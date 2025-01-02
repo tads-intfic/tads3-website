@@ -20,52 +20,52 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Multi-method registry. This is where we keep the registry information
 that we build during initialization.
 
 **`_multiMethodRegistry`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`_multiMethodRegistry`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`baseFuncTab_`](#baseFuncTab_)  [`boundFuncTab_`](#boundFuncTab_)  [`funcNameTab_`](#funcNameTab_)  [`funcParamTab_`](#funcParamTab_)  [`funcTab_`](#funcTab_)  [`inhTab_`](#inhTab_)  `
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="baseFuncTab_"></span>
 
@@ -73,11 +73,11 @@ that we build during initialization.
 
 [multmeth.t](../file/multmeth.t.html)\[[789](../source/multmeth.t.html#789)\]
 
-<div class="desc">
+
 
 function -\> base function
 
-</div>
+
 
 <span id="boundFuncTab_"></span>
 
@@ -85,11 +85,11 @@ function -\> base function
 
 [multmeth.t](../file/multmeth.t.html)\[[786](../source/multmeth.t.html#786)\]
 
-<div class="desc">
+
 
 base function -\> initial binding property
 
-</div>
+
 
 <span id="funcNameTab_"></span>
 
@@ -97,11 +97,11 @@ base function -\> initial binding property
 
 [multmeth.t](../file/multmeth.t.html)\[[783](../source/multmeth.t.html#783)\]
 
-<div class="desc">
+
 
 function name table
 
-</div>
+
 
 <span id="funcParamTab_"></span>
 
@@ -109,11 +109,11 @@ function name table
 
 [multmeth.t](../file/multmeth.t.html)\[[780](../source/multmeth.t.html#780)\]
 
-<div class="desc">
+
 
 table of function parameter lists, indexed by function
 
-</div>
+
 
 <span id="funcTab_"></span>
 
@@ -121,11 +121,11 @@ table of function parameter lists, indexed by function
 
 [multmeth.t](../file/multmeth.t.html)\[[777](../source/multmeth.t.html#777)\]
 
-<div class="desc">
+
 
 table of registered functions, indexed by base function
 
-</div>
+
 
 <span id="inhTab_"></span>
 
@@ -133,25 +133,25 @@ table of registered functions, indexed by base function
 
 [multmeth.t](../file/multmeth.t.html)\[[793](../source/multmeth.t.html#793)\]
 
-<div class="desc">
+
 
 table of cached inherited() information, indexed by function
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

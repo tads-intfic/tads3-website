@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Odor is an object representing a smell (as opposed to the object that
 might be emitting that smell). The desc property of an Odor is displayed
@@ -41,15 +41,15 @@ SENSORY EXTENSION\]
 
 `class `**`Odor`**` :   `[`SensoryEmanation`](../object/SensoryEmanation.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Odor`**  
 [`SensoryEmanation`](../object/SensoryEmanation.html)  
@@ -64,29 +64,29 @@ SENSORY EXTENSION\]
 `                                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Odor`**  
 [`SimpleOdor`](../object/SimpleOdor.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`decorationActions`](#decorationActions)[`isOdor`](#isOdor)[`notImportantMsg`](#notImportantMsg)[`sightSize`](#sightSize)[`tooFarAwayToSeeDetailMsg`](#tooFarAwayToSeeDetailMsg)
 
@@ -114,11 +114,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(SmellSomething)`](#dobjFor(SmellSomething))[`emanate`](#emanate)[`emanationDesc`](#emanationDesc)
 
@@ -146,11 +146,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="decorationActions"></span>
 
@@ -158,11 +158,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[49](../source/extras.t.html#49)\]
 
-<div class="desc">
+
 
 An Odor responds to EXAMINE SOMETHING or SMELL SOMETHING
 
-</div>
+
 
 <span id="isOdor"></span>
 
@@ -170,11 +170,11 @@ An Odor responds to EXAMINE SOMETHING or SMELL SOMETHING
 
 [extras.t](../file/extras.t.html)\[[73](../source/extras.t.html#73)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notImportantMsg"></span>
 
@@ -182,11 +182,11 @@ An Odor responds to EXAMINE SOMETHING or SMELL SOMETHING
 
 [extras.t](../file/extras.t.html)\[[54](../source/extras.t.html#54)\]
 
-<div class="desc">
+
 
 The message to display when any other action is attempted with an Odor
 
-</div>
+
 
 <span id="sightSize"></span>
 
@@ -194,12 +194,12 @@ The message to display when any other action is attempted with an Odor
 
 [extras.t](../file/extras.t.html)\[[65](../source/extras.t.html#65)\]
 
-<div class="desc">
+
 
 Since we turn SMELL into EXAMINE we want our sightSize to be our
 smellSize.
 
-</div>
+
 
 <span id="tooFarAwayToSeeDetailMsg"></span>
 
@@ -207,20 +207,20 @@ smellSize.
 
 [extras.t](../file/extras.t.html)\[[71](../source/extras.t.html#71)\]
 
-<div class="desc">
+
 
 For the same reason we want to use our tooFarAwayToSmellMsg for our
 tooFarWayToSeeDetailMsg.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -228,11 +228,11 @@ tooFarWayToSeeDetailMsg.
 
 [extras.t](../file/extras.t.html)\[[59](../source/extras.t.html#59)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(SmellSomething)"></span>
 
@@ -240,11 +240,11 @@ tooFarWayToSeeDetailMsg.
 
 [extras.t](../file/extras.t.html)\[[57](../source/extras.t.html#57)\]
 
-<div class="desc">
+
 
 Treat Smelling an Odor as equivalent to Examining it.
 
-</div>
+
 
 <span id="emanate"></span>
 
@@ -252,13 +252,13 @@ Treat Smelling an Odor as equivalent to Examining it.
 
 [sensory.t](../file/sensory.t.html)\[[219](../source/sensory.t.html#219)\]
 
-<div class="desc">
+
 
 Only carry out the inherited handling if the player hasn't issued a
 SMELL command on this turn, otherwise there's the risk of duplicate
 messages. \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="emanationDesc"></span>
 
@@ -266,7 +266,7 @@ messages. \[DEFINED IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[192](../source/sensory.t.html#192)\]
 
-<div class="desc">
+
 
 The message to be displayed to show that there's a smell here. The
 default implementation should be serviceable in many cases, but game
@@ -275,11 +275,11 @@ By default we execute our script if we are one, otherwise we use our own
 smellDesc or remoteSmellDesc as appropriate. \[DEFINED IN SENSORY
 EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

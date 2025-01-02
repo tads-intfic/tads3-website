@@ -81,51 +81,54 @@ above on the direct object of a Take action would be called:</p>
 <strong>dobjFor</strong> and <strong>iobjFor</strong> propertyset macros to write definitions that
 look like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dobjFor(Take)
+<p>`
+    dobjFor(Take)
     {
-       verify() { ... }
-       preCond() { ... }
-       check() { ... }
-       action() { ... }
-       report() { ... }
-       remap() { ... }
-    }
+       verify() { … }
+       preCond() { … }
+       check() { … }
+       action() { … }
+       report() { … }
+       remap() { … }
+    }</p>
 
-Note, however, that so far as the TADS 3 compiler is concerned, the two
+<p>Note, however, that so far as the TADS 3 compiler is concerned, the two
 ways of defining these methods have exactly the same meaning. We use the
-second method because it's usually easier and clearer. Note also that we
-don't normally need to define every stage; for most actions on most
-objects it's normally sufficient just to define two or three of these
-stages.
+second method because it’s usually easier and clearer. Note also that we
+don’t normally need to define every stage; for most actions on most
+objects it’s normally sufficient just to define two or three of these
+stages.</p>
 
-We can now proceed to consider each of these stages in more detail.
+<p>We can now proceed to consider each of these stages in more detail.</p>
 
-## &lt;span id="verify"&gt;Verify&lt;/span&gt;
+<h2 id="verify"><span id="verify">Verify</span></h2>
 
-The Verify stage has two purposes:
+<p>The Verify stage has two purposes:</p>
 
-1.  To help the parser decide which is the best choice of object for a
-    command (in cases of ambiguity).
-2.  To prevent an action going ahead if it is obviously inappropriate,
-    and in that case to explain why it has been prevented.
+<ol>
+  <li>To help the parser decide which is the best choice of object for a
+command (in cases of ambiguity).</li>
+  <li>To prevent an action going ahead if it is obviously inappropriate,
+and in that case to explain why it has been prevented.</li>
+</ol>
 
-This may be alternatively expressed by saying that the job of the verify
+<p>This may be alternatively expressed by saying that the job of the verify
 stage is to rule out illogical actions and to help the parser make the
 most logical choice; these two tasks are clearly related, which is why
-they are handled by the same stage.
+they are handled by the same stage.</p>
 
-For example, suppose the player types the command TAKE BALL when there
+<p>For example, suppose the player types the command TAKE BALL when there
 are three balls in scope: a small red ball which the player is already
 carrying, a blue plastic ball lying on the ground, and a large
 ornamental stone ball attached to a stone parapet. Which ball is the
-player most likely to have meant? The red ball can't currently be taken,
+player most likely to have meant? The red ball can’t currently be taken,
 because the player character is already holding in; the stone ball can
-never be taken, because it's fixed to the parapet and would in any case
+never be taken, because it’s fixed to the parapet and would in any case
 be too heavy to lift; so the player must presumably have intended the
 blue ball. In this case the parser would therefore select the blue ball
-and the TAKE action would go ahead.
+and the TAKE action would go ahead.</p>
 
-Now consider the same scenario but without the blue ball; only the red
+<p>Now consider the same scenario but without the blue ball; only the red
 ball (held by the player character) and the immovable stone ball are
 present. Which should the parser choose when the player types TAKE BALL?
 You might think that since neither can be taken the parser should simply
@@ -135,14 +138,14 @@ minimize. An alternative approach is to reckon that since the stone ball
 can never be taken, but the red ball could have been taken under
 different circumstances, the red ball is the more logical choice; the
 player could never have imagined that the great stone ball could ever be
-takeable, but it's possible s/he forget s/he was already carrying the
+takeable, but it’s possible s/he forget s/he was already carrying the
 red ball. So in this case ther parser would choose the red ball but
-display a message explaining that it can't be taken while it's already
-held.
+display a message explaining that it can’t be taken while it’s already
+held.</p>
 
-The code to achieve this might (in outline) look something like this:
+<p>The code to achieve this might (in outline) look something like this:</p>
 
-&lt;div class="code"&gt;
+<div class="code">
 
     stoneBall: Thing 'stone ball; huge large ornamental'
       isFixed = true
@@ -163,40 +166,40 @@ The code to achieve this might (in outline) look something like this:
          }
       }
     ;
-</code></pre></div></div>
+`
 
-<p>Notice the use of the <strong>illogicalNow()</strong> macro here; this means that the
-action might be illogical under certain circumstance — it’s illogical
-<em>now</em> if the red ball is already directly in (i.e. carried by) the actor
+Notice the use of the **illogicalNow()** macro here; this means that the
+action might be illogical under certain circumstance — it's illogical
+*now* if the red ball is already directly in (i.e. carried by) the actor
 — but under other circumstances it might be perfectly logical and the
 action could proceed. (Note, adv3 would use illogicalAlready here, but
 adv3Lite makes no distinction between illogicalAlready and illogicalNow
 and uses illogicalNow for both). This makes it less illogical that some
-things that are always illogical (like taking the great stone ball).</p>
+things that are always illogical (like taking the great stone ball).
 
-<p>Note also what we mean by <em>logical</em> here; we don’t mean logical
+Note also what we mean by *logical* here; we don't mean logical
 primarily from the perspective of the game mechanics (what will actually
 work) but logical primarily from the perspective of the player, what the
 player is most likely to expect to work. The intention is to help the
-parser read the player’s mind when s/he enters an ambiguous command, and
-then, at a second stage, rule out clearly impossible actions.</p>
+parser read the player's mind when s/he enters an ambiguous command, and
+then, at a second stage, rule out clearly impossible actions.
 
-<p>There really are two stages rolled into one here, for the verify()
+There really are two stages rolled into one here, for the verify()
 method may actually be run twice during command execution. It is first
 run by the parser when matching objects to the command the player typed.
-The object with the highest score is selected, and only if there’s a tie
+The object with the highest score is selected, and only if there's a tie
 (as might be the case if both the red ball and the blue ball were lying
 on the ground available to be taken, for example) will the parser issue
 a disambiguation prompt asking the player to state which object s/he
 meant. If the object is selected for the command, the verify routine is
 run a second time by the action to check whether the action can proceed
-with this object, and if it can’t, the appropriate failure message will
-then be displayed.</p>
+with this object, and if it can't, the appropriate failure message will
+then be displayed.
 
-<p>The previous paragraph spoke of the object with the highest score. The
+The previous paragraph spoke of the object with the highest score. The
 parser calculates the score of an object by calling scoreObjects() on
 the action. It is this routine that uses the verify stage to assign a
-score, assigned according to the <em>logical rank</em> the verify stage comes
+score, assigned according to the *logical rank* the verify stage comes
 up with. The default logical rank (for an empty verify routine which
 does nothing, which means that the action is perfectly okay to proceed)
 is a score of 100. A logical rank of 150 would be a particularly good
@@ -205,14 +208,14 @@ action was possible with this object but not such a good fit (examining
 an unobtrusive background decoration object, say, when a far more
 prominent match is also available). A logical rank of 50 or less means
 that the action is illogical, the lower the rank meaning the more
-illogical it is.</p>
+illogical it is.
 
-<p>The adv3Lite library currently just uses the logical rank returned by
+The adv3Lite library currently just uses the logical rank returned by
 the verify routine as the match score. Note that the Mercury parser,
 which adv3Lite uses, allows for further tweaking of the match score
 through the scoreObject() methods of both the action and the object
 concerned. At the moment the adv3Lite library uses these methods only to
-take the <code class="language-plaintext highlighter-rouge">vocabLikelihood</code> into account, but in
+take the `vocabLikelihood` into account, but in
 principle game authors could make use of them to make further
 adjustments or override the outcome of the logical ranking altogether
 (although this is not recommended). It is possible that future versions
@@ -221,131 +224,130 @@ with further hooks to adjust the way the score is calculated, so game
 authors should be aware that there may be some adjustments in this area
 in the future. These adjustments will not, however, discuss the basic
 principles or indeed the details of how the verify stage should be used
-and what it’s for; at most they will may simply provide means for
-further tweaking.</p>
+and what it's for; at most they will may simply provide means for
+further tweaking.
 
-<p><span id="verresult"></span></p>
+<span id="verresult"></span>
 
-<p>Verify routines can make use of the following macros to define verify
-results:</p>
+Verify routines can make use of the following macros to define verify
+results:
 
-<ul>
-  <li><strong>logical</strong>: results in a logical rank of 100 and allows the action to
-go ahead. This is the default and is also what will happen if no other
-verify result is present (i.e. if the verify() routine is empty or if
-none of its conditional statements is true).</li>
-  <li><strong>logicalRank(<em>n</em>)</strong>: results in a logical rank of <em>n</em> and allows the
-action to go ahead. (If you’re familiar with adv3 please note that
-there’s no second parameter in the adv3Lite version of logicalRank).</li>
-  <li><strong>illogicalNow(<em>msg</em>)</strong>: results in a logical rank of 40 and prevents
-the action from going ahead. This should be used for actions that are
-illogical under certain circumstances (e.g. taking an object you’re
-already holding) but not others. (If you’re familiar with adv3 please
-note that you should use illogicalNow in place of illogicalAlready).</li>
-  <li><strong>implausible(<em>msg</em>)</strong>: results in a logical rank of 35 and prevents
-the action from going ahead. This is intended for actions that are
-illogical, but whose illogicality might not be quite so immediately
-apparent as is the case with a straightforwardly illogical action.</li>
-  <li><strong>illogical(<em>msg</em>):</strong> results in a logical rank of 30 and prevents the
-action from going ahead. Use this for actions that are
-straightforwardly and obviously illogical, like trying to take a
-mountain or eat a table.</li>
-  <li><strong>illogicalSelf(<em>msg</em>):</strong> results in a logical rank of 20 and prevents
-the action from going ahead. This is intended to rule out actions such
-as PUT RED BOX IN RED BOX or TAKE ME (and thereby help to disambiguate
-commands like PUT RED IN RED where just about any object would be a
-better choice to put in the red box than the red box itself).</li>
-  <li><strong>inaccessible(<em>msg</em>):</strong> results in a logical rank of 10 and prevents
-the action from going ahead. This rules out actions for which the
-object is inaccessible to the actor.</li>
-  <li><strong>nonObvious</strong>: results in a logical rank of 30 but allows the action
-to go ahead provided it isn’t an implicit action. This can be used,
-for example, to prevent a player accidentally solving a puzzle by
-triggering an implicit action.</li>
-  <li><strong>dangerous</strong>: results in a logical rank of 90 and allows the action
-to go ahead provided it isn’t an implicit action. This can be used,
-for example, to prevent the player accidentally doing something
-dangerous (like picking up an obviously booby-trapped object or
-opening the doors of a cabinet filled with poison gas) inadvertently
-through an implicit action. It also means that other things being
-equal, if the parser has to choose between two interpretations of the
-player’s command, it will choose the safer one.</li>
-</ul>
+- **logical**: results in a logical rank of 100 and allows the action to
+  go ahead. This is the default and is also what will happen if no other
+  verify result is present (i.e. if the verify() routine is empty or if
+  none of its conditional statements is true).
+- **logicalRank(*n*)**: results in a logical rank of *n* and allows the
+  action to go ahead. (If you're familiar with adv3 please note that
+  there's no second parameter in the adv3Lite version of logicalRank).
+- **illogicalNow(*msg*)**: results in a logical rank of 40 and prevents
+  the action from going ahead. This should be used for actions that are
+  illogical under certain circumstances (e.g. taking an object you're
+  already holding) but not others. (If you're familiar with adv3 please
+  note that you should use illogicalNow in place of illogicalAlready).
+- **implausible(*msg*)**: results in a logical rank of 35 and prevents
+  the action from going ahead. This is intended for actions that are
+  illogical, but whose illogicality might not be quite so immediately
+  apparent as is the case with a straightforwardly illogical action.
+- **illogical(*msg*):** results in a logical rank of 30 and prevents the
+  action from going ahead. Use this for actions that are
+  straightforwardly and obviously illogical, like trying to take a
+  mountain or eat a table.
+- **illogicalSelf(*msg*):** results in a logical rank of 20 and prevents
+  the action from going ahead. This is intended to rule out actions such
+  as PUT RED BOX IN RED BOX or TAKE ME (and thereby help to disambiguate
+  commands like PUT RED IN RED where just about any object would be a
+  better choice to put in the red box than the red box itself).
+- **inaccessible(*msg*):** results in a logical rank of 10 and prevents
+  the action from going ahead. This rules out actions for which the
+  object is inaccessible to the actor.
+- **nonObvious**: results in a logical rank of 30 but allows the action
+  to go ahead provided it isn't an implicit action. This can be used,
+  for example, to prevent a player accidentally solving a puzzle by
+  triggering an implicit action.
+- **dangerous**: results in a logical rank of 90 and allows the action
+  to go ahead provided it isn't an implicit action. This can be used,
+  for example, to prevent the player accidentally doing something
+  dangerous (like picking up an obviously booby-trapped object or
+  opening the doors of a cabinet filled with poison gas) inadvertently
+  through an implicit action. It also means that other things being
+  equal, if the parser has to choose between two interpretations of the
+  player's command, it will choose the safer one.
 
-<p>Where the <em>msg</em> parameter is specified above it in each case refers to
+Where the *msg* parameter is specified above it in each case refers to
 the message to be displayed to the player to explain why the action
-cannot go ahead (if indeed it can’t). In the examples given above this
+cannot go ahead (if indeed it can't). In the examples given above this
 was shown as a single-quoted string, which is indeed perfectly legal,
 but in the adv3Lite library it is always expressed as a property (e.g.
 cannotTakeMsg) which is a property defined on the object in question.
 Part of the reason for this is to make it easy for game authors to
 customize these refusal messages: if you want something less generic
-than ‘The stone ball is fixed in place’ you can simply override the
-cannotTakeMsg property on the stoneBall object; you don’t have to
+than 'The stone ball is fixed in place' you can simply override the
+cannotTakeMsg property on the stoneBall object; you don't have to
 override the entire verifyDobjTake() method. Either way, however, the
-verification macro <em>must</em> receive a single-quoted string value, and
-<em>never</em> a double-quoted string; both <code class="language-plaintext highlighter-rouge">illogical("{I}
-{can\\t} wash that."} </code>and <code class="language-plaintext highlighter-rouge">cannotWashMsg = "{I}
-{can\\t} wash that."</code> would be programming errors that can be
+verification macro *must* receive a single-quoted string value, and
+*never* a double-quoted string; both `illogical("{I}
+{can\\t} wash that."} `and `cannotWashMsg = "{I}
+{can\\t} wash that."` would be programming errors that can be
 guaranteed to produce strange and unwanted results. (The explanation of
-the bits in curly braces like ‘{I} {can\t}’ will be covered later in
-the section on <a href="message.html">messages</a>).</p>
+the bits in curly braces like '{I} {can\\t}' will be covered later in
+the section on [messages](message.html)).
 
-<p>Note that your verify routines should contain nothing but one or more of
+Note that your verify routines should contain nothing but one or more of
 the macros listed above and the conditional (if) statement needed to
 define when they apply (and, possibly, some code to calculate local
 variables for use by the conditional statements). In particular verify
 routines should not display anything (via say() statements or
-double-quoted strings) nor should they change the game state.</p>
+double-quoted strings) nor should they change the game state.
 
-<p>Note also that it’s perfectly okay for the logic of your verify routine
+Note also that it's perfectly okay for the logic of your verify routine
 to result in more than one of the logical/illogical macros being
-executed. The library will simply use the one that has the <em>lowest</em>
+executed. The library will simply use the one that has the *lowest*
 logical rank (on the assumption that if it is applicable at all, it
 trumps all the rest). The verify result with the lowest logical rank is
 stored in a table, where it can be replaced by a verify result with an
 even lower logical rank, if one is encountered, and where its
 corresponding failure message can be accessed if and when the time comes
-to display it.</p>
+to display it.
 
-<p><span id="gTentative"></span></p>
+<span id="gTentative"></span>
 
-<p>When we’re writing verify routines for TIActions (such as TakeFrom or
-DigWith) it’s sometimes useful for the verify routine on one object of
+When we're writing verify routines for TIActions (such as TakeFrom or
+DigWith) it's sometimes useful for the verify routine on one object of
 the action to know what the other object involved in the action will be.
-The library uses the <strong>resolveIobjFirst</strong> property of each TIAction to
+The library uses the **resolveIobjFirst** property of each TIAction to
 determine which object should be resolved first, generally choosing the
 more helpful order (so that the object that most needs to know what the
-other object will be is resolved second.</p>
+other object will be is resolved second.
 
-<p>Occasionally, though, it can be helpful for both objects’ verify
+Occasionally, though, it can be helpful for both objects' verify
 routines to know what the other object involved in the action will be
 (as is the case with TakeFrom, for example). In such cases the macros
-<strong>gVerifyDobj</strong> and <strong>gVerifyIobj</strong> should always be used instead of
-gDobj and gIobj (since there’s always a risk that these won’t have been
+**gVerifyDobj** and **gVerifyIobj** should always be used instead of
+gDobj and gIobj (since there's always a risk that these won't have been
 assigned values yet, leading to potential nil object reference run-time
 errors). The macros gVerifyDobj and gVerifyIobj evaluate to gDobj or
 gIobj respectively if these are non-nil, but otherwise use the values of
-the first item in the gTentativeDobj/gTentativeIobj list.</p>
+the first item in the gTentativeDobj/gTentativeIobj list.
 
-<p>The macros <strong>gTentativeDobj</strong> and <strong>gTentativeIobj</strong> can also be
+The macros **gTentativeDobj** and **gTentativeIobj** can also be
 helpful. These produce the lists of objects that the current Command is
 considering as possible direct and indirect objects. They can be used in
 the verify routines of TIActions in place of gDobj and gIobj when it
 would be helpful to know the complete lists of what the other object
 might turn out to be before it has been fully resolved. Note that unlike
 the similarly named macros in adv3, these ones do actually results in
-lists of actual objects, not npMatches or the like.</p>
+lists of actual objects, not npMatches or the like.
 
-<p>The macros <strong>gTentativeDobjIn(<em>lst</em>)</strong> and <strong>gTentativeIobjIn(<em>lst</em>)</strong>
+The macros **gTentativeDobjIn(*lst*)** and **gTentativeIobjIn(*lst*)**
 should normally be used in verify routines to test whether the list
-<em>lst</em> has any items in common with gTentativeDobj and gTentativeIobj
-respectively (these macros evaluate to true if so or nil otherwise).</p>
+*lst* has any items in common with gTentativeDobj and gTentativeIobj
+respectively (these macros evaluate to true if so or nil otherwise).
 
-<p>For example, the library defines the following handling of the TakeFrom
-action on the indirect object:</p>
+For example, the library defines the following handling of the TakeFrom
+action on the indirect object:
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    iobjFor(TakeFrom)
+`
+    iobjFor(TakeFrom)
         {
             preCond = [touchObj]
             
@@ -364,12 +366,13 @@ action on the indirect object:</p>
             
             }      
         }
-</code></pre></div></div>
+`
 
-<p>This could also have been written (with exactly the same meaning and
-effect):</p>
+This could also have been written (with exactly the same meaning and
+effect):
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    iobjFor(TakeFrom)
+`
+    iobjFor(TakeFrom)
         {
             preCond = [touchObj]
             
@@ -388,13 +391,14 @@ effect):</p>
             
             }      
         }
-</code></pre></div></div>
+`
 
-<p>Note that the library is set up to minimize the number of verify
+Note that the library is set up to minimize the number of verify
 routines you need to override. For example, the action handling for Dig
-and DigWith is defined like this:</p>
+and DigWith is defined like this:
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     /* Most things are not suitable for digging in*/
+`
+     /* Most things are not suitable for digging in*/
         isDiggable = nil
         
         dobjFor(Dig)
@@ -438,12 +442,12 @@ and DigWith is defined like this:</p>
             {that iobj}. ')
         cannotDigWithSelfMsg = BMsg(cannot dig with self, '{I} {can\'t} dig {the
             dobj} with {itself dobj}. ')
-</code></pre></div></div>
+`
 
-<p>This means that instead of having to override the verify methods of
+This means that instead of having to override the verify methods of
 things you want to dig or dig with to make the commands possible, you
-can simply define <code class="language-plaintext highlighter-rouge">isDiggable = true</code> or
-<code class="language-plaintext highlighter-rouge">canDigWithMe = true</code> as appropriate (and
+can simply define `isDiggable = true` or
+`canDigWithMe = true` as appropriate (and
 preventing using something to dig itself is still automatically taken
 care of). The name pattern isXXXable for the direct object and
 canXXXPrepMe for the indirect object when the corresponding actions are
@@ -456,119 +460,120 @@ properties like isDiggable and isCuttable, and the use of the more
 idiomatic isEdible in place of isEatable, the use of the canXXXPrepMe
 form where this reads more naturally than isXXXPrepable (e.g. canSitOnMe
 is used in preference to the rather awkward isSitOnable). If in doubt
-you can consult the list given in the <a href="actionref.html">Action Reference</a>
+you can consult the list given in the [Action Reference](actionref.html)
 (which may also be useful if you need to check the name of the action),
-but the property names in fact follow a largely consistent scheme:</p>
+but the property names in fact follow a largely consistent scheme:
 
-<ol>
-  <li>For a two-object (TIAction) action (such as FooPrep) the property
-controlling success or failure in the verify routine on the direct
-object is always <code class="language-plaintext highlighter-rouge">isFooable</code>, and on the
-indirect object is always <code class="language-plaintext highlighter-rouge">canFooPrepMe</code>
-(except for PushTravel actions, which are really compound actions
-combining Pushing and Traveling, and so follow slightly different
-rules; see below).</li>
-  <li>For a single-object (TAction, TopicTAction or LiteralTAction) action
-the property controlling success of failure in the verify routine of
-the direct object is always <code class="language-plaintext highlighter-rouge">isFooable</code> if
-the action name does not contain a preposition (such as Take) or
-<code class="language-plaintext highlighter-rouge">canFooPrepMe</code> if the action name does
-contain a preposition (such as SitOn), provided the preposition
-would normally precede the direct object (e.g. SIT IN CHAIR). Two
-apparent exceptions are <code class="language-plaintext highlighter-rouge">canSetMeTo</code> and
-<code class="language-plaintext highlighter-rouge">canTurnMeTo</code>, but here the preposition
-would normally come after the direct object (e.g. TURN DIAL TO 7,
-not TURN TO DIAL 7); the rule is that the Me in the property name
-comes where the direct object would come in the corresponding
-command.</li>
-  <li>There are one or two exceptions where it wouldn’t make sense to
-define a whole lot of properties for similar actions. The main one
-of these is the <code class="language-plaintext highlighter-rouge">canPushTravel</code> property
-which allows or disallows the whole set of PushTravel actions on the
-direct object, and the abbreviated property names on the indirect
-objects for some PushTravel actions (such as
-<code class="language-plaintext highlighter-rouge">cannotPushDownMsg</code> rather than
-<code class="language-plaintext highlighter-rouge">cannotPushTravelClimbDownMsg</code>, which would
-be strictly consistent but unpleasantly cumbersome). Since the
-various PushTravel actions combine pushing with travelling, the
-verification properties on the indirect object of a PushTravel
-command are those for travelling via the object; e.g. the indirect
-object of PushTravelClimbDown checks
-<code class="language-plaintext highlighter-rouge">canClimbDownMe</code>, not
-<code class="language-plaintext highlighter-rouge">canPushTravelClimbDownMe</code>. The other
-exception is the absence of any properties like
-<code class="language-plaintext highlighter-rouge">canAskMeAbout</code> on Thing, since all
-conversational commands are ruled out unconditionally on Thing, and
-all use the common failure message
-<code class="language-plaintext highlighter-rouge">cannotTalkToMsg</code>.</li>
-  <li>Apart from the exceptions noted above, most of the message
-properties follow the scheme already described in the paragraph
-preceeding this list.</li>
-</ol>
+1.  For a two-object (TIAction) action (such as FooPrep) the property
+    controlling success or failure in the verify routine on the direct
+    object is always `isFooable`, and on the
+    indirect object is always `canFooPrepMe`
+    (except for PushTravel actions, which are really compound actions
+    combining Pushing and Traveling, and so follow slightly different
+    rules; see below).
+2.  For a single-object (TAction, TopicTAction or LiteralTAction) action
+    the property controlling success of failure in the verify routine of
+    the direct object is always `isFooable` if
+    the action name does not contain a preposition (such as Take) or
+    `canFooPrepMe` if the action name does
+    contain a preposition (such as SitOn), provided the preposition
+    would normally precede the direct object (e.g. SIT IN CHAIR). Two
+    apparent exceptions are `canSetMeTo` and
+    `canTurnMeTo`, but here the preposition
+    would normally come after the direct object (e.g. TURN DIAL TO 7,
+    not TURN TO DIAL 7); the rule is that the Me in the property name
+    comes where the direct object would come in the corresponding
+    command.
+3.  There are one or two exceptions where it wouldn't make sense to
+    define a whole lot of properties for similar actions. The main one
+    of these is the `canPushTravel` property
+    which allows or disallows the whole set of PushTravel actions on the
+    direct object, and the abbreviated property names on the indirect
+    objects for some PushTravel actions (such as
+    `cannotPushDownMsg` rather than
+    `cannotPushTravelClimbDownMsg`, which would
+    be strictly consistent but unpleasantly cumbersome). Since the
+    various PushTravel actions combine pushing with travelling, the
+    verification properties on the indirect object of a PushTravel
+    command are those for travelling via the object; e.g. the indirect
+    object of PushTravelClimbDown checks
+    `canClimbDownMe`, not
+    `canPushTravelClimbDownMe`. The other
+    exception is the absence of any properties like
+    `canAskMeAbout` on Thing, since all
+    conversational commands are ruled out unconditionally on Thing, and
+    all use the common failure message
+    `cannotTalkToMsg`.
+4.  Apart from the exceptions noted above, most of the message
+    properties follow the scheme already described in the paragraph
+    preceeding this list.
 
-<p>The default values of these properties in the library generally depend
+The default values of these properties in the library generally depend
 on what seems to be the most likely common case. Thus, for example, few
 things can be used to burn or cut other things with, and probably most
-game objects won’t be suitable for burning or cutting, so
-<code class="language-plaintext highlighter-rouge">isBurnable</code>,
-<code class="language-plaintext highlighter-rouge">isCuttable</code>,
-<code class="language-plaintext highlighter-rouge">canBurnWithMe</code> and
-<code class="language-plaintext highlighter-rouge">canCutWithMe</code> are all nil by default.
+game objects won't be suitable for burning or cutting, so
+`isBurnable`,
+`isCuttable`,
+`canBurnWithMe` and
+`canCutWithMe` are all nil by default.
 Conversely, just about anything can be the target of a throw, so the
-default value of <code class="language-plaintext highlighter-rouge">canThrowAtMe</code> is true, while
-in general we can throw anything that isn’t fixed in place, so that
-<code class="language-plaintext highlighter-rouge">isThrowable</code> is defined as
-<code class="language-plaintext highlighter-rouge">(!isFixed)</code>. This incidentally illustrates that
+default value of `canThrowAtMe` is true, while
+in general we can throw anything that isn't fixed in place, so that
+`isThrowable` is defined as
+`(!isFixed)`. This incidentally illustrates that
 some properties define the default value of other properties;
-<code class="language-plaintext highlighter-rouge">isFixed</code> for example is used to determine
-several such properties such as <code class="language-plaintext highlighter-rouge">isTakeable</code> and
-<code class="language-plaintext highlighter-rouge">isMoveable</code>. Similarly,
-<code class="language-plaintext highlighter-rouge">isCloseable</code> is defined as
-<code class="language-plaintext highlighter-rouge">(isOpenable)</code>, since one would normally expect
+`isFixed` for example is used to determine
+several such properties such as `isTakeable` and
+`isMoveable`. Similarly,
+`isCloseable` is defined as
+`(isOpenable)`, since one would normally expect
 something that can be opened to be also something than can be closed (a
 door or a desk drawer, say). If in doubt, consult the library code in
-Thing.t (or, for many common cases, the <a href="actionref.html">Action
-Reference</a>) to see how these properties are defined.</p>
+Thing.t (or, for many common cases, the [Action
+Reference](actionref.html)) to see how these properties are defined.
 
-<p>Note that changing these other behavioural properties to true doesn’t
+Note that changing these other behavioural properties to true doesn't
 necessarily make the corresponding action work, in most cases it merely
-allows the action to proceed to the next stage. It’s up to authors’ game
+allows the action to proceed to the next stage. It's up to authors' game
 code to define what happens when something is dug or cut or fastened or
-whatever, since in general the library can’t know how you want these
-things to work in your game.</p>
+whatever, since in general the library can't know how you want these
+things to work in your game.
 
-<p><span id="failturn"></span></p>
+<span id="failturn"></span>
 
-<p>When an action fails at the verify stage, the action is stopped but the
+When an action fails at the verify stage, the action is stopped but the
 rest of the turn sequence normally goes ahead, so that, for example, the
 turn counter is incremented, daemons are executed and so on.Some game
-authors may, however, prefer that actions that don’t take place because
-they’re clearly illogical, such as TAKE ME or EAT THE HOUSE, shouldn’t
-count as turns. The Action property <strong>failedActionCountsAsTurn</strong> can be
+authors may, however, prefer that actions that don't take place because
+they're clearly illogical, such as TAKE ME or EAT THE HOUSE, shouldn't
+count as turns. The Action property **failedActionCountsAsTurn** can be
 overriden to nil, either globally on the Action class, or on individual
 actions, so that failing an action at the verify stage aborts the rest
 of the action processing for that turn (so that the turn counter is not
 advanced, no daemons are executed, and the turn is treated as if it
-didn’t happen). For example, to make all actions that fail at the verify
+didn't happen). For example, to make all actions that fail at the verify
 stage not count as a turn we could include the following in our game
-code:</p>
+code:
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
+`
+     
      modify Action
         failedActionCountsAsTurn = nil
     ;
-</code></pre></div></div>
+`
 
-<h2 id="pre-conditions"><span id="precond">Pre-conditions</span></h2>
+  
 
-<p>In interactive fiction it’s frequently the case that some condition has
+## <span id="precond">Pre-conditions</span>
+
+In interactive fiction it's frequently the case that some condition has
 to obtain in order for some action to go ahead. Before I can take the
 red ball I have to be able to reach it. Before I can put the red ball in
 the blue box I have to be holding the red ball and the blue box has to
 be open. Moreover in such cases it is very tedious for the player to be
 told s/he has to meet the condition before the action can be carried
 out. No player will thank you if you force the following kind of
-interaction on them:</p>
+interaction on them:
 
 <div class="cmdline">
 
@@ -681,7 +686,7 @@ To apply PreConditions to objects involved in particular actions we
 simply list the appropriate precondition objects in the appropriate
 **preCond** property, for example:
 
-```
+`
     class Thing: Mentionable
        ...
        dobjFor(PutIn)
@@ -696,13 +701,13 @@ simply list the appropriate precondition objects in the appropriate
            ...
        }
     ;
-```
+`
 
 A further example illustrates how the touchObj precondition can be used
 in conjunction with a checkReach() method to prevent an object being
 touched when it's too hot:
 
-```
+`
     + cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -753,7 +758,7 @@ touched when it's too hot:
         
         cannotBurnMsg = 'The saucepan\'s quite burnt enough already! '
     ;
-```
+`
 
 Occasionally it can be useful to list a PreCondition in the
 `preCond` property of an Action object,
@@ -761,7 +766,7 @@ particularly when the Action is an IAction and we want the actor to be
 in a particular state before the action can take place. For example the
 library defines the Jump action thus:
 
-```
+`
      DefineIAction(Jump)
         execAction(cmd)
         {
@@ -773,7 +778,7 @@ library defines the Jump action thus:
     ;
      
      
-```
+`
 
 This ensures that the actor is removed from any nested room it's in
 before attempting to JUMP (unless it starts out in a nested room for
@@ -799,7 +804,7 @@ should not use any such things here). A check routine should thus
 consist purely of statements that display failure messages to the player
 and conditional statements controlling when they are displayed, e.g.:
 
-```
+`
     partyDress: Thing 'party dress; blue; frock'
       isWearable = true
       wornBy = gPlayerChar
@@ -813,7 +818,7 @@ and conditional statements controlling when they are displayed, e.g.:
                 own room. ";
          }
       }
-```
+`
 
 This incidentally illustrates that when customizing objects to respond
 to actions, there's no need to repeat the parts already defined by the
@@ -851,7 +856,7 @@ implement to hand, and announcing which writing implement the player
 character is using without halting the action in the process. This could
 be implemented thus:
 
-```
+`
     + pieceOfPaper: Thing 'piece of paper'
         "On it is inscribed <q>&lt;<writtenText>&gt;&lt;/q&gt;. "
         
@@ -900,7 +905,7 @@ be implemented thus:
     + blackPen: Thing 'black pen'
         canWriteWithMe = true   
     ;
-```
+`
 
 While we could, in principle, have delayed displaying the "(with the
 black pen)" message until the action stage, this would have been awkward
@@ -951,7 +956,7 @@ a mat reveals a note that was previously concealed beneath) you could do
 so by using the **reportAfter(*msg*)** macro, which will cause *msg* to
 be displayed after any output from the report stage. For example:
 
-```
+`
     mat:Thing 'mat; white place; placemat'
       dobjFor(Take)
       {
@@ -966,7 +971,7 @@ be displayed after any output from the report stage. For example:
          }
       }
     ;
-```
+`
 
 Note that you wouldn't have to code this particular example this way,
 since in practice you'd simply define <span id="code">hiddenUnder =
@@ -981,7 +986,7 @@ parentheic information. For example it is used by the library to
 announce which key it has chosen (e.g. ("(with the brass key)") in
 response to a LOCK or UNLOCK command:
 
-```
+`
       dobjFor(Lock)
       {
          ...
@@ -1000,7 +1005,7 @@ response to a LOCK or UNLOCK command:
             DMsg(report lock, okayLockMsg, gActionListStr);
          }
       }
-```
+`
 
 Here the report() phase would still be suppressed, however, if the
 action() method displayed anything else (apart from its
@@ -1021,7 +1026,7 @@ current action. These methods are called **doInstead()** and
 something under the tap to result in its being put in the sink; you
 could do it like this:
 
-```
+`
     tap: Fixture 'tap; silver; faucet'
       ...
       iobjFor(PutUnder)
@@ -1033,7 +1038,7 @@ could do it like this:
          }
       }
     ;
-```
+`
 
 You could do the same with replaceAction(), but doInstead() makes it
 easier to synthesize certain kinds of action that are much harder to so
@@ -1041,7 +1046,7 @@ with replaceAction() or nestedAction(). For example if you want the
 player to ask George about the broken candlestick the first time s/he
 looks at it you could write something like:
 
-```
+`
     candlestick: Thing 'silver candlestick; broken'
        "It's broken. "
        
@@ -1059,7 +1064,7 @@ looks at it you could write something like:
        }    
        georgeAsked = nil
     ;
-```
+`
 
 This wouldn't work with `nestedAction()` because
 the AskAbout command expects its indirect object to be a ResolvedTopic,
@@ -1103,7 +1108,7 @@ an indirect object for the TIAction DigWith, and then (if the player
 responds with the name of a suitable object) execute DigWith with the
 existing direct object and newly specified indirect object:
 
-```
+`
     + sand: Fixture 'patch of sand; deep'
        "It's not very big, but it looks like it could be quite deep. "
        
@@ -1118,7 +1123,7 @@ existing direct object and newly specified indirect object:
        {
          ...
     ;     
-```
+`
 
   
 
@@ -1135,7 +1140,7 @@ objects is available; the pseudo-global variable **gActionListStr** then
 contains a single-quoted string listing the items in the form 'the pen,
 the ink and the paper' which can be used in your report, e.g.:
 
-```
+`
     class Thing Mentionable
       dobjFor(Take)
       {
@@ -1150,7 +1155,7 @@ the ink and the paper' which can be used in your report, e.g.:
          }
       }
     ;
-```
+`
 
 This will result in a report such as 'You take the pen, the ink and the
 paper. ' (Note that there's no need to implement this particular example
@@ -1193,7 +1198,7 @@ assign it to a variable which you can then use in a message parameter
 substitution, as in the following example from the library (for
 ThrowDir):
 
-```
+`
         report()
         {
             local obj = gActionListObj;
@@ -1203,7 +1208,7 @@ ThrowDir):
             DMsg(throw dir, '{I} {throw} {the obj} {1}wards and {he obj} {lands}
                 on the ground. ', gAction.direction.name );
         }
-```
+`
 
 Finally, since the report method is designed to give a routine report on
 what may be a group of objects, there's usually little point in defining
@@ -1230,12 +1235,12 @@ The Remap stage is used to replace the current object of an action with
 another object in the same role. For example, to remap putting things in
 a desk to putting them into its drawer we could simply write:
 
-```
+`
     desk: Thing 'desk'
       "It has a single drawer. "
       iobjFor(PutIn) { remap = drawer  }
     ;
-```
+`
 
 Finally, there are situations when you what you want to do is not so
 much to remap one action to another (possibly involving different
@@ -1244,20 +1249,20 @@ For this purpose you can use the macros **asDobjFor(*action*)** and
 **asIobjFor(*action*)**, just as in the adv3 library. For example if we
 wanted pulling the drawer always to equate to opening it we'd write:
 
-```
+`
     drawer: Thing 'drawer'
       isOpenable = true
       contType = In
 
       dobjFor(Pull) asDobjFor(Open)  
     ;
-```
+`
 
 As a second example, the adv3Lite library defines the following on the
 SimpleAttachable class to make FASTEN and UNFASTEN behave just like
 ATTACH and DETACH:
 
-```
+`
     class SimpleAttachable: Thing
       ...
        /* Treat Fasten and Unfasten as equivalent to Attach and Detach */
@@ -1267,7 +1272,7 @@ ATTACH and DETACH:
         iobjFor(UnfastenFrom) asIobjFor(DetachFrom)
         dobjFor(Unfasten) asDobjFor(Detach)  
     ;
-```
+`
 
   
 
@@ -1287,7 +1292,7 @@ ATTACH and DETACH:
 &lt;/div&gt;
 
 &lt;/div&gt;
-</gActionListStr></gLiteral></q></writingImplement.theName></writtenText></q></end></if></div>
+</gActionListStr></gLiteral></q></writingImplement.theName></writtenText></q></end></if></div></div>
 
 </main>
 <footer>

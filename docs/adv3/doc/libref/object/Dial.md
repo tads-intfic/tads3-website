@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Dial - something you can turn to different settings. Note that dials are
 usually used as components of larger objects; since our base class is
@@ -40,15 +40,15 @@ dial.
 
 `class `**`Dial`**` :   `[`Settable`](../object/Settable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Dial`**  
 [`Settable`](../object/Settable.html)  
@@ -57,30 +57,30 @@ dial.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Dial`**  
 [`LabeledDial`](../object/LabeledDial.html)  
 [`NumberedDial`](../object/NumberedDial.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`okaySetToMsgProp`](#okaySetToMsgProp)[`setToInvalidMsgProp`](#setToInvalidMsgProp)
 
@@ -95,11 +95,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Turn)`](#dobjFor(Turn))[`dobjFor(TurnTo)`](#dobjFor(TurnTo))
 
@@ -114,11 +114,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="okaySetToMsgProp"></span>
 
@@ -126,11 +126,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5475](../source/objects.t.html#5475)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="setToInvalidMsgProp"></span>
 
@@ -138,19 +138,19 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5474](../source/objects.t.html#5474)\]
 
-<div class="desc">
+
 
 refer to setting the dial as turning it in our messages
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Turn)"></span>
 
@@ -158,11 +158,11 @@ refer to setting the dial as turning it in our messages
 
 [objects.t](../file/objects.t.html)\[[5465](../source/objects.t.html#5465)\]
 
-<div class="desc">
+
 
 "turn" with no destination - indicate that we need a setting
 
-</div>
+
 
 <span id="dobjFor(TurnTo)"></span>
 
@@ -170,15 +170,15 @@ refer to setting the dial as turning it in our messages
 
 [objects.t](../file/objects.t.html)\[[5471](../source/objects.t.html#5471)\]
 
-<div class="desc">
+
 
 treat "turn \<self\> to \<literal\>" the same as "set to"
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

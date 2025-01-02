@@ -47,22 +47,23 @@ what the game is actually about. We really need to add a proper
 introduction, which we can do in the <strong>showIntro()</strong> method of the
 <code class="language-plaintext highlighter-rouge">gameMain</code> object:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    gameMain: GameMainDef
+<p>`
+    gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
-        paraBrksBtwnSubcontents = nil
-        
-        showIntro()
-        {
-           "&lt;font size=+2&gt;&lt;b&gt;Airport&lt;/b&gt;&lt;/font&gt;\b
-           They're out to get you. No, they really are --- &lt;q&gt;they&lt;/q&gt; being the
-           local drug barons. You've just got the evidence that will put them behind
-           bars for the rest of the century, and now you're desperate to leave with
-           it while you still can, since El Diablo and his henchmen will be equally
-           desperate to stop you --- for good. They've pursued you as far as the
-           airport and now your only hope is to get the first plane out of here.\b";
-        }       
-    ;
+        paraBrksBtwnSubcontents = nil</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    showIntro()
+    {
+       "&lt;font size=+2&gt;&lt;b&gt;Airport&lt;/b&gt;&lt;/font&gt;\b
+       They're out to get you. No, they really are --- &lt;q&gt;they&lt;/q&gt; being the
+       local drug barons. You've just got the evidence that will put them behind
+       bars for the rest of the century, and now you're desperate to leave with
+       it while you still can, since El Diablo and his henchmen will be equally
+       desperate to stop you --- for good. They've pursued you as far as the
+       airport and now your only hope is to get the first plane out of here.\b";
+    }       
+; `
 </code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">gameMain</code> object can also be used to define
@@ -80,18 +81,19 @@ blotter and a diary.”</p>
 is meant to be. It’s generally a good idea to oblige them by providing a
 custom description on the player character object:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + me: Thing 'you'   
-        "Secret agents are normally meant to be well equipped, but your quick
+<p>`
+    + me: Thing ‘you’ <br />
+        “Secret agents are normally meant to be well equipped, but your quick
         getaway just now meant you had to leave just about everything behind
-        except what you're wearing, and that's not much. You couldn't even go back
-        to pick up your wallet or your credit card. "
-        isFixed = true    
+        except what you’re wearing, and that’s not much. You couldn’t even go back
+        to pick up your wallet or your credit card. “
+        isFixed = true  <br />
         proper = true
         ownsContents = true
-        person = 2   
-        contType = Carrier    
+        person = 2 <br />
+        contType = Carrier  <br />
     ;
-</code></pre></div></div>
+`</p>
 
 <hr />
 

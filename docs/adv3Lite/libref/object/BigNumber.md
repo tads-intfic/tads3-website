@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The BigNumber intrinsic class lets you perform floating-point and
 integer arithmetic with (almost) any desired precision. BigNumber uses a
@@ -58,41 +58,41 @@ with REFLECT_BIGNUM defined.
 
 `intrinsic class `**`BigNumber`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BigNumber`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -100,11 +100,11 @@ with REFLECT_BIGNUM defined.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`arccosine`](#arccosine)[`arcsine`](#arcsine)[`arctangent`](#arctangent)[`copySignFrom`](#copySignFrom)[`cosh`](#cosh)[`cosine`](#cosine)[`degreesToRadians`](#degreesToRadians)[`divideBy`](#divideBy)[`equalRound`](#equalRound)[`expE`](#expE)[`formatString`](#formatString)[`getAbs`](#getAbs)[`getCeil`](#getCeil)[`getE`](#getE)[`getFloor`](#getFloor)[`getFraction`](#getFraction)[`getPi`](#getPi)[`getPrecision`](#getPrecision)[`getScale`](#getScale)[`getWhole`](#getWhole)[`isNegative`](#isNegative)[`log10`](#log10)[`logE`](#logE)[`negate`](#negate)[`numType`](#numType)[`radiansToDegrees`](#radiansToDegrees)[`raiseToPower`](#raiseToPower)[`roundToDecimal`](#roundToDecimal)[`scaleTen`](#scaleTen)[`setPrecision`](#setPrecision)[`sine`](#sine)[`sinh`](#sinh)[`sqrt`](#sqrt)[`tangent`](#tangent)[`tanh`](#tanh)[`valToSymbol`](#valToSymbol)
 
@@ -113,19 +113,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="arccosine"></span>
 
@@ -133,12 +133,12 @@ Inherited from `Object` :
 
 [bignum.h](../file/bignum.h.html)\[[182](../source/bignum.h.html#182)\]
 
-<div class="desc">
+
 
 Calculate and return the arccosine (in radians). The value must be
 between -1 and +1 inclusive.
 
-</div>
+
 
 <span id="arcsine"></span>
 
@@ -146,13 +146,13 @@ between -1 and +1 inclusive.
 
 [bignum.h](../file/bignum.h.html)\[[176](../source/bignum.h.html#176)\]
 
-<div class="desc">
+
 
 Calculate and return the arcsine (in radians) of the value. Note that
 the value must be between -1 and +1 inclusive, since sine() never has a
 value outside of this range.
 
-</div>
+
 
 <span id="arctangent"></span>
 
@@ -160,11 +160,11 @@ value outside of this range.
 
 [bignum.h](../file/bignum.h.html)\[[185](../source/bignum.h.html#185)\]
 
-<div class="desc">
+
 
 calculate and return the arctangent (in radians)
 
-</div>
+
 
 <span id="copySignFrom"></span>
 
@@ -172,11 +172,11 @@ calculate and return the arctangent (in radians)
 
 [bignum.h](../file/bignum.h.html)\[[104](../source/bignum.h.html#104)\]
 
-<div class="desc">
+
 
 copySignFrom - combine the absolute value of self with the sign of x
 
-</div>
+
 
 <span id="cosh"></span>
 
@@ -184,11 +184,11 @@ copySignFrom - combine the absolute value of self with the sign of x
 
 [bignum.h](../file/bignum.h.html)\[[213](../source/bignum.h.html#213)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cosine"></span>
 
@@ -196,12 +196,12 @@ copySignFrom - combine the absolute value of self with the sign of x
 
 [bignum.h](../file/bignum.h.html)\[[151](../source/bignum.h.html#151)\]
 
-<div class="desc">
+
 
 calculate and return the trigonometric cosine of the value (taken as a
 radian value)
 
-</div>
+
 
 <span id="degreesToRadians"></span>
 
@@ -209,12 +209,12 @@ radian value)
 
 [bignum.h](../file/bignum.h.html)\[[163](../source/bignum.h.html#163)\]
 
-<div class="desc">
+
 
 interpreting this number as a number of degrees, convert the value to
 radians and return the result
 
-</div>
+
 
 <span id="divideBy"></span>
 
@@ -222,7 +222,7 @@ radians and return the result
 
 [bignum.h](../file/bignum.h.html)\[[139](../source/bignum.h.html#139)\]
 
-<div class="desc">
+
 
 Calculate the integer quotient and the remainder; returns a list whose
 first element is the integer quotient (a BigNumber containing an integer
@@ -251,7 +251,7 @@ will always be an integer), the remainder will satisfy the relationship
 AND will be the unique remainder with absolute value less than the
 divisor.
 
-</div>
+
 
 <span id="equalRound"></span>
 
@@ -259,12 +259,12 @@ divisor.
 
 [bignum.h](../file/bignum.h.html)\[[47](../source/bignum.h.html#47)\]
 
-<div class="desc">
+
 
 compare for equality after rounding to the smaller of my precision and
 num's precision
 
-</div>
+
 
 <span id="expE"></span>
 
@@ -272,12 +272,12 @@ num's precision
 
 [bignum.h](../file/bignum.h.html)\[[200](../source/bignum.h.html#200)\]
 
-<div class="desc">
+
 
 raise e (the base of the natural logarithm) to the power of this value
 and return the result
 
-</div>
+
 
 <span id="formatString"></span>
 
@@ -285,11 +285,11 @@ and return the result
 
 [bignum.h](../file/bignum.h.html)\[[40](../source/bignum.h.html#40)\]
 
-<div class="desc">
+
 
 format to a string
 
-</div>
+
 
 <span id="getAbs"></span>
 
@@ -297,11 +297,11 @@ format to a string
 
 [bignum.h](../file/bignum.h.html)\[[79](../source/bignum.h.html#79)\]
 
-<div class="desc">
+
 
 return the absolute value
 
-</div>
+
 
 <span id="getCeil"></span>
 
@@ -309,11 +309,11 @@ return the absolute value
 
 [bignum.h](../file/bignum.h.html)\[[82](../source/bignum.h.html#82)\]
 
-<div class="desc">
+
 
 least integer greater than or equal to this number
 
-</div>
+
 
 <span id="getE"></span>
 
@@ -321,11 +321,11 @@ least integer greater than or equal to this number
 
 [bignum.h](../file/bignum.h.html)\[[220](../source/bignum.h.html#220)\]
 
-<div class="desc">
+
 
 class method: get the value of e to a given precision
 
-</div>
+
 
 <span id="getFloor"></span>
 
@@ -333,11 +333,11 @@ class method: get the value of e to a given precision
 
 [bignum.h](../file/bignum.h.html)\[[85](../source/bignum.h.html#85)\]
 
-<div class="desc">
+
 
 greatest integer less than or equal to this number
 
-</div>
+
 
 <span id="getFraction"></span>
 
@@ -345,11 +345,11 @@ greatest integer less than or equal to this number
 
 [bignum.h](../file/bignum.h.html)\[[66](../source/bignum.h.html#66)\]
 
-<div class="desc">
+
 
 get the fractional part
 
-</div>
+
 
 <span id="getPi"></span>
 
@@ -357,11 +357,11 @@ get the fractional part
 
 [bignum.h](../file/bignum.h.html)\[[217](../source/bignum.h.html#217)\]
 
-<div class="desc">
+
 
 class method: get the value of pi to a given precision
 
-</div>
+
 
 <span id="getPrecision"></span>
 
@@ -369,12 +369,12 @@ class method: get the value of pi to a given precision
 
 [bignum.h](../file/bignum.h.html)\[[53](../source/bignum.h.html#53)\]
 
-<div class="desc">
+
 
 returns an integer giving the number of digits of precision that this
 number stores
 
-</div>
+
 
 <span id="getScale"></span>
 
@@ -382,11 +382,11 @@ number stores
 
 [bignum.h](../file/bignum.h.html)\[[88](../source/bignum.h.html#88)\]
 
-<div class="desc">
+
 
 get the base-10 scale of the number
 
-</div>
+
 
 <span id="getWhole"></span>
 
@@ -394,11 +394,11 @@ get the base-10 scale of the number
 
 [bignum.h](../file/bignum.h.html)\[[69](../source/bignum.h.html#69)\]
 
-<div class="desc">
+
 
 get the whole part (truncates the fraction - doesn't round)
 
-</div>
+
 
 <span id="isNegative"></span>
 
@@ -406,11 +406,11 @@ get the whole part (truncates the fraction - doesn't round)
 
 [bignum.h](../file/bignum.h.html)\[[107](../source/bignum.h.html#107)\]
 
-<div class="desc">
+
 
 determine if the value is negative
 
-</div>
+
 
 <span id="log10"></span>
 
@@ -418,11 +418,11 @@ determine if the value is negative
 
 [bignum.h](../file/bignum.h.html)\[[203](../source/bignum.h.html#203)\]
 
-<div class="desc">
+
 
 calculate the base-10 logarithm of the number and return the result
 
-</div>
+
 
 <span id="logE"></span>
 
@@ -430,11 +430,11 @@ calculate the base-10 logarithm of the number and return the result
 
 [bignum.h](../file/bignum.h.html)\[[194](../source/bignum.h.html#194)\]
 
-<div class="desc">
+
 
 calculate the natural logarithm of this number and return the result
 
-</div>
+
 
 <span id="negate"></span>
 
@@ -442,11 +442,11 @@ calculate the natural logarithm of this number and return the result
 
 [bignum.h](../file/bignum.h.html)\[[98](../source/bignum.h.html#98)\]
 
-<div class="desc">
+
 
 negate - invert the sign of the number
 
-</div>
+
 
 <span id="numType"></span>
 
@@ -454,13 +454,13 @@ negate - invert the sign of the number
 
 [bignum.h](../file/bignum.h.html)\[[228](../source/bignum.h.html#228)\]
 
-<div class="desc">
+
 
 Get the type of this number. This returns a combination of NumTypeXxx
 flags, combined with the '\|' operator. This can be used to check for
 special values, such as infinites and "not a number" values.
 
-</div>
+
 
 <span id="radiansToDegrees"></span>
 
@@ -468,12 +468,12 @@ special values, such as infinites and "not a number" values.
 
 [bignum.h](../file/bignum.h.html)\[[169](../source/bignum.h.html#169)\]
 
-<div class="desc">
+
 
 interpreting this number as a number of radians, convert the value to
 degrees and return the result
 
-</div>
+
 
 <span id="raiseToPower"></span>
 
@@ -481,11 +481,11 @@ degrees and return the result
 
 [bignum.h](../file/bignum.h.html)\[[209](../source/bignum.h.html#209)\]
 
-<div class="desc">
+
 
 raise this number to the power of the argument and return the result
 
-</div>
+
 
 <span id="roundToDecimal"></span>
 
@@ -493,13 +493,13 @@ raise this number to the power of the argument and return the result
 
 [bignum.h](../file/bignum.h.html)\[[76](../source/bignum.h.html#76)\]
 
-<div class="desc">
+
 
 round to the given number of digits after the decimal point; if the
 value is zero, round to integer; if the value is negative, round to the
 given number of places before the decimal point
 
-</div>
+
 
 <span id="scaleTen"></span>
 
@@ -507,13 +507,13 @@ given number of places before the decimal point
 
 [bignum.h](../file/bignum.h.html)\[[95](../source/bignum.h.html#95)\]
 
-<div class="desc">
+
 
 scale by 10^x - if x is positive, this multiplies the number by ten the
 given number of times; if x is negative, this divides the number by ten
 the given number of times
 
-</div>
+
 
 <span id="setPrecision"></span>
 
@@ -521,7 +521,7 @@ the given number of times
 
 [bignum.h](../file/bignum.h.html)\[[63](../source/bignum.h.html#63)\]
 
-<div class="desc">
+
 
 Return a new number, with the same value as this number but with the
 given number of decimal digits of precision. If the new precision is
@@ -530,7 +530,7 @@ requested new size and add trailing zeros to the value. If the new
 precision is lower than the old precision, we'll round the number for
 the reduced precision.
 
-</div>
+
 
 <span id="sine"></span>
 
@@ -538,12 +538,12 @@ the reduced precision.
 
 [bignum.h](../file/bignum.h.html)\[[145](../source/bignum.h.html#145)\]
 
-<div class="desc">
+
 
 calculate and return the trigonometric sine of the value (taken as a
 radian value)
 
-</div>
+
 
 <span id="sinh"></span>
 
@@ -551,11 +551,11 @@ radian value)
 
 [bignum.h](../file/bignum.h.html)\[[212](../source/bignum.h.html#212)\]
 
-<div class="desc">
+
 
 calculate the hyperbolic sine, cosine, and tangent
 
-</div>
+
 
 <span id="sqrt"></span>
 
@@ -563,11 +563,11 @@ calculate the hyperbolic sine, cosine, and tangent
 
 [bignum.h](../file/bignum.h.html)\[[188](../source/bignum.h.html#188)\]
 
-<div class="desc">
+
 
 calculate the square root and return the result
 
-</div>
+
 
 <span id="tangent"></span>
 
@@ -575,12 +575,12 @@ calculate the square root and return the result
 
 [bignum.h](../file/bignum.h.html)\[[157](../source/bignum.h.html#157)\]
 
-<div class="desc">
+
 
 calculate and return the trigonometric tangent of the value (taken as a
 radian value)
 
-</div>
+
 
 <span id="tanh"></span>
 
@@ -588,11 +588,11 @@ radian value)
 
 [bignum.h](../file/bignum.h.html)\[[214](../source/bignum.h.html#214)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="valToSymbol"></span>
 
@@ -600,15 +600,15 @@ radian value)
 
 [reflect.t](../file/reflect.t.html)\[[408](../source/reflect.t.html#408)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

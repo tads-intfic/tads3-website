@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Internet Media
@@ -17,7 +17,7 @@ Past Tense</a>    
 <a href="t3projectStarters.html" class="nav"><em>Next:</em> Workbench
 Project Starter Templates</a>     </span>
 
-</div>
+
 
 
 
@@ -50,7 +50,7 @@ select one from the following list:
 
   
 
-<div class="section_title">
+
 
 Background: Media Type Syntax
 
@@ -89,11 +89,11 @@ database](http://www.isi.edu/in-notes/iana/assignments/media-types) of
 all media types registered with the [Internet Assigned Numbers
 Authority](http://www.iana.org/) so far.
 
-<div class="section_title">
+
 
 Background: Types and Subtypes
 
-</div>
+
 
 As mentioned above a media type consists of both a (top-level) type and
 a subtype. The former can be chosen from the registration tree of
@@ -177,11 +177,11 @@ according to Mike Roberts, very flexible in this respect:
 Similarly one is encouraged to follow the general Internet guidelines of
 being conservative in what you send and liberal in what you accept.
 
-<div class="section_title">
+
 
 Background: Use Cases
 
-</div>
+
 
 There are a number of ways in which media types can be used. First of
 all there is the use case they were originally designed for:
@@ -240,11 +240,11 @@ in quotes because these are only official as far as coming from us here
 at tads.org; for the most part, these aren't registered with the OS
 vendors or any formal standards body.
 
-<div class="section_title">
+
 
 <span id="gam">Media Type: TADS 2 Game</span>
 
-</div>
+
 
 This media type is defined for game files as used by TADS 2 interpreters
 and development tools.
@@ -303,11 +303,11 @@ conforms to <code>org.tads.tads-game</code></td>
 Please note that the magic number contains, contrary to common usage,
 the sequence LF CR (`"\x0A\x0D"`) instead of CR LF (`"\x0D\x0A"`).
 
-<div class="section_title">
+
 
 <span id="sav">Media Type: TADS 2 Saved Game</span>
 
-</div>
+
 
 This media type is defined for saved game files as used by TADS 2
 interpreters.
@@ -362,11 +362,11 @@ conforms to <code>org.tads.tads-saved-game</code></td>
 Please note that the magic number contains, contrary to common usage,
 the sequence LF CR (`"\x0A\x0D"`) instead of CR LF (`"\x0D\x0A"`).
 
-<div class="section_title">
+
 
 <span id="rs">Media Type: TADS 2 Resource</span>
 
-</div>
+
 
 This media type is defined for resource files as used by TADS 2
 interpreters and development tools.
@@ -422,11 +422,11 @@ conforms to <code>org.tads.tads-resource-bundle</code></td>
 Please note that the magic number contains, contrary to common usage,
 the sequence LF CR ("\x0A\x0D") instead of CR LF ("\x0D\x0A").
 
-<div class="section_title">
+
 
 <span id="t3x">Media Type: TADS 3 Executable</span>
 
-</div>
+
 
 This media type is defined for executable files as used by TADS 3
 interpreters and development tools.
@@ -482,11 +482,11 @@ conforms to <code>org.tads.tads-game</code></td>
 </tbody>
 </table>
 
-<div class="section_title">
+
 
 <span id="t3v">Media Type: TADS 3 Saved Position</span>
 
-</div>
+
 
 This media type is defined for saved position files as used by TADS 3
 interpreters.
@@ -540,11 +540,11 @@ conforms to <code>org.tads.tads-saved-game</code></td>
 </tbody>
 </table>
 
-<div class="section_title">
+
 
 <span id="t3r">Media Type: TADS 3 Resource</span>
 
-</div>
+
 
 This media type is defined for resource files as used by TADS 3
 interpreters and development tools. Due to the fact that resource files
@@ -612,18 +612,18 @@ Please note that a file extension of `.t3r` *should* only be used for
 compiler-loaded resources, e.g. `cmaplib.t3r`. In contrast
 interpreter-loaded resources *must* always use a `.3r``n` extension.
 
-<div class="section_title">
+
 
 <span id="t3m">Media Type: TADS 3 Project</span>
 
-</div>
+
 
 This media type is defined for project files as used by TADS 3
 development tools, most notably its build system.
 
 MIME media type name
 
-</div>
+
 
 `text`
 
@@ -672,11 +672,11 @@ outside of line break sequences is forbidden.
 Please note that the values of the `charset` parameter are not case
 sensitive.
 
-<div class="section_title">
+
 
 <span id="tl">Media Type: TADS 3 Library</span>
 
-</div>
+
 
 This media type is defined for library files as used by TADS 3
 development tools, most notably its build system.
@@ -730,11 +730,11 @@ outside of line break sequences is forbidden.
 Please note that the values of the `charset` parameter are not case
 sensitive.
 
-<div class="section_title">
+
 
 <span id="t">Media Type: TADS Source</span>
 
-</div>
+
 
 This media type is defined for source and header files as used by both
 TADS 2 and 3 development tools. Note that, despite sharing media type,
@@ -807,11 +807,11 @@ names registered with the [Internet Assigned Numbers
 Authority](http://www.iana.org/) so far. The use of those
 widely-recognized names is *recommended*.
 
-<div class="section_title">
+
 
 How-To: Configuring Apache
 
-</div>
+
 
 This section describes briefly how to configure the [Apache web
 server](http://httpd.apache.org/) to distribute your TADS files using
@@ -889,7 +889,7 @@ directive—*should not* be edited directly.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -900,4 +900,4 @@ Past Tense</a>    
 <a href="t3projectStarters.html" class="nav"><em>Next:</em> Workbench
 Project Starter Templates</a>     </span>
 
-</div>
+

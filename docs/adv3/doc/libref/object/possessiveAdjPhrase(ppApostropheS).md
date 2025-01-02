@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 return just the basic noun phrase part
 
 `grammar `<span class="gramalt">[`possessiveAdjPhrase`](../object/possessiveAdjPhrase.html)`(ppApostropheS)`</span>` :   `[`LayeredNounPhraseProd`](../object/LayeredNounPhraseProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`possessiveAdjPhrase(ppApostropheS)`**  
 [`LayeredNounPhraseProd`](../object/LayeredNounPhraseProd.html)  
@@ -43,11 +43,11 @@ return just the basic noun phrase part
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isPluralPossessive`](#isPluralPossessive)
 
@@ -61,11 +61,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getOrigMainText`](#getOrigMainText)[`resolveNouns`](#resolveNouns)
 
@@ -79,11 +79,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isPluralPossessive"></span>
 
@@ -91,19 +91,19 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6785](../source/en_us.t.html#6785)\]
 
-<div class="desc">
+
 
 the possessive phrase is plural
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getOrigMainText"></span>
 
@@ -111,11 +111,11 @@ the possessive phrase is plural
 
 [en_us.t](../file/en_us.t.html)\[[6769](../source/en_us.t.html#6769)\]
 
-<div class="desc">
+
 
 get the original text without the "'s" suffix
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -123,15 +123,15 @@ get the original text without the "'s" suffix
 
 [en_us.t](../file/en_us.t.html)\[[6775](../source/en_us.t.html#6775)\]
 
-<div class="desc">
+
 
 return just the basic noun phrase part
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

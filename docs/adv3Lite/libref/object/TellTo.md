@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`TellTo`**` :   `[`LiteralTAction`](../object/LiteralTAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TellTo`**  
 [`LiteralTAction`](../object/LiteralTAction.html)  
@@ -45,11 +45,11 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isConversational`](#isConversational)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`afterAction`](#afterAction)[`exec`](#exec)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -105,19 +105,19 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1899](../source/actions.t.html#1899)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -125,12 +125,12 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1897](../source/actions.t.html#1897)\]
 
-<div class="desc">
+
 
 Take a command of the form of TELL FOO TO BAR, turn it into FOO, BAR and
 then send it back to parser to execute
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -138,15 +138,15 @@ then send it back to parser to execute
 
 [actions.t](../file/actions.t.html)\[[1888](../source/actions.t.html#1888)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

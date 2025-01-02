@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Dial is Simply a Settable we can turn as well as set
 
 `class `**`Dial`**` :   `[`Settable`](../object/Settable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Dial`**  
 [`Settable`](../object/Settable.html)  
@@ -53,29 +53,29 @@ A Dial is Simply a Settable we can turn as well as set
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Dial`**  
 [`NumberedDial`](../object/NumberedDial.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canTurnMeTo`](#canTurnMeTo)
 
@@ -97,11 +97,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(TurnTo)`](#dobjFor(TurnTo))
 
@@ -125,11 +125,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canTurnMeTo"></span>
 
@@ -137,19 +137,19 @@ Inherited from `LMentionable` :
 
 [gadget.t](../file/gadget.t.html)\[[222](../source/gadget.t.html#222)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(TurnTo)"></span>
 
@@ -157,15 +157,15 @@ Inherited from `LMentionable` :
 
 [gadget.t](../file/gadget.t.html)\[[221](../source/gadget.t.html#221)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Special description lister for the contents of an item being examined.
 This is similar to the regular specialDescLister, but shows the special
@@ -35,15 +35,15 @@ or "look in," rather than of the entire location.
 
 `class `**`SpecialDescContentsLister`**` :   `[`ParagraphLister`](../object/ParagraphLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SpecialDescContentsLister`**  
 [`ParagraphLister`](../object/ParagraphLister.html)  
@@ -51,27 +51,27 @@ or "look in," rather than of the entire location.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cont_`](#cont_)
 
@@ -82,11 +82,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`isListed`](#isListed)[`listWith`](#listWith)[`showListItem`](#showListItem)
 
@@ -98,11 +98,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cont_"></span>
 
@@ -110,19 +110,19 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1459](../source/lister.t.html#1459)\]
 
-<div class="desc">
+
 
 the containing object we're examining
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -130,11 +130,11 @@ the containing object we're examining
 
 [lister.t](../file/lister.t.html)\[[1439](../source/lister.t.html#1439)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -142,11 +142,11 @@ the containing object we're examining
 
 [lister.t](../file/lister.t.html)\[[1446](../source/lister.t.html#1446)\]
 
-<div class="desc">
+
 
 list everything
 
-</div>
+
 
 <span id="listWith"></span>
 
@@ -154,11 +154,11 @@ list everything
 
 [lister.t](../file/lister.t.html)\[[1456](../source/lister.t.html#1456)\]
 
-<div class="desc">
+
 
 use the object's special description grouper
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -166,15 +166,15 @@ use the object's special description grouper
 
 [lister.t](../file/lister.t.html)\[[1449](../source/lister.t.html#1449)\]
 
-<div class="desc">
+
 
 show a list item
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

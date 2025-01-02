@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An implied greeting topic. This handles ONLY implied greetings.
 
@@ -44,15 +44,15 @@ we'll fall back on the HelloTopic for that.
 
 `class `**`ImpHelloTopic`**` :   `[`MiscTopic`](../object/MiscTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ImpHelloTopic`**  
 [`MiscTopic`](../object/MiscTopic.html)  
@@ -60,27 +60,27 @@ we'll fall back on the HelloTopic for that.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`impliesGreeting`](#impliesGreeting)[`includeInList`](#includeInList)[`matchList`](#matchList)[`matchScore`](#matchScore)
 
@@ -91,11 +91,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`noteInvocation`](#noteInvocation)
 
@@ -107,11 +107,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="impliesGreeting"></span>
 
@@ -119,12 +119,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3328](../source/actor.t.html#3328)\]
 
-<div class="desc">
+
 
 this is itself a greeting, so we obviously don't want to trigger another
 greeting to greet the greeting
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -132,11 +132,11 @@ greeting to greet the greeting
 
 [actor.t](../file/actor.t.html)\[[3320](../source/actor.t.html#3320)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchList"></span>
 
@@ -144,11 +144,11 @@ greeting to greet the greeting
 
 [actor.t](../file/actor.t.html)\[[3321](../source/actor.t.html#3321)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -156,19 +156,19 @@ greeting to greet the greeting
 
 [actor.t](../file/actor.t.html)\[[3322](../source/actor.t.html#3322)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="noteInvocation"></span>
 
@@ -176,16 +176,16 @@ greeting to greet the greeting
 
 [actor.t](../file/actor.t.html)\[[3334](../source/actor.t.html#3334)\]
 
-<div class="desc">
+
 
 if we use this as a greeting upon entering a ConvNode, we'll want to
 stay in the node afterward
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A stairway going down from here.
 
 `class `**`StairwayDown`**` :   `[`Stairway`](../object/Stairway.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`StairwayDown`**  
 [`Stairway`](../object/Stairway.html)  
@@ -58,27 +58,27 @@ A stairway going down from here.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -110,11 +110,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`describeArrival`](#describeArrival)[`describeDeparture`](#describeDeparture)[`dobjFor(ClimbDown)`](#dobjFor(ClimbDown))[`dobjFor(ClimbUp)`](#dobjFor(ClimbUp))
 
@@ -148,19 +148,19 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="describeArrival"></span>
 
@@ -168,11 +168,11 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[2747](../source/travel.t.html#2747)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="describeDeparture"></span>
 
@@ -180,12 +180,12 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[2756](../source/travel.t.html#2756)\]
 
-<div class="desc">
+
 
 describe the actor arriving by coming up these stairs (they leave down,
 so they arrive up)
 
-</div>
+
 
 <span id="dobjFor(ClimbDown)"></span>
 
@@ -193,11 +193,11 @@ so they arrive up)
 
 [travel.t](../file/travel.t.html)\[[2745](../source/travel.t.html#2745)\]
 
-<div class="desc">
+
 
 "climb down" is the specific direction for "climb" here
 
-</div>
+
 
 <span id="dobjFor(ClimbUp)"></span>
 
@@ -205,15 +205,15 @@ so they arrive up)
 
 [travel.t](../file/travel.t.html)\[[2763](../source/travel.t.html#2763)\]
 
-<div class="desc">
+
 
 cannot climb up from here
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

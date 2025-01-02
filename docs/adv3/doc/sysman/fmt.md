@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="ui.html" class="nav">The User Interface</a> \> The Output
@@ -16,7 +16,7 @@ Formatter
     <a href="dispfn.html" class="nav"><em>Next:</em> The Default Display
 Function</a>     </span>
 
-</div>
+
 
 
 
@@ -668,7 +668,7 @@ To summarize the differences from TADS 2:
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -678,4 +678,4 @@ Formatter
     <a href="dispfn.html" class="nav"><em>Next:</em> The Default Display
 Function</a>     </span>
 
-</div>
+

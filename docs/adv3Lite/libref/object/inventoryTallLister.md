@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 inventoryTallLister for displaying an inventory list in TALL format.
 
 **`inventoryTallLister`**` :   `[`ItemLister`](../object/ItemLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`inventoryTallLister`**  
 [`ItemLister`](../object/ItemLister.html)  
@@ -42,11 +42,11 @@ inventoryTallLister for displaying an inventory list in TALL format.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contentsListedProp`](#contentsListedProp)[`indentLevel`](#indentLevel)[`listRecursively`](#listRecursively)[`maxIndentLevel`](#maxIndentLevel)
 
@@ -57,11 +57,11 @@ Inherited from `ItemLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`listed`](#listed)[`listName`](#listName)[`showContentsTall`](#showContentsTall)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
@@ -73,11 +73,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contentsListedProp"></span>
 
@@ -85,12 +85,12 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[307](../source/lister.t.html#307)\]
 
-<div class="desc">
+
 
 The property on a Thing-derived container to test whether its contents
 should be listed when listing with this lister
 
-</div>
+
 
 <span id="indentLevel"></span>
 
@@ -98,11 +98,11 @@ should be listed when listing with this lister
 
 [lister.t](../file/lister.t.html)\[[298](../source/lister.t.html#298)\]
 
-<div class="desc">
+
 
 The current indentation level for listing subcontents recursively
 
-</div>
+
 
 <span id="listRecursively"></span>
 
@@ -110,12 +110,12 @@ The current indentation level for listing subcontents recursively
 
 [lister.t](../file/lister.t.html)\[[313](../source/lister.t.html#313)\]
 
-<div class="desc">
+
 
 Flag, so we want to list contents of contents when using this lister; by
 default we do.
 
-</div>
+
 
 <span id="maxIndentLevel"></span>
 
@@ -123,20 +123,20 @@ default we do.
 
 [lister.t](../file/lister.t.html)\[[301](../source/lister.t.html#301)\]
 
-<div class="desc">
+
 
 The maximum level of indentation we want to allow for listed nested
 subcontents.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="listed"></span>
 
@@ -144,11 +144,11 @@ subcontents.
 
 [lister.t](../file/lister.t.html)\[[188](../source/lister.t.html#188)\]
 
-<div class="desc">
+
 
 is the object listed in an inventory list?
 
-</div>
+
 
 <span id="listName"></span>
 
@@ -156,13 +156,13 @@ is the object listed in an inventory list?
 
 [lister.t](../file/lister.t.html)\[[276](../source/lister.t.html#276)\]
 
-<div class="desc">
+
 
 A version of the listName method that doesn't list an items contents in
 parenthesis after its name, which would be inappropriate to the tall
 inventory format.
 
-</div>
+
 
 <span id="showContentsTall"></span>
 
@@ -170,14 +170,14 @@ inventory format.
 
 [lister.t](../file/lister.t.html)\[[207](../source/lister.t.html#207)\]
 
-<div class="desc">
+
 
 List the player's inventory in tall format, i.e., as a columnar list
 with each item on a new line. This method may call itself recursively to
 list subcontents (such as the visible contents of any containers in the
 player character's inventory).
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -185,11 +185,11 @@ player character's inventory).
 
 [lister.t](../file/lister.t.html)\[[319](../source/lister.t.html#319)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -197,11 +197,11 @@ player character's inventory).
 
 [lister.t](../file/lister.t.html)\[[315](../source/lister.t.html#315)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffix"></span>
 
@@ -209,15 +209,15 @@ player character's inventory).
 
 [lister.t](../file/lister.t.html)\[[317](../source/lister.t.html#317)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

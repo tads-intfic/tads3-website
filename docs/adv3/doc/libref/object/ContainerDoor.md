@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A container door. This is useful for cases where you want to create the
 door to a container as a separate object in its own right.
 
 `class `**`ContainerDoor`**` :   `[`Component`](../object/Component.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ContainerDoor`**  
 [`Component`](../object/Component.html)  
@@ -52,27 +52,27 @@ door to a container as a separate object in its own right.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isOpen`](#isOpen)[`subContainer`](#subContainer)
 
@@ -92,11 +92,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Close)`](#dobjFor(Close))[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(LookBehind)`](#dobjFor(LookBehind))[`dobjFor(LookIn)`](#dobjFor(LookIn))[`dobjFor(Open)`](#dobjFor(Open))[`dobjFor(Unlock)`](#dobjFor(Unlock))[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))[`examineStatus`](#examineStatus)
 
@@ -117,11 +117,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -129,11 +129,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[520](../source/extras.t.html#520)\]
 
-<div class="desc">
+
 
 we're open if our associated sub-container is open
 
-</div>
+
 
 <span id="subContainer"></span>
 
@@ -141,7 +141,7 @@ we're open if our associated sub-container is open
 
 [extras.t](../file/extras.t.html)\[[517](../source/extras.t.html#517)\]
 
-<div class="desc">
+
 
 In most cases, you should create a ContainerDoor as a component of a
 ComplexContainer. It's usually necessary to use a ComplexContainer in
@@ -154,15 +154,15 @@ container, and its subContainer is the actual container for which we're
 the door. You can override this property to create a different
 relationship if necessary.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Close)"></span>
 
@@ -170,11 +170,11 @@ relationship if necessary.
 
 [extras.t](../file/extras.t.html)\[[539](../source/extras.t.html#539)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Lock)"></span>
 
@@ -182,11 +182,11 @@ relationship if necessary.
 
 [extras.t](../file/extras.t.html)\[[540](../source/extras.t.html#540)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LockWith)"></span>
 
@@ -194,11 +194,11 @@ relationship if necessary.
 
 [extras.t](../file/extras.t.html)\[[541](../source/extras.t.html#541)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookBehind)"></span>
 
@@ -206,11 +206,11 @@ relationship if necessary.
 
 [extras.t](../file/extras.t.html)\[[535](../source/extras.t.html#535)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookIn)"></span>
 
@@ -218,11 +218,11 @@ relationship if necessary.
 
 [extras.t](../file/extras.t.html)\[[534](../source/extras.t.html#534)\]
 
-<div class="desc">
+
 
 looking in or behind a door is like looking inside the container
 
-</div>
+
 
 <span id="dobjFor(Open)"></span>
 
@@ -230,11 +230,11 @@ looking in or behind a door is like looking inside the container
 
 [extras.t](../file/extras.t.html)\[[538](../source/extras.t.html#538)\]
 
-<div class="desc">
+
 
 door-like operations on the door map to the container
 
-</div>
+
 
 <span id="dobjFor(Unlock)"></span>
 
@@ -242,11 +242,11 @@ door-like operations on the door map to the container
 
 [extras.t](../file/extras.t.html)\[[542](../source/extras.t.html#542)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(UnlockWith)"></span>
 
@@ -254,11 +254,11 @@ door-like operations on the door map to the container
 
 [extras.t](../file/extras.t.html)\[[543](../source/extras.t.html#543)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -266,15 +266,15 @@ door-like operations on the door map to the container
 
 [extras.t](../file/extras.t.html)\[[523](../source/extras.t.html#523)\]
 
-<div class="desc">
+
 
 our status description mentions our open status
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

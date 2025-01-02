@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Custom
@@ -16,7 +16,7 @@ Preconditions
     <a href="t3msg.html" class="nav"><em>Next:</em> Message Parameter
 Substitutions</a>     </span>
 
-</div>
+
 
 
 
@@ -457,7 +457,7 @@ With these changes, our new `objNotHeld` precondition becomes:
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -467,4 +467,4 @@ Preconditions
     <a href="t3msg.html" class="nav"><em>Next:</em> Message Parameter
 Substitutions</a>     </span>
 
-</div>
+

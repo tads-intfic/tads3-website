@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> The Main Program
@@ -17,7 +17,7 @@ Entrypoint
 <a href="inherit.html" class="nav"><em>Next:</em> The Object Inheritance
 Model</a>     </span>
 
-</div>
+
 
 
 
@@ -65,7 +65,7 @@ If the user is running your program from within a traditional
 command-line shell, such as a Unix shell or a Windows command prompt (a
 "DOS box"), they might start your program with a command like this:
 
-<div class="cmdline">
+
 
     t3run -s0 -cs us-ascii mygame.t3 hello world!
 
@@ -230,11 +230,11 @@ but it has a similar feature. Refer to [initialization](init.html) for
 information on how pre-initialization and run-time initialization work
 in TADS 3.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -245,4 +245,4 @@ Entrypoint
 <a href="inherit.html" class="nav"><em>Next:</em> The Object Inheritance
 Model</a>     </span>
 
-</div>
+

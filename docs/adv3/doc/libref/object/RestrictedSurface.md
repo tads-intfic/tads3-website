@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A special kind of surface that only accepts specific contents.
 
 `class `**`RestrictedSurface`**` :   `[`RestrictedHolder`](../object/RestrictedHolder.html)[`Surface`](../object/Surface.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RestrictedSurface`**  
 [`RestrictedHolder`](../object/RestrictedHolder.html)  
@@ -52,27 +52,27 @@ A special kind of surface that only accepts specific contents.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -93,11 +93,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotPutOnMsg`](#cannotPutOnMsg)[`iobjFor(PutOn)`](#iobjFor(PutOn))
 
@@ -118,19 +118,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotPutOnMsg"></span>
 
@@ -138,7 +138,7 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5219](../source/objects.t.html#5219)\]
 
-<div class="desc">
+
 
 A message that explains why the direct object can't be put on this
 surface. In most cases, the rather generic default message should be
@@ -147,7 +147,7 @@ this surface. The rejected object is provided as a parameter in case the
 message needs to vary by object, but we ignore this and just use a
 single blanket failure message by default.
 
-</div>
+
 
 <span id="iobjFor(PutOn)"></span>
 
@@ -155,15 +155,15 @@ single blanket failure message by default.
 
 [objects.t](../file/objects.t.html)\[[5222](../source/objects.t.html#5222)\]
 
-<div class="desc">
+
 
 override PutOn to enforce our contents restriction
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

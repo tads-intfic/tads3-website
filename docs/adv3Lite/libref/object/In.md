@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "In" location type - specifies that an object is contained within its
 location; its location encloses it.
 
 **`In`**` :   `[`IntLocType`](../object/IntLocType.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`In`**  
 [`IntLocType`](../object/IntLocType.html)  
@@ -43,11 +43,11 @@ location; its location encloses it.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`intoPrep`](#intoPrep)  [`listOrder`](#listOrder)  [`prep`](#prep)  `
 
@@ -57,11 +57,11 @@ location; its location encloses it.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -71,11 +71,11 @@ location; its location encloses it.
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="intoPrep"></span>
 
@@ -83,11 +83,11 @@ location; its location encloses it.
 
 [english.t](../file/english.t.html)\[[5696](../source/english.t.html#5696)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="listOrder"></span>
 
@@ -95,11 +95,11 @@ location; its location encloses it.
 
 [thing.t](../file/thing.t.html)\[[10058](../source/thing.t.html#10058)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="prep"></span>
 
@@ -107,25 +107,25 @@ location; its location encloses it.
 
 [english.t](../file/english.t.html)\[[5695](../source/english.t.html#5695)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

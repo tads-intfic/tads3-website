@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`QueryAbout`**` :   `[`TopicTAction`](../object/TopicTAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`QueryAbout`**  
 [`TopicTAction`](../object/TopicTAction.html)  
@@ -45,11 +45,11 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`iqinfo`](#iqinfo)[`isConversational`](#isConversational)[`qType`](#qType)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="iqinfo"></span>
 
@@ -105,11 +105,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1929](../source/actions.t.html#1929)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -117,11 +117,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1932](../source/actions.t.html#1932)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="qType"></span>
 
@@ -129,19 +129,19 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1926](../source/actions.t.html#1926)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -149,15 +149,15 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1920](../source/actions.t.html#1920)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -2596,7 +2596,7 @@ layout: docs
         setStatus(room, score?, turns?)
         {
             /* set up the room text in the left portion */
-            local msg = '<div class="statusleft"><<room>></div>';
+            local msg = '<<room>>';
 
             /* 
              *   format the right side: 'score/turns', 'score', or empty,
@@ -2607,7 +2607,7 @@ layout: docs
 
             /* if there's a right side, wrap it with right alignment */
             if (rt != '')
-                msg += '<div class="statusright"><<rt>></div>';
+                msg += '<<rt>>';
 
             /* 
              *   our left/right divisions are floats, which some browsers don't
@@ -3555,9 +3555,9 @@ layout: docs
         }
     ;
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

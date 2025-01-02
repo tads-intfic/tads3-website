@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Undo one turn.
 
 `DefineSystemAction(Undo)      `*`// original source text`*  
 `class `**`UndoAction`**` :   `[`SystemAction`](../object/SystemAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`UndoAction`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -51,29 +51,29 @@ Undo one turn.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`UndoAction`**  
 [`predicate(Undo)`](../object/predicate(Undo).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInUndo`](#includeInUndo)
 
@@ -90,11 +90,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doAction`](#doAction)[`performUndo`](#performUndo)
 
@@ -112,11 +112,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -124,20 +124,20 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[761](../source/actions.t.html#761)\]
 
-<div class="desc">
+
 
 "undo" is not undoable - if we undo again after an undo, we undo the
 next most recent command
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doAction"></span>
 
@@ -145,7 +145,7 @@ next most recent command
 
 [actions.t](../file/actions.t.html)\[[663](../source/actions.t.html#663)\]
 
-<div class="desc">
+
 
 "Undo" is so special that we must override the entire action processing
 sequence. We do this because undoing will restore the game state as of
@@ -154,7 +154,7 @@ unsynchronized in the normal action sequence. To avoid problems, we
 simply leave out any other action processing and perform the 'undo'
 directly.
 
-</div>
+
 
 <span id="performUndo"></span>
 
@@ -162,18 +162,18 @@ directly.
 
 [actions.t](../file/actions.t.html)\[[697](../source/actions.t.html#697)\]
 
-<div class="desc">
+
 
 Perform undo. Returns true if we were successful, nil if not.
 
 'asCommand' indicates whether or not the undo is being performed as an
 explicit command: if so, we'll save the UNDO command for use in AGAIN.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

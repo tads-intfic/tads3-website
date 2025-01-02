@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Reviewing the
 Basics  
@@ -15,7 +15,7 @@ Basics
    <a href="object.html" class="nav"><em>Next:</em> Object Definitions</a>
     </span>
 
-</div>
+
 
 
 
@@ -26,7 +26,7 @@ made use of all sorts of adv3Lite (and TADS 3) features without really
 going into much detail about how they work. In the present chapter we'll
 review some of these features in a slightly more organized fashion.
 
-<div class="sectoc">
+
 
 [Object Definitions](object.html)  
 [Object Containment](containment.html)  
@@ -36,11 +36,11 @@ review some of these features in a slightly more organized fashion.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Reviewing the
@@ -49,4 +49,4 @@ Basics
    <a href="object.html" class="nav"><em>Next:</em> Object Definitions</a>
     </span>
 
-</div>
+

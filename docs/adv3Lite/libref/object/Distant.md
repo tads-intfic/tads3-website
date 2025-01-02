@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Distant is a Decoration that's considered too far away to be
 interacted with by any command other than EXAMINE
 
 `class `**`Distant`**` :   `[`ProxyDest`](../object/ProxyDest.html)[`Decoration`](../object/Decoration.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Distant`**  
 [`ProxyDest`](../object/ProxyDest.html)  
@@ -57,27 +57,27 @@ interacted with by any command other than EXAMINE
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`decorationActions`](#decorationActions)[`destination`](#destination)[`notImportantMsg`](#notImportantMsg)
 
@@ -104,11 +104,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(GoTo)`](#dobjFor(GoTo))
 
@@ -137,11 +137,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="decorationActions"></span>
 
@@ -149,7 +149,7 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[309](../source/extras.t.html#309)\]
 
-<div class="desc">
+
 
 The base Decoration class includes GoTo as a decorationAction. For a
 Distant object (e.g. the sun or moon or a distanct mountain) this will
@@ -160,7 +160,7 @@ character to; decorationActions will then include GoTo, since GO TO SIGN
 would then be a reasonable way for the player to get to the location of
 the sign.
 
-</div>
+
 
 <span id="destination"></span>
 
@@ -168,7 +168,7 @@ the sign.
 
 [extras.t](../file/extras.t.html)\[[319](../source/extras.t.html#319)\]
 
-<div class="desc">
+
 
 If this Distant represents an object that's notionally in another
 location, setting destination to that location will allow the GO TO
@@ -177,7 +177,7 @@ it should normally be a room (usually one adjacent to that this Distant
 object is located in. For an object like the sky, the sun or a distant
 mountain this should be left as nil.
 
-</div>
+
 
 <span id="notImportantMsg"></span>
 
@@ -185,19 +185,19 @@ mountain this should be left as nil.
 
 [extras.t](../file/extras.t.html)\[[297](../source/extras.t.html#297)\]
 
-<div class="desc">
+
 
 Message to say that this object is too far away.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(GoTo)"></span>
 
@@ -205,18 +205,18 @@ Message to say that this object is too far away.
 
 [extras.t](../file/extras.t.html)\[[328](../source/extras.t.html#328)\]
 
-<div class="desc">
+
 
 Going To a Distant object is unlike a normal GoTo, since if the object
 is meant to be Distant, going to its location (the normal response to a
 GO TO command) is precisely what we don't want to happen. We therefore
 need to provide custom GoTo handling on a Distant object.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

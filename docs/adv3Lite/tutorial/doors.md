@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Doors and Locks  
@@ -16,7 +16,7 @@ layout: docs
 <a href="schemes.html" class="nav"><em>Next:</em> Schemes and Devices</a>
     </span>
 
-</div>
+
 
 
 
@@ -47,7 +47,7 @@ direction property of the relevant room to the door through which it
 leads. This should become clear with the particular example we're
 implemented here:
 
-`
+```
     gateArea: Room 'Gate Area' 'gate area'
         "The ways to Gates 1, 2 and 3 are signposted to the northwest, north and
         northeast respectively, while a display board mounted high up on the wall
@@ -84,7 +84,7 @@ implemented here:
         
         otherSide = maintenanceRoomDoor
     ;
-`
+```
 
 Note that we handle the description of whether the doors are open or
 closed manually, via embedded expressions and the
@@ -135,7 +135,7 @@ Clearly, we want the maintenance room door to be lockableWithKey. We
 also want it to start out locked. We therefore need to make the
 following changes:
 
-`
+```
     + maintenanceRoomDoor: Door 'metal door'
         "It's marked <q>Personal de Mantenimiento S&oacute;lo</q>, and <<if isOpen>>
         is currently open<<else>> looks firmly closed<<end>>. "
@@ -155,7 +155,7 @@ following changes:
         lockability = lockableWithKey
         isLocked = true
     ;
-`
+```
 
 That's all very well, but we still haven't defined *which* key or keys
 can be used to unlock this door. In fact, in adv3Lite, we have to do it
@@ -163,14 +163,14 @@ the other way round: we need to tell the key which things it can lock
 and unlock. We do that by assigning anything that's going to act as a
 key to the Key class, and defining a couple of properties on it thus:
 
-`
+```
     + brassKey: Key 'small brass key; yale'
         "It's just like all the other yale keys you've ever seen. "    
         
         actualLockList = [maintenanceRoomDoor, mrDoorOut]
         plausibleLockList = [maintenanceRoomDoor, mrDoorOut]
     ;
-`
+```
 
 The **actualLockList** property contains a list of the objects this key
 in fact locks and unlocks. Note that if we want it to work on both sides
@@ -215,7 +215,7 @@ result in a potentially misleading response). To save ourselves a bit of
 repetitious work we can therefore define a couple of custom classes that
 can be used to implement both pairs of doors:
 
-`
+```
     class PlaneDoor: Door 
         desc = "It's <<if isOpen>>open<<else>>closed<<end>>. "
         lockability = indirectLockable
@@ -232,7 +232,7 @@ can be used to implement both pairs of doors:
         
         isLocked = nil
     ;
-`
+```
 
 Note the use of the nested \<\<if \>\> on the LockablePlaneDoor class.
 If the door is open there's not a lot of point in reporting whether it's
@@ -245,7 +245,7 @@ game won't be winnable.
 Armed with these class defintions we can now implement the doors aboard
 the plane as follows:
 
-`
+```
     cockpit: Room 'Cockpit' 'cockpit'
         
         aft = cabinDoor
@@ -309,7 +309,7 @@ the plane as follows:
     + bathroomDoorInside: LockablePlaneDoor 'cabin door'
         otherSide = bathroomDoor
     ;
-`
+```
 
 If you compile and run the game now, after making these changes, you
 should be able to try these doors out.
@@ -323,7 +323,7 @@ other hand, it would not be unreasonable for the player to try to UNLOCK
 DOOR WITH CARD, so we shall instead make it lockableWithKey, making the
 IDCard the appropriate key:
 
-`
+```
     ++ IDcard: Key 'an ID Card; identification poor; photo'     
         "According to what's on the front it apparently belongs to one Antonio
         Velaquez. Fortunately the accompanying photo is so poor it could be of
@@ -357,13 +357,13 @@ IDCard the appropriate key:
         lockability = lockableWithKey    
         isLocked = true    
     ;
-`
+```
 
 The other side of this door can just be a simple door, since we'll
 assume that no special steps ever need be taken to lock it and unlock it
 from the Security Area side:
 
-`
+```
     securityArea: Room 'Security Area' 'security area'
         "This somewhat bare room seems to be lobby for other areas. There are exits
         south and west, while the way out back to the concourse lies through the
@@ -381,21 +381,21 @@ from the Security Area side:
         
         otherSide = securityDoor
     ;
-`
+```
 
 This will work well enough if the player types UNLOCK DOOR WITH CARD,
 but not so well if the equally plausible PUT CARD IN SLOT is used.
 Probably the best way to deal with that is to intercept PUT CARD IN SLOT
 and turn it into UNLOCK DOOR WITH KEY by using a Doer:
 
-`
+```
     Doer 'put IDcard in cardslot'
         execAction(c)
         {
             doInstead(UnlockWith, securityDoor, IDcard);
         }
     ;
-`
+```
 
 If you recall our previous use of Doers you should probably recognize
 that this means "If the player's command matches PUT IDcard IN cardslot,
@@ -407,7 +407,7 @@ We also want to make it clear to the player that the ID Card is the only
 thing that should be put in the slot, which we can do by customizing the
 cannotPutInMsg on the cardSlot object:
 
-`
+```
     + cardslot: Fixture 'card slot'  
         "The slot appears to accept special ID cards with magnetic encoding. If you
         had an appropriate ID card, you could put it in the slot to open the door. "
@@ -415,7 +415,7 @@ cannotPutInMsg on the cardSlot object:
         cannotPutInMsg = '{The subj dobj} {does}n\'t look as if {he dobj}{\'s} meant
             to fit in there. '
     ;
-`
+```
 
 If you recompile and run this game you should be able to check that it
 all works as expected; at least you could if you get the IDCard through
@@ -450,7 +450,7 @@ it, or at least make it pop open a fraction, and closing the door to
 lock it. We can implement these refinements by overriding the makeOpen()
 and makeLocked() method of the door like so:
 
-`
+```
     + securityDoor: Door 'door'
         "It's clearly marked PRIVADO and is <<if isOpen>> currently open<<else>>
         firmly closed<<end>>. "
@@ -482,7 +482,7 @@ and makeLocked() method of the door like so:
             
         }
     ;
-`
+```
 
 The messages that we've just added would look a bit awkward if they
 appeared alongside the default messages we get for unlocking and closing
@@ -507,14 +507,14 @@ We can improve our implementation of this self-locking door (one that
 locks itself when closed) by using a Doer to redirect the LOCK action to
 a CLOSE action:
 
-`
+```
     Doer 'lock securityDoor; lock securityDoor with IDcard'
         execAction(c)
         {
             doInstead(Close, securityDoor);
         }    
     ;
-`
+```
 
 Note that some care is needed in choosing where to place such a
 definition in your source code. In particular, you need to avoid putting
@@ -569,7 +569,7 @@ features of adv3Lite.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -579,4 +579,4 @@ features of adv3Lite.
 <a href="schemes.html" class="nav"><em>Next:</em> Schemes and Devices</a>
     </span>
 
-</div>
+

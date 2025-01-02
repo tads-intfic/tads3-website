@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Doer is a command handler for a specific action acting on particular
 objects under a given set of conditions. We use these for all of the
@@ -40,43 +40,43 @@ is active and when it's dormant.
 
 `class `**`Doer`**` :   `[`Redirector`](../object/Redirector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Doer`**  
 [`Redirector`](../object/Redirector.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`default1Doer`](../object/default1Doer.html)[`default2Doer`](../object/default2Doer.html)[`default3Doer`](../object/default3Doer.html)[`default4Doer`](../object/default4Doer.html)[`getOnGroundDoer`](../object/getOnGroundDoer.html)[`putOnGroundDoer`](../object/putOnGroundDoer.html)[`removeDoer`](../object/removeDoer.html)[`reverseAttachableDoer`](../object/reverseAttachableDoer.html)[`takePathDoer`](../object/takePathDoer.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cmd`](#cmd)[`handleAction`](#handleAction)[`ignoreError`](#ignoreError)[`priority`](#priority)[`strict`](#strict)
 
@@ -84,11 +84,11 @@ is active and when it's dormant.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkDirection`](#checkDirection)[`exec`](#exec)[`execAction`](#execAction)[`redirect`](#redirect)
 
@@ -97,11 +97,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cmd"></span>
 
@@ -109,7 +109,7 @@ Inherited from `Redirector` :
 
 [doer.t](../file/doer.t.html)\[[213](../source/doer.t.html#213)\]
 
-<div class="desc">
+
 
 The command that the object handles. This is a string describing the
 action and object combination that this handler recognizes.
@@ -161,7 +161,7 @@ cmd = '\* \* \* \*'
 That is, match any verb, with or without any direct object, indirect
 object, and accessory object.
 
-</div>
+
 
 <span id="handleAction"></span>
 
@@ -169,14 +169,14 @@ object, and accessory object.
 
 [doer.t](../file/doer.t.html)\[[368](../source/doer.t.html#368)\]
 
-<div class="desc">
+
 
 If this Doer is handling a complete action (instead of stopping one or
 replacing it with another) this should either be true (if it's the same
 action that we've matched) or some other action (if that's the one we're
 simulating and it's not the one we matched).
 
-</div>
+
 
 <span id="ignoreError"></span>
 
@@ -184,13 +184,13 @@ simulating and it's not the one we matched).
 
 [doer.t](../file/doer.t.html)\[[470](../source/doer.t.html#470)\]
 
-<div class="desc">
+
 
 Flag, do we want to ignore (i.e. not report) an error in the
 construction of this Doer. We may want to do this when the error is
 simply due to the exclusion of a module like extras.t
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -198,7 +198,7 @@ simply due to the exclusion of a module like extras.t
 
 [doer.t](../file/doer.t.html)\[[280](../source/doer.t.html#280)\]
 
-<div class="desc">
+
 
 The priority of this handler. You can use this when it's necessary to
 override the default precedence order, which is figured according to the
@@ -261,7 +261,7 @@ If two Doers have the same priority based on the rules above, the one
 that's defined LATER in the source code has priority. This means that
 Doers defined in the game take priority over library definitions.
 
-</div>
+
 
 <span id="strict"></span>
 
@@ -269,21 +269,21 @@ Doers defined in the game take priority over library definitions.
 
 [doer.t](../file/doer.t.html)\[[463](../source/doer.t.html#463)\]
 
-<div class="desc">
+
 
 Set this property to true for this Doer to match only if the wording
 corresponds (and not just the action). At the moment the check is only
 on the first word of the command, but this may usually be enough
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkDirection"></span>
 
@@ -291,12 +291,12 @@ on the first word of the command, but this may usually be enough
 
 [doer.t](../file/doer.t.html)\[[389](../source/doer.t.html#389)\]
 
-<div class="desc">
+
 
 Check whether the direction associatated with this command is valid for
 the actor's current location.
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -304,13 +304,13 @@ the actor's current location.
 
 [doer.t](../file/doer.t.html)\[[291](../source/doer.t.html#291)\]
 
-<div class="desc">
+
 
 ECSE ADDED a curCmd parameter (the command being added) to give the Doer
 access to what it's meant to be acting on, together with a default
 handling (execute the action associated with the current command).
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -318,13 +318,13 @@ handling (execute the action associated with the current command).
 
 [doer.t](../file/doer.t.html)\[[376](../source/doer.t.html#376)\]
 
-<div class="desc">
+
 
 We separate out execAction() as a separate method from exec() so that
 custom Doers can readily override this for the player character while
 leaving commands directed to other actors (or objects) to be handle by
 
-</div>
+
 
 <span id="redirect"></span>
 
@@ -332,18 +332,18 @@ leaving commands directed to other actors (or objects) to be handle by
 
 [doer.t](../file/doer.t.html)\[[433](../source/doer.t.html#433)\]
 
-<div class="desc">
+
 
 Utility method that can be called from execAction() to redirect the
 command to a new action with the same (or new) objects. This will
 normally be called via the doInstead()/doNested() interface defined on
 our Redirector superclass.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

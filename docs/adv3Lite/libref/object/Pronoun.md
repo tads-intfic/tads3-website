@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for pronouns. We represent each type of pronoun with an
 object, to abstract pronouns away from the vocabulary.
@@ -73,64 +73,64 @@ return the appropriate results.
 
 `class `**`Pronoun`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Pronoun`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Pronoun`**  
 [`ReflexivePronoun`](../object/ReflexivePronoun.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`Her`](../object/Her.html)[`Him`](../object/Him.html)[`It`](../object/It.html)[`Me`](../object/Me.html)[`Them`](../object/Them.html)[`Us`](../object/Us.html)[`Yall`](../object/Yall.html)[`You`](../object/You.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`all`](#all)[`aName`](#aName)[`ante`](#ante)[`person`](#person)[`reflexive`](#reflexive)[`theName`](#theName)[`theObjName`](#theObjName)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`matchObj`](#matchObj)[`resolve`](#resolve)[`setAntecedents`](#setAntecedents)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="all"></span>
 
@@ -138,13 +138,13 @@ return the appropriate results.
 
 [parser.t](../file/parser.t.html)\[[4663](../source/parser.t.html#4663)\]
 
-<div class="desc">
+
 
 Class property - list of all regular Pronoun objects. (Note that this
 excludes the reflexive pronouns, because the ReflexivePronoun class has
 its own separate 'all' list for its instances.)
 
-</div>
+
 
 <span id="aName"></span>
 
@@ -152,11 +152,11 @@ its own separate 'all' list for its instances.)
 
 [english.t](../file/english.t.html)\[[2214](../source/english.t.html#2214)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="ante"></span>
 
@@ -164,11 +164,11 @@ its own separate 'all' list for its instances.)
 
 [parser.t](../file/parser.t.html)\[[4650](../source/parser.t.html#4650)\]
 
-<div class="desc">
+
 
 my antecedent or list of antecedents
 
-</div>
+
 
 <span id="person"></span>
 
@@ -176,13 +176,13 @@ my antecedent or list of antecedents
 
 [parser.t](../file/parser.t.html)\[[4620](../source/parser.t.html#4620)\]
 
-<div class="desc">
+
 
 The grammatical person of the pronoun. Pronouns come in three persons:
 first (me, us), second (you), and third (her, them). We represent these
 as 1, 2, and 3.
 
-</div>
+
 
 <span id="reflexive"></span>
 
@@ -190,12 +190,12 @@ as 1, 2, and 3.
 
 [parser.t](../file/parser.t.html)\[[4656](../source/parser.t.html#4656)\]
 
-<div class="desc">
+
 
 the corresponding reflexive pronoun, if any - this is set up
 automatically during preinit
 
-</div>
+
 
 <span id="theName"></span>
 
@@ -203,11 +203,11 @@ automatically during preinit
 
 [english.t](../file/english.t.html)\[[2215](../source/english.t.html#2215)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theObjName"></span>
 
@@ -215,19 +215,19 @@ automatically during preinit
 
 [english.t](../file/english.t.html)\[[2216](../source/english.t.html#2216)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -235,11 +235,11 @@ automatically during preinit
 
 [parser.t](../file/parser.t.html)\[[4666](../source/parser.t.html#4666)\]
 
-<div class="desc">
+
 
 on initialization, add me to the master list of pronoun objects
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -247,13 +247,13 @@ on initialization, add me to the master list of pronoun objects
 
 [parser.t](../file/parser.t.html)\[[4644](../source/parser.t.html#4644)\]
 
-<div class="desc">
+
 
 Does this pronoun match the given object or list of objects? By default,
 we won't match lists, and we'll ask the object if it thinks we're a
 match.
 
-</div>
+
 
 <span id="resolve"></span>
 
@@ -261,7 +261,7 @@ match.
 
 [parser.t](../file/parser.t.html)\[[4613](../source/parser.t.html#4613)\]
 
-<div class="desc">
+
 
 Resolve the pronoun during parsing. The usual way of doing this is to
 return the list of antecedents we store as part of the pronoun object.
@@ -274,7 +274,7 @@ external antecedent. Second person is inherently reflexive, in that it
 refers to the addressee(s), so this should return 'self' for a
 second-person pronoun.
 
-</div>
+
 
 <span id="setAntecedents"></span>
 
@@ -282,7 +282,7 @@ second-person pronoun.
 
 [parser.t](../file/parser.t.html)\[[4637](../source/parser.t.html#4637)\]
 
-<div class="desc">
+
 
 Set the antecedent(s) for future pronoun usage based on the objects
 mentioned in the current command input or narrative output. 'obj' can be
@@ -297,11 +297,11 @@ is to save both the door and the key as possible antecedents, so that we
 can choose the most suitable object when we actually see a pronoun in a
 subsequent command.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

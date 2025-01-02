@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Special defines a set of custom overrides to standard Query questions
 that apply under specific conditions.
@@ -36,62 +36,62 @@ determined by the active() method.
 
 `class `**`Special`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Special`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`commLink`](../object/commLink.html)[`QDefaults`](../object/QDefaults.html)[`QSenseRegion`](../object/QSenseRegion.html)[`QViewport`](../object/QViewport.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`active`](#active)[`all`](#all)[`allActive_`](#allActive_)[`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`allActive`](#allActive)[`classInit`](#classInit)[`first`](#first)[`next`](#next)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="active"></span>
 
@@ -99,12 +99,12 @@ determined by the active() method.
 
 [query.t](../file/query.t.html)\[[570](../source/query.t.html#570)\]
 
-<div class="desc">
+
 
 Am I active? Each instance should override this to define the conditions
 that activate the Special.
 
-</div>
+
 
 <span id="all"></span>
 
@@ -112,12 +112,12 @@ that activate the Special.
 
 [query.t](../file/query.t.html)\[[711](../source/query.t.html#711)\]
 
-<div class="desc">
+
 
 Class property: the list of all Special objects throughout the game.
 This is set up during preinit.
 
-</div>
+
 
 <span id="allActive_"></span>
 
@@ -125,7 +125,7 @@ This is set up during preinit.
 
 [query.t](../file/query.t.html)\[[685](../source/query.t.html#685)\]
 
-<div class="desc">
+
 
 Class property: cache of all currently active Specials. This is set
 whenever someone asks for the list and it's not available, and is
@@ -133,7 +133,7 @@ cleared whenever an Effect modifies the game state. (Callers shouldn't
 access this directly - this is an internal cache. Use the allActive()
 method instead.)
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -141,7 +141,7 @@ method instead.)
 
 [query.t](../file/query.t.html)\[[607](../source/query.t.html#607)\]
 
-<div class="desc">
+
 
 My priority. This is an integer value that determines which Special
 takes precedence when two or more Specials are active at the same time,
@@ -174,15 +174,15 @@ priorities can change at other times (which doesn't seem like it'd be
 useful, but just in case), you'd need to re-sort the list on every call
 to allActive(), even when the list isn't rebuilt.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="allActive"></span>
 
@@ -190,11 +190,11 @@ to allActive(), even when the list isn't rebuilt.
 
 [query.t](../file/query.t.html)\[[666](../source/query.t.html#666)\]
 
-<div class="desc">
+
 
 Class method: get the list of active Specials.
 
-</div>
+
 
 <span id="classInit"></span>
 
@@ -202,11 +202,11 @@ Class method: get the list of active Specials.
 
 [query.t](../file/query.t.html)\[[688](../source/query.t.html#688)\]
 
-<div class="desc">
+
 
 during initialization, build the list of all Specials
 
-</div>
+
 
 <span id="first"></span>
 
@@ -214,13 +214,13 @@ during initialization, build the list of all Specials
 
 [query.t](../file/query.t.html)\[[644](../source/query.t.html#644)\]
 
-<div class="desc">
+
 
 Get the first active Special (the one with the highest priority) that
 defines the given method. This is used by the Q query methods to invoke
 the correct current Special version of the method.
 
-</div>
+
 
 <span id="next"></span>
 
@@ -228,7 +228,7 @@ the correct current Special version of the method.
 
 [query.t](../file/query.t.html)\[[621](../source/query.t.html#621)\]
 
-<div class="desc">
+
 
 Call the same method in the next lower priority Special. This can be
 used in any Special query method to invoke the "default" version that
@@ -240,11 +240,11 @@ of a method from an overriding version in a subclass. As with
 want to pass to the default handling, because this routine determines
 what to call based on the caller.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The library base class for the gameMain object.
 
@@ -45,61 +45,61 @@ OBJTIME EXTENSION
 
 `class `**`GameMainDef`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GameMainDef`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`againRepeatsParse`](#againRepeatsParse)[`allVerbsAllowAll`](#allVerbsAllowAll)[`autoSwitchAgain`](#autoSwitchAgain)[`beforeRunsBeforeCheck`](#beforeRunsBeforeCheck)[`fastGoTo`](#fastGoTo)[`gameStartTime`](#gameStartTime)[`initialPlayerChar`](#initialPlayerChar)[`paraBrksBtwnSubcontents`](#paraBrksBtwnSubcontents)[`scoreRankTable`](#scoreRankTable)[`useParentheticalListing`](#useParentheticalListing)[`usePastTense`](#usePastTense)[`verbose`](#verbose)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getSaveDesc`](#getSaveDesc)[`maxScore`](#maxScore)[`newGame`](#newGame)[`restoreAndRunGame`](#restoreAndRunGame)[`setAboutBox`](#setAboutBox)[`setGameTitle`](#setGameTitle)[`showGoodbye`](#showGoodbye)[`showIntro`](#showIntro)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="againRepeatsParse"></span>
 
@@ -107,7 +107,7 @@ OBJTIME EXTENSION
 
 [misc.t](../file/misc.t.html)\[[378](../source/misc.t.html#378)\]
 
-<div class="desc">
+
 
 The AGAIN command could be interpreted in two different ways. It could
 repeat the resolved action (using precisely the same objects as before),
@@ -117,7 +117,7 @@ of the command, or different objects being selected). The former
 interpretation is used if againRepeatsParse is nil; the latter if it's
 true.
 
-</div>
+
 
 <span id="allVerbsAllowAll"></span>
 
@@ -125,7 +125,7 @@ true.
 
 [misc.t](../file/misc.t.html)\[[342](../source/misc.t.html#342)\]
 
-<div class="desc">
+
 
 Option flag: allow ALL to be used for every verb. This is true by
 default, which means that players will be allowed to use ALL with any
@@ -142,7 +142,7 @@ If you're writing an especially puzzle-oriented game, you might want to
 set this to nil. It's a trade-off though, as some people will think your
 game is less player-friendly if you disable ALL.
 
-</div>
+
 
 <span id="autoSwitchAgain"></span>
 
@@ -150,13 +150,13 @@ game is less player-friendly if you disable ALL.
 
 [misc.t](../file/misc.t.html)\[[386](../source/misc.t.html#386)\]
 
-<div class="desc">
+
 
 Flag. If this is true the game attempts to switch the againRepeatsParse
 flag between true and nil to give the contextually better interpretation
 of AGAIN. This should be regarded as somewhat experimental for now.
 
-</div>
+
 
 <span id="beforeRunsBeforeCheck"></span>
 
@@ -164,7 +164,7 @@ of AGAIN. This should be regarded as somewhat experimental for now.
 
 [misc.t](../file/misc.t.html)\[[359](../source/misc.t.html#359)\]
 
-<div class="desc">
+
 
 Should the "before" notifications (beforeAction, roomBeforeAction, and
 actorAction) run before or after the "check" phase?
@@ -179,7 +179,7 @@ to know that the command has already passed all of its own internal
 checks by the time "before" is invoked - that way, you can invoke side
 effects without worrying that the command will subsequently fail.
 
-</div>
+
 
 <span id="fastGoTo"></span>
 
@@ -187,7 +187,7 @@ effects without worrying that the command will subsequently fail.
 
 [misc.t](../file/misc.t.html)\[[401](../source/misc.t.html#401)\]
 
-<div class="desc">
+
 
 Is this game in fast GO TO mode? By default we make it not, so that the
 GO TO command moves the player character only one step of the way at a
@@ -195,7 +195,7 @@ time, but if this is set to true the GO TO command will keep moving the
 player until either the destination is reached or an obstacle is
 encountered.
 
-</div>
+
 
 <span id="gameStartTime"></span>
 
@@ -203,7 +203,7 @@ encountered.
 
 [objtime.t](../file/objtime.t.html)\[[165](../source/objtime.t.html#165)\]
 
-<div class="desc">
+
 
 The date and time at which this game notionally starts. This should be
 specified as a list of numbers in the format \[year, month, day, hour,
@@ -211,7 +211,7 @@ minute, second, millisecond\]. Trailing zero elements may be omitted. We
 default to midnight on 1st January 2000, but game code should generally
 override this. \[PART OF OBJTIME EXTENSION\]
 
-</div>
+
 
 <span id="initialPlayerChar"></span>
 
@@ -219,13 +219,13 @@ override this. \[PART OF OBJTIME EXTENSION\]
 
 [misc.t](../file/misc.t.html)\[[62](../source/misc.t.html#62)\]
 
-<div class="desc">
+
 
 The initial player character. Each game's 'gameMain' object MUST define
 this to refer to the Actor object that serves as the initial player
 character.
 
-</div>
+
 
 <span id="paraBrksBtwnSubcontents"></span>
 
@@ -233,7 +233,7 @@ character.
 
 [misc.t](../file/misc.t.html)\[[322](../source/misc.t.html#322)\]
 
-<div class="desc">
+
 
 If this flag is true then room description listings will include a
 paragraph break between each set of subcontents listings (i.e. the
@@ -242,7 +242,7 @@ contents). If it is nil the subcontents listings will all be run into a
 single paragraph. Note that the global setting defined here can be
 overridden on individual rooms.
 
-</div>
+
 
 <span id="scoreRankTable"></span>
 
@@ -250,7 +250,7 @@ overridden on individual rooms.
 
 [misc.t](../file/misc.t.html)\[[303](../source/misc.t.html#303)\]
 
-<div class="desc">
+
 
 The score ranking list - this provides a list of names for various score
 levels. If the game provides a non-nil list here, the SCORE and FULL
@@ -268,7 +268,7 @@ points, since it should give the initial, lowest rank.
 If this is set to nil, which it is by default, we'll simply skip score
 ranks entirely.
 
-</div>
+
 
 <span id="useParentheticalListing"></span>
 
@@ -276,14 +276,14 @@ ranks entirely.
 
 [misc.t](../file/misc.t.html)\[[312](../source/misc.t.html#312)\]
 
-<div class="desc">
+
 
 If this flag is true then room description listings and examine listings
 use a parenthetical style to show subcontents (e.g. "On the table you
 see a box (in which is a brass key)") instead of showing each item and
 its contents in a separate paragraph.
 
-</div>
+
 
 <span id="usePastTense"></span>
 
@@ -291,14 +291,14 @@ its contents in a separate paragraph.
 
 [misc.t](../file/misc.t.html)\[[367](../source/misc.t.html#367)\]
 
-<div class="desc">
+
 
 Flag, should this game be in the past tense. By default the game is in
 the present tense.
 
 For a wider selection of tenses override Narrator.tense instead.
 
-</div>
+
 
 <span id="verbose"></span>
 
@@ -306,20 +306,20 @@ For a wider selection of tenses override Narrator.tense instead.
 
 [misc.t](../file/misc.t.html)\[[392](../source/misc.t.html#392)\]
 
-<div class="desc">
+
 
 Is this game in verbose mode? By default we make it so, but players can
 change this with the BRIEF/TERSE command.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getSaveDesc"></span>
 
@@ -327,7 +327,7 @@ change this with the BRIEF/TERSE command.
 
 [misc.t](../file/misc.t.html)\[[225](../source/misc.t.html#225)\]
 
-<div class="desc">
+
 
 Build a saved game metadata table. This returns a LookupTable containing
 string key/value pairs that are stored in saved game files, providing
@@ -359,7 +359,7 @@ the filename, and is intended to let the user enter a more free-form
 description than would be allowed in a filename. This text, if any, is
 passed to use via the 'userDesc' parameter.
 
-</div>
+
 
 <span id="maxScore"></span>
 
@@ -367,7 +367,7 @@ passed to use via the 'userDesc' parameter.
 
 [misc.t](../file/misc.t.html)\[[270](../source/misc.t.html#270)\]
 
-<div class="desc">
+
 
 The maximum number of points possible in the game. If the game includes
 the scoring module at all, and this is non-nil, the SCORE and FULL SCORE
@@ -379,7 +379,7 @@ point values of the Achievement objects in the game. The game can
 override this if needed to specify a specific maximum possible score,
 rather than relying on the automatic calculation.
 
-</div>
+
 
 <span id="newGame"></span>
 
@@ -387,7 +387,7 @@ rather than relying on the automatic calculation.
 
 [misc.t](../file/misc.t.html)\[[98](../source/misc.t.html#98)\]
 
-<div class="desc">
+
 
 Begin a new game. This default implementation shows the introductory
 message, calls the main command loop, and finally shows the goodbye
@@ -400,7 +400,7 @@ the user's input. If you need only to customize the introduction and
 goodbye messages, you can simply override showIntro() and showGoodbye()
 instead.
 
-</div>
+
 
 <span id="restoreAndRunGame"></span>
 
@@ -408,7 +408,7 @@ instead.
 
 [misc.t](../file/misc.t.html)\[[139](../source/misc.t.html#139)\]
 
-<div class="desc">
+
 
 Restore a game and start it running. This is invoked when the user
 launches the interpreter using a saved game file; for example, on a
@@ -420,7 +420,7 @@ we simply restore the game file if possible, and immediately start the
 game's main command loop. Most games won't need to override this, but
 you can if you need some special effect in the restore-at-startup case.
 
-</div>
+
 
 <span id="setAboutBox"></span>
 
@@ -428,7 +428,7 @@ you can if you need some special effect in the restore-at-startup case.
 
 [misc.t](../file/misc.t.html)\[[187](../source/misc.t.html#187)\]
 
-<div class="desc">
+
 
 Set up the HTML-mode about-box. By default, this does nothing. Games can
 use this routine to show an \<ABOUTBOX\> tag, if desired, to set up the
@@ -438,7 +438,7 @@ Note that an \<ABOUTBOX\> tag must be re-initialized each time the main
 game window is cleared, so this routine should be called again after any
 call to clearScreen().
 
-</div>
+
 
 <span id="setGameTitle"></span>
 
@@ -446,13 +446,13 @@ call to clearScreen().
 
 [misc.t](../file/misc.t.html)\[[172](../source/misc.t.html#172)\]
 
-<div class="desc">
+
 
 Set the interpreter window title, if applicable to the local platform.
 This simply displays a \<TITLE\> tag to set the title to the string
 found in the versionInfo object.
 
-</div>
+
 
 <span id="showGoodbye"></span>
 
@@ -460,7 +460,7 @@ found in the versionInfo object.
 
 [misc.t](../file/misc.t.html)\[[84](../source/misc.t.html#84)\]
 
-<div class="desc">
+
 
 Show the "goodbye" message. This is called after the main command loop
 terminates.
@@ -469,7 +469,7 @@ We don't show anything by default. If you want to show a "thanks for
 playing" type of message as the game exits, override this routine with
 the desired text.
 
-</div>
+
 
 <span id="showIntro"></span>
 
@@ -477,7 +477,7 @@ the desired text.
 
 [misc.t](../file/misc.t.html)\[[74](../source/misc.t.html#74)\]
 
-<div class="desc">
+
 
 Show the game's introduction. This routine is called by the default
 newGame() just before entering the main command loop. The command loop
@@ -488,11 +488,11 @@ Most games will want to override this, to show a prologue message
 setting up the game's initial situation for the player. We don't show
 anything by default.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Expressions and
@@ -17,7 +17,7 @@ Finalization</a>    
 <a href="proccode.html" class="nav"><em>Next:</em> Procedural Code</a>
     </span>
 
-</div>
+
 
 
 
@@ -266,7 +266,7 @@ This section describes each operator's syntax and usage.
 The `new` operator is used to create a new
 instance of a class dynamically. The syntax is:
 
-<div class="syntax">
+
 
     new className [ argumentList ] 
 
@@ -299,11 +299,11 @@ The result value of the expression is the new object reference.
 The `inherited` operator invokes the method that
 the currently executing method overrides.
 
-<div class="syntax">
+
 
     inherited [ superclass ]  [ . propertySpec ]  [ argumentList ] 
 
-</div>
+
 
 (See [below](#commonEles) for the syntax of the *propertySpec* and
 *argumentList* elements.)
@@ -358,11 +358,11 @@ inheritance relationship with the current method's defining object.
 
 The syntax is:
 
-<div class="syntax">
+
 
     delegated objectExpr [ .propertySpec ]  [ argumentList ] 
 
-</div>
+
 
 This operator is useful when you want to circumvent the normal
 inheritance relationships between objects, and call a method in an
@@ -520,13 +520,13 @@ The unary `&` operator yields a property ID
 value for a given property name, *or* a pointer to a function, *or* a
 pointer to a built-in function. The syntax is:
 
-<div class="syntax">
+
 
     & propertyName
     & functionName
     & intrinsicFunctionName
 
-</div>
+
 
 When applied to a property name, this operator simply yields the
 property ID value for the named property. It *does not* invoke the
@@ -634,11 +634,11 @@ final b
 This operator is used to index a list or lookup table value. The syntax
 is:
 
-<div class="syntax">
+
 
     expression [ expression]
 
-</div>
+
 
 The first expression is evaluated first. This expression must yield a
 value that is valid for indexing: a List, a Vector, or a LookupTable.
@@ -664,11 +664,11 @@ Example:
 This operator evaluates a property or method of an object. The syntax
 is:
 
-<div class="syntax">
+
 
     expression . propertySpec [ argumentList ] 
 
-</div>
+
 
 (For details on the *propertySpec* and *argumentList* elements, see
 [below](#commonEles).)
@@ -699,11 +699,11 @@ Example:
 This operator invokes a function. It can be used to invoke a function by
 name, or through a function pointer expression. The syntax is:
 
-<div class="syntax">
+
 
     expression ( [ argument [ , argument ... ]  ]  )
 
-</div>
+
 
 The expression can be simply the literal name of a function, or it can
 be any expression that yields a pointer to a function.
@@ -1078,12 +1078,12 @@ the set.
 
 The syntax of these operators is unusual:
 
-<div class="syntax">
+
 
     expr is in ( expr1 [ , expr2 ... ]  )
     expr not in ( expr1 [ , expr2 ... ]  )
 
-</div>
+
 
 The first expression, *expr*, is the value to find in the set. The
 values in the parentheses - *expr1* and so on - are the set of values to
@@ -1566,11 +1566,11 @@ the side effects will only be triggered once when using the
 The "conditional" operator is unusual in that it takes three operand
 values. The syntax is:
 
-<div class="syntax">
+
 
     condExpr ? thenExpr : elseExpr
 
-</div>
+
 
 One way to read this operator is like this: "if *condition* then
 *then-part* else *else-part*." The operator first evaluates the
@@ -1746,14 +1746,14 @@ There are several kinds of lvalues. You can assign to:
 
 The syntax of an *lvalue* is:
 
-<div class="syntax">
+
 
     localName
     expression [ expression]
     propertySpec
     expression . propertySpec
 
-</div>
+
 
 When an indexed list value is used as an lvalue, it has some special
 behavior. Lists are immutable, so assigning a new value to an element of
@@ -1797,12 +1797,12 @@ The *propertySpec* element is a property name or expression that
 specifies a property. When a *propertySpec* is required, you can supply
 either of these forms:
 
-<div class="syntax">
+
 
     propertyName
     ( expression )
 
-</div>
+
 
 The first form simply specifies the literal name of a property.
 
@@ -1815,11 +1815,11 @@ expression must be enclosed in parentheses.
 An *argumentList* element lets you specify the arguments to a function
 or method. The syntax is:
 
-<div class="syntax">
+
 
     ( [ expression [ , expression ... ]  )
 
-</div>
+
 
 Each *expression* can be any valid expression. Note, though, that the
 comma has a special meaning in this context: it separates successive
@@ -2200,11 +2200,11 @@ of typing. Of course, you can still write "self." explicitly if you want
 to, and on occasion it's clearer to do so. But most of the time you can
 just leave it out.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -2215,4 +2215,4 @@ Finalization</a>    
 <a href="proccode.html" class="nav"><em>Next:</em> Procedural Code</a>
     </span>
 
-</div>
+

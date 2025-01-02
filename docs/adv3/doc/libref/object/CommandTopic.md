@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A command topic. This is used to respond to orders given to an NPC, as
 in "BOB, GO EAST." The match object for this kind of topic entry is an
@@ -53,42 +53,42 @@ topicResponse()
 
 `class `**`CommandTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandTopic`**  
 [`TopicEntry`](../object/TopicEntry.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)
 
@@ -97,11 +97,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`setTopicPronouns`](#setTopicPronouns)
 
@@ -110,11 +110,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -122,19 +122,19 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3216](../source/actor.t.html#3216)\]
 
-<div class="desc">
+
 
 we go in the command topics list
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isMatchPossible"></span>
 
@@ -142,12 +142,12 @@ we go in the command topics list
 
 [actor.t](../file/actor.t.html)\[[3247](../source/actor.t.html#3247)\]
 
-<div class="desc">
+
 
 we can always match, since the player can always type in any possible
 action
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -155,11 +155,11 @@ action
 
 [actor.t](../file/actor.t.html)\[[3219](../source/actor.t.html#3219)\]
 
-<div class="desc">
+
 
 match the topic
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -167,15 +167,15 @@ match the topic
 
 [actor.t](../file/actor.t.html)\[[3250](../source/actor.t.html#3250)\]
 
-<div class="desc">
+
 
 we have no pronouns to set
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

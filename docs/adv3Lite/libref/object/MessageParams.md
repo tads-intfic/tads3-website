@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Message Parameter Handler. This object defines and handles parameter
 expansion for '{...}' strings in displayed messages.
@@ -38,62 +38,62 @@ substitution parameter names and handler functions.
 
 `class `**`MessageParams`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MessageParams`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`englishMessageParams`](../object/englishMessageParams.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`langObj`](#langObj)[`params`](#params)[`paramTab`](#paramTab)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cmdInfo`](#cmdInfo)[`construct`](#construct)[`expand`](#expand)[`findStrParam`](#findStrParam)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="langObj"></span>
 
@@ -101,11 +101,11 @@ substitution parameter names and handler functions.
 
 [messages.t](../file/messages.t.html)\[[1158](../source/messages.t.html#1158)\]
 
-<div class="desc">
+
 
 the language module's instance of the class
 
-</div>
+
 
 <span id="params"></span>
 
@@ -113,7 +113,7 @@ the language module's instance of the class
 
 [messages.t](../file/messages.t.html)\[[980](../source/messages.t.html#980)\]
 
-<div class="desc">
+
 
 Parameter mapping list. This is a list of lists: \[name, func\], where
 'name' is the parameter name (as a string), and 'func' is the expansion
@@ -136,7 +136,7 @@ parameter.
 The parameter list must be provided by the language module, since each
 language's list of parameters and expansions will vary.
 
-</div>
+
 
 <span id="paramTab"></span>
 
@@ -144,20 +144,20 @@ language's list of parameters and expansions will vary.
 
 [messages.t](../file/messages.t.html)\[[1155](../source/messages.t.html#1155)\]
 
-<div class="desc">
+
 
 Parameter lookup table. This maps a parameter name to its handler
 function.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cmdInfo"></span>
 
@@ -165,7 +165,7 @@ function.
 
 [messages.t](../file/messages.t.html)\[[1015](../source/messages.t.html#1015)\]
 
-<div class="desc">
+
 
 Some parameters expand to properties of objects involved in the command.
 cmdInfo() makes it easier to define the expansion functions for such
@@ -197,7 +197,7 @@ is called subjective case). It's vObject for any other noun phrase role
 the context (the case marking of the parameter, or the position), use
 vAmbig to mark it as ambiguous.
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -205,11 +205,11 @@ vAmbig to mark it as ambiguous.
 
 [messages.t](../file/messages.t.html)\[[1161](../source/messages.t.html#1161)\]
 
-<div class="desc">
+
 
 construction - build the lookup table
 
-</div>
+
 
 <span id="expand"></span>
 
@@ -217,7 +217,7 @@ construction - build the lookup table
 
 [messages.t](../file/messages.t.html)\[[913](../source/messages.t.html#913)\]
 
-<div class="desc">
+
 
 Expand a parameter string. 'ctx' is a MessageCtx object with the current
 sentence context. This contains the message expansion arguments
@@ -227,7 +227,7 @@ list of space-delimited tokens within the curly-brace parameter string.
 Returns the string to substitute for the parameter in the message
 output.
 
-</div>
+
 
 <span id="findStrParam"></span>
 
@@ -235,16 +235,16 @@ output.
 
 [messages.t](../file/messages.t.html)\[[1086](../source/messages.t.html#1086)\]
 
-<div class="desc">
+
 
 if anything went wrong, return nil to indicate we failed to find an
 expansion
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

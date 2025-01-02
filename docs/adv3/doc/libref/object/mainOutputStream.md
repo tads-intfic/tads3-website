@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The OutputStream for the main text area.
 
@@ -30,15 +30,15 @@ and restore.
 
 `transient `**`mainOutputStream`**` :   `[`OutputStream`](../object/OutputStream.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`mainOutputStream`**  
 [`OutputStream`](../object/OutputStream.html)  
@@ -47,11 +47,11 @@ and restore.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curTranscript`](#curTranscript)[`myInputManager`](#myInputManager)
 
@@ -65,11 +65,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`writeFromStream`](#writeFromStream)
 
@@ -83,11 +83,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curTranscript"></span>
 
@@ -95,11 +95,11 @@ Inherited from `ModuleExecObject` :
 
 [output.t](../file/output.t.html)\[[418](../source/output.t.html#418)\]
 
-<div class="desc">
+
 
 the current command transcript
 
-</div>
+
 
 <span id="myInputManager"></span>
 
@@ -107,21 +107,21 @@ the current command transcript
 
 [output.t](../file/output.t.html)\[[415](../source/output.t.html#415)\]
 
-<div class="desc">
+
 
 The main text area is the same place where we normally read command
 lines from the keyboard, so associate this output stream with the
 primary input manager.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="writeFromStream"></span>
 
@@ -129,15 +129,15 @@ primary input manager.
 
 [output.t](../file/output.t.html)\[[421](../source/output.t.html#421)\]
 
-<div class="desc">
+
 
 we sit atop the system-level main console output stream
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

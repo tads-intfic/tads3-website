@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A restricted-contents RearSurface
 
 `class `**`RestrictedRearSurface`**` :   `[`RestrictedHolder`](../object/RestrictedHolder.html)[`RearSurface`](../object/RearSurface.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RestrictedRearSurface`**  
 [`RestrictedHolder`](../object/RestrictedHolder.html)  
@@ -54,27 +54,27 @@ A restricted-contents RearSurface
 `                                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -101,11 +101,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotPutBehindMsg`](#cannotPutBehindMsg)[`iobjFor(PutBehind)`](#iobjFor(PutBehind))
 
@@ -131,19 +131,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotPutBehindMsg"></span>
 
@@ -151,11 +151,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[1048](../source/extras.t.html#1048)\]
 
-<div class="desc">
+
 
 explain the problem
 
-</div>
+
 
 <span id="iobjFor(PutBehind)"></span>
 
@@ -163,15 +163,15 @@ explain the problem
 
 [extras.t](../file/extras.t.html)\[[1051](../source/extras.t.html#1051)\]
 
-<div class="desc">
+
 
 override PutBehind to enforce our contents restriction
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

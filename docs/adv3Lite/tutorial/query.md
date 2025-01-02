@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="conversation.html" class="nav">The Art of Conversation</a> \>
@@ -17,7 +17,7 @@ Show</a>    
 <a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>    
 </span>
 
-</div>
+
 
 
 
@@ -34,12 +34,12 @@ then define a TopicEntry that responds to ASK ATTENDANT ABOUT NAME, but
 this doesn't seem altogether a natural way to converse. Or we could set
 up a TopicEntry that refers to the angela object itself, something like:
 
-`
+```
     + AskTopic @angela
         "<q>Tell me about yourself,</q> you say.\b
         <q>I'm called Angela,</q> she tells you. "
     ;
-`
+```
 
 We might locate this directly in the angela object (hence only the
 single + sign) on the basis that the player character might ask Angela
@@ -64,14 +64,14 @@ to call them. In adv3Lite all you have to do is to give a TopicEntry a
 name property and the game will know to suggest it by that name. In this
 case, for example, we could write this:
 
-`
+```
     + AskTopic @angela
         "<q>Tell me about yourself,</q> you say.\b
         <q>I'm called Angela,</q> she tells you. "
         
         name = 'herself'
     ;
-`
+```
 
 Then, once the player character is in conversation with Angela, the
 player can type TOPICS and the game will respond with "You could ask her
@@ -82,7 +82,7 @@ character wants to know when the plane is going to leave. We could use
 the flight departures Topic we've already defined to create a new
 AskTopic for Angela:
 
-`
+```
     + AskTopic @tFlightDepartures    
         "<q>When is this plane going to leave?</q> you ask.\b
         <q>Just as soon as the pilot comes aboard,</q> she tells you. <.reveal
@@ -90,7 +90,7 @@ AskTopic for Angela:
         
         name = 'flight departures'
     ;
-`
+```
 
 Note the use of the `\<.reveal pilot-awaited\>`
 tag here to note that our protagonist has just learned the highly
@@ -103,7 +103,7 @@ its name property from that of its matchObj (here tFlightDepartures). To
 do that we can just define `autoName = true` on
 the TopicEntry instead of spelling out the name explicitly:
 
-`
+```
     + AskTopic @tFlightDepartures    
         "<q>When is this plane going to leave?</q> you ask.\b
         <q>Just as soon as the pilot comes aboard,</q> she tells you. <.reveal
@@ -111,7 +111,7 @@ the TopicEntry instead of spelling out the name explicitly:
         
         autoName = true
     ;
-`
+```
 
 In this case this doesn't quite give us what we'd ideally like, since
 the game will now suggest "You could ask her about the flight
@@ -119,9 +119,9 @@ departures" and we don't really want the definite article here. We could
 fix that by tweaking the way we defined the vocab property of the
 tFlightDepartures Topic object:
 
-`
+```
     tFlightDepartures: Topic '() flight departures; plane; times';
-`
+```
 
 Adding the () at the start of the vocab property tells adv3Lite to treat
 the name as a qualified name and so omit the article.
@@ -130,7 +130,7 @@ The reply to the question about flight departures invites a further
 question about the missing pilot, but only when the player character
 knows that the pilot is missing:
 
-`
+```
     + AskTopic @tPilot
         "<q>What's happened to the pilot?</q> you ask.\b
         <q>I don't know; we're still waiting for him,</q> she replies. <q>But don't
@@ -139,14 +139,14 @@ knows that the pilot is missing:
         autoName = true
         isActive = gRevealed('pilot-awaited')
     ;
-`
+```
 
 This of course requires us to define the tPilot Topic somewhere; the
 best place would be wherever we've put our other Topic objects:
 
-`
+```
     tPilot: Topic 'pilot';
-`
+```
 
 If you try compiling and running the game now and going to talk to
 Angela, you'll find that when you first type TOPICS the game will
@@ -188,20 +188,20 @@ the *type* of query ('who', 'what', 'why', 'when', 'what', 'whether',
 such-and-such part. A QueryTopic for asking Angela about her name might
 thus look like this:
 
-`
+```
     + QueryTopic 'what' @tHerName
         "<q>What's your name?</q> you ask.\b
         <q>Angela,</q> she replies. "
     ;
-`
+```
 
 This would then require us to define a
 `tHerName` topic object that might look
 something like this:
 
-`
+```
     tHerName: Topic 'her name is; your';
-`
+```
 
 We add 'your' as an additional vocab word in case the player types WHAT
 IS YOUR NAME (some players will certainly try this, and we'll want it to
@@ -220,12 +220,12 @@ number of different QueryTopics, it may seem a bit tedious to have to
 define it in addition to the QueryTopic. Adv3Lite therefore allows you
 to define it directly on the QueryTopic thus:
 
-`
+```
     + QueryTopic 'what' 'her name is; your'
         "<q>What's your name?</q> you ask.\b
         <q>Angela,</q> she replies. "
     ;
-`
+```
 
 This actually does precisely the same thing; it simply makes the library
 define the Topic object for you. In this case the library will define a
@@ -236,12 +236,12 @@ otherwise have to define a separate Topic you'd never use anywhere else.
 In this kind of case you can, if you like, run the qtype string and the
 topic vocab string into one, like this:
 
-`
+```
     + QueryTopic 'what her name is; your'
         "<q>What's your name?</q> you ask.\b
         <q>Angela,</q> she replies. "
     ;
-`
+```
 
 When the library doesn't find a separate qtype (i.e. when it finds only
 one string defined on the template) it takes the first word of the
@@ -262,7 +262,7 @@ proper name), so that she's not referred to as 'the Angela'. It will be
 convenient to define a `makeProper()` method
 that does this for us and then returns her name:
 
-`
+```
     angela: Actor 'flight attendant; statuesque young; woman angela; her'
         @planeFront
         "She's a statuesque and by no means unattractive young woman. "
@@ -278,7 +278,7 @@ that does this for us and then returns her name:
             return name;
         }
     ;
-`
+```
 
 We can then call this method in the QueryTopic so that it changes her
 name to Angela at the same time as telling the player character that
@@ -287,14 +287,14 @@ character has asked her name once, there's no need to do it again, so at
 the same time we want to define the QueryTopic so that its isActive
 property becomes nil once Angela has a proper name:
 
-`
+```
     + QueryTopic 'what' 'her name is; your'
         "<q>What's your name?</q> you ask.\b
         <q><<getActor.makeProper>>,</q> she replies. "
         
         isActive = !getActor.proper
     ;
-`
+```
 
 One further point. We said above that this QueryTopic would respond to
 ASK WHAT HER NAME IS or WHAT IS YOUR NAME, but what happens if the
@@ -315,9 +315,9 @@ define different QueryTopics for different ActorStates. Since it will
 then be used by several QueryTopics it's probably worth defining a
 separate Topic object for this:
 
-`
+```
     tEnjoyWork: Topic 'she enjoys her work; you enjoy your like likes; job';
-`
+```
 
 Here the name section 'she enjoys her work' provides the text for a
 suggestion like 'ask if she enjoys her work', while the rest of the
@@ -329,12 +329,12 @@ might follow DO.
 We can then go ahead and define the QueryTopic that might be located in
 the angelaGreetingState:
 
-`
+```
     ++ QueryTopic 'if|whether' @tEnjoyWork
        "<q>Do you enjoy your work?</q> you ask.\b
        <q>Of course, sir,</q> she replies with a bland smile. "    
     ;
-`
+```
 
 Note how here we define the qtype part as 'if\|whether'. This means that
 QueryTopic will respond either to ASK IF... or ASK WHETHER..., since the
@@ -345,24 +345,24 @@ angelaTalkingState, which is the state Angela will be in if the player
 character talks with her on the Jetway while she's assisting the
 passengers who have just been forced off the plane.
 
-`
+```
     ++ QueryTopic 'if|whether' @tEnjoyWork
        "<q>Do you enjoy your work -- at times like these?</q> you ask.\b
        <q>At times like these...</q> she leaves the sentence unfinished with an
        expressive grimace. "    
     ;
-`
+```
 
 And this is the version we might locate under the angelaSeatedState
 (when the plane has been taken over by the drug barons):
 
-`
+```
     ++ QueryTopic 'if|whether' @tEnjoyWork
         "<q>Are you enjoying your work now?</q> you ask.\b
         <q>I'll be glad when this particular flight is over,</q> she replies
         quietly. "       
     ;
-`
+```
 
 The third personal question we suggested the player character might put
 to Angela is what she's doing tonight. The answer might vary a bit
@@ -374,7 +374,7 @@ and another in angelaSeatedState which will take precedence towards the
 end of the game. First the more general answer to be located directly in
 angela:
 
-`
+```
     + QueryTopic, StopEventList 'what' @tDoingTonight
         [
             '<q>What are you doing tonight?</q> you ask.\b
@@ -391,13 +391,13 @@ angela:
             closed.</q> '       
         ]
     ;
-`
+```
 
 And then the QueryTopic to be located in angelaSeatedState (i.e. once
 the drug cartel has replaced the regular passengers and the player
 character returns to the plane wearing a pilot's uniform).
 
-`
+```
     ++ QueryTopic, StopEventList 'what' @tDoingTonight
         [
             '<q>What are your plans for tonight now?</q> you ask.\b
@@ -412,26 +412,26 @@ character returns to the plane wearing a pilot's uniform).
             insists. '
         ]
     ;
-`
+```
 
 For either of these to work, we also have to define the Topic object
 they both use:
 
-`
+```
     tDoingTonight: Topic 'she\'s doing tonight; she is you are';
-`
+```
 
 There's one final QueryTopic we could add at this point. The question
 asked about flight departures is 'When is this plane going to leave?'
 which suggests a QueryTopic like this:
 
-`
+```
     + QueryTopic 'when' 'this plane is going to leave; depart take off'
         "<q>When is this plane going to leave?</q> you ask.\b
         <q>Just as soon as the pilot comes aboard,</q> she tells you. <.reveal
         pilot-awaited> "
     ;
-`
+```
 
 The problem with this, however, is that it effectively duplicates the
 existing AskTopic for tFlightDepartures. What we'd ideally like is a
@@ -442,7 +442,7 @@ that by deleting the AskTopic, retaining the QueryTopic, and adding
 definition of the QueryTopic. This tells the QueryTopic that it should
 also behave like an AskTopic that matches tFlightDepartures:
 
-`
+```
     + QueryTopic 'when' 'this plane is going to leave; depart take off'
         "<q>When is this plane going to leave?</q> you ask.\b
         <q>Just as soon as the pilot comes aboard,</q> she tells you. <.reveal
@@ -450,7 +450,7 @@ also behave like an AskTopic that matches tFlightDepartures:
         
         askMatchObj = tFlightDepartures
     ;
-`
+```
 
 Actually, what it does behind the scenes is a bit more complex than
 that, but we don't need to worry about the technicalities for now. In
@@ -482,7 +482,7 @@ that relate to Angela herself. We then need to define keyTopics =
 'angela' on the QueryTopics for ASK WHAT HER NAME IS, ASK IF SHE ENJOYS
 HER JOB and ASK WHAT SHE'S DOING TONIGHT:
 
-`
+```
     + AskTopic @angela
         keyTopics = 'angela'
         
@@ -516,7 +516,7 @@ HER JOB and ASK WHAT SHE'S DOING TONIGHT:
         
         convKeys = 'angela'
     ;
-`
+```
 
 And so on for the other QueryTopics we've defined that relate to what
 Angela's doing tonight or whether she enjoys her work.
@@ -534,7 +534,7 @@ carry out a couple of extra steps. First we need to define the
 top-level TopicEntries. Again, this can be anything we like, but let's
 call it 'top':
 
-`
+```
     angela: Actor 'flight attendant; statuesque young; woman angela; her'
         @planeFront
         "She's a statuesque and by no means unattractive young woman. "
@@ -552,7 +552,7 @@ call it 'top':
         
         suggestionKey = 'top'
     ;
-`
+```
 
 Now the TOPICS command will only list those TopicEntries whose convKeys
 include 'top'. We thus need to give a convKey of 'top' to the ASK ABOUT
@@ -563,7 +563,7 @@ we can save a bit of typing (and perhaps make our intentions a bit
 clearer) by putting these three TopicEntries together in the same
 TopicGroup and defining the convKeys property on the TopicGroup:
 
-`
+```
     + TopicGroup 'top';
 
     ++ AskTopic @angela
@@ -589,7 +589,7 @@ TopicGroup and defining the convKeys property on the TopicGroup:
         autoName = true
         isActive = gRevealed('pilot-awaited')
     ;
-`
+```
 
 If after all this you're beginning to lose track of what TopicEntry
 should go where, you can take a look at the
@@ -613,7 +613,7 @@ of these concepts again in the remainder of this chapter.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -624,4 +624,4 @@ Show</a>    
 <a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>    
 </span>
 
-</div>
+

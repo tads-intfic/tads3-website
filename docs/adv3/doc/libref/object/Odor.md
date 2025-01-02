@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Odor - this is an intangible object representing an odor.
 
 `class `**`Odor`**` :   `[`SensoryEmanation`](../object/SensoryEmanation.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Odor`**  
 [`SensoryEmanation`](../object/SensoryEmanation.html)  
@@ -50,29 +50,29 @@ Odor - this is an intangible object representing an odor.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Odor`**  
 [`SimpleOdor`](../object/SimpleOdor.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isSmellListedInRoom`](#isSmellListedInRoom)[`smellPresence`](#smellPresence)
 
@@ -90,11 +90,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotSeeSource`](#cannotSeeSource)[`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(Smell)`](#dobjFor(Smell))[`smellHereDesc`](#smellHereDesc)
 
@@ -112,11 +112,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isSmellListedInRoom"></span>
 
@@ -124,14 +124,14 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[702](../source/objects.t.html#702)\]
 
-<div class="desc">
+
 
 By default, an odor is listed in a room description (i.e., on LOOK or
 entry to a room) unless it's an ambient background odor. Set this to nil
 to omit the odor from the room description, while still allowing it to
 be listed in an explicit SMELL command.
 
-</div>
+
 
 <span id="smellPresence"></span>
 
@@ -139,20 +139,20 @@ be listed in an explicit SMELL command.
 
 [objects.t](../file/objects.t.html)\[[694](../source/objects.t.html#694)\]
 
-<div class="desc">
+
 
 by default, we have a definite presence in the smell sense if we're
 currently emanating our odor
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotSeeSource"></span>
 
@@ -160,11 +160,11 @@ currently emanating our odor
 
 [objects.t](../file/objects.t.html)\[[708](../source/objects.t.html#708)\]
 
-<div class="desc">
+
 
 explain that we can't see the source because of the obstructor
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -172,11 +172,11 @@ explain that we can't see the source because of the obstructor
 
 [objects.t](../file/objects.t.html)\[[714](../source/objects.t.html#714)\]
 
-<div class="desc">
+
 
 "examine" requires that the object is smellable
 
-</div>
+
 
 <span id="dobjFor(Smell)"></span>
 
@@ -184,11 +184,11 @@ explain that we can't see the source because of the obstructor
 
 [objects.t](../file/objects.t.html)\[[711](../source/objects.t.html#711)\]
 
-<div class="desc">
+
 
 handle "smell" using our "examine" handler
 
-</div>
+
 
 <span id="smellHereDesc"></span>
 
@@ -196,15 +196,15 @@ handle "smell" using our "examine" handler
 
 [objects.t](../file/objects.t.html)\[[705](../source/objects.t.html#705)\]
 
-<div class="desc">
+
 
 mention the odor as part of a room description
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

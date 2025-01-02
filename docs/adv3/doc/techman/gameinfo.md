@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Bibliographic
@@ -17,7 +17,7 @@ with the Workbench Editor (Windows)</a>    
 <a href="depth.html" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
 </span>
 
-</div>
+
 
 
 
@@ -159,7 +159,7 @@ step for you automatically because of the way you set things up back in
 Step 1.) Run the T3 Resource Compiler (t3res) and bind the generated
 GameInfo.txt file into your game:
 
-<div class="cmdline">
+
 
     t3res mygame.t3 -add GameInfo.txt
 
@@ -685,11 +685,11 @@ parties will be able to extract the information you define. This will
 let the Archive and other tools do a better job of indexing your game
 and presenting it to users.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -700,4 +700,4 @@ with the Workbench Editor (Windows)</a>    
 <a href="depth.html" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
 </span>
 
-</div>
+

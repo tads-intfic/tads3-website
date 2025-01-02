@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The antecedent of the pronoun is no longer in scope
 
 `class `**`AntecedentScopeError`**` :   `[`PronounError`](../object/PronounError.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AntecedentScopeError`**  
 [`PronounError`](../object/PronounError.html)  
@@ -50,27 +50,27 @@ The antecedent of the pronoun is no longer in scope
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cmd`](#cmd)
 
@@ -88,11 +88,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`display`](#display)
 
@@ -109,11 +109,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cmd"></span>
 
@@ -121,19 +121,19 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5388](../source/parser.t.html#5388)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -141,11 +141,11 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5382](../source/parser.t.html#5382)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="display"></span>
 
@@ -153,15 +153,15 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5390](../source/parser.t.html#5390)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`TakeFrom`**` :   `[`TIAction`](../object/TIAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TakeFrom`**  
 [`TIAction`](../object/TIAction.html)  
@@ -45,11 +45,11 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allowAll`](#allowAll)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`exec`](#exec)[`getAll`](#getAll)[`reportAction`](#reportAction)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowAll"></span>
 
@@ -105,19 +105,19 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1385](../source/actions.t.html#1385)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -125,12 +125,12 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1356](../source/actions.t.html#1356)\]
 
-<div class="desc">
+
 
 If the command matched ALL filter out dobjs that aren't in the iobj by
 not executing the command for them.
 
-</div>
+
 
 <span id="getAll"></span>
 
@@ -138,12 +138,12 @@ not executing the command for them.
 
 [actions.t](../file/actions.t.html)\[[1380](../source/actions.t.html#1380)\]
 
-<div class="desc">
+
 
 If the player tried to TAKE ALL FRMO IOBJ and there was nothing to take
 we need to report this
 
-</div>
+
 
 <span id="reportAction"></span>
 
@@ -151,15 +151,15 @@ we need to report this
 
 [actions.t](../file/actions.t.html)\[[1366](../source/actions.t.html#1366)\]
 
-<div class="desc">
+
 
 Otherwise note the current dobj in any case
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

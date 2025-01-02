@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Named Arguments  
@@ -16,7 +16,7 @@ Parameters</a>    
 <a href="except.html" class="nav"><em>Next:</em> Exceptions and Error
 Handling</a>     </span>
 
-</div>
+
 
 
 
@@ -833,7 +833,7 @@ cases be a net performance improvement:
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -843,4 +843,4 @@ Parameters</a>    
 <a href="except.html" class="nav"><em>Next:</em> Exceptions and Error
 Handling</a>     </span>
 
-</div>
+

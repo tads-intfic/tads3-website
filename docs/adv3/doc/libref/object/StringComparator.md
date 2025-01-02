@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 StringComparator intrinsic class. This class provides support for
 dictionaries based on complex string matches, including truncation
@@ -42,41 +42,41 @@ characters in input).
 
 `intrinsic class `**`StringComparator`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`StringComparator`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -84,11 +84,11 @@ characters in input).
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`calcHash`](#calcHash)[`matchValues`](#matchValues)
 
@@ -97,19 +97,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="calcHash"></span>
 
@@ -117,12 +117,12 @@ Inherited from `Object` :
 
 [strcomp.h](../file/strcomp.h.html)\[[82](../source/strcomp.h.html#82)\]
 
-<div class="desc">
+
 
 Calculate a hash value. This returns an integer giving the hash value
 for the given string.
 
-</div>
+
 
 <span id="matchValues"></span>
 
@@ -130,7 +130,7 @@ for the given string.
 
 [strcomp.h](../file/strcomp.h.html)\[[100](../source/strcomp.h.html#100)\]
 
-<div class="desc">
+
 
 Match two values. The first value is the input string, and the second is
 the dictionary string. Each character in the dictionary string can match
@@ -145,11 +145,11 @@ is a combination of pre-defined flag values (see below) and any flag
 values from equivalence mappings. The flag values from ALL equivalence
 mappings that were actually used to make the match are included.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

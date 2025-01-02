@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Network
@@ -17,7 +17,7 @@ Set</a>    
 <a href="scripts.html" class="nav"><em>Next:</em> Input Scripts</a>    
 </span>
 
-</div>
+
 
 
 
@@ -156,7 +156,7 @@ PC's firewall software.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -167,4 +167,4 @@ Set</a>    
 <a href="scripts.html" class="nav"><em>Next:</em> Input Scripts</a>    
 </span>
 
-</div>
+

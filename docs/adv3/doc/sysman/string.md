@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> String  
@@ -15,7 +15,7 @@ layout: docs
     <a href="strbuf.html" class="nav"><em>Next:</em> StringBuffer</a>    
 </span>
 
-</div>
+
 
 
 
@@ -90,7 +90,7 @@ information.
 
 `compareTo(*str*)`
 
-<div class="fdef">
+
 
 Compares this string to the second string *str*, returning an integer
 less than 0 if this string sorts before *str*, 0 if the two strings are
@@ -108,7 +108,7 @@ match the Unicode character order.
 
 `compareIgnoreCase(*str*)`
 
-<div class="fdef">
+
 
 Compares this string to the second string *str*, ignoring differences in
 upper/lower case. For example, "A" and "a" are treated as equal. Returns
@@ -127,13 +127,13 @@ accented accented characters probably won't be sorted in the correct
 linguistic order for a given language. Different languages use different
 collation rules, which usually don't match the Unicode character order.
 
-</div>
+
 
 <span id="digestMD5"></span>
 
 `digestMD5()`
 
-<div class="fdef">
+
 
 Calculates the 128-bit RSA MD5 message digest of the string, returning a
 string of 32 hex digits representing the digest value.
@@ -147,13 +147,13 @@ HTTP digest authentication). In an Interactive Fiction context,
 older games. If you're looking for a secure hash, consider SHA-2 (see
 [`sha256()`](#sha256)) instead of MD5.
 
-</div>
+
 
 <span id="endsWith"></span>
 
 `endsWith(*str*)`
 
-<div class="fdef">
+
 
 Returns `true` if this string ends with *str*,
 `nil` if not. This string ends with *str* if
@@ -161,13 +161,13 @@ this string is at least as long as *str*, and the last
 `str.length()` characters of this string are the
 same as the characters of *str*.
 
-</div>
+
 
 <span id="find"></span>
 
 `find(*target*, *index*?)`
 
-<div class="fdef">
+
 
 Finds the substring or regular expression *target* within this string.
 
@@ -213,13 +213,13 @@ Examples:
     'abcdef123456'.find(R'%d+') yields 7
 ```
 
-</div>
+
 
 <span id="findAll"></span>
 
 `findAll(*target*, *func*?)`
 
-<div class="fdef">
+
 
 Searches the subject string (self) for all occurrences of a given
 substring or regular expression pattern, returning a list of matches.
@@ -258,13 +258,13 @@ Examples:
     'one two three'.findAll(R'(%w)%w*', {m, i, g1, g2: g2} yields [nil, nil, nil]
 ```
 
-</div>
+
 
 <span id="findLast"></span>
 
 `findLast(*target*, *index*?)`
 
-<div class="fdef">
+
 
 Searches the subject string (self) for the last (rightmost) match to a
 given substring or regular expression pattern. This works like the
@@ -331,14 +331,14 @@ towards the beginning of the string and "right" to mean towards the end,
 regardless of whether the string contains Roman characters or Arabic
 characters or anything else.
 
-</div>
+
 
 <span id="findReplace"></span>
 
 `findReplace(*oldStr*, *newStr*, *flags*?, *index*?,
 *limit*?)`
 
-<div class="fdef">
+
 
 Finds one or more instances of the substring *oldStr* within the subject
 string (i.e., `self`), and replaces them with
@@ -535,13 +535,13 @@ replacements, each element of the replacement list can be a separate
 function. The replacement list can also be a mix of strings and
 functions.
 
-</div>
+
 
 <span id="htmlify"></span>
 
 `htmlify(*flags*?)`
 
-<div class="fdef">
+
 
 Converts HTML markup-significant characters in the string to appropriate
 HTML sequences, and returns the resulting string. If the flags argument
@@ -589,21 +589,21 @@ parser would attempt to interpret the characters as HTML formatting
 codes. You can use this method to ensure that a string obtained
 externally is displayed verbatim in HTML mode.
 
-</div>
+
 
 <span id="length"></span>
 
 `length()`
 
-<div class="fdef">
+
 
 Returns the number of characters in the string.
 
-</div>
+
 
 `mapToByteArray(*charset*?)`
 
-<div class="fdef">
+
 
 Creates a [ByteArray](bytearr.h) object based on the contents of the
 string. This is equivalent to calling `new
@@ -630,13 +630,13 @@ Unicode character code of each character as the byte value. Since a byte
 can only hold values from 0 to 255, a numeric overflow error will be
 thrown if the string contains any characters outside of this range.
 
-</div>
+
 
 <span id="match"></span>
 
 `match(*target*, *index*?)`
 
-<div class="fdef">
+
 
 Checks for a match to the given *target* value, at the given starting
 position in the subject string (self).
@@ -675,13 +675,13 @@ position, without searching any further in the string, whereas find()
 searches for a match at each character of the string from the starting
 point onwards, until either finding a match or exhausting the string.
 
-</div>
+
 
 <span id="packBytes"></span>
 
 `packBytes(*format*, ...)`
 
-<div class="fdef">
+
 
 Packs a list of values into bytes, creating a new String object
 representing the byte values. This is a static method that you call
@@ -713,13 +713,13 @@ random gibberish if displayed.
 
 See [Byte Packing](pack.html) for more information.
 
-</div>
+
 
 <span id="sha256"></span>
 
 `sha256()`
 
-<div class="fdef">
+
 
 Calculates the 256-bit SHA-2 (Secure Hash Algorithm 2) hash of the
 string, returning a string of 64 hex digits representing the hash value.
@@ -735,13 +735,13 @@ third party who steals the password file from being able to recover the
 original password values, while still allowing password entries to be
 verified, by computing the matching hash value on an entered password.
 
-</div>
+
 
 <span id="specialsToHtml"></span>
 
 `specialsToHtml(*stateObject*?)`
 
-<div class="fdef">
+
 
 Returns a new string with any special TADS formatting characters in the
 "self" string translated to their standard HTML equivalents. The result
@@ -861,13 +861,13 @@ they are:
   fragment of the tag up to the end of the string, so that the next call
   can resume parsing the tag where the last call left off.
 
-</div>
+
 
 <span id="specialsToText"></span>
 
 `specialsToText(*stateObject*?)`
 
-<div class="fdef">
+
 
 Returns a new string with any special TADS formatting characters in the
 "self" string translated to their plain text equivalents. This function
@@ -926,14 +926,14 @@ This function performs the following conversions:
 - `&dddd;` (where the *d*s are digits) is
   converted to the Unicode character with value *dddd*.
 
-</div>
+
 
 <span id="splice"></span>
 
 `splice(*index*, *deleteLength*,
 *insertString*?)`
 
-<div class="fdef">
+
 
 Returns a new string consisting of the original text of this string with
 the following two edits: first, the *deleteLength* characters starting
@@ -948,13 +948,13 @@ substrings of the original string, but
 It's also a little more efficient, since it bypasses the need to create
 the two intermediate substrings.
 
-</div>
+
 
 <span id="split"></span>
 
 `split(*delim*?, *limit*?)`
 
-<div class="fdef">
+
 
 Splits a string into substrings defined by the given delimiter. Returns
 a list of the substrings.
@@ -996,11 +996,11 @@ returns `\['one', 'two', 'three', 'four'\]`
 `'abcdefghi'.split(2)` returns
 `\['ab', 'cd', 'ef', 'gh', 'i'\]`
 
-</div>
+
 
 `startsWith(*str*)`
 
-<div class="fdef">
+
 
 Returns true if this string starts with *str*,
 `nil` if not. This string starts with *str* if
@@ -1008,11 +1008,11 @@ this string is at least as long as *str*, and the first
 `str.length()` characters match the characters
 of *str*.
 
-</div>
+
 
 `substr(*start*, *length*?)`
 
-<div class="fdef">
+
 
 Returns a new string consisting of a substring of this string. The
 substring starts at character index *start* (the first character in the
@@ -1044,13 +1044,13 @@ Examples:
     'abcdefghi'.substr(-4, -2) yields 'fg'
 ```
 
-</div>
+
 
 <span id="toFoldedCase"></span>
 
 `toFoldedCase()`
 
-<div class="fdef">
+
 
 Returns a new string consisting of the characters of the original string
 converted to "folded" case, as defined in the Unicode character
@@ -1069,13 +1069,13 @@ the strings 'WEISS' and 'weiß' to match when case-folded, for example.
 There are a number of other ligatures and accented characters that
 undergo similar expansions when case-folded.
 
-</div>
+
 
 <span id="toLower"></span>
 
 `toLower()`
 
-<div class="fdef">
+
 
 Returns a new string consisting of the characters of the original string
 converted to lower-case. Only alphabetic characters are affected; other
@@ -1083,13 +1083,13 @@ characters are copied to the new string unchanged. The conversion uses
 the case conversions specified in the Unicode character database, so
 accented and non-Roman alphabetic characters are properly converted.
 
-</div>
+
 
 <span id="toTitleCase"></span>
 
 `toTitleCase()`
 
-<div class="fdef">
+
 
 Returns a new string consisting of the characters of the original string
 converted to title case. Title case is the same as upper case for most
@@ -1109,13 +1109,13 @@ you can use this routine to convert the first character of each word to
 title case once you identify the word boundaries, identify words that
 aren't capitalized, etc.
 
-</div>
+
 
 <span id="toUnicode"></span>
 
 `toUnicode(*idx*?)`
 
-<div class="fdef">
+
 
 Converts one or all of the characters of this string to Unicode
 character codes.
@@ -1138,13 +1138,13 @@ manipulate a string. You can convert a list of Unicode code point values
 back into a string using the `makeString()`
 function in the [tads-gen](tadsgen.html) function set.
 
-</div>
+
 
 <span id="toUpper"></span>
 
 `toUpper()`
 
-<div class="fdef">
+
 
 Returns a new string consisting of the characters of the original string
 converted to upper-case. Only alphabetic characters are affected; other
@@ -1152,11 +1152,11 @@ characters are copied to the new string unchanged. The conversion uses
 the case conversions specified in the Unicode character database, so
 accented and non-Roman alphabetic characters are properly converted.
 
-</div>
+
 
 `unpackBytes(*format*)`
 
-<div class="fdef">
+
 
 Unpacks the string, treating the string's characters as byte values and
 interpreting the bytes according to the format string.
@@ -1183,13 +1183,13 @@ This returns the list \['123', '456'\].
 
 See [Byte Packing](pack.html) for more information.
 
-</div>
+
 
 <span id="urlDecode"></span>
 
 `urlDecode()`
 
-<div class="fdef">
+
 
 Translates a URL-encoded string to plaintext, returning a new string
 containing the translated text. This reverses the effect of
@@ -1206,13 +1206,13 @@ the sequence %C3%A1 represents the character 'á', so
 `'á'`. Any %xx sequence that doesn't form a
 valid UTF-8 character is converted to '?'.
 
-</div>
+
 
 <span id="urlEncode"></span>
 
 `urlEncode()`
 
-<div class="fdef">
+
 
 Encodes a string for use in a URL parameter value, returning a new
 string containing the encoded text. This function performs the following
@@ -1237,13 +1237,13 @@ URL. This method is intended only for encoding the building blocks of
 URL strings, such as the value portion of a "?name=value" query
 parameter.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1252,4 +1252,4 @@ parameter.
     <a href="strbuf.html" class="nav"><em>Next:</em> StringBuffer</a>    
 </span>
 
-</div>
+

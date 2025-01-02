@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Exporting
@@ -17,7 +17,7 @@ Classes</a>    
 <a href="errmsg.html" class="nav"><em>Next:</em> VM Run-Time Error
 Codes</a>     </span>
 
-</div>
+
 
 
 
@@ -55,7 +55,7 @@ VM.
 
 To export a symbol, you use the export statement.
 
-<div class="syntax">
+
 
     export symbol [ 'externalName' ]  ;
 
@@ -139,11 +139,11 @@ allocated by the compiler.
 `ObjectCallProp` - a property assigned for
 invocation of anonymous function pointers.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -154,4 +154,4 @@ Classes</a>    
 <a href="errmsg.html" class="nav"><em>Next:</em> VM Run-Time Error
 Codes</a>     </span>
 
-</div>
+

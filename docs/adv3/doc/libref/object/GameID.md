@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for the game's module ID. This merely sets the listing order
 to 1 so that the game's credit is listed first. Normally, exactly one
@@ -62,15 +62,15 @@ presentationProfile - Multimedia, Plain Text
 
 `class `**`GameID`**` :   `[`GameInfoModuleID`](../object/GameInfoModuleID.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GameID`**  
 [`GameInfoModuleID`](../object/GameInfoModuleID.html)  
@@ -82,27 +82,27 @@ presentationProfile - Multimedia, Plain Text
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`listingOrder`](#listingOrder)
 
@@ -121,11 +121,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showCredit`](#showCredit)[`showVersion`](#showVersion)
 
@@ -144,11 +144,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="listingOrder"></span>
 
@@ -156,19 +156,19 @@ Inherited from `ModuleExecObject` :
 
 [modid.t](../file/modid.t.html)\[[555](../source/modid.t.html#555)\]
 
-<div class="desc">
+
 
 always list the game's credits before any library credits
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showCredit"></span>
 
@@ -176,7 +176,7 @@ always list the game's credits before any library credits
 
 [modid.t](../file/modid.t.html)\[[570](../source/modid.t.html#570)\]
 
-<div class="desc">
+
 
 Show the game's credits. By default, we'll just show our name and
 by-line.
@@ -190,7 +190,7 @@ the credits, to allow the author full control over the formatting of the
 credits. Authors are encouraged to give credit where it's due for any
 libraries they use.
 
-</div>
+
 
 <span id="showVersion"></span>
 
@@ -198,16 +198,16 @@ libraries they use.
 
 [modid.t](../file/modid.t.html)\[[580](../source/modid.t.html#580)\]
 
-<div class="desc">
+
 
 show a blank line after the game's version information, to make it stand
 apart from the list of library and VM version numbers
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

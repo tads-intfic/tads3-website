@@ -1656,9 +1656,9 @@ property of [SecretDoor](../object/SecretDoor.html) in
 [WebStatusWin](../object/WebStatusWin.html) in
 [webui.t](../file/webui.t.html)\[[2577](../source/webui.t.html#2577)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

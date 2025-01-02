@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 show the full score
 
 **`Notify`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Notify`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -45,11 +45,11 @@ show the full score
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`showNotifyStatus`](#showNotifyStatus)
 
@@ -93,19 +93,19 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -113,11 +113,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[261](../source/actions.t.html#261)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showNotifyStatus"></span>
 
@@ -125,15 +125,15 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[271](../source/actions.t.html#271)\]
 
-<div class="desc">
+
 
 show the current score notify status
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

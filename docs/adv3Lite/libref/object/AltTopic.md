@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An AltTopic is a TopicEntry that can be located inside another
 TopicEntry; to provide an alternative response to the same
@@ -40,15 +40,15 @@ is true.
 
 `class `**`AltTopic`**` :   `[`ActorTopicEntry`](../object/ActorTopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AltTopic`**  
 [`ActorTopicEntry`](../object/ActorTopicEntry.html)  
@@ -59,27 +59,27 @@ is true.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionPhrase`](#actionPhrase)[`allowAction`](#allowAction)[`convKeys`](#convKeys)[`getActor`](#getActor)[`includeInList`](#includeInList)[`myAction`](#myAction)[`name`](#name)[`suggestAs`](#suggestAs)
 
@@ -95,11 +95,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`matchTopic`](#matchTopic)
 
@@ -117,11 +117,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionPhrase"></span>
 
@@ -129,11 +129,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4759](../source/actor.t.html#4759)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="allowAction"></span>
 
@@ -141,11 +141,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4757](../source/actor.t.html#4757)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="convKeys"></span>
 
@@ -153,11 +153,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4752](../source/actor.t.html#4752)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getActor"></span>
 
@@ -165,12 +165,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4750](../source/actor.t.html#4750)\]
 
-<div class="desc">
+
 
 By default we take most of our property values from the corresponding
 property on the TopicEntry we're located in
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -178,11 +178,11 @@ property on the TopicEntry we're located in
 
 [actor.t](../file/actor.t.html)\[[4753](../source/actor.t.html#4753)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="myAction"></span>
 
@@ -190,11 +190,11 @@ property on the TopicEntry we're located in
 
 [actor.t](../file/actor.t.html)\[[4758](../source/actor.t.html#4758)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -202,11 +202,11 @@ property on the TopicEntry we're located in
 
 [actor.t](../file/actor.t.html)\[[4754](../source/actor.t.html#4754)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="suggestAs"></span>
 
@@ -214,19 +214,19 @@ property on the TopicEntry we're located in
 
 [actor.t](../file/actor.t.html)\[[4755](../source/actor.t.html#4755)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -234,17 +234,17 @@ property on the TopicEntry we're located in
 
 [actor.t](../file/actor.t.html)\[[4766](../source/actor.t.html#4766)\]
 
-<div class="desc">
+
 
 We match if our location matches, but if it does match we add our
 relative source text order to our location's match score to give us a
 higher score the later we're defined after our associated TopicEntry.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

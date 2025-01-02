@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 DEFINED IN TIAACTION EXTENSION. A TIAAction is one that has three
 objects (direct, indirect and indirect), such as PUT COIN IN SLOT WITH
@@ -34,15 +34,15 @@ TWEEZERS.
 
 `class `**`TIAAction`**` :   `[`TIAction`](../object/TIAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TIAAction`**  
 [`TIAction`](../object/TIAction.html)  
@@ -53,27 +53,27 @@ TWEEZERS.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionAobjProp`](#actionAobjProp)[`aoActionList`](#aoActionList)[`checkAobjProp`](#checkAobjProp)[`curAobj`](#curAobj)[`preCondAobjProp`](#preCondAobjProp)[`reportAobjProp`](#reportAobjProp)[`verAobjProp`](#verAobjProp)
 
@@ -92,11 +92,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkAction`](#checkAction)[`doActionOnce`](#doActionOnce)[`execAction`](#execAction)[`execResolvedAction`](#execResolvedAction)[`getMessageParam`](#getMessageParam)[`reportAction`](#reportAction)[`reset`](#reset)[`resolvedObjectsInScope`](#resolvedObjectsInScope)[`setResolvedObjects`](#setResolvedObjects)
 
@@ -117,11 +117,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionAobjProp"></span>
 
@@ -129,11 +129,11 @@ Inherited from `Redirector` :
 
 [tiaaction.t](../file/tiaaction.t.html)\[[35](../source/tiaaction.t.html#35)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="aoActionList"></span>
 
@@ -141,12 +141,12 @@ Inherited from `Redirector` :
 
 [tiaaction.t](../file/tiaaction.t.html)\[[43](../source/tiaaction.t.html#43)\]
 
-<div class="desc">
+
 
 A list of the accessory objects that this actually actually ends up
 acting on at the action stage. \[TIAACTION EXTENSION\]
 
-</div>
+
 
 <span id="checkAobjProp"></span>
 
@@ -154,11 +154,11 @@ acting on at the action stage. \[TIAACTION EXTENSION\]
 
 [tiaaction.t](../file/tiaaction.t.html)\[[34](../source/tiaaction.t.html#34)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="curAobj"></span>
 
@@ -166,11 +166,11 @@ acting on at the action stage. \[TIAACTION EXTENSION\]
 
 [tiaaction.t](../file/tiaaction.t.html)\[[29](../source/tiaaction.t.html#29)\]
 
-<div class="desc">
+
 
 The current accessory object of this action.
 
-</div>
+
 
 <span id="preCondAobjProp"></span>
 
@@ -178,11 +178,11 @@ The current accessory object of this action.
 
 [tiaaction.t](../file/tiaaction.t.html)\[[36](../source/tiaaction.t.html#36)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="reportAobjProp"></span>
 
@@ -190,11 +190,11 @@ The current accessory object of this action.
 
 [tiaaction.t](../file/tiaaction.t.html)\[[37](../source/tiaaction.t.html#37)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verAobjProp"></span>
 
@@ -202,19 +202,19 @@ The current accessory object of this action.
 
 [tiaaction.t](../file/tiaaction.t.html)\[[33](../source/tiaaction.t.html#33)\]
 
-<div class="desc">
+
 
 The various methods to call on the accessory object of this action.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkAction"></span>
 
@@ -222,12 +222,12 @@ The various methods to call on the accessory object of this action.
 
 [tiaaction.t](../file/tiaaction.t.html)\[[85](../source/tiaaction.t.html#85)\]
 
-<div class="desc">
+
 
 \[TIAACTION EXTENSION\] Carry out the check phase for this command on
 all three objects involved in the command.
 
-</div>
+
 
 <span id="doActionOnce"></span>
 
@@ -235,14 +235,14 @@ all three objects involved in the command.
 
 [tiaaction.t](../file/tiaaction.t.html)\[[252](../source/tiaaction.t.html#252)\]
 
-<div class="desc">
+
 
 Execute the action phase of the action on both objects. Note that
 although some TIAActions can operate on multiple direct objects, none
 defined in the library acts on multiple indirect objects, so there's
 only minimal support for the latter possibility. \[TIAACTION EXTENSION\]
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -250,12 +250,12 @@ only minimal support for the latter possibility. \[TIAACTION EXTENSION\]
 
 [tiaaction.t](../file/tiaaction.t.html)\[[54](../source/tiaaction.t.html#54)\]
 
-<div class="desc">
+
 
 execute this action, noting the accessory object in addition to the
 other two.
 
-</div>
+
 
 <span id="execResolvedAction"></span>
 
@@ -263,12 +263,12 @@ other two.
 
 [tiaaction.t](../file/tiaaction.t.html)\[[173](../source/tiaaction.t.html#173)\]
 
-<div class="desc">
+
 
 Execute this action as a resolved action, that is once its direct,
 indirect and accessory objects are known. \[TIAACTION EXTENSION\]
 
-</div>
+
 
 <span id="getMessageParam"></span>
 
@@ -276,12 +276,12 @@ indirect and accessory objects are known. \[TIAACTION EXTENSION\]
 
 [tiaaction.t](../file/tiaaction.t.html)\[[154](../source/tiaaction.t.html#154)\]
 
-<div class="desc">
+
 
 Get the message parameters relating to this action for all three
 objects.
 
-</div>
+
 
 <span id="reportAction"></span>
 
@@ -289,7 +289,7 @@ objects.
 
 [tiaaction.t](../file/tiaaction.t.html)\[[137](../source/tiaaction.t.html#137)\]
 
-<div class="desc">
+
 
 Carry out the report phase for this action. If there's anything in the
 aoActionList and we're not an implicit action, call the report method on
@@ -298,7 +298,7 @@ object). Note that this method is called by the current Command object
 once its finished iterating over all the objects involved in the
 command. \[TIAACTION EXTENSION\]
 
-</div>
+
 
 <span id="reset"></span>
 
@@ -306,12 +306,12 @@ command. \[TIAACTION EXTENSION\]
 
 [tiaaction.t](../file/tiaaction.t.html)\[[46](../source/tiaaction.t.html#46)\]
 
-<div class="desc">
+
 
 Reset the action variables to their initial state, including the
 accessory object.
 
-</div>
+
 
 <span id="resolvedObjectsInScope"></span>
 
@@ -319,12 +319,12 @@ accessory object.
 
 [tiaaction.t](../file/tiaaction.t.html)\[[121](../source/tiaaction.t.html#121)\]
 
-<div class="desc">
+
 
 Test whether the direct, the indirect and the accessory objects for this
 action are in scope. \[TIAACTION EXTENSION\]
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -332,15 +332,15 @@ action are in scope. \[TIAACTION EXTENSION\]
 
 [tiaaction.t](../file/tiaaction.t.html)\[[110](../source/tiaaction.t.html#110)\]
 
-<div class="desc">
+
 
 Set all three resolved objects for this action. \[TIAACTION EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -72,28 +72,29 @@ TopicEntries located directly in the actor.</p>
 
 <p>To give a simple example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bob: Actor 'Bob; short; man; him'
-       "He's a short man, with a permanently worried-looking expression. "
-    ;
+<p>`
+    bob: Actor ‘Bob; short; man; him’
+       “He’s a short man, with a permanently worried-looking expression. “
+    ;</p>
 
-    + AskTopic @darkTower
-       "&lt;q&gt;What do you know about the dark tower?&lt;/q&gt; you ask.\b
-        &lt;q&gt;You don't want to go there,&lt;/q&gt; he tells you with a little shudder,
-        &lt;q&gt;you really don't.&lt;/q&gt; "
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ AskTopic @darkTower
+   "&lt;q&gt;What do you know about the dark tower?&lt;/q&gt; you ask.\b
+    &lt;q&gt;You don't want to go there,&lt;/q&gt; he tells you with a little shudder,
+    &lt;q&gt;you really don't.&lt;/q&gt; "
+;
 
-    + TellTopic [tVisit, darkTower]
-       "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
-       Bob shakes his head and looks distinctively uncomfortable.\b
-       &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
-        you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
-        at night!&lt;/q&gt; "
-    ;
++ TellTopic [tVisit, darkTower]
+   "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
+   Bob shakes his head and looks distinctively uncomfortable.\b
+   &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
+    you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
+    at night!&lt;/q&gt; "
+;
 
-    + AskTellTopic @tWeather
-       "&lt;q&gt;Nice weather we're having, don't you think?&lt;/q&gt; you ask.\b
-       &lt;q&gt;Not bad,&lt;/q&gt; he concurs. "
-    ;
++ AskTellTopic @tWeather
+   "&lt;q&gt;Nice weather we're having, don't you think?&lt;/q&gt; you ask.\b
+   &lt;q&gt;Not bad,&lt;/q&gt; he concurs. "
+; `
 </code></pre></div></div>
 
 <p><span id="varying"></span></p>
@@ -112,23 +113,25 @@ a list of different responses, each of which can be used in turn. Once
 again the TopicEntry template makes it possible to do this in a succinct
 way, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + AskTopic, StopEventList @darkTower
+<p>`
+     + AskTopic, StopEventList @darkTower
        [
-          '&lt;q&gt;What do you know about the dark tower?&lt;/q&gt; you ask.\b
-          &lt;q&gt;You really don\'t want to go there,&lt;/q&gt; he tells you with a little shudder,
-          &lt;q&gt;you really don't.&lt;/q&gt;',
-          
-          '&lt;q&gt;What\'s so bad about the dark tower?&lt;/q&gt; you want to know.\b
-           &lt;q&gt;It all goes back to -- no, it\'s best not to talk about it,&lt;/q&gt; he breaks
-           off. ',
-           
-          '&lt;q&gt;Why don\'t you want to talk about the dark tower?&lt;/q&gt; you ask.\b
-           In reply Bob merely shakes his head and mutters something inaudible. '
-          
-       ]
-    ;
-     
+          ‘<q>What do you know about the dark tower?</q> you ask.\b
+          <q>You really don't want to go there,</q> he tells you with a little shudder,
+          <q>you really don’t.</q>’,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      '&lt;q&gt;What\'s so bad about the dark tower?&lt;/q&gt; you want to know.\b
+       &lt;q&gt;It all goes back to -- no, it\'s best not to talk about it,&lt;/q&gt; he breaks
+       off. ',
+       
+      '&lt;q&gt;Why don\'t you want to talk about the dark tower?&lt;/q&gt; you ask.\b
+       In reply Bob merely shakes his head and mutters something inaudible. '
+      
+   ]
+;
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>A TopicEntry can be mixed-in with any EventList class like this, but for
 this type of situation a StopEventList is usually the most appropriate.</p>
@@ -147,24 +150,24 @@ way: defining multiple TopicEntries that match the same objects but
 using a combination of there matchScore and isActive properties to
 determine which one is chosen. For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TellTopic [tVisit, darkTower]
-       "&lt;q&gt;I'm thinking of making a visit to the dark tower later today,&lt;/q&gt; you
-        announce. &lt;q&gt;I've heard so much about it, I want to see it for myself.&lt;/q&gt;\b
-        &lt;q&gt;No you don't,&lt;/q&gt; he warns you. &lt;q&gt;Curiosity killed the cat, and there
-        are some things worse than death -- &lt;i&gt;much&lt;/i&gt; worse. If you value your
-        immortal soul you won't go anywhere near that evil place!&lt;/q&gt;"
-    ;
+<p>`
+    + TellTopic [tVisit, darkTower]
+       “<q>I’m thinking of making a visit to the dark tower later today,</q> you
+        announce. <q>I’ve heard so much about it, I want to see it for myself.</q>\b
+        <q>No you don’t,</q> he warns you. <q>Curiosity killed the cat, and there
+        are some things worse than death – <i>much</i> worse. If you value your
+        immortal soul you won’t go anywhere near that evil place!</q>”
+    ;</p>
 
-
-    + TellTopic +110 [tVisit, darkTower]
-       "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
-       Bob shakes his head and looks distinctively uncomfortable.\b
-       &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
-        you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
-        at night!&lt;/q&gt; "
-        
-        isActive = (gPlayerChar.hasSeen(darkTower))
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ TellTopic +110 [tVisit, darkTower]
+   "&lt;q&gt;I visited the dark tower earlier today,&lt;/q&gt; you announce.
+   Bob shakes his head and looks distinctively uncomfortable.\b
+   &lt;q&gt;You shouldn't have done that,&lt;/q&gt; he chides you. &lt;q&gt;But at least
+    you didn't go at night. You &lt;i&gt;really&lt;/i&gt; don't want to go there
+    at night!&lt;/q&gt; "
+    
+    isActive = (gPlayerChar.hasSeen(darkTower))
+; `
 </code></pre></div></div>
 
 <p>In this above example, if the player types TELL BOB ABOUT VISIT or T
@@ -209,10 +212,11 @@ NPC is to your game. For a minor NPC or a game which in primarily
 puzzle-driven as opposed to character-driven (say) it might suffice to
 do this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultAskTellTopic
-        "Bob merely shrugs and shakes his head. "
+<p>`
+    + DefaultAskTellTopic
+        “Bob merely shrugs and shakes his head. “
     ;
-</code></pre></div></div>
+`</p>
 
 <p>In a game where the characters are more important, and you want to give
 them a bit more personality and make them a bit more lifelike, you’ll
@@ -226,16 +230,17 @@ characterization of your NPCs.</p>
 <p>Writing the DefaultTellTopic is probably easier, since here you can have
 the NPC apparently react to what the player character supposedly says:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultTellTopic, ShuffledEventList
+<p>`
+    + DefaultTellTopic, ShuffledEventList
       [
-         '&lt;q&gt;Fascinating!&lt;/q&gt; Bob declares. ',
-         '&lt;q&gt;Well I never!&lt;/q&gt; says Bob. ',
-         '&lt;q&gt;How interesting!&lt;/q&gt; Bob remarks. ',
-         'Bob listens intently to your every word. ',
-         '&lt;q&gt;Yes, indeed!&lt;/q&gt;, says Bob. '
+         ‘<q>Fascinating!</q> Bob declares. ‘,
+         ‘<q>Well I never!</q> says Bob. ‘,
+         ‘<q>How interesting!</q> Bob remarks. ‘,
+         ‘Bob listens intently to your every word. ‘,
+         ‘<q>Yes, indeed!</q>, says Bob. ‘
       ]
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Defining the DefaultAskTopic follows the same principles, but can be a
 little trickier, since you have to give the NPC a plausible reason for
@@ -257,7 +262,7 @@ you might end up with exchanges like the following:</p>
 
 A DefaultAskTopic might look like this:
 
-```
+`
     + DefaultAskTopic
        [
           '<q>Let\'s change the subject,</q> he suggests with a wry smile. ',
@@ -270,7 +275,7 @@ A DefaultAskTopic might look like this:
           
        ]
     ;
-```
+`
 
 You may still get some incongruous responses, that's almost impossible
 to avoid given that the player is free to type absolutely anything, but

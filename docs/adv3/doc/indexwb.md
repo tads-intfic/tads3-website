@@ -3,11 +3,11 @@ layout: docs
 ---
 TADS 3 Bookshelf
 
-<div class="title">
+
 
 <img src="title2.gif" data-border="0" />
 
-</div>
+
 
 
 
@@ -46,7 +46,7 @@ own games.
 
 *This book is accompanied by a sample game,* The Further Adventures of
 Heidi*. The game's source files can be found
-here:*` [`Heidi.t`](gsg/Heidi.t) [`Heidi.t3m`](gsg/Heidi.t3m) `
+here:*[`Heidi.t`](gsg/Heidi.t) [`Heidi.t3m`](gsg/Heidi.t3m)
 
 *This book can also be viewed in a [PDF
 version](gsg/Getting%20Started%20in%20TADS%203.pdf). This version is
@@ -143,7 +143,7 @@ HTML.)
 
 # Change Logs
 
-<div class="indent">
+
 
 [**TADS 3 System Change History**](t3changes.html). This is a
 chronological log of changes to the TADS 3 language, tools, and Virtual
@@ -164,7 +164,7 @@ Windows.
 
 # Notes
 
-<div class="indent">
+
 
 These books are copyrighted by their respective authors. In general,
 they may be used and distributed without charge, subject to certain
@@ -178,6 +178,6 @@ you need the Acrobat Reader software, which is available as a [free
 download from
 Adobe](http://www.adobe.com/products/acrobat/readstep.html).
 
-</div>
 
-</div>
+
+

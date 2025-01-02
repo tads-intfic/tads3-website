@@ -28,7 +28,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Long Topic Items are used to print out big long gobs of text on a
 subject. Use it for printing long treatises on your design philosophy
@@ -44,15 +44,15 @@ Long topic item
 
 `class `**`MenuLongTopicItem`**` :   `[`MenuItem`](../object/MenuItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MenuLongTopicItem`**  
 [`MenuItem`](../object/MenuItem.html)  
@@ -60,29 +60,29 @@ Long topic item
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`MenuLongTopicItem`**  
 [`HintLongTopicItem`](../object/HintLongTopicItem.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`heading`](#heading)[`isChapterMenu`](#isChapterMenu)[`menuContents`](#menuContents)[`menuLongTopicEnd`](#menuLongTopicEnd)[`title`](#title)
 
@@ -94,11 +94,11 @@ Inherited from `MenuObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getXML`](#getXML)[`showMenuCommon`](#showMenuCommon)[`showMenuHtml`](#showMenuHtml)[`showMenuText`](#showMenuText)
 
@@ -110,11 +110,11 @@ Inherited from `MenuObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="heading"></span>
 
@@ -122,11 +122,11 @@ Inherited from `MenuObject` :
 
 [menusys.t](../file/menusys.t.html)\[[479](../source/menusys.t.html#479)\]
 
-<div class="desc">
+
 
 the heading, shown while we're displaying our contents
 
-</div>
+
 
 <span id="isChapterMenu"></span>
 
@@ -134,14 +134,14 @@ the heading, shown while we're displaying our contents
 
 [menusys.t](../file/menusys.t.html)\[[490](../source/menusys.t.html#490)\]
 
-<div class="desc">
+
 
 Flag - this is a "chapter" in a list of chapters. If this is set to
 true, then we'll offer the options to proceed directly to the next and
 previous chapters. If this is nil, we'll simply wait for acknowledgment
 and return to the parent menu.
 
-</div>
+
 
 <span id="menuContents"></span>
 
@@ -149,11 +149,11 @@ and return to the parent menu.
 
 [menusys.t](../file/menusys.t.html)\[[482](../source/menusys.t.html#482)\]
 
-<div class="desc">
+
 
 either a string to be displayed, or a method returning a string
 
-</div>
+
 
 <span id="menuLongTopicEnd"></span>
 
@@ -161,11 +161,11 @@ either a string to be displayed, or a method returning a string
 
 [menusys.t](../file/menusys.t.html)\[[493](../source/menusys.t.html#493)\]
 
-<div class="desc">
+
 
 the message we display at the end of our text
 
-</div>
+
 
 <span id="title"></span>
 
@@ -173,19 +173,19 @@ the message we display at the end of our text
 
 [menusys.t](../file/menusys.t.html)\[[476](../source/menusys.t.html#476)\]
 
-<div class="desc">
+
 
 the title of the menu, shown in parent menus
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getXML"></span>
 
@@ -193,11 +193,11 @@ the title of the menu, shown in parent menus
 
 [menuweb.t](../file/menuweb.t.html)\[[301](../source/menuweb.t.html#301)\]
 
-<div class="desc">
+
 
 get my XML description
 
-</div>
+
 
 <span id="showMenuCommon"></span>
 
@@ -205,11 +205,11 @@ get my XML description
 
 [menucon.t](../file/menucon.t.html)\[[1060](../source/menucon.t.html#1060)\]
 
-<div class="desc">
+
 
 show our contents - common handler for text and HTML modes
 
-</div>
+
 
 <span id="showMenuHtml"></span>
 
@@ -217,11 +217,11 @@ show our contents - common handler for text and HTML modes
 
 [menucon.t](../file/menucon.t.html)\[[938](../source/menucon.t.html#938)\]
 
-<div class="desc">
+
 
 display and run our menu in HTML mode
 
-</div>
+
 
 <span id="showMenuText"></span>
 
@@ -229,15 +229,15 @@ display and run our menu in HTML mode
 
 [menucon.t](../file/menucon.t.html)\[[917](../source/menucon.t.html#917)\]
 
-<div class="desc">
+
 
 display and run our menu in text mode
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

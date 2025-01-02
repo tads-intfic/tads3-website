@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Settings item - show defaults in status line
 
 **`exitsMode`**` :   `[`SettingsItem`](../object/SettingsItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`exitsMode`**  
 [`SettingsItem`](../object/SettingsItem.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`inRoomDesc`](#inRoomDesc)[`inStatusLine`](#inStatusLine)[`settingDesc`](#settingDesc)[`settingID`](#settingID)
 
@@ -54,11 +54,11 @@ Inherited from `SettingsItem` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`settingFromText`](#settingFromText)[`settingToText`](#settingToText)
 
@@ -67,11 +67,11 @@ Inherited from `SettingsItem` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="inRoomDesc"></span>
 
@@ -79,11 +79,11 @@ Inherited from `SettingsItem` :
 
 [exits.t](../file/exits.t.html)\[[440](../source/exits.t.html#440)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="inStatusLine"></span>
 
@@ -91,13 +91,13 @@ Inherited from `SettingsItem` :
 
 [exits.t](../file/exits.t.html)\[[439](../source/exits.t.html#439)\]
 
-<div class="desc">
+
 
 Our value is in two parts. inStatusLine controls whether or not we show
 the exit list in the status line; inRoomDesc controls the exit listing
 in room descriptions.
 
-</div>
+
 
 <span id="settingDesc"></span>
 
@@ -105,11 +105,11 @@ in room descriptions.
 
 [exits.t](../file/exits.t.html)\[[410](../source/exits.t.html#410)\]
 
-<div class="desc">
+
 
 show our description
 
-</div>
+
 
 <span id="settingID"></span>
 
@@ -117,19 +117,19 @@ show our description
 
 [exits.t](../file/exits.t.html)\[[407](../source/exits.t.html#407)\]
 
-<div class="desc">
+
 
 our ID
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="settingFromText"></span>
 
@@ -137,11 +137,11 @@ our ID
 
 [exits.t](../file/exits.t.html)\[[422](../source/exits.t.html#422)\]
 
-<div class="desc">
+
 
 just return the two binary variables
 
-</div>
+
 
 <span id="settingToText"></span>
 
@@ -149,15 +149,15 @@ just return the two binary variables
 
 [exits.t](../file/exits.t.html)\[[414](../source/exits.t.html#414)\]
 
-<div class="desc">
+
 
 convert to text
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

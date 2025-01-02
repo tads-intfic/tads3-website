@@ -26,49 +26,49 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Basic topic qualifier resolver. This can be used to resolve qualifier
 phrases (such as possessives or locationals) within topic phrases.
 
 `class `**`TopicQualifierResolver`**` :   `[`Resolver`](../object/Resolver.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicQualifierResolver`**  
 [`Resolver`](../object/Resolver.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -77,11 +77,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`getAll`](#getAll)[`getAllDefaults`](#getAllDefaults)[`getDefaultObject`](#getDefaultObject)
 
@@ -90,19 +90,19 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterAmbiguousNounPhrase"></span>
 
@@ -110,11 +110,11 @@ Inherited from `Resolver` :
 
 [resolver.t](../file/resolver.t.html)\[[858](../source/resolver.t.html#858)\]
 
-<div class="desc">
+
 
 we don't need defaults for a qualifier
 
-</div>
+
 
 <span id="filterPluralPhrase"></span>
 
@@ -122,11 +122,11 @@ we don't need defaults for a qualifier
 
 [resolver.t](../file/resolver.t.html)\[[864](../source/resolver.t.html#864)\]
 
-<div class="desc">
+
 
 we have no basis for any filtering; return the list unchanged
 
-</div>
+
 
 <span id="getAll"></span>
 
@@ -134,11 +134,11 @@ we have no basis for any filtering; return the list unchanged
 
 [resolver.t](../file/resolver.t.html)\[[846](../source/resolver.t.html#846)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getAllDefaults"></span>
 
@@ -146,11 +146,11 @@ we have no basis for any filtering; return the list unchanged
 
 [resolver.t](../file/resolver.t.html)\[[852](../source/resolver.t.html#852)\]
 
-<div class="desc">
+
 
 'all' doesn't make sense as a qualifier; return an empty list
 
-</div>
+
 
 <span id="getDefaultObject"></span>
 
@@ -158,15 +158,15 @@ we have no basis for any filtering; return the list unchanged
 
 [resolver.t](../file/resolver.t.html)\[[870](../source/resolver.t.html#870)\]
 
-<div class="desc">
+
 
 we have no basis for any filtering
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Possessive phrase production for disambiguation. This base class can be
 used for grammar productions that match possessive phrases in
@@ -34,15 +34,15 @@ disambiguation prompt ("which book do you mean...?") responses.
 
 `class `**`DisambigPossessiveProd`**` :   `[`BasicPossessiveProd`](../object/BasicPossessiveProd.html)[`DisambigProd`](../object/DisambigProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DisambigPossessiveProd`**  
 [`BasicPossessiveProd`](../object/BasicPossessiveProd.html)  
@@ -57,29 +57,29 @@ disambiguation prompt ("which book do you mean...?") responses.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`DisambigPossessiveProd`**  
 [`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`qualifiedList_`](#qualifiedList_)
 
@@ -103,11 +103,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`reduceDefinite`](#reduceDefinite)[`resolveNouns`](#resolveNouns)
 
@@ -133,11 +133,11 @@ Inherited from `DisambigProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="qualifiedList_"></span>
 
@@ -145,20 +145,20 @@ Inherited from `DisambigProd` :
 
 [parser.t](../file/parser.t.html)\[[3145](../source/parser.t.html#3145)\]
 
-<div class="desc">
+
 
 the list of objects being qualified - this is the list of books, for
 example, in "bob's books"
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="reduceDefinite"></span>
 
@@ -166,14 +166,14 @@ example, in "bob's books"
 
 [parser.t](../file/parser.t.html)\[[3122](../source/parser.t.html#3122)\]
 
-<div class="desc">
+
 
 Do extra filter during disambiguation. Since we have a list of objects
 we're trying to qualify, we can look at that list to see if some of the
 possible matches for the qualifier phrase are owners of things in the
 qualified list.
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -181,15 +181,15 @@ qualified list.
 
 [parser.t](../file/parser.t.html)\[[3080](../source/parser.t.html#3080)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

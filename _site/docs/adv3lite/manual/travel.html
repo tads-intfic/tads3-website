@@ -182,44 +182,45 @@ stairs.</p>
 be one that only allows travel down a smoke-filled passage if the player
 is wearing a wet blanket, which could be defined thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    landing: Room 'Landing' 'landing'
-        "The smoke is already becoming so thick here that it's hard to see much.
-        Your bedroom lies to the north -- if you can make your way through the
+<p>`
+    landing: Room ‘Landing’ ‘landing’
+        “The smoke is already becoming so thick here that it’s hard to see much.
+        Your bedroom lies to the north – if you can make your way through the
         smoke. Most of the other upstairs rooms are down the passage the other way,
-        to the south, but the worst of the smoke seems to be coming from there. "
+        to the south, but the worst of the smoke seems to be coming from there. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    down = landingStairs
+    
+    north: TravelConnector
+    {
+        destination = bedroom
         
-        down = landingStairs
+        travelDesc = "You manage to force your way through the smoke, coughing
+            and choking as you go. "
         
-        north: TravelConnector
+        canTravelerPass(actor)
         {
-            destination = bedroom
-            
-            travelDesc = "You manage to force your way through the smoke, coughing
-                and choking as you go. "
-            
-            canTravelerPass(actor)
-            {
-                return blanket.wornBy == actor &amp;&amp; blanket.isWet;
-            }
-            
-            explainTravelBarrier(actor)
-            {
-                if(blanket.wornBy == actor)
-                    "You take a few steps down the corridor but the smoke forces you
-                    back as the blanket starts to get singed. ";
-                else
-                    "The smoke is too thick; you find yourself coughing and choking
-                    after the first step and are forced to retreat. ";
-            }
+            return blanket.wornBy == actor &amp;&amp; blanket.isWet;
         }
         
-        
-        south  { "The smoke is too thick that way; you almost choke to death
-            with the first step south you take. Well, it's not as if there's
-            anything down there you really need all that much right now. "; }
-        
-        regions = upstairs
-    ;
+        explainTravelBarrier(actor)
+        {
+            if(blanket.wornBy == actor)
+                "You take a few steps down the corridor but the smoke forces you
+                back as the blanket starts to get singed. ";
+            else
+                "The smoke is too thick; you find yourself coughing and choking
+                after the first step and are forced to retreat. ";
+        }
+    }
+    
+    
+    south  { "The smoke is too thick that way; you almost choke to death
+        with the first step south you take. Well, it's not as if there's
+        anything down there you really need all that much right now. "; }
+    
+    regions = upstairs
+; `
 </code></pre></div></div>
 
 <p>This incidentally illustrates that if we only want to use a particular
@@ -278,58 +279,59 @@ name the connector that’s being blocked. For example, suppose our game
 had several exits that required the player character to be wearing a wet
 blanket in order to penetrate the smoke. We might set it up thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    landing: Room 'Landing' 'landing'
-        "The smoke is already becoming so thick here that it's hard to see much.
-        Your bedroom lies to the north -- if you can make your way through the
+<p>`
+    landing: Room ‘Landing’ ‘landing’
+        “The smoke is already becoming so thick here that it’s hard to see much.
+        Your bedroom lies to the north – if you can make your way through the
         smoke. Most of the other upstairs rooms are down the passage the other way,
-        to the south, but the worst of the smoke seems to be coming from there. "
+        to the south, but the worst of the smoke seems to be coming from there. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    down = landingStairs
+    
+    north: TravelConnector
+    {
+        destination = bedroom
         
-        down = landingStairs
+        travelDesc = "You manage to force your way through the smoke, coughing
+            and choking as you go. "
         
-        north: TravelConnector
+        theName = 'the corridor'
+        
+        travelBarriers = [smokeBarrier]
+    }
+    
+    
+    south: TravelConnector
+    {
+        destination = bathroom
+       
+        travelDesc = "With the aid of the blanket, you are able to make your way 
+         through the smoke to the bathroom. "
+        
+        theName = 'bathroom passage'
+       
+        travelBarriers = [smokeBarrier]
+    }   
+    
+    regions = upstairs
+;
+
+smokeBarrier: TravelBarrier
+        canTravelerPass(actor, connector)
         {
-            destination = bedroom
-            
-            travelDesc = "You manage to force your way through the smoke, coughing
-                and choking as you go. "
-            
-            theName = 'the corridor'
-            
-            travelBarriers = [smokeBarrier]
+            return blanket.wornBy == actor &amp;&amp; blanket.isWet;
         }
         
-        
-        south: TravelConnector
+        explainTravelBarrier(actor, connector)
         {
-            destination = bathroom
-           
-            travelDesc = "With the aid of the blanket, you are able to make your way 
-             through the smoke to the bathroom. "
-            
-            theName = 'bathroom passage'
-           
-            travelBarriers = [smokeBarrier]
-        }   
-        
-        regions = upstairs
-    ;
-
-    smokeBarrier: TravelBarrier
-            canTravelerPass(actor, connector)
-            {
-                return blanket.wornBy == actor &amp;&amp; blanket.isWet;
-            }
-            
-            explainTravelBarrier(actor, connector)
-            {
-                if(blanket.wornBy == actor)
-                    "You take a few steps down &lt;&lt;connector.theName&gt;&gt; but the smoke forces you
-                    back as the blanket starts to get singed. ";
-                else
-                    "The smoke is too thick; you find yourself coughing and choking
-                    after the first step and are forced to retreat. ";
-            }
-    ;
+            if(blanket.wornBy == actor)
+                "You take a few steps down &lt;&lt;connector.theName&gt;&gt; but the smoke forces you
+                back as the blanket starts to get singed. ";
+            else
+                "The smoke is too thick; you find yourself coughing and choking
+                after the first step and are forced to retreat. ";
+        }
+; `
 </code></pre></div></div>
 
 <p>Note how we’ve added a custom theName property to the two

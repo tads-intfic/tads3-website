@@ -26,32 +26,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 ParseError is an Exception subclass for parsing errors.
 
 `class `**`ParseError`**` :   `[`Exception`](../object/Exception.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ParseError`**  
 [`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ParseError`**  
 [`BadMultiError`](../object/BadMultiError.html)  
@@ -78,19 +78,19 @@ ParseError is an Exception subclass for parsing errors.
 [`UnknownWordError`](../object/UnknownWordError.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allowOnRespell`](#allowOnRespell)[`curable`](#curable)[`errStage`](#errStage)
 
@@ -99,11 +99,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`display`](#display)[`rankCorrection`](#rankCorrection)[`tryCuring`](#tryCuring)
 
@@ -112,11 +112,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowOnRespell"></span>
 
@@ -124,7 +124,7 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[4972](../source/parser.t.html#4972)\]
 
-<div class="desc">
+
 
 Is this error allowed on a spelling correction candidate? By default,
 this is nil, meaning that this error invalidates a correction candidate.
@@ -135,7 +135,7 @@ there are a few curable errors where it can make sense to keep a
 correction, such as an ambiguous noun phrase: that's so close to being a
 working command that we probably have a good correction.
 
-</div>
+
 
 <span id="curable"></span>
 
@@ -143,7 +143,7 @@ working command that we probably have a good correction.
 
 [parser.t](../file/parser.t.html)\[[4986](../source/parser.t.html#4986)\]
 
-<div class="desc">
+
 
 Is this a "curable" error? A curable error is one that the user can fix
 by answering a question, such as "which one do you mean?" or "what do
@@ -155,7 +155,7 @@ one resolves without an error, the parser stops and uses that match. But
 if \*none\* of the possible matches resolve without an error, the parser
 picks a match with a curable error over one with an incurable error.
 
-</div>
+
 
 <span id="errStage"></span>
 
@@ -163,7 +163,7 @@ picks a match with a curable error over one with an incurable error.
 
 [parser.t](../file/parser.t.html)\[[5012](../source/parser.t.html#5012)\]
 
-<div class="desc">
+
 
 The parsing "stage" of this error. We can distinguish three levels of
 intelligibility as we work through the parsing process: (1) completely
@@ -171,15 +171,15 @@ unintelligible, (2) valid verb structure, and (3) resolved noun phrases.
 This property tells us which stage we finish in when we encounter an
 error of this type.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="display"></span>
 
@@ -187,11 +187,11 @@ error of this type.
 
 [parser.t](../file/parser.t.html)\[[4943](../source/parser.t.html#4943)\]
 
-<div class="desc">
+
 
 Display the error message
 
-</div>
+
 
 <span id="rankCorrection"></span>
 
@@ -199,7 +199,7 @@ Display the error message
 
 [parser.t](../file/parser.t.html)\[[4959](../source/parser.t.html#4959)\]
 
-<div class="desc">
+
 
 Rank a spelling correction candidate for input that triggered this error
 on parsing.
@@ -213,7 +213,7 @@ sorting, so the scale is arbitrary - we simply take the highest ranking
 item. The value 0 is special, though: it means that we should filter out
 the candidate and not consider it at all.
 
-</div>
+
 
 <span id="tryCuring"></span>
 
@@ -221,7 +221,7 @@ the candidate and not consider it at all.
 
 [parser.t](../file/parser.t.html)\[[5003](../source/parser.t.html#5003)\]
 
-<div class="desc">
+
 
 Try curing this error with the user's answer to the error message. The
 parser calls this when (a) the PREVIOUS command resulted in this error,
@@ -236,11 +236,11 @@ return a CommandList with the "cured" version of the command. This new
 command list should supplement the command with the new information
 provided by the reply. If not, we simply return nil.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

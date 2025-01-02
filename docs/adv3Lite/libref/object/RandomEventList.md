@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Randomized event list. This is similar to a regular event list, but
 chooses an event at random each time it's invoked.
@@ -39,15 +39,15 @@ spent ones.
 
 `class `**`RandomEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)[`EventList`](../object/EventList.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RandomEventList`**  
 [`RandomFiringScript`](../object/RandomFiringScript.html)  
@@ -57,27 +57,27 @@ spent ones.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fireCt`](#fireCt)
 
@@ -91,11 +91,11 @@ Inherited from `EventList` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doScript`](#doScript)[`getNextRandom`](#getNextRandom)
 
@@ -110,11 +110,11 @@ Inherited from `Script` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fireCt"></span>
 
@@ -122,19 +122,19 @@ Inherited from `Script` :
 
 [eventListItem.t](../file/eventListItem.t.html)\[[472](../source/eventListItem.t.html#472)\]
 
-<div class="desc">
+
 
 The number of times we have fired on this 'cycle '
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doScript"></span>
 
@@ -142,11 +142,11 @@ The number of times we have fired on this 'cycle '
 
 [eventList.t](../file/eventList.t.html)\[[341](../source/eventList.t.html#341)\]
 
-<div class="desc">
+
 
 process the next step of the script
 
-</div>
+
 
 <span id="getNextRandom"></span>
 
@@ -155,7 +155,7 @@ process the next step of the script
 [eventList.t](../file/eventList.t.html)\[[365](../source/eventList.t.html#365)\],
 [eventListItem.t](../file/eventListItem.t.html)\[[437](../source/eventListItem.t.html#437)\]
 
-<div class="desc">
+
 
 Get the next random state. By default, we simply return a number from 1
 to the number of entries in our event list. This is a separate method to
@@ -170,11 +170,11 @@ However, if we have an unused EventListItem that's ready to fire, we
 select that instead, to make sure it gets a look-in at the earliest
 possible opportunity.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 The main English language module.
 
@@ -32,43 +32,43 @@ behavior is up to them.
 Methods and properties that are part of the generic interface are
 identified with \[Required\].
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`CustomVocab`](../object/CustomVocab.html)[`LCommandTopicHelper`](../object/LCommandTopicHelper.html)[`LMentionable`](../object/LMentionable.html)[`LState`](../object/LState.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`actorActionContinuer_`](../object/actorActionContinuer_.html)[`decimalPreParser`](../object/decimalPreParser.html)[`DirState`](../object/DirState.html)[`englishCustomVocab`](../object/englishCustomVocab.html)[`englishMessageParams`](../object/englishMessageParams.html)[`englishOptions`](../object/englishOptions.html)[`finishOptionsLister`](../object/finishOptionsLister.html)[`getOnGroundDoer`](../object/getOnGroundDoer.html)[`libMessages`](../object/libMessages.html)[`LitUnlit`](../object/LitUnlit.html)[`OpenClosed`](../object/OpenClosed.html)[`prevDummy_`](../object/prevDummy_.html)[`pronounPreinit`](../object/pronounPreinit.html)[`putOnGroundDoer`](../object/putOnGroundDoer.html)[`removeDoer`](../object/removeDoer.html)[`subLister`](../object/subLister.html)[`takePathDoer`](../object/takePathDoer.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`andList`](#andList)[`announceBestChoice`](#announceBestChoice)[`askAmbiguous`](#askAmbiguous)[`askMissingNoun`](#askMissingNoun)[`conjugate`](#conjugate)[`conjugateBe`](#conjugateBe)[`conjugateBeNot`](#conjugateBeNot)[`conjugateCan`](#conjugateCan)[`conjugateDoNot`](#conjugateDoNot)[`conjugateDont`](#conjugateDont)[`conjugateHavenot`](#conjugateHavenot)[`conjugateHavnt`](#conjugateHavnt)[`conjugateIm`](#conjugateIm)[`conjugateIsnt`](#conjugateIsnt)[`conjugateIve`](#conjugateIve)[`conjugateMust`](#conjugateMust)[`conjugateRegular`](#conjugateRegular)[`conjugateWas`](#conjugateWas)[`conjugateWasnot`](#conjugateWasnot)[`conjugateWasnt`](#conjugateWasnt)[`genList`](#genList)[`isListStr`](#isListStr)[`langAdjust`](#langAdjust)[`listStrIs`](#listStrIs)[`makeCountedPlural`](#makeCountedPlural)[`makeListInStr`](#makeListInStr)[`makeListStr`](#makeListStr)[`makeSentence`](#makeSentence)[`mentionA`](#mentionA)[`mentionThe`](#mentionThe)[`mergeDuplicates`](#mergeDuplicates)[`nounRoleQuestion`](#nounRoleQuestion)[`npListPronoun`](#npListPronoun)[`orList`](#orList)[`pastParticiple`](#pastParticiple)[`spelledToInt`](#spelledToInt)[`spellNumber`](#spellNumber)[`stripArticle`](#stripArticle)[`yesOrNo`](#yesOrNo)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="andList"></span>
 
@@ -76,11 +76,11 @@ identified with \[Required\].
 
 [english.t](../file/english.t.html)\[[3512](../source/english.t.html#3512)\]
 
-<div class="desc">
+
 
 Construct a printable list of strings separated by "and" conjunctions.
 
-</div>
+
 
 <span id="announceBestChoice"></span>
 
@@ -88,14 +88,14 @@ Construct a printable list of strings separated by "and" conjunctions.
 
 [english.t](../file/english.t.html)\[[3868](../source/english.t.html#3868)\]
 
-<div class="desc">
+
 
 Announce our choice of object when askForIobj() or askForDobj() chooses
 the best match on the player's behalf. We find the section of the
 verbPhrase appropriate to the direct or indirect object (e.g. '(what)'
 or '(on what)') and replace 'what' with the object name.
 
-</div>
+
 
 <span id="askAmbiguous"></span>
 
@@ -103,7 +103,7 @@ or '(on what)') and replace 'what' with the object name.
 
 [english.t](../file/english.t.html)\[[3787](../source/english.t.html#3787)\]
 
-<div class="desc">
+
 
 Ask for help with an ambiguous noun. The parser calls this when the
 player enters a noun phrase that's ambiguous, and we need to ask for
@@ -115,7 +115,7 @@ the Distinguisher process.
 
 \[Required\]
 
-</div>
+
 
 <span id="askMissingNoun"></span>
 
@@ -123,7 +123,7 @@ the Distinguisher process.
 
 [english.t](../file/english.t.html)\[[3771](../source/english.t.html#3771)\]
 
-<div class="desc">
+
 
 Ask for a missing noun phrase. The parser calls this when the player
 enters a command that omits a required noun phrase, such as PUT KEY or
@@ -136,7 +136,7 @@ the NounRole object telling us which predicate role is missing
 
 \[Required\]
 
-</div>
+
 
 <span id="conjugate"></span>
 
@@ -144,13 +144,13 @@ the NounRole object telling us which predicate role is missing
 
 [english.t](../file/english.t.html)\[[4668](../source/english.t.html#4668)\]
 
-<div class="desc">
+
 
 Regular verb conjugator. This takes the list of CustomVocab verbParmas
 tokens built during preinit, and returns the appropriate conjugation for
 the subject and tense.
 
-</div>
+
 
 <span id="conjugateBe"></span>
 
@@ -158,12 +158,12 @@ the subject and tense.
 
 [english.t](../file/english.t.html)\[[4861](../source/english.t.html#4861)\]
 
-<div class="desc">
+
 
 Conjugate "to be". This is a handler function for message parameter
 expansion, for the "be" verb parameters ({am}, {is}, {are}).
 
-</div>
+
 
 <span id="conjugateBeNot"></span>
 
@@ -171,13 +171,13 @@ expansion, for the "be" verb parameters ({am}, {is}, {are}).
 
 [english.t](../file/english.t.html)\[[4906](../source/english.t.html#4906)\]
 
-<div class="desc">
+
 
 Conjugate "to be" in negative senses. This is a handler function for
 message parameter expansion, for auxiliaries with negative usage
 (cannot, will not, etc).
 
-</div>
+
 
 <span id="conjugateCan"></span>
 
@@ -185,14 +185,14 @@ message parameter expansion, for auxiliaries with negative usage
 
 [english.t](../file/english.t.html)\[[5280](../source/english.t.html#5280)\]
 
-<div class="desc">
+
 
 Conjugate 'can', 'can\\t', or 'cannot'. In the present, these are
 variations on "I can"; in the past, "I could"; in all other tenses,
 these change to conjugations of "to be able to": I have been able to, I
 had been able to, I will be able to, I will have been able to.
 
-</div>
+
 
 <span id="conjugateDoNot"></span>
 
@@ -200,13 +200,13 @@ had been able to, I will be able to, I will have been able to.
 
 [english.t](../file/english.t.html)\[[5232](../source/english.t.html#5232)\]
 
-<div class="desc">
+
 
 Conjugate "do not" plus a verb. "Do not" is always an auxiliary in
 English, and has an irregular structure in different tenses. The second
 token in the {donot x} phrase is the main verb we're auxiliarizing.
 
-</div>
+
 
 <span id="conjugateDont"></span>
 
@@ -214,13 +214,13 @@ token in the {donot x} phrase is the main verb we're auxiliarizing.
 
 [english.t](../file/english.t.html)\[[5185](../source/english.t.html#5185)\]
 
-<div class="desc">
+
 
 Conjugate "don't" plus a verb. "Don't" is always an auxiliary in
 English, and has an irregular structure in different tenses. The second
 token in the {don't x} phrase is the main verb we're auxiliarizing.
 
-</div>
+
 
 <span id="conjugateHavenot"></span>
 
@@ -228,11 +228,11 @@ token in the {don't x} phrase is the main verb we're auxiliarizing.
 
 [english.t](../file/english.t.html)\[[5158](../source/english.t.html#5158)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="conjugateHavnt"></span>
 
@@ -240,11 +240,11 @@ token in the {don't x} phrase is the main verb we're auxiliarizing.
 
 [english.t](../file/english.t.html)\[[5136](../source/english.t.html#5136)\]
 
-<div class="desc">
+
 
 Conjugate haven\\t (contracted have not)
 
-</div>
+
 
 <span id="conjugateIm"></span>
 
@@ -252,13 +252,13 @@ Conjugate haven\\t (contracted have not)
 
 [english.t](../file/english.t.html)\[[4996](../source/english.t.html#4996)\]
 
-<div class="desc">
+
 
 Conjugate "to be" contractions - I'm, you're, he's, she's, etc. This is
 a handler function for message parameter expansion, for the "be" verb
 parameters with contraction ({I'm}, {he's}, {you're}).
 
-</div>
+
 
 <span id="conjugateIsnt"></span>
 
@@ -266,13 +266,13 @@ parameters with contraction ({I'm}, {he's}, {you're}).
 
 [english.t](../file/english.t.html)\[[4951](../source/english.t.html#4951)\]
 
-<div class="desc">
+
 
 Conjugate "isn't". This is a handler function for message parameter
 expansion, for the "be" verb parameters with "not" contractions ({am
 not}, {isn't}, {aren't}).
 
-</div>
+
 
 <span id="conjugateIve"></span>
 
@@ -280,14 +280,14 @@ not}, {isn't}, {aren't}).
 
 [english.t](../file/english.t.html)\[[5108](../source/english.t.html#5108)\]
 
-<div class="desc">
+
 
 Conjugate 've (contraction of have). After some words it's better not to
 contract (e.g. Liz's or Jesus'd is a a bit awkward) so we use the full
 'have' or 'had' form for such subjects and the contracted form
 otherwise.
 
-</div>
+
 
 <span id="conjugateMust"></span>
 
@@ -295,14 +295,14 @@ otherwise.
 
 [english.t](../file/english.t.html)\[[5306](../source/english.t.html#5306)\]
 
-<div class="desc">
+
 
 Conjugate "must" plus a verb. In the present, this is "I must \<x\>"; in
 other tenses, this is a conjugation of "to have to \<x\>": I had to
 \<x\>, I have to have \<xed\>, I had to have \<xed\>, I will have to
 \<x\>, I will have to have \<xed\>.
 
-</div>
+
 
 <span id="conjugateRegular"></span>
 
@@ -310,11 +310,11 @@ other tenses, this is a conjugation of "to have to \<x\>": I had to
 
 [english.t](../file/english.t.html)\[[4751](../source/english.t.html#4751)\]
 
-<div class="desc">
+
 
 Conjugate a regular verb
 
-</div>
+
 
 <span id="conjugateWas"></span>
 
@@ -322,13 +322,13 @@ Conjugate a regular verb
 
 [english.t](../file/english.t.html)\[[5042](../source/english.t.html#5042)\]
 
-<div class="desc">
+
 
 Conjugate the past tense of "to be" where we want to use the past tense
 in a present context (e.g. "You can see that Kilroy was here. "). This
 is a handler function for {was} or {were}.
 
-</div>
+
 
 <span id="conjugateWasnot"></span>
 
@@ -336,11 +336,11 @@ is a handler function for {was} or {were}.
 
 [english.t](../file/english.t.html)\[[5082](../source/english.t.html#5082)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="conjugateWasnt"></span>
 
@@ -348,11 +348,11 @@ is a handler function for {was} or {were}.
 
 [english.t](../file/english.t.html)\[[5062](../source/english.t.html#5062)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="genList"></span>
 
@@ -360,11 +360,11 @@ is a handler function for {was} or {were}.
 
 [english.t](../file/english.t.html)\[[3520](../source/english.t.html#3520)\]
 
-<div class="desc">
+
 
 General list constructor
 
-</div>
+
 
 <span id="isListStr"></span>
 
@@ -372,14 +372,14 @@ General list constructor
 
 [english.t](../file/english.t.html)\[[3480](../source/english.t.html#3480)\]
 
-<div class="desc">
+
 
 Function for use with the \<\<is list of \*\>\> string template,
 prefixing a list with the correct form of the verb to be to match the
 grammatical number of the list (e.g. "There are a box and a glove here"
 or "There is box here").
 
-</div>
+
 
 <span id="langAdjust"></span>
 
@@ -387,14 +387,14 @@ or "There is box here").
 
 [english.t](../file/english.t.html)\[[4717](../source/english.t.html#4717)\]
 
-<div class="desc">
+
 
 Language specific adjustments to a string applied before the message
 processor looks for parameter substitutions. Here we scan txt for
 sequences like 'verb{s/d}' and convert them to '{conj verb s/d}', which
 the parameter substitution mechanism can then deal with.
 
-</div>
+
 
 <span id="listStrIs"></span>
 
@@ -402,13 +402,13 @@ the parameter substitution mechanism can then deal with.
 
 [english.t](../file/english.t.html)\[[3495](../source/english.t.html#3495)\]
 
-<div class="desc">
+
 
 Function for use by the \<\<list of \* is\>\> string template, which
 returns a formatted list followed by the appropriate form of the verb
 'to be' in grammatical agreement with that list.
 
-</div>
+
 
 <span id="makeCountedPlural"></span>
 
@@ -416,7 +416,7 @@ returns a formatted list followed by the appropriate form of the verb
 
 [english.t](../file/english.t.html)\[[3626](../source/english.t.html#3626)\]
 
-<div class="desc">
+
 
 Take the string representation of a name (str) and a number (num) and
 return a string with the number spelled out and the name pluralised,
@@ -425,7 +425,7 @@ the more complex case ('taking the coin'), 3) -\> 'taking three coins');
 i.e. the method now substitutes the number for the first occurrence of
 an article, if there is one.
 
-</div>
+
 
 <span id="makeListInStr"></span>
 
@@ -433,12 +433,12 @@ an article, if there is one.
 
 [english.t](../file/english.t.html)\[[3469](../source/english.t.html#3469)\]
 
-<div class="desc">
+
 
 A version of makeListStr that uses only one parameter, for use by the
 \<\<list of \*\>\>string template
 
-</div>
+
 
 <span id="makeListStr"></span>
 
@@ -446,7 +446,7 @@ A version of makeListStr that uses only one parameter, for use by the
 
 [english.t](../file/english.t.html)\[[3363](../source/english.t.html#3363)\]
 
-<div class="desc">
+
 
 Take a list of objects supplied in objList and return a formatted list
 in a single quoted string, having first sorted the items in objList in
@@ -460,7 +460,7 @@ By default the last two items in the list are separated by 'and', but we
 can choose a different conjunction by supplying the conjunction
 parameter.
 
-</div>
+
 
 <span id="makeSentence"></span>
 
@@ -468,12 +468,12 @@ parameter.
 
 [english.t](../file/english.t.html)\[[4103](../source/english.t.html#4103)\]
 
-<div class="desc">
+
 
 make an error message into a sentence, by capitalizing the first letter
 and adding a period at the end if it doesn't already have one
 
-</div>
+
 
 <span id="mentionA"></span>
 
@@ -481,13 +481,13 @@ and adding a period at the end if it doesn't already have one
 
 [english.t](../file/english.t.html)\[[3422](../source/english.t.html#3422)\]
 
-<div class="desc">
+
 
 Function to use with the \<\<mention a \*\>\> string template. This
 marks the object as mentioned in a room description and allows it to be
 used as the antecedent of a {prev} tag, to ensure verb agreement.
 
-</div>
+
 
 <span id="mentionThe"></span>
 
@@ -495,13 +495,13 @@ used as the antecedent of a {prev} tag, to ensure verb agreement.
 
 [english.t](../file/english.t.html)\[[3446](../source/english.t.html#3446)\]
 
-<div class="desc">
+
 
 Function to use with the \<\<mention the \*\>\> string template. This
 marks the object as mentioned in a room description and allows it to be
 used as the antecedent of a {prev} tag, to ensure verb agreement.
 
-</div>
+
 
 <span id="mergeDuplicates"></span>
 
@@ -509,13 +509,13 @@ used as the antecedent of a {prev} tag, to ensure verb agreement.
 
 [english.t](../file/english.t.html)\[[3558](../source/english.t.html#3558)\]
 
-<div class="desc">
+
 
 Take a list of strings of the form \['a book', 'a cat', 'a book'\] and
 merge the duplicate items to return a list of the form \['two books', 'a
 cat'\]
 
-</div>
+
 
 <span id="nounRoleQuestion"></span>
 
@@ -523,14 +523,14 @@ cat'\]
 
 [english.t](../file/english.t.html)\[[3814](../source/english.t.html#3814)\]
 
-<div class="desc">
+
 
 Get the basic question for a noun role. This turns the verb around into
 a question about one of its roles. For example, for (Open,
 DirectObject), we'd return "what do you want to open". For (AttachTo
 IndirectObject), "what do you want to connect it to".
 
-</div>
+
 
 <span id="npListPronoun"></span>
 
@@ -538,12 +538,12 @@ IndirectObject), "what do you want to connect it to".
 
 [english.t](../file/english.t.html)\[[3904](../source/english.t.html#3904)\]
 
-<div class="desc">
+
 
 Get the pronoun for a resolved (or partially resolved) NounPhrase list
 from a command.
 
-</div>
+
 
 <span id="orList"></span>
 
@@ -551,11 +551,11 @@ from a command.
 
 [english.t](../file/english.t.html)\[[3504](../source/english.t.html#3504)\]
 
-<div class="desc">
+
 
 Construct a printable list of strings separated by "or" conjunctions.
 
-</div>
+
 
 <span id="pastParticiple"></span>
 
@@ -563,7 +563,7 @@ Construct a printable list of strings separated by "or" conjunctions.
 
 [english.t](../file/english.t.html)\[[4825](../source/english.t.html#4825)\]
 
-<div class="desc">
+
 
 Form the past participle of a verb, which may either be given in the
 form xxx, in which case we assume it's an irregular verb to be looked up
@@ -571,7 +571,7 @@ in the table of irregular verbs, or in the form xxx\[y/z\], in which
 case we assume it's a regular verb to be conjugated according to the
 \[y/z\] ending.
 
-</div>
+
 
 <span id="spelledToInt"></span>
 
@@ -579,12 +579,12 @@ case we assume it's a regular verb to be conjugated according to the
 
 [english.t](../file/english.t.html)\[[2896](../source/english.t.html#2896)\]
 
-<div class="desc">
+
 
 Try to convert a spelled out number (e.g. 'ninety-six') to its integer
 representation. If this fails, return nil.
 
-</div>
+
 
 <span id="spellNumber"></span>
 
@@ -592,7 +592,7 @@ representation. If this fails, return nil.
 
 [english.t](../file/english.t.html)\[[2800](../source/english.t.html#2800)\]
 
-<div class="desc">
+
 
 Generate a spelled-out version of the given number value, or simply a
 string representation of the number. We follow fairly standard English
@@ -612,7 +612,7 @@ spelled-out number or digits might vary by language.
 
 \[Required\]
 
-</div>
+
 
 <span id="stripArticle"></span>
 
@@ -620,12 +620,12 @@ spelled-out number or digits might vary by language.
 
 [english.t](../file/english.t.html)\[[3667](../source/english.t.html#3667)\]
 
-<div class="desc">
+
 
 Remove any definite or indefinite article that occurs at the beginning
 of txt, and return the resultant string in lower case.
 
-</div>
+
 
 <span id="yesOrNo"></span>
 
@@ -633,17 +633,17 @@ of txt, and return the resultant string in lower case.
 
 [english.t](../file/english.t.html)\[[5848](../source/english.t.html#5848)\]
 
-<div class="desc">
+
 
 Simple yes/no confirmation. The caller must display a prompt; we'll read
 a command line response, then return true if it's an affirmative
 response, nil if not.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -27,48 +27,48 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `class `**`SuggestedNoTopic`**` :   `[`SuggestedTopic`](../object/SuggestedTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SuggestedNoTopic`**  
 [`SuggestedTopic`](../object/SuggestedTopic.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fullName`](#fullName)[`name`](#name)[`suggestionGroup`](#suggestionGroup)
 
@@ -77,11 +77,11 @@ Inherited from `SuggestedTopic` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -90,11 +90,11 @@ Inherited from `SuggestedTopic` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fullName"></span>
 
@@ -102,11 +102,11 @@ Inherited from `SuggestedTopic` :
 
 [en_us.t](../file/en_us.t.html)\[[2684](../source/en_us.t.html#2684)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -114,11 +114,11 @@ Inherited from `SuggestedTopic` :
 
 [en_us.t](../file/en_us.t.html)\[[2683](../source/en_us.t.html#2683)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="suggestionGroup"></span>
 
@@ -126,25 +126,25 @@ Inherited from `SuggestedTopic` :
 
 [actor.t](../file/actor.t.html)\[[1460](../source/actor.t.html#1460)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

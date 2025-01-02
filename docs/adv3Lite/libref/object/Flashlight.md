@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Flashlight is a light source that can be turned on and off; in other
 words it's a Switch that's lit when on.
 
 `class `**`Flashlight`**` :   `[`Switch`](../object/Switch.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Flashlight`**  
 [`Switch`](../object/Switch.html)  
@@ -54,27 +54,27 @@ words it's a Switch that's lit when on.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -96,11 +96,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Extinguish)`](#dobjFor(Extinguish))[`dobjFor(Light)`](#dobjFor(Light))[`makeOn`](#makeOn)
 
@@ -124,19 +124,19 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Extinguish)"></span>
 
@@ -144,11 +144,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[988](../source/extras.t.html#988)\]
 
-<div class="desc">
+
 
 Extinguishing a Flashlight is equivalent to switching it off
 
-</div>
+
 
 <span id="dobjFor(Light)"></span>
 
@@ -156,11 +156,11 @@ Extinguishing a Flashlight is equivalent to switching it off
 
 [extras.t](../file/extras.t.html)\[[985](../source/extras.t.html#985)\]
 
-<div class="desc">
+
 
 Lighting a Flashlight is equivalent to switching it on
 
-</div>
+
 
 <span id="makeOn"></span>
 
@@ -168,15 +168,15 @@ Lighting a Flashlight is equivalent to switching it on
 
 [extras.t](../file/extras.t.html)\[[978](../source/extras.t.html#978)\]
 
-<div class="desc">
+
 
 Turning a Flashlight on and off makes it lit or unlit
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

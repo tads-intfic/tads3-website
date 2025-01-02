@@ -25,65 +25,65 @@ layout: docs
 [Summary](#_TemplateSummary_)  
 [Details](#_Templates_)
 
-<div class="fdesc">
+
 
 This header defines the tads-gen intrinsic function set. This function
 set provides some miscellaneous functions, including data conversions,
 object iteration, regular expressions, and state persistence operations.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 *(none)* <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`abs`](#abs)[`concat`](#concat)[`dataType`](#dataType)[`firstObj`](#firstObj)[`getArg`](#getArg)[`getFuncParams`](#getFuncParams)[`getTime`](#getTime)[`makeList`](#makeList)[`makeString`](#makeString)[`max`](#max)[`min`](#min)[`nextObj`](#nextObj)[`rand`](#rand)[`randomize`](#randomize)[`restartGame`](#restartGame)[`restoreGame`](#restoreGame)[`rexGroup`](#rexGroup)[`rexMatch`](#rexMatch)[`rexReplace`](#rexReplace)[`rexSearch`](#rexSearch)[`rexSearchLast`](#rexSearchLast)[`saveGame`](#saveGame)[`savepoint`](#savepoint)[`sgn`](#sgn)[`sprintf`](#sprintf)[`toInteger`](#toInteger)[`toNumber`](#toNumber)[`toString`](#toString)[`undo`](#undo)
 
 <span id="_MacroSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Macros</span>  
 
-</div>
+
 
 [`GetTimeDateAndTime`](#GetTimeDateAndTime)[`GetTimeTicks`](#GetTimeTicks)[`ObjAll`](#ObjAll)[`ObjClasses`](#ObjClasses)[`ObjInstances`](#ObjInstances)[`ReplaceAll`](#ReplaceAll)[`ReplaceFollowCase`](#ReplaceFollowCase)[`ReplaceIgnoreCase`](#ReplaceIgnoreCase)[`ReplaceOnce`](#ReplaceOnce)[`ReplaceSerial`](#ReplaceSerial)[`RNG_ISAAC`](#RNG_ISAAC)[`RNG_LCG`](#RNG_LCG)[`RNG_MT19937`](#RNG_MT19937)
 
 <span id="_EnumSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Enums</span>  
 
-</div>
+
 
 *(none)* <span id="_TemplateSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Templates</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="abs"></span>
 
@@ -91,7 +91,7 @@ object iteration, regular expressions, and state persistence operations.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[616](../source/tadsgen.h.html#616)\]
 
-<div class="desc">
+
 
 Get the absolute value of a number. The argument can be an integer or a
 BigNumber; the return value is the absolute value of the argument, and
@@ -99,7 +99,7 @@ has the same type as the argument. (The absolute value of a positive
 number X (or zero) is X; the absolute value of a negative number X is
 -X.)
 
-</div>
+
 
 <span id="concat"></span>
 
@@ -107,7 +107,7 @@ number X (or zero) is X; the absolute value of a negative number X is
 
 [tadsgen.h](../file/tadsgen.h.html)\[[640](../source/tadsgen.h.html#640)\]
 
-<div class="desc">
+
 
 Concatenate the arguments together into a single string. The arguments
 can be strings or any types that can be automatically converted to
@@ -122,7 +122,7 @@ that creates and copies an extra intermediate result string at each
 step. This function only creates one result string and only has to copy
 each input string once.
 
-</div>
+
 
 <span id="dataType"></span>
 
@@ -130,11 +130,11 @@ each input string once.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[24](../source/tadsgen.h.html#24)\]
 
-<div class="desc">
+
 
 Get the type of the given value. This returns a TypeXxx value.
 
-</div>
+
 
 <span id="firstObj"></span>
 
@@ -142,7 +142,7 @@ Get the type of the given value. This returns a TypeXxx value.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[48](../source/tadsgen.h.html#48)\]
 
-<div class="desc">
+
 
 Get the first object in memory. If 'cls' is provided, we return the
 first object of the given class; otherwise we return the first object of
@@ -159,7 +159,7 @@ you want to ensure that any currently unreachable objects are removed
 from memory just before a firstObj-nextObj loop, you can do so by
 calling t3RunGC().
 
-</div>
+
 
 <span id="getArg"></span>
 
@@ -167,12 +167,12 @@ calling t3RunGC().
 
 [tadsgen.h](../file/tadsgen.h.html)\[[30](../source/tadsgen.h.html#30)\]
 
-<div class="desc">
+
 
 Get the given parameter to the current function. 'idx' is 1 for the
 first argument in left-to-right order, 2 for the second, and so on.
 
-</div>
+
 
 <span id="getFuncParams"></span>
 
@@ -180,7 +180,7 @@ first argument in left-to-right order, 2 for the second, and so on.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[542](../source/tadsgen.h.html#542)\]
 
-<div class="desc">
+
 
 Get a description of the parameters to the given function. 'func' is a
 function pointer. This function returns a list: \[minArgs, optionalArgs,
@@ -190,7 +190,7 @@ can be optionally provided to the function, and isVarargs is true if the
 function takes any number of additional ("varying") arguments, nil if
 not.
 
-</div>
+
 
 <span id="getTime"></span>
 
@@ -198,7 +198,7 @@ not.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[318](../source/tadsgen.h.html#318)\]
 
-<div class="desc">
+
 
 Get the current local time.
 
@@ -228,7 +228,7 @@ timer value will roll around to zero at each 24.8 day multiple. So, it's
 possible for this function to return a smaller value than on a previous
 invocation, if the two invocations straddle a 24.8-day boundary.
 
-</div>
+
 
 <span id="makeList"></span>
 
@@ -236,14 +236,14 @@ invocation, if the two invocations straddle a 24.8-day boundary.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[607](../source/tadsgen.h.html#607)\]
 
-<div class="desc">
+
 
 Create a list by repeating the given value the given number of times. If
 the repeat count isn't specified, the default is 1; a repeat count less
 than zero throws an error. 'val' can be any value; it's simply repeated
 in each element of the list.
 
-</div>
+
 
 <span id="makeString"></span>
 
@@ -251,7 +251,7 @@ in each element of the list.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[531](../source/tadsgen.h.html#531)\]
 
-<div class="desc">
+
 
 Create a string by repeating the given value the given number of times.
 If the repeat count isn't specified, the default is 1; a repeat count
@@ -265,7 +265,7 @@ character array, which is sometimes a more convenient or efficient way
 to do certain types of string handling than using the actual string
 type.
 
-</div>
+
 
 <span id="max"></span>
 
@@ -273,14 +273,14 @@ type.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[507](../source/tadsgen.h.html#507)\]
 
-<div class="desc">
+
 
 Get the maximum of the given arguments. The values must be comparable
 with the ordinary "\<" and "\>" operators. Note that because this is an
 ordinary function call, all of the arguments are evaluated (which means
 any side effects of these evaluations will be triggered).
 
-</div>
+
 
 <span id="min"></span>
 
@@ -288,14 +288,14 @@ any side effects of these evaluations will be triggered).
 
 [tadsgen.h](../file/tadsgen.h.html)\[[516](../source/tadsgen.h.html#516)\]
 
-<div class="desc">
+
 
 Get the minimum of the given arguments. The values must be comparable
 with the ordinary "\<" and "\>" operators. Note that because this is an
 ordinary function call, all of the arguments are evaluated (which means
 any side effects of these evaluations will be triggered).
 
-</div>
+
 
 <span id="nextObj"></span>
 
@@ -303,13 +303,13 @@ any side effects of these evaluations will be triggered).
 
 [tadsgen.h](../file/tadsgen.h.html)\[[56](../source/tadsgen.h.html#56)\]
 
-<div class="desc">
+
 
 Get the next object in memory after the given object, optionally of the
 given class and optionally limiting to instances, classes, or both. This
 is used to continue an iteration started with firstObj().
 
-</div>
+
 
 <span id="rand"></span>
 
@@ -317,7 +317,7 @@ is used to continue an iteration started with firstObj().
 
 [tadsgen.h](../file/tadsgen.h.html)\[[219](../source/tadsgen.h.html#219)\]
 
-<div class="desc">
+
 
 Select a random number or a random value. This uses the current random
 number algorithm as selected via randomize().
@@ -352,7 +352,7 @@ of those evaluations.
 In all cases, the random numbers are uniformly distributed, meaning that
 each possible return value has equal probability.
 
-</div>
+
 
 <span id="randomize"></span>
 
@@ -360,7 +360,7 @@ each possible return value has equal probability.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[183](../source/tadsgen.h.html#183)\]
 
-<div class="desc">
+
 
 Random number generator (RNG) initialization. This selects and
 initializes the random number generator algorithm used by rand(). TADS
@@ -489,7 +489,7 @@ make big changes to the program if you want to switch between test mode
 and real randomness - all you have to do is change the one call to
 randomize().
 
-</div>
+
 
 <span id="restartGame"></span>
 
@@ -497,13 +497,13 @@ randomize().
 
 [tadsgen.h](../file/tadsgen.h.html)\[[498](../source/tadsgen.h.html#498)\]
 
-<div class="desc">
+
 
 Restart the program from the beginning. This resets all persistent
 objects to their initial state, as they were when the program was first
 started.
 
-</div>
+
 
 <span id="restoreGame"></span>
 
@@ -511,14 +511,14 @@ started.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[491](../source/tadsgen.h.html#491)\]
 
-<div class="desc">
+
 
 Restore a previously saved state file. This loads the states of all
 persistent objects stored in the given file. The file must have been
 saved by the current version of the current running program; if not, an
 exception is thrown.
 
-</div>
+
 
 <span id="rexGroup"></span>
 
@@ -526,7 +526,7 @@ exception is thrown.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[364](../source/tadsgen.h.html#364)\]
 
-<div class="desc">
+
 
 Get the given regular expression group. This can be called after a
 successful rexMatch() or rexSearch() call to retrieve information on the
@@ -542,7 +542,7 @@ character index within the matched or searched string of the start of
 the group match, length is the character length of the group match, and
 string is the text of the group match.
 
-</div>
+
 
 <span id="rexMatch"></span>
 
@@ -550,7 +550,7 @@ string is the text of the group match.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[332](../source/tadsgen.h.html#332)\]
 
-<div class="desc">
+
 
 Match a string to a regular expression pattern. 'pat' can be either a
 string giving the regular expression, or can be a RexPattern object.
@@ -562,7 +562,7 @@ indicate failure - rather, it indicates a successful match of the
 pattern to zero characters. This is possible for a pattern with a
 zero-or-more closure, such as 'x\*' or 'x?'.)
 
-</div>
+
 
 <span id="rexReplace"></span>
 
@@ -570,7 +570,7 @@ zero-or-more closure, such as 'x\*' or 'x?'.)
 
 [tadsgen.h](../file/tadsgen.h.html)\[[444](../source/tadsgen.h.html#444)\]
 
-<div class="desc">
+
 
 Search for the given regular expression pattern (which can be given as a
 regular expression string or as a RexPattern object) within the given
@@ -646,7 +646,7 @@ group, %2 the second, and so on. %\* is replaced by the entire matched
 input. (Because of the special meaning of "%", you must use "%%" to
 include a percent sign in the replacement text.)
 
-</div>
+
 
 <span id="rexSearch"></span>
 
@@ -654,7 +654,7 @@ include a percent sign in the replacement text.)
 
 [tadsgen.h](../file/tadsgen.h.html)\[[346](../source/tadsgen.h.html#346)\]
 
-<div class="desc">
+
 
 Search the given string for the given regular expression pattern. 'pat'
 is a string giving the regular expression to find, or a RexPattern
@@ -667,7 +667,7 @@ length, string\], where index is the starting character index of the
 match, length is the length in characters of the match, and string is
 the text of the match.
 
-</div>
+
 
 <span id="rexSearchLast"></span>
 
@@ -675,7 +675,7 @@ the text of the match.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[680](../source/tadsgen.h.html#680)\]
 
-<div class="desc">
+
 
 Search backwards in the given string for the given regular expression
 pattern. 'pat' is a string giving the regular expression to find, or a
@@ -713,7 +713,7 @@ search, \<FirstBegin\> means that the winner is the match whose ending
 index is highest, and \<FirstEnd\> means that the winner is the one
 whose starting index is highest.
 
-</div>
+
 
 <span id="saveGame"></span>
 
@@ -721,7 +721,7 @@ whose starting index is highest.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[483](../source/tadsgen.h.html#483)\]
 
-<div class="desc">
+
 
 Save the current system state into the given file. This uses the VM's
 internal state-save mechanism to store the current state of all
@@ -736,7 +736,7 @@ the list can include any information relevant to the game that would be
 helpful when reviewing saved position files, such as the room name,
 score, turn count, chapter name, etc.
 
-</div>
+
 
 <span id="savepoint"></span>
 
@@ -744,12 +744,12 @@ score, turn count, chapter name, etc.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[450](../source/tadsgen.h.html#450)\]
 
-<div class="desc">
+
 
 Create an UNDO savepoint. This adds a marker to the VM's internal UNDO
 log, establishing a point in time for a future UNDO operation.
 
-</div>
+
 
 <span id="sgn"></span>
 
@@ -757,13 +757,13 @@ log, establishing a point in time for a future UNDO operation.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[623](../source/tadsgen.h.html#623)\]
 
-<div class="desc">
+
 
 Get the sign of a number. The argument can be an integer or a BigNumber.
 The return value is an integer: 1 if the argument is positive, 0 if the
 argument is zero, -1 if the argument is negative.
 
-</div>
+
 
 <span id="sprintf"></span>
 
@@ -771,7 +771,7 @@ argument is zero, -1 if the argument is negative.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[599](../source/tadsgen.h.html#599)\]
 
-<div class="desc">
+
 
 Format values into a string. This is similar to the traditional C
 language "printf" family of functions: it takes a "format string"
@@ -797,7 +797,7 @@ The return value is a string containing the formatted result.
 
 See the System Manual for the list of '%' codes.
 
-</div>
+
 
 <span id="toInteger"></span>
 
@@ -805,7 +805,7 @@ See the System Manual for the list of '%' codes.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[285](../source/tadsgen.h.html#285)\]
 
-<div class="desc">
+
 
 Convert the given value to an integer.
 
@@ -829,7 +829,7 @@ value, use the getWhole() method of the BigNumber.)
 See also toNumber(), which can also parse floating point values and
 whole numbers too large for the ordinary integer type.
 
-</div>
+
 
 <span id="toNumber"></span>
 
@@ -837,7 +837,7 @@ whole numbers too large for the ordinary integer type.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[571](../source/tadsgen.h.html#571)\]
 
-<div class="desc">
+
 
 Convert the given value to a number. This is similar to toInteger(), but
 can parse strings containing floating point numbers and whole numbers
@@ -865,7 +865,7 @@ If val is true or the string 'true', return 1; if nil or the string
 'nil', returns 0. Leading and trailing spaces are ignored in the string
 versions of these values.
 
-</div>
+
 
 <span id="toString"></span>
 
@@ -873,7 +873,7 @@ versions of these values.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[259](../source/tadsgen.h.html#259)\]
 
-<div class="desc">
+
 
 Convert the given value to a string representation. 'val' can be an
 integer, in which case it's converted to a string representation in the
@@ -909,7 +909,7 @@ have distinct signed and unsigned interpretations, so 'isSigned' isn't
 meaningful with most other types. With BigNumber in particular, the only
 effect is to omit the "-" sign for negative values.
 
-</div>
+
 
 <span id="undo"></span>
 
@@ -917,7 +917,7 @@ effect is to omit the "-" sign for negative values.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[465](../source/tadsgen.h.html#465)\]
 
-<div class="desc">
+
 
 UNDO to the most recent savepoint. This uses the VM's internal UNDO log
 to undo all changes to persistent objects, up to the most recent
@@ -931,15 +931,15 @@ to local system parameters. This function requires at least one
 savepoint to be present, because otherwise it could create an
 inconsistent state.)
 
-</div>
+
 
 <span id="_Macros_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Macros</span>  
 
-</div>
+
 
 <span id="GetTimeDateAndTime"></span>
 
@@ -947,12 +947,12 @@ inconsistent state.)
 
 [tadsgen.h](../file/tadsgen.h.html)\[[702](../source/tadsgen.h.html#702)\]
 
-<div class="desc">
+
 
 `1`  
 getTime() flags
 
-</div>
+
 
 <span id="GetTimeTicks"></span>
 
@@ -960,12 +960,12 @@ getTime() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[703](../source/tadsgen.h.html#703)\]
 
-<div class="desc">
+
 
 `2`  
 *no description available*
 
-</div>
+
 
 <span id="ObjAll"></span>
 
@@ -973,12 +973,12 @@ getTime() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[688](../source/tadsgen.h.html#688)\]
 
-<div class="desc">
+
 
 `(ObjInstances | ObjClasses)`  
 *no description available*
 
-</div>
+
 
 <span id="ObjClasses"></span>
 
@@ -986,12 +986,12 @@ getTime() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[687](../source/tadsgen.h.html#687)\]
 
-<div class="desc">
+
 
 `0x0002`  
 *no description available*
 
-</div>
+
 
 <span id="ObjInstances"></span>
 
@@ -999,12 +999,12 @@ getTime() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[686](../source/tadsgen.h.html#686)\]
 
-<div class="desc">
+
 
 `0x0001`  
 flags for firstObj() and nextObj()
 
-</div>
+
 
 <span id="ReplaceAll"></span>
 
@@ -1012,12 +1012,12 @@ flags for firstObj() and nextObj()
 
 [tadsgen.h](../file/tadsgen.h.html)\[[693](../source/tadsgen.h.html#693)\]
 
-<div class="desc">
+
 
 `0x0001`  
 rexReplace() flags
 
-</div>
+
 
 <span id="ReplaceFollowCase"></span>
 
@@ -1025,12 +1025,12 @@ rexReplace() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[695](../source/tadsgen.h.html#695)\]
 
-<div class="desc">
+
 
 `0x0004`  
 *no description available*
 
-</div>
+
 
 <span id="ReplaceIgnoreCase"></span>
 
@@ -1038,12 +1038,12 @@ rexReplace() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[694](../source/tadsgen.h.html#694)\]
 
-<div class="desc">
+
 
 `0x0002`  
 *no description available*
 
-</div>
+
 
 <span id="ReplaceOnce"></span>
 
@@ -1051,12 +1051,12 @@ rexReplace() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[697](../source/tadsgen.h.html#697)\]
 
-<div class="desc">
+
 
 `0x0010`  
 *no description available*
 
-</div>
+
 
 <span id="ReplaceSerial"></span>
 
@@ -1064,12 +1064,12 @@ rexReplace() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[696](../source/tadsgen.h.html#696)\]
 
-<div class="desc">
+
 
 `0x0008`  
 *no description available*
 
-</div>
+
 
 <span id="RNG_ISAAC"></span>
 
@@ -1077,7 +1077,7 @@ rexReplace() flags
 
 [tadsgen.h](../file/tadsgen.h.html)\[[719](../source/tadsgen.h.html#719)\]
 
-<div class="desc">
+
 
 `1`  
 
@@ -1089,7 +1089,7 @@ and is reasonably fast.
 
 ISAAC's preferred format for a fixed seed is a string value.
 
-</div>
+
 
 <span id="RNG_LCG"></span>
 
@@ -1097,7 +1097,7 @@ ISAAC's preferred format for a fixed seed is a string value.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[733](../source/tadsgen.h.html#733)\]
 
-<div class="desc">
+
 
 `2`  
 RNG_LCG - LCG stands for Linear Congruential Generator, which generates
@@ -1110,7 +1110,7 @@ volume 2, p170.
 
 The LCG's preferred format for a fixed seed is an integer value.
 
-</div>
+
 
 <span id="RNG_MT19937"></span>
 
@@ -1118,7 +1118,7 @@ The LCG's preferred format for a fixed seed is an integer value.
 
 [tadsgen.h](../file/tadsgen.h.html)\[[745](../source/tadsgen.h.html#745)\]
 
-<div class="desc">
+
 
 `3`  
 RNG_MT19937 - Mersenne Twister MT19937 algorithm. This is a widely used
@@ -1130,29 +1130,29 @@ tests.
 
 MT's preferred format for a fixed seed is a string value.
 
-</div>
+
 
 <span id="_Enums_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Enums</span>  
 
-</div>
+
 
 *(none)* <span id="_Templates_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Templates</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

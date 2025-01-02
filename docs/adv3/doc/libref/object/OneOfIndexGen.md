@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 \<\<one of\>\> index generator. The compiler generates an anonymous
 instance of this class for each \<\<one of\>\> list in string, setting
@@ -37,61 +37,61 @@ index value, which is an integer from 1 to numItems.
 
 `class `**`OneOfIndexGen`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OneOfIndexGen`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`idx_`](#idx_)[`listAttrs`](#listAttrs)[`lst_`](#lst_)[`numItems`](#numItems)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getNextIndex`](#getNextIndex)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="idx_"></span>
 
@@ -99,11 +99,11 @@ index value, which is an integer from 1 to numItems.
 
 [\_main.t](../file/_main.t.html)\[[1468](../source/_main.t.html#1468)\]
 
-<div class="desc">
+
 
 current position in the list
 
-</div>
+
 
 <span id="listAttrs"></span>
 
@@ -111,7 +111,7 @@ current position in the list
 
 [\_main.t](../file/_main.t.html)\[[1308](../source/_main.t.html#1308)\]
 
-<div class="desc">
+
 
 List attributes. This is a string with a comma-delimited list of tokens
 describing the treatment on the list for each fetch. The first call to
@@ -151,7 +151,7 @@ stop - repeat the previous selection forever. (This should only be used
 as the second or later attribute in the list, since it depends on a
 prior selection being made.)
 
-</div>
+
 
 <span id="lst_"></span>
 
@@ -159,11 +159,11 @@ prior selection being made.)
 
 [\_main.t](../file/_main.t.html)\[[1465](../source/_main.t.html#1465)\]
 
-<div class="desc">
+
 
 generated list
 
-</div>
+
 
 <span id="numItems"></span>
 
@@ -171,19 +171,19 @@ generated list
 
 [\_main.t](../file/_main.t.html)\[[1264](../source/_main.t.html#1264)\]
 
-<div class="desc">
+
 
 number of list items
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getNextIndex"></span>
 
@@ -191,17 +191,17 @@ number of list items
 
 [\_main.t](../file/_main.t.html)\[[1315](../source/_main.t.html#1315)\]
 
-<div class="desc">
+
 
 Get the next index value. Returns an integer from 1 to numItems. The
 algorithm for choosing the index depends on the list type, as defined by
 listAttrs.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

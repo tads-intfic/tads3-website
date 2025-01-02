@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A NetEvent instance describes an event read via the getNetEvent()
 function.
@@ -47,25 +47,25 @@ debugger.
 
 `class `**`NetEvent`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NetEvent`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NetEvent`**  
 [`NetReplyDoneEvent`](../object/NetReplyDoneEvent.html)  
@@ -74,39 +74,39 @@ debugger.
 [`NetTimeoutEvent`](../object/NetTimeoutEvent.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`evArgs`](#evArgs)[`evType`](#evType)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="evArgs"></span>
 
@@ -114,7 +114,7 @@ debugger.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[66](../source/tadsnet.t.html#66)\]
 
-<div class="desc">
+
 
 Extra event-specific arguments. This is primarily for debugging
 purposes, since it's only used when getNetEvent() needs to construct a
@@ -124,7 +124,7 @@ game isn't written to handle the type of event generated (for example,
 because it was written for an older interpreter version that didn't have
 the event type).
 
-</div>
+
 
 <span id="evType"></span>
 
@@ -132,20 +132,20 @@ the event type).
 
 [tadsnet.t](../file/tadsnet.t.html)\[[44](../source/tadsnet.t.html#44)\]
 
-<div class="desc">
+
 
 The event type. This is a NetEvXxx value (see tadsnet.h) indicating
 which type of event this is.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -153,16 +153,16 @@ which type of event this is.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[51](../source/tadsnet.t.html#51)\]
 
-<div class="desc">
+
 
 Construction. getNetEvent() only constructs this object directly when
 the subclass it's looking for isn't defined in the game program.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

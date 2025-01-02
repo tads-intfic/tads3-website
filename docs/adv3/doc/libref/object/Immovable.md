@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Immovable is an object that can't be moved, but not because it's
 obviously a fixture or component of another object. This class is
@@ -50,15 +50,15 @@ are more logical choices.
 
 `class `**`Immovable`**` :   `[`NonPortable`](../object/NonPortable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Immovable`**  
 [`NonPortable`](../object/NonPortable.html)  
@@ -67,11 +67,11 @@ are more logical choices.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Immovable`**  
 [`CustomImmovable`](../object/CustomImmovable.html)  
@@ -81,19 +81,19 @@ are more logical choices.
 [`Person`](../object/Person.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotMoveMsg`](#cannotMoveMsg)[`cannotPutMsg`](#cannotPutMsg)[`cannotTakeMsg`](#cannotTakeMsg)
 
@@ -108,11 +108,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Drop)`](#dobjFor(Drop))[`dobjFor(Move)`](#dobjFor(Move))[`dobjFor(MoveTo)`](#dobjFor(MoveTo))[`dobjFor(MoveWith)`](#dobjFor(MoveWith))[`dobjFor(Pull)`](#dobjFor(Pull))[`dobjFor(Push)`](#dobjFor(Push))[`dobjFor(PushTravel)`](#dobjFor(PushTravel))[`dobjFor(PutBehind)`](#dobjFor(PutBehind))[`dobjFor(PutIn)`](#dobjFor(PutIn))[`dobjFor(PutOn)`](#dobjFor(PutOn))[`dobjFor(PutUnder)`](#dobjFor(PutUnder))[`dobjFor(Take)`](#dobjFor(Take))[`dobjFor(ThrowAt)`](#dobjFor(ThrowAt))[`dobjFor(ThrowDir)`](#dobjFor(ThrowDir))[`dobjFor(Turn)`](#dobjFor(Turn))
 
@@ -127,11 +127,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotMoveMsg"></span>
 
@@ -139,11 +139,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[2030](../source/objects.t.html#2030)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotPutMsg"></span>
 
@@ -151,11 +151,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[2031](../source/objects.t.html#2031)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotTakeMsg"></span>
 
@@ -163,21 +163,21 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[2029](../source/objects.t.html#2029)\]
 
-<div class="desc">
+
 
 The messages to use for the failure messages. These can be overridden
 with new properties (of playerActionMessages and the like), or simply
 with single-quoted strings to display.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Drop)"></span>
 
@@ -185,11 +185,11 @@ with single-quoted strings to display.
 
 [objects.t](../file/objects.t.html)\[[2009](../source/objects.t.html#2009)\]
 
-<div class="desc">
+
 
 Immovables can't be pushed, pulled, or otherwise moved
 
-</div>
+
 
 <span id="dobjFor(Move)"></span>
 
@@ -197,11 +197,11 @@ Immovables can't be pushed, pulled, or otherwise moved
 
 [objects.t](../file/objects.t.html)\[[2012](../source/objects.t.html#2012)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(MoveTo)"></span>
 
@@ -209,11 +209,11 @@ Immovables can't be pushed, pulled, or otherwise moved
 
 [objects.t](../file/objects.t.html)\[[2014](../source/objects.t.html#2014)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(MoveWith)"></span>
 
@@ -221,11 +221,11 @@ Immovables can't be pushed, pulled, or otherwise moved
 
 [objects.t](../file/objects.t.html)\[[2013](../source/objects.t.html#2013)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Pull)"></span>
 
@@ -233,11 +233,11 @@ Immovables can't be pushed, pulled, or otherwise moved
 
 [objects.t](../file/objects.t.html)\[[2011](../source/objects.t.html#2011)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Push)"></span>
 
@@ -245,11 +245,11 @@ Immovables can't be pushed, pulled, or otherwise moved
 
 [objects.t](../file/objects.t.html)\[[2010](../source/objects.t.html#2010)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PushTravel)"></span>
 
@@ -257,11 +257,11 @@ Immovables can't be pushed, pulled, or otherwise moved
 
 [objects.t](../file/objects.t.html)\[[2015](../source/objects.t.html#2015)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutBehind)"></span>
 
@@ -269,11 +269,11 @@ Immovables can't be pushed, pulled, or otherwise moved
 
 [objects.t](../file/objects.t.html)\[[2006](../source/objects.t.html#2006)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutIn)"></span>
 
@@ -281,11 +281,11 @@ Immovables can't be pushed, pulled, or otherwise moved
 
 [objects.t](../file/objects.t.html)\[[2003](../source/objects.t.html#2003)\]
 
-<div class="desc">
+
 
 Immovables can't be put anywhere
 
-</div>
+
 
 <span id="dobjFor(PutOn)"></span>
 
@@ -293,11 +293,11 @@ Immovables can't be put anywhere
 
 [objects.t](../file/objects.t.html)\[[2004](../source/objects.t.html#2004)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutUnder)"></span>
 
@@ -305,11 +305,11 @@ Immovables can't be put anywhere
 
 [objects.t](../file/objects.t.html)\[[2005](../source/objects.t.html#2005)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -317,11 +317,11 @@ Immovables can't be put anywhere
 
 [objects.t](../file/objects.t.html)\[[2000](../source/objects.t.html#2000)\]
 
-<div class="desc">
+
 
 an Immovable can't be taken
 
-</div>
+
 
 <span id="dobjFor(ThrowAt)"></span>
 
@@ -329,11 +329,11 @@ an Immovable can't be taken
 
 [objects.t](../file/objects.t.html)\[[2016](../source/objects.t.html#2016)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ThrowDir)"></span>
 
@@ -341,11 +341,11 @@ an Immovable can't be taken
 
 [objects.t](../file/objects.t.html)\[[2017](../source/objects.t.html#2017)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Turn)"></span>
 
@@ -353,15 +353,15 @@ an Immovable can't be taken
 
 [objects.t](../file/objects.t.html)\[[2018](../source/objects.t.html#2018)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

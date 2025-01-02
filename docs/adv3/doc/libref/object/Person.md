@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Person is an actor that represents a human character. This is just an
 UntakeableActor with some custom versions of the messages for taking and
@@ -34,15 +34,15 @@ moving the actor.
 
 `class `**`Person`**` :   `[`UntakeableActor`](../object/UntakeableActor.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Person`**  
 [`UntakeableActor`](../object/UntakeableActor.html)  
@@ -65,27 +65,27 @@ moving the actor.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`bulk`](#bulk)[`cannotMoveMsg`](#cannotMoveMsg)[`cannotPutMsg`](#cannotPutMsg)[`cannotTakeMsg`](#cannotTakeMsg)[`cannotTasteActorMsg`](#cannotTasteActorMsg)
 
@@ -123,11 +123,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -168,11 +168,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="bulk"></span>
 
@@ -180,12 +180,12 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[10446](../source/actor.t.html#10446)\]
 
-<div class="desc">
+
 
 use a fairly large default bulk, since people are usually fairly large
 compared with the sorts of items that one carries around
 
-</div>
+
 
 <span id="cannotMoveMsg"></span>
 
@@ -193,11 +193,11 @@ compared with the sorts of items that one carries around
 
 [actor.t](../file/actor.t.html)\[[10438](../source/actor.t.html#10438)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotPutMsg"></span>
 
@@ -205,11 +205,11 @@ compared with the sorts of items that one carries around
 
 [actor.t](../file/actor.t.html)\[[10439](../source/actor.t.html#10439)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotTakeMsg"></span>
 
@@ -217,11 +217,11 @@ compared with the sorts of items that one carries around
 
 [actor.t](../file/actor.t.html)\[[10437](../source/actor.t.html#10437)\]
 
-<div class="desc">
+
 
 customize the messages for trying to take or move me
 
-</div>
+
 
 <span id="cannotTasteActorMsg"></span>
 
@@ -229,25 +229,25 @@ customize the messages for trying to take or move me
 
 [actor.t](../file/actor.t.html)\[[10440](../source/actor.t.html#10440)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

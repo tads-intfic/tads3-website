@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The noExit object can be used to block an exit that would otherwise be
 set as a reciprocal exit by Room.preinitThing(). This can be used to
@@ -37,26 +37,26 @@ extension. \[SYMCOMM EXTENSION\]
 
 **`noExit`**` :   `[`TravelConnector`](../object/TravelConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`noExit`**  
 [`TravelConnector`](../object/TravelConnector.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isConnectorListed`](#isConnectorListed)
 
@@ -65,11 +65,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canTravelerPass`](#canTravelerPass)[`explainTravelBarrier`](#explainTravelBarrier)
 
@@ -78,11 +78,11 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isConnectorListed"></span>
 
@@ -90,20 +90,20 @@ Inherited from `TravelConnector` :
 
 [symconn.t](../file/symconn.t.html)\[[911](../source/symconn.t.html#911)\]
 
-<div class="desc">
+
 
 Since we're mimicking the absence of an exit, we don't want to be listed
 as one.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canTravelerPass"></span>
 
@@ -111,11 +111,11 @@ as one.
 
 [symconn.t](../file/symconn.t.html)\[[914](../source/symconn.t.html#914)\]
 
-<div class="desc">
+
 
 We're not a real exit, so no actor can pass through us.
 
-</div>
+
 
 <span id="explainTravelBarrier"></span>
 
@@ -123,17 +123,17 @@ We're not a real exit, so no actor can pass through us.
 
 [symconn.t](../file/symconn.t.html)\[[921](../source/symconn.t.html#921)\]
 
-<div class="desc">
+
 
 In order to behave just as a nil exit would, we call the actor's
 location's cannotGoThatWay() method to explain why travel isn't
 possible.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

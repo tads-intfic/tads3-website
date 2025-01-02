@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "Accompanying in-travel" state - this is an actor state used when an
 actor is taking part in a group travel operation. This state lasts only
@@ -39,15 +39,15 @@ room.
 
 `class `**`AccompanyingInTravelState`**` :   `[`ActorState`](../object/ActorState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AccompanyingInTravelState`**  
 [`ActorState`](../object/ActorState.html)  
@@ -58,29 +58,29 @@ room.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`AccompanyingInTravelState`**  
 [`GuidedInTravelState`](../object/GuidedInTravelState.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`leadActor`](#leadActor)[`nextState`](#nextState)
 
@@ -97,11 +97,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`initiateTopic`](#initiateTopic)[`sayArrivingLocally`](#sayArrivingLocally)[`sayDeparting`](#sayDeparting)[`sayDepartingDir`](#sayDepartingDir)[`sayDepartingDownStairs`](#sayDepartingDownStairs)[`sayDepartingLocally`](#sayDepartingLocally)[`sayDepartingThroughPassage`](#sayDepartingThroughPassage)[`sayDepartingUpStairs`](#sayDepartingUpStairs)[`sayDepartingViaPath`](#sayDepartingViaPath)[`specialDesc`](#specialDesc)[`takeTurn`](#takeTurn)
 
@@ -119,11 +119,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="leadActor"></span>
 
@@ -131,11 +131,11 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[5377](../source/actor.t.html#5377)\]
 
-<div class="desc">
+
 
 the lead actor of the group travel
 
-</div>
+
 
 <span id="nextState"></span>
 
@@ -143,20 +143,20 @@ the lead actor of the group travel
 
 [actor.t](../file/actor.t.html)\[[5383](../source/actor.t.html#5383)\]
 
-<div class="desc">
+
 
 the next state - we'll switch our actor to this state after the travel
 has been completed
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -164,11 +164,11 @@ has been completed
 
 [actor.t](../file/actor.t.html)\[[5366](../source/actor.t.html#5366)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="initiateTopic"></span>
 
@@ -176,11 +176,11 @@ has been completed
 
 [actor.t](../file/actor.t.html)\[[5413](../source/actor.t.html#5413)\]
 
-<div class="desc">
+
 
 initiate a topic - defer to the next state
 
-</div>
+
 
 <span id="sayArrivingLocally"></span>
 
@@ -188,7 +188,7 @@ initiate a topic - defer to the next state
 
 [actor.t](../file/actor.t.html)\[[5454](../source/actor.t.html#5454)\]
 
-<div class="desc">
+
 
 Describe local travel using our standard departure message as well. This
 is used to describe our travel when our origin and destination locations
@@ -200,7 +200,7 @@ state describes even normal travel as though it were visible all along,
 we can use our standard "departing" message to describe local travel as
 well.
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -208,7 +208,7 @@ well.
 
 [actor.t](../file/actor.t.html)\[[5435](../source/actor.t.html#5435)\]
 
-<div class="desc">
+
 
 Override our departure messages. When we're accompanying another actor
 on a group travel, the lead actor will, as part of its turn, send each
@@ -228,7 +228,7 @@ by overriding sayDeparting(). Overriding the individual methods is still
 desirable, of course, if you want separate messages for the different
 departure types.
 
-</div>
+
 
 <span id="sayDepartingDir"></span>
 
@@ -236,11 +236,11 @@ departure types.
 
 [actor.t](../file/actor.t.html)\[[5437](../source/actor.t.html#5437)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingDownStairs"></span>
 
@@ -248,11 +248,11 @@ departure types.
 
 [actor.t](../file/actor.t.html)\[[5441](../source/actor.t.html#5441)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingLocally"></span>
 
@@ -260,11 +260,11 @@ departure types.
 
 [actor.t](../file/actor.t.html)\[[5455](../source/actor.t.html#5455)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingThroughPassage"></span>
 
@@ -272,11 +272,11 @@ departure types.
 
 [actor.t](../file/actor.t.html)\[[5438](../source/actor.t.html#5438)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingUpStairs"></span>
 
@@ -284,11 +284,11 @@ departure types.
 
 [actor.t](../file/actor.t.html)\[[5440](../source/actor.t.html#5440)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingViaPath"></span>
 
@@ -296,11 +296,11 @@ departure types.
 
 [actor.t](../file/actor.t.html)\[[5439](../source/actor.t.html#5439)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="specialDesc"></span>
 
@@ -308,12 +308,12 @@ departure types.
 
 [actor.t](../file/actor.t.html)\[[5389](../source/actor.t.html#5389)\]
 
-<div class="desc">
+
 
 Show our "I am here" description. By default, we'll use the
 arrivingWithDesc of the \*next\* state object.
 
-</div>
+
 
 <span id="takeTurn"></span>
 
@@ -321,15 +321,15 @@ arrivingWithDesc of the \*next\* state object.
 
 [actor.t](../file/actor.t.html)\[[5392](../source/actor.t.html#5392)\]
 
-<div class="desc">
+
 
 take our turn
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

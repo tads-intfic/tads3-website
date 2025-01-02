@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A CollectiveGroup is a an object that can represent a set of other
 objects for particular actions. For any of the objects in the myObjects
@@ -35,15 +35,15 @@ list; all the other actions will be handled by the individual objects.
 
 `class `**`CollectiveGroup`**` :   `[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CollectiveGroup`**  
 [`Fixture`](../object/Fixture.html)  
@@ -56,29 +56,29 @@ list; all the other actions will be handled by the individual objects.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`CollectiveGroup`**  
 [`MobileCollectiveGroup`](../object/MobileCollectiveGroup.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`collectiveActions`](#collectiveActions)[`isListed`](#isListed)
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`desc`](#desc)[`filterResolveList`](#filterResolveList)[`isCollectiveAction`](#isCollectiveAction)[`myScopeObjects`](#myScopeObjects)
 
@@ -127,11 +127,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="collectiveActions"></span>
 
@@ -139,12 +139,12 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[477](../source/extras.t.html#477)\]
 
-<div class="desc">
+
 
 The list of actions this CollectiveGroup will handle; all the rest will
 be handled by the individual objects.
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -152,19 +152,19 @@ be handled by the individual objects.
 
 [extras.t](../file/extras.t.html)\[[560](../source/extras.t.html#560)\]
 
-<div class="desc">
+
 
 A CollectiveGroup isn't normally listed as an item in its own right.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -172,12 +172,12 @@ A CollectiveGroup isn't normally listed as an item in its own right.
 
 [extras.t](../file/extras.t.html)\[[519](../source/extras.t.html#519)\]
 
-<div class="desc">
+
 
 The default descriptions of a CollectiveGroup: By default we just list
 those of our members that are in scope.
 
-</div>
+
 
 <span id="filterResolveList"></span>
 
@@ -185,13 +185,13 @@ those of our members that are in scope.
 
 [extras.t](../file/extras.t.html)\[[494](../source/extras.t.html#494)\]
 
-<div class="desc">
+
 
 If the current action is one of the collective Actions, then filter all
 myObjects from the resolve list; otherwise filter myself out from the
 resolve list.
 
-</div>
+
 
 <span id="isCollectiveAction"></span>
 
@@ -199,13 +199,13 @@ resolve list.
 
 [extras.t](../file/extras.t.html)\[[484](../source/extras.t.html#484)\]
 
-<div class="desc">
+
 
 Is action to be treated as a collective action by this group (i.e.
 handled by this CollectiveGroup object); by default it is if it's one of
 the actions listed in our collectiveActions property.
 
-</div>
+
 
 <span id="myScopeObjects"></span>
 
@@ -213,15 +213,15 @@ the actions listed in our collectiveActions property.
 
 [extras.t](../file/extras.t.html)\[[509](../source/extras.t.html#509)\]
 
-<div class="desc">
+
 
 Obtain the list of the objects belonging to me that are in scope.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

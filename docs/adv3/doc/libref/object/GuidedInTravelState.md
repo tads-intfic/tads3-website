@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A subclass of the basic accompanying travel state specifically designed
 for guided tours. This is almost the same as the basic accompanying
@@ -35,15 +35,15 @@ of our associated actor, which is the actor serving as the tour guide.
 
 `class `**`GuidedInTravelState`**` :   `[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GuidedInTravelState`**  
 [`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
@@ -55,27 +55,27 @@ of our associated actor, which is the actor serving as the tour guide.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -95,11 +95,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`sayDeparting`](#sayDeparting)
 
@@ -120,19 +120,19 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -140,15 +140,15 @@ Inherited from `TopicDatabase` :
 
 [extras.t](../file/extras.t.html)\[[2454](../source/extras.t.html#2454)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

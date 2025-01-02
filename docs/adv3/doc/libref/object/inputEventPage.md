@@ -20,33 +20,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Input event page. The client javascript does a GET on this resource to
 send us an input event.
 
 **`inputEventPage`**` :   `[`WebResource`](../object/WebResource.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`inputEventPage`**  
 [`WebResource`](../object/WebResource.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`vpath`](#vpath)
 
@@ -55,11 +55,11 @@ Inherited from `WebResource` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`processRequest`](#processRequest)
 
@@ -68,11 +68,11 @@ Inherited from `WebResource` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="vpath"></span>
 
@@ -80,19 +80,19 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[3427](../source/webui.t.html#3427)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="processRequest"></span>
 
@@ -100,15 +100,15 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[3428](../source/webui.t.html#3428)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

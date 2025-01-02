@@ -1,19 +1,19 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Introduction  
 <span class="navnp"><a href="fund.html" class="nav"><em>Next:</em> Fundamentals</a>
     </span>
 
-</div>
+
 
 
 
@@ -79,11 +79,11 @@ editions: <http://www.tads.org/t3techlist.html>.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Introduction  
 <span class="navnp"><a href="fund.html" class="nav"><em>Next:</em> Fundamentals</a>
     </span>
 
-</div>
+

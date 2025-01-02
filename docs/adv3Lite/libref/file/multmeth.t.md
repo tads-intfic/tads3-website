@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 This module provides the run-time component of "multi-methods" in TADS
 3. This works with the compiler to implement a multiple-dispatch system.
@@ -65,43 +65,43 @@ not all that different; our implementation of multi-methods does in fact
 modify the original class object, since we store the binding information
 in the class objects.)
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`_MultiMethodInheritCtx`](../object/_MultiMethodInheritCtx.html)[`_MultiMethodPlaceholder`](../object/_MultiMethodPlaceholder.html)[`UnboundInheritedMultiMethod`](../object/UnboundInheritedMultiMethod.html)[`UnboundMultiMethod`](../object/UnboundMultiMethod.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`_multiMethodEndOfList`](../object/_multiMethodEndOfList.html)[`_multiMethodNonObjectBindings`](../object/_multiMethodNonObjectBindings.html)[`_multiMethodRegistry`](../object/_multiMethodRegistry.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`_multiMethodBuildBindings`](#_multiMethodBuildBindings)[`_multiMethodCall`](#_multiMethodCall)[`_multiMethodCallInherited`](#_multiMethodCallInherited)[`_multiMethodInherit`](#_multiMethodInherit)[`_multiMethodInheritMain`](#_multiMethodInheritMain)[`_multiMethodRegister`](#_multiMethodRegister)[`_multiMethodSelect`](#_multiMethodSelect)[`getMultiMethodPointer`](#getMultiMethodPointer)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="_multiMethodBuildBindings"></span>
 
@@ -109,13 +109,13 @@ in the class objects.)
 
 [multmeth.t](../file/multmeth.t.html)\[[518](../source/multmeth.t.html#518)\]
 
-<div class="desc">
+
 
 Build the method bindings. The compiler generates a call to this after
 all methods have been registered; we run through the list of registered
 methods and generate the binding properties in the referenced objects.
 
-</div>
+
 
 <span id="_multiMethodCall"></span>
 
@@ -123,7 +123,7 @@ methods and generate the binding properties in the referenced objects.
 
 [multmeth.t](../file/multmeth.t.html)\[[76](../source/multmeth.t.html#76)\]
 
-<div class="desc">
+
 
 Invoke a multi-method function. For an expression of the form
 
@@ -144,7 +144,7 @@ giving the actual parameter values for invoking the function.
 Our job is to find the actual run-time binding for the function given
 the actual parameters, and invoke it.
 
-</div>
+
 
 <span id="_multiMethodCallInherited"></span>
 
@@ -152,14 +152,14 @@ the actual parameters, and invoke it.
 
 [multmeth.t](../file/multmeth.t.html)\[[105](../source/multmeth.t.html#105)\]
 
-<div class="desc">
+
 
 Invoke the base multi-method inherited from the given multi-method.
 'fromFunc' is a pointer to a multi-method, presumably the one currently
 running; we look up the next in line in inheritance order and invoke it
 with the given argument list.
 
-</div>
+
 
 <span id="_multiMethodInherit"></span>
 
@@ -167,7 +167,7 @@ with the given argument list.
 
 [multmeth.t](../file/multmeth.t.html)\[[291](../source/multmeth.t.html#291)\]
 
-<div class="desc">
+
 
 Select the INHERITED version of a multi-method. This takes a particular
 version of the multi-method, and finds the next version in inheritance
@@ -179,7 +179,7 @@ the two functions could in principle be merged into one. However, doing
 so would have an efficiency cost to \_multiMethodSelect(), which we want
 to keep as lean as possible.
 
-</div>
+
 
 <span id="_multiMethodInheritMain"></span>
 
@@ -187,11 +187,11 @@ to keep as lean as possible.
 
 [multmeth.t](../file/multmeth.t.html)\[[301](../source/multmeth.t.html#301)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_multiMethodRegister"></span>
 
@@ -199,7 +199,7 @@ to keep as lean as possible.
 
 [multmeth.t](../file/multmeth.t.html)\[[495](../source/multmeth.t.html#495)\]
 
-<div class="desc">
+
 
 Register a multi-method.
 
@@ -217,7 +217,7 @@ this is a "varargs" function, and any number of additional parameters
 can be supplied at this point in the parameters; this is always the last
 parameter in the list if it's present).
 
-</div>
+
 
 <span id="_multiMethodSelect"></span>
 
@@ -225,7 +225,7 @@ parameter in the list if it's present).
 
 [multmeth.t](../file/multmeth.t.html)\[[205](../source/multmeth.t.html#205)\]
 
-<div class="desc">
+
 
 Resolve a multi-method binding. This function takes a binding property
 ID (the property we assign during the registration process to generate
@@ -263,7 +263,7 @@ call. We continue up our first argument's class tree until we either
 find a binding (in which case we return it) or exhaust the class tree
 (in which case we return nil).
 
-</div>
+
 
 <span id="getMultiMethodPointer"></span>
 
@@ -271,7 +271,7 @@ find a binding (in which case we return it) or exhaust the class tree
 
 [multmeth.t](../file/multmeth.t.html)\[[153](../source/multmeth.t.html#153)\]
 
-<div class="desc">
+
 
 Get a pointer to a resolved multi-method function. This takes a pointer
 to the base function for the multi-method and a list of actual argument
@@ -288,11 +288,11 @@ local func = getMultiMethodPointer(foo, x, y, z);
 We return a pointer to the individual multi-method function that matches
 the argument list, or nil if there's no matching multi-method.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

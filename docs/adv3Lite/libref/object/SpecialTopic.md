@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 SpecialTopic is the base class for two kinds of TopicEntry that extend
 the conversation system beyong basic ask/tell: SayTopic and QueryTopic.
@@ -35,15 +35,15 @@ directly in game code, which will use either SayTopic or QueryTopic
 
 `class `**`SpecialTopic`**` :   `[`ActorTopicEntry`](../object/ActorTopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SpecialTopic`**  
 [`ActorTopicEntry`](../object/ActorTopicEntry.html)  
@@ -54,30 +54,30 @@ directly in game code, which will use either SayTopic or QueryTopic
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SpecialTopic`**  
 [`QueryTopic`](../object/QueryTopic.html)  
 [`SayTopic`](../object/SayTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`askMatchObj`](#askMatchObj)[`autoName`](#autoName)[`rex`](#rex)[`tellMatchObj`](#tellMatchObj)
 
@@ -93,11 +93,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`initializeTopicEntry`](#initializeTopicEntry)
 
@@ -115,11 +115,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="askMatchObj"></span>
 
@@ -127,13 +127,13 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4455](../source/actor.t.html#4455)\]
 
-<div class="desc">
+
 
 If we want this SpecialTopic also to match an ASK ABOUT command, define
 the askMatchObj to hold the topic or list of topics that said ASK ABOUT
 command should match here.
 
-</div>
+
 
 <span id="autoName"></span>
 
@@ -141,12 +141,12 @@ command should match here.
 
 [actor.t](../file/actor.t.html)\[[4468](../source/actor.t.html#4468)\]
 
-<div class="desc">
+
 
 For a SpeciallTopic make constructing a name property automatically the
 default.
 
-</div>
+
 
 <span id="rex"></span>
 
@@ -154,7 +154,7 @@ default.
 
 [actor.t](../file/actor.t.html)\[[4448](../source/actor.t.html#4448)\]
 
-<div class="desc">
+
 
 A Regular expression pattern to look for the kinds of characters we'd
 expect to find in our matchPattern property if it actually represents a
@@ -162,7 +162,7 @@ regular expression for this TopicEntry to match. We use this to help
 determine whether the matchPattern property contains a regex to match
 our the vocab of a Topic object to create on the fly.
 
-</div>
+
 
 <span id="tellMatchObj"></span>
 
@@ -170,21 +170,21 @@ our the vocab of a Topic object to create on the fly.
 
 [actor.t](../file/actor.t.html)\[[4462](../source/actor.t.html#4462)\]
 
-<div class="desc">
+
 
 If we want this SpecialTopic also to match an TELL ABOUT command, define
 the askMatchObj to hold the topic or list of topics that said TELL ABOUT
 command should match here.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="initializeTopicEntry"></span>
 
@@ -192,16 +192,16 @@ command should match here.
 
 [actor.t](../file/actor.t.html)\[[4361](../source/actor.t.html#4361)\]
 
-<div class="desc">
+
 
 Carry out the initialization (actually preinitialization) of a
 SpecialTopic
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

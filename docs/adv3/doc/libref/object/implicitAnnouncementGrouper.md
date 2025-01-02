@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Implied action announcement grouper. This takes a list of
 ImplicitActionAnnouncement reports and returns a single message string
@@ -28,45 +28,45 @@ describing the entire list of actions.
 
 **`implicitAnnouncementGrouper`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`implicitAnnouncementGrouper`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`keepAllFailures`](#keepAllFailures)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`compositeMessage`](#compositeMessage)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="keepAllFailures"></span>
 
@@ -74,7 +74,7 @@ describing the entire list of actions.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5487](../source/msg_neu.t.html#5487)\]
 
-<div class="desc">
+
 
 Configuration option: keep all failures in a list of implied
 announcements. If this is true, then we'll write things like "trying to
@@ -96,15 +96,15 @@ All they really tell us is why we're running the action that actually
 failed, but that's almost always obvious, so suppressing them is usually
 fine.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="compositeMessage"></span>
 
@@ -112,15 +112,15 @@ fine.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5490](../source/msg_neu.t.html#5490)\]
 
-<div class="desc">
+
 
 build the composite message
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

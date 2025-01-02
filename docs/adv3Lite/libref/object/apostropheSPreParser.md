@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Possibly a temporary measure to replace the apostrophe in possessives in
 certain words in the player's input with a carat in order to enable
@@ -28,15 +28,15 @@ matching vocab.
 
 **`apostropheSPreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`apostropheSPreParser`**  
 [`StringPreParser`](../object/StringPreParser.html)  
@@ -45,11 +45,11 @@ matching vocab.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`possTab`](#possTab)
 
@@ -64,11 +64,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addEntry`](#addEntry)[`doParsing`](#doParsing)
 
@@ -82,11 +82,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="possTab"></span>
 
@@ -94,20 +94,20 @@ Inherited from `ModuleExecObject` :
 
 [english.t](../file/english.t.html)\[[5514](../source/english.t.html#5514)\]
 
-<div class="desc">
+
 
 If we haven't created a LookupTable there aren't any words to check for,
 so we can just return the string unaltered.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addEntry"></span>
 
@@ -115,11 +115,11 @@ so we can just return the string unaltered.
 
 [english.t](../file/english.t.html)\[[5516](../source/english.t.html#5516)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="doParsing"></span>
 
@@ -127,15 +127,15 @@ so we can just return the string unaltered.
 
 [english.t](../file/english.t.html)\[[5490](../source/english.t.html#5490)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 20/06/2013 from adv3Lite version 0.91
 
-</div>
+

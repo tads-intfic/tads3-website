@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A consultation topic. You can place one or more of these inside a
 Consultable object (using the 'location' property, or the '+' notation),
@@ -34,15 +34,15 @@ to create a database of topics that can be looked up in the consultable.
 
 `class `**`ConsultTopic`**` :   `[`TopicMatchTopic`](../object/TopicMatchTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ConsultTopic`**  
 [`TopicMatchTopic`](../object/TopicMatchTopic.html)  
@@ -50,27 +50,27 @@ to create a database of topics that can be looked up in the consultable.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)
 
@@ -82,11 +82,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`setTopicPronouns`](#setTopicPronouns)
 
@@ -98,11 +98,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -110,19 +110,19 @@ Inherited from `TopicEntry` :
 
 [objects.t](../file/objects.t.html)\[[1668](../source/objects.t.html#1668)\]
 
-<div class="desc">
+
 
 include in the consultation list
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -130,16 +130,16 @@ include in the consultation list
 
 [objects.t](../file/objects.t.html)\[[1674](../source/objects.t.html#1674)\]
 
-<div class="desc">
+
 
 don't set any pronouns for the topic - the consultable itself should be
 the pronoun antecedent
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

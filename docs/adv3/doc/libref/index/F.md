@@ -957,9 +957,9 @@ in
 [**`Fuse`**](../object/Fuse.html) - class in
 [events.t](../file/events.t.html)\[[682](../source/events.t.html#682)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

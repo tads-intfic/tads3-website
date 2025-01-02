@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="schemes.html" class="nav">Schemes and Devices</a> \> The
@@ -17,7 +17,7 @@ Maintenance Room
 <a href="security.html" class="nav"><em>Next:</em> The Security Area</a>
     </span>
 
-</div>
+
 
 
 
@@ -38,7 +38,7 @@ cabinet.
 The first thing to do is to add a brief description of the maintenance
 room that mentions the two cabinets:
 
-`
+```
     maintenanceRoom: Room 'Maintenance Room' 'maintenance room'
         "<<one of>>On entering the room you immediately notice<<or>>This is a small
         square room with<<stopping>> a pair of steel cabinets mounted against one
@@ -48,7 +48,7 @@ room that mentions the two cabinets:
         west = mrDoorOut
         out asExit(west)
     ;
-`
+```
 
 Notice the use of the \<\<one of\>\> ... \<\<or\>\> ... \<\<stopping\>\>
 embedded description so that we see one version of the description the
@@ -57,13 +57,13 @@ first time we enter the room, and a different one thereafter.
 Next we need the two cabinets. We'll start with the tall one that would
 normally be used to house the bucket, sponge and garbage bag.
 
-`
+```
     + tallCabinet: OpenableContainer, Fixture 'tall metal cabinet; green'
         "It's a good two metres high and painted an institutional green. "
         
         bulkCapacity = 50
     ;
-`
+```
 
 We've made the tall cabinet both an OpenableContainer and a Fixture (so
 it can be open and closed, but can't be picked up and carried around),
@@ -72,7 +72,7 @@ reasonable number of objects. This is only meaningful if we give some
 bulk to the objects that might be stored in the maintenance room, for
 example:
 
-`
+```
     + bucket: Container 'bucket; plain yellow plastic; pail'
         "It's just a plain yellow plastic bucket. "
         initSpecialDesc = "Some cleaner seems to have left all his things here:
@@ -104,7 +104,7 @@ example:
         
         bulk = 1
     ;
-`
+```
 
 Note that we've also given a bulkCapacity to the bucket and the garbage
 bag, both of which can contain things, and that we've made the bulk of
@@ -155,7 +155,7 @@ can be defined on any Thing; they should point to another Thing to which
 the appropriate actions will then be redirected. So, for example, if we
 had a desk with a drawer we could write:
 
-`
+```
     + desk: Fixture, Surface 'desk'
       "It has a single drawer. "
       remapIn = drawer
@@ -163,7 +163,7 @@ had a desk with a drawer we could write:
 
     ++ drawer: OpenableContainer 'drawer'
     ;
-`
+```
 
 The set-up above will ensure that the commands LOOK IN DESK, SEARCH
 DESK, PUT something IN DESK, OPEN DESK, CLOSE DESK, LOCK DECK amd UNLOCK
@@ -175,12 +175,12 @@ can take advantage of a TADS 3 feature to make it easier: anonymous
 nested objects. An anonymous nested object is one that's defined
 directly on the property of another object, like this:
 
-`
+```
     + desk: Fixture, Surface 'desk'
       "It has a single drawer. "
       remapIn: OpenableContainer 'drawer' { location = lexicalParent }
     ;
-`
+```
 
 Note that in this case we have to use opening and closing braces to mark
 the beginning and end of the nested object definition. Note too this
@@ -204,7 +204,7 @@ remapBehind property of the enclosing object.
 
 Armed with these tools we can now define the short cabinet thus:
 
-`
+```
     + shortCabinet: Fixture 'short metal cabinet; light grey gray'
         "It's about a metre high and painted light grey. "
         
@@ -218,7 +218,7 @@ Armed with these tools we can now define the short cabinet thus:
         
         remapOn: SubComponent { bulkCapacity = 10 }    
     ;
-`
+```
 
 With this definition, the short metal cabinet (which, of course, should
 be defined somewhere in the maintenance room) will behave exactly as if
@@ -239,7 +239,7 @@ the key back under the pot plant, providing the pot plant is resting on
 a surface and not being carried, but we'll limit what can be put under
 the pot plant to one small item:
 
-`
+```
     ++ potPlant: Thing 'pot plant; small; cactus'
         "It looks like a small cactus. "
         
@@ -259,7 +259,7 @@ the pot plant to one small item:
         actualLockList = [shortCabinet]
         plausibleLockList = [shortCabinet]
     ;
-`
+```
 
 There are a number of points to note here. First, observe how we define
 the starting location of the pot plant. Assuming this piece of code is
@@ -318,7 +318,7 @@ actually need. The following code should be placed immediately after the
 definition of the short cabinet and just before the definition of the
 pot plant:
 
-`
+```
     ++ powerSwitch: Fixture, Switch 'big red switch{-zz}'
         "It's marked <q>Metal Detector</q> and is currently in the <<if isOn>>ON
         <<else>> OFF<<end>> position. "
@@ -338,7 +338,7 @@ pot plant:
         specialDesc = "A bank of switches is mounted at the rear of the 
             cabinet. "
     ;
-`
+```
 
 We define `subLocation = &remapIn` on both these
 objects to make sure they actually start out inside the short cabinet's
@@ -385,7 +385,7 @@ metal detector. We can do that first by making the
 value from the `isOn` property of the
 powerSwitch:
 
-`
+```
     + metalDetector: Passage 'metal detector; crude; frame'
         "The metal detector is little more than a crude metal frame, just large
         enough to step through, with a power cable trailing across the floor. "
@@ -414,7 +414,7 @@ powerSwitch:
             announcementObj.start();
         }
     ;
-`
+```
 
 If you compile and run the program at this point, you should be able to
 turn off the power switch and then carry the ID card through the metal
@@ -428,7 +428,7 @@ section of the article on Thing in the *adv3Lite Library Manual*.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -439,4 +439,4 @@ Maintenance Room
 <a href="security.html" class="nav"><em>Next:</em> The Security Area</a>
     </span>
 
-</div>
+

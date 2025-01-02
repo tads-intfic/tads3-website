@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Display a confirmation that this change has just taken place.
 
 **`Inventory`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Inventory`**  
 [`IAction`](../object/IAction.html)  
@@ -44,11 +44,11 @@ Display a confirmation that this change has just taken place.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`splitListing`](#splitListing)
 
@@ -64,11 +64,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)
 
@@ -86,11 +86,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="splitListing"></span>
 
@@ -98,20 +98,20 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[515](../source/actions.t.html#515)\]
 
-<div class="desc">
+
 
 Do we want separate lists of what's worn and what's carried? By default
 we do unless we're doing a tall inventory listing
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -120,15 +120,15 @@ we do unless we're doing a tall inventory listing
 [actions.t](../file/actions.t.html)\[[452](../source/actions.t.html#452)\],
 [newbie.t](../file/newbie.t.html)\[[705](../source/newbie.t.html#705)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

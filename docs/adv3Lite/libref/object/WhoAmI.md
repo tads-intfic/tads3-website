@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Provide a response to WHO AM I. We provide a brief explanation and then
 perform an EXAMINE ME command to add any game-specific player character
@@ -28,15 +28,15 @@ description.
 
 **`WhoAmI`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WhoAmI`**  
 [`IAction`](../object/IAction.html)  
@@ -46,11 +46,11 @@ description.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -66,11 +66,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`execAction`](#execAction)  `
 
@@ -88,19 +88,19 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -108,15 +108,15 @@ Inherited from `Redirector` :
 
 [newbie.t](../file/newbie.t.html)\[[835](../source/newbie.t.html#835)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

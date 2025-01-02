@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Nested Room is any object that isn't a room but which can contain an
 actor: chairs, beds, platforms, vehicles, and the like.
@@ -48,15 +48,15 @@ were in the enclosing location.
 
 `class `**`NestedRoom`**` :   `[`BasicLocation`](../object/BasicLocation.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NestedRoom`**  
 [`BasicLocation`](../object/BasicLocation.html)  
@@ -65,11 +65,11 @@ were in the enclosing location.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NestedRoom`**  
 [`BasicChair`](../object/BasicChair.html)  
@@ -84,19 +84,19 @@ were in the enclosing location.
 [`Vehicle`](../object/Vehicle.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`bulkCapacity`](#bulkCapacity)[`exitDestination`](#exitDestination)[`mustMoveIntoProp`](#mustMoveIntoProp)[`out`](#out)[`roomName`](#roomName)[`stagingLocations`](#stagingLocations)
 
@@ -111,11 +111,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotMoveActorOutOf`](#cannotMoveActorOutOf)[`cannotMoveActorToStagingLocation`](#cannotMoveActorToStagingLocation)[`checkActorInStagingLocation`](#checkActorInStagingLocation)[`checkActorOutOfNested`](#checkActorOutOfNested)[`checkActorReadyToEnterNestedRoom`](#checkActorReadyToEnterNestedRoom)[`checkMovingActorInto`](#checkMovingActorInto)[`chooseStagingLocation`](#chooseStagingLocation)[`defaultStagingLocation`](#defaultStagingLocation)[`disembarkRoom`](#disembarkRoom)[`dobjFor(GetOutOf)`](#dobjFor(GetOutOf))[`dobjFor(Take)`](#dobjFor(Take))[`getExtraScopeItems`](#getExtraScopeItems)[`isOwnedBy`](#isOwnedBy)[`isStagingLocationKnown`](#isStagingLocationKnown)[`makeStandingUp`](#makeStandingUp)[`mapPushTravelIobj`](#mapPushTravelIobj)[`removeFromNested`](#removeFromNested)[`roomTravelPreCond`](#roomTravelPreCond)[`tryMovingIntoNested`](#tryMovingIntoNested)[`tryRemovingFromNested`](#tryRemovingFromNested)
 
@@ -130,11 +130,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="bulkCapacity"></span>
 
@@ -142,7 +142,7 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[5634](../source/travel.t.html#5634)\]
 
-<div class="desc">
+
 
 The maximum bulk the room can hold. We'll define this to a large number
 by default so that bulk isn't a concern.
@@ -150,7 +150,7 @@ by default so that bulk isn't a concern.
 Lower numbers here can be used, for example, to limit the seating
 capacity of a chair.
 
-</div>
+
 
 <span id="exitDestination"></span>
 
@@ -158,7 +158,7 @@ capacity of a chair.
 
 [travel.t](../file/travel.t.html)\[[6132](../source/travel.t.html#6132)\]
 
-<div class="desc">
+
 
 Our exit destination. This is where an actor ends up when the actor is
 immediately inside this nested room and uses a "get out of" or
@@ -167,7 +167,7 @@ equivalent command to exit the nested room.
 By default, we'll use the default staging location as the exit
 destination.
 
-</div>
+
 
 <span id="mustMoveIntoProp"></span>
 
@@ -175,11 +175,11 @@ destination.
 
 [travel.t](../file/travel.t.html)\[[5770](../source/travel.t.html#5770)\]
 
-<div class="desc">
+
 
 message property to use for reportFailure when tryMovingIntoNested fails
 
-</div>
+
 
 <span id="out"></span>
 
@@ -187,7 +187,7 @@ message property to use for reportFailure when tryMovingIntoNested fails
 
 [travel.t](../file/travel.t.html)\[[5688](../source/travel.t.html#5688)\]
 
-<div class="desc">
+
 
 By default, 'out' within a nested room should take us out of the nested
 room itself. The easy way to accomplish this is to set up a
@@ -203,7 +203,7 @@ EXITS command and in the status line). If you don't want OUT to be
 listed as an available exit for the nested room, you should override
 this to use noTravelOut instead.
 
-</div>
+
 
 <span id="roomName"></span>
 
@@ -211,7 +211,7 @@ this to use noTravelOut instead.
 
 [travel.t](../file/travel.t.html)\[[5600](../source/travel.t.html#5600)\]
 
-<div class="desc">
+
 
 Our interior room name. This is the status line name we display when an
 actor is within this object and can't see out to the enclosing room.
@@ -220,7 +220,7 @@ see the enclosing room, we must provide one of our own.
 
 By default, we'll use our regular name.
 
-</div>
+
 
 <span id="stagingLocations"></span>
 
@@ -228,7 +228,7 @@ By default, we'll use our regular name.
 
 [travel.t](../file/travel.t.html)\[[6122](../source/travel.t.html#6122)\]
 
-<div class="desc">
+
 
 The valid "staging locations" for this nested room. This is a list of
 the rooms from which an actor can DIRECTLY reach this nested room; in
@@ -254,15 +254,15 @@ By default, an actor can only enter a nested room from the room's direct
 container. For example, if a chair is on a stage, an actor must be
 standing on the stage before the actor can sit on the chair.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotMoveActorOutOf"></span>
 
@@ -270,14 +270,14 @@ standing on the stage before the actor can sit on the chair.
 
 [travel.t](../file/travel.t.html)\[[6087](../source/travel.t.html#6087)\]
 
-<div class="desc">
+
 
 Report that we are unable to move an actor out of this nested room,
 because there's no valid 'exit destination'. This is called when we
 attempt to GET OUT OF the nested room, and the 'exitDestination'
 property is nil.
 
-</div>
+
 
 <span id="cannotMoveActorToStagingLocation"></span>
 
@@ -285,14 +285,14 @@ property is nil.
 
 [travel.t](../file/travel.t.html)\[[6075](../source/travel.t.html#6075)\]
 
-<div class="desc">
+
 
 Report that we are unable to move an actor to any staging location for
 this nested room. By default, we'll generate the message "you can't do
 that from here," but this can overridden to provide a more specific if
 desired.
 
-</div>
+
 
 <span id="checkActorInStagingLocation"></span>
 
@@ -300,7 +300,7 @@ desired.
 
 [travel.t](../file/travel.t.html)\[[5927](../source/travel.t.html#5927)\]
 
-<div class="desc">
+
 
 Check, using precondition rules, that the actor is in a valid "staging
 location" for entering this nested room. We'll ensure that the actor is
@@ -310,7 +310,7 @@ that list if the actor isn't in any of them.
 
 This isn't normally overridden in subclasses.
 
-</div>
+
 
 <span id="checkActorOutOfNested"></span>
 
@@ -318,7 +318,7 @@ This isn't normally overridden in subclasses.
 
 [travel.t](../file/travel.t.html)\[[5862](../source/travel.t.html#5862)\]
 
-<div class="desc">
+
 
 Check, using pre-condition rules, that the actor is removed from this
 nested location and moved to my immediate location. This is used to
@@ -326,7 +326,7 @@ enforce a precondition that the actor is in the enclosing location.
 
 This isn't normally overridden in subclasses.
 
-</div>
+
 
 <span id="checkActorReadyToEnterNestedRoom"></span>
 
@@ -334,14 +334,14 @@ This isn't normally overridden in subclasses.
 
 [travel.t](../file/travel.t.html)\[[5889](../source/travel.t.html#5889)\]
 
-<div class="desc">
+
 
 Check, using pre-condition rules, that the actor is ready to enter this
 room as a nested location.
 
 This isn't normally overridden in subclasses.
 
-</div>
+
 
 <span id="checkMovingActorInto"></span>
 
@@ -349,7 +349,7 @@ This isn't normally overridden in subclasses.
 
 [travel.t](../file/travel.t.html)\[[5814](../source/travel.t.html#5814)\]
 
-<div class="desc">
+
 
 Try moving the actor into this location. This is used to move the actor
 into this location as part of meeting preconditions, and we use the
@@ -362,7 +362,7 @@ execute fails or fails to satisfy the condition.
 
 This does not normally need to be overridden in subclasses.
 
-</div>
+
 
 <span id="chooseStagingLocation"></span>
 
@@ -370,7 +370,7 @@ This does not normally need to be overridden in subclasses.
 
 [travel.t](../file/travel.t.html)\[[6022](../source/travel.t.html#6022)\]
 
-<div class="desc">
+
 
 Choose an intermediate staging location, given the actor's current
 location. This routine is called when the actor is attempting to move
@@ -397,7 +397,7 @@ defining the special relationship.
 If we fail to find any staging location indirectly containing the actor,
 we'll return the result of defaultStagingLocation().
 
-</div>
+
 
 <span id="defaultStagingLocation"></span>
 
@@ -405,7 +405,7 @@ we'll return the result of defaultStagingLocation().
 
 [travel.t](../file/travel.t.html)\[[6050](../source/travel.t.html#6050)\]
 
-<div class="desc">
+
 
 The default staging location for this nested room. This is the staging
 location we'll attempt to reach implicitly if the actor isn't in any of
@@ -413,7 +413,7 @@ the rooms in the stagingLocations list already. We'll return the first
 element of our stagingLocations list for which isStagingLocationKnown
 returns true.
 
-</div>
+
 
 <span id="disembarkRoom"></span>
 
@@ -421,13 +421,13 @@ returns true.
 
 [travel.t](../file/travel.t.html)\[[5695](../source/travel.t.html#5695)\]
 
-<div class="desc">
+
 
 An actor is attempting to "get out" while in this location. By default,
 we'll treat this as getting out of this object. This can be overridden
 if "get out" should do something different.
 
-</div>
+
 
 <span id="dobjFor(GetOutOf)"></span>
 
@@ -435,11 +435,11 @@ if "get out" should do something different.
 
 [travel.t](../file/travel.t.html)\[[6201](../source/travel.t.html#6201)\]
 
-<div class="desc">
+
 
 "get out of" action - exit the nested room
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -447,11 +447,11 @@ if "get out" should do something different.
 
 [travel.t](../file/travel.t.html)\[[6185](../source/travel.t.html#6185)\]
 
-<div class="desc">
+
 
 We cannot take a nested room that the actor is occupying
 
-</div>
+
 
 <span id="getExtraScopeItems"></span>
 
@@ -459,13 +459,13 @@ We cannot take a nested room that the actor is occupying
 
 [travel.t](../file/travel.t.html)\[[5663](../source/travel.t.html#5663)\]
 
-<div class="desc">
+
 
 Get the extra scope items within this room. Normally, the immediately
 enclosing nested room is in scope for an actor in the room. So, if the
 actor is directly in 'self', return 'self'.
 
-</div>
+
 
 <span id="isOwnedBy"></span>
 
@@ -473,7 +473,7 @@ actor is directly in 'self', return 'self'.
 
 [travel.t](../file/travel.t.html)\[[5645](../source/travel.t.html#5645)\]
 
-<div class="desc">
+
 
 Check for ownership. For a nested room, an actor can be taken to own the
 nested room by virtue of being inside the room - the chair Bob is
@@ -483,7 +483,7 @@ If we don't have an explicit owner, and the potential owner 'obj' is in
 me and can own me, we'll report that 'obj' does in fact own me.
 Otherwise, we'll defer to the inherited implementation.
 
-</div>
+
 
 <span id="isStagingLocationKnown"></span>
 
@@ -491,7 +491,7 @@ Otherwise, we'll defer to the inherited implementation.
 
 [travel.t](../file/travel.t.html)\[[6154](../source/travel.t.html#6154)\]
 
-<div class="desc">
+
 
 Is the given staging location "known"? This returns true if the staging
 location is usable as a default, nil if not. If this returns true, then
@@ -510,7 +510,7 @@ puzzle by solving it automatically.
 
 By default, we'll treat all of our staging locations as known.
 
-</div>
+
 
 <span id="makeStandingUp"></span>
 
@@ -518,13 +518,13 @@ By default, we'll treat all of our staging locations as known.
 
 [travel.t](../file/travel.t.html)\[[5706](../source/travel.t.html#5706)\]
 
-<div class="desc">
+
 
 Make the actor stand up from this location. By default, we'll cause the
 actor to travel (using travelWithin) to our container, and assume the
 appropriate posture for the container.
 
-</div>
+
 
 <span id="mapPushTravelIobj"></span>
 
@@ -532,11 +532,11 @@ appropriate posture for the container.
 
 [travel.t](../file/travel.t.html)\[[6249](../source/travel.t.html#6249)\]
 
-<div class="desc">
+
 
 explicitly define the push-travel indirect object mappings
 
-</div>
+
 
 <span id="removeFromNested"></span>
 
@@ -544,7 +544,7 @@ explicitly define the push-travel indirect object mappings
 
 [travel.t](../file/travel.t.html)\[[5796](../source/travel.t.html#5796)\]
 
-<div class="desc">
+
 
 Replace the current action with one that removes the actor from this
 nested room. This is used to implement the GET OUT command when the
@@ -552,7 +552,7 @@ actor is directly in this nested room. In most cases, this should simply
 be implemented with a call to replaceAction() with the appropriate
 command.
 
-</div>
+
 
 <span id="roomTravelPreCond"></span>
 
@@ -560,14 +560,14 @@ command.
 
 [travel.t](../file/travel.t.html)\[[6162](../source/travel.t.html#6162)\]
 
-<div class="desc">
+
 
 Get the travel preconditions for an actor in this location. By default,
 if we have a container, and the actor can see the container, we'll
 return its travel preconditions; otherwise, we'll use our inherited
 preconditions.
 
-</div>
+
 
 <span id="tryMovingIntoNested"></span>
 
@@ -575,7 +575,7 @@ preconditions.
 
 [travel.t](../file/travel.t.html)\[[5760](../source/travel.t.html#5760)\]
 
-<div class="desc">
+
 
 Try an implied command to move the actor from outside of this nested
 room into this nested room. This must be overridden in subclasses to
@@ -590,7 +590,7 @@ normally be overridden imply by calling tryImplicitAction() with the
 appropriate command for the specific type of nested room, and returning
 the result.
 
-</div>
+
 
 <span id="tryRemovingFromNested"></span>
 
@@ -598,7 +598,7 @@ the result.
 
 [travel.t](../file/travel.t.html)\[[5783](../source/travel.t.html#5783)\]
 
-<div class="desc">
+
 
 Try an implied command to remove an actor from this location and place
 the actor in my immediate containing location. This must be overridden
@@ -609,11 +609,11 @@ This is essentially the reverse of tryMovingIntoNested(), and should in
 most cases be implemented by calling tryImplicitAction() with the
 appropriate command to get out of the room, and returning the result.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

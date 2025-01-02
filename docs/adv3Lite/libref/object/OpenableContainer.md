@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An OpenableContainer is a Container that can be opened and closed.
 
 `class `**`OpenableContainer`**` :   `[`Container`](../object/Container.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OpenableContainer`**  
 [`Container`](../object/Container.html)  
@@ -53,30 +53,30 @@ An OpenableContainer is a Container that can be opened and closed.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`OpenableContainer`**  
 [`KeyedContainer`](../object/KeyedContainer.html)  
 [`LockableContainer`](../object/LockableContainer.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isOpen`](#isOpen)[`isOpenable`](#isOpenable)
 
@@ -98,11 +98,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -125,11 +125,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -137,11 +137,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[132](../source/extras.t.html#132)\]
 
-<div class="desc">
+
 
 Most OpenableContainers start out closed.
 
-</div>
+
 
 <span id="isOpenable"></span>
 
@@ -149,25 +149,25 @@ Most OpenableContainers start out closed.
 
 [extras.t](../file/extras.t.html)\[[135](../source/extras.t.html#135)\]
 
-<div class="desc">
+
 
 An OpenableContainer is openable
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

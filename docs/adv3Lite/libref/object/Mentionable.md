@@ -26,32 +26,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `class `**`Mentionable`**` :   `[`LMentionable`](../object/LMentionable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Mentionable`**  
 [`LMentionable`](../object/LMentionable.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Mentionable`**  
 [`Thing`](../object/Thing.html)  
@@ -122,20 +122,20 @@ Details](#_Methods_)
 [`Topic`](../object/Topic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`prevDummy_`](../object/prevDummy_.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`ambiguouslyPlural`](#ambiguouslyPlural)[`disambigGroup`](#disambigGroup)[`disambigMatchPhrases`](#disambigMatchPhrases)[`disambigName`](#disambigName)[`disambigOrder`](#disambigOrder)[`distinguishByContents`](#distinguishByContents)[`isHer`](#isHer)[`isHim`](#isHim)[`isIt`](#isIt)[`massNoun`](#massNoun)[`matchPhrases`](#matchPhrases)[`matchPhrasesExclude`](#matchPhrasesExclude)[`name`](#name)[`nominalContents`](#nominalContents)[`person`](#person)[`plural`](#plural)[`proper`](#proper)[`qualified`](#qualified)[`roomTitle`](#roomTitle)[`states`](#states)[`vocab`](#vocab)[`vocabWords`](#vocabWords)
 
@@ -144,11 +144,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`filterResolveList`](#filterResolveList)[`matchName`](#matchName)[`matchNameCommon`](#matchNameCommon)[`matchNameDisambig`](#matchNameDisambig)[`phraseMatchName`](#phraseMatchName)[`simpleMatchName`](#simpleMatchName)
 
@@ -157,11 +157,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="ambiguouslyPlural"></span>
 
@@ -169,13 +169,13 @@ Inherited from `LMentionable` :
 
 [thing.t](../file/thing.t.html)\[[228](../source/thing.t.html#228)\]
 
-<div class="desc">
+
 
 Some objects, such as a pair of shoes or a flight of stairs could be
 regarded as either singular or plural and referred to as either 'it' or
 'them'. Set ambiguouslyPlural to true for such objects.
 
-</div>
+
 
 <span id="disambigGroup"></span>
 
@@ -183,7 +183,7 @@ regarded as either singular or plural and referred to as either 'it' or
 
 [thing.t](../file/thing.t.html)\[[86](../source/thing.t.html#86)\]
 
-<div class="desc">
+
 
 Disambiguation prompt grouping. When the parser generates a
 disambiguation question ("Which did you mean, the red book, or the blue
@@ -194,7 +194,7 @@ like for this, as long as grouped objects have the same value in common.
 We give this property a default value of 0 so that the disambigOrder
 will work by default without the need to specify a disambigGroup.
 
-</div>
+
 
 <span id="disambigMatchPhrases"></span>
 
@@ -202,7 +202,7 @@ will work by default without the need to specify a disambigGroup.
 
 [thing.t](../file/thing.t.html)\[[618](../source/thing.t.html#618)\]
 
-<div class="desc">
+
 
 Do we want to test for phrase matches when disambiguating? We'll assume
 that by default we do since the same reasons for wanting the phrase
@@ -210,7 +210,7 @@ match are likely to apply when disambiguating, and that we'll use the
 same set of phrases. This can be overridden to supply a different set of
 phrases or none.
 
-</div>
+
 
 <span id="disambigName"></span>
 
@@ -218,7 +218,7 @@ phrases or none.
 
 [thing.t](../file/thing.t.html)\[[73](../source/thing.t.html#73)\]
 
-<div class="desc">
+
 
 The object's disambiguation name. This is a more detailed version of the
 name, for situations where the short name is ambiguous. For example, the
@@ -232,7 +232,7 @@ name very terse, so you'll leave out some distinguishing detail that it
 \*could\* have had. In such cases, you can add the distinguishing detail
 here, so that it's displayed only when it's really needed.
 
-</div>
+
 
 <span id="disambigOrder"></span>
 
@@ -240,7 +240,7 @@ here, so that it's displayed only when it's really needed.
 
 [thing.t](../file/thing.t.html)\[[103](../source/thing.t.html#103)\]
 
-<div class="desc">
+
 
 Disambiguation prompt sorting. This gives the display order of this item
 within its disambiguation group, if it has one. The parser sorts objects
@@ -255,7 +255,7 @@ be displayed in the natural order: "button 1, button 2, or button 3?" or
 "the door on the left, the door in the middle, or the door on the
 right?"
 
-</div>
+
 
 <span id="distinguishByContents"></span>
 
@@ -263,7 +263,7 @@ right?"
 
 [thing.t](../file/thing.t.html)\[[272](../source/thing.t.html#272)\]
 
-<div class="desc">
+
 
 Can I be distinguished in parser messages by my contents? If so, we can
 be distinguished (in parser messages) from similar objects by our
@@ -271,7 +271,7 @@ contents, or lack thereof: "bucket of water" vs "empty bucket". If this
 is true, our nominalContents property determines the contents we display
 for this.
 
-</div>
+
 
 <span id="isHer"></span>
 
@@ -279,11 +279,11 @@ for this.
 
 [thing.t](../file/thing.t.html)\[[204](../source/thing.t.html#204)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isHim"></span>
 
@@ -291,11 +291,11 @@ for this.
 
 [thing.t](../file/thing.t.html)\[[203](../source/thing.t.html#203)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isIt"></span>
 
@@ -303,7 +303,7 @@ for this.
 
 [thing.t](../file/thing.t.html)\[[202](../source/thing.t.html#202)\]
 
-<div class="desc">
+
 
 The object's grammatical gender(s). This information is used to
 determine which pronouns can match the object as an antecedent, which
@@ -349,7 +349,7 @@ to tag the gender of individual vocabulary words. One approach would be
 to use separate mNoun and fNoun token properties (and more if needed) to
 distinguish the gender of individual nouns in the dictionary.
 
-</div>
+
 
 <span id="massNoun"></span>
 
@@ -357,7 +357,7 @@ distinguish the gender of individual nouns in the dictionary.
 
 [thing.t](../file/thing.t.html)\[[247](../source/thing.t.html#247)\]
 
-<div class="desc">
+
 
 The object's name is a mass noun. A mass noun is a word that has
 singular form but represents an indeterminate quantity or group of
@@ -375,7 +375,7 @@ but recasting it as "pile of sand" makes it an ordinary noun. (The
 generic way to do this for a homogeneous substance is to add "quantity
 of".)
 
-</div>
+
 
 <span id="matchPhrases"></span>
 
@@ -383,7 +383,7 @@ of".)
 
 [thing.t](../file/thing.t.html)\[[608](../source/thing.t.html#608)\]
 
-<div class="desc">
+
 
 A single-quoted string, or a list of single-quoted strings containing
 exact phrases (i.e. sequences of words) that must be matched by the
@@ -393,7 +393,7 @@ vocab property; the purpose of the matchPhrases property is to limit
 matches. Note also that object will be matched if any of the phrases in
 the list is matched.
 
-</div>
+
 
 <span id="matchPhrasesExclude"></span>
 
@@ -401,13 +401,13 @@ the list is matched.
 
 [thing.t](../file/thing.t.html)\[[626](../source/thing.t.html#626)\]
 
-<div class="desc">
+
 
 If failing to match any of the match phrases (when the player's input
 includes at least one word used in any of them) excludes a match, then
 return nil
 
-</div>
+
 
 <span id="name"></span>
 
@@ -415,7 +415,7 @@ return nil
 
 [thing.t](../file/thing.t.html)\[[37](../source/thing.t.html#37)\]
 
-<div class="desc">
+
 
 The object's short name, for display in lists and announcements. By
 default, this is automatically derived from 'vocab', so you usually
@@ -423,7 +423,7 @@ don't have to set it directly. If you define a non-nil 'name' value
 manually, though, it takes precedence (i.e., the library won't replace
 it with the name implied by 'vocab').
 
-</div>
+
 
 <span id="nominalContents"></span>
 
@@ -431,7 +431,7 @@ it with the name implied by 'vocab').
 
 [thing.t](../file/thing.t.html)\[[263](../source/thing.t.html#263)\]
 
-<div class="desc">
+
 
 My nominal contents is the special contents item we can use in naming
 the object. This is useful for containers whose identities come
@@ -446,7 +446,7 @@ a "box of books and papers" by having separate nominal contents objects
 for the books and the papers; although you could fake it by creating a
 "books and papers" object.)
 
-</div>
+
 
 <span id="person"></span>
 
@@ -454,7 +454,7 @@ for the books and the papers; although you could fake it by creating a
 
 [thing.t](../file/thing.t.html)\[[152](../source/thing.t.html#152)\]
 
-<div class="desc">
+
 
 The grammatical person of narration relative to this object. Use 1 for
 first person ("I am in a cave"), 2 for second person ("You are in a
@@ -473,7 +473,7 @@ narrative person of the story automatically. To write a first-person
 game, you don't have to replace all of the default messages, but simply
 set person=1 in your PC object.
 
-</div>
+
 
 <span id="plural"></span>
 
@@ -481,7 +481,7 @@ set person=1 in your PC object.
 
 [thing.t](../file/thing.t.html)\[[221](../source/thing.t.html#221)\]
 
-<div class="desc">
+
 
 The object's name's grammatical number. This specifies singular or
 plural usage for the object's name when it appears in generated
@@ -496,7 +496,7 @@ implemented collectively as a single "books" object.
 The English library sets this to true if 'them' is listed as a pronoun
 for the object in the 'vocab' property.
 
-</div>
+
 
 <span id="proper"></span>
 
@@ -504,7 +504,7 @@ for the object in the 'vocab' property.
 
 [thing.t](../file/thing.t.html)\[[123](../source/thing.t.html#123)\]
 
-<div class="desc">
+
 
 Is this object's short name a proper name? A proper name is the name of
 a person, place, or other unique entity with its own name.
@@ -522,7 +522,7 @@ over whatever the name's capitalization would otherwise imply. (Other
 languages might have different rules for inferring 'proper', and some
 might not be able to infer it at all.)
 
-</div>
+
 
 <span id="qualified"></span>
 
@@ -530,14 +530,14 @@ might not be able to infer it at all.)
 
 [thing.t](../file/thing.t.html)\[[132](../source/thing.t.html#132)\]
 
-<div class="desc">
+
 
 The object's name is "qualified" grammatically, meaning that it can't be
 combined with articles (a, the) or possessives. Proper names are
 considered to be qualified, but it's possible for a name to be qualified
 but not proper, such as a name that incorporates a possessive.
 
-</div>
+
 
 <span id="roomTitle"></span>
 
@@ -545,7 +545,7 @@ but not proper, such as a name that incorporates a possessive.
 
 [thing.t](../file/thing.t.html)\[[57](../source/thing.t.html#57)\]
 
-<div class="desc">
+
 
 My room title. This is displayed as the start of the room headline,
 which is the first line of the room description when 'self' is the
@@ -563,7 +563,7 @@ The room headline sometimes adds more status information to the title,
 such as the point-of-view actor's direct container when the actor is
 inside an intermediate container within the room, such as a chair.
 
-</div>
+
 
 <span id="states"></span>
 
@@ -571,11 +571,11 @@ inside an intermediate container within the room, such as a chair.
 
 [thing.t](../file/thing.t.html)\[[655](../source/thing.t.html#655)\]
 
-<div class="desc">
+
 
 the State objects applying to this object
 
-</div>
+
 
 <span id="vocab"></span>
 
@@ -583,7 +583,7 @@ the State objects applying to this object
 
 [thing.t](../file/thing.t.html)\[[28](../source/thing.t.html#28)\]
 
-<div class="desc">
+
 
 'vocab' is a string that we use to initialize the object's short name,
 dictionary words, grammatical gender, and grammatical number
@@ -593,7 +593,7 @@ output purposes.
 
 The syntax is language-specific - see initVocab() for details.
 
-</div>
+
 
 <span id="vocabWords"></span>
 
@@ -601,21 +601,21 @@ The syntax is language-specific - see initVocab() for details.
 
 [thing.t](../file/thing.t.html)\[[652](../source/thing.t.html#652)\]
 
-<div class="desc">
+
 
 Vocabulary word list. This is a vector of VocabWord objects that we
 build in initVocab(), giving the individual words that this object uses
 for its noun phrase vocabulary.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -623,12 +623,12 @@ for its noun phrase vocabulary.
 
 [thing.t](../file/thing.t.html)\[[634](../source/thing.t.html#634)\]
 
-<div class="desc">
+
 
 On dynamically creating a new object, do the automatic vocabulary and
 short name initialization.
 
-</div>
+
 
 <span id="filterResolveList"></span>
 
@@ -636,7 +636,7 @@ short name initialization.
 
 [thing.t](../file/thing.t.html)\[[672](../source/thing.t.html#672)\]
 
-<div class="desc">
+
 
 The filterResolveList method allows this object to remove itself or
 other objects from the list of resolved objects.
@@ -652,7 +652,7 @@ mode is the match mode.
 
 By default we do nothing here.
 
-</div>
+
 
 <span id="matchName"></span>
 
@@ -660,7 +660,7 @@ By default we do nothing here.
 
 [thing.t](../file/thing.t.html)\[[313](../source/thing.t.html#313)\]
 
-<div class="desc">
+
 
 Match the object to a noun phrase in the player's input. If the given
 token list is a valid name for this object, we return a combination of
@@ -700,7 +700,7 @@ matching words that aren't in the vocabulary list, such as a game object
 that represents a group of apparent objects that have a whole range of
 labels ("post office box 123", say).
 
-</div>
+
 
 <span id="matchNameCommon"></span>
 
@@ -708,7 +708,7 @@ labels ("post office box 123", say).
 
 [thing.t](../file/thing.t.html)\[[325](../source/thing.t.html#325)\]
 
-<div class="desc">
+
 
 Match a name against a list of tokens entered by the player. phrases is
 the list of match phrases defined on the object (either for initial
@@ -716,7 +716,7 @@ matching or for disambiguation) and excludes should be true or nil
 depending on whether failure to match phrases should exclude a match
 overall.
 
-</div>
+
 
 <span id="matchNameDisambig"></span>
 
@@ -724,7 +724,7 @@ overall.
 
 [thing.t](../file/thing.t.html)\[[418](../source/thing.t.html#418)\]
 
-<div class="desc">
+
 
 Match the object to a noun phrase in \*disambiguation\* input. This
 checks words in the player's reply to a "Which one did you mean...?"
@@ -748,7 +748,7 @@ object vocabulary, ignoring word order. This will usually work even when
 matchName() is overridden to care about word order, since the added
 words here are just serving to distinguish one object from another.
 
-</div>
+
 
 <span id="phraseMatchName"></span>
 
@@ -756,13 +756,13 @@ words here are just serving to distinguish one object from another.
 
 [thing.t](../file/thing.t.html)\[[541](../source/thing.t.html#541)\]
 
-<div class="desc">
+
 
 If we have any phraseMatches defined, check whether we fail to match any
 of them. This will be the case if we find a phraseMatch containing one
 of our tokens but not the rest in the right order.
 
-</div>
+
 
 <span id="simpleMatchName"></span>
 
@@ -770,18 +770,18 @@ of our tokens but not the rest in the right order.
 
 [thing.t](../file/thing.t.html)\[[438](../source/thing.t.html#438)\]
 
-<div class="desc">
+
 
 Simple implementation of matchName(), which simply checks to see if all
 of the tokens are associated with the object. The "simple" aspect is
 that we don't pay any attention to the order of the words - we simply
 check that they're all in the object's vocabulary list, in any order.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

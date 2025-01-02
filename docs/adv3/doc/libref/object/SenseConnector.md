@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 SenseConnector: an object that can pass senses across room boundaries.
 This is a mix-in class: add it to the superclass list of the object
@@ -40,15 +40,15 @@ MultiLoc.
 
 `class `**`SenseConnector`**` :   `[`MultiLoc`](../object/MultiLoc.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SenseConnector`**  
 [`MultiLoc`](../object/MultiLoc.html)  
@@ -56,29 +56,29 @@ MultiLoc.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SenseConnector`**  
 [`DistanceConnector`](../object/DistanceConnector.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`connectorMaterial`](#connectorMaterial)[`getConnectedContainers`](#getConnectedContainers)
 
@@ -89,11 +89,11 @@ Inherited from `BaseMultiLoc` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addDirectConnections`](#addDirectConnections)[`checkMoveThrough`](#checkMoveThrough)[`checkMoveViaPath`](#checkMoveViaPath)[`checkThrowThrough`](#checkThrowThrough)[`checkThrowViaPath`](#checkThrowViaPath)[`checkTouchThrough`](#checkTouchThrough)[`checkTouchViaPath`](#checkTouchViaPath)[`forEachConnectedContainer`](#forEachConnectedContainer)[`sensePathFromWithout`](#sensePathFromWithout)[`shineFromWithout`](#shineFromWithout)[`transSensingThru`](#transSensingThru)
 
@@ -105,11 +105,11 @@ Inherited from `BaseMultiLoc` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="connectorMaterial"></span>
 
@@ -117,12 +117,12 @@ Inherited from `BaseMultiLoc` :
 
 [sense.t](../file/sense.t.html)\[[436](../source/sense.t.html#436)\]
 
-<div class="desc">
+
 
 A SenseConnector's material generally determines how senses pass through
 the connection.
 
-</div>
+
 
 <span id="getConnectedContainers"></span>
 
@@ -130,20 +130,20 @@ the connection.
 
 [sense.t](../file/sense.t.html)\[[582](../source/sense.t.html#582)\]
 
-<div class="desc">
+
 
 Return a list of my connected containers. We connect to all of our
 containers, so simply return my location list.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addDirectConnections"></span>
 
@@ -151,14 +151,14 @@ containers, so simply return my location list.
 
 [sense.t](../file/sense.t.html)\[[451](../source/sense.t.html#451)\]
 
-<div class="desc">
+
 
 Add the direct containment connections for this item to a lookup table.
 
 Since we provide a sense connection among all of our containers, add
 each of our containers to the list.
 
-</div>
+
 
 <span id="checkMoveThrough"></span>
 
@@ -166,13 +166,13 @@ each of our containers to the list.
 
 [sense.t](../file/sense.t.html)\[[589](../source/sense.t.html#589)\]
 
-<div class="desc">
+
 
 Check moving an object through me. This is called when we try to move an
 object from one of our containers to another of our containers through
 me. By default, we don't allow it.
 
-</div>
+
 
 <span id="checkMoveViaPath"></span>
 
@@ -180,11 +180,11 @@ me. By default, we don't allow it.
 
 [sense.t](../file/sense.t.html)\[[617](../source/sense.t.html#617)\]
 
-<div class="desc">
+
 
 check for moving via a path
 
-</div>
+
 
 <span id="checkThrowThrough"></span>
 
@@ -192,13 +192,13 @@ check for moving via a path
 
 [sense.t](../file/sense.t.html)\[[611](../source/sense.t.html#611)\]
 
-<div class="desc">
+
 
 Check throwing an object through me. This is called when an actor tries
 to throw a projectile 'obj' at 'dest' via a path that includes 'self'.
 By default, we don't allow it.
 
-</div>
+
 
 <span id="checkThrowViaPath"></span>
 
@@ -206,11 +206,11 @@ By default, we don't allow it.
 
 [sense.t](../file/sense.t.html)\[[647](../source/sense.t.html#647)\]
 
-<div class="desc">
+
 
 check for throwing via a path
 
-</div>
+
 
 <span id="checkTouchThrough"></span>
 
@@ -218,13 +218,13 @@ check for throwing via a path
 
 [sense.t](../file/sense.t.html)\[[600](../source/sense.t.html#600)\]
 
-<div class="desc">
+
 
 Check touching an object through me. This is called when an actor tries
 to reach from one of my containers through me into another of my
 containers. By default, we don't allow it.
 
-</div>
+
 
 <span id="checkTouchViaPath"></span>
 
@@ -232,11 +232,11 @@ containers. By default, we don't allow it.
 
 [sense.t](../file/sense.t.html)\[[632](../source/sense.t.html#632)\]
 
-<div class="desc">
+
 
 check for touching via a path
 
-</div>
+
 
 <span id="forEachConnectedContainer"></span>
 
@@ -244,13 +244,13 @@ check for touching via a path
 
 [sense.t](../file/sense.t.html)\[[573](../source/sense.t.html#573)\]
 
-<div class="desc">
+
 
 Call a function on each connected container. Since we provide a sense
 path connection among our containers, we must iterate over each of our
 containers.
 
-</div>
+
 
 <span id="sensePathFromWithout"></span>
 
@@ -258,11 +258,11 @@ containers.
 
 [sense.t](../file/sense.t.html)\[[519](../source/sense.t.html#519)\]
 
-<div class="desc">
+
 
 Build a sense path from a container to me
 
-</div>
+
 
 <span id="shineFromWithout"></span>
 
@@ -270,11 +270,11 @@ Build a sense path from a container to me
 
 [sense.t](../file/sense.t.html)\[[478](../source/sense.t.html#478)\]
 
-<div class="desc">
+
 
 Transmit energy from a container onto me.
 
-</div>
+
 
 <span id="transSensingThru"></span>
 
@@ -282,16 +282,16 @@ Transmit energy from a container onto me.
 
 [sense.t](../file/sense.t.html)\[[442](../source/sense.t.html#442)\]
 
-<div class="desc">
+
 
 Determine how senses pass through this connection. By default, we simply
 use the material's transparency.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

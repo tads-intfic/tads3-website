@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| TADS 3 In Depth  
 <span class="navnp"><a href="gameinfo.html" class="nav"><em>Prev:</em> Bibliographic Metadata
@@ -15,7 +15,7 @@ layout: docs
 <a href="t3messages.html" class="nav"><em>Next:</em> Where Messages Come
 From</a>     </span>
 
-</div>
+
 
 
 
@@ -25,7 +25,7 @@ This section looks at important TADS 3 programming topics in detail.
 Most authors working with TADS will encounter these topics at one point
 or another.
 
-<div class="sectoc">
+
 
 [Where Messages Come From](t3messages.html)  
 [Action Results](t3res.html)  
@@ -42,11 +42,11 @@ or another.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| TADS 3 In Depth  
@@ -55,4 +55,4 @@ or another.
 <a href="t3messages.html" class="nav"><em>Next:</em> Where Messages Come
 From</a>     </span>
 
-</div>
+

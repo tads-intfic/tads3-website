@@ -26,49 +26,49 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Network Reply event. This type of event occurs when we receive a reply
 to a network request made with sendNetRequest().
 
 `class `**`NetReplyEvent`**` :   `[`NetEvent`](../object/NetEvent.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NetReplyEvent`**  
 [`NetEvent`](../object/NetEvent.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`evType`](#evType)[`httpStatusLine`](#httpStatusLine)[`redirectLoc`](#redirectLoc)[`replyBody`](#replyBody)[`replyHeaders`](#replyHeaders)[`replyHeadersRaw`](#replyHeadersRaw)[`requestID`](#requestID)[`statusCode`](#statusCode)
 
@@ -77,11 +77,11 @@ Inherited from `NetEvent` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -89,11 +89,11 @@ Inherited from `NetEvent` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="evType"></span>
 
@@ -101,11 +101,11 @@ Inherited from `NetEvent` :
 
 [tadsnet.t](../file/tadsnet.t.html)\[[164](../source/tadsnet.t.html#164)\]
 
-<div class="desc">
+
 
 our default event type is NetEvReply
 
-</div>
+
 
 <span id="httpStatusLine"></span>
 
@@ -113,11 +113,11 @@ our default event type is NetEvReply
 
 [tadsnet.t](../file/tadsnet.t.html)\[[211](../source/tadsnet.t.html#211)\]
 
-<div class="desc">
+
 
 the HTTP status string (the first line of the headers)
 
-</div>
+
 
 <span id="redirectLoc"></span>
 
@@ -125,7 +125,7 @@ the HTTP status string (the first line of the headers)
 
 [tadsnet.t](../file/tadsnet.t.html)\[[234](../source/tadsnet.t.html#234)\]
 
-<div class="desc">
+
 
 Redirect location, if applicable. By default, this will be nil whether
 or not a redirection took place, because sendNetRequest() normally
@@ -139,7 +139,7 @@ happens, this property is set to a string giving the target of the
 redirect. You can then follow the redirect manually, if desired, by
 sending a new request to the target given here.
 
-</div>
+
 
 <span id="replyBody"></span>
 
@@ -147,11 +147,11 @@ sending a new request to the target given here.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[202](../source/tadsnet.t.html#202)\]
 
-<div class="desc">
+
 
 the content body from the reply
 
-</div>
+
 
 <span id="replyHeaders"></span>
 
@@ -159,12 +159,12 @@ the content body from the reply
 
 [tadsnet.t](../file/tadsnet.t.html)\[[208](../source/tadsnet.t.html#208)\]
 
-<div class="desc">
+
 
 the HTTP headers from the reply, as a lookup table indexed by header
 name
 
-</div>
+
 
 <span id="replyHeadersRaw"></span>
 
@@ -172,12 +172,12 @@ name
 
 [tadsnet.t](../file/tadsnet.t.html)\[[218](../source/tadsnet.t.html#218)\]
 
-<div class="desc">
+
 
 the HTTP headers from the reply, in the raw text format - this is simply
 a string of all the headers, separated by CR-LF (\r\n) sequences
 
-</div>
+
 
 <span id="requestID"></span>
 
@@ -185,13 +185,13 @@ a string of all the headers, separated by CR-LF (\r\n) sequences
 
 [tadsnet.t](../file/tadsnet.t.html)\[[171](../source/tadsnet.t.html#171)\]
 
-<div class="desc">
+
 
 The request identifier. This is the ID value provided by the caller in
 the call to sendNetRequest(), so that the caller can relate the reply
 back to the corresponding request.
 
-</div>
+
 
 <span id="statusCode"></span>
 
@@ -199,7 +199,7 @@ back to the corresponding request.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[199](../source/tadsnet.t.html#199)\]
 
-<div class="desc">
+
 
 The network status code. This is an integer value indicating whether the
 request was successful or failed with an error. A negative value is a
@@ -226,15 +226,15 @@ the protocol used to send the request:
 200 range generally indicates success, while other ranges generally
 indicate errors.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -242,15 +242,15 @@ indicate errors.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[114](../source/tadsnet.t.html#114)\]
 
-<div class="desc">
+
 
 construction
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

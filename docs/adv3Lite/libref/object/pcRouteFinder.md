@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The pcRouteFinder works exactly the same as the more general routeFinder
 except that it finds routes only through TravelConnectors whose
@@ -28,26 +28,26 @@ destinations are known.
 
 **`pcRouteFinder`**` :   `[`Pathfinder`](../object/Pathfinder.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`pcRouteFinder`**  
 [`Pathfinder`](../object/Pathfinder.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -56,11 +56,11 @@ Inherited from `Pathfinder` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`findDestinations`](#findDestinations)
 
@@ -69,19 +69,19 @@ Inherited from `Pathfinder` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="findDestinations"></span>
 
@@ -89,15 +89,15 @@ Inherited from `Pathfinder` :
 
 [pathfind.t](../file/pathfind.t.html)\[[224](../source/pathfind.t.html#224)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

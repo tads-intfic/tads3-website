@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 \[FOOTNOTE EXTENSION\]
 
 **`FootnotesStatus`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FootnotesStatus`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -45,11 +45,11 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInUndo`](#includeInUndo)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`showFootnoteStatus`](#showFootnoteStatus)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -105,19 +105,19 @@ Inherited from `Redirector` :
 
 [footnote.t](../file/footnote.t.html)\[[435](../source/footnote.t.html#435)\]
 
-<div class="desc">
+
 
 there's no point in including this in undo
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -125,11 +125,11 @@ there's no point in including this in undo
 
 [footnote.t](../file/footnote.t.html)\[[424](../source/footnote.t.html#424)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showFootnoteStatus"></span>
 
@@ -137,15 +137,15 @@ there's no point in including this in undo
 
 [footnote.t](../file/footnote.t.html)\[[437](../source/footnote.t.html#437)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

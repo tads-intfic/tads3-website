@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Matchbook is a special dispenser for matches.
 
 `class `**`Matchbook`**` :   `[`Collective`](../object/Collective.html)[`Openable`](../object/Openable.html)[`Dispenser`](../object/Dispenser.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Matchbook`**  
 [`Collective`](../object/Collective.html)  
@@ -58,27 +58,27 @@ A Matchbook is a special dispenser for matches.
 `                                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canReturnItem`](#canReturnItem)[`myItemClass`](#myItemClass)
 
@@ -111,11 +111,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`appendHeldContents`](#appendHeldContents)[`isCollectiveFor`](#isCollectiveFor)
 
@@ -151,11 +151,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canReturnItem"></span>
 
@@ -163,11 +163,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[1857](../source/extras.t.html#1857)\]
 
-<div class="desc">
+
 
 we cannot return a match to a matchbook
 
-</div>
+
 
 <span id="myItemClass"></span>
 
@@ -175,20 +175,20 @@ we cannot return a match to a matchbook
 
 [extras.t](../file/extras.t.html)\[[1863](../source/extras.t.html#1863)\]
 
-<div class="desc">
+
 
 we dispense matches (subclasses can override this if they want to
 dispense a specialized match subclass)
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="appendHeldContents"></span>
 
@@ -196,14 +196,14 @@ dispense a specialized match subclass)
 
 [extras.t](../file/extras.t.html)\[[1883](../source/extras.t.html#1883)\]
 
-<div class="desc">
+
 
 Append my directly-held contents to a vector when I'm directly held.
 When the matchbook is open, append our matches, because we consider the
 matches to be effectively attached to the matchbook (rather than
 contained within it).
 
-</div>
+
 
 <span id="isCollectiveFor"></span>
 
@@ -211,7 +211,7 @@ contained within it).
 
 [extras.t](../file/extras.t.html)\[[1875](../source/extras.t.html#1875)\]
 
-<div class="desc">
+
 
 Act as a collective for any items within me. This will have no effect
 unless we also have a plural name that matches that of the contained
@@ -221,11 +221,11 @@ It is usually desirable for a matchbook to act as a collective for the
 contained items, so that a command like "take matches" will be taken to
 apply to the matchbook rather than the individual matches.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

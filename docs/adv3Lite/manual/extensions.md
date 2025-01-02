@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Extensions  
@@ -16,7 +16,7 @@ layout: docs
 <a href="../learning/exercises.html" class="nav"><em>Next:</em> Exercises
 &amp; Samples</a>     </span>
 
-</div>
+
 
 
 
@@ -66,14 +66,14 @@ extension file names to your project (t3m) file in the equivalent place:
 between the library files and your own game code files, in the following
 manner:
 
-`
+```
     -lib system
     -lib adv3Lite
     -source extensions/roomparts
     -source start
 
      
-`
+```
 
 Many of the extensions that come with adv3Lite make use of additional
 macros, templates and enums. These are all defined in the advlite.h file
@@ -322,7 +322,7 @@ see the documentation on [weight.t](../extensions/weight.html).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *Adv3Lite Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -332,4 +332,4 @@ see the documentation on [weight.t](../extensions/weight.html).
 <a href="../learning/exercises.html" class="nav"><em>Next:</em> Exercises
 &amp; Samples</a>     </span>
 
-</div>
+

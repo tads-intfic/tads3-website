@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Show room exits in response to an explicit request (such as an EXITS
 command).
 
 **`explicitExitLister`**` :   `[`ExitLister`](../object/ExitLister1.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`explicitExitLister`**  
 [`ExitLister`](../object/ExitLister1.html)  
@@ -43,11 +43,11 @@ command).
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -58,11 +58,11 @@ Inherited from `ExitLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListEmpty`](#showListEmpty)
 
@@ -74,19 +74,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -94,15 +94,15 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5422](../source/msg_neu.t.html#5422)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

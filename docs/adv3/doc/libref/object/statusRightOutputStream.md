@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A special OutputStream for the right half of the status line (the
 score/turn count area) in text mode. We use a separate stream for this
@@ -35,15 +35,15 @@ flexibility.
 
 `transient `**`statusRightOutputStream`**` :   `[`OutputStream`](../object/OutputStream.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`statusRightOutputStream`**  
 [`OutputStream`](../object/OutputStream.html)  
@@ -52,11 +52,11 @@ flexibility.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`buf_`](#buf_)
 
@@ -70,11 +70,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`flushStream`](#flushStream)[`writeFromStream`](#writeFromStream)
 
@@ -88,11 +88,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="buf_"></span>
 
@@ -100,19 +100,19 @@ Inherited from `ModuleExecObject` :
 
 [status.t](../file/status.t.html)\[[109](../source/status.t.html#109)\]
 
-<div class="desc">
+
 
 our buffered text
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="flushStream"></span>
 
@@ -120,12 +120,12 @@ our buffered text
 
 [status.t](../file/status.t.html)\[[99](../source/status.t.html#99)\]
 
-<div class="desc">
+
 
 Flush the buffer. This writes whatever we've buffered up to the right
 half of the text-mode status line.
 
-</div>
+
 
 <span id="writeFromStream"></span>
 
@@ -133,16 +133,16 @@ half of the text-mode status line.
 
 [status.t](../file/status.t.html)\[[89](../source/status.t.html#89)\]
 
-<div class="desc">
+
 
 Write from the stream. We simply buffer up text until we're asked to
 display the final data.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

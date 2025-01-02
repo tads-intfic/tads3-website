@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Combined pushing-and-traveling action ("push crate north", "drag sled
 into cave"). All of these are based on a base action class, which
@@ -37,15 +37,15 @@ takes us.
 `DefineTAction(PushTravel)      `*`// original source text`*  
 `class `**`PushTravelAction`**` :   `[`TAction`](../object/TAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PushTravelAction`**  
 [`TAction`](../object/TAction.html)  
@@ -56,11 +56,11 @@ takes us.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PushTravelAction`**  
 [`PushTravelDirAction`](../object/PushTravelDirAction.html)  
@@ -94,19 +94,19 @@ takes us.
 [`predicate(PushTravelThrough)`](../object/predicate(PushTravelThrough).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -124,11 +124,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`performTravel`](#performTravel)
 
@@ -146,19 +146,19 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="performTravel"></span>
 
@@ -167,7 +167,7 @@ only</span>
 
 [actions.t](../file/actions.t.html)\[[2912](../source/actions.t.html#2912)\]
 
-<div class="desc">
+
 
 Carry out the nested travel action for the special combination
 push-traveler. This should carry out the same action we would have
@@ -184,11 +184,11 @@ traveler.
 
 This method is abstract - each subclass must define it appropriately.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "Divided" inventory lister. In 'wide' mode, this shows inventory in two
 parts: the items being carried, and the items being worn. (We use the
@@ -34,15 +34,15 @@ standard single tree-style listing in 'tall' mode.)
 
 `class `**`DividedInventoryLister`**` :   `[`InventoryLister`](../object/InventoryLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DividedInventoryLister`**  
 [`InventoryLister`](../object/InventoryLister.html)  
@@ -50,28 +50,28 @@ standard single tree-style listing in 'tall' mode.)
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`actorInventoryLister`](../object/actorInventoryLister.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`carryingLister`](#carryingLister)[`singleSentenceMaxNouns`](#singleSentenceMaxNouns)[`wearingLister`](#wearingLister)
 
@@ -82,11 +82,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showCombinedInventoryList`](#showCombinedInventoryList)[`showList`](#showList)
 
@@ -98,11 +98,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="carryingLister"></span>
 
@@ -110,12 +110,12 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1687](../source/lister.t.html#1687)\]
 
-<div class="desc">
+
 
 Our associated sub-listers for items begin carried and worn,
 respectively. We'll use these to list our sublist of items being worn.
 
-</div>
+
 
 <span id="singleSentenceMaxNouns"></span>
 
@@ -123,14 +123,14 @@ respectively. We'll use these to list our sublist of items being worn.
 
 [lister.t](../file/lister.t.html)\[[1680](../source/lister.t.html#1680)\]
 
-<div class="desc">
+
 
 The recommended maximum number of number of noun phrases to show in the
 single-sentence format. This should be used by the
 showCombinedInventoryList() method to decide whether to display the
 combined listing as a single sentence or as two separate sentences.
 
-</div>
+
 
 <span id="wearingLister"></span>
 
@@ -138,19 +138,19 @@ combined listing as a single sentence or as two separate sentences.
 
 [lister.t](../file/lister.t.html)\[[1688](../source/lister.t.html#1688)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showCombinedInventoryList"></span>
 
@@ -158,7 +158,7 @@ combined listing as a single sentence or as two separate sentences.
 
 [lister.t](../file/lister.t.html)\[[1671](../source/lister.t.html#1671)\]
 
-<div class="desc">
+
 
 Show the combined listing. This must be provided by each
 language-specific subclass. The inputs are the results (strings) of the
@@ -167,7 +167,7 @@ items being worn. These will be "raw" listings, without any prefix or
 suffix text. This routine's job is to display the final output, adding
 the framing text.
 
-</div>
+
 
 <span id="showList"></span>
 
@@ -175,16 +175,16 @@ the framing text.
 
 [lister.t](../file/lister.t.html)\[[1608](../source/lister.t.html#1608)\]
 
-<div class="desc">
+
 
 Show the list. We completely override the main lister method so that we
 can show our two lists.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

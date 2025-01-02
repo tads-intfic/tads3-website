@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Command report objects. The library uses these to control how the text
 from a command is displayed. Game code can also use report objects to
@@ -67,25 +67,25 @@ are ordered before and after (respectively) a main report.
 
 `class `**`CommandReport`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandReport`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`CommandReport`**  
 [`CommandAnnouncement`](../object/CommandAnnouncement.html)  
@@ -116,39 +116,39 @@ are ordered before and after (respectively) a main report.
 [`FailCommandMarker`](../object/FailCommandMarker.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`action_`](#action_)[`isFailure`](#isFailure)[`isQuestion`](#isQuestion)[`iter_`](#iter_)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`getAction`](#getAction)[`isActionImplicit`](#isActionImplicit)[`isActionNestedIn`](#isActionNestedIn)[`isPartOf`](#isPartOf)[`setAction`](#setAction)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action_"></span>
 
@@ -156,11 +156,11 @@ are ordered before and after (respectively) a main report.
 
 [report.t](../file/report.t.html)\[[97](../source/report.t.html#97)\]
 
-<div class="desc">
+
 
 the action I'm associated with
 
-</div>
+
 
 <span id="isFailure"></span>
 
@@ -168,12 +168,12 @@ the action I'm associated with
 
 [report.t](../file/report.t.html)\[[85](../source/report.t.html#85)\]
 
-<div class="desc">
+
 
 Flag: if this property is true, this report indicates a failure. By
 default, a report does not indicate failure.
 
-</div>
+
 
 <span id="isQuestion"></span>
 
@@ -181,12 +181,12 @@ default, a report does not indicate failure.
 
 [report.t](../file/report.t.html)\[[91](../source/report.t.html#91)\]
 
-<div class="desc">
+
 
 Flag: if this property is true, this report indicates an interruption
 for interactive input.
 
-</div>
+
 
 <span id="iter_"></span>
 
@@ -194,19 +194,19 @@ for interactive input.
 
 [report.t](../file/report.t.html)\[[94](../source/report.t.html#94)\]
 
-<div class="desc">
+
 
 iteration number current when we were added to the transcript
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -214,11 +214,11 @@ iteration number current when we were added to the transcript
 
 [report.t](../file/report.t.html)\[[56](../source/report.t.html#56)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getAction"></span>
 
@@ -226,11 +226,11 @@ iteration number current when we were added to the transcript
 
 [report.t](../file/report.t.html)\[[67](../source/report.t.html#67)\]
 
-<div class="desc">
+
 
 get/set my action
 
-</div>
+
 
 <span id="isActionImplicit"></span>
 
@@ -238,11 +238,11 @@ get/set my action
 
 [report.t](../file/report.t.html)\[[71](../source/report.t.html#71)\]
 
-<div class="desc">
+
 
 check to see if my action is implicit
 
-</div>
+
 
 <span id="isActionNestedIn"></span>
 
@@ -250,11 +250,11 @@ check to see if my action is implicit
 
 [report.t](../file/report.t.html)\[[74](../source/report.t.html#74)\]
 
-<div class="desc">
+
 
 check to see if my action is nested in the other report's action
 
-</div>
+
 
 <span id="isPartOf"></span>
 
@@ -262,13 +262,13 @@ check to see if my action is nested in the other report's action
 
 [report.t](../file/report.t.html)\[[104](../source/report.t.html#104)\]
 
-<div class="desc">
+
 
 Am I part of the same action as the given report? Returns true if this
 action is part of the same iteration and part of the same action as the
 other report.
 
-</div>
+
 
 <span id="setAction"></span>
 
@@ -276,15 +276,15 @@ other report.
 
 [report.t](../file/report.t.html)\[[68](../source/report.t.html#68)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

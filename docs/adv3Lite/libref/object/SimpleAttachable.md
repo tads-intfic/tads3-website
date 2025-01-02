@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SimpleAttachabe is a Thing that can be attached to other things or
 have other things attached to it in the special case in which the
@@ -35,15 +35,15 @@ SimpleAttachable is also the base class for other types of attachable.
 
 `class `**`SimpleAttachable`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SimpleAttachable`**  
 [`Thing`](../object/Thing.html)  
@@ -55,11 +55,11 @@ SimpleAttachable is also the base class for other types of attachable.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SimpleAttachable`**  
 [`AttachableComponent`](../object/AttachableComponent.html)  
@@ -67,19 +67,19 @@ SimpleAttachable is also the base class for other types of attachable.
 [`Attachable`](../object/Attachable.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allowableAttachments`](#allowableAttachments)[`allowOtherToMoveWhileAttached`](#allowOtherToMoveWhileAttached)[`alreadyAttachedMsg`](#alreadyAttachedMsg)[`attachedLocation`](#attachedLocation)[`attachedTo`](#attachedTo)[`attachedToList`](#attachedToList)[`attachmentLister`](#attachmentLister)[`attachments`](#attachments)[`canAttachToMe`](#canAttachToMe)[`canDetachFromMe`](#canDetachFromMe)[`cannotBeAttachedMsg`](#cannotBeAttachedMsg)[`cannotDetachFromMsg`](#cannotDetachFromMsg)[`cannotDetachMsg`](#cannotDetachMsg)[`detachedLocation`](#detachedLocation)[`isAttachable`](#isAttachable)[`isDetachable`](#isDetachable)[`isFirmAttachment`](#isFirmAttachment)[`isListed`](#isListed)[`notAttachedMsg`](#notAttachedMsg)[`notAttachedToThatMsg`](#notAttachedToThatMsg)[`nothingAttachedMsg`](#nothingAttachedMsg)[`okayAttachMsg`](#okayAttachMsg)[`okayDetachFromMsg`](#okayDetachFromMsg)[`okayDetachMsg`](#okayDetachMsg)
 
@@ -98,11 +98,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`actionMoveInto`](#actionMoveInto)[`allowAttach`](#allowAttach)[`attachTo`](#attachTo)[`detachFrom`](#detachFrom)[`dobjFor(AttachTo)`](#dobjFor(AttachTo))[`dobjFor(Detach)`](#dobjFor(Detach))[`dobjFor(DetachFrom)`](#dobjFor(DetachFrom))[`dobjFor(FastenTo)`](#dobjFor(FastenTo))[`dobjFor(Take)`](#dobjFor(Take))[`dobjFor(Unfasten)`](#dobjFor(Unfasten))[`dobjFor(UnfastenFrom)`](#dobjFor(UnfastenFrom))[`examineStatus`](#examineStatus)[`iobjFor(AttachTo)`](#iobjFor(AttachTo))[`iobjFor(DetachFrom)`](#iobjFor(DetachFrom))[`iobjFor(FastenTo)`](#iobjFor(FastenTo))[`iobjFor(UnfastenFrom)`](#iobjFor(UnfastenFrom))[`isAttachedTo`](#isAttachedTo)[`isAttachedToMe`](#isAttachedToMe)[`locType`](#locType)[`makeAttachedTo`](#makeAttachedTo)[`makeDetachedFrom`](#makeDetachedFrom)[`preinitThing`](#preinitThing)[`sayCannotMoveWhileAttached`](#sayCannotMoveWhileAttached)
 
@@ -123,11 +123,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowableAttachments"></span>
 
@@ -135,11 +135,11 @@ Inherited from `LMentionable` :
 
 [attachables.t](../file/attachables.t.html)\[[41](../source/attachables.t.html#41)\]
 
-<div class="desc">
+
 
 A list of the objects or classes of objects that can be attached to me
 
-</div>
+
 
 <span id="allowOtherToMoveWhileAttached"></span>
 
@@ -147,13 +147,13 @@ A list of the objects or classes of objects that can be attached to me
 
 [attachables.t](../file/attachables.t.html)\[[418](../source/attachables.t.html#418)\]
 
-<div class="desc">
+
 
 Determine whether the object I'm attached to can be moved while I'm
 attached to it. For a SimpleAttachable we normally do allow this, since
 I simply move with the other object.
 
-</div>
+
 
 <span id="alreadyAttachedMsg"></span>
 
@@ -161,11 +161,11 @@ I simply move with the other object.
 
 [attachables.t](../file/attachables.t.html)\[[154](../source/attachables.t.html#154)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="attachedLocation"></span>
 
@@ -173,13 +173,13 @@ I simply move with the other object.
 
 [attachables.t](../file/attachables.t.html)\[[61](../source/attachables.t.html#61)\]
 
-<div class="desc">
+
 
 The location this object should be moved to when it's attached to
 another object. A SimpleAttachment should normally be moved into the to
 which it's attached.
 
-</div>
+
 
 <span id="attachedTo"></span>
 
@@ -187,11 +187,11 @@ which it's attached.
 
 [attachables.t](../file/attachables.t.html)\[[343](../source/attachables.t.html#343)\]
 
-<div class="desc">
+
 
 Am I currently attached to anything?
 
-</div>
+
 
 <span id="attachedToList"></span>
 
@@ -199,11 +199,11 @@ Am I currently attached to anything?
 
 [attachables.t](../file/attachables.t.html)\[[346](../source/attachables.t.html#346)\]
 
-<div class="desc">
+
 
 The list of things I'm attached to
 
-</div>
+
 
 <span id="attachmentLister"></span>
 
@@ -211,11 +211,11 @@ The list of things I'm attached to
 
 [attachables.t](../file/attachables.t.html)\[[398](../source/attachables.t.html#398)\]
 
-<div class="desc">
+
 
 The lister to be used for listing our attachments.
 
-</div>
+
 
 <span id="attachments"></span>
 
@@ -223,11 +223,11 @@ The lister to be used for listing our attachments.
 
 [attachables.t](../file/attachables.t.html)\[[44](../source/attachables.t.html#44)\]
 
-<div class="desc">
+
 
 A list of the objects that are attached to me
 
-</div>
+
 
 <span id="canAttachToMe"></span>
 
@@ -235,11 +235,11 @@ A list of the objects that are attached to me
 
 [attachables.t](../file/attachables.t.html)\[[50](../source/attachables.t.html#50)\]
 
-<div class="desc">
+
 
 A SimpleAttachable can have (some) other things attached to it
 
-</div>
+
 
 <span id="canDetachFromMe"></span>
 
@@ -247,11 +247,11 @@ A SimpleAttachable can have (some) other things attached to it
 
 [attachables.t](../file/attachables.t.html)\[[53](../source/attachables.t.html#53)\]
 
-<div class="desc">
+
 
 A SimpleAttachable can have (some) other things detached from it
 
-</div>
+
 
 <span id="cannotBeAttachedMsg"></span>
 
@@ -259,11 +259,11 @@ A SimpleAttachable can have (some) other things detached from it
 
 [attachables.t](../file/attachables.t.html)\[[340](../source/attachables.t.html#340)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotDetachFromMsg"></span>
 
@@ -271,11 +271,11 @@ A SimpleAttachable can have (some) other things detached from it
 
 [attachables.t](../file/attachables.t.html)\[[269](../source/attachables.t.html#269)\]
 
-<div class="desc">
+
 
 Carry out the inherited handling
 
-</div>
+
 
 <span id="cannotDetachMsg"></span>
 
@@ -283,11 +283,11 @@ Carry out the inherited handling
 
 [attachables.t](../file/attachables.t.html)\[[239](../source/attachables.t.html#239)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="detachedLocation"></span>
 
@@ -295,13 +295,13 @@ Carry out the inherited handling
 
 [attachables.t](../file/attachables.t.html)\[[68](../source/attachables.t.html#68)\]
 
-<div class="desc">
+
 
 The location this object should be moved to when it's detached. A
 SimpleAttachment should normally be moved into the location of the
 object it's just been detached from.
 
-</div>
+
 
 <span id="isAttachable"></span>
 
@@ -309,11 +309,11 @@ object it's just been detached from.
 
 [attachables.t](../file/attachables.t.html)\[[47](../source/attachables.t.html#47)\]
 
-<div class="desc">
+
 
 A SimpleAttachable can be attached to (some) other things.
 
-</div>
+
 
 <span id="isDetachable"></span>
 
@@ -321,13 +321,13 @@ A SimpleAttachable can be attached to (some) other things.
 
 [attachables.t](../file/attachables.t.html)\[[411](../source/attachables.t.html#411)\]
 
-<div class="desc">
+
 
 Allow detachment through a simple DETACH command. (If this is nil
 detachment might still be programatically possible, e.g. by UNSCREWing
 something).
 
-</div>
+
 
 <span id="isFirmAttachment"></span>
 
@@ -335,12 +335,12 @@ something).
 
 [attachables.t](../file/attachables.t.html)\[[404](../source/attachables.t.html#404)\]
 
-<div class="desc">
+
 
 If I'm attached, do I become firmly attached (so that I can't be removed
 without an explicit detachment)?
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -348,12 +348,12 @@ without an explicit detachment)?
 
 [attachables.t](../file/attachables.t.html)\[[352](../source/attachables.t.html#352)\]
 
-<div class="desc">
+
 
 By default I'm not listed as a separate object if I'm attached to
 something else.
 
-</div>
+
 
 <span id="notAttachedMsg"></span>
 
@@ -361,12 +361,12 @@ something else.
 
 [attachables.t](../file/attachables.t.html)\[[175](../source/attachables.t.html#175)\]
 
-<div class="desc">
+
 
 If we don't allow the dobj to be attached to us, rule out the
 attachment.
 
-</div>
+
 
 <span id="notAttachedToThatMsg"></span>
 
@@ -374,11 +374,11 @@ attachment.
 
 [attachables.t](../file/attachables.t.html)\[[272](../source/attachables.t.html#272)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nothingAttachedMsg"></span>
 
@@ -386,11 +386,11 @@ attachment.
 
 [attachables.t](../file/attachables.t.html)\[[275](../source/attachables.t.html#275)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="okayAttachMsg"></span>
 
@@ -398,11 +398,11 @@ attachment.
 
 [attachables.t](../file/attachables.t.html)\[[151](../source/attachables.t.html#151)\]
 
-<div class="desc">
+
 
 We can't be attached while we're already attached
 
-</div>
+
 
 <span id="okayDetachFromMsg"></span>
 
@@ -410,11 +410,11 @@ We can't be attached while we're already attached
 
 [attachables.t](../file/attachables.t.html)\[[236](../source/attachables.t.html#236)\]
 
-<div class="desc">
+
 
 Carry out the inherited handling.
 
-</div>
+
 
 <span id="okayDetachMsg"></span>
 
@@ -422,19 +422,19 @@ Carry out the inherited handling.
 
 [attachables.t](../file/attachables.t.html)\[[200](../source/attachables.t.html#200)\]
 
-<div class="desc">
+
 
 We can't be detached if we're not detachable
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="actionMoveInto"></span>
 
@@ -442,13 +442,13 @@ We can't be detached if we're not detachable
 
 [attachables.t](../file/attachables.t.html)\[[301](../source/attachables.t.html#301)\]
 
-<div class="desc">
+
 
 Check while any of my attachments object to my being moved while they
 are attached to me. If so, prevent the attempt to move me as the result
 of a player command.
 
-</div>
+
 
 <span id="allowAttach"></span>
 
@@ -456,12 +456,12 @@ of a player command.
 
 [attachables.t](../file/attachables.t.html)\[[34](../source/attachables.t.html#34)\]
 
-<div class="desc">
+
 
 Can an object be attached to this one? By default we return true if obj
 is on our list of allowableAttachments.
 
-</div>
+
 
 <span id="attachTo"></span>
 
@@ -469,11 +469,11 @@ is on our list of allowableAttachments.
 
 [attachables.t](../file/attachables.t.html)\[[71](../source/attachables.t.html#71)\]
 
-<div class="desc">
+
 
 Attach this object to obj
 
-</div>
+
 
 <span id="detachFrom"></span>
 
@@ -481,11 +481,11 @@ Attach this object to obj
 
 [attachables.t](../file/attachables.t.html)\[[94](../source/attachables.t.html#94)\]
 
-<div class="desc">
+
 
 Detach this item from obj
 
-</div>
+
 
 <span id="dobjFor(AttachTo)"></span>
 
@@ -493,11 +493,11 @@ Detach this item from obj
 
 [attachables.t](../file/attachables.t.html)\[[122](../source/attachables.t.html#122)\]
 
-<div class="desc">
+
 
 Handling for the ATTACH TO action
 
-</div>
+
 
 <span id="dobjFor(Detach)"></span>
 
@@ -505,11 +505,11 @@ Handling for the ATTACH TO action
 
 [attachables.t](../file/attachables.t.html)\[[177](../source/attachables.t.html#177)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(DetachFrom)"></span>
 
@@ -517,11 +517,11 @@ Handling for the ATTACH TO action
 
 [attachables.t](../file/attachables.t.html)\[[203](../source/attachables.t.html#203)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(FastenTo)"></span>
 
@@ -529,11 +529,11 @@ Handling for the ATTACH TO action
 
 [attachables.t](../file/attachables.t.html)\[[278](../source/attachables.t.html#278)\]
 
-<div class="desc">
+
 
 Treat Fasten and Unfasten as equivalent to Attach and Detach
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -541,14 +541,14 @@ Treat Fasten and Unfasten as equivalent to Attach and Detach
 
 [attachables.t](../file/attachables.t.html)\[[290](../source/attachables.t.html#290)\]
 
-<div class="desc">
+
 
 We can't take this object while it's attached. Note that this is
 assymetric: it applies only to the attached object (the one for which
 attachedTo != nil) not to the object it's attached to (which can be
 taken with the attached object still attached to it.
 
-</div>
+
 
 <span id="dobjFor(Unfasten)"></span>
 
@@ -556,11 +556,11 @@ taken with the attached object still attached to it.
 
 [attachables.t](../file/attachables.t.html)\[[282](../source/attachables.t.html#282)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(UnfastenFrom)"></span>
 
@@ -568,11 +568,11 @@ taken with the attached object still attached to it.
 
 [attachables.t](../file/attachables.t.html)\[[280](../source/attachables.t.html#280)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -580,11 +580,11 @@ taken with the attached object still attached to it.
 
 [attachables.t](../file/attachables.t.html)\[[387](../source/attachables.t.html#387)\]
 
-<div class="desc">
+
 
 If anything's attached to us, list our attachements when we're examined.
 
-</div>
+
 
 <span id="iobjFor(AttachTo)"></span>
 
@@ -592,11 +592,11 @@ If anything's attached to us, list our attachements when we're examined.
 
 [attachables.t](../file/attachables.t.html)\[[156](../source/attachables.t.html#156)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(DetachFrom)"></span>
 
@@ -604,11 +604,11 @@ If anything's attached to us, list our attachements when we're examined.
 
 [attachables.t](../file/attachables.t.html)\[[241](../source/attachables.t.html#241)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(FastenTo)"></span>
 
@@ -616,11 +616,11 @@ If anything's attached to us, list our attachements when we're examined.
 
 [attachables.t](../file/attachables.t.html)\[[279](../source/attachables.t.html#279)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(UnfastenFrom)"></span>
 
@@ -628,11 +628,11 @@ If anything's attached to us, list our attachements when we're examined.
 
 [attachables.t](../file/attachables.t.html)\[[281](../source/attachables.t.html#281)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isAttachedTo"></span>
 
@@ -640,12 +640,12 @@ If anything's attached to us, list our attachements when we're examined.
 
 [attachables.t](../file/attachables.t.html)\[[368](../source/attachables.t.html#368)\]
 
-<div class="desc">
+
 
 Is there an attachment relationship between myself and obj; there is
 either is obj is attach to me or if I'm attached to obj.
 
-</div>
+
 
 <span id="isAttachedToMe"></span>
 
@@ -653,12 +653,12 @@ either is obj is attach to me or if I'm attached to obj.
 
 [attachables.t](../file/attachables.t.html)\[[358](../source/attachables.t.html#358)\]
 
-<div class="desc">
+
 
 Is obj attached to me? By default it is if it's in my list of
 attachements.
 
-</div>
+
 
 <span id="locType"></span>
 
@@ -666,11 +666,11 @@ attachements.
 
 [attachables.t](../file/attachables.t.html)\[[375](../source/attachables.t.html#375)\]
 
-<div class="desc">
+
 
 Our locType is Attached if we're attached so something.
 
-</div>
+
 
 <span id="makeAttachedTo"></span>
 
@@ -678,11 +678,11 @@ Our locType is Attached if we're attached so something.
 
 [attachables.t](../file/attachables.t.html)\[[88](../source/attachables.t.html#88)\]
 
-<div class="desc">
+
 
 For a SimpleAttachable we just make obj the item we're attached to
 
-</div>
+
 
 <span id="makeDetachedFrom"></span>
 
@@ -690,11 +690,11 @@ For a SimpleAttachable we just make obj the item we're attached to
 
 [attachables.t](../file/attachables.t.html)\[[115](../source/attachables.t.html#115)\]
 
-<div class="desc">
+
 
 For a SimpleAttachable detachment reduces our attachedTo to nil
 
-</div>
+
 
 <span id="preinitThing"></span>
 
@@ -702,11 +702,11 @@ For a SimpleAttachable detachment reduces our attachedTo to nil
 
 [attachables.t](../file/attachables.t.html)\[[422](../source/attachables.t.html#422)\]
 
-<div class="desc">
+
 
 Preinitialize a SimpleAttachable
 
-</div>
+
 
 <span id="sayCannotMoveWhileAttached"></span>
 
@@ -714,16 +714,16 @@ Preinitialize a SimpleAttachable
 
 [attachables.t](../file/attachables.t.html)\[[331](../source/attachables.t.html#331)\]
 
-<div class="desc">
+
 
 Display a message saying we can't be moved while we're attached to
 other.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

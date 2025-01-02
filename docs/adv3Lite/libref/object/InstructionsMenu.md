@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 a base class for the instruction chapter menus
 
 `class `**`InstructionsMenu`**` :   `[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`InstructionsMenu`**  
 [`MenuLongTopicItem`](../object/MenuLongTopicItem.html)  
@@ -49,27 +49,27 @@ a base class for the instruction chapter menus
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`chapterProp`](#chapterProp)[`heading`](#heading)[`isChapterMenu`](#isChapterMenu)[`menuContents`](#menuContents)
 
@@ -84,11 +84,11 @@ Inherited from `MenuObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -103,11 +103,11 @@ Inherited from `MenuObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="chapterProp"></span>
 
@@ -115,11 +115,11 @@ Inherited from `MenuObject` :
 
 [instruct.t](../file/instruct.t.html)\[[1031](../source/instruct.t.html#1031)\]
 
-<div class="desc">
+
 
 the InstructionsAction property that we invoke to show our chapter
 
-</div>
+
 
 <span id="heading"></span>
 
@@ -127,11 +127,11 @@ the InstructionsAction property that we invoke to show our chapter
 
 [instruct.t](../file/instruct.t.html)\[[1034](../source/instruct.t.html#1034)\]
 
-<div class="desc">
+
 
 don't use a heading, as we provide our own internal chapter titles
 
-</div>
+
 
 <span id="isChapterMenu"></span>
 
@@ -139,12 +139,12 @@ don't use a heading, as we provide our own internal chapter titles
 
 [instruct.t](../file/instruct.t.html)\[[1028](../source/instruct.t.html#1028)\]
 
-<div class="desc">
+
 
 present the instructions in "chapter" format, so that we can navigate
 from one chapter directly to the next
 
-</div>
+
 
 <span id="menuContents"></span>
 
@@ -152,25 +152,25 @@ from one chapter directly to the next
 
 [instruct.t](../file/instruct.t.html)\[[1037](../source/instruct.t.html#1037)\]
 
-<div class="desc">
+
 
 show our chapter text
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

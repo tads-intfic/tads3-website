@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Define a global remapping to transform commands of the form "X, GIVE ME
 Y" to the format "ME, ASK X FOR Y". This makes it easier to write the
@@ -29,15 +29,15 @@ write it in the ASK FOR handler.
 
 **`giveMeToAskFor`**` :   `[`GlobalRemapping`](../object/GlobalRemapping.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`giveMeToAskFor`**  
 [`GlobalRemapping`](../object/GlobalRemapping.html)  
@@ -46,11 +46,11 @@ write it in the ASK FOR handler.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -64,11 +64,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getRemapping`](#getRemapping)
 
@@ -82,19 +82,19 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getRemapping"></span>
 
@@ -102,18 +102,18 @@ Inherited from `ModuleExecObject` :
 
 [actions.t](../file/actions.t.html)\[[2184](../source/actions.t.html#2184)\]
 
-<div class="desc">
+
 
 Remap a command, if applicable. We look for commands of the form "X,
 GIVE ME Y": we look for a GiveTo action whose indirect object is the
 same as the issuing actor. When we find this form of command, we rewrite
 it to "ME, ASK X FOR Y".
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

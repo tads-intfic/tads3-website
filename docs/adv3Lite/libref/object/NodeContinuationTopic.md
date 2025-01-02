@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A NodeContinuationTopic is aspecial kind of InitiateTopic that can be
 used to prompt the player/pc when particular convKeys have been
@@ -36,15 +36,15 @@ waiting for an answer.
 
 `class `**`NodeContinuationTopic`**` :   `[`InitiateTopic`](../object/InitiateTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NodeContinuationTopic`**  
 [`InitiateTopic`](../object/InitiateTopic.html)  
@@ -56,27 +56,27 @@ waiting for an answer.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`active`](#active)[`convKeys`](#convKeys)[`matchObj`](#matchObj)
 
@@ -95,11 +95,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`handleTopic`](#handleTopic)
 
@@ -119,11 +119,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="active"></span>
 
@@ -131,12 +131,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4795](../source/actor.t.html#4795)\]
 
-<div class="desc">
+
 
 We're only active when one or more of our keys is active (having been
 activated through an \<.convnode\> tag).
 
-</div>
+
 
 <span id="convKeys"></span>
 
@@ -144,14 +144,14 @@ activated through an \<.convnode\> tag).
 
 [actor.t](../file/actor.t.html)\[[4803](../source/actor.t.html#4803)\]
 
-<div class="desc">
+
 
 Particular instances must override this property to stipulate which keys
 we're active for. (This isn't needed if the NodeContinuationTopic is
 located in a ConvNode, since the ConvNode will then take care of this
 for us).
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -159,19 +159,19 @@ for us).
 
 [actor.t](../file/actor.t.html)\[[4789](../source/actor.t.html#4789)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="handleTopic"></span>
 
@@ -179,15 +179,15 @@ for us).
 
 [actor.t](../file/actor.t.html)\[[4805](../source/actor.t.html#4805)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

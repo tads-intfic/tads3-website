@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Noun phrase resolution error. This is a special type of parsing error
 that indicates that the problem is with resolving a noun phrase to
@@ -34,15 +34,15 @@ game-world objects.
 
 `class `**`ResolutionError`**` :   `[`ParseError`](../object/ParseError.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ResolutionError`**  
 [`ParseError`](../object/ParseError.html)  
@@ -50,11 +50,11 @@ game-world objects.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ResolutionError`**  
 [`ActorResolutionError`](../object/ActorResolutionError.html)  
@@ -72,19 +72,19 @@ game-world objects.
 [`UnmatchedActorError`](../object/UnmatchedActorError.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`np`](#np)[`txt`](#txt)
 
@@ -96,11 +96,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`rankCorrection`](#rankCorrection)
 
@@ -112,11 +112,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="np"></span>
 
@@ -124,11 +124,11 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5244](../source/parser.t.html#5244)\]
 
-<div class="desc">
+
 
 the NounPhrase object for the errant phrase, if available
 
-</div>
+
 
 <span id="txt"></span>
 
@@ -136,19 +136,19 @@ the NounPhrase object for the errant phrase, if available
 
 [parser.t](../file/parser.t.html)\[[5247](../source/parser.t.html#5247)\]
 
-<div class="desc">
+
 
 the text of the errant phrase, if available
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -156,11 +156,11 @@ the text of the errant phrase, if available
 
 [parser.t](../file/parser.t.html)\[[5231](../source/parser.t.html#5231)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="rankCorrection"></span>
 
@@ -168,7 +168,7 @@ the text of the errant phrase, if available
 
 [parser.t](../file/parser.t.html)\[[5258](../source/parser.t.html#5258)\]
 
-<div class="desc">
+
 
 For a noun resolution error, our best bet for a spelling correction
 would be a word associated with a game-world object. Only consider
@@ -178,11 +178,11 @@ encounter. We'll also allow words that are used in non-predicate grammar
 productions, since we might have a structural noun phrase word (an
 article, pronoun, etc).
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

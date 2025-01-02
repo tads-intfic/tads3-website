@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Verification result - command is logical and allowed.
 
@@ -43,15 +43,15 @@ object were not already somewhere in the actor's inventory.
 
 `class `**`LogicalVerifyResult`**` :   `[`VerifyResult`](../object/VerifyResult.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LogicalVerifyResult`**  
 [`VerifyResult`](../object/VerifyResult.html)  
@@ -59,28 +59,28 @@ object were not already somewhere in the actor's inventory.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`defaultLogicalVerifyResult`](../object/defaultLogicalVerifyResult.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`keyVal`](#keyVal)[`likelihood`](#likelihood)[`listOrder`](#listOrder)[`resultRank`](#resultRank)
 
@@ -92,11 +92,11 @@ Inherited from `MessageResult` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`compareTo`](#compareTo)[`construct`](#construct)[`identicalTo`](#identicalTo)[`isWorseThan`](#isWorseThan)[`shouldInsertBefore`](#shouldInsertBefore)
 
@@ -107,11 +107,11 @@ Inherited from `MessageResult` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="keyVal"></span>
 
@@ -119,12 +119,12 @@ Inherited from `MessageResult` :
 
 [verify.t](../file/verify.t.html)\[[281](../source/verify.t.html#281)\]
 
-<div class="desc">
+
 
 my key value, to distinguish among different results with the same
 likelihood ranking
 
-</div>
+
 
 <span id="likelihood"></span>
 
@@ -132,14 +132,14 @@ likelihood ranking
 
 [verify.t](../file/verify.t.html)\[[249](../source/verify.t.html#249)\]
 
-<div class="desc">
+
 
 The likelihood of the command - the higher the number, the more likely.
 We use 100 as the default, so that there's plenty of room for specific
 rankings above or below the default. Particular actions might want to
 rank likelihoods based on action-specific factors.
 
-</div>
+
 
 <span id="listOrder"></span>
 
@@ -147,7 +147,7 @@ rank likelihoods based on action-specific factors.
 
 [verify.t](../file/verify.t.html)\[[275](../source/verify.t.html#275)\]
 
-<div class="desc">
+
 
 Our list ordering. This establishes how we are entered into the master
 results list relative to other 'logical' results. Results are entered
@@ -171,7 +171,7 @@ importance but which can be useful to distinguish objects in cases where
 no more important rankings are present. The library uses this for
 precondition verification rankings.
 
-</div>
+
 
 <span id="resultRank"></span>
 
@@ -179,19 +179,19 @@ precondition verification rankings.
 
 [verify.t](../file/verify.t.html)\[[284](../source/verify.t.html#284)\]
 
-<div class="desc">
+
 
 result rank - we're the most approving kind of result
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="compareTo"></span>
 
@@ -199,11 +199,11 @@ result rank - we're the most approving kind of result
 
 [verify.t](../file/verify.t.html)\[[198](../source/verify.t.html#198)\]
 
-<div class="desc">
+
 
 compare to another result
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -211,11 +211,11 @@ compare to another result
 
 [verify.t](../file/verify.t.html)\[[171](../source/verify.t.html#171)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="identicalTo"></span>
 
@@ -223,11 +223,11 @@ compare to another result
 
 [verify.t](../file/verify.t.html)\[[233](../source/verify.t.html#233)\]
 
-<div class="desc">
+
 
 determine if I'm identical to another result
 
-</div>
+
 
 <span id="isWorseThan"></span>
 
@@ -235,11 +235,11 @@ determine if I'm identical to another result
 
 [verify.t](../file/verify.t.html)\[[184](../source/verify.t.html#184)\]
 
-<div class="desc">
+
 
 am I worse than the other result?
 
-</div>
+
 
 <span id="shouldInsertBefore"></span>
 
@@ -247,15 +247,15 @@ am I worse than the other result?
 
 [verify.t](../file/verify.t.html)\[[215](../source/verify.t.html#215)\]
 
-<div class="desc">
+
 
 determine if I go in a result list before the given result
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

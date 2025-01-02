@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A default travel connector for going out from a nested room. This works
 the same way as noTravelOut, except that we'll show OUT as a listed
@@ -28,15 +28,15 @@ exit.
 
 **`nestedRoomOut`**` :   `[`noTravelOut`](../object/noTravelOut.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`nestedRoomOut`**  
 [`noTravelOut`](../object/noTravelOut.html)  
@@ -50,11 +50,11 @@ exit.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -79,11 +79,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isConnectorApparent`](#isConnectorApparent)
 
@@ -108,19 +108,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isConnectorApparent"></span>
 
@@ -128,15 +128,15 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[1953](../source/travel.t.html#1953)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

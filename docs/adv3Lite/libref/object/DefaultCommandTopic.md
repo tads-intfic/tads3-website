@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 DefaultTopic to match orders directed to this actor by the player
 (character)
 
 `class `**`DefaultCommandTopic`**` :   `[`CommandTopicHelper`](../object/CommandTopicHelper.html)[`DefaultTopic`](../object/DefaultTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefaultCommandTopic`**  
 [`CommandTopicHelper`](../object/CommandTopicHelper.html)  
@@ -56,27 +56,27 @@ DefaultTopic to match orders directed to this actor by the player
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)[`matchObj`](#matchObj)[`matchScore`](#matchScore)
 
@@ -100,11 +100,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -131,11 +131,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -143,11 +143,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4289](../source/actor.t.html#4289)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -155,11 +155,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4291](../source/actor.t.html#4291)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -167,25 +167,25 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4290](../source/actor.t.html#4290)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

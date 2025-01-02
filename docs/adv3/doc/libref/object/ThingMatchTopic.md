@@ -26,32 +26,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A base class for topic entries that match simple simulation objects.
 
 `class `**`ThingMatchTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ThingMatchTopic`**  
 [`TopicEntry`](../object/TopicEntry.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ThingMatchTopic`**  
 [`GiveShowTopic`](../object/GiveShowTopic.html)  
@@ -63,19 +63,19 @@ A base class for topic entries that match simple simulation objects.
 [`AskTellShowTopic`](../object/AskTellShowTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -84,11 +84,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`setTopicPronouns`](#setTopicPronouns)
 
@@ -97,19 +97,19 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isMatchPossible"></span>
 
@@ -117,12 +117,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3068](../source/actor.t.html#3068)\]
 
-<div class="desc">
+
 
 It's possible for us to match if any of our matchObj objects are in
 scope.
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -130,12 +130,12 @@ scope.
 
 [actor.t](../file/actor.t.html)\[[3041](../source/actor.t.html#3041)\]
 
-<div class="desc">
+
 
 Match the topic. We'll match the simulation object in 'obj' to our
 matchObj object or list.
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -143,15 +143,15 @@ matchObj object or list.
 
 [actor.t](../file/actor.t.html)\[[3084](../source/actor.t.html#3084)\]
 
-<div class="desc">
+
 
 set the topic pronouns
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Things  
@@ -16,7 +16,7 @@ layout: docs
 <a href="room.html" class="nav"><em>Next:</em> Rooms &amp; Regions</a>
     </span>
 
-</div>
+
 
 
 
@@ -64,12 +64,12 @@ define a property that requires one kind of data with data of a
 different type things won't work as you expect. For example, the
 following three property definitions are anything but equivalent:
 
-`
+```
         foo = bar   // An object (or possibly an enum or variable or property name)
         foo = 'bar' // a single-quoted string
         foo = "bar" // a double-quoted string 
      
-`
+```
 
 If you don't understand the distinctions being made above then you
 really should read Part III of the [TADS 3 System Manual](../sysman.html)
@@ -89,12 +89,12 @@ adv3Lite library the first two of these can be defined in single
 property, the vocab property. So, for example, to define a red ball you
 might write:
 
-`
+```
     redBall: Thing
        vocab = 'red ball;bouncy rubber; sphere'
        desc = "It's very bouncy, and appears to be made of rubber. "
     ;
-`
+```
 
 Note how the vocab property works. First we supply the name of the
 object ('red ball'), then, following the first semicolon we supply any
@@ -122,11 +122,11 @@ In practice, though, we'd normally use the Thing template to define
 these basic properties, so in a real game our red ball definition would
 normally look like this:
 
-`
+```
     redBall: Thing 'red ball;bouncy rubber; sphere'
        "It's very bouncy, and appears to be made of rubber. "
     ;
-`
+```
 
 If the name doesn't uniquely identify the object — say because there
 were two red balls in our game, the bouncy red rubber ball and a cricket
@@ -136,13 +136,13 @@ when the parser asks the player to disambiguate which ball s/he means
 ball or the red ball?'"). In this admittedly artificial example, we
 would need to define a disambigName on our redBall object so:
 
-`
+```
     redBall: Thing 'red ball;bouncy rubber; sphere'
        "It's very bouncy, and appears to be made of rubber. "
        
        disambigName = 'bouncy rubber ball'
     ;
-`
+```
 
 Normally, though, this should not be necessary.
 
@@ -411,12 +411,12 @@ matched. We could do this by making it adjust the
 `np.matches` list to remove the NPMatch object
 corresponding to itself:
 
-`
+```
     filterResolveList(np, cmd, mode)
     {
        np.matches = np.matches.subset({m: m.obj != self});
     }
-`
+```
 
 Here we change the `np.matches` list to a subset
 of that list that contains everything except the NPMatch corresponding
@@ -436,7 +436,7 @@ an Unthing if nothing else in scope will match, so we want the
 filterResolveList() method of an Unthing to rule itself out if there are
 any other matches:
 
-`
+```
     class Unthing: Decoration
         ...
         filterResolveList(np, cmd, mode)
@@ -445,7 +445,7 @@ any other matches:
                 np.matches = np.matches.subset({m: m.obj != self});
         }
     ;    
-`
+```
 
 In other situations we may want to filter according to what action is
 being considered and/or what role (direct object or indirect object) the
@@ -470,7 +470,7 @@ directly, or through the template with an @ sign, or by using the +
 syntax to indicate the containment hierarchy. The three following
 definitions are thus equivalent:
 
-`
+```
     hall: Room 'Hall'
     ;
 
@@ -483,11 +483,11 @@ definitions are thus equivalent:
        "It's very bouncy, and appears to be made of rubber. "
        location = box
     ;
-`
+```
 
 Means exactly the same as:
 
-`
+```
     hall: Room 'Hall'
     ;
 
@@ -498,11 +498,11 @@ Means exactly the same as:
     redBall: Thing 'red ball;bouncy rubber; sphere' @box
        "It's very bouncy, and appears to be made of rubber. "  
     ;
-`
+```
 
 Which means exactly the same as:
 
-`
+```
     hall: Room 'Hall'
     ;
 
@@ -513,7 +513,7 @@ Which means exactly the same as:
     ++ redBall: Thing 'red ball;bouncy rubber; sphere'
        "It's very bouncy, and appears to be made of rubber. "   
     ;
-`
+```
 
 The + syntax can be used to nest containment up to any desired depth.
 
@@ -602,12 +602,12 @@ been moved) or automatically taken by the player character. For example,
 to hide a gold coin and a silver key under a rug, you could define the
 rug thus:
 
-`
+```
     rug: Thing 'persian rug; old worn'
        "The old rug has seen better days; it's now rather worn. "
        hiddenUnder = [goldCoin, silverKey]
     ;
-`
+```
 
 Note that in this case the location property of the goldCoin and the
 silverKey should be left at nil at the start of the game. Objects listed
@@ -622,12 +622,12 @@ contType = On and isEnterable = true). We could then define it thus,
 without having to worry about how to make the rug handle multiple kinds
 of containment:
 
-`
+```
     rug: Platform 'persian rug; old worn'
        "The old rug has seen better days; it's now rather worn. "
        hiddenUnder = [goldCoin, silverKey]
     ;
-`
+```
 
 <span id="canput"></span>
 
@@ -751,7 +751,7 @@ ComplexContainer. For example, suppose we want to define an oven (or
 stove) the player character can put things in or on. We could do it like
 this:
 
-`
+```
     cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -761,7 +761,7 @@ this:
         remapIn: SubComponent  {   isOpenable = true   }
         remapOn: SubComponent  {  }
     ;
-`
+```
 
 Note that there's no need to define the contType property on these
 SubComponents, since the library can deduce what it should be from the
@@ -776,7 +776,7 @@ manner as in the adv3 library, i.e. by defining the contained objects
 subLocation property. Thus, for example, if there's a pan on top of the
 stove we'd define it thus:
 
-`
+```
     cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -793,7 +793,7 @@ stove we'd define it thus:
        
         subLocation = &remapOn
     ;
-`
+```
 
 ### <span id="bulk">Bulk and BulkCapacity</span>
 
@@ -1040,14 +1040,14 @@ list of actions you want to allow. For example, extras.t defines a
 simple Odor class to represent something that can be smelled as well as
 examined:
 
-`
+```
     class Odor: Thing
         isDecoration = true
         decorationActions = [Examine, SmellSomething]
         notImportantMsg = BMsg(only smell, '{I} {can\'t} do that to a smell. ')
         dobjFor(SmellSomething) asDobjFor(Examine)    
     ;
-`
+```
 
 Note that if you need additional behavioural or state properties you can
 always modify or subclass Thing to define them (or define them on the
@@ -1355,10 +1355,10 @@ of their parts of speech.
 
 The 'vocab' string has this overall syntax:
 
-`
+```
        
          vocab = 'article short name; adjectives; nouns; pronouns'
-`
+```
 
 You don't have to include all of the parts; you can simply stop when
 you're done, so it's valid, for example, to just write the 'short name'
@@ -1513,7 +1513,7 @@ other would be to give the green bottle a
 `matchPhrases` property on the dark green bottle
 so that it will match 'dark green' or 'dark' but not 'green' by itself:
 
-`
+```
     ++ greenBottle: Thing 'green bottle'
         "It's just an ordinary green bottle. "
     ;
@@ -1522,7 +1522,7 @@ so that it will match 'dark green' or 'dark' but not 'green' by itself:
         "It's a dark green bottle. "
         matchPhrases = ['dark', 'dark green']    
     ;
-`
+```
 
 The rule is this: if any of the words in the noun phrase entered by the
 player occur in any of the matchPhrases, then one of the matchPhrases
@@ -1559,7 +1559,7 @@ other. Another case might be where two objects share precisely the same
 vocab words but in a different order, for example a green broad bean and
 a broad green bean. We might handle this case thus:
 
-`
+```
     ++ broadGreenBean: Thing 'broad green bean'
         "It's broad and green. "
         matchPhrases = 'broad green'
@@ -1571,7 +1571,7 @@ a broad green bean. We might handle this case thus:
         matchPhrases = 'green broad'
         matchPhrasesExclude = nil    
     ;
-`
+```
 
 <span id="matchphraseexcludes"></span>
 
@@ -1655,7 +1655,7 @@ to the following rules:
 
 For example, suppose we define the following:
 
-`
+```
     class Coin: Thing 'coin; round metal; money; it'
     ;
 
@@ -1664,24 +1664,24 @@ For example, suppose we define the following:
 
     silverCoin: Coin 'silver +; tiny; -shilling'
     ;
-`
+```
 
 The vocab properties of the two coins would end up just as if we had
 defined them thus:
 
-`
+```
 
     goldCoin: Thing 'gold coin; small round metal; pound; it'
     ;
 
     silverCoin: Thing 'silver coin; tiny round metal; shilling; it'
     ;
-`
+```
 
 To a limited extent, we can also use the + sign in the name property to
 inherit multiple steps up the class tree, for example:
 
-`
+```
      class Coin: Thing 'coin; round'
      ;
      
@@ -1691,7 +1691,7 @@ inherit multiple steps up the class tree, for example:
      smallGoldCoin: GoldCoin 'small +'
      ;
      
-`
+```
 
 This would give the `smallGoldCoin` object a
 vocab property of 'small gold coin; round'.
@@ -1699,14 +1699,14 @@ vocab property of 'small gold coin; round'.
 Note that this kind of use of the + property only works 'vertically',
 however. If you defined:
 
-`
+```
      class Coin: Thing 'coin';
      
      class Gold: Thing 'gold';
      
      goldCoin: Gold, Coin '+'; 
      
-`
+```
 
 Then the vocab property of goldCoin would end up simply as 'gold', not
 'gold coin' or even 'goldcoin', since the + is simply replaced with the
@@ -1716,7 +1716,7 @@ carried out thereafter.
 Note also that the + substitution does not insert any additional spaces.
 This allows you to create definitions like:
 
-`
+```
     class Light: Decoration 'light' 
        notImportantMsg = 'You can\'t do that with light.'
     ;
@@ -1725,7 +1725,7 @@ This allows you to create definitions like:
     sunlight: Light 'sun+';
     torchlight: Light 'torch+';  
      
-`
+```
 
 This would result in vocabs (and hence names) of 'moonlight', 'sunlight'
 and 'torchlight' respectively.
@@ -1756,7 +1756,7 @@ state objects of your own. For example if your game involves one or more
 objects that can be wet, damp or dry you could define the following
 State objects:
 
-`
+```
     enum wet, damp, dry;
 
     WetDryDamp: State
@@ -1764,7 +1764,7 @@ State objects:
 
        adjectives = [[dry, 'dry'], [damp, 'damp'], [wet, 'wet']]
     ;
-`
+```
 
 The `WetDryDamp` state will then be applicable
 to any object that defines the `wetness`
@@ -1817,7 +1817,7 @@ class uses this method to change the vocabulary that can be used to
 refer to a secret door (something that isn't obviously a door when it's
 closed) according to whether it's open or closed:
 
-`
+```
     class SecretDoor: Door
         isGoThroughable = isOpen
         isConnectorListed = isOpen   
@@ -1845,11 +1845,11 @@ closed) according to whether it's open or closed:
                 replaceVocab(vocabWhenClosed);
         }
     ;
-`
+```
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1861,4 +1861,4 @@ closed) according to whether it's open or closed:
 
 
 
-</div>
+

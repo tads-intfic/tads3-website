@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 lookContentsLister is used to display a list of the contents of objects
 in a room description.
 
 **`lookContentsLister`**` :   `[`ItemLister`](../object/ItemLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`lookContentsLister`**  
 [`ItemLister`](../object/ItemLister.html)  
@@ -43,11 +43,11 @@ in a room description.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contentsListedProp`](#contentsListedProp)[`showSubListing`](#showSubListing)
 
@@ -58,11 +58,11 @@ Inherited from `ItemLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`listed`](#listed)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
@@ -74,11 +74,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contentsListedProp"></span>
 
@@ -86,11 +86,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[166](../source/lister.t.html#166)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showSubListing"></span>
 
@@ -98,21 +98,21 @@ Inherited from `Lister` :
 
 [english.t](../file/english.t.html)\[[3237](../source/english.t.html#3237)\]
 
-<div class="desc">
+
 
 Flag: Show a sublisting (i.e. the contents of the items in our immediate
 contents, in parentheses after the name of the item, if the gameMain
 option useParentheticalListing is true.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="listed"></span>
 
@@ -120,11 +120,11 @@ option useParentheticalListing is true.
 
 [lister.t](../file/lister.t.html)\[[164](../source/lister.t.html#164)\]
 
-<div class="desc">
+
 
 is the object listed in a LOOK AROUND description?
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -132,11 +132,11 @@ is the object listed in a LOOK AROUND description?
 
 [english.t](../file/english.t.html)\[[3222](../source/english.t.html#3222)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffix"></span>
 
@@ -144,15 +144,15 @@ is the object listed in a LOOK AROUND description?
 
 [english.t](../file/english.t.html)\[[3227](../source/english.t.html#3227)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

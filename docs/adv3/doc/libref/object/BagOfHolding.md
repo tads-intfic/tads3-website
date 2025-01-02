@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "Bag of Holding." This is a mix-in that actively moves items from the
 holding actor's direct inventory into itself when the actor's hands are
@@ -60,71 +60,71 @@ items as necessary from the actor's hands to the bag.
 
 `class `**`BagOfHolding`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BagOfHolding`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BagOfHolding`**  
 [`Keyring`](../object/Keyring.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`affinityFor`](#affinityFor)[`getBagsOfHolding`](#getBagsOfHolding)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="affinityFor"></span>
 
@@ -132,7 +132,7 @@ items as necessary from the actor's hands to the bag.
 
 [extras.t](../file/extras.t.html)\[[1244](../source/extras.t.html#1244)\]
 
-<div class="desc">
+
 
 Get my "affinity" for the given object. This is an indication of how
 strongly this bag wants to contain the object. The affinity is a number
@@ -177,7 +177,7 @@ By default, we'll return the default affinity of 100. Specialized bags
 that don't hold all types of objects must override this to return zero
 for objects they can't hold.
 
-</div>
+
 
 <span id="getBagsOfHolding"></span>
 
@@ -185,17 +185,17 @@ for objects they can't hold.
 
 [extras.t](../file/extras.t.html)\[[1190](../source/extras.t.html#1190)\]
 
-<div class="desc">
+
 
 Get my bags of holding. Since we are a bag of holding, we'll add
 ourselves to the vector, then we'll inherit the normal handling to pick
 up our contents.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

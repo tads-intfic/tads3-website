@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The English-specific message builder.
 
 **`langMessageBuilder`**` :   `[`MessageBuilder`](../object/MessageBuilder.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`langMessageBuilder`**  
 [`MessageBuilder`](../object/MessageBuilder.html)  
@@ -45,11 +45,11 @@ The English-specific message builder.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fixedTenseProp_`](#fixedTenseProp_)[`lastSubject_`](#lastSubject_)[`lastSubjectName_`](#lastSubjectName_)[`paramList_`](#paramList_)[`pastEnding_`](#pastEnding_)[`patEndOfSentence`](#patEndOfSentence)[`patIdObjApostS`](#patIdObjApostS)[`patIdObjSlashIdApostS`](#patIdObjSlashIdApostS)[`patParamWithExclam`](#patParamWithExclam)[`patSpecial`](#patSpecial)[`patSSlashLetterEd`](#patSSlashLetterEd)[`patTenseSwitching`](#patTenseSwitching)
 
@@ -65,11 +65,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`generateMessage`](#generateMessage)[`getTargetProp`](#getTargetProp)[`langRewriteParam`](#langRewriteParam)[`processOrig`](#processOrig)[`processResult`](#processResult)
 
@@ -85,11 +85,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fixedTenseProp_"></span>
 
@@ -97,7 +97,7 @@ Inherited from `ModuleExecObject` :
 
 [en_us.t](../file/en_us.t.html)\[[4249](../source/en_us.t.html#4249)\]
 
-<div class="desc">
+
 
 This property is used to temporarily store either a boolean value
 indicating whether the last encountered parameter string had an
@@ -105,7 +105,7 @@ exclamation mark at the end of any word, or a property to be invoked by
 Thing.propWithPresentMessageBuilder\_. This field is for internal use
 only; authors shouldn't have any reason to access it directly.
 
-</div>
+
 
 <span id="lastSubject_"></span>
 
@@ -113,14 +113,14 @@ only; authors shouldn't have any reason to access it directly.
 
 [en_us.t](../file/en_us.t.html)\[[4053](../source/en_us.t.html#4053)\]
 
-<div class="desc">
+
 
 The most recent target object used in the nominative case. We note this
 so that we can supply reflexive mappings when the same object is re-used
 in the objective case. This allows us to map things like "you can't take
 you" to the better-sounding "you can't take yourself".
 
-</div>
+
 
 <span id="lastSubjectName_"></span>
 
@@ -128,11 +128,11 @@ you" to the better-sounding "you can't take yourself".
 
 [en_us.t](../file/en_us.t.html)\[[4056](../source/en_us.t.html#4056)\]
 
-<div class="desc">
+
 
 the parameter name of the last subject ('dobj', 'actor', etc)
 
-</div>
+
 
 <span id="paramList_"></span>
 
@@ -140,7 +140,7 @@ the parameter name of the last subject ('dobj', 'actor', etc)
 
 [en_us.t](../file/en_us.t.html)\[[3777](../source/en_us.t.html#3777)\]
 
-<div class="desc">
+
 
 The English message substitution parameter table.
 
@@ -156,7 +156,7 @@ info\[5\] = true if this is a nominative usage, nil if not. We use this
 to determine which target objects are used in the nominative case, so
 that we can remember those objects for subsequent reflexive usages.
 
-</div>
+
 
 <span id="pastEnding_"></span>
 
@@ -164,14 +164,14 @@ that we can remember those objects for subsequent reflexive usages.
 
 [en_us.t](../file/en_us.t.html)\[[4239](../source/en_us.t.html#4239)\]
 
-<div class="desc">
+
 
 This property is used to temporarily store the past-tense ending of a
 verb to be displayed by Thing.verbEndingSMessageBuilder\_. It's for
 internal use only; game authors shouldn't have any reason to access it
 directly.
 
-</div>
+
 
 <span id="patEndOfSentence"></span>
 
@@ -179,11 +179,11 @@ directly.
 
 [en_us.t](../file/en_us.t.html)\[[4125](../source/en_us.t.html#4125)\]
 
-<div class="desc">
+
 
 end-of-sentence match pattern
 
-</div>
+
 
 <span id="patIdObjApostS"></span>
 
@@ -191,11 +191,11 @@ end-of-sentence match pattern
 
 [en_us.t](../file/en_us.t.html)\[[4159](../source/en_us.t.html#4159)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patIdObjSlashIdApostS"></span>
 
@@ -203,11 +203,11 @@ end-of-sentence match pattern
 
 [en_us.t](../file/en_us.t.html)\[[4157](../source/en_us.t.html#4157)\]
 
-<div class="desc">
+
 
 some pre-compiled search patterns we use a lot
 
-</div>
+
 
 <span id="patParamWithExclam"></span>
 
@@ -215,11 +215,11 @@ some pre-compiled search patterns we use a lot
 
 [en_us.t](../file/en_us.t.html)\[[4161](../source/en_us.t.html#4161)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patSpecial"></span>
 
@@ -227,7 +227,7 @@ some pre-compiled search patterns we use a lot
 
 [en_us.t](../file/en_us.t.html)\[[4027](../source/en_us.t.html#4027)\]
 
-<div class="desc">
+
 
 Pre-compiled regular expression pattern matching any sequence with a
 special meaning in a message string.
@@ -236,7 +236,7 @@ We match either a stuttered opening brace, or a single opening brace
 followed by any sequence of characters that doesn't contain a closing
 brace followed by a closing brace.
 
-</div>
+
 
 <span id="patSSlashLetterEd"></span>
 
@@ -244,11 +244,11 @@ brace followed by a closing brace.
 
 [en_us.t](../file/en_us.t.html)\[[4162](../source/en_us.t.html#4162)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patTenseSwitching"></span>
 
@@ -256,7 +256,7 @@ brace followed by a closing brace.
 
 [en_us.t](../file/en_us.t.html)\[[4040](../source/en_us.t.html#4040)\]
 
-<div class="desc">
+
 
 Pre-compiled regular expression pattern matching our special
 tense-switching syntax.
@@ -266,15 +266,15 @@ that doesn't contain a closing brace or a vertical bar, followed by a
 vertical bar, followed by any sequence of characters that doesn't
 contain a closing brace or a vertical bar, followed by a closing brace.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="generateMessage"></span>
 
@@ -282,12 +282,12 @@ contain a closing brace or a vertical bar, followed by a closing brace.
 
 [en_us.t](../file/en_us.t.html)\[[3912](../source/en_us.t.html#3912)\]
 
-<div class="desc">
+
 
 Add a hook to the generateMessage method, which we use to pre-process
 the source string before expanding the substitution parameters.
 
-</div>
+
 
 <span id="getTargetProp"></span>
 
@@ -295,7 +295,7 @@ the source string before expanding the substitution parameters.
 
 [en_us.t](../file/en_us.t.html)\[[4069](../source/en_us.t.html#4069)\]
 
-<div class="desc">
+
 
 Get the target object property mapping. If the target object is the same
 as the most recent subject object (i.e., the last object used in the
@@ -307,7 +307,7 @@ Also, if there was an exclamation mark at the end of any word in the
 tag, we'll return a property returning a fixed-tense form of the
 property for the tag.
 
-</div>
+
 
 <span id="langRewriteParam"></span>
 
@@ -315,7 +315,7 @@ property for the tag.
 
 [en_us.t](../file/en_us.t.html)\[[4184](../source/en_us.t.html#4184)\]
 
-<div class="desc">
+
 
 Rewrite a parameter string for a language-specific syntax extension.
 
@@ -334,7 +334,7 @@ fixed-tense handling), and to detect a parameter string matching the
 {s/?ed} syntax, where ? is any letter, and rewrite it literally as
 's/?ed' literally.
 
-</div>
+
 
 <span id="processOrig"></span>
 
@@ -342,7 +342,7 @@ fixed-tense handling), and to detect a parameter string matching the
 
 [en_us.t](../file/en_us.t.html)\[[3941](../source/en_us.t.html#3941)\]
 
-<div class="desc">
+
 
 Pre-process a source string containing substitution parameters, before
 generating the expanded message from it.
@@ -368,7 +368,7 @@ tense is past. The string "take{s}", if selected, would in turn be
 expanded to either "take" or "takes", depending on the grammatical
 person of the subject, as per the regular substitution mechanism.
 
-</div>
+
 
 <span id="processResult"></span>
 
@@ -376,15 +376,15 @@ person of the subject, as per the regular substitution mechanism.
 
 [en_us.t](../file/en_us.t.html)\[[4130](../source/en_us.t.html#4130)\]
 
-<div class="desc">
+
 
 Process result text.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

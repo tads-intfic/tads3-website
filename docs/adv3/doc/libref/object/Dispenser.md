@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Dispenser is a container for a special type of item, such as a book of
 matches or a box of candy.
 
 `class `**`Dispenser`**` :   `[`Container`](../object/Container.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Dispenser`**  
 [`Container`](../object/Container.html)  
@@ -52,29 +52,29 @@ matches or a box of candy.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Dispenser`**  
 [`Matchbook`](../object/Matchbook.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canReturnItem`](#canReturnItem)[`myItemClass`](#myItemClass)
 
@@ -95,11 +95,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`iobjFor(PutIn)`](#iobjFor(PutIn))[`isMyItem`](#isMyItem)
 
@@ -120,11 +120,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canReturnItem"></span>
 
@@ -132,14 +132,14 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[1758](../source/extras.t.html#1758)\]
 
-<div class="desc">
+
 
 Can we return one of our items to the dispenser once the item is
 dispensed? Books of matches wouldn't generally allow this, since a match
 must be torn out to be removed, but simple box dispensers probably
 would. By default, we won't allow returning an item once dispensed.
 
-</div>
+
 
 <span id="myItemClass"></span>
 
@@ -147,21 +147,21 @@ would. By default, we won't allow returning an item once dispensed.
 
 [extras.t](../file/extras.t.html)\[[1775](../source/extras.t.html#1775)\]
 
-<div class="desc">
+
 
 The class of items we dispense. This is used by the default
 implementation of isMyItem(), so subclasses that inherit that
 implementation should provide the appropriate base class here.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="iobjFor(PutIn)"></span>
 
@@ -169,11 +169,11 @@ implementation should provide the appropriate base class here.
 
 [extras.t](../file/extras.t.html)\[[1778](../source/extras.t.html#1778)\]
 
-<div class="desc">
+
 
 "put in" indirect object handler
 
-</div>
+
 
 <span id="isMyItem"></span>
 
@@ -181,7 +181,7 @@ implementation should provide the appropriate base class here.
 
 [extras.t](../file/extras.t.html)\[[1768](../source/extras.t.html#1768)\]
 
-<div class="desc">
+
 
 Is the item one of the types of items we dispense? Normally, we dispense
 identical items, so our default implementation simply determines if the
@@ -189,11 +189,11 @@ item is an instance of our dispensable class. If the dispenser can hand
 out items of multiple, unrelated classes, this can be overridden to use
 a different means of identifying the dispensed items.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

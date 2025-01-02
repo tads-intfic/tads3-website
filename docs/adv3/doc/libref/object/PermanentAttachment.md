@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Permanent attachments. This class is for things that are described in
 the story text as attached to one another, but which can never be
@@ -69,44 +69,44 @@ detached from other objects.
 
 `class `**`PermanentAttachment`**` :   `[`Attachable`](../object/Attachable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PermanentAttachment`**  
 [`Attachable`](../object/Attachable.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PermanentAttachment`**  
 [`PermanentAttachmentChild`](../object/PermanentAttachmentChild.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`baseCannotDetachMsg`](#baseCannotDetachMsg)
 
@@ -115,11 +115,11 @@ Inherited from `Attachable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotDetachMsgFor`](#cannotDetachMsgFor)
 
@@ -128,11 +128,11 @@ Inherited from `Attachable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="baseCannotDetachMsg"></span>
 
@@ -140,19 +140,19 @@ Inherited from `Attachable` :
 
 [extras.t](../file/extras.t.html)\[[3598](../source/extras.t.html#3598)\]
 
-<div class="desc">
+
 
 basic message to use when we try to detach something from self
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotDetachMsgFor"></span>
 
@@ -160,7 +160,7 @@ basic message to use when we try to detach something from self
 
 [extras.t](../file/extras.t.html)\[[3587](../source/extras.t.html#3587)\]
 
-<div class="desc">
+
 
 Get the message explaining why we can't detach from 'obj'.
 
@@ -173,11 +173,11 @@ cannot-detach message in the container. If the container isn't a
 PermanentAttachment, or we're not attached to it, we'll return our
 default library message.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

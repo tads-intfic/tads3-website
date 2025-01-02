@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Changing the Player
@@ -17,7 +17,7 @@ Conversation</a>    
 <a href="final.html" class="nav"><em>Next:</em> Final Moves</a>    
 </span>
 
-</div>
+
 
 
 
@@ -52,18 +52,18 @@ happened. To assist with this setPlayer() returns the previous name of
 the new player character, so when the player becomes Bob you could use
 code like this:
 
-`
+```
      "You are now <<setPlayer(bob)>>. ";
      bob.getOutermostRoom.lookAroundWithin(); 
      
-`
+```
 
 Something else you can do to help players keep track of who they're now
 meant to be is to include the name of the player character in the status
 line. One way to do that might be to include it in parentheses after the
 room name, which we can do like this:
 
-`
+```
      modify Room
         statusName(actor)
         {
@@ -73,11 +73,11 @@ room name, which we can do like this:
         }
     ;
      
-`
+```
 
 Or, alternatively, if we prefer it:
 
-`
+```
      
     modify statusLine
         showStatusLeft()
@@ -87,12 +87,12 @@ Or, alternatively, if we prefer it:
                 " [as <<libGlobal.playerCharName>>] ";
         }
     ; 
-`
+```
 
 Or again, if we didn't want the score and turn count at the right hand
 end of the status line we could do this:
 
-`
+```
     modify statusLine
         showStatusRight()
         {        
@@ -100,7 +100,7 @@ end of the status line we could do this:
                 " [as <<libGlobal.playerCharName>>] ";
         }
     ;
-`
+```
 
 You can use whichever of these you prefer, or devise your own variant.
 
@@ -125,14 +125,14 @@ NPC, except for the `person` property which may
 be 1 or 2 if this is the Actor that's starting out as the player
 character; for example:
 
-`
+```
      
     + joan: Actor 'Joan; large; woman; her'
         "She's quite a large woman. "
         
         person =  2
     ;
-`
+```
 
 <span id="ispc"></span>
 
@@ -143,14 +143,14 @@ test for which is applicable using the **isPlayerChar** property of the
 Actor and write the desc property accordingly. A minimally varying one
 might look like this:
 
-`
+```
      
     + joan: Actor 'Joan; large; woman; her'
         "<<if isPlayerChar>>You're<<else>>She's<<end>> quite a large woman. "
         
         person =  2
     ;
-`
+```
 
 In practice, you'd probably want to vary the two descriptions by more
 than this.
@@ -159,7 +159,7 @@ than this.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -170,4 +170,4 @@ Conversation</a>    
 <a href="final.html" class="nav"><em>Next:</em> Final Moves</a>    
 </span>
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Dropping
@@ -17,7 +17,7 @@ objects from the tree
 <a href="birdinnest.html" class="nav"><em>Next:</em> Is the bird in the
 nest?</a>     </span>
 
-</div>
+
 
 
 
@@ -31,7 +31,7 @@ were. One solution might be to assume that anything dropped at the top
 of the tree is put on the branch, and we could implement that. This
 would be another good use of a Doer:
 
-`
+```
     Doer 'drop Thing'
         execAction(curCmd)    
         {        
@@ -40,7 +40,7 @@ would be another good use of a Doer:
         
         where = topOfTree
     ;
-`
+```
 
 Here 'drop Thing' will match the attempt to drop any Thing (in this
 context either the bird or the nest, since these are the only two
@@ -90,7 +90,7 @@ We could use a Doer to do this, but here we'll illustrate another way,
 using the `roomBeforeAction()` method of the
 location to intercept an action just before it takes place:
 
-`
+```
     topOfTree: Room 'At the top of the tree'
         "You cling precariously to the trunk. "
         
@@ -111,7 +111,7 @@ location to intercept an action just before it takes place:
             }
         }
     ;
-`
+```
 
 Now let's explain how this works. The
 `roomBeforeAction()` method is called on the
@@ -194,7 +194,7 @@ once again behaves as you expect.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -205,4 +205,4 @@ objects from the tree
 <a href="birdinnest.html" class="nav"><em>Next:</em> Is the bird in the
 nest?</a>     </span>
 
-</div>
+

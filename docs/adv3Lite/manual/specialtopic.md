@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Special Topics  
@@ -16,7 +16,7 @@ Conversational Topics</a>    
 <a href="topicgroup.html" class="nav"><em>Next:</em> Topic Groups</a>    
 </span>
 
-</div>
+
 
 
 
@@ -103,7 +103,7 @@ The full, long-hand way to define a SayTopic is thus first to define the
 Topic it matches and then use that Topic as the matchObj of your
 SayTopic; for example:
 
-`
+```
     tNotAfraid: Topic 'you\'re not afraid; you are i\'m i am'
     ;
 
@@ -113,7 +113,7 @@ SayTopic; for example:
       "<q>I'm not afraid of the dark tower, you know,</q> you boast.\b
        <q>Well, you should be,</q> Bob warns you. "
     ;
-`
+```
 
 Note how we define the tNotAfraid Topic object here. Because of the way
 autoname works it will be suggested to the player as 'You could say
@@ -134,12 +134,12 @@ of your code and then make use of it on just the one SayTopic. The
 adv3Lite library accordingly provides a short-cut way of doing this,
 allowing you to define the Topic directly on the SayTopic, like this:
 
-`
+```
     + SayTopic 'you\'re not afraid; you are i\'m i am'
       "<q>I'm not afraid of the dark tower, you know,</q> you boast.\b
        <q>Well, you should be,</q> Bob warns you. "
     ;
-`
+```
 
 Note that this has the same effect behind the scenes. What happens is
 that the library preinitialization creates an anonymous Topic object
@@ -165,14 +165,14 @@ instead of SAY I'M NOT AFRAID). To deal with this you can define an
 equivalent matchObj for a TellTopic on the SayTopic's tellMatchObj
 property, like so:
 
-`
+```
     + SayTopic 'you\'re not afraid; you are i\'m i am'
       "<q>I'm not afraid of the dark tower, you know,</q> you boast.\b
        <q>Well, you should be,</q> Bob warns you. "
        
        tellMatchObj = tFear
     ;
-`
+```
 
 This assumes that the tFear Topic is defined somewhere else in your
 code. What happens behind the scenes here is that the library creates a
@@ -187,7 +187,7 @@ prevaricate in response to a question Bob asks the player character.
 Since the player does not need to begin a command with SAY to have it
 match a SayTopic this is perfectly possible. You'd do it like this:
 
-`
+```
     /* Bob has just asked 'Have you been to the dark tower?' */
 
     + YesTopic
@@ -213,7 +213,7 @@ match a SayTopic this is perfectly possible. You'd do it like this:
     ;
 
     tLie: Topic 'lie';
-`
+```
 
 Note the use of the **includeSayInName** property to suppress the
 inclusion of 'say' in the way the topic is suggested when
@@ -314,7 +314,7 @@ implicit SAY command (e.g., because their input included a typo or they
 were trying to issue a command the parser considers invalid). Consider
 the following exchange as an example:
 
-<div class="cmdline">
+
 
     >EXMINE DESK
     Fred does not respond.
@@ -329,14 +329,14 @@ class now defines a new **defaultSayResponse** property which displays
 when there's no match to an (explicit or implicit) SAY command. With
 this in place, the above exchange becomes:
 
-<div class="cmdline">
+
 
     >EXMINE DESK
     “Exmine desk,” you say.
 
     Fred does not respond.
 
-</div>
+
 
 While this may not be very elegant, and some players may even find it a
 little irritating, it at least makes it clear to the player how their
@@ -365,21 +365,21 @@ Finally, if you want to customize Fred's non response while keeping what
 the player character is deemed to have just said, you could do something
 along the lines of:
 
-`
+```
     ++ DefaultSayTopic
         "<<getActor.pcDefaultSayQuip>><.p>
         <q>Whatever do you mean?</q> Fred demands. "
     ;
-`
+```
 
 Or, for further customization still:
 
-`
+```
     ++ DefaultSayTopic
         "For some reason you come out with, <q><<gTopicText.substr(1,1).toUpper()>><<gTopicText.substr(2).toLower()>>.</q><.p>
         <q>Whatever do you mean?</q> Fred demands. "
     ;
-`
+```
 
   
 
@@ -392,7 +392,7 @@ defined in a manner similar to SayTopics, except that we need to define
 one further property, the qtype ('how', 'what', 'who', 'why', 'where',
 etc.). We can do this directly in the QueryTopic template, like this:
 
-`
+```
     + QueryTopic 'how' @tHowOld
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -412,7 +412,7 @@ etc.). We can do this directly in the QueryTopic template, like this:
 
     tAge: Topic 'his age'
     ;
-`
+```
 
 Note how we here use the askMatchObj property so that the player would
 get the same response from ASK BOB ABOUT HIS AGE. Note also how we
@@ -427,7 +427,7 @@ aren't any other NPCs where going to put this question to, it's probably
 more convenient to define the Topic vocab directly on the QueryTopic, as
 before:
 
-`
+```
     + QueryTopic 'how' 'old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -435,7 +435,7 @@ before:
 
         askMatchObj = tAge     
     ;
-`
+```
 
 This, by the way, is part of the reason we need to define
 <span id="qtype-idx">qtype</span> as a separate property, and not simply
@@ -447,7 +447,7 @@ lacking the initial ASK. However, when defining a QueryTopic using the
 template form above we can, if we wish, run the qtype and the topic
 vocab together into a single string like this:
 
-`
+```
     + QueryTopic 'how old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -455,7 +455,7 @@ vocab together into a single string like this:
 
         askMatchObj = tAge     
     ;
-`
+```
 
 In this case, where the library doesn't find the qtype property
 seperately defined, it takes the first word of the string to be the
@@ -478,21 +478,21 @@ separate them with a vertical bar. This is most likely to be needed with
 ASK IF and ASK WHETHER, which players are likely to treat as synonyms.
 So, for example, we might define:
 
-`
+```
     + QueryTopic 'if|whether' 'he likes chocolate; you like'
         "<q>Do you like chocolate?</q> you ask.\b
         <q>Of course,</q> he replies. <q>Doesn't everyone?</q>"
     ;
-`
+```
 
 Or, alternatively and equivalently:
 
-`
+```
     + QueryTopic 'if|whether he likes chocolate; you like'
         "<q>Do you like chocolate?</q> you ask.\b
         <q>Of course,</q> he replies. <q>Doesn't everyone?</q>"
     ;
-`
+```
 
 Note here the appearance of 'you like' as additional words in the vocab
 property after the 'he likes chocolate' in the name part. This is to
@@ -507,11 +507,11 @@ this kind of thing!). The (English-language) parser recognizes commands
 beginning DO, DOES or DID as equivalent to commands beginning ASK IF,
 but your topic vocab needs to cope with the rest.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -521,4 +521,4 @@ Conversational Topics</a>    
 <a href="topicgroup.html" class="nav"><em>Next:</em> Topic Groups</a>    
 </span>
 
-</div>
+

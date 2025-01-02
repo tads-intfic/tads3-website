@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Room
@@ -15,7 +15,7 @@ Descriptions
 <span class="navnp"><a href="room.html" class="nav"><em>Prev:</em>Rooms</a>
     <a href="door.html" class="nav"><em>Next:</em> Doors</a>     </span>
 
-</div>
+
 
 
 
@@ -67,7 +67,7 @@ each of these sections by using the following properties:
 Thus, for example, suppose we had a room defined along the following
 lines:
 
-`
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -141,14 +141,14 @@ lines:
             you why this rubbish would be best consigned to the flames. "
           
     ;
-`
+```
 
 Suppose further that an NPC called George follows the player character
 into the room, and the player character opens the desk drawer, drops a
 couple of objects, and then executes a LOOK command. The player would
 then see something like this:
 
-<div class="cmdline">
+
 
     Study
     This is your favourite room in the whole house, where you do your best work, think your best thoughts, 
@@ -215,7 +215,7 @@ Armed with these tools we can, for example, amend the specialDesc of the
 desk so that the desk lists its contents in any way we please. For
 example:
 
-`
+```
     + desk: Thing 'desk; fine old'
         "It's a fine old desk with a single drawer. "
         
@@ -233,11 +233,11 @@ example:
         
         remapIn = deskDrawer    
     ;
-`
+```
 
 Which would give us:
 
-<div class="cmdline">
+
 
     Study
     This is your favourite room in the whole house, where you do your best work, think your best thoughts, 
@@ -249,7 +249,7 @@ Which would give us:
 
     George is watching you carefully, waiting for you to speak.
 
-</div>
+
 
 Note how the desk's specialDesc has to test whether there's anything on
 the desk or in its drawer available for listing before displaying the
@@ -272,7 +272,7 @@ can see a note and a blue ball here. " One way we could change this is
 by incorporating a list of miscellaneous items into the room description
 itself, for example:
 
-`
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -287,7 +287,7 @@ itself, for example:
         
         regions = downstairs
     ;
-`
+```
 
 This works after a fashion, but it's less than ideal, not least because
 you may not want this list of miscellaneous items to appear before the
@@ -307,7 +307,7 @@ listing. To use a CustomRoomLister you attach it to the
 roomContentsLister property of the room in question and pass the prefix
 and suffix text you want to use via its constructor, thus:
 
-`
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -323,7 +323,7 @@ and suffix text you want to use via its constructor, thus:
         roomContentsLister = new CustomRoomLister('Someone\'s left ', suffix: '
             lying on the floor. ')
     ;
-`
+```
 
 Note that here the first parameter we pass to the CustomRoomLister's
 constructor is always the prefix string (since this is the most common
@@ -362,7 +362,7 @@ need to name the parameter, use the **method** keyword to define a
 method with three parameters, and then write our method definition
 within curly braces, for example:
 
-`
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -379,13 +379,13 @@ within curly braces, for example:
                                                   method (lst, pl, irName) 
             {"Lying on the floor <<if pl>>are<<else>>is<<end>> ";})
     ;
-`
+```
 
 Note that since we don't need a prefix string here, we supply the first
 parameter as nil. We'd define a suffix method in much the same way, for
 example:
 
-`
+```
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -402,7 +402,7 @@ example:
                                                   method (lst, pl, irName) 
             {" <<if pl>>are<<else>>is<<end>> lying on the floor. ";})
     ;
-`
+```
 
 Note that in this case we supply '\\' as the prefix string to make sure
 that the sentence listing the room contents starts with a capital
@@ -415,7 +415,7 @@ letter.
 Consider the original version of the study room definition which
 resulted in a listing like:
 
-<div class="cmdline">
+
 
     Study
     This is your favourite room in the whole house, where you do your best work, think your best thoughts, 
@@ -429,7 +429,7 @@ resulted in a listing like:
 
     In the red box you see a battery.
 
-</div>
+
 
 There are two further options you can set to change the way this basic
 listing is presented. The first is to change
@@ -439,7 +439,7 @@ the contents of the items in the room. In the above example, this would
 mean that the final three sentences would be run together into a single
 paragraph, thus:
 
-<div class="cmdline">
+
 
     Study
     This is your favourite room in the whole house, where you do your best work, think your best thoughts, 
@@ -449,7 +449,7 @@ paragraph, thus:
 
     On the desk you see a blue book and a red box. In the drawer you see a brown file. In the red box you see a battery.
 
-</div>
+
 
 <span id="parabrk"></span>
 
@@ -461,7 +461,7 @@ gameMain.
 A second option is to set **gameMain.useParentheticalListing** to true.
 This would result in output like:
 
-<div class="cmdline">
+
 
     Study
     This is your favourite room in the whole house, where you do your best work, think your best thoughts, 
@@ -473,13 +473,13 @@ This would result in output like:
 
     In the drawer you see a brown file.
 
-</div>
+
 
 You can control the nesting depth of parenthetical listing by overriding
 the value of **subLister.maxNestingDepth**. The default value is 1,
 resulting in output like:
 
-<div class="cmdline">
+
 
     Study
     This is your favourite room in the whole house, where you do your best work, think your best thoughts, 
@@ -491,12 +491,12 @@ resulting in output like:
 
     In the drawer you see a brown file.
 
-</div>
+
 
 If you increased the `maxNestingDepth` to 4,
 say, you might potentially see something like:
 
-<div class="cmdline">
+
 
     Study
     This is your favourite room in the whole house, where you do your best work, think your best thoughts, 
@@ -508,13 +508,13 @@ say, you might potentially see something like:
 
     In the drawer you see a brown file.
 
-</div>
+
 
 If you set both `paraBrksBtwnSubcontents` and
 `useParentheticalListing` to true, your output
 might look like:
 
-<div class="cmdline">
+
 
     Study
     This is your favourite room in the whole house, where you do your best work, think your best thoughts, 
@@ -524,7 +524,7 @@ might look like:
 
     On the desk you see a blue book and a glass case (in which is a red box). In the drawer you see a brown file.
 
-</div>
+
 
 For further information on listing options, see the chapter on [Lists
 and Listers](lister.html).
@@ -561,11 +561,11 @@ The `inventoryListed` property determines
 whether an object is listed in response to an INVENTORY command. It too
 takes its default value from `isListed`.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -574,4 +574,4 @@ Descriptions
 <span class="navnp"><a href="thing.html" class="nav"><em>Prev:</em> Rooms</a>
     <a href="door.html" class="nav"><em>Next:</em> Doors</a>     </span>
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
@@ -17,7 +17,7 @@ Command Help
 <a href="dynregion.html" class="nav"><em>Next:</em> Dynamic Region</a>
     </span>
 
-</div>
+
 
 
 
@@ -66,7 +66,7 @@ source files.
 
 If the player then enters an empty command, the response will be:
 
-<div class="cmdline">
+
 
     What would you like to do?
     1. Go to another location
@@ -85,7 +85,7 @@ The player can then respond by selecting one of the numbers above
 by displaying some suggested commands. For example, if the player
 selected option 2 above then the game might respond:
 
-<div class="cmdline">
+
 
     Here are some suggestions (other actions may also be possible):
     look  listen smell  inventory
@@ -98,7 +98,7 @@ selected option 2 above then the game might respond:
 
     smell cheese   
 
-</div>
+
 
 If the game is being played on an HTML-capable interpreter the player
 can then click on one of the suggested commands to execute it.
@@ -222,11 +222,11 @@ This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
 [cmdhelp.t](../cmdhelp.t) file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *Adv3Lite Manual*  
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
@@ -237,4 +237,4 @@ Command Help
 <a href="dynregion.html" class="nav"><em>Next:</em> Dynamic Region</a>
     </span>
 
-</div>
+

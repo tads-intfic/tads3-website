@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "remote room lister". This is used to describe the contents of an
 adjoining room. For example, if an actor is standing in one room, and
@@ -35,42 +35,42 @@ lister to describe the objects the actor can see through the window.
 
 `class `**`RemoteRoomLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RemoteRoomLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`remoteRoom`](#remoteRoom)
 
@@ -79,11 +79,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -92,11 +92,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="remoteRoom"></span>
 
@@ -104,19 +104,19 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4460](../source/msg_neu.t.html#4460)\]
 
-<div class="desc">
+
 
 the remote room we're viewing
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -124,11 +124,11 @@ the remote room we're viewing
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4449](../source/msg_neu.t.html#4449)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -136,11 +136,11 @@ the remote room we're viewing
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4456](../source/msg_neu.t.html#4456)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -148,11 +148,11 @@ the remote room we're viewing
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4451](../source/msg_neu.t.html#4451)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -160,15 +160,15 @@ the remote room we're viewing
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4453](../source/msg_neu.t.html#4453)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

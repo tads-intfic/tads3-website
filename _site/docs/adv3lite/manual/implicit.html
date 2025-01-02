@@ -75,9 +75,10 @@ object or objects you want the implicit action to apply to. So, for
 example, to trigger an implicit TAKE RED BALL action in your own code
 you might write:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     tryImplicitAction(Take, redBall); 
-     
-</code></pre></div></div>
+<p>`
+     tryImplicitAction(Take, redBall);</p>
+
+<p>`</p>
 
 <p>The place where you might typically write such code is in the action
 section of a dobjFor() or iobjFor() block in your own code. For example,
@@ -88,26 +89,28 @@ action if the pen isn’t held, you could make the player character take
 the pen automatically via an implicit action provided the pen is within
 reach, something like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     pieceOfPaper: Thing 'piece of paper'
-        ...
+<p>`
+     pieceOfPaper: Thing ‘piece of paper’
+        …
         dobjFor(WriteOn)
         {
             check()
             {
                if(!gActor.canReach(pen))
-                 "You need a pen to do that. ";
-            }
-            
-            action()
-            {
-               if(!pen.isDirectlyHeldBy(gActor))
-                 tryImplicitAction(Take, pen);
-                 
-               ...  
-            }
+                 “You need a pen to do that. “;
+            }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        action()
+        {
+           if(!pen.isDirectlyHeldBy(gActor))
+             tryImplicitAction(Take, pen);
+             
+           ...  
         }
-     
+    }
 </code></pre></div></div>
+
+<p>`</p>
 
 <p><span id="reporting"></span></p>
 
@@ -139,26 +142,29 @@ implicit action reports, and since it’s your game you’re writing you
 can, if you like, banish all implicit action reports with the following
 few lines of code:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Take
+<p>`
+    modify Take
         reportImplicitActions = nil
     ;
-</code></pre></div></div>
+`</p>
 
 <p>You can also do this on a per action basis. For example, the following
 code would suppress implicit take reports but allow all other implicit
 actions to be reported:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     modify Take
+<p>`
+     modify Take
         reportImplicitActions = nil
-    ;
-     
-</code></pre></div></div>
+    ;</p>
+
+<p>`</p>
 
 <p>To suppress the implicit action reports that would stem from a
 particular action applied to particular objects, we can use a
 <a href="doer.html">Doer</a>, like so:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     Doer 'look in octopusTank'
+<p>`
+     Doer ‘look in octopusTank’
         execAction(c)
         {
             try
@@ -170,10 +176,10 @@ particular action applied to particular objects, we can use a
             {
                 Action.reportImplicitActions = true;
             }
-        }       
-    ;
-     
-</code></pre></div></div>
+        }     <br />
+    ;</p>
+
+<p>`</p>
 
 <p>This would prevent any implicit action reports appearing in response to
 the command LOOK IN OCTOPUS TANK. We could also, of course, use a Doer
@@ -189,16 +195,17 @@ true at the end of the action even if it throws an exception.</p>
 up implicit action reports by using a
 <a href="message.html#custmessage_idx">CustomMessages</a> object like so:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     CustomMessages
+<p>`
+     CustomMessages
         messages = [
-            Msg(implicit action report start, '[after '),
-            Msg(implicit action report failure, 'failing to '),
-            Msg(implicit action report separator, ' and next '),
-            Msg(implicit action report terminator, ']\n')   
+            Msg(implicit action report start, ‘[after ‘),
+            Msg(implicit action report failure, ‘failing to ‘),
+            Msg(implicit action report separator, ‘ and next ‘),
+            Msg(implicit action report terminator, ‘]\n’) <br />
         ]
-    ;
-     
-</code></pre></div></div>
+    ;</p>
+
+<p>`</p>
 
 <p>This example would turn a report like ‘(first taking the ball)’ into
 ‘[after taking the ball]’, ‘(first trying to open the box)’ into

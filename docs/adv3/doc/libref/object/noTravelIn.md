@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A default travel connector for going in. When travel in the relative
 direction "in" isn't allowed, we'll try recasting the command as an
@@ -28,15 +28,15 @@ direction "in" isn't allowed, we'll try recasting the command as an
 
 **`noTravelIn`**` :   `[`DefaultAskConnector`](../object/DefaultAskConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`noTravelIn`**  
 [`DefaultAskConnector`](../object/DefaultAskConnector.html)  
@@ -49,11 +49,11 @@ direction "in" isn't allowed, we'll try recasting the command as an
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`travelAction`](#travelAction)
 
@@ -75,11 +75,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -102,11 +102,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="travelAction"></span>
 
@@ -114,25 +114,25 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[1934](../source/travel.t.html#1934)\]
 
-<div class="desc">
+
 
 when we go 'in', we'll try to ENTER something
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Hints  
@@ -15,7 +15,7 @@ layout: docs
     <a href="instruct.html" class="nav"><em>Next:</em> Instructions</a>
     </span>
 
-</div>
+
 
 
 
@@ -43,7 +43,7 @@ many hints you're likely to need to show at once, you can either put
 a current objective the player may be trying to achieve) or create a
 sub-menu structure using **HintMenu** items; for example:
 
-`
+```
      topHintMenu: TopHintMenu 'Hints';
        + HintMenu 'General Questions';
        ++ Goal 'What am I supposed to be doing?' [answer, answer, answer];
@@ -54,7 +54,7 @@ sub-menu structure using **HintMenu** items; for example:
        + HintMenu 'Second Area';
        ++ Goal 'Where is the gold key?' [answer, answer, answer];
        ++ Goal 'How do I unlock the gold door?' [answer, answer, answer];  
-`
+```
 
 Note that there's no requirement that the hint menu tree takes exactly
 this shape. A very small game could dispense with the submenus and
@@ -115,7 +115,7 @@ single-quoted strings, each one successively nudging the player towards
 the goal by giving just a bit more information or a slightler clearer
 clue (since they will be displayed one at a time); for example:
 
-`
+```
     + Goal 'Where is the gold key?'
        [
           'What did the old man tell you?',
@@ -128,7 +128,7 @@ clue (since they will be displayed one at a time); for example:
        openWhenSeen = goldDoor
        closeWhenSeen = goldKey
     ;
-`
+```
 
 Occasionally, though, you may want to use a
 <span id="hint-idx">Hint</span> object instead of a single-quoted string
@@ -137,7 +137,7 @@ appear in more than one list, or you want displaying the hint to open a
 fresh goal. For example, instead of the final item in the previous
 example we might have defined:
 
-`
+```
     fountainHint: Hint 'What\'s the temperature like in the fountain? ' [fountainGoal] ; 
 
 
@@ -178,7 +178,7 @@ example we might have defined:
         
         priority = 110
     ;
-`
+```
 
 Note how we can make use of the ExtraHint template to define the
 hintDelay and hintText properties of these ExtraHints. In this instance
@@ -213,7 +213,7 @@ one nudge, particularly if s/he fails to respond to the first. In such a
 case you can mix the ExtraHint in with an EventList class to provide a
 series of nudges, for example:
 
-`
+```
     ExtraHint, EventList +7 
         [
            'Try taking the document. ',
@@ -223,7 +223,7 @@ series of nudges, for example:
         openWhenSeen = study
         closeWhenMoved = document  
     ;
-`
+```
 
 <span id="setdelay"></span>
 
@@ -241,7 +241,7 @@ one call this method? Because single-quoted strings can contained
 embedded expressions, you might be tempted to make the following
 mistake:
 
-`
+```
     ExtraHint, EventList +7 
         [
            'Try taking the document. <<setDelay(6)>>',  // DON'T DO THIS!
@@ -251,7 +251,7 @@ mistake:
         openWhenSeen = study
         closeWhenMoved = document  
     ;
-`
+```
 
 The problem with code like this is that all the list elements are
 evaluated the first time the list is referenced, so that it will most
@@ -259,7 +259,7 @@ likely result in the hintDelay being set to 5 all the way through. One
 way to avoid this is to embed the calls to setDelay in double-quoted
 strings inside anonymous functions, like this:
 
-`
+```
     ExtraHint, EventList +7 
         [
            {: "Try taking the document. <<setDelay(6)>>" },  // DO THIS INSTEAD
@@ -269,7 +269,7 @@ strings inside anonymous functions, like this:
         openWhenSeen = study
         closeWhenMoved = document  
     ;
-`
+```
 
 If you use an EventList, as in the foregoing examples, then the
 ExtraHint will automatically close itself off after the last hint in the
@@ -282,12 +282,12 @@ By default extra hints are shown in italics. If you like you can change
 this by modifying the **extraHintStyleTag**. For example, to make the
 hints appear in bold blue, you'd define the following:
 
-`
+```
     modify extraHintStyleTag
         openText = '<.p><b><font color=blue>'
         closeText = '</font></b><.p>'
     ;
-`
+```
 
 You need to be a bit careful about specifying particular colours like
 this, however; what may look good in your interpreter may not work at
@@ -297,19 +297,19 @@ background! For that reason it may be safer to stick to using different
 styles (bold, italic, etc.) or prefix and suffix characters such a
 square brackets or asterisks, e.g.:
 
-`
+```
     modify extraHintStyleTag
         openText = '<.p>** '
         closeText = ' **<.p>'
     ;
-`
+```
 
 Of course, you can simply stick with the default italics here and not
 bother with modifying extraHintStyleTag at all.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -320,4 +320,4 @@ bother with modifying extraHintStyleTag at all.
 
 
 
-</div>
+

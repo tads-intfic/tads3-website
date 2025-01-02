@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A LocationPrepProduction is a special Production type for phrases that
 encode the preposition of a locational phrase. This is only needed in
@@ -41,26 +41,26 @@ location relationship of the preposition.
 
 `class `**`LocationPrepProduction`**` :   `[`Production`](../object/Production.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LocationPrepProduction`**  
 [`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`LocationPrepProduction`**  
 [`locationPrep(from)`](../object/locationPrep(from).html)  
@@ -68,19 +68,19 @@ location relationship of the preposition.
 [`locationPrep(on)`](../object/locationPrep(on).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`locType`](#locType)
 
@@ -89,11 +89,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`build`](#build)
 
@@ -102,11 +102,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="locType"></span>
 
@@ -114,19 +114,19 @@ Inherited from `Production` :
 
 [parser.t](../file/parser.t.html)\[[4376](../source/parser.t.html#4376)\]
 
-<div class="desc">
+
 
 our location relationship type, as a LocType object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="build"></span>
 
@@ -134,16 +134,16 @@ our location relationship type, as a LocType object
 
 [parser.t](../file/parser.t.html)\[[4382](../source/parser.t.html#4382)\]
 
-<div class="desc">
+
 
 on building the production, set the locType in our LocationalProduction
 parent
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="ui.html" class="nav">The User Interface</a> \> The Default
@@ -16,7 +16,7 @@ Display Function
     <a href="banners.html" class="nav"><em>Next:</em> The Banner Window
 Display Model</a>     </span>
 
-</div>
+
 
 
 
@@ -326,7 +326,7 @@ displaying strings and expressions. The effect, however, is the same.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -336,4 +336,4 @@ Display Function
     <a href="banners.html" class="nav"><em>Next:</em> The Banner Window
 Display Model</a>     </span>
 
-</div>
+

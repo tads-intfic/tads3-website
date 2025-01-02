@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SympPathPassage is a SymPassage that represents a path (or road or
 track or the like). so that following it or going down it is equivalent
@@ -34,15 +34,15 @@ to going through it.
 
 `class `**`SymPathPassage`**` :   `[`SymPassage`](../object/SymPassage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SymPathPassage`**  
 [`SymPassage`](../object/SymPassage.html)  
@@ -60,27 +60,27 @@ to going through it.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`traversalMsg`](#traversalMsg)
 
@@ -111,11 +111,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(ClimbDown)`](#dobjFor(ClimbDown))[`dobjFor(ClimbUp)`](#dobjFor(ClimbUp))[`dobjFor(Follow)`](#dobjFor(Follow))
 
@@ -148,11 +148,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="traversalMsg"></span>
 
@@ -160,20 +160,20 @@ Inherited from `LMentionable` :
 
 [symconn.t](../file/symconn.t.html)\[[889](../source/symconn.t.html#889)\]
 
-<div class="desc">
+
 
 One most naturally talks of going 'down' a path; by default we use the
 message from the PathPassage class.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(ClimbDown)"></span>
 
@@ -181,11 +181,11 @@ message from the PathPassage class.
 
 [symconn.t](../file/symconn.t.html)\[[879](../source/symconn.t.html#879)\]
 
-<div class="desc">
+
 
 Make going down a path the same as going through it.
 
-</div>
+
 
 <span id="dobjFor(ClimbUp)"></span>
 
@@ -193,11 +193,11 @@ Make going down a path the same as going through it.
 
 [symconn.t](../file/symconn.t.html)\[[882](../source/symconn.t.html#882)\]
 
-<div class="desc">
+
 
 Make going up a path the same as going through it.
 
-</div>
+
 
 <span id="dobjFor(Follow)"></span>
 
@@ -205,15 +205,15 @@ Make going up a path the same as going through it.
 
 [symconn.t](../file/symconn.t.html)\[[876](../source/symconn.t.html#876)\]
 
-<div class="desc">
+
 
 Make followinng a path the same as going through it.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

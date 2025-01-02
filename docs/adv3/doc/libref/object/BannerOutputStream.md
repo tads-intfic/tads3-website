@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Banner Output Stream. This is a specialization of OutputStream that
 writes to a banner window.
 
 `class `**`BannerOutputStream`**` :   `[`OutputStream`](../object/OutputStream.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BannerOutputStream`**  
 [`OutputStream`](../object/OutputStream.html)  
@@ -50,27 +50,27 @@ writes to a banner window.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`handle_`](#handle_)
 
@@ -84,11 +84,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`execute`](#execute)[`writeFromStream`](#writeFromStream)
 
@@ -102,11 +102,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="handle_"></span>
 
@@ -114,19 +114,19 @@ Inherited from `ModuleExecObject` :
 
 [banner.t](../file/banner.t.html)\[[492](../source/banner.t.html#492)\]
 
-<div class="desc">
+
 
 our system-level banner window handle
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -134,11 +134,11 @@ our system-level banner window handle
 
 [banner.t](../file/banner.t.html)\[[463](../source/banner.t.html#463)\]
 
-<div class="desc">
+
 
 construct
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -146,11 +146,11 @@ construct
 
 [banner.t](../file/banner.t.html)\[[473](../source/banner.t.html#473)\]
 
-<div class="desc">
+
 
 execute preinitialization
 
-</div>
+
 
 <span id="writeFromStream"></span>
 
@@ -158,15 +158,15 @@ execute preinitialization
 
 [banner.t](../file/banner.t.html)\[[485](../source/banner.t.html#485)\]
 
-<div class="desc">
+
 
 write text from the stream to the interpreter I/O system
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

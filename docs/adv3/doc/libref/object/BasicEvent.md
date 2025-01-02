@@ -26,31 +26,31 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A basic event, for game-time and real-time events.
 
 `class `**`BasicEvent`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BasicEvent`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BasicEvent`**  
 [`Event`](../object/Event.html)  
@@ -67,39 +67,39 @@ A basic event, for game-time and real-time events.
 [`RealTimeSenseFuse`](../object/RealTimeSenseFuse.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`obj_`](#obj_)[`prop_`](#prop_)[`sense_`](#sense_)[`source_`](#source_)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`callMethod`](#callMethod)[`construct`](#construct)[`eventMatches`](#eventMatches)[`executeEvent`](#executeEvent)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="obj_"></span>
 
@@ -107,11 +107,11 @@ A basic event, for game-time and real-time events.
 
 [events.t](../file/events.t.html)\[[617](../source/events.t.html#617)\]
 
-<div class="desc">
+
 
 the object and property we invoke
 
-</div>
+
 
 <span id="prop_"></span>
 
@@ -119,11 +119,11 @@ the object and property we invoke
 
 [events.t](../file/events.t.html)\[[618](../source/events.t.html#618)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sense_"></span>
 
@@ -131,11 +131,11 @@ the object and property we invoke
 
 [events.t](../file/events.t.html)\[[631](../source/events.t.html#631)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="source_"></span>
 
@@ -143,7 +143,7 @@ the object and property we invoke
 
 [events.t](../file/events.t.html)\[[630](../source/events.t.html#630)\]
 
-<div class="desc">
+
 
 The sensory context of the event. When the event fires, we'll execute
 its method in this sensory context, so that any messages generated will
@@ -154,15 +154,15 @@ By default, these are nil, which means that the event's messages will be
 displayed (or, at least, they won't be suppressed because of the sensory
 context).
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="callMethod"></span>
 
@@ -170,12 +170,12 @@ context).
 
 [events.t](../file/events.t.html)\[[605](../source/events.t.html#605)\]
 
-<div class="desc">
+
 
 Call our underlying method. This is an internal routine intended for use
 by the executeEvent() implementations.
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -183,11 +183,11 @@ by the executeEvent() implementations.
 
 [events.t](../file/events.t.html)\[[583](../source/events.t.html#583)\]
 
-<div class="desc">
+
 
 construction
 
-</div>
+
 
 <span id="eventMatches"></span>
 
@@ -195,11 +195,11 @@ construction
 
 [events.t](../file/events.t.html)\[[599](../source/events.t.html#599)\]
 
-<div class="desc">
+
 
 does this event match the given object/property combination?
 
-</div>
+
 
 <span id="executeEvent"></span>
 
@@ -207,17 +207,17 @@ does this event match the given object/property combination?
 
 [events.t](../file/events.t.html)\[[596](../source/events.t.html#596)\]
 
-<div class="desc">
+
 
 Execute the event. This must be overridden by the subclass to perform
 the appropriate operation when executed. In particular, the subclass
 must reschedule or unschedule the event, as appropriate.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

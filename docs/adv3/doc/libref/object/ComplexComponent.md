@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A component object of a complex container. This class can be used as a
 mix-in for sub-objects of a complex container (the subContainer or
@@ -49,15 +49,15 @@ in those cases.
 
 `class `**`ComplexComponent`**` :   `[`Component`](../object/Component.html)[`NameAsParent`](../object/NameAsParent.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ComplexComponent`**  
 [`Component`](../object/Component.html)  
@@ -71,27 +71,27 @@ in those cases.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`stagingLocations`](#stagingLocations)
 
@@ -117,11 +117,11 @@ Inherited from `NameAsOther` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getIdentityObject`](#getIdentityObject)[`hideFromAll`](#hideFromAll)[`initializeLocation`](#initializeLocation)
 
@@ -146,11 +146,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="stagingLocations"></span>
 
@@ -158,7 +158,7 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[496](../source/extras.t.html#496)\]
 
-<div class="desc">
+
 
 In case this component is being used to implement a nested room of some
 kind (a platform, booth, etc), use the complex container's location as
@@ -168,15 +168,15 @@ container/component are meant to act as a single combined object, so
 we'd want to bypass the complex container and move directly between the
 enclosing location and 'self'.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getIdentityObject"></span>
 
@@ -184,13 +184,13 @@ enclosing location and 'self'.
 
 [extras.t](../file/extras.t.html)\[[478](../source/extras.t.html#478)\]
 
-<div class="desc">
+
 
 Get our "identity" object. We take our identity from our parent object,
 if we have one. Note that our identity isn't simply our parent, but
 rather is our parent's identity, recursively defined.
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -198,11 +198,11 @@ rather is our parent's identity, recursively defined.
 
 [extras.t](../file/extras.t.html)\[[484](../source/extras.t.html#484)\]
 
-<div class="desc">
+
 
 don't participate in 'all', since we're a secret internal object
 
-</div>
+
 
 <span id="initializeLocation"></span>
 
@@ -210,15 +210,15 @@ don't participate in 'all', since we're a secret internal object
 
 [extras.t](../file/extras.t.html)\[[464](../source/extras.t.html#464)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -762,9 +762,9 @@ of [ClockEvent](../object/ClockEvent.html) in
 object in
 [output.t](../file/output.t.html)\[[1866](../source/output.t.html#1866)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

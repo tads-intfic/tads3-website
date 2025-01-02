@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Player Character and NPC
@@ -16,7 +16,7 @@ Knowledge
     <a href="orders.html" class="nav"><em>Next:</em> Giving Orders to
 NPCs</a>     </span>
 
-</div>
+
 
 
 
@@ -134,7 +134,7 @@ to keep separate track of Bob's knowledge we could define new
 `bob.knownProp` to
 `&bobFamiliar`, like this:
 
-`
+```
     modify Thing
         bobSeen = nil
         bobFamiliar = nil
@@ -150,7 +150,7 @@ to keep separate track of Bob's knowledge we could define new
        knownProp = &bobFamiliar
     ;
      
-`
+```
 
 With these definitions in place,
 `bob.setHasSeen(obj`) will set
@@ -201,7 +201,7 @@ to do anything else about it, the player character can't ask about the
 dark tower, for example, until s/he knows of the dark tower's existence.
 That means we can safely define ActorTopicEntries like this:
 
-`
+```
     + AskTellTopic @tTown
        "<q>This seems a nice town,</q> you remark cheerily.\b
         <q>Yes it is -- provided you don't go anywhere the dark
@@ -213,7 +213,7 @@ That means we can safely define ActorTopicEntries like this:
       Bob rolls his eyes and looks away for a moment. <q>You don't want
       to know,</q> he mutters. <q>You really don't.</q> "
     ;
-`
+```
 
 Here, the second TopicEntry can't be reached until the player character
 knows about (i.e. knows of the existence of) the dark tower. This might
@@ -251,7 +251,7 @@ whether some item of knowledge has been revealed to the player character
 we can use the **gRevealed(tag)** macro, e.g.
 gRevealed('tower-haunted'). So, for example, we might go on to define:
 
-`
+```
     + AskTellTopic +110 @darkTower
        "<q>I've heard it said that the dark tower is haunted,</q> you remark.
         <q>Do you believe that?</q>\b
@@ -260,7 +260,7 @@ gRevealed('tower-haunted'). So, for example, we might go on to define:
         
         isActive = gRevealed('tower-haunted')
     ;
-`
+```
 
 Note that we've given this AskTellTopic a matchScore of 110 (10 higher
 than the default) so that if the player character has heard about the
@@ -301,7 +301,7 @@ belonging to the actor. For example, if at some later point in the game
 the player character were to discuss his experiences in Bob's town with
 a friend, he might want to inform her about the haunting:
 
-`
+```
     + TellTopic @darkTower
       "<q>You know, the folks in Doomsville even think their local tower is
        haunted,</q> you remark. <.inform tower-haunted>\b
@@ -311,7 +311,7 @@ a friend, he might want to inform her about the haunting:
        
       isActive = gRevealed('tower-haunted') && !gInformed('tower-haunted')
     ;
-`
+```
 
 Note how we use the gInformed() macro in the isActive property so that
 the player character won't tell Mavis the same piece of information
@@ -368,7 +368,7 @@ confusion).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -378,4 +378,4 @@ Knowledge
     <a href="orders.html" class="nav"><em>Next:</em> Giving Orders to
 NPCs</a>     </span>
 
-</div>
+

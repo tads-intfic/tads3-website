@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Standard Non-Player Character (NPC) messages. These messages are
 generated when the player issues a command to a specific non-player
@@ -28,15 +28,15 @@ character.
 
 **`npcMessagesDirect`**` :   `[`npcMessages`](../object/npcMessages.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`npcMessagesDirect`**  
 [`npcMessages`](../object/npcMessages.html)  
@@ -46,11 +46,11 @@ character.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -65,11 +65,11 @@ Inherited from `libMessages` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askDisambig`](#askDisambig)[`askMissingObject`](#askMissingObject)[`askUnknownWord`](#askUnknownWord)[`disambigOrdinalOutOfRange`](#disambigOrdinalOutOfRange)[`insufficientQuantity`](#insufficientQuantity)[`missingLiteral`](#missingLiteral)[`missingObject`](#missingObject)[`noMatchCannotSee`](#noMatchCannotSee)[`noMatchDisambig`](#noMatchDisambig)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchNotAware`](#noMatchNotAware)[`singleObjectRequired`](#singleObjectRequired)[`uniqueObjectRequired`](#uniqueObjectRequired)[`wordIsUnknown`](#wordIsUnknown)[`zeroQuantity`](#zeroQuantity)
 
@@ -87,19 +87,19 @@ Inherited from `MessageHelper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="ambiguousNounPhrase"></span>
 
@@ -107,12 +107,12 @@ Inherited from `MessageHelper` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2380](../source/msg_neu.t.html#2380)\]
 
-<div class="desc">
+
 
 we found an ambiguous noun phrase, but we were unable to perform
 interactive disambiguation
 
-</div>
+
 
 <span id="askDisambig"></span>
 
@@ -120,7 +120,7 @@ interactive disambiguation
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2345](../source/msg_neu.t.html#2345)\]
 
-<div class="desc">
+
 
 Ask the canonical disambiguation question: "Which x do you mean...?".
 'matchList' is the list of ambiguous objects with any redundant
@@ -132,7 +132,7 @@ To prevent interactive disambiguation, do this:
 throw new ParseFailureException(&ambiguousNounPhrase,  
 originalText, matchList, fullMatchList);
 
-</div>
+
 
 <span id="askMissingObject"></span>
 
@@ -140,11 +140,11 @@ originalText, matchList, fullMatchList);
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2389](../source/msg_neu.t.html#2389)\]
 
-<div class="desc">
+
 
 Missing object query and error message templates
 
-</div>
+
 
 <span id="askUnknownWord"></span>
 
@@ -152,11 +152,11 @@ Missing object query and error message templates
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2409](../source/msg_neu.t.html#2409)\]
 
-<div class="desc">
+
 
 tell the user they entered a word we don't know
 
-</div>
+
 
 <span id="disambigOrdinalOutOfRange"></span>
 
@@ -164,7 +164,7 @@ tell the user they entered a word we don't know
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2326](../source/msg_neu.t.html#2326)\]
 
-<div class="desc">
+
 
 The answer to a disambiguation question specifies an invalid ordinal
 ("the fourth one" when only three choices were offered).
@@ -173,7 +173,7 @@ The answer to a disambiguation question specifies an invalid ordinal
 'originalText' is the text of the noun phrase that caused the
 disambiguation question to be asked in the first place.
 
-</div>
+
 
 <span id="insufficientQuantity"></span>
 
@@ -181,11 +181,11 @@ disambiguation question to be asked in the first place.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2290](../source/msg_neu.t.html#2290)\]
 
-<div class="desc">
+
 
 insufficient quantity to meet a command request ('take five books')
 
-</div>
+
 
 <span id="missingLiteral"></span>
 
@@ -193,11 +193,11 @@ insufficient quantity to meet a command request ('take five books')
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2402](../source/msg_neu.t.html#2402)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="missingObject"></span>
 
@@ -205,11 +205,11 @@ insufficient quantity to meet a command request ('take five books')
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2396](../source/msg_neu.t.html#2396)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatchCannotSee"></span>
 
@@ -217,11 +217,11 @@ insufficient quantity to meet a command request ('take five books')
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2260](../source/msg_neu.t.html#2260)\]
 
-<div class="desc">
+
 
 no match for a noun phrase
 
-</div>
+
 
 <span id="noMatchDisambig"></span>
 
@@ -229,11 +229,11 @@ no match for a noun phrase
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2311](../source/msg_neu.t.html#2311)\]
 
-<div class="desc">
+
 
 no match for the response to a disambiguation question
 
-</div>
+
 
 <span id="noMatchForAll"></span>
 
@@ -241,11 +241,11 @@ no match for the response to a disambiguation question
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2271](../source/msg_neu.t.html#2271)\]
 
-<div class="desc">
+
 
 no match for 'all'
 
-</div>
+
 
 <span id="noMatchForAllBut"></span>
 
@@ -253,11 +253,11 @@ no match for 'all'
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2277](../source/msg_neu.t.html#2277)\]
 
-<div class="desc">
+
 
 nothing left for 'all' after removing 'except' items
 
-</div>
+
 
 <span id="noMatchNotAware"></span>
 
@@ -265,11 +265,11 @@ nothing left for 'all' after removing 'except' items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2265](../source/msg_neu.t.html#2265)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="singleObjectRequired"></span>
 
@@ -277,11 +277,11 @@ nothing left for 'all' after removing 'except' items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2304](../source/msg_neu.t.html#2304)\]
 
-<div class="desc">
+
 
 a single noun phrase is required, but a noun list was used
 
-</div>
+
 
 <span id="uniqueObjectRequired"></span>
 
@@ -289,11 +289,11 @@ a single noun phrase is required, but a noun list was used
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2297](../source/msg_neu.t.html#2297)\]
 
-<div class="desc">
+
 
 a unique object is required, but multiple objects were specified
 
-</div>
+
 
 <span id="wordIsUnknown"></span>
 
@@ -301,11 +301,11 @@ a unique object is required, but multiple objects were specified
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2416](../source/msg_neu.t.html#2416)\]
 
-<div class="desc">
+
 
 tell the user they entered a word we don't know
 
-</div>
+
 
 <span id="zeroQuantity"></span>
 
@@ -313,15 +313,15 @@ tell the user they entered a word we don't know
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2283](../source/msg_neu.t.html#2283)\]
 
-<div class="desc">
+
 
 'take zero books'
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

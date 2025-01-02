@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Thoughts  
@@ -15,7 +15,7 @@ layout: docs
     <a href="action.html" class="nav"><em>Next:</em> Actions</a>    
 </span>
 
-</div>
+
 
 
 
@@ -28,7 +28,7 @@ almost precisely the same way. All you need to do is to define an object
 of the **ThoughtManager** class and then populate it with **Thought**
 objects, like so:
 
-`
+```
     myThoughts: ThoughtManager
     ;
 
@@ -45,7 +45,7 @@ objects, like so:
         "You find your thoughts start to wander; for some reason you can't
         concentrate on that topic right now. "
     ;
-`
+```
 
 Thought inherits from [TopicEntry](topicentry.html), so you can use all
 the properties and methods of TopicEntry with it; Thought and
@@ -57,7 +57,7 @@ thoughts.t you must also include topicentry.t.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -68,4 +68,4 @@ thoughts.t you must also include topicentry.t.
 
 
 
-</div>
+

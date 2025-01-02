@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Implied Action
@@ -17,7 +17,7 @@ Substitutions</a>    
 <a href="t3lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
 
-</div>
+
 
 
 
@@ -478,7 +478,7 @@ tryImplicitActionMsg may be the way to go.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -489,4 +489,4 @@ Substitutions</a>    
 <a href="t3lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
 
-</div>
+

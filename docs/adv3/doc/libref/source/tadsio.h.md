@@ -752,9 +752,9 @@ layout: docs
     #define ColorNavy     ColorRGB(0x00, 0x00, 0x80)
     #define ColorTeal     ColorRGB(0x00, 0x80, 0x80)
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

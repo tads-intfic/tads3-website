@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> TimeZone  
@@ -15,7 +15,7 @@ layout: docs
     <a href="vector.html" class="nav"><em>Next:</em> Vector</a>    
 </span>
 
-</div>
+
 
 
 
@@ -57,7 +57,7 @@ When using the TimeZone class, `\#include
 
 `new TimeZone()`
 
-<div class="fdef">
+
 
 Creates a TimeZone object representing the host system's local time
 zone. On Windows, this obtains the timezone settings from the operating
@@ -72,7 +72,7 @@ US Eastern Time, set TZ=America/New_York.)
 
 `new TimeZone(*zoneinfoName*)`
 
-<div class="fdef">
+
 
 Creates a TimeZone object for the given location in the zoneinfo
 database, such as 'America/New_York' or 'Europe/London'.
@@ -87,12 +87,12 @@ dates in the future. Parsing or formatting a date/time value will treat
 the local time appropriately for its date, so that it matches the wall
 clock actually in effect on that date in the given location.
 
-</div>
+
 
 `new
 TimeZone('*STD*+*ofs*\[*DST*\[+*ofs*\],*start*,*end*\]')`
 
-<div class="fdef">
+
 
 This format creates a custom time zone. This bypasses the zoneinfo
 database and lets you define a timezone with a custom name, UTC offset,
@@ -168,11 +168,11 @@ the rules the zone will always use standard time. There are no default
 rules, so if you want to define a zone that switches seasonally between
 standard and daylight time, you must specify the rules.
 
-</div>
+
 
 `new TimeZone('*UTC*')`
 
-<div class="fdef">
+
 
 'Z' and 'GMT' are equivalent. This creates a TimeZone object
 representing UTC (Universal Time Coordinated), also known as Zulu (Z)
@@ -183,11 +183,11 @@ technically the same as UTC, but the two terms are commonly used
 interchangeably, which is why both are accepted here. UTC isn't subject
 to daylight time; it's on "standard time" year round.
 
-</div>
+
 
 `new TimeZone('*UTC*+*offset*')`
 
-<div class="fdef">
+
 
 'Z+*offset*' and 'GMT+*offset*' are equivlaent. This creates a TimeZone
 object representing a zone at a fixed offset (time difference) from UTC.
@@ -212,11 +212,11 @@ time; the difference is that the US Pacific Time zone implies a history
 of daylight savings and other changes, while 'UTC-8' is simply 8 hours
 earlier than UTC for all dates and times.
 
-</div>
+
 
 `new TimeZone(*offsetSecs*)`
 
-<div class="fdef">
+
 
 Creates a TimeZone object at the fixed UTC offset. *offsetSecs* is an
 integer giving the time zone offset in seconds; positive values are east
@@ -228,7 +228,7 @@ constructor above for the corresponding offset. For example,
 `new TimeZone(-25200)` yields the same type of
 time zone object as `new TimeZone('UTC-7')`.
 
-</div>
+
 
 ## Methods
 
@@ -236,7 +236,7 @@ time zone object as `new TimeZone('UTC-7')`.
 
 `getNames()`
 
-<div class="fdef">
+
 
 Returns a list of strings giving the names by which the timezone is
 known. For a timezone based on a zoneinfo location, this returns a list
@@ -248,13 +248,13 @@ name. For a zone based on a UTC offset, the list has only one entry,
 with a name of the form 'UTC+hh:mm:ss' (but the seconds and minutes are
 dropped if they're zero).
 
-</div>
+
 
 <span id="getHistory"></span>
 
 `getHistory(*date*?)`
 
-<div class="fdef">
+
 
 Gets the enumerated history of clock setting changes in this timezone,
 or the single history item that applies to the given date.
@@ -329,13 +329,13 @@ has to work a little harder.
 See the [getRules()](#getRules) method for information on retrieving the
 ongoing rules.
 
-</div>
+
 
 <span id="getLocation"></span>
 
 `getLocation()`
 
-<div class="fdef">
+
 
 Returns a description of the zone location, as a list consisting of
 \[*country*, *latitude*, *longitude*, *desc*\]. *country* is a string
@@ -348,13 +348,13 @@ with comment text describing the zone (or `nil`
 if there's no descriptive text). This information comes from the
 zoneinfo database.
 
-</div>
+
 
 <span id="getRules"></span>
 
 `getRules()`
 
-<div class="fdef">
+
 
 Gets the ongoing rules that are in effect after the last enumerated
 history item (see [getHistory()](#getHistory)). This returns a list of
@@ -439,13 +439,13 @@ zone for types 's' and 'u'. For example, if a US Pacific Time rule were
 stated as midnight UTC, the rule would fire on the previous afternoon in
 terms of the local date.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -454,4 +454,4 @@ terms of the local date.
     <a href="vector.html" class="nav"><em>Next:</em> Vector</a>    
 </span>
 
-</div>
+

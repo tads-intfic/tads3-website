@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Collection  
 <span class="navnp"><a href="charset.html" class="nav"><em>Prev:</em> CharacterSet</a>
     <a href="date.html" class="nav"><em>Next:</em> Date</a>     </span>
 
-</div>
+
 
 
 
@@ -43,7 +43,7 @@ access the elements.
 
 `createIterator()`
 
-<div class="fdef">
+
 
 Creates and returns an Iterator object. The Iterator is initialized so
 that it refers to the first element of the collection.
@@ -61,7 +61,7 @@ the Iterator was created.
 
 `createLiveIterator()`
 
-<div class="fdef">
+
 
 Creates and returns a "live" Iterator object. A live iterator refers
 directly to the original collection, not a snapshot copy of the
@@ -88,13 +88,13 @@ between `createIterator()` and
 List object is immutable, a List returns identical iterators for both of
 these methods.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -102,4 +102,4 @@ these methods.
 <span class="navnp"><a href="charset.html" class="nav"><em>Prev:</em> CharacterSet</a>
     <a href="date.html" class="nav"><em>Next:</em> Date</a>     </span>
 
-</div>
+

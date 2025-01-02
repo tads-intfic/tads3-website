@@ -3,7 +3,7 @@ layout: docs
 ---
 Welcome to TADS 3
 
-<div id="main">
+
 
 <div>
 
@@ -64,6 +64,6 @@ refer to the [LICENSE.TXT](../../license.txt) file for full details.
 <span style="font-size: 85%; color: #808080;"> Copyright ©2012 by
 Michael J. Roberts. </span>
 
-</div>
+
 
 </div>

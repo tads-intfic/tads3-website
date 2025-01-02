@@ -27,22 +27,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "rear container" is similar to an underside: it models the space
 behind an object.
 
 `class `**`RearContainer`**` :   `[`SpaceOverlay`](../object/SpaceOverlay.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RearContainer`**  
 [`SpaceOverlay`](../object/SpaceOverlay.html)  
@@ -52,11 +52,11 @@ behind an object.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RearContainer`**  
 [`RearSurface`](../object/RearSurface.html)  
@@ -64,19 +64,19 @@ behind an object.
 [`RestrictedRearContainer`](../object/RestrictedRearContainer.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`abandonContentsLister`](#abandonContentsLister)[`actorInPrep`](#actorInPrep)[`actorOutOfPrep`](#actorOutOfPrep)[`allowPutBehind`](#allowPutBehind)[`alreadyPutInMsg`](#alreadyPutInMsg)[`cannotPutInSelfMsg`](#cannotPutInSelfMsg)[`circularlyInMessage`](#circularlyInMessage)[`contentsLister`](#contentsLister)[`descContentsLister`](#descContentsLister)[`inlineContentsLister`](#inlineContentsLister)[`lookInLister`](#lookInLister)[`objInPrep`](#objInPrep)[`putDestMessage`](#putDestMessage)[`takeFromNotInMessage`](#takeFromNotInMessage)[`tooFullMsg`](#tooFullMsg)[`tooLargeForContainerMsg`](#tooLargeForContainerMsg)
 
@@ -94,11 +94,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(LookBehind)`](#dobjFor(LookBehind))[`iobjFor(PutBehind)`](#iobjFor(PutBehind))[`nestedLookIn`](#nestedLookIn)[`tryMovingObjInto`](#tryMovingObjInto)
 
@@ -116,11 +116,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="abandonContentsLister"></span>
 
@@ -128,11 +128,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[943](../source/extras.t.html#943)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorInPrep"></span>
 
@@ -140,11 +140,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2115](../source/en_us.t.html#2115)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorOutOfPrep"></span>
 
@@ -152,11 +152,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2116](../source/en_us.t.html#2116)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="allowPutBehind"></span>
 
@@ -164,13 +164,13 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[933](../source/extras.t.html#933)\]
 
-<div class="desc">
+
 
 Can actors put new objects behind self, using the PUT BEHIND command? By
 default, we allow it. Override this property to nil if new objects
 cannot be added by player commands.
 
-</div>
+
 
 <span id="alreadyPutInMsg"></span>
 
@@ -178,11 +178,11 @@ cannot be added by player commands.
 
 [extras.t](../file/extras.t.html)\[[965](../source/extras.t.html#965)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotPutInSelfMsg"></span>
 
@@ -190,11 +190,11 @@ cannot be added by player commands.
 
 [extras.t](../file/extras.t.html)\[[964](../source/extras.t.html#964)\]
 
-<div class="desc">
+
 
 customize the verification messages
 
-</div>
+
 
 <span id="circularlyInMessage"></span>
 
@@ -202,12 +202,12 @@ customize the verification messages
 
 [extras.t](../file/extras.t.html)\[[952](../source/extras.t.html#952)\]
 
-<div class="desc">
+
 
 my message indicating that another object x cannot be put into me
 because I'm already in x
 
-</div>
+
 
 <span id="contentsLister"></span>
 
@@ -215,11 +215,11 @@ because I'm already in x
 
 [extras.t](../file/extras.t.html)\[[939](../source/extras.t.html#939)\]
 
-<div class="desc">
+
 
 use custom contents listers
 
-</div>
+
 
 <span id="descContentsLister"></span>
 
@@ -227,11 +227,11 @@ use custom contents listers
 
 [extras.t](../file/extras.t.html)\[[940](../source/extras.t.html#940)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="inlineContentsLister"></span>
 
@@ -239,11 +239,11 @@ use custom contents listers
 
 [extras.t](../file/extras.t.html)\[[942](../source/extras.t.html#942)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lookInLister"></span>
 
@@ -251,11 +251,11 @@ use custom contents listers
 
 [extras.t](../file/extras.t.html)\[[941](../source/extras.t.html#941)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="objInPrep"></span>
 
@@ -263,11 +263,11 @@ use custom contents listers
 
 [en_us.t](../file/en_us.t.html)\[[2114](../source/en_us.t.html#2114)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="putDestMessage"></span>
 
@@ -275,11 +275,11 @@ use custom contents listers
 
 [extras.t](../file/extras.t.html)\[[955](../source/extras.t.html#955)\]
 
-<div class="desc">
+
 
 message phrase for objects put under me
 
-</div>
+
 
 <span id="takeFromNotInMessage"></span>
 
@@ -287,11 +287,11 @@ message phrase for objects put under me
 
 [extras.t](../file/extras.t.html)\[[946](../source/extras.t.html#946)\]
 
-<div class="desc">
+
 
 the message for taking things from me that aren't behind me
 
-</div>
+
 
 <span id="tooFullMsg"></span>
 
@@ -299,11 +299,11 @@ the message for taking things from me that aren't behind me
 
 [extras.t](../file/extras.t.html)\[[958](../source/extras.t.html#958)\]
 
-<div class="desc">
+
 
 message when we're too full for another object
 
-</div>
+
 
 <span id="tooLargeForContainerMsg"></span>
 
@@ -311,19 +311,19 @@ message when we're too full for another object
 
 [extras.t](../file/extras.t.html)\[[961](../source/extras.t.html#961)\]
 
-<div class="desc">
+
 
 message when object is too large to fit behind me
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(LookBehind)"></span>
 
@@ -331,11 +331,11 @@ message when object is too large to fit behind me
 
 [extras.t](../file/extras.t.html)\[[999](../source/extras.t.html#999)\]
 
-<div class="desc">
+
 
 Looking "behind" a surface simply shows the surface's contents.
 
-</div>
+
 
 <span id="iobjFor(PutBehind)"></span>
 
@@ -343,11 +343,11 @@ Looking "behind" a surface simply shows the surface's contents.
 
 [extras.t](../file/extras.t.html)\[[974](../source/extras.t.html#974)\]
 
-<div class="desc">
+
 
 Handle the PUT UNDER command
 
-</div>
+
 
 <span id="nestedLookIn"></span>
 
@@ -355,11 +355,11 @@ Handle the PUT UNDER command
 
 [extras.t](../file/extras.t.html)\[[936](../source/extras.t.html#936)\]
 
-<div class="desc">
+
 
 we need to LOOK BEHIND this object to see its contents
 
-</div>
+
 
 <span id="tryMovingObjInto"></span>
 
@@ -367,15 +367,15 @@ we need to LOOK BEHIND this object to see its contents
 
 [extras.t](../file/extras.t.html)\[[968](../source/extras.t.html#968)\]
 
-<div class="desc">
+
 
 our implied containment verb is PUT BEHIND
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

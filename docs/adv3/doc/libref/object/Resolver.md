@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Basic object resolver. An Action object creates an object resolver to
 mediate the process of resolving noun phrases to objects.
@@ -46,25 +46,25 @@ Custom base resolver
 
 `class `**`Resolver`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Resolver`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Resolver`**  
 [`ActorResolver`](../object/ActorResolver.html)  
@@ -357,39 +357,39 @@ Custom base resolver
 [`TActionTopicResolver`](../object/TActionTopicResolver.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`action_`](#action_)[`actor_`](#actor_)[`equivs_`](#equivs_)[`isGlobalScope`](#isGlobalScope)[`isSubResolver`](#isSubResolver)[`issuer_`](#issuer_)[`scope_`](#scope_)[`whichMessageObject`](#whichMessageObject)[`whichObject`](#whichObject)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`allowAll`](#allowAll)[`cacheScopeList`](#cacheScopeList)[`construct`](#construct)[`filterAll`](#filterAll)[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`filterPossRank`](#filterPossRank)[`getAction`](#getAction)[`getAll`](#getAll)[`getAllDefaults`](#getAllDefaults)[`getDefaultObject`](#getDefaultObject)[`getPossessiveResolver`](#getPossessiveResolver)[`getPronounDefault`](#getPronounDefault)[`getQualifierResolver`](#getQualifierResolver)[`getRawPronounAntecedent`](#getRawPronounAntecedent)[`getReflexiveBinding`](#getReflexiveBinding)[`getScopeList`](#getScopeList)[`getTargetActor`](#getTargetActor)[`matchName`](#matchName)[`objInScope`](#objInScope)[`resetResolver`](#resetResolver)[`resolvePronounAntecedent`](#resolvePronounAntecedent)[`resolveUnknownNounPhrase`](#resolveUnknownNounPhrase)[`selectIndefinite`](#selectIndefinite)[`withGlobals`](#withGlobals)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action_"></span>
 
@@ -397,11 +397,11 @@ Custom base resolver
 
 [resolver.t](../file/resolver.t.html)\[[740](../source/resolver.t.html#740)\]
 
-<div class="desc">
+
 
 my action
 
-</div>
+
 
 <span id="actor_"></span>
 
@@ -409,11 +409,11 @@ my action
 
 [resolver.t](../file/resolver.t.html)\[[746](../source/resolver.t.html#746)\]
 
-<div class="desc">
+
 
 the target actor object
 
-</div>
+
 
 <span id="equivs_"></span>
 
@@ -421,13 +421,13 @@ the target actor object
 
 [resolver.t](../file/resolver.t.html)\[[753](../source/resolver.t.html#753)\]
 
-<div class="desc">
+
 
 List of equivalent objects we've resolved so far. We use this to try to
 return different equivalent objects when multiple noun phrases refer to
 the same set of equivalents.
 
-</div>
+
 
 <span id="isGlobalScope"></span>
 
@@ -435,7 +435,7 @@ the same set of equivalents.
 
 [resolver.t](../file/resolver.t.html)\[[186](../source/resolver.t.html#186)\]
 
-<div class="desc">
+
 
 Is this a "global" scope? By default, the scope is local: it's limited
 to what the actor can see, hear, etc. In some cases, the scope is
@@ -452,7 +452,7 @@ generally want to be more inclusive of possible matches than in local
 scopes, because we have much less of a basis to guess about what the
 player might mean.
 
-</div>
+
 
 <span id="isSubResolver"></span>
 
@@ -460,12 +460,12 @@ player might mean.
 
 [resolver.t](../file/resolver.t.html)\[[47](../source/resolver.t.html#47)\]
 
-<div class="desc">
+
 
 Are we a sub-phrase resolver? This should return true if we're being
 used to resolve a sub-phrase of the main phrase.
 
-</div>
+
 
 <span id="issuer_"></span>
 
@@ -473,11 +473,11 @@ used to resolve a sub-phrase of the main phrase.
 
 [resolver.t](../file/resolver.t.html)\[[743](../source/resolver.t.html#743)\]
 
-<div class="desc">
+
 
 the issuing actor
 
-</div>
+
 
 <span id="scope_"></span>
 
@@ -485,7 +485,7 @@ the issuing actor
 
 [resolver.t](../file/resolver.t.html)\[[737](../source/resolver.t.html#737)\]
 
-<div class="desc">
+
 
 The cached scope list, if we have one. Note that this is an internal
 implementation detail of the base class; subclasses can dispense with
@@ -497,7 +497,7 @@ list MUST ensure that the result only contains unique entries. The
 library assumes in several places that there are no duplicate entries in
 the list; subtle problems can occur if the list contains any duplicates.
 
-</div>
+
 
 <span id="whichMessageObject"></span>
 
@@ -505,14 +505,14 @@ the list; subtle problems can occur if the list contains any duplicates.
 
 [resolver.t](../file/resolver.t.html)\[[723](../source/resolver.t.html#723)\]
 
-<div class="desc">
+
 
 Get an indication of which object we're resolving, for message
 generation purposes. By default, we'll indicate direct object; this
 should be overridden for resolvers of indirect and other types of
 objects.
 
-</div>
+
 
 <span id="whichObject"></span>
 
@@ -520,19 +520,19 @@ objects.
 
 [resolver.t](../file/resolver.t.html)\[[715](../source/resolver.t.html#715)\]
 
-<div class="desc">
+
 
 the role played by this object, if any
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="allowAll"></span>
 
@@ -540,12 +540,12 @@ the role played by this object, if any
 
 [resolver.t](../file/resolver.t.html)\[[397](../source/resolver.t.html#397)\]
 
-<div class="desc">
+
 
 Determine if "all" is allowed for the noun phrase we're resolving. By
 default, we'll just ask the action.
 
-</div>
+
 
 <span id="cacheScopeList"></span>
 
@@ -553,7 +553,7 @@ default, we'll just ask the action.
 
 [resolver.t](../file/resolver.t.html)\[[108](../source/resolver.t.html#108)\]
 
-<div class="desc">
+
 
 Cache the scope list for this object. By default, we cache the standard
 physical scope list for our target actor.
@@ -564,7 +564,7 @@ purely an implementation detail of the base Resolver class. A subclass
 can use whatever internal implementation it wants, as long as it
 overrides objInScope() and getScopeList() to return consistent results.
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -572,11 +572,11 @@ overrides objInScope() and getScopeList() to return consistent results.
 
 [resolver.t](../file/resolver.t.html)\[[32](../source/resolver.t.html#32)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="filterAll"></span>
 
@@ -584,7 +584,7 @@ overrides objInScope() and getScopeList() to return consistent results.
 
 [resolver.t](../file/resolver.t.html)\[[427](../source/resolver.t.html#427)\]
 
-<div class="desc">
+
 
 Filter an 'all' list to remove things that don't belong. We always
 remove the actor executing the command, as well as any objects
@@ -593,7 +593,7 @@ explicitly marked as hidden from 'all' lists.
 Returns a ResolveInfo list, with each entry marked with the MatchedAll
 flag.
 
-</div>
+
 
 <span id="filterAmbiguousEquivalents"></span>
 
@@ -601,7 +601,7 @@ flag.
 
 [resolver.t](../file/resolver.t.html)\[[545](../source/resolver.t.html#545)\]
 
-<div class="desc">
+
 
 Filter a list of ambiguous matches ('lst') for a noun phrase, to reduce
 each set of equivalent items to a single such item, if desired. If no
@@ -611,7 +611,7 @@ simply return the original list.
 'np' is the noun phrase production that we're resolving. This is usually
 a subclass of NounPhraseProd.
 
-</div>
+
 
 <span id="filterAmbiguousNounPhrase"></span>
 
@@ -619,7 +619,7 @@ a subclass of NounPhraseProd.
 
 [resolver.t](../file/resolver.t.html)\[[505](../source/resolver.t.html#505)\]
 
-<div class="desc">
+
 
 Filter an ambiguous list of objects ('lst') resolving to a noun phrase.
 If the objects in the list vary in the degree of suitability for the
@@ -649,7 +649,7 @@ It is not necessary to reduce the list to a single entry; it is adequate
 merely to reduce the ambiguity by removing any items that are clearly
 less suitable than the survivors.
 
-</div>
+
 
 <span id="filterPluralPhrase"></span>
 
@@ -657,7 +657,7 @@ less suitable than the survivors.
 
 [resolver.t](../file/resolver.t.html)\[[634](../source/resolver.t.html#634)\]
 
-<div class="desc">
+
 
 Filter a plural phrase to reduce the set to the logical subset, if
 possible. If there is no logical subset, simply return the original set.
@@ -665,7 +665,7 @@ possible. If there is no logical subset, simply return the original set.
 'np' is the noun phrase we're resolving; this is usually a subclass of
 PluralProd.
 
-</div>
+
 
 <span id="filterPossRank"></span>
 
@@ -673,14 +673,14 @@ PluralProd.
 
 [resolver.t](../file/resolver.t.html)\[[517](../source/resolver.t.html#517)\]
 
-<div class="desc">
+
 
 Filter an ambiguous noun phrase list using the strength of possessive
 qualification, if any. If we have subsets at different possessive
 strengths, choose the strongest subset that has at least the required
 number of objects.
 
-</div>
+
 
 <span id="getAction"></span>
 
@@ -688,11 +688,11 @@ number of objects.
 
 [resolver.t](../file/resolver.t.html)\[[60](../source/resolver.t.html#60)\]
 
-<div class="desc">
+
 
 get the action we're resolving
 
-</div>
+
 
 <span id="getAll"></span>
 
@@ -700,14 +700,14 @@ get the action we're resolving
 
 [resolver.t](../file/resolver.t.html)\[[409](../source/resolver.t.html#409)\]
 
-<div class="desc">
+
 
 Get the "all" list - this is the list of objects that we should use when
 the object of the command is the special word "all". We'll ask the
 action to resolve 'all' for the direct object, since we are by default a
 direct object resolver.
 
-</div>
+
 
 <span id="getAllDefaults"></span>
 
@@ -715,12 +715,12 @@ direct object resolver.
 
 [resolver.t](../file/resolver.t.html)\[[465](../source/resolver.t.html#465)\]
 
-<div class="desc">
+
 
 Get the list of potential default objects. This is simply the basic
 'all' list, not filtered for exclusion with hideFromAll.
 
-</div>
+
 
 <span id="getDefaultObject"></span>
 
@@ -728,7 +728,7 @@ Get the list of potential default objects. This is simply the basic
 
 [resolver.t](../file/resolver.t.html)\[[671](../source/resolver.t.html#671)\]
 
-<div class="desc">
+
 
 Get the default object or objects for this phrase. Returns a list of
 ResolveInfo objects if a default is available, or nil if no default is
@@ -740,7 +740,7 @@ By default, we ask the action for a default direct object. Resolver
 subclasses should override this as appropriate for the specific objects
 they're used to resolve.
 
-</div>
+
 
 <span id="getPossessiveResolver"></span>
 
@@ -748,13 +748,13 @@ they're used to resolve.
 
 [resolver.t](../file/resolver.t.html)\[[95](../source/resolver.t.html#95)\]
 
-<div class="desc">
+
 
 Get the resolver for possessive phrases. By default, we return a
 standard possessive resolver. This can be overridden in contexts wher
 ethe possesive resolution context is special.
 
-</div>
+
 
 <span id="getPronounDefault"></span>
 
@@ -762,7 +762,7 @@ ethe possesive resolution context is special.
 
 [en_us.t](../file/en_us.t.html)\[[3304](../source/en_us.t.html#3304)\]
 
-<div class="desc">
+
 
 Get the default in-scope object list for a given pronoun. We'll look for
 a unique object in scope that matches the desired pronoun, and return a
@@ -770,7 +770,7 @@ ResolveInfo list if we find one. If there aren't any objects in scope
 that match the pronoun, or multiple objects are in scope, there's no
 default.
 
-</div>
+
 
 <span id="getQualifierResolver"></span>
 
@@ -778,7 +778,7 @@ default.
 
 [resolver.t](../file/resolver.t.html)\[[88](../source/resolver.t.html#88)\]
 
-<div class="desc">
+
 
 Get the resolver for qualifier phrases. By default, this simply returns
 myself, since the resolver for qualifiers is in most contexts the same
@@ -790,7 +790,7 @@ narrows the scope for resolving a phrase, such as an exclusion list or a
 disambiguation response, we will want to resolve qualifiers in the
 context of the main resolution scope rather than the narrowed scope.
 
-</div>
+
 
 <span id="getRawPronounAntecedent"></span>
 
@@ -798,14 +798,14 @@ context of the main resolution scope rather than the narrowed scope.
 
 [resolver.t](../file/resolver.t.html)\[[301](../source/resolver.t.html#301)\]
 
-<div class="desc">
+
 
 Get the "raw" pronoun antecedent list for a given pronoun selector. This
 returns a list of objects matching the pronoun. The list is raw in that
 it is given as a list of game objects (not ResolveInfo objects), and it
 isn't filtered for scope.
 
-</div>
+
 
 <span id="getReflexiveBinding"></span>
 
@@ -813,7 +813,7 @@ isn't filtered for scope.
 
 [resolver.t](../file/resolver.t.html)\[[196](../source/resolver.t.html#196)\]
 
-<div class="desc">
+
 
 Get the binding for a reflexive third-person pronoun (himself, herself,
 itself, themselves). By default, the reflexive binding is the anaphoric
@@ -821,7 +821,7 @@ binding from the action - that is, it refers back to the preceding noun
 phrase in a verb phrase with multiple noun slots (as in ASK BOB ABOUT
 HIMSELF: 'himself' refers back to 'bob', the previous noun phrase).
 
-</div>
+
 
 <span id="getScopeList"></span>
 
@@ -829,7 +829,7 @@ HIMSELF: 'himself' refers back to 'bob', the previous noun phrase).
 
 [resolver.t](../file/resolver.t.html)\[[168](../source/resolver.t.html#168)\]
 
-<div class="desc">
+
 
 Get the full list of objects in scope. By default, this simply returns
 our cached scope list.
@@ -858,7 +858,7 @@ scope like the one TopicResolver uses - it's usually fine to use the
 default definition of getScopeList(), which returns only the objects
 that are in the smaller physical scope.
 
-</div>
+
 
 <span id="getTargetActor"></span>
 
@@ -866,11 +866,11 @@ that are in the smaller physical scope.
 
 [resolver.t](../file/resolver.t.html)\[[63](../source/resolver.t.html#63)\]
 
-<div class="desc">
+
 
 get the target actor
 
-</div>
+
 
 <span id="matchName"></span>
 
@@ -878,14 +878,14 @@ get the target actor
 
 [resolver.t](../file/resolver.t.html)\[[71](../source/resolver.t.html#71)\]
 
-<div class="desc">
+
 
 Match an object's name. By default, we'll call the object's own
 matchName method with the given original and adjusted token lists.
 Subclasses can override this to call different match methods (such as
 matchNameDisambig).
 
-</div>
+
 
 <span id="objInScope"></span>
 
@@ -893,7 +893,7 @@ matchNameDisambig).
 
 [resolver.t](../file/resolver.t.html)\[[136](../source/resolver.t.html#136)\]
 
-<div class="desc">
+
 
 Determine if an object is in scope for the purposes of object
 resolution. By default, we'll return true if the object is in our cached
@@ -914,7 +914,7 @@ should return true for every object in the list returned by
 getScopeList() (although getScopeList() doesn't necessarily have to
 return every object for which objInScope() is true).
 
-</div>
+
 
 <span id="resetResolver"></span>
 
@@ -922,12 +922,12 @@ return every object for which objInScope() is true).
 
 [resolver.t](../file/resolver.t.html)\[[53](../source/resolver.t.html#53)\]
 
-<div class="desc">
+
 
 Reset the resolver - this can be called if we are to re-use the same
 resolver to resolve a list of noun phrases again.
 
-</div>
+
 
 <span id="resolvePronounAntecedent"></span>
 
@@ -935,14 +935,14 @@ resolver to resolve a list of noun phrases again.
 
 [resolver.t](../file/resolver.t.html)\[[205](../source/resolver.t.html#205)\]
 
-<div class="desc">
+
 
 Resolve a pronoun antecedent, given a pronoun selector. This returns a
 list of ResolveInfo objects, for use in object resolution. 'poss' is
 true if this is a possessive pronoun (his, her, its, etc), nil if it's
 an ordinary, non-possessive pronoun (him, her, it, etc).
 
-</div>
+
 
 <span id="resolveUnknownNounPhrase"></span>
 
@@ -950,7 +950,7 @@ an ordinary, non-possessive pronoun (him, her, it, etc).
 
 [resolver.t](../file/resolver.t.html)\[[696](../source/resolver.t.html#696)\]
 
-<div class="desc">
+
 
 Resolve a noun phrase involving unknown words, if possible. If it is not
 possible to resolve such a phrase, return nil; otherwise, return a list
@@ -968,7 +968,7 @@ unknown words specially, rather than using the matchName mechanism. This
 routine is called as a last resort, only after the matchName mechanism
 fails to find any matches.
 
-</div>
+
 
 <span id="selectIndefinite"></span>
 
@@ -976,7 +976,7 @@ fails to find any matches.
 
 [resolver.t](../file/resolver.t.html)\[[651](../source/resolver.t.html#651)\]
 
-<div class="desc">
+
 
 Select a resolution for an indefinite noun phrase ("a coin"), given a
 list of possible matches. The matches will be given to us sorted from
@@ -988,7 +988,7 @@ noun phrase means that we should arbitrarily select any matching object.
 This can be overridden for contexts in which indefinite noun phrases
 must be handled differently.
 
-</div>
+
 
 <span id="withGlobals"></span>
 
@@ -996,17 +996,17 @@ must be handled differently.
 
 [resolver.t](../file/resolver.t.html)\[[708](../source/resolver.t.html#708)\]
 
-<div class="desc">
+
 
 Execute a callback function in the global context of our actor and
 action - we'll set gActor and gAction to our own stored actor and action
 values, then call the callback, then restore the old globals.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

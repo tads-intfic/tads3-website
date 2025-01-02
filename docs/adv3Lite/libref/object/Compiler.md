@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Compiler: This object provides a simplified interface to the dynamic
 compiler. The methods here can be used instead of manually creating
@@ -45,15 +45,15 @@ omitting this whole module from the build.
 
 **`Compiler`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Compiler`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -61,11 +61,11 @@ omitting this whole module from the build.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`macros_`](#macros_)[`symtab_`](#symtab_)
 
@@ -77,11 +77,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`compile`](#compile)[`defineFunc`](#defineFunc)[`eval`](#eval)[`execute`](#execute)
 
@@ -92,11 +92,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="macros_"></span>
 
@@ -104,11 +104,11 @@ Inherited from `ModuleExecObject` :
 
 [dynfunc.t](../file/dynfunc.t.html)\[[149](../source/dynfunc.t.html#149)\]
 
-<div class="desc">
+
 
 a saved referenced to the preprocessor macro table
 
-</div>
+
 
 <span id="symtab_"></span>
 
@@ -116,19 +116,19 @@ a saved referenced to the preprocessor macro table
 
 [dynfunc.t](../file/dynfunc.t.html)\[[146](../source/dynfunc.t.html#146)\]
 
-<div class="desc">
+
 
 a saved reference to the global symbol table
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="compile"></span>
 
@@ -136,7 +136,7 @@ a saved reference to the global symbol table
 
 [dynfunc.t](../file/dynfunc.t.html)\[[73](../source/dynfunc.t.html#73)\]
 
-<div class="desc">
+
 
 Compile an expression or function. 'str' is a string giving the code to
 compile. This can be a simple value expression, such as 'Me.location' or
@@ -170,7 +170,7 @@ function. This means it's checked for errors, such as syntax errors and
 unknown symbol names. If the code contains any errors, this method
 throws a CompilerException describing the problem.
 
-</div>
+
 
 <span id="defineFunc"></span>
 
@@ -178,13 +178,13 @@ throws a CompilerException describing the problem.
 
 [dynfunc.t](../file/dynfunc.t.html)\[[85](../source/dynfunc.t.html#85)\]
 
-<div class="desc">
+
 
 Compile a dynamic function string, and add it to the global symbol table
 as a function with the given name. This effectively creates a new named
 function that you can call from other dynamic code objects.
 
-</div>
+
 
 <span id="eval"></span>
 
@@ -192,7 +192,7 @@ function that you can call from other dynamic code objects.
 
 [dynfunc.t](../file/dynfunc.t.html)\[[118](../source/dynfunc.t.html#118)\]
 
-<div class="desc">
+
 
 Evaluate an expression. 'str' is a string giving code to compile. In
 most cases, this is simply a simple value expression, although it's also
@@ -216,7 +216,7 @@ needed. That's more efficient than using eval() each time, since eval()
 to recompile the expression on every call, which is a fairly complex
 process.
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -224,7 +224,7 @@ process.
 
 [dynfunc.t](../file/dynfunc.t.html)\[[138](../source/dynfunc.t.html#138)\]
 
-<div class="desc">
+
 
 During preinit, save a reference to the program's global symbol table in
 a property of self. The VM always makes the global symbols available
@@ -235,11 +235,11 @@ reference here prevents the garbage collector from discarding the table
 when preinit finishes, which forces it to be saved in the final .t3 file
 and thus makes it available permanently.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

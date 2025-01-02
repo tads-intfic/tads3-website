@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`inDir`**` :   `[`Direction`](../object/Direction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`inDir`**  
 [`Direction`](../object/Direction.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`departureName`](#departureName)  [`dirProp`](#dirProp)  [`name`](#name)  [`opposite`](#opposite)  [`sortingOrder`](#sortingOrder)  `
 
@@ -54,11 +54,11 @@ Inherited from `Direction` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -67,11 +67,11 @@ Inherited from `Direction` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="departureName"></span>
 
@@ -79,11 +79,11 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1872](../source/travel.t.html#1872)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dirProp"></span>
 
@@ -91,11 +91,11 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1870](../source/travel.t.html#1870)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -103,11 +103,11 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1871](../source/travel.t.html#1871)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="opposite"></span>
 
@@ -115,11 +115,11 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1874](../source/travel.t.html#1874)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sortingOrder"></span>
 
@@ -127,25 +127,25 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1873](../source/travel.t.html#1873)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

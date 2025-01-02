@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> The Preprocessor  
@@ -16,7 +16,7 @@ Sets</a>    
 <a href="types.html" class="nav"><em>Next:</em> Fundamental Datatypes</a>
     </span>
 
-</div>
+
 
 
 
@@ -78,7 +78,7 @@ anything, not even a comment or whitespace.
 
 The syntax is:
 
-<div class="syntax">
+
 
     #charset "name"
 
@@ -96,12 +96,12 @@ This directive defines a macro. It has two forms: one that defines a
 simple constant symbol, and one that defines a function-like macro with
 parameters.
 
-<div class="syntax">
+
 
     #define simpleMacro text
     #define funcMacro( [ param1 [ , param2 ... ]  ]  ) textWithParameters
 
-</div>
+
 
 The first form defines a "simple" macro, which simply associates a
 symbol name with some replacement text. Each time the macro symbol name
@@ -134,11 +134,11 @@ that you don't wish to allow.
 
 The syntax is:
 
-<div class="syntax">
+
 
     #error token [ token2 ... ] 
 
-</div>
+
 
 The token list can contain any number of tokens of any kind. However,
 note that macro expansion is performed on the line, so in most cases,
@@ -162,7 +162,7 @@ These directives allow you to include or exclude code conditionally.
 
 The syntax of these macros is as follows:
 
-<div class="syntax">
+
 
     #if expression
     #ifdef macroName
@@ -170,7 +170,7 @@ The syntax of these macros is as follows:
     #else
     #endif
 
-</div>
+
 
 The *macro* of an \#ifdef is simply a macro symbol.
 
@@ -233,11 +233,11 @@ effectively replace the \#include directive in the preprocessor output.
 
 \#include has two forms.
 
-<div class="syntax">
+
 
     #include "filename"
 
-</div>
+
 
 This form searches for a file with the given name, starting the search
 in the directory containing the *including* file, then in the directory
@@ -247,11 +247,11 @@ this order and stop at the first matching file we find. If we still
 can't find the file after looking in the directory containing the
 top-level source file, then we proceed as for an angle-bracketed file.
 
-<div class="syntax">
+
 
     #include <filename>
 
-</div>
+
 
 This form searches for the given file in each directory in the "include
 path," as specified in the compiler command options. For the
@@ -358,11 +358,11 @@ problem so you can fix it.
 This directive lets you override the compiler's internal notion of its
 current position in the source text. The syntax is:
 
-<div class="syntax">
+
 
     #line number 'filename'
 
-</div>
+
 
 This tells the compiler that it should pretend that it's reading from
 the file named *file* at line number *number*.
@@ -390,11 +390,11 @@ in terms of the original input file than in terms of the temporary file.
 This directive lets you display a message on the console while the
 compiler is running. The syntax is:
 
-<div class="syntax">
+
 
     #pragma message ( token ... )
 
-</div>
+
 
 Each *token* can be a single-quoted string, a double-quoted string, a
 symbol token, or an integer. Any macro symbols you use are expanded as
@@ -580,11 +580,11 @@ This directive deletes - "undefines" - a macro that was previously
 defined. This is useful because it lets you redefine a macro with a new
 value. The syntax is:
 
-<div class="syntax">
+
 
     #undef macroName
 
-</div>
+
 
 It's perfectly legal to undefine a macro that was never defined. This is
 silently ignored; it doesn't even generate a warning.
@@ -1214,11 +1214,11 @@ which means they'll yield the source location of the code that
 ultimately invoked the macro rather than the location of the definition
 of the macro.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1228,4 +1228,4 @@ Sets</a>    
 <a href="types.html" class="nav"><em>Next:</em> Fundamental Datatypes</a>
     </span>
 
-</div>
+

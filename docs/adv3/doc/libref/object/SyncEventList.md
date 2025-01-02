@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A synchronized event list. This is an event list that takes its actions
 from a separate event list object. We get our current state from the
@@ -41,15 +41,15 @@ of the other to ensure that the two lists are based on a common state.
 
 `class `**`SyncEventList`**` :   `[`EventList`](../object/EventList.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SyncEventList`**  
 [`EventList`](../object/EventList.html)  
@@ -57,27 +57,27 @@ of the other to ensure that the two lists are based on a common state.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`masterObject`](#masterObject)
 
@@ -88,11 +88,11 @@ Inherited from `EventList` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`advanceState`](#advanceState)[`getScriptState`](#getScriptState)[`scriptDone`](#scriptDone)
 
@@ -103,11 +103,11 @@ Inherited from `EventList` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="masterObject"></span>
 
@@ -115,19 +115,19 @@ Inherited from `EventList` :
 
 [misc.t](../file/misc.t.html)\[[1191](../source/misc.t.html#1191)\]
 
-<div class="desc">
+
 
 my master event list object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="advanceState"></span>
 
@@ -135,11 +135,11 @@ my master event list object
 
 [misc.t](../file/misc.t.html)\[[1197](../source/misc.t.html#1197)\]
 
-<div class="desc">
+
 
 to advance my state, advance the master list's state
 
-</div>
+
 
 <span id="getScriptState"></span>
 
@@ -147,11 +147,11 @@ to advance my state, advance the master list's state
 
 [misc.t](../file/misc.t.html)\[[1194](../source/misc.t.html#1194)\]
 
-<div class="desc">
+
 
 my state is simply the master list's state
 
-</div>
+
 
 <span id="scriptDone"></span>
 
@@ -159,15 +159,15 @@ my state is simply the master list's state
 
 [misc.t](../file/misc.t.html)\[[1200](../source/misc.t.html#1200)\]
 
-<div class="desc">
+
 
 let the master list take care of finishing a script step
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

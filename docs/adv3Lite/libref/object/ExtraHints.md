@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`ExtraHints`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ExtraHints`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -45,11 +45,11 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`extraHintsActive`](#extraHintsActive)[`extraHintsCmd`](#extraHintsCmd)[`hintsOff`](#hintsOff)[`hintsOn`](#hintsOn)[`onOff`](#onOff)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`onOrOff`](#onOrOff)[`showExtraHintStatus`](#showExtraHintStatus)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="extraHintsActive"></span>
 
@@ -105,11 +105,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[381](../source/actions.t.html#381)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="extraHintsCmd"></span>
 
@@ -117,11 +117,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[390](../source/actions.t.html#390)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hintsOff"></span>
 
@@ -129,11 +129,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[387](../source/actions.t.html#387)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hintsOn"></span>
 
@@ -141,11 +141,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[388](../source/actions.t.html#388)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="onOff"></span>
 
@@ -153,19 +153,19 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[385](../source/actions.t.html#385)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -173,11 +173,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[336](../source/actions.t.html#336)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="onOrOff"></span>
 
@@ -185,11 +185,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[383](../source/actions.t.html#383)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showExtraHintStatus"></span>
 
@@ -197,17 +197,17 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[369](../source/actions.t.html#369)\]
 
-<div class="desc">
+
 
 Routine to display message saying that extra hints are on or off.
 Translators may want to override this method to display a message if it
 can't readily be done in a CustomMessages object.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

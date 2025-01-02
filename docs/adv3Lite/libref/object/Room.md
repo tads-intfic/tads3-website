@@ -34,7 +34,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Room is a top location in which the player character, other actors and
 other objects may be located. It may represent any discrete unit of
@@ -83,15 +83,15 @@ Modifications to Room class for VIEWPORT EXTENSION
 
 `class `**`Room`**` :   `[`TravelConnector`](../object/TravelConnector.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Room`**  
 [`TravelConnector`](../object/TravelConnector.html)  
@@ -105,30 +105,30 @@ Modifications to Room class for VIEWPORT EXTENSION
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Room`**  
 [`OutdoorRoom`](../object/OutdoorRoom.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`unknownDest_`](../object/unknownDest_.html)[`varDest_`](../object/varDest_.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`aft`](#aft)[`allowCompassDirections`](#allowCompassDirections)[`allowDarkTravel`](#allowDarkTravel)[`audibleRooms`](#audibleRooms)[`autoBackConnections`](#autoBackConnections)[`autoName`](#autoName)[`canLieInMe`](#canLieInMe)[`cannotGoThatWayInDarkMsg`](#cannotGoThatWayInDarkMsg)[`cannotGoThatWayMsg`](#cannotGoThatWayMsg)[`canSitInMe`](#canSitInMe)[`canStandInMe`](#canStandInMe)[`ceilingObj`](#ceilingObj)[`contType`](#contType)[`down`](#down)[`east`](#east)[`extraScopeItems`](#extraScopeItems)[`floorObj`](#floorObj)[`fore`](#fore)[`in`](#in)[`isDestinationKnown`](#isDestinationKnown)[`isFixed`](#isFixed)[`isLit`](#isLit)[`isOpen`](#isOpen)[`lastSeenAt`](#lastSeenAt)[`linkedRooms`](#linkedRooms)[`listOrder`](#listOrder)[`north`](#north)[`northeast`](#northeast)[`northwest`](#northwest)[`noScriptAfterListen`](#noScriptAfterListen)[`out`](#out)[`outermostParent`](#outermostParent)[`port`](#port)[`regions`](#regions)[`remoteContentsLister`](#remoteContentsLister)[`remoteMiscContentsList`](#remoteMiscContentsList)[`remoteSecondSpecialList`](#remoteSecondSpecialList)[`roomFirstDesc`](#roomFirstDesc)[`roomsViewed`](#roomsViewed)[`smellableRooms`](#smellableRooms)[`south`](#south)[`southeast`](#southeast)[`southwest`](#southwest)[`starboard`](#starboard)[`talkableRooms`](#talkableRooms)[`throwableRooms`](#throwableRooms)[`up`](#up)[`visibleRooms`](#visibleRooms)[`visited`](#visited)[`wallObjs`](#wallObjs)[`west`](#west)
 
@@ -150,11 +150,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addExtraScopeItems`](#addExtraScopeItems)[`addToRegions`](#addToRegions)[`afterTravel`](#afterTravel)[`allowShipboardDirections`](#allowShipboardDirections)[`allRegions`](#allRegions)[`beforeTravel`](#beforeTravel)[`canHearInFrom`](#canHearInFrom)[`canHearOutTo`](#canHearOutTo)[`cannotGoThatWay`](#cannotGoThatWay)[`cannotGoThatWayInDark`](#cannotGoThatWayInDark)[`cannotReachTargetMsg`](#cannotReachTargetMsg)[`canSeeInFrom`](#canSeeInFrom)[`canSeeOutTo`](#canSeeOutTo)[`canSmellInFrom`](#canSmellInFrom)[`canSmellOutTo`](#canSmellOutTo)[`describeRemotely`](#describeRemotely)[`destination`](#destination)[`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(GetOutOf)`](#dobjFor(GetOutOf))[`examineStatus`](#examineStatus)[`execTravel`](#execTravel)[`getAllRegions`](#getAllRegions)[`getConnector`](#getConnector)[`getDirection`](#getDirection)[`getDirectionTo`](#getDirectionTo)[`getOutermostRoom`](#getOutermostRoom)[`initVocab`](#initVocab)[`inRoomName`](#inRoomName)[`interiorDesc`](#interiorDesc)[`interiorParent`](#interiorParent)[`iobjFor(PushTravelGetOutOf)`](#iobjFor(PushTravelGetOutOf))[`isIn`](#isIn)[`litWithin`](#litWithin)[`lookOnEnter`](#lookOnEnter)[`notifyAfter`](#notifyAfter)[`notifyBefore`](#notifyBefore)[`notifyDeparture`](#notifyDeparture)[`outermostVisibleParent`](#outermostVisibleParent)[`preinitThing`](#preinitThing)[`regionsInCommonWith`](#regionsInCommonWith)[`remoteRoomListOrder`](#remoteRoomListOrder)[`roomAfterAction`](#roomAfterAction)[`roomBeforeAction`](#roomBeforeAction)[`roomDaemon`](#roomDaemon)[`roomRemoteDesc`](#roomRemoteDesc)[`setDestInfo`](#setDestInfo)[`showConnectedMiscContents`](#showConnectedMiscContents)[`showFirstConnectedSpecials`](#showFirstConnectedSpecials)[`showFirstRemoteSpecials`](#showFirstRemoteSpecials)[`showRemoteMiscContents`](#showRemoteMiscContents)[`showSecondConnectedSpecials`](#showSecondConnectedSpecials)[`showSecondRemoteSpecials`](#showSecondRemoteSpecials)[`showStatuslineExits`](#showStatuslineExits)[`sortRoomSublist`](#sortRoomSublist)[`statusName`](#statusName)[`travelerEntering`](#travelerEntering)[`travelerLeaving`](#travelerLeaving)[`unmentionRemoteContents`](#unmentionRemoteContents)[`updateSymVocab`](#updateSymVocab)
 
@@ -178,11 +178,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="aft"></span>
 
@@ -190,11 +190,11 @@ Inherited from `LMentionable` :
 
 [travel.t](../file/travel.t.html)\[[51](../source/travel.t.html#51)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="allowCompassDirections"></span>
 
@@ -202,13 +202,13 @@ Inherited from `LMentionable` :
 
 [travel.t](../file/travel.t.html)\[[59](../source/travel.t.html#59)\]
 
-<div class="desc">
+
 
 Are compass directions allowed for travel from this room? By default
 we'll allow thema anywhere, but game code may wish to override this for
 rooms that are aboard a vessel.
 
-</div>
+
 
 <span id="allowDarkTravel"></span>
 
@@ -216,13 +216,13 @@ rooms that are aboard a vessel.
 
 [travel.t](../file/travel.t.html)\[[303](../source/travel.t.html#303)\]
 
-<div class="desc">
+
 
 Normally we don't allow travel from this location if both it and the
 destination are in darkness. To allow travel from this location in any
 case set allowDarkTravel to true.
 
-</div>
+
 
 <span id="audibleRooms"></span>
 
@@ -230,12 +230,12 @@ case set allowDarkTravel to true.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[236](../source/senseRegion.t.html#236)\]
 
-<div class="desc">
+
 
 The lists of rooms we can smell, hear, talk or throw from/into from this
 room.
 
-</div>
+
 
 <span id="autoBackConnections"></span>
 
@@ -243,7 +243,7 @@ room.
 
 [symconn.t](../file/symconn.t.html)\[[166](../source/symconn.t.html#166)\]
 
-<div class="desc">
+
 
 Flag - do we want the library (specifically the preInit method of Thing)
 to automatically create connections back (in the reverse direction) from
@@ -254,7 +254,7 @@ this to nil (either on the Room class or on individual rooms) to
 suppress it if it's not wanted - which may be the case if the this
 extension is being used for SymmConnectors rather than
 
-</div>
+
 
 <span id="autoName"></span>
 
@@ -262,13 +262,13 @@ extension is being used for SymmConnectors rather than
 
 [english.t](../file/english.t.html)\[[2204](../source/english.t.html#2204)\]
 
-<div class="desc">
+
 
 Flag: do we want this room to take its vocab (and hence its name) from
 its roomTitle property if its vocab property isn't explicitly defined?
 By default we do.
 
-</div>
+
 
 <span id="canLieInMe"></span>
 
@@ -276,11 +276,11 @@ By default we do.
 
 [postures.t](../file/postures.t.html)\[[535](../source/postures.t.html#535)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotGoThatWayInDarkMsg"></span>
 
@@ -288,13 +288,13 @@ By default we do.
 
 [travel.t](../file/travel.t.html)\[[279](../source/travel.t.html#279)\]
 
-<div class="desc">
+
 
 The message to display when travel is attempted in the dark, either in a
 direction for which no destination (or other handling) is defined, or in
 a direction in which the exit is not visible in the dark.
 
-</div>
+
 
 <span id="cannotGoThatWayMsg"></span>
 
@@ -302,12 +302,12 @@ a direction in which the exit is not visible in the dark.
 
 [travel.t](../file/travel.t.html)\[[254](../source/travel.t.html#254)\]
 
-<div class="desc">
+
 
 The Message to display if travel is disallowed in any given direction
 (because the corresponding direction property of the Room is nil).
 
-</div>
+
 
 <span id="canSitInMe"></span>
 
@@ -315,11 +315,11 @@ The Message to display if travel is disallowed in any given direction
 
 [postures.t](../file/postures.t.html)\[[534](../source/postures.t.html#534)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canStandInMe"></span>
 
@@ -327,12 +327,12 @@ The Message to display if travel is disallowed in any given direction
 
 [postures.t](../file/postures.t.html)\[[533](../source/postures.t.html#533)\]
 
-<div class="desc">
+
 
 By default we assume that an actor can sit, stand or lie in a room
 \[DEFINED IN POSTURES EXTENSION\]
 
-</div>
+
 
 <span id="ceilingObj"></span>
 
@@ -340,13 +340,13 @@ By default we assume that an actor can sit, stand or lie in a room
 
 [roomparts.t](../file/roomparts.t.html)\[[77](../source/roomparts.t.html#77)\]
 
-<div class="desc">
+
 
 The ceilingObj property defines the object to be used for this Room's
 ceiling. By default we use the defaultCeiling object defined below.
 \[DEFINED IN ROOMPARTS EXTENSION\]
 
-</div>
+
 
 <span id="contType"></span>
 
@@ -354,12 +354,12 @@ ceiling. By default we use the defaultCeiling object defined below.
 
 [travel.t](../file/travel.t.html)\[[397](../source/travel.t.html#397)\]
 
-<div class="desc">
+
 
 Anything in the Room is deemed to be inside it (this sounds tautologous,
 but it's why we give Room a contType of In).
 
-</div>
+
 
 <span id="down"></span>
 
@@ -367,11 +367,11 @@ but it's why we give Room a contType of In).
 
 [travel.t](../file/travel.t.html)\[[42](../source/travel.t.html#42)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="east"></span>
 
@@ -379,11 +379,11 @@ but it's why we give Room a contType of In).
 
 [travel.t](../file/travel.t.html)\[[38](../source/travel.t.html#38)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="extraScopeItems"></span>
 
@@ -391,12 +391,12 @@ but it's why we give Room a contType of In).
 
 [travel.t](../file/travel.t.html)\[[567](../source/travel.t.html#567)\]
 
-<div class="desc">
+
 
 A list of extra items to be added to scope when an action is carried out
 in this room.
 
-</div>
+
 
 <span id="floorObj"></span>
 
@@ -404,7 +404,7 @@ in this room.
 
 [travel.t](../file/travel.t.html)\[[127](../source/travel.t.html#127)\]
 
-<div class="desc">
+
 
 Although we don't define room parts in general, we do give every Room a
 floor so that the parser can refer to objects 'on the ground' when
@@ -416,7 +416,7 @@ Floor class. It's also legal to define floorObj as nil on a Room that
 represents an obviously floorless place, such as the top of a mast or
 tree.
 
-</div>
+
 
 <span id="fore"></span>
 
@@ -424,11 +424,11 @@ tree.
 
 [travel.t](../file/travel.t.html)\[[52](../source/travel.t.html#52)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="in"></span>
 
@@ -436,11 +436,11 @@ tree.
 
 [travel.t](../file/travel.t.html)\[[43](../source/travel.t.html#43)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isDestinationKnown"></span>
 
@@ -448,11 +448,11 @@ tree.
 
 [travel.t](../file/travel.t.html)\[[111](../source/travel.t.html#111)\]
 
-<div class="desc">
+
 
 By default our destination is known if we've been visited
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -460,11 +460,11 @@ By default our destination is known if we've been visited
 
 [travel.t](../file/travel.t.html)\[[88](../source/travel.t.html#88)\]
 
-<div class="desc">
+
 
 A Room is always fixed in place.
 
-</div>
+
 
 <span id="isLit"></span>
 
@@ -472,12 +472,12 @@ A Room is always fixed in place.
 
 [travel.t](../file/travel.t.html)\[[85](../source/travel.t.html#85)\]
 
-<div class="desc">
+
 
 A Room is normally lit, but if we want a dark room we can override isLit
 to nil.
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -485,11 +485,11 @@ to nil.
 
 [travel.t](../file/travel.t.html)\[[91](../source/travel.t.html#91)\]
 
-<div class="desc">
+
 
 A Room is always open
 
-</div>
+
 
 <span id="lastSeenAt"></span>
 
@@ -497,11 +497,11 @@ A Room is always open
 
 [travel.t](../file/travel.t.html)\[[570](../source/travel.t.html#570)\]
 
-<div class="desc">
+
 
 The location at which a Room was last seen is always itself.
 
-</div>
+
 
 <span id="linkedRooms"></span>
 
@@ -509,12 +509,12 @@ The location at which a Room was last seen is always itself.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[245](../source/senseRegion.t.html#245)\]
 
-<div class="desc">
+
 
 The list of rooms to which we're linked by virtue of being in the same
 SenseRegion.
 
-</div>
+
 
 <span id="listOrder"></span>
 
@@ -523,14 +523,14 @@ description only</span>
 
 [senseRegion.t](../file/senseRegion.t.html)\[[473](../source/senseRegion.t.html#473)\]
 
-<div class="desc">
+
 
 listOrder is inherited from Thing with a default value of 100. For a
 Room in a SenseRegion it can control the order in which other rooms in
 the SenseRegion have their contents described (higher = later), although
 this can be adjusted via the remoteRoomListOrder(pov) method.
 
-</div>
+
 
 <span id="north"></span>
 
@@ -538,7 +538,7 @@ this can be adjusted via the remoteRoomListOrder(pov) method.
 
 [travel.t](../file/travel.t.html)\[[37](../source/travel.t.html#37)\]
 
-<div class="desc">
+
 
 The direction properties (north, south, etc.) define what happens when
 travel is attempted in the corresponding direction. A direction property
@@ -551,7 +551,7 @@ when the effect of attempted travel is something other than ordinary
 travel; to impose conditions on travel or define the side-effects of
 travel it's usually better to use a TravelConnector object.
 
-</div>
+
 
 <span id="northeast"></span>
 
@@ -559,11 +559,11 @@ travel it's usually better to use a TravelConnector object.
 
 [travel.t](../file/travel.t.html)\[[47](../source/travel.t.html#47)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="northwest"></span>
 
@@ -571,11 +571,11 @@ travel it's usually better to use a TravelConnector object.
 
 [travel.t](../file/travel.t.html)\[[48](../source/travel.t.html#48)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noScriptAfterListen"></span>
 
@@ -583,13 +583,13 @@ travel it's usually better to use a TravelConnector object.
 
 [travel.t](../file/travel.t.html)\[[416](../source/travel.t.html#416)\]
 
-<div class="desc">
+
 
 Flag, do we want to prevent out script firing after a LISTEN command? By
 default we do because otherwise the respose to a LISTEN command might
 clash with an atmospheric message appearing on the same turn.
 
-</div>
+
 
 <span id="out"></span>
 
@@ -597,11 +597,11 @@ clash with an atmospheric message appearing on the same turn.
 
 [travel.t](../file/travel.t.html)\[[44](../source/travel.t.html#44)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="outermostParent"></span>
 
@@ -609,11 +609,11 @@ clash with an atmospheric message appearing on the same turn.
 
 [travel.t](../file/travel.t.html)\[[247](../source/travel.t.html#247)\]
 
-<div class="desc">
+
 
 A Room's outermost parent is itself.
 
-</div>
+
 
 <span id="port"></span>
 
@@ -621,11 +621,11 @@ A Room's outermost parent is itself.
 
 [travel.t](../file/travel.t.html)\[[49](../source/travel.t.html#49)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="regions"></span>
 
@@ -633,12 +633,12 @@ A Room's outermost parent is itself.
 
 [travel.t](../file/travel.t.html)\[[423](../source/travel.t.html#423)\]
 
-<div class="desc">
+
 
 This room can optionally be in one or more regions. The regions property
 hold the region or a list of regions I'm in.
 
-</div>
+
 
 <span id="remoteContentsLister"></span>
 
@@ -646,12 +646,12 @@ hold the region or a list of regions I'm in.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[397](../source/senseRegion.t.html#397)\]
 
-<div class="desc">
+
 
 The contents lister to use to list this room's miscellaneous contents
 when viewed from a remote location.
 
-</div>
+
 
 <span id="remoteMiscContentsList"></span>
 
@@ -659,11 +659,11 @@ when viewed from a remote location.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[280](../source/senseRegion.t.html#280)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="remoteSecondSpecialList"></span>
 
@@ -671,12 +671,12 @@ when viewed from a remote location.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[279](../source/senseRegion.t.html#279)\]
 
-<div class="desc">
+
 
 These properties are for the internal use of the remote listing
 routines, and should normally be left alone by game code.
 
-</div>
+
 
 <span id="roomFirstDesc"></span>
 
@@ -684,13 +684,13 @@ routines, and should normally be left alone by game code.
 
 [travel.t](../file/travel.t.html)\[[727](../source/travel.t.html#727)\]
 
-<div class="desc">
+
 
 The description of this room to be used when it has not previously
 examined (and is thus being described fot the first time). If this is
 left as nil, we simply use the desc instead.
 
-</div>
+
 
 <span id="roomsViewed"></span>
 
@@ -698,13 +698,13 @@ left as nil, we simply use the desc instead.
 
 [viewport.t](../file/viewport.t.html)\[[176](../source/viewport.t.html#176)\]
 
-<div class="desc">
+
 
 The list of rooms viewed from Viewports from within this room. This
 enables the player to refer to objects in rooms that have been viewed.
 \[DEFINED ON VIEWPORT EXTENSION\]
 
-</div>
+
 
 <span id="smellableRooms"></span>
 
@@ -712,11 +712,11 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[237](../source/senseRegion.t.html#237)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="south"></span>
 
@@ -724,11 +724,11 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [travel.t](../file/travel.t.html)\[[39](../source/travel.t.html#39)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="southeast"></span>
 
@@ -736,11 +736,11 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [travel.t](../file/travel.t.html)\[[45](../source/travel.t.html#45)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="southwest"></span>
 
@@ -748,11 +748,11 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [travel.t](../file/travel.t.html)\[[46](../source/travel.t.html#46)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="starboard"></span>
 
@@ -760,11 +760,11 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [travel.t](../file/travel.t.html)\[[50](../source/travel.t.html#50)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="talkableRooms"></span>
 
@@ -772,11 +772,11 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[238](../source/senseRegion.t.html#238)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="throwableRooms"></span>
 
@@ -784,11 +784,11 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[239](../source/senseRegion.t.html#239)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="up"></span>
 
@@ -796,11 +796,11 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [travel.t](../file/travel.t.html)\[[41](../source/travel.t.html#41)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="visibleRooms"></span>
 
@@ -808,7 +808,7 @@ enables the player to refer to objects in rooms that have been viewed.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[230](../source/senseRegion.t.html#230)\]
 
-<div class="desc">
+
 
 The list of rooms that are visible from this room. Ordinarily this list
 is constructed at Preinit by any Sense Regions this room belongs to, so
@@ -817,7 +817,7 @@ that game code could tweak these lists after Preinit, though, perhaps to
 create a one-way connection (e.g. to model a high room that overlooks
 lower ones)
 
-</div>
+
 
 <span id="visited"></span>
 
@@ -825,11 +825,11 @@ lower ones)
 
 [travel.t](../file/travel.t.html)\[[114](../source/travel.t.html#114)\]
 
-<div class="desc">
+
 
 Has this room been visited?
 
-</div>
+
 
 <span id="wallObjs"></span>
 
@@ -837,14 +837,14 @@ Has this room been visited?
 
 [roomparts.t](../file/roomparts.t.html)\[[86](../source/roomparts.t.html#86)\]
 
-<div class="desc">
+
 
 The wallObjs property defines the list of walls in this Room. By default
 we define use the four default walls. Particular rooms that don't have
 four walls (e.g. a length of passage) or which want to use custom wall
 objects can override this. \[DEFINED IN ROOMPARTS EXTENSION\]
 
-</div>
+
 
 <span id="west"></span>
 
@@ -852,19 +852,19 @@ objects can override this. \[DEFINED IN ROOMPARTS EXTENSION\]
 
 [travel.t](../file/travel.t.html)\[[40](../source/travel.t.html#40)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addExtraScopeItems"></span>
 
@@ -873,7 +873,7 @@ objects can override this. \[DEFINED IN ROOMPARTS EXTENSION\]
 [travel.t](../file/travel.t.html)\[[542](../source/travel.t.html#542)\],
 [viewport.t](../file/viewport.t.html)\[[196](../source/viewport.t.html#196)\]
 
-<div class="desc">
+
 
 Add extra items into scope for the action. By default we simply add the
 items from our extraScopeItems list together with those of any regions
@@ -887,7 +887,7 @@ a Viewport, the player may want to refer to them in commands, if only to
 examine them, so we need to add them to scope. \[MODIFIED FOR VIEWPORT
 EXTENSION\]
 
-</div>
+
 
 <span id="addToRegions"></span>
 
@@ -895,11 +895,11 @@ EXTENSION\]
 
 [travel.t](../file/travel.t.html)\[[435](../source/travel.t.html#435)\]
 
-<div class="desc">
+
 
 Add this room to the room list of all the regions it's in
 
-</div>
+
 
 <span id="afterTravel"></span>
 
@@ -907,12 +907,12 @@ Add this room to the room list of all the regions it's in
 
 [travel.t](../file/travel.t.html)\[[356](../source/travel.t.html#356)\]
 
-<div class="desc">
+
 
 afterTravel(traveler, connector) is called on the room traveler has just
 arrived in via connector.
 
-</div>
+
 
 <span id="allowShipboardDirections"></span>
 
@@ -920,7 +920,7 @@ arrived in via connector.
 
 [travel.t](../file/travel.t.html)\[[68](../source/travel.t.html#68)\]
 
-<div class="desc">
+
 
 Are shipboard directions meaningful in this room? By default we'll make
 them so if and only if this room defines at least one shipboard
@@ -928,7 +928,7 @@ directional exit. Game code may wish to modify this, for example, on the
 hold of a ship that only defines an up direction but where shipboard
 directions would still in principle be meaningful.
 
-</div>
+
 
 <span id="allRegions"></span>
 
@@ -936,12 +936,12 @@ directions would still in principle be meaningful.
 
 [travel.t](../file/travel.t.html)\[[446](../source/travel.t.html#446)\]
 
-<div class="desc">
+
 
 The list of all the regions this room belongs to. This is calculated the
 first time this property is queried and then stored in the property.
 
-</div>
+
 
 <span id="beforeTravel"></span>
 
@@ -949,13 +949,13 @@ first time this property is queried and then stored in the property.
 
 [travel.t](../file/travel.t.html)\[[350](../source/travel.t.html#350)\]
 
-<div class="desc">
+
 
 beforeTravel(traveler, connector) is called on the room traveler is in
 just as traveler is about to attempt travel via connector (a
 TravelConnector object).
 
-</div>
+
 
 <span id="canHearInFrom"></span>
 
@@ -963,12 +963,12 @@ TravelConnector object).
 
 [senseRegion.t](../file/senseRegion.t.html)\[[435](../source/senseRegion.t.html#435)\]
 
-<div class="desc">
+
 
 Can we hear into this room from loc (i.e. can an actor in loc hear
 something in this room?
 
-</div>
+
 
 <span id="canHearOutTo"></span>
 
@@ -976,12 +976,12 @@ something in this room?
 
 [senseRegion.t](../file/senseRegion.t.html)\[[441](../source/senseRegion.t.html#441)\]
 
-<div class="desc">
+
 
 Can we hear out from this room to loc (i.e. can an actor in this room
 hear something in loc)?
 
-</div>
+
 
 <span id="cannotGoThatWay"></span>
 
@@ -989,7 +989,7 @@ hear something in loc)?
 
 [travel.t](../file/travel.t.html)\[[264](../source/travel.t.html#264)\]
 
-<div class="desc">
+
 
 The method that is called when travel is attempted in a direction (given
 the dir parameter) for which nothing is defined. By default we simply
@@ -998,7 +998,7 @@ be overridden if desired, and different responses given for different
 directions. Note that the dir parameter will be passed as a direction
 object. e.g. northDir.
 
-</div>
+
 
 <span id="cannotGoThatWayInDark"></span>
 
@@ -1006,14 +1006,14 @@ object. e.g. northDir.
 
 [travel.t](../file/travel.t.html)\[[288](../source/travel.t.html#288)\]
 
-<div class="desc">
+
 
 The method that's called when travel is attempted by an undefined or
 invisible exit in the dark. By default we display the
 cannotGoThatWayInDarkMsg followed by a list of visible exits, but game
 code can override this.
 
-</div>
+
 
 <span id="cannotReachTargetMsg"></span>
 
@@ -1021,7 +1021,7 @@ code can override this.
 
 [travel.t](../file/travel.t.html)\[[675](../source/travel.t.html#675)\]
 
-<div class="desc">
+
 
 Optional method that returns a single-quoted string explaining why
 target (normally an object in a remote location) cannot be reached from
@@ -1030,7 +1030,7 @@ can be overridden, for example, to return the same format of message for
 every target that can't be reached from this room (e.g. "You can't reach
 \[the target\] from the meadow. ") \]
 
-</div>
+
 
 <span id="canSeeInFrom"></span>
 
@@ -1038,7 +1038,7 @@ every target that can't be reached from this room (e.g. "You can't reach
 
 [senseRegion.t](../file/senseRegion.t.html)\[[426](../source/senseRegion.t.html#426)\]
 
-<div class="desc">
+
 
 The following six methods take effect only if there would otherwise be a
 sensory connection between the current room and loc due to their being
@@ -1046,7 +1046,7 @@ in the same SenseRegion.
 
 Can we see into this room from loc?
 
-</div>
+
 
 <span id="canSeeOutTo"></span>
 
@@ -1054,11 +1054,11 @@ Can we see into this room from loc?
 
 [senseRegion.t](../file/senseRegion.t.html)\[[429](../source/senseRegion.t.html#429)\]
 
-<div class="desc">
+
 
 Can we see out of this room to loc?
 
-</div>
+
 
 <span id="canSmellInFrom"></span>
 
@@ -1066,12 +1066,12 @@ Can we see out of this room to loc?
 
 [senseRegion.t](../file/senseRegion.t.html)\[[447](../source/senseRegion.t.html#447)\]
 
-<div class="desc">
+
 
 Can we smell into this room from loc (i.e. can an actor in loc smell
 something in this room?
 
-</div>
+
 
 <span id="canSmellOutTo"></span>
 
@@ -1079,12 +1079,12 @@ something in this room?
 
 [senseRegion.t](../file/senseRegion.t.html)\[[453](../source/senseRegion.t.html#453)\]
 
-<div class="desc">
+
 
 Can we hear out from this room to loc (i.e. can an actor in this room
 hear something in loc)?
 
-</div>
+
 
 <span id="describeRemotely"></span>
 
@@ -1092,12 +1092,12 @@ hear something in loc)?
 
 [viewport.t](../file/viewport.t.html)\[[230](../source/viewport.t.html#230)\]
 
-<div class="desc">
+
 
 \[DEFINED ON VIEWPORT EXTENSION\] Used for describing a Room when seen
 through a Viewport.
 
-</div>
+
 
 <span id="destination"></span>
 
@@ -1105,13 +1105,13 @@ through a Viewport.
 
 [travel.t](../file/travel.t.html)\[[108](../source/travel.t.html#108)\]
 
-<div class="desc">
+
 
 Since a Room provides the TravelConnector interface, we need to define
 where it leads to when one attempts to travel via it; a Room always
 leads to itself (i.e. traveling via a Room takes one to that Room).
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -1120,7 +1120,7 @@ leads to itself (i.e. traveling via a Room takes one to that Room).
 [travel.t](../file/travel.t.html)\[[642](../source/travel.t.html#642)\],
 [viewport.t](../file/viewport.t.html)\[[214](../source/viewport.t.html#214)\]
 
-<div class="desc">
+
 
 Examining a Room is the same as looking around within it.
 
@@ -1128,7 +1128,7 @@ Examining a Room is the same as looking around within it.
 [viewport.t](../file/viewport.t.html)\[[214](../source/viewport.t.html#214)\]:*  
 \[MODIFIED FOR VIEWPORT EXTENSION\]
 
-</div>
+
 
 <span id="dobjFor(GetOutOf)"></span>
 
@@ -1136,11 +1136,11 @@ Examining a Room is the same as looking around within it.
 
 [travel.t](../file/travel.t.html)\[[648](../source/travel.t.html#648)\]
 
-<div class="desc">
+
 
 Going out of a Room is the same as executing an OUT command
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -1148,14 +1148,14 @@ Going out of a Room is the same as executing an OUT command
 
 [travel.t](../file/travel.t.html)\[[639](../source/travel.t.html#639)\]
 
-<div class="desc">
+
 
 By default we don't want the examineStatus method of a Room to do
 anything except displaying the stateDesc, should we have defined one. In
 particular we don't want it to list the contents of the Room, since
 Looking Around will do this anyway.
 
-</div>
+
 
 <span id="execTravel"></span>
 
@@ -1164,7 +1164,7 @@ Looking Around will do this anyway.
 [travel.t](../file/travel.t.html)\[[138](../source/travel.t.html#138)\],
 [objtime.t](../file/objtime.t.html)\[[372](../source/objtime.t.html#372)\]
 
-<div class="desc">
+
 
 When executing travel we move the traveler into the room. Then, if the
 traveler is the player char we perform a look around in the room,
@@ -1179,7 +1179,7 @@ vehicle is traversing in order to reach this room.
 Modified in OBJTIME EXTENSION to add the traversal time for entering the
 room.
 
-</div>
+
 
 <span id="getAllRegions"></span>
 
@@ -1187,11 +1187,11 @@ room.
 
 [travel.t](../file/travel.t.html)\[[454](../source/travel.t.html#454)\]
 
-<div class="desc">
+
 
 Calculate a list of all the regions this room belongs to
 
-</div>
+
 
 <span id="getConnector"></span>
 
@@ -1199,12 +1199,12 @@ Calculate a list of all the regions this room belongs to
 
 [travel.t](../file/travel.t.html)\[[684](../source/travel.t.html#684)\]
 
-<div class="desc">
+
 
 Get the connector object explictly or implicitly defined on prop, even
 if it uses the asExit macro. If it's not an object, return nil;
 
-</div>
+
 
 <span id="getDirection"></span>
 
@@ -1212,13 +1212,13 @@ if it uses the asExit macro. If it's not an object, return nil;
 
 [travel.t](../file/travel.t.html)\[[593](../source/travel.t.html#593)\]
 
-<div class="desc">
+
 
 The getDirection method returns the direction by which one would need to
 travel from this room to travel via the connector conn (or nil if none
 of the room's direction properties point to conn).
 
-</div>
+
 
 <span id="getDirectionTo"></span>
 
@@ -1226,7 +1226,7 @@ of the room's direction properties point to conn).
 
 [travel.t](../file/travel.t.html)\[[611](../source/travel.t.html#611)\]
 
-<div class="desc">
+
 
 The getDirectionTo method returns the direction by which one would need
 to travel from this room to travel to dest not via an UnlistedProxy
@@ -1234,7 +1234,7 @@ Connector (normally defined by the asExit() macro. If none of the room's
 direction properties clearly leads to dest via a TravelConnector
 including a Room) then return nil.
 
-</div>
+
 
 <span id="getOutermostRoom"></span>
 
@@ -1242,11 +1242,11 @@ including a Room) then return nil.
 
 [travel.t](../file/travel.t.html)\[[241](../source/travel.t.html#241)\]
 
-<div class="desc">
+
 
 A Room's outermost room is itself.
 
-</div>
+
 
 <span id="initVocab"></span>
 
@@ -1254,11 +1254,11 @@ A Room's outermost room is itself.
 
 [english.t](../file/english.t.html)\[[2186](../source/english.t.html#2186)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="inRoomName"></span>
 
@@ -1266,13 +1266,13 @@ A Room's outermost room is itself.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[414](../source/senseRegion.t.html#414)\]
 
-<div class="desc">
+
 
 The name that's used to introduce a list of miscellaneous objects in
 this room when viewed from a remote location containing the pov object
 (normally the player character).
 
-</div>
+
 
 <span id="interiorDesc"></span>
 
@@ -1280,12 +1280,12 @@ this room when viewed from a remote location containing the pov object
 
 [travel.t](../file/travel.t.html)\[[714](../source/travel.t.html#714)\]
 
-<div class="desc">
+
 
 If we've defined a roomFirstDesc and this room description hasn't been
 displayed before, display our roomFirstDesc, otherwise display our desc.
 
-</div>
+
 
 <span id="interiorParent"></span>
 
@@ -1293,11 +1293,11 @@ displayed before, display our roomFirstDesc, otherwise display our desc.
 
 [travel.t](../file/travel.t.html)\[[531](../source/travel.t.html#531)\]
 
-<div class="desc">
+
 
 A Room has no interiorParent since it's a top-level container.
 
-</div>
+
 
 <span id="iobjFor(PushTravelGetOutOf)"></span>
 
@@ -1305,12 +1305,12 @@ A Room has no interiorParent since it's a top-level container.
 
 [travel.t](../file/travel.t.html)\[[657](../source/travel.t.html#657)\]
 
-<div class="desc">
+
 
 Pushing an object out of a Room is the same as pushing it via the OUT
 exit.
 
-</div>
+
 
 <span id="isIn"></span>
 
@@ -1318,12 +1318,12 @@ exit.
 
 [travel.t](../file/travel.t.html)\[[429](../source/travel.t.html#429)\]
 
-<div class="desc">
+
 
 A Room can't be in another Room or a Thing, but it can notionally be in
 a Region, so we check to see if we're in the list of our regions.
 
-</div>
+
 
 <span id="litWithin"></span>
 
@@ -1331,12 +1331,12 @@ a Region, so we check to see if we're in the list of our regions.
 
 [travel.t](../file/travel.t.html)\[[97](../source/travel.t.html#97)\]
 
-<div class="desc">
+
 
 A Room is lit within it it's illuminated (it's either lit itself or
 contains a light source
 
-</div>
+
 
 <span id="lookOnEnter"></span>
 
@@ -1345,7 +1345,7 @@ contains a light source
 [travel.t](../file/travel.t.html)\[[234](../source/travel.t.html#234)\],
 [senseRegion.t](../file/senseRegion.t.html)\[[461](../source/senseRegion.t.html#461)\]
 
-<div class="desc">
+
 
 Should we look around on entering this room? By default we should; this
 is overridden in senseRegion.t to provide for the possibility of a
@@ -1358,7 +1358,7 @@ both the room obj is travelling from and the room it's travelling to
 (normally this room) both belong in a SenseRegion whose contSpace
 property is true.
 
-</div>
+
 
 <span id="notifyAfter"></span>
 
@@ -1366,11 +1366,11 @@ property is true.
 
 [travel.t](../file/travel.t.html)\[[322](../source/travel.t.html#322)\]
 
-<div class="desc">
+
 
 Call the after action notifications on this room and its regions
 
-</div>
+
 
 <span id="notifyBefore"></span>
 
@@ -1378,11 +1378,11 @@ Call the after action notifications on this room and its regions
 
 [travel.t](../file/travel.t.html)\[[308](../source/travel.t.html#308)\]
 
-<div class="desc">
+
 
 Call the before action notifications on this room and its regions
 
-</div>
+
 
 <span id="notifyDeparture"></span>
 
@@ -1393,7 +1393,7 @@ Call the before action notifications on this room and its regions
 [symconn.t](../file/symconn.t.html)\[[200](../source/symconn.t.html#200)\],
 [viewport.t](../file/viewport.t.html)\[[182](../source/viewport.t.html#182)\]
 
-<div class="desc">
+
 
 Carry out the notifications for a traveler leaving this room to go to
 dest.
@@ -1413,7 +1413,7 @@ our destination.
 Reset the list of rooms viewed when the player character leaves the
 room. \[MODIFIED FOR VIEWPORT EXTENSION\]
 
-</div>
+
 
 <span id="outermostVisibleParent"></span>
 
@@ -1421,11 +1421,11 @@ room. \[MODIFIED FOR VIEWPORT EXTENSION\]
 
 [travel.t](../file/travel.t.html)\[[244](../source/travel.t.html#244)\]
 
-<div class="desc">
+
 
 A Room's outermost visible parent is itself.
 
-</div>
+
 
 <span id="preinitThing"></span>
 
@@ -1433,12 +1433,12 @@ A Room's outermost visible parent is itself.
 
 [symconn.t](../file/symconn.t.html)\[[23](../source/symconn.t.html#23)\]
 
-<div class="desc">
+
 
 Modified for SYMCOMM EXTENSION to set up symmetrical connectors at
 preinit.
 
-</div>
+
 
 <span id="regionsInCommonWith"></span>
 
@@ -1446,11 +1446,11 @@ preinit.
 
 [travel.t](../file/travel.t.html)\[[465](../source/travel.t.html#465)\]
 
-<div class="desc">
+
 
 return a list of regions that both this room and other are common to.
 
-</div>
+
 
 <span id="remoteRoomListOrder"></span>
 
@@ -1458,7 +1458,7 @@ return a list of regions that both this room and other are common to.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[482](../source/senseRegion.t.html#482)\]
 
-<div class="desc">
+
 
 For a Room in a SenseRegion return the order in which other rooms in the
 SenseRegion have their contents described (higher = later) from the
@@ -1466,7 +1466,7 @@ point of view of the pov object, which will normally be the room from
 which the viewing, smelling or listening is being performed. By default
 we just return the Room's listOrder.
 
-</div>
+
 
 <span id="roomAfterAction"></span>
 
@@ -1474,11 +1474,11 @@ we just return the Room's listOrder.
 
 [travel.t](../file/travel.t.html)\[[342](../source/travel.t.html#342)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="roomBeforeAction"></span>
 
@@ -1486,12 +1486,12 @@ we just return the Room's listOrder.
 
 [travel.t](../file/travel.t.html)\[[341](../source/travel.t.html#341)\]
 
-<div class="desc">
+
 
 roomBeforeAction and roomAfterAction are called just before and after
 the action phases of the current action. Individual instances can
 
-</div>
+
 
 <span id="roomDaemon"></span>
 
@@ -1499,14 +1499,14 @@ the action phases of the current action. Individual instances can
 
 [travel.t](../file/travel.t.html)\[[405](../source/travel.t.html#405)\]
 
-<div class="desc">
+
 
 This method is invoked on the player char's current room at the end of
 every action. By default we run our doScript() method if we're also a
 Script (that is, if the Room has been mixed in with an EventList class),
 thereby facilitating the display of atmospheric messages.
 
-</div>
+
 
 <span id="roomRemoteDesc"></span>
 
@@ -1514,12 +1514,12 @@ thereby facilitating the display of atmospheric messages.
 
 [viewport.t](../file/viewport.t.html)\[[169](../source/viewport.t.html#169)\]
 
-<div class="desc">
+
 
 The roomRemoteDesc() is the description of the room as seen via a
 Viewport from pov. \[DEFINED ON VIEWPORT EXTENSION\]
 
-</div>
+
 
 <span id="setDestInfo"></span>
 
@@ -1527,7 +1527,7 @@ Viewport from pov. \[DEFINED ON VIEWPORT EXTENSION\]
 
 [travel.t](../file/travel.t.html)\[[583](../source/travel.t.html#583)\]
 
-<div class="desc">
+
 
 Convenience method to set information about the destination dirn from
 this room. The dirn parameter should be specified as a direction object
@@ -1539,7 +1539,7 @@ player has tried to go in this direction from this room. Once the player
 tries this direction the dest info table will be overwritten with
 information about where it actually leads.
 
-</div>
+
 
 <span id="showConnectedMiscContents"></span>
 
@@ -1547,11 +1547,11 @@ information about where it actually leads.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[269](../source/senseRegion.t.html#269)\]
 
-<div class="desc">
+
 
 List the miscellaneous contents of a remote room
 
-</div>
+
 
 <span id="showFirstConnectedSpecials"></span>
 
@@ -1559,12 +1559,12 @@ List the miscellaneous contents of a remote room
 
 [senseRegion.t](../file/senseRegion.t.html)\[[251](../source/senseRegion.t.html#251)\]
 
-<div class="desc">
+
 
 Show the specialDescs of any items in the other rooms in our
 SenseRegions, where specialDescBeforeContents is true
 
-</div>
+
 
 <span id="showFirstRemoteSpecials"></span>
 
@@ -1572,7 +1572,7 @@ SenseRegions, where specialDescBeforeContents is true
 
 [senseRegion.t](../file/senseRegion.t.html)\[[290](../source/senseRegion.t.html#290)\]
 
-<div class="desc">
+
 
 In additional to showing the first (i.e. pre-miscellaneous) list of
 items with specialDescs in remote locations, the
@@ -1581,7 +1581,7 @@ the subsequent methods to use. pov is the point of view object
 (typically the player character) from whose point of view the list is
 being constructed.
 
-</div>
+
 
 <span id="showRemoteMiscContents"></span>
 
@@ -1589,11 +1589,11 @@ being constructed.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[386](../source/senseRegion.t.html#386)\]
 
-<div class="desc">
+
 
 List the miscellaneous list of items in this remote location
 
-</div>
+
 
 <span id="showSecondConnectedSpecials"></span>
 
@@ -1601,12 +1601,12 @@ List the miscellaneous list of items in this remote location
 
 [senseRegion.t](../file/senseRegion.t.html)\[[262](../source/senseRegion.t.html#262)\]
 
-<div class="desc">
+
 
 Show the specialDescs of any items in the other rooms in our
 SenseRegions, where specialDescBeforeContents is nil
 
-</div>
+
 
 <span id="showSecondRemoteSpecials"></span>
 
@@ -1614,11 +1614,11 @@ SenseRegions, where specialDescBeforeContents is nil
 
 [senseRegion.t](../file/senseRegion.t.html)\[[376](../source/senseRegion.t.html#376)\]
 
-<div class="desc">
+
 
 Show the removeSpecialDesc of each item in the second list of specials
 
-</div>
+
 
 <span id="showStatuslineExits"></span>
 
@@ -1626,11 +1626,11 @@ Show the removeSpecialDesc of each item in the second list of specials
 
 [travel.t](../file/travel.t.html)\[[360](../source/travel.t.html#360)\]
 
-<div class="desc">
+
 
 show the exit list in the status line
 
-</div>
+
 
 <span id="sortRoomSublist"></span>
 
@@ -1638,12 +1638,12 @@ show the exit list in the status line
 
 [senseRegion.t](../file/senseRegion.t.html)\[[491](../source/senseRegion.t.html#491)\]
 
-<div class="desc">
+
 
 Sort a sublist of rooms in ascending order of their
 remoteRoomListOrder(pov) and return the result.
 
-</div>
+
 
 <span id="statusName"></span>
 
@@ -1652,7 +1652,7 @@ remoteRoomListOrder(pov) and return the result.
 [travel.t](../file/travel.t.html)\[[369](../source/travel.t.html#369)\],
 [postures.t](../file/postures.t.html)\[[541](../source/postures.t.html#541)\]
 
-<div class="desc">
+
 
 The name of the room as it appears in the status line.
 
@@ -1661,7 +1661,7 @@ The name of the room as it appears in the status line.
 The name of the room as it appears in the status line. \[MODIFIED FOR
 POSTURES EXTENSION to include the actor's posture\]
 
-</div>
+
 
 <span id="travelerEntering"></span>
 
@@ -1669,12 +1669,12 @@ POSTURES EXTENSION to include the actor's posture\]
 
 [travel.t](../file/travel.t.html)\[[527](../source/travel.t.html#527)\]
 
-<div class="desc">
+
 
 This method is invoked when traveler is about to enter this room from
 origin.
 
-</div>
+
 
 <span id="travelerLeaving"></span>
 
@@ -1682,12 +1682,12 @@ origin.
 
 [travel.t](../file/travel.t.html)\[[521](../source/travel.t.html#521)\]
 
-<div class="desc">
+
 
 This method is invoked when traveler is about to leave this room and go
 to dest.
 
-</div>
+
 
 <span id="unmentionRemoteContents"></span>
 
@@ -1695,12 +1695,12 @@ to dest.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[403](../source/senseRegion.t.html#403)\]
 
-<div class="desc">
+
 
 Reset the contents of all the remote rooms visible from this room to not
 having been mentioned.
 
-</div>
+
 
 <span id="updateSymVocab"></span>
 
@@ -1708,16 +1708,16 @@ having been mentioned.
 
 [symconn.t](../file/symconn.t.html)\[[172](../source/symconn.t.html#172)\]
 
-<div class="desc">
+
 
 update the vocab of any SymPassages in our contents list that have
 seperate room1Vocab and room2Vocab
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

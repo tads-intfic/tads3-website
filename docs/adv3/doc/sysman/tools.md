@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| The Tools  
 <span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello, World!</a>
@@ -15,7 +15,7 @@ layout: docs
 <a href="build.html" class="nav"><em>Next:</em> Compiling and Linking</a>
     </span>
 
-</div>
+
 
 
 
@@ -24,7 +24,7 @@ layout: docs
 This part goes into detail about the tools that you use to build and run
 TADS 3 programs: the compiler and the interpreter.
 
-<div class="sectoc">
+
 
 [Compiling and Linking](build.html)  
 [Universal Paths](univpath.html)  
@@ -33,11 +33,11 @@ TADS 3 programs: the compiler and the interpreter.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| The Tools  
@@ -46,4 +46,4 @@ TADS 3 programs: the compiler and the interpreter.
 <a href="build.html" class="nav"><em>Next:</em> Compiling and Linking</a>
     </span>
 
-</div>
+

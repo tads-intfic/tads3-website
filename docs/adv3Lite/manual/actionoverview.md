@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Overview  
@@ -15,7 +15,7 @@ layout: docs
     <a href="actres.html" class="nav"><em>Next:</em> Action Results</a>
     </span>
 
-</div>
+
 
 
 
@@ -298,7 +298,7 @@ means, see under [SayTopic](specialtopic.html#saytopic) below).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -309,4 +309,4 @@ means, see under [SayTopic](specialtopic.html#saytopic) below).
 
 
 
-</div>
+

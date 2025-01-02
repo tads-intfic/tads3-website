@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "conversational" agenda item. This type of item is ready to execute
 only when the actor hasn't engaged in conversation during the same turn.
@@ -36,42 +36,42 @@ until we get a turn where the player didn't directly talk to us.
 
 `class `**`ConvAgendaItem`**` :   `[`AgendaItem`](../object/AgendaItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ConvAgendaItem`**  
 [`AgendaItem`](../object/AgendaItem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`greetingDisplayed`](#greetingDisplayed)[`isReady`](#isReady)[`otherActor`](#otherActor)[`reasonInvoked`](#reasonInvoked)
 
@@ -80,11 +80,11 @@ Inherited from `AgendaItem` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`invokeItemBase`](#invokeItemBase)
 
@@ -93,11 +93,11 @@ Inherited from `AgendaItem` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="greetingDisplayed"></span>
 
@@ -105,12 +105,12 @@ Inherited from `AgendaItem` :
 
 [actor.t](../file/actor.t.html)\[[6004](../source/actor.t.html#6004)\]
 
-<div class="desc">
+
 
 Flag; did invoking this item result in the display of a greeting (from
 an ActorHelloTopic)?
 
-</div>
+
 
 <span id="isReady"></span>
 
@@ -118,11 +118,11 @@ an ActorHelloTopic)?
 
 [actor.t](../file/actor.t.html)\[[5915](../source/actor.t.html#5915)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="otherActor"></span>
 
@@ -130,13 +130,13 @@ an ActorHelloTopic)?
 
 [actor.t](../file/actor.t.html)\[[5922](../source/actor.t.html#5922)\]
 
-<div class="desc">
+
 
 The actor we're planning to address - by default, this is the PC. If the
 conversational overture will be directed to another NPC, you can specify
 that other actor here.
 
-</div>
+
 
 <span id="reasonInvoked"></span>
 
@@ -144,22 +144,22 @@ that other actor here.
 
 [actor.t](../file/actor.t.html)\[[6012](../source/actor.t.html#6012)\]
 
-<div class="desc">
+
 
 Why was this ConvAgenda Item invoked?  
 1 = InitiateConversationReason = Actor initiating new conversation  
 2 = ConversationLullReason = Actor using lull in conversation  
 3 = DefaultTopicReason = Actor responding to DefaultAgendaTopic
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="invokeItemBase"></span>
 
@@ -167,15 +167,15 @@ Why was this ConvAgenda Item invoked?
 
 [actor.t](../file/actor.t.html)\[[5925](../source/actor.t.html#5925)\]
 
-<div class="desc">
+
 
 There's more work to do on a ConvAgendaItem when it's invoked
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

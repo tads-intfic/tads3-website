@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> DynamicFunc  
 <span class="navnp"><a href="dict.html" class="nav"><em>Prev:</em> Dictionary</a>
     <a href="file.html" class="nav"><em>Next:</em> File</a>     </span>
 
-</div>
+
 
 
 
@@ -552,7 +552,7 @@ exception object.
 
 `getSource()`
 
-<div class="fdef">
+
 
 Returns a string containing the source code originally used to create
 the object via the `new DynamicFunc()`
@@ -698,11 +698,11 @@ the name of an existing function, but doing so will only affect *future*
 compilations - it won't affect any code previously compiled, including
 the statically compiled code of the main program.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -710,4 +710,4 @@ the statically compiled code of the main program.
 <span class="navnp"><a href="dict.html" class="nav"><em>Prev:</em> Dictionary</a>
     <a href="file.html" class="nav"><em>Next:</em> File</a>     </span>
 
-</div>
+

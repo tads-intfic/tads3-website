@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An outdoor location. This differs from an indoor location in that it has
 ground and sky rather than floor and ceiling, and has no walls.
 
 `class `**`OutdoorRoom`**` :   `[`Room`](../object/Room.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OutdoorRoom`**  
 [`Room`](../object/Room.html)  
@@ -62,27 +62,27 @@ ground and sky rather than floor and ceiling, and has no walls.
 `                                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`roomParts`](#roomParts)
 
@@ -122,11 +122,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -167,11 +167,11 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="roomParts"></span>
 
@@ -179,25 +179,25 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[4752](../source/travel.t.html#4752)\]
 
-<div class="desc">
+
 
 an outdoor room has ground and sky, but no walls
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

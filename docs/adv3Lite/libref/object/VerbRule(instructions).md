@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 define the INSTRUCTIONS command's grammar
 
 `VerbRule(instructions)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(instructions)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(instructions)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -43,11 +43,11 @@ define the INSTRUCTIONS command's grammar
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`verbPhrase`](#verbPhrase)  `
 
@@ -59,11 +59,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Production` :
 
 [instruct.t](../file/instruct.t.html)\[[1001](../source/instruct.t.html#1001)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -99,25 +99,25 @@ Inherited from `Production` :
 
 [instruct.t](../file/instruct.t.html)\[[1002](../source/instruct.t.html#1002)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

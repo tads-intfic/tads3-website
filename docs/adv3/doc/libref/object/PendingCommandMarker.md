@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A pending command marker. This is not an actual pending command; rather,
 it's just a queue marker. We sometimes want to synchronize some other
@@ -39,42 +39,42 @@ command by observing the marker's progress through the queue.
 
 `class `**`PendingCommandMarker`**` :   `[`PendingCommandInfo`](../object/PendingCommandInfo.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PendingCommandMarker`**  
 [`PendingCommandInfo`](../object/PendingCommandInfo.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`hasCommand`](#hasCommand)
 
@@ -83,11 +83,11 @@ Inherited from `PendingCommandInfo` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -96,11 +96,11 @@ Inherited from `PendingCommandInfo` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="hasCommand"></span>
 
@@ -108,25 +108,25 @@ Inherited from `PendingCommandInfo` :
 
 [actor.t](../file/actor.t.html)\[[10568](../source/actor.t.html#10568)\]
 
-<div class="desc">
+
 
 I have no command to execute
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

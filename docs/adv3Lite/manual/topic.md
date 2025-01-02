@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Topics  
@@ -15,7 +15,7 @@ layout: docs
     <a href="beginning.html" class="nav"><em>Next:</em> Beginnings</a>
     </span>
 
-</div>
+
 
 
 
@@ -33,11 +33,11 @@ necklace if it's simply a topic of conversation and never makes a
 physical appearance in the game. For these purposes we can define a
 Topic:
 
-`
+```
     tBonaparte: Topic 'Napoleon[n] Bonaparte';
     tJupiter: Topic 'Jupiter';
     tNecklace: Topic '() Aunt Maude\'s necklace';
-`
+```
 
 Note that the property we are defining in the Topic template is the
 [vocab](thing.html#vocab) property, which works in precisely the same way
@@ -83,15 +83,15 @@ nil. The quick way to do that is through the Topic template, for which
 the second, optional, element, defined with an @ sign, defines the value
 of the familiar property:
 
-`
+```
     tNecklace: Topic '() Aunt Maude\'s necklace' @nil;
-`
+```
 
 
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -100,4 +100,4 @@ of the familiar property:
     <a href="beginning.html" class="nav"><em>Next:</em> Beginnings</a>
     </span>
 
-</div>
+

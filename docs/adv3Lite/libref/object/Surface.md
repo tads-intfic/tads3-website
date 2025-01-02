@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Surface is a Thing that other things can be placed on top of
 
 `class `**`Surface`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Surface`**  
 [`Thing`](../object/Thing.html)  
@@ -52,11 +52,11 @@ A Surface is a Thing that other things can be placed on top of
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Surface`**  
 [`Platform`](../object/Platform.html)  
@@ -64,19 +64,19 @@ A Surface is a Thing that other things can be placed on top of
 [`Chair`](../object/Chair.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contType`](#contType)[`nothingOnMsg`](#nothingOnMsg)
 
@@ -95,11 +95,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Search)`](#dobjFor(Search))[`listContentsOn`](#listContentsOn)
 
@@ -120,11 +120,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contType"></span>
 
@@ -132,11 +132,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[164](../source/extras.t.html#164)\]
 
-<div class="desc">
+
 
 The contents of a Surface are considered to be on the Surface
 
-</div>
+
 
 <span id="nothingOnMsg"></span>
 
@@ -144,19 +144,19 @@ The contents of a Surface are considered to be on the Surface
 
 [extras.t](../file/extras.t.html)\[[200](../source/extras.t.html#200)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Search)"></span>
 
@@ -164,7 +164,7 @@ The contents of a Surface are considered to be on the Surface
 
 [extras.t](../file/extras.t.html)\[[175](../source/extras.t.html#175)\]
 
-<div class="desc">
+
 
 Searching a Surface may involve look for what's on it as well as what's
 in it.
@@ -173,7 +173,7 @@ We put this code here rather than checking for contType == On on a Thing
 to avoid burdening Thing with overcomplicated code for a rather special
 case.
 
-</div>
+
 
 <span id="listContentsOn"></span>
 
@@ -181,16 +181,16 @@ case.
 
 [extras.t](../file/extras.t.html)\[[206](../source/extras.t.html#206)\]
 
-<div class="desc">
+
 
 List what's on me. We put this in a separate method to make it easier to
 customise on a per object basis.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

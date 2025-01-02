@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A readable object. Any ordinary object will show its normal full
 description when read, but an object that is explicitly readable will
@@ -35,15 +35,15 @@ a separate description when read.
 
 `class `**`Readable`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Readable`**  
 [`Thing`](../object/Thing.html)  
@@ -51,27 +51,27 @@ a separate description when read.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`readDesc`](#readDesc)
 
@@ -83,11 +83,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dimReadDesc`](#dimReadDesc)[`dobjFor(Read)`](#dobjFor(Read))[`obscuredReadDesc`](#obscuredReadDesc)
 
@@ -99,11 +99,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="readDesc"></span>
 
@@ -111,22 +111,22 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1454](../source/objects.t.html#1454)\]
 
-<div class="desc">
+
 
 Show my special reading desription. By default, we set this to nil to
 indicate that we should use our default "examine" description; objects
 can override this to show a special message for reading the object as
 desired.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dimReadDesc"></span>
 
@@ -134,11 +134,11 @@ desired.
 
 [objects.t](../file/objects.t.html)\[[1460](../source/objects.t.html#1460)\]
 
-<div class="desc">
+
 
 our reading description in dim light
 
-</div>
+
 
 <span id="dobjFor(Read)"></span>
 
@@ -146,11 +146,11 @@ our reading description in dim light
 
 [objects.t](../file/objects.t.html)\[[1463](../source/objects.t.html#1463)\]
 
-<div class="desc">
+
 
 "Read" action
 
-</div>
+
 
 <span id="obscuredReadDesc"></span>
 
@@ -158,15 +158,15 @@ our reading description in dim light
 
 [objects.t](../file/objects.t.html)\[[1457](../source/objects.t.html#1457)\]
 
-<div class="desc">
+
 
 our reading description when obscured
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

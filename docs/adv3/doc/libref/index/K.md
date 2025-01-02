@@ -79,9 +79,9 @@ property of [LockableWithKey](../object/LockableWithKey.html) in
 [Actor](../object/Actor.html) in
 [actor.t](../file/actor.t.html)\[[8243](../source/actor.t.html#8243)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

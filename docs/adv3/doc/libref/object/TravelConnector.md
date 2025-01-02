@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Travel Connector is a special connection interface that allows for
 travel from one location to another. Most actor movement, except for
@@ -65,15 +65,15 @@ the destination of the travel would be.
 
 `class `**`TravelConnector`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TravelConnector`**  
 [`Thing`](../object/Thing.html)  
@@ -81,11 +81,11 @@ the destination of the travel would be.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TravelConnector`**  
 [`AskConnector`](../object/AskConnector.html)  
@@ -116,20 +116,20 @@ the destination of the travel would be.
 [`FakeConnector`](../object/FakeConnector.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`noTravel`](../object/noTravel.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`connectorStagingLocation`](#connectorStagingLocation)[`isCircularPassage`](#isCircularPassage)[`isConnectorListed`](#isConnectorListed)[`rememberCircularPassage`](#rememberCircularPassage)[`travelBarrier`](#travelBarrier)[`travelMemory`](#travelMemory)
 
@@ -141,11 +141,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`actorTravelPreCond`](#actorTravelPreCond)[`canTravelerPass`](#canTravelerPass)[`checkTravelBarriers`](#checkTravelBarriers)[`connectorBack`](#connectorBack)[`connectorGetConnectorTo`](#connectorGetConnectorTo)[`connectorTravelPreCond`](#connectorTravelPreCond)[`createUnlistedProxy`](#createUnlistedProxy)[`darkTravel`](#darkTravel)[`describeArrival`](#describeArrival)[`describeDeparture`](#describeDeparture)[`describeLocalArrival`](#describeLocalArrival)[`describeLocalDeparture`](#describeLocalDeparture)[`describeRemoteTravel`](#describeRemoteTravel)[`dobjFor(TravelVia)`](#dobjFor(TravelVia))[`explainTravelBarrier`](#explainTravelBarrier)[`fixedSource`](#fixedSource)[`getApparentDestination`](#getApparentDestination)[`getDestination`](#getDestination)[`isConnectorApparent`](#isConnectorApparent)[`isConnectorPassable`](#isConnectorPassable)[`isConnectorVisibleInDark`](#isConnectorVisibleInDark)[`noteTraversal`](#noteTraversal)[`rememberTravel`](#rememberTravel)
 
@@ -157,11 +157,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="connectorStagingLocation"></span>
 
@@ -169,14 +169,14 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[815](../source/travel.t.html#815)\]
 
-<div class="desc">
+
 
 The "staging location" for travel through this connector. By default, if
 we have a location, that's our staging location; if we don't have a
 location (in which case we probably an outermost room), we don't have a
 staging location.
 
-</div>
+
 
 <span id="isCircularPassage"></span>
 
@@ -184,7 +184,7 @@ staging location.
 
 [travel.t](../file/travel.t.html)\[[1218](../source/travel.t.html#1218)\]
 
-<div class="desc">
+
 
 Is this a "circular" passage? A circular passage is one that explicitly
 connects back to its origin, so that traveling through the connector
@@ -199,7 +199,7 @@ mostly useful in disorienting environments, such as twisty cave
 networks, where a passage between locations can change direction and
 even loop back on itself.
 
-</div>
+
 
 <span id="isConnectorListed"></span>
 
@@ -207,7 +207,7 @@ even loop back on itself.
 
 [travel.t](../file/travel.t.html)\[[963](../source/travel.t.html#963)\]
 
-<div class="desc">
+
 
 Is this connector listed? This indicates whether or not the exit is
 allowed to be displayed in lists of exits, such as in the status line or
@@ -220,7 +220,7 @@ true, AND the point-of-view actor for the listing can perceive the exit
 (which means that isConnectorApparent must return true, and there must
 be sufficient light to see the exit).
 
-</div>
+
 
 <span id="rememberCircularPassage"></span>
 
@@ -228,14 +228,14 @@ be sufficient light to see the exit).
 
 [travel.t](../file/travel.t.html)\[[1227](../source/travel.t.html#1227)\]
 
-<div class="desc">
+
 
 Should we remember a circular trip through this passage? By default, we
 remember the destination of a passage that takes us back to our origin
 only if we're explicitly marked as a circular passage; in other cases,
 we assume that the travel was blocked somehow instead.
 
-</div>
+
 
 <span id="travelBarrier"></span>
 
@@ -243,13 +243,13 @@ we assume that the travel was blocked somehow instead.
 
 [travel.t](../file/travel.t.html)\[[852](../source/travel.t.html#852)\]
 
-<div class="desc">
+
 
 Barrier or barriers to travel. This property can be set to a single
 TravelBarrier object or to a list of TravelBarrier objects.
 checkTravelBarriers() checks each barrier specified here.
 
-</div>
+
 
 <span id="travelMemory"></span>
 
@@ -257,7 +257,7 @@ checkTravelBarriers() checks each barrier specified here.
 
 [travel.t](../file/travel.t.html)\[[1202](../source/travel.t.html#1202)\]
 
-<div class="desc">
+
 
 Our "travel memory" table. If this contains a non-nil lookup table
 object, we'll store a record of each successful traversal of a travel
@@ -273,15 +273,15 @@ property to nil) if the game doesn't make any use of the information.
 Note that this table is stored just once, in the TravelConnector class
 itself - there's not a separate table per connector.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="actorTravelPreCond"></span>
 
@@ -289,7 +289,7 @@ itself - there's not a separate table per connector.
 
 [travel.t](../file/travel.t.html)\[[836](../source/travel.t.html#836)\]
 
-<div class="desc">
+
 
 Get the travel preconditions that this connector requires for travel by
 the given actor. In most cases, this won't depend on the actor, but it's
@@ -307,7 +307,7 @@ Note that this will only be called when an actor is the traveler. When a
 vehicle or other kind of traveler is doing the travel, this will not be
 invoked.
 
-</div>
+
 
 <span id="canTravelerPass"></span>
 
@@ -315,7 +315,7 @@ invoked.
 
 [travel.t](../file/travel.t.html)\[[936](../source/travel.t.html#936)\]
 
-<div class="desc">
+
 
 Check to see if the Traveler object is allowed to travel through this
 connector. Returns true if travel is allowed, nil if not.
@@ -341,7 +341,7 @@ is needed in only one place, creating a barrier to represent the
 condition is a bit verbose; in such cases, the condition can be placed
 in this method more conveniently.
 
-</div>
+
 
 <span id="checkTravelBarriers"></span>
 
@@ -349,12 +349,12 @@ in this method more conveniently.
 
 [travel.t](../file/travel.t.html)\[[858](../source/travel.t.html#858)\]
 
-<div class="desc">
+
 
 Check barriers. The TravelVia check() routine must call this to enforce
 barriers.
 
-</div>
+
 
 <span id="connectorBack"></span>
 
@@ -362,7 +362,7 @@ barriers.
 
 [travel.t](../file/travel.t.html)\[[1400](../source/travel.t.html#1400)\]
 
-<div class="desc">
+
 
 Find a connector in the destination location that connects back as the
 source of travel from the given connector when traversed from the source
@@ -396,7 +396,7 @@ simple connector whose apparent source is this connector, because in
 such cases we won't be able to find the reverse connector with our
 direction search.
 
-</div>
+
 
 <span id="connectorGetConnectorTo"></span>
 
@@ -404,7 +404,7 @@ direction search.
 
 [travel.t](../file/travel.t.html)\[[1145](../source/travel.t.html#1145)\]
 
-<div class="desc">
+
 
 Get the travel connector leading to the given destination from the given
 origin and for the given travel. Return nil if we don't know a connector
@@ -424,7 +424,7 @@ destination ourself, so getDestination() will have to return nil. But we
 connector that points to that destination. That's what this routine is
 for.
 
-</div>
+
 
 <span id="connectorTravelPreCond"></span>
 
@@ -432,11 +432,11 @@ for.
 
 [travel.t](../file/travel.t.html)\[[780](../source/travel.t.html#780)\]
 
-<div class="desc">
+
 
 Get any connector-specific pre-conditions for travel via this connector.
 
-</div>
+
 
 <span id="createUnlistedProxy"></span>
 
@@ -444,13 +444,13 @@ Get any connector-specific pre-conditions for travel via this connector.
 
 [travel.t](../file/travel.t.html)\[[970](../source/travel.t.html#970)\]
 
-<div class="desc">
+
 
 Get an unlisted proxy for this connector. This is normally called from
 the asExit() macro to set up one room exit direction as an unlisted
 synonym for another.
 
-</div>
+
 
 <span id="darkTravel"></span>
 
@@ -458,7 +458,7 @@ synonym for another.
 
 [travel.t](../file/travel.t.html)\[[1541](../source/travel.t.html#1541)\]
 
-<div class="desc">
+
 
 Handle travel in the dark. Specifically, this is called when an actor
 attempts travel from one dark location to another dark location. (We
@@ -469,7 +469,7 @@ By default, we will prohibit dark-to-dark travel by calling the
 location's darkTravel handler. Individual connectors can override this
 to allow such travel or apply different handling.
 
-</div>
+
 
 <span id="describeArrival"></span>
 
@@ -477,7 +477,7 @@ to allow such travel or apply different handling.
 
 [travel.t](../file/travel.t.html)\[[1287](../source/travel.t.html#1287)\]
 
-<div class="desc">
+
 
 Describe an actor's arrival through the connector from the given origin
 into the given destination. This description is from the point of view
@@ -490,7 +490,7 @@ location. So, if we have two sides to a door, and the actor traverses
 the first side, this will be called on the second side - the one that
 links the destination back to the origin.
 
-</div>
+
 
 <span id="describeDeparture"></span>
 
@@ -498,13 +498,13 @@ links the destination back to the origin.
 
 [travel.t](../file/travel.t.html)\[[1234](../source/travel.t.html#1234)\]
 
-<div class="desc">
+
 
 Describe an actor's departure through the connector from the given
 origin to the given destination. This description is from the point of
 view of another actor in the origin location.
 
-</div>
+
 
 <span id="describeLocalArrival"></span>
 
@@ -512,7 +512,7 @@ view of another actor in the origin location.
 
 [travel.t](../file/travel.t.html)\[[1346](../source/travel.t.html#1346)\]
 
-<div class="desc">
+
 
 Describe a "local arrival" via this connector. This is called when the
 traveler moves around entirely within the field of view of the player
@@ -523,7 +523,7 @@ We'll describe the travel not in terms of truly arriving, since the
 traveler was already here to start with, but rather as entering the
 destination, but just in terms of moving closer.
 
-</div>
+
 
 <span id="describeLocalDeparture"></span>
 
@@ -531,7 +531,7 @@ destination, but just in terms of moving closer.
 
 [travel.t](../file/travel.t.html)\[[1329](../source/travel.t.html#1329)\]
 
-<div class="desc">
+
 
 Describe a "local departure" via this connector. This is called when a
 traveler moves around entirely within the field of view of the player
@@ -541,7 +541,7 @@ origin, AND the origin's top-level location contains the PC. We'll
 describe the travel not in terms of truly departing, but simply in terms
 of moving away.
 
-</div>
+
 
 <span id="describeRemoteTravel"></span>
 
@@ -549,7 +549,7 @@ of moving away.
 
 [travel.t](../file/travel.t.html)\[[1360](../source/travel.t.html#1360)\]
 
-<div class="desc">
+
 
 Describe "remote travel" via this connector. This is called when the
 traveler moves around entirely within the field of view of the PC, but
@@ -558,7 +558,7 @@ contain the PC." In this case, the traveler isn't arriving or departing,
 exactly; it's just moving laterally from one top-level location to
 another.
 
-</div>
+
 
 <span id="dobjFor(TravelVia)"></span>
 
@@ -566,7 +566,7 @@ another.
 
 [travel.t](../file/travel.t.html)\[[1561](../source/travel.t.html#1561)\]
 
-<div class="desc">
+
 
 Action handler for the internal "TravelVia" action. This is not a real
 action, but is instead a pseudo-action that we implement generically for
@@ -577,7 +577,7 @@ say, asDobjFor), since this will ensure that every type of travel
 through the connector actually looks like a TravelVia action, which is
 useful for intercepting travel actions generically in other code.
 
-</div>
+
 
 <span id="explainTravelBarrier"></span>
 
@@ -585,7 +585,7 @@ useful for intercepting travel actions generically in other code.
 
 [travel.t](../file/travel.t.html)\[[948](../source/travel.t.html#948)\]
 
-<div class="desc">
+
 
 Explain why canTravelerPass() returned nil. This is called to display an
 explanation of why travel is not allowed by self.canTravelerPass().
@@ -595,7 +595,7 @@ implementation of this method does nothing. Whenever canTravelerPass()
 is overridden to return nil, this should also be overridden to provide
 an appropriate explanation.
 
-</div>
+
 
 <span id="fixedSource"></span>
 
@@ -603,7 +603,7 @@ an appropriate explanation.
 
 [travel.t](../file/travel.t.html)\[[1488](../source/travel.t.html#1488)\]
 
-<div class="desc">
+
 
 Get the "fixed" source for travelers emerging from this connector, if
 possible. This can return nil if the connector does not have a fixed
@@ -620,7 +620,7 @@ as long as the overridden connectorBack() doesn't call it). Whenever it
 is not clear how to implement this routine, don't - implement
 connectorBack() instead.
 
-</div>
+
 
 <span id="getApparentDestination"></span>
 
@@ -628,7 +628,7 @@ connectorBack() instead.
 
 [travel.t](../file/travel.t.html)\[[1063](../source/travel.t.html#1063)\]
 
-<div class="desc">
+
 
 Get the apparent destination of travel by the actor to the given origin.
 This returns the location to which the connector travels, AS FAR AS THE
@@ -676,7 +676,7 @@ remember the destination each time an actor travels via a connector, and
 use this information by default to provide apparent destination
 information.
 
-</div>
+
 
 <span id="getDestination"></span>
 
@@ -684,7 +684,7 @@ information.
 
 [travel.t](../file/travel.t.html)\[[1123](../source/travel.t.html#1123)\]
 
-<div class="desc">
+
 
 Get our destination, given the traveler and the origin location.
 
@@ -708,7 +708,7 @@ through something like an auto-map. This method is intended for internal
 use in the course of processing a travel action, since it knows the true
 destination of the travel.
 
-</div>
+
 
 <span id="isConnectorApparent"></span>
 
@@ -716,7 +716,7 @@ destination of the travel.
 
 [travel.t](../file/travel.t.html)\[[987](../source/travel.t.html#987)\]
 
-<div class="desc">
+
 
 Determine if the travel connection is apparent - as a travel connector -
 to the actor in the given origin location. This doesn't indicate whether
@@ -730,7 +730,7 @@ it's not possible currently. A secret door, on the other hand, would
 return nil while closed, because it would not be apparent to the actor
 that the object is a door at all.
 
-</div>
+
 
 <span id="isConnectorPassable"></span>
 
@@ -738,7 +738,7 @@ that the object is a door at all.
 
 [travel.t](../file/travel.t.html)\[[1007](../source/travel.t.html#1007)\]
 
-<div class="desc">
+
 
 Determine if the travel connection is passable by the given traveler in
 the current state. For example, a door would return true when open, nil
@@ -752,7 +752,7 @@ rather than this method because that allows better specificity in
 reporting failures. This method lets game code get at the same
 information, but in a more coarse-grained fashion.
 
-</div>
+
 
 <span id="isConnectorVisibleInDark"></span>
 
@@ -760,7 +760,7 @@ information, but in a more coarse-grained fashion.
 
 [travel.t](../file/travel.t.html)\[[1507](../source/travel.t.html#1507)\]
 
-<div class="desc">
+
 
 Can the given actor see this connector in the dark, looking from the
 given origin? Returns true if so, nil if not.
@@ -774,7 +774,7 @@ a dark room is possible only when the destination is lit. If we can't
 determine our destination, we will assume that the connector is not
 visible.
 
-</div>
+
 
 <span id="noteTraversal"></span>
 
@@ -782,7 +782,7 @@ visible.
 
 [travel.t](../file/travel.t.html)\[[1160](../source/travel.t.html#1160)\]
 
-<div class="desc">
+
 
 Note that the connector is being traversed. This is invoked just before
 the traveler is moved; this notification is fired after the other
@@ -792,7 +792,7 @@ describing what happens during the travel, because any messages
 displayed here will come after any messages related to reactions from
 other objects.
 
-</div>
+
 
 <span id="rememberTravel"></span>
 
@@ -800,7 +800,7 @@ other objects.
 
 [travel.t](../file/travel.t.html)\[[1173](../source/travel.t.html#1173)\]
 
-<div class="desc">
+
 
 Service routine: add a memory of a successful traversal of a travel
 connector. If we have a travel memory table, we'll add the traversal to
@@ -809,11 +809,11 @@ the table, so that we can find it later.
 This is called from Traveler.travelerTravelTo() on successful travel.
 We're called for each actor participating in the travel.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A mix-in class for objects that don't come into play until some future
 event. This class lets us initialize these objects with their
@@ -38,61 +38,61 @@ eventual location by calling makePresent().
 
 `class `**`PresentLater`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PresentLater`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`eventualLocation`](#eventualLocation)[`initiallyPresent`](#initiallyPresent)[`plKey`](#plKey)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`initializeLocation`](#initializeLocation)[`makePresent`](#makePresent)[`makePresentByKey`](#makePresentByKey)[`makePresentByKeyIf`](#makePresentByKeyIf)[`makePresentIf`](#makePresentIf)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="eventualLocation"></span>
 
@@ -100,11 +100,11 @@ eventual location by calling makePresent().
 
 [extras.t](../file/extras.t.html)\[[3787](../source/extras.t.html#3787)\]
 
-<div class="desc">
+
 
 our eventual location
 
-</div>
+
 
 <span id="initiallyPresent"></span>
 
@@ -112,7 +112,7 @@ our eventual location
 
 [extras.t](../file/extras.t.html)\[[3647](../source/extras.t.html#3647)\]
 
-<div class="desc">
+
 
 Flag: are we present initially? By default, we're only present later, as
 that's the whole point. In some cases, though, we have objects that come
@@ -120,7 +120,7 @@ and go, but start out present. Setting this property to true makes the
 object present initially, but still allows it to come and go using the
 standard PresentLater mechanisms.
 
-</div>
+
 
 <span id="plKey"></span>
 
@@ -128,7 +128,7 @@ standard PresentLater mechanisms.
 
 [extras.t](../file/extras.t.html)\[[3637](../source/extras.t.html#3637)\]
 
-<div class="desc">
+
 
 My "key" - this is an optional property you can add to a PresentLater
 object to associate it with a group of objects. You can then use
@@ -142,15 +142,15 @@ value, then call makePresentByKey() on that key.
 You don't need to define this for an object unless you want to use
 makePresentByKey() with the object.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="initializeLocation"></span>
 
@@ -158,11 +158,11 @@ makePresentByKey() with the object.
 
 [extras.t](../file/extras.t.html)\[[3649](../source/extras.t.html#3649)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="makePresent"></span>
 
@@ -170,11 +170,11 @@ makePresentByKey() with the object.
 
 [extras.t](../file/extras.t.html)\[[3688](../source/extras.t.html#3688)\]
 
-<div class="desc">
+
 
 bring the object into the game world in its eventual location(s)
 
-</div>
+
 
 <span id="makePresentByKey"></span>
 
@@ -182,14 +182,14 @@ bring the object into the game world in its eventual location(s)
 
 [extras.t](../file/extras.t.html)\[[3732](../source/extras.t.html#3732)\]
 
-<div class="desc">
+
 
 Bring every PresentLater object with the given key into the game. Note
 that this is a "class" method that you call on PresentLater itself:
 
 PresentLater.makePresentByKey('foo');
 
-</div>
+
 
 <span id="makePresentByKeyIf"></span>
 
@@ -197,7 +197,7 @@ PresentLater.makePresentByKey('foo');
 
 [extras.t](../file/extras.t.html)\[[3760](../source/extras.t.html#3760)\]
 
-<div class="desc">
+
 
 Bring every PresentLater object with the given key into the game, or
 move every one out of the game, according to the condition 'cond'.
@@ -212,7 +212,7 @@ PresentLater.makePresentByKeyIf('foo', {x: x.showObj});
 
 Note that this is a "class" method that you call on PresentLater itself.
 
-</div>
+
 
 <span id="makePresentIf"></span>
 
@@ -220,16 +220,16 @@ Note that this is a "class" method that you call on PresentLater itself.
 
 [extras.t](../file/extras.t.html)\[[3717](../source/extras.t.html#3717)\]
 
-<div class="desc">
+
 
 make myself present if the given condition is true; otherwise, remove me
 from the game world (i.e. move me into nil)
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Anonymous
@@ -17,7 +17,7 @@ Handling</a>    
 <a href="undef.html" class="nav"><em>Next:</em> Capturing Calls to
 Undefined Methods</a>     </span>
 
-</div>
+
 
 
 
@@ -515,7 +515,7 @@ the balance in favor of removing `new`.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -526,4 +526,4 @@ Handling</a>    
 <a href="undef.html" class="nav"><em>Next:</em> Capturing Calls to
 Undefined Methods</a>     </span>
 
-</div>
+

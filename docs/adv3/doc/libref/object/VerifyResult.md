@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Verification result class. Verification routines return a verification
 result describing whether or not an action is allowed, and how much
@@ -65,26 +65,26 @@ open it.
 
 `class `**`VerifyResult`**` :   `[`MessageResult`](../object/MessageResult.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerifyResult`**  
 [`MessageResult`](../object/MessageResult.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`VerifyResult`**  
 [`DangerousVerifyResult`](../object/DangerousVerifyResult.html)  
@@ -97,19 +97,19 @@ open it.
 [`NonObviousVerifyResult`](../object/NonObviousVerifyResult.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allowAction`](#allowAction)[`excludePluralMatches`](#excludePluralMatches)[`resultRank`](#resultRank)
 
@@ -118,11 +118,11 @@ Inherited from `MessageResult` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`compareTo`](#compareTo)[`identicalTo`](#identicalTo)[`isWorseThan`](#isWorseThan)[`shouldInsertBefore`](#shouldInsertBefore)
 
@@ -131,11 +131,11 @@ Inherited from `MessageResult` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowAction"></span>
 
@@ -143,12 +143,12 @@ Inherited from `MessageResult` :
 
 [verify.t](../file/verify.t.html)\[[60](../source/verify.t.html#60)\]
 
-<div class="desc">
+
 
 Is the action allowed? This returns true if the command can be allowed
 to proceed on the basis of the verification, nil if not.
 
-</div>
+
 
 <span id="excludePluralMatches"></span>
 
@@ -156,14 +156,14 @@ to proceed on the basis of the verification, nil if not.
 
 [verify.t](../file/verify.t.html)\[[152](../source/verify.t.html#152)\]
 
-<div class="desc">
+
 
 Should we exclude plurals from being matched, when this type of result
 is present? By default, we don't; some illogical types might want to
 exclude plurals because the result types indicate such obvious
 illogicalities.
 
-</div>
+
 
 <span id="resultRank"></span>
 
@@ -171,7 +171,7 @@ illogicalities.
 
 [verify.t](../file/verify.t.html)\[[144](../source/verify.t.html#144)\]
 
-<div class="desc">
+
 
 Our result ranking relative to other results. Each result class defines
 a ranking level so that we can determine whether one result is better
@@ -182,15 +182,15 @@ game-specific result types, we assign widely spaced rankings to the
 pre-defined results. This is arbitrary; the only thing that matters in
 comparing two results is the order of the rank values.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="compareTo"></span>
 
@@ -198,12 +198,12 @@ comparing two results is the order of the rank values.
 
 [verify.t](../file/verify.t.html)\[[96](../source/verify.t.html#96)\]
 
-<div class="desc">
+
 
 compare to another: negative if I'm worse than the other, zero if we're
 the same, positive if I'm better
 
-</div>
+
 
 <span id="identicalTo"></span>
 
@@ -211,7 +211,7 @@ the same, positive if I'm better
 
 [verify.t](../file/verify.t.html)\[[127](../source/verify.t.html#127)\]
 
-<div class="desc">
+
 
 Determine if I'm identical to another result. Note that it's possible
 for two items to compare the same but not be identical - compareTo() is
@@ -220,7 +220,7 @@ the two items are exactly the same. Some subclasses (such as
 LogicalVerifyResult) distinguish among items that compare the same but
 have different reasons for their rankings.
 
-</div>
+
 
 <span id="isWorseThan"></span>
 
@@ -228,12 +228,12 @@ have different reasons for their rankings.
 
 [verify.t](../file/verify.t.html)\[[86](../source/verify.t.html#86)\]
 
-<div class="desc">
+
 
 Am I worse than another result? Returns true if this result is more
 disapproving than the other.
 
-</div>
+
 
 <span id="shouldInsertBefore"></span>
 
@@ -241,17 +241,17 @@ disapproving than the other.
 
 [verify.t](../file/verify.t.html)\[[108](../source/verify.t.html#108)\]
 
-<div class="desc">
+
 
 Determine if I should appear in a result list before the given result
 object. By default, this is true if I'm worse than the given result, but
 some types of results use special sorting orders.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

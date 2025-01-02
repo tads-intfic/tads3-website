@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 FRAMEWORK FOR THE EXTRA HINTS MECHANISM
 
@@ -69,42 +69,42 @@ the telephone pole.
 
 `class `**`ExtraHint`**` :   `[`HintOpener`](../object/HintOpener.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ExtraHint`**  
 [`HintOpener`](../object/HintOpener.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`hintDelay`](#hintDelay)[`hintDone`](#hintDone)[`hintText`](#hintText)[`location`](#location)[`openedWhen`](#openedWhen)[`priority`](#priority)
 
@@ -113,11 +113,11 @@ Inherited from `HintOpener` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkClose`](#checkClose)[`doHint`](#doHint)[`setDelay`](#setDelay)[`showHint`](#showHint)
 
@@ -125,11 +125,11 @@ Inherited from `HintOpener` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="hintDelay"></span>
 
@@ -137,12 +137,12 @@ Inherited from `HintOpener` :
 
 [hintsys.t](../file/hintsys.t.html)\[[778](../source/hintsys.t.html#778)\]
 
-<div class="desc">
+
 
 The number of turns between openWhen becoming true and this hint being
 displayed.
 
-</div>
+
 
 <span id="hintDone"></span>
 
@@ -150,12 +150,12 @@ displayed.
 
 [hintsys.t](../file/hintsys.t.html)\[[856](../source/hintsys.t.html#856)\]
 
-<div class="desc">
+
 
 For internal use only: Flag; have we done with this hint (because we've
 displayed it)?
 
-</div>
+
 
 <span id="hintText"></span>
 
@@ -163,11 +163,11 @@ displayed it)?
 
 [hintsys.t](../file/hintsys.t.html)\[[814](../source/hintsys.t.html#814)\]
 
-<div class="desc">
+
 
 The text to display in relation to this ExtraHint
 
-</div>
+
 
 <span id="location"></span>
 
@@ -175,11 +175,11 @@ The text to display in relation to this ExtraHint
 
 [hintsys.t](../file/hintsys.t.html)\[[762](../source/hintsys.t.html#762)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="openedWhen"></span>
 
@@ -187,11 +187,11 @@ The text to display in relation to this ExtraHint
 
 [hintsys.t](../file/hintsys.t.html)\[[859](../source/hintsys.t.html#859)\]
 
-<div class="desc">
+
 
 The turn on which this ExtraHint was first opened
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -199,20 +199,20 @@ The turn on which this ExtraHint was first opened
 
 [hintsys.t](../file/hintsys.t.html)\[[865](../source/hintsys.t.html#865)\]
 
-<div class="desc">
+
 
 Our priority. When two ExtraHints become available on the same term, the
 one with the higher priority will be displayed.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkClose"></span>
 
@@ -220,12 +220,12 @@ one with the higher priority will be displayed.
 
 [hintsys.t](../file/hintsys.t.html)\[[768](../source/hintsys.t.html#768)\]
 
-<div class="desc">
+
 
 The condition under which we close this ExtraHint. By default we close
 it if either hintDone becomes true or our closeWhen condition is true.
 
-</div>
+
 
 <span id="doHint"></span>
 
@@ -233,7 +233,7 @@ it if either hintDone becomes true or our closeWhen condition is true.
 
 [hintsys.t](../file/hintsys.t.html)\[[791](../source/hintsys.t.html#791)\]
 
-<div class="desc">
+
 
 If the closeWhen condition is true we remove this ExtraHint from the
 list of potentially active ExtraHints and return nil to tell the caller
@@ -244,7 +244,7 @@ open. If both conditions are met we show our text and return true to
 tell our caller that an ExtraHint has been displayed (important since we
 display at most one ExtraHint per turn). Otherwise we return nil.
 
-</div>
+
 
 <span id="setDelay"></span>
 
@@ -252,11 +252,11 @@ display at most one ExtraHint per turn). Otherwise we return nil.
 
 [hintsys.t](../file/hintsys.t.html)\[[846](../source/hintsys.t.html#846)\]
 
-<div class="desc">
+
 
 Set the number of turns that must elapse before we display this hint
 
-</div>
+
 
 <span id="showHint"></span>
 
@@ -264,15 +264,15 @@ Set the number of turns that must elapse before we display this hint
 
 [hintsys.t](../file/hintsys.t.html)\[[817](../source/hintsys.t.html#817)\]
 
-<div class="desc">
+
 
 Show the text related to this ExtraHint
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

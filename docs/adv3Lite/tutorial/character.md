@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Character
 Building  
@@ -15,7 +15,7 @@ Building
    <a href="npcoverview.html" class="nav"><em>Next:</em> Overview</a>    
 </span>
 
-</div>
+
 
 
 
@@ -23,7 +23,7 @@ Building
 
 In this chapter we start implementing some Non-Player Characters.
 
-<div class="sectoc">
+
 
 [Overview](npcoverview.html)  
 [The Security Guard — A Really Simple NPC](guard.html)  
@@ -32,11 +32,11 @@ In this chapter we start implementing some Non-Player Characters.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Character
@@ -45,4 +45,4 @@ Building
    <a href="npcoverview.html" class="nav"><em>Next:</em> Overview</a>    
 </span>
 
-</div>
+

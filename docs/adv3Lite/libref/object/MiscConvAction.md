@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `class `**`MiscConvAction`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MiscConvAction`**  
 [`IAction`](../object/IAction.html)  
@@ -50,28 +50,28 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`QueryVague`](../object/QueryVague.html)[`SayNo`](../object/SayNo.html)[`SayYes`](../object/SayYes.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curObj`](#curObj)[`isConversational`](#isConversational)[`responseProp`](#responseProp)[`topicObj`](#topicObj)
 
@@ -87,11 +87,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`getMessageParam`](#getMessageParam)
 
@@ -109,11 +109,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curObj"></span>
 
@@ -121,11 +121,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1730](../source/actions.t.html#1730)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -133,11 +133,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1753](../source/actions.t.html#1753)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="responseProp"></span>
 
@@ -145,11 +145,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1750](../source/actions.t.html#1750)\]
 
-<div class="desc">
+
 
 inherit default handling
 
-</div>
+
 
 <span id="topicObj"></span>
 
@@ -157,19 +157,19 @@ inherit default handling
 
 [actions.t](../file/actions.t.html)\[[1751](../source/actions.t.html#1751)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -177,11 +177,11 @@ inherit default handling
 
 [actions.t](../file/actions.t.html)\[[1717](../source/actions.t.html#1717)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getMessageParam"></span>
 
@@ -189,15 +189,15 @@ inherit default handling
 
 [actions.t](../file/actions.t.html)\[[1732](../source/actions.t.html#1732)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

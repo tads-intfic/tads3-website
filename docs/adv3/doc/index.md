@@ -5,17 +5,17 @@ layout: docs
 
 [TADS 3](../../index.html)
 
-<div class="menu-button">
 
-</div>
+
+
 
 <a href="../adv3lite/index.html" class="nav-element">Adv3Lite
 Bookshelf</a> <a href="#" class="nav-element current">Adv3 Bookshelf</a>
 <a href="#" class="nav-element">Cheat Sheets</a>
 
-<div id="spacer">
 
-</div>
+
+
 
 </div>
 
@@ -177,7 +177,7 @@ HTML.)</p></td>
 
 # Change Logs
 
-<div class="indent">
+
 
 <a href="t3changes.html" target="_blank"><strong>TADS 3 System Change
 History</strong></a>. This is a chronological log of changes to the TADS
@@ -198,7 +198,7 @@ the Workbench development environment on Windows.
 
 # Notes
 
-<div class="indent">
+
 
 These books are copyrighted by their respective authors. In general,
 they may be used and distributed without charge, subject to certain
@@ -213,6 +213,6 @@ is available as a
 <a href="http://www.adobe.com/products/acrobat/readstep.html"
 target="_blank">free download from Adobe</a>.
 
-</div>
 
-</div>
+
+

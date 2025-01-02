@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A CommandTopic is a TopicEntry that handles a command directed at this
 actor (e.g. BOB, JUMP).
 
 `class `**`CommandTopic`**` :   `[`CommandTopicHelper`](../object/CommandTopicHelper.html)[`ActorTopicEntry`](../object/ActorTopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandTopic`**  
 [`CommandTopicHelper`](../object/CommandTopicHelper.html)  
@@ -55,27 +55,27 @@ actor (e.g. BOB, JUMP).
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)[`matchDobj`](#matchDobj)[`matchIobj`](#matchIobj)[`myAction`](#myAction)
 
@@ -96,11 +96,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`matchTopic`](#matchTopic)
 
@@ -124,11 +124,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -136,12 +136,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3598](../source/actor.t.html#3598)\]
 
-<div class="desc">
+
 
 CommandTopics are included in the commandTopics list of their
 ActorTopicDatabase
 
-</div>
+
 
 <span id="matchDobj"></span>
 
@@ -149,12 +149,12 @@ ActorTopicDatabase
 
 [actor.t](../file/actor.t.html)\[[3587](../source/actor.t.html#3587)\]
 
-<div class="desc">
+
 
 The direct and indirect objects I must match (individually or as one of
 a list) if this CommandTopic is to be matched.
 
-</div>
+
 
 <span id="matchIobj"></span>
 
@@ -162,11 +162,11 @@ a list) if this CommandTopic is to be matched.
 
 [actor.t](../file/actor.t.html)\[[3588](../source/actor.t.html#3588)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="myAction"></span>
 
@@ -174,19 +174,19 @@ a list) if this CommandTopic is to be matched.
 
 [actor.t](../file/actor.t.html)\[[3591](../source/actor.t.html#3591)\]
 
-<div class="desc">
+
 
 the action I've just matched.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -194,15 +194,15 @@ the action I've just matched.
 
 [actor.t](../file/actor.t.html)\[[3558](../source/actor.t.html#3558)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

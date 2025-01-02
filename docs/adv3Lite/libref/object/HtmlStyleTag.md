@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 HtmlStyleTag - this is a subclass of StyleTag that provides different
 rendering depending on whether the interpreter is in HTML mode or not.
@@ -35,43 +35,43 @@ HTML mode, we display our plainOpenText and plainCloseText.
 
 `class `**`HtmlStyleTag`**` :   `[`StyleTag`](../object/StyleTag.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`HtmlStyleTag`**  
 [`StyleTag`](../object/StyleTag.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html)[`inputlineStyleTag`](../object/inputlineStyleTag.html)[`statusroomStyleTag`](../object/statusroomStyleTag.html)[`statusscoreStyleTag`](../object/statusscoreStyleTag.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`closeText`](#closeText)[`htmlCloseText`](#htmlCloseText)[`htmlOpenText`](#htmlOpenText)[`openText`](#openText)[`plainCloseText`](#plainCloseText)[`plainOpenText`](#plainOpenText)
 
@@ -80,11 +80,11 @@ Inherited from `StyleTag` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -92,11 +92,11 @@ Inherited from `StyleTag` :
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="closeText"></span>
 
@@ -104,11 +104,11 @@ Inherited from `StyleTag` :
 
 [output.t](../file/output.t.html)\[[947](../source/output.t.html#947)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="htmlCloseText"></span>
 
@@ -116,11 +116,11 @@ Inherited from `StyleTag` :
 
 [output.t](../file/output.t.html)\[[951](../source/output.t.html#951)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="htmlOpenText"></span>
 
@@ -128,11 +128,11 @@ Inherited from `StyleTag` :
 
 [output.t](../file/output.t.html)\[[950](../source/output.t.html#950)\]
 
-<div class="desc">
+
 
 our HTML-mode opening and closing text
 
-</div>
+
 
 <span id="openText"></span>
 
@@ -140,11 +140,11 @@ our HTML-mode opening and closing text
 
 [output.t](../file/output.t.html)\[[945](../source/output.t.html#945)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="plainCloseText"></span>
 
@@ -152,11 +152,11 @@ our HTML-mode opening and closing text
 
 [output.t](../file/output.t.html)\[[955](../source/output.t.html#955)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="plainOpenText"></span>
 
@@ -164,25 +164,25 @@ our HTML-mode opening and closing text
 
 [output.t](../file/output.t.html)\[[954](../source/output.t.html#954)\]
 
-<div class="desc">
+
 
 our plain (non-HTML) opening and closing text
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

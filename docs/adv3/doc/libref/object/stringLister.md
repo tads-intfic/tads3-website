@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 stringLister is a concrete SimpleLister for formatting lists of strings.
 To use this lister, pass lists of single-quoted strings (instead of
@@ -28,15 +28,15 @@ simulation objects) to showSimpleList(), etc.
 
 **`stringLister`**` :   `[`SimpleLister`](../object/SimpleLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`stringLister`**  
 [`SimpleLister`](../object/SimpleLister.html)  
@@ -44,11 +44,11 @@ simulation objects) to showSimpleList(), etc.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -59,11 +59,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getArrangedListCardinality`](#getArrangedListCardinality)[`showListItem`](#showListItem)
 
@@ -75,19 +75,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getArrangedListCardinality"></span>
 
@@ -95,13 +95,13 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1314](../source/lister.t.html#1314)\]
 
-<div class="desc">
+
 
 get the cardinality of an arranged list (we need to override this
 because our items are strings, which don't have the normal object
 properties that would let us count cardinality the usual way)
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -109,15 +109,15 @@ properties that would let us count cardinality the usual way)
 
 [lister.t](../file/lister.t.html)\[[1307](../source/lister.t.html#1307)\]
 
-<div class="desc">
+
 
 show a list item - list items are strings, so simply 'say' them
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

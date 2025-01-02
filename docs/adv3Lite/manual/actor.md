@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Actors  
 <span class="navnp"><a href="actionref.html" class="nav"><em>Prev:</em> Action Reference</a>
@@ -15,7 +15,7 @@ layout: docs
 <a href="actoroverview.html" class="nav"><em>Next:</em> NPC Overview</a>
     </span>
 
-</div>
+
 
 
 
@@ -26,7 +26,7 @@ or NPCs, i.e. actors other than the player character who play a part in
 your game). The modules actor.t, events.t and topicEntry.t must be
 included in your game for the features described in this part to work.
 
-<div class="sectoc">
+
 
 [NPC Overview](actoroverview.html)  
 [The Actor Object](actorobj.html)  
@@ -47,11 +47,11 @@ included in your game for the features described in this part to work.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Actors  
@@ -60,4 +60,4 @@ included in your game for the features described in this part to work.
 <a href="actoroverview.html" class="nav"><em>Next:</em> NPC Overview</a>
     </span>
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Pre-resolved phrase production. This isn't normally used in any actual
 grammar; instead, this is for use when building actions
@@ -35,42 +35,42 @@ already know the object we want to resolve.
 
 `class `**`PreResolvedProd`**` :   `[`BasicProd`](../object/BasicProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PreResolvedProd`**  
 [`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`obj_`](#obj_)
 
@@ -79,11 +79,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`resolveNouns`](#resolveNouns)
 
@@ -92,11 +92,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="obj_"></span>
 
@@ -104,21 +104,21 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[1886](../source/parser.t.html#1886)\]
 
-<div class="desc">
+
 
 Our pre-resolved object result. This is a list containing a single
 ResolveInfo representing our resolved object, since this is the form
 required by callers of resolveNouns.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -126,11 +126,11 @@ required by callers of resolveNouns.
 
 [parser.t](../file/parser.t.html)\[[1857](../source/parser.t.html#1857)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -138,15 +138,15 @@ required by callers of resolveNouns.
 
 [parser.t](../file/parser.t.html)\[[1875](../source/parser.t.html#1875)\]
 
-<div class="desc">
+
 
 resolve the nouns: this is easy, since we started out resolved
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

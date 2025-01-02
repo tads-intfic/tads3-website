@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The subLister is used by other listers such as inventoryLister and
 wornLister to show the contents of listed items in parentheses (e.g.
@@ -29,15 +29,15 @@ nesting is limited by the maxNestingDepth property.
 
 **`subLister`**` :   `[`ItemLister`](../object/ItemLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`subLister`**  
 [`ItemLister`](../object/ItemLister.html)  
@@ -45,11 +45,11 @@ nesting is limited by the maxNestingDepth property.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`maxNestingDepth`](#maxNestingDepth)[`nestingDepth`](#nestingDepth)[`showSubListing`](#showSubListing)
 
@@ -60,11 +60,11 @@ Inherited from `ItemLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`buildList`](#buildList)[`listed`](#listed)[`showList`](#showList)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
@@ -76,11 +76,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="maxNestingDepth"></span>
 
@@ -88,11 +88,11 @@ Inherited from `Lister` :
 
 [english.t](../file/english.t.html)\[[3154](../source/english.t.html#3154)\]
 
-<div class="desc">
+
 
 The maximum nesting depth this subLister is allowed to reach
 
-</div>
+
 
 <span id="nestingDepth"></span>
 
@@ -100,11 +100,11 @@ The maximum nesting depth this subLister is allowed to reach
 
 [english.t](../file/english.t.html)\[[3157](../source/english.t.html#3157)\]
 
-<div class="desc">
+
 
 The current nesting depth of this subLister
 
-</div>
+
 
 <span id="showSubListing"></span>
 
@@ -112,19 +112,19 @@ The current nesting depth of this subLister
 
 [english.t](../file/english.t.html)\[[3160](../source/english.t.html#3160)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="buildList"></span>
 
@@ -132,11 +132,11 @@ The current nesting depth of this subLister
 
 [english.t](../file/english.t.html)\[[3117](../source/english.t.html#3117)\]
 
-<div class="desc">
+
 
 Construct the list contents from lst to a maximum nesting depth
 
-</div>
+
 
 <span id="listed"></span>
 
@@ -144,11 +144,11 @@ Construct the list contents from lst to a maximum nesting depth
 
 [english.t](../file/english.t.html)\[[3162](../source/english.t.html#3162)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showList"></span>
 
@@ -156,11 +156,11 @@ Construct the list contents from lst to a maximum nesting depth
 
 [english.t](../file/english.t.html)\[[3148](../source/english.t.html#3148)\]
 
-<div class="desc">
+
 
 Return the result
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -168,11 +168,11 @@ Return the result
 
 [english.t](../file/english.t.html)\[[3114](../source/english.t.html#3114)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -180,11 +180,11 @@ Return the result
 
 [english.t](../file/english.t.html)\[[3106](../source/english.t.html#3106)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffix"></span>
 
@@ -192,15 +192,15 @@ Return the result
 
 [english.t](../file/english.t.html)\[[3112](../source/english.t.html#3112)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

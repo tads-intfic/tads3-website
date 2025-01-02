@@ -1,19 +1,19 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Index  
 <span class="navnp"><a href="changelog.html" class="nav"><em>Prev:</em> Change Log</a></span>
 
-</div>
+
 
 
 
@@ -2168,11 +2168,11 @@ regular UI and the Web UI)
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Index  
 <span class="navnp"><a href="changelog.html" class="nav"><em>Prev:</em> Change Log</a></span>
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Goal represents an open task: something that the player is trying to
 achieve. A Goal is an abstract object, not part of the simulated world
@@ -64,15 +64,15 @@ the game before they become relevant.
 
 `class `**`Goal`**` :   `[`MenuTopicItem`](../object/MenuTopicItem.html)[`HintMenuObject`](../object/HintMenuObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Goal`**  
 [`MenuTopicItem`](../object/MenuTopicItem.html)  
@@ -83,27 +83,27 @@ the game before they become relevant.
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`closeWhen`](#closeWhen)[`closeWhenAchieved`](#closeWhenAchieved)[`closeWhenDescribed`](#closeWhenDescribed)[`closeWhenKnown`](#closeWhenKnown)[`closeWhenRevealed`](#closeWhenRevealed)[`closeWhenSeen`](#closeWhenSeen)[`closeWhenTrue`](#closeWhenTrue)[`goalFullyDisplayed`](#goalFullyDisplayed)[`goalState`](#goalState)[`isActiveInMenu`](#isActiveInMenu)[`location`](#location)[`menuContents`](#menuContents)[`openWhen`](#openWhen)[`openWhenAchieved`](#openWhenAchieved)[`openWhenDescribed`](#openWhenDescribed)[`openWhenKnown`](#openWhenKnown)[`openWhenRevealed`](#openWhenRevealed)[`openWhenSeen`](#openWhenSeen)[`openWhenTrue`](#openWhenTrue)[`title`](#title)
 
@@ -121,11 +121,11 @@ Inherited from `HintMenuObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`displaySubItem`](#displaySubItem)[`updateContents`](#updateContents)
 
@@ -143,11 +143,11 @@ Inherited from `HintMenuObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="closeWhen"></span>
 
@@ -155,14 +155,14 @@ Inherited from `HintMenuObject` :
 
 [hintsys.t](../file/hintsys.t.html)\[[247](../source/hintsys.t.html#247)\]
 
-<div class="desc">
+
 
 Determine if there's any condition that should close this goal. We'll
 check closeWhenSeen, closeWhenDescribed, and all of the other
 closeWhenXxx conditions; if any of these return true, then we'll return
 true.
 
-</div>
+
 
 <span id="closeWhenAchieved"></span>
 
@@ -170,14 +170,14 @@ true.
 
 [hintsys.t](../file/hintsys.t.html)\[[181](../source/hintsys.t.html#181)\]
 
-<div class="desc">
+
 
 An optional Achievement object that closes this goal. Once the
 achievement is completed, this goal's state will automatically be set to
 Closed. This makes it easy to associate the goal with a puzzle: once the
 puzzle is solved, there's no need to show hints for the goal any more.
 
-</div>
+
 
 <span id="closeWhenDescribed"></span>
 
@@ -185,11 +185,11 @@ puzzle is solved, there's no need to show hints for the goal any more.
 
 [hintsys.t](../file/hintsys.t.html)\[[162](../source/hintsys.t.html#162)\]
 
-<div class="desc">
+
 
 close the goal when the given object is described
 
-</div>
+
 
 <span id="closeWhenKnown"></span>
 
@@ -197,11 +197,11 @@ close the goal when the given object is described
 
 [hintsys.t](../file/hintsys.t.html)\[[193](../source/hintsys.t.html#193)\]
 
-<div class="desc">
+
 
 an optional Topic or Thing that closes this goal when known
 
-</div>
+
 
 <span id="closeWhenRevealed"></span>
 
@@ -209,11 +209,11 @@ an optional Topic or Thing that closes this goal when known
 
 [hintsys.t](../file/hintsys.t.html)\[[203](../source/hintsys.t.html#203)\]
 
-<div class="desc">
+
 
 an optional \<.reveal\> tag that closes this goal when revealed
 
-</div>
+
 
 <span id="closeWhenSeen"></span>
 
@@ -221,13 +221,13 @@ an optional \<.reveal\> tag that closes this goal when revealed
 
 [hintsys.t](../file/hintsys.t.html)\[[153](../source/hintsys.t.html#153)\]
 
-<div class="desc">
+
 
 An option object that, when seen by the player character, closes this
 goal. Many goals will be things like "how do I find the X?", in which
 case it's nice to close the goal when the X is found.
 
-</div>
+
 
 <span id="closeWhenTrue"></span>
 
@@ -235,11 +235,11 @@ case it's nice to close the goal when the X is found.
 
 [hintsys.t](../file/hintsys.t.html)\[[215](../source/hintsys.t.html#215)\]
 
-<div class="desc">
+
 
 an optional general-purpose check that closes the goal
 
-</div>
+
 
 <span id="goalFullyDisplayed"></span>
 
@@ -247,7 +247,7 @@ an optional general-purpose check that closes the goal
 
 [hintsys.t](../file/hintsys.t.html)\[[271](../source/hintsys.t.html#271)\]
 
-<div class="desc">
+
 
 Has this goal been fully displayed? The hint system automatically sets
 this to true when the last item in our hint list is displayed.
@@ -263,7 +263,7 @@ this, simply add this to the Goal object:
   
 closeWhenTrue = (goalFullyDisplayed)
 
-</div>
+
 
 <span id="goalState"></span>
 
@@ -271,13 +271,13 @@ closeWhenTrue = (goalFullyDisplayed)
 
 [hintsys.t](../file/hintsys.t.html)\[[348](../source/hintsys.t.html#348)\]
 
-<div class="desc">
+
 
 This goal's current state. We'll start off undiscovered. When a goal
 should be open from the very start of the game, this should be
 overridden and set to OpenGoal.
 
-</div>
+
 
 <span id="isActiveInMenu"></span>
 
@@ -285,11 +285,11 @@ overridden and set to OpenGoal.
 
 [hintsys.t](../file/hintsys.t.html)\[[341](../source/hintsys.t.html#341)\]
 
-<div class="desc">
+
 
 we're active in our parent menu if our goal state is Open
 
-</div>
+
 
 <span id="location"></span>
 
@@ -297,7 +297,7 @@ we're active in our parent menu if our goal state is Open
 
 [hintsys.t](../file/hintsys.t.html)\[[120](../source/hintsys.t.html#120)\]
 
-<div class="desc">
+
 
 Our parent menu - this is usually a HintMenu object. In very simple hint
 systems, this could simply be a top-level hint menu container; more
@@ -305,7 +305,7 @@ typically, the hint system will be structured into a menu tree that
 organizes the hint topics into several different submenus, for easier
 navigatino.
 
-</div>
+
 
 <span id="menuContents"></span>
 
@@ -313,7 +313,7 @@ navigatino.
 
 [hintsys.t](../file/hintsys.t.html)\[[134](../source/hintsys.t.html#134)\]
 
-<div class="desc">
+
 
 The list of hints for this topic. This should be ordered from most
 general to most specific; we offer the hints in the order they appear in
@@ -326,7 +326,7 @@ be a Hint object. In most cases, a string will do. A Hint object is only
 needed when displaying the hint has some side effect, such as opening a
 new Goal.
 
-</div>
+
 
 <span id="openWhen"></span>
 
@@ -334,7 +334,7 @@ new Goal.
 
 [hintsys.t](../file/hintsys.t.html)\[[233](../source/hintsys.t.html#233)\]
 
-<div class="desc">
+
 
 Determine if there's any condition that should open this goal. This
 checks openWhenSeen, openWhenDescribed, and all of the other openWhenXxx
@@ -349,7 +349,7 @@ to override openWhen to add the new condition: simply define openWhen as
 (inherited \|\| newCondition), where 'newCondition' is the new special
 condition you want to add.
 
-</div>
+
 
 <span id="openWhenAchieved"></span>
 
@@ -357,7 +357,7 @@ condition you want to add.
 
 [hintsys.t](../file/hintsys.t.html)\[[172](../source/hintsys.t.html#172)\]
 
-<div class="desc">
+
 
 An optional Achievement object that opens this goal. This goal will be
 opened automatically once the goal is achieved, if the goal was
@@ -366,7 +366,7 @@ becomes available after a particular puzzle is solved, which is useful
 when a new puzzle only becomes known to the player after a gating puzzle
 has been solved.
 
-</div>
+
 
 <span id="openWhenDescribed"></span>
 
@@ -374,12 +374,12 @@ has been solved.
 
 [hintsys.t](../file/hintsys.t.html)\[[159](../source/hintsys.t.html#159)\]
 
-<div class="desc">
+
 
 this is like openWhenSeen, but opens the topic when the given object is
 described (with EXAMINE)
 
-</div>
+
 
 <span id="openWhenKnown"></span>
 
@@ -387,7 +387,7 @@ described (with EXAMINE)
 
 [hintsys.t](../file/hintsys.t.html)\[[190](../source/hintsys.t.html#190)\]
 
-<div class="desc">
+
 
 An optional Topic or Thing that opens this goal when the object becomes
 "known" to the player character. This will open the goal as soon as
@@ -395,7 +395,7 @@ gPlayerChar.knowsAbout(openWhenKnown) returns true. This makes it easy
 to open a goal as soon as the player comes across some information in
 the game.
 
-</div>
+
 
 <span id="openWhenRevealed"></span>
 
@@ -403,13 +403,13 @@ the game.
 
 [hintsys.t](../file/hintsys.t.html)\[[200](../source/hintsys.t.html#200)\]
 
-<div class="desc">
+
 
 An optional \<.reveal\> tag name that opens this goal. If this is set to
 a non-nil string, we'll automatically open this goal when the tag has
 been revealed via \<.reveal\> (or gReveal()).
 
-</div>
+
 
 <span id="openWhenSeen"></span>
 
@@ -417,7 +417,7 @@ been revealed via \<.reveal\> (or gReveal()).
 
 [hintsys.t](../file/hintsys.t.html)\[[145](../source/hintsys.t.html#145)\]
 
-<div class="desc">
+
 
 An optional object that, when seen by the player character, opens this
 goal. It's often convenient to declare a goal open as soon as the player
@@ -426,7 +426,7 @@ such cases, simply set this property to the room or object that opens
 the goal, and we'll automatically mark the goal as Open the next time
 the player asks for a hint after seeing the referenced object.
 
-</div>
+
 
 <span id="openWhenTrue"></span>
 
@@ -434,14 +434,14 @@ the player asks for a hint after seeing the referenced object.
 
 [hintsys.t](../file/hintsys.t.html)\[[212](../source/hintsys.t.html#212)\]
 
-<div class="desc">
+
 
 An optional arbitrary check that opens the goal. If this returns true,
 we'll open the goal. This check is made in addition to the other checks
 (openWhenSeen, openWhenDescribed, etc). This can be used for any custom
 check that doesn't fit into one of the standard openWhenXxx properties.
 
-</div>
+
 
 <span id="title"></span>
 
@@ -449,21 +449,21 @@ check that doesn't fit into one of the standard openWhenXxx properties.
 
 [hintsys.t](../file/hintsys.t.html)\[[111](../source/hintsys.t.html#111)\]
 
-<div class="desc">
+
 
 The topic question associated with the goal. The hint system shows a
 list of the topics for the goals that are currently open, so that the
 player can decide what area they want help on.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="displaySubItem"></span>
 
@@ -471,11 +471,11 @@ player can decide what area they want help on.
 
 [hintsys.t](../file/hintsys.t.html)\[[330](../source/hintsys.t.html#330)\]
 
-<div class="desc">
+
 
 display a sub-item, keeping track of when we've shown them all
 
-</div>
+
 
 <span id="updateContents"></span>
 
@@ -483,7 +483,7 @@ display a sub-item, keeping track of when we've shown them all
 
 [hintsys.t](../file/hintsys.t.html)\[[299](../source/hintsys.t.html#299)\]
 
-<div class="desc">
+
 
 Check our menu state and update it if necessary. Each time our parent
 menu is about to display, it'll call this on its sub-items to let them
@@ -508,11 +508,11 @@ referenced by openWhenSeen has been seen by the player character, then
 we'll change our state to Open. We'll make the corresponding check for
 openWhenDescribed.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -55,44 +55,45 @@ SenseRegion itself but in defining what particular objects can be
 other kind of Region, and then assign rooms to it by listing the
 SenseRegion in their regions property, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    countryside: Region
-    ;
+<p>`
+    countryside: Region
+    ;</p>
 
-    meadowRegion: SenseRegion
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>meadowRegion: SenseRegion
+;
 
-    sun: MultiLoc, Distant 'sky; blue cloudless bright; sun; it'
-        "The sun glares down from the cloudless blue sky above. "
-        locationList = [countryside]
-    ;
-        
-    meadow: Room 'Meadow' 'meadow'
-        "&lt;&lt;first time&gt;&gt;You've no idea how you got here, nor do you recognize this
-        place.&lt;&lt;only&gt;&gt; Tall grass and wild flowers grow in profusion, forming an
-        even carpet that slopes down towards a riverbank to what you instinctively
-        think of as the east. To the south lies a thick band of trees, a large
-        wood or perhaps even a forest. To the north is another field, while a steep
-        hill rises up a short way off to the west. "
-        
-        east = riverbank
-        south = forestPath
-        west = hillsideFromMeadow
-        north = field
-        
-        regions = [countryside, meadowRegion]
-    ;
+sun: MultiLoc, Distant 'sky; blue cloudless bright; sun; it'
+    "The sun glares down from the cloudless blue sky above. "
+    locationList = [countryside]
+;
+    
+meadow: Room 'Meadow' 'meadow'
+    "&lt;&lt;first time&gt;&gt;You've no idea how you got here, nor do you recognize this
+    place.&lt;&lt;only&gt;&gt; Tall grass and wild flowers grow in profusion, forming an
+    even carpet that slopes down towards a riverbank to what you instinctively
+    think of as the east. To the south lies a thick band of trees, a large
+    wood or perhaps even a forest. To the north is another field, while a steep
+    hill rises up a short way off to the west. "
+    
+    east = riverbank
+    south = forestPath
+    west = hillsideFromMeadow
+    north = field
+    
+    regions = [countryside, meadowRegion]
+;
 
-    riverbank: Room 'Riverbank' 'riverbank;;bank'
-        "A broad river runs lazily by just to the west. The way south is blocked by
-        a thick belt of trees extending all the way down to the water's edge, but
-        there's nothing to stop you carrying along the riverbank to the north, or
-        wandering off west towards the meadow. "
+riverbank: Room 'Riverbank' 'riverbank;;bank'
+    "A broad river runs lazily by just to the west. The way south is blocked by
+    a thick belt of trees extending all the way down to the water's edge, but
+    there's nothing to stop you carrying along the riverbank to the north, or
+    wandering off west towards the meadow. "
+    
+    west = meadow
+    north = marsh
         
-        west = meadow
-        north = marsh
-            
-        regions = [countryside, meadowRegion]                                                
-    ;
+    regions = [countryside, meadowRegion]                                                
+; `
 </code></pre></div></div>
 
 <p>By default you can see, hear and smell (but not touch) objects in one
@@ -192,27 +193,29 @@ connection can change according to some other factor, such as whether a
 door or window is open or closed. If a window between two rooms blocked
 sound and smell when it was closed you might define:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     hall: Room 'Hall'
-       "A window looks out to the east. "
+<p>`
+     hall: Room ‘Hall’
+       “A window looks out to the east. “
        canHearOutTo(loc) { return window.isOpen; }
-       canSmellOutTo(loc) { return window.isOpen; }
-       
-       regions = [windowRegion]
-    ;
+       canSmellOutTo(loc) { return window.isOpen; }</p>
 
-    + window: Fixture 'window'
-       "The window looks out over the lawn. "
-       isOpenable = true
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   regions = [windowRegion]
+;
 
-    lawn: Room 'Lawn'
-       regions = [windowRegion]
-    ;
++ window: Fixture 'window'
+   "The window looks out over the lawn. "
+   isOpenable = true
+;
 
-    windowRegion: SenseRegion
-    ;
-     
+lawn: Room 'Lawn'
+   regions = [windowRegion]
+;
+
+windowRegion: SenseRegion
+;
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>Note that while a SenseRegion’s <code class="language-plaintext highlighter-rouge">familiar</code>
 property has the same meaning as it does on an ordinary
@@ -320,19 +323,19 @@ overridden the usual specialDesc and/or initSpecialDesc will be used,
 but most of the time it will normally be appropriate to provide an
 alternative for remote viewing, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + Fixture 'scarecrow; poor wretched straw; man sticks'
-        "It's a poor wretched thing, little more than a couple of sticks stuffed
-        with straw wearing a faded brown coat; a straw man if ever there was one! "
-            
+<p>`
+    + Fixture ‘scarecrow; poor wretched straw; man sticks’
+        “It’s a poor wretched thing, little more than a couple of sticks stuffed
+        with straw wearing a faded brown coat; a straw man if ever there was one! “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    specialDesc = "A scarecrow stands guard over the crop at the centre of the
+        field, doing his best to ward off the crows. "
         
-        specialDesc = "A scarecrow stands guard over the crop at the centre of the
-            field, doing his best to ward off the crows. "
-            
-        remoteSpecialDesc(pov)
-        {
-            "Off in the distance a scarecrow stands lonely guard over the field. ";
-        }    
-    ;
+    remoteSpecialDesc(pov)
+    {
+        "Off in the distance a scarecrow stands lonely guard over the field. ";
+    }    
+; `
 </code></pre></div></div>
 
 <p>Where items don’t have a specialDesc (or initSpecialDesc) they’re
@@ -341,33 +344,34 @@ The miscellaneous items in remote rooms are listed after those in the
 player character’s immediate location, usually prefaced with ‘in’
 followed by the name of the room, for example, suppose we had defined:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    meadow: Room 'Meadow' 'meadow'
-        "Tall grass and wild flowers grow in profusion, forming an
+<p>`
+    meadow: Room ‘Meadow’ ‘meadow’
+        “Tall grass and wild flowers grow in profusion, forming an
         even carpet that slopes down towards a riverbank to what you instinctively
         think of as the east. To the south lies a thick band of trees, a large
         wood or perhaps even a forest. To the north is another field, while a steep
-        hill rises up a short way off to the west. "
-        
-        east = riverbank
-        south = forestPath
-        west = hillsideFromMeadow
-        north = field
-        
-        regions = [countryside, meadowRegion]
-    ;
+        hill rises up a short way off to the west. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    east = riverbank
+    south = forestPath
+    west = hillsideFromMeadow
+    north = field
+    
+    regions = [countryside, meadowRegion]
+;
 
 
-    riverbank: Room 'Riverbank' 'riverbank;;bank'
-        "A broad river runs lazily by just to the west. The way south is blocked by
-        a thick belt of trees extending all the way down to the water's edge, but
-        there's nothing to stop you carrying along the riverbank to the north, or
-        wandering off west towards the meadow. "
-        
-        west = meadow
-        north = marsh
-       
-        regions = [countryside, meadowRegion]                                                
-    ;
+riverbank: Room 'Riverbank' 'riverbank;;bank'
+    "A broad river runs lazily by just to the west. The way south is blocked by
+    a thick belt of trees extending all the way down to the water's edge, but
+    there's nothing to stop you carrying along the riverbank to the north, or
+    wandering off west towards the meadow. "
+    
+    west = meadow
+    north = marsh
+   
+    regions = [countryside, meadowRegion]                                                
+; `
 </code></pre></div></div>
 
 <p>Now suppose we drop a couple of objects in the riverbank location and
@@ -392,7 +396,7 @@ To deal with this we'd probably override the riverbank's
 listing of miscellaneous items to be introduced when they're viewed
 remotely by the pov object. So, for example, we might define:
 
-```
+`
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -406,7 +410,7 @@ remotely by the pov object. So, for example, we might define:
 
         inRoomName(pov) { return 'down by the riverbank'; }    
     ;
-```
+`
 
 This would then give us:
 
@@ -427,7 +431,7 @@ objects are listed in a remote location by using a
 attaching a CustomRoomLister to the remoteContentsLister property of the
 room to be viewed remotely. For example we could define:
 
-```
+`
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -443,7 +447,7 @@ room to be viewed remotely. For example we could define:
             method(lst, pl, irName) 
             { "&lt;.p&gt;Lying close to the riverbank &lt;<if pl="">&gt;are&lt;<else>&gt;is&lt;<end>&gt; "; })  
     ;
-```
+`
 
 And this would give us:
 
@@ -460,7 +464,7 @@ And this would give us:
 
 Or as another variation we might define:
 
-```
+`
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -476,7 +480,7 @@ Or as another variation we might define:
             pl, irName) { " &lt;<if pl="">&gt;lie&lt;<else>&gt;lies&lt;<end>&gt; abandoned down by the
                 riverbank. "; })
     ;
-```
+`
 
 And this would give us:
 
@@ -525,7 +529,7 @@ soundSize and/or smellSize isn't small.
 
 So, for example, we might define:
 
-```
+`
     + crows: Decoration 'crows; nasty big black; birds; them'
         "Nasty big black things. You never did like them, even since one scared you
         as a child. "
@@ -553,7 +557,7 @@ So, for example, we might define:
             only that way can you show the full extent of your contempt for the
             horrid things. '
     ;
-```
+`
 
   
 <span id="listorder"></span>
@@ -577,12 +581,12 @@ For example, if we want the ploughed field's contents to be listed after
 those of the meadow when viewed from the riverBank, we could define the
 following on the ploughedField Room:
 
-```
+`
         remoteRoomListOrder(pov)
         {
             return pov == riverBank ? 200 : inherited(pov);
         }
-```
+`
 
   
 
@@ -654,7 +658,7 @@ used to provide a customized response, or else to make sightSize a
 method that returns medium or large depending on the viewing conditions,
 e.g.:
 
-```
+`
     modify Actor
        sightSize()
        {
@@ -664,7 +668,7 @@ e.g.:
           return medium;
        }
     ;
-```
+`
 
 Similar considerations may apply to listening to a remote actor via a
 commLink.

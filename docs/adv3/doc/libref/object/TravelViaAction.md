@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An internal action for traveling via a connector. This isn't a real
 action, and shouldn't have a grammar defined for it. The purpose of this
@@ -37,15 +37,15 @@ the base travel connector class.
 `DefineTAction(TravelVia)      `*`// original source text`*  
 `class `**`TravelViaAction`**` :   `[`TAction`](../object/TAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TravelViaAction`**  
 [`TAction`](../object/TAction.html)  
@@ -56,29 +56,29 @@ the base travel connector class.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TravelViaAction`**  
 [`EnTravelVia`](../object/EnTravelVia.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`getCurrentObjects`](#getCurrentObjects)
 
@@ -96,11 +96,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -118,11 +118,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="getCurrentObjects"></span>
 
@@ -130,7 +130,7 @@ Inherited from `Resolver` :
 
 [actions.t](../file/actions.t.html)\[[2874](../source/actions.t.html#2874)\]
 
-<div class="desc">
+
 
 The direct object of this synthetic action isn't necessarily an ordinary
 simulation object: it could be a TravelConnector instead. Since callers
@@ -140,21 +140,21 @@ this, we return an empty object list by default - this ensures that no
 one who asks for the direct object of the verb will get back a
 non-simulation travel connector.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

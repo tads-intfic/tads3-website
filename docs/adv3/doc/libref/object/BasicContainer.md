@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A basic container is an object that can enclose its contents. This is
 the core of the Container type, but this class only has the bare-bones
@@ -38,15 +38,15 @@ when we're closed.
 
 `class `**`BasicContainer`**` :   `[`BulkLimiter`](../object/BulkLimiter.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BasicContainer`**  
 [`BulkLimiter`](../object/BulkLimiter.html)  
@@ -55,11 +55,11 @@ when we're closed.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BasicContainer`**  
 [`Container`](../object/Container.html)  
@@ -74,19 +74,19 @@ when we're closed.
 [`StretchyContainer`](../object/StretchyContainer.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotMoveThroughMsg`](#cannotMoveThroughMsg)[`cannotTouchThroughMsg`](#cannotTouchThroughMsg)[`isOpen`](#isOpen)[`material`](#material)[`putDestMessage`](#putDestMessage)[`tooLargeForContainerMsg`](#tooLargeForContainerMsg)
 
@@ -101,11 +101,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canFitObjThruOpening`](#canFitObjThruOpening)[`cannotReachObject`](#cannotReachObject)[`cannotSeeSmellSource`](#cannotSeeSmellSource)[`cannotSeeSoundSource`](#cannotSeeSoundSource)[`canObjReachThruOpening`](#canObjReachThruOpening)[`checkMoveViaPath`](#checkMoveViaPath)[`checkTouchViaPath`](#checkTouchViaPath)[`fillMedium`](#fillMedium)[`transSensingIn`](#transSensingIn)
 
@@ -120,11 +120,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotMoveThroughMsg"></span>
 
@@ -132,12 +132,12 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[4700](../source/objects.t.html#4700)\]
 
-<div class="desc">
+
 
 The message property we use when we can't move an object through the
 containment boundary. This is a playerActionMessages property.
 
-</div>
+
 
 <span id="cannotTouchThroughMsg"></span>
 
@@ -145,13 +145,13 @@ containment boundary. This is a playerActionMessages property.
 
 [objects.t](../file/objects.t.html)\[[4748](../source/objects.t.html#4748)\]
 
-<div class="desc">
+
 
 Library message (in playerActionMessages) explaining why we can't touch
 an object through this container. This is used when an actor on the
 outside tries to reach something on the inside, or vice versa.
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -159,14 +159,14 @@ outside tries to reach something on the inside, or vice versa.
 
 [objects.t](../file/objects.t.html)\[[4657](../source/objects.t.html#4657)\]
 
-<div class="desc">
+
 
 My current open/closed state. By default, this state never changes, but
 is fixed in the object's definition; for example, a box without a lid
 would always be open, while a hollow glass cube would always be closed.
 Our default state is open.
 
-</div>
+
 
 <span id="material"></span>
 
@@ -174,11 +174,11 @@ Our default state is open.
 
 [objects.t](../file/objects.t.html)\[[4660](../source/objects.t.html#4660)\]
 
-<div class="desc">
+
 
 the material that we're made of
 
-</div>
+
 
 <span id="putDestMessage"></span>
 
@@ -186,11 +186,11 @@ the material that we're made of
 
 [objects.t](../file/objects.t.html)\[[4663](../source/objects.t.html#4663)\]
 
-<div class="desc">
+
 
 prepositional phrase for objects being put into me
 
-</div>
+
 
 <span id="tooLargeForContainerMsg"></span>
 
@@ -198,19 +198,19 @@ prepositional phrase for objects being put into me
 
 [objects.t](../file/objects.t.html)\[[4862](../source/objects.t.html#4862)\]
 
-<div class="desc">
+
 
 message when an object is too large (all by itself) to fit in me
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canFitObjThruOpening"></span>
 
@@ -218,7 +218,7 @@ message when an object is too large (all by itself) to fit in me
 
 [objects.t](../file/objects.t.html)\[[4765](../source/objects.t.html#4765)\]
 
-<div class="desc">
+
 
 Determine if the given object fits through our opening. This is only
 called when we're open; this determines if the object can be moved in or
@@ -232,7 +232,7 @@ about whether or not the object can fit through the opening itself. This
 allows for things like narrow-mouthed bottles which have greater
 capacity within than in their openings.
 
-</div>
+
 
 <span id="cannotReachObject"></span>
 
@@ -240,12 +240,12 @@ capacity within than in their openings.
 
 [objects.t](../file/objects.t.html)\[[4827](../source/objects.t.html#4827)\]
 
-<div class="desc">
+
 
 Display a message explaining why we are obstructing a sense path to the
 given object.
 
-</div>
+
 
 <span id="cannotSeeSmellSource"></span>
 
@@ -253,11 +253,11 @@ given object.
 
 [objects.t](../file/objects.t.html)\[[4852](../source/objects.t.html#4852)\]
 
-<div class="desc">
+
 
 explain why we can't see the source of an odor
 
-</div>
+
 
 <span id="cannotSeeSoundSource"></span>
 
@@ -265,11 +265,11 @@ explain why we can't see the source of an odor
 
 [objects.t](../file/objects.t.html)\[[4842](../source/objects.t.html#4842)\]
 
-<div class="desc">
+
 
 explain why we can't see the source of a sound
 
-</div>
+
 
 <span id="canObjReachThruOpening"></span>
 
@@ -277,7 +277,7 @@ explain why we can't see the source of a sound
 
 [objects.t](../file/objects.t.html)\[[4779](../source/objects.t.html#4779)\]
 
-<div class="desc">
+
 
 Determine if the given object can "reach" through our opening, for the
 purposes of touching an object on the other side of the opening. This is
@@ -290,7 +290,7 @@ This differs from canFitObjThruOpening() in that we don't care if all of
 'obj' is able to fit through the opening; we only care whether obj's
 hand (or whatever it uses for reaching) can fit.
 
-</div>
+
 
 <span id="checkMoveViaPath"></span>
 
@@ -298,11 +298,11 @@ hand (or whatever it uses for reaching) can fit.
 
 [objects.t](../file/objects.t.html)\[[4669](../source/objects.t.html#4669)\]
 
-<div class="desc">
+
 
 Determine if I can move an object via a path through this container.
 
-</div>
+
 
 <span id="checkTouchViaPath"></span>
 
@@ -310,12 +310,12 @@ Determine if I can move an object via a path through this container.
 
 [objects.t](../file/objects.t.html)\[[4706](../source/objects.t.html#4706)\]
 
-<div class="desc">
+
 
 Determine if an actor can touch an object via a path through this
 container.
 
-</div>
+
 
 <span id="fillMedium"></span>
 
@@ -323,14 +323,14 @@ container.
 
 [objects.t](../file/objects.t.html)\[[4806](../source/objects.t.html#4806)\]
 
-<div class="desc">
+
 
 Get my fill medium. If I'm open, inherit my parent's medium, assuming
 that the medium behaves like fog or smoke and naturally disperses to
 fill any nested open containers. If I'm closed, I am by default filled
 with no medium.
 
-</div>
+
 
 <span id="transSensingIn"></span>
 
@@ -338,17 +338,17 @@ with no medium.
 
 [objects.t](../file/objects.t.html)\[[4786](../source/objects.t.html#4786)\]
 
-<div class="desc">
+
 
 Determine how a sense passes to my contents. If I'm open, the sense
 passes through directly, since there's nothing in the way. If I'm
 closed, the sense must pass through my material.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

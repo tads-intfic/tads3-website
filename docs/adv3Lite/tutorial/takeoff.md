@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="cockpit.html" class="nav">Cockpit Controls</a> \> Taking Off  
@@ -16,7 +16,7 @@ Actions</a>    
 <a href="character.html" class="nav"><em>Next:</em> Character
 Building</a>     </span>
 
-</div>
+
 
 
 
@@ -32,7 +32,7 @@ plane to the start of the runway, leaving the plane ready for take-off.
 We'll also reset the controls to their starting positions, and close off
 the exit from the plane to the walkway:
 
-`
+```
     takeoff: Scene
         startsWhen = (ignitionButton.isOn == true)
         
@@ -53,7 +53,7 @@ the exit from the plane to the walkway:
             planeFront.port = 'You can\'t leave the plane now it\'s left the jetway.
                 ';
         }
-`
+```
 
 We'll use the `eachTurn()` method of the takeoff
 scene to control just about everything else. A scene's
@@ -79,7 +79,7 @@ player pulls back much too early then nothing much happens until the
 plane has picked up just enough speed to start taking off and then
 stall:
 
-`
+```
         /* The total distance traveled along the runway */
         distanceTraveled = 0
         
@@ -113,7 +113,7 @@ stall:
                     "The aircraft judders slightly but nothing else happens; it
                     isn't traveling nearly fast enough to take off. ";
             }
-`
+```
 
 We next need to do some calculations to determine how fast the plane is
 now travelling and how far down the runway it has travelled. There's no
@@ -131,7 +131,7 @@ traveled by the average of the new airspeed and the previous airspeed
 tutorial in applied mathematics, don't worry if these details don't make
 too much sense to you. In terms of code they look like:
 
-`
+```
             local thrust = toInteger(thrustLever.curSetting) * 400 - asi.airspeed;
             
             asi.airspeed += (thrust/100);
@@ -140,7 +140,7 @@ too much sense to you. In terms of code they look like:
                 asi.airspeed = 0;
             
             distanceTraveled += ((asi.airspeed + oldSpeed)/2);
-`
+```
 
 Here we're simply assuming that one turn represents an appropriate unit
 of time. Note the use of the **toInteger()** function to convert the
@@ -152,7 +152,7 @@ method the plane hasn't taken off yet, so we need to check that it
 hasn't overshot the runway. If it has, then a fatal crash occurs and we
 end the game in death:
 
-`
+```
            /* If we go too far, we run off the end of the runway */
             if(distanceTraveled > 500)
             {
@@ -163,7 +163,7 @@ end the game in death:
                 
                 finishGameMsg(ftDeath, [finishOptionUndo]);
             }
-`
+```
 
 The figure of 500 for the length of the runway wasn't arrived at by any
 kind of calculation, by the way; I simply ran the previous code to get
@@ -177,7 +177,7 @@ runway will send it to one side or the other with catastrophic effects,
 although in case the player tries this more than once we'll introduce
 some slight variations into the description of the ensuing catastrophe:
 
-`
+```
             /* 
              *   If we turn the wheel while the plane is moving along the runway,
              *   the results are likely to be catastrophic.
@@ -194,7 +194,7 @@ some slight variations into the description of the ensuing catastrophe:
                 
                 finishGameMsg(ftDeath, [finishOptionUndo]);
             }
-`
+```
 
 If you've been following the logic of what we've been doing up until now
 at all closely, you'll have noticed that this is the only effect that
@@ -216,7 +216,7 @@ The final task for this `eachTurn()` to perform
 is to provide the player with some feedback on what's happening if
 nothing more dramatic has intervened:
 
-`
+```
             /* 
              *   If nothing else dramatic has intervened, report what's happening to
              *   the speed.
@@ -233,7 +233,7 @@ nothing more dramatic has intervened:
                 "The plane is losing speed. ";
         }   
     ;
-`
+```
 
 Hopefully the logic of this should be reasonably apparent. If the speed
 has increased since the previous turn, we select a message depending on
@@ -245,7 +245,7 @@ If we now put all the pieces together, the complete definition of the
 takeoff scene (which does all the work of responding to the movement of
 the cockpit controls) looks like this:
 
-`
+```
     takeoff: Scene
         startsWhen = (ignitionButton.isOn == true)
         
@@ -360,7 +360,7 @@ the cockpit controls) looks like this:
                 "The plane is losing speed. ";
         }   
     ;
-`
+```
 
 There is quite a lot happening on this Scene object, but it's probably
 easier to co-ordinate it all there rather than distribute the effects of
@@ -376,7 +376,7 @@ depending on what's happening, so perhaps the easiest approach is to
 make the windscreen's `desc` property a method
 that calls a separate method when the takeoff scene is in progress:
 
-`
+```
     + windscreen: Fixture 'windscreen;; window windshield'
         desc()
         {
@@ -405,7 +405,7 @@ that calls a separate method when the takeoff scene is in progress:
         
         dobjFor(LookThrough) asDobjFor(Examine)
     ;
-`
+```
 
 Defining `takeoff.distanceTraveled/5` at the
 start of the `takeoffDesc` method not only saves
@@ -424,7 +424,7 @@ directly after the end of the windscreen object, assuming that the
 windscreen is the last of the cockpit contents objects you've defined in
 your source:
 
-`
+```
     + terminalBuilding: Distant 'terminal building; shabby white large; structure'
         "It's a large white structure just off to port. In the fading light you
         can't really make out how shabby it actually looks. "
@@ -458,7 +458,7 @@ your source:
             terminalBuilding.moveInto(nil);
         }
         ...
-`
+```
 
 By making the `terminalBuilding` and
 `landingLights` both of the
@@ -496,7 +496,7 @@ game.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -506,4 +506,4 @@ Actions</a>    
 <a href="character.html" class="nav"><em>Next:</em> Character
 Building</a>     </span>
 
-</div>
+

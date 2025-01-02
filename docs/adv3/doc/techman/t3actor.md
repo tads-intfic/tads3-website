@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Creating Dynamic
@@ -17,7 +17,7 @@ Context-Sensitive Help System</a>    
 <a href="convbkg.html" class="nav"><em>Next:</em> Choosing a Conversation
 System</a>     </span>
 
-</div>
+
 
 
 
@@ -822,7 +822,7 @@ creating a series of custom state objects, one for each travel action.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -833,4 +833,4 @@ Context-Sensitive Help System</a>    
 <a href="convbkg.html" class="nav"><em>Next:</em> Choosing a Conversation
 System</a>     </span>
 
-</div>
+

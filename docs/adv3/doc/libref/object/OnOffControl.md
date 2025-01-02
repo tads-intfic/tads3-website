@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 OnOffControl - a generic control that can be turned on and off. We keep
 track of an internal on/off state, and recognize the commands "turn on"
@@ -34,15 +34,15 @@ and "turn off".
 
 `class `**`OnOffControl`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OnOffControl`**  
 [`Thing`](../object/Thing.html)  
@@ -50,30 +50,30 @@ and "turn off".
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`OnOffControl`**  
 [`Switch`](../object/Switch.html)  
 [`Flashlight`](../object/Flashlight.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isOn`](#isOn)[`onDesc`](#onDesc)
 
@@ -85,11 +85,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(TurnOff)`](#dobjFor(TurnOff))[`dobjFor(TurnOn)`](#dobjFor(TurnOn))[`makeOn`](#makeOn)
 
@@ -101,11 +101,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isOn"></span>
 
@@ -113,12 +113,12 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5262](../source/objects.t.html#5262)\]
 
-<div class="desc">
+
 
 The current on/off setting. We'll start in the 'off' position by
 default.
 
-</div>
+
 
 <span id="onDesc"></span>
 
@@ -126,20 +126,20 @@ default.
 
 [objects.t](../file/objects.t.html)\[[5268](../source/objects.t.html#5268)\]
 
-<div class="desc">
+
 
 On/off status name. This returns the appropriate name ('on' or 'off' in
 English) for our current status.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(TurnOff)"></span>
 
@@ -147,11 +147,11 @@ English) for our current status.
 
 [objects.t](../file/objects.t.html)\[[5296](../source/objects.t.html#5296)\]
 
-<div class="desc">
+
 
 set to 'on' and generate a default report
 
-</div>
+
 
 <span id="dobjFor(TurnOn)"></span>
 
@@ -159,11 +159,11 @@ set to 'on' and generate a default report
 
 [objects.t](../file/objects.t.html)\[[5280](../source/objects.t.html#5280)\]
 
-<div class="desc">
+
 
 remember the new value
 
-</div>
+
 
 <span id="makeOn"></span>
 
@@ -171,16 +171,16 @@ remember the new value
 
 [objects.t](../file/objects.t.html)\[[5274](../source/objects.t.html#5274)\]
 
-<div class="desc">
+
 
 Change our on/off setting. Subclasses can override this to apply any
 side effects of changing the value.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

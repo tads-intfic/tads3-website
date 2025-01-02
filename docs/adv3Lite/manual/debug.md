@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Scope  
@@ -16,7 +16,7 @@ layout: docs
 <a href="actionref.html" class="nav"><em>Next:</em> Action Reference</a>
     </span>
 
-</div>
+
 
 
 
@@ -99,7 +99,7 @@ the expression evaluates to an object EVAL diplays the name property of
 the object (if it has one) together with its superclass list. For
 example:
 
-<div class="cmdline">
+
 
     >eval 2 + 5
     7
@@ -152,7 +152,7 @@ have a SUMMON command which can summon any object into the player
 character's presence (i.e. the same room as the player character) we
 could do it like this:
 
-`
+```
      
     #ifdef __DEBUG
 
@@ -192,7 +192,7 @@ could do it like this:
         }
     ;
     #endif
-`
+```
 
 Note that since we probably don't want our debugging action to count as
 normal turn we override beforeAction(), afterAction() and turnSequence()
@@ -214,22 +214,22 @@ an object of the Test class (it can be an anonymous object). Use the
 referred to with a TEST command. Then define the list of commands to be
 performed by the test script in the **testList** property. For example:
 
-`
+```
      Test 
         testName = 'foo'
         testList = ['x me', 'i', 'look']
      ; 
      
-`
+```
 
 With this definition in place you can use the command TEST FOO to carry
 out X ME followed by I followed by LOOK. You can also abbreviate the
 definition of the Test object by using the built-in template, so:
 
-`
+```
      
      Test 'foo' ['x me', 'i', 'look'];
-`
+```
 
 For some scripts to work as required it may be necessary for the actor
 to be in a particular location, or to have particular items in his/her
@@ -243,22 +243,22 @@ conditions by using gonear and purloin commands in the script, but we
 can also do so using the **location** and **testHolding** properties of
 our Test object, thus:
 
-`
+```
     Test 
        testName = 'queen'
        testList = ['unlock golden door with diamond key', 'n', 'x queen', 'give yellow rose to queen']
        location = tulipPassage
        testHolding = [diamondKey, yellowRose]   
     ;
-`
+```
 
 Again, this may be abbreviated via use of the template to:
 
-`
+```
     Test 'queen' ['unlock golden door with diamond key', 'n', 'x queen', 'give yellow rose to queen']
       @tulipPassage [diamondKey, yellowRose]
     ;
-`
+```
 
 The command TEST QUEEN will then move the player character to
 tulipPassage, move the diamondKey and the yellowRose into his inventory,
@@ -281,7 +281,7 @@ definitions with `\#ifdef \_DEBUG` and
 `\#endif` so that they don't cause compilation
 errors in a release build; for example:
 
-`
+```
     #ifdef __DEBUG
 
     Test 'foo' ['x me', 'i', 'look'];
@@ -292,7 +292,7 @@ errors in a release build; for example:
      
     #endif 
      
-`
+```
 
   
 <span id="additional"></span>
@@ -317,24 +317,24 @@ When your <span id="beta_idx">beta-testers</span> test your game, it is
 often helpful to get them to record a transcript of it (using the SCRIPT
 command), in the course of which they can type comments such as:
 
-<div class="cmdline">
+
 
      >* TYPO elehpant -> elephant
      ...
      >* BUG! The brass key won't work on the inside of the tower door
      
 
-</div>
+
 
 By default such comments are commands that start with an asterisk (\*).
 To change how comments should be prefixed, see the discussion of the
 [commentPreParser](output.html#comment).
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -344,4 +344,4 @@ To change how comments should be prefixed, see the discussion of the
 <a href="actionref.html" class="nav"><em>Next:</em> Action Reference</a>
     </span>
 
-</div>
+

@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `class `**`ImplicitConversationAction`**` :   `[`TopicAction`](../object/TopicAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ImplicitConversationAction`**  
 [`TopicAction`](../object/TopicAction.html)  
@@ -51,28 +51,28 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 ` [`AskAboutImplicit`](../object/AskAboutImplicit.html)  [`AskForImplicit`](../object/AskForImplicit.html)  [`Query`](../object/Query.html)  [`SayAction`](../object/SayAction.html)  [`TalkAboutImplicit`](../object/TalkAboutImplicit.html)  [`TellAboutImplicit`](../object/TellAboutImplicit.html)  `
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`defaultProperty`](#defaultProperty)  [`isConversational`](#isConversational)  [`topicListProperty`](#topicListProperty)  [`topics`](#topics)  `
 
@@ -91,11 +91,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`execAction`](#execAction)  [`resolvePronouns`](#resolvePronouns)  `
 
@@ -116,11 +116,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="defaultProperty"></span>
 
@@ -128,12 +128,12 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2041](../source/actions.t.html#2041)\]
 
-<div class="desc">
+
 
 The default property to call on the Actor if there's not matching
 TopicEntry
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -141,11 +141,11 @@ TopicEntry
 
 [actions.t](../file/actions.t.html)\[[2073](../source/actions.t.html#2073)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="topicListProperty"></span>
 
@@ -153,11 +153,11 @@ TopicEntry
 
 [actions.t](../file/actions.t.html)\[[2070](../source/actions.t.html#2070)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="topics"></span>
 
@@ -165,19 +165,19 @@ TopicEntry
 
 [actions.t](../file/actions.t.html)\[[2071](../source/actions.t.html#2071)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -185,11 +185,11 @@ TopicEntry
 
 [actions.t](../file/actions.t.html)\[[2006](../source/actions.t.html#2006)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="resolvePronouns"></span>
 
@@ -197,17 +197,17 @@ TopicEntry
 
 [actions.t](../file/actions.t.html)\[[2050](../source/actions.t.html#2050)\]
 
-<div class="desc">
+
 
 This is a bit of a kludge to deal with the fact that the Parser doesn't
 seem able to resolve pronouns within ResolvedTopics. We do it here
 instead.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `VerbRule(AttachToWhat)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(AttachToWhat)`**` :   `[`VerbProduction`](../object/VerbProduction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(AttachToWhat)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -43,11 +43,11 @@ Details](#_Methods_)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`action`](#action)[`iobjReply`](#iobjReply)[`missingQ`](#missingQ)[`missingRole`](#missingRole)[`verbPhrase`](#verbPhrase)
 
@@ -59,11 +59,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2958](../source/grammar.t.html#2958)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjReply"></span>
 
@@ -99,11 +99,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2964](../source/grammar.t.html#2964)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="missingQ"></span>
 
@@ -111,11 +111,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2960](../source/grammar.t.html#2960)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="missingRole"></span>
 
@@ -123,11 +123,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2963](../source/grammar.t.html#2963)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -135,25 +135,25 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2959](../source/grammar.t.html#2959)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 23/02/2014 from adv3Lite version 1.03
 
-</div>
+

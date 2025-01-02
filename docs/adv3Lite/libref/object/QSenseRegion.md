@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 This Special redefines canHear, canSee, canSmell, canTalkTo and
 canThrowTo to take account of possible sensory connections across rooms
@@ -28,26 +28,26 @@ in a SenseRegion
 
 **`QSenseRegion`**` :   `[`Special`](../object/Special.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`QSenseRegion`**  
 [`Special`](../object/Special.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`active`](#active)[`priority`](#priority)
 
@@ -56,11 +56,11 @@ Inherited from `Special` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canHear`](#canHear)[`canSee`](#canSee)[`canSmell`](#canSmell)[`canTalkTo`](#canTalkTo)[`canThrowTo`](#canThrowTo)[`nonBlocker`](#nonBlocker)[`reachBlocker`](#reachBlocker)
 
@@ -69,11 +69,11 @@ Inherited from `Special` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="active"></span>
 
@@ -81,11 +81,11 @@ Inherited from `Special` :
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1388](../source/senseRegion.t.html#1388)\]
 
-<div class="desc">
+
 
 This Special should be active whenever this module is included.
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -93,20 +93,20 @@ This Special should be active whenever this module is included.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1385](../source/senseRegion.t.html#1385)\]
 
-<div class="desc">
+
 
 Gives this Special a slightly higher priority than QDefaults, so that it
 takes priority.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canHear"></span>
 
@@ -114,11 +114,11 @@ takes priority.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1440](../source/senseRegion.t.html#1440)\]
 
-<div class="desc">
+
 
 Can A hear B? We return true if there's a clear sound path from A to B.
 
-</div>
+
 
 <span id="canSee"></span>
 
@@ -126,12 +126,12 @@ Can A hear B? We return true if there's a clear sound path from A to B.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1395](../source/senseRegion.t.html#1395)\]
 
-<div class="desc">
+
 
 Can A see B? We return true if and only if B is in light and there's a
 clear sight path from A to B.
 
-</div>
+
 
 <span id="canSmell"></span>
 
@@ -139,11 +139,11 @@ clear sight path from A to B.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1485](../source/senseRegion.t.html#1485)\]
 
-<div class="desc">
+
 
 Can A smell B? We return true if there's a clear scent path from A to B.
 
-</div>
+
 
 <span id="canTalkTo"></span>
 
@@ -151,13 +151,13 @@ Can A smell B? We return true if there's a clear scent path from A to B.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1531](../source/senseRegion.t.html#1531)\]
 
-<div class="desc">
+
 
 For A to be able to talk to B, A must both be able to hear B and either
 be in the same room as B or in a room that's close enough to be able to
 converse with B
 
-</div>
+
 
 <span id="canThrowTo"></span>
 
@@ -165,11 +165,11 @@ converse with B
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1554](../source/senseRegion.t.html#1554)\]
 
-<div class="desc">
+
 
 Can A throw an object to B?
 
-</div>
+
 
 <span id="nonBlocker"></span>
 
@@ -177,13 +177,13 @@ Can A throw an object to B?
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1601](../source/senseRegion.t.html#1601)\]
 
-<div class="desc">
+
 
 Is o the kind of object that would block movement from one room to the
 room containing b? It is unless o is a room and the room and b are both
 in a SenseRegion for which autoGoTo is true.
 
-</div>
+
 
 <span id="reachBlocker"></span>
 
@@ -191,7 +191,7 @@ in a SenseRegion for which autoGoTo is true.
 
 [senseRegion.t](../file/senseRegion.t.html)\[[1582](../source/senseRegion.t.html#1582)\]
 
-<div class="desc">
+
 
 Determine if A can reach B, and if not, what stands in the way. Returns
 a list of containers along the path between A and B that obstruct the
@@ -199,11 +199,11 @@ reach. If the two objects are in separate rooms, the top-level room
 containing A is in the list to represent the room separation. If there's
 no obstruction, we return an empty list.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

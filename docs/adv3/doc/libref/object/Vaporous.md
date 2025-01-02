@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "vaporous" object is a visible but intangible object: something
 visible, and possibly with an odor and a sound, but not something that
@@ -35,15 +35,15 @@ are examples of this kind of object.
 
 `class `**`Vaporous`**` :   `[`Intangible`](../object/Intangible.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Vaporous`**  
 [`Intangible`](../object/Intangible.html)  
@@ -52,27 +52,27 @@ are examples of this kind of object.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`notWithIntangibleMsg`](#notWithIntangibleMsg)[`sightPresence`](#sightPresence)
 
@@ -87,11 +87,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(ListenTo)`](#dobjFor(ListenTo))[`dobjFor(LookBehind)`](#dobjFor(LookBehind))[`dobjFor(LookIn)`](#dobjFor(LookIn))[`dobjFor(LookThrough)`](#dobjFor(LookThrough))[`dobjFor(LookUnder)`](#dobjFor(LookUnder))[`dobjFor(Search)`](#dobjFor(Search))[`dobjFor(Smell)`](#dobjFor(Smell))[`hideFromAll`](#hideFromAll)[`lookInDesc`](#lookInDesc)
 
@@ -106,11 +106,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="notWithIntangibleMsg"></span>
 
@@ -118,11 +118,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[136](../source/objects.t.html#136)\]
 
-<div class="desc">
+
 
 the message we display for commands we disallow
 
-</div>
+
 
 <span id="sightPresence"></span>
 
@@ -130,19 +130,19 @@ the message we display for commands we disallow
 
 [objects.t](../file/objects.t.html)\[[92](../source/objects.t.html#92)\]
 
-<div class="desc">
+
 
 we have a sight presence
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -150,7 +150,7 @@ we have a sight presence
 
 [objects.t](../file/objects.t.html)\[[114](../source/objects.t.html#114)\]
 
-<div class="desc">
+
 
 We can examine, smell, and listen to these objects, as normal for any
 Thing. To make these verbs work as normal for Thing, we need to
@@ -159,7 +159,7 @@ dobjFor(Default) verifier in Intangible. We don't need to do anything
 special in the overrides, so just inherit the default handling; what's
 important is that we do override the methods at all.
 
-</div>
+
 
 <span id="dobjFor(ListenTo)"></span>
 
@@ -167,11 +167,11 @@ important is that we do override the methods at all.
 
 [objects.t](../file/objects.t.html)\[[116](../source/objects.t.html#116)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookBehind)"></span>
 
@@ -179,11 +179,11 @@ important is that we do override the methods at all.
 
 [objects.t](../file/objects.t.html)\[[131](../source/objects.t.html#131)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookIn)"></span>
 
@@ -191,12 +191,12 @@ important is that we do override the methods at all.
 
 [objects.t](../file/objects.t.html)\[[129](../source/objects.t.html#129)\]
 
-<div class="desc">
+
 
 downgrade the likelihood of these slightly, and map everything to LOOK
 IN
 
-</div>
+
 
 <span id="dobjFor(LookThrough)"></span>
 
@@ -204,11 +204,11 @@ IN
 
 [objects.t](../file/objects.t.html)\[[130](../source/objects.t.html#130)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookUnder)"></span>
 
@@ -216,11 +216,11 @@ IN
 
 [objects.t](../file/objects.t.html)\[[132](../source/objects.t.html#132)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Search)"></span>
 
@@ -228,11 +228,11 @@ IN
 
 [objects.t](../file/objects.t.html)\[[133](../source/objects.t.html#133)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Smell)"></span>
 
@@ -240,11 +240,11 @@ IN
 
 [objects.t](../file/objects.t.html)\[[115](../source/objects.t.html#115)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -252,12 +252,12 @@ IN
 
 [objects.t](../file/objects.t.html)\[[98](../source/objects.t.html#98)\]
 
-<div class="desc">
+
 
 EXAMINE ALL, LISTEN TO ALL, and SMELL ALL apply to us, but hide from ALL
 for other actions, as not much else makes sense on us
 
-</div>
+
 
 <span id="lookInDesc"></span>
 
@@ -265,17 +265,17 @@ for other actions, as not much else makes sense on us
 
 [objects.t](../file/objects.t.html)\[[123](../source/objects.t.html#123)\]
 
-<div class="desc">
+
 
 look in, look through, look behind, look under, search: since vaporous
 objects are usually essentially transparent, these commands reveal
 nothing interesting
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

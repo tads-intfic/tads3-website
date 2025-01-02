@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 LocationalProduction is a subclass of Production for phrases that
 involve locational qualifiers, as in "the book on the table".
@@ -45,26 +45,26 @@ giving the containment relationship.
 
 `class `**`LocationalProduction`**` :   `[`Production`](../object/Production.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LocationalProduction`**  
 [`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`LocationalProduction`**  
 [`disambigPhrase(locational)`](../object/disambigPhrase(locational).html)  
@@ -76,19 +76,19 @@ giving the containment relationship.
 [`qualifiedSingularNounPhrase(theOneIn)`](../object/qualifiedSingularNounPhrase(theOneIn).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`locType`](#locType)  `
 
@@ -97,11 +97,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`visitProd`](#visitProd)  `
 
@@ -110,11 +110,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="locType"></span>
 
@@ -122,7 +122,7 @@ Inherited from `Production` :
 
 [parser.t](../file/parser.t.html)\[[4359](../source/parser.t.html#4359)\]
 
-<div class="desc">
+
 
 Our location type. This is a LocType object giving the location
 relationship specified by this locational phrase. For languages that
@@ -131,15 +131,15 @@ LocationPrepProduction in our sub-tree. For languages that use case
 inflection to specify the type of relationship, this must be set by the
 noun phrase sub-tree instead.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="visitProd"></span>
 
@@ -147,18 +147,18 @@ noun phrase sub-tree instead.
 
 [parser.t](../file/parser.t.html)\[[4319](../source/parser.t.html#4319)\]
 
-<div class="desc">
+
 
 Visit a production. When we process the locational qualifier phrase,
 we'll build out the sub-tree in the context of a new NounPhrase, which
 we attach as a locational qualifier to the encompassing noun phrase
 under construction.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

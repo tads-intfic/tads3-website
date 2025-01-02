@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A NumericTAction is an action that involves one physical object and one
 number, e.g. DIAL 1234 ON PHONR.
 
 `class `**`NumericTAction`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NumericTAction`**  
 [`TAction`](../object/TAction.html)  
@@ -51,27 +51,27 @@ number, e.g. DIAL 1234 ON PHONR.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`num`](#num)
 
@@ -87,11 +87,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`verify`](#verify)
 
@@ -109,11 +109,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="num"></span>
 
@@ -121,19 +121,19 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[2748](../source/action.t.html#2748)\]
 
-<div class="desc">
+
 
 The numeric value associated with this command
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -141,11 +141,11 @@ The numeric value associated with this command
 
 [action.t](../file/action.t.html)\[[2707](../source/action.t.html#2707)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verify"></span>
 
@@ -153,7 +153,7 @@ The numeric value associated with this command
 
 [action.t](../file/action.t.html)\[[2741](../source/action.t.html#2741)\]
 
-<div class="desc">
+
 
 Whichever object slot a verify routine is notionally trying to verify
 for given the grammatical form of the command, in practice only the
@@ -162,11 +162,11 @@ for WRITE FOO ON BALL we treat BALL as the direct object of the command
 and FOO as the literal, even if the Parser thinks it needs to verify the
 Indirect Object to disambiguate BALL.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

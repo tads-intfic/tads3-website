@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Button is an object that does something when pressed
 
 `class `**`Button`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Button`**  
 [`Thing`](../object/Thing.html)  
@@ -52,27 +52,27 @@ A Button is an object that does something when pressed
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isFixed`](#isFixed)
 
@@ -91,11 +91,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Push)`](#dobjFor(Push))[`makePushed`](#makePushed)
 
@@ -116,11 +116,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -128,19 +128,19 @@ Inherited from `LMentionable` :
 
 [gadget.t](../file/gadget.t.html)\[[22](../source/gadget.t.html#22)\]
 
-<div class="desc">
+
 
 a button is usually fixed to something
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Push)"></span>
 
@@ -148,11 +148,11 @@ a button is usually fixed to something
 
 [gadget.t](../file/gadget.t.html)\[[25](../source/gadget.t.html#25)\]
 
-<div class="desc">
+
 
 Handle the Push command
 
-</div>
+
 
 <span id="makePushed"></span>
 
@@ -160,17 +160,17 @@ Handle the Push command
 
 [gadget.t](../file/gadget.t.html)\[[42](../source/gadget.t.html#42)\]
 
-<div class="desc">
+
 
 Carry out the effects of pushing the button here. Particular Button
 objects will need to override this method to carry out the effect of
 pushing the button.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

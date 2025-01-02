@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -17,7 +17,7 @@ Documentation</a>    
 <a href="philos.html" class="nav"><em>Next:</em> Design Philosophy</a>
     </span>
 
-</div>
+
 
 
 
@@ -87,18 +87,18 @@ character flags embedded.
 [Metaclass Identifier List](metalist.html)  
 [Saving and Restoring State](save.html)
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2010 by Michael J. Roberts.  
 Revision: January, 2010
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -109,4 +109,4 @@ Documentation</a>    
 <a href="philos.html" class="nav"><em>Next:</em> Design Philosophy</a>
     </span>
 
-</div>
+

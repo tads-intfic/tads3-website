@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Randomized event list. This is similar to a regular event list, but
 chooses an event at random each time it's invoked.
 
 `class `**`RandomEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)[`EventList`](../object/EventList.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RandomEventList`**  
 [`RandomFiringScript`](../object/RandomFiringScript.html)  
@@ -51,27 +51,27 @@ chooses an event at random each time it's invoked.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -85,11 +85,11 @@ Inherited from `EventList` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doScript`](#doScript)[`getNextRandom`](#getNextRandom)
 
@@ -104,19 +104,19 @@ Inherited from `Script` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doScript"></span>
 
@@ -124,11 +124,11 @@ Inherited from `Script` :
 
 [misc.t](../file/misc.t.html)\[[1209](../source/misc.t.html#1209)\]
 
-<div class="desc">
+
 
 process the next step of the script
 
-</div>
+
 
 <span id="getNextRandom"></span>
 
@@ -136,17 +136,17 @@ process the next step of the script
 
 [misc.t](../file/misc.t.html)\[[1233](../source/misc.t.html#1233)\]
 
-<div class="desc">
+
 
 Get the next random state. By default, we simply return a number from 1
 to the number of entries in our event list. This is a separate method to
 allow subclasses to customize the way the random number is selected.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Command Prompt Daemon. This is a special type of daemon that executes
 not according to the game clock, but rather once per command prompt. The
@@ -35,15 +35,15 @@ for a command line.
 
 `class `**`PromptDaemon`**` :   `[`Event`](../object/Event.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PromptDaemon`**  
 [`Event`](../object/Event.html)  
@@ -51,29 +51,29 @@ for a command line.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PromptDaemon`**  
 [`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isPromptDaemon`](#isPromptDaemon)
 
@@ -85,11 +85,11 @@ Inherited from `BasicEvent` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`executeEvent`](#executeEvent)
 
@@ -101,11 +101,11 @@ Inherited from `BasicEvent` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isPromptDaemon"></span>
 
@@ -113,19 +113,19 @@ Inherited from `BasicEvent` :
 
 [events.t](../file/events.t.html)\[[826](../source/events.t.html#826)\]
 
-<div class="desc">
+
 
 flag: we are a special per-command-prompt daemon
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="executeEvent"></span>
 
@@ -133,15 +133,15 @@ flag: we are a special per-command-prompt daemon
 
 [events.t](../file/events.t.html)\[[815](../source/events.t.html#815)\]
 
-<div class="desc">
+
 
 execute the daemon
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

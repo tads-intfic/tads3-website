@@ -26,32 +26,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Basic noun phrase production class.
 
 `class `**`NounPhraseProd`**` :   `[`BasicProd`](../object/BasicProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NounPhraseProd`**  
 [`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NounPhraseProd`**  
 [`ButProd`](../object/ButProd.html)  
@@ -229,19 +229,19 @@ Basic noun phrase production class.
 [`singleNoun(multiple)`](../object/singleNoun(multiple).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`filterForCollectives`](#filterForCollectives)
 
@@ -250,11 +250,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterTruncations`](#filterTruncations)[`getVerifyKeepers`](#getVerifyKeepers)
 
@@ -263,11 +263,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="filterForCollectives"></span>
 
@@ -275,7 +275,7 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[1213](../source/parser.t.html#1213)\]
 
-<div class="desc">
+
 
 Determine whether this kind of noun phrase prefers to keep a collective
 or the collective's individuals when filtering. If this is true, we'll
@@ -283,15 +283,15 @@ keep a collective and discard its individuals when filtering a
 resolution list; otherwise, we'll drop the collective and keep the
 individuals.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterTruncations"></span>
 
@@ -299,14 +299,14 @@ individuals.
 
 [parser.t](../file/parser.t.html)\[[1248](../source/parser.t.html#1248)\]
 
-<div class="desc">
+
 
 Filter a match list of results for truncated matches. If we have a mix
 of truncated matches and exact matches, we'll keep only the exact
 matches. If we have only truncated matches, though, we'll return the
 list unchanged, as we don't have a better offer going.
 
-</div>
+
 
 <span id="getVerifyKeepers"></span>
 
@@ -314,7 +314,7 @@ list unchanged, as we don't have a better offer going.
 
 [parser.t](../file/parser.t.html)\[[1227](../source/parser.t.html#1227)\]
 
-<div class="desc">
+
 
 Filter a "verify" result list for the results we'd like to keep in the
 final resolution of the noun phrase. This is called after we've run
@@ -326,11 +326,11 @@ By default, we keep only the items that are equally as logical as the
 best item in the results. Since the items are sorted in descending order
 of goodness, the best item is always the first item.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

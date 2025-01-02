@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Compound noun phrase. This is one or more noun phrases connected with
 'of', as in "piece of paper". The part after the 'of' is another
@@ -35,15 +35,15 @@ specific literal sequences where more complex grammar is necessary.
 
 `grammar `<span class="gramalt">[`compoundNounPhrase`](../object/compoundNounPhrase.html)`(simple)`</span>` :   `[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`compoundNounPhrase(simple)`**  
 [`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)  
@@ -52,11 +52,11 @@ specific literal sequences where more complex grammar is necessary.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -70,11 +70,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getAdjustedTokens`](#getAdjustedTokens)[`getVocabMatchList`](#getVocabMatchList)
 
@@ -89,19 +89,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getAdjustedTokens"></span>
 
@@ -109,11 +109,11 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6090](../source/en_us.t.html#6090)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getVocabMatchList"></span>
 
@@ -121,15 +121,15 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6086](../source/en_us.t.html#6086)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

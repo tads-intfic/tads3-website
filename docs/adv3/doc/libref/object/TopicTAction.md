@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Action with a direct object and a topic, such as "ask \<actor\> about
 \<topic\>". Topics differ from ordinary noun phrases in scope: rather
@@ -59,15 +59,15 @@ English-specific additions for verbs with topic phrases.
 
 `class `**`TopicTAction`**` :   `[`TopicActionBase`](../object/TopicActionBase.html)[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicTAction`**  
 [`TopicActionBase`](../object/TopicActionBase.html)  
@@ -80,11 +80,11 @@ English-specific additions for verbs with topic phrases.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TopicTAction`**  
 [`AskVagueAction`](../object/AskVagueAction.html)  
@@ -108,19 +108,19 @@ English-specific additions for verbs with topic phrases.
 [`TellVagueAction`](../object/TellVagueAction.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`needAnaphoricBinding_`](#needAnaphoricBinding_)[`predicateNounPhrases`](#predicateNounPhrases)[`topicList_`](#topicList_)[`topicResolver_`](#topicResolver_)[`whichMessageObject`](#whichMessageObject)[`whichMessageTopic`](#whichMessageTopic)[`whichObject`](#whichObject)
 
@@ -141,11 +141,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`announceDefaultObject`](#announceDefaultObject)[`createTopicResolver`](#createTopicResolver)[`filterTopic`](#filterTopic)[`getAnaphoricBinding`](#getAnaphoricBinding)[`getCurrentObjects`](#getCurrentObjects)[`getMatchForRole`](#getMatchForRole)[`getObjectForRole`](#getObjectForRole)[`getOtherMessageObjectPronoun`](#getOtherMessageObjectPronoun)[`getOtherObjectRole`](#getOtherObjectRole)[`getQuestionInf`](#getQuestionInf)[`getRoleFromIndex`](#getRoleFromIndex)[`getVerbPhrase`](#getVerbPhrase)[`initForMissingDobj`](#initForMissingDobj)[`initForMissingTopic`](#initForMissingTopic)[`resetAction`](#resetAction)[`resolveNouns`](#resolveNouns)[`retryWithMissingTopic`](#retryWithMissingTopic)[`setCurrentObjects`](#setCurrentObjects)[`setObjectMatches`](#setObjectMatches)[`setResolvedObjects`](#setResolvedObjects)[`whatObj`](#whatObj)
 
@@ -166,11 +166,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="needAnaphoricBinding_"></span>
 
@@ -178,14 +178,14 @@ Inherited from `Resolver` :
 
 [action.t](../file/action.t.html)\[[5944](../source/action.t.html#5944)\]
 
-<div class="desc">
+
 
 Flag: we have been asked for an anaphoric binding, but we don't have a
 binding available. We'll check this after resolving the first-resolved
 noun phrase so that we can go back and re-resolve it again after
 resolving the other noun phrase.
 
-</div>
+
 
 <span id="predicateNounPhrases"></span>
 
@@ -193,11 +193,11 @@ resolving the other noun phrase.
 
 [action.t](../file/action.t.html)\[[5947](../source/action.t.html#5947)\]
 
-<div class="desc">
+
 
 we have a direct object and a topic phrase
 
-</div>
+
 
 <span id="topicList_"></span>
 
@@ -205,11 +205,11 @@ we have a direct object and a topic phrase
 
 [action.t](../file/action.t.html)\[[6026](../source/action.t.html#6026)\]
 
-<div class="desc">
+
 
 the resolved topic object list
 
-</div>
+
 
 <span id="topicResolver_"></span>
 
@@ -217,11 +217,11 @@ the resolved topic object list
 
 [action.t](../file/action.t.html)\[[6029](../source/action.t.html#6029)\]
 
-<div class="desc">
+
 
 my cached topic resolver
 
-</div>
+
 
 <span id="whichMessageObject"></span>
 
@@ -229,7 +229,7 @@ my cached topic resolver
 
 [action.t](../file/action.t.html)\[[6054](../source/action.t.html#6054)\]
 
-<div class="desc">
+
 
 What we call our direct object might actually be playing the grammatical
 role of the indirect object - in order to inherit easily from TAction,
@@ -240,7 +240,7 @@ care about its real role. So, override the resolver method
 whichMessageObject so that it returns whichever role is NOT served by
 the topic object.
 
-</div>
+
 
 <span id="whichMessageTopic"></span>
 
@@ -248,11 +248,11 @@ the topic object.
 
 [action.t](../file/action.t.html)\[[6032](../source/action.t.html#6032)\]
 
-<div class="desc">
+
 
 grammatical role played by topic phrase in generated messages
 
-</div>
+
 
 <span id="whichObject"></span>
 
@@ -260,19 +260,19 @@ grammatical role played by topic phrase in generated messages
 
 [action.t](../file/action.t.html)\[[6042](../source/action.t.html#6042)\]
 
-<div class="desc">
+
 
 the true role of the resolved object is always as the direct object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="announceDefaultObject"></span>
 
@@ -280,11 +280,11 @@ the true role of the resolved object is always as the direct object
 
 [en_us.t](../file/en_us.t.html)\[[9152](../source/en_us.t.html#9152)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="createTopicResolver"></span>
 
@@ -292,11 +292,11 @@ the true role of the resolved object is always as the direct object
 
 [action.t](../file/action.t.html)\[[5908](../source/action.t.html#5908)\]
 
-<div class="desc">
+
 
 create our TAction topic resolver
 
-</div>
+
 
 <span id="filterTopic"></span>
 
@@ -304,12 +304,12 @@ create our TAction topic resolver
 
 [action.t](../file/action.t.html)\[[5848](../source/action.t.html#5848)\]
 
-<div class="desc">
+
 
 Filter the resolved topic. This is called by our TActionTopicResolver,
 which refers the resolution back to us.
 
-</div>
+
 
 <span id="getAnaphoricBinding"></span>
 
@@ -317,7 +317,7 @@ which refers the resolution back to us.
 
 [action.t](../file/action.t.html)\[[5922](../source/action.t.html#5922)\]
 
-<div class="desc">
+
 
 In the topic phrase, we can use an anaphoric pronoun to refer back to
 the direct object. Since we resolve the direct object phrase first, we
@@ -325,7 +325,7 @@ can simply return the direct object list as the binding. If the direct
 object isn't resolved yet, make a note to come back and re-bind the
 anaphor.
 
-</div>
+
 
 <span id="getCurrentObjects"></span>
 
@@ -333,12 +333,12 @@ anaphor.
 
 [action.t](../file/action.t.html)\[[6013](../source/action.t.html#6013)\]
 
-<div class="desc">
+
 
 Get the list of active objects. We return only our direct object, since
 our topic isn't actually a simulation object.
 
-</div>
+
 
 <span id="getMatchForRole"></span>
 
@@ -346,11 +346,11 @@ our topic isn't actually a simulation object.
 
 [action.t](../file/action.t.html)\[[5977](../source/action.t.html#5977)\]
 
-<div class="desc">
+
 
 get the match tree for the given role
 
-</div>
+
 
 <span id="getObjectForRole"></span>
 
@@ -358,11 +358,11 @@ get the match tree for the given role
 
 [action.t](../file/action.t.html)\[[5967](../source/action.t.html#5967)\]
 
-<div class="desc">
+
 
 get the resolved object in a given role
 
-</div>
+
 
 <span id="getOtherMessageObjectPronoun"></span>
 
@@ -370,11 +370,11 @@ get the resolved object in a given role
 
 [en_us.t](../file/en_us.t.html)\[[9177](../source/en_us.t.html#9177)\]
 
-<div class="desc">
+
 
 use the same handling as for a regular two-object action
 
-</div>
+
 
 <span id="getOtherObjectRole"></span>
 
@@ -382,11 +382,11 @@ use the same handling as for a regular two-object action
 
 [action.t](../file/action.t.html)\[[5960](../source/action.t.html#5960)\]
 
-<div class="desc">
+
 
 get the OtherObject role for the given role
 
-</div>
+
 
 <span id="getQuestionInf"></span>
 
@@ -394,11 +394,11 @@ get the OtherObject role for the given role
 
 [en_us.t](../file/en_us.t.html)\[[9171](../source/en_us.t.html#9171)\]
 
-<div class="desc">
+
 
 use the same handling we use for a regular two-object action
 
-</div>
+
 
 <span id="getRoleFromIndex"></span>
 
@@ -406,11 +406,11 @@ use the same handling we use for a regular two-object action
 
 [action.t](../file/action.t.html)\[[5950](../source/action.t.html#5950)\]
 
-<div class="desc">
+
 
 get an object role
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -418,11 +418,11 @@ get an object role
 
 [en_us.t](../file/en_us.t.html)\[[9201](../source/en_us.t.html#9201)\]
 
-<div class="desc">
+
 
 return a generic pronoun for the topic
 
-</div>
+
 
 <span id="initForMissingDobj"></span>
 
@@ -430,11 +430,11 @@ return a generic pronoun for the topic
 
 [action.t](../file/action.t.html)\[[5881](../source/action.t.html#5881)\]
 
-<div class="desc">
+
 
 initialize a new action we're retrying for a missing direct object
 
-</div>
+
 
 <span id="initForMissingTopic"></span>
 
@@ -442,11 +442,11 @@ initialize a new action we're retrying for a missing direct object
 
 [action.t](../file/action.t.html)\[[5893](../source/action.t.html#5893)\]
 
-<div class="desc">
+
 
 initialize for retrying with a missing topic phrase
 
-</div>
+
 
 <span id="resetAction"></span>
 
@@ -454,11 +454,11 @@ initialize for retrying with a missing topic phrase
 
 [action.t](../file/action.t.html)\[[5790](../source/action.t.html#5790)\]
 
-<div class="desc">
+
 
 reset the action
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -466,11 +466,11 @@ reset the action
 
 [action.t](../file/action.t.html)\[[5802](../source/action.t.html#5802)\]
 
-<div class="desc">
+
 
 resolve our noun phrases to objects
 
-</div>
+
 
 <span id="retryWithMissingTopic"></span>
 
@@ -478,7 +478,7 @@ resolve our noun phrases to objects
 
 [action.t](../file/action.t.html)\[[5863](../source/action.t.html#5863)\]
 
-<div class="desc">
+
 
 Retry a single-object action as an action taking both an object and a
 topic phrase. We'll treat the original action's direct object list as
@@ -487,7 +487,7 @@ our direct object list, and we'll obtain a topic phrase interactively.
 This routine terminates with 'exit' if it doesn't throw some other
 error.
 
-</div>
+
 
 <span id="setCurrentObjects"></span>
 
@@ -495,11 +495,11 @@ error.
 
 [action.t](../file/action.t.html)\[[6019](../source/action.t.html#6019)\]
 
-<div class="desc">
+
 
 set the current objects
 
-</div>
+
 
 <span id="setObjectMatches"></span>
 
@@ -507,11 +507,11 @@ set the current objects
 
 [action.t](../file/action.t.html)\[[6000](../source/action.t.html#6000)\]
 
-<div class="desc">
+
 
 manually set the pre-resolved match trees
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -519,12 +519,12 @@ manually set the pre-resolved match trees
 
 [action.t](../file/action.t.html)\[[5990](../source/action.t.html#5990)\]
 
-<div class="desc">
+
 
 Manually set the resolved objects. We'll set our direct and indirect
 objects.
 
-</div>
+
 
 <span id="whatObj"></span>
 
@@ -532,18 +532,18 @@ objects.
 
 [en_us.t](../file/en_us.t.html)\[[9165](../source/en_us.t.html#9165)\]
 
-<div class="desc">
+
 
 Use the same handling as for a regular two-object action. We can only
 default the actual object in this kind of verb; the actual object always
 fills the DirectObject slot, but in message generation it might use a
 different slot, so use the message generation slot here.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

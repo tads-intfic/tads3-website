@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A passage that an actor can travel through (with a "go through" or
 "enter" command). A "go through" command applied to the passage simply
@@ -38,15 +38,15 @@ descriptions ("Bob arrives through the door," etc).
 
 `class `**`ThroughPassage`**` :   `[`Passage`](../object/Passage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ThroughPassage`**  
 [`Passage`](../object/Passage.html)  
@@ -63,11 +63,11 @@ descriptions ("Bob arrives through the door," etc).
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ThroughPassage`**  
 [`BasicDoor`](../object/BasicDoor.html)  
@@ -79,19 +79,19 @@ descriptions ("Bob arrives through the door," etc).
 [`PathPassage`](../object/PathPassage.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -121,11 +121,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`describeArrival`](#describeArrival)[`describeDeparture`](#describeDeparture)[`dobjFor(Enter)`](#dobjFor(Enter))[`dobjFor(GoThrough)`](#dobjFor(GoThrough))[`mapPushTravelIobj`](#mapPushTravelIobj)[`mapPushTravelIobj`](#mapPushTravelIobj)
 
@@ -156,19 +156,19 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="describeArrival"></span>
 
@@ -176,11 +176,11 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[2608](../source/travel.t.html#2608)\]
 
-<div class="desc">
+
 
 describe the traveler departing through this passage
 
-</div>
+
 
 <span id="describeDeparture"></span>
 
@@ -188,11 +188,11 @@ describe the traveler departing through this passage
 
 [travel.t](../file/travel.t.html)\[[2602](../source/travel.t.html#2602)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -200,11 +200,11 @@ describe the traveler departing through this passage
 
 [travel.t](../file/travel.t.html)\[[2618](../source/travel.t.html#2618)\]
 
-<div class="desc">
+
 
 "enter" is the same as "go through" for this type of passage
 
-</div>
+
 
 <span id="dobjFor(GoThrough)"></span>
 
@@ -212,11 +212,11 @@ describe the traveler departing through this passage
 
 [travel.t](../file/travel.t.html)\[[2615](../source/travel.t.html#2615)\]
 
-<div class="desc">
+
 
 treat "go through self" as travel through the passage
 
-</div>
+
 
 <span id="mapPushTravelIobj"></span>
 
@@ -224,7 +224,7 @@ treat "go through self" as travel through the passage
 
 [travel.t](../file/travel.t.html)\[[2630](../source/travel.t.html#2630)\]
 
-<div class="desc">
+
 
 Explicitly map the indirect object 'verify' handlers for the push-travel
 commands corresponding to the regular travel commands we provide. This
@@ -234,7 +234,7 @@ important because it will give the mapping higher precedence than a
 catch-all handlers overriding the same mapping we inherit from Thing. We
 use the same mapping that Thing provides by default.
 
-</div>
+
 
 <span id="mapPushTravelIobj"></span>
 
@@ -242,15 +242,15 @@ use the same mapping that Thing provides by default.
 
 [travel.t](../file/travel.t.html)\[[2631](../source/travel.t.html#2631)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

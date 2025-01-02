@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 Based on Copyright (c) 2002, 2006 by Michael J. Roberts
 
@@ -41,47 +41,47 @@ This extra information can be controlled by the player through the
 direction where no exit exists, as a helpful reminder of which
 directions are valid.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`DestInfo`](../object/DestInfo.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`exitLister`](../object/exitLister.html)[`ExitLister`](../object/ExitLister1.html)[`exitsMode`](../object/exitsMode1.html)[`explicitExitLister`](../object/explicitExitLister.html)[`lookAroundExitLister`](../object/lookAroundExitLister.html)[`lookAroundTerseExitLister`](../object/lookAroundTerseExitLister.html)[`statuslineExitLister`](../object/statuslineExitLister.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

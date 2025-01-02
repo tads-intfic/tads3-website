@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Conversation manager output filter. We look for special tags in the
 output stream:
@@ -87,15 +87,15 @@ familiar)
 
 **`conversationManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`conversationManager`**  
 [`OutputFilter`](../object/OutputFilter.html)  
@@ -105,11 +105,11 @@ familiar)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`convnodeSetTurn`](#convnodeSetTurn)[`customTags`](#customTags)[`idToActor`](#idToActor)[`objNameTab`](#objNameTab)[`pendingTopicInventory`](#pendingTopicInventory)[`pendingTopicInventoryKey`](#pendingTopicInventoryKey)[`respondingActor`](#respondingActor)[`tagPat`](#tagPat)
 
@@ -123,11 +123,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doCustomTag`](#doCustomTag)[`execute`](#execute)[`filterText`](#filterText)[`manageKeys`](#manageKeys)[`scheduleTopicInventory`](#scheduleTopicInventory)[`setInformed`](#setInformed)[`setRevealed`](#setRevealed)[`setUnrevealed`](#setUnrevealed)[`showAgendaError`](#showAgendaError)[`showKnownError`](#showKnownError)[`showObjDoesNotBelongToActorError`](#showObjDoesNotBelongToActorError)[`showObjNotExistError`](#showObjNotExistError)[`showStateError`](#showStateError)[`showWrongKindofObjectError`](#showWrongKindofObjectError)[`topicInventoryDaemon`](#topicInventoryDaemon)
 
@@ -140,11 +140,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="convnodeSetTurn"></span>
 
@@ -152,11 +152,11 @@ Inherited from `ModuleExecObject` :
 
 [actor.t](../file/actor.t.html)\[[5358](../source/actor.t.html#5358)\]
 
-<div class="desc">
+
 
 The turn on which we last processed a convnode tag
 
-</div>
+
 
 <span id="customTags"></span>
 
@@ -164,7 +164,7 @@ The turn on which we last processed a convnode tag
 
 [actor.t](../file/actor.t.html)\[[5025](../source/actor.t.html#5025)\]
 
-<div class="desc">
+
 
 Custom extended tags. Games and library extensions can add their own tag
 processing as needed, by using 'modify' to extend this object. There are
@@ -181,7 +181,7 @@ Second, define a doCustomTag() method to process the tags. The filter
 routine will call your doCustomTag() method whenever it finds one of
 your custom tags in the output stream.
 
-</div>
+
 
 <span id="idToActor"></span>
 
@@ -189,11 +189,11 @@ your custom tags in the output stream.
 
 [actor.t](../file/actor.t.html)\[[5573](../source/actor.t.html#5573)\]
 
-<div class="desc">
+
 
 a vector of actors, indexed by their convMgrID values
 
-</div>
+
 
 <span id="objNameTab"></span>
 
@@ -201,11 +201,11 @@ a vector of actors, indexed by their convMgrID values
 
 [actor.t](../file/actor.t.html)\[[5623](../source/actor.t.html#5623)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="pendingTopicInventory"></span>
 
@@ -213,11 +213,11 @@ a vector of actors, indexed by their convMgrID values
 
 [actor.t](../file/actor.t.html)\[[5618](../source/actor.t.html#5618)\]
 
-<div class="desc">
+
 
 flag: we have a pending prompt-time topic inventory request
 
-</div>
+
 
 <span id="pendingTopicInventoryKey"></span>
 
@@ -225,11 +225,11 @@ flag: we have a pending prompt-time topic inventory request
 
 [actor.t](../file/actor.t.html)\[[5621](../source/actor.t.html#5621)\]
 
-<div class="desc">
+
 
 The key to use for the pending prompt-time inventory request
 
-</div>
+
 
 <span id="respondingActor"></span>
 
@@ -237,12 +237,12 @@ The key to use for the pending prompt-time inventory request
 
 [actor.t](../file/actor.t.html)\[[5032](../source/actor.t.html#5032)\]
 
-<div class="desc">
+
 
 The actor we're dealing with is the player character's current
 interlocutor
 
-</div>
+
 
 <span id="tagPat"></span>
 
@@ -250,19 +250,19 @@ interlocutor
 
 [actor.t](../file/actor.t.html)\[[5361](../source/actor.t.html#5361)\]
 
-<div class="desc">
+
 
 regular expression pattern for our tags
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doCustomTag"></span>
 
@@ -270,11 +270,11 @@ regular expression pattern for our tags
 
 [actor.t](../file/actor.t.html)\[[5026](../source/actor.t.html#5026)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -282,11 +282,11 @@ regular expression pattern for our tags
 
 [actor.t](../file/actor.t.html)\[[5576](../source/actor.t.html#5576)\]
 
-<div class="desc">
+
 
 preinitialize
 
-</div>
+
 
 <span id="filterText"></span>
 
@@ -294,11 +294,11 @@ preinitialize
 
 [actor.t](../file/actor.t.html)\[[5035](../source/actor.t.html#5035)\]
 
-<div class="desc">
+
 
 filter text written to the output stream
 
-</div>
+
 
 <span id="manageKeys"></span>
 
@@ -306,11 +306,11 @@ filter text written to the output stream
 
 [actor.t](../file/actor.t.html)\[[5370](../source/actor.t.html#5370)\]
 
-<div class="desc">
+
 
 Provided we have a respondingActor, call its manageKeys method.
 
-</div>
+
 
 <span id="scheduleTopicInventory"></span>
 
@@ -318,7 +318,7 @@ Provided we have a respondingActor, call its manageKeys method.
 
 [actor.t](../file/actor.t.html)\[[5383](../source/actor.t.html#5383)\]
 
-<div class="desc">
+
 
 Schedule a topic inventory request. Game code can call this at any time
 to request that the player character's topic inventory be shown
@@ -326,7 +326,7 @@ automatically just before the next command prompt. In most cases, game
 code won't call this directly, but will request the same effect using
 the \<.topics\> tag in topic response text.
 
-</div>
+
 
 <span id="setInformed"></span>
 
@@ -334,12 +334,12 @@ the \<.topics\> tag in topic response text.
 
 [actor.t](../file/actor.t.html)\[[5455](../source/actor.t.html#5455)\]
 
-<div class="desc">
+
 
 Notify every actor who's in a position to hear that we've just imparted
 some information.
 
-</div>
+
 
 <span id="setRevealed"></span>
 
@@ -347,7 +347,7 @@ some information.
 
 [actor.t](../file/actor.t.html)\[[5410](../source/actor.t.html#5410)\]
 
-<div class="desc">
+
 
 Mark a tag as revealed. This adds an entry for the tag to the
 revealedNameTab table. We simply set the table entry to 'true'; the
@@ -366,7 +366,7 @@ The actual method and the revealedNameTab are on libGlobal rather than
 here in order to make them available to games that don't include
 actor.t.
 
-</div>
+
 
 <span id="setUnrevealed"></span>
 
@@ -374,7 +374,7 @@ actor.t.
 
 [actor.t](../file/actor.t.html)\[[5446](../source/actor.t.html#5446)\]
 
-<div class="desc">
+
 
 Mark a tag as unrevealed. This removes an entry for the tag to the
 revealedNameTab table.
@@ -383,7 +383,7 @@ The actual method and the revealedNameTab are on libGlobal rather than
 here in order to make them available to games that don't include
 actor.t.
 
-</div>
+
 
 <span id="showAgendaError"></span>
 
@@ -391,14 +391,14 @@ actor.t.
 
 [actor.t](../file/actor.t.html)\[[5489](../source/actor.t.html#5489)\]
 
-<div class="desc">
+
 
 Display an error message if the game code tries to add or remove agenda
 items from an agendaList using a \<.agenda item\> or \<.remove item\>
 tag, when item doesn't correspond to a valid AgendaItem, but only do so
 if the game has been compiled for debugging.
 
-</div>
+
 
 <span id="showKnownError"></span>
 
@@ -406,14 +406,14 @@ if the game has been compiled for debugging.
 
 [actor.t](../file/actor.t.html)\[[5531](../source/actor.t.html#5531)\]
 
-<div class="desc">
+
 
 Display an error message if the game code tries mark an object as known
 about using a \<.known obj\> tag, when obj doesn't correspond to a valid
 Mentionable object, but only do so if the game has been compiled for
 debugging.
 
-</div>
+
 
 <span id="showObjDoesNotBelongToActorError"></span>
 
@@ -421,11 +421,11 @@ debugging.
 
 [actor.t](../file/actor.t.html)\[[5565](../source/actor.t.html#5565)\]
 
-<div class="desc">
+
 
 The object referred to by tag doesn't belong to the actor in question
 
-</div>
+
 
 <span id="showObjNotExistError"></span>
 
@@ -433,11 +433,11 @@ The object referred to by tag doesn't belong to the actor in question
 
 [actor.t](../file/actor.t.html)\[[5550](../source/actor.t.html#5550)\]
 
-<div class="desc">
+
 
 The object referred to by tag doesn't exist
 
-</div>
+
 
 <span id="showStateError"></span>
 
@@ -445,14 +445,14 @@ The object referred to by tag doesn't exist
 
 [actor.t](../file/actor.t.html)\[[5511](../source/actor.t.html#5511)\]
 
-<div class="desc">
+
 
 Display an error message if the game code tries to change our actor's
 ActorState via a \<.state newstate\> tag, when tag doesn't correspond to
 a valid ActorState, but only do so if the game has been compiled for
 debugging.
 
-</div>
+
 
 <span id="showWrongKindofObjectError"></span>
 
@@ -460,11 +460,11 @@ debugging.
 
 [actor.t](../file/actor.t.html)\[[5558](../source/actor.t.html#5558)\]
 
-<div class="desc">
+
 
 The object referred to by tag is the wrong sort of object
 
-</div>
+
 
 <span id="topicInventoryDaemon"></span>
 
@@ -472,7 +472,7 @@ The object referred to by tag is the wrong sort of object
 
 [actor.t](../file/actor.t.html)\[[5596](../source/actor.t.html#5596)\]
 
-<div class="desc">
+
 
 Prompt daemon: show topic inventory when appropriate. When a response
 explicitly asks us to show a topic inventory using the \<.topics\> tag,
@@ -480,11 +480,11 @@ or when other game code asks us to show topic inventory by calling
 scheduleTopicInventory(), we'll show the inventory just before the
 command input prompt.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Single-list inventory lister. This shows the inventory listing as a
 single list, with worn items mixed in among the other inventory items
@@ -28,15 +28,15 @@ and labeled "(being worn)".
 
 **`actorSingleInventoryLister`**` :   `[`InventoryLister`](../object/InventoryLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`actorSingleInventoryLister`**  
 [`InventoryLister`](../object/InventoryLister.html)  
@@ -44,11 +44,11 @@ and labeled "(being worn)".
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -59,11 +59,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListContentsPrefixTall`](#showListContentsPrefixTall)[`showListEmpty`](#showListEmpty)[`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -75,19 +75,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListContentsPrefixTall"></span>
 
@@ -95,11 +95,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4498](../source/msg_neu.t.html#4498)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -107,11 +107,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4501](../source/msg_neu.t.html#4501)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -119,11 +119,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4496](../source/msg_neu.t.html#4496)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -131,11 +131,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4491](../source/msg_neu.t.html#4491)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -143,15 +143,15 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4493](../source/msg_neu.t.html#4493)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

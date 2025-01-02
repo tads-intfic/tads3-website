@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> TravelConnectors
@@ -15,7 +15,7 @@ and Barriers
 <span class="navnp"><a href="door.html" class="nav"><em>Prev:</em>Doors</a>
     <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span>
 
-</div>
+
 
 
 
@@ -160,7 +160,7 @@ An example of a TravelConnector which conditionally blocks travel could
 be one that only allows travel down a smoke-filled passage if the player
 is wearing a wet blanket, which could be defined thus:
 
-`
+```
     landing: Room 'Landing' 'landing'
         "The smoke is already becoming so thick here that it's hard to see much.
         Your bedroom lies to the north -- if you can make your way through the
@@ -199,7 +199,7 @@ is wearing a wet blanket, which could be defined thus:
         
         regions = upstairs
     ;
-`
+```
 
 This incidentally illustrates that if we only want to use a particular
 TravelConnector once, we don't need to define it as separate named
@@ -253,7 +253,7 @@ name the connector that's being blocked. For example, suppose our game
 had several exits that required the player character to be wearing a wet
 blanket in order to penetrate the smoke. We might set it up thus:
 
-`
+```
     landing: Room 'Landing' 'landing'
         "The smoke is already becoming so thick here that it's hard to see much.
         Your bedroom lies to the north -- if you can make your way through the
@@ -306,7 +306,7 @@ blanket in order to penetrate the smoke. We might set it up thus:
                     after the first step and are forced to retreat. ";
             }
     ;
-`
+```
 
 Note how we've added a custom theName property to the two
 TravelConnectors so that smokeBarrier.explainTravelBarrier(actor,
@@ -316,7 +316,7 @@ connector) can refer to them.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -325,4 +325,4 @@ and Barriers
 <span class="navnp"><a href="door.html" class="nav"><em>Prev:</em> Doors</a>
     <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span>
 
-</div>
+

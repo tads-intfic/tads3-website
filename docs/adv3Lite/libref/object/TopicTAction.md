@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A TopicTAction is an action involving one physical object and one topic,
 e.g. ASK BOB ABOUT TOWER.
 
 `class `**`TopicTAction`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicTAction`**  
 [`TAction`](../object/TAction.html)  
@@ -51,28 +51,28 @@ e.g. ASK BOB ABOUT TOWER.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`AskAbout`](../object/AskAbout.html)[`AskFor`](../object/AskFor.html)[`ConsultAbout`](../object/ConsultAbout.html)[`QueryAbout`](../object/QueryAbout.html)[`SayTo`](../object/SayTo.html)[`TalkAbout`](../object/TalkAbout.html)[`TellAbout`](../object/TellAbout.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curIobj`](#curIobj)[`curTopic`](#curTopic)[`topicIsGrammaticalIobj`](#topicIsGrammaticalIobj)
 
@@ -88,11 +88,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`resolvePronouns`](#resolvePronouns)[`verify`](#verify)
 
@@ -110,11 +110,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curIobj"></span>
 
@@ -122,13 +122,13 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[2644](../source/action.t.html#2644)\]
 
-<div class="desc">
+
 
 Although we don't have an indirect object in the conventional sense, we
 use the curIobj property to store the ResolvedTopic involved in the
 command.
 
-</div>
+
 
 <span id="curTopic"></span>
 
@@ -136,12 +136,12 @@ command.
 
 [action.t](../file/action.t.html)\[[2650](../source/action.t.html#2650)\]
 
-<div class="desc">
+
 
 We also store the current ResolvedTopic in the curTopic property so it
 can be found by the gTopic macro.
 
-</div>
+
 
 <span id="topicIsGrammaticalIobj"></span>
 
@@ -149,7 +149,7 @@ can be found by the gTopic macro.
 
 [action.t](../file/action.t.html)\[[2698](../source/action.t.html#2698)\]
 
-<div class="desc">
+
 
 Is the topic the grammatical Indirect object of this command? This is
 used by Redirector.doOtherAction() to encapsulate the appropriate string
@@ -157,15 +157,15 @@ in a ResolvedTopic. The topic is the grammatical iobj if its the second
 object involved in the commamd, e.g. ASK BOB ABOUT FIRE, where FIRE is
 the topic.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -173,11 +173,11 @@ the topic.
 
 [action.t](../file/action.t.html)\[[2606](../source/action.t.html#2606)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="resolvePronouns"></span>
 
@@ -185,13 +185,13 @@ the topic.
 
 [action.t](../file/action.t.html)\[[2657](../source/action.t.html#2657)\]
 
-<div class="desc">
+
 
 This is a bit of a kludge to deal with the fact that the Parser doesn't
 seem able to resolve pronouns within ResolvedTopics. We do it here
 instead.
 
-</div>
+
 
 <span id="verify"></span>
 
@@ -199,7 +199,7 @@ instead.
 
 [action.t](../file/action.t.html)\[[2686](../source/action.t.html#2686)\]
 
-<div class="desc">
+
 
 Whichever object slot a verify routine is notionally trying to verify
 for given the grammatical form of the command, in practice only the
@@ -208,11 +208,11 @@ for WRITE FOO ON BALL we treat BALL as the direct object of the command
 and FOO as the literal, even if the Parser thinks it needs to verify the
 Indirect Object to disambiguate BALL.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

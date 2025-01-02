@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A command ranking criterion that measures a "problem" by a count of
 occurrences stored in a property of the CommandRanking object. For
@@ -48,43 +48,43 @@ number.
 
 `class `**`CommandRankingByProblem`**` :   `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandRankingByProblem`**  
 [`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`rankByActorSpecified`](../object/rankByActorSpecified.html)[`rankByAllExcluded`](../object/rankByAllExcluded.html)[`rankByDisambigOrdinals`](../object/rankByDisambigOrdinals.html)[`rankByEmptyBut`](../object/rankByEmptyBut.html)[`rankByIndefinite`](../object/rankByIndefinite.html)[`rankByInsufficient`](../object/rankByInsufficient.html)[`rankByListForSingle`](../object/rankByListForSingle.html)[`rankByMiscWordList`](../object/rankByMiscWordList.html)[`rankByMissing`](../object/rankByMissing.html)[`rankByNonMatch`](../object/rankByNonMatch.html)[`rankByUnwantedPlural`](../object/rankByUnwantedPlural.html)[`rankByVocabNonMatch`](../object/rankByVocabNonMatch.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`prop_`](#prop_)
 
@@ -92,11 +92,11 @@ number.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
 
@@ -104,11 +104,11 @@ number.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="prop_"></span>
 
@@ -116,21 +116,21 @@ number.
 
 [parser.t](../file/parser.t.html)\[[5854](../source/parser.t.html#5854)\]
 
-<div class="desc">
+
 
 our ranking property - this is a property of the CommandRanking object
 that gives us a count of the number of times our "problem" has occurred
 in the ranking object's parse tree
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="comparePass1"></span>
 
@@ -138,11 +138,11 @@ in the ranking object's parse tree
 
 [parser.t](../file/parser.t.html)\[[5857](../source/parser.t.html#5857)\]
 
-<div class="desc">
+
 
 first pass - compare by presence or absence of the problem
 
-</div>
+
 
 <span id="comparePass2"></span>
 
@@ -150,15 +150,15 @@ first pass - compare by presence or absence of the problem
 
 [parser.t](../file/parser.t.html)\[[5875](../source/parser.t.html#5875)\]
 
-<div class="desc">
+
 
 second pass - compare by number of occurrences of the problem
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

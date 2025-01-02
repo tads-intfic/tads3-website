@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Clock-setting plot event. This object represents a plot point that
 occurs at a particular time in the story world. Create one of these for
@@ -41,61 +41,61 @@ next plot event. \[DEFINED IN SUBTIME EXTENSION\]
 
 `class `**`ClockEvent`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ClockEvent`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`eventDate`](#eventDate)[`eventTime`](#eventTime)[`hasBeenReached`](#hasBeenReached)[`reachedWhen`](#reachedWhen)[`scaleFactor`](#scaleFactor)[`turnsToEvent`](#turnsToEvent)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`calcScaleFactor`](#calcScaleFactor)[`eventReached`](#eventReached)[`formatTime`](#formatTime)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="eventDate"></span>
 
@@ -103,11 +103,11 @@ next plot event. \[DEFINED IN SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[540](../source/subtime.t.html#540)\]
 
-<div class="desc">
+
 
 This is the eventTime expressed as a Date object
 
-</div>
+
 
 <span id="eventTime"></span>
 
@@ -115,7 +115,7 @@ This is the eventTime expressed as a Date object
 
 [subtime.t](../file/subtime.t.html)\[[537](../source/subtime.t.html#537)\]
 
-<div class="desc">
+
 
 The time at which this event occurs. This is expressed as a list with
 three elements: the day number, the hour (on a 24-hour clock), and the
@@ -125,7 +125,7 @@ second day of the game, you'd write \[2,14,40\]. Note that 12 AM is
 written as 0 (zero) on a 24-hour clock, so 12:05am on day 1 would be
 \[1,0,5\].
 
-</div>
+
 
 <span id="hasBeenReached"></span>
 
@@ -133,13 +133,13 @@ written as 0 (zero) on a 24-hour clock, so 12:05am on day 1 would be
 
 [subtime.t](../file/subtime.t.html)\[[618](../source/subtime.t.html#618)\]
 
-<div class="desc">
+
 
 Flag: has this event been reached? This is used internally by the
 library and shouldn't normally be changed in game code. \[SUBTIME
 EXTENSION\]
 
-</div>
+
 
 <span id="reachedWhen"></span>
 
@@ -147,14 +147,14 @@ EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[611](../source/subtime.t.html#611)\]
 
-<div class="desc">
+
 
 A condition (or a method that returns true or nil) that causes this
 event to be reached when it becomes true. This provides an alternative
 way of reaching events (instead of calling the eventReached method).
 \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="scaleFactor"></span>
 
@@ -162,7 +162,7 @@ way of reaching events (instead of calling the eventReached method).
 
 [subtime.t](../file/subtime.t.html)\[[570](../source/subtime.t.html#570)\]
 
-<div class="desc">
+
 
 This is the number of minutes per hundred turns when we have unlimited
 time until this next event. This number is pretty arbitrary, since we're
@@ -175,7 +175,7 @@ Alternatively you can define the turnsToEvent property (see below) and
 the game will calculate an appropriate scaleFactor for you. \[SUBTIME
 EXTENSION\]
 
-</div>
+
 
 <span id="turnsToEvent"></span>
 
@@ -183,7 +183,7 @@ EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[579](../source/subtime.t.html#579)\]
 
-<div class="desc">
+
 
 Optional: if specified this should contain an estimate of the number of
 turns a player is typically likely to take to get to this event from the
@@ -191,15 +191,15 @@ previous one; the game will then calculate an appropriate scaleFactor.
 Alternatively this can be left at nil and the scaleFactor specified
 directly. \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="calcScaleFactor"></span>
 
@@ -207,13 +207,13 @@ directly. \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[586](../source/subtime.t.html#586)\]
 
-<div class="desc">
+
 
 If the turnsToEvent property is not nil and the clockManager has
 recorded a previous event, calculate the scaleFactor for this event.
 \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="eventReached"></span>
 
@@ -221,13 +221,13 @@ recorded a previous event, calculate the scaleFactor for this event.
 
 [subtime.t](../file/subtime.t.html)\[[551](../source/subtime.t.html#551)\]
 
-<div class="desc">
+
 
 Notify the clock manager that this event has just occurred. This sets
 the game clock to the event's time. The game code must call this method
 when our point in the plot is reached.
 
-</div>
+
 
 <span id="formatTime"></span>
 
@@ -235,15 +235,15 @@ when our point in the plot is reached.
 
 [subtime.t](../file/subtime.t.html)\[[543](../source/subtime.t.html#543)\]
 
-<div class="desc">
+
 
 get a formatted version of the event time
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A DefaultTopic is a kind of TopicEntry for use as a fallback when the
 player attempts to discuss a topic that game code doesn't explicitly
@@ -34,15 +34,15 @@ cater for.
 
 `class `**`DefaultTopic`**` :   `[`ActorTopicEntry`](../object/ActorTopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefaultTopic`**  
 [`ActorTopicEntry`](../object/ActorTopicEntry.html)  
@@ -53,11 +53,11 @@ cater for.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`DefaultTopic`**  
 [`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
@@ -83,19 +83,19 @@ cater for.
 [`DefaultTellTopic`](../object/DefaultTellTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`exceptions`](#exceptions)[`matchObj`](#matchObj)[`matchScore`](#matchScore)
 
@@ -111,11 +111,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`avoidMatching`](#avoidMatching)[`matchTopic`](#matchTopic)
 
@@ -133,11 +133,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="exceptions"></span>
 
@@ -145,13 +145,13 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4060](../source/actor.t.html#4060)\]
 
-<div class="desc">
+
 
 A list of topics we don't want this DefaultTopic to match, so matching
 can fall through to another topic database to handle it (thereby
 facilitating the common handling of some topics across ActorStates).
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -159,11 +159,11 @@ facilitating the common handling of some topics across ActorStates).
 
 [actor.t](../file/actor.t.html)\[[4033](../source/actor.t.html#4033)\]
 
-<div class="desc">
+
 
 A DefaultTopic matches any Thing or Topic or yes or no
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -171,20 +171,20 @@ A DefaultTopic matches any Thing or Topic or yes or no
 
 [actor.t](../file/actor.t.html)\[[4039](../source/actor.t.html#4039)\]
 
-<div class="desc">
+
 
 A DefaultTopic has a very low matchScore to allow anything more specific
 to take precedence.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="avoidMatching"></span>
 
@@ -192,13 +192,13 @@ to take precedence.
 
 [actor.t](../file/actor.t.html)\[[4068](../source/actor.t.html#4068)\]
 
-<div class="desc">
+
 
 Do we want to avoid this DefaultTopic matching top, so that it can be
 matched elsewhere? By default we do so if top is listed in our
 exceptions.
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -206,16 +206,16 @@ exceptions.
 
 [actor.t](../file/actor.t.html)\[[4046](../source/actor.t.html#4046)\]
 
-<div class="desc">
+
 
 Don't match this DefaultTopic if top is one of the topics we want to
 avoid matching. Otherwise carry out the inherited handling.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

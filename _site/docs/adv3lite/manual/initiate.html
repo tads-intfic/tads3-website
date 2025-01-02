@@ -87,19 +87,20 @@ NPC who’s following the player character around make a comment on each
 room (or some of the rooms) they arrive in, by keying the InitiateTopic
 to the location. This might be done like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bobAccompanying: ActorState
-        specialDesc = "Bob is by your side. "
-        
-        arrivingTurn() { getActor.initiateTopic(getActor.getOutermostRoom); }
-    ;
+<p>`
+    + bobAccompanying: ActorState
+        specialDesc = “Bob is by your side. “</p>
 
-    ++ InitiateTopic @lounge
-        "&lt;q&gt;H'm,&lt;/q&gt; says Bob. &lt;q&gt;This room is rather bare, isn't it?&lt;/q&gt;. "
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    arrivingTurn() { getActor.initiateTopic(getActor.getOutermostRoom); }
+;
 
-    ++ InitiateTopic @kitchen
-        "&lt;q&gt;Ah!&lt;/q&gt; says Bob. &lt;q&gt;Any chance of something to eat?&lt;/q&gt; "   
-    ;
+++ InitiateTopic @lounge
+    "&lt;q&gt;H'm,&lt;/q&gt; says Bob. &lt;q&gt;This room is rather bare, isn't it?&lt;/q&gt;. "
+;
+
+++ InitiateTopic @kitchen
+    "&lt;q&gt;Ah!&lt;/q&gt; says Bob. &lt;q&gt;Any chance of something to eat?&lt;/q&gt; "   
+; `
 </code></pre></div></div>
 
 <p>Note that such a scheme does not commit you to supplying an
@@ -169,33 +170,34 @@ want to (for example, if the NPC asks a question).</p>
 <p>So, for example, we could have an NPC ask a question about the player
 characters’s study once both of them are in the study.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ActorHelloTopic
-        "George coughs to get your attention. ";
-    ;
+<p>`
+    + ActorHelloTopic
+        “George coughs to get your attention. “;
+    ;</p>
 
-    + ConvAgendaItem
-        isReady = inherited &amp;&amp; getActor.getOutermostRoom == study
-        invokeItem()
-        {
-            "&lt;q&gt;So this is where you work, is it?&lt;/q&gt; &lt;&lt;if
-              greetingDisplayed&gt;&gt;he&lt;&lt;else&gt;&gt;George&lt;&lt;end&gt;&gt; asks. &lt;.convnode
-            study-node&gt;";
-            isDone = true;
-        }
-        initiallyActive = true
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ ConvAgendaItem
+    isReady = inherited &amp;&amp; getActor.getOutermostRoom == study
+    invokeItem()
+    {
+        "&lt;q&gt;So this is where you work, is it?&lt;/q&gt; &lt;&lt;if
+          greetingDisplayed&gt;&gt;he&lt;&lt;else&gt;&gt;George&lt;&lt;end&gt;&gt; asks. &lt;.convnode
+        study-node&gt;";
+        isDone = true;
+    }
+    initiallyActive = true
+;
 
-    + YesTopic
-        "&lt;q&gt;Yes, this is where I do all my best work,&lt;/q&gt; you reply. "
-        convKeys = 'study-node'
-        isActive = nodeActive
-    ;
++ YesTopic
+    "&lt;q&gt;Yes, this is where I do all my best work,&lt;/q&gt; you reply. "
+    convKeys = 'study-node'
+    isActive = nodeActive
+;
 
-    + NoTopic
-        "&lt;q&gt;No, I only pretend to work here,&lt;/q&gt; you reply. "
-        convKeys = 'study-node'
-        isActive = nodeActive
-    ;
++ NoTopic
+    "&lt;q&gt;No, I only pretend to work here,&lt;/q&gt; you reply. "
+    convKeys = 'study-node'
+    isActive = nodeActive
+; `
 </code></pre></div></div>
 
 <p>Note how we use the value of greetingDisplayed to avoid repeating
@@ -304,11 +306,11 @@ assuming that there was no specific TopicEntry to deal with it).
 
 A DefaultAgendaTopic might therefore look something like this:
 
-```
+`
     + DefaultAgendaTopic
         "<q>Let's talk about something else,</q> he suggests. &lt;.topics&gt;"
     ;
-```
+`
 
 We don't have to do it precisely this way, and if we manage the
 DefaultAgendaTopic's agendaList properly (see below) the player should
@@ -348,7 +350,7 @@ doesn't allow for, so your response needs to read as a deliberate
 attempt by the NPC to change the subject. Typically, this might look
 like this:
 
-```
+`
     + fireAgenda: ConvAgendaItem
         invokeItem()
         {
@@ -358,7 +360,7 @@ like this:
             to know&lt;<end>&gt; is what you're going to do about this fire.&lt;/q&gt; ";
         }
     ;
-```
+`
 
 In fact, it could get even more complicated, since in principle this
 ConvAgendaItem could be invoked in any of the three ways noted above (to
@@ -367,7 +369,7 @@ conversation, or as a DefaultAgendaTopic response), and we may need to
 customize our text to that it works well with all three. Potentially,
 this could lead to something like this:
 
-```
+`
     + fireAgenda: ConvAgendaItem
         invokeItem()
         {
@@ -395,7 +397,7 @@ this could lead to something like this:
             
         }
     ;
-```
+`
 
 This certainly takes a bit of work (and maybe some ingenuity) to get
 right, but it's worth it if you want your NPCs to be lifelike; moreover
@@ -407,7 +409,7 @@ use the macro-constants **InitiateConversationReason** (1),
 of the numbers 1, 2 and 3 in code like the above to make it a bit more
 readable, for example:
 
-```
+`
     + fireAgenda: ConvAgendaItem
         invokeItem()
         {
@@ -435,7 +437,7 @@ readable, for example:
             
         }
     ;
-```
+`
 
   
 <span id="addingagenda"></span>
@@ -518,7 +520,7 @@ situation where this may be the case is where you want an NPC to say
 something in response to a particular player character action, which is
 most conveniently triggered from an afterAction method, such as:
 
-```
+`
     martha: Actor 'Martha;;woman;her' @lounge
     ;
 
@@ -533,7 +535,7 @@ most conveniently triggered from an afterAction method, such as:
               your aunt admonishes you sternly. ');
        }
     ;
-```
+`
 
 The advantage of using `actorSay()` here instead
 of just using a double-quoted string to display the text is that this

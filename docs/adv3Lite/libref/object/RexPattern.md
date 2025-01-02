@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 'RexPattern' intrinsic class. This class encapsulates a compiled regular
 expression pattern.
@@ -39,41 +39,41 @@ pattern will be used in multiple searches.
 
 `intrinsic class `**`RexPattern`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RexPattern`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ pattern will be used in multiple searches.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getPatternString`](#getPatternString)
 
@@ -94,19 +94,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getPatternString"></span>
 
@@ -114,15 +114,15 @@ Inherited from `Object` :
 
 [systype.h](../file/systype.h.html)\[[1218](../source/systype.h.html#1218)\]
 
-<div class="desc">
+
 
 retrieve the original pattern string used to construct the object
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

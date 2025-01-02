@@ -101,38 +101,39 @@ For example, suppose a certain scene ends tragically if Martha is dead
 but happily if you give Martha the gold ring, you might do something
 like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class SceneEnding: object
+<p>`
+    class SceneEnding: object
        whenEnding() { }
-    ;
+    ;</p>
 
-    happyEnding: SceneEnding
-       whenEnding() { "A surge of happiness washes over you..."; }
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>happyEnding: SceneEnding
+   whenEnding() { "A surge of happiness washes over you..."; }
+;
 
-    tragicEnding: SceneEnding
-       whenEnding() { "You feel inconsolable at your loss..."; }
-    ;
+tragicEnding: SceneEnding
+   whenEnding() { "You feel inconsolable at your loss..."; }
+;
 
-    marthaScene: Scene
-       startsWhen = Q.canSee(me, martha)
-       
-       endsWhen()
-       {
-            if(martha.isDead)
-               return tragicEnding;
-             
-            if(goldRing.isIn(martha))
-               return happyEnding;
-             
-            return nil;      
-       }
-       
-       whenEnding() 
-       {
-          if(howEnded != nil)
-             howEnded.whenEnding();
-       }
-    ;
+marthaScene: Scene
+   startsWhen = Q.canSee(me, martha)
+   
+   endsWhen()
+   {
+        if(martha.isDead)
+           return tragicEnding;
+         
+        if(goldRing.isIn(martha))
+           return happyEnding;
+         
+        return nil;      
+   }
+   
+   whenEnding() 
+   {
+      if(howEnded != nil)
+         howEnded.whenEnding();
+   }
+; `
 </code></pre></div></div>
 
 <p>One special point to note: if you define the startsWhen condition of a
@@ -143,22 +144,22 @@ method will execute just <em>after</em> the first room description is
 displayed. If you want it to display something just after, you can use
 its whenStarting method to display some text, e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     introScene: Scene
+<p>`
+     introScene: Scene
         startsWhen = (harry.isIn(harrysBed))
-        endsWhen = (!harry.isIn(harrysBed))
-        
-        
-        whenEnding()
-        {
-            "Harry stretches and yawns, before staggering uncertainly across the
-            room. ";
-        }
-       
-        whenStarting = "Harry groans. "    
-    ;
-     
-     
+        endsWhen = (!harry.isIn(harrysBed))</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    whenEnding()
+    {
+        "Harry stretches and yawns, before staggering uncertainly across the
+        room. ";
+    }
+   
+    whenStarting = "Harry groans. "    
+;
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>This is normally what you would want, but note that this means that you
 can’t use a Scene to display any text prior to the first room

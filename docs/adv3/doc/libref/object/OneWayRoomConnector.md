@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A one-way room connector. This works like an ordinary room connector,
 but connects only in one direction. To use this class, simply define the
@@ -34,15 +34,15 @@ but connects only in one direction. To use this class, simply define the
 
 `class `**`OneWayRoomConnector`**` :   `[`RoomConnector`](../object/RoomConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OneWayRoomConnector`**  
 [`RoomConnector`](../object/RoomConnector.html)  
@@ -52,27 +52,27 @@ but connects only in one direction. To use this class, simply define the
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`destination`](#destination)
 
@@ -90,11 +90,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getDestination`](#getDestination)
 
@@ -112,11 +112,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="destination"></span>
 
@@ -124,19 +124,19 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[2363](../source/travel.t.html#2363)\]
 
-<div class="desc">
+
 
 my destination - instances must define this
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getDestination"></span>
 
@@ -144,15 +144,15 @@ my destination - instances must define this
 
 [travel.t](../file/travel.t.html)\[[2366](../source/travel.t.html#2366)\]
 
-<div class="desc">
+
 
 we always have a fixed destination
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

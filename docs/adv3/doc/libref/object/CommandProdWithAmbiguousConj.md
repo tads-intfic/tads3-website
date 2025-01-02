@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Match class for two command phrases separated by an ambiguous
 conjunction (i.e., a conjunction that could also separate two noun
@@ -37,15 +37,15 @@ of the second command.
 
 `class `**`CommandProdWithAmbiguousConj`**` :   `[`CommandProd`](../object/CommandProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandProdWithAmbiguousConj`**  
 [`CommandProd`](../object/CommandProd.html)  
@@ -53,29 +53,29 @@ of the second command.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`CommandProdWithAmbiguousConj`**  
 [`commandPhrase(ambiguousConj)`](../object/commandPhrase(ambiguousConj).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cmdCounted_`](#cmdCounted_)
 
@@ -87,11 +87,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`countCommands`](#countCommands)[`getCommandSepIndex`](#getCommandSepIndex)[`getNextCommandIndex`](#getNextCommandIndex)[`isEndOfSentence`](#isEndOfSentence)[`resolveFirstAction`](#resolveFirstAction)[`resolveNouns`](#resolveNouns)
 
@@ -103,11 +103,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cmdCounted_"></span>
 
@@ -115,19 +115,19 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[1137](../source/parser.t.html#1137)\]
 
-<div class="desc">
+
 
 counter: have we counted our command in the results object yet?
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="countCommands"></span>
 
@@ -135,11 +135,11 @@ counter: have we counted our command in the results object yet?
 
 [parser.t](../file/parser.t.html)\[[1126](../source/parser.t.html#1126)\]
 
-<div class="desc">
+
 
 count our commands
 
-</div>
+
 
 <span id="getCommandSepIndex"></span>
 
@@ -147,12 +147,12 @@ count our commands
 
 [parser.t](../file/parser.t.html)\[[1159](../source/parser.t.html#1159)\]
 
-<div class="desc">
+
 
 Get the token index of the first command separator token. This is the
 first token that is not part of the underlying command.
 
-</div>
+
 
 <span id="getNextCommandIndex"></span>
 
@@ -160,12 +160,12 @@ first token that is not part of the underlying command.
 
 [parser.t](../file/parser.t.html)\[[1169](../source/parser.t.html#1169)\]
 
-<div class="desc">
+
 
 get the token index of the next command - this is simply the starting
 index for our second subcommand tree
 
-</div>
+
 
 <span id="isEndOfSentence"></span>
 
@@ -173,11 +173,11 @@ index for our second subcommand tree
 
 [parser.t](../file/parser.t.html)\[[1146](../source/parser.t.html#1146)\]
 
-<div class="desc">
+
 
 does this command end a sentence
 
-</div>
+
 
 <span id="resolveFirstAction"></span>
 
@@ -185,11 +185,11 @@ does this command end a sentence
 
 [parser.t](../file/parser.t.html)\[[1140](../source/parser.t.html#1140)\]
 
-<div class="desc">
+
 
 resolve my first action
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -197,15 +197,15 @@ resolve my first action
 
 [parser.t](../file/parser.t.html)\[[1108](../source/parser.t.html#1108)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

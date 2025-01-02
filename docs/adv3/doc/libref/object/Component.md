@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A component object. These objects cannot be removed from their
 containers because they are permanent features of other objects, which
@@ -37,15 +37,15 @@ objects rather than fixed features of rooms.
 
 `class `**`Component`**` :   `[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Component`**  
 [`Fixture`](../object/Fixture.html)  
@@ -55,30 +55,30 @@ objects rather than fixed features of rooms.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Component`**  
 [`ComplexComponent`](../object/ComplexComponent.html)  
 [`ContainerDoor`](../object/ContainerDoor.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -96,11 +96,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(PutBehind)`](#dobjFor(PutBehind))[`dobjFor(PutIn)`](#dobjFor(PutIn))[`dobjFor(PutOn)`](#dobjFor(PutOn))[`dobjFor(PutUnder)`](#dobjFor(PutUnder))[`dobjFor(Take)`](#dobjFor(Take))[`dobjFor(TakeFrom)`](#dobjFor(TakeFrom))[`hideFromAll`](#hideFromAll)[`isComponentOf`](#isComponentOf)[`meetsObjHeld`](#meetsObjHeld)[`verifyMoveTo`](#verifyMoveTo)
 
@@ -118,19 +118,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(PutBehind)"></span>
 
@@ -138,11 +138,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1947](../source/objects.t.html#1947)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutIn)"></span>
 
@@ -150,11 +150,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1941](../source/objects.t.html#1941)\]
 
-<div class="desc">
+
 
 a component cannot be separately put somewhere
 
-</div>
+
 
 <span id="dobjFor(PutOn)"></span>
 
@@ -162,11 +162,11 @@ a component cannot be separately put somewhere
 
 [objects.t](../file/objects.t.html)\[[1943](../source/objects.t.html#1943)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutUnder)"></span>
 
@@ -174,11 +174,11 @@ a component cannot be separately put somewhere
 
 [objects.t](../file/objects.t.html)\[[1945](../source/objects.t.html#1945)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -186,11 +186,11 @@ a component cannot be separately put somewhere
 
 [objects.t](../file/objects.t.html)\[[1935](../source/objects.t.html#1935)\]
 
-<div class="desc">
+
 
 a component cannot be taken separately
 
-</div>
+
 
 <span id="dobjFor(TakeFrom)"></span>
 
@@ -198,11 +198,11 @@ a component cannot be taken separately
 
 [objects.t](../file/objects.t.html)\[[1937](../source/objects.t.html#1937)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -210,7 +210,7 @@ a component cannot be taken separately
 
 [objects.t](../file/objects.t.html)\[[1911](../source/objects.t.html#1911)\]
 
-<div class="desc">
+
 
 Hide components from EXAMINE ALL, as well as any commands hidden from
 ALL for ordinary fixtures. Components are small parts of larger objects,
@@ -218,7 +218,7 @@ so when we EXAMINE ALL, it's enough to examine the larger objects of
 which we're a part; we don't want components to show up separately in
 these cases.
 
-</div>
+
 
 <span id="isComponentOf"></span>
 
@@ -226,12 +226,12 @@ these cases.
 
 [objects.t](../file/objects.t.html)\[[1922](../source/objects.t.html#1922)\]
 
-<div class="desc">
+
 
 We are a component of our direct cotnainer, and we're indirectly a
 component of anything that it's a component of.
 
-</div>
+
 
 <span id="meetsObjHeld"></span>
 
@@ -239,12 +239,12 @@ component of anything that it's a component of.
 
 [objects.t](../file/objects.t.html)\[[1932](../source/objects.t.html#1932)\]
 
-<div class="desc">
+
 
 Consider ourself to be held by the given actor if we're a component of
 the actor.
 
-</div>
+
 
 <span id="verifyMoveTo"></span>
 
@@ -252,15 +252,15 @@ the actor.
 
 [objects.t](../file/objects.t.html)\[[1898](../source/objects.t.html#1898)\]
 
-<div class="desc">
+
 
 a component cannot be removed from its container by an actor action
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

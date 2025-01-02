@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Typographical effects output filter. This filter looks for certain
 sequences in the text and converts them to typographical equivalents.
@@ -46,26 +46,26 @@ customize it for local conventions.
 
 **`typographicalOutputFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`typographicalOutputFilter`**  
 [`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`abbreviations`](#abbreviations)[`abbrevPat`](#abbrevPat)[`eosPattern`](#eosPattern)
 
@@ -73,11 +73,11 @@ customize it for local conventions.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterText`](#filterText)
 
@@ -85,11 +85,11 @@ customize it for local conventions.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="abbreviations"></span>
 
@@ -97,7 +97,7 @@ customize it for local conventions.
 
 [output.t](../file/output.t.html)\[[1948](../source/output.t.html#1948)\]
 
-<div class="desc">
+
 
 Common abbreviations. These are excluded from being treated as sentence
 endings when they appear with a trailing period.
@@ -107,7 +107,7 @@ fly - abbrevPat is static, so it picks up the initial value of this
 property at start-up, and doesn't re-evaluate it while the game is
 running.
 
-</div>
+
 
 <span id="abbrevPat"></span>
 
@@ -115,11 +115,11 @@ running.
 
 [output.t](../file/output.t.html)\[[1936](../source/output.t.html#1936)\]
 
-<div class="desc">
+
 
 pattern for abbreviations that were mistaken for sentence endings
 
-</div>
+
 
 <span id="eosPattern"></span>
 
@@ -127,7 +127,7 @@ pattern for abbreviations that were mistaken for sentence endings
 
 [output.t](../file/output.t.html)\[[1923](../source/output.t.html#1923)\]
 
-<div class="desc">
+
 
 The end-of-sentence pattern. This looks a bit complicated, but all we're
 looking for is a period, exclamation point, or question mark, optionally
@@ -146,15 +146,15 @@ Note that we specifically look only for ordinary spaces. Any
 sentence-ending punctuation that's followed by a quoted space or any
 typographical space overrides this substitution.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterText"></span>
 
@@ -162,15 +162,15 @@ typographical space overrides this substitution.
 
 [output.t](../file/output.t.html)\[[1867](../source/output.t.html#1867)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

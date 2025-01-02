@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A DefaultAgendaTopic can be used to give the actor the opportunity to
 seize the conversational initiative when the player enters a
@@ -47,15 +47,15 @@ turn out to be executable.
 
 `class `**`DefaultAgendaTopic`**` :   `[`AgendaManager`](../object/AgendaManager.html)[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefaultAgendaTopic`**  
 [`AgendaManager`](../object/AgendaManager.html)  
@@ -70,27 +70,27 @@ turn out to be executable.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`active`](#active)[`matchScore`](#matchScore)
 
@@ -115,11 +115,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`handleTopic`](#handleTopic)
 
@@ -145,11 +145,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="active"></span>
 
@@ -157,12 +157,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4153](../source/actor.t.html#4153)\]
 
-<div class="desc">
+
 
 This kind of Default Topic is active only when it has any agenda items
 to process.
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -170,20 +170,20 @@ to process.
 
 [actor.t](../file/actor.t.html)\[[4160](../source/actor.t.html#4160)\]
 
-<div class="desc">
+
 
 When this DefaultTopic is active we want it to take priority over over
 DefaultTopics.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="handleTopic"></span>
 
@@ -191,15 +191,15 @@ DefaultTopics.
 
 [actor.t](../file/actor.t.html)\[[4139](../source/actor.t.html#4139)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

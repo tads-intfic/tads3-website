@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Where Messages
@@ -16,7 +16,7 @@ Come From
     <a href="t3res.html" class="nav"><em>Next:</em> Action Results</a>
     </span>
 
-</div>
+
 
 
 
@@ -1955,7 +1955,7 @@ This farewell message is produced by the showGoodbye() method on
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1965,4 +1965,4 @@ Come From
     <a href="t3res.html" class="nav"><em>Next:</em> Action Results</a>
     </span>
 
-</div>
+

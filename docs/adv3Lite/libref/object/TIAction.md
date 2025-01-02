@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A TIAction is an action that applies to both a direct object and an
 indirect object. Since it inherits from TAction we only need to define
@@ -40,15 +40,15 @@ return the complete phrase string
 
 `class `**`TIAction`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TIAction`**  
 [`TAction`](../object/TAction.html)  
@@ -58,30 +58,30 @@ return the complete phrase string
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TIAction`**  
 [`TIAAction`](../object/TIAAction.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`AttachTo`](../object/AttachTo.html)[`AttackWith`](../object/AttackWith.html)[`BurnWith`](../object/BurnWith.html)[`CleanWith`](../object/CleanWith.html)[`CutWith`](../object/CutWith.html)[`DetachFrom`](../object/DetachFrom.html)[`DigWith`](../object/DigWith.html)[`DoNothing`](../object/DoNothing.html)[`FastenTo`](../object/FastenTo.html)[`GiveTo`](../object/GiveTo.html)[`LockWith`](../object/LockWith.html)[`MoveTo`](../object/MoveTo.html)[`MoveWith`](../object/MoveWith.html)[`PlugInto`](../object/PlugInto.html)[`PourInto`](../object/PourInto.html)[`PourOnto`](../object/PourOnto.html)[`PushTravelClimbDown`](../object/PushTravelClimbDown.html)[`PushTravelClimbUp`](../object/PushTravelClimbUp.html)[`PushTravelEnter`](../object/PushTravelEnter.html)[`PushTravelGetOutOf`](../object/PushTravelGetOutOf.html)[`PushTravelThrough`](../object/PushTravelThrough.html)[`PutBehind`](../object/PutBehind.html)[`PutIn`](../object/PutIn.html)[`PutOn`](../object/PutOn.html)[`PutUnder`](../object/PutUnder.html)[`ScrewWith`](../object/ScrewWith.html)[`ShowTo`](../object/ShowTo.html)[`TakeFrom`](../object/TakeFrom.html)[`ThrowAt`](../object/ThrowAt.html)[`ThrowTo`](../object/ThrowTo.html)[`TurnWith`](../object/TurnWith.html)[`UnfastenFrom`](../object/UnfastenFrom.html)[`UnlockWith`](../object/UnlockWith.html)[`UnplugFrom`](../object/UnplugFrom.html)[`UnscrewWith`](../object/UnscrewWith.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionIobjProp`](#actionIobjProp)[`checkIobjProp`](#checkIobjProp)[`curIobj`](#curIobj)[`ioActionList`](#ioActionList)[`preCondIobjProp`](#preCondIobjProp)[`resolveIobjFirst`](#resolveIobjFirst)[`verIobjProp`](#verIobjProp)
 
@@ -97,11 +97,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkAction`](#checkAction)[`doActionOnce`](#doActionOnce)[`execAction`](#execAction)[`execResolvedAction`](#execResolvedAction)[`getMessageParam`](#getMessageParam)[`getVerbPhrase`](#getVerbPhrase)[`getVerbPhrase2`](#getVerbPhrase2)[`reportAction`](#reportAction)[`reset`](#reset)[`resolvedObjectsInScope`](#resolvedObjectsInScope)[`setResolvedObjects`](#setResolvedObjects)
 
@@ -119,11 +119,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionIobjProp"></span>
 
@@ -131,11 +131,11 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[2219](../source/action.t.html#2219)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="checkIobjProp"></span>
 
@@ -143,11 +143,11 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[2218](../source/action.t.html#2218)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="curIobj"></span>
 
@@ -155,11 +155,11 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[2213](../source/action.t.html#2213)\]
 
-<div class="desc">
+
 
 The current indirect object of this action.
 
-</div>
+
 
 <span id="ioActionList"></span>
 
@@ -167,12 +167,12 @@ The current indirect object of this action.
 
 [action.t](../file/action.t.html)\[[2226](../source/action.t.html#2226)\]
 
-<div class="desc">
+
 
 A list of the indirect objects that this actually actually ends up
 acting on at the action stage.
 
-</div>
+
 
 <span id="preCondIobjProp"></span>
 
@@ -180,11 +180,11 @@ acting on at the action stage.
 
 [action.t](../file/action.t.html)\[[2220](../source/action.t.html#2220)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="resolveIobjFirst"></span>
 
@@ -192,12 +192,12 @@ acting on at the action stage.
 
 [action.t](../file/action.t.html)\[[2232](../source/action.t.html#2232)\]
 
-<div class="desc">
+
 
 Flag: should we resolve the indirect object of this action before the
 direct object?
 
-</div>
+
 
 <span id="verIobjProp"></span>
 
@@ -205,19 +205,19 @@ direct object?
 
 [action.t](../file/action.t.html)\[[2217](../source/action.t.html#2217)\]
 
-<div class="desc">
+
 
 The various methods to call on the indirect object of this action.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkAction"></span>
 
@@ -225,11 +225,11 @@ The various methods to call on the indirect object of this action.
 
 [action.t](../file/action.t.html)\[[2265](../source/action.t.html#2265)\]
 
-<div class="desc">
+
 
 Carry out the check phase for this command.
 
-</div>
+
 
 <span id="doActionOnce"></span>
 
@@ -237,14 +237,14 @@ Carry out the check phase for this command.
 
 [action.t](../file/action.t.html)\[[2423](../source/action.t.html#2423)\]
 
-<div class="desc">
+
 
 Execute the action phase of the action on both objects. Note that
 although some TIActions can operate on multiple direct objects, none
 defined in the library acts on multiple indirect objects, so there's
 only minimal support for the latter possibility.
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -252,11 +252,11 @@ only minimal support for the latter possibility.
 
 [action.t](../file/action.t.html)\[[2243](../source/action.t.html#2243)\]
 
-<div class="desc">
+
 
 execute this action.
 
-</div>
+
 
 <span id="execResolvedAction"></span>
 
@@ -264,12 +264,12 @@ execute this action.
 
 [action.t](../file/action.t.html)\[[2350](../source/action.t.html#2350)\]
 
-<div class="desc">
+
 
 Execute this action as a resolved action, that is once its direct and
 indirect objects are known.
 
-</div>
+
 
 <span id="getMessageParam"></span>
 
@@ -277,11 +277,11 @@ indirect objects are known.
 
 [action.t](../file/action.t.html)\[[2331](../source/action.t.html#2331)\]
 
-<div class="desc">
+
 
 Get the message parameters relating to this action
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -289,11 +289,11 @@ Get the message parameters relating to this action
 
 [english.t](../file/english.t.html)\[[5595](../source/english.t.html#5595)\]
 
-<div class="desc">
+
 
 get the verb phrase in infinitive or participle form
 
-</div>
+
 
 <span id="getVerbPhrase2"></span>
 
@@ -301,7 +301,7 @@ get the verb phrase in infinitive or participle form
 
 [english.t](../file/english.t.html)\[[5628](../source/english.t.html#5628)\]
 
-<div class="desc">
+
 
 Get the verb phrase for a two-object (dobj + iobj) phrasing. This is a
 class method, so that it can be reused by unrelated (i.e., non-TIAction)
@@ -309,7 +309,7 @@ classes that also use two-object syntax but with other internal
 structures. This is the two-object equivalent of
 TAction.getVerbPhrase1().
 
-</div>
+
 
 <span id="reportAction"></span>
 
@@ -317,7 +317,7 @@ TAction.getVerbPhrase1().
 
 [action.t](../file/action.t.html)\[[2314](../source/action.t.html#2314)\]
 
-<div class="desc">
+
 
 Carry out the report phase for this action. If there's anything in the
 ioActionList and we're not an implicit action, call the report method on
@@ -326,7 +326,7 @@ the same on the direct object). Note that this method is called by the
 current Command object once its finished iterating over all the objects
 involved in the command.
 
-</div>
+
 
 <span id="reset"></span>
 
@@ -334,11 +334,11 @@ involved in the command.
 
 [action.t](../file/action.t.html)\[[2235](../source/action.t.html#2235)\]
 
-<div class="desc">
+
 
 Reset the action variables to their initial state.
 
-</div>
+
 
 <span id="resolvedObjectsInScope"></span>
 
@@ -346,12 +346,12 @@ Reset the action variables to their initial state.
 
 [action.t](../file/action.t.html)\[[2298](../source/action.t.html#2298)\]
 
-<div class="desc">
+
 
 Test whether both the direct and the indirect objects for this action
 are in scope.
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -359,15 +359,15 @@ are in scope.
 
 [action.t](../file/action.t.html)\[[2288](../source/action.t.html#2288)\]
 
-<div class="desc">
+
 
 Set the resolved objects for this action.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

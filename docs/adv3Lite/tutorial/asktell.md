@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="conversation.html" class="nav">The Art of Conversation</a> \>
@@ -17,7 +17,7 @@ Conversation</a>    
 <a href="query.html" class="nav"><em>Next:</em> Queries and
 Suggestions</a>     </span>
 
-</div>
+
 
 
 
@@ -122,14 +122,14 @@ We don't actually want our protagonist to talk to Pablo Cortez at all,
 since the idea is to avoid attracting Cortez's attention. In this case
 all we need is a single DefaultAnyTopic that explains this:
 
-`
+```
     + DefaultAnyTopic
         "You really don't want to attract his attention. If he recognizes you he'll
         kill you. "
         
         isConversational = nil
     ;
-`
+```
 
 This object definition should be placed somewhere after the
 `cortez` object in the npcs.t file so that the +
@@ -155,14 +155,14 @@ for which we've already defined a corresponding
 `tFlightDepartures` Topic object. As a first
 attempt, then, we might define an AskTopic for our Security Guard thus:
 
-`
+```
     + AskTopic @tFlightDepartures
        "<q>When's the next plane out of here?</q> you ask.\b
        <q>Listen for the announcements, Se&ntilde;or,</q> he suggests, <q>or look at
        the departure boards through there.</q> He jerks his thumb vaguely in the
        direction of north. "
     ;
-`
+```
 
 Here we use the @ symbol in the TopicEntry template to denote the fact
 that we're defining the AskTopic's `matchObj`
@@ -180,7 +180,7 @@ simply add StopEventList to the class list and then supply a list of
 single-quoted strings in place of the double-quoted string giving the
 response:
 
-`
+```
     + AskTopic, StopEventList @tFlightDepartures
         [
             '<q>When\'s the next plane out of here?</q> you ask.\b
@@ -193,14 +193,14 @@ response:
             watch the board,</q> he replies with a faint air of impatience.'
         ]
     ;
-`
+```
 
 Since this man is presumably meant to have something to do with airport
 security, it's possible that the player character might try to tell him
 about Pablo Cortez's takeover of the plane, which we can do in a similar
 fashion via a TellTopic:
 
-`
+```
     + TellTopic, StopEventList @cortez
         [
             '<q>A criminal called Pablo Cortez has just tried to take over the
@@ -213,7 +213,7 @@ fashion via a TellTopic:
             of, Se&ntilde;or,</q> he insists. '
         ]
     ;
-`
+```
 
 If you try compiling and running the game at this point, you'll find
 that this TellTopic won't be triggered unless and until the player
@@ -236,13 +236,13 @@ Something else the player character might obviously try to do in
 conversation with the security guard is to ask for the ID card back once
 it's been confiscated. For that purpose we can use an AskForTopic:
 
-`
+```
     + AskForTopic @IDcard
         "<q>Can I have my ID card back, please?</q> you ask.\b
         <q>That was not your ID card, Se&ntilde;or,</q> the guard replies equably.
         <q>I know Antonio Velaquez, and you are not he.</q> "
     ;
-`
+```
 
 The problem is that this AskForTopic can be triggered once the player
 has seen the ID card; there's no guarantee that it will have been
@@ -269,7 +269,7 @@ First, then, we must add a `\<.reveal\>` tag to
 the notice of the card's confiscation; this occurs on the definition of
 the metal detector:
 
-`
+```
     + metalDetector: Passage 'metal detector; crude; frame'
         "The metal detector is little more than a crude metal frame, just large
         enough to step through, with a power cable trailing across the floor. "
@@ -302,7 +302,7 @@ the metal detector:
                 announcementObj.start();
         }
     ;
-`
+```
 
 At the same time as adding the `\<.reveal
 card-confiscated\>` tag we've added a few words about a colleague
@@ -311,7 +311,7 @@ to explain how the card finds its way back to the counter.
 The next step is to add the appropriate isActive condition to the
 AskForTopic:
 
-`
+```
     + AskForTopic @IDcard
         "<q>Can I have my ID card back, please?</q> you ask.\b
         <q>That was not your ID card, Se&ntilde;or,</q> the guard replies equably.
@@ -319,7 +319,7 @@ AskForTopic:
         
         isActive = gRevealed('card-confiscated') && IDcard.location == counter
     ;
-`
+```
 
 This is not absolutely bullet-proof, since the player character could
 find the ID card on the counter after it has been confiscated and still
@@ -333,7 +333,7 @@ means we'll need our ShowTopic to do a bit more than just display some
 text. We can do that by defining its topicResponse property explicitly
 as a method rather than as a double-quoted string via the template:
 
-`
+```
     + ShowTopic @IDcard
         topicResponse()
         {
@@ -347,7 +347,7 @@ as a method rather than as a double-quoted string via the template:
             IDcard.moveInto(counter);
         }    
     ;
-`
+```
 
 Because of the way the ShowTo action is defined, a ShowTopic can't be
 triggered unless the object it's meant to match is visible, so there's
@@ -359,7 +359,7 @@ to put an objHeld preCondition on the ShowTo response of the IDcard,
 since this will trigger an implicit take if the player character drops
 the card before showing it to the guard:
 
-`
+```
     ++ IDcard: Key 'an ID Card; identification poor; photo'     
         "According to what's on the front it apparently belongs to one Antonio
         Velaquez. Fortunately the accompanying photo is so poor it could be of
@@ -372,19 +372,19 @@ the card before showing it to the guard:
         
         dobjFor(ShowTo)   {  preCond = [objHeld]   }
     ;
-`
+```
 
 Finally, we should give the security guard some form of default response
 to handle all other conversational commands. Since he's not really a
 major character we can afford to go with something fairly
 unsophisticated:
 
-`
+```
     + DefaultAnyTopic
         "The guard merely shrugs and mutters something that could be either, <q>Not
         my concern, Se&ntilde;or,</q> or <q>Not your concern, Se&ntilde;or.</q> "
     ;
-`
+```
 
   
 
@@ -396,7 +396,7 @@ automatically see if the player character was carrying a ticket, and
 allow him to board if so. Now we know how to allow the player character
 to show things to people, we can remove that code:
 
-`
+```
     + angelaTicketAgenda: ConvAgendaItem
         initiallyActive = true
         
@@ -417,7 +417,7 @@ to show things to people, we can remove that code:
     //        }        
         }
     ;
-`
+```
 
 Instead, we can put similar code in the topicResponse() method of a
 GiveShowTopic, so that the player character can (and must) explicitly
@@ -426,7 +426,7 @@ when the flight attendant is in her
 `angelaGreetingState` state, it's probably best
 to locate our GiveShowTopic there rather than directly in angela:
 
-`
+```
     ++ GiveShowTopic @ticket
         topicResponse()
         {
@@ -440,7 +440,7 @@ to locate our GiveShowTopic there rather than directly in angela:
             angelaGreetingState.ticketSeen = true;
         }
     ;
-`
+```
 
 We've now completed all the conversation we want to implement with Pablo
 Cortez and the Security Guard, but this is just the start of the
@@ -458,7 +458,7 @@ Knowledge](../manual/knowledge.html).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -469,4 +469,4 @@ Conversation</a>    
 <a href="query.html" class="nav"><em>Next:</em> Queries and
 Suggestions</a>     </span>
 
-</div>
+

@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Actor is a living person, animal, or other entity with a will of its
 own. Actors can usually be addressed with targeted commands ("bob, go
@@ -54,15 +54,15 @@ actor-by-actor basis.
 
 `class `**`Actor`**` :   `[`Thing`](../object/Thing.html)[`Schedulable`](../object/Schedulable.html)[`Traveler`](../object/Traveler.html)[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Actor`**  
 [`Thing`](../object/Thing.html)  
@@ -78,30 +78,30 @@ actor-by-actor basis.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Actor`**  
 [`UntakeableActor`](../object/UntakeableActor.html)  
 [`Person`](../object/Person.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`accompanyingActors`](#accompanyingActors)[`actorNotifyList`](#actorNotifyList)[`agendaList`](#agendaList)[`antecedentTable`](#antecedentTable)[`boredomAgendaItem`](#boredomAgendaItem)[`boredomCount`](#boredomCount)[`bulkCapacity`](#bulkCapacity)[`canMatch3rdPerson`](#canMatch3rdPerson)[`canMatchHer`](#canMatchHer)[`canMatchHim`](#canMatchHim)[`canMatchIt`](#canMatchIt)[`canMatchThem`](#canMatchThem)[`commandReferralPerson`](#commandReferralPerson)[`communicationSenses`](#communicationSenses)[`contentsListed`](#contentsListed)[`convMgrID`](#convMgrID)[`convNodeTab`](#convNodeTab)[`curConvNode`](#curConvNode)[`curState`](#curState)[`excludeFromLookAroundList`](#excludeFromLookAroundList)[`followables_`](#followables_)[`followingActor`](#followingActor)[`getTravelerActors`](#getTravelerActors)[`getTravelerMotiveActors`](#getTravelerMotiveActors)[`hearinglikeSenses`](#hearinglikeSenses)[`holdingDescInventoryLister`](#holdingDescInventoryLister)[`inventoryLister`](#inventoryLister)[`isActor`](#isActor)[`isLikelyCommandTarget`](#isLikelyCommandTarget)[`isListed`](#isListed)[`isListedAboardVehicle`](#isListedAboardVehicle)[`isListedInContents`](#isListedInContents)[`isListedInInventory`](#isListedInInventory)[`issueCommandsSynchronously`](#issueCommandsSynchronously)[`knownProp`](#knownProp)[`lastConsulted`](#lastConsulted)[`lastConvTime`](#lastConvTime)[`lastDoorTraversed`](#lastDoorTraversed)[`lastInterlocutor`](#lastInterlocutor)[`lastTravelBack`](#lastTravelBack)[`lastTravelDest`](#lastTravelDest)[`locationBefore`](#locationBefore)[`locationLitBefore`](#locationLitBefore)[`maxSingleBulk`](#maxSingleBulk)[`mostRecentAction`](#mostRecentAction)[`name`](#name)[`nextHoldingIndex`](#nextHoldingIndex)[`nextRunTime`](#nextRunTime)[`pcReferralPerson`](#pcReferralPerson)[`pendingCommand`](#pendingCommand)[`pendingConv`](#pendingConv)[`pendingResponse`](#pendingResponse)[`possAnaphorTable`](#possAnaphorTable)[`posture`](#posture)[`responseSetConvNode`](#responseSetConvNode)[`revertTargetActorAtEndOfSentence`](#revertTargetActorAtEndOfSentence)[`scheduleOrder`](#scheduleOrder)[`scopeSenses`](#scopeSenses)[`seenProp`](#seenProp)[`sightlikeSenses`](#sightlikeSenses)[`smelllikeSenses`](#smelllikeSenses)[`specialDescBeforeContents`](#specialDescBeforeContents)[`specialDescOrder`](#specialDescOrder)[`specialTraveler`](#specialTraveler)[`takeFromNotInMessage`](#takeFromNotInMessage)[`waitingForActor`](#waitingForActor)[`waitingForInfo`](#waitingForInfo)[`weightCapacity`](#weightCapacity)
 
@@ -126,11 +126,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`acceptCommand`](#acceptCommand)[`acceptCommandBusy`](#acceptCommandBusy)[`actorAction`](#actorAction)[`actorActionFollow`](#actorActionFollow)[`actorHereDesc`](#actorHereDesc)[`actorListWith`](#actorListWith)[`actorRoomNameStatus`](#actorRoomNameStatus)[`actorThereDesc`](#actorThereDesc)[`actorTravel`](#actorTravel)[`actorVerifyFollow`](#actorVerifyFollow)[`addAccompanyingActor`](#addAccompanyingActor)[`addActorNotifyItem`](#addActorNotifyItem)[`addBusyTime`](#addBusyTime)[`addFirstPendingAction`](#addFirstPendingAction)[`addFirstPendingCommand`](#addFirstPendingCommand)[`addPendingAction`](#addPendingAction)[`addPendingCommand`](#addPendingCommand)[`addToAgenda`](#addToAgenda)[`addToContents`](#addToContents)[`adjustLookAroundTable`](#adjustLookAroundTable)[`afterAction`](#afterAction)[`afterTravel`](#afterTravel)[`aName`](#aName)[`aNameObj`](#aNameObj)[`beforeAction`](#beforeAction)[`beforeTravel`](#beforeTravel)[`bestVisualInfo`](#bestVisualInfo)[`calcScheduleOrder`](#calcScheduleOrder)[`canBeTalkedTo`](#canBeTalkedTo)[`canHear`](#canHear)[`cannotFollow`](#cannotFollow)[`cannotRespondToCommand`](#cannotRespondToCommand)[`canOwn`](#canOwn)[`canSee`](#canSee)[`canSmell`](#canSmell)[`canTalkTo`](#canTalkTo)[`checkBulkChangeWithin`](#checkBulkChangeWithin)[`checkDarkTravel`](#checkDarkTravel)[`checkMovingTravelerInto`](#checkMovingTravelerInto)[`checkReadyToEnterNestedRoom`](#checkReadyToEnterNestedRoom)[`checkStagingLocation`](#checkStagingLocation)[`checkTakeFromInventory`](#checkTakeFromInventory)[`checkWaitingForActor`](#checkWaitingForActor)[`conjugateRegularVerb`](#conjugateRegularVerb)[`conversedThisTurn`](#conversedThisTurn)[`copyPronounAntecedentsFrom`](#copyPronounAntecedentsFrom)[`defaultAskForResponse`](#defaultAskForResponse)[`defaultAskResponse`](#defaultAskResponse)[`defaultCommandResponse`](#defaultCommandResponse)[`defaultConvResponse`](#defaultConvResponse)[`defaultGiveResponse`](#defaultGiveResponse)[`defaultGoodbyeResponse`](#defaultGoodbyeResponse)[`defaultGreetingResponse`](#defaultGreetingResponse)[`defaultNoResponse`](#defaultNoResponse)[`defaultShowResponse`](#defaultShowResponse)[`defaultTellResponse`](#defaultTellResponse)[`defaultYesResponse`](#defaultYesResponse)[`descViaActorContainer`](#descViaActorContainer)[`disembark`](#disembark)[`distantSpecialDesc`](#distantSpecialDesc)[`dobjFor(AskAbout)`](#dobjFor(AskAbout))[`dobjFor(AskFor)`](#dobjFor(AskFor))[`dobjFor(Drop)`](#dobjFor(Drop))[`dobjFor(Kiss)`](#dobjFor(Kiss))[`dobjFor(PutIn)`](#dobjFor(PutIn))[`dobjFor(PutOn)`](#dobjFor(PutOn))[`dobjFor(PutUnder)`](#dobjFor(PutUnder))[`dobjFor(Take)`](#dobjFor(Take))[`dobjFor(TalkTo)`](#dobjFor(TalkTo))[`dobjFor(TellAbout)`](#dobjFor(TellAbout))[`dobjFor(Throw)`](#dobjFor(Throw))[`dobjFor(ThrowAt)`](#dobjFor(ThrowAt))[`dobjFor(ThrowDir)`](#dobjFor(ThrowDir))[`dobjFor(ThrowTo)`](#dobjFor(ThrowTo))[`endConversation`](#endConversation)[`examineListContents`](#examineListContents)[`examineStatus`](#examineStatus)[`excludeFromLookAround`](#excludeFromLookAround)[`executeActorTurn`](#executeActorTurn)[`executeAgenda`](#executeAgenda)[`executeTurn`](#executeTurn)[`findVisualObstructor`](#findVisualObstructor)[`forEachTravelingActor`](#forEachTravelingActor)[`forgetPossAnaphors`](#forgetPossAnaphors)[`getActionMessageObj`](#getActionMessageObj)[`getActorNotifyList`](#getActorNotifyList)[`getBulkHeld`](#getBulkHeld)[`getCurrentInterlocutor`](#getCurrentInterlocutor)[`getDefaultInterlocutor`](#getDefaultInterlocutor)[`getDropDestination`](#getDropDestination)[`getFollowables`](#getFollowables)[`getFollowInfo`](#getFollowInfo)[`getLookAroundName`](#getLookAroundName)[`getParserDeferredMessageObj`](#getParserDeferredMessageObj)[`getParserMessageObj`](#getParserMessageObj)[`getPossAnaphor`](#getPossAnaphor)[`getPronounAntecedent`](#getPronounAntecedent)[`getPushTraveler`](#getPushTraveler)[`getTopicOwner`](#getTopicOwner)[`getTraveler`](#getTraveler)[`getVisualAmbient`](#getVisualAmbient)[`getWeightHeld`](#getWeightHeld)[`goToSleep`](#goToSleep)[`handleConversation`](#handleConversation)[`hasSeen`](#hasSeen)[`hideFromAll`](#hideFromAll)[`hideFromDefault`](#hideFromDefault)[`idleTurn`](#idleTurn)[`impliedCommandMode`](#impliedCommandMode)[`initializeActor`](#initializeActor)[`initiateConversation`](#initiateConversation)[`initiateTopic`](#initiateTopic)[`inventorySense`](#inventorySense)[`inventorySenseInfoTable`](#inventorySenseInfoTable)[`iobjFor(GiveTo)`](#iobjFor(GiveTo))[`iobjFor(ShowTo)`](#iobjFor(ShowTo))[`iobjFor(ThrowTo)`](#iobjFor(ThrowTo))[`isActorTraveling`](#isActorTraveling)[`isLikelyTopic`](#isLikelyTopic)[`isLocationLit`](#isLocationLit)[`isPlayerChar`](#isPlayerChar)[`knowsAbout`](#knowsAbout)[`knowsTopic`](#knowsTopic)[`listActorPosture`](#listActorPosture)[`lookAround`](#lookAround)[`makePosture`](#makePosture)[`meetsObjHeld`](#meetsObjHeld)[`mustMoveObjInto`](#mustMoveObjInto)[`nonIdleTurn`](#nonIdleTurn)[`noteConditionsAfter`](#noteConditionsAfter)[`noteConditionsBefore`](#noteConditionsBefore)[`noteConsultation`](#noteConsultation)[`noteConvAction`](#noteConvAction)[`noteConversation`](#noteConversation)[`noteConversationFrom`](#noteConversationFrom)[`noteObjectShown`](#noteObjectShown)[`noteSeenBy`](#noteSeenBy)[`notifyIssuerParseFailure`](#notifyIssuerParseFailure)[`notifyParseFailure`](#notifyParseFailure)[`notifyTopicResponse`](#notifyTopicResponse)[`npcDesc`](#npcDesc)[`obeyCommand`](#obeyCommand)[`okayPostureChange`](#okayPostureChange)[`orderingTime`](#orderingTime)[`pcDesc`](#pcDesc)[`postureDesc`](#postureDesc)[`readyForTurn`](#readyForTurn)[`referralPerson`](#referralPerson)[`rememberLastDoor`](#rememberLastDoor)[`rememberTravel`](#rememberTravel)[`remoteSpecialDesc`](#remoteSpecialDesc)[`removeActorNotifyItem`](#removeActorNotifyItem)[`removeFromAgenda`](#removeFromAgenda)[`reverseLastTravel`](#reverseLastTravel)[`sayArriving`](#sayArriving)[`sayArrivingDir`](#sayArrivingDir)[`sayArrivingDownStairs`](#sayArrivingDownStairs)[`sayArrivingLocally`](#sayArrivingLocally)[`sayArrivingThroughPassage`](#sayArrivingThroughPassage)[`sayArrivingUpStairs`](#sayArrivingUpStairs)[`sayArrivingViaPath`](#sayArrivingViaPath)[`sayDeparting`](#sayDeparting)[`sayDepartingDir`](#sayDepartingDir)[`sayDepartingDownStairs`](#sayDepartingDownStairs)[`sayDepartingLocally`](#sayDepartingLocally)[`sayDepartingThroughPassage`](#sayDepartingThroughPassage)[`sayDepartingUpStairs`](#sayDepartingUpStairs)[`sayDepartingViaPath`](#sayDepartingViaPath)[`sayGoodbye`](#sayGoodbye)[`sayHello`](#sayHello)[`sayNo`](#sayNo)[`saySpecialTopic`](#saySpecialTopic)[`sayToActor`](#sayToActor)[`sayTravelingRemotely`](#sayTravelingRemotely)[`sayYes`](#sayYes)[`scheduleInitiateConversation`](#scheduleInitiateConversation)[`scopeList`](#scopeList)[`scriptedTravelTo`](#scriptedTravelTo)[`setConvNode`](#setConvNode)[`setConvNodeReason`](#setConvNodeReason)[`setCurState`](#setCurState)[`setHasSeen`](#setHasSeen)[`setHer`](#setHer)[`setHim`](#setHim)[`setIt`](#setIt)[`setKnowsAbout`](#setKnowsAbout)[`setPossAnaphor`](#setPossAnaphor)[`setPossAnaphorObj`](#setPossAnaphorObj)[`setPronoun`](#setPronoun)[`setPronounAntecedent`](#setPronounAntecedent)[`setPronounByType`](#setPronounByType)[`setPronounMulti`](#setPronounMulti)[`setPronounObj`](#setPronounObj)[`setSpecialTraveler`](#setSpecialTraveler)[`setThem`](#setThem)[`showInventory`](#showInventory)[`showInventoryWith`](#showInventoryWith)[`showSpecialDescInContents`](#showSpecialDescInContents)[`specialDesc`](#specialDesc)[`specialDescListWith`](#specialDescListWith)[`standUp`](#standUp)[`suggestTopics`](#suggestTopics)[`suggestTopicsFor`](#suggestTopicsFor)[`trackFollowInfo`](#trackFollowInfo)[`travelerName`](#travelerName)[`travelerPreCond`](#travelerPreCond)[`travelerTravelWithin`](#travelerTravelWithin)[`travelTo`](#travelTo)[`travelWithin`](#travelWithin)[`tryMakingRoomToHold`](#tryMakingRoomToHold)[`tryMovingObjInto`](#tryMovingObjInto)[`unexcludeFromLookAround`](#unexcludeFromLookAround)[`verifyFollowable`](#verifyFollowable)[`verifyNotSelf`](#verifyNotSelf)[`visibleInfoTable`](#visibleInfoTable)[`visibleInfoTableFromPov`](#visibleInfoTableFromPov)[`waitForIssuedCommand`](#waitForIssuedCommand)[`wantsFollowInfo`](#wantsFollowInfo)
 
@@ -157,11 +157,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="accompanyingActors"></span>
 
@@ -169,7 +169,7 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[7816](../source/actor.t.html#7816)\]
 
-<div class="desc">
+
 
 My vector of actors who are accompanying me.
 
@@ -179,7 +179,7 @@ shouldn't be used to get me to follow another actor or another actor to
 follow me. To make me accompany another actor, simply override
 accompanyTravel() so that it returns a suitable ActorState object.
 
-</div>
+
 
 <span id="actorNotifyList"></span>
 
@@ -187,11 +187,11 @@ accompanyTravel() so that it returns a suitable ActorState object.
 
 [actor.t](../file/actor.t.html)\[[8499](../source/actor.t.html#8499)\]
 
-<div class="desc">
+
 
 our list of registered actor notification items
 
-</div>
+
 
 <span id="agendaList"></span>
 
@@ -199,12 +199,12 @@ our list of registered actor notification items
 
 [actor.t](../file/actor.t.html)\[[6922](../source/actor.t.html#6922)\]
 
-<div class="desc">
+
 
 The actor's "agenda." This is a list of AgendaItem objects that describe
 things the actor wants to do of its own volition on its own turn.
 
-</div>
+
 
 <span id="antecedentTable"></span>
 
@@ -212,13 +212,13 @@ things the actor wants to do of its own volition on its own turn.
 
 [actor.t](../file/actor.t.html)\[[9953](../source/actor.t.html#9953)\]
 
-<div class="desc">
+
 
 Antecedent lookup table. Each actor keeps its own table of antecedents
 indexed by pronoun type, so that we can simultaneously have different
 antecedents for different pronouns.
 
-</div>
+
 
 <span id="boredomAgendaItem"></span>
 
@@ -226,13 +226,13 @@ antecedents for different pronouns.
 
 [actor.t](../file/actor.t.html)\[[6929](../source/actor.t.html#6929)\]
 
-<div class="desc">
+
 
 our special "boredom" agenda item - this makes us initiate an end to an
 active conversation when the PC has ignored us for a given number of
 consecutive turns
 
-</div>
+
 
 <span id="boredomCount"></span>
 
@@ -240,7 +240,7 @@ consecutive turns
 
 [actor.t](../file/actor.t.html)\[[6831](../source/actor.t.html#6831)\]
 
-<div class="desc">
+
 
 Our conversational "boredom" counter. While we're in a conversation,
 this tracks the number of turns since the last conversational command
@@ -251,7 +251,7 @@ managed by the InConversationState object. The state is stored with the
 actor rather than with the state object because it really describes the
 condition of the actor, not of the state object.
 
-</div>
+
 
 <span id="bulkCapacity"></span>
 
@@ -259,7 +259,7 @@ condition of the actor, not of the state object.
 
 [actor.t](../file/actor.t.html)\[[6339](../source/actor.t.html#6339)\]
 
-<div class="desc">
+
 
 You can limit the cumulative amount of bulk an actor can hold, and the
 maximum bulk of any one object the actor can hold, using bulkCapacity
@@ -289,7 +289,7 @@ holding is actually better than an unlimited inventory, since it
 improves readability by keeping the direct inventory list to a
 manageable size.
 
-</div>
+
 
 <span id="canMatch3rdPerson"></span>
 
@@ -297,13 +297,13 @@ manageable size.
 
 [en_us.t](../file/en_us.t.html)\[[2391](../source/en_us.t.html#2391)\]
 
-<div class="desc">
+
 
 Test to see if we can match a third-person pronoun ('it', 'him', 'her',
 'them'). We can unless we're the player character and the player
 character is referred to in the first or second person.
 
-</div>
+
 
 <span id="canMatchHer"></span>
 
@@ -311,11 +311,11 @@ character is referred to in the first or second person.
 
 [en_us.t](../file/en_us.t.html)\[[2382](../source/en_us.t.html#2382)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canMatchHim"></span>
 
@@ -323,13 +323,13 @@ character is referred to in the first or second person.
 
 [en_us.t](../file/en_us.t.html)\[[2381](../source/en_us.t.html#2381)\]
 
-<div class="desc">
+
 
 Test to see if we can match the third-person pronouns. We'll match these
 if our inherited test says we match them AND we can be referred to in
 the third person.
 
-</div>
+
 
 <span id="canMatchIt"></span>
 
@@ -337,11 +337,11 @@ the third person.
 
 [en_us.t](../file/en_us.t.html)\[[2383](../source/en_us.t.html#2383)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canMatchThem"></span>
 
@@ -349,11 +349,11 @@ the third person.
 
 [en_us.t](../file/en_us.t.html)\[[2384](../source/en_us.t.html#2384)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="commandReferralPerson"></span>
 
@@ -361,7 +361,7 @@ the third person.
 
 [actor.t](../file/actor.t.html)\[[6238](../source/actor.t.html#6238)\]
 
-<div class="desc">
+
 
 The referral person of the current command targeting the actor. This is
 meaningful only when a command is being directed to this actor, and this
@@ -375,7 +375,7 @@ object in the command. "tell bob to hit you" probably means that Bob
 should hit the player character, while "bob, hit you" probably means
 that Bob should hit himself.
 
-</div>
+
 
 <span id="communicationSenses"></span>
 
@@ -383,7 +383,7 @@ that Bob should hit himself.
 
 [actor.t](../file/actor.t.html)\[[7574](../source/actor.t.html#7574)\]
 
-<div class="desc">
+
 
 Communication senses: these are the senses through which the actor can
 communicate directly with other actors through commands and messages.
@@ -402,7 +402,7 @@ but they would ordinarily communicate by talking. In such a case, sound
 should be in the list but sight should not be, because sight is not a
 natural, default form of communications for the actors.
 
-</div>
+
 
 <span id="contentsListed"></span>
 
@@ -410,11 +410,11 @@ natural, default form of communications for the actors.
 
 [actor.t](../file/actor.t.html)\[[5948](../source/actor.t.html#5948)\]
 
-<div class="desc">
+
 
 the contents of an actor aren't listed in a room's description
 
-</div>
+
 
 <span id="convMgrID"></span>
 
@@ -422,13 +422,13 @@ the contents of an actor aren't listed in a room's description
 
 [actor.t](../file/actor.t.html)\[[5778](../source/actor.t.html#5778)\]
 
-<div class="desc">
+
 
 conversation manager ID - this is assigned by the conversation manager
 to map to and from output stream references to the actor; this is only
 for internal use by the conversation manager
 
-</div>
+
 
 <span id="convNodeTab"></span>
 
@@ -436,7 +436,7 @@ for internal use by the conversation manager
 
 [actor.t](../file/actor.t.html)\[[5726](../source/actor.t.html#5726)\]
 
-<div class="desc">
+
 
 Our table of conversation nodes. At initialization, the conversation
 manager scans all ConvNode instances and adds each one to its actor's
@@ -445,7 +445,7 @@ entry is the ConvNode object - this lets us look up the ConvNode object
 by name. Because each actor has its own lookup table, ConvNode names
 only have to be unique within the actor's set of ConvNodes.
 
-</div>
+
 
 <span id="curConvNode"></span>
 
@@ -453,12 +453,12 @@ only have to be unique within the actor's set of ConvNodes.
 
 [actor.t](../file/actor.t.html)\[[5715](../source/actor.t.html#5715)\]
 
-<div class="desc">
+
 
 Our current conversation node. This is a ConvNode object that keeps
 track of the flow of the conversation.
 
-</div>
+
 
 <span id="curState"></span>
 
@@ -466,7 +466,7 @@ track of the flow of the conversation.
 
 [actor.t](../file/actor.t.html)\[[5690](../source/actor.t.html#5690)\]
 
-<div class="desc">
+
 
 Our current state. This is an ActorState object representing what we're
 currently doing. Whenever the actor changes to a new state (for example,
@@ -483,7 +483,7 @@ advantage of the ActorState mechanism. If this isn't initialized for a
 particular actor, we'll automatically create a default ActorState object
 during pre-initialization.
 
-</div>
+
 
 <span id="excludeFromLookAroundList"></span>
 
@@ -491,14 +491,14 @@ during pre-initialization.
 
 [actor.t](../file/actor.t.html)\[[7483](../source/actor.t.html#7483)\]
 
-<div class="desc">
+
 
 Our list of objects explicitly excluded from 'look around'. These
 objects will be suppressed from any sort of listing (including in the
 room's contents list and in special descriptions) in 'look around' when
 this actor is doing the looking.
 
-</div>
+
 
 <span id="followables_"></span>
 
@@ -506,12 +506,12 @@ this actor is doing the looking.
 
 [actor.t](../file/actor.t.html)\[[8158](../source/actor.t.html#8158)\]
 
-<div class="desc">
+
 
 Our list of followable information. Each entry in this list is a
 FollowInfo object that tracks a particular followable.
 
-</div>
+
 
 <span id="followingActor"></span>
 
@@ -519,13 +519,13 @@ FollowInfo object that tracks a particular followable.
 
 [actor.t](../file/actor.t.html)\[[9235](../source/actor.t.html#9235)\]
 
-<div class="desc">
+
 
 If we're following an actor, this keeps track of the actor we're
 following. NPC's can use this to follow around another actor whenever
 possible.
 
-</div>
+
 
 <span id="getTravelerActors"></span>
 
@@ -533,13 +533,13 @@ possible.
 
 [actor.t](../file/actor.t.html)\[[6435](../source/actor.t.html#6435)\]
 
-<div class="desc">
+
 
 Get the actors involved in travel, when we're acting in our role as a
 Traveler. When the Traveler is simply the Actor, the only actor involved
 in the travel is 'self'.
 
-</div>
+
 
 <span id="getTravelerMotiveActors"></span>
 
@@ -547,11 +547,11 @@ in the travel is 'self'.
 
 [actor.t](../file/actor.t.html)\[[6438](../source/actor.t.html#6438)\]
 
-<div class="desc">
+
 
 we're the self-motive actor doing the travel
 
-</div>
+
 
 <span id="hearinglikeSenses"></span>
 
@@ -559,12 +559,12 @@ we're the self-motive actor doing the travel
 
 [actor.t](../file/actor.t.html)\[[7546](../source/actor.t.html#7546)\]
 
-<div class="desc">
+
 
 Hearing-like senses. These are senses that the actor can use to hear
 objects.
 
-</div>
+
 
 <span id="holdingDescInventoryLister"></span>
 
@@ -572,7 +572,7 @@ objects.
 
 [actor.t](../file/actor.t.html)\[[8927](../source/actor.t.html#8927)\]
 
-<div class="desc">
+
 
 The Lister for inventory listings, for use in a full description of the
 actor. By default, we use the "long form" inventory lister, on the
@@ -580,7 +580,7 @@ assumption that most actors have relatively lengthy descriptive text.
 This can be overridden to use other formats; the short-form lister, for
 example, is useful for actors with only brief descriptions.
 
-</div>
+
 
 <span id="inventoryLister"></span>
 
@@ -588,13 +588,13 @@ example, is useful for actors with only brief descriptions.
 
 [actor.t](../file/actor.t.html)\[[8917](../source/actor.t.html#8917)\]
 
-<div class="desc">
+
 
 The Lister object that we use for inventory listings. By default, we use
 actorInventoryLister, but this can be overridden if desired to use a
 different listing style.
 
-</div>
+
 
 <span id="isActor"></span>
 
@@ -602,11 +602,11 @@ different listing style.
 
 [actor.t](../file/actor.t.html)\[[5672](../source/actor.t.html#5672)\]
 
-<div class="desc">
+
 
 flag: we're an actor
 
-</div>
+
 
 <span id="isLikelyCommandTarget"></span>
 
@@ -614,7 +614,7 @@ flag: we're an actor
 
 [actor.t](../file/actor.t.html)\[[9506](../source/actor.t.html#9506)\]
 
-<div class="desc">
+
 
 By default, all actors are likely command targets. This should be
 overridden for actors who are obviously not likely to accept commands of
@@ -625,7 +625,7 @@ provide an indication of what should be obvious to a player, because the
 purpose of this information is to guess what the player is likely to
 take for granted in specifying a target actor.
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -633,12 +633,12 @@ take for granted in specifying a target actor.
 
 [actor.t](../file/actor.t.html)\[[5943](../source/actor.t.html#5943)\]
 
-<div class="desc">
+
 
 Actors are not listed with the ordinary objects in a room's description.
 However, an actor is listed as part of an inventory description.
 
-</div>
+
 
 <span id="isListedAboardVehicle"></span>
 
@@ -646,11 +646,11 @@ However, an actor is listed as part of an inventory description.
 
 [actor.t](../file/actor.t.html)\[[6368](../source/actor.t.html#6368)\]
 
-<div class="desc">
+
 
 by default, actors are listed when they arrive aboard a vehicle
 
-</div>
+
 
 <span id="isListedInContents"></span>
 
@@ -658,11 +658,11 @@ by default, actors are listed when they arrive aboard a vehicle
 
 [actor.t](../file/actor.t.html)\[[5944](../source/actor.t.html#5944)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isListedInInventory"></span>
 
@@ -670,11 +670,11 @@ by default, actors are listed when they arrive aboard a vehicle
 
 [actor.t](../file/actor.t.html)\[[5945](../source/actor.t.html#5945)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="issueCommandsSynchronously"></span>
 
@@ -682,7 +682,7 @@ by default, actors are listed when they arrive aboard a vehicle
 
 [actor.t](../file/actor.t.html)\[[7695](../source/actor.t.html#7695)\]
 
-<div class="desc">
+
 
 Flag: we wait for commands issued to other actors to complete before we
 get another turn. If this is true, then whenever we issue a command to
@@ -701,7 +701,7 @@ NPC's carrying out commands in parallel with the player, but it's an
 unconventional style that some players might find confusing, so we don't
 use this mode by default.
 
-</div>
+
 
 <span id="knownProp"></span>
 
@@ -709,7 +709,7 @@ use this mode by default.
 
 [actor.t](../file/actor.t.html)\[[8228](../source/actor.t.html#8228)\]
 
-<div class="desc">
+
 
 My 'known' property. By default, this is simply 'known', which means
 that we don't distinguish who knows what.
@@ -720,7 +720,7 @@ to have its own knowledge base to use a separate property name. For
 example, if you want to keep track of what Bob knows individually, you
 could define 'knownProp = &bobKnows' in Bob.
 
-</div>
+
 
 <span id="lastConsulted"></span>
 
@@ -728,11 +728,11 @@ could define 'knownProp = &bobKnows' in Bob.
 
 [actor.t](../file/actor.t.html)\[[6915](../source/actor.t.html#6915)\]
 
-<div class="desc">
+
 
 the object we most recently consulted
 
-</div>
+
 
 <span id="lastConvTime"></span>
 
@@ -740,12 +740,12 @@ the object we most recently consulted
 
 [actor.t](../file/actor.t.html)\[[6837](../source/actor.t.html#6837)\]
 
-<div class="desc">
+
 
 game-clock time (Schedulable.gameClockTime) of the last conversational
 command addressed to us by the player character
 
-</div>
+
 
 <span id="lastDoorTraversed"></span>
 
@@ -753,11 +753,11 @@ command addressed to us by the player character
 
 [actor.t](../file/actor.t.html)\[[6700](../source/actor.t.html#6700)\]
 
-<div class="desc">
+
 
 the last door I traversed
 
-</div>
+
 
 <span id="lastInterlocutor"></span>
 
@@ -765,12 +765,12 @@ the last door I traversed
 
 [actor.t](../file/actor.t.html)\[[6818](../source/actor.t.html#6818)\]
 
-<div class="desc">
+
 
 The most recent actor that we've interacted with through a
 conversational command (ASK, TELL, GIVE, SHOW, etc).
 
-</div>
+
 
 <span id="lastTravelBack"></span>
 
@@ -778,11 +778,11 @@ conversational command (ASK, TELL, GIVE, SHOW, etc).
 
 [actor.t](../file/actor.t.html)\[[6704](../source/actor.t.html#6704)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lastTravelDest"></span>
 
@@ -790,11 +790,11 @@ conversational command (ASK, TELL, GIVE, SHOW, etc).
 
 [actor.t](../file/actor.t.html)\[[6703](../source/actor.t.html#6703)\]
 
-<div class="desc">
+
 
 the destination and back connector for our last travel
 
-</div>
+
 
 <span id="locationBefore"></span>
 
@@ -802,11 +802,11 @@ the destination and back connector for our last travel
 
 [actor.t](../file/actor.t.html)\[[9000](../source/actor.t.html#9000)\]
 
-<div class="desc">
+
 
 conditions we noted in noteConditionsBefore()
 
-</div>
+
 
 <span id="locationLitBefore"></span>
 
@@ -814,11 +814,11 @@ conditions we noted in noteConditionsBefore()
 
 [actor.t](../file/actor.t.html)\[[9001](../source/actor.t.html#9001)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="maxSingleBulk"></span>
 
@@ -826,11 +826,11 @@ conditions we noted in noteConditionsBefore()
 
 [actor.t](../file/actor.t.html)\[[6340](../source/actor.t.html#6340)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="mostRecentAction"></span>
 
@@ -838,11 +838,11 @@ conditions we noted in noteConditionsBefore()
 
 [actor.t](../file/actor.t.html)\[[9147](../source/actor.t.html#9147)\]
 
-<div class="desc">
+
 
 the action the actor performed most recently
 
-</div>
+
 
 <span id="name"></span>
 
@@ -850,11 +850,11 @@ the action the actor performed most recently
 
 [en_us.t](../file/en_us.t.html)\[[2131](../source/en_us.t.html#2131)\]
 
-<div class="desc">
+
 
 by default, use my pronoun for my name
 
-</div>
+
 
 <span id="nextHoldingIndex"></span>
 
@@ -862,7 +862,7 @@ by default, use my pronoun for my name
 
 [actor.t](../file/actor.t.html)\[[7293](../source/actor.t.html#7293)\]
 
-<div class="desc">
+
 
 Next available "holding index" value. Each time we pick up an item,
 we'll assign it our current holding index value and then increment our
@@ -874,7 +874,7 @@ by only one actor at a time (multi-location items are generally not
 portable), which means that we can use a simple property in each object
 being held to store its holding index.
 
-</div>
+
 
 <span id="nextRunTime"></span>
 
@@ -882,11 +882,11 @@ being held to store its holding index.
 
 [actor.t](../file/actor.t.html)\[[9004](../source/actor.t.html#9004)\]
 
-<div class="desc">
+
 
 let the actor have a turn as soon as the game starts
 
-</div>
+
 
 <span id="pcReferralPerson"></span>
 
@@ -894,11 +894,11 @@ let the actor have a turn as soon as the game starts
 
 [actor.t](../file/actor.t.html)\[[6223](../source/actor.t.html#6223)\]
 
-<div class="desc">
+
 
 by default, refer to the player character in the second person
 
-</div>
+
 
 <span id="pendingCommand"></span>
 
@@ -906,11 +906,11 @@ by default, refer to the player character in the second person
 
 [actor.t](../file/actor.t.html)\[[9794](../source/actor.t.html#9794)\]
 
-<div class="desc">
+
 
 pending commands - this is a list of PendingCommandInfo objects
 
-</div>
+
 
 <span id="pendingConv"></span>
 
@@ -918,13 +918,13 @@ pending commands - this is a list of PendingCommandInfo objects
 
 [actor.t](../file/actor.t.html)\[[5911](../source/actor.t.html#5911)\]
 
-<div class="desc">
+
 
 Our list of pending conversation initiators. In our takeTurn()
 processing, we'll check this list for conversations that we can
 initiate.
 
-</div>
+
 
 <span id="pendingResponse"></span>
 
@@ -932,12 +932,12 @@ initiate.
 
 [actor.t](../file/actor.t.html)\[[9801](../source/actor.t.html#9801)\]
 
-<div class="desc">
+
 
 pending response - this is a single PendingResponseInfo object, which
 we'll deliver as soon as the issuing actor is in a position to hear us
 
-</div>
+
 
 <span id="possAnaphorTable"></span>
 
@@ -945,7 +945,7 @@ we'll deliver as soon as the issuing actor is in a position to hear us
 
 [actor.t](../file/actor.t.html)\[[9965](../source/actor.t.html#9965)\]
 
-<div class="desc">
+
 
 Possessive anaphor lookup table. In almost all cases, the possessive
 anaphor for a given pronoun will be the same as the corresponding
@@ -955,7 +955,7 @@ and these will differ. For example, in TELL BOB TO DROP HIS BOOK, "his"
 refers back to Bob, while in TELL BOB TO HIT HIM, "him" refers to
 whatever it referred to before the command.
 
-</div>
+
 
 <span id="posture"></span>
 
@@ -963,13 +963,13 @@ whatever it referred to before the command.
 
 [actor.t](../file/actor.t.html)\[[7322](../source/actor.t.html#7322)\]
 
-<div class="desc">
+
 
 My current "posture," which specifies how we're positioned with respect
 to our container; this is one of the standard library posture enum
 values (Standing, etc.) or another posture added by the game.
 
-</div>
+
 
 <span id="responseSetConvNode"></span>
 
@@ -977,12 +977,12 @@ values (Standing, etc.) or another posture added by the game.
 
 [actor.t](../file/actor.t.html)\[[5785](../source/actor.t.html#5785)\]
 
-<div class="desc">
+
 
 Flag indicating whether or not we've set a ConvNode in the course of the
 current response. This is for use by the converstaion manager.
 
-</div>
+
 
 <span id="revertTargetActorAtEndOfSentence"></span>
 
@@ -990,7 +990,7 @@ current response. This is for use by the converstaion manager.
 
 [actor.t](../file/actor.t.html)\[[7722](../source/actor.t.html#7722)\]
 
-<div class="desc">
+
 
 Flag: the "target actor" of the command line automatically reverts to
 this actor at the end of a sentence, when this actor is the issuer of a
@@ -1014,7 +1014,7 @@ actor designation ("Bob,") lasts only until the end of the sentence.
 Once a new sentence begins, we revert to the issuing actor (the player
 character, since the command came from the player via the keyboard).
 
-</div>
+
 
 <span id="scheduleOrder"></span>
 
@@ -1022,7 +1022,7 @@ character, since the command came from the player via the keyboard).
 
 [actor.t](../file/actor.t.html)\[[9028](../source/actor.t.html#9028)\]
 
-<div class="desc">
+
 
 Scheduling order - this determines the order of execution when several
 items are schedulable at the same game clock time.
@@ -1045,7 +1045,7 @@ This ordering ensures that each actor gets a chance to run each turn,
 but that actors with work to do go first, and other things being equal,
 the player character goes ahead of NPC's.
 
-</div>
+
 
 <span id="scopeSenses"></span>
 
@@ -1053,7 +1053,7 @@ the player character goes ahead of NPC's.
 
 [actor.t](../file/actor.t.html)\[[7514](../source/actor.t.html#7514)\]
 
-<div class="desc">
+
 
 The senses that determine scope for this actor. An actor might possess
 only a subset of the defined sense.
@@ -1069,7 +1069,7 @@ touching them, but without some other sense to locate the objects, the
 actor wouldn't have any way of knowing where to reach to touch things,
 so they're not in scope. So, touch isn't a scope sense.
 
-</div>
+
 
 <span id="seenProp"></span>
 
@@ -1077,7 +1077,7 @@ so they're not in scope. So, touch isn't a scope sense.
 
 [actor.t](../file/actor.t.html)\[[8215](../source/actor.t.html#8215)\]
 
-<div class="desc">
+
 
 My 'seen' property. By default, this is simply 'seen', which means that
 we don't distinguish who's seen what - in other words, there's a single,
@@ -1092,7 +1092,7 @@ that property name for each such NPC. For example, for Bob, you could
 make the property bobHasSeen, so in Bob you'd define 'sightProp =
 &bobHasSeen'.
 
-</div>
+
 
 <span id="sightlikeSenses"></span>
 
@@ -1100,7 +1100,7 @@ make the property bobHasSeen, so in Bob you'd define 'sightProp =
 
 [actor.t](../file/actor.t.html)\[[7540](../source/actor.t.html#7540)\]
 
-<div class="desc">
+
 
 "Sight-like" senses: these are the senses that operate like sight for
 the actor, and which the actor can use to determine the names of objects
@@ -1124,7 +1124,7 @@ An actor can have more than one sight-like sense, in which case the
 senses will act effectively as one sense that can reach the union of
 objects reachable through the individual senses.
 
-</div>
+
 
 <span id="smelllikeSenses"></span>
 
@@ -1132,12 +1132,12 @@ objects reachable through the individual senses.
 
 [actor.t](../file/actor.t.html)\[[7552](../source/actor.t.html#7552)\]
 
-<div class="desc">
+
 
 Smell-like senses. These are senses that the actor can use to smell
 objects.
 
-</div>
+
 
 <span id="specialDescBeforeContents"></span>
 
@@ -1145,7 +1145,7 @@ objects.
 
 [actor.t](../file/actor.t.html)\[[6063](../source/actor.t.html#6063)\]
 
-<div class="desc">
+
 
 By default, show the special description for an actor in the group of
 special descriptions that come \*after\* the room's portable contents
@@ -1153,7 +1153,7 @@ listing. An actor's presence is usually a dynamic feature of a room, and
 so we don't want to suggest that the actor is a permanent feature of the
 room by describing the actor directly with the room's main description.
 
-</div>
+
 
 <span id="specialDescOrder"></span>
 
@@ -1161,13 +1161,13 @@ room by describing the actor directly with the room's main description.
 
 [actor.t](../file/actor.t.html)\[[6082](../source/actor.t.html#6082)\]
 
-<div class="desc">
+
 
 By default, put all of the actor special descriptions after the special
 descriptions of ordinary objects, by giving actors a higher listing
 order value.
 
-</div>
+
 
 <span id="specialTraveler"></span>
 
@@ -1175,11 +1175,11 @@ order value.
 
 [actor.t](../file/actor.t.html)\[[6462](../source/actor.t.html#6462)\]
 
-<div class="desc">
+
 
 our special traveler
 
-</div>
+
 
 <span id="takeFromNotInMessage"></span>
 
@@ -1187,11 +1187,11 @@ our special traveler
 
 [actor.t](../file/actor.t.html)\[[10047](../source/actor.t.html#10047)\]
 
-<div class="desc">
+
 
 show a "take from" message as indicating I don't have the dobj
 
-</div>
+
 
 <span id="waitingForActor"></span>
 
@@ -1199,14 +1199,14 @@ show a "take from" message as indicating I don't have the dobj
 
 [actor.t](../file/actor.t.html)\[[7785](../source/actor.t.html#7785)\]
 
-<div class="desc">
+
 
 Synchronous command processing: the target actor and dummy pending
 command we're waiting for. When these are non-nil, we won't take another
 turn until the given PendingCommandInfo has been removed from the given
 target actor's command queue.
 
-</div>
+
 
 <span id="waitingForInfo"></span>
 
@@ -1214,11 +1214,11 @@ target actor's command queue.
 
 [actor.t](../file/actor.t.html)\[[7786](../source/actor.t.html#7786)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="weightCapacity"></span>
 
@@ -1226,21 +1226,21 @@ target actor's command queue.
 
 [actor.t](../file/actor.t.html)\[[6348](../source/actor.t.html#6348)\]
 
-<div class="desc">
+
 
 An actor can limit the cumulative amount of weight being held, using
 weightCapacity. By default we make this so large that there is
 effectively no limit to how much weight an actor can carry.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="acceptCommand"></span>
 
@@ -1248,7 +1248,7 @@ effectively no limit to how much weight an actor can carry.
 
 [actor.t](../file/actor.t.html)\[[9529](../source/actor.t.html#9529)\]
 
-<div class="desc">
+
 
 Determine if we should accept a command. 'issuingActor' is the actor who
 issued the command: if the player typed the command on the command line,
@@ -1269,7 +1269,7 @@ number of checks for the physical ability of the actor to execute a
 command from the issuer. To determine whether or not the actor should
 obey physically valid commands from the issuer, override obeyCommand().
 
-</div>
+
 
 <span id="acceptCommandBusy"></span>
 
@@ -1277,7 +1277,7 @@ obey physically valid commands from the issuer, override obeyCommand().
 
 [actor.t](../file/actor.t.html)\[[9573](../source/actor.t.html#9573)\]
 
-<div class="desc">
+
 
 Check to see if I'm busy with pending commands, and if so, whether or
 not I should accept a new command. Returns true if we should accept a
@@ -1286,7 +1286,7 @@ rejection.
 
 By default, we won't accept a command if we have any work pending.
 
-</div>
+
 
 <span id="actorAction"></span>
 
@@ -1294,13 +1294,13 @@ By default, we won't accept a command if we have any work pending.
 
 [actor.t](../file/actor.t.html)\[[8373](../source/actor.t.html#8373)\]
 
-<div class="desc">
+
 
 Perform any actor-specific processing for an action. The main command
 processor invokes this on gActor after notifying nearby objects via
 beforeAction(), but before carrying out the main action of the command.
 
-</div>
+
 
 <span id="actorActionFollow"></span>
 
@@ -1308,11 +1308,11 @@ beforeAction(), but before carrying out the main action of the command.
 
 [actor.t](../file/actor.t.html)\[[7990](../source/actor.t.html#7990)\]
 
-<div class="desc">
+
 
 Carry out a "follow" command being performed by this actor.
 
-</div>
+
 
 <span id="actorHereDesc"></span>
 
@@ -1320,14 +1320,14 @@ Carry out a "follow" command being performed by this actor.
 
 [actor.t](../file/actor.t.html)\[[6117](../source/actor.t.html#6117)\]
 
-<div class="desc">
+
 
 Actor "I am here" description. This is displayed as part of the
 description of a room - it describes the actor as being present in the
 room. By default, we let the "nominal actor container" provide the
 description.
 
-</div>
+
 
 <span id="actorListWith"></span>
 
@@ -1335,13 +1335,13 @@ description.
 
 [actor.t](../file/actor.t.html)\[[6089](../source/actor.t.html#6089)\]
 
-<div class="desc">
+
 
 Get my listing group for my special description as part of a room
 description. By default, we'll let our immediate location decide how
 we're grouped.
 
-</div>
+
 
 <span id="actorRoomNameStatus"></span>
 
@@ -1349,7 +1349,7 @@ we're grouped.
 
 [actor.t](../file/actor.t.html)\[[6145](../source/actor.t.html#6145)\]
 
-<div class="desc">
+
 
 Show our status, as an addendum to the given room's name (this is the
 room title, shown at the start of a room description and on the status
@@ -1366,7 +1366,7 @@ parameter, because we don't want to say something like "Phone Booth
 nominal container again if the nominal container is what we're naming in
 the first place.
 
-</div>
+
 
 <span id="actorThereDesc"></span>
 
@@ -1374,14 +1374,14 @@ the first place.
 
 [actor.t](../file/actor.t.html)\[[6125](../source/actor.t.html#6125)\]
 
-<div class="desc">
+
 
 Actor's "I am over there" description. This is displayed in the room
 description when the actor is visible, but is either in a separate
 top-level room or is at a distance. By default, we let the "nominal
 actor container" provide the description.
 
-</div>
+
 
 <span id="actorTravel"></span>
 
@@ -1389,13 +1389,13 @@ actor container" provide the description.
 
 [actor.t](../file/actor.t.html)\[[8422](../source/actor.t.html#8422)\]
 
-<div class="desc">
+
 
 Receive notification that I'm initiating travel. This is called on the
 actor performing the travel action before the travel is actually carried
 out.
 
-</div>
+
 
 <span id="actorVerifyFollow"></span>
 
@@ -1403,11 +1403,11 @@ out.
 
 [actor.t](../file/actor.t.html)\[[7934](../source/actor.t.html#7934)\]
 
-<div class="desc">
+
 
 Verify a "follow" command being performed by this actor.
 
-</div>
+
 
 <span id="addAccompanyingActor"></span>
 
@@ -1415,7 +1415,7 @@ Verify a "follow" command being performed by this actor.
 
 [actor.t](../file/actor.t.html)\[[7796](../source/actor.t.html#7796)\]
 
-<div class="desc">
+
 
 Add the given actor to the list of actors accompanying my travel on the
 current turn. This does NOT set an actor in "follow mode" or "accompany
@@ -1424,7 +1424,7 @@ around. Instead, this makes the given actor go with us for the CURRENT
 travel only - the travel we're already in the process of performing to
 process the current TravelVia action.
 
-</div>
+
 
 <span id="addActorNotifyItem"></span>
 
@@ -1432,7 +1432,7 @@ process the current TravelVia action.
 
 [actor.t](../file/actor.t.html)\[[8487](../source/actor.t.html#8487)\]
 
-<div class="desc">
+
 
 Add an item to our registered notification items. These items are to
 receive notifications when we're the actor performing a command.
@@ -1444,7 +1444,7 @@ containment are automatically notified of each action; only items that
 must receive notification even when not in scope need to be registered
 here.
 
-</div>
+
 
 <span id="addBusyTime"></span>
 
@@ -1452,13 +1452,13 @@ here.
 
 [actor.t](../file/actor.t.html)\[[9154](../source/actor.t.html#9154)\]
 
-<div class="desc">
+
 
 Add busy time. An action calls this when we are the actor performing the
 action, and the action consumes game time. This marks us as busy for the
 given time units.
 
-</div>
+
 
 <span id="addFirstPendingAction"></span>
 
@@ -1466,13 +1466,13 @@ given time units.
 
 [actor.t](../file/actor.t.html)\[[9785](../source/actor.t.html#9785)\]
 
-<div class="desc">
+
 
 Insert a resolved action at the start of our pending command list. The
 new command is specified as a resolved Action object; it is added before
 any commands already in our list.
 
-</div>
+
 
 <span id="addFirstPendingCommand"></span>
 
@@ -1480,13 +1480,13 @@ any commands already in our list.
 
 [actor.t](../file/actor.t.html)\[[9761](../source/actor.t.html#9761)\]
 
-<div class="desc">
+
 
 Insert a command at the head of our pending command list. The new
 command is specified as a list of tokens to parse, and it is inserted
 into our pending command list before any commands already in the list.
 
-</div>
+
 
 <span id="addPendingAction"></span>
 
@@ -1494,13 +1494,13 @@ into our pending command list before any commands already in the list.
 
 [actor.t](../file/actor.t.html)\[[9773](../source/actor.t.html#9773)\]
 
-<div class="desc">
+
 
 Add a resolved action to our pending command list. The new command is
 specified as a resolved Action object; it is added after any commands
 already in our list.
 
-</div>
+
 
 <span id="addPendingCommand"></span>
 
@@ -1508,13 +1508,13 @@ already in our list.
 
 [actor.t](../file/actor.t.html)\[[9748](../source/actor.t.html#9748)\]
 
-<div class="desc">
+
 
 Add a command to our pending command list. The new command is specified
 as a list of tokens to be parsed, and it is added after any commands
 already in our pending list.
 
-</div>
+
 
 <span id="addToAgenda"></span>
 
@@ -1522,11 +1522,11 @@ already in our pending list.
 
 [actor.t](../file/actor.t.html)\[[6932](../source/actor.t.html#6932)\]
 
-<div class="desc">
+
 
 add an agenda item
 
-</div>
+
 
 <span id="addToContents"></span>
 
@@ -1534,11 +1534,11 @@ add an agenda item
 
 [actor.t](../file/actor.t.html)\[[7296](../source/actor.t.html#7296)\]
 
-<div class="desc">
+
 
 add an object to my contents
 
-</div>
+
 
 <span id="adjustLookAroundTable"></span>
 
@@ -1546,12 +1546,12 @@ add an object to my contents
 
 [actor.t](../file/actor.t.html)\[[7443](../source/actor.t.html#7443)\]
 
-<div class="desc">
+
 
 Adjust a table of visible objects for 'look around'. By default, we
 remove any explicitly excluded objects.
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -1559,12 +1559,12 @@ remove any explicitly excluded objects.
 
 [actor.t](../file/actor.t.html)\[[8382](../source/actor.t.html#8382)\]
 
-<div class="desc">
+
 
 Receive notification that a command has just been carried out in our
 presence.
 
-</div>
+
 
 <span id="afterTravel"></span>
 
@@ -1572,11 +1572,11 @@ presence.
 
 [actor.t](../file/actor.t.html)\[[8411](../source/actor.t.html#8411)\]
 
-<div class="desc">
+
 
 receive a notification that someone has just traveled here
 
-</div>
+
 
 <span id="aName"></span>
 
@@ -1584,12 +1584,12 @@ receive a notification that someone has just traveled here
 
 [en_us.t](../file/en_us.t.html)\[[2316](../source/en_us.t.html#2316)\]
 
-<div class="desc">
+
 
 Get the name with an indefinite article. Use the same rules of referral
 person as for definite articles.
 
-</div>
+
 
 <span id="aNameObj"></span>
 
@@ -1597,11 +1597,11 @@ person as for definite articles.
 
 [en_us.t](../file/en_us.t.html)\[[2319](../source/en_us.t.html#2319)\]
 
-<div class="desc">
+
 
 aName in objective case
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -1609,12 +1609,12 @@ aName in objective case
 
 [actor.t](../file/actor.t.html)\[[8349](../source/actor.t.html#8349)\]
 
-<div class="desc">
+
 
 Receive notification that a command is being carried out in our
 presence.
 
-</div>
+
 
 <span id="beforeTravel"></span>
 
@@ -1622,11 +1622,11 @@ presence.
 
 [actor.t](../file/actor.t.html)\[[8389](../source/actor.t.html#8389)\]
 
-<div class="desc">
+
 
 receive a notification that someone is about to travel
 
-</div>
+
 
 <span id="bestVisualInfo"></span>
 
@@ -1634,12 +1634,12 @@ receive a notification that someone is about to travel
 
 [actor.t](../file/actor.t.html)\[[8559](../source/actor.t.html#8559)\]
 
-<div class="desc">
+
 
 Get the best (most transparent) sense information for one of our visual
 senses to the given object.
 
-</div>
+
 
 <span id="calcScheduleOrder"></span>
 
@@ -1647,11 +1647,11 @@ senses to the given object.
 
 [actor.t](../file/actor.t.html)\[[9031](../source/actor.t.html#9031)\]
 
-<div class="desc">
+
 
 calculate the scheduling order
 
-</div>
+
 
 <span id="canBeTalkedTo"></span>
 
@@ -1659,7 +1659,7 @@ calculate the scheduling order
 
 [actor.t](../file/actor.t.html)\[[7663](../source/actor.t.html#7663)\]
 
-<div class="desc">
+
 
 Determine whether or not I can understand an attempt by another actor to
 talk to me. 'talker' is the actor doing the talking. 'sense' is the
@@ -1682,7 +1682,7 @@ This is a service method for canTalkTo. This is broken out as a separate
 method so that individual actors can override the necessary conditions
 for communications in particular senses.
 
-</div>
+
 
 <span id="canHear"></span>
 
@@ -1690,11 +1690,11 @@ for communications in particular senses.
 
 [actor.t](../file/actor.t.html)\[[8685](../source/actor.t.html#8685)\]
 
-<div class="desc">
+
 
 Determine if I can hear the given object.
 
-</div>
+
 
 <span id="cannotFollow"></span>
 
@@ -1702,7 +1702,7 @@ Determine if I can hear the given object.
 
 [actor.t](../file/actor.t.html)\[[9247](../source/actor.t.html#9247)\]
 
-<div class="desc">
+
 
 Handle a situation where we're trying to follow an actor but can't. By
 default, this simply cancels our follow mode.
@@ -1713,7 +1713,7 @@ following, in case the target actor returns after a brief digression; or
 an actor could stay in follow mode until it received other instructions,
 or found something better to do.
 
-</div>
+
 
 <span id="cannotRespondToCommand"></span>
 
@@ -1721,14 +1721,14 @@ or found something better to do.
 
 [actor.t](../file/actor.t.html)\[[9912](../source/actor.t.html#9912)\]
 
-<div class="desc">
+
 
 We have a parser error to report to the player, but we cannot respond at
 the moment because the player is not capable of hearing us (there is no
 sense path for our communications senses from us to the player actor).
 Defer reporting the message until later.
 
-</div>
+
 
 <span id="canOwn"></span>
 
@@ -1736,11 +1736,11 @@ Defer reporting the message until later.
 
 [actor.t](../file/actor.t.html)\[[6354](../source/actor.t.html#6354)\]
 
-<div class="desc">
+
 
 Can I own the given object? By default, an actor can own anything.
 
-</div>
+
 
 <span id="canSee"></span>
 
@@ -1748,12 +1748,12 @@ Can I own the given object? By default, an actor can own anything.
 
 [actor.t](../file/actor.t.html)\[[8665](../source/actor.t.html#8665)\]
 
-<div class="desc">
+
 
 Determine if I can see the given object. This returns true if the object
 can be sensed at all in one of my sight-like senses, nil if not.
 
-</div>
+
 
 <span id="canSmell"></span>
 
@@ -1761,11 +1761,11 @@ can be sensed at all in one of my sight-like senses, nil if not.
 
 [actor.t](../file/actor.t.html)\[[8705](../source/actor.t.html#8705)\]
 
-<div class="desc">
+
 
 Determine if I can smell the given object.
 
-</div>
+
 
 <span id="canTalkTo"></span>
 
@@ -1773,7 +1773,7 @@ Determine if I can smell the given object.
 
 [actor.t](../file/actor.t.html)\[[7592](../source/actor.t.html#7592)\]
 
-<div class="desc">
+
 
 Determine if I can communicate with the given character via a natural,
 default form of communication that we share with the other character.
@@ -1788,7 +1788,7 @@ Likewise, in order for a non-player character to say something to the
 player, the player must be able to sense the NPC via at least one
 communication sense that the two actors have in common.
 
-</div>
+
 
 <span id="checkBulkChangeWithin"></span>
 
@@ -1796,11 +1796,11 @@ communication sense that the two actors have in common.
 
 [actor.t](../file/actor.t.html)\[[7252](../source/actor.t.html#7252)\]
 
-<div class="desc">
+
 
 Check a bulk change of one of my direct contents.
 
-</div>
+
 
 <span id="checkDarkTravel"></span>
 
@@ -1808,7 +1808,7 @@ Check a bulk change of one of my direct contents.
 
 [actor.t](../file/actor.t.html)\[[6568](../source/actor.t.html#6568)\]
 
-<div class="desc">
+
 
 Check for travel in the dark. If we're in a dark room, and our
 destination is a dark room, ask the connector for guidance.
@@ -1817,7 +1817,7 @@ Travel connectors normally call this before invoking our travelTo()
 method to carry out the travel. The darkness check usually must be made
 before any barrier checks.
 
-</div>
+
 
 <span id="checkMovingTravelerInto"></span>
 
@@ -1825,12 +1825,12 @@ before any barrier checks.
 
 [actor.t](../file/actor.t.html)\[[6468](../source/actor.t.html#6468)\]
 
-<div class="desc">
+
 
 Try moving the actor into the given room in preparation for travel,
 using pre-condition rules.
 
-</div>
+
 
 <span id="checkReadyToEnterNestedRoom"></span>
 
@@ -1838,13 +1838,13 @@ using pre-condition rules.
 
 [actor.t](../file/actor.t.html)\[[6479](../source/actor.t.html#6479)\]
 
-<div class="desc">
+
 
 Check to ensure the actor is ready to enter the given nested room, using
 pre-condition rules. By default, we'll ask the given nested room to
 handle it.
 
-</div>
+
 
 <span id="checkStagingLocation"></span>
 
@@ -1852,12 +1852,12 @@ handle it.
 
 [actor.t](../file/actor.t.html)\[[6710](../source/actor.t.html#6710)\]
 
-<div class="desc">
+
 
 use a custom message for cases where we're holding a destination object
 for BOARD, ENTER, etc
 
-</div>
+
 
 <span id="checkTakeFromInventory"></span>
 
@@ -1865,13 +1865,13 @@ for BOARD, ENTER, etc
 
 [actor.t](../file/actor.t.html)\[[8459](../source/actor.t.html#8459)\]
 
-<div class="desc">
+
 
 Check to see if we want to allow another actor to take something from my
 inventory. By default, we won't allow it - we'll always fail the
 command.
 
-</div>
+
 
 <span id="checkWaitingForActor"></span>
 
@@ -1879,7 +1879,7 @@ command.
 
 [actor.t](../file/actor.t.html)\[[9090](../source/actor.t.html#9090)\]
 
-<div class="desc">
+
 
 Check to see if we're waiting for another actor to do something. Return
 true if so, nil if not. If we've been waiting for another actor, and the
@@ -1887,7 +1887,7 @@ actor has finished the task we've been waiting for since the last time
 we checked, we'll clean up our internal state relating to the wait and
 return nil.
 
-</div>
+
 
 <span id="conjugateRegularVerb"></span>
 
@@ -1895,7 +1895,7 @@ return nil.
 
 [en_us.t](../file/en_us.t.html)\[[2265](../source/en_us.t.html#2265)\]
 
-<div class="desc">
+
 
 Conjugate a regular verb in the present or past tense for our person and
 number.
@@ -1908,7 +1908,7 @@ suffix: -y -\> -ies, -o -\> -oes.
 In the past tense, we use the inherited handling since the past tense
 ending doesn't vary with person.
 
-</div>
+
 
 <span id="conversedThisTurn"></span>
 
@@ -1916,13 +1916,13 @@ ending doesn't vary with person.
 
 [actor.t](../file/actor.t.html)\[[6845](../source/actor.t.html#6845)\]
 
-<div class="desc">
+
 
 Did we engage in any conversation on the current turn? This can be used
 as a quick check in background activity scripts when we want to run a
 step only in the absence of any conversation on the same turn.
 
-</div>
+
 
 <span id="copyPronounAntecedentsFrom"></span>
 
@@ -1930,13 +1930,13 @@ step only in the absence of any conversation on the same turn.
 
 [actor.t](../file/actor.t.html)\[[10034](../source/actor.t.html#10034)\]
 
-<div class="desc">
+
 
 Copy pronoun antecedents from the given actor. This should be called
 whenever an actor issues a command to us, so that pronouns in the
 command are properly resolved relative to the issuer.
 
-</div>
+
 
 <span id="defaultAskForResponse"></span>
 
@@ -1944,11 +1944,11 @@ command are properly resolved relative to the issuer.
 
 [actor.t](../file/actor.t.html)\[[10390](../source/actor.t.html#10390)\]
 
-<div class="desc">
+
 
 the default response for ASK FOR
 
-</div>
+
 
 <span id="defaultAskResponse"></span>
 
@@ -1956,7 +1956,7 @@ the default response for ASK FOR
 
 [actor.t](../file/actor.t.html)\[[10362](../source/actor.t.html#10362)\]
 
-<div class="desc">
+
 
 Show the default answer to a question - this is called when we're the
 actor in ASK \<actor\> ABOUT \<topic\>, and we can't find a more
@@ -1979,7 +1979,7 @@ The \*usual\* way of providing a default response is to define a
 DefaultAskTopic (or a DefaultAskTellTopic) and put it in the actor's
 topic database.
 
-</div>
+
 
 <span id="defaultCommandResponse"></span>
 
@@ -1987,11 +1987,11 @@ topic database.
 
 [actor.t](../file/actor.t.html)\[[10402](../source/actor.t.html#10402)\]
 
-<div class="desc">
+
 
 default refusal of a command
 
-</div>
+
 
 <span id="defaultConvResponse"></span>
 
@@ -1999,12 +1999,12 @@ default refusal of a command
 
 [actor.t](../file/actor.t.html)\[[10307](../source/actor.t.html#10307)\]
 
-<div class="desc">
+
 
 Show a default response to a conversational action. By default, we'll
 show the default response for our conversation type.
 
-</div>
+
 
 <span id="defaultGiveResponse"></span>
 
@@ -2012,11 +2012,11 @@ show the default response for our conversation type.
 
 [actor.t](../file/actor.t.html)\[[10386](../source/actor.t.html#10386)\]
 
-<div class="desc">
+
 
 the default response for GIVE TO
 
-</div>
+
 
 <span id="defaultGoodbyeResponse"></span>
 
@@ -2024,11 +2024,11 @@ the default response for GIVE TO
 
 [actor.t](../file/actor.t.html)\[[10336](../source/actor.t.html#10336)\]
 
-<div class="desc">
+
 
 show our default goodbye message
 
-</div>
+
 
 <span id="defaultGreetingResponse"></span>
 
@@ -2036,7 +2036,7 @@ show our default goodbye message
 
 [actor.t](../file/actor.t.html)\[[10332](../source/actor.t.html#10332)\]
 
-<div class="desc">
+
 
 Show our default greeting message - this is used when the given another
 actor greets us with HELLO or TALK TO, and we don't otherwise handle it
@@ -2058,7 +2058,7 @@ There's no response
 You could ask him about the candle, the book, or the bell, or  
 tell him about the crypt.
 
-</div>
+
 
 <span id="defaultNoResponse"></span>
 
@@ -2066,11 +2066,11 @@ tell him about the crypt.
 
 [actor.t](../file/actor.t.html)\[[10398](../source/actor.t.html#10398)\]
 
-<div class="desc">
+
 
 default response to being told NO
 
-</div>
+
 
 <span id="defaultShowResponse"></span>
 
@@ -2078,11 +2078,11 @@ default response to being told NO
 
 [actor.t](../file/actor.t.html)\[[10382](../source/actor.t.html#10382)\]
 
-<div class="desc">
+
 
 the default response for SHOW TO
 
-</div>
+
 
 <span id="defaultTellResponse"></span>
 
@@ -2090,7 +2090,7 @@ the default response for SHOW TO
 
 [actor.t](../file/actor.t.html)\[[10378](../source/actor.t.html#10378)\]
 
-<div class="desc">
+
 
 Show the default response to being told of a topic - this is called when
 we're the actor in TELL \<actor\> ABOUT \<topic\>, and we can't find a
@@ -2104,7 +2104,7 @@ The usual way of providing a default response is to define a
 DefaultTellTopic (or a DefaultAskTellTopic) and put it in the actor's
 topic database.
 
-</div>
+
 
 <span id="defaultYesResponse"></span>
 
@@ -2112,11 +2112,11 @@ topic database.
 
 [actor.t](../file/actor.t.html)\[[10394](../source/actor.t.html#10394)\]
 
-<div class="desc">
+
 
 default response to being told YES
 
-</div>
+
 
 <span id="descViaActorContainer"></span>
 
@@ -2124,7 +2124,7 @@ default response to being told YES
 
 [actor.t](../file/actor.t.html)\[[6171](../source/actor.t.html#6171)\]
 
-<div class="desc">
+
 
 Describe the actor via the "nominal actor container." The nominal
 container is determined by our direct location.
@@ -2146,7 +2146,7 @@ location and the specific place we're standing or sitting or whatever
 might not be the same: "Bob is in the garden, sitting in the lawn
 chair."
 
-</div>
+
 
 <span id="disembark"></span>
 
@@ -2154,12 +2154,12 @@ chair."
 
 [actor.t](../file/actor.t.html)\[[7387](../source/actor.t.html#7387)\]
 
-<div class="desc">
+
 
 Disembark. This is used by the 'Get out' action to carry out the
 command. By default, we'll let the room handle it.
 
-</div>
+
 
 <span id="distantSpecialDesc"></span>
 
@@ -2167,11 +2167,11 @@ command. By default, we'll let the room handle it.
 
 [actor.t](../file/actor.t.html)\[[6051](../source/actor.t.html#6051)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(AskAbout)"></span>
 
@@ -2179,11 +2179,11 @@ command. By default, we'll let the room handle it.
 
 [actor.t](../file/actor.t.html)\[[10230](../source/actor.t.html#10230)\]
 
-<div class="desc">
+
 
 also mark the visible contents of the object as having been seen
 
-</div>
+
 
 <span id="dobjFor(AskFor)"></span>
 
@@ -2191,11 +2191,11 @@ also mark the visible contents of the object as having been seen
 
 [actor.t](../file/actor.t.html)\[[10123](../source/actor.t.html#10123)\]
 
-<div class="desc">
+
 
 cannot kiss oneself
 
-</div>
+
 
 <span id="dobjFor(Drop)"></span>
 
@@ -2203,11 +2203,11 @@ cannot kiss oneself
 
 [actor.t](../file/actor.t.html)\[[10073](../source/actor.t.html#10073)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Kiss)"></span>
 
@@ -2215,11 +2215,11 @@ cannot kiss oneself
 
 [actor.t](../file/actor.t.html)\[[10112](../source/actor.t.html#10112)\]
 
-<div class="desc">
+
 
 do the normal work
 
-</div>
+
 
 <span id="dobjFor(PutIn)"></span>
 
@@ -2227,11 +2227,11 @@ do the normal work
 
 [actor.t](../file/actor.t.html)\[[10092](../source/actor.t.html#10092)\]
 
-<div class="desc">
+
 
 treat PUT SELF IN FOO as GET IN FOO
 
-</div>
+
 
 <span id="dobjFor(PutOn)"></span>
 
@@ -2239,11 +2239,11 @@ treat PUT SELF IN FOO as GET IN FOO
 
 [actor.t](../file/actor.t.html)\[[10074](../source/actor.t.html#10074)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutUnder)"></span>
 
@@ -2251,11 +2251,11 @@ treat PUT SELF IN FOO as GET IN FOO
 
 [actor.t](../file/actor.t.html)\[[10075](../source/actor.t.html#10075)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -2263,7 +2263,7 @@ treat PUT SELF IN FOO as GET IN FOO
 
 [actor.t](../file/actor.t.html)\[[10072](../source/actor.t.html#10072)\]
 
-<div class="desc">
+
 
 For the basic physical manipulation verbs (TAKE, DROP, PUT ON, etc),
 it's illogical to operate on myself, so check for this in verify().
@@ -2271,7 +2271,7 @@ Otherwise, handle these as we would ordinary objects, since we might be
 able to manipulate other actors in the normal manner, especially actors
 small enough that we can pick them up.
 
-</div>
+
 
 <span id="dobjFor(TalkTo)"></span>
 
@@ -2279,11 +2279,11 @@ small enough that we can pick them up.
 
 [actor.t](../file/actor.t.html)\[[10141](../source/actor.t.html#10141)\]
 
-<div class="desc">
+
 
 let the state object handle it
 
-</div>
+
 
 <span id="dobjFor(TellAbout)"></span>
 
@@ -2291,11 +2291,11 @@ let the state object handle it
 
 [actor.t](../file/actor.t.html)\[[10248](../source/actor.t.html#10248)\]
 
-<div class="desc">
+
 
 let our state object handle it
 
-</div>
+
 
 <span id="dobjFor(Throw)"></span>
 
@@ -2303,11 +2303,11 @@ let our state object handle it
 
 [actor.t](../file/actor.t.html)\[[10076](../source/actor.t.html#10076)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ThrowAt)"></span>
 
@@ -2315,11 +2315,11 @@ let our state object handle it
 
 [actor.t](../file/actor.t.html)\[[10077](../source/actor.t.html#10077)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ThrowDir)"></span>
 
@@ -2327,11 +2327,11 @@ let our state object handle it
 
 [actor.t](../file/actor.t.html)\[[10078](../source/actor.t.html#10078)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ThrowTo)"></span>
 
@@ -2339,11 +2339,11 @@ let our state object handle it
 
 [actor.t](../file/actor.t.html)\[[10079](../source/actor.t.html#10079)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="endConversation"></span>
 
@@ -2351,7 +2351,7 @@ let our state object handle it
 
 [actor.t](../file/actor.t.html)\[[5897](../source/actor.t.html#5897)\]
 
-<div class="desc">
+
 
 Break off our current conversation, of the NPC's own volition. This is
 the opposite number of initiateConversation: this causes the NPC to
@@ -2362,7 +2362,7 @@ This call is mostly useful when the actor's current state is an
 InConversationState, since the main function of this routine is to
 switch to an out-of-conversation state.
 
-</div>
+
 
 <span id="examineListContents"></span>
 
@@ -2370,11 +2370,11 @@ switch to an out-of-conversation state.
 
 [actor.t](../file/actor.t.html)\[[6037](../source/actor.t.html#6037)\]
 
-<div class="desc">
+
 
 examine my contents specially
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -2382,11 +2382,11 @@ examine my contents specially
 
 [actor.t](../file/actor.t.html)\[[5978](../source/actor.t.html#5978)\]
 
-<div class="desc">
+
 
 show our status
 
-</div>
+
 
 <span id="excludeFromLookAround"></span>
 
@@ -2394,12 +2394,12 @@ show our status
 
 [actor.t](../file/actor.t.html)\[[7457](../source/actor.t.html#7457)\]
 
-<div class="desc">
+
 
 Add an object to the 'look around' exclusion list. Returns true if the
 object was already in the list, nil if not.
 
-</div>
+
 
 <span id="executeActorTurn"></span>
 
@@ -2407,13 +2407,13 @@ object was already in the list, nil if not.
 
 [actor.t](../file/actor.t.html)\[[9297](../source/actor.t.html#9297)\]
 
-<div class="desc">
+
 
 The main processing for an actor's turn. In most cases, subclasses
 should override this method (rather than executeTurn) to specialize an
 actor's turn processing.
 
-</div>
+
 
 <span id="executeAgenda"></span>
 
@@ -2421,13 +2421,13 @@ actor's turn processing.
 
 [actor.t](../file/actor.t.html)\[[6965](../source/actor.t.html#6965)\]
 
-<div class="desc">
+
 
 Execute the next item in our agenda, if there are any items in the
 agenda that are ready to execute. We'll return true if we found an item
 to execute, nil if not.
 
-</div>
+
 
 <span id="executeTurn"></span>
 
@@ -2435,7 +2435,7 @@ to execute, nil if not.
 
 [actor.t](../file/actor.t.html)\[[9268](../source/actor.t.html#9268)\]
 
-<div class="desc">
+
 
 Execute one "turn" - this is a unit of time passing. The player
 character generally is allowed to execute one command in the course of a
@@ -2447,7 +2447,7 @@ executeActorTurn() method. In most cases, subclasses should override
 executeActorTurn() rather than this method, since overriding
 executeTurn() directly will lose the action environment.
 
-</div>
+
 
 <span id="findVisualObstructor"></span>
 
@@ -2455,11 +2455,11 @@ executeTurn() directly will lose the action environment.
 
 [actor.t](../file/actor.t.html)\[[8725](../source/actor.t.html#8725)\]
 
-<div class="desc">
+
 
 Find the object that prevents us from seeing the given object.
 
-</div>
+
 
 <span id="forEachTravelingActor"></span>
 
@@ -2467,11 +2467,11 @@ Find the object that prevents us from seeing the given object.
 
 [actor.t](../file/actor.t.html)\[[6424](../source/actor.t.html#6424)\]
 
-<div class="desc">
+
 
 invoke a callback on each actor traveling with the traveler
 
-</div>
+
 
 <span id="forgetPossAnaphors"></span>
 
@@ -2479,11 +2479,11 @@ invoke a callback on each actor traveling with the traveler
 
 [actor.t](../file/actor.t.html)\[[10022](../source/actor.t.html#10022)\]
 
-<div class="desc">
+
 
 forget the possessive anaphors
 
-</div>
+
 
 <span id="getActionMessageObj"></span>
 
@@ -2491,12 +2491,12 @@ forget the possessive anaphors
 
 [actor.t](../file/actor.t.html)\[[9835](../source/actor.t.html#9835)\]
 
-<div class="desc">
+
 
 Get the library message object for action responses. This is used to
 generate library responses to verbs.
 
-</div>
+
 
 <span id="getActorNotifyList"></span>
 
@@ -2504,12 +2504,12 @@ generate library responses to verbs.
 
 [actor.t](../file/actor.t.html)\[[8470](../source/actor.t.html#8470)\]
 
-<div class="desc">
+
 
 Build a list of the objects that are explicitly registered to receive
 notification when I'm the actor in a command.
 
-</div>
+
 
 <span id="getBulkHeld"></span>
 
@@ -2517,7 +2517,7 @@ notification when I'm the actor in a command.
 
 [actor.t](../file/actor.t.html)\[[7030](../source/actor.t.html#7030)\]
 
-<div class="desc">
+
 
 Calculate the amount of bulk I'm holding directly. By default, we'll
 simply add up the "actor-encumbering bulk" of each of our direct
@@ -2529,7 +2529,7 @@ up to the getEncumberingBulk routine, so that only the objects are in
 the business of deciding how bulky they are under different
 circumstances.
 
-</div>
+
 
 <span id="getCurrentInterlocutor"></span>
 
@@ -2537,13 +2537,13 @@ circumstances.
 
 [actor.t](../file/actor.t.html)\[[6765](../source/actor.t.html#6765)\]
 
-<div class="desc">
+
 
 Get the current interlocutor. By default, we'll address new
 conversational commands (ASK ABOUT, TELL ABOUT, SHOW TO) to the last
 conversational partner, if that actor is still within range.
 
-</div>
+
 
 <span id="getDefaultInterlocutor"></span>
 
@@ -2551,7 +2551,7 @@ conversational partner, if that actor is still within range.
 
 [actor.t](../file/actor.t.html)\[[6784](../source/actor.t.html#6784)\]
 
-<div class="desc">
+
 
 Get the default interlocutor. If there's a current interlocutor, and we
 can still talk to that actor, then that's the default interlocutor. If
@@ -2559,7 +2559,7 @@ not, we'll return whatever actor is the default for a TALK TO command.
 Note that TALK TO won't necessarily have a default actor; if it doesn't,
 we'll simply return nil.
 
-</div>
+
 
 <span id="getDropDestination"></span>
 
@@ -2567,13 +2567,13 @@ we'll simply return nil.
 
 [actor.t](../file/actor.t.html)\[[7490](../source/actor.t.html#7490)\]
 
-<div class="desc">
+
 
 Get the location into which objects should be moved when the actor drops
 them with an explicit 'drop' command. By default, we return the drop
 destination of our current container.
 
-</div>
+
 
 <span id="getFollowables"></span>
 
@@ -2581,13 +2581,13 @@ destination of our current container.
 
 [actor.t](../file/actor.t.html)\[[7823](../source/actor.t.html#7823)\]
 
-<div class="desc">
+
 
 Get the list of objects I can follow. This is a list of all of the
 objects which I have seen departing a location - these are all in scope
 for 'follow' commands.
 
-</div>
+
 
 <span id="getFollowInfo"></span>
 
@@ -2595,14 +2595,14 @@ for 'follow' commands.
 
 [actor.t](../file/actor.t.html)\[[7918](../source/actor.t.html#7918)\]
 
-<div class="desc">
+
 
 Get information on what to do to make this actor follow the given
 object. This returns a FollowInfo object that reports our last knowledge
 of the given object's location and departure, or nil if we don't know
 anything about how to follow the actor.
 
-</div>
+
 
 <span id="getLookAroundName"></span>
 
@@ -2610,13 +2610,13 @@ anything about how to follow the actor.
 
 [actor.t](../file/actor.t.html)\[[7432](../source/actor.t.html#7432)\]
 
-<div class="desc">
+
 
 Get my "look around" location name as a string. This returns a string
 containing the location name that we display in the status line or at
 the start of a "look around" description of my location.
 
-</div>
+
 
 <span id="getParserDeferredMessageObj"></span>
 
@@ -2624,13 +2624,13 @@ the start of a "look around" description of my location.
 
 [actor.t](../file/actor.t.html)\[[9829](../source/actor.t.html#9829)\]
 
-<div class="desc">
+
 
 Get the deferred library message object for a parser message addressed
 to the player character. We only use this to generate messages deferred
 from non-player characters.
 
-</div>
+
 
 <span id="getParserMessageObj"></span>
 
@@ -2638,12 +2638,12 @@ from non-player characters.
 
 [actor.t](../file/actor.t.html)\[[9807](../source/actor.t.html#9807)\]
 
-<div class="desc">
+
 
 get the library message object for a parser message addressed to the
 player character
 
-</div>
+
 
 <span id="getPossAnaphor"></span>
 
@@ -2651,11 +2651,11 @@ player character
 
 [actor.t](../file/actor.t.html)\[[10019](../source/actor.t.html#10019)\]
 
-<div class="desc">
+
 
 get a possessive anaphor value
 
-</div>
+
 
 <span id="getPronounAntecedent"></span>
 
@@ -2663,11 +2663,11 @@ get a possessive anaphor value
 
 [actor.t](../file/actor.t.html)\[[9995](../source/actor.t.html#9995)\]
 
-<div class="desc">
+
 
 look up a pronoun's value
 
-</div>
+
 
 <span id="getPushTraveler"></span>
 
@@ -2675,13 +2675,13 @@ look up a pronoun's value
 
 [actor.t](../file/actor.t.html)\[[6401](../source/actor.t.html#6401)\]
 
-<div class="desc">
+
 
 Get the "push traveler" for the actor. This is the nominal traveler that
 we want to use when the actor enters a command like PUSH BOX NORTH.
 'obj' is the object we're trying to push.
 
-</div>
+
 
 <span id="getTopicOwner"></span>
 
@@ -2689,11 +2689,11 @@ we want to use when the actor enters a command like PUSH BOX NORTH.
 
 [actor.t](../file/actor.t.html)\[[8261](../source/actor.t.html#8261)\]
 
-<div class="desc">
+
 
 we are the owner of any TopicEntry objects contained within us
 
-</div>
+
 
 <span id="getTraveler"></span>
 
@@ -2701,7 +2701,7 @@ we are the owner of any TopicEntry objects contained within us
 
 [actor.t](../file/actor.t.html)\[[6381](../source/actor.t.html#6381)\]
 
-<div class="desc">
+
 
 Get the object that's actually going to move when this actor travels via
 the given connector. In most cases this is simply the actor; but when
@@ -2713,7 +2713,7 @@ thinks about the situation.
 If we have a special traveler explicitly set, it overrides the traveler
 indicated by the location.
 
-</div>
+
 
 <span id="getVisualAmbient"></span>
 
@@ -2721,12 +2721,12 @@ indicated by the location.
 
 [actor.t](../file/actor.t.html)\[[8505](../source/actor.t.html#8505)\]
 
-<div class="desc">
+
 
 Get the ambient light level in the visual senses at this actor. This is
 the ambient level at the actor.
 
-</div>
+
 
 <span id="getWeightHeld"></span>
 
@@ -2734,7 +2734,7 @@ the ambient level at the actor.
 
 [actor.t](../file/actor.t.html)\[[7056](../source/actor.t.html#7056)\]
 
-<div class="desc">
+
 
 Calculate the total weight I'm holding. By default, we'll add up the
 "actor-encumbering weight" of each of our direct contents.
@@ -2746,7 +2746,7 @@ from needing any special knowledge of the internal structure of any
 items we're holding, and puts that knowledge in the individual items
 where it belongs.
 
-</div>
+
 
 <span id="goToSleep"></span>
 
@@ -2754,13 +2754,13 @@ where it belongs.
 
 [actor.t](../file/actor.t.html)\[[7310](../source/actor.t.html#7310)\]
 
-<div class="desc">
+
 
 Go to sleep. This is used by the 'Sleep' action to carry out the
 command. By default, we simply say that we're not sleepy; actors can
 override this to cause other actions.
 
-</div>
+
 
 <span id="handleConversation"></span>
 
@@ -2768,7 +2768,7 @@ override this to cause other actions.
 
 [actor.t](../file/actor.t.html)\[[10293](../source/actor.t.html#10293)\]
 
-<div class="desc">
+
 
 Handle a conversational command. All of the conversational actions
 (HELLO, GOODBYE, YES, NO, ASK ABOUT, ASK FOR, TELL ABOUT, SHOW TO, GIVE
@@ -2776,7 +2776,7 @@ TO) are routed here when we're the target of the action (for example,
 we're BOB in ASK BOB ABOUT TOPIC) AND the ActorState doesn't want to
 handle the action.
 
-</div>
+
 
 <span id="hasSeen"></span>
 
@@ -2784,11 +2784,11 @@ handle the action.
 
 [actor.t](../file/actor.t.html)\[[8161](../source/actor.t.html#8161)\]
 
-<div class="desc">
+
 
 determine if I've ever seen the given object
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -2796,7 +2796,7 @@ determine if I've ever seen the given object
 
 [actor.t](../file/actor.t.html)\[[5922](../source/actor.t.html#5922)\]
 
-<div class="desc">
+
 
 Hide actors from 'all' by default. The kinds of actions that normally
 apply to 'all' and the kinds that normally apply to actors have pretty
@@ -2805,7 +2805,7 @@ low overlap.
 If a particular actor looks a lot like an inanimate object, it might
 want to override this to participate in 'all' for most or all actions.
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -2813,13 +2813,13 @@ want to override this to participate in 'all' for most or all actions.
 
 [actor.t](../file/actor.t.html)\[[5929](../source/actor.t.html#5929)\]
 
-<div class="desc">
+
 
 don't hide actors from defaulting, though - it's frequently convenient
 and appropriate to assume an actor by default, especially for commands
 like GIVE TO and SHOW TO
 
-</div>
+
 
 <span id="idleTurn"></span>
 
@@ -2827,12 +2827,12 @@ like GIVE TO and SHOW TO
 
 [actor.t](../file/actor.t.html)\[[9168](../source/actor.t.html#9168)\]
 
-<div class="desc">
+
 
 When it's our turn and we don't have any command to perform, we'll call
 this routine, which can perform a scripted operation if desired.
 
-</div>
+
 
 <span id="impliedCommandMode"></span>
 
@@ -2840,7 +2840,7 @@ this routine, which can perform a scripted operation if desired.
 
 [actor.t](../file/actor.t.html)\[[6273](../source/actor.t.html#6273)\]
 
-<div class="desc">
+
 
 Implicit command handling style for this actor. There are two styles for
 handling implied commands: "player" and "NPC", indicated by the enum
@@ -2869,7 +2869,7 @@ character, which is why the various parts of the parser that care about
 this mode consult this method rather than simply testing the PC/NPC
 status of the actor.
 
-</div>
+
 
 <span id="initializeActor"></span>
 
@@ -2877,11 +2877,11 @@ status of the actor.
 
 [actor.t](../file/actor.t.html)\[[8932](../source/actor.t.html#8932)\]
 
-<div class="desc">
+
 
 Perform library pre-initialization on the actor
 
-</div>
+
 
 <span id="initiateConversation"></span>
 
@@ -2889,7 +2889,7 @@ Perform library pre-initialization on the actor
 
 [actor.t](../file/actor.t.html)\[[5818](../source/actor.t.html#5818)\]
 
-<div class="desc">
+
 
 Initiate a conversation with the player character. This lets the NPC
 initiate a conversation, in response to something the player character
@@ -2917,7 +2917,7 @@ context, the NPC script code might just as well display the
 conversational exchange as a plain old message, and not bother going to
 all this trouble.
 
-</div>
+
 
 <span id="initiateTopic"></span>
 
@@ -2925,13 +2925,13 @@ all this trouble.
 
 [actor.t](../file/actor.t.html)\[[5853](../source/actor.t.html#5853)\]
 
-<div class="desc">
+
 
 Initiate a conversation based on the given simulation object. We'll look
 for an InitiateTopic matching the given object, and if we can find one,
 we'll show its topic response.
 
-</div>
+
 
 <span id="inventorySense"></span>
 
@@ -2939,12 +2939,12 @@ we'll show its topic response.
 
 [actor.t](../file/actor.t.html)\[[8890](../source/actor.t.html#8890)\]
 
-<div class="desc">
+
 
 Add to an inventory description a list of things we notice through a
 specific sense.
 
-</div>
+
 
 <span id="inventorySenseInfoTable"></span>
 
@@ -2952,13 +2952,13 @@ specific sense.
 
 [actor.t](../file/actor.t.html)\[[8789](../source/actor.t.html#8789)\]
 
-<div class="desc">
+
 
 Build a lookup table of the objects that can be sensed for the purposes
 of taking inventory. We'll include everything in the normal visual sense
 table, plus everything directly held.
 
-</div>
+
 
 <span id="iobjFor(GiveTo)"></span>
 
@@ -2966,11 +2966,11 @@ table, plus everything directly held.
 
 [actor.t](../file/actor.t.html)\[[10159](../source/actor.t.html#10159)\]
 
-<div class="desc">
+
 
 handle it as a 'hello' topic
 
-</div>
+
 
 <span id="iobjFor(ShowTo)"></span>
 
@@ -2978,11 +2978,11 @@ handle it as a 'hello' topic
 
 [actor.t](../file/actor.t.html)\[[10183](../source/actor.t.html#10183)\]
 
-<div class="desc">
+
 
 let the state object handle it
 
-</div>
+
 
 <span id="iobjFor(ThrowTo)"></span>
 
@@ -2990,11 +2990,11 @@ let the state object handle it
 
 [actor.t](../file/actor.t.html)\[[10082](../source/actor.t.html#10082)\]
 
-<div class="desc">
+
 
 customize the message for THROW TO \<actor\>
 
-</div>
+
 
 <span id="isActorTraveling"></span>
 
@@ -3002,11 +3002,11 @@ customize the message for THROW TO \<actor\>
 
 [actor.t](../file/actor.t.html)\[[6417](../source/actor.t.html#6417)\]
 
-<div class="desc">
+
 
 is an actor traveling with us?
 
-</div>
+
 
 <span id="isLikelyTopic"></span>
 
@@ -3014,13 +3014,13 @@ is an actor traveling with us?
 
 [actor.t](../file/actor.t.html)\[[8254](../source/actor.t.html#8254)\]
 
-<div class="desc">
+
 
 Determine if the given object is a likely topic for a conversational
 action performed by this actor. By default, we'll return true if the
 topic is known, nil if not.
 
-</div>
+
 
 <span id="isLocationLit"></span>
 
@@ -3028,11 +3028,11 @@ topic is known, nil if not.
 
 [actor.t](../file/actor.t.html)\[[8532](../source/actor.t.html#8532)\]
 
-<div class="desc">
+
 
 Determine if my location is lit for my sight-like senses.
 
-</div>
+
 
 <span id="isPlayerChar"></span>
 
@@ -3040,11 +3040,11 @@ Determine if my location is lit for my sight-like senses.
 
 [actor.t](../file/actor.t.html)\[[6241](../source/actor.t.html#6241)\]
 
-<div class="desc">
+
 
 determine if I'm the player character
 
-</div>
+
 
 <span id="knowsAbout"></span>
 
@@ -3052,13 +3052,13 @@ determine if I'm the player character
 
 [actor.t](../file/actor.t.html)\[[8195](../source/actor.t.html#8195)\]
 
-<div class="desc">
+
 
 Determine if I know about the given object. I know about an object if
 it's specifically marked as known to me; I also know about the object if
 I can see it now, or if I've ever seen it in the past.
 
-</div>
+
 
 <span id="knowsTopic"></span>
 
@@ -3066,7 +3066,7 @@ I can see it now, or if I've ever seen it in the past.
 
 [actor.t](../file/actor.t.html)\[[8243](../source/actor.t.html#8243)\]
 
-<div class="desc">
+
 
 Determine if the actor recognizes the given object as a "topic," which
 is an object that represents some knowledge the actor can use in
@@ -3079,7 +3079,7 @@ actor's knowledge according to what the actor has experienced of the
 setting or story. Note that it's often easier to control actor knowledge
 using the lower-level knowsAbout() and setKnowsAbout() methods, though.
 
-</div>
+
 
 <span id="listActorPosture"></span>
 
@@ -3087,12 +3087,12 @@ using the lower-level knowsAbout() and setKnowsAbout() methods, though.
 
 [actor.t](../file/actor.t.html)\[[7356](../source/actor.t.html#7356)\]
 
-<div class="desc">
+
 
 Describe the actor as part of the EXAMINE description of a nested room
 containing the actor. 'povActor' is the actor doing the looking.
 
-</div>
+
 
 <span id="lookAround"></span>
 
@@ -3100,7 +3100,7 @@ containing the actor. 'povActor' is the actor doing the looking.
 
 [actor.t](../file/actor.t.html)\[[7413](../source/actor.t.html#7413)\]
 
-<div class="desc">
+
 
 Display a description of the actor's location from the actor's point of
 view.
@@ -3110,7 +3110,7 @@ Otherwise, we'll show the full description if the actor hasn't seen the
 location before, or the terse description if the actor has previously
 seen the location.
 
-</div>
+
 
 <span id="makePosture"></span>
 
@@ -3118,13 +3118,13 @@ seen the location.
 
 [actor.t](../file/actor.t.html)\[[7398](../source/actor.t.html#7398)\]
 
-<div class="desc">
+
 
 Set our posture to the given status. By default, we'll simply set our
 posture property to the new status, but actors can override this to
 handle side effects of the change.
 
-</div>
+
 
 <span id="meetsObjHeld"></span>
 
@@ -3132,13 +3132,13 @@ handle side effects of the change.
 
 [actor.t](../file/actor.t.html)\[[5936](../source/actor.t.html#5936)\]
 
-<div class="desc">
+
 
 We meet the objHeld precondition for ourself - that is, for any verb
 that requires holding an object, we can be considered to be holding
 ourself.
 
-</div>
+
 
 <span id="mustMoveObjInto"></span>
 
@@ -3146,11 +3146,11 @@ ourself.
 
 [actor.t](../file/actor.t.html)\[[6306](../source/actor.t.html#6306)\]
 
-<div class="desc">
+
 
 desribe our containment of an object as carrying the object
 
-</div>
+
 
 <span id="nonIdleTurn"></span>
 
@@ -3158,7 +3158,7 @@ desribe our containment of an object as carrying the object
 
 [actor.t](../file/actor.t.html)\[[9224](../source/actor.t.html#9224)\]
 
-<div class="desc">
+
 
 Receive notification that this is a non-idle turn. This is called
 whenever a command in our pending command queue is about to be executed.
@@ -3174,7 +3174,7 @@ usually started by an explicit command in the first place, so it is
 usually sensible for a new command to replace the one that started
 follow mode.
 
-</div>
+
 
 <span id="noteConditionsAfter"></span>
 
@@ -3182,14 +3182,14 @@ follow mode.
 
 [actor.t](../file/actor.t.html)\[[8972](../source/actor.t.html#8972)\]
 
-<div class="desc">
+
 
 Note conditions after an action or other event. By default, if we are
 still in the same location we were in when noteConditionsBefore() was
 last called, and the light/dark status has changed, we'll mention the
 change in light/dark status.
 
-</div>
+
 
 <span id="noteConditionsBefore"></span>
 
@@ -3197,13 +3197,13 @@ change in light/dark status.
 
 [actor.t](../file/actor.t.html)\[[8959](../source/actor.t.html#8959)\]
 
-<div class="desc">
+
 
 Note conditions before an action or other event. By default, we note our
 location and light/dark status, so that we comment on any change in the
 light/dark status after the event if we're still in the same location.
 
-</div>
+
 
 <span id="noteConsultation"></span>
 
@@ -3211,11 +3211,11 @@ light/dark status after the event if we're still in the same location.
 
 [actor.t](../file/actor.t.html)\[[6902](../source/actor.t.html#6902)\]
 
-<div class="desc">
+
 
 note that we're consulting an item
 
-</div>
+
 
 <span id="noteConvAction"></span>
 
@@ -3223,7 +3223,7 @@ note that we're consulting an item
 
 [actor.t](../file/actor.t.html)\[[6883](../source/actor.t.html#6883)\]
 
-<div class="desc">
+
 
 Note that we're taking part in a conversational action with another
 character. This is symmetrical - it could mean we're the initiator of
@@ -3231,7 +3231,7 @@ the conversation action or the target. We'll remember the person we're
 talking to, and reset our conversation time counters so we know we've
 conversed on this turn.
 
-</div>
+
 
 <span id="noteConversation"></span>
 
@@ -3239,7 +3239,7 @@ conversed on this turn.
 
 [actor.t](../file/actor.t.html)\[[6855](../source/actor.t.html#6855)\]
 
-<div class="desc">
+
 
 Note that we're performing a conversational command targeting the given
 actor. We'll make the actors point at each other with their
@@ -3248,7 +3248,7 @@ performing the conversation command: if the player types ASK BOB ABOUT
 BOOK, this will be called on the player character actor, with 'other'
 set to Bob.
 
-</div>
+
 
 <span id="noteConversationFrom"></span>
 
@@ -3256,13 +3256,13 @@ set to Bob.
 
 [actor.t](../file/actor.t.html)\[[6870](../source/actor.t.html#6870)\]
 
-<div class="desc">
+
 
 Note that another actor is issuing a conversational command targeting
 us. For example, if the player types ASK BOB ABOUT BOOK, then this will
 be called on Bob, with the player character actor as 'other'.
 
-</div>
+
 
 <span id="noteObjectShown"></span>
 
@@ -3270,7 +3270,7 @@ be called on Bob, with the player character actor as 'other'.
 
 [actor.t](../file/actor.t.html)\[[10215](../source/actor.t.html#10215)\]
 
-<div class="desc">
+
 
 Note that the given object has been explicitly shown to me. By default,
 we'll mark the object and its visible contents as having been seen by
@@ -3279,7 +3279,7 @@ since presumably such an explicit act of calling our attention to an
 object would make us consider the object as having been seen in the
 future.
 
-</div>
+
 
 <span id="noteSeenBy"></span>
 
@@ -3287,11 +3287,11 @@ future.
 
 [actor.t](../file/actor.t.html)\[[8167](../source/actor.t.html#8167)\]
 
-<div class="desc">
+
 
 receive notification that another actor is observing us
 
-</div>
+
 
 <span id="notifyIssuerParseFailure"></span>
 
@@ -3299,7 +3299,7 @@ receive notification that another actor is observing us
 
 [actor.t](../file/actor.t.html)\[[9943](../source/actor.t.html#9943)\]
 
-<div class="desc">
+
 
 Receive notification that a command we sent to another NPC failed. This
 is only called when one NPC sends a command to another NPC; this is
@@ -3311,7 +3311,7 @@ code to send a command from one NPC to another. Any custom NPC actor
 that sends a command to another NPC actor might want to use this to deal
 with problems in processing those commands.
 
-</div>
+
 
 <span id="notifyParseFailure"></span>
 
@@ -3319,7 +3319,7 @@ with problems in processing those commands.
 
 [actor.t](../file/actor.t.html)\[[9853](../source/actor.t.html#9853)\]
 
-<div class="desc">
+
 
 Notify an issuer that a command sent to us resulted in a parsing
 failure. We are meant to reply to the issuer to let the issuer know
@@ -3327,7 +3327,7 @@ about the problem. messageProp is the libGlobal message property
 describing the error, and args is a list with the (varargs) arguments to
 the message property.
 
-</div>
+
 
 <span id="notifyTopicResponse"></span>
 
@@ -3335,12 +3335,12 @@ the message property.
 
 [actor.t](../file/actor.t.html)\[[6908](../source/actor.t.html#6908)\]
 
-<div class="desc">
+
 
 Receive notification that a TopicEntry response in our database is being
 invoked. We'll just pass this along to our current state.
 
-</div>
+
 
 <span id="npcDesc"></span>
 
@@ -3348,7 +3348,7 @@ invoked. We'll just pass this along to our current state.
 
 [actor.t](../file/actor.t.html)\[[6034](../source/actor.t.html#6034)\]
 
-<div class="desc">
+
 
 Show the description of this actor when this actor is a non-player
 character.
@@ -3368,7 +3368,7 @@ defaultDescReport - simply display the descriptive message directly:
 
 npcDesc = "He's wearing a gorilla costume. "
 
-</div>
+
 
 <span id="obeyCommand"></span>
 
@@ -3376,7 +3376,7 @@ npcDesc = "He's wearing a gorilla costume. "
 
 [actor.t](../file/actor.t.html)\[[9645](../source/actor.t.html#9645)\]
 
-<div class="desc">
+
 
 Determine whether or not we want to obey a command from the given actor
 to perform the given action. We only get this far when we determine that
@@ -3407,7 +3407,7 @@ wantsFollowInfo(), since an actor that accepts "follow" commands will
 need to keep track of the movements of other actors if it is to carry
 out any following.
 
-</div>
+
 
 <span id="okayPostureChange"></span>
 
@@ -3415,7 +3415,7 @@ out any following.
 
 [actor.t](../file/actor.t.html)\[[7333](../source/actor.t.html#7333)\]
 
-<div class="desc">
+
 
 Get a default acknowledgment of a change to our posture. This should
 acknowledge the posture so that it tells us the current posture. This is
@@ -3424,7 +3424,7 @@ report the appropriate posture status in our acknowledgment; we might
 end up being inside another nested container after standing up from the
 chair, so we might not simply be standing when we're done.
 
-</div>
+
 
 <span id="orderingTime"></span>
 
@@ -3432,7 +3432,7 @@ chair, so we might not simply be standing when we're done.
 
 [actor.t](../file/actor.t.html)\[[7733](../source/actor.t.html#7733)\]
 
-<div class="desc">
+
 
 The amount of time, in game clock units, it takes me to issue an order
 to another actor. By default, it takes one unit (which is usually equal
@@ -3441,7 +3441,7 @@ configured to wait for our issued commands to complete in full, the
 ordering time is zero; we don't need any extra wait time in this case
 because we'll wait the full length of the issued command to begin with.
 
-</div>
+
 
 <span id="pcDesc"></span>
 
@@ -3449,13 +3449,13 @@ because we'll wait the full length of the issued command to begin with.
 
 [actor.t](../file/actor.t.html)\[[6011](../source/actor.t.html#6011)\]
 
-<div class="desc">
+
 
 The default description when we examine this actor and the actor is
 serving as the player character. This should generally not include any
 temporary status information; just show constant, fixed features.
 
-</div>
+
 
 <span id="postureDesc"></span>
 
@@ -3463,12 +3463,12 @@ temporary status information; just show constant, fixed features.
 
 [actor.t](../file/actor.t.html)\[[6003](../source/actor.t.html#6003)\]
 
-<div class="desc">
+
 
 Show my posture, as part of the full EXAMINE description of this actor.
 We'll let our nominal actor container handle it.
 
-</div>
+
 
 <span id="readyForTurn"></span>
 
@@ -3476,14 +3476,14 @@ We'll let our nominal actor container handle it.
 
 [actor.t](../file/actor.t.html)\[[9049](../source/actor.t.html#9049)\]
 
-<div class="desc">
+
 
 Determine if we're ready to do something on our turn. We're ready to do
 something if we're not waiting for another actor to finish doing
 something and either we're the player character or we already have a
 pending command in our command queue.
 
-</div>
+
 
 <span id="referralPerson"></span>
 
@@ -3491,12 +3491,12 @@ pending command in our command queue.
 
 [actor.t](../file/actor.t.html)\[[6220](../source/actor.t.html#6220)\]
 
-<div class="desc">
+
 
 refer to the player character with my player character referral person,
 and refer to all other characters in the third person
 
-</div>
+
 
 <span id="rememberLastDoor"></span>
 
@@ -3504,14 +3504,14 @@ and refer to all other characters in the third person
 
 [actor.t](../file/actor.t.html)\[[6653](../source/actor.t.html#6653)\]
 
-<div class="desc">
+
 
 Remember the last door I traveled through. We use this information for
 disambiguation, to boost the likelihood that an actor that just traveled
 through a door is referring to the same door in a subsequent "close"
 command.
 
-</div>
+
 
 <span id="rememberTravel"></span>
 
@@ -3519,14 +3519,14 @@ command.
 
 [actor.t](../file/actor.t.html)\[[6661](../source/actor.t.html#6661)\]
 
-<div class="desc">
+
 
 Remember our most recent travel. If we know the back connector (i.e.,
 the connector that reverses the travel we're performing), then we'll be
 able to accept a GO BACK command to attempt to return to the previous
 location.
 
-</div>
+
 
 <span id="remoteSpecialDesc"></span>
 
@@ -3534,11 +3534,11 @@ location.
 
 [actor.t](../file/actor.t.html)\[[6052](../source/actor.t.html#6052)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="removeActorNotifyItem"></span>
 
@@ -3546,11 +3546,11 @@ location.
 
 [actor.t](../file/actor.t.html)\[[8493](../source/actor.t.html#8493)\]
 
-<div class="desc">
+
 
 remove an item from the registered notification list
 
-</div>
+
 
 <span id="removeFromAgenda"></span>
 
@@ -3558,11 +3558,11 @@ remove an item from the registered notification list
 
 [actor.t](../file/actor.t.html)\[[6953](../source/actor.t.html#6953)\]
 
-<div class="desc">
+
 
 remove an agenda item
 
-</div>
+
 
 <span id="reverseLastTravel"></span>
 
@@ -3570,7 +3570,7 @@ remove an agenda item
 
 [actor.t](../file/actor.t.html)\[[6675](../source/actor.t.html#6675)\]
 
-<div class="desc">
+
 
 Reverse the most recent travel. If we're still within the same
 destination we reached in the last travel, and we know the connector we
@@ -3578,7 +3578,7 @@ arrived through (i.e., the "back connector" for the last travel, which
 reverses the connector we took to get here), then try traveling via the
 connector.
 
-</div>
+
 
 <span id="sayArriving"></span>
 
@@ -3586,12 +3586,12 @@ connector.
 
 [actor.t](../file/actor.t.html)\[[6729](../source/actor.t.html#6729)\]
 
-<div class="desc">
+
 
 Travel arrival/departure messages. Defer to the current state object on
 all of these.
 
-</div>
+
 
 <span id="sayArrivingDir"></span>
 
@@ -3599,11 +3599,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6739](../source/actor.t.html#6739)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayArrivingDownStairs"></span>
 
@@ -3611,11 +3611,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6753](../source/actor.t.html#6753)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayArrivingLocally"></span>
 
@@ -3623,11 +3623,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6733](../source/actor.t.html#6733)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayArrivingThroughPassage"></span>
 
@@ -3635,11 +3635,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6743](../source/actor.t.html#6743)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayArrivingUpStairs"></span>
 
@@ -3647,11 +3647,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6751](../source/actor.t.html#6751)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayArrivingViaPath"></span>
 
@@ -3659,11 +3659,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6747](../source/actor.t.html#6747)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -3671,11 +3671,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6731](../source/actor.t.html#6731)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingDir"></span>
 
@@ -3683,11 +3683,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6741](../source/actor.t.html#6741)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingDownStairs"></span>
 
@@ -3695,11 +3695,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6757](../source/actor.t.html#6757)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingLocally"></span>
 
@@ -3707,11 +3707,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6735](../source/actor.t.html#6735)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingThroughPassage"></span>
 
@@ -3719,11 +3719,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6745](../source/actor.t.html#6745)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingUpStairs"></span>
 
@@ -3731,11 +3731,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6755](../source/actor.t.html#6755)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDepartingViaPath"></span>
 
@@ -3743,11 +3743,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[6749](../source/actor.t.html#6749)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayGoodbye"></span>
 
@@ -3755,11 +3755,11 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[9661](../source/actor.t.html#9661)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayHello"></span>
 
@@ -3767,14 +3767,14 @@ all of these.
 
 [actor.t](../file/actor.t.html)\[[9660](../source/actor.t.html#9660)\]
 
-<div class="desc">
+
 
 Say hello/goodbye/yes/no to the given actor. We'll greet the target
 actor is the target actor was specified (i.e., actor != self);
 otherwise, we'll greet our current default conversational partner, if we
 have one.
 
-</div>
+
 
 <span id="sayNo"></span>
 
@@ -3782,11 +3782,11 @@ have one.
 
 [actor.t](../file/actor.t.html)\[[9663](../source/actor.t.html#9663)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="saySpecialTopic"></span>
 
@@ -3794,7 +3794,7 @@ have one.
 
 [actor.t](../file/actor.t.html)\[[9715](../source/actor.t.html#9715)\]
 
-<div class="desc">
+
 
 Handle the XSPCLTOPIC pseudo-command. This command is generated by the
 SpecialTopic pre-parser when it recognizes the player's input as
@@ -3803,7 +3803,7 @@ this back to our current interlocutor's active ConvNode, so that it can
 find the SpecialTopic that it matched in pre-parsing and show its
 response.
 
-</div>
+
 
 <span id="sayToActor"></span>
 
@@ -3811,11 +3811,11 @@ response.
 
 [actor.t](../file/actor.t.html)\[[9666](../source/actor.t.html#9666)\]
 
-<div class="desc">
+
 
 handle one of the conversational addresses
 
-</div>
+
 
 <span id="sayTravelingRemotely"></span>
 
@@ -3823,11 +3823,11 @@ handle one of the conversational addresses
 
 [actor.t](../file/actor.t.html)\[[6737](../source/actor.t.html#6737)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayYes"></span>
 
@@ -3835,11 +3835,11 @@ handle one of the conversational addresses
 
 [actor.t](../file/actor.t.html)\[[9662](../source/actor.t.html#9662)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="scheduleInitiateConversation"></span>
 
@@ -3847,7 +3847,7 @@ handle one of the conversational addresses
 
 [actor.t](../file/actor.t.html)\[[5881](../source/actor.t.html#5881)\]
 
-<div class="desc">
+
 
 Schedule initiation of conversation. This allows the caller to set up a
 conversation to start on a future turn. The conversation will start
@@ -3866,7 +3866,7 @@ check the queue. If 'turns' is 1, then the player will get at least one
 more command before the conversation will begin, and so on with higher
 numbers.
 
-</div>
+
 
 <span id="scopeList"></span>
 
@@ -3874,7 +3874,7 @@ numbers.
 
 [actor.t](../file/actor.t.html)\[[8594](../source/actor.t.html#8594)\]
 
-<div class="desc">
+
 
 Build a list of all of the objects of which an actor is aware.
 
@@ -3889,7 +3889,7 @@ In addition, objects that the actor is holding (i.e., those contained by
 the actor directly) are always in scope, regardless of their
 reachability through any sense.
 
-</div>
+
 
 <span id="scriptedTravelTo"></span>
 
@@ -3897,7 +3897,7 @@ reachability through any sense.
 
 [actor.t](../file/actor.t.html)\[[6635](../source/actor.t.html#6635)\]
 
-<div class="desc">
+
 
 Perform scripted travel to the given adjacent location. This looks for a
 directional connector in our current location whose destination is the
@@ -3921,7 +3921,7 @@ we want the NPC to visit in order. This routine simplifies this type of
 scripting by automatically finding the connectors; the script only has
 to specify the next location for the NPC to visit.
 
-</div>
+
 
 <span id="setConvNode"></span>
 
@@ -3929,11 +3929,11 @@ to specify the next location for the NPC to visit.
 
 [actor.t](../file/actor.t.html)\[[5729](../source/actor.t.html#5729)\]
 
-<div class="desc">
+
 
 set the current conversation node
 
-</div>
+
 
 <span id="setConvNodeReason"></span>
 
@@ -3941,11 +3941,11 @@ set the current conversation node
 
 [actor.t](../file/actor.t.html)\[[5732](../source/actor.t.html#5732)\]
 
-<div class="desc">
+
 
 set the current conversation node, with a reason code
 
-</div>
+
 
 <span id="setCurState"></span>
 
@@ -3953,11 +3953,11 @@ set the current conversation node, with a reason code
 
 [actor.t](../file/actor.t.html)\[[5693](../source/actor.t.html#5693)\]
 
-<div class="desc">
+
 
 set the current state
 
-</div>
+
 
 <span id="setHasSeen"></span>
 
@@ -3965,11 +3965,11 @@ set the current state
 
 [actor.t](../file/actor.t.html)\[[8164](../source/actor.t.html#8164)\]
 
-<div class="desc">
+
 
 mark the object to remember that I've seen it
 
-</div>
+
 
 <span id="setHer"></span>
 
@@ -3977,11 +3977,11 @@ mark the object to remember that I've seen it
 
 [actor.t](../file/actor.t.html)\[[9983](../source/actor.t.html#9983)\]
 
-<div class="desc">
+
 
 set the antecedent for the feminine singular ("her")
 
-</div>
+
 
 <span id="setHim"></span>
 
@@ -3989,11 +3989,11 @@ set the antecedent for the feminine singular ("her")
 
 [actor.t](../file/actor.t.html)\[[9977](../source/actor.t.html#9977)\]
 
-<div class="desc">
+
 
 set the antecedent for the masculine singular ("him")
 
-</div>
+
 
 <span id="setIt"></span>
 
@@ -4001,11 +4001,11 @@ set the antecedent for the masculine singular ("him")
 
 [actor.t](../file/actor.t.html)\[[9971](../source/actor.t.html#9971)\]
 
-<div class="desc">
+
 
 set the antecedent for the neuter singular pronoun ("it" in English)
 
-</div>
+
 
 <span id="setKnowsAbout"></span>
 
@@ -4013,11 +4013,11 @@ set the antecedent for the neuter singular pronoun ("it" in English)
 
 [actor.t](../file/actor.t.html)\[[8198](../source/actor.t.html#8198)\]
 
-<div class="desc">
+
 
 mark the object as known to me
 
-</div>
+
 
 <span id="setPossAnaphor"></span>
 
@@ -4025,11 +4025,11 @@ mark the object as known to me
 
 [actor.t](../file/actor.t.html)\[[10012](../source/actor.t.html#10012)\]
 
-<div class="desc">
+
 
 set a possessive anaphor value
 
-</div>
+
 
 <span id="setPossAnaphorObj"></span>
 
@@ -4037,11 +4037,11 @@ set a possessive anaphor value
 
 [en_us.t](../file/en_us.t.html)\[[2577](../source/en_us.t.html#2577)\]
 
-<div class="desc">
+
 
 set a possessive anaphor
 
-</div>
+
 
 <span id="setPronoun"></span>
 
@@ -4049,7 +4049,7 @@ set a possessive anaphor
 
 [en_us.t](../file/en_us.t.html)\[[2410](../source/en_us.t.html#2410)\]
 
-<div class="desc">
+
 
 Set a pronoun antecedent to the given list of ResolveInfo objects.
 Pronoun handling is language-specific, so this implementation is part of
@@ -4065,7 +4065,7 @@ antecedent of 'them', and we'll forget about any antecedent for 'it'.
 Note that the input is a list of ResolveInfo objects, so we must pull
 out the underlying game objects when setting the antecedents.
 
-</div>
+
 
 <span id="setPronounAntecedent"></span>
 
@@ -4073,11 +4073,11 @@ out the underlying game objects when setting the antecedents.
 
 [actor.t](../file/actor.t.html)\[[10002](../source/actor.t.html#10002)\]
 
-<div class="desc">
+
 
 set a pronoun's antecedent value
 
-</div>
+
 
 <span id="setPronounByType"></span>
 
@@ -4085,7 +4085,7 @@ set a pronoun's antecedent value
 
 [en_us.t](../file/en_us.t.html)\[[2516](../source/en_us.t.html#2516)\]
 
-<div class="desc">
+
 
 Set a pronoun antecedent to the given ResolveInfo list, for the
 specified type of pronoun. We don't have to worry about setting other
@@ -4093,7 +4093,7 @@ types of pronouns to this antecedent - we specifically want to set the
 given pronoun type. This is language-dependent because we still have to
 figure out the number (i.e. singular or plural) of the pronoun type.
 
-</div>
+
 
 <span id="setPronounMulti"></span>
 
@@ -4101,7 +4101,7 @@ figure out the number (i.e. singular or plural) of the pronoun type.
 
 [en_us.t](../file/en_us.t.html)\[[2463](../source/en_us.t.html#2463)\]
 
-<div class="desc">
+
 
 Set a pronoun to refer to multiple potential antecedents. This is used
 when the verb has multiple noun slots - UNLOCK DOOR WITH KEY. For verbs
@@ -4122,7 +4122,7 @@ a future singular pronoun, we'll figure out which of the multiple
 antecedents is the most logical choice in the context of the pronoun's
 usage.
 
-</div>
+
 
 <span id="setPronounObj"></span>
 
@@ -4130,12 +4130,12 @@ usage.
 
 [en_us.t](../file/en_us.t.html)\[[2535](../source/en_us.t.html#2535)\]
 
-<div class="desc">
+
 
 Set a pronoun antecedent to the given simulation object (usually an
 object descended from Thing).
 
-</div>
+
 
 <span id="setSpecialTraveler"></span>
 
@@ -4143,14 +4143,14 @@ object descended from Thing).
 
 [actor.t](../file/actor.t.html)\[[6447](../source/actor.t.html#6447)\]
 
-<div class="desc">
+
 
 Set the "special traveler." When this is set, we explicitly perform
 travel through this object rather than through the traveler indicated by
 our location. Returns the old value, so that the old value can be
 restored when the caller has finished its need for the special traveler.
 
-</div>
+
 
 <span id="setThem"></span>
 
@@ -4158,11 +4158,11 @@ restored when the caller has finished its need for the special traveler.
 
 [actor.t](../file/actor.t.html)\[[9989](../source/actor.t.html#9989)\]
 
-<div class="desc">
+
 
 set the antecedent list for the ungendered plural pronoun ("them")
 
-</div>
+
 
 <span id="showInventory"></span>
 
@@ -4170,11 +4170,11 @@ set the antecedent list for the ungendered plural pronoun ("them")
 
 [actor.t](../file/actor.t.html)\[[8851](../source/actor.t.html#8851)\]
 
-<div class="desc">
+
 
 Show what the actor is carrying.
 
-</div>
+
 
 <span id="showInventoryWith"></span>
 
@@ -4182,14 +4182,14 @@ Show what the actor is carrying.
 
 [actor.t](../file/actor.t.html)\[[8867](../source/actor.t.html#8867)\]
 
-<div class="desc">
+
 
 Show what the actor is carrying, using the given listers.
 
 Note that this method must be overridden if the actor does not use a
 conventional 'contents' list property to store its full set of contents.
 
-</div>
+
 
 <span id="showSpecialDescInContents"></span>
 
@@ -4197,14 +4197,14 @@ conventional 'contents' list property to store its full set of contents.
 
 [actor.t](../file/actor.t.html)\[[6071](../source/actor.t.html#6071)\]
 
-<div class="desc">
+
 
 When we're asked to show a special description as part of the
 description of a containing object (which will usually be a nested room
 of some kind), just show our posture in our container, rather than
 showing our full "I am here" description.
 
-</div>
+
 
 <span id="specialDesc"></span>
 
@@ -4212,13 +4212,13 @@ showing our full "I am here" description.
 
 [actor.t](../file/actor.t.html)\[[6050](../source/actor.t.html#6050)\]
 
-<div class="desc">
+
 
 Always list actors specially, rather than as ordinary items in contents
 listings. We'll send this to our current state object for processing,
 since our "I am here" description tends to vary by state.
 
-</div>
+
 
 <span id="specialDescListWith"></span>
 
@@ -4226,11 +4226,11 @@ since our "I am here" description tends to vary by state.
 
 [actor.t](../file/actor.t.html)\[[6053](../source/actor.t.html#6053)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="standUp"></span>
 
@@ -4238,11 +4238,11 @@ since our "I am here" description tends to vary by state.
 
 [actor.t](../file/actor.t.html)\[[7370](../source/actor.t.html#7370)\]
 
-<div class="desc">
+
 
 Stand up. This is used by the 'Stand' action to carry out the command.
 
-</div>
+
 
 <span id="suggestTopics"></span>
 
@@ -4250,7 +4250,7 @@ Stand up. This is used by the 'Stand' action to carry out the command.
 
 [actor.t](../file/actor.t.html)\[[8309](../source/actor.t.html#8309)\]
 
-<div class="desc">
+
 
 Suggest topics of conversation. This is called by the TOPICS command (in
 which case 'explicit' is true), and whenever we first engage a character
@@ -4293,7 +4293,7 @@ choices. Using the TOPICS system might be a good compromise for many
 authors, since the topic list can help guide the player to the right
 questions without making the player feel straitjacketed by a menu list.
 
-</div>
+
 
 <span id="suggestTopicsFor"></span>
 
@@ -4301,14 +4301,14 @@ questions without making the player feel straitjacketed by a menu list.
 
 [actor.t](../file/actor.t.html)\[[8339](../source/actor.t.html#8339)\]
 
-<div class="desc">
+
 
 Suggest topics that the given actor might want to talk to us about. The
 given actor is almost always the player character, since generally NPC's
 don't talk to one another using conversation commands (there'd be no
 point; they're simple programmed automata, not full-blown AI's).
 
-</div>
+
 
 <span id="trackFollowInfo"></span>
 
@@ -4316,7 +4316,7 @@ point; they're simple programmed automata, not full-blown AI's).
 
 [actor.t](../file/actor.t.html)\[[7879](../source/actor.t.html#7879)\]
 
-<div class="desc">
+
 
 Receive notification that an object is leaving its current location as a
 result of the action we're currently processing. Actors (and possibly
@@ -4343,7 +4343,7 @@ Note that this notification is sent only to actors with some sort of
 containment connection to the object that's moving, because a
 containment connection is necessary for there to be a sense connection.
 
-</div>
+
 
 <span id="travelerName"></span>
 
@@ -4351,13 +4351,13 @@ containment connection is necessary for there to be a sense connection.
 
 [en_us.t](../file/en_us.t.html)\[[2373](../source/en_us.t.html#2373)\]
 
-<div class="desc">
+
 
 Show my name for an arrival/departure message. If we've been seen before
 by the player character, we'll show our definite name, otherwise our
 indefinite name.
 
-</div>
+
 
 <span id="travelerPreCond"></span>
 
@@ -4365,7 +4365,7 @@ indefinite name.
 
 [actor.t](../file/actor.t.html)\[[6365](../source/actor.t.html#6365)\]
 
-<div class="desc">
+
 
 Get the preconditions for travel. By default, we'll add the standard
 preconditions that the connector requires for actors.
@@ -4375,7 +4375,7 @@ If the actor is in a vehicle, so that the vehicle is the traveler in a
 given travel operation, the vehicle's travelerPreCond conditions are
 used instead of ours.
 
-</div>
+
 
 <span id="travelerTravelWithin"></span>
 
@@ -4383,12 +4383,12 @@ used instead of ours.
 
 [actor.t](../file/actor.t.html)\[[6517](../source/actor.t.html#6517)\]
 
-<div class="desc">
+
 
 Traveler interface: perform local travel, between nested rooms within a
 single top-level location.
 
-</div>
+
 
 <span id="travelTo"></span>
 
@@ -4396,11 +4396,11 @@ single top-level location.
 
 [actor.t](../file/actor.t.html)\[[6603](../source/actor.t.html#6603)\]
 
-<div class="desc">
+
 
 Travel to a new location.
 
-</div>
+
 
 <span id="travelWithin"></span>
 
@@ -4408,7 +4408,7 @@ Travel to a new location.
 
 [actor.t](../file/actor.t.html)\[[6500](../source/actor.t.html#6500)\]
 
-<div class="desc">
+
 
 Travel within a location, as from a room to a contained nested room.
 This should generally be used in lieu of travelTo when traveling between
@@ -4422,7 +4422,7 @@ This type of travel does not trigger calls to travelerLeaving() or
 travelerArriving(). To mitigate this loss of notification, we call
 actorTravelingWithin() on the source and destination objects.
 
-</div>
+
 
 <span id="tryMakingRoomToHold"></span>
 
@@ -4430,7 +4430,7 @@ actorTravelingWithin() on the source and destination objects.
 
 [actor.t](../file/actor.t.html)\[[7086](../source/actor.t.html#7086)\]
 
-<div class="desc">
+
 
 Try making room to hold the given object. This is called when checking
 the "room to hold object" pre-condition, such as for the "take" verb.
@@ -4444,7 +4444,7 @@ concerned, thereby reducing our active holding load.
 
 Returns true if an implicit command was attempted, nil if not.
 
-</div>
+
 
 <span id="tryMovingObjInto"></span>
 
@@ -4452,7 +4452,7 @@ Returns true if an implicit command was attempted, nil if not.
 
 [actor.t](../file/actor.t.html)\[[6283](../source/actor.t.html#6283)\]
 
-<div class="desc">
+
 
 Try moving the given object into this object. For an actor, this will do
 one of two things. If 'self' is the actor performing the action that's
@@ -4461,7 +4461,7 @@ taking the object. Otherwise, the way to get an object into my
 possession is to have the actor performing the command give me the
 object.
 
-</div>
+
 
 <span id="unexcludeFromLookAround"></span>
 
@@ -4469,11 +4469,11 @@ object.
 
 [actor.t](../file/actor.t.html)\[[7472](../source/actor.t.html#7472)\]
 
-<div class="desc">
+
 
 remove an object from the 'look around' exclusion list
 
-</div>
+
 
 <span id="verifyFollowable"></span>
 
@@ -4481,11 +4481,11 @@ remove an object from the 'look around' exclusion list
 
 [actor.t](../file/actor.t.html)\[[7926](../source/actor.t.html#7926)\]
 
-<div class="desc">
+
 
 By default, all actors are followable.
 
-</div>
+
 
 <span id="verifyNotSelf"></span>
 
@@ -4493,11 +4493,11 @@ By default, all actors are followable.
 
 [actor.t](../file/actor.t.html)\[[10050](../source/actor.t.html#10050)\]
 
-<div class="desc">
+
 
 verify() handler to check against applying an action to 'self'
 
-</div>
+
 
 <span id="visibleInfoTable"></span>
 
@@ -4505,13 +4505,13 @@ verify() handler to check against applying an action to 'self'
 
 [actor.t](../file/actor.t.html)\[[8750](../source/actor.t.html#8750)\]
 
-<div class="desc">
+
 
 Build a table of full sensory information for all of the objects visible
 to the actor through the actor's sight-like senses. Returns a lookup
 table with the same set of information as senseInfoTable().
 
-</div>
+
 
 <span id="visibleInfoTableFromPov"></span>
 
@@ -4519,12 +4519,12 @@ table with the same set of information as senseInfoTable().
 
 [actor.t](../file/actor.t.html)\[[8761](../source/actor.t.html#8761)\]
 
-<div class="desc">
+
 
 Build a table of full sensory information for all of the objects visible
 to me from a particular point of view through my sight-like senses.
 
-</div>
+
 
 <span id="waitForIssuedCommand"></span>
 
@@ -4532,7 +4532,7 @@ to me from a particular point of view through my sight-like senses.
 
 [actor.t](../file/actor.t.html)\[[7747](../source/actor.t.html#7747)\]
 
-<div class="desc">
+
 
 Wait for completion of a command that we issued to another actor. The
 parser calls this routine after each time we issue a command to another
@@ -4542,7 +4542,7 @@ If we're configured to wait for completion of orders given to other
 actors before we get another turn, we'll set ourselves up in waiting
 mode. Otherwise, we'll do nothing.
 
-</div>
+
 
 <span id="wantsFollowInfo"></span>
 
@@ -4550,7 +4550,7 @@ mode. Otherwise, we'll do nothing.
 
 [actor.t](../file/actor.t.html)\[[7839](../source/actor.t.html#7839)\]
 
-<div class="desc">
+
 
 Do I track departing objects for following the given object?
 
@@ -4561,11 +4561,11 @@ time; for efficiency, we take advantage of this assumption so that we
 can avoid storing a bunch of tracking information that will never be
 used.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Procedural Code  
@@ -16,7 +16,7 @@ Operators</a>    
 <a href="optparams.html" class="nav"><em>Next:</em> Optional
 Parameters</a>     </span>
 
-</div>
+
 
 
 
@@ -103,7 +103,7 @@ it.
 
 A function definition has this form:
 
-<div class="syntax">
+
 
     functionName ( [ paramName [ , paramName ... ]  ]  )
     {
@@ -662,13 +662,13 @@ To define a function or object as external, you use the
 `extern` statement. This statement can be used
 to define functions, objects, and classes. The syntax is:
 
-<div class="syntax">
+
 
     extern function functionName ( [ param [ , param ... ]  ]  ) ;
     extern object objectName ;
     extern class className ;
 
-</div>
+
 
 These statements must be placed in "top level" code, outside of all
 object or function definitions.
@@ -700,11 +700,11 @@ program, but you still want to use the name as a property name. For
 these situations, the compiler lets you explicitly declare a symbol as
 being a property name. The syntax is:
 
-<div class="syntax">
+
 
     property propName [ , propName ... ]  ;
 
-</div>
+
 
 This statement declares each listed symbol as a property. It must be
 placed in "top level" code, outside of all object or function
@@ -906,11 +906,11 @@ overhead.
 The `local` statement defines one or more local
 variables, and optionally assigns initial values to them.
 
-<div class="syntax">
+
 
     local varName [ = expression ]  [ , ... ]  ;
 
-</div>
+
 
 Local variables are in scope from the `local`
 statement to the end of the enclosing code block. A local is **not** in
@@ -998,11 +998,11 @@ variable when the function or method is entered.
 
 An expression, all by itself, counts as a statement.
 
-<div class="syntax">
+
 
     expression ;
 
-</div>
+
 
 Expression statements are typically the most numerous type of statement
 in a program, because they're the main way to call functions and
@@ -1091,11 +1091,11 @@ function or method and resumes execution in the caller. Optionally, the
 statement can specify an expression to evaluate as the return value of
 the function or method.
 
-<div class="syntax">
+
 
     return [ expression ]  ;
 
-</div>
+
 
 If an expression is specified, it's evaluated when the
 `return` statement is executed, and the result
@@ -1115,14 +1115,14 @@ The `if` statement executes a statement if a
 given condition is true, and can optionally execute a different
 statement if the given condition is false.
 
-<div class="syntax">
+
 
     if ( conditionExpression )
       thenPart
     [ else
       elsePart ] 
 
-</div>
+
 
 Each of <span class="synPar">thenPart</span> and
 <span class="synPar">elsePart</span> are single statements, or code
@@ -1198,21 +1198,21 @@ The basic `for` loop in TADS is almost identical
 to the {\[for}} loop in C, C++, Javascript, and most other C-like
 languages. It has this basic syntax:
 
-<div class="syntax">
+
 
     for ( [ initializer ]  ; [ condition ]  ; [ updater ]  )
       loopBody
 
-</div>
+
 
 The <span class="synPar">initializer</span> is either an ordinary
 expression, or a list of local variable declarations, or a mix of both:
 
-<div class="syntax">
+
 
     ( expression | local varName = expression )  [ , ... ] 
 
-</div>
+
 
 Note the difference from ordinary `local`
 statements: the initializer expression is *required* for a local
@@ -1331,12 +1331,12 @@ same as for the [`foreach`](#foreach) statement,
 other than using `for` in place of
 `foreach`:
 
-<div class="syntax">
+
 
     for ( [ local ]  loopVar in expression )
        loopBody
 
-</div>
+
 
 For..in loops are new in TADS 3.1; in older versions, only the
 `foreach` statement accepted this syntax. The
@@ -1356,12 +1356,12 @@ to make the meaning a little clearer.
 
 The syntax for an integer range loop is:
 
-<div class="syntax">
+
 
     for ( [ local ]  loopVar in fromExpr .. toExpr [ step stepExpr ]  )
        loopBody
 
-</div>
+
 
 As with other `for` loops, the
 `local` keyword lets you define a new local
@@ -1537,23 +1537,23 @@ The `foreach` statement iterates over a
 Collection object's contents. It executes a statement (or group of
 statements) once for each element of a Collection.
 
-<div class="syntax">
+
 
     foreach ( loopVar in expression )
       loopBody
 
-</div>
+
 
 <span class="synPar">loopVar</span> can take one of two forms: it can be
 any "lvalue" (see the [expressions](expr.html#commonEles) section for
 details), such as a local variable, an object property, or an indexed
 lvalue; or it can be of this form:
 
-<div class="syntax">
+
 
     local localName
 
-</div>
+
 
 The `local` syntax defines a new local variable,
 scoped to the `foreach` statement. (This works
@@ -1699,12 +1699,12 @@ loop body once, then go to the top of the loop.
 The `while` statement sets up a simple loop that
 repeats as long as a condition is true.
 
-<div class="syntax">
+
 
     while ( conditionExpression )
        loopBody
 
-</div>
+
 
 The <span class="synPar">conditionExpression</span> is any expression,
 and the <span class="synPar">loopBody</span> is a single statement or a
@@ -1743,13 +1743,13 @@ that a `do`...`while`
 loop always executes *at least once*, since the loop condition isn't
 tested until after the first iteration.
 
-<div class="syntax">
+
 
     do
       loopBody
     while ( conditionExpression ) ;
 
-</div>
+
 
 The <span class="synPar">conditionExpression</span> is any expression,
 and the <span class="synPar">loopBody</span> is one statement or a group
@@ -1784,7 +1784,7 @@ code branches, depending on the value of an expression.
 if`...`else if`... statements, but has
 some advantages and restrictions over that approach.
 
-<div class="syntax">
+
 
     switch ( controlExpression )
     {
@@ -1798,7 +1798,7 @@ some advantages and restrictions over that approach.
         defaultBody
     }
 
-</div>
+
 
 The <span class="synPar">controlExpression</span> is any expression.
 This is used to select which "branch" of the
@@ -2063,11 +2063,11 @@ code they're labeling.
 The `goto` statement transfers the execution
 position directly to a labeled statement.
 
-<div class="syntax">
+
 
     goto label ;
 
-</div>
+
 
 The <span class="synPar">label</span> is the name of a statement label
 defined elsewhere within the same function or method. The target label
@@ -2110,11 +2110,11 @@ indeed.
 The `break` statement exits a given statement,
 transferring control to the next statement after the given statement.
 
-<div class="syntax">
+
 
     break [ label ]  ;
 
-</div>
+
 
 `break` comes in two forms: with and without a
 target label.
@@ -2218,11 +2218,11 @@ The `continue` statement bypasses the remainder
 of a loop body, and jumps directly to the start of the next iteration of
 the loop.
 
-<div class="syntax">
+
 
     continue [ label ]  ;
 
-</div>
+
 
 If no label is specified, the `continue`
 implicitly refers to the nearest enclosing
@@ -2283,11 +2283,11 @@ That is, given an Exception object, the statement transfers control to
 the nearest enclosing `catch` handler for that
 class of Exception.
 
-<div class="syntax">
+
 
     throw expression ;
 
-</div>
+
 
 The <span class="synPar">expression</span> is most often of the form
 `new E()`, where `E` is
@@ -2310,7 +2310,7 @@ you to catch and handle selected exceptions that are thrown from within
 the protected code, or from any code that it calls via function and
 method calls.
 
-<div class="syntax">
+
 
     try
     {
@@ -2329,7 +2329,7 @@ method calls.
       finallyCode
     }
 
-</div>
+
 
 The <span class="synPar">protectedCode</span> consists of any number of
 statements. This is the code that the `try`
@@ -2447,11 +2447,11 @@ more important ones:
   `local` statements could only go at the top of
   a code block, no longer applies.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -2461,4 +2461,4 @@ Operators</a>    
 <a href="optparams.html" class="nav"><em>Next:</em> Optional
 Parameters</a>     </span>
 
-</div>
+

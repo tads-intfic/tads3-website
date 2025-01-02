@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A NoTopic is a TopicEntry that responds to NO or SAY NO
 
 `class `**`NoTopic`**` :   `[`MiscTopic`](../object/MiscTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NoTopic`**  
 [`MiscTopic`](../object/MiscTopic.html)  
@@ -52,27 +52,27 @@ A NoTopic is a TopicEntry that responds to NO or SAY NO
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)[`matchObj`](#matchObj)[`name`](#name)[`suggestAs`](#suggestAs)
 
@@ -90,11 +90,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -115,11 +115,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -127,11 +127,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3726](../source/actor.t.html#3726)\]
 
-<div class="desc">
+
 
 NoTopics are included in the miscTopics list of their TopicDatabase
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -139,11 +139,11 @@ NoTopics are included in the miscTopics list of their TopicDatabase
 
 [actor.t](../file/actor.t.html)\[[3729](../source/actor.t.html#3729)\]
 
-<div class="desc">
+
 
 NoTopics match the noTopicObj
 
-</div>
+
 
 <span id="name"></span>
 
@@ -151,12 +151,12 @@ NoTopics match the noTopicObj
 
 [actor.t](../file/actor.t.html)\[[3735](../source/actor.t.html#3735)\]
 
-<div class="desc">
+
 
 We give NoTopic a name so that it can be suggested in response to a
 request to display a list of suggested topics.
 
-</div>
+
 
 <span id="suggestAs"></span>
 
@@ -164,26 +164,26 @@ request to display a list of suggested topics.
 
 [actor.t](../file/actor.t.html)\[[3741](../source/actor.t.html#3741)\]
 
-<div class="desc">
+
 
 We define the suggestAs property of the NoTopic so that the
 suggestedTopicLister can readily separate it from YesTopics
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

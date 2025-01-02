@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 MessageBuilder - this object provides a general text substitution
 mechanism. Text to be substituted is enclosed in {curly braces}. Within
@@ -59,15 +59,15 @@ by the language-specific library.
 
 `class `**`MessageBuilder`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MessageBuilder`**  
 [`OutputFilter`](../object/OutputFilter.html)  
@@ -77,28 +77,28 @@ by the language-specific library.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`langMessageBuilder`](../object/langMessageBuilder.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`lastParamObj_`](#lastParamObj_)[`lastTargetObj_`](#lastTargetObj_)[`nameTable_`](#nameTable_)[`paramList_`](#paramList_)[`paramTable_`](#paramTable_)[`patAllCaps`](#patAllCaps)[`patIdObj`](#patIdObj)[`patIdObjSlashId`](#patIdObjSlashId)[`patIdSlash`](#patIdSlash)[`patUpper`](#patUpper)
 
@@ -111,11 +111,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)[`filterText`](#filterText)[`generateMessage`](#generateMessage)[`genLiteral`](#genLiteral)[`getTargetProp`](#getTargetProp)[`langRewriteParam`](#langRewriteParam)[`processResult`](#processResult)[`quoteMessage`](#quoteMessage)
 
@@ -128,11 +128,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="lastParamObj_"></span>
 
@@ -140,11 +140,11 @@ Inherited from `ModuleExecObject` :
 
 [output.t](../file/output.t.html)\[[1513](../source/output.t.html#1513)\]
 
-<div class="desc">
+
 
 the parameter name of the last target object ('dobj', 'actor', etc)
 
-</div>
+
 
 <span id="lastTargetObj_"></span>
 
@@ -152,14 +152,14 @@ the parameter name of the last target object ('dobj', 'actor', etc)
 
 [output.t](../file/output.t.html)\[[1510](../source/output.t.html#1510)\]
 
-<div class="desc">
+
 
 The most recent target object. Each time we parse a substitution string,
 we'll remember the target object here; when a substitution string
 doesn't imply or specify a target object, we'll use the previous one by
 default.
 
-</div>
+
 
 <span id="nameTable_"></span>
 
@@ -167,11 +167,11 @@ default.
 
 [output.t](../file/output.t.html)\[[1519](../source/output.t.html#1519)\]
 
-<div class="desc">
+
 
 our global name table - a LookupTable we set up during preinit
 
-</div>
+
 
 <span id="paramList_"></span>
 
@@ -179,7 +179,7 @@ our global name table - a LookupTable we set up during preinit
 
 [output.t](../file/output.t.html)\[[1581](../source/output.t.html#1581)\]
 
-<div class="desc">
+
 
 our parameter list - this should be initialized in the language-specific
 subclass to a list like this:
@@ -225,7 +225,7 @@ have an implied object, so the target object is the one explicitly given
 in the message source text or is the previous target object if one isn't
 specified in the message text.
 
-</div>
+
 
 <span id="paramTable_"></span>
 
@@ -233,11 +233,11 @@ specified in the message text.
 
 [output.t](../file/output.t.html)\[[1516](../source/output.t.html#1516)\]
 
-<div class="desc">
+
 
 our parameter table - a LookupTable that we set up during preinit
 
-</div>
+
 
 <span id="patAllCaps"></span>
 
@@ -245,11 +245,11 @@ our parameter table - a LookupTable that we set up during preinit
 
 [output.t](../file/output.t.html)\[[1073](../source/output.t.html#1073)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patIdObj"></span>
 
@@ -257,11 +257,11 @@ our parameter table - a LookupTable that we set up during preinit
 
 [output.t](../file/output.t.html)\[[1076](../source/output.t.html#1076)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patIdObjSlashId"></span>
 
@@ -269,11 +269,11 @@ our parameter table - a LookupTable that we set up during preinit
 
 [output.t](../file/output.t.html)\[[1074](../source/output.t.html#1074)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patIdSlash"></span>
 
@@ -281,11 +281,11 @@ our parameter table - a LookupTable that we set up during preinit
 
 [output.t](../file/output.t.html)\[[1077](../source/output.t.html#1077)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patUpper"></span>
 
@@ -293,19 +293,19 @@ our parameter table - a LookupTable that we set up during preinit
 
 [output.t](../file/output.t.html)\[[1072](../source/output.t.html#1072)\]
 
-<div class="desc">
+
 
 pre-compile some regular expressions we use a lot
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -313,11 +313,11 @@ pre-compile some regular expressions we use a lot
 
 [output.t](../file/output.t.html)\[[1472](../source/output.t.html#1472)\]
 
-<div class="desc">
+
 
 execute pre-initialization
 
-</div>
+
 
 <span id="filterText"></span>
 
@@ -325,12 +325,12 @@ execute pre-initialization
 
 [output.t](../file/output.t.html)\[[1498](../source/output.t.html#1498)\]
 
-<div class="desc">
+
 
 Our output filter method. We'll run each string written to the display
 through our parameter substitution method.
 
-</div>
+
 
 <span id="generateMessage"></span>
 
@@ -338,12 +338,12 @@ through our parameter substitution method.
 
 [output.t](../file/output.t.html)\[[1084](../source/output.t.html#1084)\]
 
-<div class="desc">
+
 
 Given a source string with substitution parameters, generate the
 expanded message with the appropriate text in place of the parameters.
 
-</div>
+
 
 <span id="genLiteral"></span>
 
@@ -351,12 +351,12 @@ expanded message with the appropriate text in place of the parameters.
 
 [output.t](../file/output.t.html)\[[1463](../source/output.t.html#1463)\]
 
-<div class="desc">
+
 
 Internal routine - generate the literal text for the given source
 string. We'll remove any stuttered close braces.
 
-</div>
+
 
 <span id="getTargetProp"></span>
 
@@ -364,7 +364,7 @@ string. We'll remove any stuttered close braces.
 
 [output.t](../file/output.t.html)\[[1410](../source/output.t.html#1410)\]
 
-<div class="desc">
+
 
 Get the property to invoke on the target object for the given parameter
 information entry. By default, we simply return info\[2\], which is the
@@ -381,7 +381,7 @@ The English version, for example, uses this routine to supply a
 reflexive instead of the default entry when the target object matches
 the subject of the sentence.
 
-</div>
+
 
 <span id="langRewriteParam"></span>
 
@@ -389,7 +389,7 @@ the subject of the sentence.
 
 [output.t](../file/output.t.html)\[[1529](../source/output.t.html#1529)\]
 
-<div class="desc">
+
 
 Rewrite the parameter string for any language-specific rules. By
 default, we'll return the original parameter string unchanged; the
@@ -398,7 +398,7 @@ syntax extensions to the parameter string syntax desired by the
 language-specific library. The returned string must be in one of the
 formats recognized by the generic handler.
 
-</div>
+
 
 <span id="processResult"></span>
 
@@ -406,7 +406,7 @@ formats recognized by the generic handler.
 
 [output.t](../file/output.t.html)\[[1442](../source/output.t.html#1442)\]
 
-<div class="desc">
+
 
 Process result text. This takes some result text that we're about to add
 and returns a processed version. This is called for all text as we add
@@ -431,7 +431,7 @@ structure. For example, the English version looks for sentence-ending
 punctuation so that it can reset its internal notion of the subject of
 the sentence when a sentence appears to be ending.
 
-</div>
+
 
 <span id="quoteMessage"></span>
 
@@ -439,7 +439,7 @@ the sentence when a sentence appears to be ending.
 
 [output.t](../file/output.t.html)\[[1454](../source/output.t.html#1454)\]
 
-<div class="desc">
+
 
 "Quote" a message - double each open or close brace, so that braces in
 the message will be taken literally when run through the substitution
@@ -450,11 +450,11 @@ substitution parameters requiring further expansion.
 Note that only open braces need to be quoted, since lone close braces
 are ignored in the substitution process.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

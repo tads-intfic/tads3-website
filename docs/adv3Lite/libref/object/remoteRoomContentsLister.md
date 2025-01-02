@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The default Lister for listing miscellaneous objects in a remote
 location.
 
 **`remoteRoomContentsLister`**` :   `[`ItemLister`](../object/ItemLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`remoteRoomContentsLister`**  
 [`ItemLister`](../object/ItemLister.html)  
@@ -43,11 +43,11 @@ location.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contentsListedProp`](#contentsListedProp)
 
@@ -58,11 +58,11 @@ Inherited from `ItemLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`listed`](#listed)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
@@ -74,11 +74,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contentsListedProp"></span>
 
@@ -86,19 +86,19 @@ Inherited from `Lister` :
 
 [senseRegion.t](../file/senseRegion.t.html)\[[526](../source/senseRegion.t.html#526)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="listed"></span>
 
@@ -106,11 +106,11 @@ Inherited from `Lister` :
 
 [senseRegion.t](../file/senseRegion.t.html)\[[510](../source/senseRegion.t.html#510)\]
 
-<div class="desc">
+
 
 is the object listed in a LOOK AROUND description?
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -118,12 +118,12 @@ is the object listed in a LOOK AROUND description?
 
 [senseRegion.t](../file/senseRegion.t.html)\[[516](../source/senseRegion.t.html#516)\]
 
-<div class="desc">
+
 
 Show the list prefix. The irName parameter is the inRoomName(pov) passed
 from Room.showRemoteMiscContents(pov).
 
-</div>
+
 
 <span id="showListSuffix"></span>
 
@@ -131,15 +131,15 @@ from Room.showRemoteMiscContents(pov).
 
 [senseRegion.t](../file/senseRegion.t.html)\[[521](../source/senseRegion.t.html#521)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

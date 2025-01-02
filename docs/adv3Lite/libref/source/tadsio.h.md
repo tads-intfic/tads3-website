@@ -752,9 +752,9 @@ layout: docs
     #define ColorNavy     ColorRGB(0x00, 0x00, 0x80)
     #define ColorTeal     ColorRGB(0x00, 0x80, 0x80)
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

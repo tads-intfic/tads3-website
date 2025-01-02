@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="tools.html" class="nav">The Tools</a> \> Universal Paths  
@@ -15,7 +15,7 @@ layout: docs
     <a href="aloneexe.html" class="nav"><em>Next:</em> Stand-Alone
 Executables</a>     </span>
 
-</div>
+
 
 
 
@@ -124,7 +124,7 @@ place.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -133,4 +133,4 @@ place.
     <a href="aloneexe.html" class="nav"><em>Next:</em> Stand-Alone
 Executables</a>     </span>
 
-</div>
+

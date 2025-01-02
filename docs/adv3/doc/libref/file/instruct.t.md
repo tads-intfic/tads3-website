@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 TADS 3 Library: Instructions for new players
 
@@ -82,46 +82,46 @@ simply by using up the candle early on while exploring some dark
 tunnels, and might not discover the problem until much further into the
 game.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`InstructionsAction`](../object/InstructionsAction.html)[`predicate(instructions)`](../object/predicate(instructions).html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

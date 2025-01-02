@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Distinguisher is an abstract parser object that represents one way
 that we can tell two objects apart, both in the name we display and in
@@ -42,64 +42,64 @@ qualification.
 
 `class `**`Distinguisher`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Distinguisher`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Distinguisher`**  
 [`StateDistinguisher`](../object/StateDistinguisher.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`contentsDistinguisher`](../object/contentsDistinguisher.html)[`disambigNameDistinguisher`](../object/disambigNameDistinguisher.html)[`locationDistinguisher`](../object/locationDistinguisher.html)[`nameDistinguisher`](../object/nameDistinguisher.html)[`ownerDistinguisher`](../object/ownerDistinguisher.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`all`](#all)[`classInitFirst`](#classInitFirst)[`sortOrder`](#sortOrder)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`appliesTo`](#appliesTo)[`apply`](#apply)[`classInit`](#classInit)[`equal`](#equal)[`getNames`](#getNames)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="all"></span>
 
@@ -107,11 +107,11 @@ qualification.
 
 [parser.t](../file/parser.t.html)\[[1318](../source/parser.t.html#1318)\]
 
-<div class="desc">
+
 
 class property: master list of all distinguishers
 
-</div>
+
 
 <span id="classInitFirst"></span>
 
@@ -119,11 +119,11 @@ class property: master list of all distinguishers
 
 [parser.t](../file/parser.t.html)\[[1331](../source/parser.t.html#1331)\]
 
-<div class="desc">
+
 
 make sure the StateDistinguisher instances are constructed first
 
-</div>
+
 
 <span id="sortOrder"></span>
 
@@ -131,20 +131,20 @@ make sure the StateDistinguisher instances are constructed first
 
 [parser.t](../file/parser.t.html)\[[1248](../source/parser.t.html#1248)\]
 
-<div class="desc">
+
 
 Sorting order. The parser sorts the master list of distinguishers in
 ascending order of this value to determine the order of application.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="appliesTo"></span>
 
@@ -152,7 +152,7 @@ ascending order of this value to determine the order of application.
 
 [parser.t](../file/parser.t.html)\[[1265](../source/parser.t.html#1265)\]
 
-<div class="desc">
+
 
 Is this distinguisher applicable to the given object? Some
 distinguishers can only apply to certain objects. For example, a
@@ -162,7 +162,7 @@ without the variable. (We can talk about "lit" and "unlit" matches, but
 we don't have any standard vocabulary to talk about "unlightable"
 matches.)
 
-</div>
+
 
 <span id="apply"></span>
 
@@ -170,11 +170,11 @@ matches.)
 
 [parser.t](../file/parser.t.html)\[[1271](../source/parser.t.html#1271)\]
 
-<div class="desc">
+
 
 Apply the distinguisher. Returns a DistResult object with the results.
 
-</div>
+
 
 <span id="classInit"></span>
 
@@ -182,11 +182,11 @@ Apply the distinguisher. Returns a DistResult object with the results.
 
 [parser.t](../file/parser.t.html)\[[1321](../source/parser.t.html#1321)\]
 
-<div class="desc">
+
 
 during initialization, build the master list
 
-</div>
+
 
 <span id="equal"></span>
 
@@ -194,12 +194,12 @@ during initialization, build the master list
 
 [parser.t](../file/parser.t.html)\[[1254](../source/parser.t.html#1254)\]
 
-<div class="desc">
+
 
 Compare two objects for equivalence under this distinguisher. Returns
 true if the objects are equivalent, nil others.
 
-</div>
+
 
 <span id="getNames"></span>
 
@@ -207,7 +207,7 @@ true if the objects are equivalent, nil others.
 
 [parser.t](../file/parser.t.html)\[[1348](../source/parser.t.html#1348)\]
 
-<div class="desc">
+
 
 Class method: generate distinguishing names for a list of objects. This
 generates names that distinguish the objects from one another, by
@@ -222,11 +222,11 @@ Returns a list of \[name, \[objects\]\] sublists. The name is a string
 giving the distinguished name; the \[objects\] sub-sublist is a list of
 the objects known under that name.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A LiteralTAction is an action that involves one physical object and one
 string, e.g. TYPE HELLO ON TERMINAL.
 
 `class `**`LiteralTAction`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LiteralTAction`**  
 [`TAction`](../object/TAction.html)  
@@ -51,28 +51,28 @@ string, e.g. TYPE HELLO ON TERMINAL.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`EnterOn`](../object/EnterOn.html)[`SetTo`](../object/SetTo.html)[`TellTo`](../object/TellTo.html)[`TurnTo`](../object/TurnTo.html)[`TypeOn`](../object/TypeOn.html)[`WriteOn`](../object/WriteOn.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`literal`](#literal)[`num`](#num)
 
@@ -88,11 +88,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`verify`](#verify)
 
@@ -110,11 +110,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="literal"></span>
 
@@ -122,11 +122,11 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[2594](../source/action.t.html#2594)\]
 
-<div class="desc">
+
 
 The literal value associated with this command
 
-</div>
+
 
 <span id="num"></span>
 
@@ -134,19 +134,19 @@ The literal value associated with this command
 
 [action.t](../file/action.t.html)\[[2597](../source/action.t.html#2597)\]
 
-<div class="desc">
+
 
 The numerical value of our literal
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -154,11 +154,11 @@ The numerical value of our literal
 
 [action.t](../file/action.t.html)\[[2553](../source/action.t.html#2553)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verify"></span>
 
@@ -166,7 +166,7 @@ The numerical value of our literal
 
 [action.t](../file/action.t.html)\[[2587](../source/action.t.html#2587)\]
 
-<div class="desc">
+
 
 Whichever object slot a verify routine is notionally trying to verify
 for given the grammatical form of the command, in practice only the
@@ -175,11 +175,11 @@ for WRITE FOO ON BALL we treat BALL as the direct object of the command
 and FOO as the literal, even if the Parser thinks it needs to verify the
 Indirect Object to disambiguate BALL.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

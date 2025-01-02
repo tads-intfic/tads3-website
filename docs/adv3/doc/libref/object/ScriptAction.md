@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Turn scripting on. This creates a text file that contains a transcript
 of all commands and responses from this point forward.
@@ -34,15 +34,15 @@ of all commands and responses from this point forward.
 `DefineAction(Script, FileOpAction)      `*`// original source text`*  
 `class `**`ScriptAction`**` :   `[`FileOpAction`](../object/FileOpAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ScriptAction`**  
 [`FileOpAction`](../object/FileOpAction.html)  
@@ -53,11 +53,11 @@ of all commands and responses from this point forward.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ScriptAction`**  
 [`predicate(Script)`](../object/predicate(Script).html)  
@@ -65,19 +65,19 @@ of all commands and responses from this point forward.
 [`predicate(ScriptString)`](../object/predicate(ScriptString).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fileDisposition`](#fileDisposition)[`filePromptMsg`](#filePromptMsg)[`fileTypeID`](#fileTypeID)
 
@@ -97,11 +97,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`performFileOp`](#performFileOp)[`setUpScripting`](#setUpScripting)[`showCancelMsg`](#showCancelMsg)
 
@@ -122,11 +122,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fileDisposition"></span>
 
@@ -134,11 +134,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1259](../source/actions.t.html#1259)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="filePromptMsg"></span>
 
@@ -146,11 +146,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1257](../source/actions.t.html#1257)\]
 
-<div class="desc">
+
 
 our file dialog parameters - ask for a log file to save
 
-</div>
+
 
 <span id="fileTypeID"></span>
 
@@ -158,19 +158,19 @@ our file dialog parameters - ask for a log file to save
 
 [actions.t](../file/actions.t.html)\[[1258](../source/actions.t.html#1258)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="performFileOp"></span>
 
@@ -178,11 +178,11 @@ our file dialog parameters - ask for a log file to save
 
 [actions.t](../file/actions.t.html)\[[1271](../source/actions.t.html#1271)\]
 
-<div class="desc">
+
 
 turn on scripting to the given file
 
-</div>
+
 
 <span id="setUpScripting"></span>
 
@@ -190,12 +190,12 @@ turn on scripting to the given file
 
 [actions.t](../file/actions.t.html)\[[1268](../source/actions.t.html#1268)\]
 
-<div class="desc">
+
 
 set up scripting - this can be used to set up scripting
 programmatically, in the course of carrying out another action
 
-</div>
+
 
 <span id="showCancelMsg"></span>
 
@@ -203,15 +203,15 @@ programmatically, in the course of carrying out another action
 
 [actions.t](../file/actions.t.html)\[[1262](../source/actions.t.html#1262)\]
 
-<div class="desc">
+
 
 show our cancellation mesasge
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

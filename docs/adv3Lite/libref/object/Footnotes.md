@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 base class for FOOTNOTES xxx commands \[FOOTNOTE EXTENSION\]
 
 **`Footnotes`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Footnotes`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -45,11 +45,11 @@ base class for FOOTNOTES xxx commands \[FOOTNOTE EXTENSION\]
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`showFootnotes`](#showFootnotes)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`acknowledgeFootnoteStatus`](#acknowledgeFootnoteStatus)[`execAction`](#execAction)[`shortFootnoteStatus`](#shortFootnoteStatus)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="showFootnotes"></span>
 
@@ -105,20 +105,20 @@ Inherited from `Redirector` :
 
 [footnote.t](../file/footnote.t.html)\[[389](../source/footnote.t.html#389)\]
 
-<div class="desc">
+
 
 the footnote status I set when this command is activated - this must be
 overridden by each subclass
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="acknowledgeFootnoteStatus"></span>
 
@@ -126,11 +126,11 @@ overridden by each subclass
 
 [footnote.t](../file/footnote.t.html)\[[391](../source/footnote.t.html#391)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -138,11 +138,11 @@ overridden by each subclass
 
 [footnote.t](../file/footnote.t.html)\[[370](../source/footnote.t.html#370)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="shortFootnoteStatus"></span>
 
@@ -150,15 +150,15 @@ overridden by each subclass
 
 [footnote.t](../file/footnote.t.html)\[[398](../source/footnote.t.html#398)\]
 
-<div class="desc">
+
 
 show the footnote status, in short form
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

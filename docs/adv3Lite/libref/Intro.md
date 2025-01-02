@@ -1,15 +1,15 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
 
 
-<div class="fdesc">
+
+
 
 # Adv3Lite Library Reference Manual
 
@@ -112,11 +112,11 @@ authorship notices be removed or modified.
 
 
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
 
-</div>
+
+

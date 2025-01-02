@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A topic resolver specialized for conversational actions (ASK ABOUT, TELL
 ABOUT, etc). When we resolve the topic, we'll differentiate the
@@ -35,15 +35,15 @@ performing the command.
 
 `class `**`ConvTopicResolver`**` :   `[`TopicResolver`](../object/TopicResolver.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ConvTopicResolver`**  
 [`TopicResolver`](../object/TopicResolver.html)  
@@ -51,27 +51,27 @@ performing the command.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -83,11 +83,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`objInConvScope`](#objInConvScope)[`resolveTopic`](#resolveTopic)
 
@@ -99,19 +99,19 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="objInConvScope"></span>
 
@@ -119,13 +119,13 @@ Inherited from `Resolver` :
 
 [action.t](../file/action.t.html)\[[6595](../source/action.t.html#6595)\]
 
-<div class="desc">
+
 
 Determine if an object is in "conversational" scope - this returns true
 if the object is in physical scope or it's known to the actor performing
 the command.
 
-</div>
+
 
 <span id="resolveTopic"></span>
 
@@ -133,18 +133,18 @@ the command.
 
 [action.t](../file/action.t.html)\[[6560](../source/action.t.html#6560)\]
 
-<div class="desc">
+
 
 Resolve the topic phrase. We'll break up the vocabulary matches into
 three sublists: the objects that are either in physical scope or known
 to the actor performing the command; objects that the actor considers
 likely topics; and everything else.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

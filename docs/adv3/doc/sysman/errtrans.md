@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="local.html" class="nav">Translating and Localizing TADS</a> \>
@@ -17,7 +17,7 @@ Localizing TADS</a>    
 <a href="cmap.html" class="nav"><em>Next:</em> Creating a
 Character-Mapping File</a>     </span>
 
-</div>
+
 
 
 
@@ -120,7 +120,7 @@ file you wish to create. For example, suppose you created a source file
 called "vm_deu.txt" with German messages for the interpreter, and you
 wish to compile it to create vm_deu.msg. You'd use a command like this:
 
-<div class="cmdline">
+
 
     t3msgc vm_deu.txt vm_deu.msg
 
@@ -133,11 +133,11 @@ didn't do this, the interpreter or compiler would display a "message not
 found" error if it should ever have to display one of the messages you
 didn't defined).
 
-<div class="cmdline">
+
 
     t3msgc -strict vm_deu.txt vm_deu.msg
 
-</div>
+
 
 To install the message file so that the interpreter or compiler actually
 starts using it, simply copy it to the appropriate filename for the type
@@ -196,11 +196,11 @@ putting both on one line, but in this case the short message is a bit
 lengthy, so it's easier to read when it's on a separate line from the
 message ID.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -211,4 +211,4 @@ Localizing TADS</a>    
 <a href="cmap.html" class="nav"><em>Next:</em> Creating a
 Character-Mapping File</a>     </span>
 
-</div>
+

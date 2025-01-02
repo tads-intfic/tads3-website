@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> List  
@@ -15,7 +15,7 @@ layout: docs
     <a href="lookup.html" class="nav"><em>Next:</em> LookupTable</a>    
 </span>
 
-</div>
+
 
 
 
@@ -75,7 +75,7 @@ Collection methods. In addition, List defines the methods shown below.
 
 `append(*val*)`
 
-<div class="fdef">
+
 
 Appends the value *val* to this list, returning the resulting list. This
 is almost the same as using the `+` operator to
@@ -118,7 +118,7 @@ intermediate list using `append()`.
 
 `appendUnique(*lst*)`
 
-<div class="fdef">
+
 
 Appends the elements of the list *lst* to this list, returning a new
 list consisting only of the unique elements of the combination. Each
@@ -129,11 +129,11 @@ with the `+` operator then applying
 more efficient because it avoids constructing the fully concatenated
 list as an intermediate value.)
 
-</div>
+
 
 `car()`
 
-<div class="fdef">
+
 
 Returns the first element of the list. If the list has no elements,
 returns `nil`.
@@ -142,11 +142,11 @@ returns `nil`.
 programming language, which borrowed them from an old IBM mainframe
 instruction set.)
 
-</div>
+
 
 `cdr()`
 
-<div class="fdef">
+
 
 Returns the "tail" of the list; that is, the rest of the list after
 removing the first element. If the list has no elements, returns
@@ -160,19 +160,19 @@ an empty list, whereas `cdr()` returns
 programming language, which borrowed them from an old IBM mainframe
 instruction set.)
 
-</div>
+
 
 `countOf(*val*)`
 
-<div class="fdef">
+
 
 Returns the number of elements whose values equal *val*.
 
-</div>
+
 
 `countWhich(*cond*)`
 
-<div class="fdef">
+
 
 Returns the number of elements for which the callback function *cond*
 returns a non-false value (anything but `nil` or
@@ -182,11 +182,11 @@ current element as the argument. If the callback returns anything but
 invoking the callback for each element, the method returns the resulting
 count.
 
-</div>
+
 
 `forEach(*func*)`
 
-<div class="fdef">
+
 
 Invokes the callback function
 `(*func*)(*value*)` for each element, in order
@@ -196,11 +196,11 @@ which is the current element, and returns no value. This method returns
 no value. This method is a convenient means of executing some code for
 each element of the list.
 
-</div>
+
 
 `forEachAssoc(*func*)`
 
-<div class="fdef">
+
 
 Invokes the callback function `(*func*)(*index*,
 *value*)` for each element, in order from first to last, passing
@@ -210,13 +210,13 @@ a convenient means of executing some code for each element of the list;
 unlike `forEach()`, this method provides its
 callback with the index as well as the value for each element it visits.
 
-</div>
+
 
 <span id="generate"></span>
 
 `generate(*func*, *n*)`
 
-<div class="fdef">
+
 
 Creates a new list containing *n* elements by invoking the callback
 function *func* once for each element, and using the return value as the
@@ -256,11 +256,11 @@ This creates a list of the first 20 Fibonacci numbers:
 (For a simple way of generating a list consisting of a repeated fixed
 value, see the [makeList()](tadsgen.html#makeList) function.)
 
-</div>
+
 
 `getUnique()`
 
-<div class="fdef">
+
 
 Returns a new list consisting of the unique elements of the original
 list. For each value in the original list, the value will appear in the
@@ -270,21 +270,21 @@ example, if the original list is `\[1, 5, 2, 5, 3, 5,
 4, 5\]`, this method will return `\[1, 5, 2, 3,
 4\]`.
 
-</div>
+
 
 `indexOf(*val*)`
 
-<div class="fdef">
+
 
 Returns the index of the first element of the list equal to the given
 value. If *val* does not appear anywhere in the list, the method returns
 `nil`. The first element is at index 1.
 
-</div>
+
 
 `indexOfMax(*func*?)`
 
-<div class="fdef">
+
 
 If *func* is omitted, returns the index of the element with the maximum
 value, comparing values to one another as though using the
@@ -300,11 +300,11 @@ For example, if `lst` is a list of string
 values, `lst.indexOfMax({x: x.length()})`
 returns the index of the longest string in the list.
 
-</div>
+
 
 `indexOfMin(*func*?)`
 
-<div class="fdef">
+
 
 If *func* is omitted, returns the index of the element with the minimum
 value, comparing values to one another as though using the
@@ -320,11 +320,11 @@ For example, if `lst` is a list of string
 values, `lst.indexOfMin({x: x.length()})`
 returns the index of the shortest string in the list.
 
-</div>
+
 
 `indexWhich(*cond*)`
 
-<div class="fdef">
+
 
 Finds the first element for which the given condition is true. The
 method iterates through the elements of the list, starting at the first
@@ -338,11 +338,11 @@ If the callback returns a false value (`nil` or
 0) for every element of the list, the method returns
 `nil`.
 
-</div>
+
 
 `insertAt(*index*, *val1*, *val2*, …)`
 
-<div class="fdef">
+
 
 Returns a new list which results from inserting the given values
 (*val1*, *val2*, and so on) into the existing list before the element at
@@ -378,11 +378,11 @@ each one is inserted as a single list-valued element, in the same manner
 as `append(*val*)` and
 `prepend(*val*)`.
 
-</div>
+
 
 `intersect(*lst2*)`
 
-<div class="fdef">
+
 
 Returns a new list consisting of the intersection of this list and
 *lst2*; that is, a list consisting of the elements common to both this
@@ -394,13 +394,13 @@ in the longer list, then the element will be in the result list the same
 number of times that it is in the shorter list. An element repeated in
 the longer list will not be repeated in the result list.
 
-</div>
+
 
 <span id="join"></span>
 
 `join(*sep*?)`
 
-<div class="fdef">
+
 
 Returns a string made by concatenating the elements of the list together
 in index order. If *sep* is provided, it's a string that's interposed
@@ -411,21 +411,21 @@ Each element is converted to a string using the usual automatic
 conversions before it's concatenated. If an element can't be converted
 to string, the method throws an error.
 
-</div>
+
 
 `lastIndexOf(*val*)`
 
-<div class="fdef">
+
 
 Returns the index of the last element in the list whose value equals
 *val*. If no element in the list equals *val*, this method returns
 `nil`.
 
-</div>
+
 
 `lastIndexWhich(*cond*)`
 
-<div class="fdef">
+
 
 Returns the index of the last element in the list for which the callback
 function *cond* returns a non-false value (anything except
@@ -435,11 +435,11 @@ reverse order, starting at the last element and working towards the
 first. Returns `nil` if the callback returns
 `nil` or 0 for every element.
 
-</div>
+
 
 `lastValWhich(*cond*)`
 
-<div class="fdef">
+
 
 Returns the value of the last element in the list for which the callback
 function *cond* returns a non-false value. This method is similar to
@@ -448,19 +448,19 @@ of the matching element rather than its index. Returns
 `nil` if the callback returns
 `nil` or 0 for every element.
 
-</div>
+
 
 `length()`
 
-<div class="fdef">
+
 
 Returns the number of elements in the list.
 
-</div>
+
 
 `mapAll(*func*)`
 
-<div class="fdef">
+
 
 For each element of the list, this method invokes the callback function
 *func*, passing the current element as the single argument, then adds
@@ -479,11 +479,11 @@ original list must consist entirely of integer values):
     y = x.applyAll({x: x*2});
 ```
 
-</div>
+
 
 `maxVal(*func*?)`
 
-<div class="fdef">
+
 
 If *func* is omitted, returns the maximum of the element values in the
 list, comparing values to one another as though using the
@@ -500,11 +500,11 @@ For example, if `lst` is a list of string
 values, `lst.maxVal({x: x.length()})` returns
 the longest string in the list.
 
-</div>
+
 
 `minVal(*func*?)`
 
-<div class="fdef">
+
 
 If *func* is omitted, returns minimum of the element values in the list,
 comparing values to one another as though using the
@@ -521,11 +521,11 @@ For example, if `lst` is a list of string
 values, `lst.minVal({x: x.length()})` returns
 the shortest string in the list.
 
-</div>
+
 
 `prepend(*val*)`
 
-<div class="fdef">
+
 
 Returns a new list which results from inserting the value *val* before
 the first element of the existing list. This method is similar to
@@ -533,11 +533,11 @@ the first element of the existing list. This method is similar to
 element at the beginning of the list rather than at the end. Note that
 if *val* is a list, it is prepended as a single list-valued element.
 
-</div>
+
 
 `removeElementAt(*index*)`
 
-<div class="fdef">
+
 
 Returns a new list which results from deleting the element at the given
 index. For example, `\[100, 200,
@@ -550,11 +550,11 @@ must be at least 1 and at most the number of elements in the list; if
 *index* is outside this range, the method throws an "index out of range"
 exception.
 
-</div>
+
 
 `removeRange(*startIndex*, *endIndex*)`
 
-<div class="fdef">
+
 
 Returns a new list which results from deleting the elements starting at
 *startIndex* and ending with (and including) *endIndex*. If *endIndex*
@@ -568,13 +568,13 @@ the last element, -2 is the second to last, and so on. Otherwise,
 elements in the list, and *endIndex* must be greater than or equal to
 *startIndex*.
 
-</div>
+
 
 <span id="sort"></span>
 
 `sort(*descending*?, *comparisonFunction*?)`
 
-<div class="fdef">
+
 
 Returns a new list consisting of the elements of this list rearranged
 into a sorted order. By default, this method sorts the elements of the
@@ -606,13 +606,13 @@ where the "priority" property has an integer value, you could do this:
     sortedLst = lst.sort(true, { a, b: a.priority - b.priority });
 ```
 
-</div>
+
 
 <span id="splice"></span>
 
 `splice(*startIndex*, *deleteCount*, ...)`
 
-<div class="fdef">
+
 
 Returns a new list which results from deleting the *deleteCount*
 elements starting at *startIndex*, then inserting any additional
@@ -633,13 +633,13 @@ with new values. It's also a little more efficient, since it doesn't
 have to construct an extra list to hold the intermediate result between
 the deletion and insertion.
 
-</div>
+
 
 <span id="sublist"></span>
 
 `sublist(*start*, *length*?)`
 
-<div class="fdef">
+
 
 Creates and returns a new list consisting of a sublist of this list
 starting at the element of this list at index *start*, and continuing
@@ -659,11 +659,11 @@ Examples:
     [1, 2, 3, 4, 5].sublist(2, -2) yields [2, 3]
 ```
 
-</div>
+
 
 `subset(*func*)`
 
-<div class="fdef">
+
 
 Creates and returns a new list containing the elements of this list for
 which the callback function *func* returns true (i.e., any value other
@@ -686,11 +686,11 @@ greater than 10.
     y = x.subset({x: x > 10});
 ```
 
-</div>
+
 
 `valWhich(*cond*)`
 
-<div class="fdef">
+
 
 Returns the value of the first element for which the callback function
 *cond* returns non-false (i.e., anything except
@@ -700,13 +700,13 @@ the first matching element rather than its index. If *cond* returns
 `nil` or 0 for every element of the list, this
 method returns `nil`.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -715,4 +715,4 @@ method returns `nil`.
     <a href="lookup.html" class="nav"><em>Next:</em> LookupTable</a>    
 </span>
 
-</div>
+

@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Dummy action to provide an action context.
 
 **`DoNothing`**` :   `[`TIAction`](../object/TIAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DoNothing`**  
 [`TIAction`](../object/TIAction.html)  
@@ -45,11 +45,11 @@ Dummy action to provide an action context.
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curDobj`](#curDobj)[`curIobj`](#curIobj)[`curObj`](#curObj)[`grammarTemplates`](#grammarTemplates)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curDobj"></span>
 
@@ -105,11 +105,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[3025](../source/actions.t.html#3025)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="curIobj"></span>
 
@@ -117,11 +117,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[3026](../source/actions.t.html#3026)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="curObj"></span>
 
@@ -129,11 +129,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[3027](../source/actions.t.html#3027)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="grammarTemplates"></span>
 
@@ -141,25 +141,25 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[3028](../source/actions.t.html#3028)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

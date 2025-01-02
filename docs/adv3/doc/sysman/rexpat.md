@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> RexPattern  
@@ -16,7 +16,7 @@ layout: docs
 <a href="framedesc.html" class="nav"><em>Next:</em> StackFrameDesc</a>
     </span>
 
-</div>
+
 
 
 
@@ -102,18 +102,18 @@ following:
 
 `getPatternString()`
 
-<div class="fdef">
+
 
 Returns the original string used to create the object (i.e., the string
 passed as the argument in the "new" expression that created the object).
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -123,4 +123,4 @@ passed as the argument in the "new" expression that created the object).
 <a href="framedesc.html" class="nav"><em>Next:</em> StackFrameDesc</a>
     </span>
 
-</div>
+

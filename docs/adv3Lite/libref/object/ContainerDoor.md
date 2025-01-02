@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A ContainerDoor can be used as part of a multiply-containing object to
 represent the door of the container-like object defined on its remapIn
@@ -36,15 +36,15 @@ remapIn object of its location.
 
 `class `**`ContainerDoor`**` :   `[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ContainerDoor`**  
 [`Fixture`](../object/Fixture.html)  
@@ -57,27 +57,27 @@ remapIn object of its location.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotTakeMsg`](#cannotTakeMsg)[`isOpen`](#isOpen)[`remapIn`](#remapIn)
 
@@ -99,11 +99,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -126,11 +126,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotTakeMsg"></span>
 
@@ -138,11 +138,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[1010](../source/extras.t.html#1010)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -150,11 +150,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[1000](../source/extras.t.html#1000)\]
 
-<div class="desc">
+
 
 We're open if our location's container is open
 
-</div>
+
 
 <span id="remapIn"></span>
 
@@ -162,27 +162,27 @@ We're open if our location's container is open
 
 [extras.t](../file/extras.t.html)\[[1007](../source/extras.t.html#1007)\]
 
-<div class="desc">
+
 
 Redirect all container-appropriate actions to the remapIn object of our
 location, so that opening, closing, locking and unlocking this door will
 perform the equivalent action on our container object.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

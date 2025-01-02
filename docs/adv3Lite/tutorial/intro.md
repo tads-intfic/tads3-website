@@ -1,19 +1,19 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Introduction  
 <span class="navnp"><a href="whatis.html" class="nav"><em>Next:</em> What is adv3Lite?</a>
     </span>
 
-</div>
+
 
 
 
@@ -22,7 +22,7 @@ layout: docs
 This chapter introduces the adv3Lite Library and explains the purpose of
 the tutorial.
 
-<div class="sectoc">
+
 
 [What is adv3Lite?](whatis.html)  
 [Who Should Read This Book?](whoshouldread.html)  
@@ -31,15 +31,15 @@ the tutorial.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Introduction  
 <span class="navnp"><a href="whatis.html" class="nav"><em>Next:</em> What is adv3Lite?</a>
     </span>
 
-</div>
+

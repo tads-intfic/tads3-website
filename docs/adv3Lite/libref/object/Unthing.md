@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Unthing is an object that represents the absence of a thing
 
 `class `**`Unthing`**` :   `[`Decoration`](../object/Decoration.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Unthing`**  
 [`Decoration`](../object/Decoration.html)  
@@ -54,28 +54,28 @@ An Unthing is an object that represents the absence of a thing
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`bodyParts`](../object/bodyParts.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`decorationActions`](#decorationActions)[`notHereMsg`](#notHereMsg)[`notImportantMsg`](#notImportantMsg)[`vocabLikelihood`](#vocabLikelihood)
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Default)`](#dobjFor(Default))[`filterResolveList`](#filterResolveList)[`handleCommand`](#handleCommand)[`hideFromAll`](#hideFromAll)[`iobjFor(Default)`](#iobjFor(Default))
 
@@ -129,11 +129,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="decorationActions"></span>
 
@@ -141,11 +141,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[400](../source/extras.t.html#400)\]
 
-<div class="desc">
+
 
 An Unthing can't respond to any actions, as it isn't there
 
-</div>
+
 
 <span id="notHereMsg"></span>
 
@@ -153,12 +153,12 @@ An Unthing can't respond to any actions, as it isn't there
 
 [extras.t](../file/extras.t.html)\[[414](../source/extras.t.html#414)\]
 
-<div class="desc">
+
 
 Users coming from adv3 may be used to Unthings having a notHereMsg, so
 we'll define this to be the same as the notImportantMsg
 
-</div>
+
 
 <span id="notImportantMsg"></span>
 
@@ -166,14 +166,14 @@ we'll define this to be the same as the notImportantMsg
 
 [extras.t](../file/extras.t.html)\[[408](../source/extras.t.html#408)\]
 
-<div class="desc">
+
 
 The message to display when the player character tries to interact with
 this object; by default we just say it isn't there, but game code will
 normally want to override this message to explain the reason for the
 absence.
 
-</div>
+
 
 <span id="vocabLikelihood"></span>
 
@@ -181,21 +181,21 @@ absence.
 
 [extras.t](../file/extras.t.html)\[[425](../source/extras.t.html#425)\]
 
-<div class="desc">
+
 
 A player is more likely to be trying to refer to something that is
 present than something that isn't, so we give Unthings a substantially
 reduced vocabLikelihood
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Default)"></span>
 
@@ -203,11 +203,11 @@ reduced vocabLikelihood
 
 [extras.t](../file/extras.t.html)\[[439](../source/extras.t.html#439)\]
 
-<div class="desc">
+
 
 Make Unthings verify with the lowest possible score
 
-</div>
+
 
 <span id="filterResolveList"></span>
 
@@ -215,12 +215,12 @@ Make Unthings verify with the lowest possible score
 
 [extras.t](../file/extras.t.html)\[[431](../source/extras.t.html#431)\]
 
-<div class="desc">
+
 
 If there's anything else in the match list, remove myself from the
 matches
 
-</div>
+
 
 <span id="handleCommand"></span>
 
@@ -228,12 +228,12 @@ matches
 
 [extras.t](../file/extras.t.html)\[[459](../source/extras.t.html#459)\]
 
-<div class="desc">
+
 
 Giving an order to an Unthing should give the same response as any other
 command involving an Unthing.
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -241,11 +241,11 @@ command involving an Unthing.
 
 [extras.t](../file/extras.t.html)\[[418](../source/extras.t.html#418)\]
 
-<div class="desc">
+
 
 An Unthing should never be included in ALL
 
-</div>
+
 
 <span id="iobjFor(Default)"></span>
 
@@ -253,15 +253,15 @@ An Unthing should never be included in ALL
 
 [extras.t](../file/extras.t.html)\[[447](../source/extras.t.html#447)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

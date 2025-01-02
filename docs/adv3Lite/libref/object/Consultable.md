@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Consultable is an object like a book, timetable or computer that can
 be used to look things up in through commands such as LOOK UP SELVAGEE
@@ -34,15 +34,15 @@ IN DICTIONARY or CONSULT BLUE BOOK ABOUT RABBITS
 
 `class `**`Consultable`**` :   [`TopicDatabase`](../object/TopicDatabase.html)   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Consultable`**  
 [`TopicDatabase`](../object/TopicDatabase.html)  
@@ -56,27 +56,27 @@ IN DICTIONARY or CONSULT BLUE BOOK ABOUT RABBITS
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`consultTopics`](#consultTopics)  [`currentConsultableScore`](#currentConsultableScore)  [`isConsultable`](#isConsultable)  [`noMatchedTopicMsg`](#noMatchedTopicMsg)  `
 
@@ -97,11 +97,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`afterAction`](#afterAction)  [`dobjFor(ConsultAbout)`](#dobjFor(ConsultAbout))  [`scoreObject`](#scoreObject)  `
 
@@ -125,11 +125,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="consultTopics"></span>
 
@@ -137,11 +137,11 @@ Inherited from `LMentionable` :
 
 [topicEntry.t](../file/topicEntry.t.html)\[[264](../source/topicEntry.t.html#264)\]
 
-<div class="desc">
+
 
 The list of ConsultTopics associated with this Consultable
 
-</div>
+
 
 <span id="currentConsultableScore"></span>
 
@@ -149,12 +149,12 @@ The list of ConsultTopics associated with this Consultable
 
 [topicEntry.t](../file/topicEntry.t.html)\[[326](../source/topicEntry.t.html#326)\]
 
-<div class="desc">
+
 
 The additional score we add in our scoreObject() method if we've been
 recently consulted.
 
-</div>
+
 
 <span id="isConsultable"></span>
 
@@ -162,11 +162,11 @@ recently consulted.
 
 [topicEntry.t](../file/topicEntry.t.html)\[[267](../source/topicEntry.t.html#267)\]
 
-<div class="desc">
+
 
 A Consultable is indeed consultable
 
-</div>
+
 
 <span id="noMatchedTopicMsg"></span>
 
@@ -174,20 +174,20 @@ A Consultable is indeed consultable
 
 [topicEntry.t](../file/topicEntry.t.html)\[[301](../source/topicEntry.t.html#301)\]
 
-<div class="desc">
+
 
 Boost our currentConsultableScore in recognition that we were the last
 item to be consulted.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -195,11 +195,11 @@ item to be consulted.
 
 [topicEntry.t](../file/topicEntry.t.html)\[[328](../source/topicEntry.t.html#328)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ConsultAbout)"></span>
 
@@ -207,11 +207,11 @@ item to be consulted.
 
 [topicEntry.t](../file/topicEntry.t.html)\[[270](../source/topicEntry.t.html#270)\]
 
-<div class="desc">
+
 
 Our handling of the ConsultAbout action when we're the direct object
 
-</div>
+
 
 <span id="scoreObject"></span>
 
@@ -219,18 +219,18 @@ Our handling of the ConsultAbout action when we're the direct object
 
 [topicEntry.t](../file/topicEntry.t.html)\[[309](../source/topicEntry.t.html#309)\]
 
-<div class="desc">
+
 
 Modify our score (from the point of view of the parser matching this
 Consultable) if we've been recently consulted (on the assumption that
 other things being equal, if we've been consulted recently, we're quite
 likely to be the object the player wants to consult again)
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -17,7 +17,7 @@ Encoding</a>    
 <a href="debug.html" class="nav"><em>Next:</em> Debug Records</a>    
 </span>
 
-</div>
+
 
 
 
@@ -409,18 +409,18 @@ of the "\$EOF" marker. This marker is intended only for future readers
 so that they can tell whether they're looking at an old file or a new
 file.
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -431,4 +431,4 @@ Encoding</a>    
 <a href="debug.html" class="nav"><em>Next:</em> Debug Records</a>    
 </span>
 
-</div>
+

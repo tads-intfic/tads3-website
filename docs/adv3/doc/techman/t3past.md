@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Writing a Game
@@ -17,7 +17,7 @@ Remapping</a>    
 <a href="mediatypes.html" class="nav"><em>Next:</em> Internet Media Types
 for TADS</a>     </span>
 
-</div>
+
 
 
 
@@ -499,7 +499,7 @@ tense is.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -510,4 +510,4 @@ Remapping</a>    
 <a href="mediatypes.html" class="nav"><em>Next:</em> Internet Media Types
 for TADS</a>     </span>
 
-</div>
+

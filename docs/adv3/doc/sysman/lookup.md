@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> LookupTable  
@@ -15,7 +15,7 @@ layout: docs
     <a href="objic.html" class="nav"><em>Next:</em> Object</a>    
 </span>
 
-</div>
+
 
 
 
@@ -207,7 +207,7 @@ methods listed below.
 
 `applyAll(*func*)`
 
-<div class="fdef">
+
 
 For each element in the table, this method invokes the callback function
 `(*func*)(*key*, *value*)`, and then changes the
@@ -220,18 +220,18 @@ value.
 
 `forEach(*func*)`
 
-<div class="fdef">
+
 
 For each element in the table, invokes the function
 `(*func*)(*value*)`. Any return value from
 *func* is ignored; the values and keys stored in the table are not
 changed. The entries are visited in arbitrary order. No return value.
 
-</div>
+
 
 `forEachAssoc(*func*)`
 
-<div class="fdef">
+
 
 For each element in the table, invokes the callback function
 `(*func*)(*key*, *value*)`. Any return value
@@ -241,62 +241,62 @@ the same as `forEach()`, except that this method
 provides the callback with the key in addition to the value for each
 element. No return value.
 
-</div>
+
 
 `getBucketCount()`
 
-<div class="fdef">
+
 
 Returns the number of "hash buckets" in the table. Since the number of
 buckets is fixed over the life of the object, this simply returns the
 bucket count that was specified when the object was created.
 
-</div>
+
 
 `getDefaultValue()`
 
-<div class="fdef">
+
 
 Returns the table's default value. This is the value returned when you
 index the table with a key that doesn't exist in the table. The default
 value is initially nil, but you can change it with
 `setDefaultValue()`.
 
-</div>
+
 
 `getEntryCount()`
 
-<div class="fdef">
+
 
 Returns the number of key/value entries in the table. This returns the
 number of entries actually stored in the table, which is unrelated to
 the initial capacity that was specified when the object was created.
 
-</div>
+
 
 `isKeyPresent(*key*)`
 
-<div class="fdef">
+
 
 Checks to see if an entry with the given key is present in the table.
 Returns `true` if the key is present,
 `nil` if not.
 
-</div>
+
 
 `keysToList()`
 
-<div class="fdef">
+
 
 Returns a list consisting of all of the keys in the table. The order of
 the keys is arbitrary, so callers must not assume any particular
 ordering.
 
-</div>
+
 
 `nthKey(*n*)`
 
-<div class="fdef">
+
 
 Returns the key at the given index in the table. This returns the key
 that appears at the given index in the
@@ -304,11 +304,11 @@ that appears at the given index in the
 key it's more efficient to use this method, since it doesn't construct a
 list. If the index is out of range, an error occurs.
 
-</div>
+
 
 `nthVal(*n*)`
 
-<div class="fdef">
+
 
 Returns the value at the given index in the table. This returns the
 value that appears at the given index in the
@@ -316,38 +316,38 @@ value that appears at the given index in the
 value it's more efficient to use this method, since it doesn't construct
 a list. If the index is out of range, an error occurs.
 
-</div>
+
 
 `removeElement(*key*)`
 
-<div class="fdef">
+
 
 Removes the element with the given key, if any. If there is no element
 with the given key in the table, this makes no change to the table and
 simply returns nil. If an element is found, the element is removed, and
 the value associated with the key (before the removal) is returned.
 
-</div>
+
 
 `setDefaultValue(*val*)`
 
-<div class="fdef">
+
 
 Sets the default value for the table. The default value is returned when
 you index the table with a key that doesn't exist in the table. The
 default value is initially nil, but you can use this method to change it
 to any other value.
 
-</div>
+
 
 `valsToList()`
 
-<div class="fdef">
+
 
 Returns a list consisting of all of the values in the table. The order
 of the values is arbitrary.
 
-</div>
+
 
 ## <span id="details"></span>Performance considerations
 
@@ -396,11 +396,11 @@ defaults. The only time you're likely to notice any difference at all by
 tweaking the creation parameters is for large tables (with hundreds or
 thousands of elements) that you use frequently.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -409,4 +409,4 @@ thousands of elements) that you use frequently.
     <a href="objic.html" class="nav"><em>Next:</em> Object</a>    
 </span>
 
-</div>
+

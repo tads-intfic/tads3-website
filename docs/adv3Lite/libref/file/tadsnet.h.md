@@ -25,7 +25,7 @@ layout: docs
 [Summary](#_TemplateSummary_)  
 [Details](#_Templates_)
 
-<div class="fdesc">
+
 
 This header defines the tads-net intrinsic function set.
 
@@ -53,59 +53,59 @@ handle the next request message. The program continues running until a
 suitable network event occurs to terminate it, such as the user typing
 QUIT into the UI.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 *(none)* <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`connectWebUI`](#connectWebUI)[`getHostName`](#getHostName)[`getLaunchHostAddr`](#getLaunchHostAddr)[`getLocalIP`](#getLocalIP)[`getNetEvent`](#getNetEvent)[`getNetStorageURL`](#getNetStorageURL)[`sendNetRequest`](#sendNetRequest)
 
 <span id="_MacroSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Macros</span>  
 
-</div>
+
 
 [`NetEvDebugBreak`](#NetEvDebugBreak)[`NetEvReply`](#NetEvReply)[`NetEvReplyDone`](#NetEvReplyDone)[`NetEvRequest`](#NetEvRequest)[`NetEvTimeout`](#NetEvTimeout)[`NetEvUIClose`](#NetEvUIClose)[`NetReqNoRedirect`](#NetReqNoRedirect)
 
 <span id="_EnumSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Enums</span>  
 
-</div>
+
 
 *(none)* <span id="_TemplateSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Templates</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="connectWebUI"></span>
 
@@ -113,7 +113,7 @@ QUIT into the UI.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[54](../source/tadsnet.h.html#54)\]
 
-<div class="desc">
+
 
 Connect to the Web UI client. This connects the Web browser client to
 the game's HTTP server. 'server' is the HTTPServer object where the Web
@@ -126,7 +126,7 @@ provides the game's Web UI. This should be called as quickly as possible
 after starting up, because clients might time out and miss the
 connection data if it takes too long to get this back to them.
 
-</div>
+
 
 <span id="getHostName"></span>
 
@@ -134,7 +134,7 @@ connection data if it takes too long to get this back to them.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[96](../source/tadsnet.h.html#96)\]
 
-<div class="desc">
+
 
 Get the local network host name. This is the name (or a name) that other
 computers can use to connect to this computer across the network.
@@ -156,7 +156,7 @@ telling the operating system which network adapter to use when opening a
 listening port. For example, you can use this name in the HTTPServer
 constructor.
 
-</div>
+
 
 <span id="getLaunchHostAddr"></span>
 
@@ -164,7 +164,7 @@ constructor.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[149](../source/tadsnet.h.html#149)\]
 
-<div class="desc">
+
 
 Get the host address that the user used to launch the game. For standard
 client/server TADS Web play, this is the network address that you should
@@ -184,7 +184,7 @@ shell. In this case, it means that the user wants to run the game
 locally, rather than from a remote client machine. Simply use
 "localhost" as the networking binding address in this case.
 
-</div>
+
 
 <span id="getLocalIP"></span>
 
@@ -192,7 +192,7 @@ locally, rather than from a remote client machine. Simply use
 
 [tadsnet.h](../file/tadsnet.h.html)\[[112](../source/tadsnet.h.html#112)\]
 
-<div class="desc">
+
 
 Get the local host's IP address. This is the IP address (or an IP
 address) that other computers can use to connect to this computer via
@@ -207,7 +207,7 @@ of the machine's IP addresses arbitrarily.
 If the IP address can't be retrieved (for example, because the machine
 has no network adapter installed), this returns nil.
 
-</div>
+
 
 <span id="getNetEvent"></span>
 
@@ -215,7 +215,7 @@ has no network adapter installed), this returns nil.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[72](../source/tadsnet.h.html#72)\]
 
-<div class="desc">
+
 
 Read an event from the network message queue. When a listener receives a
 connection request from a client, it creates a network server thread to
@@ -231,7 +231,7 @@ returns a timeout event.
 
 The return value is a NetEvent instance describing the event.
 
-</div>
+
 
 <span id="getNetStorageURL"></span>
 
@@ -239,7 +239,7 @@ The return value is a NetEvent instance describing the event.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[126](../source/tadsnet.h.html#126)\]
 
-<div class="desc">
+
 
 Get the URL to the storage server. When running in Web mode, the
 interpreter is generally configured to store files on a separate
@@ -251,7 +251,7 @@ that you wish to access. This can contain query parameters (introduced
 by a "?" symbol), if desired. The return value is the full URL to the
 requested page on the server.
 
-</div>
+
 
 <span id="sendNetRequest"></span>
 
@@ -259,7 +259,7 @@ requested page on the server.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[214](../source/tadsnet.h.html#214)\]
 
-<div class="desc">
+
 
 Send a network request to a remote server. This initiates processing the
 request and immediately returns; the process of setting up the network
@@ -323,15 +323,15 @@ NetEvReqReply event occurs, at which point you can inspect that NetEvent
 object to find out if the request was successful, and if so retrieve the
 reply data.
 
-</div>
+
 
 <span id="_Macros_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Macros</span>  
 
-</div>
+
 
 <span id="NetEvDebugBreak"></span>
 
@@ -339,7 +339,7 @@ reply data.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[270](../source/tadsnet.h.html#270)\]
 
-<div class="desc">
+
 
 `3`  
 Debugger interrupt. netEvent() returns this type of event when the user
@@ -355,7 +355,7 @@ program location. Once that's accomplished, there's nothing more to do
 with this event type; simply discard it and get the next event when the
 user resumes execution.
 
-</div>
+
 
 <span id="NetEvReply"></span>
 
@@ -363,7 +363,7 @@ user resumes execution.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[298](../source/tadsnet.h.html#298)\]
 
-<div class="desc">
+
 
 `5`  
 Network reply. This type of event occurs when a network request
@@ -371,7 +371,7 @@ initiated by sendNetRequest() completes, or fails with an error. The
 event object contains the status of the request and, if successful, the
 result information sent back from the server.
 
-</div>
+
 
 <span id="NetEvReplyDone"></span>
 
@@ -379,7 +379,7 @@ result information sent back from the server.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[311](../source/tadsnet.h.html#311)\]
 
-<div class="desc">
+
 
 `6`  
 Reply data transfer finished. This type of event occurs when an
@@ -392,7 +392,7 @@ occurs sending a reply; there's no provision in HTTP for a server to
 initiate contact with a client, so it's up to the client to handle it,
 such as by retrying the request.
 
-</div>
+
 
 <span id="NetEvRequest"></span>
 
@@ -400,7 +400,7 @@ such as by retrying the request.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[248](../source/tadsnet.h.html#248)\]
 
-<div class="desc">
+
 
 `1`  
 Request event. This type of event contains a request from the network
@@ -408,7 +408,7 @@ client. For example, for an HTTP client, the event contains an HTTP
 request, such as a GET. The request is represented as an object; the
 class depends on the type of server and request.
 
-</div>
+
 
 <span id="NetEvTimeout"></span>
 
@@ -416,13 +416,13 @@ class depends on the type of server and request.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[254](../source/tadsnet.h.html#254)\]
 
-<div class="desc">
+
 
 `2`  
 Timeout. netEvent() returns this type of event when the interval expires
 before any actual network events occur.
 
-</div>
+
 
 <span id="NetEvUIClose"></span>
 
@@ -430,7 +430,7 @@ before any actual network events occur.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[290](../source/tadsnet.h.html#290)\]
 
-<div class="desc">
+
 
 `4`  
 UI Closed. This type of event occurs when the user manually closes the
@@ -450,7 +450,7 @@ temporary network interruption). In the full client/server
 configuration, we have to be more subtle in determining that the user
 intends to quit the application, generally with inactivity timers.
 
-</div>
+
 
 <span id="NetReqNoRedirect"></span>
 
@@ -458,7 +458,7 @@ intends to quit the application, generally with inactivity timers.
 
 [tadsnet.h](../file/tadsnet.h.html)\[[233](../source/tadsnet.h.html#233)\]
 
-<div class="desc">
+
 
 `0x0001`  
 DO NOT follow "redirect" (301) results. By default (i.e., without this
@@ -471,29 +471,29 @@ DON'T follow a redirection, but instead simply stop and return the 301
 result. The caller can inspect the reply headers to get the redirection
 link.
 
-</div>
+
 
 <span id="_Enums_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Enums</span>  
 
-</div>
+
 
 *(none)* <span id="_Templates_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Templates</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -70,78 +70,79 @@ represent the cave, and three objects: the pedestal, the skull and the
 rock. There’s very little that’s new here; this is what the code should
 look like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
+<p>`
+    #charset “us-ascii”</p>
 
-    #include &lt;tads.h&gt;
-    #include "advlite.h"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
+#include "advlite.h"
 
-    versionInfo: GameID
-        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-        name = 'Goldskull'
-        byline = 'by A.N. Author'
-        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
-                      A.N. Author&lt;/a&gt;'
-        version = '1'
-        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
-        desc = 'Your blurb here.'
-        htmlDesc = 'Your blurb here.'    
-        
-    ;
+versionInfo: GameID
+    IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+    name = 'Goldskull'
+    byline = 'by A.N. Author'
+    htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                  A.N. Author&lt;/a&gt;'
+    version = '1'
+    authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+    desc = 'Your blurb here.'
+    htmlDesc = 'Your blurb here.'    
+    
+;
 
-    gameMain: GameMainDef    
-         
-        /* 
-         * By using the Player class to define the player character object 
-         * below, we remove the need to set the initialPlayerChar property here.
-         */
-    ;
-
-
-    /* The starting location; this can be called anything you like */
-
-    startroom: Room 'Outside Cave'
-         desc = "You're standing in the bright sunlight just outside of a large,
-             dark, foreboding cave, which lies to the north. " 
-        north = cave 
-    ;
-
+gameMain: GameMainDef    
+     
     /* 
-     *   The player character object. This doesn't have to be called me, but me is a
-     *   convenient name. As an alternative to defining the player character object
-     *   as a Thing and defining various of its properties, we can simply define it as
-     *   a Player object, as here, in which case we don't also need to set gameMain.initialPlayerChar, 
-     *   although we must still define the gameMain object. We'll add a description to the Player
-     *   object so that it can provide a non-default response to X ME. 
+     * By using the Player class to define the player character object 
+     * below, we remove the need to set the initialPlayerChar property here.
      */
+;
 
-    + me: Player 'you'   
-        "You can't see yourself, but you suspect you must look quite a sight after
-        traipsing miles through tropical jungle to get here. "      
-    ;
 
-    cave: Room 'Cave'    
-        desc = "You're inside a dark and musty cave. Sunlight 
-        pours in from a passage to the south. " 
+/* The starting location; this can be called anything you like */
 
-        south = startroom 
-    ;
+startroom: Room 'Outside Cave'
+     desc = "You're standing in the bright sunlight just outside of a large,
+         dark, foreboding cave, which lies to the north. " 
+    north = cave 
+;
 
-    + pedestal: Thing 'stone pedestal; smooth'
-        "The smooth stone pedestal is artfully positioned to catch the sunlight at
-        just this time of day. "
-        
-        isFixed = true
-        contType = On
-    ;
+/* 
+ *   The player character object. This doesn't have to be called me, but me is a
+ *   convenient name. As an alternative to defining the player character object
+ *   as a Thing and defining various of its properties, we can simply define it as
+ *   a Player object, as here, in which case we don't also need to set gameMain.initialPlayerChar, 
+ *   although we must still define the gameMain object. We'll add a description to the Player
+ *   object so that it can provide a non-default response to X ME. 
+ */
 
-    ++ goldSkull: Thing 'gold skull;; head'
-        "It's the shape and size of a human skull, but made of solid gold; it must
-        be worth a fortune. "
-    ;
++ me: Player 'you'   
+    "You can't see yourself, but you suspect you must look quite a sight after
+    traipsing miles through tropical jungle to get here. "      
+;
 
-    + smallRock: Thing 'small rock; round solid'
-         "It's roughly round and looks pretty solid. "
-    ;
+cave: Room 'Cave'    
+    desc = "You're inside a dark and musty cave. Sunlight 
+    pours in from a passage to the south. " 
+
+    south = startroom 
+;
+
++ pedestal: Thing 'stone pedestal; smooth'
+    "The smooth stone pedestal is artfully positioned to catch the sunlight at
+    just this time of day. "
+    
+    isFixed = true
+    contType = On
+;
+
+++ goldSkull: Thing 'gold skull;; head'
+    "It's the shape and size of a human skull, but made of solid gold; it must
+    be worth a fortune. "
+;
+
++ smallRock: Thing 'small rock; round solid'
+     "It's roughly round and looks pretty solid. "
+; `
 </code></pre></div></div>
 
 <p>Changes to the boiler-plate code already provided are marked in bold to

@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Perform the save, using the filename given in our fname\_ parameter,
 trimmed of quotes.
 
 **`Restore`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Restore`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -46,11 +46,11 @@ trimmed of quotes.
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInUndo`](#includeInUndo)
 
@@ -69,11 +69,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`askAndRestore`](#askAndRestore)[`execAction`](#execAction)[`filePromptFailed`](#filePromptFailed)[`filePromptFailedMsg`](#filePromptFailedMsg)[`performRestore`](#performRestore)[`startupRestore`](#startupRestore)
 
@@ -94,11 +94,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -106,22 +106,22 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2954](../source/actions.t.html#2954)\]
 
-<div class="desc">
+
 
 There's no point in including this in undo. If the command succeeds,
 it's not undoable itself, and there won't be any undo information in the
 newly restored state. If the command fails, it won't make any changes to
 the game state, so there won't be anything to undo.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="askAndRestore"></span>
 
@@ -129,7 +129,7 @@ the game state, so there won't be anything to undo.
 
 [actions.t](../file/actions.t.html)\[[2762](../source/actions.t.html#2762)\]
 
-<div class="desc">
+
 
 Ask for a file and try to restore it. Returns true on success, nil on
 failure. (Failure could indicate that the user chose to cancel out of
@@ -137,7 +137,7 @@ the file selector, that we couldn't find the file to restore, or that
 the file isn't a valid saved state file. In any case, we show an
 appropriate message on failure.)
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -145,11 +145,11 @@ appropriate message on failure.)
 
 [actions.t](../file/actions.t.html)\[[2743](../source/actions.t.html#2743)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="filePromptFailed"></span>
 
@@ -157,11 +157,11 @@ appropriate message on failure.)
 
 [actions.t](../file/actions.t.html)\[[2957](../source/actions.t.html#2957)\]
 
-<div class="desc">
+
 
 error showing the input file dialog (or character-mode equivalent)
 
-</div>
+
 
 <span id="filePromptFailedMsg"></span>
 
@@ -169,11 +169,11 @@ error showing the input file dialog (or character-mode equivalent)
 
 [actions.t](../file/actions.t.html)\[[2965](../source/actions.t.html#2965)\]
 
-<div class="desc">
+
 
 error showing the input file dialog, with a system error message
 
-</div>
+
 
 <span id="performRestore"></span>
 
@@ -181,13 +181,13 @@ error showing the input file dialog, with a system error message
 
 [actions.t](../file/actions.t.html)\[[2872](../source/actions.t.html#2872)\]
 
-<div class="desc">
+
 
 Restore a file. 'code' is the restoreCode value for the
 PostRestoreObject notifications. Returns true on success, nil on
 failure.
 
-</div>
+
 
 <span id="startupRestore"></span>
 
@@ -195,7 +195,7 @@ failure.
 
 [actions.t](../file/actions.t.html)\[[2833](../source/actions.t.html#2833)\]
 
-<div class="desc">
+
 
 Restore a game on startup. This can be called from mainRestore() to
 restore a saved game directly as part of loading the game. (Most
@@ -208,11 +208,11 @@ simply exit the program. On success, the caller should start the game
 running, usually using runGame(), after showing any desired introductory
 messages.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

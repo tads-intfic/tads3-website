@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 RECORD - this is similar to SCRIPT, but stores a file containing only
 the command input, not the output.
@@ -34,15 +34,15 @@ the command input, not the output.
 `DefineAction(Record, FileOpAction)      `*`// original source text`*  
 `class `**`RecordAction`**` :   `[`FileOpAction`](../object/FileOpAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RecordAction`**  
 [`FileOpAction`](../object/FileOpAction.html)  
@@ -53,11 +53,11 @@ the command input, not the output.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RecordAction`**  
 [`predicate(Record)`](../object/predicate(Record).html)  
@@ -69,19 +69,19 @@ the command input, not the output.
 [`predicate(RecordEventsString)`](../object/predicate(RecordEventsString).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fileDisposition`](#fileDisposition)[`filePromptMsg`](#filePromptMsg)[`fileTypeID`](#fileTypeID)[`logFileType`](#logFileType)
 
@@ -101,11 +101,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`performFileOp`](#performFileOp)[`setUpRecording`](#setUpRecording)[`showCancelMsg`](#showCancelMsg)
 
@@ -126,11 +126,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fileDisposition"></span>
 
@@ -138,11 +138,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1389](../source/actions.t.html#1389)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="filePromptMsg"></span>
 
@@ -150,11 +150,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1387](../source/actions.t.html#1387)\]
 
-<div class="desc">
+
 
 our file dialog parameters - ask for a log file to save
 
-</div>
+
 
 <span id="fileTypeID"></span>
 
@@ -162,11 +162,11 @@ our file dialog parameters - ask for a log file to save
 
 [actions.t](../file/actions.t.html)\[[1388](../source/actions.t.html#1388)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="logFileType"></span>
 
@@ -174,19 +174,19 @@ our file dialog parameters - ask for a log file to save
 
 [actions.t](../file/actions.t.html)\[[1439](../source/actions.t.html#1439)\]
 
-<div class="desc">
+
 
 the log file type - by default, we open a regular command log
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="performFileOp"></span>
 
@@ -194,11 +194,11 @@ the log file type - by default, we open a regular command log
 
 [actions.t](../file/actions.t.html)\[[1401](../source/actions.t.html#1401)\]
 
-<div class="desc">
+
 
 turn on recording to the given file
 
-</div>
+
 
 <span id="setUpRecording"></span>
 
@@ -206,12 +206,12 @@ turn on recording to the given file
 
 [actions.t](../file/actions.t.html)\[[1398](../source/actions.t.html#1398)\]
 
-<div class="desc">
+
 
 set up recording - this can be used to set up scripting
 programmatically, in the course of carrying out another action
 
-</div>
+
 
 <span id="showCancelMsg"></span>
 
@@ -219,15 +219,15 @@ programmatically, in the course of carrying out another action
 
 [actions.t](../file/actions.t.html)\[[1392](../source/actions.t.html#1392)\]
 
-<div class="desc">
+
 
 show our cancellation mesasge
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

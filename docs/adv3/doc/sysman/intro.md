@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Introduction  
@@ -15,7 +15,7 @@ layout: docs
     <a href="syntax.html" class="nav"><em>Next:</em> Typographical
 Conventions</a>     </span>
 
-</div>
+
 
 
 
@@ -151,7 +151,7 @@ you'll forgive me for the oversight, and I thank you all.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -160,4 +160,4 @@ you'll forgive me for the oversight, and I thank you all.
     <a href="syntax.html" class="nav"><em>Next:</em> Typographical
 Conventions</a>     </span>
 
-</div>
+

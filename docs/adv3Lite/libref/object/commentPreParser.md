@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The "comment" pre-parser. If the command line starts with a special
 prefix string (by default, "\*", but this can be changed via our
@@ -33,15 +33,15 @@ play-testing feedback.
 
 **`commentPreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`commentPreParser`**  
 [`StringPreParser`](../object/StringPreParser.html)  
@@ -50,11 +50,11 @@ play-testing feedback.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`commentPrefix`](#commentPrefix)[`leadPat`](#leadPat)[`runOrder`](#runOrder)[`warningCount`](#warningCount)
 
@@ -69,11 +69,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doParsing`](#doParsing)
 
@@ -87,11 +87,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="commentPrefix"></span>
 
@@ -99,7 +99,7 @@ Inherited from `ModuleExecObject` :
 
 [input.t](../file/input.t.html)\[[796](../source/input.t.html#796)\]
 
-<div class="desc">
+
 
 The comment prefix. You can change this to any character, or to any
 sequence of characters (longer sequences, such as '//', will work fine).
@@ -107,7 +107,7 @@ If a command line starts with this exact string (or starts with
 whitespace followed by this string), we'll consider the line to be a
 comment.
 
-</div>
+
 
 <span id="leadPat"></span>
 
@@ -115,7 +115,7 @@ comment.
 
 [input.t](../file/input.t.html)\[[808](../source/input.t.html#808)\]
 
-<div class="desc">
+
 
 The leading-whitespace pattern. We skip any text that matches this
 pattern at the start of a command line before looking for the comment
@@ -126,7 +126,7 @@ you can simply change this to '' - a pattern consisting of an empty
 string always matches zero characters, so it will prevent us from
 skipping any leading charactres in the player's input.
 
-</div>
+
 
 <span id="runOrder"></span>
 
@@ -134,7 +134,7 @@ skipping any leading charactres in the player's input.
 
 [input.t](../file/input.t.html)\[[825](../source/input.t.html#825)\]
 
-<div class="desc">
+
 
 Use a lower execution order than the default, so that we run before most
 other pre-parsers. Most other pre-parsers are written to handle actual
@@ -146,7 +146,7 @@ a comment, it halts any further processing of the command - so by
 running ahead of other pre-parsers, we'll effectively bypass other
 pre-parsers when we detect a comment.
 
-</div>
+
 
 <span id="warningCount"></span>
 
@@ -154,19 +154,19 @@ pre-parsers when we detect a comment.
 
 [input.t](../file/input.t.html)\[[811](../source/input.t.html#811)\]
 
-<div class="desc">
+
 
 warning count for entering comments without SCRIPT in effect
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doParsing"></span>
 
@@ -174,15 +174,15 @@ warning count for entering comments without SCRIPT in effect
 
 [input.t](../file/input.t.html)\[[750](../source/input.t.html#750)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

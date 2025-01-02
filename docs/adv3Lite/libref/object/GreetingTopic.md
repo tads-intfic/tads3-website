@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A GreetingTopic is a kind of TopicEntry used in greeting protocols
 (saying Hello or Goodbye). Game code will not use this class directly
@@ -34,15 +34,15 @@ but will instead use one or more of its subclasses
 
 `class `**`GreetingTopic`**` :   `[`MiscTopic`](../object/MiscTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GreetingTopic`**  
 [`MiscTopic`](../object/MiscTopic.html)  
@@ -54,11 +54,11 @@ but will instead use one or more of its subclasses
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`GreetingTopic`**  
 [`ActorByeTopic`](../object/ActorByeTopic.html)  
@@ -72,19 +72,19 @@ but will instead use one or more of its subclasses
 [`LeaveByeTopic`](../object/LeaveByeTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`changeToState`](#changeToState)[`impliesGreeting`](#impliesGreeting)[`includeInList`](#includeInList)
 
@@ -102,11 +102,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`handleTopic`](#handleTopic)
 
@@ -127,11 +127,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="changeToState"></span>
 
@@ -139,13 +139,13 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3776](../source/actor.t.html#3776)\]
 
-<div class="desc">
+
 
 It may be that we want to change to a different actor state when we
 begin or end a conversation. If so the changeToState property can be
 used to specify which state to change to.
 
-</div>
+
 
 <span id="impliesGreeting"></span>
 
@@ -153,11 +153,11 @@ used to specify which state to change to.
 
 [actor.t](../file/actor.t.html)\[[3769](../source/actor.t.html#3769)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -165,19 +165,19 @@ used to specify which state to change to.
 
 [actor.t](../file/actor.t.html)\[[3768](../source/actor.t.html#3768)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="handleTopic"></span>
 
@@ -185,16 +185,16 @@ used to specify which state to change to.
 
 [actor.t](../file/actor.t.html)\[[3782](../source/actor.t.html#3782)\]
 
-<div class="desc">
+
 
 Handling a GreetingTopic includes the requested state change, if
 changeToState is defined
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -56,15 +56,16 @@ cabinet.</p>
 <p>The first thing to do is to add a brief description of the maintenance
 room that mentions the two cabinets:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    maintenanceRoom: Room 'Maintenance Room' 'maintenance room'
-        "&lt;&lt;one of&gt;&gt;On entering the room you immediately notice&lt;&lt;or&gt;&gt;This is a small
-        square room with&lt;&lt;stopping&gt;&gt; a pair of steel cabinets mounted against one
+<p>`
+    maintenanceRoom: Room ‘Maintenance Room’ ‘maintenance room’
+        “«one of»On entering the room you immediately notice«or»This is a small
+        square room with«stopping» a pair of steel cabinets mounted against one
         wall, one much taller than the other. The only way out is through a door to
-        the west. "
-        
-        west = mrDoorOut
-        out asExit(west)
-    ;
+        the west. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    west = mrDoorOut
+    out asExit(west)
+; `
 </code></pre></div></div>
 
 <p>Notice the use of the &lt;&lt;one of&gt;&gt; … &lt;&lt;or&gt;&gt; … &lt;&lt;stopping&gt;&gt;
@@ -74,11 +75,12 @@ first time we enter the room, and a different one thereafter.</p>
 <p>Next we need the two cabinets. We’ll start with the tall one that would
 normally be used to house the bucket, sponge and garbage bag.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + tallCabinet: OpenableContainer, Fixture 'tall metal cabinet; green'
-        "It's a good two metres high and painted an institutional green. "
-        
-        bulkCapacity = 50
-    ;
+<p>`
+    + tallCabinet: OpenableContainer, Fixture ‘tall metal cabinet; green’
+        “It’s a good two metres high and painted an institutional green. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bulkCapacity = 50
+; `
 </code></pre></div></div>
 
 <p>We’ve made the tall cabinet both an OpenableContainer and a Fixture (so
@@ -88,37 +90,38 @@ reasonable number of objects. This is only meaningful if we give some
 bulk to the objects that might be stored in the maintenance room, for
 example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bucket: Container 'bucket; plain yellow plastic; pail'
-        "It's just a plain yellow plastic bucket. "
-        initSpecialDesc = "Some cleaner seems to have left all his things here:
-            &lt;&lt;list of location.listableContents.subset({x: x.moved == nil})&gt;&gt;. "
-        
-        bulk = 6
-        bulkCapacity = 6
-        
-    ;
+<p>`
+    + bucket: Container ‘bucket; plain yellow plastic; pail’
+        “It’s just a plain yellow plastic bucket. “
+        initSpecialDesc = “Some cleaner seems to have left all his things here:
+            «list of location.listableContents.subset({x: x.moved == nil})». “</p>
 
-    + sponge: Thing 'sponge; turquoise'
-        "It's a kind of turquoise colour. "
-        
-        bulk = 3
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    bulk = 6
+    bulkCapacity = 6
+    
+;
 
-    + garbageBag: Container 'garbage bag; large green plastic rubbish; bag'
-        "It's basically just a large green plastic bag. "
-        
-        bulk = (2 + getBulkWithin)    
-        bulkCapacity = 10
-    ;
++ sponge: Thing 'sponge; turquoise'
+    "It's a kind of turquoise colour. "
+    
+    bulk = 3
+;
 
-    + brassKey: Key 'small brass key; yale'
-        "It's just like all the other yale keys you've ever seen. "    
-        
-        actualLockList = [maintenanceRoomDoor, mrDoorOut]
-        plausibleLockList = [maintenanceRoomDoor, mrDoorOut]
-        
-        bulk = 1
-    ;
++ garbageBag: Container 'garbage bag; large green plastic rubbish; bag'
+    "It's basically just a large green plastic bag. "
+    
+    bulk = (2 + getBulkWithin)    
+    bulkCapacity = 10
+;
+
++ brassKey: Key 'small brass key; yale'
+    "It's just like all the other yale keys you've ever seen. "    
+    
+    actualLockList = [maintenanceRoomDoor, mrDoorOut]
+    plausibleLockList = [maintenanceRoomDoor, mrDoorOut]
+    
+    bulk = 1
+; `
 </code></pre></div></div>
 
 <p>Note that we’ve also given a bulkCapacity to the bucket and the garbage
@@ -196,13 +199,14 @@ can be defined on any Thing; they should point to another Thing to which
 the appropriate actions will then be redirected. So, for example, if we
 had a desk with a drawer we could write:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + desk: Fixture, Surface 'desk'
-      "It has a single drawer. "
+<p>`
+    + desk: Fixture, Surface ‘desk’
+      “It has a single drawer. “
       remapIn = drawer
-    ;
+    ;</p>
 
-    ++ drawer: OpenableContainer 'drawer'
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ drawer: OpenableContainer 'drawer'
+; `
 </code></pre></div></div>
 
 <p>The set-up above will ensure that the commands LOOK IN DESK, SEARCH
@@ -215,11 +219,12 @@ can take advantage of a TADS 3 feature to make it easier: anonymous
 nested objects. An anonymous nested object is one that’s defined
 directly on the property of another object, like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + desk: Fixture, Surface 'desk'
-      "It has a single drawer. "
-      remapIn: OpenableContainer 'drawer' { location = lexicalParent }
+<p>`
+    + desk: Fixture, Surface ‘desk’
+      “It has a single drawer. “
+      remapIn: OpenableContainer ‘drawer’ { location = lexicalParent }
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note that in this case we have to use opening and closing braces to mark
 the beginning and end of the nested object definition. Note too this
@@ -243,19 +248,20 @@ remapBehind property of the enclosing object.</p>
 
 <p>Armed with these tools we can now define the short cabinet thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + shortCabinet: Fixture 'short metal cabinet; light grey gray'
-        "It's about a metre high and painted light grey. "
-        
-        remapIn: SubComponent 
-        {
-            isOpenable = true
-            lockability = lockableWithKey
-            isLocked = true
-            bulkCapacity = 5        
-        }
-        
-        remapOn: SubComponent { bulkCapacity = 10 }    
-    ;
+<p>`
+    + shortCabinet: Fixture ‘short metal cabinet; light grey gray’
+        “It’s about a metre high and painted light grey. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    remapIn: SubComponent 
+    {
+        isOpenable = true
+        lockability = lockableWithKey
+        isLocked = true
+        bulkCapacity = 5        
+    }
+    
+    remapOn: SubComponent { bulkCapacity = 10 }    
+; `
 </code></pre></div></div>
 
 <p>With this definition, the short metal cabinet (which, of course, should
@@ -277,25 +283,26 @@ the key back under the pot plant, providing the pot plant is resting on
 a surface and not being carried, but we’ll limit what can be put under
 the pot plant to one small item:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ potPlant: Thing 'pot plant; small; cactus'
-        "It looks like a small cactus. "
-        
-        maxBulkHiddenUnder = 1
-        hiddenUnder = [silverKey]
-        canPutUnderMe = (locType == On || location.ofKind(Room))
-        
-        subLocation = &amp;remapOn
-        
-        cannotPutUnderMsg = '{I} {can\'t} put anything under the pot plant unless
-            it\'s resting on something. '
-    ;
+<p>`
+    ++ potPlant: Thing ‘pot plant; small; cactus’
+        “It looks like a small cactus. “</p>
 
-    silverKey: Key 'small silver key'
-        
-        bulk = 1
-        actualLockList = [shortCabinet]
-        plausibleLockList = [shortCabinet]
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    maxBulkHiddenUnder = 1
+    hiddenUnder = [silverKey]
+    canPutUnderMe = (locType == On || location.ofKind(Room))
+    
+    subLocation = &amp;remapOn
+    
+    cannotPutUnderMsg = '{I} {can\'t} put anything under the pot plant unless
+        it\'s resting on something. '
+;
+
+silverKey: Key 'small silver key'
+    
+    bulk = 1
+    actualLockList = [shortCabinet]
+    plausibleLockList = [shortCabinet]
+; `
 </code></pre></div></div>
 
 <p>There are a number of points to note here. First, observe how we define
@@ -355,25 +362,26 @@ actually need. The following code should be placed immediately after the
 definition of the short cabinet and just before the definition of the
 pot plant:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ powerSwitch: Fixture, Switch 'big red switch{-zz}'
-        "It's marked &lt;q&gt;Metal Detector&lt;/q&gt; and is currently in the &lt;&lt;if isOn&gt;&gt;ON
-        &lt;&lt;else&gt;&gt; OFF&lt;&lt;end&gt;&gt; position. "
-        
-        isOn = true
-        subLocation = &amp;remapIn
-    ;
+<p>`
+    ++ powerSwitch: Fixture, Switch ‘big red switch{-zz}’
+        “It’s marked <q>Metal Detector</q> and is currently in the «if isOn»ON
+        «else» OFF«end» position. “</p>
 
-    ++ Decoration 'switches; other of[prep]; bank rows row; them'
-        "There are four rows of switches in a variety of colours, but your attention
-        is quickly drawn to the big red one marked &lt;q&gt;Metal Detector&lt;/q&gt;. "
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isOn = true
+    subLocation = &amp;remapIn
+;
 
-        notImportantMsg = 'Only the big red switch is of any interest to you; you
-            don\'t want to risk drawing attention to yourself by messing with any of
-            the others. '
-        subLocation = &amp;remapIn
-        specialDesc = "A bank of switches is mounted at the rear of the 
-            cabinet. "
-    ;
+++ Decoration 'switches; other of[prep]; bank rows row; them'
+    "There are four rows of switches in a variety of colours, but your attention
+    is quickly drawn to the big red one marked &lt;q&gt;Metal Detector&lt;/q&gt;. "
+
+    notImportantMsg = 'Only the big red switch is of any interest to you; you
+        don\'t want to risk drawing attention to yourself by messing with any of
+        the others. '
+    subLocation = &amp;remapIn
+    specialDesc = "A bank of switches is mounted at the rear of the 
+        cabinet. "
+; `
 </code></pre></div></div>
 
 <p>We define <code class="language-plaintext highlighter-rouge">subLocation = &amp;remapIn</code> on both these
@@ -421,34 +429,35 @@ metal detector. We can do that first by making the
 value from the <code class="language-plaintext highlighter-rouge">isOn</code> property of the
 powerSwitch:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + metalDetector: Passage 'metal detector; crude; frame'
-        "The metal detector is little more than a crude metal frame, just large
-        enough to step through, with a power cable trailing across the floor. "
-        destination = concourse
+<p>`
+    + metalDetector: Passage ‘metal detector; crude; frame’
+        “The metal detector is little more than a crude metal frame, just large
+        enough to step through, with a power cable trailing across the floor. “
+        destination = concourse</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isOn = (powerSwitch.isOn)
+    
+    canTravelerPass(traveler)
+    {
+        return !isOn || !IDcard.isIn(traveler);
+    }
+    
+    explainTravelBarrier(traveler)
+    {
+        "The metal detector buzzes furiously as you pass through it. The
+        security guard beckons you back immediately, with a pointed
+        tap of his holstered pistol. After a brisk search, he discovers the ID
+        card and takes it off you with a disapproving shake of his head. ";
         
-        isOn = (powerSwitch.isOn)
-        
-        canTravelerPass(traveler)
-        {
-            return !isOn || !IDcard.isIn(traveler);
-        }
-        
-        explainTravelBarrier(traveler)
-        {
-            "The metal detector buzzes furiously as you pass through it. The
-            security guard beckons you back immediately, with a pointed
-            tap of his holstered pistol. After a brisk search, he discovers the ID
-            card and takes it off you with a disapproving shake of his head. ";
-            
-            IDcard.moveInto(counter);
-        }
-        
-        travelDesc()
-        {
-            "You pass through the metal detector without incident. ";
-            announcementObj.start();
-        }
-    ;
+        IDcard.moveInto(counter);
+    }
+    
+    travelDesc()
+    {
+        "You pass through the metal detector without incident. ";
+        announcementObj.start();
+    }
+; `
 </code></pre></div></div>
 
 <p>If you compile and run the program at this point, you should be able to

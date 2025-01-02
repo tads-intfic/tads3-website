@@ -1018,9 +1018,9 @@ of [SmellImplicitAction](../object/SmellImplicitAction.html) in
 of [ListenImplicitAction](../object/ListenImplicitAction.html) in
 [actions.t](../file/actions.t.html)\[[1872](../source/actions.t.html#1872)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

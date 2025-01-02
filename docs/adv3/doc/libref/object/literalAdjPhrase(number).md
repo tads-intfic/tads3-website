@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "literal adjective" phrase is a number or string used as an adjective.
 
 `grammar `<span class="gramalt">[`literalAdjPhrase`](../object/literalAdjPhrase.html)`(number)`</span>` :   `[`AdjPhraseWithVocab`](../object/AdjPhraseWithVocab.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`literalAdjPhrase(number)`**  
 [`AdjPhraseWithVocab`](../object/AdjPhraseWithVocab.html)  
@@ -44,11 +44,11 @@ A "literal adjective" phrase is a number or string used as an adjective.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`adj_`](#adj_)
 
@@ -65,11 +65,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getAdjustedTokens`](#getAdjustedTokens)[`getVocabMatchList`](#getVocabMatchList)
 
@@ -87,11 +87,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="adj_"></span>
 
@@ -99,19 +99,19 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6486](../source/en_us.t.html#6486)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getAdjustedTokens"></span>
 
@@ -119,11 +119,11 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6505](../source/en_us.t.html#6505)\]
 
-<div class="desc">
+
 
 return the combined lists
 
-</div>
+
 
 <span id="getVocabMatchList"></span>
 
@@ -131,15 +131,15 @@ return the combined lists
 
 [en_us.t](../file/en_us.t.html)\[[6487](../source/en_us.t.html#6487)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

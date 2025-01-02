@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Object associations lists. We use this object to store some lookup
 tables that we build during preinitialization to relate object usages
@@ -28,15 +28,15 @@ tables that we build during preinitialization to relate object usages
 
 **`objectRelations`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`objectRelations`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -44,11 +44,11 @@ tables that we build during preinitialization to relate object usages
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionAllProps`](#actionAllProps)[`actionDefaultProps`](#actionDefaultProps)[`checkAllProps`](#checkAllProps)[`checkDefaultProps`](#checkDefaultProps)[`preCondAllProps`](#preCondAllProps)[`preCondDefaultProps`](#preCondDefaultProps)[`verifyAllProps`](#verifyAllProps)[`verifyDefaultProps`](#verifyDefaultProps)
 
@@ -59,11 +59,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)
 
@@ -74,11 +74,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionAllProps"></span>
 
@@ -86,11 +86,11 @@ Inherited from `ModuleExecObject` :
 
 [action.t](../file/action.t.html)\[[80](../source/action.t.html#80)\]
 
-<div class="desc">
+
 
 lookup table for catch-all action properties
 
-</div>
+
 
 <span id="actionDefaultProps"></span>
 
@@ -98,11 +98,11 @@ lookup table for catch-all action properties
 
 [action.t](../file/action.t.html)\[[77](../source/action.t.html#77)\]
 
-<div class="desc">
+
 
 lookup table for default action properties
 
-</div>
+
 
 <span id="checkAllProps"></span>
 
@@ -110,11 +110,11 @@ lookup table for default action properties
 
 [action.t](../file/action.t.html)\[[74](../source/action.t.html#74)\]
 
-<div class="desc">
+
 
 lookup table for catch-all check properties
 
-</div>
+
 
 <span id="checkDefaultProps"></span>
 
@@ -122,11 +122,11 @@ lookup table for catch-all check properties
 
 [action.t](../file/action.t.html)\[[71](../source/action.t.html#71)\]
 
-<div class="desc">
+
 
 lookup table for default check properties
 
-</div>
+
 
 <span id="preCondAllProps"></span>
 
@@ -134,11 +134,11 @@ lookup table for default check properties
 
 [action.t](../file/action.t.html)\[[62](../source/action.t.html#62)\]
 
-<div class="desc">
+
 
 lookup table for catch-all precondition properties
 
-</div>
+
 
 <span id="preCondDefaultProps"></span>
 
@@ -146,11 +146,11 @@ lookup table for catch-all precondition properties
 
 [action.t](../file/action.t.html)\[[59](../source/action.t.html#59)\]
 
-<div class="desc">
+
 
 lookup table for default precondition properties
 
-</div>
+
 
 <span id="verifyAllProps"></span>
 
@@ -158,11 +158,11 @@ lookup table for default precondition properties
 
 [action.t](../file/action.t.html)\[[68](../source/action.t.html#68)\]
 
-<div class="desc">
+
 
 lookup table for catch-all verification properties
 
-</div>
+
 
 <span id="verifyDefaultProps"></span>
 
@@ -170,19 +170,19 @@ lookup table for catch-all verification properties
 
 [action.t](../file/action.t.html)\[[65](../source/action.t.html#65)\]
 
-<div class="desc">
+
 
 lookup table for default verification properties
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -190,15 +190,15 @@ lookup table for default verification properties
 
 [action.t](../file/action.t.html)\[[23](../source/action.t.html#23)\]
 
-<div class="desc">
+
 
 preinitialization - build the lookup tables
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

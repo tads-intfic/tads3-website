@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 attachables.t
@@ -33,47 +33,47 @@ relationship: the object that is attached can only be attached to one
 object at a time, but the object it's attached to can have multiple
 objects attached to it.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`Attachable`](../object/Attachable.html)[`AttachableComponent`](../object/AttachableComponent.html)[`NearbyAttachable`](../object/NearbyAttachable.html)[`PlugAttachable`](../object/PlugAttachable.html)[`SimpleAttachable`](../object/SimpleAttachable.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`reverseAttachableDoer`](../object/reverseAttachableDoer.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

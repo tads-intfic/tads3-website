@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`Follow`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Follow`**  
 [`TAction`](../object/TAction.html)  
@@ -44,11 +44,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`againRepeatsParse`](#againRepeatsParse)
 
@@ -64,11 +64,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addExtraScopeItems`](#addExtraScopeItems)
 
@@ -86,11 +86,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="againRepeatsParse"></span>
 
@@ -98,19 +98,19 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[936](../source/actions.t.html#936)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addExtraScopeItems"></span>
 
@@ -118,15 +118,15 @@ Inherited from `Redirector` :
 
 [actor.t](../file/actor.t.html)\[[6722](../source/actor.t.html#6722)\]
 
-<div class="desc">
+
 
 For this action to work all known actors also need to be in scope
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

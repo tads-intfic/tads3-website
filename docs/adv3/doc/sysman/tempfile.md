@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> TemporaryFile  
@@ -15,7 +15,7 @@ layout: docs
     <a href="timezone.html" class="nav"><em>Next:</em> TimeZone</a>    
 </span>
 
-</div>
+
 
 
 
@@ -107,7 +107,7 @@ to the following built-in functions:
 
 `deleteFile()`
 
-<div class="fdef">
+
 
 Explicitly deletes the local file corresponding to the TemporaryFile
 object. There's no error if the local file doesn't exist or if it exists
@@ -134,7 +134,7 @@ This method has no arguments and no return value.
 
 `getFilename()`
 
-<div class="fdef">
+
 
 Returns a string giving the name of the file in the local file system.
 This is a fully-qualified path on most systems.
@@ -145,7 +145,7 @@ one of the File "open" methods - in most cases, the file safety settings
 will prohibit access to this file by name, since it's usually in a
 system directory outside of the program's home folder.
 
-</div>
+
 
 ## Automatic deletion
 
@@ -211,11 +211,11 @@ attempt to use the string version of the filename (as returned by
 File class grants the special exception only to the TemporaryFile object
 itself, not to the underlying filename.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -224,4 +224,4 @@ itself, not to the underlying filename.
     <a href="timezone.html" class="nav"><em>Next:</em> TimeZone</a>    
 </span>
 
-</div>
+

@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The persistent banner tracker. This keeps track of the active banner
 windows persistently. Whenever we save or restore the game's state, this
@@ -36,15 +36,15 @@ conditions as they existed in the saved state.
 
 **`bannerTracker`**` :   `[`PostRestoreObject`](../object/PostRestoreObject.html)[`PostUndoObject`](../object/PostUndoObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`bannerTracker`**  
 [`PostRestoreObject`](../object/PostRestoreObject.html)  
@@ -55,11 +55,11 @@ conditions as they existed in the saved state.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`activeBanners_`](#activeBanners_)
 
@@ -75,11 +75,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addBanner`](#addBanner)[`execute`](#execute)[`removeBanner`](#removeBanner)[`restoreDisplayState`](#restoreDisplayState)[`skipDescendants`](#skipDescendants)
 
@@ -94,11 +94,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="activeBanners_"></span>
 
@@ -106,20 +106,20 @@ Inherited from `ModuleExecObject` :
 
 [banner.t](../file/banner.t.html)\[[927](../source/banner.t.html#927)\]
 
-<div class="desc">
+
 
 The list of active banners. This is a list of BannerWindow objects,
 stored in banner layout list order.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addBanner"></span>
 
@@ -127,11 +127,11 @@ stored in banner layout list order.
 
 [banner.t](../file/banner.t.html)\[[813](../source/banner.t.html#813)\]
 
-<div class="desc">
+
 
 add a banner to the active display list
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -139,11 +139,11 @@ add a banner to the active display list
 
 [banner.t](../file/banner.t.html)\[[930](../source/banner.t.html#930)\]
 
-<div class="desc">
+
 
 receive RESTORE/UNDO notification
 
-</div>
+
 
 <span id="removeBanner"></span>
 
@@ -151,11 +151,11 @@ receive RESTORE/UNDO notification
 
 [banner.t](../file/banner.t.html)\[[899](../source/banner.t.html#899)\]
 
-<div class="desc">
+
 
 remove a banner from the active list
 
-</div>
+
 
 <span id="restoreDisplayState"></span>
 
@@ -163,14 +163,14 @@ remove a banner from the active list
 
 [banner.t](../file/banner.t.html)\[[943](../source/banner.t.html#943)\]
 
-<div class="desc">
+
 
 Restore the saved banner display state, so that the banner layout looks
 the same as it did when we saved the persistent state. This should be
 called after restoring a saved state, undoing to a savepoint, or
 initializing (when first starting the game or when restarting).
 
-</div>
+
 
 <span id="skipDescendants"></span>
 
@@ -178,15 +178,15 @@ initializing (when first starting the game or when restarting).
 
 [banner.t](../file/banner.t.html)\[[872](../source/banner.t.html#872)\]
 
-<div class="desc">
+
 
 Skip all descendants of the window at the given index.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

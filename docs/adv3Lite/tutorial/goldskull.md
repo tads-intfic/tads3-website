@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Goldskull  
 <span class="navnp"><a href="summing.html" class="nav"><em>Prev:</em> Summing Up</a>
    <a href="goldmap.html" class="nav"><em>Next:</em> Laying out the map</a>
     </span>
 
-</div>
+
 
 
 
@@ -22,7 +22,7 @@ layout: docs
 
 In this chapter we implement another simple game.
 
-<div class="sectoc">
+
 
 [Laying out the map](goldmap.html)  
 [Making things happen](making.html)  
@@ -33,11 +33,11 @@ In this chapter we implement another simple game.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Goldskull  
@@ -45,4 +45,4 @@ In this chapter we implement another simple game.
    <a href="goldmap.html" class="nav"><em>Next:</em> Laying out the map</a>
     </span>
 
-</div>
+

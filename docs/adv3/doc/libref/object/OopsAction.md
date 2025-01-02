@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Dummy OOPS action for times when OOPS isn't in context. We'll simply
 explain how OOPS works, and that you can't use it right now.
@@ -34,15 +34,15 @@ explain how OOPS works, and that you can't use it right now.
 `DefineLiteralAction(Oops)      `*`// original source text`*  
 `class `**`OopsAction`**` :   `[`LiteralAction`](../object/LiteralAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OopsAction`**  
 [`LiteralAction`](../object/LiteralAction.html)  
@@ -54,29 +54,29 @@ explain how OOPS works, and that you can't use it right now.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`OopsAction`**  
 [`predicate(Oops)`](../object/predicate(Oops).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionTime`](#actionTime)
 
@@ -96,11 +96,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)
 
@@ -121,11 +121,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionTime"></span>
 
@@ -133,19 +133,19 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[3123](../source/actions.t.html#3123)\]
 
-<div class="desc">
+
 
 this is a meta-command, so don't consume any time
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -153,15 +153,15 @@ this is a meta-command, so don't consume any time
 
 [actions.t](../file/actions.t.html)\[[3116](../source/actions.t.html#3116)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

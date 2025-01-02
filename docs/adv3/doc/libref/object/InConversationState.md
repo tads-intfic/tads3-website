@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The "in-conversation" state. This works with ConversationReadyState to
 handle transitions in and out of conversations. In this state, we are
@@ -43,15 +43,15 @@ simultaneously in conversation with more than one other character.
 
 `class `**`InConversationState`**` :   `[`ActorState`](../object/ActorState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`InConversationState`**  
 [`ActorState`](../object/ActorState.html)  
@@ -62,27 +62,27 @@ simultaneously in conversation with more than one other character.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`attentionSpan`](#attentionSpan)[`nextState`](#nextState)[`previousState`](#previousState)
 
@@ -99,11 +99,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`activateState`](#activateState)[`deactivateState`](#deactivateState)[`defaultGreetingResponse`](#defaultGreetingResponse)[`endConversation`](#endConversation)[`handleConversation`](#handleConversation)[`takeTurn`](#takeTurn)
 
@@ -121,11 +121,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="attentionSpan"></span>
 
@@ -133,7 +133,7 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[4979](../source/actor.t.html#4979)\]
 
-<div class="desc">
+
 
 Our attention span, in turns. This is the number of turns that we'll be
 willing to stay in the conversation while the other character is
@@ -145,7 +145,7 @@ If the NPC's doesn't have a limited attention span, set this property to
 nil. This will prevent the NPC from ever disengaging of its own
 volition.
 
-</div>
+
 
 <span id="nextState"></span>
 
@@ -153,13 +153,13 @@ volition.
 
 [actor.t](../file/actor.t.html)\[[4987](../source/actor.t.html#4987)\]
 
-<div class="desc">
+
 
 The state to switch to when the conversation ends. Instances can
 override this to select the next state. By default, we'll return to the
 state that we were in immediately before the conversation started.
 
-</div>
+
 
 <span id="previousState"></span>
 
@@ -167,21 +167,21 @@ state that we were in immediately before the conversation started.
 
 [actor.t](../file/actor.t.html)\[[5170](../source/actor.t.html#5170)\]
 
-<div class="desc">
+
 
 The previous state - this is the state we were in before the
 conversation began, and the one we'll return to by default when the
 conversation ends. We'll set this automatically on activation.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="activateState"></span>
 
@@ -189,11 +189,11 @@ conversation ends. We'll set this automatically on activation.
 
 [actor.t](../file/actor.t.html)\[[5118](../source/actor.t.html#5118)\]
 
-<div class="desc">
+
 
 activate this state
 
-</div>
+
 
 <span id="deactivateState"></span>
 
@@ -201,11 +201,11 @@ activate this state
 
 [actor.t](../file/actor.t.html)\[[5152](../source/actor.t.html#5152)\]
 
-<div class="desc">
+
 
 deactivate this state
 
-</div>
+
 
 <span id="defaultGreetingResponse"></span>
 
@@ -213,12 +213,12 @@ deactivate this state
 
 [actor.t](../file/actor.t.html)\[[5094](../source/actor.t.html#5094)\]
 
-<div class="desc">
+
 
 provide a default HELLO response, if we don't have a special TopicEntry
 for it
 
-</div>
+
 
 <span id="endConversation"></span>
 
@@ -226,7 +226,7 @@ for it
 
 [actor.t](../file/actor.t.html)\[[5005](../source/actor.t.html#5005)\]
 
-<div class="desc">
+
 
 End the current conversation. 'reason' indicates why we're leaving the
 conversation - this is one of the endConvXxx enums defined in adv3.h.
@@ -242,7 +242,7 @@ call this.
 This returns true if we wish to allow the conversation to end, nil if
 not.
 
-</div>
+
 
 <span id="handleConversation"></span>
 
@@ -250,11 +250,11 @@ not.
 
 [actor.t](../file/actor.t.html)\[[5051](../source/actor.t.html#5051)\]
 
-<div class="desc">
+
 
 handle a conversational command
 
-</div>
+
 
 <span id="takeTurn"></span>
 
@@ -262,17 +262,17 @@ handle a conversational command
 
 [actor.t](../file/actor.t.html)\[[5105](../source/actor.t.html#5105)\]
 
-<div class="desc">
+
 
 As our default response, point out that we're already at the actor's
 service. (This isn't an error, because the other actor might not have
 been talking to us, even though we thought we were talking to them.)
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

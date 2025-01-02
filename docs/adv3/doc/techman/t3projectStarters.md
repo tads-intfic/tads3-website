@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Workbench
@@ -17,7 +17,7 @@ for TADS</a>    
 <a href="t3spec.html" class="nav"><em>Next:</em> T3 VM Technical
 Documentation</a>     </span>
 
-</div>
+
 
 
 
@@ -220,7 +220,7 @@ the folders in Library Paths list.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -231,4 +231,4 @@ for TADS</a>    
 <a href="t3spec.html" class="nav"><em>Next:</em> T3 VM Technical
 Documentation</a>     </span>
 
-</div>
+

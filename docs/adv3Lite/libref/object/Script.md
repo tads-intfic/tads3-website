@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Generic script object. This class can be used to implement a simple
 state machine.
@@ -39,25 +39,25 @@ excluded from the build if they're not needed in a particular game.
 
 `class `**`Script`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Script`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Script`**  
 [`EventList`](../object/EventList.html)  
@@ -69,39 +69,39 @@ excluded from the build if they're not needed in a particular game.
 [`SyncEventList`](../object/SyncEventList.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curScriptState`](#curScriptState)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doScript`](#doScript)[`getScriptState`](#getScriptState)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curScriptState"></span>
 
@@ -109,7 +109,7 @@ excluded from the build if they're not needed in a particular game.
 
 [misc.t](../file/misc.t.html)\[[565](../source/misc.t.html#565)\]
 
-<div class="desc">
+
 
 Property giving our current state. This should never be used directly;
 instead, getScriptState() should always be used, since getScriptState()
@@ -117,15 +117,15 @@ can be overridden so that the state depends on something other than this
 internal state property. The meaning of the state identifier is specific
 to each subclass.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doScript"></span>
 
@@ -133,7 +133,7 @@ to each subclass.
 
 [misc.t](../file/misc.t.html)\[[553](../source/misc.t.html#553)\]
 
-<div class="desc">
+
 
 Process the next step of the script. This routine must be overridden to
 perform the action of the script. This routine's action should call
@@ -143,7 +143,7 @@ current one.
 
 By default, we don't do anything at all.
 
-</div>
+
 
 <span id="getScriptState"></span>
 
@@ -151,16 +151,16 @@ By default, we don't do anything at all.
 
 [misc.t](../file/misc.t.html)\[[538](../source/misc.t.html#538)\]
 
-<div class="desc">
+
 
 Get the current state. This returns a value that gives the current state
 of the script, which is usually simply an integer.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

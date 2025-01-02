@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 long-description contents lister for a RearContainer/Surface
 
 **`rearDescContentsLister`**` :   `[`DescContentsLister`](../object/DescContentsLister.html)[`BaseRearContentsLister`](../object/BaseRearContentsLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`rearDescContentsLister`**  
 [`DescContentsLister`](../object/DescContentsLister.html)  
@@ -46,11 +46,11 @@ long-description contents lister for a RearContainer/Surface
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -67,11 +67,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListPrefixWide`](#showListPrefixWide)
 
@@ -89,19 +89,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -109,15 +109,15 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5013](../source/msg_neu.t.html#5013)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

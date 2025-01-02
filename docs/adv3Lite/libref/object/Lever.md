@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Lever is an object that can be in one of two positions: pulled
 (isPulled = true) or pushed (isPulled = nil), and which can be pulled
@@ -34,15 +34,15 @@ and pushed between those two positions.
 
 `class `**`Lever`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Lever`**  
 [`Thing`](../object/Thing.html)  
@@ -54,27 +54,27 @@ and pushed between those two positions.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`alreadyPulledMsg`](#alreadyPulledMsg)  [`alreadyPushedMsg`](#alreadyPushedMsg)  [`isFixed`](#isFixed)  [`isPulled`](#isPulled)  [`isPushed`](#isPushed)  `
 
@@ -93,11 +93,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`dobjFor(Pull)`](#dobjFor(Pull))  [`dobjFor(Push)`](#dobjFor(Push))  [`makePulled`](#makePulled)  `
 
@@ -118,11 +118,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="alreadyPulledMsg"></span>
 
@@ -130,11 +130,11 @@ Inherited from `LMentionable` :
 
 [gadget.t](../file/gadget.t.html)\[[99](../source/gadget.t.html#99)\]
 
-<div class="desc">
+
 
 The message to display when we can't be pulled any further
 
-</div>
+
 
 <span id="alreadyPushedMsg"></span>
 
@@ -142,11 +142,11 @@ The message to display when we can't be pulled any further
 
 [gadget.t](../file/gadget.t.html)\[[123](../source/gadget.t.html#123)\]
 
-<div class="desc">
+
 
 The message to display when we can't be pushed any further
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -154,11 +154,11 @@ The message to display when we can't be pushed any further
 
 [gadget.t](../file/gadget.t.html)\[[53](../source/gadget.t.html#53)\]
 
-<div class="desc">
+
 
 a lever is usually fixed to something
 
-</div>
+
 
 <span id="isPulled"></span>
 
@@ -166,11 +166,11 @@ a lever is usually fixed to something
 
 [gadget.t](../file/gadget.t.html)\[[56](../source/gadget.t.html#56)\]
 
-<div class="desc">
+
 
 is this lever in the pulled or pushed position.
 
-</div>
+
 
 <span id="isPushed"></span>
 
@@ -178,22 +178,22 @@ is this lever in the pulled or pushed position.
 
 [gadget.t](../file/gadget.t.html)\[[64](../source/gadget.t.html#64)\]
 
-<div class="desc">
+
 
 By default we make isPushed the opposite of isPulled, but we defined
 them as separate properties in case we want a lever that can be in more
 than two positions, and so might be in an intermediate position that is
 neither pushed nor pulled.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Pull)"></span>
 
@@ -201,11 +201,11 @@ neither pushed nor pulled.
 
 [gadget.t](../file/gadget.t.html)\[[77](../source/gadget.t.html#77)\]
 
-<div class="desc">
+
 
 Handle Pulling this Lever
 
-</div>
+
 
 <span id="dobjFor(Push)"></span>
 
@@ -213,11 +213,11 @@ Handle Pulling this Lever
 
 [gadget.t](../file/gadget.t.html)\[[102](../source/gadget.t.html#102)\]
 
-<div class="desc">
+
 
 Handle Pushing this Lever
 
-</div>
+
 
 <span id="makePulled"></span>
 
@@ -225,16 +225,16 @@ Handle Pushing this Lever
 
 [gadget.t](../file/gadget.t.html)\[[70](../source/gadget.t.html#70)\]
 
-<div class="desc">
+
 
 Carry out pushing or pulling the lever. Note that this would need to be
 overridden on a Lever that can be in more than two states.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

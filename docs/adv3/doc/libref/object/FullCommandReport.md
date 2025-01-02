@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 base class for all "full" reports
 
 `class `**`FullCommandReport`**` :   `[`CommandReportMessage`](../object/CommandReportMessage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FullCommandReport`**  
 [`CommandReportMessage`](../object/CommandReportMessage.html)  
@@ -50,11 +50,11 @@ base class for all "full" reports
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`FullCommandReport`**  
 [`AfterCommandReport`](../object/AfterCommandReport.html)  
@@ -64,19 +64,19 @@ base class for all "full" reports
 [`QuestionCommandReport`](../object/QuestionCommandReport.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`seqNum`](#seqNum)
 
@@ -90,11 +90,11 @@ Inherited from `MessageResult` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -109,11 +109,11 @@ Inherited from `MessageResult` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="seqNum"></span>
 
@@ -121,27 +121,27 @@ Inherited from `MessageResult` :
 
 [report.t](../file/report.t.html)\[[220](../source/report.t.html#220)\]
 
-<div class="desc">
+
 
 a full report has a sequence number that tells us where the report goes
 relative to the others - the higher this number, the later the report
 goes
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

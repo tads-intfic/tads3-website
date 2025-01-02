@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A chair is an item that an actor can sit on. When an actor is sitting on
 a chair, the chair contains the actor. In addition to sitting, chairs
@@ -43,15 +43,15 @@ English-specific changes for various nested room types.
 
 `class `**`BasicChair`**` :   `[`NestedRoom`](../object/NestedRoom.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BasicChair`**  
 [`NestedRoom`](../object/NestedRoom.html)  
@@ -61,11 +61,11 @@ English-specific changes for various nested room types.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BasicChair`**  
 [`BasicBed`](../object/BasicBed.html)  
@@ -77,19 +77,19 @@ English-specific changes for various nested room types.
 [`Chair`](../object/Chair.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actorInPrep`](#actorInPrep)[`actorOutOfPrep`](#actorOutOfPrep)[`allowedPostures`](#allowedPostures)[`defaultPosture`](#defaultPosture)[`effectiveFollowLocation`](#effectiveFollowLocation)[`mustMoveIntoProp`](#mustMoveIntoProp)[`objInPrep`](#objInPrep)[`obviousPostures`](#obviousPostures)
 
@@ -107,11 +107,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Board)`](#dobjFor(Board))[`dobjFor(GetOffOf)`](#dobjFor(GetOffOf))[`dobjFor(LieOn)`](#dobjFor(LieOn))[`dobjFor(SitOn)`](#dobjFor(SitOn))[`dobjFor(StandOn)`](#dobjFor(StandOn))[`getDropDestination`](#getDropDestination)[`performEntry`](#performEntry)[`preCondForEntry`](#preCondForEntry)[`removeFromNested`](#removeFromNested)[`tryMovingIntoNested`](#tryMovingIntoNested)[`tryRemovingFromNested`](#tryRemovingFromNested)[`verifyEntry`](#verifyEntry)
 
@@ -129,11 +129,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actorInPrep"></span>
 
@@ -141,11 +141,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2892](../source/en_us.t.html#2892)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorOutOfPrep"></span>
 
@@ -153,11 +153,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2893](../source/en_us.t.html#2893)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="allowedPostures"></span>
 
@@ -165,12 +165,12 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[6311](../source/travel.t.html#6311)\]
 
-<div class="desc">
+
 
 A list of the allowed postures for this object. By default, we can sit
 and stand on a chair, since most ordinary chairs are suitable for both.
 
-</div>
+
 
 <span id="defaultPosture"></span>
 
@@ -178,11 +178,11 @@ and stand on a chair, since most ordinary chairs are suitable for both.
 
 [travel.t](../file/travel.t.html)\[[6357](../source/travel.t.html#6357)\]
 
-<div class="desc">
+
 
 default posture in this nested room is sitting
 
-</div>
+
 
 <span id="effectiveFollowLocation"></span>
 
@@ -190,7 +190,7 @@ default posture in this nested room is sitting
 
 [travel.t](../file/travel.t.html)\[[6334](../source/travel.t.html#6334)\]
 
-<div class="desc">
+
 
 A chair's effective follow location is usually its location's effective
 follow location, because we don't usually want to treat a chair as a
@@ -198,7 +198,7 @@ separate location for the purposes of "follow." That is, if A and B are
 in the same room, and A sits down on a chair in the room, we don't want
 to count this as a move that B could follow.
 
-</div>
+
 
 <span id="mustMoveIntoProp"></span>
 
@@ -206,11 +206,11 @@ to count this as a move that B could follow.
 
 [travel.t](../file/travel.t.html)\[[6354](../source/travel.t.html#6354)\]
 
-<div class="desc">
+
 
 tryMovingIntoNested failure message is "must sit on chair"
 
-</div>
+
 
 <span id="objInPrep"></span>
 
@@ -218,11 +218,11 @@ tryMovingIntoNested failure message is "must sit on chair"
 
 [en_us.t](../file/en_us.t.html)\[[2891](../source/en_us.t.html#2891)\]
 
-<div class="desc">
+
 
 by default, one sits \*on\* a chair
 
-</div>
+
 
 <span id="obviousPostures"></span>
 
@@ -230,7 +230,7 @@ by default, one sits \*on\* a chair
 
 [travel.t](../file/travel.t.html)\[[6324](../source/travel.t.html#6324)\]
 
-<div class="desc">
+
 
 A list of the obvious postures for this object. The only obvious,
 default thing you do with most ordinary chairs is sit on them, even they
@@ -242,15 +242,15 @@ might be possible but not probable. For most ordinary chairs, standing
 is possible, but it's not the first thing you'd think of doing with the
 chair.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Board)"></span>
 
@@ -258,13 +258,13 @@ chair.
 
 [travel.t](../file/travel.t.html)\[[6461](../source/travel.t.html#6461)\]
 
-<div class="desc">
+
 
 For "get on/in" / "board", let our default posture object handle it, by
 running the appropriate nested action that moves the actor into self in
 the default posture.
 
-</div>
+
 
 <span id="dobjFor(GetOffOf)"></span>
 
@@ -272,11 +272,11 @@ the default posture.
 
 [travel.t](../file/travel.t.html)\[[6468](../source/travel.t.html#6468)\]
 
-<div class="desc">
+
 
 "get off of" is the same as "get out of"
 
-</div>
+
 
 <span id="dobjFor(LieOn)"></span>
 
@@ -284,11 +284,11 @@ the default posture.
 
 [travel.t](../file/travel.t.html)\[[6440](../source/travel.t.html#6440)\]
 
-<div class="desc">
+
 
 "lie on" action
 
-</div>
+
 
 <span id="dobjFor(SitOn)"></span>
 
@@ -296,11 +296,11 @@ the default posture.
 
 [travel.t](../file/travel.t.html)\[[6399](../source/travel.t.html#6399)\]
 
-<div class="desc">
+
 
 "sit on" action
 
-</div>
+
 
 <span id="dobjFor(StandOn)"></span>
 
@@ -308,11 +308,11 @@ the default posture.
 
 [travel.t](../file/travel.t.html)\[[6418](../source/travel.t.html#6418)\]
 
-<div class="desc">
+
 
 "stand on" action
 
-</div>
+
 
 <span id="getDropDestination"></span>
 
@@ -320,12 +320,12 @@ the default posture.
 
 [travel.t](../file/travel.t.html)\[[6363](../source/travel.t.html#6363)\]
 
-<div class="desc">
+
 
 by default, objects dropped while sitting in a chair go into the
 enclosing location's drop destination
 
-</div>
+
 
 <span id="performEntry"></span>
 
@@ -333,12 +333,12 @@ enclosing location's drop destination
 
 [travel.t](../file/travel.t.html)\[[6551](../source/travel.t.html#6551)\]
 
-<div class="desc">
+
 
 Perform entry in the given posture. This carries out the common actions
 for SIT ON, LIE ON, and STAND ON.
 
-</div>
+
 
 <span id="preCondForEntry"></span>
 
@@ -346,11 +346,11 @@ for SIT ON, LIE ON, and STAND ON.
 
 [travel.t](../file/travel.t.html)\[[6471](../source/travel.t.html#6471)\]
 
-<div class="desc">
+
 
 standard preconditions for sitting/lying/standing on the chair
 
-</div>
+
 
 <span id="removeFromNested"></span>
 
@@ -358,12 +358,12 @@ standard preconditions for sitting/lying/standing on the chair
 
 [travel.t](../file/travel.t.html)\[[6387](../source/travel.t.html#6387)\]
 
-<div class="desc">
+
 
 Run the appropriate command to remove us from this nested container, as
 a replacement command.
 
-</div>
+
 
 <span id="tryMovingIntoNested"></span>
 
@@ -371,7 +371,7 @@ a replacement command.
 
 [travel.t](../file/travel.t.html)\[[6344](../source/travel.t.html#6344)\]
 
-<div class="desc">
+
 
 Try an implied command to move the actor from outside of this nested
 room into this nested room. By default, we'll call upon our default
@@ -380,7 +380,7 @@ object in the default posture. For a chair, the default posture is
 typically sitting, so the 'sitting' posture will perform a SIT ON
 \<self\> command.
 
-</div>
+
 
 <span id="tryRemovingFromNested"></span>
 
@@ -388,12 +388,12 @@ typically sitting, so the 'sitting' posture will perform a SIT ON
 
 [travel.t](../file/travel.t.html)\[[6374](../source/travel.t.html#6374)\]
 
-<div class="desc">
+
 
 Remove an actor from the chair. By default, we'll simply stand up, since
 this is the normal way out of a chair.
 
-</div>
+
 
 <span id="verifyEntry"></span>
 
@@ -401,18 +401,18 @@ this is the normal way out of a chair.
 
 [travel.t](../file/travel.t.html)\[[6494](../source/travel.t.html#6494)\]
 
-<div class="desc">
+
 
 Verify that we can enter the chair in the given posture. This performs
 verification work common to SIT ON, LIE ON, and STAND ON. If this
 returns true, the caller should inherit the base class default handling,
 otherwise it shouldn't.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

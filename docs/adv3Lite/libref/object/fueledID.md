@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`fueledID`**` :   `[`ModuleID`](../object/ModuleID.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`fueledID`**  
 [`ModuleID`](../object/ModuleID.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`byline`](#byline)[`htmlByline`](#htmlByline)[`name`](#name)[`version`](#version)
 
@@ -54,11 +54,11 @@ Inherited from `ModuleID` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -67,11 +67,11 @@ Inherited from `ModuleID` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="byline"></span>
 
@@ -79,11 +79,11 @@ Inherited from `ModuleID` :
 
 [fueled.t](../file/fueled.t.html)\[[24](../source/fueled.t.html#24)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="htmlByline"></span>
 
@@ -91,11 +91,11 @@ Inherited from `ModuleID` :
 
 [fueled.t](../file/fueled.t.html)\[[25](../source/fueled.t.html#25)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -103,11 +103,11 @@ Inherited from `ModuleID` :
 
 [fueled.t](../file/fueled.t.html)\[[23](../source/fueled.t.html#23)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="version"></span>
 
@@ -115,25 +115,25 @@ Inherited from `ModuleID` :
 
 [fueled.t](../file/fueled.t.html)\[[26](../source/fueled.t.html#26)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

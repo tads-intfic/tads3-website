@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Door is something that can be open and closed (and optionally locked),
 and which must be open to allow travel through. Doors are defined in
@@ -35,15 +35,15 @@ the other
 
 `class `**`Door`**` :   `[`TravelConnector`](../object/TravelConnector.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Door`**  
 [`TravelConnector`](../object/TravelConnector.html)  
@@ -57,29 +57,29 @@ the other
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Door`**  
 [`SecretDoor`](../object/SecretDoor.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`autoUnlock`](#autoUnlock)[`canGoThroughMe`](#canGoThroughMe)[`cannotGoThroughClosedDoorMsg`](#cannotGoThroughClosedDoorMsg)[`isDestinationKnown`](#isDestinationKnown)[`isFixed`](#isFixed)[`isListed`](#isListed)[`isOpen`](#isOpen)[`isOpenable`](#isOpenable)[`openStatusReportable`](#openStatusReportable)[`otherSide`](#otherSide)[`PushTravelVia`](#PushTravelVia)[`traversalMsg`](#traversalMsg)
 
@@ -101,11 +101,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkTravelBarriers`](#checkTravelBarriers)[`destination`](#destination)[`dobjFor(Enter)`](#dobjFor(Enter))[`dobjFor(GoThrough)`](#dobjFor(GoThrough))[`execTravel`](#execTravel)[`iobjFor(PushTravelThrough)`](#iobjFor(PushTravelThrough))[`makeLocked`](#makeLocked)[`makeOpen`](#makeOpen)[`preinitThing`](#preinitThing)[`sayActorFollowing`](#sayActorFollowing)[`sayDeparting`](#sayDeparting)[`sayDoorOpens`](#sayDoorOpens)[`sayTravelerOpensDoor`](#sayTravelerOpensDoor)
 
@@ -129,11 +129,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="autoUnlock"></span>
 
@@ -141,12 +141,12 @@ Inherited from `LMentionable` :
 
 [travel.t](../file/travel.t.html)\[[763](../source/travel.t.html#763)\]
 
-<div class="desc">
+
 
 Flag, do we want to attempt to unlock this door via an implicit action
 if someone attempts to open it while it's locked?
 
-</div>
+
 
 <span id="canGoThroughMe"></span>
 
@@ -154,11 +154,11 @@ if someone attempts to open it while it's locked?
 
 [travel.t](../file/travel.t.html)\[[786](../source/travel.t.html#786)\]
 
-<div class="desc">
+
 
 A Door is something it makes sense to go through.
 
-</div>
+
 
 <span id="cannotGoThroughClosedDoorMsg"></span>
 
@@ -166,12 +166,12 @@ A Door is something it makes sense to go through.
 
 [travel.t](../file/travel.t.html)\[[947](../source/travel.t.html#947)\]
 
-<div class="desc">
+
 
 The message to display if travel is attempted through this door when
 it's closed and we're not allowed to open it via an implicit action.
 
-</div>
+
 
 <span id="isDestinationKnown"></span>
 
@@ -179,13 +179,13 @@ it's closed and we're not allowed to open it via an implicit action.
 
 [travel.t](../file/travel.t.html)\[[954](../source/travel.t.html#954)\]
 
-<div class="desc">
+
 
 By default the player character doesn't start off knowing where this
 door leads. Once the pc has been through the door in either direction
 this becomes true on both sides of the door.
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -193,12 +193,12 @@ this becomes true on both sides of the door.
 
 [travel.t](../file/travel.t.html)\[[751](../source/travel.t.html#751)\]
 
-<div class="desc">
+
 
 A door is something fixed in place, not something that can be picked up
 and carried around.
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -206,11 +206,11 @@ and carried around.
 
 [travel.t](../file/travel.t.html)\[[745](../source/travel.t.html#745)\]
 
-<div class="desc">
+
 
 Doors generally aren't listed separately in room descriptions.
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -218,11 +218,11 @@ Doors generally aren't listed separately in room descriptions.
 
 [travel.t](../file/travel.t.html)\[[742](../source/travel.t.html#742)\]
 
-<div class="desc">
+
 
 Most doors start out closed.
 
-</div>
+
 
 <span id="isOpenable"></span>
 
@@ -230,11 +230,11 @@ Most doors start out closed.
 
 [travel.t](../file/travel.t.html)\[[739](../source/travel.t.html#739)\]
 
-<div class="desc">
+
 
 A door is generally openable
 
-</div>
+
 
 <span id="openStatusReportable"></span>
 
@@ -242,12 +242,12 @@ A door is generally openable
 
 [travel.t](../file/travel.t.html)\[[757](../source/travel.t.html#757)\]
 
-<div class="desc">
+
 
 By default we leave game authors to decide if and how they want to
 report whether a door is open or closed.
 
-</div>
+
 
 <span id="otherSide"></span>
 
@@ -255,14 +255,14 @@ report whether a door is open or closed.
 
 [travel.t](../file/travel.t.html)\[[771](../source/travel.t.html#771)\]
 
-<div class="desc">
+
 
 A physical door is represented by two objects in code, each representing
 one side of the door and each present in one of the two locations the
 door connects. Each side needs to point to the other side through its
 otherSide property.
 
-</div>
+
 
 <span id="PushTravelVia"></span>
 
@@ -270,12 +270,12 @@ otherSide property.
 
 [travel.t](../file/travel.t.html)\[[1043](../source/travel.t.html#1043)\]
 
-<div class="desc">
+
 
 The appropriate action for push an object via a door is
 PushTravelThrough
 
-</div>
+
 
 <span id="traversalMsg"></span>
 
@@ -283,19 +283,19 @@ PushTravelThrough
 
 [travel.t](../file/travel.t.html)\[[1069](../source/travel.t.html#1069)\]
 
-<div class="desc">
+
 
 Create message parameter substitutions for the follower and leader
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkTravelBarriers"></span>
 
@@ -303,13 +303,13 @@ Create message parameter substitutions for the follower and leader
 
 [travel.t](../file/travel.t.html)\[[826](../source/travel.t.html#826)\]
 
-<div class="desc">
+
 
 The most likely barrier to travel through a door is that the door is
 closed and locked, so we check for than after the other kinds of travel
 barrier.
 
-</div>
+
 
 <span id="destination"></span>
 
@@ -317,11 +317,11 @@ barrier.
 
 [travel.t](../file/travel.t.html)\[[1011](../source/travel.t.html#1011)\]
 
-<div class="desc">
+
 
 The destination is the room to which this door leads.
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -329,11 +329,11 @@ The destination is the room to which this door leads.
 
 [travel.t](../file/travel.t.html)\[[1031](../source/travel.t.html#1031)\]
 
-<div class="desc">
+
 
 Entering a door is the same as going through it.
 
-</div>
+
 
 <span id="dobjFor(GoThrough)"></span>
 
@@ -341,11 +341,11 @@ Entering a door is the same as going through it.
 
 [travel.t](../file/travel.t.html)\[[1023](../source/travel.t.html#1023)\]
 
-<div class="desc">
+
 
 Going through a door is the same as traveling via it.
 
-</div>
+
 
 <span id="execTravel"></span>
 
@@ -353,11 +353,11 @@ Going through a door is the same as traveling via it.
 
 [travel.t](../file/travel.t.html)\[[919](../source/travel.t.html#919)\]
 
-<div class="desc">
+
 
 Execute travel through this door.
 
-</div>
+
 
 <span id="iobjFor(PushTravelThrough)"></span>
 
@@ -365,11 +365,11 @@ Execute travel through this door.
 
 [travel.t](../file/travel.t.html)\[[1033](../source/travel.t.html#1033)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="makeLocked"></span>
 
@@ -377,11 +377,11 @@ Execute travel through this door.
 
 [travel.t](../file/travel.t.html)\[[807](../source/travel.t.html#807)\]
 
-<div class="desc">
+
 
 Make a Door locked (stat = true) or unlocked (stat = nil)
 
-</div>
+
 
 <span id="makeOpen"></span>
 
@@ -389,11 +389,11 @@ Make a Door locked (stat = true) or unlocked (stat = nil)
 
 [travel.t](../file/travel.t.html)\[[789](../source/travel.t.html#789)\]
 
-<div class="desc">
+
 
 Make a Door open (stat = true) or closed (stat = nil)
 
-</div>
+
 
 <span id="preinitThing"></span>
 
@@ -401,11 +401,11 @@ Make a Door open (stat = true) or closed (stat = nil)
 
 [travel.t](../file/travel.t.html)\[[957](../source/travel.t.html#957)\]
 
-<div class="desc">
+
 
 Preinitialize a door
 
-</div>
+
 
 <span id="sayActorFollowing"></span>
 
@@ -413,12 +413,12 @@ Preinitialize a door
 
 [travel.t](../file/travel.t.html)\[[1060](../source/travel.t.html#1060)\]
 
-<div class="desc">
+
 
 Display message announcing that follower is following leader through
 this door.
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -426,12 +426,12 @@ this door.
 
 [travel.t](../file/travel.t.html)\[[1049](../source/travel.t.html#1049)\]
 
-<div class="desc">
+
 
 Display message announcing that traveler has left via this door. The
 traveler would normally be an NPC visible to the player character.
 
-</div>
+
 
 <span id="sayDoorOpens"></span>
 
@@ -439,12 +439,12 @@ traveler would normally be an NPC visible to the player character.
 
 [travel.t](../file/travel.t.html)\[[911](../source/travel.t.html#911)\]
 
-<div class="desc">
+
 
 Message to display when the door is opened from the other side so the
 player character can't see who is opening it.
 
-</div>
+
 
 <span id="sayTravelerOpensDoor"></span>
 
@@ -452,16 +452,16 @@ player character can't see who is opening it.
 
 [travel.t](../file/travel.t.html)\[[897](../source/travel.t.html#897)\]
 
-<div class="desc">
+
 
 Message to display when the player character sees the traveler opening
 this door.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \>
@@ -16,7 +16,7 @@ StringComparator
     <a href="tadsobj.html" class="nav"><em>Next:</em> TadsObject</a>    
 </span>
 
-</div>
+
 
 
 
@@ -226,7 +226,7 @@ the following methods:
 
 `calcHash(*str*)`
 
-<div class="fdef">
+
 
 Calculate a hash value for the given string. Returns an integer giving
 the hash value. The hash calculation conforms to the requirement that,
@@ -239,7 +239,7 @@ s2)` indicates a match, then
 
 `matchValues(*inputStr*, *refStr*)`
 
-<div class="fdef">
+
 
 Compares the two strings, and returns a non-zero integer if the two
 strings match, according to the rules defined when the StringComparator
@@ -278,13 +278,13 @@ StringComparator reserves all flag values from 0x0001 to 0x0080, to
 allow for future expansion; equivalence mappings should use flag values
 0x0100 and above.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -294,4 +294,4 @@ StringComparator
     <a href="tadsobj.html" class="nav"><em>Next:</em> TadsObject</a>    
 </span>
 
-</div>
+

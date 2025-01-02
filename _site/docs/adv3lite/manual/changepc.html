@@ -70,51 +70,55 @@ happened. To assist with this setPlayer() returns the previous name of
 the new player character, so when the player becomes Bob you could use
 code like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     "You are now &lt;&lt;setPlayer(bob)&gt;&gt;. ";
-     bob.getOutermostRoom.lookAroundWithin(); 
-     
-</code></pre></div></div>
+<p>`
+     “You are now «setPlayer(bob)». “;
+     bob.getOutermostRoom.lookAroundWithin();</p>
+
+<p>`</p>
 
 <p>Something else you can do to help players keep track of who they’re now
 meant to be is to include the name of the player character in the status
 line. One way to do that might be to include it in parentheses after the
 room name, which we can do like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     modify Room
+<p>`
+     modify Room
         statusName(actor)
         {
             inherited(actor);
             if(libGlobal.playerCharName != nil)
-                " (as &lt;&lt;libGlobal.playerCharName&gt;&gt;) ";
+                “ (as «libGlobal.playerCharName») “;
         }
-    ;
-     
-</code></pre></div></div>
+    ;</p>
+
+<p>`</p>
 
 <p>Or, alternatively, if we prefer it:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
-    modify statusLine
-        showStatusLeft()
-        {
-            inherited;
-            if(libGlobal.playerCharName != nil)
-                " [as &lt;&lt;libGlobal.playerCharName&gt;&gt;] ";
-        }
-    ; 
+<p>`</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>modify statusLine
+    showStatusLeft()
+    {
+        inherited;
+        if(libGlobal.playerCharName != nil)
+            " [as &lt;&lt;libGlobal.playerCharName&gt;&gt;] ";
+    }
+;  `
 </code></pre></div></div>
 
 <p>Or again, if we didn’t want the score and turn count at the right hand
 end of the status line we could do this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify statusLine
+<p>`
+    modify statusLine
         showStatusRight()
-        {        
+        {      <br />
             if(libGlobal.playerCharName != nil)
-                " [as &lt;&lt;libGlobal.playerCharName&gt;&gt;] ";
+                “ [as «libGlobal.playerCharName»] “;
         }
     ;
-</code></pre></div></div>
+`</p>
 
 <p>You can use whichever of these you prefer, or devise your own variant.</p>
 
@@ -139,12 +143,13 @@ NPC, except for the <code class="language-plaintext highlighter-rouge">person</c
 be 1 or 2 if this is the Actor that’s starting out as the player
 character; for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
-    + joan: Actor 'Joan; large; woman; her'
-        "She's quite a large woman. "
-        
-        person =  2
-    ;
+<p>`</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ joan: Actor 'Joan; large; woman; her'
+    "She's quite a large woman. "
+    
+    person =  2
+; `
 </code></pre></div></div>
 
 <p><span id="ispc"></span></p>
@@ -156,12 +161,13 @@ test for which is applicable using the <strong>isPlayerChar</strong> property of
 Actor and write the desc property accordingly. A minimally varying one
 might look like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
-    + joan: Actor 'Joan; large; woman; her'
-        "&lt;&lt;if isPlayerChar&gt;&gt;You're&lt;&lt;else&gt;&gt;She's&lt;&lt;end&gt;&gt; quite a large woman. "
-        
-        person =  2
-    ;
+<p>`</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ joan: Actor 'Joan; large; woman; her'
+    "&lt;&lt;if isPlayerChar&gt;&gt;You're&lt;&lt;else&gt;&gt;She's&lt;&lt;end&gt;&gt; quite a large woman. "
+    
+    person =  2
+; `
 </code></pre></div></div>
 
 <p>In practice, you’d probably want to vary the two descriptions by more

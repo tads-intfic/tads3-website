@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| The User
 Interface  
@@ -16,7 +16,7 @@ Library</a>    
 <a href="fmt.html" class="nav"><em>Next:</em> The Output Formatter</a>
     </span>
 
-</div>
+
 
 
 
@@ -28,7 +28,7 @@ the needs of traditional text-only Interactive Fiction, but goes beyond
 the limits of text-only games to provide graphics, sound effects, and
 GUI-style interaction on platforms that support these features.
 
-<div class="sectoc">
+
 
 [The Output Formatter](fmt.html)  
 [The Default Display Function](dispfn.html)  
@@ -36,11 +36,11 @@ GUI-style interaction on platforms that support these features.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| The User
@@ -50,4 +50,4 @@ Library</a>    
 <a href="fmt.html" class="nav"><em>Next:</em> The Output Formatter</a>
     </span>
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "weakness" criterion. This is similar to the rank-by-problem
 criterion, but rather than ranking on an actual structural problem, it
@@ -44,43 +44,43 @@ real problems.
 
 `class `**`CommandRankingByWeakness`**` :   `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandRankingByWeakness`**  
 [`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`rankByEndAdj`](../object/rankByEndAdj.html)[`rankByPluralTrunc`](../object/rankByPluralTrunc.html)[`rankByPronoun`](../object/rankByPronoun.html)[`rankByTrunc`](../object/rankByTrunc.html)[`rankByWeakness`](../object/rankByWeakness.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`prop_`](#prop_)
 
@@ -88,11 +88,11 @@ real problems.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
 
@@ -100,11 +100,11 @@ real problems.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="prop_"></span>
 
@@ -112,19 +112,19 @@ real problems.
 
 [parser.t](../file/parser.t.html)\[[5910](../source/parser.t.html#5910)\]
 
-<div class="desc">
+
 
 our command-ranking property
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="comparePass1"></span>
 
@@ -132,11 +132,11 @@ our command-ranking property
 
 [parser.t](../file/parser.t.html)\[[5904](../source/parser.t.html#5904)\]
 
-<div class="desc">
+
 
 on pass 1, ignore weaknesses
 
-</div>
+
 
 <span id="comparePass2"></span>
 
@@ -144,15 +144,15 @@ on pass 1, ignore weaknesses
 
 [parser.t](../file/parser.t.html)\[[5907](../source/parser.t.html#5907)\]
 
-<div class="desc">
+
 
 on pass 2, compare based on weaknesses
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

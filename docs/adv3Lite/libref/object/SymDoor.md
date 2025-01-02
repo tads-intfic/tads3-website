@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Symmetrical Door is a door that can be traversed in either direction
 and exists in both the locations it connects. It behaves much like a
@@ -85,15 +85,15 @@ adjectives, such as 'north', to the SymDoor's vocab).
 
 `class `**`SymDoor`**` :   `[`SymPassage`](../object/SymPassage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SymDoor`**  
 [`SymPassage`](../object/SymPassage.html)  
@@ -111,27 +111,27 @@ adjectives, such as 'north', to the SymDoor's vocab).
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`autoUnlock`](#autoUnlock)[`cannotGoThroughClosedDoorMsg`](#cannotGoThroughClosedDoorMsg)[`isOpen`](#isOpen)[`isOpenable`](#isOpenable)[`lockability`](#lockability)[`openStatusReportable`](#openStatusReportable)[`room1Lockability`](#room1Lockability)[`room2Lockability`](#room2Lockability)
 
@@ -162,11 +162,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkTravelBarriers`](#checkTravelBarriers)[`dobjFor(GoThrough)`](#dobjFor(GoThrough))[`iobjFor(PushTravelThrough)`](#iobjFor(PushTravelThrough))
 
@@ -199,11 +199,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="autoUnlock"></span>
 
@@ -211,12 +211,12 @@ Inherited from `LMentionable` :
 
 [symconn.t](../file/symconn.t.html)\[[675](../source/symconn.t.html#675)\]
 
-<div class="desc">
+
 
 Flag, do we want to attempt to unlock this door via an implicit action
 if someone attempts to open it while it's locked? \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="cannotGoThroughClosedDoorMsg"></span>
 
@@ -224,12 +224,12 @@ if someone attempts to open it while it's locked? \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[663](../source/symconn.t.html#663)\]
 
-<div class="desc">
+
 
 If we can't go through the door, use Door's version of the appropriate
 method. \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -237,11 +237,11 @@ method. \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[646](../source/symconn.t.html#646)\]
 
-<div class="desc">
+
 
 A door usually starts out closed. \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="isOpenable"></span>
 
@@ -249,11 +249,11 @@ A door usually starts out closed. \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[643](../source/symconn.t.html#643)\]
 
-<div class="desc">
+
 
 A door is usually openable. \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="lockability"></span>
 
@@ -261,7 +261,7 @@ A door is usually openable. \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[684](../source/symconn.t.html#684)\]
 
-<div class="desc">
+
 
 The lockability of this Door (notLockable, lockableWithKey,
 lockableWithoutKey, or indirectLockable). This can be different for each
@@ -271,7 +271,7 @@ appropriate to the location of the current actor. If you want the same
 lockability for both sides of the door, simply override lockability
 accordingly. \[SYMCONN EXTENSION\]
 
-</div>
+
 
 <span id="openStatusReportable"></span>
 
@@ -279,12 +279,12 @@ accordingly. \[SYMCONN EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[669](../source/symconn.t.html#669)\]
 
-<div class="desc">
+
 
 By default we leave game authors to decide if and how they want to
 report whether a door is open or closed. \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="room1Lockability"></span>
 
@@ -292,11 +292,11 @@ report whether a door is open or closed. \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[689](../source/symconn.t.html#689)\]
 
-<div class="desc">
+
 
 Our lockability on the room1 side of the door. \[SYMCONN EXTENSION\]
 
-</div>
+
 
 <span id="room2Lockability"></span>
 
@@ -304,19 +304,19 @@ Our lockability on the room1 side of the door. \[SYMCONN EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[694](../source/symconn.t.html#694)\]
 
-<div class="desc">
+
 
 Our lockability on the room2 side of the door. \[SYMCONN EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkTravelBarriers"></span>
 
@@ -324,14 +324,14 @@ Our lockability on the room2 side of the door. \[SYMCONN EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[654](../source/symconn.t.html#654)\]
 
-<div class="desc">
+
 
 Although SymDoor doesn't inherit from Door, it needs to use Door's
 checkTravelBarriers() method to attempt to open the door via an implicit
 action if an attempt is made to go through it when it's closed.
 \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="dobjFor(GoThrough)"></span>
 
@@ -339,11 +339,11 @@ action if an attempt is made to go through it when it's closed.
 
 [symconn.t](../file/symconn.t.html)\[[696](../source/symconn.t.html#696)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(PushTravelThrough)"></span>
 
@@ -351,15 +351,15 @@ action if an attempt is made to go through it when it's closed.
 
 [symconn.t](../file/symconn.t.html)\[[701](../source/symconn.t.html#701)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

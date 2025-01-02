@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Sitting posture.
 
 **`sitting`**` :   `[`Posture`](../object/Posture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`sitting`**  
 [`Posture`](../object/Posture.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`msgVerbIPast`](#msgVerbIPast)[`msgVerbIPresent`](#msgVerbIPresent)[`msgVerbTPast`](#msgVerbTPast)[`msgVerbTPresent`](#msgVerbTPresent)[`participle`](#participle)
 
@@ -54,11 +54,11 @@ Inherited from `Posture` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`setActorToPosture`](#setActorToPosture)[`tryMakingPosture`](#tryMakingPosture)
 
@@ -66,11 +66,11 @@ Inherited from `Posture` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="msgVerbIPast"></span>
 
@@ -78,11 +78,11 @@ Inherited from `Posture` :
 
 [en_us.t](../file/en_us.t.html)\[[2638](../source/en_us.t.html#2638)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="msgVerbIPresent"></span>
 
@@ -90,11 +90,11 @@ Inherited from `Posture` :
 
 [en_us.t](../file/en_us.t.html)\[[2637](../source/en_us.t.html#2637)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="msgVerbTPast"></span>
 
@@ -102,11 +102,11 @@ Inherited from `Posture` :
 
 [en_us.t](../file/en_us.t.html)\[[2640](../source/en_us.t.html#2640)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="msgVerbTPresent"></span>
 
@@ -114,11 +114,11 @@ Inherited from `Posture` :
 
 [en_us.t](../file/en_us.t.html)\[[2639](../source/en_us.t.html#2639)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="participle"></span>
 
@@ -126,19 +126,19 @@ Inherited from `Posture` :
 
 [en_us.t](../file/en_us.t.html)\[[2641](../source/en_us.t.html#2641)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="setActorToPosture"></span>
 
@@ -146,11 +146,11 @@ Inherited from `Posture` :
 
 [actor.t](../file/actor.t.html)\[[130](../source/actor.t.html#130)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="tryMakingPosture"></span>
 
@@ -158,15 +158,15 @@ Inherited from `Posture` :
 
 [actor.t](../file/actor.t.html)\[[129](../source/actor.t.html#129)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

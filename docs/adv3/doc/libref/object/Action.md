@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Basic Action class. An Action is the language-independent definition of
 the abstract action of a command.
@@ -38,26 +38,26 @@ Language-specific Action modifications.
 
 `class `**`Action`**` :   `[`BasicProd`](../object/BasicProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Action`**  
 [`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Action`**  
 [`CommandActorAction`](../object/CommandActorAction.html)  
@@ -515,19 +515,19 @@ Language-specific Action modifications.
 [`predicate(Wear)`](../object/predicate(Wear).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionTime`](#actionTime)[`afterActionMainList`](#afterActionMainList)[`beforeAfterObjs`](#beforeAfterObjs)[`defaultForRecursion`](#defaultForRecursion)[`extraMessageParams`](#extraMessageParams)[`implicitMsg`](#implicitMsg)[`includeInUndo`](#includeInUndo)[`isImplicit`](#isImplicit)[`isRepeatable`](#isRepeatable)[`iterationCanceled`](#iterationCanceled)[`originalAction`](#originalAction)[`parentAction`](#parentAction)[`preCond`](#preCond)[`predicateNounPhrases`](#predicateNounPhrases)[`pronounOverride`](#pronounOverride)[`remappedFrom`](#remappedFrom)[`showDefaultReports`](#showDefaultReports)[`synthParamID`](#synthParamID)[`verbFlags`](#verbFlags)[`verifiedOkay`](#verifiedOkay)
 
@@ -536,11 +536,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`actionOfKind`](#actionOfKind)[`addBeforeAfterObj`](#addBeforeAfterObj)[`afterAction`](#afterAction)[`afterActionMain`](#afterActionMain)[`announceActionObject`](#announceActionObject)[`announceAllDefaultObjects`](#announceAllDefaultObjects)[`announceDefaultObject`](#announceDefaultObject)[`beforeAction`](#beforeAction)[`beforeActionMain`](#beforeActionMain)[`cacheMultiObjectAnnouncements`](#cacheMultiObjectAnnouncements)[`callAfterActionMain`](#callAfterActionMain)[`callCatchAllProp`](#callCatchAllProp)[`callPreConditions`](#callPreConditions)[`callVerifyPreCond`](#callVerifyPreCond)[`callVerifyProp`](#callVerifyProp)[`cancelIteration`](#cancelIteration)[`checkAction`](#checkAction)[`checkPreConditions`](#checkPreConditions)[`checkRemapping`](#checkRemapping)[`combineRemappedVerifyResults`](#combineRemappedVerifyResults)[`createActionFrom`](#createActionFrom)[`createActionInstance`](#createActionInstance)[`createTopicQualifierResolver`](#createTopicQualifierResolver)[`doAction`](#doAction)[`doActionOnce`](#doActionOnce)[`execAction`](#execAction)[`filterAmbiguousWithVerify`](#filterAmbiguousWithVerify)[`filterFacets`](#filterFacets)[`filterPluralWithVerify`](#filterPluralWithVerify)[`finishResolveList`](#finishResolveList)[`getAnaphoricBinding`](#getAnaphoricBinding)[`getCurrentObjects`](#getCurrentObjects)[`getDefaultWithVerify`](#getDefaultWithVerify)[`getEnteredVerbPhrase`](#getEnteredVerbPhrase)[`getImplicitPhrase`](#getImplicitPhrase)[`getInfPhrase`](#getInfPhrase)[`getMatchForRole`](#getMatchForRole)[`getMessageParam`](#getMessageParam)[`getNotifyTable`](#getNotifyTable)[`getObjectForRole`](#getObjectForRole)[`getObjPreCondDescList`](#getObjPreCondDescList)[`getObjPreConditions`](#getObjPreConditions)[`getObjResponseProd`](#getObjResponseProd)[`getOriginalAction`](#getOriginalAction)[`getOrigTokenList`](#getOrigTokenList)[`getOtherObjectRole`](#getOtherObjectRole)[`getParticiplePhrase`](#getParticiplePhrase)[`getPreCondDescList`](#getPreCondDescList)[`getPreCondPropForRole`](#getPreCondPropForRole)[`getPredicate`](#getPredicate)[`getPronounOverride`](#getPronounOverride)[`getQuestionInf`](#getQuestionInf)[`getRemappedFrom`](#getRemappedFrom)[`getRemapPropForRole`](#getRemapPropForRole)[`getResolvedObjList`](#getResolvedObjList)[`getResolveInfo`](#getResolveInfo)[`getRoleFromIndex`](#getRoleFromIndex)[`getSimpleSynonymRemap`](#getSimpleSynonymRemap)[`getSortedVerifyResults`](#getSortedVerifyResults)[`getVerbPhrase`](#getVerbPhrase)[`getVerifyPropForRole`](#getVerifyPropForRole)[`initTentative`](#initTentative)[`isConversational`](#isConversational)[`isNestedIn`](#isNestedIn)[`isPartOf`](#isPartOf)[`isRemapped`](#isRemapped)[`makeResolveInfo`](#makeResolveInfo)[`makeResolveInfoList`](#makeResolveInfoList)[`maybeAnnounceDefaultObject`](#maybeAnnounceDefaultObject)[`maybeAnnounceImplicit`](#maybeAnnounceImplicit)[`maybeAnnounceMultiObject`](#maybeAnnounceMultiObject)[`noMatch`](#noMatch)[`notifyBeforeAfter`](#notifyBeforeAfter)[`objListPronoun`](#objListPronoun)[`preAnnounceActionObject`](#preAnnounceActionObject)[`recalcSenseContext`](#recalcSenseContext)[`repeatAction`](#repeatAction)[`resetAction`](#resetAction)[`resolveAction`](#resolveAction)[`resolvedObjectsInScope`](#resolvedObjectsInScope)[`runBeforeNotifiers`](#runBeforeNotifiers)[`saveActionForAgain`](#saveActionForAgain)[`setCurrentObjects`](#setCurrentObjects)[`setImplicit`](#setImplicit)[`setMessageParam`](#setMessageParam)[`setMessageParams`](#setMessageParams)[`setNested`](#setNested)[`setObjectMatches`](#setObjectMatches)[`setOriginalAction`](#setOriginalAction)[`setPronounOverride`](#setPronounOverride)[`setRemapped`](#setRemapped)[`setResolvedObjects`](#setResolvedObjects)[`spPrefix`](#spPrefix)[`spSuffix`](#spSuffix)[`synthMessageParam`](#synthMessageParam)[`verifyAction`](#verifyAction)[`verifyHandlersExist`](#verifyHandlersExist)[`whatObj`](#whatObj)[`whatTranslate`](#whatTranslate)[`withVerifyResults`](#withVerifyResults)[`zeroActionTime`](#zeroActionTime)
 
@@ -549,11 +549,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionTime"></span>
 
@@ -561,13 +561,13 @@ Inherited from `BasicProd` :
 
 [action.t](../file/action.t.html)\[[1298](../source/action.t.html#1298)\]
 
-<div class="desc">
+
 
 the amount of time on the game clock that the action consumes - by
 default, each action consumes one unit, but actions can override this to
 consume more or less game time
 
-</div>
+
 
 <span id="afterActionMainList"></span>
 
@@ -575,11 +575,11 @@ consume more or less game time
 
 [action.t](../file/action.t.html)\[[1291](../source/action.t.html#1291)\]
 
-<div class="desc">
+
 
 list of methods to invoke after we've completed the action
 
-</div>
+
 
 <span id="beforeAfterObjs"></span>
 
@@ -587,11 +587,11 @@ list of methods to invoke after we've completed the action
 
 [action.t](../file/action.t.html)\[[2254](../source/action.t.html#2254)\]
 
-<div class="desc">
+
 
 vector of objects requiring explicit before/after notification
 
-</div>
+
 
 <span id="defaultForRecursion"></span>
 
@@ -599,13 +599,13 @@ vector of objects requiring explicit before/after notification
 
 [action.t](../file/action.t.html)\[[504](../source/action.t.html#504)\]
 
-<div class="desc">
+
 
 the defaultForRecursion flag must be explicitly set in subclasses when
 desired - by default we'll use any language-specific subclass of an
 Action for recursive commands
 
-</div>
+
 
 <span id="extraMessageParams"></span>
 
@@ -613,7 +613,7 @@ Action for recursive commands
 
 [action.t](../file/action.t.html)\[[642](../source/action.t.html#642)\]
 
-<div class="desc">
+
 
 Extra message parameters. If a message processor wants to add special
 message parameters of its own, we'll create a lookup table for the extra
@@ -621,7 +621,7 @@ parameters. Message processors might want to add their own special
 parameters to allow referring to objects other than the main objects of
 the command.
 
-</div>
+
 
 <span id="implicitMsg"></span>
 
@@ -629,11 +629,11 @@ the command.
 
 [action.t](../file/action.t.html)\[[543](../source/action.t.html#543)\]
 
-<div class="desc">
+
 
 the libMessage property, if any, to announce the implicit command
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -641,13 +641,13 @@ the libMessage property, if any, to announce the implicit command
 
 [action.t](../file/action.t.html)\[[656](../source/action.t.html#656)\]
 
-<div class="desc">
+
 
 Flag: this command should be included in the undo records. This is true
 for almost every command, but a few special commands (undo, save) are
 not subject to undo.
 
-</div>
+
 
 <span id="isImplicit"></span>
 
@@ -655,14 +655,14 @@ not subject to undo.
 
 [action.t](../file/action.t.html)\[[512](../source/action.t.html#512)\]
 
-<div class="desc">
+
 
 Flag: the command is implicit. An implicit command is one that is
 performed as an implied enabling step of another command - for example,
 if an actor wants to throw something, the actor must be holding the
 object, so will implicitly try to take the object.
 
-</div>
+
 
 <span id="isRepeatable"></span>
 
@@ -670,13 +670,13 @@ object, so will implicitly try to take the object.
 
 [action.t](../file/action.t.html)\[[649](../source/action.t.html#649)\]
 
-<div class="desc">
+
 
 Flag: this command is repeatable with 'again'. Before executing a
 command, we'll save it for use by the 'again' command if this flag is
 true.
 
-</div>
+
 
 <span id="iterationCanceled"></span>
 
@@ -684,11 +684,11 @@ true.
 
 [action.t](../file/action.t.html)\[[204](../source/action.t.html#204)\]
 
-<div class="desc">
+
 
 internal flag: object iteration has been canceled
 
-</div>
+
 
 <span id="originalAction"></span>
 
@@ -696,12 +696,12 @@ internal flag: object iteration has been canceled
 
 [action.t](../file/action.t.html)\[[540](../source/action.t.html#540)\]
 
-<div class="desc">
+
 
 the original action - we are effectively part of the original action for
 reporting purposes
 
-</div>
+
 
 <span id="parentAction"></span>
 
@@ -709,7 +709,7 @@ reporting purposes
 
 [action.t](../file/action.t.html)\[[527](../source/action.t.html#527)\]
 
-<div class="desc">
+
 
 The parent action. If the command is performed programmatically in the
 course of executing another command, this is set to the enclosing
@@ -722,7 +722,7 @@ different command as a nested command. In any case, a nested but
 non-implicit command does not appear to the player as a separate
 command; it is simply part of the original command.
 
-</div>
+
 
 <span id="preCond"></span>
 
@@ -730,14 +730,14 @@ command; it is simply part of the original command.
 
 [action.t](../file/action.t.html)\[[2403](../source/action.t.html#2403)\]
 
-<div class="desc">
+
 
 Our list of action-level pre-condition objects. These are the conditions
 that apply to the overall action, not to the individual objects
 involved. (Object-level pre-conditions are attached to the objects, not
 to the action.)
 
-</div>
+
 
 <span id="predicateNounPhrases"></span>
 
@@ -745,7 +745,7 @@ to the action.)
 
 [action.t](../file/action.t.html)\[[834](../source/action.t.html#834)\]
 
-<div class="desc">
+
 
 Get the noun-phrase information for my predicate grammar. This returns a
 list of the match-tree properties for the noun-phrase sub-productions in
@@ -757,7 +757,7 @@ predicate grammar match.
 The base Action is intransitive, so it doesn't have any noun-phrase
 slots, hence this is an empty list.
 
-</div>
+
 
 <span id="pronounOverride"></span>
 
@@ -765,13 +765,13 @@ slots, hence this is an empty list.
 
 [action.t](../file/action.t.html)\[[1021](../source/action.t.html#1021)\]
 
-<div class="desc">
+
 
 the pronoun override table - this is nil by default, which means that no
 overrides have been defined yet; we create a LookupTable upon adding the
 first entry to the table
 
-</div>
+
 
 <span id="remappedFrom"></span>
 
@@ -779,12 +779,12 @@ first entry to the table
 
 [action.t](../file/action.t.html)\[[534](../source/action.t.html#534)\]
 
-<div class="desc">
+
 
 The original action we were remapped from. This is valid when the action
 was explicitly remapped during the remap() phase to a different action.
 
-</div>
+
 
 <span id="showDefaultReports"></span>
 
@@ -792,13 +792,13 @@ was explicitly remapped during the remap() phase to a different action.
 
 [action.t](../file/action.t.html)\[[550](../source/action.t.html#550)\]
 
-<div class="desc">
+
 
 Flag: we are to show default reports for this action. In most cases we
 will do so, but for some types of commands (such as implicit commands),
 we suppress default reports.
 
-</div>
+
 
 <span id="synthParamID"></span>
 
@@ -806,11 +806,11 @@ we suppress default reports.
 
 [action.t](../file/action.t.html)\[[633](../source/action.t.html#633)\]
 
-<div class="desc">
+
 
 synthesized message object parameter serial number
 
-</div>
+
 
 <span id="verbFlags"></span>
 
@@ -818,12 +818,12 @@ synthesized message object parameter serial number
 
 [en_us.t](../file/en_us.t.html)\[[8411](../source/en_us.t.html#8411)\]
 
-<div class="desc">
+
 
 Verb flags - these are used to control certain aspects of verb
 formatting. By default, we have no special flags.
 
-</div>
+
 
 <span id="verifiedOkay"></span>
 
@@ -831,7 +831,7 @@ formatting. By default, we have no special flags.
 
 [action.t](../file/action.t.html)\[[2968](../source/action.t.html#2968)\]
 
-<div class="desc">
+
 
 List of objects that verified okay on a prior pass. This is a
 scratch-pad for use by verifier routines, to keep track of work they've
@@ -842,15 +842,15 @@ effects conditions that already hold is normally illogical); by tracking
 that the verification previously succeeded, the verifier can know that
 the action should be allowed to proceed and do nothing.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="actionOfKind"></span>
 
@@ -858,12 +858,12 @@ the action should be allowed to proceed and do nothing.
 
 [action.t](../file/action.t.html)\[[162](../source/action.t.html#162)\]
 
-<div class="desc">
+
 
 Are we the given kind of action? By default, this simply returns true if
 we're of the given action class.
 
-</div>
+
 
 <span id="addBeforeAfterObj"></span>
 
@@ -871,7 +871,7 @@ we're of the given action class.
 
 [action.t](../file/action.t.html)\[[2243](../source/action.t.html#2243)\]
 
-<div class="desc">
+
 
 Register an object for explicit inclusion in beforeAction and
 afterAction notifications. This can be used to register objects that
@@ -880,7 +880,7 @@ means. If this is called after the beforeAction notification loop has
 already started, then the object will only be sent an afterAction
 notification.
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -888,11 +888,11 @@ notification.
 
 [action.t](../file/action.t.html)\[[1812](../source/action.t.html#1812)\]
 
-<div class="desc">
+
 
 Run our action-specific post-processing. By default, we do nothing here.
 
-</div>
+
 
 <span id="afterActionMain"></span>
 
@@ -900,12 +900,12 @@ Run our action-specific post-processing. By default, we do nothing here.
 
 [action.t](../file/action.t.html)\[[1196](../source/action.t.html#1196)\]
 
-<div class="desc">
+
 
 Perform processing after running the entire action. This is called just
 once per action, even if the action was iterated for a list of objects.
 
-</div>
+
 
 <span id="announceActionObject"></span>
 
@@ -913,7 +913,7 @@ once per action, even if the action was iterated for a list of objects.
 
 [action.t](../file/action.t.html)\[[1600](../source/action.t.html#1600)\]
 
-<div class="desc">
+
 
 Announce the object of an action. This should be used for each iteration
 of a command that takes objects to announce the objects on this
@@ -951,7 +951,7 @@ message generator might use this in conjunction with the action to
 include a preposition with the displayed phrase, for example, or choose
 an appropriate inflection.
 
-</div>
+
 
 <span id="announceAllDefaultObjects"></span>
 
@@ -959,12 +959,12 @@ an appropriate inflection.
 
 [en_us.t](../file/en_us.t.html)\[[8289](../source/en_us.t.html#8289)\]
 
-<div class="desc">
+
 
 Announce all defaulted objects in the action. By default, we show
 nothing.
 
-</div>
+
 
 <span id="announceDefaultObject"></span>
 
@@ -972,7 +972,7 @@ nothing.
 
 [en_us.t](../file/en_us.t.html)\[[8276](../source/en_us.t.html#8276)\]
 
-<div class="desc">
+
 
 Announce a default object used with this action.
 
@@ -981,7 +981,7 @@ this is true if we've already resolved all of the other objects in the
 command, nil if not. We use this information to get the phrasing right
 according to the situation.
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -989,11 +989,11 @@ according to the situation.
 
 [action.t](../file/action.t.html)\[[1776](../source/action.t.html#1776)\]
 
-<div class="desc">
+
 
 Run our action-specific pre-processing. By default, we do nothing here.
 
-</div>
+
 
 <span id="beforeActionMain"></span>
 
@@ -1001,12 +1001,12 @@ Run our action-specific pre-processing. By default, we do nothing here.
 
 [action.t](../file/action.t.html)\[[1187](../source/action.t.html#1187)\]
 
-<div class="desc">
+
 
 Perform processing before running the action. This is called just once
 per action, even if the action will be iterated for a list of objects.
 
-</div>
+
 
 <span id="cacheMultiObjectAnnouncements"></span>
 
@@ -1014,7 +1014,7 @@ per action, even if the action will be iterated for a list of objects.
 
 [action.t](../file/action.t.html)\[[1674](../source/action.t.html#1674)\]
 
-<div class="desc">
+
 
 Pre-calculate the multi-object announcement text for each object. This
 is important because these announcements might choose a form for the
@@ -1025,7 +1025,7 @@ iterate over the objects. From the user's perspective, they're referring
 to the objects based on the state at the start of the command, so the
 user will expect to see names based on the that state.
 
-</div>
+
 
 <span id="callAfterActionMain"></span>
 
@@ -1033,7 +1033,7 @@ user will expect to see names based on the that state.
 
 [action.t](../file/action.t.html)\[[1279](../source/action.t.html#1279)\]
 
-<div class="desc">
+
 
 Register an object for afterActionMain invocation. After we've finished
 with the entire action - including all iterated objects involved in the
@@ -1056,7 +1056,7 @@ follow-up handler could display a message summarizing the iterated parts
 of the action; or, it could even scan the transcript for particular
 messages and replace them with a summary.
 
-</div>
+
 
 <span id="callCatchAllProp"></span>
 
@@ -1064,7 +1064,7 @@ messages and replace them with a summary.
 
 [action.t](../file/action.t.html)\[[1946](../source/action.t.html#1946)\]
 
-<div class="desc">
+
 
 Call a catch-all property on the given object.
 
@@ -1088,7 +1088,7 @@ this property in all cases.
 Returns true if there is indeed a Default property that overrides the
 action, nil if not.
 
-</div>
+
 
 <span id="callPreConditions"></span>
 
@@ -1096,12 +1096,12 @@ action, nil if not.
 
 [action.t](../file/action.t.html)\[[2338](../source/action.t.html#2338)\]
 
-<div class="desc">
+
 
 Call a method on all of the precondition objects in the precondition
 list obtained from the given property of the given object.
 
-</div>
+
 
 <span id="callVerifyPreCond"></span>
 
@@ -1109,12 +1109,12 @@ list obtained from the given property of the given object.
 
 [action.t](../file/action.t.html)\[[1896](../source/action.t.html#1896)\]
 
-<div class="desc">
+
 
 Verify the non-object-related pre-conditions. This runs verification on
 each of the pre-condition objects defined for the action.
 
-</div>
+
 
 <span id="callVerifyProp"></span>
 
@@ -1122,7 +1122,7 @@ each of the pre-condition objects defined for the action.
 
 [action.t](../file/action.t.html)\[[1984](../source/action.t.html#1984)\]
 
-<div class="desc">
+
 
 Call a verification routine. This creates a results object and makes it
 active, then invokes the given verification routine on the given object.
@@ -1135,7 +1135,7 @@ so far - this can be used for multi-object verifications to gather all
 of the verification results for all of the objects into a single result
 list. If resultSoFar is nil, we'll create a new result list.
 
-</div>
+
 
 <span id="cancelIteration"></span>
 
@@ -1143,7 +1143,7 @@ list. If resultSoFar is nil, we'll create a new result list.
 
 [action.t](../file/action.t.html)\[[201](../source/action.t.html#201)\]
 
-<div class="desc">
+
 
 Cancel iteration of the action. This can be called during the 'check' or
 'action' phases of executing this action. It tells the action that we
@@ -1158,7 +1158,7 @@ iterate over, ending the command normally. If you want to cut off the
 remainder of the execution cycle for the current object, you can use
 'exit' (for example) immediately after calling this method.
 
-</div>
+
 
 <span id="checkAction"></span>
 
@@ -1166,7 +1166,7 @@ remainder of the execution cycle for the current object, you can use
 
 [action.t](../file/action.t.html)\[[1791](../source/action.t.html#1791)\]
 
-<div class="desc">
+
 
 Check the action. This runs the 'check' phase, and must be overridden
 for each subclass.
@@ -1178,7 +1178,7 @@ from 'execute' mostly for the benefit of transitive actions, where the
 'check' phase gives the involved objects a chance to object to the
 action.
 
-</div>
+
 
 <span id="checkPreConditions"></span>
 
@@ -1186,7 +1186,7 @@ action.
 
 [action.t](../file/action.t.html)\[[2292](../source/action.t.html#2292)\]
 
-<div class="desc">
+
 
 Check any pre-conditions for the action.
 
@@ -1202,7 +1202,7 @@ a precondition must simply fail (by displaying an appropriate failure
 report and using 'exit') without attempting an implicit command if its
 assertion does not hold.
 
-</div>
+
 
 <span id="checkRemapping"></span>
 
@@ -1210,7 +1210,7 @@ assertion does not hold.
 
 [action.t](../file/action.t.html)\[[1851](../source/action.t.html#1851)\]
 
-<div class="desc">
+
 
 Check for remapping the action. This should check with each resolved
 object involved in the command to see if the object wants to remap the
@@ -1219,7 +1219,7 @@ action (using replaceAction or equivalent). Note that replacing the
 action must use 'exit' to terminate the original action, so this will
 never return if remapping actually does occur.
 
-</div>
+
 
 <span id="combineRemappedVerifyResults"></span>
 
@@ -1227,7 +1227,7 @@ never return if remapping actually does occur.
 
 [action.t](../file/action.t.html)\[[2520](../source/action.t.html#2520)\]
 
-<div class="desc">
+
 
 Combine any remapped verify results in the given verify result list. We
 will remove any result that was remapped to a different object if and
@@ -1237,7 +1237,7 @@ fashion, they become effectively equivalent for the purposes of this
 command, so we don't have to distinguish between them for disambiguation
 or defaulting purposes.
 
-</div>
+
 
 <span id="createActionFrom"></span>
 
@@ -1245,12 +1245,12 @@ or defaulting purposes.
 
 [action.t](../file/action.t.html)\[[275](../source/action.t.html#275)\]
 
-<div class="desc">
+
 
 Create an instance of this action based on another action. We'll copy
 the basic properties of the original action.
 
-</div>
+
 
 <span id="createActionInstance"></span>
 
@@ -1258,7 +1258,7 @@ the basic properties of the original action.
 
 [action.t](../file/action.t.html)\[[235](../source/action.t.html#235)\]
 
-<div class="desc">
+
 
 Create an instance of this action, for use by a recursive or
 programmatically-generated command.
@@ -1286,7 +1286,7 @@ module designate a particular subclass to use as the default for
 recursive commands, which might be desirable in cases where the language
 module defines more than one subclass of an action.
 
-</div>
+
 
 <span id="createTopicQualifierResolver"></span>
 
@@ -1294,7 +1294,7 @@ module defines more than one subclass of an action.
 
 [action.t](../file/action.t.html)\[[2951](../source/action.t.html#2951)\]
 
-<div class="desc">
+
 
 Create a topic qualifier resolver. This type of resolver is used for
 qualifier phrases (e.g., possessives) within topic phrases within
@@ -1304,7 +1304,7 @@ a topic phrase from one action to be resolved in the context of another
 action that wouldn't normally involve a topic phrase. That's why this is
 needed on the base Action class.
 
-</div>
+
 
 <span id="doAction"></span>
 
@@ -1312,12 +1312,12 @@ needed on the base Action class.
 
 [action.t](../file/action.t.html)\[[1097](../source/action.t.html#1097)\]
 
-<div class="desc">
+
 
 Perform this action. Throughout execution of the action, the global
 parser variables that specify the current actor and action are valid.
 
-</div>
+
 
 <span id="doActionOnce"></span>
 
@@ -1325,7 +1325,7 @@ parser variables that specify the current actor and action are valid.
 
 [action.t](../file/action.t.html)\[[1326](../source/action.t.html#1326)\]
 
-<div class="desc">
+
 
 Execute the action for a single set of objects. This runs the full
 execution sequence for the current set of objects.
@@ -1334,7 +1334,7 @@ Subclasses generally won't override this method, but will instead
 override the methods that implement the individual steps in the
 execution sequence.
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -1342,7 +1342,7 @@ execution sequence.
 
 [action.t](../file/action.t.html)\[[1802](../source/action.t.html#1802)\]
 
-<div class="desc">
+
 
 Execute the action. This must be overridden by each subclass.
 
@@ -1352,7 +1352,7 @@ objects involved in the command - for example, most single-object
 commands will call a method in the direct object to carry out the
 command.
 
-</div>
+
 
 <span id="filterAmbiguousWithVerify"></span>
 
@@ -1360,7 +1360,7 @@ command.
 
 [action.t](../file/action.t.html)\[[2574](../source/action.t.html#2574)\]
 
-<div class="desc">
+
 
 Filter an ambiguous object list using the given verification method. We
 call the given verification method on each object, noting the result,
@@ -1374,7 +1374,7 @@ This is the typical way that we disambiguate a list of objects, but this
 is merely a service routine, so individual actions can choose to use
 this or other mechanisms as appropriate.
 
-</div>
+
 
 <span id="filterFacets"></span>
 
@@ -1382,7 +1382,7 @@ this or other mechanisms as appropriate.
 
 [action.t](../file/action.t.html)\[[2776](../source/action.t.html#2776)\]
 
-<div class="desc">
+
 
 Filter out redundant facets of the same object. The various facets of an
 object are equivalent to the parser. An object that has multiple facets
@@ -1390,7 +1390,7 @@ is meant to appear to be one game world object from the perspective of a
 character - the multiple facet objects are an internal implementation
 detail.
 
-</div>
+
 
 <span id="filterPluralWithVerify"></span>
 
@@ -1398,14 +1398,14 @@ detail.
 
 [action.t](../file/action.t.html)\[[2738](../source/action.t.html#2738)\]
 
-<div class="desc">
+
 
 Filter a plural list with a verification method. We'll reduce the list
 to the subset of objects that verify as logical, if there are any. If
 there are no logical objects in the list, we'll simply return the entire
 original list.
 
-</div>
+
 
 <span id="finishResolveList"></span>
 
@@ -1413,14 +1413,14 @@ original list.
 
 [action.t](../file/action.t.html)\[[2411](../source/action.t.html#2411)\]
 
-<div class="desc">
+
 
 Finish the result list for a resolved noun phrase. This is used just
 before disambiguation. We'll give each object in the list a chance to
 filter the list with filterResolveList, and we'll note the noun phrase
 we matched in each resolved object.
 
-</div>
+
 
 <span id="getAnaphoricBinding"></span>
 
@@ -1428,7 +1428,7 @@ we matched in each resolved object.
 
 [action.t](../file/action.t.html)\[[960](../source/action.t.html#960)\]
 
-<div class="desc">
+
 
 Get the list of bindings for an anaphoric pronoun - this is a pronoun
 that refers back to an earlier noun phrase in the same sentence, such as
@@ -1456,7 +1456,7 @@ phrase production that requested the anaphor binding.
 'typ' is the PronounType specifier for the corresponding ordinary
 pronoun. For 'himself', for example, typ will be PronounHim.
 
-</div>
+
 
 <span id="getCurrentObjects"></span>
 
@@ -1464,7 +1464,7 @@ pronoun. For 'himself', for example, typ will be PronounHim.
 
 [action.t](../file/action.t.html)\[[2266](../source/action.t.html#2266)\]
 
-<div class="desc">
+
 
 Get the list of all of the objects (direct object, indirect object, and
 any additional objects for actions with three or more object roles)
@@ -1475,7 +1475,7 @@ are selected for the action.
 By default, an action has no objects roles at all, so we'll just return
 an empty list.
 
-</div>
+
 
 <span id="getDefaultWithVerify"></span>
 
@@ -1483,7 +1483,7 @@ an empty list.
 
 [action.t](../file/action.t.html)\[[2838](../source/action.t.html#2838)\]
 
-<div class="desc">
+
 
 Get a default object using the given verification method. We'll start
 with the 'all' list, then use the verification method to reduce the list
@@ -1491,7 +1491,7 @@ to the most likely candidates. If we find a unique most likely
 candidate, we'll return a ResolveInfo list with that result; otherwise,
 we'll return nothing, since there is no suitable default.
 
-</div>
+
 
 <span id="getEnteredVerbPhrase"></span>
 
@@ -1499,7 +1499,7 @@ we'll return nothing, since there is no suitable default.
 
 [action.t](../file/action.t.html)\[[718](../source/action.t.html#718)\]
 
-<div class="desc">
+
 
 Get the actual verb phrase the player typed in to generate this Action,
 expressed in a canonical format. The canonical format consists of the
@@ -1512,7 +1512,7 @@ and '(topic)' for a topic phrase.
 For example, if the player typed PUT BOOK AND PENCIL IN BOX, the
 canonical phrasing we return would be "put (dobj) in (iobj)".
 
-</div>
+
 
 <span id="getImplicitPhrase"></span>
 
@@ -1520,7 +1520,7 @@ canonical phrasing we return would be "put (dobj) in (iobj)".
 
 [en_us.t](../file/en_us.t.html)\[[8303](../source/en_us.t.html#8303)\]
 
-<div class="desc">
+
 
 Return a phrase describing the action performed implicitly, as a
 participle phrase. 'ctx' is an ImplicitAnnouncementContext object
@@ -1533,7 +1533,7 @@ Otherwise, we'll be describing the action as actually having been
 performed, so we'll return a present participle phrase ("opening the
 box").
 
-</div>
+
 
 <span id="getInfPhrase"></span>
 
@@ -1541,7 +1541,7 @@ box").
 
 [en_us.t](../file/en_us.t.html)\[[8320](../source/en_us.t.html#8320)\]
 
-<div class="desc">
+
 
 Get the infinitive form of the action. We are NOT to include the
 infinitive complementizer (i.e., "to") as part of the result, since the
@@ -1549,7 +1549,7 @@ complementizer isn't used in all contexts in which we might want to use
 the infinitive; for example, we don't want a "to" in phrases involving
 an auxiliary verb, such as "he can open the box."
 
-</div>
+
 
 <span id="getMatchForRole"></span>
 
@@ -1557,11 +1557,11 @@ an auxiliary verb, such as "he can open the box."
 
 [action.t](../file/action.t.html)\[[856](../source/action.t.html#856)\]
 
-<div class="desc">
+
 
 get the match tree for the noun phrase in the given role
 
-</div>
+
 
 <span id="getMessageParam"></span>
 
@@ -1569,14 +1569,14 @@ get the match tree for the noun phrase in the given role
 
 [action.t](../file/action.t.html)\[[558](../source/action.t.html#558)\]
 
-<div class="desc">
+
 
 Get a message parameter object for the action. Each action subclass
 defines this to return its objects according to its own classifications.
 The default action has no objects, but recognizes 'actor' as the current
 command's actor.
 
-</div>
+
 
 <span id="getNotifyTable"></span>
 
@@ -1584,12 +1584,12 @@ command's actor.
 
 [action.t](../file/action.t.html)\[[2175](../source/action.t.html#2175)\]
 
-<div class="desc">
+
 
 Get the list of objects to notify before or after the action has been
 performed.
 
-</div>
+
 
 <span id="getObjectForRole"></span>
 
@@ -1597,11 +1597,11 @@ performed.
 
 [action.t](../file/action.t.html)\[[853](../source/action.t.html#853)\]
 
-<div class="desc">
+
 
 get the resolved object in a given role
 
-</div>
+
 
 <span id="getObjPreCondDescList"></span>
 
@@ -1609,13 +1609,13 @@ get the resolved object in a given role
 
 [action.t](../file/action.t.html)\[[2314](../source/action.t.html#2314)\]
 
-<div class="desc">
+
 
 Get a precondition descriptor list for the given object. This returns a
 list of PreCondDesc objects that wrap the preconditions for the given
 object in the given role for this action.
 
-</div>
+
 
 <span id="getObjPreConditions"></span>
 
@@ -1623,13 +1623,13 @@ object in the given role for this action.
 
 [action.t](../file/action.t.html)\[[2060](../source/action.t.html#2060)\]
 
-<div class="desc">
+
 
 Get the precondition list for an object. whichObj is the object role of
 the object whose preconditions we're retrieving; this is nil if we're
 looking for action-level preconditions.
 
-</div>
+
 
 <span id="getObjResponseProd"></span>
 
@@ -1637,13 +1637,13 @@ looking for action-level preconditions.
 
 [action.t](../file/action.t.html)\[[2975](../source/action.t.html#2975)\]
 
-<div class="desc">
+
 
 Get the missing object response production for a given resolver role.
 (The base action doesn't have any objects, so there's no such thing as a
 missing object query.)
 
-</div>
+
 
 <span id="getOriginalAction"></span>
 
@@ -1651,7 +1651,7 @@ missing object query.)
 
 [action.t](../file/action.t.html)\[[391](../source/action.t.html#391)\]
 
-<div class="desc">
+
 
 Get the "original" action. If I'm a replacement or nested action, this
 returns the original main action of which I'm a part, for reporting
@@ -1673,7 +1673,7 @@ reports to hide the internal details of how the action is carried out,
 and instead say what the action was meant to do from the player's
 perspective.
 
-</div>
+
 
 <span id="getOrigTokenList"></span>
 
@@ -1681,7 +1681,7 @@ perspective.
 
 [action.t](../file/action.t.html)\[[2924](../source/action.t.html#2924)\]
 
-<div class="desc">
+
 
 A synthesized Action (one that's generated by something other than
 parsing a command line, such as an event action or nested action) won't
@@ -1690,7 +1690,7 @@ list, we need to check for this possibility. If we don't have a token
 list, but we do have a parent action, we'll defer to the parent action.
 Otherwise, we'll simply return nil.
 
-</div>
+
 
 <span id="getOtherObjectRole"></span>
 
@@ -1698,14 +1698,14 @@ Otherwise, we'll simply return nil.
 
 [action.t](../file/action.t.html)\[[850](../source/action.t.html#850)\]
 
-<div class="desc">
+
 
 Get the "other object" role - this is the complement of the given object
 role for a two-object action, and is used to determine the real role of
 the special OtherObject placeholder in a remapTo(). This is only
 meaningful with actions of exactly two objects.
 
-</div>
+
 
 <span id="getParticiplePhrase"></span>
 
@@ -1713,13 +1713,13 @@ meaningful with actions of exactly two objects.
 
 [en_us.t](../file/en_us.t.html)\[[8359](../source/en_us.t.html#8359)\]
 
-<div class="desc">
+
 
 Get a string describing the full action in present participle form,
 using the current command objects: "taking the watch", "putting the book
 on the shelf"
 
-</div>
+
 
 <span id="getPreCondDescList"></span>
 
@@ -1727,13 +1727,13 @@ on the shelf"
 
 [action.t](../file/action.t.html)\[[2303](../source/action.t.html#2303)\]
 
-<div class="desc">
+
 
 Get the precondition descriptor list for the action. For the base
 intransitive action type, this simply returns the list of conditions for
 the action itself.
 
-</div>
+
 
 <span id="getPreCondPropForRole"></span>
 
@@ -1741,11 +1741,11 @@ the action itself.
 
 [action.t](../file/action.t.html)\[[865](../source/action.t.html#865)\]
 
-<div class="desc">
+
 
 get the 'preCond' property for a given object role
 
-</div>
+
 
 <span id="getPredicate"></span>
 
@@ -1753,7 +1753,7 @@ get the 'preCond' property for a given object role
 
 [action.t](../file/action.t.html)\[[811](../source/action.t.html#811)\]
 
-<div class="desc">
+
 
 Get the grammar match tree object for the predicate that was used to
 enter this command. By default, if we have an original action, we return
@@ -1771,7 +1771,7 @@ TAKE BOX AND BOOK AND GO NORTH", the predicate for the Take action is
 "TAKE BOX AND BOOK" - the full verb phrase includes any multiple-object
 lists in the original command.)
 
-</div>
+
 
 <span id="getPronounOverride"></span>
 
@@ -1779,14 +1779,14 @@ lists in the original command.)
 
 [action.t](../file/action.t.html)\[[992](../source/action.t.html#992)\]
 
-<div class="desc">
+
 
 Get any special pronoun override in effect for the action, as set via
 setPronounOverride(). This looks in our own override table for a
 definition; then, if we have no override of our own, we ask our parent
 action if we have one, then our original action.
 
-</div>
+
 
 <span id="getQuestionInf"></span>
 
@@ -1794,7 +1794,7 @@ action if we have one, then our original action.
 
 [en_us.t](../file/en_us.t.html)\[[8345](../source/en_us.t.html#8345)\]
 
-<div class="desc">
+
 
 Get the root infinitive form of our verb phrase as part of a question in
 which one of the verb's objects is the "unknown" of the interrogative.
@@ -1813,7 +1813,7 @@ Note that we are NOT to include the infinitive complementizer (i.e.,
 used in some contexts where the infinitive conjugation is needed (for
 example, "what should I \<infinitive\>").
 
-</div>
+
 
 <span id="getRemappedFrom"></span>
 
@@ -1821,11 +1821,11 @@ example, "what should I \<infinitive\>").
 
 [action.t](../file/action.t.html)\[[430](../source/action.t.html#430)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getRemapPropForRole"></span>
 
@@ -1833,11 +1833,11 @@ example, "what should I \<infinitive\>").
 
 [action.t](../file/action.t.html)\[[871](../source/action.t.html#871)\]
 
-<div class="desc">
+
 
 get the 'remap' property for a given object role
 
-</div>
+
 
 <span id="getResolvedObjList"></span>
 
@@ -1845,11 +1845,11 @@ get the 'remap' property for a given object role
 
 [action.t](../file/action.t.html)\[[1686](../source/action.t.html#1686)\]
 
-<div class="desc">
+
 
 get the list of resolved objects in the given role
 
-</div>
+
 
 <span id="getResolveInfo"></span>
 
@@ -1857,14 +1857,14 @@ get the list of resolved objects in the given role
 
 [action.t](../file/action.t.html)\[[883](../source/action.t.html#883)\]
 
-<div class="desc">
+
 
 Get the ResolveInfo for the given object in the current command. Since
 we don't have any objects at all, we'll simply return a new ResolveInfo
 wrapping the given object. 'cur' is the object we're looking for, and
 'oldRole' is the role the object previously played in the action.
 
-</div>
+
 
 <span id="getRoleFromIndex"></span>
 
@@ -1872,14 +1872,14 @@ wrapping the given object. 'cur' is the object we're looking for, and
 
 [action.t](../file/action.t.html)\[[842](../source/action.t.html#842)\]
 
-<div class="desc">
+
 
 Get the object "role" identifier for the given index. This returns the
 identifier (DirectObject, IndirectObject, etc.) for the object at the
 given slot index, as used in setResolvedObjects(). The first object is
 at index 1.
 
-</div>
+
 
 <span id="getSimpleSynonymRemap"></span>
 
@@ -1887,7 +1887,7 @@ at index 1.
 
 [action.t](../file/action.t.html)\[[451](../source/action.t.html#451)\]
 
-<div class="desc">
+
 
 Get the "simple synonym" remapping for one of our objects, if any. 'obj'
 is the resolved object to remap, and 'role' is the object role
@@ -1905,7 +1905,7 @@ same action role as the original object was.
 
 If there's no simple synonym remapping, we'll return nil.
 
-</div>
+
 
 <span id="getSortedVerifyResults"></span>
 
@@ -1913,14 +1913,14 @@ If there's no simple synonym remapping, we'll return nil.
 
 [action.t](../file/action.t.html)\[[2432](../source/action.t.html#2432)\]
 
-<div class="desc">
+
 
 Get a list of verification results for the given ResolveInfo objects,
 sorted from best to worst. Each entry in the returned list will be a
 VerifyResultList object whose obj\_ property is set to the ResolveInfo
 object for which it was generated.
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -1928,7 +1928,7 @@ object for which it was generated.
 
 [en_us.t](../file/en_us.t.html)\[[8375](../source/en_us.t.html#8375)\]
 
-<div class="desc">
+
 
 Get the full verb phrase in either infinitive or participle format. This
 is a common handler for getInfinitivePhrase() and getParticiplePhrase().
@@ -1937,7 +1937,7 @@ is a common handler for getInfinitivePhrase() and getParticiplePhrase().
 antecedents when we're stringing together multiple verb phrases. 'ctx'
 can be nil if the verb phrase is being used in isolation.
 
-</div>
+
 
 <span id="getVerifyPropForRole"></span>
 
@@ -1945,11 +1945,11 @@ can be nil if the verb phrase is being used in isolation.
 
 [action.t](../file/action.t.html)\[[859](../source/action.t.html#859)\]
 
-<div class="desc">
+
 
 get the 'verify' property for a given object role
 
-</div>
+
 
 <span id="initTentative"></span>
 
@@ -1957,12 +1957,12 @@ get the 'verify' property for a given object role
 
 [action.t](../file/action.t.html)\[[1837](../source/action.t.html#1837)\]
 
-<div class="desc">
+
 
 Initialize tentative resolutions for other noun phrases besides the one
 indicated.
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -1970,7 +1970,7 @@ indicated.
 
 [action.t](../file/action.t.html)\[[703](../source/action.t.html#703)\]
 
-<div class="desc">
+
 
 Flag: this is a "conversational" command, as opposed to an order. When
 this type of command is addressed to another character, it doesn't ask
@@ -2013,7 +2013,7 @@ conversational if the action itself is a conversational overture. So,
 "BOB, HELLO" is conversational; "BOB, ASK BILL ABOUT COMPUTER" is not,
 because it orders Bob to do something.
 
-</div>
+
 
 <span id="isNestedIn"></span>
 
@@ -2021,13 +2021,13 @@ because it orders Bob to do something.
 
 [action.t](../file/action.t.html)\[[337](../source/action.t.html#337)\]
 
-<div class="desc">
+
 
 Determine if I'm nested within the given action. Returns true if the
 given action is my parent action, or if my parent action is nested
 within the given action.
 
-</div>
+
 
 <span id="isPartOf"></span>
 
@@ -2035,13 +2035,13 @@ within the given action.
 
 [action.t](../file/action.t.html)\[[407](../source/action.t.html#407)\]
 
-<div class="desc">
+
 
 Determine if this action is "part of" the given action. I'm part of the
 given action if I am the given action, or the given action is my
 "original" action, or my original action is part of the given action.
 
-</div>
+
 
 <span id="isRemapped"></span>
 
@@ -2049,11 +2049,11 @@ given action if I am the given action, or the given action is my
 
 [action.t](../file/action.t.html)\[[429](../source/action.t.html#429)\]
 
-<div class="desc">
+
 
 determine if I'm remapped, and get the original action if so
 
-</div>
+
 
 <span id="makeResolveInfo"></span>
 
@@ -2061,11 +2061,11 @@ determine if I'm remapped, and get the original action if so
 
 [action.t](../file/action.t.html)\[[1024](../source/action.t.html#1024)\]
 
-<div class="desc">
+
 
 wrap an object with a ResolveInfo
 
-</div>
+
 
 <span id="makeResolveInfoList"></span>
 
@@ -2073,11 +2073,11 @@ wrap an object with a ResolveInfo
 
 [action.t](../file/action.t.html)\[[1039](../source/action.t.html#1039)\]
 
-<div class="desc">
+
 
 Convert an object or list of objects to a ResolveInfo list
 
-</div>
+
 
 <span id="maybeAnnounceDefaultObject"></span>
 
@@ -2085,13 +2085,13 @@ Convert an object or list of objects to a ResolveInfo list
 
 [action.t](../file/action.t.html)\[[1700](../source/action.t.html#1700)\]
 
-<div class="desc">
+
 
 Announce a defaulted object list, if appropriate. We'll announce the
 object if we have a single object in the given resolution list, it was
 defaulted, and it hasn't yet been announced.
 
-</div>
+
 
 <span id="maybeAnnounceImplicit"></span>
 
@@ -2099,11 +2099,11 @@ defaulted, and it hasn't yet been announced.
 
 [action.t](../file/action.t.html)\[[1540](../source/action.t.html#1540)\]
 
-<div class="desc">
+
 
 Maybe announce the action as an implied action.
 
-</div>
+
 
 <span id="maybeAnnounceMultiObject"></span>
 
@@ -2111,11 +2111,11 @@ Maybe announce the action as an implied action.
 
 [action.t](../file/action.t.html)\[[1643](../source/action.t.html#1643)\]
 
-<div class="desc">
+
 
 announce a multi-action object, if appropriate
 
-</div>
+
 
 <span id="noMatch"></span>
 
@@ -2123,14 +2123,14 @@ announce a multi-action object, if appropriate
 
 [en_us.t](../file/en_us.t.html)\[[8405](../source/en_us.t.html#8405)\]
 
-<div class="desc">
+
 
 Show the "noMatch" library message. For most verbs, we use the basic
 "you can't see that here". Verbs that are mostly used with intangible
 objects, such as LISTEN TO and SMELL, might want to override this to use
 a less visually-oriented message.
 
-</div>
+
 
 <span id="notifyBeforeAfter"></span>
 
@@ -2138,12 +2138,12 @@ a less visually-oriented message.
 
 [action.t](../file/action.t.html)\[[2160](../source/action.t.html#2160)\]
 
-<div class="desc">
+
 
 Call the beforeAction or afterAction method for each object in the
 notification list.
 
-</div>
+
 
 <span id="objListPronoun"></span>
 
@@ -2151,13 +2151,13 @@ notification list.
 
 [en_us.t](../file/en_us.t.html)\[[8183](../source/en_us.t.html#8183)\]
 
-<div class="desc">
+
 
 Return a string with the appropriate pronoun (objective form) for a list
 of object matches, with the given resolved cardinality. This list is a
 list of ResolveInfo objects.
 
-</div>
+
 
 <span id="preAnnounceActionObject"></span>
 
@@ -2165,7 +2165,7 @@ list of ResolveInfo objects.
 
 [action.t](../file/action.t.html)\[[1744](../source/action.t.html#1744)\]
 
-<div class="desc">
+
 
 "Pre-announce" a common object for a command that might involve
 iteration over other objects. For example, in "put all in box", the box
@@ -2184,7 +2184,7 @@ Returns true if we did any pre-announcing, nil otherwise. If we return
 true, the caller should not re-announce this object during the
 iteration, since our pre-announcement is common to all iterations.
 
-</div>
+
 
 <span id="recalcSenseContext"></span>
 
@@ -2192,7 +2192,7 @@ iteration, since our pre-announcement is common to all iterations.
 
 [action.t](../file/action.t.html)\[[1531](../source/action.t.html#1531)\]
 
-<div class="desc">
+
 
 Reset the message generation context for a sense change. This can be
 called when something substantial happens in the midst of a command, and
@@ -2201,7 +2201,7 @@ change. For example, this is used when a non-player character moves from
 one location to another, because the NPC might want to generate leaving
 and arriving messages differently in the two locations.
 
-</div>
+
 
 <span id="repeatAction"></span>
 
@@ -2209,11 +2209,11 @@ and arriving messages differently in the two locations.
 
 [action.t](../file/action.t.html)\[[178](../source/action.t.html#178)\]
 
-<div class="desc">
+
 
 Repeat the action, for an AGAIN command.
 
-</div>
+
 
 <span id="resetAction"></span>
 
@@ -2221,13 +2221,13 @@ Repeat the action, for an AGAIN command.
 
 [action.t](../file/action.t.html)\[[169](../source/action.t.html#169)\]
 
-<div class="desc">
+
 
 Reset the action in preparation for re-execution. This should discard
 any scoped context from any past execution of the command, such as
 cached scope information.
 
-</div>
+
 
 <span id="resolveAction"></span>
 
@@ -2235,7 +2235,7 @@ cached scope information.
 
 [en_us.t](../file/en_us.t.html)\[[8149](../source/en_us.t.html#8149)\]
 
-<div class="desc">
+
 
 In the English grammar, all 'predicate' grammar definitions (which are
 usually made via the VerbRule macro) are associated with Action match
@@ -2263,7 +2263,7 @@ must be defined on whatever class is used to construct 'predicate'
 grammar matches, instead of on Action, since Action will not be a
 'predicate' match.
 
-</div>
+
 
 <span id="resolvedObjectsInScope"></span>
 
@@ -2271,7 +2271,7 @@ grammar matches, instead of on Action, since Action will not be a
 
 [action.t](../file/action.t.html)\[[925](../source/action.t.html#925)\]
 
-<div class="desc">
+
 
 Check that the resolved objects are all in scope. Returns true if so,
 nil if not.
@@ -2282,7 +2282,7 @@ one object in each slot. For normal parser-built actions, this check
 isn't necessary, because the parser only resolves objects that are in
 scope in the first place.
 
-</div>
+
 
 <span id="runBeforeNotifiers"></span>
 
@@ -2290,12 +2290,12 @@ scope in the first place.
 
 [action.t](../file/action.t.html)\[[1507](../source/action.t.html#1507)\]
 
-<div class="desc">
+
 
 Run the "before" notifiers: this calls beforeAction on everything in
 scope, and calls roomBeforeAction on the actor's containers.
 
-</div>
+
 
 <span id="saveActionForAgain"></span>
 
@@ -2303,11 +2303,11 @@ scope, and calls roomBeforeAction on the actor's containers.
 
 [action.t](../file/action.t.html)\[[1065](../source/action.t.html#1065)\]
 
-<div class="desc">
+
 
 If the command is repeatable, save it for use by 'again'.
 
-</div>
+
 
 <span id="setCurrentObjects"></span>
 
@@ -2315,12 +2315,12 @@ If the command is repeatable, save it for use by 'again'.
 
 [action.t](../file/action.t.html)\[[2275](../source/action.t.html#2275)\]
 
-<div class="desc">
+
 
 Set the current objects. This takes a list of the same form returned by
 getCurrentObjects().
 
-</div>
+
 
 <span id="setImplicit"></span>
 
@@ -2328,12 +2328,12 @@ getCurrentObjects().
 
 [action.t](../file/action.t.html)\[[299](../source/action.t.html#299)\]
 
-<div class="desc">
+
 
 Mark the command as implicit. 'msgProp' is the property (of
 gLibMessages) to use to announce the implicit command.
 
-</div>
+
 
 <span id="setMessageParam"></span>
 
@@ -2341,7 +2341,7 @@ gLibMessages) to use to announce the implicit command.
 
 [action.t](../file/action.t.html)\[[590](../source/action.t.html#590)\]
 
-<div class="desc">
+
 
 Define an extra message-specific parameter. Message processors can use
 this to add their own special parameters, so that they can refer to
@@ -2349,7 +2349,7 @@ parameters that aren't involved directly in the command. For example, a
 message for "take \<dobj\>" might want to refer to the object containing
 the direct object.
 
-</div>
+
 
 <span id="setMessageParams"></span>
 
@@ -2357,12 +2357,12 @@ the direct object.
 
 [action.t](../file/action.t.html)\[[607](../source/action.t.html#607)\]
 
-<div class="desc">
+
 
 For convenience, this method allows setting any number of name/value
 pairs for message parameters.
 
-</div>
+
 
 <span id="setNested"></span>
 
@@ -2370,12 +2370,12 @@ pairs for message parameters.
 
 [action.t](../file/action.t.html)\[[326](../source/action.t.html#326)\]
 
-<div class="desc">
+
 
 Mark the command as nested, noting the parent action (which we take as
 the global current action).
 
-</div>
+
 
 <span id="setObjectMatches"></span>
 
@@ -2383,7 +2383,7 @@ the global current action).
 
 [action.t](../file/action.t.html)\[[913](../source/action.t.html#913)\]
 
-<div class="desc">
+
 
 Explicitly set the object match trees. This sets the pre-resolved
 production match trees. The arguments are given in the order of their
@@ -2396,7 +2396,7 @@ given; or they can be ResolveInfo objects giving the desired
 resolutions, in which case we'll build the appropriate kind of
 PreResolvedProd for each one. The types can be freely mixed.
 
-</div>
+
 
 <span id="setOriginalAction"></span>
 
@@ -2404,7 +2404,7 @@ PreResolvedProd for each one. The types can be freely mixed.
 
 [action.t](../file/action.t.html)\[[363](../source/action.t.html#363)\]
 
-<div class="desc">
+
 
 Set the "original" action. An action with an original action is
 effectively part of the original action for the purposes of its reported
@@ -2413,7 +2413,7 @@ results.
 An action has an original action if it's a nested or replacement action
 for an action.
 
-</div>
+
 
 <span id="setPronounOverride"></span>
 
@@ -2421,7 +2421,7 @@ for an action.
 
 [action.t](../file/action.t.html)\[[976](../source/action.t.html#976)\]
 
-<div class="desc">
+
 
 Set a special pronoun override. This creates a temporary pronoun
 definition, which lasts as long as this action (and any nested actions).
@@ -2434,7 +2434,7 @@ the YOUR qualifier should still refer to Bob even though the command is
 no longer addressing Bob directly. This routine can be used in this case
 to override the meaning of 'you' so that it refers to Bob.
 
-</div>
+
 
 <span id="setRemapped"></span>
 
@@ -2442,12 +2442,12 @@ to override the meaning of 'you' so that it refers to Bob.
 
 [action.t](../file/action.t.html)\[[426](../source/action.t.html#426)\]
 
-<div class="desc">
+
 
 Mark the action as "remapped." This indicates that the action was
 explicitly remapped to a different action during the remap() phase.
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -2455,7 +2455,7 @@ explicitly remapped to a different action during the remap() phase.
 
 [action.t](../file/action.t.html)\[[898](../source/action.t.html#898)\]
 
-<div class="desc">
+
 
 Explicitly set the resolved objects. This should be overridden in each
 subclass for the number of objects specific to the action (a simple
@@ -2468,7 +2468,7 @@ programmatically, rather than based on parsed input. Since there's no
 parsed input in such cases, the objects are specified directly by the
 programmatic caller.
 
-</div>
+
 
 <span id="spPrefix"></span>
 
@@ -2476,11 +2476,11 @@ programmatic caller.
 
 [en_us.t](../file/en_us.t.html)\[[8414](../source/en_us.t.html#8414)\]
 
-<div class="desc">
+
 
 add a space prefix/suffix to a string if the string is non-empty
 
-</div>
+
 
 <span id="spSuffix"></span>
 
@@ -2488,11 +2488,11 @@ add a space prefix/suffix to a string if the string is non-empty
 
 [en_us.t](../file/en_us.t.html)\[[8415](../source/en_us.t.html#8415)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="synthMessageParam"></span>
 
@@ -2500,12 +2500,12 @@ add a space prefix/suffix to a string if the string is non-empty
 
 [action.t](../file/action.t.html)\[[618](../source/action.t.html#618)\]
 
-<div class="desc">
+
 
 Synthesize a global message parameter name for the given object. We'll
 store the association and return the synthesized name.
 
-</div>
+
 
 <span id="verifyAction"></span>
 
@@ -2513,7 +2513,7 @@ store the association and return the synthesized name.
 
 [action.t](../file/action.t.html)\[[1824](../source/action.t.html#1824)\]
 
-<div class="desc">
+
 
 Verify the action. Action subclasses with one or more objects should
 call object verification routines here. Returns a VerifyResultList with
@@ -2521,7 +2521,7 @@ the results, or nil if there are no verification results at all. A nil
 return should be taken as success, not failure, because it means that we
 found no objection to the command.
 
-</div>
+
 
 <span id="verifyHandlersExist"></span>
 
@@ -2529,7 +2529,7 @@ found no objection to the command.
 
 [action.t](../file/action.t.html)\[[2120](../source/action.t.html#2120)\]
 
-<div class="desc">
+
 
 Verify that some sort of handling for this action is defined on at least
 one of the given objects. If we have no handlers at all definfed, we'll
@@ -2545,7 +2545,7 @@ three properties is defined on the corresponding object, we'll allow the
 command to proceed. If we can find none of the given handler properties
 on any of our objects, we'll add an "illogical" verify result.
 
-</div>
+
 
 <span id="whatObj"></span>
 
@@ -2553,7 +2553,7 @@ on any of our objects, we'll add an "illogical" verify result.
 
 [en_us.t](../file/en_us.t.html)\[[8158](../source/en_us.t.html#8158)\]
 
-<div class="desc">
+
 
 Return the interrogative pronoun for a missing object in one of our
 object roles. In most cases, this is simply "what", but for some
@@ -2561,7 +2561,7 @@ actions, "whom" is more appropriate (for example, the direct object of
 "ask" is implicitly a person, so "whom" is most appropriate for this
 role).
 
-</div>
+
 
 <span id="whatTranslate"></span>
 
@@ -2569,14 +2569,14 @@ role).
 
 [en_us.t](../file/en_us.t.html)\[[8169](../source/en_us.t.html#8169)\]
 
-<div class="desc">
+
 
 Translate an interrogative word for whatObj. If the word is 'whom',
 translate to the library message for 'whom'; this allows authors to use
 'who' rather than 'whom' as the objective form of 'who', which sounds
 less stuffy to many people.
 
-</div>
+
 
 <span id="withVerifyResults"></span>
 
@@ -2584,13 +2584,13 @@ less stuffy to many people.
 
 [action.t](../file/action.t.html)\[[1861](../source/action.t.html#1861)\]
 
-<div class="desc">
+
 
 Invoke a callback with a verify results list in gVerifyResults, using
 the existing results list or creating a new one if there is no existing
 one. Returns the results list used.
 
-</div>
+
 
 <span id="zeroActionTime"></span>
 
@@ -2598,7 +2598,7 @@ one. Returns the results list used.
 
 [action.t](../file/action.t.html)\[[1308](../source/action.t.html#1308)\]
 
-<div class="desc">
+
 
 Zero the action time in this action and any parent actions. This should
 be used when a nested replacement action is to completely take over the
@@ -2606,11 +2606,11 @@ time-keeping responsibility for the entire turn; all containing actions
 in this case are to take zero time, since the nested action is the only
 part of the turn that will count for timing.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

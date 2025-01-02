@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Ambiguous object announcement. We display this when the parser manages
 to resolve a noun phrase to an object (or objects) from an ambiguous set
@@ -47,15 +47,15 @@ object announcement.
 
 `class `**`AmbigObjectAnnouncement`**` :   `[`CommandAnnouncement`](../object/CommandAnnouncement.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AmbigObjectAnnouncement`**  
 [`CommandAnnouncement`](../object/CommandAnnouncement.html)  
@@ -63,27 +63,27 @@ object announcement.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`messageProp_`](#messageProp_)
 
@@ -95,11 +95,11 @@ Inherited from `CommandReport` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -111,11 +111,11 @@ Inherited from `CommandReport` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="messageProp_"></span>
 
@@ -123,25 +123,25 @@ Inherited from `CommandReport` :
 
 [report.t](../file/report.t.html)\[[449](../source/report.t.html#449)\]
 
-<div class="desc">
+
 
 show the announceAmbigObject announcement
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

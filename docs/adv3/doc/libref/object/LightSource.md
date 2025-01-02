@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An item that can provide light.
 
@@ -42,15 +42,15 @@ Enligh-specific light source modifications
 
 `class `**`LightSource`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LightSource`**  
 [`Thing`](../object/Thing.html)  
@@ -58,11 +58,11 @@ Enligh-specific light source modifications
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`LightSource`**  
 [`Flashlight`](../object/Flashlight.html)  
@@ -71,19 +71,19 @@ Enligh-specific light source modifications
 [`Matchstick`](../object/Matchstick.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`adjective`](#adjective)[`allStates`](#allStates)[`brightnessOff`](#brightnessOff)[`brightnessOn`](#brightnessOn)[`distinguishers`](#distinguishers)[`getState`](#getState)[`isLit`](#isLit)[`nameLit`](#nameLit)[`pluralNameLit`](#pluralNameLit)[`theNameLit`](#theNameLit)
 
@@ -95,11 +95,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`aNameLit`](#aNameLit)[`brightness`](#brightness)[`makeLit`](#makeLit)
 
@@ -111,11 +111,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="adjective"></span>
 
@@ -123,13 +123,13 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[3607](../source/en_us.t.html#3607)\]
 
-<div class="desc">
+
 
 Allow 'lit' and 'unlit' as adjectives - but even though we define these
 as our adjectives in the dictionary, we'll only accept the one
 appropriate for our current state, thanks to our state objects.
 
-</div>
+
 
 <span id="allStates"></span>
 
@@ -137,11 +137,11 @@ appropriate for our current state, thanks to our state objects.
 
 [objects.t](../file/objects.t.html)\[[5981](../source/objects.t.html#5981)\]
 
-<div class="desc">
+
 
 get our set of possible states
 
-</div>
+
 
 <span id="brightnessOff"></span>
 
@@ -149,11 +149,11 @@ get our set of possible states
 
 [objects.t](../file/objects.t.html)\[[5969](../source/objects.t.html#5969)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="brightnessOn"></span>
 
@@ -161,11 +161,11 @@ get our set of possible states
 
 [objects.t](../file/objects.t.html)\[[5968](../source/objects.t.html#5968)\]
 
-<div class="desc">
+
 
 the brightness that the object has when it is on and off
 
-</div>
+
 
 <span id="distinguishers"></span>
 
@@ -173,13 +173,13 @@ the brightness that the object has when it is on and off
 
 [objects.t](../file/objects.t.html)\[[5964](../source/objects.t.html#5964)\]
 
-<div class="desc">
+
 
 We can distinguish light sources according to their isLit status. Give
 the lit/unlit distinction higher priority than the normal
 ownership/containment distinction.
 
-</div>
+
 
 <span id="getState"></span>
 
@@ -187,11 +187,11 @@ ownership/containment distinction.
 
 [objects.t](../file/objects.t.html)\[[5978](../source/objects.t.html#5978)\]
 
-<div class="desc">
+
 
 get our current state: lit or unlit
 
-</div>
+
 
 <span id="isLit"></span>
 
@@ -199,11 +199,11 @@ get our current state: lit or unlit
 
 [objects.t](../file/objects.t.html)\[[5945](../source/objects.t.html#5945)\]
 
-<div class="desc">
+
 
 is the light source currently turned on?
 
-</div>
+
 
 <span id="nameLit"></span>
 
@@ -211,11 +211,11 @@ is the light source currently turned on?
 
 [en_us.t](../file/en_us.t.html)\[[3586](../source/en_us.t.html#3586)\]
 
-<div class="desc">
+
 
 provide lit/unlit names for litUnlitDistinguisher
 
-</div>
+
 
 <span id="pluralNameLit"></span>
 
@@ -223,11 +223,11 @@ provide lit/unlit names for litUnlitDistinguisher
 
 [en_us.t](../file/en_us.t.html)\[[3599](../source/en_us.t.html#3599)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theNameLit"></span>
 
@@ -235,20 +235,20 @@ provide lit/unlit names for litUnlitDistinguisher
 
 [en_us.t](../file/en_us.t.html)\[[3598](../source/en_us.t.html#3598)\]
 
-<div class="desc">
+
 
 if this is a mass noun or a plural name, just use the name with
 lit/unlit; otherwise, add "a"
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="aNameLit"></span>
 
@@ -256,11 +256,11 @@ lit/unlit; otherwise, add "a"
 
 [en_us.t](../file/en_us.t.html)\[[3587](../source/en_us.t.html#3587)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="brightness"></span>
 
@@ -268,12 +268,12 @@ lit/unlit; otherwise, add "a"
 
 [objects.t](../file/objects.t.html)\[[5975](../source/objects.t.html#5975)\]
 
-<div class="desc">
+
 
 return the appropriate on/off brightness, depending on whether or not
 we're currently lit
 
-</div>
+
 
 <span id="makeLit"></span>
 
@@ -281,18 +281,18 @@ we're currently lit
 
 [objects.t](../file/objects.t.html)\[[5953](../source/objects.t.html#5953)\]
 
-<div class="desc">
+
 
 Turn the light source on or off. Note that we don't have to make any
 special check for a change to the light level, because the main action
 handler always checks for a change in light/dark status over the course
 of the turn.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

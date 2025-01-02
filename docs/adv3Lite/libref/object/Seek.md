@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 SeekAction is designed to handle of commands FIND X, LOOK FOR Y or
 SEARCH FOR Z, when they don't seem to be intended as attempts to look
@@ -44,15 +44,15 @@ and that if an Unthing is matched it is not described as being present.
 
 **`Seek`**` :   `[`TopicAction`](../object/TopicAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Seek`**  
 [`TopicAction`](../object/TopicAction.html)  
@@ -63,11 +63,11 @@ and that if an Unthing is matched it is not described as being present.
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -86,11 +86,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`getBestMatch`](#getBestMatch)[`locDesc`](#locDesc)[`senseDesc`](#senseDesc)
 
@@ -111,19 +111,19 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -131,11 +131,11 @@ Inherited from `Redirector` :
 
 [newbie.t](../file/newbie.t.html)\[[938](../source/newbie.t.html#938)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getBestMatch"></span>
 
@@ -143,7 +143,7 @@ Inherited from `Redirector` :
 
 [newbie.t](../file/newbie.t.html)\[[999](../source/newbie.t.html#999)\]
 
-<div class="desc">
+
 
 gTopic.getBestMatch() may not give the best results for our purposes.
 The following code is designed to prefer Things to Unthings, and then to
@@ -151,7 +151,7 @@ prioritize what the player char can see over what s/he has seen, and
 both over what s/he only knows about. If none of these find a match, we
 then revert to gTopic.getBestMatch.
 
-</div>
+
 
 <span id="locDesc"></span>
 
@@ -159,12 +159,12 @@ then revert to gTopic.getBestMatch.
 
 [newbie.t](../file/newbie.t.html)\[[1037](../source/newbie.t.html#1037)\]
 
-<div class="desc">
+
 
 Finally, if all else fails, just return the ResolvedTopic's idea of a
 best match.
 
-</div>
+
 
 <span id="senseDesc"></span>
 
@@ -172,15 +172,15 @@ best match.
 
 [newbie.t](../file/newbie.t.html)\[[1045](../source/newbie.t.html#1045)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

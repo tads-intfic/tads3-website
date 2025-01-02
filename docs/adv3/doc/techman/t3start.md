@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Creating Your First
@@ -17,7 +17,7 @@ Project
 <a href="t3design.html" class="nav"><em>Next:</em> Tips on Designing your
 Game</a>     </span>
 
-</div>
+
 
 
 
@@ -407,7 +407,7 @@ adv3 but before your own source files.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -418,4 +418,4 @@ Project
 <a href="t3design.html" class="nav"><em>Next:</em> Tips on Designing your
 Game</a>     </span>
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The INSTRUCTIONS command. Make this a "system" action, because it's a
 meta-action outside of the story. System actions don't consume any game
@@ -35,15 +35,15 @@ time.
 `DefineSystemAction(Instructions)      `*`// original source text`*  
 `class `**`InstructionsAction`**` :   `[`SystemAction`](../object/SystemAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`InstructionsAction`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -53,29 +53,29 @@ time.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`InstructionsAction`**  
 [`predicate(instructions)`](../object/predicate(instructions).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allRequiredVerbsDisclosed`](#allRequiredVerbsDisclosed)[`conversationAbbr`](#conversationAbbr)[`conversationInstructions`](#conversationInstructions)[`conversationVerbs`](#conversationVerbs)[`crueltyLevel`](#crueltyLevel)[`customVerbs`](#customVerbs)[`includeInUndo`](#includeInUndo)[`isRealTime`](#isRealTime)[`isRepeatable`](#isRepeatable)[`truncationLength`](#truncationLength)
 
@@ -92,11 +92,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execSystemAction`](#execSystemAction)[`showAbbrevChapter`](#showAbbrevChapter)[`showAdvancedCmdChapter`](#showAdvancedCmdChapter)[`showAmbiguousCmdChapter`](#showAmbiguousCmdChapter)[`showCommandsChapter`](#showCommandsChapter)[`showConversationChapter`](#showConversationChapter)[`showInstructions`](#showInstructions)[`showObjectsChapter`](#showObjectsChapter)[`showSaveRestoreChapter`](#showSaveRestoreChapter)[`showSpecialCmdChapter`](#showSpecialCmdChapter)[`showTimeChapter`](#showTimeChapter)[`showTipsChapter`](#showTipsChapter)[`showTravelChapter`](#showTravelChapter)[`showUnknownWordsChapter`](#showUnknownWordsChapter)
 
@@ -114,11 +114,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allRequiredVerbsDisclosed"></span>
 
@@ -126,7 +126,7 @@ Inherited from `BasicProd` :
 
 [instruct.t](../file/instruct.t.html)\[[97](../source/instruct.t.html#97)\]
 
-<div class="desc">
+
 
 This property tells us how complete the verb list is. By default, we'll
 assume that the instructions fail to disclose every required verb in the
@@ -141,7 +141,7 @@ strongly encouraged to disclose a list of verbs that is sufficient by
 itself to complete the game, and to set this property to true once
 they've done so.
 
-</div>
+
 
 <span id="conversationAbbr"></span>
 
@@ -149,11 +149,11 @@ they've done so.
 
 [instruct.t](../file/instruct.t.html)\[[129](../source/instruct.t.html#129)\]
 
-<div class="desc">
+
 
 conversation verb abbreviations
 
-</div>
+
 
 <span id="conversationInstructions"></span>
 
@@ -161,7 +161,7 @@ conversation verb abbreviations
 
 [instruct.t](../file/instruct.t.html)\[[219](../source/instruct.t.html#219)\]
 
-<div class="desc">
+
 
 Conversation system description. Several different conversation systems
 have come into relatively widespread use, so there isn't any single
@@ -183,7 +183,7 @@ suggest, so the TOPICS command isn't needed.
 We'll include information on special topics if there are any
 SpecialTopic objects defined.
 
-</div>
+
 
 <span id="conversationVerbs"></span>
 
@@ -191,7 +191,7 @@ SpecialTopic objects defined.
 
 [instruct.t](../file/instruct.t.html)\[[118](../source/instruct.t.html#118)\]
 
-<div class="desc">
+
 
 Verbs relating specifically to character interaction. This is in the
 same format as customVerbs, and has essentially the same purpose;
@@ -201,7 +201,7 @@ This is desirable for conversation-related commands in particular
 because some games will not use the ASK/TELL conversation system at all
 and will thus want to remove any mention of the standard set of verbs.
 
-</div>
+
 
 <span id="crueltyLevel"></span>
 
@@ -209,7 +209,7 @@ and will thus want to remove any mention of the standard set of verbs.
 
 [instruct.t](../file/instruct.t.html)\[[188](../source/instruct.t.html#188)\]
 
-<div class="desc">
+
 
 This property should be set on a game-by-game basis to indicate the
 "cruelty level" of the game, which is a rough estimation of how likely
@@ -250,7 +250,7 @@ the game becomes unwinnable, because of things like the irreversible
 loss of an object, or an unrepeatable event sequence; it almost always
 takes extra design work to ensure that a game is always winnable.
 
-</div>
+
 
 <span id="customVerbs"></span>
 
@@ -258,7 +258,7 @@ takes extra design work to ensure that a game is always winnable.
 
 [instruct.t](../file/instruct.t.html)\[[106](../source/instruct.t.html#106)\]
 
-<div class="desc">
+
 
 A list of custom verbs. Each game should set this to a list of
 single-quoted strings; each string gives an example of a verb to display
@@ -266,7 +266,7 @@ in the list of sample verbs. Something like this:
 
 customVerbs = \['brush my teeth', 'pick the lock'\]
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -274,11 +274,11 @@ customVerbs = \['brush my teeth', 'pick the lock'\]
 
 [instruct.t](../file/instruct.t.html)\[[992](../source/instruct.t.html#992)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isRealTime"></span>
 
@@ -286,13 +286,13 @@ customVerbs = \['brush my teeth', 'pick the lock'\]
 
 [instruct.t](../file/instruct.t.html)\[[195](../source/instruct.t.html#195)\]
 
-<div class="desc">
+
 
 Does this game have any real-time features? If so, set this to true. By
 default, we'll explain that game time passes only in response to command
 input.
 
-</div>
+
 
 <span id="isRepeatable"></span>
 
@@ -300,11 +300,11 @@ input.
 
 [instruct.t](../file/instruct.t.html)\[[991](../source/instruct.t.html#991)\]
 
-<div class="desc">
+
 
 INSTRUCTIONS doesn't affect UNDO or AGAIN
 
-</div>
+
 
 <span id="truncationLength"></span>
 
@@ -312,7 +312,7 @@ INSTRUCTIONS doesn't affect UNDO or AGAIN
 
 [instruct.t](../file/instruct.t.html)\[[141](../source/instruct.t.html#141)\]
 
-<div class="desc">
+
 
 Truncation length. If the game's parser allows words to be abbreviated
 to some minimum number of letters, this should indicate the minimum
@@ -321,15 +321,15 @@ default.
 
 Set this to nil if the game doesn't allow truncation at all.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execSystemAction"></span>
 
@@ -337,11 +337,11 @@ Set this to nil if the game doesn't allow truncation at all.
 
 [instruct.t](../file/instruct.t.html)\[[299](../source/instruct.t.html#299)\]
 
-<div class="desc">
+
 
 execute the command
 
-</div>
+
 
 <span id="showAbbrevChapter"></span>
 
@@ -349,11 +349,11 @@ execute the command
 
 [instruct.t](../file/instruct.t.html)\[[547](../source/instruct.t.html#547)\]
 
-<div class="desc">
+
 
 Abbreviations chapter
 
-</div>
+
 
 <span id="showAdvancedCmdChapter"></span>
 
@@ -361,11 +361,11 @@ Abbreviations chapter
 
 [instruct.t](../file/instruct.t.html)\[[870](../source/instruct.t.html#870)\]
 
-<div class="desc">
+
 
 Advance Command Formats chapter
 
-</div>
+
 
 <span id="showAmbiguousCmdChapter"></span>
 
@@ -373,11 +373,11 @@ Advance Command Formats chapter
 
 [instruct.t](../file/instruct.t.html)\[[831](../source/instruct.t.html#831)\]
 
-<div class="desc">
+
 
 Ambiguous Commands chapter
 
-</div>
+
 
 <span id="showCommandsChapter"></span>
 
@@ -385,11 +385,11 @@ Ambiguous Commands chapter
 
 [instruct.t](../file/instruct.t.html)\[[432](../source/instruct.t.html#432)\]
 
-<div class="desc">
+
 
 Entering Commands chapter
 
-</div>
+
 
 <span id="showConversationChapter"></span>
 
@@ -397,11 +397,11 @@ Entering Commands chapter
 
 [instruct.t](../file/instruct.t.html)\[[659](../source/instruct.t.html#659)\]
 
-<div class="desc">
+
 
 show the Conversation chapter
 
-</div>
+
 
 <span id="showInstructions"></span>
 
@@ -409,12 +409,12 @@ show the Conversation chapter
 
 [instruct.t](../file/instruct.t.html)\[[337](../source/instruct.t.html#337)\]
 
-<div class="desc">
+
 
 Show the instructions as a standard text display. Give the user the
 option of turning on a SCRIPT file to capture the text.
 
-</div>
+
 
 <span id="showObjectsChapter"></span>
 
@@ -422,11 +422,11 @@ option of turning on a SCRIPT file to capture the text.
 
 [instruct.t](../file/instruct.t.html)\[[632](../source/instruct.t.html#632)\]
 
-<div class="desc">
+
 
 Objects chapter
 
-</div>
+
 
 <span id="showSaveRestoreChapter"></span>
 
@@ -434,11 +434,11 @@ Objects chapter
 
 [instruct.t](../file/instruct.t.html)\[[698](../source/instruct.t.html#698)\]
 
-<div class="desc">
+
 
 Saving, Restoring, and Undo chapter
 
-</div>
+
 
 <span id="showSpecialCmdChapter"></span>
 
@@ -446,11 +446,11 @@ Saving, Restoring, and Undo chapter
 
 [instruct.t](../file/instruct.t.html)\[[770](../source/instruct.t.html#770)\]
 
-<div class="desc">
+
 
 Other Special Commands chapter
 
-</div>
+
 
 <span id="showTimeChapter"></span>
 
@@ -458,11 +458,11 @@ Other Special Commands chapter
 
 [instruct.t](../file/instruct.t.html)\[[670](../source/instruct.t.html#670)\]
 
-<div class="desc">
+
 
 Time chapter
 
-</div>
+
 
 <span id="showTipsChapter"></span>
 
@@ -470,11 +470,11 @@ Time chapter
 
 [instruct.t](../file/instruct.t.html)\[[933](../source/instruct.t.html#933)\]
 
-<div class="desc">
+
 
 General Tips chapter
 
-</div>
+
 
 <span id="showTravelChapter"></span>
 
@@ -482,11 +482,11 @@ General Tips chapter
 
 [instruct.t](../file/instruct.t.html)\[[586](../source/instruct.t.html#586)\]
 
-<div class="desc">
+
 
 Travel chapter
 
-</div>
+
 
 <span id="showUnknownWordsChapter"></span>
 
@@ -494,15 +494,15 @@ Travel chapter
 
 [instruct.t](../file/instruct.t.html)\[[816](../source/instruct.t.html#816)\]
 
-<div class="desc">
+
 
 Unknown Words chapter
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

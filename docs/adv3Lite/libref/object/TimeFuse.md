@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A TimeFuse is a Fuse that executes either at a set time or after a set
 time
@@ -61,15 +61,15 @@ is to execute at 15:34 on 22nd June 2014 (game time, not real time).
 
 `class `**`TimeFuse`**` :   `[`Fuse`](../object/Fuse.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TimeFuse`**  
 [`Fuse`](../object/Fuse.html)  
@@ -77,29 +77,29 @@ is to execute at 15:34 on 22nd June 2014 (game time, not real time).
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TimeFuse`**  
 [`SenseTimeFuse`](../object/SenseTimeFuse.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`eventTime`](#eventTime)
 
@@ -110,11 +110,11 @@ Inherited from `Event` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`getNextRunTime`](#getNextRunTime)
 
@@ -126,11 +126,11 @@ Inherited from `Event` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="eventTime"></span>
 
@@ -138,19 +138,19 @@ Inherited from `Event` :
 
 [objtime.t](../file/objtime.t.html)\[[301](../source/objtime.t.html#301)\]
 
-<div class="desc">
+
 
 The time (as a Date object) at which this Fuse is set to activate
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -158,11 +158,11 @@ The time (as a Date object) at which this Fuse is set to activate
 
 [objtime.t](../file/objtime.t.html)\[[261](../source/objtime.t.html#261)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getNextRunTime"></span>
 
@@ -170,17 +170,17 @@ The time (as a Date object) at which this Fuse is set to activate
 
 [objtime.t](../file/objtime.t.html)\[[308](../source/objtime.t.html#308)\]
 
-<div class="desc">
+
 
 If our eventTime is still in the future, return a turn count well into
 the future so we don't execute yet; otherwise return the current turn
 count so we do execute on this turn.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

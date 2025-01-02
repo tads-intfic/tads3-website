@@ -102,15 +102,17 @@ set up a Conversation Node that includes all the TopicEntries whose
 convKeys contain at least one of these keys (e.g. <em>key1</em> or <em>key2</em> or
 <em>key3</em>). This would be equivalent to:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      someActor.addPendingKey('key1');
-      someActor.addPendingKey('key2');
-      someActor.addPendingKey('key3');
-</code></pre></div></div>
+<p>`
+      someActor.addPendingKey(‘key1’);
+      someActor.addPendingKey(‘key2’);
+      someActor.addPendingKey(‘key3’);
+`</p>
 
 <p>Or just:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      someActor.pendingKeys = ['key1', 'key2', 'key3'];
-</code></pre></div></div>
+<p>`
+      someActor.pendingKeys = [‘key1’, ‘key2’, ‘key3’];
+`</p>
 
 <p><span id="nodeactive"></span></p>
 
@@ -154,13 +156,14 @@ forever have lost the chance to pick one of your special responses.</p>
 <p>You may recall in the previous section we gave an example of a
 QueryTopic that included a question at the end of the NPC’s response:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + QueryTopic 'how' 'old he is; are you'
-        "&lt;q&gt;How old are you?&lt;/q&gt; you ask.\b
-        &lt;q&gt;None of your damned business,&lt;/q&gt; he replies. &lt;q&gt;Would you like someone
-        asking you about your age?&lt;/q&gt; "
-          
-        askMatchObj = tAge    
-    ;
+<p>`
+    + QueryTopic ‘how’ ‘old he is; are you’
+        “<q>How old are you?</q> you ask.\b
+        <q>None of your damned business,</q> he replies. <q>Would you like someone
+        asking you about your age?</q> “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    askMatchObj = tAge    
+; `
 </code></pre></div></div>
 
 <p>Perhaps the question “Would you like someone asking you about your age?”
@@ -174,26 +177,27 @@ conversation has arrived at a Conversation Node.</p>
 of Bob’s response, and then a YesTopic and a NoTopic keyed to the same
 node:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + QueryTopic 'how' 'old he is; are you'
-        "&lt;q&gt;How old are you?&lt;/q&gt; you ask.\b
-        &lt;q&gt;None of your damned business,&lt;/q&gt; he replies. &lt;q&gt;Would you like someone
-        asking you about your age?&lt;/q&gt; &lt;.convnode age-node&gt;"
-          
-        askMatchObj = tAge    
-    ;
+<p>`
+    + QueryTopic ‘how’ ‘old he is; are you’
+        “<q>How old are you?</q> you ask.\b
+        <q>None of your damned business,</q> he replies. <q>Would you like someone
+        asking you about your age?</q> &lt;.convnode age-node&gt;”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    askMatchObj = tAge    
+;
 
 
-    + YesTopic
-        "&lt;q&gt;Yes, sure, I wouldn't mind,&lt;/q&gt; you reply.\b
-        &lt;q&gt;Well, I do,&lt;/q&gt; he grunts. "
-        convKeys = ['age-node']     
-    ;
++ YesTopic
+    "&lt;q&gt;Yes, sure, I wouldn't mind,&lt;/q&gt; you reply.\b
+    &lt;q&gt;Well, I do,&lt;/q&gt; he grunts. "
+    convKeys = ['age-node']     
+;
 
-    + NoTopic
-        "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
-        &lt;q&gt;Well, there you are then!&lt;/q&gt; he declares triumphantly. "
-        convKeys = ['age-node']    
-    ;
++ NoTopic
+    "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
+    &lt;q&gt;Well, there you are then!&lt;/q&gt; he declares triumphantly. "
+    convKeys = ['age-node']    
+; `
 </code></pre></div></div>
 
 <p>There’s nothing magic about the name ‘age-node’ by the way. We don’t
@@ -210,19 +214,20 @@ they could be triggered by the player typing YES or NO at any point. To
 restrict them to this particular Conversation Node we need to set their
 isActive property to nodeActive:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + YesTopic
-        "&lt;q&gt;Yes, sure, I wouldn't mind,&lt;/q&gt; you reply.\b
-        &lt;q&gt;Well, I do,&lt;/q&gt; he grunts. "
-        convKeys = ['age-node']
-        isActive = nodeActive    
-    ;
+<p>`
+    + YesTopic
+        “<q>Yes, sure, I wouldn’t mind,</q> you reply.\b
+        <q>Well, I do,</q> he grunts. “
+        convKeys = [‘age-node’]
+        isActive = nodeActive  <br />
+    ;</p>
 
-    + NoTopic
-        "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
-        &lt;q&gt;Well, there you are then!&lt;/q&gt; he declares triumphantly. "
-        convKeys = ['age-node']
-        isActive = nodeActive    
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ NoTopic
+    "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
+    &lt;q&gt;Well, there you are then!&lt;/q&gt; he declares triumphantly. "
+    convKeys = ['age-node']
+    isActive = nodeActive    
+; `
 </code></pre></div></div>
 
 <p>Note that if we had listed several keys in the convKeys property of
@@ -236,13 +241,14 @@ as well. We could achieve that by defining a TellTopic that had
 ‘age-node’ in its convKeys property but didn’t set its isActive property
 to nodeActive:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TellTopic @tYourAge
-        "I'm forty-three, you tell him.\b
-        Well bully for you! he declares. "
-        convKeys = ['age-node']
+<p>`
+    + TellTopic @tYourAge
+        “I’m forty-three, you tell him.\b
+        Well bully for you! he declares. “
+        convKeys = [‘age-node’]
         autoName = true
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note also that if you do set isActive to nodeActive, there is nothing to
 stop you adding further conditions to the isActive property
@@ -255,11 +261,12 @@ about your age?” we could make him prompt the player for one until he
 receives it. For this purpose we can define a <strong>NodeContinuationTopic</strong>
 and set its convKeys property to the appropriate node:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + NodeContinuationTopic
-        "&lt;q&gt;I thought I asked you a question,&lt;/q&gt; Bob reminds you. "
-        convKeys = ['age-node']
+<p>`
+    + NodeContinuationTopic
+        “<q>I thought I asked you a question,</q> Bob reminds you. “
+        convKeys = [‘age-node’]
     ;
-</code></pre></div></div>
+`</p>
 
 <p>There’s no need to define the isActive property here, since
 NodeContinuationTopic defines is as nodeActive by default. Note,
@@ -280,14 +287,15 @@ way to do this is to define a DefaultTopic that’s only active in the
 node in question, but which blocks attempts to leave the node until a
 satisfactory reply is given. For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        
-    + DefaultAnyTopic
-        "&lt;q&gt;Don't try to change the subject; I want to know whether you'd like
-        someone asking about your age,&lt;/q&gt; he insists. &lt;q&gt;Well, would you?&lt;/q&gt;
-        &lt;.convstay&gt; &lt;.topics&gt; "
-        convKeys = ['age-node']
-        isActive = nodeActive
-    ;
+<p>`</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ DefaultAnyTopic
+    "&lt;q&gt;Don't try to change the subject; I want to know whether you'd like
+    someone asking about your age,&lt;/q&gt; he insists. &lt;q&gt;Well, would you?&lt;/q&gt;
+    &lt;.convstay&gt; &lt;.topics&gt; "
+    convKeys = ['age-node']
+    isActive = nodeActive
+; `
 </code></pre></div></div>
 
 <p><span id="convstay"></span></p>
@@ -312,22 +320,23 @@ return nil, or blockEndConv, if we want to disallow ending the
 conversation. For example, to prevent the player character from saying
 goodbye while we’re at this node we could define:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + NodeEndCheck
+<p>`
+    + NodeEndCheck
         canEndConversation(reason)
         {
             if(reason == endConvBye)
             {
-                "&lt;q&gt;&lt;q&gt;Goodbye,&lt;/q&gt; isn't an answer,&lt;/q&gt; Bob complains. &lt;q&gt;Would
-                you like someone to ask you about your age or wouldn't you?&lt;/q&gt; ";
-                                  
-                return blockEndConv;
-            }
-            
-            return true;
+                “<q><q>Goodbye,</q> isn’t an answer,</q> Bob complains. <q>Would
+                you like someone to ask you about your age or wouldn’t you?</q> “;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            return blockEndConv;
         }
         
-        convKeys = ['age-node']
-    ;
+        return true;
+    }
+    
+    convKeys = ['age-node']
+; `
 </code></pre></div></div>
 
 <p>Once again we don’t need to explicitly define the isActive property of
@@ -378,50 +387,51 @@ associated.</p>
 <p>Using a ConvNode object, the Conversation Node illustrated above could
 be defined like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + QueryTopic 'how' 'old he is; are you'
-        "&lt;q&gt;How old are you?&lt;/q&gt; you ask.\b
-        &lt;q&gt;None of your damned business,&lt;/q&gt; he replies. &lt;q&gt;Would you like someone
-        asking you about your age?&lt;/q&gt; &lt;.convnode age-node&gt;"
-          
-        askMatchObj = tAge    
-    ;
+<p>`
+    + QueryTopic ‘how’ ‘old he is; are you’
+        “<q>How old are you?</q> you ask.\b
+        <q>None of your damned business,</q> he replies. <q>Would you like someone
+        asking you about your age?</q> &lt;.convnode age-node&gt;”</p>
 
-    + ConvNode 'age-node';
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    askMatchObj = tAge    
+;
 
-    ++ YesTopic
-        "&lt;q&gt;Yes, sure, I wouldn't mind,&lt;/q&gt; you reply.\b
-        &lt;q&gt;Well, I do,&lt;/q&gt; he grunts. "         
-    ;
++ ConvNode 'age-node';
 
-    ++ NoTopic
-        "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
-        &lt;q&gt;Well, there you are then!&lt;/q&gt; he declares triumphantly. "        
-    ;
+++ YesTopic
+    "&lt;q&gt;Yes, sure, I wouldn't mind,&lt;/q&gt; you reply.\b
+    &lt;q&gt;Well, I do,&lt;/q&gt; he grunts. "         
+;
 
-    ++ DefaultAnyTopic
-        "&lt;q&gt;Don't try to change the subject; I want to know whether you'd like
-        someone asking about your age,&lt;/q&gt; he insists. &lt;q&gt;Well, would you?&lt;/q&gt;
-        &lt;.convstay&gt; &lt;.topics&gt; "  
-    ;
+++ NoTopic
+    "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
+    &lt;q&gt;Well, there you are then!&lt;/q&gt; he declares triumphantly. "        
+;
 
-    ++ NodeContinuationTopic
-        "&lt;q&gt;I thought I asked you a question,&lt;/q&gt; Bob reminds you. "   
-    ;
+++ DefaultAnyTopic
+    "&lt;q&gt;Don't try to change the subject; I want to know whether you'd like
+    someone asking about your age,&lt;/q&gt; he insists. &lt;q&gt;Well, would you?&lt;/q&gt;
+    &lt;.convstay&gt; &lt;.topics&gt; "  
+;
 
-    ++ NodeEndCheck
-        canEndConversation(reason)
+++ NodeContinuationTopic
+    "&lt;q&gt;I thought I asked you a question,&lt;/q&gt; Bob reminds you. "   
+;
+
+++ NodeEndCheck
+    canEndConversation(reason)
+    {
+        if(reason == endConvBye)
         {
-            if(reason == endConvBye)
-            {
-                "&lt;q&gt;&lt;q&gt;Goodbye,&lt;/q&gt; isn't an answer,&lt;/q&gt; Bob complains. &lt;q&gt;Would
-                you like someone to ask you about your age or wouldn't you?&lt;/q&gt; ";
-                                  
-                return blockEndConv;
-            }
-            
-            return true;
-        }    
-    ;
+            "&lt;q&gt;&lt;q&gt;Goodbye,&lt;/q&gt; isn't an answer,&lt;/q&gt; Bob complains. &lt;q&gt;Would
+            you like someone to ask you about your age or wouldn't you?&lt;/q&gt; ";
+                              
+            return blockEndConv;
+        }
+        
+        return true;
+    }    
+; `
 </code></pre></div></div>
 
 <p><span id="curnode"></span></p>

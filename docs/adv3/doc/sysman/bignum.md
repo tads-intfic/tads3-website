@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> BigNumber  
@@ -15,7 +15,7 @@ layout: docs
     <a href="bytearr.html" class="nav"><em>Next:</em> ByteArray</a>    
 </span>
 
-</div>
+
 
 
 
@@ -98,7 +98,7 @@ You can write a BigNumber value as a floating-point constant. This is a
 numeric constant that contains a decimal point or an exponent, or both.
 Syntactically, that means one of these formats:
 
-<div class="syntax">
+
 
     digit ... ( E | e )  [ + | - ]  digit ...
     [ digit ... ]  . ( digit ... )  [ ( E | e )  [ + | - ]  digit ...
@@ -283,74 +283,74 @@ the target number. For example, to get the remainder of dividing 10 by
 
 `arccosine()`
 
-<div class="fdef">
+
 
 Returns the arccosine (the number whose cosine is this value), as a
 value in radians, of the number. This function is mathematically
 meaningful only for input values from -1 to +1; this function throws a
 run-time exception if the input value is outside of this range.
 
-</div>
+
 
 `arcsine()`
 
-<div class="fdef">
+
 
 Returns the arcsine (the number whose sine is this value), as a value in
 radians, of the number. This function is mathematically meaningful only
 for input values from -1 to +1; this function throws a run-time
 exception if the input value is outside of this range.
 
-</div>
+
 
 `arctangent()`
 
-<div class="fdef">
+
 
 Returns the arctangent (the number whose tangent is this value), as a
 value in radians, of the number.
 
-</div>
+
 
 `copySignFrom(*x*)`
 
-<div class="fdef">
+
 
 Returns a number containing the same absolute value as this number, but
 with the sign of x replacing the original value's sign.
 
-</div>
+
 
 `cosh()`
 
-<div class="fdef">
+
 
 Computes the hyperbolic cosine of the number and returns the result.
 
-</div>
+
 
 `cosine()`
 
-<div class="fdef">
+
 
 Computes the trigonometric cosine of the number (interpreted as a radian
 value) and returns the result. Refer to the description of sine() for
 notes on how the input precision affects the calculation.
 
-</div>
+
 
 `degreesToRadians()`
 
-<div class="fdef">
+
 
 Converts the value from radians to degrees and returns the number of
 degrees. This simply multiplies the value by (*pi*/180).
 
-</div>
+
 
 `divideBy(*x*)`
 
-<div class="fdef">
+
 
 Computes the integer quotient of dividing this number by x, and returns
 a list with two elements. The first element is a BigNumber value giving
@@ -386,11 +386,11 @@ represent the exact integer quotient, the remainder will satisfy this
 relationship **and** will be the unique remainder with absolute values
 less than the divisor.
 
-</div>
+
 
 `equalRound(*num*)`
 
-<div class="fdef">
+
 
 Determine if this value is equal to num after rounding. This is
 equivalent to the `==` operator if the numbers
@@ -401,23 +401,23 @@ of the less precise value, then compares the values. The
 effectively extending the precision of the less precise value by adding
 imaginary zeros to the end of the number.
 
-</div>
+
 
 `expE()`
 
-<div class="fdef">
+
 
 Returns the result of raising *e*, the base of the natural logarithm, to
 the power of this number.
 
-</div>
+
 
 <span id="formatString"></span>
 
 `formatString(*maxDigits*?, *flags*?, *wholePlaces*?,
 *fracDigits*?, *expDigits*?, *leadFiller*?)`
 
-<div class="fdef">
+
 
 Formats the number, returning a string with the result. All of the
 arguments are optional.
@@ -519,32 +519,32 @@ argument.
   zeros after the decimal point are removed. This is ignored if there's
   no *maxDigits* value.
 
-</div>
+
 
 `getAbs()`
 
-<div class="fdef">
+
 
 Returns a number containing the absolute value of this number. (This
 function could be easily coded from a comparison and negation, but the
 method implementation is more efficient.)
 
-</div>
+
 
 `getCeil()`
 
-<div class="fdef">
+
 
 "Ceiling": returns a number containing the least integer greater than
 this number. For example, the ceiling of 2.2 is 3. Note that for
 negative numbers, the least integer above a number has a smaller
 absolute value, so the ceiling of -1.6 is -1.
 
-</div>
+
 
 `getE(*digits*)`
 
-<div class="fdef">
+
 
 Returns the value of *e* (the base of the natural logarithm,
 approximately 2.781828183) to the given number of digits of precision.
@@ -560,29 +560,29 @@ precision calculated so far during the program's execution, so this
 routine only needs to compute the value when it is called with a higher
 precision than that of the previously cached value.
 
-</div>
+
 
 `getFloor()`
 
-<div class="fdef">
+
 
 "Floor": returns a number containing the greatest integer less than this
 number.
 
-</div>
+
 
 `getFraction()`
 
-<div class="fdef">
+
 
 Returns a number containing only the fractional part of this number (the
 digits after the decimal point).
 
-</div>
+
 
 `getPi(*digits*)`
 
-<div class="fdef">
+
 
 Returns the value of *pi* (*pi*, the mathematical constant defined as
 the ratio of a circle's circumfrence to its diameter, approximately
@@ -599,20 +599,20 @@ precision calculated so far during the program's execution, so this
 routine only needs to compute the value when it is called with a higher
 precision than that of the cached value.
 
-</div>
+
 
 `getPrecision()`
 
-<div class="fdef">
+
 
 Returns the number of digits of precision that this number stores. The
 return value is of type integer.
 
-</div>
+
 
 `getScale()`
 
-<div class="fdef">
+
 
 Returns an integer giving the base-10 scale of this number. If the
 return value is positive, it indicates the number of digits before the
@@ -625,11 +625,11 @@ number of digits of zeros that immediately follow the decimal point
 before the first non-zero digit. If the value of the number is exactly
 zero, the return value is 1.
 
-</div>
+
 
 `getWhole()`
 
-<div class="fdef">
+
 
 Returns BigNumber containing only the whole part of this number (the
 digits before the decimal point). This doesn't do any rounding; it
@@ -637,46 +637,46 @@ simply truncates the number at the decimal point. For example,
 `1.99999.getWhole()` returns
 `1.00000`.
 
-</div>
+
 
 `isNegative()`
 
-<div class="fdef">
+
 
 Returns true if the number is less than zero, nil if the number is
 greater than or equal to zero.
 
-</div>
+
 
 `log10()`
 
-<div class="fdef">
+
 
 Returns the base-10 logarithm of the number.
 
-</div>
+
 
 `logE()`
 
-<div class="fdef">
+
 
 Returns the natural logarithm of the number. The logarithm of a
 non-positive number is not a real number, so this function throws a
 run-time exception if the number is less than or equal to zero.
 
-</div>
+
 
 `negate()`
 
-<div class="fdef">
+
 
 Returns a number containing the arithmetic negative of this number.
 
-</div>
+
 
 `numType()`
 
-<div class="fdef">
+
 
 Returns an integer with information on the type of the number. This lets
 you identify the special values "Not a Number" (NaN) and Infinity.
@@ -726,20 +726,20 @@ non-zero if the "not a number" flag is set.
   NumTypeZero) != 0`. Any given number will have only one of the
   positive or negative zero flags set.
 
-</div>
+
 
 `radiansToDegrees()`
 
-<div class="fdef">
+
 
 Converts the value from degrees to radians and returns the number of
 radians. This simply multiplies the value by (180/*pi*).
 
-</div>
+
 
 `raiseToPower(*y*)`
 
-<div class="fdef">
+
 
 Computes the value of this number raised to the power *y* and returns
 the result. If the value of the target number is negative, then *y* must
@@ -754,11 +754,11 @@ of 0 is undefined; 0 raised to any negative exponent is equivalent to
 the inverse of 0 to the absolute value of the exponent, which is the
 same as 1/0, which throws a divide-by-zero exception.
 
-</div>
+
 
 `roundToDecimal(*places*)`
 
-<div class="fdef">
+
 
 Returns a number rounded to the given number of digits after the decimal
 point. The new number has the same precision as this number, but all of
@@ -772,11 +772,11 @@ the nearest multiple of 100, and so on. Note that the precision of the
 result is the same as the precision of the original value; rounding
 merely affects the value, not the stored precision.
 
-</div>
+
 
 `scaleTen(*x*)`
 
-<div class="fdef">
+
 
 Returns a new number containing the value of this number scaled by
 10<sup>*x*</sup>. If *x* is positive, this multiplies this number's
@@ -785,11 +785,11 @@ times 1000). If *x* is negative, this divides this number's value by ten
 *x* times. (This is more efficient than explicitly multiplying by ten,
 because it simply adjusts the number's internal scale factor.)
 
-</div>
+
 
 `setPrecision(*digits*)`
 
-<div class="fdef">
+
 
 Returns a new number with the same value as this number but with the
 specified number of digits of precision. If *digits* is higher than this
@@ -798,11 +798,11 @@ added trailing digits. If *digits* is lower than this number's
 precision, the value is rounded to the given number of digits of
 precision.
 
-</div>
+
 
 `sine()`
 
-<div class="fdef">
+
 
 Computes the trigonometric sine of the number (interpreted as a radian
 value) and returns the result.
@@ -825,28 +825,28 @@ or minus a few times pi, but users should keep this in mind if they are
 using very large numbers and the trigonometric functions yield
 unexpected or inaccurate results.
 
-</div>
+
 
 `sinh()`
 
-<div class="fdef">
+
 
 Computes the hyperbolic sine of the number and returns the result.
 
-</div>
+
 
 `sqrt()`
 
-<div class="fdef">
+
 
 Returns the square root of the number. If the number is negative, this
 function throws a run-time exception.
 
-</div>
+
 
 `tangent()`
 
-<div class="fdef">
+
 
 Computes the trigonometric tangent of the number (interpreted as a
 radian value) and returns the result. Refer to the description of sine()
@@ -863,15 +863,15 @@ because the input value cannot be exactly an odd multiple of *pi*/2
 with a finite number of decimal digits), the tangent will return a
 number with a very large absolute value.
 
-</div>
+
 
 `tanh()`
 
-<div class="fdef">
+
 
 Computes the hyperbolic tangent of the number and returns the result.
 
-</div>
+
 
 ## Precision and Scale
 
@@ -999,11 +999,11 @@ The exact result would be 7377, but the value stored in z will be 7380:
 the last digit of y is dropped, but the system rounds up the last digit
 retained because the dropped digit is 5 or higher (in this case, 7).
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1012,4 +1012,4 @@ retained because the dropped digit is 5 or higher (in this case, 7).
     <a href="bytearr.html" class="nav"><em>Next:</em> ByteArray</a>    
 </span>
 
-</div>
+

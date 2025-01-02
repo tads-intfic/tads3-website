@@ -811,9 +811,9 @@ in
 [**`gVerifyList`**](../file/advlite.h.html#gVerifyList) - macro in
 [advlite.h](../file/advlite.h.html)\[[651](../source/advlite.h.html#651)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

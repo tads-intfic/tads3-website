@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An IAction is an Action that doesn't directly act on any objects. At
 least in this version of the library it works just like the base Action
@@ -34,15 +34,15 @@ class.
 
 `class `**`IAction`**` :   `[`Action`](../object/Action.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`IAction`**  
 [`Action`](../object/Action.html)  
@@ -51,11 +51,11 @@ class.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`IAction`**  
 [`LiteralAction`](../object/LiteralAction.html)  
@@ -67,20 +67,20 @@ class.
 [`ImplicitConversationAction`](../object/ImplicitConversationAction.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`ClimbDownVague`](../object/ClimbDownVague.html)[`ClimbUpVague`](../object/ClimbUpVague.html)[`Continue`](../object/Continue.html)[`FiatLux`](../object/FiatLux.html)[`GetOut`](../object/GetOut.html)[`GoBack`](../object/GoBack.html)[`Goodbye`](../object/Goodbye.html)[`GoSomewhere`](../object/GoSomewhere.html)[`Hello`](../object/Hello.html)[`Inventory`](../object/Inventory.html)[`Jump`](../object/Jump.html)[`JumpOffIntransitive`](../object/JumpOffIntransitive.html)[`Lie`](../object/Lie.html)[`Listen`](../object/Listen.html)[`Look`](../object/Look.html)[`LookHere`](../object/LookHere.html)[`Sit`](../object/Sit.html)[`Sleep`](../object/Sleep.html)[`Smell`](../object/Smell.html)[`Stand`](../object/Stand.html)[`Think`](../object/Think.html)[`VagueTravel`](../object/VagueTravel.html)[`Wait`](../object/Wait.html)[`WhereAmI`](../object/WhereAmI.html)[`WhereGo`](../object/WhereGo.html)[`WhoAmI`](../object/WhoAmI.html)[`Yell`](../object/Yell.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`againRepeatsParse`](#againRepeatsParse)
 
@@ -93,11 +93,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execCycle`](#execCycle)[`execResolvedAction`](#execResolvedAction)[`resolvedObjectsInScope`](#resolvedObjectsInScope)[`scoreObjects`](#scoreObjects)[`setResolvedObjects`](#setResolvedObjects)
 
@@ -112,11 +112,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="againRepeatsParse"></span>
 
@@ -124,20 +124,20 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[1095](../source/action.t.html#1095)\]
 
-<div class="desc">
+
 
 There's usually no point in parsing an IAction again when it's repeated
 since there are no objects to have changed.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execCycle"></span>
 
@@ -145,11 +145,11 @@ since there are no objects to have changed.
 
 [action.t](../file/action.t.html)\[[1143](../source/action.t.html#1143)\]
 
-<div class="desc">
+
 
 Otherwise, display the normal output from this action
 
-</div>
+
 
 <span id="execResolvedAction"></span>
 
@@ -157,12 +157,12 @@ Otherwise, display the normal output from this action
 
 [action.t](../file/action.t.html)\[[1123](../source/action.t.html#1123)\]
 
-<div class="desc">
+
 
 These methods are provided to allow an IAction to be invoked as an
 implicit action.
 
-</div>
+
 
 <span id="resolvedObjectsInScope"></span>
 
@@ -170,12 +170,12 @@ implicit action.
 
 [action.t](../file/action.t.html)\[[1175](../source/action.t.html#1175)\]
 
-<div class="desc">
+
 
 An IAction has no resolved objects, so we simply return true to indicate
 that scope is not a problem.
 
-</div>
+
 
 <span id="scoreObjects"></span>
 
@@ -183,14 +183,14 @@ that scope is not a problem.
 
 [action.t](../file/action.t.html)\[[1103](../source/action.t.html#1103)\]
 
-<div class="desc">
+
 
 For an IAction there's no point in trying to score anything but the
 Actor object; attempting to score objects via their verify properties
 will cause a run-time error, since IActions don't define verify
 properties and the like.
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -198,15 +198,15 @@ properties and the like.
 
 [action.t](../file/action.t.html)\[[1169](../source/action.t.html#1169)\]
 
-<div class="desc">
+
 
 Nothing to do here.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

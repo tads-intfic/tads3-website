@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Starting the Map  
@@ -16,7 +16,7 @@ game</a>    
 <a href="airmap2.html" class="nav"><em>Next:</em> Extending the Map</a>
     </span>
 
-</div>
+
 
 
 
@@ -42,7 +42,7 @@ definition template). I'll explain why when we get to the end. I'll also
 interrupt the program listing every now and again to explain particular
 points as they arise.
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -60,13 +60,13 @@ points as they arise.
         htmlDesc = 'A brief demonstration of game design in TADS 3.'    
         
     ;
-`
+```
 
 Note that we've filled in some of the properties of versionInfo,
 including the IFID, from those shown in the game design article we're
 borrowing from in the *TADS 3 Technical Menual*.
 
-`
+```
     gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
@@ -141,7 +141,7 @@ borrowing from in the *TADS 3 Technical Menual*.
             from the card, and it would almost certainly render the card useless if
             you did so. '
     ;
-`
+```
 
 Note how we've made the magnetic stripe a part of the ID card, by making
 it a Fixture (so it can't be taken separately) and then providing a
@@ -149,7 +149,7 @@ custom cannotTakeMsg. The description also hints both that the card
 might be useful in a card lock and that it might trigger a metal
 detector.
 
-`
+```
     + Decoration 'people; of[prep]; line queue tourists businesspeople; them'
         "A motley collection of tourists and businesspeople, so far as you can
         tell, many of them looking increasingly frustrated at the length of the
@@ -167,7 +167,7 @@ detector.
         
         notImportantMsg = 'Unfortunately you can\'t get anywhere near any of them. '
     ;
-`
+```
 
 Here we've simply used the Decoration class to implement people the
 player character isn't meant to interact with. Even this minimal
@@ -178,7 +178,7 @@ attention to the ID card that's been left lying around. We'll see how to
 implement rather livelier and more responsive non-player characters in
 later chapters.
 
-`
+```
     securityGate: Room 'Security Gate' 'security gate'
         "You are at the security gate leading into the main
         concourse and boarding gate areas. The concourse lies to the
@@ -222,7 +222,7 @@ later chapters.
         notImportantMsg = 'You\'re morally certain the security guard won\'t let you
             get anywhere near it. '
     ;
-`
+```
 
 The main point of note here is the use of the Passage class (yet another
 combination of TravelConnector and Thing) to implement the metal
@@ -247,7 +247,7 @@ the metal detector might be a way to disable it, but its
 clear that interfering directly with the cable isn't the way to go about
 it.
 
-`
+```
     concourse: Room 'Concourse' 'concourse; long; hallway'
         "You are in a long hallway connecting the terminal
         building (which lies to the south) to the boarding gates (which are
@@ -264,7 +264,7 @@ it.
         "The slot appears to accept special ID cards with magnetic encoding. If you
         had an appropriate ID card, you could put it in the slot to open the door. "
     ;   
-`
+```
 
 Note that we've commented out the line `north =
 gateArea` for now, since gateArea hasn't been implemented yet.
@@ -272,7 +272,7 @@ This will allow us to test this part of the map without first completing
 the rest of the map. The implementation of the card slot is obviously
 incomplete, but it will do for now.
 
-`
+```
     snackBar: Room 'Snack Bar' 'snack bar'
         "The snack bar seems to be full of passengers jostling one another to get at
         the serving counter, or consuming their homogenized snacks at the crowded
@@ -333,7 +333,7 @@ incomplete, but it will do for now.
             something <i>big</i>, but you knew that anyway; that's what brought you
             to this godforsaken hell-hole. "   
     ;
-`
+```
 
 Once again we've used Decoration objects to represent people we don't
 want the player character to interact with, although the description of
@@ -349,7 +349,7 @@ more information about the game's setting. It does not yet provide an
 airline ticket when taken, but we'll be coming back to that in the next
 chapter.
 
-`
+```
     securityArea: Room 'Security Area' 'security area'
         "This somewhat bare room seems to be a lobby for other areas. There are exits
         south and west, while the way out back to the concourse lies through the
@@ -394,7 +394,7 @@ chapter.
         east = securityArea
         out asExit(east)
     ;
-`
+```
 
 These last three rooms are quite sparsely implemented for now, and will
 need to be filled out more later, but we do at least have the suitcase
@@ -459,7 +459,7 @@ next section, we'll sketch in the rest of the airport map.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -469,4 +469,4 @@ game</a>    
 <a href="airmap2.html" class="nav"><em>Next:</em> Extending the Map</a>
     </span>
 
-</div>
+

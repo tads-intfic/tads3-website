@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`QueryVague`**` :   `[`MiscConvAction`](../object/MiscConvAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`QueryVague`**  
 [`MiscConvAction`](../object/MiscConvAction.html)  
@@ -45,11 +45,11 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`baseActionClass`](#baseActionClass)[`qType`](#qType)[`responseProp`](#responseProp)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="baseActionClass"></span>
 
@@ -105,11 +105,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1786](../source/actions.t.html#1786)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="qType"></span>
 
@@ -117,11 +117,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1793](../source/actions.t.html#1793)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="responseProp"></span>
 
@@ -129,19 +129,19 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1794](../source/actions.t.html#1794)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -149,15 +149,15 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1787](../source/actions.t.html#1787)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

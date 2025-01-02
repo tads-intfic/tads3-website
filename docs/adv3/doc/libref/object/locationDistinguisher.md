@@ -20,33 +20,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Location Distinguisher. This distinguisher identifies objects purely by
 their immediate locations.
 
 **`locationDistinguisher`**` :   `[`Distinguisher`](../object/Distinguisher.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`locationDistinguisher`**  
 [`Distinguisher`](../object/Distinguisher.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -54,11 +54,11 @@ their immediate locations.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`matchName`](#matchName)[`name`](#name)[`notePrompt`](#notePrompt)[`objInScope`](#objInScope)[`theName`](#theName)
 
@@ -66,19 +66,19 @@ their immediate locations.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="aName"></span>
 
@@ -86,11 +86,11 @@ their immediate locations.
 
 [en_us.t](../file/en_us.t.html)\[[3556](../source/en_us.t.html#3556)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canDistinguish"></span>
 
@@ -98,11 +98,11 @@ their immediate locations.
 
 [disambig.t](../file/disambig.t.html)\[[219](../source/disambig.t.html#219)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="countName"></span>
 
@@ -110,11 +110,11 @@ their immediate locations.
 
 [en_us.t](../file/en_us.t.html)\[[3558](../source/en_us.t.html#3558)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchName"></span>
 
@@ -122,11 +122,11 @@ their immediate locations.
 
 [disambig.t](../file/disambig.t.html)\[[235](../source/disambig.t.html#235)\]
 
-<div class="desc">
+
 
 otherwise, use the inherited handling
 
-</div>
+
 
 <span id="name"></span>
 
@@ -134,11 +134,11 @@ otherwise, use the inherited handling
 
 [en_us.t](../file/en_us.t.html)\[[3555](../source/en_us.t.html#3555)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notePrompt"></span>
 
@@ -146,11 +146,11 @@ otherwise, use the inherited handling
 
 [en_us.t](../file/en_us.t.html)\[[3561](../source/en_us.t.html#3561)\]
 
-<div class="desc">
+
 
 note that we're prompting based on this distinguisher
 
-</div>
+
 
 <span id="objInScope"></span>
 
@@ -158,11 +158,11 @@ note that we're prompting based on this distinguisher
 
 [disambig.t](../file/disambig.t.html)\[[225](../source/disambig.t.html#225)\]
 
-<div class="desc">
+
 
 we tell the objects apart by their immediate locations
 
-</div>
+
 
 <span id="theName"></span>
 
@@ -170,15 +170,15 @@ we tell the objects apart by their immediate locations
 
 [en_us.t](../file/en_us.t.html)\[[3557](../source/en_us.t.html#3557)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

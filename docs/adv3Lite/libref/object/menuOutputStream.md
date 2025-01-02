@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Menu output stream. We run topic contents through this output stream to
 allow topics to use the special paragraph and style tag markups.
 
 `transient `**`menuOutputStream`**` :   `[`OutputStream`](../object/OutputStream.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`menuOutputStream`**  
 [`OutputStream`](../object/OutputStream.html)  
@@ -44,11 +44,11 @@ allow topics to use the special paragraph and style tag markups.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`buf_`](#buf_)
 
@@ -63,11 +63,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`captureOutput`](#captureOutput)[`execute`](#execute)[`writeFromStream`](#writeFromStream)
 
@@ -81,11 +81,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="buf_"></span>
 
@@ -93,19 +93,19 @@ Inherited from `ModuleExecObject` :
 
 [menusys.t](../file/menusys.t.html)\[[125](../source/menusys.t.html#125)\]
 
-<div class="desc">
+
 
 our capture buffer (a StringBuffer object)
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="captureOutput"></span>
 
@@ -113,13 +113,13 @@ our capture buffer (a StringBuffer object)
 
 [menusys.t](../file/menusys.t.html)\[[90](../source/menusys.t.html#90)\]
 
-<div class="desc">
+
 
 Process a function call through the stream. If the function generates
 any output, we capture it. If the function simply returns text, we run
 it through the filters.
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -127,11 +127,11 @@ it through the filters.
 
 [menusys.t](../file/menusys.t.html)\[[115](../source/menusys.t.html#115)\]
 
-<div class="desc">
+
 
 initialize
 
-</div>
+
 
 <span id="writeFromStream"></span>
 
@@ -139,15 +139,15 @@ initialize
 
 [menusys.t](../file/menusys.t.html)\[[112](../source/menusys.t.html#112)\]
 
-<div class="desc">
+
 
 we capture our output to a string buffer
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

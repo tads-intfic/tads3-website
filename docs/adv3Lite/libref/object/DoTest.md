@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The 'test X' command can be used with any Test object defined in the
 source code:
 
 **`DoTest`**` :   `[`LiteralAction`](../object/LiteralAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DoTest`**  
 [`LiteralAction`](../object/LiteralAction.html)  
@@ -46,11 +46,11 @@ source code:
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -69,11 +69,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`afterAction`](#afterAction)[`exec`](#exec)[`turnSequence`](#turnSequence)
 
@@ -93,19 +93,19 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -113,11 +113,11 @@ Inherited from `Redirector` :
 
 [debug.t](../file/debug.t.html)\[[461](../source/debug.t.html#461)\]
 
-<div class="desc">
+
 
 Do nothing after the main action
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -125,13 +125,13 @@ Do nothing after the main action
 
 [debug.t](../file/debug.t.html)\[[450](../source/debug.t.html#450)\]
 
-<div class="desc">
+
 
 We override exec() rather than exeAction() here, since we want to skip
 all the normal turn sequence routines such as before and after
 notifications and advancing the turn count.
 
-</div>
+
 
 <span id="turnSequence"></span>
 
@@ -139,15 +139,15 @@ notifications and advancing the turn count.
 
 [debug.t](../file/debug.t.html)\[[463](../source/debug.t.html#463)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

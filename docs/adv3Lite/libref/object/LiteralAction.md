@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A LiteralAction is an action that acts on a single literal object, e.g.
 TYPE HELLO
 
 `class `**`LiteralAction`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LiteralAction`**  
 [`IAction`](../object/IAction.html)  
@@ -51,28 +51,28 @@ TYPE HELLO
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`DoTest`](../object/DoTest.html)[`Evaluate`](../object/Evaluate.html)[`Type`](../object/Type.html)[`Write`](../object/Write.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`literal`](#literal)[`num`](#num)
 
@@ -88,11 +88,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`exec`](#exec)
 
@@ -110,11 +110,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="literal"></span>
 
@@ -122,11 +122,11 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[2540](../source/action.t.html#2540)\]
 
-<div class="desc">
+
 
 The string literal on which this command is operating.
 
-</div>
+
 
 <span id="num"></span>
 
@@ -134,19 +134,19 @@ The string literal on which this command is operating.
 
 [action.t](../file/action.t.html)\[[2543](../source/action.t.html#2543)\]
 
-<div class="desc">
+
 
 The numerical value of our literal
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -154,15 +154,15 @@ The numerical value of our literal
 
 [action.t](../file/action.t.html)\[[2530](../source/action.t.html#2530)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

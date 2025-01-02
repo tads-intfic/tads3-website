@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Paragraph manager. We filter strings as they're about to be sent to the
 console to convert paragraph markers (represented in the source text
@@ -67,43 +67,43 @@ restore.
 
 `class `**`ParagraphManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ParagraphManager`**  
 [`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`mainParagraphManager`](../object/mainParagraphManager.html)[`menuParagraphManager`](../object/menuParagraphManager.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`leadingMultiPat`](#leadingMultiPat)[`leadingSinglePat`](#leadingSinglePat)[`renderAfterInput`](#renderAfterInput)[`renderText`](#renderText)[`suppressAfter`](#suppressAfter)[`suppressBefore`](#suppressBefore)
 
@@ -111,11 +111,11 @@ restore.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterText`](#filterText)
 
@@ -123,11 +123,11 @@ restore.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="leadingMultiPat"></span>
 
@@ -135,11 +135,11 @@ restore.
 
 [output.t](../file/output.t.html)\[[635](../source/output.t.html#635)\]
 
-<div class="desc">
+
 
 pre-compile some regular expression patterns we use a lot
 
-</div>
+
 
 <span id="leadingSinglePat"></span>
 
@@ -147,11 +147,11 @@ pre-compile some regular expression patterns we use a lot
 
 [output.t](../file/output.t.html)\[[636](../source/output.t.html#636)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="renderAfterInput"></span>
 
@@ -159,12 +159,12 @@ pre-compile some regular expression patterns we use a lot
 
 [output.t](../file/output.t.html)\[[610](../source/output.t.html#610)\]
 
-<div class="desc">
+
 
 Flag: show or hide paragraph breaks immediately after input. By default,
 we do not show paragraph breaks after an input line.
 
-</div>
+
 
 <span id="renderText"></span>
 
@@ -172,12 +172,12 @@ we do not show paragraph breaks after an input line.
 
 [output.t](../file/output.t.html)\[[604](../source/output.t.html#604)\]
 
-<div class="desc">
+
 
 Rendering - this is what we display on the console to represent a
 paragraph break. By default, we'll display a blank line.
 
-</div>
+
 
 <span id="suppressAfter"></span>
 
@@ -185,7 +185,7 @@ paragraph break. By default, we'll display a blank line.
 
 [output.t](../file/output.t.html)\[[632](../source/output.t.html#632)\]
 
-<div class="desc">
+
 
 Following suppression. This is a regular expression that we match to
 individual characters. If the character immediately following a
@@ -195,7 +195,7 @@ until we find one that does not match; we'll suppress all of the
 characters that do match. By default, we suppress additional blank lines
 after a paragraph break.
 
-</div>
+
 
 <span id="suppressBefore"></span>
 
@@ -203,7 +203,7 @@ after a paragraph break.
 
 [output.t](../file/output.t.html)\[[620](../source/output.t.html#620)\]
 
-<div class="desc">
+
 
 Preceding suppression. This is a regular expression that we match to
 individual characters. If the character immediately preceding a
@@ -212,15 +212,15 @@ marker in the output. By default, we'll suppress a paragraph break
 following a blank line, because the default rendering would add a
 redundant blank line.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterText"></span>
 
@@ -228,15 +228,15 @@ redundant blank line.
 
 [output.t](../file/output.t.html)\[[640](../source/output.t.html#640)\]
 
-<div class="desc">
+
 
 process a string that's about to be written to the console
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

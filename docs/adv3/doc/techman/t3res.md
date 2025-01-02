@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Action Results  
@@ -16,7 +16,7 @@ From</a>    
 <a href="t3verchk.html" class="nav"><em>Next:</em> Verify, Check, and
 When to Use Which</a>     </span>
 
-</div>
+
 
 
 
@@ -1048,7 +1048,7 @@ getParserMessageObj() when isPlayerChar() returns nil.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1058,4 +1058,4 @@ From</a>    
 <a href="t3verchk.html" class="nav"><em>Next:</em> Verify, Check, and
 When to Use Which</a>     </span>
 
-</div>
+

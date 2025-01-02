@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for resolution errors involving pronouns
 
 `class `**`PronounError`**` :   `[`ResolutionError`](../object/ResolutionError.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PronounError`**  
 [`ResolutionError`](../object/ResolutionError.html)  
@@ -49,30 +49,30 @@ Base class for resolution errors involving pronouns
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PronounError`**  
 [`AntecedentScopeError`](../object/AntecedentScopeError.html)  
 [`NoAntecedentError`](../object/NoAntecedentError.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`pronoun`](#pronoun)
 
@@ -87,11 +87,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -106,11 +106,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="pronoun"></span>
 
@@ -118,19 +118,19 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5358](../source/parser.t.html#5358)\]
 
-<div class="desc">
+
 
 the pronoun that caused the error, as a Pronoun object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -138,15 +138,15 @@ the pronoun that caused the error, as a Pronoun object
 
 [parser.t](../file/parser.t.html)\[[5351](../source/parser.t.html#5351)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

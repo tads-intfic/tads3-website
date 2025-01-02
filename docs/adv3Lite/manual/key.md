@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Keys  
@@ -16,7 +16,7 @@ Barriers</a>    
 <a href="multiloc.html" class="nav"><em>Next:</em> MultiLocs</a>    
 </span>
 
-</div>
+
 
 
 
@@ -59,14 +59,14 @@ trouble to do it.
 
 Thus, for example, we might define a front door key as follows:
 
-`
+```
      brassKey: Key 'brass key; medium sized'    
         "It's just a medium sized brass key, typical of the sort used to lock and
         unlock doors. "
         plausibleLockList = [frontDoor, frontDoorOutside, backDoor, backDoorOutside]
         actualLockList = [frontDoor, frontDoorOutside]
     ;
-`
+```
 
 Note that we have to specify both sides of the frontDoor in the
 actualLockList property if we want the key to work on both sides.
@@ -111,12 +111,12 @@ game author).
 This means that, for example, to define a Door that starts out locked
 and can be unlocked with the brassKey we could just define:
 
-`
+```
     + frontDoor: Door ->frontDoorOutside 'door'
        keyList = [brassKey]  
     ;
      
-`
+```
 
 This is an alternative to listing frontDoor in the actualLockList of the
 brassKey (although it wouldn't matter if you did both). If you like, you
@@ -127,7 +127,7 @@ the actualLockLists of Keys.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -137,4 +137,4 @@ Barriers</a>    
 <a href="multiloc.html" class="nav"><em>Next:</em> MultiLocs</a>    
 </span>
 
-</div>
+

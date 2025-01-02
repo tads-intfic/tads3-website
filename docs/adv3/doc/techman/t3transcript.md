@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Manipulating the
@@ -17,7 +17,7 @@ Cycle</a>    
 <a href="t3scope.html" class="nav"><em>Next:</em> Redefining Scope</a>
     </span>
 
-</div>
+
 
 
 
@@ -1838,7 +1838,7 @@ wrong with your latest attempt.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1849,4 +1849,4 @@ Cycle</a>    
 <a href="t3scope.html" class="nav"><em>Next:</em> Redefining Scope</a>
     </span>
 
-</div>
+

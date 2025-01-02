@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 List Group implementation: simple prefix/suffix lister. Shows a prefix
 message, then shows the list, then shows a suffix message.
@@ -37,15 +37,15 @@ by compareGroupItems().
 
 `class `**`ListGroupPrefixSuffix`**` :   `[`ListGroupSorted`](../object/ListGroupSorted.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ListGroupPrefixSuffix`**  
 [`ListGroupSorted`](../object/ListGroupSorted.html)  
@@ -53,29 +53,29 @@ by compareGroupItems().
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ListGroupPrefixSuffix`**  
 [`SuggestionListGroup`](../object/SuggestionListGroup.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`groupPrefix`](#groupPrefix)[`groupSuffix`](#groupSuffix)
 
@@ -86,11 +86,11 @@ Inherited from `ListGroup` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showGroupList`](#showGroupList)[`showGroupPrefix`](#showGroupPrefix)[`showGroupSuffix`](#showGroupSuffix)
 
@@ -102,11 +102,11 @@ Inherited from `ListGroup` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="groupPrefix"></span>
 
@@ -114,7 +114,7 @@ Inherited from `ListGroup` :
 
 [lister.t](../file/lister.t.html)\[[2216](../source/lister.t.html#2216)\]
 
-<div class="desc">
+
 
 The prefix and suffix messages. The showGroupPrefix and showGroupSuffix
 methods simply show these message properties. We go through this
@@ -124,7 +124,7 @@ parameterless properties. If the subclass needs to vary the message
 according to the POV or what's in the list, it can override the
 showGroupXxx methods instead.
 
-</div>
+
 
 <span id="groupSuffix"></span>
 
@@ -132,19 +132,19 @@ showGroupXxx methods instead.
 
 [lister.t](../file/lister.t.html)\[[2217](../source/lister.t.html#2217)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showGroupList"></span>
 
@@ -152,11 +152,11 @@ showGroupXxx methods instead.
 
 [lister.t](../file/lister.t.html)\[[2179](../source/lister.t.html#2179)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showGroupPrefix"></span>
 
@@ -164,11 +164,11 @@ showGroupXxx methods instead.
 
 [lister.t](../file/lister.t.html)\[[2202](../source/lister.t.html#2202)\]
 
-<div class="desc">
+
 
 show the prefix - we just show the groupPrefix message by default
 
-</div>
+
 
 <span id="showGroupSuffix"></span>
 
@@ -176,15 +176,15 @@ show the prefix - we just show the groupPrefix message by default
 
 [lister.t](../file/lister.t.html)\[[2205](../source/lister.t.html#2205)\]
 
-<div class="desc">
+
 
 show the suffix - we just show the groupSuffix message by default
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

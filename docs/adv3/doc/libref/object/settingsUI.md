@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The settings user interface. This is a subclass of the Settings Manager
 that adds a command-line user interface, particularly to allow the user
@@ -36,26 +36,26 @@ settings when we start (or RESTART) the game.
 
 **`settingsUI`**` :   `[`settingsManager`](../object/settingsManager.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`settingsUI`**  
 [`settingsManager`](../object/settingsManager.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -63,11 +63,11 @@ settings when we start (or RESTART) the game.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`restoreSettingsMsg`](#restoreSettingsMsg)[`saveSettingsMsg`](#saveSettingsMsg)[`showAll`](#showAll)
 
@@ -76,19 +76,19 @@ Inherited from `settingsManager` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="restoreSettingsMsg"></span>
 
@@ -96,12 +96,12 @@ Inherited from `settingsManager` :
 
 [misc.t](../file/misc.t.html)\[[2401](../source/misc.t.html#2401)\]
 
-<div class="desc">
+
 
 Restore settings, and display an acknowledgment or error message, as
 appropriate.
 
-</div>
+
 
 <span id="saveSettingsMsg"></span>
 
@@ -109,12 +109,12 @@ appropriate.
 
 [misc.t](../file/misc.t.html)\[[2379](../source/misc.t.html#2379)\]
 
-<div class="desc">
+
 
 Save settings, and display an acknowledgment message (or an error
 message, if necessary) for the user's edification.
 
-</div>
+
 
 <span id="showAll"></span>
 
@@ -122,15 +122,15 @@ message, if necessary) for the user's edification.
 
 [misc.t](../file/misc.t.html)\[[2352](../source/misc.t.html#2352)\]
 
-<div class="desc">
+
 
 display all of the current settings
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

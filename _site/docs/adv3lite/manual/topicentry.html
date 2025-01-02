@@ -55,12 +55,13 @@ To create a Consultable object in adv3Lite we first define an object of
 class Consultable, in much the same way as we’d define any other Thing,
 for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    blueBook: Consultable 'blue book; useless trusty of[prep];dictionary information' @desk
-        "It's your trusty dictionary of useless information. "
-        
-        readDesc = "It's not the sort of book you'd want to read from cover to
-            cover; it's more for looking things up in. "
-    ;
+<p>`
+    blueBook: Consultable ‘blue book; useless trusty of[prep];dictionary information’ @desk
+        “It’s your trusty dictionary of useless information. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    readDesc = "It's not the sort of book you'd want to read from cover to
+        cover; it's more for looking things up in. "
+; `
 </code></pre></div></div>
 
 <p>Each item you want the player to be able to look up in the blue book can
@@ -107,11 +108,12 @@ one Topic or Thing).</li>
 <p>Most of these properties can be defined through a template. The basic
 template for a TopicEntry looks like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    TopicEntry template
+<p>`
+    TopicEntry template
        +matchScore?
-       @matchObj | [matchObj] | 'matchPattern'
-       "topicResponse" | [eventList] ?;
-</code></pre></div></div>
+       @matchObj | [matchObj] | ‘matchPattern’
+       “topicResponse” | [eventList] ?;
+`</p>
 
 <p>This means that a TopicEntry can optionally be defined with a + sign and
 a number giving its matchScore; following that (if it is present) or
@@ -124,21 +126,22 @@ strings) if the TopicEntry is also an EventList.</p>
 <p>To continue the previous example, we might begin to populate our
 dictionary of useless information with ConsultTopics thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ConsultTopic @tLemons    
-        "Apparently they're yellow and sour. "
-    ;
+<p>`
+    + ConsultTopic @tLemons  <br />
+        “Apparently they’re yellow and sour. “
+    ;</p>
 
-    + ConsultTopic 'oranges'
-        "They're round and juicy. "
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ ConsultTopic 'oranges'
+    "They're round and juicy. "
+;
 
-    + ConsultTopic @Door
-        "Doors can be opened and closed, and when open you can go through them. "
-    ;
++ ConsultTopic @Door
+    "Doors can be opened and closed, and when open you can go through them. "
+;
 
-    + ConsultTopic '(black|red|green) blob(s){0,1}'
-       "They're very blobby. "   
-    ;
++ ConsultTopic '(black|red|green) blob(s){0,1}'
+   "They're very blobby. "   
+; `
 </code></pre></div></div>
 
 <p><span id="defaultconsult"></span></p>
@@ -149,28 +152,30 @@ ABRAHAM LINCOLN IN BOOK or CONSULT DICTIONARY ABOUT KNOWN UNKNOWNS for
 example. For that purpose we use a <strong>DefaultConsultTopic</strong> which acts a
 catch-all for anything we haven’t specifically defined:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultConsultTopic
-        "You thumb through the blue book in vain for any interesting information on
-        that topic. "
+<p>`
+    + DefaultConsultTopic
+        “You thumb through the blue book in vain for any interesting information on
+        that topic. “
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Alternatively, we might mix in the DefaultConsultTopic with an EventList
 class to provide a sequence of responses:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + DefaultConsultTopic, StopEventList
+<p>`
+    + DefaultConsultTopic, StopEventList
       [
-        'You thumb through the blue book in vain for any interesting information on
-        that topic. ',
-        
-        'Once again you fail to find anything useful. ',
-        
-        'You begin to wonder whether this book is much use; that\'s the third time
-         it\'s failed to provide information on something. ',
-         
-        'Oh dear! Yet again you fail to find what you\'re looking for. '    
-       ]
-    ;
+        ‘You thumb through the blue book in vain for any interesting information on
+        that topic. ‘,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    'Once again you fail to find anything useful. ',
+    
+    'You begin to wonder whether this book is much use; that\'s the third time
+     it\'s failed to provide information on something. ',
+     
+    'Oh dear! Yet again you fail to find what you\'re looking for. '    
+   ]
+; `
 </code></pre></div></div>
 
 <p>If you don’t need Consultables or any other kind of TopicEntries then

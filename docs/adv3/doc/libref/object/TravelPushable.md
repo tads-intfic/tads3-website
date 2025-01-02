@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "TravelPushable" is an object that can't be taken, but can be moved
 from one location to another via commands of the form "push obj dir,"
@@ -38,15 +38,15 @@ code. This is therefore only a general framework for pushability.
 
 `class `**`TravelPushable`**` :   `[`Immovable`](../object/Immovable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TravelPushable`**  
 [`Immovable`](../object/Immovable.html)  
@@ -56,27 +56,27 @@ code. This is therefore only a general framework for pushability.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotMoveMsg`](#cannotMoveMsg)[`cannotPutMsg`](#cannotPutMsg)[`cannotTakeMsg`](#cannotTakeMsg)[`pushTravelerClass`](#pushTravelerClass)
 
@@ -93,11 +93,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`beforeMovePushable`](#beforeMovePushable)[`canPushTravelVia`](#canPushTravelVia)[`describeMovePushable`](#describeMovePushable)[`dobjFor(PushTravel)`](#dobjFor(PushTravel))[`explainNoPushTravelVia`](#explainNoPushTravelVia)[`movePushable`](#movePushable)
 
@@ -115,11 +115,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotMoveMsg"></span>
 
@@ -127,11 +127,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[3166](../source/travel.t.html#3166)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotPutMsg"></span>
 
@@ -139,11 +139,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[3167](../source/travel.t.html#3167)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotTakeMsg"></span>
 
@@ -151,11 +151,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[3165](../source/travel.t.html#3165)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="pushTravelerClass"></span>
 
@@ -163,22 +163,22 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[3303](../source/travel.t.html#3303)\]
 
-<div class="desc">
+
 
 The class we create for our special push traveler - by default, this is
 PushTraveler, but we parameterize this via this property to allow
 special PushTraveler subclasses to be created; this could be useful, for
 example, to customize the traveler name messages.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="beforeMovePushable"></span>
 
@@ -187,7 +187,7 @@ description only</span>
 
 [travel.t](../file/travel.t.html)\[[3182](../source/travel.t.html#3182)\]
 
-<div class="desc">
+
 
 Receive notification that we're about to be pushed somewhere. This is
 called just before the underlying traveler performs the actual travel.
@@ -195,7 +195,7 @@ called just before the underlying traveler performs the actual travel.
 combined with another base class that overrides the method, the
 overrider will be called.)
 
-</div>
+
 
 <span id="canPushTravelVia"></span>
 
@@ -203,11 +203,11 @@ overrider will be called.)
 
 [travel.t](../file/travel.t.html)\[[3170](../source/travel.t.html#3170)\]
 
-<div class="desc">
+
 
 can we be pushed via the given travel connector?
 
-</div>
+
 
 <span id="describeMovePushable"></span>
 
@@ -215,14 +215,14 @@ can we be pushed via the given travel connector?
 
 [travel.t](../file/travel.t.html)\[[3213](../source/travel.t.html#3213)\]
 
-<div class="desc">
+
 
 Describe the actor pushing the object into the new location. This is
 called from movePushable; we pull this out as a separate routine so that
 the description of the pushing can be overridden without having to
 override all of movePushable.
 
-</div>
+
 
 <span id="dobjFor(PushTravel)"></span>
 
@@ -230,14 +230,14 @@ override all of movePushable.
 
 [travel.t](../file/travel.t.html)\[[3226](../source/travel.t.html#3226)\]
 
-<div class="desc">
+
 
 If the actor is the player character, mention that we're pushing the
 object with us. For an NPC, show nothing, because the normal travel
 message will mention that the NPC is pushing the object as part of the
 normal travel report (thanks to PushTraveler's name override).
 
-</div>
+
 
 <span id="explainNoPushTravelVia"></span>
 
@@ -245,11 +245,11 @@ normal travel report (thanks to PushTraveler's name override).
 
 [travel.t](../file/travel.t.html)\[[3173](../source/travel.t.html#3173)\]
 
-<div class="desc">
+
 
 explain why canPushTravelVia said we can't be pushed this way
 
-</div>
+
 
 <span id="movePushable"></span>
 
@@ -257,7 +257,7 @@ explain why canPushTravelVia said we can't be pushed this way
 
 [travel.t](../file/travel.t.html)\[[3198](../source/travel.t.html#3198)\]
 
-<div class="desc">
+
 
 Move the object to a new location as part of a push-travel operation. By
 default, this simply uses moveInto to move the object, but subclasses
@@ -272,11 +272,11 @@ routine is never called if the traveler ends up in its original location
 after the travel, so this routine isn't called when travel isn't allowed
 for the underlying traveler.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

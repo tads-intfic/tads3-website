@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Exact quantified plural phrase. This is similar to the normal quantified
 plural, but has the additional requirement of matching an unambiguous
@@ -35,15 +35,15 @@ find exactly five books matching the phrase - no fewer, and no more).
 
 `class `**`ExactQuantifiedPluralProd`**` :   `[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ExactQuantifiedPluralProd`**  
 [`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)  
@@ -55,11 +55,11 @@ find exactly five books matching the phrase - no fewer, and no more).
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ExactQuantifiedPluralProd`**  
 [`BothPluralProd`](../object/BothPluralProd.html)  
@@ -69,19 +69,19 @@ find exactly five books matching the phrase - no fewer, and no more).
 [`qualifiedPluralNounPhrase(allNum)`](../object/qualifiedPluralNounPhrase(allNum).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -100,11 +100,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getVerifyKeepers`](#getVerifyKeepers)[`selectExactCount`](#selectExactCount)
 
@@ -125,19 +125,19 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getVerifyKeepers"></span>
 
@@ -145,11 +145,11 @@ Inherited from `AmbigResponseKeeper` :
 
 [parser.t](../file/parser.t.html)\[[2413](../source/parser.t.html#2413)\]
 
-<div class="desc">
+
 
 get the keepers in the verify stage
 
-</div>
+
 
 <span id="selectExactCount"></span>
 
@@ -157,16 +157,16 @@ get the keepers in the verify stage
 
 [parser.t](../file/parser.t.html)\[[2387](../source/parser.t.html#2387)\]
 
-<div class="desc">
+
 
 Select the desired number of matches. Since we want an exact set of
 matches, we'll run disambiguation on the set.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

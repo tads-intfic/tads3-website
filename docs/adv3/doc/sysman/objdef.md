@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Object
@@ -17,7 +17,7 @@ Model</a>    
 <a href="inlineobj.html" class="nav"><em>Next:</em> Inline Objects</a>
     </span>
 
-</div>
+
 
 
 
@@ -75,7 +75,7 @@ entities.
 
 The most general way to define an object is like this:
 
-<div class="syntax">
+
 
     objectName : class1 [ , class2 ... ] 
        propName = value
@@ -99,7 +99,7 @@ subsequent superclasses.
 Alternatively, you can write the same thing in a slightly different way,
 by enclosing the list of properties in braces:
 
-<div class="syntax">
+
 
     objectName : class1 [ , class2 ... ] 
     {
@@ -107,7 +107,7 @@ by enclosing the list of properties in braces:
        methodName ( arg1 [ , arg2 ... ]  ) { methodBody }
     }
 
-</div>
+
 
 When you use this alternative syntax, you must place the entire property
 list within the braces. A semicolon is not required at the end of the
@@ -271,14 +271,14 @@ otherwise normal property definitions, enclosed in a set of braces to
 mark the bounds of the set. So, the general syntax for a property set
 is:
 
-<div class="syntax">
+
 
     propertyset 'pattern'
     {
        propertyList
     }
 
-</div>
+
 
 Optionally, you can include a parameter list after the pattern. The
 parameter list is a set of common formal parameters that each method in
@@ -287,11 +287,11 @@ define. Like the name pattern, the parameter list uses an asterisk
 ("\*") to indicate where the added parameters of each method go in the
 list.
 
-<div class="syntax">
+
 
     propertyset 'pattern' ( params, *, params )  { propertyList }
 
-</div>
+
 
 This all goes within an object definition - you can put a property set
 anywhere a single property could go, and property sets can be
@@ -539,13 +539,13 @@ object to serve as an argument to a function.
 You can define a class instead of an object by adding the keyword
 "class" before the object name:
 
-<div class="syntax">
+
 
     class className : superclass1 [ , superclass2 ... ] 
         propertiesAndMethods
     ;
 
-</div>
+
 
 A class definition is otherwise syntactically identical to an ordinary
 object definition. In particular, you can define properties and methods
@@ -781,21 +781,21 @@ for defining properties that you use frequently.
 To define objects using templates, you must first define the templates
 themselves. You define a template using the object template statement:
 
-<div class="syntax">
+
 
     objectName template [ item1 [ , item2 ... ]  ]  ;
 
-</div>
+
 
 You can also define a template that is specific to instances of a class
 and all of its subclasses (including subclasses of subclasses, to any
 depth):
 
-<div class="syntax">
+
 
     className template [ item1 [ , item2 ... ]  ]  ;
 
-</div>
+
 
 Each item in the list is a placeholder for a property; it specifies the
 name of the property to assign to the position, and how you will write
@@ -1203,11 +1203,11 @@ object itself isn't stored in the file. When you restore the game, the
 persistent object will be restored, and the property that contained the
 transient object reference will be `nil`.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1218,4 +1218,4 @@ Model</a>    
 <a href="inlineobj.html" class="nav"><em>Next:</em> Inline Objects</a>
     </span>
 
-</div>
+

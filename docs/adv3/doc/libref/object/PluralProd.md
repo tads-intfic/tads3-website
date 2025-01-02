@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for a plural production
 
 `class `**`PluralProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PluralProd`**  
 [`NounPhraseProd`](../object/NounPhraseProd.html)  
@@ -48,11 +48,11 @@ Base class for a plural production
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PluralProd`**  
 [`AllPluralProd`](../object/AllPluralProd.html)  
@@ -71,19 +71,19 @@ Base class for a plural production
 [`qualifiedPluralNounPhrase(anyNum)`](../object/qualifiedPluralNounPhrase(anyNum).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -95,11 +95,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`basicPluralResolveNouns`](#basicPluralResolveNouns)[`getVerifyKeepers`](#getVerifyKeepers)
 
@@ -111,19 +111,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="basicPluralResolveNouns"></span>
 
@@ -131,12 +131,12 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[2097](../source/parser.t.html#2097)\]
 
-<div class="desc">
+
 
 Basic plural noun resolution. We'll retrieve the matching objects and
 filter them using filterPluralPhrase.
 
-</div>
+
 
 <span id="getVerifyKeepers"></span>
 
@@ -144,7 +144,7 @@ filter them using filterPluralPhrase.
 
 [parser.t](../file/parser.t.html)\[[2137](../source/parser.t.html#2137)\]
 
-<div class="desc">
+
 
 Get the verify "keepers" for a plural phrase.
 
@@ -153,11 +153,11 @@ return the subset of items which are logical for this command. If the
 filter flag is nil, we'll simply return the full set of vocabulary
 matches without any filtering.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

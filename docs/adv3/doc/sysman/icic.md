@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \>
@@ -16,7 +16,7 @@ IntrinsicClass
     <a href="iter.html" class="nav"><em>Next:</em> Iterator</a>    
 </span>
 
-</div>
+
 
 
 
@@ -99,7 +99,7 @@ empty list.
 
 `isIntrinsicClass(*val*)`
 
-<div class="fdef">
+
 
 Returns `true` if *val* is an IntrinsicClass
 object, `nil` if not.
@@ -145,7 +145,7 @@ testing don't work for this test.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -155,6 +155,6 @@ IntrinsicClass
     <a href="iter.html" class="nav"><em>Next:</em> Iterator</a>    
 </span>
 
-</div>
 
-</div>
+
+

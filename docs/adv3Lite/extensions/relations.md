@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
@@ -16,7 +16,7 @@ Relations
     <a href="roomparts.html" class="nav"><em>Next:</em> Room Parts</a>
     </span>
 
-</div>
+
 
 
 
@@ -377,7 +377,7 @@ available to query and test relations:
 The **relations** command lists all the relations defined in the game,
 with information about their type, e.g.:
 
-<div class="cmdline">
+
 
     >relations
     fatherOf oneToMany: name = 'father of' reverseName = 'child of'
@@ -391,7 +391,7 @@ with information about their type, e.g.:
 REL, RELATION or RELATIONS followed by the name of a relation lists the
 items related via that relation, e.g.:
 
-<div class="cmdline">
+
 
     >rel father of
     fatherOf oneToMany: name = 'father of' reverseName = 'child of'
@@ -400,12 +400,12 @@ items related via that relation, e.g.:
     john -> [mark]
     simon -> [aaron]
 
-</div>
+
 
 The EVAL command (which can be used with any valid expression) can also
 be used to set and test relations, e.g.:
 
-<div class="cmdline">
+
 
     >eval related(mark, loving)
 
@@ -426,7 +426,7 @@ be used to set and test relations, e.g.:
     jack -> [jill]
     mark -> [jill]
 
-</div>
+
 
   
 
@@ -434,11 +434,11 @@ This covers most of what you need to know to use this extension. For
 additional information see the source code and comments in the
 [relations.t](../relations.t) file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *Adv3Lite Manual*  
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
@@ -448,4 +448,4 @@ Postures
     <a href="roomparts.html" class="nav"><em>Next:</em> Room Parts</a>
     </span>
 
-</div>
+

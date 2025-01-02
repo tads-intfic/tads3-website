@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A basic menu object. This is an abstract base class that encapsulates
 some behavior common to different menu classes, and allows the use of
@@ -34,25 +34,25 @@ the + syntax (like "+ MenuItem") to define containment.
 
 `class `**`MenuObject`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MenuObject`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`MenuObject`**  
 [`MenuItem`](../object/MenuItem.html)  
@@ -64,39 +64,39 @@ the + syntax (like "+ MenuItem") to define containment.
 [`Goal`](../object/Goal.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contents`](#contents)[`menuOrder`](#menuOrder)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addToContents`](#addToContents)[`compareForMenuSort`](#compareForMenuSort)[`execute`](#execute)[`initializeContents`](#initializeContents)[`initializeLocation`](#initializeLocation)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contents"></span>
 
@@ -104,11 +104,11 @@ the + syntax (like "+ MenuItem") to define containment.
 
 [menusys.t](../file/menusys.t.html)\[[143](../source/menusys.t.html#143)\]
 
-<div class="desc">
+
 
 our contents list
 
-</div>
+
 
 <span id="menuOrder"></span>
 
@@ -116,7 +116,7 @@ our contents list
 
 [menusys.t](../file/menusys.t.html)\[[204](../source/menusys.t.html#204)\]
 
-<div class="desc">
+
 
 The menu order. When we're about to show a list of menu items, we'll
 sort the list in ascending order of this property, then in ascending
@@ -125,15 +125,15 @@ menu item's sourceTextOrder. This makes the menu order default to the
 order of objects as defined in the source. If some other basis is
 desired, override topicOrder.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addToContents"></span>
 
@@ -141,11 +141,11 @@ desired, override topicOrder.
 
 [menusys.t](../file/menusys.t.html)\[[156](../source/menusys.t.html#156)\]
 
-<div class="desc">
+
 
 add a menu item
 
-</div>
+
 
 <span id="compareForMenuSort"></span>
 
@@ -153,7 +153,7 @@ add a menu item
 
 [menusys.t](../file/menusys.t.html)\[[215](../source/menusys.t.html#215)\]
 
-<div class="desc">
+
 
 Compare this menu object to another, for the purposes of sorting a list
 of menu items. Returns a positive number if this menu item sorts after
@@ -163,7 +163,7 @@ other one, 0 if the relative order is arbitrary.
 By default, we'll sort by menuOrder if the menuOrder values are
 different, otherwise arbitrarily.
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -171,12 +171,12 @@ different, otherwise arbitrarily.
 
 [menusys.t](../file/menusys.t.html)\[[255](../source/menusys.t.html#255)\]
 
-<div class="desc">
+
 
 This preinit object makes sure the MenuObjects all have their contents
 initialized properly.
 
-</div>
+
 
 <span id="initializeContents"></span>
 
@@ -184,7 +184,7 @@ initialized properly.
 
 [menusys.t](../file/menusys.t.html)\[[242](../source/menusys.t.html#242)\]
 
-<div class="desc">
+
 
 Finish initializing our contents list. This will be called on each
 MenuObject \*after\* we've called initializeLocation() on every object.
@@ -195,7 +195,7 @@ contents here, so that they list their menus in a defined order. By
 default, we sort the menu items by menuOrder; subclasses can override
 this as needed.
 
-</div>
+
 
 <span id="initializeLocation"></span>
 
@@ -203,16 +203,16 @@ this as needed.
 
 [menusys.t](../file/menusys.t.html)\[[149](../source/menusys.t.html#149)\]
 
-<div class="desc">
+
 
 Since we're inheriting from object, but need to use the "+" syntax, we
 need to set up the contents appropriately
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

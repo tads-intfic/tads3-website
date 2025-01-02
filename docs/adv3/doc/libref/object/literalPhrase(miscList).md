@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 flag the literal text
 
 `grammar `<span class="gramalt">[`literalPhrase`](../object/literalPhrase.html)`(miscList)`</span>` :   `[`LiteralProd`](../object/LiteralProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`literalPhrase(miscList)`**  
 [`LiteralProd`](../object/LiteralProd.html)  
@@ -42,11 +42,11 @@ flag the literal text
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -57,11 +57,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getLiteralText`](#getLiteralText)[`getTentativeLiteralText`](#getTentativeLiteralText)[`resolveLiteral`](#resolveLiteral)
 
@@ -72,19 +72,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getLiteralText"></span>
 
@@ -92,11 +92,11 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[7187](../source/en_us.t.html#7187)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getTentativeLiteralText"></span>
 
@@ -104,11 +104,11 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[7203](../source/en_us.t.html#7203)\]
 
-<div class="desc">
+
 
 return the text
 
-</div>
+
 
 <span id="resolveLiteral"></span>
 
@@ -116,15 +116,15 @@ return the text
 
 [en_us.t](../file/en_us.t.html)\[[7209](../source/en_us.t.html#7209)\]
 
-<div class="desc">
+
 
 our regular text is permanent, so simply use it now
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

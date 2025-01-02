@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Check any Preconditions relating to the action as a whole (as opposed to
 any of its objects. \[SYSRULES EXTENSION\]
 
 **`checkActionPreconditionsRule`**` :   `[`BeforeRule`](../object/BeforeRule.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`checkActionPreconditionsRule`**  
 [`BeforeRule`](../object/BeforeRule.html)  
@@ -46,11 +46,11 @@ any of its objects. \[SYSRULES EXTENSION\]
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`priority`](#priority)
 
@@ -66,11 +66,11 @@ Inherited from `Rule` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`follow`](#follow)
 
@@ -87,11 +87,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -99,20 +99,20 @@ Inherited from `Redirector` :
 
 [sysrules.t](../file/sysrules.t.html)\[[270](../source/sysrules.t.html#270)\]
 
-<div class="desc">
+
 
 Check any Preconditions relating to the action as a whole (as opposed to
 any of its objects.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="follow"></span>
 
@@ -120,15 +120,15 @@ any of its objects.
 
 [sysrules.t](../file/sysrules.t.html)\[[260](../source/sysrules.t.html#260)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

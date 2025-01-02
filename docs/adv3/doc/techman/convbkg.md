@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \>
@@ -18,7 +18,7 @@ Characters</a>    
 <a href="t3conv.html" class="nav"><em>Next:</em> Programming
 Conversations with NPCs</a>     </span>
 
-</div>
+
 
 
 
@@ -885,7 +885,7 @@ a complete waste for the player.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -897,4 +897,4 @@ Characters</a>    
 <a href="t3conv.html" class="nav"><em>Next:</em> Programming
 Conversations with NPCs</a>     </span>
 
-</div>
+

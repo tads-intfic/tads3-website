@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Static object and class initializer.
 
@@ -64,15 +64,15 @@ basis for providing other arguments.
 
 **`libObjectInitializer`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`libObjectInitializer`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -80,11 +80,11 @@ basis for providing other arguments.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`_initedTab`](#_initedTab)[`execBeforeMe`](#execBeforeMe)
 
@@ -96,11 +96,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`callConstructor`](#callConstructor)[`execute`](#execute)
 
@@ -111,11 +111,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="_initedTab"></span>
 
@@ -123,11 +123,11 @@ Inherited from `ModuleExecObject` :
 
 [misc.t](../file/misc.t.html)\[[2422](../source/misc.t.html#2422)\]
 
-<div class="desc">
+
 
 table of objects we've already initialized
 
-</div>
+
 
 <span id="execBeforeMe"></span>
 
@@ -135,19 +135,19 @@ table of objects we've already initialized
 
 [misc.t](../file/misc.t.html)\[[2296](../source/misc.t.html#2296)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="callConstructor"></span>
 
@@ -155,11 +155,11 @@ table of objects we've already initialized
 
 [misc.t](../file/misc.t.html)\[[2368](../source/misc.t.html#2368)\]
 
-<div class="desc">
+
 
 call the given object's constructor
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -167,15 +167,15 @@ call the given object's constructor
 
 [misc.t](../file/misc.t.html)\[[2297](../source/misc.t.html#2297)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

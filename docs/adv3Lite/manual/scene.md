@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Scenes  
@@ -15,7 +15,7 @@ layout: docs
     <a href="score.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
 
-</div>
+
 
 
 
@@ -79,7 +79,7 @@ For example, suppose a certain scene ends tragically if Martha is dead
 but happily if you give Martha the gold ring, you might do something
 like this:
 
-`
+```
     class SceneEnding: object
        whenEnding() { }
     ;
@@ -112,7 +112,7 @@ like this:
              howEnded.whenEnding();
        }
     ;
-`
+```
 
 One special point to note: if you define the startsWhen condition of a
 Scene so that it is true right at the start of play (e.g.
@@ -122,7 +122,7 @@ method will execute just *after* the first room description is
 displayed. If you want it to display something just after, you can use
 its whenStarting method to display some text, e.g.:
 
-`
+```
      introScene: Scene
         startsWhen = (harry.isIn(harrysBed))
         endsWhen = (!harry.isIn(harrysBed))
@@ -138,7 +138,7 @@ its whenStarting method to display some text, e.g.:
     ;
      
      
-`
+```
 
 This is normally what you would want, but note that this means that you
 can't use a Scene to display any text prior to the first room
@@ -171,7 +171,7 @@ different actions).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -182,4 +182,4 @@ different actions).
 
 
 
-</div>
+

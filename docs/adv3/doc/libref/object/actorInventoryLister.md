@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Standard inventory lister for actors - this will work for the player
 character and NPC's as well. This lister uses a "divided" format, which
@@ -30,15 +30,15 @@ is short, otherwise we'll show two separate sentences for readability.
 
 **`actorInventoryLister`**` :   `[`DividedInventoryLister`](../object/DividedInventoryLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`actorInventoryLister`**  
 [`DividedInventoryLister`](../object/DividedInventoryLister.html)  
@@ -47,11 +47,11 @@ is short, otherwise we'll show two separate sentences for readability.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`phraseSepPat`](#phraseSepPat)
 
@@ -65,11 +65,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`countPhrases`](#countPhrases)[`showCombinedInventoryList`](#showCombinedInventoryList)[`showInventoryCarryingOnly`](#showInventoryCarryingOnly)[`showInventoryEmpty`](#showInventoryEmpty)[`showInventoryLongLists`](#showInventoryLongLists)[`showInventoryShortLists`](#showInventoryShortLists)[`showInventoryWearingOnly`](#showInventoryWearingOnly)[`showListContentsPrefixTall`](#showListContentsPrefixTall)[`showListEmpty`](#showListEmpty)[`showListPrefixTall`](#showListPrefixTall)
 
@@ -84,11 +84,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="phraseSepPat"></span>
 
@@ -96,19 +96,19 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4604](../source/msg_neu.t.html#4604)\]
 
-<div class="desc">
+
 
 return the count
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="countPhrases"></span>
 
@@ -116,7 +116,7 @@ return the count
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4570](../source/msg_neu.t.html#4570)\]
 
-<div class="desc">
+
 
 Count the noun phrases in a string. We'll count the number of elements
 in the list as indicated by commas and semicolons. This might not be a
@@ -127,7 +127,7 @@ what we're really after. The point is that we want to break up the
 listings if they're long, but combine them into a single sentence if
 they're short.
 
-</div>
+
 
 <span id="showCombinedInventoryList"></span>
 
@@ -135,12 +135,12 @@ they're short.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4518](../source/msg_neu.t.html#4518)\]
 
-<div class="desc">
+
 
 Show the combined inventory listing, putting together the raw lists of
 the items being carried and the items being worn.
 
-</div>
+
 
 <span id="showInventoryCarryingOnly"></span>
 
@@ -148,11 +148,11 @@ the items being carried and the items being worn.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4623](../source/msg_neu.t.html#4623)\]
 
-<div class="desc">
+
 
 we're carrying nothing but wearing some items
 
-</div>
+
 
 <span id="showInventoryEmpty"></span>
 
@@ -160,14 +160,14 @@ we're carrying nothing but wearing some items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4612](../source/msg_neu.t.html#4612)\]
 
-<div class="desc">
+
 
 Once we've made up our mind about the format, we'll call one of these
 methods to show the final sentence. These are all separate methods so
 that the individual formats can be easily tweaked without overriding the
 whole combined-inventory-listing method.
 
-</div>
+
 
 <span id="showInventoryLongLists"></span>
 
@@ -175,11 +175,11 @@ whole combined-inventory-listing method.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4636](../source/msg_neu.t.html#4636)\]
 
-<div class="desc">
+
 
 short lists - combine carried and worn in a single sentence
 
-</div>
+
 
 <span id="showInventoryShortLists"></span>
 
@@ -187,11 +187,11 @@ short lists - combine carried and worn in a single sentence
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4628](../source/msg_neu.t.html#4628)\]
 
-<div class="desc">
+
 
 we have only carried items to report
 
-</div>
+
 
 <span id="showInventoryWearingOnly"></span>
 
@@ -199,11 +199,11 @@ we have only carried items to report
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4617](../source/msg_neu.t.html#4617)\]
 
-<div class="desc">
+
 
 empty inventory
 
-</div>
+
 
 <span id="showListContentsPrefixTall"></span>
 
@@ -211,11 +211,11 @@ empty inventory
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4651](../source/msg_neu.t.html#4651)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -223,11 +223,11 @@ empty inventory
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4653](../source/msg_neu.t.html#4653)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -235,16 +235,16 @@ empty inventory
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4649](../source/msg_neu.t.html#4649)\]
 
-<div class="desc">
+
 
 For 'tall' listings, we'll use the standard listing style, so we need to
 provide the framing messages for the tall-mode listing.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

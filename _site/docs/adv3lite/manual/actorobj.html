@@ -87,11 +87,12 @@ to nil.</li>
 
 <p>A minimal Actor definition might thus look something like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    george: Actor 'George; tall thin; man; him' @hall
-        "He's a tall thin man. "    
-       
-        globalParamName = 'george'
-    ;
+<p>`
+    george: Actor ‘George; tall thin; man; him’ @hall
+        “He’s a tall thin man. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    globalParamName = 'george'
+; `
 </code></pre></div></div>
 
 <p><span id="additional"></span></p>
@@ -366,28 +367,29 @@ to set the ProxyActor’s location property to the Actor it’s standing in
 for, which we can do via the @ notation in the ProxyActor template,
 e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ProxyActor @guard    
-    ;
+<p>`
+    ProxyActor @guard  <br />
+    ;</p>
 
-    + guardAlertState: ActorState
-       isInitState = true
-       specialDesc = "A burly guard blocks your path, eyeing you suspiciously. "
-       stateDesc = 'You certainly don\'t want to mess with him. '
-       
-       beforeTravel(traveler, connector)
-       {
-          if(traveler == gPlayerChar &amp;&amp; connector == forbiddenDoor)
-          {
-              "The guard blocks your path with a warning snarl. ";
-              exit;
-          }
-       }
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ guardAlertState: ActorState
+   isInitState = true
+   specialDesc = "A burly guard blocks your path, eyeing you suspiciously. "
+   stateDesc = 'You certainly don\'t want to mess with him. '
+   
+   beforeTravel(traveler, connector)
+   {
+      if(traveler == gPlayerChar &amp;&amp; connector == forbiddenDoor)
+      {
+          "The guard blocks your path with a warning snarl. ";
+          exit;
+      }
+   }
+;
 
-    + guardAgenda: AgendaItem
-       ...
++ guardAgenda: AgendaItem
+   ...
 
-    ;
+; `
 </code></pre></div></div>
 
 <hr />

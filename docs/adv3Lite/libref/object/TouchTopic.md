@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `class `**`TouchTopic`**` :   `[`MiscTopic`](../object/MiscTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TouchTopic`**  
 [`MiscTopic`](../object/MiscTopic.html)  
@@ -52,27 +52,27 @@ Details](#_Methods_)
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`impliesGreeting`](#impliesGreeting)[`includeInList`](#includeInList)[`isConversational`](#isConversational)[`matchObj`](#matchObj)
 
@@ -90,11 +90,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -115,11 +115,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="impliesGreeting"></span>
 
@@ -127,11 +127,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3702](../source/actor.t.html#3702)\]
 
-<div class="desc">
+
 
 Touching someone does not trigger a greeting
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -139,12 +139,12 @@ Touching someone does not trigger a greeting
 
 [actor.t](../file/actor.t.html)\[[3690](../source/actor.t.html#3690)\]
 
-<div class="desc">
+
 
 TouchTopics should be included in the miscTopics list of their
 TopicDatabase (Actor or ActorState)
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -152,12 +152,12 @@ TopicDatabase (Actor or ActorState)
 
 [actor.t](../file/actor.t.html)\[[3699](../source/actor.t.html#3699)\]
 
-<div class="desc">
+
 
 Touching someone is not normally regarded as form of conversational
 exchange.
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -165,25 +165,25 @@ exchange.
 
 [actor.t](../file/actor.t.html)\[[3693](../source/actor.t.html#3693)\]
 
-<div class="desc">
+
 
 TouchTopics match the hitTopicObj
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

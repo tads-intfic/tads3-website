@@ -26,33 +26,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A numeric production. These can be either spelled-out numbers (such as
 "fifty-seven") or numbers entered in digit form (as in "57").
 
 `class `**`NumberProd`**` :   `[`BasicProd`](../object/BasicProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NumberProd`**  
 [`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NumberProd`**  
 [`numberPhrase(digits)`](../object/numberPhrase(digits).html)  
@@ -81,19 +81,19 @@ A numeric production. These can be either spelled-out numbers (such as
 [`spelledThousand(thousandsPlus)`](../object/spelledThousand(thousandsPlus).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -102,11 +102,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getStrVal`](#getStrVal)[`getval`](#getval)
 
@@ -115,19 +115,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getStrVal"></span>
 
@@ -135,7 +135,7 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[7650](../source/en_us.t.html#7650)\]
 
-<div class="desc">
+
 
 Get the string version of the numeric value. This should return a
 string, but the string should be in digit form. If the original entry
@@ -143,7 +143,7 @@ was in digit form, then the original entry should be returned;
 otherwise, a string should be constructed from the integer value. By
 default, we'll do the latter.
 
-</div>
+
 
 <span id="getval"></span>
 
@@ -151,15 +151,15 @@ default, we'll do the latter.
 
 [en_us.t](../file/en_us.t.html)\[[7641](../source/en_us.t.html#7641)\]
 
-<div class="desc">
+
 
 get the numeric (integer) value
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

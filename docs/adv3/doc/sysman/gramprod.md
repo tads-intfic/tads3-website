@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> GrammarProd  
@@ -15,7 +15,7 @@ layout: docs
     <a href="httpreq.html" class="nav"><em>Next:</em> HTTPRequest</a>    
 </span>
 
-</div>
+
 
 
 
@@ -112,7 +112,7 @@ A grammar rule is defined using the `grammar`
 keyword. A `grammar` statement is mostly like an
 ordinary object or class definition, but with a few added elements:
 
-<div class="syntax">
+
 
     grammar prodName [ ( tag ) ]  : rules : superclass [ , superclass ... ] 
       propsAndMethods
@@ -154,11 +154,11 @@ making up a single GrammarProd object.)
 The *rules* section is a set of one or more syntax rules to be
 associated with the production. Each alternative list looks like this:
 
-<div class="syntax">
+
 
     itemList [ | itemList ... ] 
 
-</div>
+
 
 The vertical bar "\|" (the same symbol used for the bitwise-OR operator)
 separates multiple item lists. Using a bar is equivalent to writing a
@@ -171,11 +171,11 @@ in the item list.
 Each item list specifies a syntax rule for the production. An item list
 looks like this:
 
-<div class="syntax">
+
 
       [ qualifiers ]  [ item [ item ... ]  ]  [ * ] 
 
-</div>
+
 
 Each *item* in the list can be one of the following:
 
@@ -257,11 +257,11 @@ item in an alternative's list.
 The optional *qualifiers*, if present, specify additional information
 about the alternative. Only one qualifier is currently valid:
 
-<div class="syntax">
+
 
     [ badness integer ]
 
-</div>
+
 
 This qualifier assigns the alternative a "badness" rating, which can be
 used to create catch-all syntax patterns that you don't want to use
@@ -290,13 +290,13 @@ general-purpose rules that don't exactly fit your needs.
 To use `modify` with a grammar rule, use this
 syntax:
 
-<div class="syntax">
+
 
     modify grammar prodName ( tag ) : rules :
       propsAndMethods
     ;
 
-</div>
+
 
 This is *almost* the same as the normal
 `grammar` syntax, but note that no class list
@@ -316,13 +316,13 @@ changing any of the grammar it matches.
 To use `replace` with a grammar rule, use this
 syntax:
 
-<div class="syntax">
+
 
     replace grammar prodName ( tag ) : rules : superclass [ , superclass ... ] 
       propsAndMethods
     ;
 
-</div>
+
 
 This is exactly the same as a normal `grammar`
 definition, except that the `replace` keyword
@@ -481,7 +481,7 @@ you should keep in mind:
 
 `addAlt(*alt*, *matchObj*, *dict*?, *symtab*?)`
 
-<div class="fdef">
+
 
 Add an alternative or set of alternatives to the production.
 
@@ -526,13 +526,13 @@ you should simply use the same symbol table that
 preinit, since that reflects the global symbols defined in the program's
 source code.
 
-</div>
+
 
 <span id="clearAlts"></span>
 
 `clearAlts(*dict*?)`
 
-<div class="fdef">
+
 
 Delete all existing alternatives (token rules) in the production. This
 is equivalent to calling deleteAlt() for each alternative.
@@ -543,13 +543,13 @@ the dictionary will be updated to remove literal tokens associated with
 the production that are being deleted by this method. This keeps the
 dictionary in sync with the changes to the grammar.
 
-</div>
+
 
 <span id="deleteAlt"></span>
 
 `deleteAlt(*id*, *dict*?)`
 
-<div class="fdef">
+
 
 Delete one or more alternatives (token rules) from the production. *id*
 specifies which alternative(s) to delete:
@@ -575,11 +575,11 @@ the dictionary will be updated to remove any literal tokens associated
 with the production that are being deleted by this method. This keeps
 the dictionary in sync with the changes to the grammar.
 
-</div>
+
 
 `getGrammarInfo()`
 
-<div class="fdef">
+
 
 The GrammarProd class provides access to the internal definition of a
 grammar production object via the
@@ -747,13 +747,13 @@ returns a direct representation of the information defined in
 `grammar` statements that appeared in the source
 code.
 
-</div>
+
 
 <span id="parseTokens"></span>
 
 `parseTokens(*tokenList*, *dict*)`
 
-<div class="fdef">
+
 
 This method matches input, in the form of a list of tokens, to the
 GrammarProd object's rule list.
@@ -802,7 +802,7 @@ the properties that appear after arrow symbols
 (`-\>`) in the grammar item list set to the
 actual values from the input token list.
 
-</div>
+
 
 ## Finding the original tokens
 
@@ -1205,11 +1205,11 @@ In the run-time library implementation of the classes, the constructors
 simply store the argument values in the corresponding instance
 properties, so that program code can refer to it as needed.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1218,4 +1218,4 @@ properties, so that program code can refer to it as needed.
     <a href="httpreq.html" class="nav"><em>Next:</em> HTTPRequest</a>    
 </span>
 
-</div>
+

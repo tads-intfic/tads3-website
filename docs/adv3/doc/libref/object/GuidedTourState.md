@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Guided Tour state. This provides a simple way of defining a "guided
 tour," which is a series of locations to which we try to guide the
@@ -47,15 +47,15 @@ him."
 
 `class `**`GuidedTourState`**` :   `[`AccompanyingState`](../object/AccompanyingState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GuidedTourState`**  
 [`AccompanyingState`](../object/AccompanyingState.html)  
@@ -67,27 +67,27 @@ him."
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`escortActor`](#escortActor)[`escortDest`](#escortDest)[`escortStateClass`](#escortStateClass)[`stateAfterEscort`](#stateAfterEscort)
 
@@ -106,11 +106,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`accompanyTravel`](#accompanyTravel)[`getAccompanyingTravelState`](#getAccompanyingTravelState)
 
@@ -131,11 +131,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="escortActor"></span>
 
@@ -143,11 +143,11 @@ Inherited from `TopicDatabase` :
 
 [extras.t](../file/extras.t.html)\[[2414](../source/extras.t.html#2414)\]
 
-<div class="desc">
+
 
 the actor we're escorting - this is usually the player character
 
-</div>
+
 
 <span id="escortDest"></span>
 
@@ -155,11 +155,11 @@ the actor we're escorting - this is usually the player character
 
 [extras.t](../file/extras.t.html)\[[2404](../source/extras.t.html#2404)\]
 
-<div class="desc">
+
 
 the travel connector we're trying to show the player into
 
-</div>
+
 
 <span id="escortStateClass"></span>
 
@@ -167,7 +167,7 @@ the travel connector we're trying to show the player into
 
 [extras.t](../file/extras.t.html)\[[2424](../source/extras.t.html#2424)\]
 
-<div class="desc">
+
 
 The class we use for our actor state during the escort travel. By
 default, we use the basic guided-tour accompanying travel state class,
@@ -176,7 +176,7 @@ class in most cases. The main reason to use a custom subclass is to
 provide customized messages to describe the departure of the escorting
 actor.
 
-</div>
+
 
 <span id="stateAfterEscort"></span>
 
@@ -184,20 +184,20 @@ actor.
 
 [extras.t](../file/extras.t.html)\[[2411](../source/extras.t.html#2411)\]
 
-<div class="desc">
+
 
 The next state for our actor to assume after the travel. This should be
 overridden and set to the state object for the next stop on the tour.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="accompanyTravel"></span>
 
@@ -205,12 +205,12 @@ overridden and set to the state object for the next stop on the tour.
 
 [extras.t](../file/extras.t.html)\[[2430](../source/extras.t.html#2430)\]
 
-<div class="desc">
+
 
 we should accompany the travel if the actor we're guiding will be
 traveling, and they're traveling to the next stop on our tour
 
-</div>
+
 
 <span id="getAccompanyingTravelState"></span>
 
@@ -218,16 +218,16 @@ traveling, and they're traveling to the next stop on our tour
 
 [extras.t](../file/extras.t.html)\[[2439](../source/extras.t.html#2439)\]
 
-<div class="desc">
+
 
 get our accompanying state object - we'll create an instance of the
 class specified in our escortStateClass property
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`Listen`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Listen`**  
 [`IAction`](../object/IAction.html)  
@@ -44,11 +44,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -64,11 +64,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`getRemoteSoundList`](#getRemoteSoundList)[`listRemoteSounds`](#listRemoteSounds)
 
@@ -86,19 +86,19 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -106,11 +106,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[609](../source/actions.t.html#609)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getRemoteSoundList"></span>
 
@@ -119,7 +119,7 @@ Inherited from `Redirector` :
 [actions.t](../file/actions.t.html)\[[649](../source/actions.t.html#649)\],
 [senseRegion.t](../file/senseRegion.t.html)\[[1249](../source/senseRegion.t.html#1249)\]
 
-<div class="desc">
+
 
 Do nothing in the core library; senseRegion.t will override if present
 
@@ -128,7 +128,7 @@ Do nothing in the core library; senseRegion.t will override if present
 Return a list of items in remote locations that can be heard from the
 current actor's location.
 
-</div>
+
 
 <span id="listRemoteSounds"></span>
 
@@ -137,7 +137,7 @@ current actor's location.
 [actions.t](../file/actions.t.html)\[[652](../source/actions.t.html#652)\],
 [senseRegion.t](../file/senseRegion.t.html)\[[1293](../source/senseRegion.t.html#1293)\]
 
-<div class="desc">
+
 
 Do nothing in the core library; senseRegion.t will override if present
 
@@ -145,11 +145,11 @@ Do nothing in the core library; senseRegion.t will override if present
 [senseRegion.t](../file/senseRegion.t.html)\[[1293](../source/senseRegion.t.html#1293)\]:*  
 List smells in remote locations
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

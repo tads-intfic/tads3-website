@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "custom" List Group implementation. This type of lister uses a
 completely custom message to show the group, without a need to
@@ -52,42 +52,42 @@ overall list is shown in the "long" format.
 
 `class `**`ListGroupCustom`**` :   `[`ListGroup`](../object/ListGroup.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ListGroupCustom`**  
 [`ListGroup`](../object/ListGroup.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`groupDisplaysSublist`](#groupDisplaysSublist)
 
@@ -96,11 +96,11 @@ Inherited from `ListGroup` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showGroupList`](#showGroupList)[`showGroupMsg`](#showGroupMsg)
 
@@ -109,11 +109,11 @@ Inherited from `ListGroup` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="groupDisplaysSublist"></span>
 
@@ -121,19 +121,19 @@ Inherited from `ListGroup` :
 
 [lister.t](../file/lister.t.html)\[[2040](../source/lister.t.html#2040)\]
 
-<div class="desc">
+
 
 assume our listing message doesn't look like a sublist
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showGroupList"></span>
 
@@ -141,11 +141,11 @@ assume our listing message doesn't look like a sublist
 
 [lister.t](../file/lister.t.html)\[[2030](../source/lister.t.html#2030)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showGroupMsg"></span>
 
@@ -153,15 +153,15 @@ assume our listing message doesn't look like a sublist
 
 [lister.t](../file/lister.t.html)\[[2037](../source/lister.t.html#2037)\]
 
-<div class="desc">
+
 
 show the custom group message - subclasses should override
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

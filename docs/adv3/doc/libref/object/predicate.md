@@ -9,11 +9,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9919`](../source/en_us.t.html#9919)`]`
 
-<div class="gramrule">
+
 
 'about'  
 
-</div>
+
 
 `VerbRule(Again)      `*`// original source text`*  
 
@@ -21,11 +21,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9757`](../source/en_us.t.html#9757)`]`
 
-<div class="gramrule">
+
 
 'again' \| 'g'  
 
-</div>
+
 
 `VerbRule(AskAbout)      `*`// original source text`*  
 
@@ -33,11 +33,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9453`](../source/en_us.t.html#9453)`]`
 
-<div class="gramrule">
+
 
 ('ask' \| 'a') singleDobj 'about' singleTopic  
 
-</div>
+
 
 `VerbRule(AskAboutImplicit)      `*`// original source text`*  
 
@@ -45,11 +45,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9461`](../source/en_us.t.html#9461)`]`
 
-<div class="gramrule">
+
 
 'a' singleTopic  
 
-</div>
+
 
 `VerbRule(AskAboutWhat)      `*`// original source text`*  
 
@@ -57,11 +57,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9474`](../source/en_us.t.html#9474)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] 'ask' singleDobj  
 
-</div>
+
 
 `VerbRule(AskFor)      `*`// original source text`*  
 
@@ -69,12 +69,12 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9430`](../source/en_us.t.html#9430)`]`
 
-<div class="gramrule">
+
 
 ('ask' \| 'a') singleDobj 'for' singleTopic  
 \| ('ask' \| 'a') 'for' singleTopic 'from' singleDobj  
 
-</div>
+
 
 `VerbRule(AskVague)      `*`// original source text`*  
 
@@ -82,11 +82,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9524`](../source/en_us.t.html#9524)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] 'ask' singleDobj singleTopic  
 
-</div>
+
 
 `VerbRule(AskWhomFor)      `*`// original source text`*  
 
@@ -94,11 +94,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9440`](../source/en_us.t.html#9440)`]`
 
-<div class="gramrule">
+
 
 ('ask' \| 'a') 'for' singleTopic  
 
-</div>
+
 
 `VerbRule(AttachTo)      `*`// original source text`*  
 
@@ -106,11 +106,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10476`](../source/en_us.t.html#10476)`]`
 
-<div class="gramrule">
+
 
 ('attach' \| 'connect') dobjList 'to' singleIobj  
 
-</div>
+
 
 `VerbRule(AttachToWhat)      `*`// original source text`*  
 
@@ -118,11 +118,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10483`](../source/en_us.t.html#10483)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] ('attach' \| 'connect') dobjList  
 
-</div>
+
 
 `VerbRule(Attack)      `*`// original source text`*  
 
@@ -130,11 +130,11 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9704`](../source/en_us.t.html#9704)`]`
 
-<div class="gramrule">
+
 
 ('attack' \| 'kill' \| 'hit' \| 'kick' \| 'punch') singleDobj  
 
-</div>
+
 
 `VerbRule(AttackWith)      `*`// original source text`*  
 
@@ -142,13 +142,13 @@ layout: docs
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9711`](../source/en_us.t.html#9711)`]`
 
-<div class="gramrule">
+
 
 ('attack' \| 'kill' \| 'hit' \| 'kick' \| 'punch' \| 'strike')  
 singleDobj  
 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(Board)      `*`// original source text`*  
 
@@ -156,7 +156,7 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10636`](../source/en_us.t.html#10636)`]`
 
-<div class="gramrule">
+
 
 ('board'  
 \| ('get' ('in' \| 'into' \| 'in' 'to' \| 'on' \| 'onto' \| 'on'
@@ -164,7 +164,7 @@ singleDobj
 \| ('climb' ('in' \| 'into' \| 'in' 'to')))  
 singleDobj  
 
-</div>
+
 
 `VerbRule(Break)      `*`// original source text`*  
 
@@ -172,11 +172,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10359`](../source/en_us.t.html#10359)`]`
 
-<div class="gramrule">
+
 
 ('break' \| 'ruin' \| 'destroy' \| 'wreck') dobjList  
 
-</div>
+
 
 `VerbRule(Burn)      `*`// original source text`*  
 
@@ -184,11 +184,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10336`](../source/en_us.t.html#10336)`]`
 
-<div class="gramrule">
+
 
 ('burn' \| 'ignite' \| 'set' 'fire' 'to') dobjList  
 
-</div>
+
 
 `VerbRule(BurnWith)      `*`// original source text`*  
 
@@ -196,12 +196,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10342`](../source/en_us.t.html#10342)`]`
 
-<div class="gramrule">
+
 
 ('light' \| 'burn' \| 'ignite' \| 'set' 'fire' 'to') singleDobj  
 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(Clean)      `*`// original source text`*  
 
@@ -209,11 +209,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10462`](../source/en_us.t.html#10462)`]`
 
-<div class="gramrule">
+
 
 'clean' dobjList  
 
-</div>
+
 
 `VerbRule(CleanWith)      `*`// original source text`*  
 
@@ -221,11 +221,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10468`](../source/en_us.t.html#10468)`]`
 
-<div class="gramrule">
+
 
 'clean' dobjList 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(Climb)      `*`// original source text`*  
 
@@ -233,11 +233,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10417`](../source/en_us.t.html#10417)`]`
 
-<div class="gramrule">
+
 
 'climb' singleDobj  
 
-</div>
+
 
 `VerbRule(ClimbDown)      `*`// original source text`*  
 
@@ -245,11 +245,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10443`](../source/en_us.t.html#10443)`]`
 
-<div class="gramrule">
+
 
 ('climb' \| 'go' \| 'walk') 'down' singleDobj  
 
-</div>
+
 
 `VerbRule(ClimbDownWhat)      `*`// original source text`*  
 
@@ -257,11 +257,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10450`](../source/en_us.t.html#10450)`]`
 
-<div class="gramrule">
+
 
 \[badness 200\] ('climb' \| 'go' \| 'walk') 'down'  
 
-</div>
+
 
 `VerbRule(ClimbUp)      `*`// original source text`*  
 
@@ -269,11 +269,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10424`](../source/en_us.t.html#10424)`]`
 
-<div class="gramrule">
+
 
 ('climb' \| 'go' \| 'walk') 'up' singleDobj  
 
-</div>
+
 
 `VerbRule(ClimbUpWhat)      `*`// original source text`*  
 
@@ -281,11 +281,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10431`](../source/en_us.t.html#10431)`]`
 
-<div class="gramrule">
+
 
 \[badness 200\] ('climb' \| 'go' \| 'walk') 'up'  
 
-</div>
+
 
 `VerbRule(Close)      `*`// original source text`*  
 
@@ -293,11 +293,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10514`](../source/en_us.t.html#10514)`]`
 
-<div class="gramrule">
+
 
 ('close' \| 'shut') dobjList  
 
-</div>
+
 
 `VerbRule(Consult)      `*`// original source text`*  
 
@@ -305,11 +305,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10258`](../source/en_us.t.html#10258)`]`
 
-<div class="gramrule">
+
 
 'consult' singleDobj
 
-</div>
+
 
 `VerbRule(ConsultAbout)      `*`// original source text`*  
 
@@ -317,7 +317,7 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10264`](../source/en_us.t.html#10264)`]`
 
-<div class="gramrule">
+
 
 'consult' singleDobj ('on' \| 'about') singleTopic  
 \| 'search' singleDobj 'for' singleTopic  
@@ -328,7 +328,7 @@ singleDobj
 singleTopic 'in' singleDobj  
 \| ('look' \| 'l') singleTopic 'up' 'in' singleDobj  
 
-</div>
+
 
 `VerbRule(ConsultWhatAbout)      `*`// original source text`*  
 
@@ -336,7 +336,7 @@ singleTopic 'in' singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10279`](../source/en_us.t.html#10279)`]`
 
-<div class="gramrule">
+
 
 (('look' \| 'l') ('up' \| 'for')  
 \| 'find'  
@@ -345,7 +345,7 @@ singleTopic 'in' singleDobj
 singleTopic  
 \| ('look' \| 'l') singleTopic 'up'  
 
-</div>
+
 
 `VerbRule(Credits)      `*`// original source text`*  
 
@@ -353,11 +353,11 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9913`](../source/en_us.t.html#9913)`]`
 
-<div class="gramrule">
+
 
 'credits'  
 
-</div>
+
 
 `VerbRule(CutWith)      `*`// original source text`*  
 
@@ -365,11 +365,11 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10377`](../source/en_us.t.html#10377)`]`
 
-<div class="gramrule">
+
 
 'cut' singleDobj 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(CutWithWhat)      `*`// original source text`*  
 
@@ -377,11 +377,11 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10365`](../source/en_us.t.html#10365)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] 'cut' singleDobj  
 
-</div>
+
 
 `VerbRule(Detach)      `*`// original source text`*  
 
@@ -389,11 +389,11 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10502`](../source/en_us.t.html#10502)`]`
 
-<div class="gramrule">
+
 
 ('detach' \| 'disconnect') dobjList  
 
-</div>
+
 
 `VerbRule(DetachFrom)      `*`// original source text`*  
 
@@ -401,11 +401,11 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10495`](../source/en_us.t.html#10495)`]`
 
-<div class="gramrule">
+
 
 ('detach' \| 'disconnect') dobjList 'from' singleIobj  
 
-</div>
+
 
 `VerbRule(Dig)      `*`// original source text`*  
 
@@ -413,11 +413,11 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10064`](../source/en_us.t.html#10064)`]`
 
-<div class="gramrule">
+
 
 ('dig' \| 'dig' 'in') singleDobj  
 
-</div>
+
 
 `VerbRule(DigWith)      `*`// original source text`*  
 
@@ -425,11 +425,11 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10071`](../source/en_us.t.html#10071)`]`
 
-<div class="gramrule">
+
 
 ('dig' \| 'dig' 'in') singleDobj 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(Doff)      `*`// original source text`*  
 
@@ -437,12 +437,12 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9417`](../source/en_us.t.html#9417)`]`
 
-<div class="gramrule">
+
 
 ('doff' \| 'take' 'off') dobjList  
 \| 'take' dobjList 'off'  
 
-</div>
+
 
 `VerbRule(Drink)      `*`// original source text`*  
 
@@ -450,11 +450,11 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10391`](../source/en_us.t.html#10391)`]`
 
-<div class="gramrule">
+
 
 ('drink' \| 'quaff' \| 'imbibe') dobjList  
 
-</div>
+
 
 `VerbRule(Drop)      `*`// original source text`*  
 
@@ -462,12 +462,12 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9269`](../source/en_us.t.html#9269)`]`
 
-<div class="gramrule">
+
 
 ('drop' \| 'put' 'down' \| 'set' 'down') dobjList  
 \| ('put' \| 'set') dobjList 'down'  
 
-</div>
+
 
 `VerbRule(Eat)      `*`// original source text`*  
 
@@ -475,21 +475,21 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10385`](../source/en_us.t.html#10385)`]`
 
-<div class="gramrule">
+
 
 ('eat' \| 'consume') dobjList  
 
-</div>
+
 
 `grammar `<span class="classExtLink">[`predicate(EmptySpecialTopic)`](../object/predicate(EmptySpecialTopic).html)</span>` :   `[`IAction`](../object/IAction.html)
 
 [`actions.t`](../file/actions.t.html)`[`[`2118`](../source/actions.t.html#2118)`]`
 
-<div class="gramrule">
+
 
 'xspcltopic'
 
-</div>
+
 
 `VerbRule(Enter)      `*`// original source text`*  
 
@@ -497,13 +497,13 @@ singleTopic
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10049`](../source/en_us.t.html#10049)`]`
 
-<div class="gramrule">
+
 
 ('enter' \| 'in' \| 'into' \| 'in' 'to'  
 \| ('walk' \| 'go') ('to' \| 'in' \| 'in' 'to' \| 'into'))  
 singleDobj  
 
-</div>
+
 
 `VerbRule(EnterOn)      `*`// original source text`*  
 
@@ -511,12 +511,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10203`](../source/en_us.t.html#10203)`]`
 
-<div class="gramrule">
+
 
 'enter' singleLiteral  
 ('on' \| 'in' \| 'in' 'to' \| 'into' \| 'with') singleDobj  
 
-</div>
+
 
 `VerbRule(EnterOnWhat)      `*`// original source text`*  
 
@@ -524,11 +524,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10211`](../source/en_us.t.html#10211)`]`
 
-<div class="gramrule">
+
 
 'enter' singleLiteral  
 
-</div>
+
 
 `VerbRule(Examine)      `*`// original source text`*  
 
@@ -536,12 +536,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9276`](../source/en_us.t.html#9276)`]`
 
-<div class="gramrule">
+
 
 ('examine' \| 'inspect' \| 'x'  
 \| 'look' 'at' \| 'l' 'at' \| 'look' \| 'l') dobjList  
 
-</div>
+
 
 `VerbRule(Exits)      `*`// original source text`*  
 
@@ -549,11 +549,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10788`](../source/en_us.t.html#10788)`]`
 
-<div class="gramrule">
+
 
 'exits'  
 
-</div>
+
 
 `VerbRule(ExitsMode)      `*`// original source text`*  
 
@@ -561,7 +561,7 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10794`](../source/en_us.t.html#10794)`]`
 
-<div class="gramrule">
+
 
 'exits' ('on'-\>on\_ \| 'all'-\>on\_  
 \| 'off'-\>off\_ \| 'none'-\>off\_  
@@ -570,7 +570,7 @@ singleDobj
 \| 'status'-\>stat\_ ('line' \| ) \| 'statusline'-\>stat\_  
 \| 'look'-\>look\_)  
 
-</div>
+
 
 `VerbRule(Extinguish)      `*`// original source text`*  
 
@@ -578,12 +578,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10352`](../source/en_us.t.html#10352)`]`
 
-<div class="gramrule">
+
 
 ('extinguish' \| 'douse' \| 'put' 'out' \| 'blow' 'out') dobjList  
 \| ('blow' \| 'put') dobjList 'out'  
 
-</div>
+
 
 `VerbRule(Fasten)      `*`// original source text`*  
 
@@ -591,11 +591,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10652`](../source/en_us.t.html#10652)`]`
 
-<div class="gramrule">
+
 
 ('fasten' \| 'buckle' \| 'buckle' 'up') dobjList  
 
-</div>
+
 
 `VerbRule(FastenTo)      `*`// original source text`*  
 
@@ -603,11 +603,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10658`](../source/en_us.t.html#10658)`]`
 
-<div class="gramrule">
+
 
 ('fasten' \| 'buckle') dobjList 'to' singleIobj  
 
-</div>
+
 
 `VerbRule(Feel)      `*`// original source text`*  
 
@@ -615,11 +615,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9319`](../source/en_us.t.html#9319)`]`
 
-<div class="gramrule">
+
 
 ('feel' \| 'touch') dobjList  
 
-</div>
+
 
 `VerbRule(Flip)      `*`// original source text`*  
 
@@ -627,11 +627,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10303`](../source/en_us.t.html#10303)`]`
 
-<div class="gramrule">
+
 
 'flip' dobjList  
 
-</div>
+
 
 `VerbRule(Follow)      `*`// original source text`*  
 
@@ -639,11 +639,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9697`](../source/en_us.t.html#9697)`]`
 
-<div class="gramrule">
+
 
 'follow' singleDobj  
 
-</div>
+
 
 `VerbRule(Footnote)      `*`// original source text`*  
 
@@ -651,11 +651,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9763`](../source/en_us.t.html#9763)`]`
 
-<div class="gramrule">
+
 
 ('footnote' \| 'note') singleNumber  
 
-</div>
+
 
 `VerbRule(FootnotesFull)      `*`// original source text`*  
 
@@ -663,11 +663,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9769`](../source/en_us.t.html#9769)`]`
 
-<div class="gramrule">
+
 
 'footnotes' 'full'  
 
-</div>
+
 
 `VerbRule(FootnotesMedium)      `*`// original source text`*  
 
@@ -675,11 +675,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9775`](../source/en_us.t.html#9775)`]`
 
-<div class="gramrule">
+
 
 'footnotes' 'medium'  
 
-</div>
+
 
 `VerbRule(FootnotesOff)      `*`// original source text`*  
 
@@ -687,11 +687,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9781`](../source/en_us.t.html#9781)`]`
 
-<div class="gramrule">
+
 
 'footnotes' 'off'  
 
-</div>
+
 
 `VerbRule(FootnotesStatus)      `*`// original source text`*  
 
@@ -699,11 +699,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9787`](../source/en_us.t.html#9787)`]`
 
-<div class="gramrule">
+
 
 'footnotes'  
 
-</div>
+
 
 `VerbRule(FullScore)      `*`// original source text`*  
 
@@ -711,11 +711,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9829`](../source/en_us.t.html#9829)`]`
 
-<div class="gramrule">
+
 
 'full' 'score' \| 'fullscore' \| 'full'  
 
-</div>
+
 
 `VerbRule(GetOffOf)      `*`// original source text`*  
 
@@ -723,11 +723,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10615`](../source/en_us.t.html#10615)`]`
 
-<div class="gramrule">
+
 
 'get' ('off' \| 'off' 'of' \| 'down' 'from') singleDobj  
 
-</div>
+
 
 `VerbRule(GetOut)      `*`// original source text`*  
 
@@ -735,7 +735,7 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10626`](../source/en_us.t.html#10626)`]`
 
-<div class="gramrule">
+
 
 'get' 'out'  
 \| 'get' 'off'  
@@ -743,7 +743,7 @@ singleDobj
 \| 'disembark'  
 \| 'climb' 'out'  
 
-</div>
+
 
 `VerbRule(GetOutOf)      `*`// original source text`*  
 
@@ -751,13 +751,13 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10603`](../source/en_us.t.html#10603)`]`
 
-<div class="gramrule">
+
 
 ('out' 'of' \| 'get' 'out' 'of' \| 'climb' 'out' 'of' \| 'leave' \|
 'exit')  
 singleDobj  
 
-</div>
+
 
 `VerbRule(GiveTo)      `*`// original source text`*  
 
@@ -765,11 +765,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9593`](../source/en_us.t.html#9593)`]`
 
-<div class="gramrule">
+
 
 ('give' \| 'offer') dobjList 'to' singleIobj  
 
-</div>
+
 
 `VerbRule(GiveToType2)      `*`// original source text`*  
 
@@ -777,11 +777,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9600`](../source/en_us.t.html#9600)`]`
 
-<div class="gramrule">
+
 
 ('give' \| 'offer') singleIobj dobjList  
 
-</div>
+
 
 `VerbRule(GiveToWhom)      `*`// original source text`*  
 
@@ -789,11 +789,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9610`](../source/en_us.t.html#9610)`]`
 
-<div class="gramrule">
+
 
 ('give' \| 'offer') dobjList  
 
-</div>
+
 
 `VerbRule(GoBack)      `*`// original source text`*  
 
@@ -801,11 +801,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10058`](../source/en_us.t.html#10058)`]`
 
-<div class="gramrule">
+
 
 'back' \| 'go' 'back' \| 'return'  
 
-</div>
+
 
 `VerbRule(Goodbye)      `*`// original source text`*  
 
@@ -813,11 +813,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9569`](../source/en_us.t.html#9569)`]`
 
-<div class="gramrule">
+
 
 ('say' \| ()) ('goodbye' \| 'good-bye' \| 'good' 'bye' \| 'bye')  
 
-</div>
+
 
 `VerbRule(GoThrough)      `*`// original source text`*  
 
@@ -825,12 +825,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10041`](../source/en_us.t.html#10041)`]`
 
-<div class="gramrule">
+
 
 ('walk' \| 'go' ) ('through' \| 'thru')  
 singleDobj  
 
-</div>
+
 
 `VerbRule(Hello)      `*`// original source text`*  
 
@@ -838,11 +838,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9563`](../source/en_us.t.html#9563)`]`
 
-<div class="gramrule">
+
 
 ('say' \| ) ('hello' \| 'hallo' \| 'hi')  
 
-</div>
+
 
 `VerbRule(Hint)      `*`// original source text`*  
 
@@ -850,11 +850,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10811`](../source/en_us.t.html#10811)`]`
 
-<div class="gramrule">
+
 
 'hint' \| 'hints'  
 
-</div>
+
 
 `VerbRule(HintsOff)      `*`// original source text`*  
 
@@ -862,11 +862,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10805`](../source/en_us.t.html#10805)`]`
 
-<div class="gramrule">
+
 
 'hints' 'off'  
 
-</div>
+
 
 `VerbRule(In)      `*`// original source text`*  
 
@@ -874,11 +874,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10027`](../source/en_us.t.html#10027)`]`
 
-<div class="gramrule">
+
 
 'enter'  
 
-</div>
+
 
 `VerbRule(instructions)      `*`// original source text`*  
 
@@ -886,11 +886,11 @@ singleDobj
 
 [`instruct.t`](../file/instruct.t.html)`[`[`1000`](../source/instruct.t.html#1000)`]`
 
-<div class="gramrule">
+
 
 'instructions'
 
-</div>
+
 
 `VerbRule(Inventory)      `*`// original source text`*  
 
@@ -898,11 +898,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9721`](../source/en_us.t.html#9721)`]`
 
-<div class="gramrule">
+
 
 'i' \| 'inventory' \| 'take' 'inventory'  
 
-</div>
+
 
 `VerbRule(InventoryTall)      `*`// original source text`*  
 
@@ -910,11 +910,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9727`](../source/en_us.t.html#9727)`]`
 
-<div class="gramrule">
+
 
 'i' 'tall' \| 'inventory' 'tall'  
 
-</div>
+
 
 `VerbRule(InventoryWide)      `*`// original source text`*  
 
@@ -922,11 +922,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9733`](../source/en_us.t.html#9733)`]`
 
-<div class="gramrule">
+
 
 'i' 'wide' \| 'inventory' 'wide'  
 
-</div>
+
 
 `VerbRule(Jump)      `*`// original source text`*  
 
@@ -934,11 +934,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10080`](../source/en_us.t.html#10080)`]`
 
-<div class="gramrule">
+
 
 'jump'  
 
-</div>
+
 
 `VerbRule(JumpOff)      `*`// original source text`*  
 
@@ -946,11 +946,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10092`](../source/en_us.t.html#10092)`]`
 
-<div class="gramrule">
+
 
 'jump' 'off' singleDobj  
 
-</div>
+
 
 `VerbRule(JumpOffI)      `*`// original source text`*  
 
@@ -958,11 +958,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10086`](../source/en_us.t.html#10086)`]`
 
-<div class="gramrule">
+
 
 'jump' 'off'  
 
-</div>
+
 
 `VerbRule(JumpOver)      `*`// original source text`*  
 
@@ -970,11 +970,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10099`](../source/en_us.t.html#10099)`]`
 
-<div class="gramrule">
+
 
 ('jump' \| 'jump' 'over') singleDobj  
 
-</div>
+
 
 `VerbRule(Kiss)      `*`// original source text`*  
 
@@ -982,11 +982,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9424`](../source/en_us.t.html#9424)`]`
 
-<div class="gramrule">
+
 
 'kiss' singleDobj  
 
-</div>
+
 
 `VerbRule(Lie)      `*`// original source text`*  
 
@@ -994,11 +994,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10579`](../source/en_us.t.html#10579)`]`
 
-<div class="gramrule">
+
 
 'lie' ( \| 'down')
 
-</div>
+
 
 `VerbRule(LieOn)      `*`// original source text`*  
 
@@ -1006,12 +1006,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10567`](../source/en_us.t.html#10567)`]`
 
-<div class="gramrule">
+
 
 'lie' ('on' \| 'in' \| 'down' 'on' \| 'down' 'in')  
 singleDobj  
 
-</div>
+
 
 `VerbRule(Light)      `*`// original source text`*  
 
@@ -1019,11 +1019,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10323`](../source/en_us.t.html#10323)`]`
 
-<div class="gramrule">
+
 
 'light' dobjList  
 
-</div>
+
 
 `VerbRule(ListenImplicit)      `*`// original source text`*  
 
@@ -1031,11 +1031,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9363`](../source/en_us.t.html#9363)`]`
 
-<div class="gramrule">
+
 
 'listen' \| 'hear'  
 
-</div>
+
 
 `VerbRule(ListenTo)      `*`// original source text`*  
 
@@ -1043,11 +1043,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9350`](../source/en_us.t.html#9350)`]`
 
-<div class="gramrule">
+
 
 ('hear' \| 'listen' 'to' ) dobjList  
 
-</div>
+
 
 `VerbRule(Lock)      `*`// original source text`*  
 
@@ -1055,11 +1055,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10520`](../source/en_us.t.html#10520)`]`
 
-<div class="gramrule">
+
 
 'lock' dobjList  
 
-</div>
+
 
 `VerbRule(LockWith)      `*`// original source text`*  
 
@@ -1067,11 +1067,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10532`](../source/en_us.t.html#10532)`]`
 
-<div class="gramrule">
+
 
 'lock' singleDobj 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(Look)      `*`// original source text`*  
 
@@ -1079,11 +1079,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9745`](../source/en_us.t.html#9745)`]`
 
-<div class="gramrule">
+
 
 'look' \| 'look' 'around' \| 'l' \| 'l' 'around'  
 
-</div>
+
 
 `VerbRule(LookBehind)      `*`// original source text`*  
 
@@ -1091,11 +1091,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9313`](../source/en_us.t.html#9313)`]`
 
-<div class="gramrule">
+
 
 ('look' \| 'l') 'behind' dobjList  
 
-</div>
+
 
 `VerbRule(LookIn)      `*`// original source text`*  
 
@@ -1103,11 +1103,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9289`](../source/en_us.t.html#9289)`]`
 
-<div class="gramrule">
+
 
 ('look' \| 'l') ('in' \| 'inside') dobjList  
 
-</div>
+
 
 `VerbRule(LookThrough)      `*`// original source text`*  
 
@@ -1115,11 +1115,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9301`](../source/en_us.t.html#9301)`]`
 
-<div class="gramrule">
+
 
 ('look' \| 'l') ('through' \| 'thru' \| 'out') dobjList  
 
-</div>
+
 
 `VerbRule(LookUnder)      `*`// original source text`*  
 
@@ -1127,11 +1127,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9307`](../source/en_us.t.html#9307)`]`
 
-<div class="gramrule">
+
 
 ('look' \| 'l') 'under' dobjList  
 
-</div>
+
 
 `VerbRule(Move)      `*`// original source text`*  
 
@@ -1139,11 +1139,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10118`](../source/en_us.t.html#10118)`]`
 
-<div class="gramrule">
+
 
 'move' dobjList  
 
-</div>
+
 
 `VerbRule(MoveTo)      `*`// original source text`*  
 
@@ -1151,11 +1151,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10124`](../source/en_us.t.html#10124)`]`
 
-<div class="gramrule">
+
 
 ('push' \| 'move') dobjList ('to' \| 'under') singleIobj  
 
-</div>
+
 
 `VerbRule(MoveWith)      `*`// original source text`*  
 
@@ -1163,11 +1163,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10132`](../source/en_us.t.html#10132)`]`
 
-<div class="gramrule">
+
 
 'move' singleDobj 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(No)      `*`// original source text`*  
 
@@ -1175,11 +1175,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9581`](../source/en_us.t.html#9581)`]`
 
-<div class="gramrule">
+
 
 'no' \| 'negative' \| 'say' 'no'  
 
-</div>
+
 
 `VerbRule(Notify)      `*`// original source text`*  
 
@@ -1187,11 +1187,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9835`](../source/en_us.t.html#9835)`]`
 
-<div class="gramrule">
+
 
 'notify'  
 
-</div>
+
 
 `VerbRule(NotifyOff)      `*`// original source text`*  
 
@@ -1199,11 +1199,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9847`](../source/en_us.t.html#9847)`]`
 
-<div class="gramrule">
+
 
 'notify' 'off'  
 
-</div>
+
 
 `VerbRule(NotifyOn)      `*`// original source text`*  
 
@@ -1211,11 +1211,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9841`](../source/en_us.t.html#9841)`]`
 
-<div class="gramrule">
+
 
 'notify' 'on'  
 
-</div>
+
 
 `VerbRule(Oops)      `*`// original source text`*  
 
@@ -1223,11 +1223,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10817`](../source/en_us.t.html#10817)`]`
 
-<div class="gramrule">
+
 
 ('oops' \| 'o') singleLiteral  
 
-</div>
+
 
 `VerbRule(OopsOnly)      `*`// original source text`*  
 
@@ -1235,11 +1235,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10823`](../source/en_us.t.html#10823)`]`
 
-<div class="gramrule">
+
 
 ('oops' \| 'o')  
 
-</div>
+
 
 `VerbRule(Open)      `*`// original source text`*  
 
@@ -1247,11 +1247,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10508`](../source/en_us.t.html#10508)`]`
 
-<div class="gramrule">
+
 
 'open' dobjList  
 
-</div>
+
 
 `VerbRule(Out)      `*`// original source text`*  
 
@@ -1259,11 +1259,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10034`](../source/en_us.t.html#10034)`]`
 
-<div class="gramrule">
+
 
 'exit' \| 'leave'  
 
-</div>
+
 
 `VerbRule(Pause)      `*`// original source text`*  
 
@@ -1271,11 +1271,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9895`](../source/en_us.t.html#9895)`]`
 
-<div class="gramrule">
+
 
 'pause'  
 
-</div>
+
 
 `VerbRule(PlugIn)      `*`// original source text`*  
 
@@ -1283,12 +1283,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10697`](../source/en_us.t.html#10697)`]`
 
-<div class="gramrule">
+
 
 'plug' dobjList 'in'  
 \| 'plug' 'in' dobjList  
 
-</div>
+
 
 `VerbRule(PlugInto)      `*`// original source text`*  
 
@@ -1296,11 +1296,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10678`](../source/en_us.t.html#10678)`]`
 
-<div class="gramrule">
+
 
 'plug' dobjList ('in' \| 'into' \| 'in' 'to') singleIobj  
 
-</div>
+
 
 `VerbRule(PlugIntoWhat)      `*`// original source text`*  
 
@@ -1308,11 +1308,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10685`](../source/en_us.t.html#10685)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] 'plug' dobjList  
 
-</div>
+
 
 `VerbRule(Port)      `*`// original source text`*  
 
@@ -1320,11 +1320,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10013`](../source/en_us.t.html#10013)`]`
 
-<div class="gramrule">
+
 
 'go' 'to' ('port' \| 'p')  
 
-</div>
+
 
 `VerbRule(Pour)      `*`// original source text`*  
 
@@ -1332,11 +1332,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10397`](../source/en_us.t.html#10397)`]`
 
-<div class="gramrule">
+
 
 'pour' dobjList  
 
-</div>
+
 
 `VerbRule(PourInto)      `*`// original source text`*  
 
@@ -1344,11 +1344,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10403`](../source/en_us.t.html#10403)`]`
 
-<div class="gramrule">
+
 
 'pour' dobjList ('in' \| 'into' \| 'in' 'to') singleIobj  
 
-</div>
+
 
 `VerbRule(PourOnto)      `*`// original source text`*  
 
@@ -1356,11 +1356,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10410`](../source/en_us.t.html#10410)`]`
 
-<div class="gramrule">
+
 
 'pour' dobjList ('on' \| 'onto' \| 'on' 'to') singleIobj  
 
-</div>
+
 
 `VerbRule(Pull)      `*`// original source text`*  
 
@@ -1368,11 +1368,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10112`](../source/en_us.t.html#10112)`]`
 
-<div class="gramrule">
+
 
 'pull' dobjList  
 
-</div>
+
 
 `VerbRule(Push)      `*`// original source text`*  
 
@@ -1380,11 +1380,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10106`](../source/en_us.t.html#10106)`]`
 
-<div class="gramrule">
+
 
 ('push' \| 'press') dobjList  
 
-</div>
+
 
 `VerbRule(PushTravelClimbDown)      `*`// original source text`*  
 
@@ -1392,12 +1392,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10781`](../source/en_us.t.html#10781)`]`
 
-<div class="gramrule">
+
 
 ('push' \| 'pull' \| 'drag' \| 'move') singleDobj  
 'down' singleIobj  
 
-</div>
+
 
 `VerbRule(PushTravelClimbUp)      `*`// original source text`*  
 
@@ -1405,12 +1405,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10773`](../source/en_us.t.html#10773)`]`
 
-<div class="gramrule">
+
 
 ('push' \| 'pull' \| 'drag' \| 'move') singleDobj  
 'up' singleIobj  
 
-</div>
+
 
 `VerbRule(PushTravelDir)      `*`// original source text`*  
 
@@ -1418,11 +1418,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10745`](../source/en_us.t.html#10745)`]`
 
-<div class="gramrule">
+
 
 ('push' \| 'pull' \| 'drag' \| 'move') singleDobj singleDir  
 
-</div>
+
 
 `VerbRule(PushTravelEnter)      `*`// original source text`*  
 
@@ -1430,12 +1430,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10758`](../source/en_us.t.html#10758)`]`
 
-<div class="gramrule">
+
 
 ('push' \| 'pull' \| 'drag' \| 'move') singleDobj  
 ('in' \| 'into' \| 'in' 'to') singleIobj  
 
-</div>
+
 
 `VerbRule(PushTravelGetOutOf)      `*`// original source text`*  
 
@@ -1443,12 +1443,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10765`](../source/en_us.t.html#10765)`]`
 
-<div class="gramrule">
+
 
 ('push' \| 'pull' \| 'drag' \| 'move') singleDobj  
 'out' ('of' \| ) singleIobj  
 
-</div>
+
 
 `VerbRule(PushTravelThrough)      `*`// original source text`*  
 
@@ -1456,12 +1456,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10751`](../source/en_us.t.html#10751)`]`
 
-<div class="gramrule">
+
 
 ('push' \| 'pull' \| 'drag' \| 'move') singleDobj  
 ('through' \| 'thru') singleIobj  
 
-</div>
+
 
 `VerbRule(PutBehind)      `*`// original source text`*  
 
@@ -1469,11 +1469,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9392`](../source/en_us.t.html#9392)`]`
 
-<div class="gramrule">
+
 
 ('put' \| 'place' \| 'set') dobjList 'behind' singleIobj  
 
-</div>
+
 
 `VerbRule(PutIn)      `*`// original source text`*  
 
@@ -1481,12 +1481,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9369`](../source/en_us.t.html#9369)`]`
 
-<div class="gramrule">
+
 
 ('put' \| 'place' \| 'set') dobjList  
 ('in' \| 'into' \| 'in' 'to' \| 'inside' \| 'inside' 'of') singleIobj  
 
-</div>
+
 
 `VerbRule(PutInWhat)      `*`// original source text`*  
 
@@ -1494,11 +1494,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9398`](../source/en_us.t.html#9398)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] ('put' \| 'place') dobjList  
 
-</div>
+
 
 `VerbRule(PutOn)      `*`// original source text`*  
 
@@ -1506,13 +1506,13 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9377`](../source/en_us.t.html#9377)`]`
 
-<div class="gramrule">
+
 
 ('put' \| 'place' \| 'drop' \| 'set') dobjList  
 ('on' \| 'onto' \| 'on' 'to' \| 'upon') singleIobj  
 \| 'put' dobjList 'down' 'on' singleIobj  
 
-</div>
+
 
 `VerbRule(PutUnder)      `*`// original source text`*  
 
@@ -1520,11 +1520,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9386`](../source/en_us.t.html#9386)`]`
 
-<div class="gramrule">
+
 
 ('put' \| 'place' \| 'set') dobjList 'under' singleIobj  
 
-</div>
+
 
 `VerbRule(Quit)      `*`// original source text`*  
 
@@ -1532,11 +1532,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9751`](../source/en_us.t.html#9751)`]`
 
-<div class="gramrule">
+
 
 'quit' \| 'q'  
 
-</div>
+
 
 `VerbRule(Read)      `*`// original source text`*  
 
@@ -1544,11 +1544,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9283`](../source/en_us.t.html#9283)`]`
 
-<div class="gramrule">
+
 
 'read' dobjList  
 
-</div>
+
 
 `VerbRule(Record)      `*`// original source text`*  
 
@@ -1556,11 +1556,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9943`](../source/en_us.t.html#9943)`]`
 
-<div class="gramrule">
+
 
 'record' \| 'record' 'on'  
 
-</div>
+
 
 `VerbRule(RecordEvents)      `*`// original source text`*  
 
@@ -1568,11 +1568,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9955`](../source/en_us.t.html#9955)`]`
 
-<div class="gramrule">
+
 
 'record' 'events' \| 'record' 'events' 'on'  
 
-</div>
+
 
 `VerbRule(RecordEventsString)      `*`// original source text`*  
 
@@ -1580,11 +1580,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9961`](../source/en_us.t.html#9961)`]`
 
-<div class="gramrule">
+
 
 'record' 'events' quotedStringPhrase-\>fname\_  
 
-</div>
+
 
 `VerbRule(RecordOff)      `*`// original source text`*  
 
@@ -1592,11 +1592,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9967`](../source/en_us.t.html#9967)`]`
 
-<div class="gramrule">
+
 
 'record' 'off'  
 
-</div>
+
 
 `VerbRule(RecordString)      `*`// original source text`*  
 
@@ -1604,11 +1604,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9949`](../source/en_us.t.html#9949)`]`
 
-<div class="gramrule">
+
 
 'record' quotedStringPhrase-\>fname\_  
 
-</div>
+
 
 `VerbRule(Remove)      `*`// original source text`*  
 
@@ -1616,11 +1616,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9263`](../source/en_us.t.html#9263)`]`
 
-<div class="gramrule">
+
 
 'remove' dobjList  
 
-</div>
+
 
 `VerbRule(ReplayQuiet)      `*`// original source text`*  
 
@@ -1628,11 +1628,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9983`](../source/en_us.t.html#9983)`]`
 
-<div class="gramrule">
+
 
 'rq' (quotedStringPhrase-\>fname\_ \| )  
 
-</div>
+
 
 `VerbRule(ReplayString)      `*`// original source text`*  
 
@@ -1640,12 +1640,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9973`](../source/en_us.t.html#9973)`]`
 
-<div class="gramrule">
+
 
 'replay' ('quiet'-\>quiet\_ \| 'nonstop'-\>nonstop\_ \| )  
 (quotedStringPhrase-\>fname\_ \| )  
 
-</div>
+
 
 `VerbRule(Restart)      `*`// original source text`*  
 
@@ -1653,11 +1653,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9889`](../source/en_us.t.html#9889)`]`
 
-<div class="gramrule">
+
 
 'restart'  
 
-</div>
+
 
 `VerbRule(Restore)      `*`// original source text`*  
 
@@ -1665,11 +1665,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9865`](../source/en_us.t.html#9865)`]`
 
-<div class="gramrule">
+
 
 'restore'  
 
-</div>
+
 
 `VerbRule(RestoreDefaults)      `*`// original source text`*  
 
@@ -1677,11 +1677,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9883`](../source/en_us.t.html#9883)`]`
 
-<div class="gramrule">
+
 
 'restore' 'defaults'  
 
-</div>
+
 
 `VerbRule(RestoreString)      `*`// original source text`*  
 
@@ -1689,11 +1689,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9871`](../source/en_us.t.html#9871)`]`
 
-<div class="gramrule">
+
 
 'restore' quotedStringPhrase-\>fname\_  
 
-</div>
+
 
 `VerbRule(Save)      `*`// original source text`*  
 
@@ -1701,11 +1701,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9853`](../source/en_us.t.html#9853)`]`
 
-<div class="gramrule">
+
 
 'save'  
 
-</div>
+
 
 `VerbRule(SaveDefaults)      `*`// original source text`*  
 
@@ -1713,11 +1713,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9877`](../source/en_us.t.html#9877)`]`
 
-<div class="gramrule">
+
 
 'save' 'defaults'  
 
-</div>
+
 
 `VerbRule(SaveString)      `*`// original source text`*  
 
@@ -1725,11 +1725,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9859`](../source/en_us.t.html#9859)`]`
 
-<div class="gramrule">
+
 
 'save' quotedStringPhrase-\>fname\_  
 
-</div>
+
 
 `VerbRule(Score)      `*`// original source text`*  
 
@@ -1737,11 +1737,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9823`](../source/en_us.t.html#9823)`]`
 
-<div class="gramrule">
+
 
 'score' \| 'status'  
 
-</div>
+
 
 `VerbRule(Screw)      `*`// original source text`*  
 
@@ -1749,11 +1749,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10717`](../source/en_us.t.html#10717)`]`
 
-<div class="gramrule">
+
 
 'screw' dobjList  
 
-</div>
+
 
 `VerbRule(ScrewWith)      `*`// original source text`*  
 
@@ -1761,11 +1761,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10723`](../source/en_us.t.html#10723)`]`
 
-<div class="gramrule">
+
 
 'screw' dobjList 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(Script)      `*`// original source text`*  
 
@@ -1773,11 +1773,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9925`](../source/en_us.t.html#9925)`]`
 
-<div class="gramrule">
+
 
 'script' \| 'script' 'on'  
 
-</div>
+
 
 `VerbRule(ScriptOff)      `*`// original source text`*  
 
@@ -1785,11 +1785,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9937`](../source/en_us.t.html#9937)`]`
 
-<div class="gramrule">
+
 
 'script' 'off' \| 'unscript'  
 
-</div>
+
 
 `VerbRule(ScriptString)      `*`// original source text`*  
 
@@ -1797,11 +1797,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9931`](../source/en_us.t.html#9931)`]`
 
-<div class="gramrule">
+
 
 'script' quotedStringPhrase-\>fname\_  
 
-</div>
+
 
 `VerbRule(Search)      `*`// original source text`*  
 
@@ -1809,11 +1809,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9295`](../source/en_us.t.html#9295)`]`
 
-<div class="gramrule">
+
 
 'search' dobjList  
 
-</div>
+
 
 `VerbRule(Set)      `*`// original source text`*  
 
@@ -1821,11 +1821,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10164`](../source/en_us.t.html#10164)`]`
 
-<div class="gramrule">
+
 
 'set' dobjList  
 
-</div>
+
 
 `VerbRule(SetTo)      `*`// original source text`*  
 
@@ -1833,11 +1833,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10170`](../source/en_us.t.html#10170)`]`
 
-<div class="gramrule">
+
 
 'set' singleDobj 'to' singleLiteral  
 
-</div>
+
 
 `VerbRule(ShowTo)      `*`// original source text`*  
 
@@ -1845,11 +1845,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9622`](../source/en_us.t.html#9622)`]`
 
-<div class="gramrule">
+
 
 'show' dobjList 'to' singleIobj  
 
-</div>
+
 
 `VerbRule(ShowToType2)      `*`// original source text`*  
 
@@ -1857,11 +1857,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9629`](../source/en_us.t.html#9629)`]`
 
-<div class="gramrule">
+
 
 'show' singleIobj dobjList  
 
-</div>
+
 
 `VerbRule(ShowToWhom)      `*`// original source text`*  
 
@@ -1869,11 +1869,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9639`](../source/en_us.t.html#9639)`]`
 
-<div class="gramrule">
+
 
 'show' dobjList  
 
-</div>
+
 
 `VerbRule(Sit)      `*`// original source text`*  
 
@@ -1881,11 +1881,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10562`](../source/en_us.t.html#10562)`]`
 
-<div class="gramrule">
+
 
 'sit' ( \| 'down')
 
-</div>
+
 
 `VerbRule(SitOn)      `*`// original source text`*  
 
@@ -1893,12 +1893,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10550`](../source/en_us.t.html#10550)`]`
 
-<div class="gramrule">
+
 
 'sit' ('on' \| 'in' \| 'down' 'on' \| 'down' 'in')  
 singleDobj  
 
-</div>
+
 
 `VerbRule(Sleep)      `*`// original source text`*  
 
@@ -1906,11 +1906,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10646`](../source/en_us.t.html#10646)`]`
 
-<div class="gramrule">
+
 
 'sleep'  
 
-</div>
+
 
 `VerbRule(Smell)      `*`// original source text`*  
 
@@ -1918,11 +1918,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9331`](../source/en_us.t.html#9331)`]`
 
-<div class="gramrule">
+
 
 ('smell' \| 'sniff') dobjList  
 
-</div>
+
 
 `VerbRule(SmellImplicit)      `*`// original source text`*  
 
@@ -1930,21 +1930,21 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9344`](../source/en_us.t.html#9344)`]`
 
-<div class="gramrule">
+
 
 'smell' \| 'sniff'  
 
-</div>
+
 
 `grammar `<span class="classExtLink">[`predicate(SpecialTopic)`](../object/predicate(SpecialTopic).html)</span>` :   `[`SpecialTopicAction`](../object/SpecialTopicAction.html)
 
 [`actions.t`](../file/actions.t.html)`[`[`2106`](../source/actions.t.html#2106)`]`
 
-<div class="gramrule">
+
 
 'xspcltopic' literalPhrase-\>literalMatch  
 
-</div>
+
 
 `VerbRule(Stand)      `*`// original source text`*  
 
@@ -1952,11 +1952,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10597`](../source/en_us.t.html#10597)`]`
 
-<div class="gramrule">
+
 
 'stand' \| 'stand' 'up' \| 'get' 'up'  
 
-</div>
+
 
 `VerbRule(StandOn)      `*`// original source text`*  
 
@@ -1964,13 +1964,13 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10584`](../source/en_us.t.html#10584)`]`
 
-<div class="gramrule">
+
 
 ('stand' ('on' \| 'in' \| 'onto' \| 'on' 'to' \| 'into' \| 'in' 'to')  
 \| 'climb' ('on' \| 'onto' \| 'on' 'to'))  
 singleDobj  
 
-</div>
+
 
 `VerbRule(Starboard)      `*`// original source text`*  
 
@@ -1978,11 +1978,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10020`](../source/en_us.t.html#10020)`]`
 
-<div class="gramrule">
+
 
 'go' 'to' ('starboard' \| 'sb')  
 
-</div>
+
 
 `VerbRule(Strike)      `*`// original source text`*  
 
@@ -1990,11 +1990,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10330`](../source/en_us.t.html#10330)`]`
 
-<div class="gramrule">
+
 
 'strike' dobjList  
 
-</div>
+
 
 `VerbRule(Switch)      `*`// original source text`*  
 
@@ -2002,11 +2002,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10297`](../source/en_us.t.html#10297)`]`
 
-<div class="gramrule">
+
 
 'switch' dobjList  
 
-</div>
+
 
 `VerbRule(Take)      `*`// original source text`*  
 
@@ -2014,12 +2014,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9248`](../source/en_us.t.html#9248)`]`
 
-<div class="gramrule">
+
 
 ('take' \| 'pick' 'up' \| 'get') dobjList  
 \| 'pick' dobjList 'up'  
 
-</div>
+
 
 `VerbRule(TakeFrom)      `*`// original source text`*  
 
@@ -2027,13 +2027,13 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9255`](../source/en_us.t.html#9255)`]`
 
-<div class="gramrule">
+
 
 ('take' \| 'get') dobjList  
 ('from' \| 'out' 'of' \| 'off' \| 'off' 'of') singleIobj  
 \| 'remove' dobjList 'from' singleIobj  
 
-</div>
+
 
 `VerbRule(TalkTo)      `*`// original source text`*  
 
@@ -2041,11 +2041,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9536`](../source/en_us.t.html#9536)`]`
 
-<div class="gramrule">
+
 
 ('greet' \| 'say' 'hello' 'to' \| 'talk' 'to') singleDobj  
 
-</div>
+
 
 `VerbRule(TalkToWhat)      `*`// original source text`*  
 
@@ -2053,11 +2053,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9543`](../source/en_us.t.html#9543)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] 'talk'  
 
-</div>
+
 
 `VerbRule(Taste)      `*`// original source text`*  
 
@@ -2065,11 +2065,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9325`](../source/en_us.t.html#9325)`]`
 
-<div class="gramrule">
+
 
 'taste' dobjList  
 
-</div>
+
 
 `VerbRule(TellAbout)      `*`// original source text`*  
 
@@ -2077,11 +2077,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9489`](../source/en_us.t.html#9489)`]`
 
-<div class="gramrule">
+
 
 ('tell' \| 't') singleDobj 'about' singleTopic  
 
-</div>
+
 
 `VerbRule(TellAboutImplicit)      `*`// original source text`*  
 
@@ -2089,11 +2089,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9497`](../source/en_us.t.html#9497)`]`
 
-<div class="gramrule">
+
 
 't' singleTopic  
 
-</div>
+
 
 `VerbRule(TellAboutWhat)      `*`// original source text`*  
 
@@ -2101,11 +2101,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9510`](../source/en_us.t.html#9510)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] 'tell' singleDobj  
 
-</div>
+
 
 `VerbRule(TellVague)      `*`// original source text`*  
 
@@ -2113,11 +2113,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9530`](../source/en_us.t.html#9530)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] 'tell' singleDobj singleTopic  
 
-</div>
+
 
 `VerbRule(Terse)      `*`// original source text`*  
 
@@ -2125,11 +2125,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9817`](../source/en_us.t.html#9817)`]`
 
-<div class="gramrule">
+
 
 'terse' \| 'brief'  
 
-</div>
+
 
 `VerbRule(Throw)      `*`// original source text`*  
 
@@ -2137,11 +2137,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9651`](../source/en_us.t.html#9651)`]`
 
-<div class="gramrule">
+
 
 ('throw' \| 'toss') dobjList  
 
-</div>
+
 
 `VerbRule(ThrowAt)      `*`// original source text`*  
 
@@ -2149,11 +2149,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9657`](../source/en_us.t.html#9657)`]`
 
-<div class="gramrule">
+
 
 ('throw' \| 'toss') dobjList 'at' singleIobj  
 
-</div>
+
 
 `VerbRule(ThrowDir)      `*`// original source text`*  
 
@@ -2161,11 +2161,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9681`](../source/en_us.t.html#9681)`]`
 
-<div class="gramrule">
+
 
 ('throw' \| 'toss') dobjList ('to' ('the' \| ) \| ) singleDir  
 
-</div>
+
 
 `VerbRule(ThrowDirDown)      `*`// original source text`*  
 
@@ -2173,11 +2173,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9688`](../source/en_us.t.html#9688)`]`
 
-<div class="gramrule">
+
 
 'throw' ('down' \| 'd') dobjList  
 
-</div>
+
 
 `VerbRule(ThrowTo)      `*`// original source text`*  
 
@@ -2185,11 +2185,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9664`](../source/en_us.t.html#9664)`]`
 
-<div class="gramrule">
+
 
 ('throw' \| 'toss') dobjList 'to' singleIobj  
 
-</div>
+
 
 `VerbRule(ThrowToType2)      `*`// original source text`*  
 
@@ -2197,11 +2197,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9671`](../source/en_us.t.html#9671)`]`
 
-<div class="gramrule">
+
 
 'throw' singleIobj dobjList  
 
-</div>
+
 
 `VerbRule(TipsOff)      `*`// original source text`*  
 
@@ -2209,11 +2209,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9802`](../source/en_us.t.html#9802)`]`
 
-<div class="gramrule">
+
 
 ('tips' \| 'tip') 'off'  
 
-</div>
+
 
 `VerbRule(TipsOn)      `*`// original source text`*  
 
@@ -2221,11 +2221,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9793`](../source/en_us.t.html#9793)`]`
 
-<div class="gramrule">
+
 
 ('tips' \| 'tip') 'on'  
 
-</div>
+
 
 `VerbRule(Topics)      `*`// original source text`*  
 
@@ -2233,11 +2233,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9557`](../source/en_us.t.html#9557)`]`
 
-<div class="gramrule">
+
 
 'topics'  
 
-</div>
+
 
 `VerbRule(Travel)      `*`// original source text`*  
 
@@ -2245,11 +2245,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9994`](../source/en_us.t.html#9994)`]`
 
-<div class="gramrule">
+
 
 'go' singleDir \| singleDir  
 
-</div>
+
 
 `VerbRule(Turn)      `*`// original source text`*  
 
@@ -2257,11 +2257,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10141`](../source/en_us.t.html#10141)`]`
 
-<div class="gramrule">
+
 
 ('turn' \| 'twist' \| 'rotate') dobjList  
 
-</div>
+
 
 `VerbRule(TurnOff)      `*`// original source text`*  
 
@@ -2269,12 +2269,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10316`](../source/en_us.t.html#10316)`]`
 
-<div class="gramrule">
+
 
 ('deactivate' \| ('turn' \| 'switch') 'off') dobjList  
 \| ('turn' \| 'switch') dobjList 'off'  
 
-</div>
+
 
 `VerbRule(TurnOn)      `*`// original source text`*  
 
@@ -2282,12 +2282,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10309`](../source/en_us.t.html#10309)`]`
 
-<div class="gramrule">
+
 
 ('activate' \| ('turn' \| 'switch') 'on') dobjList  
 \| ('turn' \| 'switch') dobjList 'on'  
 
-</div>
+
 
 `VerbRule(TurnTo)      `*`// original source text`*  
 
@@ -2295,12 +2295,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10155`](../source/en_us.t.html#10155)`]`
 
-<div class="gramrule">
+
 
 ('turn' \| 'twist' \| 'rotate') singleDobj  
 'to' singleLiteral  
 
-</div>
+
 
 `VerbRule(TurnWith)      `*`// original source text`*  
 
@@ -2308,11 +2308,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10147`](../source/en_us.t.html#10147)`]`
 
-<div class="gramrule">
+
 
 ('turn' \| 'twist' \| 'rotate') singleDobj 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(TypeLiteralOn)      `*`// original source text`*  
 
@@ -2320,11 +2320,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10184`](../source/en_us.t.html#10184)`]`
 
-<div class="gramrule">
+
 
 'type' singleLiteral 'on' singleDobj  
 
-</div>
+
 
 `VerbRule(TypeLiteralOnWhat)      `*`// original source text`*  
 
@@ -2332,11 +2332,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10191`](../source/en_us.t.html#10191)`]`
 
-<div class="gramrule">
+
 
 \[badness 500\] 'type' singleLiteral  
 
-</div>
+
 
 `VerbRule(TypeOn)      `*`// original source text`*  
 
@@ -2344,11 +2344,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10178`](../source/en_us.t.html#10178)`]`
 
-<div class="gramrule">
+
 
 'type' 'on' singleDobj  
 
-</div>
+
 
 `VerbRule(Undo)      `*`// original source text`*  
 
@@ -2356,11 +2356,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9901`](../source/en_us.t.html#9901)`]`
 
-<div class="gramrule">
+
 
 'undo'  
 
-</div>
+
 
 `VerbRule(Unfasten)      `*`// original source text`*  
 
@@ -2368,11 +2368,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10665`](../source/en_us.t.html#10665)`]`
 
-<div class="gramrule">
+
 
 ('unfasten' \| 'unbuckle') dobjList  
 
-</div>
+
 
 `VerbRule(UnfastenFrom)      `*`// original source text`*  
 
@@ -2380,11 +2380,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10671`](../source/en_us.t.html#10671)`]`
 
-<div class="gramrule">
+
 
 ('unfasten' \| 'unbuckle') dobjList 'from' singleIobj  
 
-</div>
+
 
 `VerbRule(Unlock)      `*`// original source text`*  
 
@@ -2392,11 +2392,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10526`](../source/en_us.t.html#10526)`]`
 
-<div class="gramrule">
+
 
 'unlock' dobjList  
 
-</div>
+
 
 `VerbRule(UnlockWith)      `*`// original source text`*  
 
@@ -2404,11 +2404,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10541`](../source/en_us.t.html#10541)`]`
 
-<div class="gramrule">
+
 
 'unlock' singleDobj 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(Unplug)      `*`// original source text`*  
 
@@ -2416,11 +2416,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10711`](../source/en_us.t.html#10711)`]`
 
-<div class="gramrule">
+
 
 'unplug' dobjList  
 
-</div>
+
 
 `VerbRule(UnplugFrom)      `*`// original source text`*  
 
@@ -2428,11 +2428,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10704`](../source/en_us.t.html#10704)`]`
 
-<div class="gramrule">
+
 
 'unplug' dobjList 'from' singleIobj  
 
-</div>
+
 
 `VerbRule(Unscrew)      `*`// original source text`*  
 
@@ -2440,11 +2440,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10731`](../source/en_us.t.html#10731)`]`
 
-<div class="gramrule">
+
 
 'unscrew' dobjList  
 
-</div>
+
 
 `VerbRule(UnscrewWith)      `*`// original source text`*  
 
@@ -2452,11 +2452,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`10737`](../source/en_us.t.html#10737)`]`
 
-<div class="gramrule">
+
 
 'unscrew' dobjList 'with' singleIobj  
 
-</div>
+
 
 `VerbRule(VagueTravel)      `*`// original source text`*  
 
@@ -2464,11 +2464,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9990`](../source/en_us.t.html#9990)`]`
 
-<div class="gramrule">
+
 
 'go' \| 'walk'
 
-</div>
+
 
 `VerbRule(Verbose)      `*`// original source text`*  
 
@@ -2476,11 +2476,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9811`](../source/en_us.t.html#9811)`]`
 
-<div class="gramrule">
+
 
 'verbose'  
 
-</div>
+
 
 `VerbRule(Version)      `*`// original source text`*  
 
@@ -2488,11 +2488,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9907`](../source/en_us.t.html#9907)`]`
 
-<div class="gramrule">
+
 
 'version'  
 
-</div>
+
 
 `VerbRule(Wait)      `*`// original source text`*  
 
@@ -2500,11 +2500,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9739`](../source/en_us.t.html#9739)`]`
 
-<div class="gramrule">
+
 
 'z' \| 'wait'  
 
-</div>
+
 
 `VerbRule(Wear)      `*`// original source text`*  
 
@@ -2512,12 +2512,12 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9410`](../source/en_us.t.html#9410)`]`
 
-<div class="gramrule">
+
 
 ('wear' \| 'don' \| 'put' 'on') dobjList  
 \| 'put' dobjList 'on'  
 
-</div>
+
 
 `VerbRule(Yell)      `*`// original source text`*  
 
@@ -2525,11 +2525,11 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9587`](../source/en_us.t.html#9587)`]`
 
-<div class="gramrule">
+
 
 'yell' \| 'scream' \| 'shout' \| 'holler'  
 
-</div>
+
 
 `VerbRule(Yes)      `*`// original source text`*  
 
@@ -2537,15 +2537,15 @@ singleDobj
 
 [`en_us.t`](../file/en_us.t.html)`[`[`9575`](../source/en_us.t.html#9575)`]`
 
-<div class="gramrule">
+
 
 'yes' \| 'affirmative' \| 'say' 'yes'  
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| The Art of
 Conversation  
@@ -15,7 +15,7 @@ Conversation
    <a href="asktell.html" class="nav"><em>Next:</em> Ask, Tell, Give,
 Show</a>     </span>
 
-</div>
+
 
 
 
@@ -24,7 +24,7 @@ Show</a>     </span>
 In this chapter we introduce the means by which conversations with NPCs
 can be implemented in adv3Lite.
 
-<div class="sectoc">
+
 
 [Ask, Tell, Give, Show](asktell.html)  
 [Queries and Suggestions](query.html)  
@@ -35,11 +35,11 @@ can be implemented in adv3Lite.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| The Art of
@@ -48,4 +48,4 @@ Conversation
    <a href="asktell.html" class="nav"><em>Next:</em> Ask, Tell, Give,
 Show</a>     </span>
 
-</div>
+

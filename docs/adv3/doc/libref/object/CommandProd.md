@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The base class for commands. A command is the root of the grammar match
 tree for a single action. A command line can consist of a number of
@@ -36,26 +36,26 @@ are things like periods, semicolons, commas, and the words "and" and
 
 `class `**`CommandProd`**` :   `[`BasicProd`](../object/BasicProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandProd`**  
 [`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`CommandProd`**  
 [`CommandProdWithActor`](../object/CommandProdWithActor.html)  
@@ -75,19 +75,19 @@ are things like periods, semicolons, commas, and the words "and" and
 [`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`getActorPhrase`](#getActorPhrase)
 
@@ -96,11 +96,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execActorPhrase`](#execActorPhrase)[`hasTargetActor`](#hasTargetActor)
 
@@ -109,11 +109,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="getActorPhrase"></span>
 
@@ -121,20 +121,20 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[674](../source/parser.t.html#674)\]
 
-<div class="desc">
+
 
 Get the match tree for the target actor phrase, if any. By default, we
 have no target actor phrase, so just return nil.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execActorPhrase"></span>
 
@@ -142,7 +142,7 @@ have no target actor phrase, so just return nil.
 
 [parser.t](../file/parser.t.html)\[[683](../source/parser.t.html#683)\]
 
-<div class="desc">
+
 
 "Execute" the actor phrase. This lets us know that the parser has
 decided to use our phrasing to specify the target actor. We're not
@@ -150,7 +150,7 @@ required to do anything here; it's just a notification for subclass use.
 Since we don't have a target actor phrase at all, we obviously don't
 need to do anything here.
 
-</div>
+
 
 <span id="hasTargetActor"></span>
 
@@ -158,15 +158,15 @@ need to do anything here.
 
 [parser.t](../file/parser.t.html)\[[659](../source/parser.t.html#659)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A possessive resolver is a proxy to a main resolver that considers an
 object in scope if (a) it's in scope in the base resolver, or (b) the
@@ -34,42 +34,42 @@ object is known to the actor.
 
 `class `**`PossessiveResolver`**` :   `[`ProxyResolver`](../object/ProxyResolver.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PossessiveResolver`**  
 [`ProxyResolver`](../object/ProxyResolver.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isSubResolver`](#isSubResolver)
 
@@ -77,11 +77,11 @@ object is known to the actor.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`objInScope`](#objInScope)
 
@@ -90,11 +90,11 @@ Inherited from `ProxyResolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isSubResolver"></span>
 
@@ -102,19 +102,19 @@ Inherited from `ProxyResolver` :
 
 [resolver.t](../file/resolver.t.html)\[[1083](../source/resolver.t.html#1083)\]
 
-<div class="desc">
+
 
 this is a sub-resolver
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="objInScope"></span>
 
@@ -122,15 +122,15 @@ this is a sub-resolver
 
 [resolver.t](../file/resolver.t.html)\[[1069](../source/resolver.t.html#1069)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

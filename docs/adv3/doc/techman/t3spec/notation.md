@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -16,7 +16,7 @@ Notation and Conventions
     <a href="model.html" class="nav"><em>Next:</em> Machine Model</a>    
 </span>
 
-</div>
+
 
 
 
@@ -73,18 +73,18 @@ property/value mechanism. We refer to instances of this subclass as
 functionality exposed through the object and class construct in the TADS
 language.
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -94,4 +94,4 @@ Notation and Conventions
     <a href="model.html" class="nav"><em>Next:</em> Machine Model</a>    
 </span>
 
-</div>
+

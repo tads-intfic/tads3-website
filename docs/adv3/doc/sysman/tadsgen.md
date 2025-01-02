@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> tads-gen
@@ -17,7 +17,7 @@ Function Set
 <a href="regex.html" class="nav"><em>Next:</em> Regular Expressions</a>
     </span>
 
-</div>
+
 
 
 
@@ -42,7 +42,7 @@ incluedes the basic system headers.
 
 `abs(*val*)`
 
-<div class="fdef">
+
 
 Returns the absolute value of the given number. *val* can be an integer
 or a BigNumber value; the result has the same type as *val*. If *val* is
@@ -55,7 +55,7 @@ is -*val*. For example, `abs(-3)` returns 3.
 
 `concat(...)`
 
-<div class="fdef">
+
 
 Returns a string with the concatenation of the argument values, in the
 order given. The arguments can be strings, or any other types that can
@@ -75,25 +75,25 @@ intermediate result at the next step; the function, in contrast, creates
 a single result string for the entire list and only copies each input
 string once.
 
-</div>
+
 
 <span id="dataType"></span>
 
 `dataType(*val*)`
 
-<div class="fdef">
+
 
 Returns the datatype of the given value. The return value is one of the
 `TypeXxx` values (see the section on
 [reflection](reflect.html)).
 
-</div>
+
 
 <span id="firstObj"></span>
 
 `firstObj(*cls*?, *flags*?)`
 
-<div class="fdef">
+
 
 Returns the first object of class *cls*, or the first object in the
 entire program if *cls* is not specified. This is used to start
@@ -160,26 +160,26 @@ and then the collector runs while you're still holding a reference to
 the resurrected object, the collector will see your reference and will
 keep the object in memory just like any other reachable object.
 
-</div>
+
 
 <span id="getArg"></span>
 
 `getArg(*idx*)`
 
-<div class="fdef">
+
 
 Retrieve the given argument to the current function. The first argument
 is at index 1. *idx* must be in the range 1 to
 `argcount`, or the function throws a run-time
 error ("bad value for built-in function").
 
-</div>
+
 
 <span id="getFuncParams"></span>
 
 `getFuncParams(*funcptr*)`
 
-<div class="fdef">
+
 
 Returns information on the parameters taken by the given function. The
 return value is a list with three elements:
@@ -203,13 +203,13 @@ If the third element is `true`, it indicates
 that the function was defined with the `...`
 varying argument list notation.
 
-</div>
+
 
 <span id="getTime"></span>
 
 `getTime(*timeType*?)`
 
-<div class="fdef">
+
 
 Returns the current system time, according to *timeType*. If *timeType*
 is not specified, `GetTimeDateAndTime` is the
@@ -259,13 +259,13 @@ default. The valid *timeType* values are:
   value and thus resets back to zero), which occurs after about 23 days
   of continuous execution.
 
-</div>
+
 
 <span id="makeList"></span>
 
 `makeList(*val*, *repeatCount*?)`
 
-<div class="fdef">
+
 
 Constructs a list by repeating the given value the given number of
 times. Returns the new list.
@@ -273,11 +273,11 @@ times. Returns the new list.
 (For a more flexible way of constructing a list that allows for varying
 element values, see the [List.generate](list.html#generate) method.)
 
-</div>
+
 
 `makeString(*val*, *repeatCount*?)`
 
-<div class="fdef">
+
 
 Constructs a string by repeating the given value the given number of
 times. The result of the function depends on the data type of *val*:
@@ -305,31 +305,31 @@ times. The result of the function depends on the data type of *val*:
 If *repeatCount* is not specified, the default is 1. If the value is
 less than zero, an error is thrown.
 
-</div>
+
 
 `max(*val1*, ...)`
 
-<div class="fdef">
+
 
 Returns the least argument value. The values must be of comparable
 types.
 
-</div>
+
 
 `min(*val1*, ...)`
 
-<div class="fdef">
+
 
 Returns the greatest argument value. The values must be of types that
 can be compared with one another, or the function throws an error.
 
-</div>
+
 
 <span id="nextObj"></span>
 
 `nextObj(*obj*, *cls*?, *flags*?)`
 
-<div class="fdef">
+
 
 Get the next object after *obj* of class *cls*. If *cls* is not
 specified, returns the next object of any type. Returns
@@ -347,11 +347,11 @@ aren't removed from memory until the garbage collector runs, which only
 happens intermittently. For more on this, see
 [`firstObj()`](#firstObj).
 
-</div>
+
 
 `rand(*x*, ...)`
 
-<div class="fdef">
+
 
 <span id="rand"></span> Returns a pseudo-random number, or randomly
 selects a value from a set of values.
@@ -484,13 +484,13 @@ RNG state by using the "-norand" option when starting the interpreter.
 You can alternatively use the `randomize()`
 function within the program to set a fixed seed value.
 
-</div>
+
 
 <span id="randomize"></span>
 
 `randomize(...)`
 
-<div class="fdef">
+
 
 Initialize the random number generator (RNG). This selects the random
 number generator algorithm used by [rand()](#rand), initializes it with
@@ -662,23 +662,23 @@ value, so there's no point in specifying more seed data than an integer.
 The actual string values you use for ISAAC or MT seeds aren't important;
 the algorithms should produce good sequences from any seed data.
 
-</div>
+
 
 `restartGame()`
 
-<div class="fdef">
+
 
 Resets all objects (except transient objects) to their initial state, as
 they were when the program was just loaded. This function doesn't affect
 transient objects.
 
-</div>
+
 
 <span id="restoreGame"></span>
 
 `restoreGame(*filename*)`
 
-<div class="fdef">
+
 
 Restore the saved state from a file. *filename* is the name of the file
 to restore; this can be a string with the name of a file in the local
@@ -703,11 +703,11 @@ allow read access to the target file. [FileName](filename.html) objects
 obtained from [inputFile()](tadsio.html#inputFile) "open" dialogs are
 always accessible.
 
-</div>
+
 
 <span id="rexGroup">`rexGroup(*groupNum*)`</span>
 
-<div class="fdef">
+
 
 Returns information on the text that matched a parenthesized group for
 the last regular expression search or match. *groupNum* is the number of
@@ -728,11 +728,11 @@ match within the original source string; the second element is the
 length in characters of the group match; and third element is a string
 giving the matching text.
 
-</div>
+
 
 `rexMatch(*pat*, *str*, *index*?)`
 
-<div class="fdef">
+
 
 <span id="rexmatch"></span> Tests *str* to see if the substring starting
 at character index *index* matches the given regular expression *pat*.
@@ -759,14 +759,14 @@ without actually creating a separate substring value.
 Refer to the [regular expressions](regex.html) section for details on how
 to construct a pattern string.
 
-</div>
+
 
 <span id="rexReplace"></span>
 
 `rexReplace(*pat*, *str*, *replacement*, *flags*?,
 *index*?, *limit*?)`
 
-<div class="fdef">
+
 
 <span id="rexReplace"></span>Replaces one or more matches for the
 regular expression pattern *pat* within the subject string *str*,
@@ -1026,13 +1026,13 @@ it doesn't need the original string to carry out its task.
     }
 ```
 
-</div>
+
 
 <span id="rexSearch"></span>
 
 `rexSearch(*pat*, *str*, *index*?)`
 
-<div class="fdef">
+
 
 Searches for the regular expression *pat* in the search string *str*,
 starting at the character position *index*. The pattern *pat* can be
@@ -1059,13 +1059,13 @@ matching substring. If there's no match, the function returns
 Refer to the [regular expressions](regex.html) section for details on how
 to construct a pattern string.
 
-</div>
+
 
 <span id="rexSearchLast"></span>
 
 `rexSearchLast(*pat*, *str*, *index*?)`
 
-<div class="fdef">
+
 
 Searches the string *str* backwards from the end for a match to the
 regular expression *pat*, starting at the character position *index*.
@@ -1106,13 +1106,13 @@ towards the beginning of the string and "right" to mean towards the end,
 regardless of whether the string contains Roman characters or Arabic
 characters or anything else.
 
-</div>
+
 
 <span id="saveGame"></span>
 
 `saveGame(*filename*, *metaTable*?)`
 
-<div class="fdef">
+
 
 Saves the state of all objects (except transient objects) to a file.
 
@@ -1143,13 +1143,13 @@ allow write access to the target file. [FileName](filename.html) objects
 obtained from [inputFile()](tadsio.html#inputFile) "save" dialogs are
 always accessible.
 
-</div>
+
 
 <span id="savepoint"></span>
 
 `savepoint()`
 
-<div class="fdef">
+
 
 Establish an undo savepoint. Multiple savepoints can be established, to
 mark multiple points in time. For example, you could establish a
@@ -1160,26 +1160,26 @@ what would happen if you carried out some series of actions, you could
 set an undo savepoint, then undo to the savepoint once you've finished
 the speculative operation.
 
-</div>
+
 
 <span id="sgn"></span>
 
 `sgn(*val*)`
 
-<div class="fdef">
+
 
 Returns the sign of the given number. *val* can be an integer or a
 BigNumber value. The return value is 1 if *val* is positive, 0 if *val*
 is zero, or -1 if *val* is negative. The result is always an integer,
 regardless of *val*'s type.
 
-</div>
+
 
 <span id="sprintf"></span>
 
 `sprintf(*format*, ...)`
 
-<div class="fdef">
+
 
 Generates a formatted text string from a list of data values, according
 to the template string *format*. sprintf is especially handy for
@@ -1532,13 +1532,13 @@ to explicitly convert the argument to an integer (but if you do this,
 note that the value must be in the valid range for a 32-bit integer,
 -2147483648 to +2147483647).
 
-</div>
+
 
 <span id="toInteger"></span>
 
 `toInteger(*val*, *radix*?)`
 
-<div class="fdef">
+
 
 Convert the value given by *val* to an integer.
 
@@ -1595,13 +1595,13 @@ See also the [toNumber](toNumber) function, which can parse strings
 containing floating point values and whole numbers too large for the
 ordinary integer type.
 
-</div>
+
 
 <span id="toNumber"></span>
 
 `toNumber(*val*, *radix*?)`
 
-<div class="fdef">
+
 
 Convert the value given by *val* to an integer or BigNumber, as
 appropriate.
@@ -1656,13 +1656,13 @@ is that toNumber can parse strings that have to be represented as
 BigNumber values (such as floating point values and very large whole
 numbers), whereas toInteger can only handle ordinary integers.
 
-</div>
+
 
 <span id="toString"></span>
 
 `toString(*val*, *radix*?, *isSigned*?)`
 
-<div class="fdef">
+
 
 <span id="toString"></span> Convert the given value *val* to a string.
 
@@ -1790,11 +1790,11 @@ rather than as an arithmetic value. In this case, an unsigned view lets
 you see all of the bits directly, without regard to how the machine uses
 the bits to encode negative numbers.
 
-</div>
+
 
 `undo()`
 
-<div class="fdef">
+
 
 Undoes all changes to object state back to the most recent undo
 savepoint, as established with the `savepoint()`
@@ -1816,13 +1816,13 @@ information is added, the VM discards the oldest undo information as
 needed to keep within the memory limits. This maintains a rolling window
 of the most recent undo information.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1833,4 +1833,4 @@ Function Set
 <a href="regex.html" class="nav"><em>Next:</em> Regular Expressions</a>
     </span>
 
-</div>
+

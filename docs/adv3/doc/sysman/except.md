@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Exceptions and
@@ -17,7 +17,7 @@ Error Handling
 <a href="anonfn.html" class="nav"><em>Next:</em> Anonymous Functions</a>
     </span>
 
-</div>
+
 
 
 
@@ -342,7 +342,7 @@ if you just want to display the error message, you should call the
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -353,4 +353,4 @@ Error Handling
 <a href="anonfn.html" class="nav"><em>Next:</em> Anonymous Functions</a>
     </span>
 
-</div>
+

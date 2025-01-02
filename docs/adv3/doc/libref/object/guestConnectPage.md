@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Guest connection request. This enables "switchboard" applications on
 remote servers that keep track of multi-user game sessions, to show
@@ -43,26 +43,26 @@ here as well: our reply body is the client connection URL.
 
 **`guestConnectPage`**` :   `[`WebResource`](../object/WebResource.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`guestConnectPage`**  
 [`WebResource`](../object/WebResource.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`vpath`](#vpath)
 
@@ -71,11 +71,11 @@ Inherited from `WebResource` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`processRequest`](#processRequest)
 
@@ -84,11 +84,11 @@ Inherited from `WebResource` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="vpath"></span>
 
@@ -96,19 +96,19 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[1380](../source/webui.t.html#1380)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="processRequest"></span>
 
@@ -116,15 +116,15 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[1381](../source/webui.t.html#1381)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

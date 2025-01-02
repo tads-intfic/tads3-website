@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Parser is the class that implements the main parsing procedure, namely
 taking a line of text from the player, figuring out what it means, and
@@ -50,61 +50,61 @@ Modifications to Parser for CMDHELP EXTENSION
 
 `class `**`Parser`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Parser`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`autoHelp`](#autoHelp)[`autoLook`](#autoLook)[`autoSpell`](#autoSpell)[`DefaultAction`](#DefaultAction)[`defaultActions`](#defaultActions)[`lastTokens`](#lastTokens)[`question`](#question)[`showUnknownWords`](#showUnknownWords)[`spellTimeLimit`](#spellTimeLimit)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`emptyCommand`](#emptyCommand)[`parse`](#parse)[`rmcType`](#rmcType)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="autoHelp"></span>
 
@@ -112,13 +112,13 @@ Modifications to Parser for CMDHELP EXTENSION
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[37](../source/cmdhelp.t.html#37)\]
 
-<div class="desc">
+
 
 Flag: Do we want to show a menu of command options in response to an
 empty command? By default we do since that's the purpose of this CMDHELP
 EXTENSION.
 
-</div>
+
 
 <span id="autoLook"></span>
 
@@ -126,7 +126,7 @@ EXTENSION.
 
 [parser.t](../file/parser.t.html)\[[95](../source/parser.t.html#95)\]
 
-<div class="desc">
+
 
 Auto-Look: Should we treat an empty command line (i.e., the user just
 presses Return) as a LOOK AROUND command?
@@ -154,7 +154,7 @@ If this property is set to true, we'll perform a LOOK AROUND command
 when the player enters a blank command line. If nil, we'll show an error
 message.
 
-</div>
+
 
 <span id="autoSpell"></span>
 
@@ -162,7 +162,7 @@ message.
 
 [parser.t](../file/parser.t.html)\[[132](../source/parser.t.html#132)\]
 
-<div class="desc">
+
 
 Should we attempt automatic spelling correction? If this is true,
 whenever a command fails, we'll check for a word that we don't
@@ -189,7 +189,7 @@ As an experiment, change the default value to be nil when we're in a
 conversation and true otherwise, since over-zealous spelling corrections
 can be particularly troublesome in a conversational context.
 
-</div>
+
 
 <span id="DefaultAction"></span>
 
@@ -197,13 +197,13 @@ can be particularly troublesome in a conversational context.
 
 [parser.t](../file/parser.t.html)\[[771](../source/parser.t.html#771)\]
 
-<div class="desc">
+
 
 The action to be tried if the parser can't find a verb in the command
 line and tries to parse the command line as the single object of a
 DefaultAction command instead.
 
-</div>
+
 
 <span id="defaultActions"></span>
 
@@ -211,7 +211,7 @@ DefaultAction command instead.
 
 [parser.t](../file/parser.t.html)\[[107](../source/parser.t.html#107)\]
 
-<div class="desc">
+
 
 Default Actions: Should we treat a command line that consists entirely
 of a single noun phrase to be a "Default Action" on the named object?
@@ -221,7 +221,7 @@ objects, it's EXAMINE. For locations, it's GO TO.
 We make the default value nil since setting it to true can result in
 some rather odd parser behaviour.
 
-</div>
+
 
 <span id="lastTokens"></span>
 
@@ -229,12 +229,12 @@ some rather odd parser behaviour.
 
 [parser.t](../file/parser.t.html)\[[728](../source/parser.t.html#728)\]
 
-<div class="desc">
+
 
 The token list from the last command, if an error occurred. This is the
 token list that we'll retry if the player enters an OOPS command.
 
-</div>
+
 
 <span id="question"></span>
 
@@ -242,7 +242,7 @@ token list that we'll retry if the player enters an OOPS command.
 
 [parser.t](../file/parser.t.html)\[[738](../source/parser.t.html#738)\]
 
-<div class="desc">
+
 
 The outstanding Question object. When we ask an interactive question
 (such as a disambiguation query, a missing noun phrase query, or a
@@ -250,7 +250,7 @@ custom question from the game), this is set to the Question waiting to
 be answered. We parse the next command against the Question to see if
 it's a reply, and if so we execute the reply.
 
-</div>
+
 
 <span id="showUnknownWords"></span>
 
@@ -258,7 +258,7 @@ it's a reply, and if so we execute the reply.
 
 [parser.t](../file/parser.t.html)\[[199](../source/parser.t.html#199)\]
 
-<div class="desc">
+
 
 When the parser doesn't recognize a word, should it say so? If this
 property is set to true, when parsing fails, we'll scan the command line
@@ -304,7 +304,7 @@ benefits of "unknown word" messages seem considerably outweighed by the
 harm they do to the illusion of boundlessness. So, our default is the
 second option, playing coy.
 
-</div>
+
 
 <span id="spellTimeLimit"></span>
 
@@ -312,7 +312,7 @@ second option, playing coy.
 
 [parser.t](../file/parser.t.html)\[[148](../source/parser.t.html#148)\]
 
-<div class="desc">
+
 
 Maximum spelling correction time, in milliseconds. The spelling
 correction process is iterative, and each iteration involves a new
@@ -326,15 +326,15 @@ check the elapsed time, and abort the process if it exceeds this limit.
 Note that this limit doesn't limit the parsing time itself - we'll never
 interrupt that mid-stream.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="emptyCommand"></span>
 
@@ -343,7 +343,7 @@ interrupt that mid-stream.
 [parser.t](../file/parser.t.html)\[[747](../source/parser.t.html#747)\],
 [cmdhelp.t](../file/cmdhelp.t.html)\[[24](../source/cmdhelp.t.html#24)\]
 
-<div class="desc">
+
 
 Execute an empty command line. The parse() routine calls this when given
 a blank command line (i.e., the user simply pressed the Return key). By
@@ -356,7 +356,7 @@ Overridden for CMDHELP EXTENSION. If our autoHelp property is true then
 respond to an empty command by displaying a brief menu of command
 options.
 
-</div>
+
 
 <span id="parse"></span>
 
@@ -364,7 +364,7 @@ options.
 
 [parser.t](../file/parser.t.html)\[[211](../source/parser.t.html#211)\]
 
-<div class="desc">
+
 
 Parse and execute a command line. This is the main parsing routine. We
 take the text of a command line, parse it against the grammar defined in
@@ -374,7 +374,7 @@ we repeat the process for each one.
 
 'str' is the text of the command line, as entered by the player.
 
-</div>
+
 
 <span id="rmcType"></span>
 
@@ -382,15 +382,15 @@ we repeat the process for each one.
 
 [parser.t](../file/parser.t.html)\[[774](../source/parser.t.html#774)\]
 
-<div class="desc">
+
 
 Return an rmcXXXX enum code depending on the state of Parser.question
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

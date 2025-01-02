@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="reviewing.html" class="nav">Reviewing the Basics</a> \> Methods,
@@ -17,7 +17,7 @@ Containment</a>    
 <a href="inherit.html" class="nav"><em>Next:</em> Inheritance,
 Modification and Overriding</a>     </span>
 
-</div>
+
 
 
 
@@ -40,7 +40,7 @@ same function is defined in the adv3 library too).
 
 The syntax for defining a function is:
 
-<div class="syntax">
+
 
     functionName ( [ paramName [ , paramName ... ]  ]  )
     {
@@ -55,7 +55,7 @@ takes, then a closing parenthesis, following which you write the body of
 the function between opening and closing braces. To give a couple of
 more concrete examples:
 
-`
+```
     sayHello()
     {
        "Hello World!";
@@ -65,16 +65,16 @@ more concrete examples:
     {
        return x * 2;
     }
-`
+```
 
 The `sayHello()` function simply displays the
 text "Hello World!" when it is invoked. The
 `double()` function accepts a single number as a
 parameter and returns double that number. It could be used like this:
 
-`
+```
       y = double(3);
-`
+```
 
 Which would result in y containing the value 6. (In this code fragment,
 y is a variable; we'll explain variables in the next subsection).
@@ -101,7 +101,7 @@ seldom matters, and if you refer to both parameters and arguments as
 A method is defined almost exactly like a function, except that its
 definition occurs within the body of an object or class. For example:
 
-`
+```
     class Greeter: Thing
        greet()
        {
@@ -118,7 +118,7 @@ definition occurs within the body of an object or class. For example:
            <<x + y>>. ";
       }
     ;
-`
+```
 
 In this somewhat contrived example, the
 `Greeter` class defines a
@@ -175,11 +175,11 @@ will have the value `nil` (i.e. nothing at all)
 until it is assigned a value. The following are all examples of legal
 variable declarations:
 
-`
+```
       local a;
       local numberOfEggs, weightOfFlour, quantityOfButter;
       local price = 10, weight, title = 'cake recipe';
-`
+```
 
 On the whole it's best to give your variables meaningful names as in the
 second and third examples above, since this will make your code easier
@@ -202,7 +202,7 @@ other at all, and no confusion will occur.
 As its name suggests, a variable is something whose value can vary as
 your code is executed. Consider the following code snippet:
 
-`
+```
     someFunction()
     {
        local myVar = 2;
@@ -210,7 +210,7 @@ your code is executed. Consider the following code snippet:
        myVar = 'Hello';    // now myVar is 'Hello'
        myVar += ' World!'; // now myVar is 'Hello World!'   
     }
-`
+```
 
 ## Statements
 
@@ -255,26 +255,26 @@ A declaration statement is one that declares a new local
 statement declares the local variable
 `myNewVar`:
 
-`
+```
     local myNewVar;
-`
+```
 
 As already noted, a local variable must be declared before it can be
 used, but a variable can be declared and assigned an initial value in
 the same statement, for example:
 
-`
+```
     local myNewVar = 10;
     local someonesName = 'John Doe';
     local obj = bird;
     local bool = true;
-`
+```
 
 The above example could alternatively be written all as one statement:
 
-`
+```
     local myNewVar = 10, someonesName = 'John Doe', obj = bird, bool = true;
-`
+```
 
 ### Assignment Statments
 
@@ -287,14 +287,14 @@ Where *lvalue* is the property or variable to which the value is being
 assigned, and *expression* is any valid TADS 3 expression. Examples of
 assignment statements include:
 
-`
+```
       x = 2;
       x = x + 3;
       obj = bird;
       obj.name = 'parrot';
       str = 'Hello' + ' World';
       val = double(x + 1) / 3 + 18;  // val is now 22
-`
+```
 
 An *expression* can be any legal combination of variables, property
 names, function and/or method calls, and operators. *Operators* include
@@ -312,13 +312,13 @@ very careful not to confuse the assignment operator
 `=` with the test for equality operator
 `==`. Consider the following:
 
-`
+```
       a = 3; // Assigns the value 3 to a.
       a == 3; // Tests whether a is 3 (and here evaluates to true), but doesn't do anything.
       
       if(a = 4)   // legal but doesn't do what you probably expect 
          say ('a is 4!')
-`
+```
 
 The statement `a == 3` is a legal statement
 because a statement can consist just of an expression, even if the
@@ -332,38 +332,38 @@ initial value of a, causing 'a is 4!' to be displayed no matter what.
 There are also various short form assignment statements. Because it's so
 common to write statements like:
 
-`
+```
       count = count + 2;
-`
+```
 
 This can be abbreviated to:
 
-`
+```
       count += 2;
-`
+```
 
 And so on with similar operators like `-= \*=`
 and `/=`. Because adding or subtracting 1 from a
 number is so common, this can be abbreviated even further:
 
-`
+```
       
       count++; // equivalent to count += 1;
       count--; // equivalent to count -= 1;  
       ++count; // equivalent to count += 1;
       --count; // equivalent to count -= 1;
-`
+```
 
 The difference between `++count` and
 `count++` is simply the point at which the
 incrementing of `count` occurs. This can be
 illustrated briefly like this:
 
-`
+```
       count = 0;
       a = count++; // a is now 0 and count is now 1, because count is incremented after its value is assigned to a
       b = ++count; // b and count are now both 2, because count is incremented before its value is assigned to b
-`
+```
 
 ### Method and Function Calls
 
@@ -377,10 +377,10 @@ side-effects. "Side-effect" is actually a slightly odd term here,
 because what we mean is what the method or function actually does.
 Examples we have actually seen include:
 
-`
+```
       finishGameMsg(ftVictory, [finishOptionUndo]); // ends the game
       bird.moveInto(nest); // moves the bird into the nest
-`
+```
 
 As you come to write more TADS 3 code (whether in adv3Lite or adv3)
 you'll probably find yourself using this kind of statement a lot.
@@ -399,12 +399,12 @@ One of the most common — and most important — statements is the
 `afterAction()` method of the
 `branch` object) in the form:
 
-<div class="syntax">
+
 
     if ( conditionExpression )
       thenPart
 
-</div>
+
 
 Where <span class="synPar">conditionExpression</span> is an expression
 that typically evaluates to either true or nil and
@@ -412,7 +412,7 @@ that typically evaluates to either true or nil and
 block (enclosed by opening and closing braces) containing multiple
 statements. For example:
 
-`
+```
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -426,19 +426,19 @@ statements. For example:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
-`
+```
 
 There's also a second form of the `if` statement
 that looks like this:
 
-<div class="syntax">
+
 
     if ( conditionExpression )
       thenPart
     else
       elsePart 
 
-</div>
+
 
 In this form of the if statement, both
 <span class="synPar">thenPart</span> and
@@ -451,7 +451,7 @@ but `nil` or `0`, then
 `nil` or `0` then
 <span class="synPar">elsePart</span> is executed. For example;
 
-`
+```
      if(obj.weight > 50)
      {
         "You can't budge it. ";
@@ -462,7 +462,7 @@ but `nil` or `0`, then
         "You push <<obj.theName>> over the edge, and it tumbles away out of sight. ";
      }
      
-`
+```
 
 In this example, if obj had a weight of 51, say, then the player would
 see the "You can't budge it" message, but if it had a weight of 50, obj
@@ -481,7 +481,7 @@ The first form simply terminates the function or method. The second
 terminates it and returns the value of
 <span class="synPar">expression</span> to the caller. For example:
 
-`
+```
      
      absolute(x)
      {
@@ -508,7 +508,7 @@ terminates it and returns the value of
        a = absolute(-40) // a is now 40
        a = sayDivide(a, 20) // a is now nil
      
-`
+```
 
 In the second case, although the player would see the message "40
 divided by 20 is 2", since the function returns no value,
@@ -520,42 +520,42 @@ of which TADS 3 provides several. The most versatile (and hence common)
 of these is the `for `statement, which can take
 several forms:
 
-<div class="syntax">
+
 
     for ( [ initializer ]  ; [ condition ]  ; [ updater ]  )
       loopBody
 
-</div>
+
 
 The <span class="synPar">initializer</span> is either an ordinary
 expression, or a list of local variable declarations, or a mix of both:
 
-<div class="syntax">
+
 
     ( expression | local varName = expression )  [ , ... ] 
 
-</div>
+
 
 An example of this kind of for loop would be:
 
-`
+```
       local count = 0;
       for(local i = 1; i <= 10; i++)
          count += i;  
      
-`
+```
 
 This would sum the numbers from 1 to 10 and store the total (55) in
 `count`.
 
 The second form of the for loop is:
 
-<div class="syntax">
+
 
     for ( [ local ]  loopVar in expression )
        loopBody
 
-</div>
+
 
 In this form of the for loop, <span class="synPar">expression</span>
 would typically be a list (or an expression that evaluates to a list).
@@ -563,20 +563,20 @@ For example, to calculate the total bulk of the items carried by Heidi
 (perhaps in a game where we didn't restrict her carrying capacity quite
 so much) we might use:
 
-`
+```
     local totalBulk = 0;
     for(local item in heidi.contents)
        totalBulk += item.bulk;
-`
+```
 
 The third form of the for loop is:
 
-<div class="syntax">
+
 
     for ( [ local ]  loopVar in fromExpr .. toExpr [ step stepExpr ]  )
        loopBody
 
-</div>
+
 
 Where *fromExpr*, *toExpr*, and the optional *stepExpr* are expressions
 that evaluate to integer values. If there's no
@@ -584,24 +584,24 @@ that evaluate to integer values. If there's no
 this form of the loop the first example (summing the numbers from 1 to
 10) could have been written as:
 
-`
+```
     local count = 0;
     for(local i in 1..10)
       count += i;
      
-`
+```
 
 As an added bonus, we can combine these different forms of for loop into
 a single statement. For example, the following could be used to display
 an enumerated list of Heidi's possessions:
 
-`
+```
     "Heidi is holding:\n";
 
     for(local item in heidi.contents, local i = 1 ;; i++)
        "<<i>>. <<item.aName>>\n";
      
-`
+```
 
 These are not the only kind of loop (and other flow-control) statements
 that TADS 3 provides, but they are the ones that are most commonly used.
@@ -615,43 +615,43 @@ statement. This is simply an instruction to display some text to the
 player, and takes the form of placing the text between double quote
 marks, and ending the statement with a semicolon:
 
-`
+```
      
     "This text will be displayed to the player. ";
-`
+```
 
 The same result can be achieved via a function call:
 
-`
+```
     say('This text will be displayed to the player. ');
-`
+```
 
 But the double-quoted string statement form is often more convenient.
 Note that in this statement the text to be displayed can contain
 embedded expressions, that is expressions enclosed in double
 angle-brackets \<\<\>\>. So for example we could write:
 
-`
+```
     "Heidi is carrying <<heidi.contents.length>> things right now. ";
-`
+```
 
 The above example won't read too well if Heidi is carrying just one
 thing, and may not be ideal if she is completely empty handed, but we
 can also use embedded expressions to change what's displayed according
 to various conditions, for example:
 
-`
+```
     local numItems = heidi.contents.length;
     "Heidi is <<if numItems == 0>> empty-handed<<else if numItems == 1>>carrying just one thing<<else>> carrying <<numItems>> things<<end>>. ";
-`
+```
 
 Embedded expressions can also be used to vary what's displayed either
 randomly or sequentially, for example:
 
-`
+```
     "Heidi is very<<one of>>sad <<or>>happy <<or>>energetic <<or>>tired <<shuffled>> today. ";
     "Heidi is very<<one of>>sad <<or>>happy <<or>>energetic <<or>>tired <<stopping>> today. "
-`
+```
 
 The first statement will run through 'sad', 'happy', 'energetic' and
 'tired' in random order, then shuffle the order and repeat through again
@@ -679,11 +679,11 @@ reading the next straight away, that's fine too, but I would still
 recommend that you read those three sections of the [TADS 3 System
 Manual](../sysman.html) sooner or later.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -694,4 +694,4 @@ Containment</a>    
 <a href="inherit.html" class="nav"><em>Next:</em> Inheritance,
 Modification and Overriding</a>     </span>
 
-</div>
+

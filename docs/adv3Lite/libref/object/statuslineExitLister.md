@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`statuslineExitLister`**` :   `[`ExitLister`](../object/ExitLister1.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`statuslineExitLister`**  
 [`ExitLister`](../object/ExitLister1.html)  
@@ -42,11 +42,11 @@ Details](#_Methods_)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`highlightUnvisitedExits`](#highlightUnvisitedExits)[`listerShowsDest`](#listerShowsDest)[`unvisitedExitColour`](#unvisitedExitColour)
 
@@ -57,11 +57,11 @@ Inherited from `ExitLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListEmpty`](#showListEmpty)[`showListItem`](#showListItem)[`showListPrefixWide`](#showListPrefixWide)[`showListSeparator`](#showListSeparator)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -73,11 +73,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="highlightUnvisitedExits"></span>
 
@@ -85,11 +85,11 @@ Inherited from `Lister` :
 
 [exits.t](../file/exits.t.html)\[[387](../source/exits.t.html#387)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="listerShowsDest"></span>
 
@@ -97,11 +97,11 @@ Inherited from `Lister` :
 
 [exits.t](../file/exits.t.html)\[[385](../source/exits.t.html#385)\]
 
-<div class="desc">
+
 
 this lister does not show destination names
 
-</div>
+
 
 <span id="unvisitedExitColour"></span>
 
@@ -109,19 +109,19 @@ this lister does not show destination names
 
 [exits.t](../file/exits.t.html)\[[389](../source/exits.t.html#389)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -129,11 +129,11 @@ this lister does not show destination names
 
 [exits.t](../file/exits.t.html)\[[355](../source/exits.t.html#355)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -141,11 +141,11 @@ this lister does not show destination names
 
 [exits.t](../file/exits.t.html)\[[368](../source/exits.t.html#368)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -153,11 +153,11 @@ this lister does not show destination names
 
 [exits.t](../file/exits.t.html)\[[360](../source/exits.t.html#360)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSeparator"></span>
 
@@ -165,11 +165,11 @@ this lister does not show destination names
 
 [exits.t](../file/exits.t.html)\[[377](../source/exits.t.html#377)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -177,15 +177,15 @@ this lister does not show destination names
 
 [exits.t](../file/exits.t.html)\[[364](../source/exits.t.html#364)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

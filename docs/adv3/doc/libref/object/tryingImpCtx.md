@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 the "just trying" implicit action announcement context
 
 **`tryingImpCtx`**` :   `[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`tryingImpCtx`**  
 [`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`useInfPhrase`](#useInfPhrase)
 
@@ -54,11 +54,11 @@ Inherited from `ImplicitAnnouncementContext` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`buildImplicitAnnouncement`](#buildImplicitAnnouncement)
 
@@ -66,11 +66,11 @@ Inherited from `ImplicitAnnouncementContext` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="useInfPhrase"></span>
 
@@ -78,20 +78,20 @@ Inherited from `ImplicitAnnouncementContext` :
 
 [en_us.t](../file/en_us.t.html)\[[8049](../source/en_us.t.html#8049)\]
 
-<div class="desc">
+
 
 The action was merely attempted, so use the infinitive phrase in the
 announcement: "(first trying to OPEN THE BOX)".
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="buildImplicitAnnouncement"></span>
 
@@ -99,15 +99,15 @@ announcement: "(first trying to OPEN THE BOX)".
 
 [en_us.t](../file/en_us.t.html)\[[8052](../source/en_us.t.html#8052)\]
 
-<div class="desc">
+
 
 build the announcement
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Another preliminary results gatherer that does everything the way the
 CommandRanking results object does, except that we perform interactive
@@ -34,15 +34,15 @@ resolution of unknown words via OOPS.
 
 `class `**`OopsResults`**` :   `[`CommandRanking`](../object/CommandRanking.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OopsResults`**  
 [`CommandRanking`](../object/CommandRanking.html)  
@@ -50,27 +50,27 @@ resolution of unknown words via OOPS.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`issuingActor_`](#issuingActor_)[`targetActor_`](#targetActor_)
 
@@ -81,11 +81,11 @@ Inherited from `CommandRanking` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`unknownNounPhrase`](#unknownNounPhrase)
 
@@ -96,11 +96,11 @@ Inherited from `CommandRanking` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="issuingActor_"></span>
 
@@ -108,11 +108,11 @@ Inherited from `CommandRanking` :
 
 [parser.t](../file/parser.t.html)\[[6760](../source/parser.t.html#6760)\]
 
-<div class="desc">
+
 
 the command's issuing actor
 
-</div>
+
 
 <span id="targetActor_"></span>
 
@@ -120,19 +120,19 @@ the command's issuing actor
 
 [parser.t](../file/parser.t.html)\[[6763](../source/parser.t.html#6763)\]
 
-<div class="desc">
+
 
 the command's target actor
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -140,11 +140,11 @@ the command's target actor
 
 [parser.t](../file/parser.t.html)\[[6723](../source/parser.t.html#6723)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="unknownNounPhrase"></span>
 
@@ -152,15 +152,15 @@ the command's target actor
 
 [parser.t](../file/parser.t.html)\[[6733](../source/parser.t.html#6733)\]
 
-<div class="desc">
+
 
 handle a phrase with unknown words
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

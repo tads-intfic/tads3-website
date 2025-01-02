@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `grammar `<span class="gramalt">[`nounWord`](../object/nounWord.html)`(nounAbbr)`</span>` :   `[`NounWordProd`](../object/NounWordProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`nounWord(nounAbbr)`**  
 [`NounWordProd`](../object/NounWordProd.html)  
@@ -44,11 +44,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -64,11 +64,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getNounText`](#getNounText)
 
@@ -86,19 +86,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getNounText"></span>
 
@@ -106,17 +106,17 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6656](../source/en_us.t.html#6656)\]
 
-<div class="desc">
+
 
 for dictionary matching purposes, include the text of our noun with the
 period attached - the period is part of the dictionary entry for an
 abbreviated word
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

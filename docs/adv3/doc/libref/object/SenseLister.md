@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for sense listers, which list the items that can be sensed
 for a command like "listen" or "smell".
 
 `class `**`SenseLister`**` :   `[`ParagraphLister`](../object/ParagraphLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SenseLister`**  
 [`ParagraphLister`](../object/ParagraphLister.html)  
@@ -49,28 +49,28 @@ for a command like "listen" or "smell".
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`inventoryListenLister`](../object/inventoryListenLister.html)[`inventorySmellLister`](../object/inventorySmellLister.html)[`roomListenLister`](../object/roomListenLister.html)[`roomSmellLister`](../object/roomSmellLister.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isListed`](#isListed)[`showListItemCounted`](#showListItemCounted)
 
@@ -97,19 +97,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -117,11 +117,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1774](../source/lister.t.html#1774)\]
 
-<div class="desc">
+
 
 show everything we're asked to list
 
-</div>
+
 
 <span id="showListItemCounted"></span>
 
@@ -129,15 +129,15 @@ show everything we're asked to list
 
 [lister.t](../file/lister.t.html)\[[1777](../source/lister.t.html#1777)\]
 
-<div class="desc">
+
 
 show a counted list item
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

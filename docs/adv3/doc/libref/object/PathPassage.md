@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Path Passage is a specialization of through passage that's more
 suitable for outdoor locations. This type of passage is good for things
@@ -43,15 +43,15 @@ English-specific travel connector changes
 
 `class `**`PathPassage`**` :   `[`ThroughPassage`](../object/ThroughPassage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PathPassage`**  
 [`ThroughPassage`](../object/ThroughPassage.html)  
@@ -69,27 +69,27 @@ English-specific travel connector changes
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotStandOnMsg`](#cannotStandOnMsg)
 
@@ -121,11 +121,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`describeArrival`](#describeArrival)[`describeDeparture`](#describeDeparture)[`dobjFor(Enter)`](#dobjFor(Enter))[`dobjFor(Follow)`](#dobjFor(Follow))[`dobjFor(GoThrough)`](#dobjFor(GoThrough))[`dobjFor(Take)`](#dobjFor(Take))[`iobjFor(PutOn)`](#iobjFor(PutOn))
 
@@ -159,11 +159,11 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotStandOnMsg"></span>
 
@@ -171,19 +171,19 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[2659](../source/travel.t.html#2659)\]
 
-<div class="desc">
+
 
 use a special message for standing on a path
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="describeArrival"></span>
 
@@ -191,11 +191,11 @@ use a special message for standing on a path
 
 [travel.t](../file/travel.t.html)\[[2649](../source/travel.t.html#2649)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="describeDeparture"></span>
 
@@ -203,11 +203,11 @@ use a special message for standing on a path
 
 [travel.t](../file/travel.t.html)\[[2644](../source/travel.t.html#2644)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -215,11 +215,11 @@ use a special message for standing on a path
 
 [en_us.t](../file/en_us.t.html)\[[2866](../source/en_us.t.html#2866)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Follow)"></span>
 
@@ -227,11 +227,11 @@ use a special message for standing on a path
 
 [travel.t](../file/travel.t.html)\[[2662](../source/travel.t.html#2662)\]
 
-<div class="desc">
+
 
 FOLLOW PATH -\> travel via the path
 
-</div>
+
 
 <span id="dobjFor(GoThrough)"></span>
 
@@ -239,11 +239,11 @@ FOLLOW PATH -\> travel via the path
 
 [en_us.t](../file/en_us.t.html)\[[2870](../source/en_us.t.html#2870)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -251,11 +251,11 @@ FOLLOW PATH -\> travel via the path
 
 [en_us.t](../file/en_us.t.html)\[[2863](../source/en_us.t.html#2863)\]
 
-<div class="desc">
+
 
 treat "take path" the same as "enter path" or "go through path"
 
-</div>
+
 
 <span id="iobjFor(PutOn)"></span>
 
@@ -263,15 +263,15 @@ treat "take path" the same as "enter path" or "go through path"
 
 [travel.t](../file/travel.t.html)\[[2656](../source/travel.t.html#2656)\]
 
-<div class="desc">
+
 
 putting something on a path is the same as dropping it
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

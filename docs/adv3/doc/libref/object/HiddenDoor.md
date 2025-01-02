@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Hidden Door. This is a secret door that is invisible when closed. This
 can be used when the passage isn't even visible when it's closed, such
@@ -34,15 +34,15 @@ as a door that seamlessly melds into the wall.
 
 `class `**`HiddenDoor`**` :   `[`SecretDoor`](../object/SecretDoor.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`HiddenDoor`**  
 [`SecretDoor`](../object/SecretDoor.html)  
@@ -65,27 +65,27 @@ as a door that seamlessly melds into the wall.
 `                                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`sightPresence`](#sightPresence)
 
@@ -127,11 +127,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -176,11 +176,11 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="sightPresence"></span>
 
@@ -188,26 +188,26 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[3016](../source/travel.t.html#3016)\]
 
-<div class="desc">
+
 
 When we're closed, we're completely invisible, so we have no sight
 presence. When we're open, we have our normal visual presence.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

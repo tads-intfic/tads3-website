@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Extras  
@@ -15,7 +15,7 @@ layout: docs
     <a href="gadget.html" class="nav"><em>Next:</em> Gadgets</a>    
 </span>
 
-</div>
+
 
 
 
@@ -100,11 +100,11 @@ read several messages along the lines of 'X is not important' in
 response to such commands. So a commonly useful modification to the
 Decoration class might be:
 
-`
+```
     modify Decoration
         hideFromAll(action) { return true; }
     ;
-`
+```
 
 This particular modification may be less useful in games that in any
 case define `gameMain.allVerbsAllowAll = nil`,
@@ -137,7 +137,7 @@ appropriate direction property of the room to point to it. For example,
 to implement a flight of stairs leading up from the hall to the landing
 you might write:
 
-`
+```
     hall: Room 'Hall'
         "A broad flight of stairs leads up to the landing above. "
         up = hallStairs
@@ -146,7 +146,7 @@ you might write:
     + hallStairs 'flight[n] of stairs; broad; steps staircase'
          destination = landing
     ;
-`
+```
 
 ## <span id="emanation">Sensory Emanation Classes</span>
 
@@ -164,7 +164,7 @@ provide simple implementations of any smells or sounds whose existence
 is suggested by smelling or listening to other objects, or by issuing an
 intransitive SMELL or LISTEN command. For example:
 
-`
+```
     + cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -180,7 +180,7 @@ intransitive SMELL or LISTEN command. For example:
     + Odor 'smell of burning; acrid distinct'
         "It smells quite acrid. "   
     ;
-`
+```
 
 As of Version 1.61, SensoryEmanations are hidden from any actions
 applied to ALL that are not relevant to the SensoryEmanation in questio
@@ -214,11 +214,11 @@ question isn't there. For example, if the player drops a key down a
 drain, you could then add an Unthing to the location to remind the
 player why the key is no longer available:
 
-`
+```
     unKey: Unthing 'small silver key'
        'Unfortunately, you dropped the silver key down the drain. '
     ;   
-`
+```
 
 Note that the second property we're defining with the template here is
 not the description but the **notHereMsg**, and that this must be a
@@ -237,13 +237,13 @@ property. E.g. if you'd defined a RETRIEVE command which you wanted to
 work on the UnKey (to make the player character try to fish the real
 silver key out of the drain, maybe), you could define your unKey thus:
 
-`
+```
     unKey: Unthing 'small silver key'
        'Unfortunately, you dropped the silver key down the drain. '
        
        decorationActions = [Retrieve]
     ;   
-`
+```
 
 A <span id="minoritem"></span>**MinorItem** is an unobtrusive and
 possibly unimportant portable object that's worth implementing in the
@@ -266,7 +266,7 @@ other objects to point to the CollectiveGroup. For example, suppose we
 have a bank of switches comprising a red switch, a blue switch and a
 green switch; in outline we might do something like this:
 
-`
+```
     + switchBank: CollectiveGroup 'switches; of[prep]; row bank; them'
        "The bank comprises a row of three switches: one red, one blue, one green. "
        collectiveActions = [Examine, Take]
@@ -286,7 +286,7 @@ green switch; in outline we might do something like this:
         isFixed = true
         collectiveGroups = [switchBank]
     ;
-`
+```
 
 With this in place the command X SWITCHES will give the description of
 the bank of switches, rather than of each individual switch, and TAKE
@@ -342,7 +342,7 @@ To use a SecretDoor, define it just like a [Door](door.html), but
 its closed state, and a separate **vocabWhenOpen** property to define
 the name and other vocab to use when it's open. For example:
 
-`
+```
     cellar: Room 'Cellar' 'cellar'
         "It's not a pleasant place at the best of times, dark, dank and smelly, with
         piles of old junk strewn all over the place waiting for you to find time to
@@ -378,7 +378,7 @@ the name and other vocab to use when it's open. For example:
         
         vocabWhenOpen = 'dark passage; empty wine; rack'
     ;
-`
+```
 
 Note that the OPEN command won't work on a
 `SecretDoor` when it's closed, but the CLOSE
@@ -398,7 +398,7 @@ sure nothing else mentions it when it's closed, but it's probably easier
 just to make it a Door and define `isHidden =
 !isOpen`, for example:
 
-`
+```
     loft: Room 'Hay Loft' 'hay loft'
         "There's not much up here, apart from a few stray strands of straw
         scattered across the bare boards. A ladder leads back down to the
@@ -457,7 +457,7 @@ just to make it a Door and define `isHidden =
     + compartmentDoor: Door 'small door'
         otherSide = loftDoor
     ;
-`
+```
 
 Note that in both these example, the `west` exit
 will only be displayed in the exit lister when the corresponding
@@ -478,7 +478,7 @@ would then be hidden inside the container when it was closed.
 So, for example, to define a cooker/oven we can put things in or on and
 which has a door we should do this:
 
-`
+```
     cooker: Fixture 'cooker;; oven stove'
        remapIn: SubComponent { isOpenable = true }
        remapOn: SubComponent { }
@@ -486,13 +486,13 @@ which has a door we should do this:
 
     + cookerDoor: ContainerDoor 'cooker door; oven stove'
     ;
-`
+```
 
 
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -501,4 +501,4 @@ which has a door we should do this:
     <a href="gadget.html" class="nav"><em>Next:</em>Gadgets</a>    
 </span>
 
-</div>
+

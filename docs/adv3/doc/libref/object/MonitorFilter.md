@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Output monitor filter. This is a filter that leaves the filtered text
 unchanged, but keeps track of whether any text was seen at all. Our
@@ -34,42 +34,42 @@ unchanged, but keeps track of whether any text was seen at all. Our
 
 `class `**`MonitorFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MonitorFilter`**  
 [`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`outputFlag`](#outputFlag)
 
@@ -77,11 +77,11 @@ unchanged, but keeps track of whether any text was seen at all. Our
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterText`](#filterText)
 
@@ -89,11 +89,11 @@ unchanged, but keeps track of whether any text was seen at all. Our
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="outputFlag"></span>
 
@@ -101,19 +101,19 @@ unchanged, but keeps track of whether any text was seen at all. Our
 
 [output.t](../file/output.t.html)\[[676](../source/output.t.html#676)\]
 
-<div class="desc">
+
 
 flag: has any output occurred for this monitor yet?
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterText"></span>
 
@@ -121,15 +121,15 @@ flag: has any output occurred for this monitor yet?
 
 [output.t](../file/output.t.html)\[[665](../source/output.t.html#665)\]
 
-<div class="desc">
+
 
 filter text
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

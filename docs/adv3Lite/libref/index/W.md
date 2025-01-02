@@ -207,9 +207,9 @@ method of [WebBannerWin](../object/WebBannerWin.html) in
 method of [OutputStream](../object/OutputStream.html) in
 [output.t](../file/output.t.html)\[[183](../source/output.t.html#183)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Setting it all up  
@@ -16,7 +16,7 @@ Need</a>    
 <a href="using.html" class="nav"><em>Next:</em> Using the Tools</a>    
 </span>
 
-</div>
+
 
 
 
@@ -199,7 +199,7 @@ Library Manual*.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -210,4 +210,4 @@ Need</a>    
 <a href="using.html" class="nav"><em>Next:</em> Using the Tools</a>    
 </span>
 
-</div>
+

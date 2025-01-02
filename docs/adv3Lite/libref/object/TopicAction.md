@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A TopicAction is an action referring to a single Topic (e.g. TALK ABOUT
 THE TOWER). It behaves almost exactly like an IAction.
 
 `class `**`TopicAction`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicAction`**  
 [`IAction`](../object/IAction.html)  
@@ -51,30 +51,30 @@ THE TOWER). It behaves almost exactly like an IAction.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TopicAction`**  
 [`ImplicitConversationAction`](../object/ImplicitConversationAction.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`ConsultWhatAbout`](../object/ConsultWhatAbout.html)[`Seek`](../object/Seek.html)[`ThinkAbout`](../object/ThinkAbout.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curTopic`](#curTopic)
 
@@ -90,11 +90,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`exec`](#exec)
 
@@ -112,11 +112,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curTopic"></span>
 
@@ -124,19 +124,19 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[2772](../source/action.t.html#2772)\]
 
-<div class="desc">
+
 
 The ResolvedTopic object associated with this action.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -144,15 +144,15 @@ The ResolvedTopic object associated with this action.
 
 [action.t](../file/action.t.html)\[[2758](../source/action.t.html#2758)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

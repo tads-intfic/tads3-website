@@ -263,9 +263,9 @@ method of [Thing](../object/Thing.html) in
 method of [RoomPartItem](../object/RoomPartItem.html) in
 [travel.t](../file/travel.t.html)\[[5537](../source/travel.t.html#5537)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

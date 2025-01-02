@@ -71,20 +71,21 @@ especially for this purpose.</p>
 convKeys properties can be readily defined through the template.
 Consider the following example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TopicGroup +10 'alice-info'
-       isActive = gRevealed('alice')
-    ;
+<p>`
+    + TopicGroup +10 ‘alice-info’
+       isActive = gRevealed(‘alice’)
+    ;</p>
 
-    ++ AskTopic @tAlice
-        "&lt;q&gt;Who is this Alice, anyway?&lt;/q&gt;
-         &lt;q&gt;Lots of folk would like to know that,&lt;/q&gt; he replies, scratching his head. "
-    ;
-     
-     
-    ++ QueryTopic 'where' 'he heard about alice; did you hear'
-       "&lt;q&gt;Where did you hear about this Alice person?&lt;/q&gt; you enquire. 
-        &lt;q&gt;From the old vicar,&lt;/q&gt; he tells you. "
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ AskTopic @tAlice
+    "&lt;q&gt;Who is this Alice, anyway?&lt;/q&gt;
+     &lt;q&gt;Lots of folk would like to know that,&lt;/q&gt; he replies, scratching his head. "
+;
+ 
+ 
+++ QueryTopic 'where' 'he heard about alice; did you hear'
+   "&lt;q&gt;Where did you hear about this Alice person?&lt;/q&gt; you enquire. 
+    &lt;q&gt;From the old vicar,&lt;/q&gt; he tells you. "
+; `
 </code></pre></div></div>
 
 <p>This adds the ‘alice-info’ convKey to both the TopicEntries defined

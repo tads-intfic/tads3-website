@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A KissTopic can be used to provide a response to KISS ACTOR, provided
 that we have overridden allowKiss to true on the actor object. This
@@ -36,15 +36,15 @@ programming style
 
 `class `**`KissTopic`**` :   `[`MiscTopic`](../object/MiscTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`KissTopic`**  
 [`MiscTopic`](../object/MiscTopic.html)  
@@ -56,27 +56,27 @@ programming style
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`impliesGreeting`](#impliesGreeting)  [`includeInList`](#includeInList)  [`isConversational`](#isConversational)  [`matchObj`](#matchObj)  `
 
@@ -94,11 +94,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -119,11 +119,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="impliesGreeting"></span>
 
@@ -131,11 +131,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3651](../source/actor.t.html#3651)\]
 
-<div class="desc">
+
 
 Kissing someone should not trigger a greeting
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -143,12 +143,12 @@ Kissing someone should not trigger a greeting
 
 [actor.t](../file/actor.t.html)\[[3639](../source/actor.t.html#3639)\]
 
-<div class="desc">
+
 
 KissTopics should be included in the miscTopics list of their
 TopicDatabase (Actor or ActorState)
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -156,12 +156,12 @@ TopicDatabase (Actor or ActorState)
 
 [actor.t](../file/actor.t.html)\[[3648](../source/actor.t.html#3648)\]
 
-<div class="desc">
+
 
 A KissTopic is not regarded as conversational, since KISS ACTOR is not
 normally treated as a conversational exchange.
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -169,25 +169,25 @@ normally treated as a conversational exchange.
 
 [actor.t](../file/actor.t.html)\[[3642](../source/actor.t.html#3642)\]
 
-<div class="desc">
+
 
 A KissTopic matches the kissTopicObj
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Object-Oriented
@@ -16,7 +16,7 @@ Programming Overview
     <a href="t3inout.html" class="nav"><em>Next:</em> Some Common
 Input/Output Issues</a>     </span>
 
-</div>
+
 
 
 
@@ -238,7 +238,7 @@ objects.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -248,4 +248,4 @@ Programming Overview
     <a href="t3inout.html" class="nav"><em>Next:</em> Some Common
 Input/Output Issues</a>     </span>
 
-</div>
+

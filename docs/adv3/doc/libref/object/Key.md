@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Key - this is an object that can be used to unlock things, and which can
 be stored on a keyring. The key that unlocks a lock is identified with a
@@ -34,15 +34,15 @@ property on the lock, not on the key.
 
 `class `**`Key`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Key`**  
 [`Thing`](../object/Thing.html)  
@@ -50,27 +50,27 @@ property on the lock, not on the key.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`keyNotPlausibleMsg`](#keyNotPlausibleMsg)
 
@@ -82,11 +82,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Detach)`](#dobjFor(Detach))[`iobjFor(LockWith)`](#iobjFor(LockWith))[`iobjFor(UnlockWith)`](#iobjFor(UnlockWith))[`isHeldBy`](#isHeldBy)[`tryHolding`](#tryHolding)
 
@@ -98,11 +98,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="keyNotPlausibleMsg"></span>
 
@@ -110,20 +110,20 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[1732](../source/extras.t.html#1732)\]
 
-<div class="desc">
+
 
 the message to use when the key is obviously not plausible for a given
 lock
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Detach)"></span>
 
@@ -131,11 +131,11 @@ lock
 
 [extras.t](../file/extras.t.html)\[[1679](../source/extras.t.html#1679)\]
 
-<div class="desc">
+
 
 treat "detach key" as "take key" if it's on a keyring
 
-</div>
+
 
 <span id="iobjFor(LockWith)"></span>
 
@@ -143,11 +143,11 @@ treat "detach key" as "take key" if it's on a keyring
 
 [extras.t](../file/extras.t.html)\[[1698](../source/extras.t.html#1698)\]
 
-<div class="desc">
+
 
 "lock with"
 
-</div>
+
 
 <span id="iobjFor(UnlockWith)"></span>
 
@@ -155,11 +155,11 @@ treat "detach key" as "take key" if it's on a keyring
 
 [extras.t](../file/extras.t.html)\[[1735](../source/extras.t.html#1735)\]
 
-<div class="desc">
+
 
 "unlock with"
 
-</div>
+
 
 <span id="isHeldBy"></span>
 
@@ -167,13 +167,13 @@ treat "detach key" as "take key" if it's on a keyring
 
 [extras.t](../file/extras.t.html)\[[1647](../source/extras.t.html#1647)\]
 
-<div class="desc">
+
 
 A key on a keyring that is being held by an actor is considered to be
 held by the actor, since the key does not have to be removed from the
 keyring in order to be manipulated as though it were directly held.
 
-</div>
+
 
 <span id="tryHolding"></span>
 
@@ -181,18 +181,18 @@ keyring in order to be manipulated as though it were directly held.
 
 [extras.t](../file/extras.t.html)\[[1665](../source/extras.t.html#1665)\]
 
-<div class="desc">
+
 
 Try making the current command's actor hold me. If we're on a keyring,
 we'll simply try to make the keyring itself held, rather than taking the
 key off the keyring; otherwise, we'll inherit the default behavior to
 make ourselves held.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

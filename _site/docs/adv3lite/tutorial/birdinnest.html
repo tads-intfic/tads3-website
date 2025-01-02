@@ -51,19 +51,20 @@ ignore the poor little bird altogether!</p>
 <p>Fortunately this is very easy to fix. All we need to do is to check that
 the nest is on the branch <em>and</em> that the bird is in the nest:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + branch: Thing 'wide firm bough; flat; branch'
-        "It's flat enough to support a small object. "
-        
-        iFixed = true
-        isListed = true
-        contType = On
-        
-        afterAction()
-        {
-            if(nest.isIn(self) &amp;&amp; bird.isIn(nest))
-                finishGameMsg(ftVictory, [finishOptionUndo]);
-        }
-    ;
+<p>`
+    + branch: Thing ‘wide firm bough; flat; branch’
+        “It’s flat enough to support a small object. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    iFixed = true
+    isListed = true
+    contType = On
+    
+    afterAction()
+    {
+        if(nest.isIn(self) &amp;&amp; bird.isIn(nest))
+            finishGameMsg(ftVictory, [finishOptionUndo]);
+    }
+; `
 </code></pre></div></div>
 
 <p>We use the <code class="language-plaintext highlighter-rouge">isIn()</code> method here to test for
@@ -105,13 +106,14 @@ exclamation mark, <code class="language-plaintext highlighter-rouge">!</code>. I
 
 <p>For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local a = 12, b = 6;
+<p>`
+    local a = 12, b = 6;
     (a == b * 2) || (b == 7) // true, because a is twice b
     (a == b * 2) &amp;&amp; (b == 7) // nil, because b is not 7
     (bird || nest) // true because bird is not nil
-    'Hampster' &amp;&amp; 'forest' // true because neither string is nil
+    ‘Hampster’ &amp;&amp; ‘forest’ // true because neither string is nil
     (a &gt; b) &amp;&amp;  !bird.ofKind(Thing) // nil because bird does inherit from Thing
-</code></pre></div></div>
+`</p>
 
 <p>Finally note that both <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> and
 <code class="language-plaintext highlighter-rouge">\|\|</code> are <em>short-circuit operators</em>. This means
@@ -134,9 +136,10 @@ be true, regardless of the value of <code class="language-plaintext highlighter-
 write code like the following, even when <code class="language-plaintext highlighter-rouge">obj</code>
 might sometimes be nil:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    if(obj &amp;&amp; obj.bulk &gt; 4)
-       say "It's quite a bulky object. ";
-</code></pre></div></div>
+<p>`
+    if(obj &amp;&amp; obj.bulk &gt; 4)
+       say “It’s quite a bulky object. “;
+`</p>
 
 <p>In this example, if <code class="language-plaintext highlighter-rouge">obj</code> is nil, the expression
 <code class="language-plaintext highlighter-rouge">(obj.bulk \&gt; 4)</code> is never evaluated; we thus

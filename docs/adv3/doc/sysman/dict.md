@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Dictionary  
@@ -15,7 +15,7 @@ layout: docs
     <a href="dynfunc.html" class="nav"><em>Next:</em> DynamicFunc</a>    
 </span>
 
-</div>
+
 
 
 
@@ -80,7 +80,7 @@ A comparator object must define the following methods:
 
 `calcHash(*str*)`
 
-<div class="fdef">
+
 
 Calculate and return the "hash code" for the given string *str*. The
 hash code is simply an arbitrary integer value; its purpose is to allow
@@ -136,7 +136,7 @@ couple of properties that the algorithm should have:
 
 `matchValues(*inputStr*, *dictStr*)`
 
-<div class="fdef">
+
 
 Match the input string *inputStr* to the dictionary string *dictStr*.
 Returns zero or `nil` if the values do not
@@ -156,7 +156,7 @@ strings; for example, an implementation might allow an input string to
 be abbreviated to a leading substring of the dictionary string, so that
 "flashl" matches "flashlight," but not vice versa.
 
-</div>
+
 
 ## Compiler Support
 
@@ -258,7 +258,7 @@ naturally.
 
 `addWord(*obj*, *str*, *vocabProp*)`
 
-<div class="fdef">
+
 
 Add an object to the dictionary with the given string and property key.
 *str* can be a string value, or can be a list (or Vector or other
@@ -272,11 +272,11 @@ given vocabulary word or words, and *vocabProp* is the dictionary
 property ID (`&noun`,
 `&adjective`, etc) to use for the association.
 
-</div>
+
 
 `correctSpelling(*str*, *maxEditDistance*)`
 
-<div class="fdef">
+
 
 Returns a list of words in the dictionary that are possible spelling
 corrections for the given string *str*. The returned list contains each
@@ -360,11 +360,11 @@ words, the chances of multiple typos increase, and the chances of false
 matches thin out considerably, so it seems worthwhile to increase the
 distance limit for these words.
 
-</div>
+
 
 `findWord(*str*, *vocabProp*?)`
 
-<div class="fdef">
+
 
 Search the dictionary for the given string and property ID. Returns a
 list giving all of the matching objects; if there are no objects,
@@ -391,11 +391,11 @@ the match. For example, StringComparator encodes information on case
 folding, truncation, and equivalence mappings. The caller could use this
 information to choose some matches over others, for example.
 
-</div>
+
 
 `forEachWord(*func*)`
 
-<div class="fdef">
+
 
 Invokes the callback function *func* on each word association in the
 dictionary. *func* is invoked as `(*func*)(*obj*,
@@ -405,22 +405,22 @@ a given string can appear many times in a dictionary, so *func* can be
 invoked with the same *str* value multiple times, once for each
 string/object/property association.
 
-</div>
+
 
 `isWordDefined(*str*)`
 
-<div class="fdef">
+
 
 Searches the dictionary for the given string and determines if it's
 associated with any objects. If the word occurs in the dictionary at
 all, this function returns `true`; otherwise, it
 returns `nil`.
 
-</div>
+
 
 `removeWord(*obj*, *str*, *vocabProp*)`
 
-<div class="fdef">
+
 
 Removes from the dictionary the object's association with the given
 string and property ID key. Only the specific association of object,
@@ -435,11 +435,11 @@ If it's a list of strings, the result is the same as calling
 list. If the word association to be removed is not defined, the
 operation is simply ignored.
 
-</div>
+
 
 `setComparator(*compObj*)`
 
-<div class="fdef">
+
 
 Set the comparator object. All subsequent dictionary operations are
 performed with the new comparator object. If *compObj* is
@@ -459,7 +459,7 @@ because the dictionary must rebuild its internal table for the new
 comparator; programs should thus avoid changing comparators except when
 necessary.
 
-</div>
+
 
 ## Notes
 
@@ -598,11 +598,11 @@ differences:
   this object in your program, to look up words and modify the
   dictionary dynamically. There was no equivalent object in TADS 2.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -611,4 +611,4 @@ differences:
     <a href="dynfunc.html" class="nav"><em>Next:</em> DynamicFunc</a>    
 </span>
 
-</div>
+

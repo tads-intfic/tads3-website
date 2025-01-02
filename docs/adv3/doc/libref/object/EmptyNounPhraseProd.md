@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An empty noun phrase production is one that matches, typically with
 non-zero badness value, as a placeholder when a command is missing a
@@ -38,15 +38,15 @@ response to an interactive prompt for the missing object.
 
 `class `**`EmptyNounPhraseProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`EmptyNounPhraseProd`**  
 [`NounPhraseProd`](../object/NounPhraseProd.html)  
@@ -54,11 +54,11 @@ response to an interactive prompt for the missing object.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`EmptyNounPhraseProd`**  
 [`ImpliedActorNounPhraseProd`](../object/ImpliedActorNounPhraseProd.html)  
@@ -66,19 +66,19 @@ response to an interactive prompt for the missing object.
 [`singleNoun(empty)`](../object/singleNoun(empty).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`asker_`](#asker_)[`fallbackResponseProd`](#fallbackResponseProd)[`newMatch`](#newMatch)[`responseProd`](#responseProd)
 
@@ -90,11 +90,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getImpliedObject`](#getImpliedObject)[`getOrigText`](#getOrigText)[`getOrigTokenList`](#getOrigTokenList)[`isEmptyPhrase`](#isEmptyPhrase)[`resolveNouns`](#resolveNouns)[`setPrompt`](#setPrompt)
 
@@ -106,11 +106,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="asker_"></span>
 
@@ -118,13 +118,13 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[4152](../source/parser.t.html#4152)\]
 
-<div class="desc">
+
 
 The ResolveAsker we use to generate our prompt. Use the base
 ResolveAsker by default; this can be overridden when the prompt is to be
 customized.
 
-</div>
+
 
 <span id="fallbackResponseProd"></span>
 
@@ -132,13 +132,13 @@ customized.
 
 [parser.t](../file/parser.t.html)\[[4145](../source/parser.t.html#4145)\]
 
-<div class="desc">
+
 
 Our fallback response production - if responseProd is nil, this must be
 supplied for cases where we can't get the production from the action.
 This is ignored if responseProd is non-nil.
 
-</div>
+
 
 <span id="newMatch"></span>
 
@@ -146,12 +146,12 @@ This is ignored if responseProd is non-nil.
 
 [parser.t](../file/parser.t.html)\[[4130](../source/parser.t.html#4130)\]
 
-<div class="desc">
+
 
 the new match, when we get an interactive response to a query for the
 missing object
 
-</div>
+
 
 <span id="responseProd"></span>
 
@@ -159,22 +159,22 @@ missing object
 
 [parser.t](../file/parser.t.html)\[[4138](../source/parser.t.html#4138)\]
 
-<div class="desc">
+
 
 Our "response" production - this is the production we use to parse the
 player's input in response to our disambiguation prompt. A subclass can
 leave this as nil, in which case we'll attempt to get the appropriate
 response production from the action.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getImpliedObject"></span>
 
@@ -182,13 +182,13 @@ response production from the action.
 
 [parser.t](../file/parser.t.html)\[[4094](../source/parser.t.html#4094)\]
 
-<div class="desc">
+
 
 Get an implied object to automatically fill in for the missing noun
 phrase. By default, we simply ask the 'results' object for the missing
 object.
 
-</div>
+
 
 <span id="getOrigText"></span>
 
@@ -196,13 +196,13 @@ object.
 
 [parser.t](../file/parser.t.html)\[[4115](../source/parser.t.html#4115)\]
 
-<div class="desc">
+
 
 Get my original text. If I have a new match tree, return the text from
 the new match tree. Otherwise, we have no original text, since we're an
 empty phrase.
 
-</div>
+
 
 <span id="getOrigTokenList"></span>
 
@@ -210,12 +210,12 @@ empty phrase.
 
 [parser.t](../file/parser.t.html)\[[4105](../source/parser.t.html#4105)\]
 
-<div class="desc">
+
 
 Get my tokens. If I have a new match tree, return the tokens from the
 new match tree. Otherwise, we don't have any tokens, since we're empty.
 
-</div>
+
 
 <span id="isEmptyPhrase"></span>
 
@@ -223,11 +223,11 @@ new match tree. Otherwise, we don't have any tokens, since we're empty.
 
 [parser.t](../file/parser.t.html)\[[4124](../source/parser.t.html#4124)\]
 
-<div class="desc">
+
 
 I'm an empty noun phrase, unless I already have a new match object.
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -235,11 +235,11 @@ I'm an empty noun phrase, unless I already have a new match object.
 
 [parser.t](../file/parser.t.html)\[[4038](../source/parser.t.html#4038)\]
 
-<div class="desc">
+
 
 resolve the empty phrase
 
-</div>
+
 
 <span id="setPrompt"></span>
 
@@ -247,15 +247,15 @@ resolve the empty phrase
 
 [parser.t](../file/parser.t.html)\[[4030](../source/parser.t.html#4030)\]
 
-<div class="desc">
+
 
 customize the way we generate the prompt and parse the response
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

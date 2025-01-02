@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
@@ -16,7 +16,7 @@ MobileCollectiveGroup
     <a href="postures.html" class="nav"><em>Next:</em> Postures</a>    
 </span>
 
-</div>
+
 
 
 
@@ -137,7 +137,7 @@ additional information see the source code and comments in the
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *Adv3Lite Manual*  
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
@@ -147,4 +147,4 @@ MobileCollectiveGroup
     <a href="postures.html" class="nav"><em>Next:</em> Postures</a>    
 </span>
 
-</div>
+

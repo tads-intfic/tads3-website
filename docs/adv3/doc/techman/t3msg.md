@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Message Parameter
@@ -17,7 +17,7 @@ Preconditions</a>    
 <a href="t3imp_action.html" class="nav"><em>Next:</em> Implied Action
 Reports</a>     </span>
 
-</div>
+
 
 
 
@@ -1291,7 +1291,7 @@ will be processed before actually being written to the display.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1302,4 +1302,4 @@ Preconditions</a>    
 <a href="t3imp_action.html" class="nav"><em>Next:</em> Implied Action
 Reports</a>     </span>
 
-</div>
+

@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The ExamineOrGoTo action is used as the default action by the Parser; it
 is not an action the player can directly command. If the player enters a
@@ -31,15 +31,15 @@ treated as an Examine action.
 
 **`ExamineOrGoTo`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ExamineOrGoTo`**  
 [`TAction`](../object/TAction.html)  
@@ -49,11 +49,11 @@ treated as an Examine action.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -69,11 +69,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addExtraScopeItems`](#addExtraScopeItems)[`exec`](#exec)
 
@@ -91,19 +91,19 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addExtraScopeItems"></span>
 
@@ -111,11 +111,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[926](../source/actions.t.html#926)\]
 
-<div class="desc">
+
 
 For this action to work all known rooms also need to be in scope
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -123,15 +123,15 @@ For this action to work all known rooms also need to be in scope
 
 [actions.t](../file/actions.t.html)\[[911](../source/actions.t.html#911)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

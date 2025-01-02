@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `grammar `**[`commandOnlyConjunction`](../object/commandOnlyConjunction.html)`(sentenceEnding)`**` :   `[`Production`](../object/Production.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`commandOnlyConjunction(sentenceEnding)`**  
 [`Production`](../object/Production.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`endOfSentence`](#endOfSentence)
 
@@ -54,11 +54,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -67,11 +67,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="endOfSentence"></span>
 
@@ -79,26 +79,26 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[127](../source/grammar.t.html#127)\]
 
-<div class="desc">
+
 
 these end the sentence - meaning that after one of these, you can
 address a new actor
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

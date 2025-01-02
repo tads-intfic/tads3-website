@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A conversation node. Conversation nodes are supplemental topic databases
 that represent a point in time in a conversation - a particular context
@@ -43,15 +43,15 @@ flexibility arranging source code.
 
 `class `**`ConvNode`**` :   `[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ConvNode`**  
 [`ActorTopicDatabase`](../object/ActorTopicDatabase.html)  
@@ -59,27 +59,27 @@ flexibility arranging source code.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`activeSpecialTopic`](#activeSpecialTopic)[`isSticky`](#isSticky)[`name`](#name)[`npcContinueList`](#npcContinueList)[`npcContinueMsg`](#npcContinueMsg)[`npcGreetingList`](#npcGreetingList)[`patDelim`](#patDelim)[`patWhitespace`](#patWhitespace)
 
@@ -91,11 +91,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`autoShowTopics`](#autoShowTopics)[`canEndConversation`](#canEndConversation)[`endConversation`](#endConversation)[`getActor`](#getActor)[`getTopicOwner`](#getTopicOwner)[`handleConversation`](#handleConversation)[`noteActive`](#noteActive)[`noteActiveReason`](#noteActiveReason)[`noteLeaving`](#noteLeaving)[`npcContinueConversation`](#npcContinueConversation)[`npcGreetingMsg`](#npcGreetingMsg)[`npcInitiateConversation`](#npcInitiateConversation)[`processSpecialCmd`](#processSpecialCmd)[`saySpecialTopic`](#saySpecialTopic)
 
@@ -107,11 +107,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="activeSpecialTopic"></span>
 
@@ -119,13 +119,13 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[1842](../source/actor.t.html#1842)\]
 
-<div class="desc">
+
 
 The active special topic. This is the SpecialTopic object that we
 matched during pre-parsing, so it's the one whose response we wish to
 show while processing the command we pre-parsed.
 
-</div>
+
 
 <span id="isSticky"></span>
 
@@ -133,7 +133,7 @@ show while processing the command we pre-parsed.
 
 [actor.t](../file/actor.t.html)\[[1509](../source/actor.t.html#1509)\]
 
-<div class="desc">
+
 
 Is this node "sticky"? If so, we'll stick to this node if we show a
 response that doesn't set a new node. By default, we're not sticky, so
@@ -146,7 +146,7 @@ when the player digresses to talk about other things. This is useful
 when the actor has a particular thread they want to drive the
 conversation along.
 
-</div>
+
 
 <span id="name"></span>
 
@@ -154,7 +154,7 @@ conversation along.
 
 [actor.t](../file/actor.t.html)\[[1495](../source/actor.t.html#1495)\]
 
-<div class="desc">
+
 
 Every ConvNode must have a name property. This is a string identifying
 the object. Use this name string instead of a regular object name (so
@@ -169,7 +169,7 @@ shouldn't contain any '\>' characters, because this would prevent them
 from being used in \<.convnode\> tags, which is the main place
 ConvNode's are usually used.)
 
-</div>
+
 
 <span id="npcContinueList"></span>
 
@@ -177,13 +177,13 @@ ConvNode's are usually used.)
 
 [actor.t](../file/actor.t.html)\[[1552](../source/actor.t.html#1552)\]
 
-<div class="desc">
+
 
 An optional EventList containing NPC-initiated continuation messages.
 You can define an EventList here instead of defining npcContinueMsg, if
 you want more than one continuation message.
 
-</div>
+
 
 <span id="npcContinueMsg"></span>
 
@@ -191,7 +191,7 @@ you want more than one continuation message.
 
 [actor.t](../file/actor.t.html)\[[1545](../source/actor.t.html#1545)\]
 
-<div class="desc">
+
 
 Our NPC-initiated conversation continuation message. This is invoked on
 each turn (during the NPC's takeTurn() daemon processing) that we're in
@@ -200,7 +200,7 @@ conversational. This allows the NPC to carry on the conversation of its
 own volition. Define this as a double-quoted string if you want the NPC
 to say something to continue the conversation.
 
-</div>
+
 
 <span id="npcGreetingList"></span>
 
@@ -208,11 +208,11 @@ to say something to continue the conversation.
 
 [actor.t](../file/actor.t.html)\[[1534](../source/actor.t.html#1534)\]
 
-<div class="desc">
+
 
 an optional EventList containing our NPC-initiated greetings
 
-</div>
+
 
 <span id="patDelim"></span>
 
@@ -220,11 +220,11 @@ an optional EventList containing our NPC-initiated greetings
 
 [actor.t](../file/actor.t.html)\[[1784](../source/actor.t.html#1784)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patWhitespace"></span>
 
@@ -232,19 +232,19 @@ an optional EventList containing our NPC-initiated greetings
 
 [actor.t](../file/actor.t.html)\[[1783](../source/actor.t.html#1783)\]
 
-<div class="desc">
+
 
 proceed, treating the original input as an ordinary command
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="autoShowTopics"></span>
 
@@ -252,7 +252,7 @@ proceed, treating the original input as an ordinary command
 
 [actor.t](../file/actor.t.html)\[[1565](../source/actor.t.html#1565)\]
 
-<div class="desc">
+
 
 Flag: automatically show a topic inventory on activating this
 conversation node. Some conversation nodes have sufficiently obscure
@@ -264,7 +264,7 @@ an active SpecialTopic entry. Since special topics are inherently
 obscure, in that they use non-standard commands, we always want to show
 topics when one of these becomes active.
 
-</div>
+
 
 <span id="canEndConversation"></span>
 
@@ -272,7 +272,7 @@ topics when one of these becomes active.
 
 [actor.t](../file/actor.t.html)\[[1680](../source/actor.t.html#1680)\]
 
-<div class="desc">
+
 
 Can we end the conversation? If so, return true; our caller will invoke
 our endConversation() to let us know that the conversation is over.
@@ -290,7 +290,7 @@ prevent further generated conversation output on this same turn.
 'reason' gives the reason the conversation is ending, as an endConvXxx
 enum code.
 
-</div>
+
 
 <span id="endConversation"></span>
 
@@ -298,7 +298,7 @@ enum code.
 
 [actor.t](../file/actor.t.html)\[[1697](../source/actor.t.html#1697)\]
 
-<div class="desc">
+
 
 Receive notification that our actor is ending a stateful conversation.
 This is called before the normal InConversationState disengagement
@@ -314,7 +314,7 @@ Note that there's no way to block the ending of the conversation here.
 If you want to prevent the conversation from ending, use
 canEndConversation() instead.
 
-</div>
+
 
 <span id="getActor"></span>
 
@@ -322,11 +322,11 @@ canEndConversation() instead.
 
 [actor.t](../file/actor.t.html)\[[1634](../source/actor.t.html#1634)\]
 
-<div class="desc">
+
 
 our actor is our location, or our location's actor
 
-</div>
+
 
 <span id="getTopicOwner"></span>
 
@@ -334,11 +334,11 @@ our actor is our location, or our location's actor
 
 [actor.t](../file/actor.t.html)\[[1645](../source/actor.t.html#1645)\]
 
-<div class="desc">
+
 
 our actor is the "owner" of our topics
 
-</div>
+
 
 <span id="handleConversation"></span>
 
@@ -346,7 +346,7 @@ our actor is the "owner" of our topics
 
 [actor.t](../file/actor.t.html)\[[1655](../source/actor.t.html#1655)\]
 
-<div class="desc">
+
 
 Handle a conversation topic. The actor state object will call this to
 give the ConvNode the first crack at handling a conversation command.
@@ -354,7 +354,7 @@ We'll return true if we handle the command, nil if not. Our default
 handling is to look up the topic in the given database list property,
 and handle it through the TopicEntry we find there, if any.
 
-</div>
+
 
 <span id="noteActive"></span>
 
@@ -362,7 +362,7 @@ and handle it through the TopicEntry we find there, if any.
 
 [actor.t](../file/actor.t.html)\[[1880](../source/actor.t.html#1880)\]
 
-<div class="desc">
+
 
 Note that we're becoming active, with a reason code. Our actor will call
 this method when we're becoming active, as long as we weren't already
@@ -372,7 +372,7 @@ Note that if you want to adapt the method's behavior according to why
 the node was activated, you can override noteActiveReason() instead of
 this method.
 
-</div>
+
 
 <span id="noteActiveReason"></span>
 
@@ -380,7 +380,7 @@ this method.
 
 [actor.t](../file/actor.t.html)\[[1866](../source/actor.t.html#1866)\]
 
-<div class="desc">
+
 
 Note that we're becoming active, with a reason code. Our actor will call
 this method when we're becoming active, as long as we weren't already
@@ -401,7 +401,7 @@ The reason code is provided so that the node can adapt its action for
 different trigger conditions, if desired. By default, we ignore the
 reason code and just call the basic noteActive() method.
 
-</div>
+
 
 <span id="noteLeaving"></span>
 
@@ -409,13 +409,13 @@ reason code and just call the basic noteActive() method.
 
 [actor.t](../file/actor.t.html)\[[1892](../source/actor.t.html#1892)\]
 
-<div class="desc">
+
 
 Note that we're leaving this conversation node. This doesn't do anything
 by default, but individual instances might find the notification useful
 for triggering side effects.
 
-</div>
+
 
 <span id="npcContinueConversation"></span>
 
@@ -423,12 +423,12 @@ for triggering side effects.
 
 [actor.t](../file/actor.t.html)\[[1597](../source/actor.t.html#1597)\]
 
-<div class="desc">
+
 
 Continue the conversation of the NPC's own volition. Returns true if we
 displayed anything, nil if not.
 
-</div>
+
 
 <span id="npcGreetingMsg"></span>
 
@@ -436,7 +436,7 @@ displayed anything, nil if not.
 
 [actor.t](../file/actor.t.html)\[[1526](../source/actor.t.html#1526)\]
 
-<div class="desc">
+
 
 Show our NPC-initiated greeting. This is invoked when our actor's
 initiateConversation() method is called to cause our actor to initiate a
@@ -451,7 +451,7 @@ To define a greeting when defining a ConvNode, you can override this
 method with a simple double-quoted string message, or you can define an
 npcGreetingList property as an EventList of some kind.
 
-</div>
+
 
 <span id="npcInitiateConversation"></span>
 
@@ -459,11 +459,11 @@ npcGreetingList property as an EventList of some kind.
 
 [actor.t](../file/actor.t.html)\[[1573](../source/actor.t.html#1573)\]
 
-<div class="desc">
+
 
 our NPC is initiating a conversation starting with this node
 
-</div>
+
 
 <span id="processSpecialCmd"></span>
 
@@ -471,7 +471,7 @@ our NPC is initiating a conversation starting with this node
 
 [actor.t](../file/actor.t.html)\[[1717](../source/actor.t.html#1717)\]
 
-<div class="desc">
+
 
 Process a special command. Check the given command line string against
 all of our topics, and see if we have a match to any topic that takes a
@@ -489,7 +489,7 @@ like removing punctuation marks and any "noise words" that don't usually
 change the meaning of the input, at least for the purposes of matching a
 special topic.
 
-</div>
+
 
 <span id="saySpecialTopic"></span>
 
@@ -497,7 +497,7 @@ special topic.
 
 [actor.t](../file/actor.t.html)\[[1801](../source/actor.t.html#1801)\]
 
-<div class="desc">
+
 
 Handle an XSPCLTOPIC command from the given actor. This is part two of
 the two-phase processing of SpecialTopic matches. Our pre-parser checks
@@ -512,11 +512,11 @@ to say, 'self'. We complete the two-step procedure by going back to the
 active special topic object that we previously noted and showing its
 response.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

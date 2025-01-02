@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The GO action is never triggered directly by a player command but can be
 used to synthesize a travel action in the direction supplied by the
@@ -28,15 +28,15 @@ dobj.
 
 **`Go`**` :   `[`TravelAction`](../object/TravelAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Go`**  
 [`TravelAction`](../object/TravelAction.html)  
@@ -46,11 +46,11 @@ dobj.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`predefinedDirection`](#predefinedDirection)
 
@@ -66,11 +66,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`resolvedObjectsInScope`](#resolvedObjectsInScope)
 
@@ -88,11 +88,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="predefinedDirection"></span>
 
@@ -100,19 +100,19 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[696](../source/actions.t.html#696)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -120,11 +120,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[698](../source/actions.t.html#698)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="resolvedObjectsInScope"></span>
 
@@ -132,15 +132,15 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[705](../source/actions.t.html#705)\]
 
-<div class="desc">
+
 
 Define this so that this action can be called from execNestedAction
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A MiscTopic is an ActorTopicEntry that responds not to a conversational
 command specifying a separate topic (such as ASK BOB ABOUT FRUIT) but
@@ -34,15 +34,15 @@ just to as simple command like YES, NO, HELLO or GOODBYE
 
 `class `**`MiscTopic`**` :   `[`ActorTopicEntry`](../object/ActorTopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MiscTopic`**  
 [`ActorTopicEntry`](../object/ActorTopicEntry.html)  
@@ -53,11 +53,11 @@ just to as simple command like YES, NO, HELLO or GOODBYE
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`MiscTopic`**  
 [`GreetingTopic`](../object/GreetingTopic.html)  
@@ -78,19 +78,19 @@ just to as simple command like YES, NO, HELLO or GOODBYE
 [`YesTopic`](../object/YesTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -106,11 +106,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`matchTopic`](#matchTopic)
 
@@ -128,19 +128,19 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -148,17 +148,17 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3614](../source/actor.t.html#3614)\]
 
-<div class="desc">
+
 
 A MiscTopic isn't matched to a topic in the normal sense, but we instead
 pass the routine an obj parameter to determine what particular kind of
 MiscTopic (e.g. YesTopic or ByeTopic) we want to match.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

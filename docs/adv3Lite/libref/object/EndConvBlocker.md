@@ -20,60 +20,60 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 EndConvBlocker is a mix-in class whose sole function is to define the
 blockEndConv method common to Actor, ActorState and NodeEndCheck
 
 **`EndConvBlocker`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`EndConvBlocker`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`blockEndConv`](#blockEndConv)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="blockEndConv"></span>
 
@@ -81,7 +81,7 @@ blockEndConv method common to Actor, ActorState and NodeEndCheck
 
 [actor.t](../file/actor.t.html)\[[4883](../source/actor.t.html#4883)\]
 
-<div class="desc">
+
 
 Convenience method that notes that conversation has occurred on this
 turn and returns nil. This is to allow us to use: \*. return
@@ -89,11 +89,11 @@ blockEndConv;
 
 in the canEndConversation method to suppress the output of any
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

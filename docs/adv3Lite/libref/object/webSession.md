@@ -20,52 +20,52 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Web UI Session object. This keeps track of miscellaneous items
 associated with the game session.
 
 `transient `**`webSession`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`webSession`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`clientSessions`](#clientSessions)  [`collabKey`](#collabKey)  [`everHadClient`](#everHadClient)  [`hkTime`](#hkTime)  [`lastClientTime`](#lastClientTime)  [`launcherGameID`](#launcherGameID)  [`launcherUsername`](#launcherUsername)  [`server`](#server)  [`sessionKey`](#sessionKey)  [`storageSID`](#storageSID)  `
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`addClient`](#addClient)  [`connectUI`](#connectUI)  [`getCollabUrl`](#getCollabUrl)  [`getFullUrl`](#getFullUrl)  [`housekeeping`](#housekeeping)  [`removeClient`](#removeClient)  [`validateKey`](#validateKey)  `
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="clientSessions"></span>
 
@@ -73,11 +73,11 @@ associated with the game session.
 
 [webui.t](../file/webui.t.html)\[[272](../source/webui.t.html#272)\]
 
-<div class="desc">
+
 
 list of active client sessions (ClientSession objects)
 
-</div>
+
 
 <span id="collabKey"></span>
 
@@ -85,13 +85,13 @@ list of active client sessions (ClientSession objects)
 
 [webui.t](../file/webui.t.html)\[[199](../source/webui.t.html#199)\]
 
-<div class="desc">
+
 
 The collaborative session key. This is a secondary session key that
 allows additional users to connect to the session for collaborative
 play.
 
-</div>
+
 
 <span id="everHadClient"></span>
 
@@ -99,11 +99,11 @@ play.
 
 [webui.t](../file/webui.t.html)\[[352](../source/webui.t.html#352)\]
 
-<div class="desc">
+
 
 have we ever had a client connection?
 
-</div>
+
 
 <span id="hkTime"></span>
 
@@ -111,11 +111,11 @@ have we ever had a client connection?
 
 [webui.t](../file/webui.t.html)\[[346](../source/webui.t.html#346)\]
 
-<div class="desc">
+
 
 system time (ms ticks) of next scheduled housekeeping pass
 
-</div>
+
 
 <span id="lastClientTime"></span>
 
@@ -123,11 +123,11 @@ system time (ms ticks) of next scheduled housekeeping pass
 
 [webui.t](../file/webui.t.html)\[[349](../source/webui.t.html#349)\]
 
-<div class="desc">
+
 
 the last time we noticed that we had a client connected
 
-</div>
+
 
 <span id="launcherGameID"></span>
 
@@ -135,13 +135,13 @@ the last time we noticed that we had a client connected
 
 [webui.t](../file/webui.t.html)\[[236](../source/webui.t.html#236)\]
 
-<div class="desc">
+
 
 The launcher's game ID. This is the ID passed from the web server that
 launched the game, to let us know how the game is identified in the
 launcher database. This is typically an IFDB TUID string.
 
-</div>
+
 
 <span id="launcherUsername"></span>
 
@@ -149,13 +149,13 @@ launcher database. This is typically an IFDB TUID string.
 
 [webui.t](../file/webui.t.html)\[[243](../source/webui.t.html#243)\]
 
-<div class="desc">
+
 
 The launcher's user name. This is passed from the web server that
 launched the game, to let us know the host user's screen name. We use
 this as the user's default screen name in multi-user games.
 
-</div>
+
 
 <span id="server"></span>
 
@@ -163,11 +163,11 @@ this as the user's default screen name in multi-user games.
 
 [webui.t](../file/webui.t.html)\[[290](../source/webui.t.html#290)\]
 
-<div class="desc">
+
 
 the HTTPServer object running our web session
 
-</div>
+
 
 <span id="sessionKey"></span>
 
@@ -175,7 +175,7 @@ the HTTPServer object running our web session
 
 [webui.t](../file/webui.t.html)\[[192](../source/webui.t.html#192)\]
 
-<div class="desc">
+
 
 The session key. This identifies the server as a whole, and is
 essentially an authentication mechanism that lets clients prove they got
@@ -191,7 +191,7 @@ The key is just a random number that's long enough that an interloper
 couldn't hope to guess it. We generate this on the first evaluation, and
 it remains fixed at that point for as long as we're running.
 
-</div>
+
 
 <span id="storageSID"></span>
 
@@ -199,7 +199,7 @@ it remains fixed at that point for as long as we're running.
 
 [webui.t](../file/webui.t.html)\[[257](../source/webui.t.html#257)\]
 
-<div class="desc">
+
 
 The primary storage server session ID, for the user who launched the
 server. If the user who launched the game logged in to a cloud storage
@@ -211,15 +211,15 @@ the session for the launch user only; if other collaborative users join,
 they can get their own session IDs that will allow them to store files
 under their own private user folders on the server.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addClient"></span>
 
@@ -227,11 +227,11 @@ under their own private user folders on the server.
 
 [webui.t](../file/webui.t.html)\[[275](../source/webui.t.html#275)\]
 
-<div class="desc">
+
 
 add a client session
 
-</div>
+
 
 <span id="connectUI"></span>
 
@@ -239,13 +239,13 @@ add a client session
 
 [webui.t](../file/webui.t.html)\[[160](../source/webui.t.html#160)\]
 
-<div class="desc">
+
 
 Connect to the UI. By default, we ask the webMainWin object to establish
 a connection, and we save the server object internally for future
 reference.
 
-</div>
+
 
 <span id="getCollabUrl"></span>
 
@@ -253,13 +253,13 @@ reference.
 
 [webui.t](../file/webui.t.html)\[[264](../source/webui.t.html#264)\]
 
-<div class="desc">
+
 
 Get the collaborative player launch URL. This is a URL that the host can
 send to other players who wish to join the session as collaborative
 users.
 
-</div>
+
 
 <span id="getFullUrl"></span>
 
@@ -267,11 +267,11 @@ users.
 
 [webui.t](../file/webui.t.html)\[[149](../source/webui.t.html#149)\]
 
-<div class="desc">
+
 
 Get the full URL to the given resource.
 
-</div>
+
 
 <span id="housekeeping"></span>
 
@@ -279,13 +279,13 @@ Get the full URL to the given resource.
 
 [webui.t](../file/webui.t.html)\[[297](../source/webui.t.html#297)\]
 
-<div class="desc">
+
 
 Run housekeeping tasks. The network event processor calls this
 periodically to let us perform background cleanup tasks. Returns the
 system tick time of the next housekeeping run.
 
-</div>
+
 
 <span id="removeClient"></span>
 
@@ -293,11 +293,11 @@ system tick time of the next housekeeping run.
 
 [webui.t](../file/webui.t.html)\[[283](../source/webui.t.html#283)\]
 
-<div class="desc">
+
 
 remove a client session
 
-</div>
+
 
 <span id="validateKey"></span>
 
@@ -305,15 +305,15 @@ remove a client session
 
 [webui.t](../file/webui.t.html)\[[204](../source/webui.t.html#204)\]
 
-<div class="desc">
+
 
 Validate a session key sent from the client
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

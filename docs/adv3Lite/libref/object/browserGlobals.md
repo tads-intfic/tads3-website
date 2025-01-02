@@ -20,51 +20,51 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Browser globals
 
 `transient `**`browserGlobals`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`browserGlobals`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`httpServer`](#httpServer)[`logFile`](#logFile)[`logFileType`](#logFileType)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="httpServer"></span>
 
@@ -72,11 +72,11 @@ Browser globals
 
 [browser.t](../file/browser.t.html)\[[30](../source/browser.t.html#30)\]
 
-<div class="desc">
+
 
 the HTTPServer object for the browser UI session
 
-</div>
+
 
 <span id="logFile"></span>
 
@@ -84,12 +84,12 @@ the HTTPServer object for the browser UI session
 
 [browser.t](../file/browser.t.html)\[[36](../source/browser.t.html#36)\]
 
-<div class="desc">
+
 
 Log file handle. For a LogTypeTranscript file, this is a LogConsole
 object; for other types, it's a regular file handle.
 
-</div>
+
 
 <span id="logFileType"></span>
 
@@ -97,25 +97,25 @@ object; for other types, it's a regular file handle.
 
 [browser.t](../file/browser.t.html)\[[39](../source/browser.t.html#39)\]
 
-<div class="desc">
+
 
 logging type (LogTypeXxx from tadsio.h, or nil if not logging)
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

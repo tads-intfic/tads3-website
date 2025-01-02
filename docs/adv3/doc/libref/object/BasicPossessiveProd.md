@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Basic possessive phrase. The grammar rules for these phrases must map
 the possessive qualifier phrase to poss\_, and the noun phrase being
@@ -41,15 +41,15 @@ apostrophe-S suffix if present.
 
 `class `**`BasicPossessiveProd`**` :   `[`DefiniteNounProd`](../object/DefiniteNounProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BasicPossessiveProd`**  
 [`DefiniteNounProd`](../object/DefiniteNounProd.html)  
@@ -60,11 +60,11 @@ apostrophe-S suffix if present.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BasicPossessiveProd`**  
 [`ButPossessiveProd`](../object/ButPossessiveProd.html)  
@@ -78,19 +78,19 @@ apostrophe-S suffix if present.
 [`explicitDetPluralOnlyNounPhrase(possessive)`](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`npKeeper`](#npKeeper)
 
@@ -107,11 +107,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`resolvePossessive`](#resolvePossessive)[`selectWithPossessive`](#selectWithPossessive)
 
@@ -129,11 +129,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="npKeeper"></span>
 
@@ -141,19 +141,19 @@ Inherited from `AmbigResponseKeeper` :
 
 [parser.t](../file/parser.t.html)\[[2979](../source/parser.t.html#2979)\]
 
-<div class="desc">
+
 
 our ambiguous response keeper
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -161,7 +161,7 @@ our ambiguous response keeper
 
 [parser.t](../file/parser.t.html)\[[2779](../source/parser.t.html#2779)\]
 
-<div class="desc">
+
 
 To allow this class to be mixed with other classes that have mixed-in
 ambiguous response keepers, create a separate object to hold our
@@ -169,7 +169,7 @@ ambiguous response keeper for the possessive phrase. We will never use
 our own ambiguous response keeper properties, so those are available to
 any other production class we're mixed into.
 
-</div>
+
 
 <span id="resolvePossessive"></span>
 
@@ -177,7 +177,7 @@ any other production class we're mixed into.
 
 [parser.t](../file/parser.t.html)\[[2795](../source/parser.t.html#2795)\]
 
-<div class="desc">
+
 
 Resolve the possessive, and perform preliminary resolution of the
 qualified noun phrase. We find the owner object and reduce the resolved
@@ -187,7 +187,7 @@ If we fail, we return nil. Otherwise, we return a list of the
 tentatively resolved objects. The caller can further resolve this list
 as needed.
 
-</div>
+
 
 <span id="selectWithPossessive"></span>
 
@@ -195,7 +195,7 @@ as needed.
 
 [parser.t](../file/parser.t.html)\[[2830](../source/parser.t.html#2830)\]
 
-<div class="desc">
+
 
 Resolve the possessive, and reduce the given match list by selecting
 only those items owned by the resolution of the possessive phrase.
@@ -206,11 +206,11 @@ be nil, to indicate that there's no specific target quantity; if the
 phrase is something like "bob's five books," the the number will be the
 qualifying quantity (5, in this case).
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

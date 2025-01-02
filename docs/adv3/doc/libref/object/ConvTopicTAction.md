@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "Conversation" TopicTAction. Many TopicTAction verbs involve
 conversation with an actor, who's specified as the direct object: ASK
@@ -43,15 +43,15 @@ standard default handling.
 
 `class `**`ConvTopicTAction`**` :   `[`TopicTAction`](../object/TopicTAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ConvTopicTAction`**  
 [`TopicTAction`](../object/TopicTAction.html)  
@@ -65,11 +65,11 @@ standard default handling.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ConvTopicTAction`**  
 [`AskAboutAction`](../object/AskAboutAction.html)  
@@ -85,19 +85,19 @@ standard default handling.
 [`predicate(TellAboutWhat)`](../object/predicate(TellAboutWhat).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -121,11 +121,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`createTopicResolver`](#createTopicResolver)[`getDefaultDobj`](#getDefaultDobj)
 
@@ -149,19 +149,19 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="createTopicResolver"></span>
 
@@ -169,12 +169,12 @@ Inherited from `Resolver` :
 
 [action.t](../file/action.t.html)\[[6091](../source/action.t.html#6091)\]
 
-<div class="desc">
+
 
 Create the topic resolver. Use a conversational topic resolver for this
 type of action.
 
-</div>
+
 
 <span id="getDefaultDobj"></span>
 
@@ -182,15 +182,15 @@ type of action.
 
 [action.t](../file/action.t.html)\[[6073](../source/action.t.html#6073)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

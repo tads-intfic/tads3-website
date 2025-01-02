@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Disambiguation Ranking. This is a special version of the command ranker
 that we use to rank the intepretations of a disambiguation response.
 
 `class `**`DisambigRanking`**` :   `[`CommandRanking`](../object/CommandRanking.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DisambigRanking`**  
 [`CommandRanking`](../object/CommandRanking.html)  
@@ -49,27 +49,27 @@ that we use to rank the intepretations of a disambiguation response.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`disambigOrdinalCount`](#disambigOrdinalCount)[`nounSlotCount`](#nounSlotCount)[`rankingCriteria`](#rankingCriteria)
 
@@ -80,11 +80,11 @@ Inherited from `CommandRanking` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`noteDisambigOrdinal`](#noteDisambigOrdinal)[`noteOrdinalOutOfRange`](#noteOrdinalOutOfRange)
 
@@ -95,11 +95,11 @@ Inherited from `CommandRanking` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="disambigOrdinalCount"></span>
 
@@ -107,11 +107,11 @@ Inherited from `CommandRanking` :
 
 [disambig.t](../file/disambig.t.html)\[[319](../source/disambig.t.html#319)\]
 
-<div class="desc">
+
 
 number of list ordinals in the match
 
-</div>
+
 
 <span id="nounSlotCount"></span>
 
@@ -119,12 +119,12 @@ number of list ordinals in the match
 
 [disambig.t](../file/disambig.t.html)\[[325](../source/disambig.t.html#325)\]
 
-<div class="desc">
+
 
 disambiguation commands have no verbs, so there's no verb structure to
 rank; so just use an arbitrary noun slot count
 
-</div>
+
 
 <span id="rankingCriteria"></span>
 
@@ -132,7 +132,7 @@ rank; so just use an arbitrary noun slot count
 
 [disambig.t](../file/disambig.t.html)\[[295](../source/disambig.t.html#295)\]
 
-<div class="desc">
+
 
 Add the ordinal count ranking criterion at the end of the inherited list
 of ranking criteria. If we can't find any differences on the basis of
@@ -144,15 +144,15 @@ generic ordinals.)
 Insert the 'ordinal' rule just before the 'indefinite' rule - avoiding
 an ordinal match is more important.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="noteDisambigOrdinal"></span>
 
@@ -160,13 +160,13 @@ an ordinal match is more important.
 
 [disambig.t](../file/disambig.t.html)\[[312](../source/disambig.t.html#312)\]
 
-<div class="desc">
+
 
 note a list ordinal (i.e., "the first one" to refer to the first item in
 the ambiguous list) - we take list ordinals as less desirable than
 treating ordinal words as adjectives or nouns
 
-</div>
+
 
 <span id="noteOrdinalOutOfRange"></span>
 
@@ -174,15 +174,15 @@ treating ordinal words as adjectives or nouns
 
 [disambig.t](../file/disambig.t.html)\[[301](../source/disambig.t.html#301)\]
 
-<div class="desc">
+
 
 note the an ordinal response is out of range
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

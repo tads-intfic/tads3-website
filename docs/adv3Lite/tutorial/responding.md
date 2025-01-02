@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="cockpit.html" class="nav">Cockpit Controls</a> \> Responding to
@@ -16,7 +16,7 @@ Actions
     <a href="takeoff.html" class="nav"><em>Next:</em> Taking Off</a>    
 </span>
 
-</div>
+
 
 
 
@@ -61,7 +61,7 @@ of the default message we defined for the report() stage.
 The code to do all this is quite lengthy, but basically quite
 straightforward:
 
-`
+```
     +++ wheel: Fixture 'wheel'
         "The wheel can be turned to port or starboard to steer the aircraft. It's
         currently <<angleDesc>>. "
@@ -123,7 +123,7 @@ straightforward:
             }
         }
     ;
-`
+```
 
 One new feature to note here is the use of `angle +=
 30` and `angle -= 30` as a convenient
@@ -143,7 +143,7 @@ PULL CONTROL COLUMN. It would therefore make sense to redirect pushing
 or pulling the wheel to pushing or pulling the control column (of which
 it is in any case a part), which we can do quite simply with remap:
 
-`
+```
         dobjFor(Push)
         {
             remap = controlColumn
@@ -153,7 +153,7 @@ it is in any case a part), which we can do quite simply with remap:
         {
             remap = controlColumn
         }
-`
+```
 
 What `remap = controlColumn` does is simply to
 tell the game to use controlColumn rather than the object actually
@@ -171,7 +171,7 @@ The implementation of the Push and Pull actions on the control column
 can then proceed in a very similar manner to that of the turning actions
 on the wheel:
 
-`
+```
     ++ controlColumn: Fixture 'control column;;stick'
         "It's basically a stick that can be pushed forward or pulled back, with a
         wheel attached at the top. It's currently <<positionDesc>>. "
@@ -212,7 +212,7 @@ on the wheel:
             }
         }
     ;
-`
+```
 
 This shouldn't require a lot of comment. Note the use of
 `position++` and
@@ -260,7 +260,7 @@ Settable class for a control that can be set to a number of different
 settings. Fortunately we can combine the two through multiple
 inheritance:
 
-`
+```
     ++ thrustLever: Settable, Lever 'thrust lever'
         "It's a lever that can be pushed forward or pulled back. It's currently
         <<settingDesc>>. "
@@ -281,7 +281,7 @@ inheritance:
         
         curSetting = '0'
     ;
-`
+```
 
 Note that we use the `curSetting` property (a
 property of `Settable`) to hold the current
@@ -307,7 +307,7 @@ from NumberedDial, since they're just straightforward numerical
 properties we can define directly on our thrustLever. The definition of
 thrustLever can thus continue like this:
 
-`
+```
         minSetting = 0
         maxSetting = 5
         
@@ -315,7 +315,7 @@ thrustLever can thus continue like this:
         {
             return delegated NumberedDial(val);
         }
-`
+```
 
 For more information on the `delegated` keyword,
 refer to the "Expressions and Operators" section of Part III of the
@@ -326,7 +326,7 @@ something a little less bland than "You set the thrust lever to n",
 especially if the engine is running. We can do that by providing our
 custom message in the makeSetting() method:
 
-`
+```
         makeSetting(val)
         {
             local oldVal = curSetting;
@@ -342,7 +342,7 @@ custom message in the makeSetting() method:
             }
             
         }
-`
+```
 
 Here we use the `oldVal` local variable to store
 the previous setting so we can test which way the player has just moved
@@ -371,7 +371,7 @@ so we need to override those two properties to cancel that assumption,
 and completely change what the Lever's
 `makePulled()` method normally does:
 
-`
+```
         makePulled(stat)
         {        
             makeSetting(stat ? '0' : '5');
@@ -379,11 +379,11 @@ and completely change what the Lever's
         
         isPulled = (curSetting == '0')
         isPushed = (curSetting == '5')
-`
+```
 
 The complete definition of the thrustLever object now looks as follows:
 
-`
+```
     ++ thrustLever: Settable, Lever 'thrust lever'
         "It's a lever that can be pushed forward or pulled back. It's currently
         <<settingDesc>>. "
@@ -435,7 +435,7 @@ The complete definition of the thrustLever object now looks as follows:
         isPulled = (curSetting == '0')
         isPushed = (curSetting == '5')
     ;
-`
+```
 
 We still have one further job to do. At the moment the thrust lever will
 respond to commands like SET LEVER TO 3 but we'd also like to respond to
@@ -443,12 +443,12 @@ MOVE LEVER TO 3, or PUSH LEVER TO 3 or PULL LEVER TO 3. We've already
 seen how to accomplish that sort of thing in another context, namely by
 modifying the appropriate VerbRule:
 
-`
+```
     modify VerbRule(SetTo)
         ('set' | 'move' | 'push' | 'pull') singleDobj 'to' literalIobj
         :
     ;
-`
+```
 
 We've now got the controls to the point where they can be operated, even
 if we can't yet fly the plane with them. In the next section we'll make
@@ -458,7 +458,7 @@ it possible for the plane to take off.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -468,4 +468,4 @@ Actions
     <a href="takeoff.html" class="nav"><em>Next:</em> Taking Off</a>    
 </span>
 
-</div>
+

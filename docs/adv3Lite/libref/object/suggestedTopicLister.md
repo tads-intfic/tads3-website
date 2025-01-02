@@ -20,52 +20,52 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A special lister to display a topic inventory list from a list of topics
 provided in the lst parameter.
 
 **`suggestedTopicLister`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`suggestedTopicLister`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`askForList`](#askForList)[`askForPrefix`](#askForPrefix)[`askList`](#askList)[`askPrefix`](#askPrefix)[`commandList`](#commandList)[`giveList`](#giveList)[`givePrefix`](#givePrefix)[`hyperlinkSuggestions`](#hyperlinkSuggestions)[`noList`](#noList)[`orListSep`](#orListSep)[`queryList`](#queryList)[`queryPrefix`](#queryPrefix)[`sayList`](#sayList)[`sayPrefix`](#sayPrefix)[`showPrefix`](#showPrefix)[`showToList`](#showToList)[`talkList`](#talkList)[`talkPrefix`](#talkPrefix)[`tellList`](#tellList)[`tellPrefix`](#tellPrefix)[`tellToPrefix`](#tellToPrefix)[`typeInfo`](#typeInfo)[`yesList`](#yesList)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`includes`](#includes)[`show`](#show)[`showList`](#showList)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)[`showSection`](#showSection)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="askForList"></span>
 
@@ -73,11 +73,11 @@ provided in the lst parameter.
 
 [actor.t](../file/actor.t.html)\[[6689](../source/actor.t.html#6689)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="askForPrefix"></span>
 
@@ -85,11 +85,11 @@ provided in the lst parameter.
 
 [actor.t](../file/actor.t.html)\[[6712](../source/actor.t.html#6712)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="askList"></span>
 
@@ -97,11 +97,11 @@ provided in the lst parameter.
 
 [actor.t](../file/actor.t.html)\[[6682](../source/actor.t.html#6682)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="askPrefix"></span>
 
@@ -109,11 +109,11 @@ provided in the lst parameter.
 
 [actor.t](../file/actor.t.html)\[[6707](../source/actor.t.html#6707)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="commandList"></span>
 
@@ -121,11 +121,11 @@ provided in the lst parameter.
 
 [actor.t](../file/actor.t.html)\[[6690](../source/actor.t.html#6690)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="giveList"></span>
 
@@ -133,11 +133,11 @@ provided in the lst parameter.
 
 [actor.t](../file/actor.t.html)\[[6685](../source/actor.t.html#6685)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="givePrefix"></span>
 
@@ -145,11 +145,11 @@ provided in the lst parameter.
 
 [actor.t](../file/actor.t.html)\[[6710](../source/actor.t.html#6710)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hyperlinkSuggestions"></span>
 
@@ -157,12 +157,12 @@ provided in the lst parameter.
 
 [actor.t](../file/actor.t.html)\[[6648](../source/actor.t.html#6648)\]
 
-<div class="desc">
+
 
 Do we want the topic suggestions to be hyperlinked so that the player
 can just click on them? By default we don't but game code can override/
 
-</div>
+
 
 <span id="noList"></span>
 
@@ -170,11 +170,11 @@ can just click on them? By default we don't but game code can override/
 
 [actor.t](../file/actor.t.html)\[[6688](../source/actor.t.html#6688)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="orListSep"></span>
 
@@ -182,11 +182,11 @@ can just click on them? By default we don't but game code can override/
 
 [actor.t](../file/actor.t.html)\[[6716](../source/actor.t.html#6716)\]
 
-<div class="desc">
+
 
 The conjunction to use at the end of a list of alternatives
 
-</div>
+
 
 <span id="queryList"></span>
 
@@ -194,11 +194,11 @@ The conjunction to use at the end of a list of alternatives
 
 [actor.t](../file/actor.t.html)\[[6681](../source/actor.t.html#6681)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="queryPrefix"></span>
 
@@ -206,11 +206,11 @@ The conjunction to use at the end of a list of alternatives
 
 [actor.t](../file/actor.t.html)\[[6706](../source/actor.t.html#6706)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayList"></span>
 
@@ -218,11 +218,11 @@ The conjunction to use at the end of a list of alternatives
 
 [actor.t](../file/actor.t.html)\[[6680](../source/actor.t.html#6680)\]
 
-<div class="desc">
+
 
 Sublists of each kind of suggestion which can be listed in turn
 
-</div>
+
 
 <span id="sayPrefix"></span>
 
@@ -230,12 +230,12 @@ Sublists of each kind of suggestion which can be listed in turn
 
 [actor.t](../file/actor.t.html)\[[6705](../source/actor.t.html#6705)\]
 
-<div class="desc">
+
 
 The prefix to use when suggesting a SayTopic, if it explicitly wants the
 suggestion to start with 'say'.
 
-</div>
+
 
 <span id="showPrefix"></span>
 
@@ -243,11 +243,11 @@ suggestion to start with 'say'.
 
 [actor.t](../file/actor.t.html)\[[6711](../source/actor.t.html#6711)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showToList"></span>
 
@@ -255,11 +255,11 @@ suggestion to start with 'say'.
 
 [actor.t](../file/actor.t.html)\[[6686](../source/actor.t.html#6686)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="talkList"></span>
 
@@ -267,11 +267,11 @@ suggestion to start with 'say'.
 
 [actor.t](../file/actor.t.html)\[[6684](../source/actor.t.html#6684)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="talkPrefix"></span>
 
@@ -279,11 +279,11 @@ suggestion to start with 'say'.
 
 [actor.t](../file/actor.t.html)\[[6709](../source/actor.t.html#6709)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="tellList"></span>
 
@@ -291,11 +291,11 @@ suggestion to start with 'say'.
 
 [actor.t](../file/actor.t.html)\[[6683](../source/actor.t.html#6683)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="tellPrefix"></span>
 
@@ -303,11 +303,11 @@ suggestion to start with 'say'.
 
 [actor.t](../file/actor.t.html)\[[6708](../source/actor.t.html#6708)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="tellToPrefix"></span>
 
@@ -315,11 +315,11 @@ suggestion to start with 'say'.
 
 [actor.t](../file/actor.t.html)\[[6713](../source/actor.t.html#6713)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="typeInfo"></span>
 
@@ -327,7 +327,7 @@ suggestion to start with 'say'.
 
 [actor.t](../file/actor.t.html)\[[6663](../source/actor.t.html#6663)\]
 
-<div class="desc">
+
 
 The typeInfo contains a list of lists that are used by the show method
 to build our various sublists. The first element of each list is a
@@ -340,7 +340,7 @@ explicitly requested in its suggestAs property. The fourth element is
 the text to use when introducing the corresponding section of the list
 (or nil if no introductory text is required).
 
-</div>
+
 
 <span id="yesList"></span>
 
@@ -348,19 +348,19 @@ the text to use when introducing the corresponding section of the list
 
 [actor.t](../file/actor.t.html)\[[6687](../source/actor.t.html#6687)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="includes"></span>
 
@@ -368,11 +368,11 @@ the text to use when introducing the corresponding section of the list
 
 [actor.t](../file/actor.t.html)\[[6696](../source/actor.t.html#6696)\]
 
-<div class="desc">
+
 
 Test whether the topicEntry t includes prop in its includeInList.
 
-</div>
+
 
 <span id="show"></span>
 
@@ -380,11 +380,11 @@ Test whether the topicEntry t includes prop in its includeInList.
 
 [actor.t](../file/actor.t.html)\[[6467](../source/actor.t.html#6467)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showList"></span>
 
@@ -392,11 +392,11 @@ Test whether the topicEntry t includes prop in its includeInList.
 
 [actor.t](../file/actor.t.html)\[[6608](../source/actor.t.html#6608)\]
 
-<div class="desc">
+
 
 Show one of our sublists of particular kinds of suggest topics
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -404,11 +404,11 @@ Show one of our sublists of particular kinds of suggest topics
 
 [actor.t](../file/actor.t.html)\[[6458](../source/actor.t.html#6458)\]
 
-<div class="desc">
+
 
 The message to display if there are no topics to suggest.
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -416,11 +416,11 @@ The message to display if there are no topics to suggest.
 
 [actor.t](../file/actor.t.html)\[[6425](../source/actor.t.html#6425)\]
 
-<div class="desc">
+
 
 Introduce the topic inventory listing
 
-</div>
+
 
 <span id="showListSuffix"></span>
 
@@ -428,11 +428,11 @@ Introduce the topic inventory listing
 
 [actor.t](../file/actor.t.html)\[[6444](../source/actor.t.html#6444)\]
 
-<div class="desc">
+
 
 End the list with a closing parenthesis or full stop as appropriate
 
-</div>
+
 
 <span id="showSection"></span>
 
@@ -440,15 +440,15 @@ End the list with a closing parenthesis or full stop as appropriate
 
 [actor.t](../file/actor.t.html)\[[6580](../source/actor.t.html#6580)\]
 
-<div class="desc">
+
 
 Finish the list by appending its suffix
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

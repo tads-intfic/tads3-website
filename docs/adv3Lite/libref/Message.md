@@ -1563,9 +1563,9 @@ useKey\_.theName)
 
 <span id="yell">DMsg(yell)</span> , (yell, '{I} {shout} very loudly. ');
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 10/05/2013 from adv3Lite version 0.8
 
-</div>
+

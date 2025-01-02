@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for "all but" rules, which select everything available except
 for objects in a specified list of exceptions; for example, in English,
@@ -34,15 +34,15 @@ for objects in a specified list of exceptions; for example, in English,
 
 `class `**`EverythingButProd`**` :   `[`ButProd`](../object/ButProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`EverythingButProd`**  
 [`ButProd`](../object/ButProd.html)  
@@ -51,29 +51,29 @@ for objects in a specified list of exceptions; for example, in English,
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`EverythingButProd`**  
 [`terminalNounPhrase(allBut)`](../object/terminalNounPhrase(allBut).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`addedFlags`](#addedFlags)[`filterForCollectives`](#filterForCollectives)
 
@@ -86,11 +86,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`flagAllExcepted`](#flagAllExcepted)[`getMainList`](#getMainList)
 
@@ -105,11 +105,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="addedFlags"></span>
 
@@ -117,12 +117,12 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[1813](../source/parser.t.html#1813)\]
 
-<div class="desc">
+
 
 set the "always announce" flag for each item - the player didn't name
 the selected items specifically, so always show what we chose
 
-</div>
+
 
 <span id="filterForCollectives"></span>
 
@@ -130,19 +130,19 @@ the selected items specifically, so always show what we chose
 
 [parser.t](../file/parser.t.html)\[[1816](../source/parser.t.html#1816)\]
 
-<div class="desc">
+
 
 match Collective objects instead of their individuals
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="flagAllExcepted"></span>
 
@@ -150,11 +150,11 @@ match Collective objects instead of their individuals
 
 [parser.t](../file/parser.t.html)\[[1803](../source/parser.t.html#1803)\]
 
-<div class="desc">
+
 
 flag an error - our main list has been completely excluded
 
-</div>
+
 
 <span id="getMainList"></span>
 
@@ -162,15 +162,15 @@ flag an error - our main list has been completely excluded
 
 [parser.t](../file/parser.t.html)\[[1788](../source/parser.t.html#1788)\]
 
-<div class="desc">
+
 
 our main list is given by the "all" list
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

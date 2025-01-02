@@ -267,7 +267,7 @@ the start of the next line.</p>
 <code class="language-plaintext highlighter-rouge">\n</code>, the compiler preserves the spaces at the
 start of the second line, so the string is stored as though you had
 written <code class="language-plaintext highlighter-rouge">local a =
-'test\n</code><code class="language-plaintext highlighter-rouge">     </code><code class="language-plaintext highlighter-rouge">string';</code>.</p>
+'test\n</code><code class="language-plaintext highlighter-rouge">string';</code>.</p>
 
 <p>What we’ve seen so far is the compiler’s default handling. In addition
 to this default behavior, there are two other “modes” that do slightly
@@ -562,7 +562,7 @@ strings or translated in any way. They’re just copied
 character-for-character to the compiled version. The
 <code class="language-plaintext highlighter-rouge">&amp;lt;</code> entities, for example, are actually
 stored as the chararacters <code class="language-plaintext highlighter-rouge">&amp;</code>
-<code class="language-plaintext highlighter-rouge">l</code> <code class="language-plaintext highlighter-rouge">t</code>
+<code class="language-plaintext highlighter-rouge">lt</code>
 <code class="language-plaintext highlighter-rouge">;</code> - they’re not converted to
 <code class="language-plaintext highlighter-rouge">\&lt;</code> characters. Note also that your program
 code can tell the difference: when you compare a stored
@@ -570,7 +570,7 @@ code can tell the difference: when you compare a stored
 <code class="language-plaintext highlighter-rouge">'\&lt;'</code>, you get a match. When you compare it to
 the string <code class="language-plaintext highlighter-rouge">'&amp;lt;'</code>, it <em>doesn’t</em> match, because
 the latter is actually stored as <code class="language-plaintext highlighter-rouge">&amp;</code>
-<code class="language-plaintext highlighter-rouge">l</code> <code class="language-plaintext highlighter-rouge">t</code>
+<code class="language-plaintext highlighter-rouge">lt</code>
 <code class="language-plaintext highlighter-rouge">;</code> and thus doesn’t match a string stored as
 <code class="language-plaintext highlighter-rouge">\&lt;</code>.</p>
 

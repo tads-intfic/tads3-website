@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An item that can be worn
 
 `class `**`Wearable`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Wearable`**  
 [`Thing`](../object/Thing.html)  
@@ -48,27 +48,27 @@ An item that can be worn
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allStates`](#allStates)[`getState`](#getState)[`wornBy`](#wornBy)
 
@@ -80,11 +80,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Doff)`](#dobjFor(Doff))[`dobjFor(Remove)`](#dobjFor(Remove))[`dobjFor(ShowTo)`](#dobjFor(ShowTo))[`dobjFor(Wear)`](#dobjFor(Wear))[`getEncumberingBulk`](#getEncumberingBulk)[`getEncumberingWeight`](#getEncumberingWeight)[`isHeldBy`](#isHeldBy)[`isWorn`](#isWorn)[`isWornBy`](#isWornBy)[`makeWornBy`](#makeWornBy)[`tryHolding`](#tryHolding)[`whatIfHeldBy`](#whatIfHeldBy)
 
@@ -96,11 +96,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allStates"></span>
 
@@ -108,11 +108,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5861](../source/objects.t.html#5861)\]
 
-<div class="desc">
+
 
 my list of possible states
 
-</div>
+
 
 <span id="getState"></span>
 
@@ -120,11 +120,11 @@ my list of possible states
 
 [objects.t](../file/objects.t.html)\[[5858](../source/objects.t.html#5858)\]
 
-<div class="desc">
+
 
 get my state
 
-</div>
+
 
 <span id="wornBy"></span>
 
@@ -132,7 +132,7 @@ get my state
 
 [objects.t](../file/objects.t.html)\[[5819](../source/objects.t.html#5819)\]
 
-<div class="desc">
+
 
 The object wearing this object, if any; if I'm not being worn, this is
 nil. The wearer should always be a container (direct or indirect) of
@@ -146,15 +146,15 @@ inside both actors in such cases, we would have to inspect intermediate
 containers to determine whether or not the outer actor was wearing the
 object if we didn't keep track of the wearer directly.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Doff)"></span>
 
@@ -162,11 +162,11 @@ object if we didn't keep track of the wearer directly.
 
 [objects.t](../file/objects.t.html)\[[5886](../source/objects.t.html#5886)\]
 
-<div class="desc">
+
 
 make the item worn and describe what happened
 
-</div>
+
 
 <span id="dobjFor(Remove)"></span>
 
@@ -174,11 +174,11 @@ make the item worn and describe what happened
 
 [objects.t](../file/objects.t.html)\[[5910](../source/objects.t.html#5910)\]
 
-<div class="desc">
+
 
 "remove \<wearable\>" is the same as "doff \<wearable\>"
 
-</div>
+
 
 <span id="dobjFor(ShowTo)"></span>
 
@@ -186,12 +186,12 @@ make the item worn and describe what happened
 
 [objects.t](../file/objects.t.html)\[[5916](../source/objects.t.html#5916)\]
 
-<div class="desc">
+
 
 if a wearable is being worn, showing it off to someone doesn't require
 holding it
 
-</div>
+
 
 <span id="dobjFor(Wear)"></span>
 
@@ -199,11 +199,11 @@ holding it
 
 [objects.t](../file/objects.t.html)\[[5869](../source/objects.t.html#5869)\]
 
-<div class="desc">
+
 
 Action processing
 
-</div>
+
 
 <span id="getEncumberingBulk"></span>
 
@@ -211,13 +211,13 @@ Action processing
 
 [objects.t](../file/objects.t.html)\[[5833](../source/objects.t.html#5833)\]
 
-<div class="desc">
+
 
 An article of clothing that is being worn by an actor does not typically
 encumber the actor at all, so by default we'll return zero if we're
 being worn by the actor, and our normal bulk otherwise.
 
-</div>
+
 
 <span id="getEncumberingWeight"></span>
 
@@ -225,7 +225,7 @@ being worn by the actor, and our normal bulk otherwise.
 
 [objects.t](../file/objects.t.html)\[[5852](../source/objects.t.html#5852)\]
 
-<div class="desc">
+
 
 An article of clothing typically encumbers an actor with the same weight
 whether or not the actor is wearing the item. However, this might not
@@ -235,7 +235,7 @@ because the distribution of weight is more manageable when worn. By
 default, we simply return our normal weight, whether worn or not;
 subclasses can override as needed to differentiate.
 
-</div>
+
 
 <span id="isHeldBy"></span>
 
@@ -243,11 +243,11 @@ subclasses can override as needed to differentiate.
 
 [objects.t](../file/objects.t.html)\[[5748](../source/objects.t.html#5748)\]
 
-<div class="desc">
+
 
 An item being worn is not considered to be held in the wearer's hands.
 
-</div>
+
 
 <span id="isWorn"></span>
 
@@ -255,11 +255,11 @@ An item being worn is not considered to be held in the wearer's hands.
 
 [objects.t](../file/objects.t.html)\[[5728](../source/objects.t.html#5728)\]
 
-<div class="desc">
+
 
 is the item currently being worn?
 
-</div>
+
 
 <span id="isWornBy"></span>
 
@@ -267,11 +267,11 @@ is the item currently being worn?
 
 [objects.t](../file/objects.t.html)\[[5822](../source/objects.t.html#5822)\]
 
-<div class="desc">
+
 
 am I worn by the given object?
 
-</div>
+
 
 <span id="makeWornBy"></span>
 
@@ -279,12 +279,12 @@ am I worn by the given object?
 
 [objects.t](../file/objects.t.html)\[[5738](../source/objects.t.html#5738)\]
 
-<div class="desc">
+
 
 make the item worn by the given actor; if actor is nil, the item isn't
 being worn by anyone
 
-</div>
+
 
 <span id="tryHolding"></span>
 
@@ -292,13 +292,13 @@ being worn by anyone
 
 [objects.t](../file/objects.t.html)\[[5790](../source/objects.t.html#5790)\]
 
-<div class="desc">
+
 
 Try making the current command's actor hold me. If I'm already directly
 in the actor's inventory and I'm being worn, we'll try a 'doff' command;
 otherwise, we'll use the default handling.
 
-</div>
+
 
 <span id="whatIfHeldBy"></span>
 
@@ -306,18 +306,18 @@ otherwise, we'll use the default handling.
 
 [objects.t](../file/objects.t.html)\[[5772](../source/objects.t.html#5772)\]
 
-<div class="desc">
+
 
 A wearable is not considered held by an actor when it is being worn, so
 we must do a what-if test for removing the item if the actor is
 currently wearing the item. If the actor isn't wearing the item, we can
 use the default test of moving the item into the actor's inventory.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

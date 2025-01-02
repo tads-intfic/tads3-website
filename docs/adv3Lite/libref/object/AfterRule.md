@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An AfterRule is a rule belonging to the afterRules Rulebook. Note than
 unlike after rules in I7 these are executed after the action is fully
@@ -34,43 +34,43 @@ complete, i.e. \*after\* the report stage. \[SYSRULES EXTENSION\]
 
 `class `**`AfterRule`**` :   `[`Rule`](../object/Rule.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AfterRule`**  
 [`Rule`](../object/Rule.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`checkIlluminationRule`](../object/checkIlluminationRule.html)[`notifyScenesAfterRule`](../object/notifyScenesAfterRule.html)[`roomNotifyAfterRule`](../object/roomNotifyAfterRule.html)[`scopeListNotifyAfterRule`](../object/scopeListNotifyAfterRule.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`currentAction`](#currentAction)[`location`](#location)
 
@@ -79,11 +79,11 @@ Inherited from `Rule` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -92,11 +92,11 @@ Inherited from `Rule` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="currentAction"></span>
 
@@ -104,11 +104,11 @@ Inherited from `Rule` :
 
 [sysrules.t](../file/sysrules.t.html)\[[135](../source/sysrules.t.html#135)\]
 
-<div class="desc">
+
 
 The current action
 
-</div>
+
 
 <span id="location"></span>
 
@@ -116,25 +116,25 @@ The current action
 
 [sysrules.t](../file/sysrules.t.html)\[[132](../source/sysrules.t.html#132)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

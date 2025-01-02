@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Lister for objects in a room description with special descriptions. Each
 special description gets its own paragraph, so this is based on the
@@ -28,15 +28,15 @@ paragraph lister.
 
 **`specialDescLister`**` :   `[`ParagraphLister`](../object/ParagraphLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`specialDescLister`**  
 [`ParagraphLister`](../object/ParagraphLister.html)  
@@ -44,11 +44,11 @@ paragraph lister.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -59,11 +59,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isListed`](#isListed)[`listWith`](#listWith)[`showListItem`](#showListItem)
 
@@ -75,19 +75,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -95,11 +95,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1419](../source/lister.t.html#1419)\]
 
-<div class="desc">
+
 
 list everything
 
-</div>
+
 
 <span id="listWith"></span>
 
@@ -107,11 +107,11 @@ list everything
 
 [lister.t](../file/lister.t.html)\[[1429](../source/lister.t.html#1429)\]
 
-<div class="desc">
+
 
 use the object's special description grouper
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -119,15 +119,15 @@ use the object's special description grouper
 
 [lister.t](../file/lister.t.html)\[[1422](../source/lister.t.html#1422)\]
 
-<div class="desc">
+
 
 show a list item
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

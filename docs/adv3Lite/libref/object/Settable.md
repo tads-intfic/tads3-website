@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Settable is anything that can be set to particular values, such as a
 slider control or a dial. Various types of dial descending from Settable
@@ -34,15 +34,15 @@ are defined below.
 
 `class `**`Settable`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Settable`**  
 [`Thing`](../object/Thing.html)  
@@ -54,30 +54,30 @@ are defined below.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Settable`**  
 [`Dial`](../object/Dial.html)  
 [`NumberedDial`](../object/NumberedDial.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`alreadySetMsg`](#alreadySetMsg)[`canSetMeTo`](#canSetMeTo)[`curSetting`](#curSetting)[`invalidSettingMsg`](#invalidSettingMsg)[`isFixed`](#isFixed)[`validSettings`](#validSettings)
 
@@ -96,11 +96,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canonicalizeSetting`](#canonicalizeSetting)[`dobjFor(SetTo)`](#dobjFor(SetTo))[`isValidSetting`](#isValidSetting)[`makeSetting`](#makeSetting)
 
@@ -121,11 +121,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="alreadySetMsg"></span>
 
@@ -133,11 +133,11 @@ Inherited from `LMentionable` :
 
 [gadget.t](../file/gadget.t.html)\[[209](../source/gadget.t.html#209)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canSetMeTo"></span>
 
@@ -145,11 +145,11 @@ Inherited from `LMentionable` :
 
 [gadget.t](../file/gadget.t.html)\[[179](../source/gadget.t.html#179)\]
 
-<div class="desc">
+
 
 A Settable is something that can be set to various values
 
-</div>
+
 
 <span id="curSetting"></span>
 
@@ -157,11 +157,11 @@ A Settable is something that can be set to various values
 
 [gadget.t](../file/gadget.t.html)\[[141](../source/gadget.t.html#141)\]
 
-<div class="desc">
+
 
 our current setting
 
-</div>
+
 
 <span id="invalidSettingMsg"></span>
 
@@ -169,11 +169,11 @@ our current setting
 
 [gadget.t](../file/gadget.t.html)\[[206](../source/gadget.t.html#206)\]
 
-<div class="desc">
+
 
 Note that the action() handling for SET TO is defined on Thing
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -181,12 +181,12 @@ Note that the action() handling for SET TO is defined on Thing
 
 [gadget.t](../file/gadget.t.html)\[[215](../source/gadget.t.html#215)\]
 
-<div class="desc">
+
 
 Most gadgets of this sort are part of or attached to something else, so
 we make them fixed in place by default
 
-</div>
+
 
 <span id="validSettings"></span>
 
@@ -194,20 +194,20 @@ we make them fixed in place by default
 
 [gadget.t](../file/gadget.t.html)\[[138](../source/gadget.t.html#138)\]
 
-<div class="desc">
+
 
 a list of the valid settings this Settable can have, given as list of
 single-quoted strings.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canonicalizeSetting"></span>
 
@@ -215,7 +215,7 @@ single-quoted strings.
 
 [gadget.t](../file/gadget.t.html)\[[150](../source/gadget.t.html#150)\]
 
-<div class="desc">
+
 
 Put the setting into a standard form so it can be checked for validity.
 By default we turn it into lower case so that it doesn't matter what
@@ -223,7 +223,7 @@ case the player types the desired setting in. We also strip any
 enclosing quotes that might have been used to pass an awkward value like
 "1.4" that the parser would otherwise misinterpret.
 
-</div>
+
 
 <span id="dobjFor(SetTo)"></span>
 
@@ -231,11 +231,11 @@ enclosing quotes that might have been used to pass an awkward value like
 
 [gadget.t](../file/gadget.t.html)\[[182](../source/gadget.t.html#182)\]
 
-<div class="desc">
+
 
 Handle a SET TO command targeted at this Settable
 
-</div>
+
 
 <span id="isValidSetting"></span>
 
@@ -243,12 +243,12 @@ Handle a SET TO command targeted at this Settable
 
 [gadget.t](../file/gadget.t.html)\[[166](../source/gadget.t.html#166)\]
 
-<div class="desc">
+
 
 Check whether the proposed setting is valid. By default it is if the
 canonicalized version of val is present in our list of valid settings.
 
-</div>
+
 
 <span id="makeSetting"></span>
 
@@ -256,15 +256,15 @@ canonicalized version of val is present in our list of valid settings.
 
 [gadget.t](../file/gadget.t.html)\[[156](../source/gadget.t.html#156)\]
 
-<div class="desc">
+
 
 Set this Settable to its new setting, val
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

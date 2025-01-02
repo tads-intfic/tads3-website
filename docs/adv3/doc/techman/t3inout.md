@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Some Common
@@ -17,7 +17,7 @@ Programming Overview</a>    
 <a href="t3build_config.html" class="nav"><em>Next:</em> Using Build
 Configurations</a>     </span>
 
-</div>
+
 
 
 
@@ -382,7 +382,7 @@ Although in this case we could have tested for
 general case in which `specialMessage` was a
 routine that may or may not display something, e.g:
 
-<div class="code">
+
 
      specialBall: SpecialThing 'ball' 'ball'   
         specialMessage   
@@ -536,7 +536,7 @@ We could then use the following code to display our ASCII diagram:
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -547,6 +547,6 @@ Programming Overview</a>    
 <a href="t3build_config.html" class="nav"><em>Next:</em> Using Build
 Configurations</a>     </span>
 
-</div>
 
-</div>
+
+

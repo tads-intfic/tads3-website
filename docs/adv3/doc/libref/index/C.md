@@ -3224,9 +3224,9 @@ in
 [**`CyclicEventList`**](../object/CyclicEventList.html) - class in
 [misc.t](../file/misc.t.html)\[[1125](../source/misc.t.html#1125)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

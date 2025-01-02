@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The AccessoryObject role is for a \*third\* object, beyond the direct
 and indirect objects, involved in the command. This might be a peer to
@@ -31,26 +31,26 @@ accessory).
 
 **`AccessoryObject`**` :   `[`NounRole`](../object/NounRole.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AccessoryObject`**  
 [`NounRole`](../object/NounRole.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curObjProp`](#curObjProp)[`matchProp`](#matchProp)[`missingReplyProp`](#missingReplyProp)[`name`](#name)[`npListProp`](#npListProp)[`objListProp`](#objListProp)[`objMatchProp`](#objMatchProp)[`objProp`](#objProp)[`order`](#order)
 
@@ -59,11 +59,11 @@ Inherited from `NounRole` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -72,11 +72,11 @@ Inherited from `NounRole` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curObjProp"></span>
 
@@ -84,11 +84,11 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3890](../source/parser.t.html#3890)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchProp"></span>
 
@@ -96,11 +96,11 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3884](../source/parser.t.html#3884)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="missingReplyProp"></span>
 
@@ -108,11 +108,11 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3889](../source/parser.t.html#3889)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -120,11 +120,11 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3891](../source/parser.t.html#3891)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="npListProp"></span>
 
@@ -132,11 +132,11 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3885](../source/parser.t.html#3885)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="objListProp"></span>
 
@@ -144,11 +144,11 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3886](../source/parser.t.html#3886)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="objMatchProp"></span>
 
@@ -156,11 +156,11 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3888](../source/parser.t.html#3888)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="objProp"></span>
 
@@ -168,11 +168,11 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3887](../source/parser.t.html#3887)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="order"></span>
 
@@ -180,25 +180,25 @@ Inherited from `NounRole` :
 
 [parser.t](../file/parser.t.html)\[[3892](../source/parser.t.html#3892)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

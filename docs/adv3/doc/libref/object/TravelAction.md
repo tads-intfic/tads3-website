@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Travel Action - this is the base class for verbs that attempt to move an
 actor to a new location via one of the directional connections from the
@@ -38,15 +38,15 @@ DirectionProd match object that gives the direction.
 `DefineIAction(Travel)      `*`// original source text`*  
 `class `**`TravelAction`**` :   `[`IAction`](../object/IAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TravelAction`**  
 [`IAction`](../object/IAction.html)  
@@ -55,11 +55,11 @@ DirectionProd match object that gives the direction.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TravelAction`**  
 [`AftAction`](../object/AftAction.html)  
@@ -86,19 +86,19 @@ DirectionProd match object that gives the direction.
 [`WestAction`](../object/WestAction.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -112,11 +112,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`actionOfKind`](#actionOfKind)[`execAction`](#execAction)[`getConnector`](#getConnector)[`getDirection`](#getDirection)
 
@@ -131,19 +131,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="actionOfKind"></span>
 
@@ -151,14 +151,14 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[2736](../source/actions.t.html#2736)\]
 
-<div class="desc">
+
 
 The grammar rules for the individual directions will usually just create
 a base TravelAction object, rather than one of the direction-specific
 subclasses (NorthAction, etc). For convenience in testing the action,
 though, treat ourself as matching the subclass with the same direction.
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -166,11 +166,11 @@ though, treat ourself as matching the subclass with the same direction.
 
 [actions.t](../file/actions.t.html)\[[2689](../source/actions.t.html#2689)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getConnector"></span>
 
@@ -178,12 +178,12 @@ though, treat ourself as matching the subclass with the same direction.
 
 [actions.t](../file/actions.t.html)\[[2721](../source/actions.t.html#2721)\]
 
-<div class="desc">
+
 
 Get my travel connector. My connector is given by the travel link
 property for this action as defined in the actor's current location.
 
-</div>
+
 
 <span id="getDirection"></span>
 
@@ -191,15 +191,15 @@ property for this action as defined in the actor's current location.
 
 [actions.t](../file/actions.t.html)\[[2714](../source/actions.t.html#2714)\]
 
-<div class="desc">
+
 
 get the direction object for the travel
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

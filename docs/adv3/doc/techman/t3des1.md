@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \>
@@ -18,7 +18,7 @@ Game</a>    
 <a href="t3des2.html" class="nav"><em>Next:</em> IF Design: In Theory</a>
     </span>
 
-</div>
+
 
 
 
@@ -796,7 +796,7 @@ in the *TADS 3 Tour Guide* should be helpful.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -808,4 +808,4 @@ Game</a>    
 <a href="t3des2.html" class="nav"><em>Next:</em> IF Design: In Theory</a>
     </span>
 
-</div>
+

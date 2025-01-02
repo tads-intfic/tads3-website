@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \>
@@ -18,7 +18,7 @@ Practice</a>    
 <a href="t3oop.html" class="nav"><em>Next:</em> Object-Oriented
 Programming Overview</a>     </span>
 
-</div>
+
 
 
 
@@ -216,7 +216,7 @@ doesn't work *in the game*. We're not talking about parser failures
 here - we're talking about commands that the parser recognizes, but
 which aren't handled in the simulation:
 
-<div class="cmdline">
+
 
     You are carrying a book.
 
@@ -269,7 +269,7 @@ acceptable for all of the vocabulary for a thing and its parts to "point
 to" the thing itself, rather than implementing all the parts as separate
 object:
 
-<div class="cmdline">
+
 
     You are carrying a jewel-encrusted egg.
 
@@ -285,7 +285,7 @@ object:
     The egg is made of a thin, glassy shell, and is exquisitely
     decorated with diamonds, emeralds, and rubies.
 
-</div>
+
 
 Second, they'll expect that you'll provide non-default descriptions of
 all objects. No object should "look like an ordinary" thing.
@@ -392,7 +392,7 @@ REACTOR. When you find these, add handlers for them that let the player
 know they're on the right track but need to think in terms of the
 details:
 
-<div class="cmdline">
+
 
     >repair nuclear reactor
     You think back to your class in nuclear reactor maintenance,
@@ -400,7 +400,7 @@ details:
     operator's manual, it would refresh your memory.  It ought
     to be around here somewhere.
 
-</div>
+
 
 ### Full disclosure
 
@@ -460,13 +460,13 @@ need arises. The way to do this is fairly straightforward: you use the
 exact verb phrasing that's accepted in player input when describing the
 object to which the special verb applies.
 
-<div class="cmdline">
+
 
     >examine spigot
     The spigot has a tapered, slightly barbed end, designed
     so that you can attach a rubber tube to it.
 
-</div>
+
 
 Here, we've prompted the player that the command for connecting a tube
 to the spigot is ATTACH TUBE TO SPIGOT. Without this prompting, it might
@@ -480,14 +480,14 @@ established IF community. If you're writing for novice players, you
 might want to actually present the advice as advice, rather than as part
 of the narrative:
 
-<div class="cmdline">
+
 
     >examine spigot
     The spigot has a tapered, slightly barbed end.
 
     [To attach something to it, type ATTACH (Thing) TO SPIGOT.]
 
-</div>
+
 
 ### Limit your verbs
 
@@ -645,7 +645,7 @@ playing for a while. If you usually implement just plain objects, with
 no subcomponents, players will come to expect that most objects behave
 this way:
 
-<div class="cmdline">
+
 
     You are carrying a jewel-encrusted egg.
 
@@ -657,13 +657,13 @@ this way:
     The egg is made of a thin, glassy shell, and is exquisitely
     decorated with diamonds, emeralds, and rubies.
 
-</div>
+
 
 If you implement most objects so that they have actual subcomponents
 implemented, but you don't generally implement sub-sub-components,
 players will come to expect that:
 
-<div class="cmdline">
+
 
     >examine emeralds
     A dozen green gems, some large, some tiny.
@@ -671,7 +671,7 @@ players will come to expect that:
     >examine large emeralds
     A dozen green gems, some large, some tiny.
 
-</div>
+
 
 It's sometimes tempting to authors to bury important clues under two or
 three or four levels of subcomponents. But if you do this in one place
@@ -932,11 +932,11 @@ if you play a few good adventure games. And nothing is a substitute for
 experience - your games will improve with each new one you write. TADS 3
 gives you a fine tool for creating games; the rest is up to you.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -948,4 +948,4 @@ Practice</a>    
 <a href="t3oop.html" class="nav"><em>Next:</em> Object-Oriented
 Programming Overview</a>     </span>
 
-</div>
+

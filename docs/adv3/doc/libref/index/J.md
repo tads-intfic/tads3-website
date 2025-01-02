@@ -37,9 +37,9 @@ property of
 in
 [report.t](../file/report.t.html)\[[579](../source/report.t.html#579)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Default object announcement. We display this announcement whenever the
 player leaves out a required object from a command, but the parser is
@@ -52,15 +52,15 @@ You try opening the door, but it seems to be locked. \*.
 
 `class `**`DefaultObjectAnnouncement`**` :   `[`CommandAnnouncement`](../object/CommandAnnouncement.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefaultObjectAnnouncement`**  
 [`CommandAnnouncement`](../object/CommandAnnouncement.html)  
@@ -68,27 +68,27 @@ You try opening the door, but it seems to be locked. \*.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allResolved_`](#allResolved_)[`obj_`](#obj_)[`whichObj_`](#whichObj_)
 
@@ -100,11 +100,11 @@ Inherited from `CommandReport` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`getMessageText`](#getMessageText)
 
@@ -116,11 +116,11 @@ Inherited from `CommandReport` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allResolved_"></span>
 
@@ -128,11 +128,11 @@ Inherited from `CommandReport` :
 
 [report.t](../file/report.t.html)\[[426](../source/report.t.html#426)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="obj_"></span>
 
@@ -140,11 +140,11 @@ Inherited from `CommandReport` :
 
 [report.t](../file/report.t.html)\[[422](../source/report.t.html#422)\]
 
-<div class="desc">
+
 
 our defaulted object
 
-</div>
+
 
 <span id="whichObj_"></span>
 
@@ -152,19 +152,19 @@ our defaulted object
 
 [report.t](../file/report.t.html)\[[425](../source/report.t.html#425)\]
 
-<div class="desc">
+
 
 our message parameters
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -172,11 +172,11 @@ our message parameters
 
 [report.t](../file/report.t.html)\[[398](../source/report.t.html#398)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getMessageText"></span>
 
@@ -184,15 +184,15 @@ our message parameters
 
 [report.t](../file/report.t.html)\[[415](../source/report.t.html#415)\]
 
-<div class="desc">
+
 
 get our message text
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

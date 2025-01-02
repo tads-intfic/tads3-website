@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Lit/Unlit state. This is useful for light sources and flammable objects.
 
@@ -28,15 +28,15 @@ Lit/Unlit state. This is useful for light sources and flammable objects.
 
 **`LitUnlit`**` :   `[`State`](../object/State.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LitUnlit`**  
 [`State`](../object/State.html)  
@@ -44,11 +44,11 @@ Lit/Unlit state. This is useful for light sources and flammable objects.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`additionalInfo`](#additionalInfo)[`adjectives`](#adjectives)[`stateProp`](#stateProp)
 
@@ -59,11 +59,11 @@ Inherited from `State` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`appliesTo`](#appliesTo)
 
@@ -75,11 +75,11 @@ Inherited from `LState` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="additionalInfo"></span>
 
@@ -87,11 +87,11 @@ Inherited from `LState` :
 
 [english.t](../file/english.t.html)\[[1992](../source/english.t.html#1992)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="adjectives"></span>
 
@@ -99,11 +99,11 @@ Inherited from `LState` :
 
 [english.t](../file/english.t.html)\[[1990](../source/english.t.html#1990)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="stateProp"></span>
 
@@ -111,19 +111,19 @@ Inherited from `LState` :
 
 [english.t](../file/english.t.html)\[[1989](../source/english.t.html#1989)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="appliesTo"></span>
 
@@ -131,15 +131,15 @@ Inherited from `LState` :
 
 [english.t](../file/english.t.html)\[[1991](../source/english.t.html#1991)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

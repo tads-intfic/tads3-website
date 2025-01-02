@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="cockpit.html" class="nav">Cockpit Controls</a> \> Furnishing the
@@ -17,7 +17,7 @@ Cockpit
 <a href="actions.html" class="nav"><em>Next:</em> Defining Actions</a>
     </span>
 
-</div>
+
 
 
 
@@ -50,7 +50,7 @@ plane to take off and the game to be won.
 
 The first step is to give the cockpit a decent description:
 
-`
+```
     cockpit: Room 'Cockpit' 'cockpit'
         "The cockpit is quite small but has everything you might expect: a
         windscreen looking forward, a pilot's seat from which you can operate all
@@ -61,7 +61,7 @@ The first step is to give the cockpit a decent description:
         
         regions = [planeRegion]
     ;
-`
+```
 
 Next we need to implement the pilot's seat and the controls. For the
 seat we can use a Platform, and set `dobjFor(Enter)
@@ -75,7 +75,7 @@ things you can reach in the cockpit are the controls. Here's how we can
 start this off (putting these object definitions immediately after that
 of the cabinDoor that's already in the cockpit):
 
-`
+```
     + pilotSeat: Fixture, Platform 'pilot\'s seat'
             
         dobjFor(Enter) asDobjFor(Board)
@@ -97,7 +97,7 @@ of the cabinDoor that's already in the cockpit):
                 operating the controls. ";
         }
     ;
-`
+```
 
 The first point of note here is the use of a Platform to implement the
 seat. For an actor to be able to get on (sit on/stand on/lie on) an
@@ -231,7 +231,7 @@ instruments and controls, locating them in the
 `controls` object, although at this stage their
 implementations will be a little sketchy:
 
-`
+```
     ++ controlColumn: Fixture 'control column;;stick'
         "It's basically a stick that can be pushed forward or pulled back, with a
         wheel attached at the top. "
@@ -285,7 +285,7 @@ implementations will be a little sketchy:
 
     + windscreen: Fixture 'windscreen;; window windshield'
     ;
-`
+```
 
 The implementation is deliberately incomplete at this stage, since
 completing it will be the task that occupies the remainder of this
@@ -327,7 +327,7 @@ actions.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -338,4 +338,4 @@ Cockpit
 <a href="actions.html" class="nav"><em>Next:</em> Defining Actions</a>
     </span>
 
-</div>
+

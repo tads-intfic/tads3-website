@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Querying the World
@@ -15,7 +15,7 @@ Model
 <span class="navnp"><a href="topicact.html" class="nav"><em>Prev:</em> Topic Actions</a>
     <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span>
 
-</div>
+
 
 
 
@@ -330,7 +330,7 @@ want ending a conversation with another actor to sever any
 communications link there may have been. A fairly basic scheme to do all
 this might be as follows:
 
-`
+```
      DefineTAction(Phone)
         addExtraScopeItems(role)
         {
@@ -391,7 +391,7 @@ this might be as follows:
         canBePhoned = true
     ; 
      
-`
+```
 
 If you want to try this out for yourself, bear in mind that the way
 we've tried it allows the player character to phone only those actors
@@ -403,7 +403,7 @@ work.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -412,4 +412,4 @@ Model
 <span class="navnp"><a href="topicact.html" class="nav"><em>Prev:</em> Topic Actions</a>
     <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span>
 
-</div>
+

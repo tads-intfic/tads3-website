@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 To make it easy to synthesize actions for pushing objects, define
 individual subclasses for the various directions.
@@ -34,15 +34,15 @@ individual subclasses for the various directions.
 `DefineAction(PushNorth, PushTravelDirAction)      `*`// original source text`*  
 `class `**`PushNorthAction`**` :   `[`PushTravelDirAction`](../object/PushTravelDirAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PushNorthAction`**  
 [`PushTravelDirAction`](../object/PushTravelDirAction.html)  
@@ -55,27 +55,27 @@ individual subclasses for the various directions.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`getDirection`](#getDirection)
 
@@ -97,11 +97,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -124,11 +124,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="getDirection"></span>
 
@@ -136,25 +136,25 @@ Inherited from `Resolver` :
 
 [actions.t](../file/actions.t.html)\[[2949](../source/actions.t.html#2949)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

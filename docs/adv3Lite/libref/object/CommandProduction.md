@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 CommandProduction is a special Production subclass for the top-level
 grammar rule for the overall command.
@@ -86,26 +86,26 @@ execution order.)
 
 `class `**`CommandProduction`**` :   `[`Production`](../object/Production.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandProduction`**  
 [`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`CommandProduction`**  
 [`commandPhrase(ambiguousConj)`](../object/commandPhrase(ambiguousConj).html)  
@@ -116,19 +116,19 @@ execution order.)
 [`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actor_`](#actor_)[`actorPerson`](#actorPerson)
 
@@ -137,11 +137,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`build`](#build)[`noteEndOfSentence`](#noteEndOfSentence)[`visitProd`](#visitProd)
 
@@ -150,11 +150,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actor_"></span>
 
@@ -162,11 +162,11 @@ Inherited from `Production` :
 
 [parser.t](../file/parser.t.html)\[[3633](../source/parser.t.html#3633)\]
 
-<div class="desc">
+
 
 -\> property: the match tree for the addressee, if any
 
-</div>
+
 
 <span id="actorPerson"></span>
 
@@ -174,7 +174,7 @@ Inherited from `Production` :
 
 [parser.t](../file/parser.t.html)\[[3655](../source/parser.t.html#3655)\]
 
-<div class="desc">
+
 
 The grammatical person of the actor to whom we're giving orders. This is
 2 for second person and 3 for third person. (It's not meaningful to give
@@ -193,15 +193,15 @@ YOU tells Bob to look at the PC.
 The default is 2, since the long-standing IF convention is the ACTOR, DO
 SOMETHING format. Override this (to 3) for TELL TO grammar rules.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="build"></span>
 
@@ -209,11 +209,11 @@ SOMETHING format. Override this (to 3) for TELL TO grammar rules.
 
 [parser.t](../file/parser.t.html)\[[3658](../source/parser.t.html#3658)\]
 
-<div class="desc">
+
 
 build the tree
 
-</div>
+
 
 <span id="noteEndOfSentence"></span>
 
@@ -221,11 +221,11 @@ build the tree
 
 [parser.t](../file/parser.t.html)\[[3716](../source/parser.t.html#3716)\]
 
-<div class="desc">
+
 
 note the end of the sentence
 
-</div>
+
 
 <span id="visitProd"></span>
 
@@ -233,15 +233,15 @@ note the end of the sentence
 
 [parser.t](../file/parser.t.html)\[[3691](../source/parser.t.html#3691)\]
 
-<div class="desc">
+
 
 visit a production
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

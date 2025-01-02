@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The message parameters object. The language module must provide one
 instance of MessageParams, to fill in the language-specific list of
@@ -30,26 +30,26 @@ parameter names and expansion functions.
 
 **`englishMessageParams`**` :   `[`MessageParams`](../object/MessageParams.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`englishMessageParams`**  
 [`MessageParams`](../object/MessageParams.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`params`](#params)[`sentenceOrder`](#sentenceOrder)[`sLetters`](#sLetters)[`verbTab`](#verbTab)
 
@@ -58,11 +58,11 @@ Inherited from `MessageParams` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`awkwardEnding`](#awkwardEnding)[`cmdInfoReflexive`](#cmdInfoReflexive)[`construct`](#construct)
 
@@ -71,11 +71,11 @@ Inherited from `MessageParams` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="params"></span>
 
@@ -83,7 +83,7 @@ Inherited from `MessageParams` :
 
 [english.t](../file/english.t.html)\[[4202](../source/english.t.html#4202)\]
 
-<div class="desc">
+
 
 The English parameter mappings. The base library doesn't use any of
 these directly, so parameter names and mappings are entirely up to the
@@ -97,7 +97,7 @@ by game authors, of course).
 
 \[Required\]
 
-</div>
+
 
 <span id="sentenceOrder"></span>
 
@@ -105,7 +105,7 @@ by game authors, of course).
 
 [english.t](../file/english.t.html)\[[4186](../source/english.t.html#4186)\]
 
-<div class="desc">
+
 
 The language's general sentence order. This should be a string
 containing the letters S, V, and O in the appropriate order for the
@@ -115,7 +115,7 @@ English sentence is Subject Verb Object.
 
 This can be left nil for languages with no prevailing sentence order.
 
-</div>
+
 
 <span id="sLetters"></span>
 
@@ -123,12 +123,12 @@ This can be left nil for languages with no prevailing sentence order.
 
 [english.t](../file/english.t.html)\[[4649](../source/english.t.html#4649)\]
 
-<div class="desc">
+
 
 Word-ending letter combinations that are awkward to follow with a
 contracted verb such a 've.
 
-</div>
+
 
 <span id="verbTab"></span>
 
@@ -136,19 +136,19 @@ contracted verb such a 've.
 
 [english.t](../file/english.t.html)\[[4643](../source/english.t.html#4643)\]
 
-<div class="desc">
+
 
 verb table - we build this at preinit from the verb parameters
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="awkwardEnding"></span>
 
@@ -156,12 +156,12 @@ verb table - we build this at preinit from the verb parameters
 
 [english.t](../file/english.t.html)\[[4655](../source/english.t.html#4655)\]
 
-<div class="desc">
+
 
 Does nam end with one of the letter combinations in sLetters, in which
 case it's awkward to follow it with a contraction.
 
-</div>
+
 
 <span id="cmdInfoReflexive"></span>
 
@@ -169,7 +169,7 @@ case it's awkward to follow it with a contraction.
 
 [english.t](../file/english.t.html)\[[4571](../source/english.t.html#4571)\]
 
-<div class="desc">
+
 
 Check for reflexives in cmdInfo. This is called when we see a noun
 phrase being used as an object of the verb (i.e., in a role other than
@@ -178,7 +178,7 @@ pronoun instead of the noun we'd normally generate. If no reflexive is
 required, we return nil, and the caller will use the normal noun or
 pronoun instead.
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -186,15 +186,15 @@ pronoun instead.
 
 [english.t](../file/english.t.html)\[[4593](../source/english.t.html#4593)\]
 
-<div class="desc">
+
 
 On construction, fill in the verb parameters from CustomVocab objects.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Pathfinder specialized for finding a route through the game map. Note
 that this can only find a route through TravelConnector objects (which
@@ -29,26 +29,26 @@ TravelConnectors).
 
 **`routeFinder`**` :   `[`Pathfinder`](../object/Pathfinder.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`routeFinder`**  
 [`Pathfinder`](../object/Pathfinder.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`excludeLockedDoors`](#excludeLockedDoors)
 
@@ -57,11 +57,11 @@ Inherited from `Pathfinder` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`findDestinations`](#findDestinations)
 
@@ -70,11 +70,11 @@ Inherited from `Pathfinder` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="excludeLockedDoors"></span>
 
@@ -82,22 +82,22 @@ Inherited from `Pathfinder` :
 
 [pathfind.t](../file/pathfind.t.html)\[[215](../source/pathfind.t.html#215)\]
 
-<div class="desc">
+
 
 the destination is only of interest if it's not nowhere, the default
 unknown destination, or the location we're trying to leave.
 
 if it's none of these, add it to the list of possible paths
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="findDestinations"></span>
 
@@ -105,15 +105,15 @@ if it's none of these, add it to the list of possible paths
 
 [pathfind.t](../file/pathfind.t.html)\[[138](../source/pathfind.t.html#138)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

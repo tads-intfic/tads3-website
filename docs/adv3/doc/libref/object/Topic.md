@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Topic is an object representing some piece of knowledge in the story.
 Actors can use Topic objects in commands such as "ask" and "tell".
@@ -43,42 +43,42 @@ connected to any "physical" object in the simulation.
 
 `class `**`Topic`**` :   `[`VocabObject`](../object/VocabObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Topic`**  
 [`VocabObject`](../object/VocabObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canResolvePossessive`](#canResolvePossessive)[`isKnown`](#isKnown)
 
@@ -87,11 +87,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canBeSensed`](#canBeSensed)
 
@@ -100,11 +100,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canResolvePossessive"></span>
 
@@ -112,11 +112,11 @@ Inherited from `VocabObject` :
 
 [actor.t](../file/actor.t.html)\[[69](../source/actor.t.html#69)\]
 
-<div class="desc">
+
 
 a topic cannot by default be used to resolve a possessive phrase
 
-</div>
+
 
 <span id="isKnown"></span>
 
@@ -124,7 +124,7 @@ a topic cannot by default be used to resolve a possessive phrase
 
 [actor.t](../file/actor.t.html)\[[57](../source/actor.t.html#57)\]
 
-<div class="desc">
+
 
 Is the topic known? If this is true, the topic is in scope for actions
 that operate on topics, such as "ask about" and "tell about." If this is
@@ -141,15 +141,15 @@ Note that, as with Thing.isKnown, this is only the DEFAULT 'known'
 property. Each actor can have its own separate 'known' property by
 defining the actor's 'knownProp' to a different property name.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canBeSensed"></span>
 
@@ -157,18 +157,18 @@ defining the actor's 'knownProp' to a different property name.
 
 [actor.t](../file/actor.t.html)\[[66](../source/actor.t.html#66)\]
 
-<div class="desc">
+
 
 Topics are abstract objects, so they can't be sensed with any of the
 physical senses, even if they're ever included as part of a containment
 hierarchy (which might be convenient in some cases for purposes of
 associating a topic with a physical object, for example).
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

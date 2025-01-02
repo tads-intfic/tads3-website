@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`GiveTo`**` :   `[`TIAction`](../object/TIAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GiveTo`**  
 [`TIAction`](../object/TIAction.html)  
@@ -45,11 +45,11 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`summaryProp`](#summaryProp)[`summaryReport`](#summaryReport)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execGroup`](#execGroup)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="summaryProp"></span>
 
@@ -105,14 +105,14 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1954](../source/actions.t.html#1954)\]
 
-<div class="desc">
+
 
 The summaryProp can be a propertyPointer to a method on the Actor being
 conversed with that's called at once a whole set of objects has been
 given. It will normally be set by a gAction.summaryProp = &prop
 statement in a GiveTopic.
 
-</div>
+
 
 <span id="summaryReport"></span>
 
@@ -120,21 +120,21 @@ statement in a GiveTopic.
 
 [actions.t](../file/actions.t.html)\[[1946](../source/actions.t.html#1946)\]
 
-<div class="desc">
+
 
 The summaryReport can be set by a GiveTopic to a single-quoted string in
 BMsg format, with {1} standing in for gActionListStr, in order to report
 on a whole set of objects given at once; e.g. '{I} {give} Bob {1}. '
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execGroup"></span>
 
@@ -142,17 +142,17 @@ on a whole set of objects given at once; e.g. '{I} {give} Bob {1}. '
 
 [actions.t](../file/actions.t.html)\[[1961](../source/actions.t.html#1961)\]
 
-<div class="desc">
+
 
 Reset the summaryReport and the summaryProp to nil for the whole group
 of objects this action may act on, so that they're only used if they're
 explicitly requested this turn.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

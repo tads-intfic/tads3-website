@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 lister for moving a RearContainer/Surface and abandoning its contents
 
 **`rearAbandonContentsLister`**` :   `[`undersideLookUnderLister`](../object/undersideLookUnderLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`rearAbandonContentsLister`**  
 [`undersideLookUnderLister`](../object/undersideLookUnderLister.html)  
@@ -48,11 +48,11 @@ lister for moving a RearContainer/Surface and abandoning its contents
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -73,11 +73,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListEmpty`](#showListEmpty)[`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -99,19 +99,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -119,11 +119,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5002](../source/msg_neu.t.html#5002)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -131,11 +131,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5007](../source/msg_neu.t.html#5007)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -143,11 +143,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5003](../source/msg_neu.t.html#5003)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -155,15 +155,15 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5005](../source/msg_neu.t.html#5005)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

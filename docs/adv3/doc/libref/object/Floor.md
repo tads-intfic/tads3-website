@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for the default floor and the default ground of a top-level
 room. The floor and ground are where things usually go when dropped, and
@@ -39,15 +39,15 @@ English-specific modifications for the default room parts.
 
 `class `**`Floor`**` :   `[`RoomPart`](../object/RoomPart.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Floor`**  
 [`RoomPart`](../object/RoomPart.html)  
@@ -58,28 +58,28 @@ English-specific modifications for the default room parts.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`defaultFloor`](../object/defaultFloor.html)[`defaultGround`](../object/defaultGround.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actorInPrep`](#actorInPrep)[`actorOutOfPrep`](#actorOutOfPrep)[`objInPrep`](#objInPrep)[`putDestMessage`](#putDestMessage)
 
@@ -100,11 +100,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`actorInGroupPrefix`](#actorInGroupPrefix)[`actorInGroupSuffix`](#actorInGroupSuffix)[`childInNameGen`](#childInNameGen)[`dobjFor(LieOn)`](#dobjFor(LieOn))[`dobjFor(SitOn)`](#dobjFor(SitOn))[`dobjFor(StandOn)`](#dobjFor(StandOn))[`hideFromDefault`](#hideFromDefault)[`iobjFor(PutOn)`](#iobjFor(PutOn))[`iobjFor(ThrowAt)`](#iobjFor(ThrowAt))[`isActorOnFloor`](#isActorOnFloor)[`isObjListedInRoomPart`](#isObjListedInRoomPart)[`performEntry`](#performEntry)[`roomActorHereDesc`](#roomActorHereDesc)[`roomActorPostureDesc`](#roomActorPostureDesc)[`roomActorStatus`](#roomActorStatus)[`roomActorThereDesc`](#roomActorThereDesc)[`roomListActorPosture`](#roomListActorPosture)[`roomOkayPostureChange`](#roomOkayPostureChange)[`verifyEntry`](#verifyEntry)
 
@@ -125,11 +125,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actorInPrep"></span>
 
@@ -137,11 +137,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[3026](../source/en_us.t.html#3026)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorOutOfPrep"></span>
 
@@ -149,11 +149,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[3027](../source/en_us.t.html#3027)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="objInPrep"></span>
 
@@ -161,11 +161,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[3025](../source/en_us.t.html#3025)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="putDestMessage"></span>
 
@@ -173,22 +173,22 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[5225](../source/travel.t.html#5225)\]
 
-<div class="desc">
+
 
 The message we use to describe this object prepositionally, as the
 destination of a throw or drop. This should be a gLibMessages property
 with the appropriate prepositional phrase. We use a custom message
 specific to floor-like objects.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="actorInGroupPrefix"></span>
 
@@ -196,7 +196,7 @@ specific to floor-like objects.
 
 [travel.t](../file/travel.t.html)\[[5440](../source/travel.t.html#5440)\]
 
-<div class="desc">
+
 
 Prefix and suffix messages for listing a group of actors nominally on
 the this floor. Actors are said to be on the floor when they're really
@@ -211,7 +211,7 @@ If we're local, and we're standing, we'll simply say that we're
 stating the obvious. If we're not standing, we will mention that we're
 on the floor.
 
-</div>
+
 
 <span id="actorInGroupSuffix"></span>
 
@@ -219,11 +219,11 @@ on the floor.
 
 [travel.t](../file/travel.t.html)\[[5449](../source/travel.t.html#5449)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="childInNameGen"></span>
 
@@ -231,11 +231,11 @@ on the floor.
 
 [en_us.t](../file/en_us.t.html)\[[3024](../source/en_us.t.html#3024)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LieOn)"></span>
 
@@ -243,11 +243,11 @@ on the floor.
 
 [travel.t](../file/travel.t.html)\[[5336](../source/travel.t.html#5336)\]
 
-<div class="desc">
+
 
 'lie on floor' causes the actor to lie down in the room
 
-</div>
+
 
 <span id="dobjFor(SitOn)"></span>
 
@@ -255,11 +255,11 @@ on the floor.
 
 [travel.t](../file/travel.t.html)\[[5326](../source/travel.t.html#5326)\]
 
-<div class="desc">
+
 
 'sit on floor' causes the actor to sit in the containing room
 
-</div>
+
 
 <span id="dobjFor(StandOn)"></span>
 
@@ -267,11 +267,11 @@ on the floor.
 
 [travel.t](../file/travel.t.html)\[[5316](../source/travel.t.html#5316)\]
 
-<div class="desc">
+
 
 'stand on floor' causes actor to stand in the containing room
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -279,11 +279,11 @@ on the floor.
 
 [travel.t](../file/travel.t.html)\[[5173](../source/travel.t.html#5173)\]
 
-<div class="desc">
+
 
 specifically allow me as a default for STAND ON, SIT ON, and LIE ON
 
-</div>
+
 
 <span id="iobjFor(PutOn)"></span>
 
@@ -291,13 +291,13 @@ specifically allow me as a default for STAND ON, SIT ON, and LIE ON
 
 [travel.t](../file/travel.t.html)\[[5203](../source/travel.t.html#5203)\]
 
-<div class="desc">
+
 
 'put x on floor' equals 'drop x'. Add a precondition that the drop
 destination is the main room, since otherwise we could have strange
 results if we dropped something inside a nested room.
 
-</div>
+
 
 <span id="iobjFor(ThrowAt)"></span>
 
@@ -305,11 +305,11 @@ results if we dropped something inside a nested room.
 
 [travel.t](../file/travel.t.html)\[[5228](../source/travel.t.html#5228)\]
 
-<div class="desc">
+
 
 'throw x at floor'
 
-</div>
+
 
 <span id="isActorOnFloor"></span>
 
@@ -317,11 +317,11 @@ results if we dropped something inside a nested room.
 
 [travel.t](../file/travel.t.html)\[[5250](../source/travel.t.html#5250)\]
 
-<div class="desc">
+
 
 is the given actor already on the floor?
 
-</div>
+
 
 <span id="isObjListedInRoomPart"></span>
 
@@ -329,7 +329,7 @@ is the given actor already on the floor?
 
 [travel.t](../file/travel.t.html)\[[5192](../source/travel.t.html#5192)\]
 
-<div class="desc">
+
 
 When explicitly examining a Floor object, list any objects that are
 listed in the normal room description (as in LOOK AROUND). By default,
@@ -337,7 +337,7 @@ the floor is the nominal container for anything directly in the room, so
 we'll normally want LOOK AROUND and LOOK AT FLOOR to produce the same
 list of objects.
 
-</div>
+
 
 <span id="performEntry"></span>
 
@@ -345,11 +345,11 @@ list of objects.
 
 [travel.t](../file/travel.t.html)\[[5302](../source/travel.t.html#5302)\]
 
-<div class="desc">
+
 
 perform sitting/standing/lying on the floor
 
-</div>
+
 
 <span id="roomActorHereDesc"></span>
 
@@ -357,14 +357,14 @@ perform sitting/standing/lying on the floor
 
 [travel.t](../file/travel.t.html)\[[5351](../source/travel.t.html#5351)\]
 
-<div class="desc">
+
 
 Mention that an actor is here, as part of a room description. When the
 actor is standing, just say that the actor is here, since it's
 overstating the obvious to say that the actor is standing on the floor.
 For other postures, do mention the floor.
 
-</div>
+
 
 <span id="roomActorPostureDesc"></span>
 
@@ -372,13 +372,13 @@ For other postures, do mention the floor.
 
 [travel.t](../file/travel.t.html)\[[5389](../source/travel.t.html#5389)\]
 
-<div class="desc">
+
 
 Show the actor's posture here. When we're standing on the floor, don't
 mention the posture, as this is too trivial a condition to state.
 Otherwise, mention it as normal for a nested room.
 
-</div>
+
 
 <span id="roomActorStatus"></span>
 
@@ -386,14 +386,14 @@ Otherwise, mention it as normal for a nested room.
 
 [travel.t](../file/travel.t.html)\[[5378](../source/travel.t.html#5378)\]
 
-<div class="desc">
+
 
 Show our room name status for an actor on the floor. Since standing on
 the floor is the trivial default for any room, we won't bother
 mentioning it. Other postures we'll mention the same way we would for
 any nested room.
 
-</div>
+
 
 <span id="roomActorThereDesc"></span>
 
@@ -401,7 +401,7 @@ any nested room.
 
 [travel.t](../file/travel.t.html)\[[5370](../source/travel.t.html#5370)\]
 
-<div class="desc">
+
 
 Mention that an actor is here, as part of a room description. Since a
 floor is a trivial part of its enclosing room, there's no point in
@@ -409,7 +409,7 @@ mentioning that we're on the floor, as that's stating the obvious;
 instead, simply describe the actor as being in the actor's actual
 enclosing room.
 
-</div>
+
 
 <span id="roomListActorPosture"></span>
 
@@ -417,12 +417,12 @@ enclosing room.
 
 [travel.t](../file/travel.t.html)\[[5414](../source/travel.t.html#5414)\]
 
-<div class="desc">
+
 
 mention the actor as part of the EXAMINE description of a nested room
 containing the actor
 
-</div>
+
 
 <span id="roomOkayPostureChange"></span>
 
@@ -430,14 +430,14 @@ containing the actor
 
 [travel.t](../file/travel.t.html)\[[5402](../source/travel.t.html#5402)\]
 
-<div class="desc">
+
 
 Generate an acknowledgment for a posture change here. If the actor is
 standing, just say "okay, you're now standing" without mentioning the
 floor, since standing on the floor is the trivial default. For other
 postures, say that we're sitting/lying/etc on the floor.
 
-</div>
+
 
 <span id="verifyEntry"></span>
 
@@ -445,15 +445,15 @@ postures, say that we're sitting/lying/etc on the floor.
 
 [travel.t](../file/travel.t.html)\[[5260](../source/travel.t.html#5260)\]
 
-<div class="desc">
+
 
 verify sitting/standing/lying on the floor
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

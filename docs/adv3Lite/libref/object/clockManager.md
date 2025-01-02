@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The clockManager object is used to keep track of subjective time. In
 this version we store dates and times internally as Date objects,
@@ -29,15 +29,15 @@ ClockEvents. \[DEFINED IN SUBTIME EXTENSION\]
 
 **`clockManager`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`clockManager`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -45,11 +45,11 @@ ClockEvents. \[DEFINED IN SUBTIME EXTENSION\]
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`baseDate`](#baseDate)[`baseScaleFactor`](#baseScaleFactor)[`curTime`](#curTime)[`eventList`](#eventList)[`lastEvent`](#lastEvent)[`nextEvent`](#nextEvent)[`nextTime`](#nextTime)[`scaleFactor`](#scaleFactor)[`turnLastCommitted`](#turnLastCommitted)
 
@@ -61,11 +61,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkTime`](#checkTime)[`checkTimeFmt`](#checkTimeFmt)[`eventDate`](#eventDate)[`eventReached`](#eventReached)[`execute`](#execute)[`formatTime`](#formatTime)[`getClockTime`](#getClockTime)[`lastEventDate`](#lastEventDate)[`reachCheck`](#reachCheck)[`slowDownTime`](#slowDownTime)[`syncTime`](#syncTime)
 
@@ -76,11 +76,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="baseDate"></span>
 
@@ -88,7 +88,7 @@ Inherited from `ModuleExecObject` :
 
 [subtime.t](../file/subtime.t.html)\[[444](../source/subtime.t.html#444)\]
 
-<div class="desc">
+
 
 The base date (year, month, day) our game is meant to start on,
 expressed as a Date object. Often this doesn't matter if we're only
@@ -96,7 +96,7 @@ interested in the time of day. By default we make it Jan 1, 2000. If
 gameMain.gameStartDate is defines it will instead be taken from there.
 \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="baseScaleFactor"></span>
 
@@ -104,7 +104,7 @@ gameMain.gameStartDate is defines it will instead be taken from there.
 
 [subtime.t](../file/subtime.t.html)\[[201](../source/subtime.t.html#201)\]
 
-<div class="desc">
+
 
 The base scaling factor: this is the number of minutes per hundred turns
 when we have unlimited time until the next event. This number is pretty
@@ -120,7 +120,7 @@ next event we take the scale factor from that event's scaleFactor so
 that we can vary the pace of time according to the spacing of events if
 we wish. \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="curTime"></span>
 
@@ -128,11 +128,11 @@ we wish. \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[416](../source/subtime.t.html#416)\]
 
-<div class="desc">
+
 
 the current game clock time \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="eventList"></span>
 
@@ -140,12 +140,12 @@ the current game clock time \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[413](../source/subtime.t.html#413)\]
 
-<div class="desc">
+
 
 our list of clock events (we build this automatically during
 pre-initialization) \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="lastEvent"></span>
 
@@ -153,11 +153,11 @@ pre-initialization) \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[419](../source/subtime.t.html#419)\]
 
-<div class="desc">
+
 
 the most recent event that we reached \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="nextEvent"></span>
 
@@ -165,11 +165,11 @@ the most recent event that we reached \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[425](../source/subtime.t.html#425)\]
 
-<div class="desc">
+
 
 the next event we're due to reach \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="nextTime"></span>
 
@@ -177,11 +177,11 @@ the next event we're due to reach \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[422](../source/subtime.t.html#422)\]
 
-<div class="desc">
+
 
 the next event's game clock time \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="scaleFactor"></span>
 
@@ -189,13 +189,13 @@ the next event's game clock time \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[208](../source/subtime.t.html#208)\]
 
-<div class="desc">
+
 
 The scaling factor to use once we have passed the last ClockEvent; this
 is the number of minutes per hundred turns once there are no more
 ClockEvents. \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="turnLastCommitted"></span>
 
@@ -203,7 +203,7 @@ ClockEvents. \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[435](../source/subtime.t.html#435)\]
 
-<div class="desc">
+
 
 The turn counter (Schedulable.gameClockTime) on the last turn where
 committed to a specific time. Each time we check the time, we look here
@@ -211,15 +211,15 @@ to see how many turns have elapsed since the last time check, and we use
 this to choose a plausible scale for the wall-clock time change.
 \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkTime"></span>
 
@@ -227,7 +227,7 @@ this to choose a plausible scale for the wall-clock time change.
 
 [subtime.t](../file/subtime.t.html)\[[49](../source/subtime.t.html#49)\]
 
-<div class="desc">
+
 
 Get the current game-clock time. This returns date/time as a Date
 object.
@@ -247,7 +247,7 @@ unless they ask, or there's some other good reason.
 If you want a string-formatted version of the time (as in '9:05pm'), you
 can call checkTimeFmt().
 
-</div>
+
 
 <span id="checkTimeFmt"></span>
 
@@ -255,7 +255,7 @@ can call checkTimeFmt().
 
 [subtime.t](../file/subtime.t.html)\[[220](../source/subtime.t.html#220)\]
 
-<div class="desc">
+
 
 Get the current game-clock time, formatted into a string with the given
 format mask - see formatTime() for details on how to write a mask
@@ -266,7 +266,7 @@ routine commits us to a particular time, so you should call this routine
 only when you're actually ready to display a time to the player.
 \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="eventDate"></span>
 
@@ -274,11 +274,11 @@ only when you're actually ready to display a time to the player.
 
 [subtime.t](../file/subtime.t.html)\[[447](../source/subtime.t.html#447)\]
 
-<div class="desc">
+
 
 Return the date of t as a Date object. \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="eventReached"></span>
 
@@ -286,14 +286,14 @@ Return the date of t as a Date object. \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[326](../source/subtime.t.html#326)\]
 
-<div class="desc">
+
 
 Receive notification from a clock event that an event has just occurred.
 (This isn't normally called directly from game code; instead, game code
 should usually call the ClockEvent object's eventReached() method.)
 \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -301,11 +301,11 @@ should usually call the ClockEvent object's eventReached() method.)
 
 [subtime.t](../file/subtime.t.html)\[[247](../source/subtime.t.html#247)\]
 
-<div class="desc">
+
 
 pre-initialize the clockManager \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="formatTime"></span>
 
@@ -313,7 +313,7 @@ pre-initialize the clockManager \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[233](../source/subtime.t.html#233)\]
 
-<div class="desc">
+
 
 Get a formatted version of the given wall-clock time. The time (t)
 parameter can be expressed as a list, in the same format as
@@ -325,7 +325,7 @@ The format string (fmt) is specified in the same way as for the
 formatDate() method of the Date class (for which see the TADS 3 System
 Manual). \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="getClockTime"></span>
 
@@ -333,12 +333,12 @@ Manual). \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[479](../source/subtime.t.html#479)\]
 
-<div class="desc">
+
 
 Get the time in our \[d, h, m, s\] format from a Date object. \[SUBTIME
 EXTENSION\]
 
-</div>
+
 
 <span id="lastEventDate"></span>
 
@@ -346,12 +346,12 @@ EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[473](../source/subtime.t.html#473)\]
 
-<div class="desc">
+
 
 Retutn the date and time of the last event as a Date object. \[SUBTIME
 EXTENSION\]
 
-</div>
+
 
 <span id="reachCheck"></span>
 
@@ -359,13 +359,13 @@ EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[384](../source/subtime.t.html#384)\]
 
-<div class="desc">
+
 
 Check each turn whether another ClockEvent has been reached. Note that
 this requires the events.t module to be present to work. \[SUBTIME
 EXTENSION\]
 
-</div>
+
 
 <span id="slowDownTime"></span>
 
@@ -373,14 +373,14 @@ EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[170](../source/subtime.t.html#170)\]
 
-<div class="desc">
+
 
 Compute the time remaining until the next event at which we start to
 slow down the clock. By default we make this half the time from the
 previous event to the next. Game code can override if some other value
 is preferred. \[SUBTIME EXTENSION\]
 
-</div>
+
 
 <span id="syncTime"></span>
 
@@ -388,16 +388,16 @@ is preferred. \[SUBTIME EXTENSION\]
 
 [subtime.t](../file/subtime.t.html)\[[497](../source/subtime.t.html#497)\]
 
-<div class="desc">
+
 
 Synchronize the timeManager's time with our time, if it exists.
 \[SUBTIME EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

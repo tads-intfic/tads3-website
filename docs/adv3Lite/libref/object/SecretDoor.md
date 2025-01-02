@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SecretDoor is a Door that doesn't appear to be a door when it's
 closed, and which must be opened by some external mechanism (other than
@@ -34,15 +34,15 @@ by an OPEN command)
 
 `class `**`SecretDoor`**` :   `[`Door`](../object/Door.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SecretDoor`**  
 [`Door`](../object/Door.html)  
@@ -57,27 +57,27 @@ by an OPEN command)
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canGoThroughMe`](#canGoThroughMe)[`isConnectorApparent`](#isConnectorApparent)[`isOpenable`](#isOpenable)[`vocabWhenClosed`](#vocabWhenClosed)[`vocabWhenOpen`](#vocabWhenOpen)
 
@@ -102,11 +102,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`makeOpen`](#makeOpen)[`preinitThing`](#preinitThing)
 
@@ -133,11 +133,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canGoThroughMe"></span>
 
@@ -145,11 +145,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[881](../source/extras.t.html#881)\]
 
-<div class="desc">
+
 
 You can only go through a SecretDoor when it's open
 
-</div>
+
 
 <span id="isConnectorApparent"></span>
 
@@ -157,11 +157,11 @@ You can only go through a SecretDoor when it's open
 
 [extras.t](../file/extras.t.html)\[[884](../source/extras.t.html#884)\]
 
-<div class="desc">
+
 
 A SecretDoor only functions as a TravelConnector when it's open
 
-</div>
+
 
 <span id="isOpenable"></span>
 
@@ -169,13 +169,13 @@ A SecretDoor only functions as a TravelConnector when it's open
 
 [extras.t](../file/extras.t.html)\[[891](../source/extras.t.html#891)\]
 
-<div class="desc">
+
 
 We can't use an OPEN command to open a SecretDoor, but by default we'll
 allow a CLOSE command to close it. To disallow this override isOpenable
 to nil
 
-</div>
+
 
 <span id="vocabWhenClosed"></span>
 
@@ -183,7 +183,7 @@ to nil
 
 [extras.t](../file/extras.t.html)\[[912](../source/extras.t.html#912)\]
 
-<div class="desc">
+
 
 The vocab string (including the name) that applies to this SecretDoor
 when it's closed. If the SecretDoor starts out closed there's no need to
@@ -194,7 +194,7 @@ To define a SecretDoor that's effectively invisible when closed, give it
 a vocab property comprising an empty string (i.e. '', not nil); this
 will make it impossible for the player to refer to it when it's closed.
 
-</div>
+
 
 <span id="vocabWhenOpen"></span>
 
@@ -202,7 +202,7 @@ will make it impossible for the player to refer to it when it's closed.
 
 [extras.t](../file/extras.t.html)\[[900](../source/extras.t.html#900)\]
 
-<div class="desc">
+
 
 The vocab string (including the name) that applies to this SecretDoor
 when it's open. This might be somewhat different from that which applies
@@ -210,15 +210,15 @@ when it's closed. For example, opening a bookcase might turn it into a
 passage or an opening. If you don't want to the vocab to change when
 this SecretDoor is opened and closed, leave vocabWhenOpen as nil.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="makeOpen"></span>
 
@@ -226,11 +226,11 @@ this SecretDoor is opened and closed, leave vocabWhenOpen as nil.
 
 [extras.t](../file/extras.t.html)\[[936](../source/extras.t.html#936)\]
 
-<div class="desc">
+
 
 Carry out opening or closing a SecretDoor
 
-</div>
+
 
 <span id="preinitThing"></span>
 
@@ -238,15 +238,15 @@ Carry out opening or closing a SecretDoor
 
 [extras.t](../file/extras.t.html)\[[915](../source/extras.t.html#915)\]
 
-<div class="desc">
+
 
 Preinitialize a SecretDoor
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

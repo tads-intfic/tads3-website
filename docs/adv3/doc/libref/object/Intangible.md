@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Intangible - this is an object that represents something that can be
 sensed but which has no tangible existence, such as a ray of light, a
@@ -34,15 +34,15 @@ sound, or an odor.
 
 `class `**`Intangible`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Intangible`**  
 [`Thing`](../object/Thing.html)  
@@ -50,11 +50,11 @@ sound, or an odor.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Intangible`**  
 [`DistanceConnector`](../object/DistanceConnector.html)  
@@ -66,19 +66,19 @@ sound, or an odor.
 [`Vaporous`](../object/Vaporous.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isListed`](#isListed)[`isListedInContents`](#isListedInContents)[`isListedInInventory`](#isListedInInventory)[`sightPresence`](#sightPresence)[`smellPresence`](#smellPresence)[`soundPresence`](#soundPresence)[`touchPresence`](#touchPresence)
 
@@ -90,11 +90,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Default)`](#dobjFor(Default))[`hideFromAll`](#hideFromAll)[`hideFromDefault`](#hideFromDefault)[`iobjFor(Default)`](#iobjFor(Default))
 
@@ -106,11 +106,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -118,11 +118,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[52](../source/objects.t.html#52)\]
 
-<div class="desc">
+
 
 intangibles aren't included in regular room/inventory/contents lists
 
-</div>
+
 
 <span id="isListedInContents"></span>
 
@@ -130,11 +130,11 @@ intangibles aren't included in regular room/inventory/contents lists
 
 [objects.t](../file/objects.t.html)\[[54](../source/objects.t.html#54)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isListedInInventory"></span>
 
@@ -142,11 +142,11 @@ intangibles aren't included in regular room/inventory/contents lists
 
 [objects.t](../file/objects.t.html)\[[53](../source/objects.t.html#53)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sightPresence"></span>
 
@@ -154,13 +154,13 @@ intangibles aren't included in regular room/inventory/contents lists
 
 [objects.t](../file/objects.t.html)\[[46](../source/objects.t.html#46)\]
 
-<div class="desc">
+
 
 The base intangible object has no presence in any sense, including
 sight. Subclasses should override these as appropriate for the senses in
 which the object can be sensed.
 
-</div>
+
 
 <span id="smellPresence"></span>
 
@@ -168,11 +168,11 @@ which the object can be sensed.
 
 [objects.t](../file/objects.t.html)\[[48](../source/objects.t.html#48)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="soundPresence"></span>
 
@@ -180,11 +180,11 @@ which the object can be sensed.
 
 [objects.t](../file/objects.t.html)\[[47](../source/objects.t.html#47)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="touchPresence"></span>
 
@@ -192,19 +192,19 @@ which the object can be sensed.
 
 [objects.t](../file/objects.t.html)\[[49](../source/objects.t.html#49)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Default)"></span>
 
@@ -212,7 +212,7 @@ which the object can be sensed.
 
 [objects.t](../file/objects.t.html)\[[72](../source/objects.t.html#72)\]
 
-<div class="desc">
+
 
 Essentially all verbs are meaningless on intangibles. Each subclass
 should re-enable verbs that are meaningful for that specific type of
@@ -223,7 +223,7 @@ Note that the verbs we handle via the Default handlers have no
 preconditions; since these verbs don't do anything anyway, there's no
 need to apply any preconditions to them.
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -231,11 +231,11 @@ need to apply any preconditions to them.
 
 [objects.t](../file/objects.t.html)\[[57](../source/objects.t.html#57)\]
 
-<div class="desc">
+
 
 hide intangibles from 'all' for all actions by default
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -243,11 +243,11 @@ hide intangibles from 'all' for all actions by default
 
 [objects.t](../file/objects.t.html)\[[60](../source/objects.t.html#60)\]
 
-<div class="desc">
+
 
 don't hide from defaults, though
 
-</div>
+
 
 <span id="iobjFor(Default)"></span>
 
@@ -255,15 +255,15 @@ don't hide from defaults, though
 
 [objects.t](../file/objects.t.html)\[[77](../source/objects.t.html#77)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

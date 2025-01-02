@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Decoration. This is an object that is included for scenery value but
 which has no other purpose, and which the author wants to make clear is
@@ -41,15 +41,15 @@ to specific verbs simply by defining an action handler for those verbs.
 
 `class `**`Decoration`**` :   `[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Decoration`**  
 [`Fixture`](../object/Fixture.html)  
@@ -59,29 +59,29 @@ to specific verbs simply by defining an action handler for those verbs.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Decoration`**  
 [`Unthing`](../object/Unthing.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`notImportantMsg`](#notImportantMsg)
 
@@ -99,11 +99,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Default)`](#dobjFor(Default))[`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(ListenTo)`](#dobjFor(ListenTo))[`dobjFor(LookIn)`](#dobjFor(LookIn))[`dobjFor(Read)`](#dobjFor(Read))[`dobjFor(Search)`](#dobjFor(Search))[`dobjFor(Smell)`](#dobjFor(Smell))[`hideFromAll`](#hideFromAll)[`hideFromDefault`](#hideFromDefault)[`iobjFor(Default)`](#iobjFor(Default))[`lookInDesc`](#lookInDesc)
 
@@ -121,11 +121,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="notImportantMsg"></span>
 
@@ -133,19 +133,19 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[2096](../source/objects.t.html#2096)\]
 
-<div class="desc">
+
 
 use the standard not-important message for decorations
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Default)"></span>
 
@@ -153,12 +153,12 @@ use the standard not-important message for decorations
 
 [objects.t](../file/objects.t.html)\[[2086](../source/objects.t.html#2086)\]
 
-<div class="desc">
+
 
 use the default response "this object isn't important" when we're used
 as either a direct or indirect object
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -166,7 +166,7 @@ as either a direct or indirect object
 
 [objects.t](../file/objects.t.html)\[[2106](../source/objects.t.html#2106)\]
 
-<div class="desc">
+
 
 The catch-all Default verifier makes all actions illogical, but we can
 override this to allow specific actions by explicitly defining them here
@@ -175,7 +175,7 @@ decorations a reduced logical rank, so that any in-scope non-decoration
 object with similar vocabulary will be matched for an Examine command
 ahead of a decoration.
 
-</div>
+
 
 <span id="dobjFor(ListenTo)"></span>
 
@@ -183,12 +183,12 @@ ahead of a decoration.
 
 [objects.t](../file/objects.t.html)\[[2113](../source/objects.t.html#2113)\]
 
-<div class="desc">
+
 
 likewise for LISTEN TO and SMELL, which are the auditory and olfactory
 equivalents of EXAMINE
 
-</div>
+
 
 <span id="dobjFor(LookIn)"></span>
 
@@ -196,11 +196,11 @@ equivalents of EXAMINE
 
 [objects.t](../file/objects.t.html)\[[2123](../source/objects.t.html#2123)\]
 
-<div class="desc">
+
 
 likewise for LOOK IN and SEARCH
 
-</div>
+
 
 <span id="dobjFor(Read)"></span>
 
@@ -208,11 +208,11 @@ likewise for LOOK IN and SEARCH
 
 [objects.t](../file/objects.t.html)\[[2119](../source/objects.t.html#2119)\]
 
-<div class="desc">
+
 
 likewise for READ
 
-</div>
+
 
 <span id="dobjFor(Search)"></span>
 
@@ -220,11 +220,11 @@ likewise for READ
 
 [objects.t](../file/objects.t.html)\[[2125](../source/objects.t.html#2125)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Smell)"></span>
 
@@ -232,11 +232,11 @@ likewise for READ
 
 [objects.t](../file/objects.t.html)\[[2115](../source/objects.t.html#2115)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -244,11 +244,11 @@ likewise for READ
 
 [objects.t](../file/objects.t.html)\[[2077](../source/objects.t.html#2077)\]
 
-<div class="desc">
+
 
 don't include decorations in 'all'
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -256,11 +256,11 @@ don't include decorations in 'all'
 
 [objects.t](../file/objects.t.html)\[[2080](../source/objects.t.html#2080)\]
 
-<div class="desc">
+
 
 don't hide from defaults
 
-</div>
+
 
 <span id="iobjFor(Default)"></span>
 
@@ -268,11 +268,11 @@ don't hide from defaults
 
 [objects.t](../file/objects.t.html)\[[2090](../source/objects.t.html#2090)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lookInDesc"></span>
 
@@ -280,15 +280,15 @@ don't hide from defaults
 
 [objects.t](../file/objects.t.html)\[[2129](../source/objects.t.html#2129)\]
 
-<div class="desc">
+
 
 the default LOOK IN response is our standard "that's not important"
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

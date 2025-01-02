@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 TADS 3 Library - point of view
 
@@ -33,42 +33,42 @@ viewer can't see an object because of darkness or an obscuring layer of
 material, messages about the object's visual appearance should not be
 generated.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`senseContext`](../object/senseContext.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`callFromPOV`](#callFromPOV)[`callWithSenseContext`](#callWithSenseContext)[`clearPOV`](#clearPOV)[`getPOV`](#getPOV)[`getPOVActor`](#getPOVActor)[`getPOVActorDefault`](#getPOVActorDefault)[`getPOVDefault`](#getPOVDefault)[`popPOV`](#popPOV)[`pushPOV`](#pushPOV)[`setPOV`](#setPOV)[`setRootPOV`](#setRootPOV)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="callFromPOV"></span>
 
@@ -76,13 +76,13 @@ generated.
 
 [pov.t](../file/pov.t.html)\[[328](../source/pov.t.html#328)\]
 
-<div class="desc">
+
 
 Call a function from a point of view. We'll set the new point of view,
 call the function with the given arguments, then restore the original
 point of view.
 
-</div>
+
 
 <span id="callWithSenseContext"></span>
 
@@ -90,7 +90,7 @@ point of view.
 
 [pov.t](../file/pov.t.html)\[[56](../source/pov.t.html#56)\]
 
-<div class="desc">
+
 
 Call a function with a given sensory context.
 
@@ -119,7 +119,7 @@ of the callback, eliminating the effect of any enclosing context.
 However, we do restore the enclosing sense context before returning, so
 there is no lasting net effect on the global sense context.
 
-</div>
+
 
 <span id="clearPOV"></span>
 
@@ -127,11 +127,11 @@ there is no lasting net effect on the global sense context.
 
 [pov.t](../file/pov.t.html)\[[310](../source/pov.t.html#310)\]
 
-<div class="desc">
+
 
 Clear the point of view and all stacked elements
 
-</div>
+
 
 <span id="getPOV"></span>
 
@@ -139,7 +139,7 @@ Clear the point of view and all stacked elements
 
 [pov.t](../file/pov.t.html)\[[205](../source/pov.t.html#205)\]
 
-<div class="desc">
+
 
 Get the current point of view. In \*most\* cases, this is the same as
 the point-of-view actor: the actor is looking around with its own eyes,
@@ -151,7 +151,7 @@ be the camera in the remote room (not the TV - the point of view is
 intended to be the object that's physically absorbing the light rays or
 other sensory equivalents).
 
-</div>
+
 
 <span id="getPOVActor"></span>
 
@@ -159,13 +159,13 @@ other sensory equivalents).
 
 [pov.t](../file/pov.t.html)\[[189](../source/pov.t.html#189)\]
 
-<div class="desc">
+
 
 Get the current point-of-view actor - this is the actor who's performing
 the action (LOOK AROUND, EXAMINE, SMELL, etc) that's generating the
 current description.
 
-</div>
+
 
 <span id="getPOVActorDefault"></span>
 
@@ -173,11 +173,11 @@ current description.
 
 [pov.t](../file/pov.t.html)\[[211](../source/pov.t.html#211)\]
 
-<div class="desc">
+
 
 get the POV actor, returning the given default if there isn't one set
 
-</div>
+
 
 <span id="getPOVDefault"></span>
 
@@ -185,11 +185,11 @@ get the POV actor, returning the given default if there isn't one set
 
 [pov.t](../file/pov.t.html)\[[221](../source/pov.t.html#221)\]
 
-<div class="desc">
+
 
 get the POV, returning the given default if there isn't one set
 
-</div>
+
 
 <span id="popPOV"></span>
 
@@ -197,11 +197,11 @@ get the POV, returning the given default if there isn't one set
 
 [pov.t](../file/pov.t.html)\[[283](../source/pov.t.html#283)\]
 
-<div class="desc">
+
 
 Pop the most recent point of view pushed
 
-</div>
+
 
 <span id="pushPOV"></span>
 
@@ -209,11 +209,11 @@ Pop the most recent point of view pushed
 
 [pov.t](../file/pov.t.html)\[[270](../source/pov.t.html#270)\]
 
-<div class="desc">
+
 
 Push the current point of view
 
-</div>
+
 
 <span id="setPOV"></span>
 
@@ -221,11 +221,11 @@ Push the current point of view
 
 [pov.t](../file/pov.t.html)\[[233](../source/pov.t.html#233)\]
 
-<div class="desc">
+
 
 Change the point of view without altering the point-of-view stack
 
-</div>
+
 
 <span id="setRootPOV"></span>
 
@@ -233,17 +233,17 @@ Change the point of view without altering the point-of-view stack
 
 [pov.t](../file/pov.t.html)\[[245](../source/pov.t.html#245)\]
 
-<div class="desc">
+
 
 Set the root point of view. This doesn't affect the current point of
 view unless there is no current point of view; this merely sets the
 outermost default point of view.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

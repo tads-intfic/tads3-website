@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> AgendaItems  
@@ -15,7 +15,7 @@ layout: docs
     <a href="asktell.html" class="nav"><em>Next:</em> Basic Ask/Tell</a>
     </span>
 
-</div>
+
 
 
 
@@ -79,7 +79,7 @@ true (or a method that returns true) when the time is right for the
 AgendaItem to be invoked. In addition, AgendaItems should always be
 located directly in the Actor to which they relate. For example:
 
-`
+```
     guard: Actor 'burly guard; strong powerful; man; him' @doorway
         "He looks incredibly strong and powerful. "
     ;
@@ -96,7 +96,7 @@ located directly in the Actor to which they relate. For example:
              isDone = true;
         }
     ;
-`
+```
 
 Here we've defined an AgendaItem that will be invoked as soon as the
 guard can see the player character, but which will only be invoked once
@@ -194,15 +194,15 @@ agendaList. The delay is set by calling the DelayedAgendaItem's
 DelayedAgendaItem. This allows you to add a DelayedAgendaItem to the
 actor's agendaList and set the delay in a single statement, e.g.:
 
-`
+```
         bob.addToAgenda(someDelayedAgendaItem.setDelay(3));
-`
+```
 
 Note that the delay is enforced on the isReady property of the
 DelayedAgendaItem, so that if you want to enforce some other condition
 as well you need to *and* it with the inherited condition, e.g.:
 
-`
+```
     + guardReactionAgenda: DelayedAgendaItem
          isReady = inherited && canSee(guard, gPlayerChar)
          
@@ -213,7 +213,7 @@ as well you need to *and* it with the inherited condition, e.g.:
                as if to say, <q>Go now, while you still can!</q> ";
          }
     ;
-`
+```
 
   
 <span id="convagenda"></span>
@@ -231,7 +231,7 @@ Once again, if you need to define a further condition on the isReady
 property of a ConvAgendaItem you need to *and* it with the inherited
 handling, for example:
 
-`
+```
     + clerkPartyAgenda: ConvAgendaItem
         isReady = inherited && gRevealed('office-party')
 
@@ -243,12 +243,12 @@ handling, for example:
             wasn't <i>that</i> wild. ";
         }
     ;
-`
+```
 
 Note that if you want something to behave as both a DelayedAgendaItem
 and a ConvAgendaItem you can just define it with both classes,e.g.:
 
-`
+```
     + clerkJacketAgenda: DelayedAgendaItem, ConvAgendaItem
        invokeItem()
        {
@@ -263,7 +263,7 @@ and a ConvAgendaItem you can just define it with both classes,e.g.:
      /* Somewhere else in the code */
      
         clerk.addToAgenda(clerkJacketAgenda.setDelay(10));
-`
+```
 
 <span id="followagenda"></span>
 
@@ -280,7 +280,7 @@ to lead the player character, and an **arrivingDesc** method to describe
 the leading actor arriving in a new destination having just led the
 player character there; for example:
 
-`
+```
         
     + FollowAgendaItem
         initiallyActive = true
@@ -310,7 +310,7 @@ player character there; for example:
             <<nextDirection.departureName>>. ";
         }
     ;
-`
+```
 
 <span id="followprops"></span>
 
@@ -394,7 +394,7 @@ the current ActorState.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -403,4 +403,4 @@ the current ActorState.
     <a href="asktell.html" class="nav"><em>Next:</em> Basic Ask/Tell</a>
     </span>
 
-</div>
+

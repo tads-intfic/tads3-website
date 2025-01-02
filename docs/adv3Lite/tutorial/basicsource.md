@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
@@ -17,7 +17,7 @@ game</a>    
 <a href="understanding.html" class="nav"><em>Next:</em> Understanding the
 Source File</a>     </span>
 
-</div>
+
 
 
 
@@ -35,7 +35,7 @@ you're not using Workbench, navigate to your Heidi directory and open
 start.t in your text editor. You should now see a file that looks like
 this:
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -79,7 +79,7 @@ this:
         person = 2   
         contType = Carrier    
     ;
-`
+```
 
 Don't worry too much about what all that means for the moment, we'll be
 explaining it all in due course. A couple of points should be emphasized
@@ -100,7 +100,7 @@ source file a little less generic and a little more relevant to the game
 we're about to write. Edit your copy of the file so it reads as it does
 below (to help you with this the main changes are shown in bold):
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -146,7 +146,7 @@ below (to help you with this the main changes are shown in bold):
         person = 2   
         contType = Carrier    
     ;
-`
+```
 
 If you like, you can also change the byline, htmlByline and authorEmail
 fields to reflect your own name and email address (though for this
@@ -157,7 +157,7 @@ have it (in Workbench, just click the 'Go' button at the left-hand end
 of the toolbar; otherwise follow the instructions at the end of the last
 chapter). The interpreter should then display something like this:
 
-<div class="cmdline">
+
 
     In front of a Cottage
     You stand outside a cottage. The forest stretches east.
@@ -176,11 +176,11 @@ result in a refusal to act. We'll be livening things up a bit soon, but
 first we should pause and reflect what we've got in our source file so
 far actually means; that's what we'll do next.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -191,4 +191,4 @@ game</a>    
 <a href="understanding.html" class="nav"><em>Next:</em> Understanding the
 Source File</a>     </span>
 
-</div>
+

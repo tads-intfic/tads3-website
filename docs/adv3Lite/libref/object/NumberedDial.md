@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Numbered Dial is a Dial that can be turned to any integer in a defined
 range of numbers.
 
 `class `**`NumberedDial`**` :   `[`Dial`](../object/Dial.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NumberedDial`**  
 [`Dial`](../object/Dial.html)  
@@ -55,27 +55,27 @@ range of numbers.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`allowDecimal`](#allowDecimal)  [`maxSetting`](#maxSetting)  [`minSetting`](#minSetting)  `
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`canonicalizeSetting`](#canonicalizeSetting)  [`isValidSetting`](#isValidSetting)  `
 
@@ -131,11 +131,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowDecimal"></span>
 
@@ -143,12 +143,12 @@ Inherited from `LMentionable` :
 
 [gadget.t](../file/gadget.t.html)\[[281](../source/gadget.t.html#281)\]
 
-<div class="desc">
+
 
 Val is valid if it lies between our minimum and maximum settings
 (inclusively)
 
-</div>
+
 
 <span id="maxSetting"></span>
 
@@ -156,11 +156,11 @@ Val is valid if it lies between our minimum and maximum settings
 
 [gadget.t](../file/gadget.t.html)\[[236](../source/gadget.t.html#236)\]
 
-<div class="desc">
+
 
 The highest number to which this dial can be turned.
 
-</div>
+
 
 <span id="minSetting"></span>
 
@@ -168,19 +168,19 @@ The highest number to which this dial can be turned.
 
 [gadget.t](../file/gadget.t.html)\[[233](../source/gadget.t.html#233)\]
 
-<div class="desc">
+
 
 The lowest number to which this dial can be turned.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canonicalizeSetting"></span>
 
@@ -188,13 +188,13 @@ The lowest number to which this dial can be turned.
 
 [gadget.t](../file/gadget.t.html)\[[243](../source/gadget.t.html#243)\]
 
-<div class="desc">
+
 
 If the spelledToInt() function is defined then allow the dial to be
 turned to a spelt-out number as well as a number given in digits, e.g.
 TURN DIAL TO FORTY-THREE as well as TURN DIAL TO 43.
 
-</div>
+
 
 <span id="isValidSetting"></span>
 
@@ -202,15 +202,15 @@ TURN DIAL TO FORTY-THREE as well as TURN DIAL TO 43.
 
 [gadget.t](../file/gadget.t.html)\[[263](../source/gadget.t.html#263)\]
 
-<div class="desc">
+
 
 Is val a valid setting for this dial?
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

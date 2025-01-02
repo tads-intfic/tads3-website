@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Using the Banner
@@ -16,7 +16,7 @@ API
     <a href="advtop.html" class="nav"><em>Next:</em> Advanced Topics</a>
     </span>
 
-</div>
+
 
 
 
@@ -1140,7 +1140,7 @@ methods.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1150,4 +1150,4 @@ API
     <a href="advtop.html" class="nav"><em>Next:</em> Advanced Topics</a>
     </span>
 
-</div>
+

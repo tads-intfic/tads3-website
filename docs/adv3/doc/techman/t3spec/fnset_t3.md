@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -17,7 +17,7 @@ t3vm Function Set
 <a href="metalist.html" class="nav"><em>Next:</em> Metaclass Identifier
 List</a>     </span>
 
-</div>
+
 
 
 
@@ -232,18 +232,18 @@ Allocates and returns a new, unused property identifier. Note that the
 property identifier allocation must be integrated with the "undo"
 mechanism and the state save/restore mechanism.
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -254,4 +254,4 @@ t3vm Function Set
 <a href="metalist.html" class="nav"><em>Next:</em> Metaclass Identifier
 List</a>     </span>
 
-</div>
+

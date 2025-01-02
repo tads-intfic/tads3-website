@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`ShowToImplicit`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ShowToImplicit`**  
 [`TAction`](../object/TAction.html)  
@@ -44,11 +44,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`showReport`](#showReport)[`summaryProp`](#summaryProp)
 
@@ -64,11 +64,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execGroup`](#execGroup)
 
@@ -86,11 +86,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="showReport"></span>
 
@@ -98,11 +98,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2098](../source/actions.t.html#2098)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="summaryProp"></span>
 
@@ -110,22 +110,22 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2106](../source/actions.t.html#2106)\]
 
-<div class="desc">
+
 
 The summaryProp can be a propertyPointer to a method on the Actor being
 conversed with that's called at once a whole set of objects has been
 given. It will normally be set by a gAction.summaryProp = &prop
 statement in a ShowTopic.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execGroup"></span>
 
@@ -133,16 +133,16 @@ statement in a ShowTopic.
 
 [actions.t](../file/actions.t.html)\[[2112](../source/actions.t.html#2112)\]
 
-<div class="desc">
+
 
 Reset the showReport to nil for the whole group of objects this action
 may act on.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Garbage Collection
@@ -17,7 +17,7 @@ Creation</a>    
 <a href="expr.html" class="nav"><em>Next:</em> Expressions and
 Operators</a>     </span>
 
-</div>
+
 
 
 
@@ -182,7 +182,7 @@ makes no difference to the program.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -193,4 +193,4 @@ Creation</a>    
 <a href="expr.html" class="nav"><em>Next:</em> Expressions and
 Operators</a>     </span>
 
-</div>
+

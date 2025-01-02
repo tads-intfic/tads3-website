@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A hint menu. This same class can be used for the top-level hints menu
 and for sub-menus within the hints menu.
@@ -55,15 +55,15 @@ easier to navigate the large number of topics.
 
 `class `**`HintMenu`**` :   `[`MenuItem`](../object/MenuItem.html)[`HintMenuObject`](../object/HintMenuObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`HintMenu`**  
 [`MenuItem`](../object/MenuItem.html)  
@@ -73,29 +73,29 @@ easier to navigate the large number of topics.
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`HintMenu`**  
 [`TopHintMenu`](../object/TopHintMenu.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allContents`](#allContents)[`isActiveInMenu`](#isActiveInMenu)[`title`](#title)
 
@@ -110,11 +110,11 @@ Inherited from `HintMenuObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addToContents`](#addToContents)[`initializeContents`](#initializeContents)[`updateContents`](#updateContents)
 
@@ -129,11 +129,11 @@ Inherited from `HintMenuObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allContents"></span>
 
@@ -141,13 +141,13 @@ Inherited from `HintMenuObject` :
 
 [hintsys.t](../file/hintsys.t.html)\[[485](../source/hintsys.t.html#485)\]
 
-<div class="desc">
+
 
 our list of all of our sub-items (some of which may not be active, in
 which case they'll appear in this list but not in our 'contents' list,
 which contains only active contents)
 
-</div>
+
 
 <span id="isActiveInMenu"></span>
 
@@ -155,11 +155,11 @@ which contains only active contents)
 
 [hintsys.t](../file/hintsys.t.html)\[[460](../source/hintsys.t.html#460)\]
 
-<div class="desc">
+
 
 we're active in a menu if we have any active contents
 
-</div>
+
 
 <span id="title"></span>
 
@@ -167,19 +167,19 @@ we're active in a menu if we have any active contents
 
 [hintsys.t](../file/hintsys.t.html)\[[432](../source/hintsys.t.html#432)\]
 
-<div class="desc">
+
 
 the menu's title
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addToContents"></span>
 
@@ -187,11 +187,11 @@ the menu's title
 
 [hintsys.t](../file/hintsys.t.html)\[[463](../source/hintsys.t.html#463)\]
 
-<div class="desc">
+
 
 add a sub-item to our contents
 
-</div>
+
 
 <span id="initializeContents"></span>
 
@@ -199,11 +199,11 @@ add a sub-item to our contents
 
 [hintsys.t](../file/hintsys.t.html)\[[473](../source/hintsys.t.html#473)\]
 
-<div class="desc">
+
 
 initialize our contents list
 
-</div>
+
 
 <span id="updateContents"></span>
 
@@ -211,15 +211,15 @@ initialize our contents list
 
 [hintsys.t](../file/hintsys.t.html)\[[435](../source/hintsys.t.html#435)\]
 
-<div class="desc">
+
 
 update our contents
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

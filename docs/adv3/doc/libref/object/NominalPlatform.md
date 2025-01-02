@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "nominal platform" is a named place where NPC's can stand. This class
 makes it easy to arrange for an NPC to be described as standing in a
@@ -52,15 +52,15 @@ roomListActorPosture, and actorInGroupPrefix/Suffix,
 
 `class `**`NominalPlatform`**` :   `[`Fixture`](../object/Fixture.html)[`Platform`](../object/Platform.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NominalPlatform`**  
 [`Fixture`](../object/Fixture.html)  
@@ -84,27 +84,27 @@ roomListActorPosture, and actorInGroupPrefix/Suffix,
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`effectiveFollowLocation`](#effectiveFollowLocation)
 
@@ -151,11 +151,11 @@ Inherited from `BulkLimiter` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(LieOn)`](#dobjFor(LieOn))[`dobjFor(SitOn)`](#dobjFor(SitOn))[`dobjFor(StandOn)`](#dobjFor(StandOn))[`hideFromAll`](#hideFromAll)[`hideFromDefault`](#hideFromDefault)
 
@@ -202,11 +202,11 @@ Inherited from `BulkLimiter` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="effectiveFollowLocation"></span>
 
@@ -214,21 +214,21 @@ Inherited from `BulkLimiter` :
 
 [travel.t](../file/travel.t.html)\[[6741](../source/travel.t.html#6741)\]
 
-<div class="desc">
+
 
 nominal platforms are internal objects only, not part of the visible
 game world structure, so treat them as equivalent to their location for
 FOLLOW purposes
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(LieOn)"></span>
 
@@ -236,11 +236,11 @@ FOLLOW purposes
 
 [travel.t](../file/travel.t.html)\[[6730](../source/travel.t.html#6730)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(SitOn)"></span>
 
@@ -248,11 +248,11 @@ FOLLOW purposes
 
 [travel.t](../file/travel.t.html)\[[6729](../source/travel.t.html#6729)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(StandOn)"></span>
 
@@ -260,11 +260,11 @@ FOLLOW purposes
 
 [travel.t](../file/travel.t.html)\[[6728](../source/travel.t.html#6728)\]
 
-<div class="desc">
+
 
 don't let anyone stand/sit/lie here via a command
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -272,11 +272,11 @@ don't let anyone stand/sit/lie here via a command
 
 [travel.t](../file/travel.t.html)\[[6733](../source/travel.t.html#6733)\]
 
-<div class="desc">
+
 
 ignore me for 'all' and object defaulting
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -284,15 +284,15 @@ ignore me for 'all' and object defaulting
 
 [travel.t](../file/travel.t.html)\[[6734](../source/travel.t.html#6734)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

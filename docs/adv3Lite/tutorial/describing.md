@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Describing the game  
@@ -16,7 +16,7 @@ layout: docs
 <a href="airmap1.html" class="nav"><em>Next:</em> Starting the Map</a>
     </span>
 
-</div>
+
 
 
 
@@ -167,7 +167,7 @@ of the adv3Lite library.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -177,4 +177,4 @@ of the adv3Lite library.
 <a href="airmap1.html" class="nav"><em>Next:</em> Starting the Map</a>
     </span>
 
-</div>
+

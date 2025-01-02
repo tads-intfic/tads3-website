@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 CoreNounPhraseProduction is a Production subclass for the "core" noun
 phrase grammar for noun phrases with object vocabulary. This is the part
@@ -43,45 +43,45 @@ object vocabulary words (e.g., pronouns, ALL).
 
 `class `**`CoreNounPhraseProduction`**` :   `[`Production`](../object/Production.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CoreNounPhraseProduction`**  
 [`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`CoreNounPhraseProduction`**  
 [`nounPhrase(main)`](../object/nounPhrase(main).html)  
 [`pluralPhrase(main)`](../object/pluralPhrase(main).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -90,11 +90,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`build`](#build)
 
@@ -103,19 +103,19 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="build"></span>
 
@@ -123,15 +123,15 @@ Inherited from `Production` :
 
 [parser.t](../file/parser.t.html)\[[4162](../source/parser.t.html#4162)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 a special rule for THROW DOWN \<dobj\>
 
 `VerbRule(ThrowDirDown)      `*`// original source text`*  
 `grammar `<span class="gramalt">[`predicate`](../object/predicate.html)`(ThrowDirDown)`</span>` :   `[`ThrowDirAction`](../object/ThrowDirAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`predicate(ThrowDirDown)`**  
 [`ThrowDirAction`](../object/ThrowDirAction.html)  
@@ -47,11 +47,11 @@ a special rule for THROW DOWN \<dobj\>
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`verbPhrase`](#verbPhrase)
 
@@ -71,11 +71,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getDirection`](#getDirection)
 
@@ -95,11 +95,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -107,19 +107,19 @@ Inherited from `Resolver` :
 
 [en_us.t](../file/en_us.t.html)\[[9691](../source/en_us.t.html#9691)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getDirection"></span>
 
@@ -127,15 +127,15 @@ Inherited from `Resolver` :
 
 [en_us.t](../file/en_us.t.html)\[[9694](../source/en_us.t.html#9694)\]
 
-<div class="desc">
+
 
 the direction is fixed as 'down' for this phrasing
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The root object class. All objects descend from this class.
 
@@ -37,24 +37,24 @@ Modify the basic Object class to provide a to-symbol mapping
 
 `intrinsic class `**`Object`**` : `
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Object`**  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Object`**  
 [`BigNumber`](../object/BigNumber1.html)  
@@ -79,47 +79,47 @@ Modify the basic Object class to provide a to-symbol mapping
 [`TadsObject`](../object/TadsObject.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getPropList`](#getPropList)[`getPropParams`](#getPropParams)[`getSuperclassList`](#getSuperclassList)[`isClass`](#isClass)[`isTransient`](#isTransient)[`ofKind`](#ofKind)[`propDefined`](#propDefined)[`propInherited`](#propInherited)[`propType`](#propType)[`valToSymbol`](#valToSymbol)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getPropList"></span>
 
@@ -127,13 +127,13 @@ Modify the basic Object class to provide a to-symbol mapping
 
 [systype.h](../file/systype.h.html)\[[61](../source/systype.h.html#61)\]
 
-<div class="desc">
+
 
 Get a list of my directly-defined properties. When called on intrinsic
 class objects, this returns a list of properties defined for instances
 of the class, as well as static properties of the class.
 
-</div>
+
 
 <span id="getPropParams"></span>
 
@@ -141,7 +141,7 @@ of the class, as well as static properties of the class.
 
 [systype.h](../file/systype.h.html)\[[71](../source/systype.h.html#71)\]
 
-<div class="desc">
+
 
 get parameter list information for the given method - returns a list:
 \[minimumArgc, optionalArgc, varargs\], where minimumArgc is the minimum
@@ -149,7 +149,7 @@ number of arguments, optionalArgc is the number of additional optional
 arguments, and varargs is true if the function takes a varying number of
 arguments greater than or equal to the minimum, nil if not.
 
-</div>
+
 
 <span id="getSuperclassList"></span>
 
@@ -157,11 +157,11 @@ arguments greater than or equal to the minimum, nil if not.
 
 [systype.h](../file/systype.h.html)\[[47](../source/systype.h.html#47)\]
 
-<div class="desc">
+
 
 get the list of direct superclasses of this object
 
-</div>
+
 
 <span id="isClass"></span>
 
@@ -169,12 +169,12 @@ get the list of direct superclasses of this object
 
 [systype.h](../file/systype.h.html)\[[77](../source/systype.h.html#77)\]
 
-<div class="desc">
+
 
 determine if I'm a "class" object - returns true if the object was
 defined with the "class" keyword, nil otherwise
 
-</div>
+
 
 <span id="isTransient"></span>
 
@@ -182,11 +182,11 @@ defined with the "class" keyword, nil otherwise
 
 [systype.h](../file/systype.h.html)\[[88](../source/systype.h.html#88)\]
 
-<div class="desc">
+
 
 determine if this instance is transient
 
-</div>
+
 
 <span id="ofKind"></span>
 
@@ -194,12 +194,12 @@ determine if this instance is transient
 
 [systype.h](../file/systype.h.html)\[[44](../source/systype.h.html#44)\]
 
-<div class="desc">
+
 
 Determine if I'm an instance or subclass of the given class 'cls'. Note
 that x.ofKind(x) returns true - an object is of its own kind.
 
-</div>
+
 
 <span id="propDefined"></span>
 
@@ -207,11 +207,11 @@ that x.ofKind(x) returns true - an object is of its own kind.
 
 [systype.h](../file/systype.h.html)\[[50](../source/systype.h.html#50)\]
 
-<div class="desc">
+
 
 determine if a property is defined or inherited by this object
 
-</div>
+
 
 <span id="propInherited"></span>
 
@@ -219,14 +219,14 @@ determine if a property is defined or inherited by this object
 
 [systype.h](../file/systype.h.html)\[[85](../source/systype.h.html#85)\]
 
-<div class="desc">
+
 
 Determine if a property is inherited further from the given object.
 definingObj is usually the value of the 'definingobj' pseudo-variable,
 and origTargetObj is usually the value of the 'targetobj'
 pseudo-variable.
 
-</div>
+
 
 <span id="propType"></span>
 
@@ -234,11 +234,11 @@ pseudo-variable.
 
 [systype.h](../file/systype.h.html)\[[53](../source/systype.h.html#53)\]
 
-<div class="desc">
+
 
 get the type of a property defined for this object
 
-</div>
+
 
 <span id="valToSymbol"></span>
 
@@ -246,15 +246,15 @@ get the type of a property defined for this object
 
 [reflect.t](../file/reflect.t.html)\[[182](../source/reflect.t.html#182)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 9/13/2007 from TADS version 3.0.15.2
 
-</div>
+

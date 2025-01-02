@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Date  
@@ -15,7 +15,7 @@ layout: docs
     <a href="dict.html" class="nav"><em>Next:</em> Dictionary</a>    
 </span>
 
-</div>
+
 
 
 
@@ -61,7 +61,7 @@ When using the Date class, `\#include
 
 `new Date()`
 
-<div class="fdef">
+
 
 This creates a Date object representing the current date and time, as of
 the moment the `new` expression is evaluated.
@@ -77,7 +77,7 @@ Date object representing the then-current time.)
 
 `new Date(*str*, *refTZ*?, *refDate*?)`
 
-<div class="fdef">
+
 
 This parses the string value *str*, attempting to interpret it as a
 written date in various common human and computer formats. A wide range
@@ -124,11 +124,11 @@ reference date:
 - If the time is given in hours and minutes, the seconds and
   milliseconds are implicitly zero.
 
-</div>
+
 
 `new Date(*number*, '*J*')`
 
-<div class="fdef">
+
 
 *number* is an integer or [BigNumber](bignum.html) giving a Julian day
 number (see [getJulianDay()](#getJulianDay)), which is the number of
@@ -136,11 +136,11 @@ days since January 1, 4713 BCE on the (proleptic) Julian calendar, at
 noon UTC. The fractional portion (if any) is the fraction of a day past
 noon UTC, counting a day as exactly 24 hours (86,400 seconds).
 
-</div>
+
 
 `new Date(*number*, '*U*')`
 
-<div class="fdef">
+
 
 *number* is an integer or [BigNumber](bignum.html) giving the number of
 seconds since January 1, 1970, at 00:00 UTC, which is also known as the
@@ -174,11 +174,11 @@ clock times for dates in the past (as of 2012, this could be up to a
 24-second difference, since that's how many leap seconds were added to
 UTC between 1972 and 2012).
 
-</div>
+
 
 `new Date(*year*, *month*, *day*, *tz*?)`
 
-<div class="fdef">
+
 
 This creates a Date value representing midnight (00:00) on the given
 date. *year* is the year number (e.g., 2012), *month* is a calendar
@@ -205,12 +205,12 @@ or more than 12, it's a month in the previous or following year, so
 `new Date(2012, 14, 1)` is interpreted as
 February 1, 2013.
 
-</div>
+
 
 `new Date(*year*, *month*, *day*, *hour*, *minutes*,
 *seconds*, *ms*, *tz*?)`
 
-<div class="fdef">
+
 
 Creates a Date value representing the given time on the given date.
 *year* is the year number (e.g., 2012), *month* is the month (1 to 12),
@@ -224,7 +224,7 @@ the usual [timezone conventions](#tzarg). If *tz* is
 `nil` or missing, the system's local time zone
 is the default.
 
-</div>
+
 
 ## <span id="tzarg">Timezone arguments</span>
 
@@ -307,7 +307,7 @@ using a default format. For more control over the presentation, use
 
 `addInterval(*interval*)`
 
-<div class="fdef">
+
 
 Adds the given calendar and/or clock interval to the given Date,
 returning a new Date object representing the result. *interval* is given
@@ -335,13 +335,13 @@ doesn't matter, since the addition works in whole years.
 When time units are added, one day is defined as exactly 86,400 seconds.
 Any UTC [leap seconds](#leapseconds) in the added interval are ignored.
 
-</div>
+
 
 <span id="compareTo"></span>
 
 `compareTo(*date*)`
 
-<div class="fdef">
+
 
 Compares this Date value to *date*, which must be another Date value.
 Returns an integer less than zero if this Date is less than (earlier in
@@ -356,13 +356,13 @@ operators (`\<`, `\>`,
 is convenient for cases where you want the relative order of two dates,
 such as in sort callbacks, since it lets you get the order in one shot.
 
-</div>
+
 
 <span id="findWeekday"></span>
 
 `findWeekday(*weekday*, *which*, *tz*?)`
 
-<div class="fdef">
+
 
 Returns a new Date giving the date of the Nth *weekday* on or
 after/before the given date, in local time zone given by *tz* (see
@@ -381,13 +381,13 @@ find the last Thursday in November, `new Date('Dec
 of November, so this starts on the last day of November, then finds the
 nearest Thursday on or before that day.
 
-</div>
+
 
 <span id="formatDate"></span>
 
 `formatDate(*format*, *tz*?)`
 
-<div class="fdef">
+
 
 Returns a string representation of the Date value's representation on
 the Gregorian calendar, in the local time zone specified by *tz* (see
@@ -630,13 +630,13 @@ to come up with a set that actually was mnemonic or rational, so we
 figured we could at least choose a set that some people already know. A
 number of the codes are unique TADS extensions.
 
-</div>
+
 
 <span id="formatJulianDate"></span>
 
 `formatJulianDate(*format*, *tz*?)`
 
-<div class="fdef">
+
 
 Formats the Date value to a string giving the Julian calendar
 representation of the date. This works just like
@@ -650,13 +650,13 @@ start at midnight, just like Gregorian days. The Week Date fields
 affected because the Week Date system is effectively an independent
 calendar.
 
-</div>
+
 
 <span id="getClockTime"></span>
 
 `getClockTime(*tz*?)`
 
-<div class="fdef">
+
 
 Returns the time of day represented by this Date object, in the local
 time zone specified by *tz* (see [timezone arguments](#tzarg)). Returns
@@ -666,13 +666,13 @@ number of minutes past the hour (0 to 59), *second* is the number of
 seconds past the minute (0 to 59), and *ms* is the number of
 milliseconds past the second (0 to 999).
 
-</div>
+
 
 <span id="getDate"></span>
 
 `getDate(*tz*?)`
 
-<div class="fdef">
+
 
 Returns a list consisting of the \[*year*, *month*, *day*, *weekday*\]
 that the Date corresponds to on the Gregorian calendar, in the local
@@ -694,13 +694,13 @@ This method always yields Gregorian calendar dates, even for dates
 before 1582 (when the calendar was first adopted). It doesn't make any
 attempt to switch to other calendars for older dates.
 
-</div>
+
 
 <span id="getISOWeekDate"></span>
 
 `getISOWeekDate(*tz*?)`
 
-<div class="fdef">
+
 
 Returns the Date object's date in the ISO 8601 Week Date system, in the
 local time zone given by *tz* (see [timezone arguments](#tzarg)). The
@@ -723,13 +723,13 @@ on the Gregorian calendar will always be entirely in a single year on
 the Week calendar. The Gregorian and Week Date calendars always agree on
 the day of the week; a Monday is always a Monday on both calendars.
 
-</div>
+
 
 <span id="getJulianDay"></span>
 
 `getJulianDay()`
 
-<div class="fdef">
+
 
 Get the Julian day number, defined as the number of days since January
 1, 4713 BCE on the (proleptic) Julian calendar, at noon UTC.
@@ -751,13 +751,13 @@ converting directly between calendar X and calendar Y, but there's
 almost always a formula for converting between any given calendar and
 Julian day numbers.
 
-</div>
+
 
 <span id="getJulianDate"></span>
 
 `getJulianDate(*tz*?)`
 
-<div class="fdef">
+
 
 Calculates the Julian calendar date for this Date object, in terms of
 the local time in the given time zone (or the system's local time zone
@@ -792,14 +792,14 @@ different times before the calendar reached the form now considered
 canonical.) Dates in historical records in Europe from before the local
 adoption of the Gregorian calendar are usually on the Julian system.
 
-</div>
+
 
 <span id="parseDate"></span>
 
 `static parseDate(*str*, *format*?, *refDate*?
 *refTZ*?)`
 
-<div class="fdef">
+
 
 Parse a date. This is similar to the `new
 Date(*str*)` constructor, but lets you specify one or more custom
@@ -890,14 +890,14 @@ constructor, which throws an error if the parsing fails. The
 little more convenient to use this method to test a string of uncertain
 provenance to see if it looks like a date.
 
-</div>
+
 
 <span id="parseJulianDate"></span>
 
 `static parseJulianDate(*str*, *format*?, *refDate*?
 *refTZ*?)`
 
-<div class="fdef">
+
 
 This works just like [parseDate()](#parseDate), except that it
 interprets the date on the Julian calendar. The form of a Julian date is
@@ -919,13 +919,13 @@ Julian date string:
     "<<str>> Julian = <<Date.parseJulianDate(str)[1].formatDate('%B %#d, %Y')>>\n";
 ```
 
-</div>
+
 
 <span id="setLocaleInfo"></span>
 
 `static setLocaleInfo(...)`
 
-<div class="fdef">
+
 
 Sets locale information for parsing and formatting date values. This
 lets you customize month names, day names, and other date elements for a
@@ -1090,7 +1090,7 @@ list of month abbreviations allows both 'Sep' and 'Sept' for September.
 When you supply synonyms, the first item is the one used for output; any
 synonyms are purely for input matching.
 
-</div>
+
 
 ## <span id="inputFormats">Input formats</span>
 
@@ -1864,11 +1864,11 @@ In concrete terms, 24 leap seconds were added to UTC between 1972 and
 2012. This makes the error due to ignoring leap seconds in an elapsed
 time calculation over that entire period about one part in 51 million.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1877,4 +1877,4 @@ time calculation over that entire period about one part in 51 million.
     <a href="dict.html" class="nav"><em>Next:</em> Dictionary</a>    
 </span>
 
-</div>
+

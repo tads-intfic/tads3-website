@@ -26,32 +26,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The basic production node base class. We'll use this as the base class
 for all of our grammar rule match objects.
 
 `class `**`BasicProd`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BasicProd`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BasicProd`**  
 [`Action`](../object/Action.html)  
@@ -790,39 +790,39 @@ for all of our grammar rule match objects.
 [`TokenListProd`](../object/TokenListProd.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`firstTokenIndex`](#firstTokenIndex)[`isSpecialResponseMatch`](#isSpecialResponseMatch)[`lastTokenIndex`](#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canResolveTo`](#canResolveTo)[`getOrigText`](#getOrigText)[`getOrigTokenList`](#getOrigTokenList)[`setOrigTokenList`](#setOrigTokenList)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="firstTokenIndex"></span>
 
@@ -830,7 +830,7 @@ for all of our grammar rule match objects.
 
 [parser.t](../file/parser.t.html)\[[603](../source/parser.t.html#603)\]
 
-<div class="desc">
+
 
 Grammar match objects that come from a GrammarProd.parseTokens() call
 will always have a set of properties indicating which tokens from the
@@ -840,7 +840,7 @@ synthesized trees, the parser obviously won't supply those properties
 for us, so we need to define suitable defaults that synthesized match
 tree nodes can inherit.
 
-</div>
+
 
 <span id="isSpecialResponseMatch"></span>
 
@@ -848,7 +848,7 @@ tree nodes can inherit.
 
 [parser.t](../file/parser.t.html)\[[592](../source/parser.t.html#592)\]
 
-<div class="desc">
+
 
 Is this match a match to the special syntax for a custom missing object
 query? This returns true if the match has a wording that strongly
@@ -871,7 +871,7 @@ that's pretty clearly a match to the expected inSingleNoun syntax. In
 contrast, "the dirt" would return false, since that's just a noun phrase
 without the special wording for this particular verb.
 
-</div>
+
 
 <span id="lastTokenIndex"></span>
 
@@ -879,19 +879,19 @@ without the special wording for this particular verb.
 
 [parser.t](../file/parser.t.html)\[[604](../source/parser.t.html#604)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canResolveTo"></span>
 
@@ -899,13 +899,13 @@ without the special wording for this particular verb.
 
 [parser.t](../file/parser.t.html)\[[540](../source/parser.t.html#540)\]
 
-<div class="desc">
+
 
 Can this object match tree resolve to the given object? We'll resolve
 the phrase as though it were a topic phrase, then look for the object
 among the matches.
 
-</div>
+
 
 <span id="getOrigText"></span>
 
@@ -913,11 +913,11 @@ among the matches.
 
 [parser.t](../file/parser.t.html)\[[502](../source/parser.t.html#502)\]
 
-<div class="desc">
+
 
 get the original text of the command for this match
 
-</div>
+
 
 <span id="getOrigTokenList"></span>
 
@@ -925,11 +925,11 @@ get the original text of the command for this match
 
 [parser.t](../file/parser.t.html)\[[513](../source/parser.t.html#513)\]
 
-<div class="desc">
+
 
 get my original token list, in canonical tokenizer format
 
-</div>
+
 
 <span id="setOrigTokenList"></span>
 
@@ -937,16 +937,16 @@ get my original token list, in canonical tokenizer format
 
 [parser.t](../file/parser.t.html)\[[528](../source/parser.t.html#528)\]
 
-<div class="desc">
+
 
 Set my original token list. This replaces the actual token list we
 matched from the parser with a new token list provided by the caller.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

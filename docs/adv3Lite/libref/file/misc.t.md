@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 Adapted for adv3Lite by Eric Eve
 
@@ -27,43 +27,43 @@ This module contains miscellaneous definitions that don't have a natural
 grouping with any larger modules, and which aren't complex enough to
 justify modules of their own.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`ArgumentMismatchError`](../object/ArgumentMismatchError.html)[`FinishOption`](../object/FinishOption.html)[`FinishType`](../object/FinishType.html)[`GameMainDef`](../object/GameMainDef.html)[`LCS`](../object/LCS.html)[`LibraryError`](../object/LibraryError.html)[`Script`](../object/Script.html)[`SingletonIterator`](../object/SingletonIterator.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`adv3LibInit`](../object/adv3LibInit.html)[`adv3LibPreinit`](../object/adv3LibPreinit.html)[`finishOptionAmusing`](../object/finishOptionAmusing.html)[`finishOptionCredits`](../object/finishOptionCredits.html)[`finishOptionFullScore`](../object/finishOptionFullScore.html)[`finishOptionQuit`](../object/finishOptionQuit.html)[`finishOptionRestart`](../object/finishOptionRestart.html)[`finishOptionRestore`](../object/finishOptionRestore.html)[`finishOptionScore`](../object/finishOptionScore.html)[`finishOptionUndo`](../object/finishOptionUndo.html)[`ftDeath`](../object/ftDeath.html)[`ftFailure`](../object/ftFailure.html)[`ftGameOver`](../object/ftGameOver.html)[`ftVictory`](../object/ftVictory.html)[`libGlobal`](../object/libGlobal.html)[`libObjectInitializer`](../object/libObjectInitializer.html)[`restoreOptionRestoreAnother`](../object/restoreOptionRestoreAnother.html)[`restoreOptionStartOver`](../object/restoreOptionStartOver.html)[`unknownDest_`](../object/unknownDest_.html)[`varDest_`](../object/varDest_.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`cls`](#cls)[`failedRestoreOptions`](#failedRestoreOptions)[`findMatchingTopic`](#findMatchingTopic)[`finishGame`](#finishGame)[`finishGameMsg`](#finishGameMsg)[`isEmptyStr`](#isEmptyStr)[`isListSubset`](#isListSubset)[`makeMentioned`](#makeMentioned)[`matchCase`](#matchCase)[`nilToList`](#nilToList)[`objOfKind`](#objOfKind)[`overrides`](#overrides)[`partitionList`](#partitionList)[`processOptions`](#processOptions)[`setPlayer`](#setPlayer)[`tryInt`](#tryInt)[`tryNum`](#tryNum)[`valToList`](#valToList)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="cls"></span>
 
@@ -71,7 +71,7 @@ justify modules of their own.
 
 [misc.t](../file/misc.t.html)\[[420](../source/misc.t.html#420)\]
 
-<div class="desc">
+
 
 Clear the main game window. In most cases, you should call this rather
 than calling the low-level clearScreen() function directly, since this
@@ -86,7 +86,7 @@ to ensure that the about-box will still be around; this is necessary
 because any existing \<ABOUTBOX\> tag is lost after the screen is
 cleared.
 
-</div>
+
 
 <span id="failedRestoreOptions"></span>
 
@@ -94,14 +94,14 @@ cleared.
 
 [misc.t](../file/misc.t.html)\[[981](../source/misc.t.html#981)\]
 
-<div class="desc">
+
 
 Show failed startup restore options. If a restore operation fails at
 startup, we won't just proceed with the game, but ask the user what they
 want to do; we'll offer the options of restoring another game, quitting,
 or starting the game from the beginning.
 
-</div>
+
 
 <span id="findMatchingTopic"></span>
 
@@ -109,13 +109,13 @@ or starting the game from the beginning.
 
 [misc.t](../file/misc.t.html)\[[1550](../source/misc.t.html#1550)\]
 
-<div class="desc">
+
 
 Find an existing Topic whose vocab is voc. If the cls parameter is
 supplied it can be used to find a match in some other class, such as
 Thing or Mentionable.
 
-</div>
+
 
 <span id="finishGame"></span>
 
@@ -123,11 +123,11 @@ Thing or Mentionable.
 
 [misc.t](../file/misc.t.html)\[[970](../source/misc.t.html#970)\]
 
-<div class="desc">
+
 
 finish the game, offering the given extra options but no message
 
-</div>
+
 
 <span id="finishGameMsg"></span>
 
@@ -135,7 +135,7 @@ finish the game, offering the given extra options but no message
 
 [misc.t](../file/misc.t.html)\[[912](../source/misc.t.html#912)\]
 
-<div class="desc">
+
 
 Finish the game, showing a message explaining why the game has ended.
 This can be called when an event occurs that ends the game, such as the
@@ -159,7 +159,7 @@ options, such as finishOptionUndo and finishOptionCredits; in addition,
 the game can subclass FinishOption to create its own custom options, as
 desired.
 
-</div>
+
 
 <span id="isEmptyStr"></span>
 
@@ -167,11 +167,11 @@ desired.
 
 [misc.t](../file/misc.t.html)\[[1736](../source/misc.t.html#1736)\]
 
-<div class="desc">
+
 
 A string is empty if it's nil or if when trimmed it's ''
 
-</div>
+
 
 <span id="isListSubset"></span>
 
@@ -179,12 +179,12 @@ A string is empty if it's nil or if when trimmed it's ''
 
 [misc.t](../file/misc.t.html)\[[1523](../source/misc.t.html#1523)\]
 
-<div class="desc">
+
 
 Determine if list a is a subset of list b. a is a subset of b if every
 element of a is in b.
 
-</div>
+
 
 <span id="makeMentioned"></span>
 
@@ -192,14 +192,14 @@ element of a is in b.
 
 [misc.t](../file/misc.t.html)\[[1490](../source/misc.t.html#1490)\]
 
-<div class="desc">
+
 
 Set the mentioned property of obj to true. If obj is supplied as a list,
 set every object's mentioned property in the list to true. This can be
 used in room and object descriptions to mark an object as mentioned so
 it won't be included in the listing.
 
-</div>
+
 
 <span id="matchCase"></span>
 
@@ -207,7 +207,7 @@ it won't be included in the listing.
 
 [misc.t](../file/misc.t.html)\[[2215](../source/misc.t.html#2215)\]
 
-<div class="desc">
+
 
 Change the case (upper/lower) of a given new string to match the case
 pattern of the given original string.
@@ -234,7 +234,7 @@ likewise with lower-case letters in the original. We leave other
 characters unchanged. E.g., matchCase('AlPhA-1', 'omicron-7') yields
 'OmIcRon-7'.
 
-</div>
+
 
 <span id="nilToList"></span>
 
@@ -242,7 +242,7 @@ characters unchanged. E.g., matchCase('AlPhA-1', 'omicron-7') yields
 
 [misc.t](../file/misc.t.html)\[[1456](../source/misc.t.html#1456)\]
 
-<div class="desc">
+
 
 nilToList - convert a 'nil' value to an empty list. This can be useful
 for mix-in classes that will be used in different inheritance contexts,
@@ -250,7 +250,7 @@ since the classes might or might not inherit a base class definition for
 list-valued methods such as preconditions. This provides a usable
 default for list-valued methods that return nothing from superclasses.
 
-</div>
+
 
 <span id="objOfKind"></span>
 
@@ -258,12 +258,12 @@ default for list-valued methods that return nothing from superclasses.
 
 [misc.t](../file/misc.t.html)\[[2467](../source/misc.t.html#2467)\]
 
-<div class="desc">
+
 
 Service function to determine whether obj is ofKind cls when obj might
 not be an object.
 
-</div>
+
 
 <span id="overrides"></span>
 
@@ -271,7 +271,7 @@ not be an object.
 
 [misc.t](../file/misc.t.html)\[[436](../source/misc.t.html#436)\]
 
-<div class="desc">
+
 
 Determine if the given object overrides the definition of the given
 property inherited from the given base class. Returns true if the object
@@ -279,7 +279,7 @@ derives from the given base class, and the object's definition of the
 property comes from a different place than the base class's definition
 of the property.
 
-</div>
+
 
 <span id="partitionList"></span>
 
@@ -287,7 +287,7 @@ of the property.
 
 [misc.t](../file/misc.t.html)\[[1511](../source/misc.t.html#1511)\]
 
-<div class="desc">
+
 
 partitionList - partition a list into a pair of two lists, the first
 containing items that match the predicate 'fn', the second containing
@@ -302,7 +302,7 @@ returns nil.
 
 (Contributed by Tommy Nordgren.)
 
-</div>
+
 
 <span id="processOptions"></span>
 
@@ -310,12 +310,12 @@ returns nil.
 
 [misc.t](../file/misc.t.html)\[[992](../source/misc.t.html#992)\]
 
-<div class="desc">
+
 
 Process a list of finishing options. We'll loop, showing prompts and
 reading responses, until we get a response that terminates the loop.
 
-</div>
+
 
 <span id="setPlayer"></span>
 
@@ -323,13 +323,13 @@ reading responses, until we get a response that terminates the loop.
 
 [misc.t](../file/misc.t.html)\[[1566](../source/misc.t.html#1566)\]
 
-<div class="desc">
+
 
 Set the player character to another actor. If the optional second
 parameter is supplied, it sets the person of the player character;
 otherwise it defaults to the second person.
 
-</div>
+
 
 <span id="tryInt"></span>
 
@@ -337,12 +337,12 @@ otherwise it defaults to the second person.
 
 [misc.t](../file/misc.t.html)\[[1348](../source/misc.t.html#1348)\]
 
-<div class="desc">
+
 
 Try converting val to an integer. If this results in an integer value,
 return it, otherwise return nil.
 
-</div>
+
 
 <span id="tryNum"></span>
 
@@ -350,12 +350,12 @@ return it, otherwise return nil.
 
 [misc.t](../file/misc.t.html)\[[1401](../source/misc.t.html#1401)\]
 
-<div class="desc">
+
 
 Try converting val to a number (integer or BigNumber); return the number
 if there is one, otherwise return nil.
 
-</div>
+
 
 <span id="valToList"></span>
 
@@ -363,17 +363,17 @@ if there is one, otherwise return nil.
 
 [misc.t](../file/misc.t.html)\[[1466](../source/misc.t.html#1466)\]
 
-<div class="desc">
+
 
 val to list - convert any value to a list. If it's already a list,
 simply return it. If it's nil return an empty list. If it's a singleton
 value, return a one-element list containing it.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

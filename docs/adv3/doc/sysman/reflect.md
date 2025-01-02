@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Reflection  
@@ -16,7 +16,7 @@ Undefined Methods</a>    
 <a href="icext.html" class="nav"><em>Next:</em> Extending Intrinsic
 Classes</a>     </span>
 
-</div>
+
 
 
 
@@ -265,7 +265,7 @@ that this is designed to be a separately-compiled module, so **do not**
 instead, simply add it to your project (.t3m) file. If you're not using
 a project file, just add it to your t3make command line:
 
-<div class="cmdline">
+
 
     t3make myProg.t reflect.t
 
@@ -277,11 +277,11 @@ defining the symbol `REFLECT_BIGNUM`, using the
 `-D` option in your project file or on the
 t3make command line.
 
-<div class="cmdline">
+
 
     t3make -DREFLECT_BIGNUM myProg.t reflect.t
 
-</div>
+
 
 The `reflectionServices` object provides the
 high-level compiler symbols interface. The methods of this object are
@@ -548,12 +548,12 @@ requirements are:
       export reflectionServices 'reflection.reflectionServices';
       export valToSymbol 'reflection.valToSymbol';
 
-  </div>
+  
 ```
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -563,4 +563,4 @@ Undefined Methods</a>    
 <a href="icext.html" class="nav"><em>Next:</em> Extending Intrinsic
 Classes</a>     </span>
 
-</div>
+

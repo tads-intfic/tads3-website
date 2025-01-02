@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A TravelAction is one that moves (or at least tries to move) the player
 character from one place to another via a command like GO NORTH, or
@@ -34,15 +34,15 @@ EAST.
 
 `class `**`TravelAction`**` :   `[`Action`](../object/Action.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TravelAction`**  
 [`Action`](../object/Action.html)  
@@ -51,28 +51,28 @@ EAST.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`Go`](../object/Go.html)[`GoIn`](../object/GoIn.html)[`GoOut`](../object/GoOut.html)[`KeepGoing`](../object/KeepGoing.html)[`Travel`](../object/Travel.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`baseActionClass`](#baseActionClass)[`canUndo`](#canUndo)[`direction`](#direction)[`predefinedDirection`](#predefinedDirection)
 
@@ -85,11 +85,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doTravel`](#doTravel)[`execAction`](#execAction)[`execCycle`](#execCycle)
 
@@ -104,11 +104,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="baseActionClass"></span>
 
@@ -116,11 +116,11 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[1184](../source/action.t.html#1184)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canUndo"></span>
 
@@ -128,11 +128,11 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[1533](../source/action.t.html#1533)\]
 
-<div class="desc">
+
 
 It's generally possible to undo a travel command.
 
-</div>
+
 
 <span id="direction"></span>
 
@@ -140,13 +140,13 @@ It's generally possible to undo a travel command.
 
 [action.t](../file/action.t.html)\[[1530](../source/action.t.html#1530)\]
 
-<div class="desc">
+
 
 The direction the actor wants to travel in. This is placed here by the
 execCycle method and takes the form of A Direction object, e.g.
 northDir.
 
-</div>
+
 
 <span id="predefinedDirection"></span>
 
@@ -154,21 +154,21 @@ northDir.
 
 [action.t](../file/action.t.html)\[[1214](../source/action.t.html#1214)\]
 
-<div class="desc">
+
 
 Does this TravelAction already define a set direction on its direction
 property (so we don't need to look to what direction object the command
 refers)?
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doTravel"></span>
 
@@ -176,7 +176,7 @@ refers)?
 
 [action.t](../file/action.t.html)\[[1299](../source/action.t.html#1299)\]
 
-<div class="desc">
+
 
 Carry out travel in direction. For this purpose we first have to define
 what the corresponding direction property of the actor's current
@@ -190,7 +190,7 @@ Note that we only display the various messages announcing failure of
 travel if the actor is the player character. We presumably don't want to
 see these messages as the result of NPCs trying to move around the map.
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -198,12 +198,12 @@ see these messages as the result of NPCs trying to move around the map.
 
 [action.t](../file/action.t.html)\[[1220](../source/action.t.html#1220)\]
 
-<div class="desc">
+
 
 Execute the travel command, first carrying out any implicit actions
 needed to facilitate travel
 
-</div>
+
 
 <span id="execCycle"></span>
 
@@ -211,16 +211,16 @@ needed to facilitate travel
 
 [action.t](../file/action.t.html)\[[1190](../source/action.t.html#1190)\]
 
-<div class="desc">
+
 
 Use the inherited handling but first make a note of the direction the
 actor wants to travel in.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

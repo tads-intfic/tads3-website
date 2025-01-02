@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A candle is an item that can be set on fire for a controlled burn.
 Although we call this a candle, this class can be used for other types
@@ -39,15 +39,15 @@ FireSource is specifically designed as a mix-in class).
 
 `class `**`Candle`**` :   `[`FueledLightSource`](../object/FueledLightSource.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Candle`**  
 [`FueledLightSource`](../object/FueledLightSource.html)  
@@ -57,27 +57,27 @@ FireSource is specifically designed as a mix-in class).
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`okayBurnMsg`](#okayBurnMsg)[`outOfFuelMsg`](#outOfFuelMsg)
 
@@ -95,11 +95,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canLightWith`](#canLightWith)[`desc`](#desc)[`dobjFor(BurnWith)`](#dobjFor(BurnWith))[`dobjFor(Extinguish)`](#dobjFor(Extinguish))[`sayBurnedOut`](#sayBurnedOut)
 
@@ -117,11 +117,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="okayBurnMsg"></span>
 
@@ -129,11 +129,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[2214](../source/extras.t.html#2214)\]
 
-<div class="desc">
+
 
 the message we display when we successfully light the candle
 
-</div>
+
 
 <span id="outOfFuelMsg"></span>
 
@@ -141,21 +141,21 @@ the message we display when we successfully light the candle
 
 [extras.t](../file/extras.t.html)\[[2211](../source/extras.t.html#2211)\]
 
-<div class="desc">
+
 
 The message we display when we try to light the candle and we're out of
 fuel. This message can be overridden by subclasses that don't fit the
 default message.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canLightWith"></span>
 
@@ -163,7 +163,7 @@ default message.
 
 [extras.t](../file/extras.t.html)\[[2233](../source/extras.t.html#2233)\]
 
-<div class="desc">
+
 
 Determine if I can be lit with the specific indirect object. By default,
 we'll allow any object to light us if the object passes the normal
@@ -173,7 +173,7 @@ example, a furnace with a deeply-recessed burner could refuse to be lit
 by anything but particular long matches, or a particular type of fuel
 could refuse to be lit except by certain especially hot flames.
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -181,13 +181,13 @@ could refuse to be lit except by certain especially hot flames.
 
 [extras.t](../file/extras.t.html)\[[2240](../source/extras.t.html#2240)\]
 
-<div class="desc">
+
 
 Default long description describes burning status. In most cases, this
 should be overridden to provide more details, such as information on our
 fuel level.
 
-</div>
+
 
 <span id="dobjFor(BurnWith)"></span>
 
@@ -195,11 +195,11 @@ fuel level.
 
 [extras.t](../file/extras.t.html)\[[2249](../source/extras.t.html#2249)\]
 
-<div class="desc">
+
 
 "burn with" action
 
-</div>
+
 
 <span id="dobjFor(Extinguish)"></span>
 
@@ -207,11 +207,11 @@ fuel level.
 
 [extras.t](../file/extras.t.html)\[[2288](../source/extras.t.html#2288)\]
 
-<div class="desc">
+
 
 "extinguish"
 
-</div>
+
 
 <span id="sayBurnedOut"></span>
 
@@ -219,15 +219,15 @@ fuel level.
 
 [extras.t](../file/extras.t.html)\[[2217](../source/extras.t.html#2217)\]
 
-<div class="desc">
+
 
 show a message when the candle runs out fuel while burning
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

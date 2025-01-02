@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An ImpHelloTopic is one that handles an implied greeting; i.e. it is
 used to start a conversation when some other conversational command is
@@ -34,15 +34,15 @@ used before the conversation is underway.
 
 `class `**`ImpHelloTopic`**` :   `[`HelloTopic`](../object/HelloTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ImpHelloTopic`**  
 [`HelloTopic`](../object/HelloTopic.html)  
@@ -56,27 +56,27 @@ used before the conversation is underway.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`matchObj`](#matchObj)[`matchScore`](#matchScore)
 
@@ -99,11 +99,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -129,11 +129,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -141,11 +141,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3833](../source/actor.t.html#3833)\]
 
-<div class="desc">
+
 
 An ImpHelloTopic matches the impHelloTopicObj only.
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -153,27 +153,27 @@ An ImpHelloTopic matches the impHelloTopicObj only.
 
 [actor.t](../file/actor.t.html)\[[3840](../source/actor.t.html#3840)\]
 
-<div class="desc">
+
 
 We give ImpHelloTopic a higher than usual matchScore so that it's used
 in preference to a HelloTopic when both are present to match the
 impHelloTopicObj.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

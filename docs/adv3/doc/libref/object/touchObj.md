@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Pre-condition: actor must be able to touch the object. This doesn't
 require that the actor is actually holding the object, but the actor
@@ -35,15 +35,15 @@ provide customized behavior as appropriate.
 
 **`touchObj`**` :   `[`TouchObjCondition`](../object/TouchObjCondition.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`touchObj`**  
 [`TouchObjCondition`](../object/TouchObjCondition.html)  
@@ -51,11 +51,11 @@ provide customized behavior as appropriate.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`sourceObj`](#sourceObj)
 
@@ -66,11 +66,11 @@ Inherited from `TouchObjCondition` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ Inherited from `TouchObjCondition` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="sourceObj"></span>
 
@@ -93,25 +93,25 @@ Inherited from `TouchObjCondition` :
 
 [precond.t](../file/precond.t.html)\[[692](../source/precond.t.html#692)\]
 
-<div class="desc">
+
 
 we want to test reaching from the current actor to the target object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

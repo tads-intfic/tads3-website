@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A DerivedRelation is one that doesn't maintain its own table of what it
 related to what, but works out what is related to what on the basis of
@@ -31,15 +31,15 @@ REQUIRES THE RELATIONS EXTENSION
 
 **`DerivedRelation`**` :   `[`Relation`](../object/Relation.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DerivedRelation`**  
 [`Relation`](../object/Relation.html)  
@@ -48,11 +48,11 @@ REQUIRES THE RELATIONS EXTENSION
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -67,11 +67,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addRelation`](#addRelation)[`inverselyRelatedTo`](#inverselyRelatedTo)[`relatedTo`](#relatedTo)[`removeRelation`](#removeRelation)
 
@@ -85,19 +85,19 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addRelation"></span>
 
@@ -105,12 +105,12 @@ Inherited from `ModuleExecObject` :
 
 [relations.t](../file/relations.t.html)\[[416](../source/relations.t.html#416)\]
 
-<div class="desc">
+
 
 By default we don't permit the direct addition of relationships via this
 relation, since this is a relation dependent upon external conditions.
 
-</div>
+
 
 <span id="inverselyRelatedTo"></span>
 
@@ -118,11 +118,11 @@ relation, since this is a relation dependent upon external conditions.
 
 [relations.t](../file/relations.t.html)\[[409](../source/relations.t.html#409)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="relatedTo"></span>
 
@@ -130,13 +130,13 @@ relation, since this is a relation dependent upon external conditions.
 
 [relations.t](../file/relations.t.html)\[[407](../source/relations.t.html#407)\]
 
-<div class="desc">
+
 
 Instances need to override to provide a method that returns a list of
 items related to a via this relationship, on the basis of whatever
 criteria are appropriate.
 
-</div>
+
 
 <span id="removeRelation"></span>
 
@@ -144,16 +144,16 @@ criteria are appropriate.
 
 [relations.t](../file/relations.t.html)\[[427](../source/relations.t.html#427)\]
 
-<div class="desc">
+
 
 By default we don't permit the direct removal of relationships via this
 relation, since this is a relation dependent upon external conditions.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> How to Use This
@@ -17,7 +17,7 @@ This Book?</a>    
 <a href="acknowledge.html" class="nav"><em>Next:</em> Acknowledgements
 and Explanations</a>     </span>
 
-</div>
+
 
 
 
@@ -136,7 +136,7 @@ to get the most out of this book.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -147,4 +147,4 @@ This Book?</a>    
 <a href="acknowledge.html" class="nav"><em>Next:</em> Acknowledgements
 and Explanations</a>     </span>
 
-</div>
+

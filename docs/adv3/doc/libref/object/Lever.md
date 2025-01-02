@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Lever - something you can push, pull, or move, generally as a control
 for a mechanical device. Our basic lever has two states, "pushed" and
@@ -34,15 +34,15 @@ for a mechanical device. Our basic lever has two states, "pushed" and
 
 `class `**`Lever`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Lever`**  
 [`Thing`](../object/Thing.html)  
@@ -50,29 +50,29 @@ for a mechanical device. Our basic lever has two states, "pushed" and
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Lever`**  
 [`SpringLever`](../object/SpringLever.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isPulled`](#isPulled)
 
@@ -84,11 +84,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Move)`](#dobjFor(Move))[`dobjFor(Pull)`](#dobjFor(Pull))[`dobjFor(Push)`](#dobjFor(Push))[`makePulled`](#makePulled)
 
@@ -100,11 +100,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isPulled"></span>
 
@@ -112,21 +112,21 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5627](../source/objects.t.html#5627)\]
 
-<div class="desc">
+
 
 The current state. We have two states: "pushed" and "pulled". We start
 in the pushed state, so the lever can initially be pulled, since "pull"
 is the verb most people would first think to apply to a lever.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Move)"></span>
 
@@ -134,11 +134,11 @@ is the verb most people would first think to apply to a lever.
 
 [objects.t](../file/objects.t.html)\[[5678](../source/objects.t.html#5678)\]
 
-<div class="desc">
+
 
 make the default report
 
-</div>
+
 
 <span id="dobjFor(Pull)"></span>
 
@@ -146,11 +146,11 @@ make the default report
 
 [objects.t](../file/objects.t.html)\[[5661](../source/objects.t.html#5661)\]
 
-<div class="desc">
+
 
 make the default report
 
-</div>
+
 
 <span id="dobjFor(Push)"></span>
 
@@ -158,13 +158,13 @@ make the default report
 
 [objects.t](../file/objects.t.html)\[[5644](../source/objects.t.html#5644)\]
 
-<div class="desc">
+
 
 Action handlers. We handle push and pull, and we treat "move" as
 equivalent to whichever of push or pull is appropriate to reverse the
 current state.
 
-</div>
+
 
 <span id="makePulled"></span>
 
@@ -172,15 +172,15 @@ current state.
 
 [objects.t](../file/objects.t.html)\[[5633](../source/objects.t.html#5633)\]
 
-<div class="desc">
+
 
 Set the state. This can be overridden to apply side effects as needed.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

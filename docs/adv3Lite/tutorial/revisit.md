@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Heidi Revisited  
 <span class="navnp"><a href="quotes.html" class="nav"><em>Prev:</em> Things in Quotes</a>
    <a href="listening.html" class="nav"><em>Next:</em> Listening to the
 Bird</a>     </span>
 
-</div>
+
 
 
 
@@ -23,7 +23,7 @@ Bird</a>     </span>
 In this chapter we revisit *The Adventures of Heidi* and make some
 improvements.
 
-<div class="sectoc">
+
 
 [Listening to the Bird](listening.html)  
 [Entering the Cottage](cottage.html)  
@@ -34,11 +34,11 @@ improvements.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Heidi Revisited  
@@ -46,4 +46,4 @@ improvements.
    <a href="listening.html" class="nav"><em>Next:</em> Listening to the
 Bird</a>     </span>
 
-</div>
+

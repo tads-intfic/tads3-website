@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Output Stream. This class provides a stream-oriented interface to
 displaying text on the console. "Stream-oriented" means that we write
@@ -39,15 +39,15 @@ UI state should not be saved either.
 
 `class `**`OutputStream`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OutputStream`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -55,11 +55,11 @@ UI state should not be saved either.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`OutputStream`**  
 [`BannerOutputStream`](../object/BannerOutputStream.html)  
@@ -67,20 +67,20 @@ UI state should not be saved either.
 [`WebWinOutputStream`](../object/WebWinOutputStream.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`mainOutputStream`](../object/mainOutputStream.html)[`menuOutputStream`](../object/menuOutputStream.html)[`statusLeftOutputStream`](../object/statusLeftOutputStream.html)[`statusRightOutputStream`](../object/statusRightOutputStream.html)[`statusTagOutputStream`](../object/statusTagOutputStream.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`filterList_`](#filterList_)[`justDidPara`](#justDidPara)[`justDidParaSuppressor`](#justDidParaSuppressor)[`myInputManager`](#myInputManager)[`prefix`](#prefix)
 
@@ -92,11 +92,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addOutputFilter`](#addOutputFilter)[`addOutputFilterBelow`](#addOutputFilterBelow)[`applyFilters`](#applyFilters)[`applyTextFilters`](#applyTextFilters)[`captureOutput`](#captureOutput)[`captureOutputIgnoreExit`](#captureOutputIgnoreExit)[`construct`](#construct)[`execute`](#execute)[`inputLineEnd`](#inputLineEnd)[`removeOutputFilter`](#removeOutputFilter)[`setPrefix`](#setPrefix)[`watchForOutput`](#watchForOutput)[`writeFromStream`](#writeFromStream)[`writeToStream`](#writeToStream)
 
@@ -107,11 +107,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="filterList_"></span>
 
@@ -119,13 +119,13 @@ Inherited from `ModuleExecObject` :
 
 [output.t](../file/output.t.html)\[[393](../source/output.t.html#393)\]
 
-<div class="desc">
+
 
 The list of active filters on this stream, in the order in which they
 are to be called. This should normally be initialized to a Vector in
 each instance.
 
-</div>
+
 
 <span id="justDidPara"></span>
 
@@ -133,13 +133,13 @@ each instance.
 
 [output.t](../file/output.t.html)\[[513](../source/output.t.html#513)\]
 
-<div class="desc">
+
 
 Internal state: we just wrote a paragraph break, and there has not yet
 been any intervening text. By default, we set this to true initially, so
 that we suppress any paragraph breaks at the very start of the text.
 
-</div>
+
 
 <span id="justDidParaSuppressor"></span>
 
@@ -147,14 +147,14 @@ that we suppress any paragraph breaks at the very start of the text.
 
 [output.t](../file/output.t.html)\[[521](../source/output.t.html#521)\]
 
-<div class="desc">
+
 
 Internal state: we just wrote a character that suppresses paragraph
 breaks that immediately follow. In this state, we'll suppress any
 paragraph marker that immediately follows, but we won't suppress any
 other characters.
 
-</div>
+
 
 <span id="myInputManager"></span>
 
@@ -162,11 +162,11 @@ other characters.
 
 [output.t](../file/output.t.html)\[[352](../source/output.t.html#352)\]
 
-<div class="desc">
+
 
 my associated input manager, if I have one
 
-</div>
+
 
 <span id="prefix"></span>
 
@@ -174,19 +174,19 @@ my associated input manager, if I have one
 
 [output.t](../file/output.t.html)\[[524](../source/output.t.html#524)\]
 
-<div class="desc">
+
 
 Text to be output before anything else
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addOutputFilter"></span>
 
@@ -194,7 +194,7 @@ Text to be output before anything else
 
 [output.t](../file/output.t.html)\[[403](../source/output.t.html#403)\]
 
-<div class="desc">
+
 
 Add an output filter. The argument is an object of class OutputFilter,
 or any object implementing the filterText() method.
@@ -203,7 +203,7 @@ Filters are always arranged in a "stack": the last output filter added
 is the first one called during output. This method thus adds the new
 filter at the "top" of the stack.
 
-</div>
+
 
 <span id="addOutputFilterBelow"></span>
 
@@ -211,7 +211,7 @@ filter at the "top" of the stack.
 
 [output.t](../file/output.t.html)\[[418](../source/output.t.html#418)\]
 
-<div class="desc">
+
 
 Add an output filter at a given point in the filter stack: add the
 filter so that it is "below" the given existing filter in the stack.
@@ -221,7 +221,7 @@ filter during output.
 If 'existingFilter' isn't in the stack of existing filters, we'll add
 the new filter at the "top" of the stack.
 
-</div>
+
 
 <span id="applyFilters"></span>
 
@@ -229,11 +229,11 @@ the new filter at the "top" of the stack.
 
 [output.t](../file/output.t.html)\[[458](../source/output.t.html#458)\]
 
-<div class="desc">
+
 
 call the filters
 
-</div>
+
 
 <span id="applyTextFilters"></span>
 
@@ -241,12 +241,12 @@ call the filters
 
 [output.t](../file/output.t.html)\[[478](../source/output.t.html#478)\]
 
-<div class="desc">
+
 
 Apply the current set of text transformation filters to a string. This
 applies only the non-capturing filters; we skip any capture filters.
 
-</div>
+
 
 <span id="captureOutput"></span>
 
@@ -254,13 +254,13 @@ applies only the non-capturing filters; we skip any capture filters.
 
 [output.t](../file/output.t.html)\[[282](../source/output.t.html#282)\]
 
-<div class="desc">
+
 
 Call the given function, capturing all text output to this stream in the
 course of the function call. Return a string containing the captured
 text.
 
-</div>
+
 
 <span id="captureOutputIgnoreExit"></span>
 
@@ -268,13 +268,13 @@ text.
 
 [output.t](../file/output.t.html)\[[311](../source/output.t.html#311)\]
 
-<div class="desc">
+
 
 A Version of captureOutput that ignores an Exit Exception. This can be
 used to attempt to retrieve the string value of an output filter that
 threw an exit exeption.
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -282,11 +282,11 @@ threw an exit exeption.
 
 [output.t](../file/output.t.html)\[[355](../source/output.t.html#355)\]
 
-<div class="desc">
+
 
 dynamic construction
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -294,11 +294,11 @@ dynamic construction
 
 [output.t](../file/output.t.html)\[[365](../source/output.t.html#365)\]
 
-<div class="desc">
+
 
 execute pre-initialization
 
-</div>
+
 
 <span id="inputLineEnd"></span>
 
@@ -306,12 +306,12 @@ execute pre-initialization
 
 [output.t](../file/output.t.html)\[[501](../source/output.t.html#501)\]
 
-<div class="desc">
+
 
 Receive notification from the input manager that we have just ended
 reading a line of input from the keyboard.
 
-</div>
+
 
 <span id="removeOutputFilter"></span>
 
@@ -319,13 +319,13 @@ reading a line of input from the keyboard.
 
 [output.t](../file/output.t.html)\[[444](../source/output.t.html#444)\]
 
-<div class="desc">
+
 
 Remove an output filter. Since filters are arranged in a stack, only the
 LAST output filter added may be removed. It's an error to remove a
 filter other than the last one.
 
-</div>
+
 
 <span id="setPrefix"></span>
 
@@ -333,11 +333,11 @@ filter other than the last one.
 
 [output.t](../file/output.t.html)\[[527](../source/output.t.html#527)\]
 
-<div class="desc">
+
 
 Set the prefix to txt
 
-</div>
+
 
 <span id="watchForOutput"></span>
 
@@ -345,7 +345,7 @@ Set the prefix to txt
 
 [output.t](../file/output.t.html)\[[239](../source/output.t.html#239)\]
 
-<div class="desc">
+
 
 Watch the stream for output. It's sometimes useful to be able to call
 out to some code and determine whether or not the code generated any
@@ -353,7 +353,7 @@ text output. This routine invokes the given callback function,
 monitoring the stream for output; if any occurs, we'll return true,
 otherwise we'll return nil.
 
-</div>
+
 
 <span id="writeFromStream"></span>
 
@@ -361,7 +361,7 @@ otherwise we'll return nil.
 
 [output.t](../file/output.t.html)\[[386](../source/output.t.html#386)\]
 
-<div class="desc">
+
 
 Write text out from this stream; this writes to the lower-level stream
 underlying this stream. This routine is intended to be called only from
@@ -377,7 +377,7 @@ a system-level stream, such as the display output stream, so most
 implementations of this method will call directly to a system-level
 output function.
 
-</div>
+
 
 <span id="writeToStream"></span>
 
@@ -385,18 +385,18 @@ output function.
 
 [output.t](../file/output.t.html)\[[183](../source/output.t.html#183)\]
 
-<div class="desc">
+
 
 Write a value to the stream. If the value is a string, we'll display the
 text of the string; if it's nil, we'll ignore it; if it's anything else,
 we'll try to convert it to a string (with the toString() function) and
 display the resulting text.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

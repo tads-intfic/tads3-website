@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Goal represents an open task: something that the player is trying to
 achieve. A Goal is an abstract object, not part of the simulated world
@@ -64,15 +64,15 @@ the game before they become relevant.
 
 `class `**`Goal`**` :   `[`MenuTopicItem`](../object/MenuTopicItem.html)[`HintMenuObject`](../object/HintMenuObject.html)[`HintOpener`](../object/HintOpener.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Goal`**  
 [`MenuTopicItem`](../object/MenuTopicItem.html)  
@@ -85,27 +85,27 @@ the game before they become relevant.
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`goalFullyDisplayed`](#goalFullyDisplayed)[`goalState`](#goalState)[`isActiveInMenu`](#isActiveInMenu)[`location`](#location)[`menuContents`](#menuContents)[`title`](#title)
 
@@ -126,11 +126,11 @@ Inherited from `HintOpener` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`displaySubItem`](#displaySubItem)[`updateContents`](#updateContents)
 
@@ -150,11 +150,11 @@ Inherited from `HintMenuObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="goalFullyDisplayed"></span>
 
@@ -162,7 +162,7 @@ Inherited from `HintMenuObject` :
 
 [hintsys.t](../file/hintsys.t.html)\[[303](../source/hintsys.t.html#303)\]
 
-<div class="desc">
+
 
 Has this goal been fully displayed? The hint system automatically sets
 this to true when the last item in our hint list is displayed.
@@ -178,7 +178,7 @@ this, simply add this to the Goal object:
   
 closeWhenTrue = (goalFullyDisplayed)
 
-</div>
+
 
 <span id="goalState"></span>
 
@@ -186,13 +186,13 @@ closeWhenTrue = (goalFullyDisplayed)
 
 [hintsys.t](../file/hintsys.t.html)\[[380](../source/hintsys.t.html#380)\]
 
-<div class="desc">
+
 
 This goal's current state. We'll start off undiscovered. When a goal
 should be open from the very start of the game, this should be
 overridden and set to OpenGoal.
 
-</div>
+
 
 <span id="isActiveInMenu"></span>
 
@@ -200,11 +200,11 @@ overridden and set to OpenGoal.
 
 [hintsys.t](../file/hintsys.t.html)\[[373](../source/hintsys.t.html#373)\]
 
-<div class="desc">
+
 
 we're active in our parent menu if our goal state is Open
 
-</div>
+
 
 <span id="location"></span>
 
@@ -212,7 +212,7 @@ we're active in our parent menu if our goal state is Open
 
 [hintsys.t](../file/hintsys.t.html)\[[270](../source/hintsys.t.html#270)\]
 
-<div class="desc">
+
 
 Our parent menu - this is usually a HintMenu object. In very simple hint
 systems, this could simply be a top-level hint menu container; more
@@ -220,7 +220,7 @@ typically, the hint system will be structured into a menu tree that
 organizes the hint topics into several different submenus, for easier
 navigatino.
 
-</div>
+
 
 <span id="menuContents"></span>
 
@@ -228,7 +228,7 @@ navigatino.
 
 [hintsys.t](../file/hintsys.t.html)\[[284](../source/hintsys.t.html#284)\]
 
-<div class="desc">
+
 
 The list of hints for this topic. This should be ordered from most
 general to most specific; we offer the hints in the order they appear in
@@ -241,7 +241,7 @@ be a Hint object. In most cases, a string will do. A Hint object is only
 needed when displaying the hint has some side effect, such as opening a
 new Goal.
 
-</div>
+
 
 <span id="title"></span>
 
@@ -249,21 +249,21 @@ new Goal.
 
 [hintsys.t](../file/hintsys.t.html)\[[261](../source/hintsys.t.html#261)\]
 
-<div class="desc">
+
 
 The topic question associated with the goal. The hint system shows a
 list of the topics for the goals that are currently open, so that the
 player can decide what area they want help on.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="displaySubItem"></span>
 
@@ -271,11 +271,11 @@ player can decide what area they want help on.
 
 [hintsys.t](../file/hintsys.t.html)\[[362](../source/hintsys.t.html#362)\]
 
-<div class="desc">
+
 
 display a sub-item, keeping track of when we've shown them all
 
-</div>
+
 
 <span id="updateContents"></span>
 
@@ -283,7 +283,7 @@ display a sub-item, keeping track of when we've shown them all
 
 [hintsys.t](../file/hintsys.t.html)\[[331](../source/hintsys.t.html#331)\]
 
-<div class="desc">
+
 
 Check our menu state and update it if necessary. Each time our parent
 menu is about to display, it'll call this on its sub-items to let them
@@ -308,11 +308,11 @@ referenced by openWhenSeen has been seen by the player character, then
 we'll change our state to Open. We'll make the corresponding check for
 openWhenDescribed.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

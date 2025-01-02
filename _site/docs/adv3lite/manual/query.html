@@ -354,67 +354,69 @@ want ending a conversation with another actor to sever any
 communications link there may have been. A fairly basic scheme to do all
 this might be as follows:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     DefineTAction(Phone)
+<p>`
+     DefineTAction(Phone)
         addExtraScopeItems(role)
         {
-            inherited(role);
-            
-            scopeList = scopeList.appendUnique(Q.knownScopeList.subset({x:
-                x.ofKind(Actor)}));
-        }
-    ;
+            inherited(role);</p>
 
-    VerbRule(Phone)
-        ('phone' | 'call') singleDobj
-        : VerbProduction
-        action = Phone
-        verbPhrase = 'phone/phoning (whom)'
-        missingQ = 'who do you want to phone'
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        scopeList = scopeList.appendUnique(Q.knownScopeList.subset({x:
+            x.ofKind(Actor)}));
+    }
+;
 
-    modify Thing
-        dobjFor(Phone)
+VerbRule(Phone)
+    ('phone' | 'call') singleDobj
+    : VerbProduction
+    action = Phone
+    verbPhrase = 'phone/phoning (whom)'
+    missingQ = 'who do you want to phone'
+;
+
+modify Thing
+    dobjFor(Phone)
+    {
+        verify()
         {
-            verify()
-            {
-                illogical('{I} {can\'t} phone {that dobj}. ');
-            }
+            illogical('{I} {can\'t} phone {that dobj}. ');
         }
-    ;
+    }
+;
 
-    modify Actor
-        dobjFor(Phone)
+modify Actor
+    dobjFor(Phone)
+    {
+        verify()
         {
-            verify()
-            {
-                if(commLink.isConnectedTo(self))
-                    illogicalNow('{I} {am} already connected to {the dobj}. ');
-                
-            }
+            if(commLink.isConnectedTo(self))
+                illogicalNow('{I} {am} already connected to {the dobj}. ');
             
-            check()
-            {
-                if(!canBePhoned)
-                    "{The dobj} {doesn\'t answer[ed]} {her actor} call. ";  
-            }
-            
-            action()
-            {
-                commLink.connectTo(self);
-                sayHello();
-            }
         }
         
-        sayGoodbye(reason = endConvBye)
+        check()
         {
-            inherited(reason);
-            commLink.disconnectFrom(self);
+            if(!canBePhoned)
+                "{The dobj} {doesn\'t answer[ed]} {her actor} call. ";  
         }
         
-        canBePhoned = true
-    ; 
-     
+        action()
+        {
+            commLink.connectTo(self);
+            sayHello();
+        }
+    }
+    
+    sayGoodbye(reason = endConvBye)
+    {
+        inherited(reason);
+        commLink.disconnectFrom(self);
+    }
+    
+    canBePhoned = true
+; 
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>If you want to try this out for yourself, bear in mind that the way
 we’ve tried it allows the player character to phone only those actors

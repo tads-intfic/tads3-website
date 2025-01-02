@@ -26,51 +26,51 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A NetException is the base class for network errors.
 
 `class `**`NetException`**` :   `[`Exception`](../object/Exception.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NetException`**  
 [`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NetException`**  
 [`NetSafetyException`](../object/NetSafetyException.html)  
 [`SocketDisconnectException`](../object/SocketDisconnectException.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`errMsg`](#errMsg)
 
@@ -79,11 +79,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`displayException`](#displayException)
 
@@ -92,11 +92,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="errMsg"></span>
 
@@ -104,19 +104,19 @@ Inherited from `Exception` :
 
 [tadsnet.t](../file/tadsnet.t.html)\[[371](../source/tadsnet.t.html#371)\]
 
-<div class="desc">
+
 
 a descriptive error message provided by the system
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -124,11 +124,11 @@ a descriptive error message provided by the system
 
 [tadsnet.t](../file/tadsnet.t.html)\[[361](../source/tadsnet.t.html#361)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="displayException"></span>
 
@@ -136,15 +136,15 @@ a descriptive error message provided by the system
 
 [tadsnet.t](../file/tadsnet.t.html)\[[368](../source/tadsnet.t.html#368)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

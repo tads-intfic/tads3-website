@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A PathPassage is a Passage that represents a path, so that following it
 or going down it is equivalent to going through it.
 
 `class `**`PathPassage`**` :   `[`Passage`](../object/Passage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PathPassage`**  
 [`Passage`](../object/Passage.html)  
@@ -56,27 +56,27 @@ or going down it is equivalent to going through it.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`traversalMsg`](#traversalMsg)
 
@@ -101,11 +101,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(ClimbDown)`](#dobjFor(ClimbDown))[`dobjFor(ClimbUp)`](#dobjFor(ClimbUp))[`dobjFor(Follow)`](#dobjFor(Follow))
 
@@ -132,11 +132,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="traversalMsg"></span>
 
@@ -144,19 +144,19 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[767](../source/extras.t.html#767)\]
 
-<div class="desc">
+
 
 One most naturally talks of going 'down' a path
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(ClimbDown)"></span>
 
@@ -164,11 +164,11 @@ One most naturally talks of going 'down' a path
 
 [extras.t](../file/extras.t.html)\[[761](../source/extras.t.html#761)\]
 
-<div class="desc">
+
 
 Make going down a path the same as going through it.
 
-</div>
+
 
 <span id="dobjFor(ClimbUp)"></span>
 
@@ -176,11 +176,11 @@ Make going down a path the same as going through it.
 
 [extras.t](../file/extras.t.html)\[[764](../source/extras.t.html#764)\]
 
-<div class="desc">
+
 
 Make going up a path the same as going through it.
 
-</div>
+
 
 <span id="dobjFor(Follow)"></span>
 
@@ -188,15 +188,15 @@ Make going up a path the same as going through it.
 
 [extras.t](../file/extras.t.html)\[[758](../source/extras.t.html#758)\]
 
-<div class="desc">
+
 
 Make following a path the same as going through it.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

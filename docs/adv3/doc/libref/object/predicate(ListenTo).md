@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `VerbRule(ListenTo)      `*`// original source text`*  
 `grammar `<span class="gramalt">[`predicate`](../object/predicate.html)`(ListenTo)`</span>` :   `[`ListenToAction`](../object/ListenToAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`predicate(ListenTo)`**  
 [`ListenToAction`](../object/ListenToAction.html)  
@@ -47,11 +47,11 @@ Details](#_Methods_)
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`verbPhrase`](#verbPhrase)
 
@@ -71,11 +71,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`noMatch`](#noMatch)
 
@@ -95,11 +95,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -107,19 +107,19 @@ Inherited from `Resolver` :
 
 [en_us.t](../file/en_us.t.html)\[[9353](../source/en_us.t.html#9353)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="noMatch"></span>
 
@@ -127,17 +127,17 @@ Inherited from `Resolver` :
 
 [en_us.t](../file/en_us.t.html)\[[9360](../source/en_us.t.html#9360)\]
 
-<div class="desc">
+
 
 use the "not aware" version of the no-match message - the object of
 LISTEN TO is often intangible, so the default "you can't see that"
 message is often incongruous for this verb
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

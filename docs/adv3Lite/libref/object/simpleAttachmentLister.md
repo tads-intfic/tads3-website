@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A lister used to list the items attached to a SimpleAttachable
 
 **`simpleAttachmentLister`**` :   `[`ItemLister`](../object/ItemLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`simpleAttachmentLister`**  
 [`ItemLister`](../object/ItemLister.html)  
@@ -42,11 +42,11 @@ A lister used to list the items attached to a SimpleAttachable
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`showSubListing`](#showSubListing)
 
@@ -57,11 +57,11 @@ Inherited from `ItemLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`listed`](#listed)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
@@ -73,11 +73,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="showSubListing"></span>
 
@@ -85,19 +85,19 @@ Inherited from `Lister` :
 
 [english.t](../file/english.t.html)\[[3305](../source/english.t.html#3305)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="listed"></span>
 
@@ -105,11 +105,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[371](../source/lister.t.html#371)\]
 
-<div class="desc">
+
 
 an object is listed if it's attached
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -117,11 +117,11 @@ an object is listed if it's attached
 
 [english.t](../file/english.t.html)\[[3295](../source/english.t.html#3295)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffix"></span>
 
@@ -129,15 +129,15 @@ an object is listed if it's attached
 
 [english.t](../file/english.t.html)\[[3300](../source/english.t.html#3300)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

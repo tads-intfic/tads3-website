@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \>
@@ -18,7 +18,7 @@ System</a>    
 <a href="t3npcTravel.html" class="nav"><em>Next:</em> NPC Travel</a>    
 </span>
 
-</div>
+
 
 
 
@@ -2038,7 +2038,7 @@ dynamic features as you need them.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -2050,4 +2050,4 @@ System</a>    
 <a href="t3npcTravel.html" class="nav"><em>Next:</em> NPC Travel</a>    
 </span>
 
-</div>
+

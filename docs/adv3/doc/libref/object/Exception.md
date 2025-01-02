@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for all exception objects. We derive all exceptions from this
 base class so that we can write 'catch' blocks that catch all exceptions
@@ -37,25 +37,25 @@ exception. Subclasses should override this method.
 
 `class `**`Exception`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Exception`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Exception`**  
 [`AbortImplicitSignal`](../object/AbortImplicitSignal.html)  
@@ -102,39 +102,39 @@ exception. Subclasses should override this method.
 [`UnknownCharSetException`](../object/UnknownCharSetException.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`errmsg_`](#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`displayException`](#displayException)[`getExceptionMessage`](#getExceptionMessage)[`showStackTrace`](#showStackTrace)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="errmsg_"></span>
 
@@ -142,7 +142,7 @@ exception. Subclasses should override this method.
 
 [\_main.t](../file/_main.t.html)\[[693](../source/_main.t.html#693)\]
 
-<div class="desc">
+
 
 Private member: The error message passed to the constructor, if any.
 Note that this doesn't necessarily contain the actual displayed
@@ -151,15 +151,15 @@ subclasses to display additional parameters or other text entirely. The
 definitive message is the one that displayException() generates. If you
 want the displayed message as a string, use getExceptionMessage().
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -167,11 +167,11 @@ want the displayed message as a string, use getExceptionMessage().
 
 [\_main.t](../file/_main.t.html)\[[659](../source/_main.t.html#659)\]
 
-<div class="desc">
+
 
 construct, with an optional message describing the error
 
-</div>
+
 
 <span id="displayException"></span>
 
@@ -179,11 +179,11 @@ construct, with an optional message describing the error
 
 [\_main.t](../file/_main.t.html)\[[667](../source/_main.t.html#667)\]
 
-<div class="desc">
+
 
 display the exception - should always be overridden
 
-</div>
+
 
 <span id="getExceptionMessage"></span>
 
@@ -191,14 +191,14 @@ display the exception - should always be overridden
 
 [\_main.t](../file/_main.t.html)\[[678](../source/_main.t.html#678)\]
 
-<div class="desc">
+
 
 Get the exception message as a string. This captures the output of
 displayException() and returns it a string. Use this instead of
 accessing errmsg\_, since that member is private and might not reflect
 the actual displayed message.
 
-</div>
+
 
 <span id="showStackTrace"></span>
 
@@ -206,7 +206,7 @@ the actual displayed message.
 
 [\_main.t](../file/_main.t.html)\[[702](../source/_main.t.html#702)\]
 
-<div class="desc">
+
 
 Display a stack trace, given a list of T3StackInfo objects. Note that,
 for efficiency, we do not by default cache a stack trace when an
@@ -214,11 +214,11 @@ exception occurs; individual subclasses can obtain a stack trace if
 desired at construction and use the information to show a stack trace
 for the exception.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

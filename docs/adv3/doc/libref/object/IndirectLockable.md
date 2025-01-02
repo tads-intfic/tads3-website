@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A lockable that can't be locked and unlocked by direct action. The LOCK
 and UNLOCK commands cannot be used with this kind of lockable.
@@ -42,15 +42,15 @@ directly.
 
 `class `**`IndirectLockable`**` :   `[`Lockable`](../object/Lockable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`IndirectLockable`**  
 [`Lockable`](../object/Lockable.html)  
@@ -58,27 +58,27 @@ directly.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotLockMsg`](#cannotLockMsg)[`cannotUnlockMsg`](#cannotUnlockMsg)[`lockStatusObvious`](#lockStatusObvious)
 
@@ -89,11 +89,11 @@ Inherited from `Lockable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(Unlock)`](#dobjFor(Unlock))[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))
 
@@ -105,11 +105,11 @@ Inherited from `Linkable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotLockMsg"></span>
 
@@ -117,11 +117,11 @@ Inherited from `Linkable` :
 
 [objects.t](../file/objects.t.html)\[[4005](../source/objects.t.html#4005)\]
 
-<div class="desc">
+
 
 the message we display in response to LOCK/UNLOCK
 
-</div>
+
 
 <span id="cannotUnlockMsg"></span>
 
@@ -129,11 +129,11 @@ the message we display in response to LOCK/UNLOCK
 
 [objects.t](../file/objects.t.html)\[[4006](../source/objects.t.html#4006)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lockStatusObvious"></span>
 
@@ -141,22 +141,22 @@ the message we display in response to LOCK/UNLOCK
 
 [objects.t](../file/objects.t.html)\[[4002](../source/objects.t.html#4002)\]
 
-<div class="desc">
+
 
 Since we can't be locked and unlocked with simple LOCK and UNLOCK
 commands, presume that the lock status isn't obvious. If the alternative
 mechanism that locks and unlocks the object makes the current status
 readily apparent, this should be overridden and set to true.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Lock)"></span>
 
@@ -164,11 +164,11 @@ readily apparent, this should be overridden and set to true.
 
 [objects.t](../file/objects.t.html)\[[3976](../source/objects.t.html#3976)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LockWith)"></span>
 
@@ -176,11 +176,11 @@ readily apparent, this should be overridden and set to true.
 
 [objects.t](../file/objects.t.html)\[[3984](../source/objects.t.html#3984)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Unlock)"></span>
 
@@ -188,11 +188,11 @@ readily apparent, this should be overridden and set to true.
 
 [objects.t](../file/objects.t.html)\[[3985](../source/objects.t.html#3985)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(UnlockWith)"></span>
 
@@ -200,15 +200,15 @@ readily apparent, this should be overridden and set to true.
 
 [objects.t](../file/objects.t.html)\[[3993](../source/objects.t.html#3993)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

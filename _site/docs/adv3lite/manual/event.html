@@ -61,35 +61,36 @@ the Fuse will execute on the same turn.</p>
 <p>For example, to define an alarm clock that rings in 10 turns’ time after
 you push a button on it, we could define:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    alarmClock: Thing 'alarm clock'
-        "It has a big red button attached. "
-        
-        ring() 
-        {
-           "The alarm clock starts ringing loudly. ";
-           redButton.isDown = nil;
-        }
-    ;
+<p>`
+    alarmClock: Thing ‘alarm clock’
+        “It has a big red button attached. “</p>
 
-    + redButton: Component 'big red button'
-        dobjFor(Push)
-        {
-            verify()
-            { 
-                if(isDown)
-                   illogicalNow('The button is already down. ');
-            }
-          
-            action()
-            {
-                isDown = true;
-                "You push the red button down. ";
-                new Fuse(alarmClock, &amp;ring, 10);
-            }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ring() 
+    {
+       "The alarm clock starts ringing loudly. ";
+       redButton.isDown = nil;
+    }
+;
+
++ redButton: Component 'big red button'
+    dobjFor(Push)
+    {
+        verify()
+        { 
+            if(isDown)
+               illogicalNow('The button is already down. ');
         }
-       
-       isDown = nil
-    ;
+      
+        action()
+        {
+            isDown = true;
+            "You push the red button down. ";
+            new Fuse(alarmClock, &amp;ring, 10);
+        }
+    }
+   
+   isDown = nil
+; `
 </code></pre></div></div>
 
 <p>Note, by the way, that the property we want to execute has to be listed
@@ -172,8 +173,9 @@ library).</p>
 its due to fire. If you’ve stored a reference to the Fuse or Daemon you
 can disable it by calling its <strong>removeEvent()</strong> method, e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      daemonID.removeEvent();
-</code></pre></div></div>
+<p>`
+      daemonID.removeEvent();
+`</p>
 
 <p>If you haven’t stored a reference to the Fuse or Daemon you want to
 remove, you can remove it by calling:</p>

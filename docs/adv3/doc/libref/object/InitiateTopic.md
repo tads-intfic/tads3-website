@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An "initiate" topic entry. This is a rather different kind of topic
 entry from the ones we've defined so far; an initiate topic is for cases
@@ -42,15 +42,15 @@ actor.initiateTopic(location);
 
 `class `**`InitiateTopic`**` :   `[`ThingMatchTopic`](../object/ThingMatchTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`InitiateTopic`**  
 [`ThingMatchTopic`](../object/ThingMatchTopic.html)  
@@ -58,27 +58,27 @@ actor.initiateTopic(location);
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)
 
@@ -89,11 +89,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`setTopicPronouns`](#setTopicPronouns)
 
@@ -105,11 +105,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -117,19 +117,19 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4068](../source/actor.t.html#4068)\]
 
-<div class="desc">
+
 
 include in the initiateTopics list
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -137,17 +137,17 @@ include in the initiateTopics list
 
 [actor.t](../file/actor.t.html)\[[4075](../source/actor.t.html#4075)\]
 
-<div class="desc">
+
 
 since this kind of topic is triggered by internal calculations in the
 game, and not on anything the player is doing, there's no reason that
 our match object should be a pronoun antecedent
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

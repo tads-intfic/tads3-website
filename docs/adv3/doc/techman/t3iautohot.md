@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Using AutoHotKey with
@@ -17,7 +17,7 @@ Compilation</a>    
 <a href="gameinfo.html" class="nav"><em>Next:</em> Bibliographic Metadata
 - the GameInfo Format</a>     </span>
 
-</div>
+
 
 
 

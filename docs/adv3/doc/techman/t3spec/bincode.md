@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -17,7 +17,7 @@ Portable Binary Encoding
 <a href="charmap.html" class="nav"><em>Next:</em> Character Mapping</a>
     </span>
 
-</div>
+
 
 
 
@@ -355,18 +355,18 @@ DATA_HOLDER
 
 Data holder for any primitive type
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -377,4 +377,4 @@ Portable Binary Encoding
 <a href="charmap.html" class="nav"><em>Next:</em> Character Mapping</a>
     </span>
 
-</div>
+

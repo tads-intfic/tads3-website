@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SymStairway is aingle object representing a stairway up from its lower
 end and a stairway down from its upper end. At the minimum we need to
@@ -46,15 +46,15 @@ use a SymStairway\]
 
 `class `**`SymStairway`**` :   `[`SymPassage`](../object/SymPassage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SymStairway`**  
 [`SymPassage`](../object/SymPassage.html)  
@@ -72,27 +72,27 @@ use a SymStairway\]
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canClimbDownMe`](#canClimbDownMe)[`cannotClimbDownMsg`](#cannotClimbDownMsg)[`cannotClimbMsg`](#cannotClimbMsg)[`inLower`](#inLower)[`inUpper`](#inUpper)[`isClimbable`](#isClimbable)[`lowerEnd`](#lowerEnd)[`PushTravelVia`](#PushTravelVia)[`traversalMsg`](#traversalMsg)[`upOrDown`](#upOrDown)[`upperEnd`](#upperEnd)
 
@@ -123,11 +123,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`byEnd`](#byEnd)[`dobjFor(Climb)`](#dobjFor(Climb))[`dobjFor(ClimbDown)`](#dobjFor(ClimbDown))[`dobjFor(ClimbUp)`](#dobjFor(ClimbUp))[`initConnector`](#initConnector)[`sayActorFollowing`](#sayActorFollowing)[`sayDeparting`](#sayDeparting)
 
@@ -160,11 +160,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canClimbDownMe"></span>
 
@@ -172,11 +172,11 @@ Inherited from `LMentionable` :
 
 [symconn.t](../file/symconn.t.html)\[[803](../source/symconn.t.html#803)\]
 
-<div class="desc">
+
 
 We can climb down this stairway if and only if we're at its upper end.
 
-</div>
+
 
 <span id="cannotClimbDownMsg"></span>
 
@@ -184,11 +184,11 @@ We can climb down this stairway if and only if we're at its upper end.
 
 [symconn.t](../file/symconn.t.html)\[[806](../source/symconn.t.html#806)\]
 
-<div class="desc">
+
 
 Use Thing's cannotDownMsg
 
-</div>
+
 
 <span id="cannotClimbMsg"></span>
 
@@ -196,11 +196,11 @@ Use Thing's cannotDownMsg
 
 [symconn.t](../file/symconn.t.html)\[[808](../source/symconn.t.html#808)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="inLower"></span>
 
@@ -208,11 +208,11 @@ Use Thing's cannotDownMsg
 
 [symconn.t](../file/symconn.t.html)\[[853](../source/symconn.t.html#853)\]
 
-<div class="desc">
+
 
 Is the player character in our lower end room?
 
-</div>
+
 
 <span id="inUpper"></span>
 
@@ -220,11 +220,11 @@ Is the player character in our lower end room?
 
 [symconn.t](../file/symconn.t.html)\[[850](../source/symconn.t.html#850)\]
 
-<div class="desc">
+
 
 Is the player character in our upper end room?
 
-</div>
+
 
 <span id="isClimbable"></span>
 
@@ -232,11 +232,11 @@ Is the player character in our upper end room?
 
 [symconn.t](../file/symconn.t.html)\[[800](../source/symconn.t.html#800)\]
 
-<div class="desc">
+
 
 We can climb up this stairway if and only if we're at its lower end.
 
-</div>
+
 
 <span id="lowerEnd"></span>
 
@@ -244,11 +244,11 @@ We can climb up this stairway if and only if we're at its lower end.
 
 [symconn.t](../file/symconn.t.html)\[[729](../source/symconn.t.html#729)\]
 
-<div class="desc">
+
 
 The room at the lower end of this staircase
 
-</div>
+
 
 <span id="PushTravelVia"></span>
 
@@ -256,12 +256,12 @@ The room at the lower end of this staircase
 
 [symconn.t](../file/symconn.t.html)\[[815](../source/symconn.t.html#815)\]
 
-<div class="desc">
+
 
 The appropriate PushTravelAction for pushing something something up or
 down a SymStairway.
 
-</div>
+
 
 <span id="traversalMsg"></span>
 
@@ -269,12 +269,12 @@ down a SymStairway.
 
 [symconn.t](../file/symconn.t.html)\[[844](../source/symconn.t.html#844)\]
 
-<div class="desc">
+
 
 The message for traversing this stairway - we delegate to Thing's
 message.
 
-</div>
+
 
 <span id="upOrDown"></span>
 
@@ -282,12 +282,12 @@ message.
 
 [symconn.t](../file/symconn.t.html)\[[866](../source/symconn.t.html#866)\]
 
-<div class="desc">
+
 
 Retuen 'down' or 'up' depending on whether we're at the upper or lower
 end of the stairway.
 
-</div>
+
 
 <span id="upperEnd"></span>
 
@@ -295,19 +295,19 @@ end of the stairway.
 
 [symconn.t](../file/symconn.t.html)\[[726](../source/symconn.t.html#726)\]
 
-<div class="desc">
+
 
 The room at the upper end of this staircase
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="byEnd"></span>
 
@@ -315,14 +315,14 @@ The room at the upper end of this staircase
 
 [symconn.t](../file/symconn.t.html)\[[861](../source/symconn.t.html#861)\]
 
-<div class="desc">
+
 
 Return a or b depending on whether or not the player character is in our
 upperEnd room. This is primarily intended to ease the writing of
 descriptions or travelDescs which vary slightly according to which end
 we're at, e.g. "The stairs lead steeply \<\<byUpLo('down', 'up')\>\> "
 
-</div>
+
 
 <span id="dobjFor(Climb)"></span>
 
@@ -330,11 +330,11 @@ we're at, e.g. "The stairs lead steeply \<\<byUpLo('down', 'up')\>\> "
 
 [symconn.t](../file/symconn.t.html)\[[794](../source/symconn.t.html#794)\]
 
-<div class="desc">
+
 
 Climbing up SymStairway is equivalent to travelling via it.
 
-</div>
+
 
 <span id="dobjFor(ClimbDown)"></span>
 
@@ -342,11 +342,11 @@ Climbing up SymStairway is equivalent to travelling via it.
 
 [symconn.t](../file/symconn.t.html)\[[788](../source/symconn.t.html#788)\]
 
-<div class="desc">
+
 
 Climbing down a SymStairway is equivalent to travelling via it.
 
-</div>
+
 
 <span id="dobjFor(ClimbUp)"></span>
 
@@ -354,11 +354,11 @@ Climbing down a SymStairway is equivalent to travelling via it.
 
 [symconn.t](../file/symconn.t.html)\[[785](../source/symconn.t.html#785)\]
 
-<div class="desc">
+
 
 Climbing a stairway is equivalent to climbimg up it.
 
-</div>
+
 
 <span id="initConnector"></span>
 
@@ -366,13 +366,13 @@ Climbing a stairway is equivalent to climbimg up it.
 
 [symconn.t](../file/symconn.t.html)\[[735](../source/symconn.t.html#735)\]
 
-<div class="desc">
+
 
 initialise this SymStairway by first carrying out the inherited
 initialization and then trying to determine which end of the stairway is
 the upperEnd and which the lowerEnd.
 
-</div>
+
 
 <span id="sayActorFollowing"></span>
 
@@ -380,12 +380,12 @@ the upperEnd and which the lowerEnd.
 
 [symconn.t](../file/symconn.t.html)\[[834](../source/symconn.t.html#834)\]
 
-<div class="desc">
+
 
 Display message announcing that follower is following leader up this
 staircase.
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -393,17 +393,17 @@ staircase.
 
 [symconn.t](../file/symconn.t.html)\[[822](../source/symconn.t.html#822)\]
 
-<div class="desc">
+
 
 Display message announcing that traveler (typically an NPC whose
 departure is witnessed by the player character) has left via this
 staircase.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1946,9 +1946,9 @@ method of [LockableWithKey](../object/LockableWithKey.html) in
 method of [Achievement](../object/Achievement.html) in
 [score.t](../file/score.t.html)\[[168](../source/score.t.html#168)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A DispensingCollective is a Collective that dispenses objects when the
 player takes from it; e.g. a bunch of grapes that dispenses grapes.
@@ -34,15 +34,15 @@ player takes from it; e.g. a bunch of grapes that dispenses grapes.
 
 `class `**`DispensingCollective`**` :   `[`Collective`](../object/Collective.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DispensingCollective`**  
 [`Collective`](../object/Collective.html)  
@@ -55,27 +55,27 @@ player takes from it; e.g. a bunch of grapes that dispenses grapes.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotDispenseMsg`](#cannotDispenseMsg)[`cannotTakeFromHereMsg`](#cannotTakeFromHereMsg)[`canSupply`](#canSupply)[`dispensedClass`](#dispensedClass)[`dispensedCount`](#dispensedCount)[`dispensedObjs`](#dispensedObjs)[`maxToDispense`](#maxToDispense)[`notEnoughLeftMsg`](#notEnoughLeftMsg)[`numLeft`](#numLeft)
 
@@ -97,11 +97,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canDispense`](#canDispense)[`collectiveAction`](#collectiveAction)[`dispenseObj`](#dispenseObj)[`dobjFor(Take)`](#dobjFor(Take))[`dobjFor(TakeFrom)`](#dobjFor(TakeFrom))[`exhaustDispenser`](#exhaustDispenser)[`iobjFor(TakeFrom)`](#iobjFor(TakeFrom))[`isCollectiveFor`](#isCollectiveFor)[`sayCannotDispense`](#sayCannotDispense)[`sayDispensed`](#sayDispensed)
 
@@ -125,11 +125,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotDispenseMsg"></span>
 
@@ -137,12 +137,12 @@ Inherited from `LMentionable` :
 
 [collective.t](../file/collective.t.html)\[[412](../source/collective.t.html#412)\]
 
-<div class="desc">
+
 
 The message to display when there's no more items to dispense from us.
 \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="cannotTakeFromHereMsg"></span>
 
@@ -150,11 +150,11 @@ The message to display when there's no more items to dispense from us.
 
 [collective.t](../file/collective.t.html)\[[384](../source/collective.t.html#384)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canSupply"></span>
 
@@ -162,14 +162,14 @@ The message to display when there's no more items to dispense from us.
 
 [collective.t](../file/collective.t.html)\[[197](../source/collective.t.html#197)\]
 
-<div class="desc">
+
 
 In principle a DispensingCollective can supply additional items on
 demand. This property is used by the parser to prevent it from throwing
 an error when the player asks for more of the items we dispense than are
 currently in scope. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="dispensedClass"></span>
 
@@ -177,12 +177,12 @@ currently in scope. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[166](../source/collective.t.html#166)\]
 
-<div class="desc">
+
 
 If definesd the class of object that is created and dispensed when an
 actor takes from this DispensingCollective. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="dispensedCount"></span>
 
@@ -190,11 +190,11 @@ actor takes from this DispensingCollective. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[175](../source/collective.t.html#175)\]
 
-<div class="desc">
+
 
 The number of objects we have dispensed so far. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="dispensedObjs"></span>
 
@@ -202,12 +202,12 @@ The number of objects we have dispensed so far. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[172](../source/collective.t.html#172)\]
 
-<div class="desc">
+
 
 Alternatively, a list of objects that are taken in turn when we take
 from this DispensingCollective. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="maxToDispense"></span>
 
@@ -215,12 +215,12 @@ from this DispensingCollective. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[181](../source/collective.t.html#181)\]
 
-<div class="desc">
+
 
 The total number of objects we can dispense. If this is nil, there is no
 limit. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="notEnoughLeftMsg"></span>
 
@@ -228,12 +228,12 @@ limit. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[419](../source/collective.t.html#419)\]
 
-<div class="desc">
+
 
 The message to display when the player has asked us for more items than
 we have left. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="numLeft"></span>
 
@@ -241,22 +241,22 @@ we have left. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[189](../source/collective.t.html#189)\]
 
-<div class="desc">
+
 
 The number of objects we have left to dispense. This is updated by the
 canDispense method, and shouldn't be overridden by user code. It may,
 however, for use code to consult this property, e.g. to vary our
 description. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canDispense"></span>
 
@@ -264,12 +264,12 @@ description. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[200](../source/collective.t.html#200)\]
 
-<div class="desc">
+
 
 Is it possible (or allowed) to dispense any more objects from us?
 \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="collectiveAction"></span>
 
@@ -277,12 +277,12 @@ Is it possible (or allowed) to dispense any more objects from us?
 
 [collective.t](../file/collective.t.html)\[[437](../source/collective.t.html#437)\]
 
-<div class="desc">
+
 
 The TakeFrom action should always act on us, the Collective.
 \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="dispenseObj"></span>
 
@@ -290,12 +290,12 @@ The TakeFrom action should always act on us, the Collective.
 
 [collective.t](../file/collective.t.html)\[[237](../source/collective.t.html#237)\]
 
-<div class="desc">
+
 
 Dispense an object from this DispensingCollective. \[COLLECTIVE
 EXTENSION\]
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -303,7 +303,7 @@ EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[309](../source/collective.t.html#309)\]
 
-<div class="desc">
+
 
 The TAKE action applied to a DispensingCollective might mean one of two
 things: it might be an attempt to take the DispensingCollective (e.g.
@@ -312,7 +312,7 @@ item (e.g. a single grape from the bunch). We assume it's the former if
 what the player typed matches the plural vocab (e.g. 'grapes') and the
 latter otherwise. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="dobjFor(TakeFrom)"></span>
 
@@ -320,11 +320,11 @@ latter otherwise. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[387](../source/collective.t.html#387)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="exhaustDispenser"></span>
 
@@ -332,7 +332,7 @@ latter otherwise. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[297](../source/collective.t.html#297)\]
 
-<div class="desc">
+
 
 Game code can override this method on specific objects to carry out the
 effects of dispensing the maximum number of objects we're going to
@@ -341,7 +341,7 @@ bananas by a single banana (when it's the last one left). We do nothing
 here in the library, since what's needed will vary with the specifics of
 the game. \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="iobjFor(TakeFrom)"></span>
 
@@ -349,7 +349,7 @@ the game. \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[363](../source/collective.t.html#363)\]
 
-<div class="desc">
+
 
 We need to be able to handle commands like TAKE GRAPE FROM BUNCH where
 the DispensingCollective represents both objects in the command (since
@@ -357,7 +357,7 @@ until we actually take the grape - or whatever the dispensed object is
 to be - it doesn't yet exist in scope to be the object of the command.)
 \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="isCollectiveFor"></span>
 
@@ -365,11 +365,11 @@ to be - it doesn't yet exist in scope to be the object of the command.)
 
 [collective.t](../file/collective.t.html)\[[422](../source/collective.t.html#422)\]
 
-<div class="desc">
+
 
 Are we the Collective for obj? \[COLLECTIVE EXTENSION\]
 
-</div>
+
 
 <span id="sayCannotDispense"></span>
 
@@ -377,11 +377,11 @@ Are we the Collective for obj? \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[402](../source/collective.t.html#402)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sayDispensed"></span>
 
@@ -389,16 +389,16 @@ Are we the Collective for obj? \[COLLECTIVE EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[279](../source/collective.t.html#279)\]
 
-<div class="desc">
+
 
 Display a message saying that the actor has taken an object from us.
 \[COLLECTIVE EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

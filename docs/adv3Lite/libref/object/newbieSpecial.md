@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`newbieSpecial`**` :   `[`Special`](../object/Special.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`newbieSpecial`**  
 [`Special`](../object/Special.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`active`](#active)[`priority`](#priority)
 
@@ -54,11 +54,11 @@ Inherited from `Special` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canTalkTo`](#canTalkTo)
 
@@ -67,11 +67,11 @@ Inherited from `Special` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="active"></span>
 
@@ -79,11 +79,11 @@ Inherited from `Special` :
 
 [newbie.t](../file/newbie.t.html)\[[962](../source/newbie.t.html#962)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -91,19 +91,19 @@ Inherited from `Special` :
 
 [newbie.t](../file/newbie.t.html)\[[960](../source/newbie.t.html#960)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canTalkTo"></span>
 
@@ -111,15 +111,15 @@ Inherited from `Special` :
 
 [newbie.t](../file/newbie.t.html)\[[952](../source/newbie.t.html#952)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 25/05/2013 from adv3Lite version 0.9
 
-</div>
+

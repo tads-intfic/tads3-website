@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 there's nothing to show - say so
 
 `DefineAction(SmellImplicit, SenseImplicitAction)      `*`// original source text`*  
 `class `**`SmellImplicitAction`**` :   `[`SenseImplicitAction`](../object/SenseImplicitAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SmellImplicitAction`**  
 [`SenseImplicitAction`](../object/SenseImplicitAction.html)  
@@ -51,29 +51,29 @@ there's nothing to show - say so
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SmellImplicitAction`**  
 [`predicate(SmellImplicit)`](../object/predicate(SmellImplicit).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`defaultMsgProp`](#defaultMsgProp)[`descProp`](#descProp)[`mySense`](#mySense)[`resultLister`](#resultLister)
 
@@ -89,11 +89,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -111,11 +111,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="defaultMsgProp"></span>
 
@@ -123,11 +123,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1867](../source/actions.t.html#1867)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="descProp"></span>
 
@@ -135,11 +135,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1866](../source/actions.t.html#1866)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="mySense"></span>
 
@@ -147,11 +147,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1865](../source/actions.t.html#1865)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="resultLister"></span>
 
@@ -159,25 +159,25 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1868](../source/actions.t.html#1868)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

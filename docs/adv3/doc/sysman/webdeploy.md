@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="web.html" class="nav">Playing on the Web</a> \> Deploying your
@@ -16,7 +16,7 @@ Web UI game
     <a href="webhost.html" class="nav"><em>Next:</em> Setting up a custom
 TADS Web server</a>     </span>
 
-</div>
+
 
 
 
@@ -264,7 +264,7 @@ interaction.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -274,4 +274,4 @@ Web UI game
     <a href="webhost.html" class="nav"><em>Next:</em> Setting up a custom
 TADS Web server</a>     </span>
 
-</div>
+

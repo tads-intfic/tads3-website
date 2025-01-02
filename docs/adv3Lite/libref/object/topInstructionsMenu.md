@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The main instructions menu. This can be used as a top-level menu; just
 call the 'display()' method on this object to display the menu. This can
@@ -29,15 +29,15 @@ menu into a parent menu's 'contents' list.
 
 **`topInstructionsMenu`**` :   `[`MenuItem`](../object/MenuItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`topInstructionsMenu`**  
 [`MenuItem`](../object/MenuItem.html)  
@@ -45,11 +45,11 @@ menu into a parent menu's 'contents' list.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`heading`](#heading)[`isChapterMenu`](#isChapterMenu)[`title`](#title)
 
@@ -61,11 +61,11 @@ Inherited from `MenuObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`menuContents`](#menuContents)
 
@@ -77,11 +77,11 @@ Inherited from `MenuObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="heading"></span>
 
@@ -89,11 +89,11 @@ Inherited from `MenuObject` :
 
 [instruct.t](../file/instruct.t.html)\[[1054](../source/instruct.t.html#1054)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isChapterMenu"></span>
 
@@ -101,11 +101,11 @@ Inherited from `MenuObject` :
 
 [instruct.t](../file/instruct.t.html)\[[1052](../source/instruct.t.html#1052)\]
 
-<div class="desc">
+
 
 the chapter menus
 
-</div>
+
 
 <span id="title"></span>
 
@@ -113,19 +113,19 @@ the chapter menus
 
 [instruct.t](../file/instruct.t.html)\[[1053](../source/instruct.t.html#1053)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="menuContents"></span>
 
@@ -133,15 +133,15 @@ the chapter menus
 
 [instruct.t](../file/instruct.t.html)\[[1055](../source/instruct.t.html#1055)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

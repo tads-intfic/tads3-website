@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Standard Non-Player Character (NPC) messages. These messages are
 generated when the player issues a command to a specific non-player
@@ -28,15 +28,15 @@ character.
 
 **`npcMessages`**` :   `[`playerMessages`](../object/playerMessages.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`npcMessages`**  
 [`playerMessages`](../object/playerMessages.html)  
@@ -45,11 +45,11 @@ character.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -62,11 +62,11 @@ Inherited from `libMessages` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askMissingObject`](#askMissingObject)[`commandNotHeard`](#commandNotHeard)[`insufficientQuantity`](#insufficientQuantity)[`missingLiteral`](#missingLiteral)[`missingObject`](#missingObject)[`noMatchCannotSee`](#noMatchCannotSee)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchNotAware`](#noMatchNotAware)
 
@@ -81,19 +81,19 @@ Inherited from `MessageHelper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="ambiguousNounPhrase"></span>
 
@@ -101,12 +101,12 @@ Inherited from `MessageHelper` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2188](../source/msg_neu.t.html#2188)\]
 
-<div class="desc">
+
 
 we found an ambiguous noun phrase, but we were unable to perform
 interactive disambiguation
 
-</div>
+
 
 <span id="askMissingObject"></span>
 
@@ -114,11 +114,11 @@ interactive disambiguation
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2197](../source/msg_neu.t.html#2197)\]
 
-<div class="desc">
+
 
 Missing object query and error message templates
 
-</div>
+
 
 <span id="commandNotHeard"></span>
 
@@ -126,11 +126,11 @@ Missing object query and error message templates
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2152](../source/msg_neu.t.html#2152)\]
 
-<div class="desc">
+
 
 the target cannot hear a command we gave
 
-</div>
+
 
 <span id="insufficientQuantity"></span>
 
@@ -138,11 +138,11 @@ the target cannot hear a command we gave
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2178](../source/msg_neu.t.html#2178)\]
 
-<div class="desc">
+
 
 insufficient quantity to meet a command request ('take five books')
 
-</div>
+
 
 <span id="missingLiteral"></span>
 
@@ -150,11 +150,11 @@ insufficient quantity to meet a command request ('take five books')
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2211](../source/msg_neu.t.html#2211)\]
 
-<div class="desc">
+
 
 missing literal phrase query and error message templates
 
-</div>
+
 
 <span id="missingObject"></span>
 
@@ -162,11 +162,11 @@ missing literal phrase query and error message templates
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2203](../source/msg_neu.t.html#2203)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatchCannotSee"></span>
 
@@ -174,11 +174,11 @@ missing literal phrase query and error message templates
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2158](../source/msg_neu.t.html#2158)\]
 
-<div class="desc">
+
 
 no match for a noun phrase
 
-</div>
+
 
 <span id="noMatchForAll"></span>
 
@@ -186,11 +186,11 @@ no match for a noun phrase
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2164](../source/msg_neu.t.html#2164)\]
 
-<div class="desc">
+
 
 no match for 'all'
 
-</div>
+
 
 <span id="noMatchForAllBut"></span>
 
@@ -198,11 +198,11 @@ no match for 'all'
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2171](../source/msg_neu.t.html#2171)\]
 
-<div class="desc">
+
 
 nothing left for 'all' after removing 'except' items
 
-</div>
+
 
 <span id="noMatchNotAware"></span>
 
@@ -210,15 +210,15 @@ nothing left for 'all' after removing 'except' items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2160](../source/msg_neu.t.html#2160)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

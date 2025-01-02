@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A special kind of container that only accepts specific contents. The
 acceptable contents can be specified by a list of enumerated items, or
@@ -34,15 +34,15 @@ by a method that indicates whether or not an item is allowed.
 
 `class `**`RestrictedContainer`**` :   `[`RestrictedHolder`](../object/RestrictedHolder.html)[`Container`](../object/Container.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RestrictedContainer`**  
 [`RestrictedHolder`](../object/RestrictedHolder.html)  
@@ -55,27 +55,27 @@ by a method that indicates whether or not an item is allowed.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -99,11 +99,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotPutInMsg`](#cannotPutInMsg)[`iobjFor(PutIn)`](#iobjFor(PutIn))
 
@@ -127,19 +127,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotPutInMsg"></span>
 
@@ -147,7 +147,7 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5073](../source/objects.t.html#5073)\]
 
-<div class="desc">
+
 
 A message that explains why the direct object can't be put in this
 container. In most cases, the rather generic default message should be
@@ -156,7 +156,7 @@ this object. The rejected object is provided as a parameter in case the
 message needs to vary by object, but we ignore this and just use a
 single blanket failure message by default.
 
-</div>
+
 
 <span id="iobjFor(PutIn)"></span>
 
@@ -164,15 +164,15 @@ single blanket failure message by default.
 
 [objects.t](../file/objects.t.html)\[[5076](../source/objects.t.html#5076)\]
 
-<div class="desc">
+
 
 override PutIn to enforce our contents restriction
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

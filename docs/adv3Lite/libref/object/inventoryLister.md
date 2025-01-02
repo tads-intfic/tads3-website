@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 inventoryLister displays an inventory listing in WIDE format.
 
 **`inventoryLister`**` :   `[`ItemLister`](../object/ItemLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`inventoryLister`**  
 [`ItemLister`](../object/ItemLister.html)  
@@ -42,11 +42,11 @@ inventoryLister displays an inventory listing in WIDE format.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -57,11 +57,11 @@ Inherited from `ItemLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`listed`](#listed)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
@@ -73,19 +73,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="listed"></span>
 
@@ -93,11 +93,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[174](../source/lister.t.html#174)\]
 
-<div class="desc">
+
 
 is the object listed in an inventory list?
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -105,11 +105,11 @@ is the object listed in an inventory list?
 
 [english.t](../file/english.t.html)\[[3066](../source/english.t.html#3066)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -117,11 +117,11 @@ is the object listed in an inventory list?
 
 [english.t](../file/english.t.html)\[[3056](../source/english.t.html#3056)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffix"></span>
 
@@ -129,15 +129,15 @@ is the object listed in an inventory list?
 
 [english.t](../file/english.t.html)\[[3061](../source/english.t.html#3061)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

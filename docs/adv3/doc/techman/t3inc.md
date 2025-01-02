@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Understanding
@@ -17,7 +17,7 @@ Configurations</a>    
 <a href="t3iautohot.html" class="nav"><em>Next:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>     </span>
 
-</div>
+
 
 
 
@@ -511,7 +511,7 @@ figures out what you've been changing and recompiles just those parts.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -522,4 +522,4 @@ Configurations</a>    
 <a href="t3iautohot.html" class="nav"><em>Next:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>     </span>
 
-</div>
+

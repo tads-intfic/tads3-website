@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "suggested" topic. These provide suggestions for things the player
 might want to ASK or TELL another actor about. At certain times
@@ -89,25 +89,25 @@ actors.
 
 `class `**`SuggestedTopic`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SuggestedTopic`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SuggestedTopic`**  
 [`SuggestedAskForTopic`](../object/SuggestedAskForTopic.html)  
@@ -121,39 +121,39 @@ actors.
 [`SuggestedYesTopic`](../object/SuggestedYesTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`associatedTopic`](#associatedTopic)[`curiositySatisfied`](#curiositySatisfied)[`fullName`](#fullName)[`location`](#location)[`name`](#name)[`suggestionGroup`](#suggestionGroup)[`suggestTo`](#suggestTo)[`timesToSuggest`](#timesToSuggest)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`associatedTopicCanMatch`](#associatedTopicCanMatch)[`associatedTopicIsActive`](#associatedTopicIsActive)[`associatedTopicTalkCount`](#associatedTopicTalkCount)[`findEnclosingSuggestedTopic`](#findEnclosingSuggestedTopic)[`findOuterSuggestedTopic`](#findOuterSuggestedTopic)[`fromEnclosingSuggestedTopic`](#fromEnclosingSuggestedTopic)[`initializeSuggestedTopic`](#initializeSuggestedTopic)[`isSuggestionActive`](#isSuggestionActive)[`noteSuggestion`](#noteSuggestion)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="associatedTopic"></span>
 
@@ -161,7 +161,7 @@ actors.
 
 [actor.t](../file/actor.t.html)\[[1185](../source/actor.t.html#1185)\]
 
-<div class="desc">
+
 
 Our associated topic. In most cases, this will be initialized
 automatically: if this suggested topic object is also a TopicEntry
@@ -170,7 +170,7 @@ object (using multiple inheritance), we'll set this during start-up to
 location. This only needs to be initialized manually if neither of those
 conditions is true.
 
-</div>
+
 
 <span id="curiositySatisfied"></span>
 
@@ -178,14 +178,14 @@ conditions is true.
 
 [actor.t](../file/actor.t.html)\[[1316](../source/actor.t.html#1316)\]
 
-<div class="desc">
+
 
 Have we satisfied our curiosity about this topic? Returns true if so,
 nil if not. We'll never suggest a topic when this returns true, because
 this means that the player no longer feels the need to ask about the
 topic.
 
-</div>
+
 
 <span id="fullName"></span>
 
@@ -193,7 +193,7 @@ topic.
 
 [actor.t](../file/actor.t.html)\[[1174](../source/actor.t.html#1174)\]
 
-<div class="desc">
+
 
 The name of the suggestion. The rules for setting this vary by language;
 in the English version, we'll display the fullName when we show a
@@ -214,7 +214,7 @@ By default, we'll walk up our 'location' tree looking for another
 suggested topic; if we find one, we'll use its corresponding name
 values.
 
-</div>
+
 
 <span id="location"></span>
 
@@ -222,7 +222,7 @@ values.
 
 [actor.t](../file/actor.t.html)\[[1199](../source/actor.t.html#1199)\]
 
-<div class="desc">
+
 
 Set the location to the actor to ask or tell about this topic. This is
 the target of the ASK ABOUT or TELL ABOUT command, NOT the actor who's
@@ -235,7 +235,7 @@ Because we're using the location property, you can use the '+' notation
 to add a suggested topic to the target actor, state objects, or topic
 entry.
 
-</div>
+
 
 <span id="name"></span>
 
@@ -243,11 +243,11 @@ entry.
 
 [actor.t](../file/actor.t.html)\[[1175](../source/actor.t.html#1175)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="suggestionGroup"></span>
 
@@ -255,11 +255,11 @@ entry.
 
 [actor.t](../file/actor.t.html)\[[1224](../source/actor.t.html#1224)\]
 
-<div class="desc">
+
 
 the ListGroup with which we're to list this suggestion
 
-</div>
+
 
 <span id="suggestTo"></span>
 
@@ -267,7 +267,7 @@ the ListGroup with which we're to list this suggestion
 
 [actor.t](../file/actor.t.html)\[[1221](../source/actor.t.html#1221)\]
 
-<div class="desc">
+
 
 The actor who \*wants\* to ask or tell about this topic. Our location
 property gives the actor to be asked or told, because we're associated
@@ -286,7 +286,7 @@ you'll probably want to override this for each suggested topic to
 indicate which character wants to ask about the topic, as the different
 player characters might have different things they'd want to talk about.
 
-</div>
+
 
 <span id="timesToSuggest"></span>
 
@@ -294,7 +294,7 @@ player characters might have different things they'd want to talk about.
 
 [actor.t](../file/actor.t.html)\[[1308](../source/actor.t.html#1308)\]
 
-<div class="desc">
+
 
 The number of times to suggest asking about our topic. When we've asked
 about our associated topic this many times, we'll have satisfied our
@@ -305,15 +305,15 @@ cases where a topic will reveal more information when asked several
 times. If this is nil, it means that there's no limit to the number of
 times to suggest asking about this.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="associatedTopicCanMatch"></span>
 
@@ -321,11 +321,11 @@ times to suggest asking about this.
 
 [actor.t](../file/actor.t.html)\[[1351](../source/actor.t.html#1351)\]
 
-<div class="desc">
+
 
 is it possible to match the associated topic?
 
-</div>
+
 
 <span id="associatedTopicIsActive"></span>
 
@@ -333,11 +333,11 @@ is it possible to match the associated topic?
 
 [actor.t](../file/actor.t.html)\[[1345](../source/actor.t.html#1345)\]
 
-<div class="desc">
+
 
 is the associated topic active?
 
-</div>
+
 
 <span id="associatedTopicTalkCount"></span>
 
@@ -345,11 +345,11 @@ is the associated topic active?
 
 [actor.t](../file/actor.t.html)\[[1348](../source/actor.t.html#1348)\]
 
-<div class="desc">
+
 
 get the number of previous invocations of the associated topic
 
-</div>
+
 
 <span id="findEnclosingSuggestedTopic"></span>
 
@@ -357,11 +357,11 @@ get the number of previous invocations of the associated topic
 
 [actor.t](../file/actor.t.html)\[[1227](../source/actor.t.html#1227)\]
 
-<div class="desc">
+
 
 find the nearest enclosing SuggestedTopic parent
 
-</div>
+
 
 <span id="findOuterSuggestedTopic"></span>
 
@@ -369,11 +369,11 @@ find the nearest enclosing SuggestedTopic parent
 
 [actor.t](../file/actor.t.html)\[[1242](../source/actor.t.html#1242)\]
 
-<div class="desc">
+
 
 find the outermost enclosing SuggestedTopic parent
 
-</div>
+
 
 <span id="fromEnclosingSuggestedTopic"></span>
 
@@ -381,12 +381,12 @@ find the outermost enclosing SuggestedTopic parent
 
 [actor.t](../file/actor.t.html)\[[1263](../source/actor.t.html#1263)\]
 
-<div class="desc">
+
 
 get a property from the nearest enclosing SuggestedTopic, or return the
 given default value if there is no enclosing SuggestedTopic
 
-</div>
+
 
 <span id="initializeSuggestedTopic"></span>
 
@@ -394,11 +394,11 @@ given default value if there is no enclosing SuggestedTopic
 
 [actor.t](../file/actor.t.html)\[[1320](../source/actor.t.html#1320)\]
 
-<div class="desc">
+
 
 initialize - this is called automatically during pre-initialization
 
-</div>
+
 
 <span id="isSuggestionActive"></span>
 
@@ -406,14 +406,14 @@ initialize - this is called automatically during pre-initialization
 
 [actor.t](../file/actor.t.html)\[[1282](../source/actor.t.html#1282)\]
 
-<div class="desc">
+
 
 Should we suggest this topic to the given actor? We'll return true if
 the actor is the same actor for which this suggestion is intended, and
 the associated topic entry is currently active, and we haven't already
 satisfied our curiosity about the topic.
 
-</div>
+
 
 <span id="noteSuggestion"></span>
 
@@ -421,17 +421,17 @@ satisfied our curiosity about the topic.
 
 [actor.t](../file/actor.t.html)\[[1359](../source/actor.t.html#1359)\]
 
-<div class="desc">
+
 
 Note that we're being shown in a topic inventory listing. By default, we
 don't do anything here, but subclasses can use this to do any extra work
 they want to do on being listed.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

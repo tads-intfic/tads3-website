@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "stretchy container." This is a simple container subclass whose
 external bulk changes according to the bulks of the contents.
 
 `class `**`StretchyContainer`**` :   `[`Container`](../object/Container.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`StretchyContainer`**  
 [`Container`](../object/Container.html)  
@@ -52,27 +52,27 @@ external bulk changes according to the bulks of the contents.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`minBulk`](#minBulk)
 
@@ -93,11 +93,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkBulkChangeWithin`](#checkBulkChangeWithin)[`checkBulkInserted`](#checkBulkInserted)[`getBulk`](#getBulk)[`getBulkForContents`](#getBulkForContents)
 
@@ -118,11 +118,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="minBulk"></span>
 
@@ -130,20 +130,20 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[1064](../source/extras.t.html#1064)\]
 
-<div class="desc">
+
 
 Our minimum bulk. This is the minimum bulk we'll report, even when the
 aggregate bulks of our contents are below this limit.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkBulkChangeWithin"></span>
 
@@ -151,13 +151,13 @@ aggregate bulks of our contents are below this limit.
 
 [extras.t](../file/extras.t.html)\[[1131](../source/extras.t.html#1131)\]
 
-<div class="desc">
+
 
 Check a bulk change of one of my direct contents. Since my own bulk
 changes whenever the bulk of one of my contents changes, we must
 propagate the bulk change of our contents as a change in our own bulk.
 
-</div>
+
 
 <span id="checkBulkInserted"></span>
 
@@ -165,7 +165,7 @@ propagate the bulk change of our contents as a change in our own bulk.
 
 [extras.t](../file/extras.t.html)\[[1110](../source/extras.t.html#1110)\]
 
-<div class="desc">
+
 
 Check what happens when a new object is inserted into my contents. This
 is called with the new object already tentatively added to my contents,
@@ -174,7 +174,7 @@ so we can examine our current status to see if everything works.
 Since we can change our own size when a new item is added to our
 contents, we'll trigger a full bulk change check.
 
-</div>
+
 
 <span id="getBulk"></span>
 
@@ -182,11 +182,11 @@ contents, we'll trigger a full bulk change check.
 
 [extras.t](../file/extras.t.html)\[[1067](../source/extras.t.html#1067)\]
 
-<div class="desc">
+
 
 get my total external bulk
 
-</div>
+
 
 <span id="getBulkForContents"></span>
 
@@ -194,7 +194,7 @@ get my total external bulk
 
 [extras.t](../file/extras.t.html)\[[1088](../source/extras.t.html#1088)\]
 
-<div class="desc">
+
 
 Calculate the contribution to my external bulk of my contents. The
 default for a stretchy container is to conform exactly to the contents,
@@ -202,11 +202,11 @@ as though the container weren't present at all, hence we simply sum the
 bulks of our contents. Subclasses can override this to define other
 aggregate bulk effects as needed.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 String capturer. This is an implementation of CaptureFilter that saves
 the captured text to a string.
 
 `class `**`StringCaptureFilter`**` :   `[`CaptureFilter`](../object/CaptureFilter.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`StringCaptureFilter`**  
 [`CaptureFilter`](../object/CaptureFilter.html)  
@@ -49,27 +49,27 @@ the captured text to a string.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`txt_`](#txt_)
 
@@ -79,11 +79,11 @@ the captured text to a string.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addText`](#addText)[`filterText`](#filterText)
 
@@ -93,11 +93,11 @@ the captured text to a string.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="txt_"></span>
 
@@ -105,19 +105,19 @@ the captured text to a string.
 
 [output.t](../file/output.t.html)\[[747](../source/output.t.html#747)\]
 
-<div class="desc">
+
 
 my captured text so far
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addText"></span>
 
@@ -125,11 +125,11 @@ my captured text so far
 
 [output.t](../file/output.t.html)\[[740](../source/output.t.html#740)\]
 
-<div class="desc">
+
 
 add to my captured text
 
-</div>
+
 
 <span id="filterText"></span>
 
@@ -137,15 +137,15 @@ add to my captured text
 
 [output.t](../file/output.t.html)\[[733](../source/output.t.html#733)\]
 
-<div class="desc">
+
 
 filter text
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -94,23 +94,24 @@ define a check method or an action method you create a block with
 closing braces (usually several lines apart) and then place your check()
 and action() code between the braces, like so:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dobjFor(Turn)
+<p>`
+    dobjFor(Turn)
     {
         check()
         {
            if(hasBeenTurned)
-              "You've already turned the valve. ";
-        }
-        
-        action()
-        {
-            "Straining with all your might you manage to turn the valve all
-             the way until the hissing stream of steam and water issuing 
-             from the pipe finally stops. ";
-             
-             hasBeenTurned = true;
-        }
+              “You’ve already turned the valve. “;
+        }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    action()
+    {
+        "Straining with all your might you manage to turn the valve all
+         the way until the hissing stream of steam and water issuing 
+         from the pipe finally stops. ";
+         
+         hasBeenTurned = true;
     }
+} `
 </code></pre></div></div>
 
 <p>Although the adv3Lite library does its best to provide standard handling
@@ -143,23 +144,24 @@ objects</strong>. This is a form of syntax that allows us to define one object
 (the nested anonymous object) directly on the property of another
 object, like so:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    enclosingObject: Thing 'whatsit'
-       "This is just a demonstration object. "
+<p>`
+    enclosingObject: Thing ‘whatsit’
+       “This is just a demonstration object. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   bulk = 10
+   
+   someProperty: Thing 'nested thing'
+   {
+       desc = "I am nested in &lt;&lt;lexicalParent.theName&gt;&gt;, which
+       has a bulk of &lt;&lt;lexicalParent.bulk&gt;&gt;. My own bulk is
+       &lt;&lt;bulk&gt;&gt;. "
        
-       bulk = 10
+       subProperty = 'foo'
        
-       someProperty: Thing 'nested thing'
-       {
-           desc = "I am nested in &lt;&lt;lexicalParent.theName&gt;&gt;, which
-           has a bulk of &lt;&lt;lexicalParent.bulk&gt;&gt;. My own bulk is
-           &lt;&lt;bulk&gt;&gt;. "
-           
-           subProperty = 'foo'
-           
-           bulk = 4
-           
-       }
-    ;
+       bulk = 4
+       
+   }
+; `
 </code></pre></div></div>
 
 <p>In this example, the object defined on the
@@ -212,17 +214,18 @@ objects of the <strong>SubComponent</strong> class directly on the <strong>remap
 <strong>remapOn</strong>, <strong>remapUnder</strong> and <strong>remapBehind</strong> properties of the Thing
 in question, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    chest: Heavy 'large chest'
+<p>`
+    chest: Heavy ‘large chest’
        remapIn: SubComponent
        {
           isOpenable = true
           bulkCapacity = 30
-       }
-       
-       remapOn: SubComponent {}
-       remapUnder: SubComponent {}
-       remapBehind: SubComponent {}
-    ;
+       }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   remapOn: SubComponent {}
+   remapUnder: SubComponent {}
+   remapBehind: SubComponent {}
+; `
 </code></pre></div></div>
 
 <p>Note that if we want the chest to be openable or lockable we need to
@@ -254,21 +257,22 @@ if we wanted the chest to start off with a book inside it, a plate on
 top of it, a coin underneath it, and pen behind it we’d define these
 four objects thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + book: Thing 'book'
+<p>`
+    + book: Thing ‘book’
       subLocation = &amp;remapIn
-    ;
-      
-    + plate: Surface 'plate'
-      subLocation = &amp;remapOn
-    ;
+    ;</p>
 
-    + coin: Thing 'coin'
-      subLocation = &amp;remapUnder
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ plate: Surface 'plate'
+  subLocation = &amp;remapOn
+;
 
-    + pen: Thing 'pen'
-      subLocation = &amp;remapBehind
-    ;  
++ coin: Thing 'coin'
+  subLocation = &amp;remapUnder
+;
+
++ pen: Thing 'pen'
+  subLocation = &amp;remapBehind
+;   `
 </code></pre></div></div>
 
 <p>If we omitted to define these <code class="language-plaintext highlighter-rouge">subLocation</code>
@@ -280,16 +284,17 @@ distinct from the main object, such as a desk with a drawer. In which
 case we can point the appropriate remapXXX property to the separate
 container, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    desk: Fixture 'desk'
-      "It has a single drawer. "
-      
-      remapIn = drawer
-      remapOn: SubComponent { }
-    ;
+<p>`
+    desk: Fixture ‘desk’
+      “It has a single drawer. “</p>
 
-    + drawer: OpenableContainer, Fixture 'drawer'
-       bulkCapacity = 8
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  remapIn = drawer
+  remapOn: SubComponent { }
+;
+
++ drawer: OpenableContainer, Fixture 'drawer'
+   bulkCapacity = 8
+; `
 </code></pre></div></div>
 
 <p>With this set-up, LOOK IN DESK, OPEN DESK, CLOSE DESK, PUT SOMETHING IN
@@ -302,33 +307,35 @@ or handle, otherwise what was meant to be an external component will end
 up shut up inside the container when it’s closed. You must be careful
 NOT to do this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    suitcase: OpenableContainer 'suitcase;;case' //DON'T DO THIS!
-      "It has a combination lock. "
+<p>`
+    suitcase: OpenableContainer ‘suitcase;;case’ //DON’T DO THIS!
+      “It has a combination lock. “
       lockability = indirectLockable
       isLocked = true
-    ;
+    ;</p>
 
-    + comboLock: Fixture 'combination lock'
-     ...
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ comboLock: Fixture 'combination lock'
+ ...
+; `
 </code></pre></div></div>
 
 <p>Instead, you need to do this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    suitcase: Thing 'suitcase;;case' 
-      "It has a combination lock. "
-      
-      remapIn: SubComponent
-      {
-         isOpenable = true
-         lockability = indirectLockable
-         isLocked = true
-      }
-    ;
+<p>`
+    suitcase: Thing ‘suitcase;;case’ 
+      “It has a combination lock. “</p>
 
-    + comboLock: Fixture 'combination lock'
-     ...
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  remapIn: SubComponent
+  {
+     isOpenable = true
+     lockability = indirectLockable
+     isLocked = true
+  }
+;
+
++ comboLock: Fixture 'combination lock'
+ ...
+; `
 </code></pre></div></div>
 
 <p>You can read more about <a href="../manual/thing.html#remapxxx">remapXXX properties and Multiple
@@ -349,31 +356,32 @@ properties. For example, if what we really wanted was for the coin and
 the pen to be hidden under and behind the chest until the player
 explicitly looks under and behind it, we should probably have written:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    chest: Heavy 'large chest'
+<p>`
+    chest: Heavy ‘large chest’
        remapIn: SubComponent
        {
           isOpenable = true
           bulkCapacity = 30
-       }
-       
-       remapOn: SubComponent {}
-       hiddenUnder = [coin]
-       hiddenBehind = [pen]
-    ;
+       }</p>
 
-    + book: Thing 'book'
-      subLocation = &amp;remapIn
-    ;
-      
-    + plate: Surface 'plate'
-      subLocation = &amp;remapOn
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   remapOn: SubComponent {}
+   hiddenUnder = [coin]
+   hiddenBehind = [pen]
+;
 
-    coin: Thing 'coin'
-    ;
++ book: Thing 'book'
+  subLocation = &amp;remapIn
+;
+  
++ plate: Surface 'plate'
+  subLocation = &amp;remapOn
+;
 
-    pen: Thing 'pen'
-    ;  
+coin: Thing 'coin'
+;
+
+pen: Thing 'pen'
+;   `
 </code></pre></div></div>
 
 <p>Note that in this case the coin and the pen start out with no location
@@ -498,11 +506,12 @@ statistics. For this kind of topic — something that may be talked about,
 thought about, or looked up, but not manipulated as a physical object
 within the game — we can define Topic objects, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tLove: Topic 'love';
-    tLife: Topic 'life';
-    tInflationRate: Topic 'rate[n] of inflation';
-    tPopulationStats: Topic 'population statistics';
-</code></pre></div></div>
+<p>`
+    tLove: Topic ‘love’;
+    tLife: Topic ‘life’;
+    tInflationRate: Topic ‘rate[n] of inflation’;
+    tPopulationStats: Topic ‘population statistics’;
+`</p>
 
 <p>Note that starting the object names of these Topics with t is simply a
 convention; you don’t have to adopt it if you don’t want to, but it’s
@@ -545,21 +554,23 @@ Consultable) we assign it to the TopicEntry’s
 response to its <code class="language-plaintext highlighter-rouge">topicResponse</code> property, which
 we can do via a conveniently defined template:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ConsultTopic @tLife
-       "According to Dodgypedia life is hard to define, but is generally regarded
-        as being preferable to the alternative. "
+<p>`
+    + ConsultTopic @tLife
+       “According to Dodgypedia life is hard to define, but is generally regarded
+        as being preferable to the alternative. “
     ;
-</code></pre></div></div>
+`</p>
 
 <p>The matchObj property can also be defined as a list of Topics (and/or
 Things), in which case the TopicEntry will be matched if any of the
 items in the matchObj list are requested:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ConsultTopic [tLife, tLove]
-       "According to the dictionary of hard-nosed economics, such imponderables
-        are not worth factoring into one's calculations. "
+<p>`
+    + ConsultTopic [tLife, tLove]
+       “According to the dictionary of hard-nosed economics, such imponderables
+        are not worth factoring into one’s calculations. “
     ;
-</code></pre></div></div>
+`</p>
 
 <p>The full story on <a href="../manual/topic.html">Topics</a> and
 <a href="../manual/topicentry.html">TopicEntries</a> can be found in the <em>adv3Lite
@@ -588,24 +599,25 @@ Barriers</a> in the <em>adv3Lite Library Manual</em>.</p>
 distinct defined object. The most normal way to define one is as an
 anonymous nested object on the direction property of a room, e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    meadow: Room 'Meadow'
-      "An extremely muddy path leads off to the south. "
-      
-      south: TravelConnector
-      {
-          destination = muddyPath
-          
-          canTravelerPass(traveler) { return boots.wornBy == traveler; }
-          explainTravelBarrier(traveler)
-          {
-              "There's no way you're going to set off through that thick, squelchy
-              mud without a pair of sturdy waterproof boots. ";
-          }
+<p>`
+    meadow: Room ‘Meadow’
+      “An extremely muddy path leads off to the south. “</p>
 
-          travelDesc = "The mud squelches noisily underfoot, threatening to steal your
-            boots, as you set off down the path. "
-       }
-    ;   
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  south: TravelConnector
+  {
+      destination = muddyPath
+      
+      canTravelerPass(traveler) { return boots.wornBy == traveler; }
+      explainTravelBarrier(traveler)
+      {
+          "There's no way you're going to set off through that thick, squelchy
+          mud without a pair of sturdy waterproof boots. ";
+      }
+
+      travelDesc = "The mud squelches noisily underfoot, threatening to steal your
+        boots, as you set off down the path. "
+   }
+;    `
 </code></pre></div></div>
 
 <h2 id="scenes">Scenes</h2>

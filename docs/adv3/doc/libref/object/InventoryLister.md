@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for inventory listers. This lister uses a special listing
 method to show the items, so that items can be shown with special
@@ -35,26 +35,26 @@ listings.
 
 `class `**`InventoryLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`InventoryLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`InventoryLister`**  
 [`DividedInventoryLister`](../object/DividedInventoryLister.html)  
@@ -63,20 +63,20 @@ listings.
 [`WearingSublister`](../object/WearingSublister.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`actorSingleInventoryLister`](../object/actorSingleInventoryLister.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -85,11 +85,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isListed`](#isListed)[`showContentsList`](#showContentsList)[`showInlineContentsList`](#showInlineContentsList)[`showListItem`](#showListItem)[`showListItemCounted`](#showListItemCounted)
 
@@ -98,19 +98,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -118,11 +118,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1549](../source/lister.t.html#1549)\]
 
-<div class="desc">
+
 
 list items in inventory according to their isListedInInventory
 
-</div>
+
 
 <span id="showContentsList"></span>
 
@@ -130,12 +130,12 @@ list items in inventory according to their isListedInInventory
 
 [lister.t](../file/lister.t.html)\[[1566](../source/lister.t.html#1566)\]
 
-<div class="desc">
+
 
 Show contents of the items in the inventory. We customize this so that
 we can differentiate inventory contents lists from other contents lists.
 
-</div>
+
 
 <span id="showInlineContentsList"></span>
 
@@ -143,11 +143,11 @@ we can differentiate inventory contents lists from other contents lists.
 
 [lister.t](../file/lister.t.html)\[[1576](../source/lister.t.html#1576)\]
 
-<div class="desc">
+
 
 Show the contents in-line, for an inventory listing.
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -155,12 +155,12 @@ Show the contents in-line, for an inventory listing.
 
 [lister.t](../file/lister.t.html)\[[1555](../source/lister.t.html#1555)\]
 
-<div class="desc">
+
 
 Show list items using the inventory name, which might differ from the
 regular nmae of the object.
 
-</div>
+
 
 <span id="showListItemCounted"></span>
 
@@ -168,15 +168,15 @@ regular nmae of the object.
 
 [lister.t](../file/lister.t.html)\[[1558](../source/lister.t.html#1558)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

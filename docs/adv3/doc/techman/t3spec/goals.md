@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -16,7 +16,7 @@ Design Goals
     <a href="notation.html" class="nav"><em>Next:</em> Notation and
 Conventions</a>     </span>
 
-</div>
+
 
 
 
@@ -232,18 +232,18 @@ applications; while the TADS object model could be emulated in JVM code,
 it would be considerably less efficient than implementing the TADS
 object model in native code within the VM.
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -253,4 +253,4 @@ Design Goals
     <a href="notation.html" class="nav"><em>Next:</em> Notation and
 Conventions</a>     </span>
 
-</div>
+

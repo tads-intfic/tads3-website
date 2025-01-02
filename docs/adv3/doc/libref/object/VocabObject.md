@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Object with vocabulary. This is the base class for any object that can
 define vocabulary words.
@@ -38,25 +38,25 @@ Language-specific modifications for VocabObject.
 
 `class `**`VocabObject`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VocabObject`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`VocabObject`**  
 [`Thing`](../object/Thing.html)  
@@ -212,39 +212,39 @@ Language-specific modifications for VocabObject.
 [`Topic`](../object/Topic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canResolvePossessive`](#canResolvePossessive)[`disambigPromptOrder`](#disambigPromptOrder)[`owner`](#owner)[`pluralOrder`](#pluralOrder)[`vocabLikelihood`](#vocabLikelihood)[`vocabWords`](#vocabWords)[`weakTokens`](#weakTokens)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addToDictionary`](#addToDictionary)[`construct`](#construct)[`expandPronounList`](#expandPronounList)[`filterResolveList`](#filterResolveList)[`getFacets`](#getFacets)[`getNominalOwner`](#getNominalOwner)[`inheritVocab`](#inheritVocab)[`initializeVocab`](#initializeVocab)[`initializeVocabWith`](#initializeVocabWith)[`isOwnedBy`](#isOwnedBy)[`matchName`](#matchName)[`matchNameCommon`](#matchNameCommon)[`matchNameDisambig`](#matchNameDisambig)[`throwNoMatchForLocation`](#throwNoMatchForLocation)[`throwNoMatchForPossessive`](#throwNoMatchForPossessive)[`throwNothingInLocation`](#throwNothingInLocation)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canResolvePossessive"></span>
 
@@ -252,7 +252,7 @@ Language-specific modifications for VocabObject.
 
 [thing.t](../file/thing.t.html)\[[893](../source/thing.t.html#893)\]
 
-<div class="desc">
+
 
 By default, every object can be used as the resolution of a possessive
 qualifier phrase (e.g., "bob" in "bob's book"). If this property is set
@@ -261,7 +261,7 @@ Note that has nothing to do with establishing ownership relationships
 between objects; it controls only the resolution of possessive phrases
 during parsing to concrete game objects.
 
-</div>
+
 
 <span id="disambigPromptOrder"></span>
 
@@ -269,7 +269,7 @@ during parsing to concrete game objects.
 
 [thing.t](../file/thing.t.html)\[[777](../source/thing.t.html#777)\]
 
-<div class="desc">
+
 
 Disambiguation prompt order. When we interactively prompt for help
 resolving an ambiguous noun phrase, we'll put the list of ambiguous
@@ -287,7 +287,7 @@ door?
 By default, we use the same value as our pluralOrder, since the plural
 order has essentially the same purpose.
 
-</div>
+
 
 <span id="owner"></span>
 
@@ -295,11 +295,11 @@ order has essentially the same purpose.
 
 [thing.t](../file/thing.t.html)\[[977](../source/thing.t.html#977)\]
 
-<div class="desc">
+
 
 our explicit owner, if any
 
-</div>
+
 
 <span id="pluralOrder"></span>
 
@@ -307,7 +307,7 @@ our explicit owner, if any
 
 [thing.t](../file/thing.t.html)\[[758](../source/thing.t.html#758)\]
 
-<div class="desc">
+
 
 Plural resolution order. When a command contains a plural noun phrase,
 we'll sort the items that match the plural phrase in ascending order of
@@ -333,7 +333,7 @@ left box: Taken.
 middle box: Taken.  
 right box: Taken.
 
-</div>
+
 
 <span id="vocabLikelihood"></span>
 
@@ -341,7 +341,7 @@ right box: Taken.
 
 [thing.t](../file/thing.t.html)\[[788](../source/thing.t.html#788)\]
 
-<div class="desc">
+
 
 Intrinsic parsing likelihood. During disambiguation, if the parser finds
 two objects with equivalent logicalness (as determined by the 'verify'
@@ -350,7 +350,7 @@ with the higher intrinsic likelihood value. The default value is zero,
 which makes all objects equivalent by default. Set a higher value to
 make the parser prefer this object in cases of ambiguity.
 
-</div>
+
 
 <span id="vocabWords"></span>
 
@@ -358,7 +358,7 @@ make the parser prefer this object in cases of ambiguity.
 
 [en_us.t](../file/en_us.t.html)\[[373](../source/en_us.t.html#373)\]
 
-<div class="desc">
+
 
 The vocabulary initializer string for the object - this string can be
 initialized (most conveniently via a template) to a string of this
@@ -397,7 +397,7 @@ If you want to match any string for a noun and/or adjective, you can't
 do it with this property. Instead, just add the property value noun='\*'
 to the object.
 
-</div>
+
 
 <span id="weakTokens"></span>
 
@@ -405,7 +405,7 @@ to the object.
 
 [thing.t](../file/thing.t.html)\[[882](../source/thing.t.html#882)\]
 
-<div class="desc">
+
 
 Our list of "weak" tokens. This is a token that is acceptable in our
 vocabulary, but which we can only use in combination with one or more
@@ -429,15 +429,15 @@ By default, this is nil to indicate that we don't have any weak tokens
 to check. If the object has weak tokens, this should be set to a list of
 strings giving the weak tokens.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addToDictionary"></span>
 
@@ -445,11 +445,11 @@ strings giving the weak tokens.
 
 [en_us.t](../file/en_us.t.html)\[[393](../source/en_us.t.html#393)\]
 
-<div class="desc">
+
 
 add the words from a dictionary property to the global dictionary
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -457,12 +457,12 @@ add the words from a dictionary property to the global dictionary
 
 [en_us.t](../file/en_us.t.html)\[[379](../source/en_us.t.html#379)\]
 
-<div class="desc">
+
 
 On dynamic construction, initialize our vocabulary words and add them to
 the dictionary.
 
-</div>
+
 
 <span id="expandPronounList"></span>
 
@@ -470,7 +470,7 @@ the dictionary.
 
 [thing.t](../file/thing.t.html)\[[856](../source/thing.t.html#856)\]
 
-<div class="desc">
+
 
 Expand a pronoun list. This is essentially complementary to
 filterResolveList: the function is to "unfilter" a pronoun binding that
@@ -504,7 +504,7 @@ of possible bindings for the pronoun reference.
 This base implementation just returns the original list unchanged. See
 CollectiveGroup for an override that uses this.
 
-</div>
+
 
 <span id="filterResolveList"></span>
 
@@ -512,7 +512,7 @@ CollectiveGroup for an override that uses this.
 
 [thing.t](../file/thing.t.html)\[[815](../source/thing.t.html#815)\]
 
-<div class="desc">
+
 
 Filter an ambiguous noun phrase resolution list. The parser calls this
 method for each object that matches an ambiguous noun phrase or an ALL
@@ -537,7 +537,7 @@ the original list, as desired.
 
 By default, we simply return the original list.
 
-</div>
+
 
 <span id="getFacets"></span>
 
@@ -545,7 +545,7 @@ By default, we simply return the original list.
 
 [thing.t](../file/thing.t.html)\[[942](../source/thing.t.html#942)\]
 
-<div class="desc">
+
 
 Get a list of the other "facets" of this object. A facet is another
 program object that to the player looks like the same or part of the
@@ -559,7 +559,7 @@ to the door, then walk through it to the other side, then refer to 'it',
 the parser will realize from the facet relationship that 'it' now refers
 to the other side of the door.
 
-</div>
+
 
 <span id="getNominalOwner"></span>
 
@@ -567,7 +567,7 @@ to the other side of the door.
 
 [thing.t](../file/thing.t.html)\[[974](../source/thing.t.html#974)\]
 
-<div class="desc">
+
 
 Get our nominal owner. This is the owner that we report for this object
 if we're asked to distinguish this object from another object in a
@@ -577,7 +577,7 @@ isOwnedBy(getNominalOwner()) should always return true.
 
 By default, we'll simply return our 'owner' property.
 
-</div>
+
 
 <span id="inheritVocab"></span>
 
@@ -585,7 +585,7 @@ By default, we'll simply return our 'owner' property.
 
 [en_us.t](../file/en_us.t.html)\[[421](../source/en_us.t.html#421)\]
 
-<div class="desc">
+
 
 Inherit vocabulary from this class and its superclasses, adding the
 words to the given target object. 'target' is the object to which we add
@@ -599,7 +599,7 @@ visited. If we're already in the vector, we'll skip adding vocabulary
 for this class or its superclasses, since we must have already traversed
 this branch of the tree from another subclass.
 
-</div>
+
 
 <span id="initializeVocab"></span>
 
@@ -607,11 +607,11 @@ this branch of the tree from another subclass.
 
 [en_us.t](../file/en_us.t.html)\[[401](../source/en_us.t.html#401)\]
 
-<div class="desc">
+
 
 initialize the vocabulary from vocabWords
 
-</div>
+
 
 <span id="initializeVocabWith"></span>
 
@@ -619,7 +619,7 @@ initialize the vocabulary from vocabWords
 
 [en_us.t](../file/en_us.t.html)\[[464](../source/en_us.t.html#464)\]
 
-<div class="desc">
+
 
 Initialize our vocabulary from the given string. This parses the given
 vocabulary initializer string and adds the words defined in the string
@@ -636,7 +636,7 @@ language implementations are free to completely redefine the format -
 there's no need to follow the conventions of the English format in other
 languages where different formats would be more convenient.
 
-</div>
+
 
 <span id="isOwnedBy"></span>
 
@@ -644,7 +644,7 @@ languages where different formats would be more convenient.
 
 [thing.t](../file/thing.t.html)\[[962](../source/thing.t.html#962)\]
 
-<div class="desc">
+
 
 Ownership: a vocab-object can be marked as owned by a given Thing. This
 allows command input to refer to the owned object using possessive
@@ -662,7 +662,7 @@ the "x" in "x's y" qualifies as my owner.
 By default, we simply return true if 'obj' matches our 'owner' property
 (and is not nil).
 
-</div>
+
 
 <span id="matchName"></span>
 
@@ -670,7 +670,7 @@ By default, we simply return true if 'obj' matches our 'owner' property
 
 [thing.t](../file/thing.t.html)\[[597](../source/thing.t.html#597)\]
 
-<div class="desc">
+
 
 Match a name as used in a noun phrase in a player's command to this
 object. The parser calls this routine to test this object for a match to
@@ -727,7 +727,7 @@ take care of both kinds of matching. Games will only need to override
 matchName() separately in cases where they need to differentiate normal
 matching and disambiguation matching.
 
-</div>
+
 
 <span id="matchNameCommon"></span>
 
@@ -735,7 +735,7 @@ matching and disambiguation matching.
 
 [thing.t](../file/thing.t.html)\[[718](../source/thing.t.html#718)\]
 
-<div class="desc">
+
 
 Common handling for the main matchName() and the disambiguation handler
 matchNameDisambig(). By default, we'll check with our state object if we
@@ -750,7 +750,7 @@ matching cases. In cases where a game needs to customize only normal
 matching or only disambiguation matching, it can override one of those
 other routines instead.
 
-</div>
+
 
 <span id="matchNameDisambig"></span>
 
@@ -758,7 +758,7 @@ other routines instead.
 
 [thing.t](../file/thing.t.html)\[[697](../source/thing.t.html#697)\]
 
-<div class="desc">
+
 
 Match a name in a disambiguation response. This is similar to
 matchName(), but is called for each object in an ambiguous object list
@@ -806,7 +806,7 @@ disambiguation match cases. Games should only override this routine when
 they need to do something different for normal vs disambiguation
 matching.
 
-</div>
+
 
 <span id="throwNoMatchForLocation"></span>
 
@@ -814,7 +814,7 @@ matching.
 
 [thing.t](../file/thing.t.html)\[[915](../source/thing.t.html#915)\]
 
-<div class="desc">
+
 
 Throw an appropriate parser error when this object is used in a player
 command to locationally qualify another object (such as when we're the
@@ -822,7 +822,7 @@ box in "examine the key in the box"), and there's no object among our
 contents with the given name. By default, we throw the standard parser
 error ("You see no key in the box").
 
-</div>
+
 
 <span id="throwNoMatchForPossessive"></span>
 
@@ -830,7 +830,7 @@ error ("You see no key in the box").
 
 [thing.t](../file/thing.t.html)\[[905](../source/thing.t.html#905)\]
 
-<div class="desc">
+
 
 Throw an appropriate parser error when this object is used in a player
 command as a possessive qualifier (such as when 'self' is the "bob" in
@@ -840,7 +840,7 @@ default, we throw the standard parser error ("Bob doesn't appear to have
 any such thing"). 'txt' is the lower-cased, HTMLified text that of the
 qualified object name ("key" in "bob's key").
 
-</div>
+
 
 <span id="throwNothingInLocation"></span>
 
@@ -848,7 +848,7 @@ qualified object name ("key" in "bob's key").
 
 [thing.t](../file/thing.t.html)\[[925](../source/thing.t.html#925)\]
 
-<div class="desc">
+
 
 Throw an appropriate parser error when this object is used in a player
 command to locationally qualify "all" (such as when we're the box in
@@ -856,11 +856,11 @@ command to locationally qualify "all" (such as when we're the box in
 we throw the standard parser error ("You see nothing unusual in the
 box").
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

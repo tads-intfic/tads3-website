@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Layout Window. This is a specialized Web Window tracker for our layout
 page type, which is displayed using the resource file
@@ -50,15 +50,15 @@ within an IFRAME, to further subdivide the space inside the IFRAME.
 
 `class `**`WebLayoutWindow`**` :   `[`WebWindow`](../object/WebWindow.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WebLayoutWindow`**  
 [`WebWindow`](../object/WebWindow.html)  
@@ -67,28 +67,28 @@ within an IFRAME, to further subdivide the space inside the IFRAME.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`webMainWin`](../object/webMainWin.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`frames`](#frames)[`src`](#src)[`vpath`](#vpath)
 
@@ -103,11 +103,11 @@ Inherited from `WebResource` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`createFrame`](#createFrame)[`flushWin`](#flushWin)[`getState`](#getState)[`winFromPath`](#winFromPath)
 
@@ -122,11 +122,11 @@ Inherited from `WebResource` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="frames"></span>
 
@@ -134,13 +134,13 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[1924](../source/webui.t.html#1924)\]
 
-<div class="desc">
+
 
 The table of active frames within this layout. This table is keyed by
 window name; each entry is a list of \[win, pos\], where 'win' is the
 WebWindow object for the window, and 'pos' is its position parameter.
 
-</div>
+
 
 <span id="src"></span>
 
@@ -148,11 +148,11 @@ WebWindow object for the window, and 'pos' is its position parameter.
 
 [webui.t](../file/webui.t.html)\[[1928](../source/webui.t.html#1928)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="vpath"></span>
 
@@ -160,19 +160,19 @@ WebWindow object for the window, and 'pos' is its position parameter.
 
 [webui.t](../file/webui.t.html)\[[1927](../source/webui.t.html#1927)\]
 
-<div class="desc">
+
 
 my virtual path and the actual resource file location
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="createFrame"></span>
 
@@ -180,7 +180,7 @@ my virtual path and the actual resource file location
 
 [webui.t](../file/webui.t.html)\[[1873](../source/webui.t.html#1873)\]
 
-<div class="desc">
+
 
 Create a new window within the layout. This creates an IFRAME in the
 browser, laid out according to the 'pos' argument, and displays the
@@ -241,7 +241,7 @@ same layout window\*. 'x' is the name of another window within the same
 layout, as specified by the 'name' argument given when the window was
 created.
 
-</div>
+
 
 <span id="flushWin"></span>
 
@@ -249,12 +249,12 @@ created.
 
 [webui.t](../file/webui.t.html)\[[1894](../source/webui.t.html#1894)\]
 
-<div class="desc">
+
 
 Flush this window. For a layout window, we simply flush each child
 window.
 
-</div>
+
 
 <span id="getState"></span>
 
@@ -262,11 +262,11 @@ window.
 
 [webui.t](../file/webui.t.html)\[[1903](../source/webui.t.html#1903)\]
 
-<div class="desc">
+
 
 Get the state.
 
-</div>
+
 
 <span id="winFromPath"></span>
 
@@ -274,15 +274,15 @@ Get the state.
 
 [webui.t](../file/webui.t.html)\[[1782](../source/webui.t.html#1782)\]
 
-<div class="desc">
+
 
 Resolve a window path name
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

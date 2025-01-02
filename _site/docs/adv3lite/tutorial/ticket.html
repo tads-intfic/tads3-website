@@ -44,14 +44,15 @@ Room</a>     </span>
 up a newspaper in the snack bar. We’ve already implemented the
 newspaper; now it’s time to implement the ticket:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ticket: Thing 'plane ticket'
-        "It's a ticket for flight TI 179 to Buenos Aires. "
-        
-        readDesc = (desc)
-        specialDesc = "A ticket lies on the ground. "
-        useSpecialDesc = (location == getOutermostRoom)
+<p>`
+    ticket: Thing ‘plane ticket’
+        “It’s a ticket for flight TI 179 to Buenos Aires. “</p>
 
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    readDesc = (desc)
+    specialDesc = "A ticket lies on the ground. "
+    useSpecialDesc = (location == getOutermostRoom)
+
+; `
 </code></pre></div></div>
 
 <p>That was the easy bit. The only new thing here is the use of the
@@ -76,16 +77,17 @@ defining the items elsewhere in our code with no starting location (i.e.
 a starting location of nil), as with the ticket above. We can thus put
 the ticket in the hiddenIn property of the newspaper:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ newspaper: Thing 'newspaper; narcosia; paper herald'
-        "It's a copy of the latest edition of the &lt;i&gt;Narcosia Herald&lt;/i&gt;. "
-        
-        readDesc = "A quick skim of the paper reveals nothing unusual for this part
-            of the world. Yet another government minister is denying charges of
-            ...
-            to this godforsaken hell-hole. "
-        
-        hiddenIn = [ticket]
-    ;
+<p>`
+    ++ newspaper: Thing ‘newspaper; narcosia; paper herald’
+        “It’s a copy of the latest edition of the <i>Narcosia Herald</i>. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    readDesc = "A quick skim of the paper reveals nothing unusual for this part
+        of the world. Yet another government minister is denying charges of
+        ...
+        to this godforsaken hell-hole. "
+    
+    hiddenIn = [ticket]
+; `
 </code></pre></div></div>
 
 <p>In the same way we could use <code class="language-plaintext highlighter-rouge">hiddenUnder</code> or
@@ -105,31 +107,32 @@ this is the method that reveals anything hidden under or behind the
 object, but since we’re not hiding anything under or behind the
 newspaper we can override this method to do just what we need:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ newspaper: Thing 'newspaper; narcosia; paper herald'
-        "It's a copy of the latest edition of the &lt;i&gt;Narcosia Herald&lt;/i&gt;. "
-        
-        readDesc = '''A quick skim of the paper reveals nothing unusual for this part
-            of the world. Yet another government minister is denying charges of
-            ...
-            to this godforsaken hell-hole. '''
-        
-        hiddenIn = [ticket]
-        
-        revealOnMove()
+<p>`
+    ++ newspaper: Thing ‘newspaper; narcosia; paper herald’
+        “It’s a copy of the latest edition of the <i>Narcosia Herald</i>. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    readDesc = '''A quick skim of the paper reveals nothing unusual for this part
+        of the world. Yet another government minister is denying charges of
+        ...
+        to this godforsaken hell-hole. '''
+    
+    hiddenIn = [ticket]
+    
+    revealOnMove()
+    {
+        if(hiddenIn.length &gt; 0)
         {
-            if(hiddenIn.length &gt; 0)
-            {
-                "As you pick up the newspaper a ticket falls out of it
-                and lands on the floor. ";
-                
-                ticket.moveInto(getOutermostRoom);
-                
-                hiddenIn = [];
-            }
+            "As you pick up the newspaper a ticket falls out of it
+            and lands on the floor. ";
+            
+            ticket.moveInto(getOutermostRoom);
+            
+            hiddenIn = [];
         }
-        
-        lookInMsg = (readDesc)
-    ;
+    }
+    
+    lookInMsg = (readDesc)
+; `
 </code></pre></div></div>
 
 <p>We first check that there’s something still hidden in the newspaper
@@ -142,29 +145,30 @@ of <code class="language-plaintext highlighter-rouge">revealOnMove()</code> will
 this game, if you wanted a more generalized version of the routine that
 worked whatever was hidden in the newspaper you could write:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ newspaper: Thing 'newspaper; narcosia; paper herald'
-        "It's a copy of the latest edition of the &lt;i&gt;Narcosia Herald&lt;/i&gt;. "
-        
-        readDesc = '''A quick skim of the paper reveals nothing unusual for this part
-            of the world. Yet another government minister is denying charges of
-            ...
-            to this godforsaken hell-hole. '''
-        
-        hiddenIn = [ticket]
-        
-        revealOnMove()
+<p>`
+    ++ newspaper: Thing ‘newspaper; narcosia; paper herald’
+        “It’s a copy of the latest edition of the <i>Narcosia Herald</i>. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    readDesc = '''A quick skim of the paper reveals nothing unusual for this part
+        of the world. Yet another government minister is denying charges of
+        ...
+        to this godforsaken hell-hole. '''
+    
+    hiddenIn = [ticket]
+    
+    revealOnMove()
+    {
+        if(hiddenIn.length &gt; 0)
         {
-            if(hiddenIn.length &gt; 0)
-            {
-                "As you pick up the newspaper &lt;&lt;list of hiddenIn&gt;&gt; {prev} {falls}
-                out of it and land{s/ed} on the floor. ";
-                
-                moveHidden(&amp;hiddenIn, getOutermostRoom);
-            }
+            "As you pick up the newspaper &lt;&lt;list of hiddenIn&gt;&gt; {prev} {falls}
+            out of it and land{s/ed} on the floor. ";
+            
+            moveHidden(&amp;hiddenIn, getOutermostRoom);
         }
-        
-        lookInMsg = (readDesc)
-    ;
+    }
+    
+    lookInMsg = (readDesc)
+; `
 </code></pre></div></div>
 
 <p>Here, <code class="language-plaintext highlighter-rouge">\&lt;\&lt;list of hiddenIn\&gt;\&gt;</code> provides a list

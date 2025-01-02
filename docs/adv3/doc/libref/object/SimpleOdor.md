@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 SimpleOdor is the olfactory equivalent of SimpleNoise
 
 `class `**`SimpleOdor`**` :   `[`Odor`](../object/Odor.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SimpleOdor`**  
 [`Odor`](../object/Odor.html)  
@@ -51,27 +51,27 @@ SimpleOdor is the olfactory equivalent of SimpleNoise
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isAmbient`](#isAmbient)
 
@@ -92,11 +92,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`descWithoutSource`](#descWithoutSource)[`descWithSource`](#descWithSource)[`hereWithoutSource`](#hereWithoutSource)[`hereWithSource`](#hereWithSource)[`sourceDesc`](#sourceDesc)
 
@@ -117,11 +117,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isAmbient"></span>
 
@@ -129,19 +129,19 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[740](../source/objects.t.html#740)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="descWithoutSource"></span>
 
@@ -149,11 +149,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[743](../source/objects.t.html#743)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="descWithSource"></span>
 
@@ -161,11 +161,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[742](../source/objects.t.html#742)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hereWithoutSource"></span>
 
@@ -173,11 +173,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[745](../source/objects.t.html#745)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hereWithSource"></span>
 
@@ -185,11 +185,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[744](../source/objects.t.html#744)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sourceDesc"></span>
 
@@ -197,15 +197,15 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[741](../source/objects.t.html#741)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

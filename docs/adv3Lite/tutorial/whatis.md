@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> What is adv3Lite?  
@@ -16,7 +16,7 @@ layout: docs
 <a href="whoshouldread.html" class="nav"><em>Next:</em> Who Should Read
 This Book</a>     </span>
 
-</div>
+
 
 
 
@@ -109,7 +109,7 @@ all, then adv3Lite might be just what you're looking for.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -119,4 +119,4 @@ all, then adv3Lite might be just what you're looking for.
 <a href="whoshouldread.html" class="nav"><em>Next:</em> Who Should Read
 This Book</a>     </span>
 
-</div>
+

@@ -26,68 +26,68 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Tokenizer base class
 
 `class `**`Tokenizer`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Tokenizer`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`cmdTokenizer`](../object/cmdTokenizer.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`rules_`](#rules_)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`deleteRule`](#deleteRule)[`deleteRuleAt`](#deleteRuleAt)[`insertRule`](#insertRule)[`insertRuleAt`](#insertRuleAt)[`tokCvtLower`](#tokCvtLower)[`tokCvtSkip`](#tokCvtSkip)[`tokenize`](#tokenize)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="rules_"></span>
 
@@ -95,7 +95,7 @@ Tokenizer base class
 
 [tok.t](../file/tok.t.html)\[[123](../source/tok.t.html#123)\]
 
-<div class="desc">
+
 
 Tokenizing rules. The subclass can override this to specify a list that
 defines different tokenization rules. Each entry in the master rules\_
@@ -132,15 +132,15 @@ simple regular expression match; for example, the value test can be used
 to look up the match in a dictionary, so that the rule only matches
 tokens that are defined in the dictionary.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="deleteRule"></span>
 
@@ -148,12 +148,12 @@ tokens that are defined in the dictionary.
 
 [tok.t](../file/tok.t.html)\[[195](../source/tok.t.html#195)\]
 
-<div class="desc">
+
 
 Delete a rule by name. This finds the rule with the given name and
 removes it from the list.
 
-</div>
+
 
 <span id="deleteRuleAt"></span>
 
@@ -161,11 +161,11 @@ removes it from the list.
 
 [tok.t](../file/tok.t.html)\[[208](../source/tok.t.html#208)\]
 
-<div class="desc">
+
 
 delete the rule at the given index
 
-</div>
+
 
 <span id="insertRule"></span>
 
@@ -173,7 +173,7 @@ delete the rule at the given index
 
 [tok.t](../file/tok.t.html)\[[154](../source/tok.t.html#154)\]
 
-<div class="desc">
+
 
 Insert a new rule before or after the existing rule with the name
 'curName'. If 'curName' is nil, or rule is found with the given name,
@@ -182,7 +182,7 @@ with the standard elements for a tokenizer rule. 'after' is nil to
 insert the new rule before the given existing rule, true to insert after
 it.
 
-</div>
+
 
 <span id="insertRuleAt"></span>
 
@@ -190,14 +190,14 @@ it.
 
 [tok.t](../file/tok.t.html)\[[185](../source/tok.t.html#185)\]
 
-<div class="desc">
+
 
 Insert a rule at the given index in our rules list. 'rule' must be a
 list with the standard elements for a tokenizer rule. 'idx' is the index
 of the new rule; we'll insert before the existing element at this index;
 so if 'idx' is 1, we'll insert before the first existing rule.
 
-</div>
+
 
 <span id="tokCvtLower"></span>
 
@@ -205,11 +205,11 @@ so if 'idx' is 1, we'll insert before the first existing rule.
 
 [tok.t](../file/tok.t.html)\[[215](../source/tok.t.html#215)\]
 
-<div class="desc">
+
 
 convert a string to lower-case (for value computation rules)
 
-</div>
+
 
 <span id="tokCvtSkip"></span>
 
@@ -217,12 +217,12 @@ convert a string to lower-case (for value computation rules)
 
 [tok.t](../file/tok.t.html)\[[226](../source/tok.t.html#226)\]
 
-<div class="desc">
+
 
 processing routine to skip a match - this is used for whitespace and
 other text that does not result in any tokens in the result list
 
-</div>
+
 
 <span id="tokenize"></span>
 
@@ -230,7 +230,7 @@ other text that does not result in any tokens in the result list
 
 [tok.t](../file/tok.t.html)\[[248](../source/tok.t.html#248)\]
 
-<div class="desc">
+
 
 Tokenize a string. If we find text that we can't match to any of the
 rules, we'll throw an exception (TokErrorNoMatch). If we succeed in
@@ -246,11 +246,11 @@ elements describing a token:
 or evaluations were performed. For example, this maintains the original
 case of strings that are lower-cased for the corresponding token values.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

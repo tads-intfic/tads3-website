@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A base class for file-oriented actions, such as SCRIPT, RECORD, and
 REPLAY. We provide common handling that prompts interactively for a
@@ -36,15 +36,15 @@ out the specific subclassed operation on the file.
 `DefineSystemAction(FileOp)      `*`// original source text`*  
 `class `**`FileOpAction`**` :   `[`SystemAction`](../object/SystemAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FileOpAction`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -54,11 +54,11 @@ out the specific subclassed operation on the file.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`FileOpAction`**  
 [`RecordAction`](../object/RecordAction.html)  
@@ -83,19 +83,19 @@ out the specific subclassed operation on the file.
 [`predicate(ScriptString)`](../object/predicate(ScriptString).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fileDisposition`](#fileDisposition)[`filePromptMsg`](#filePromptMsg)[`fileTypeID`](#fileTypeID)[`includeInUndo`](#includeInUndo)[`isRepeatable`](#isRepeatable)[`showCancelMsg`](#showCancelMsg)
 
@@ -112,11 +112,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execSystemAction`](#execSystemAction)[`performFileOp`](#performFileOp)[`setUpFileOp`](#setUpFileOp)
 
@@ -134,11 +134,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fileDisposition"></span>
 
@@ -146,11 +146,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1163](../source/actions.t.html#1163)\]
 
-<div class="desc">
+
 
 the file dialog open/save type
 
-</div>
+
 
 <span id="filePromptMsg"></span>
 
@@ -158,11 +158,11 @@ the file dialog open/save type
 
 [actions.t](../file/actions.t.html)\[[1160](../source/actions.t.html#1160)\]
 
-<div class="desc">
+
 
 our file dialog prompt message
 
-</div>
+
 
 <span id="fileTypeID"></span>
 
@@ -170,11 +170,11 @@ our file dialog prompt message
 
 [actions.t](../file/actions.t.html)\[[1166](../source/actions.t.html#1166)\]
 
-<div class="desc">
+
 
 the file dialog type ID
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -182,11 +182,11 @@ the file dialog type ID
 
 [actions.t](../file/actions.t.html)\[[1245](../source/actions.t.html#1245)\]
 
-<div class="desc">
+
 
 we can't include this in undo, as it affects external files
 
-</div>
+
 
 <span id="isRepeatable"></span>
 
@@ -194,11 +194,11 @@ we can't include this in undo, as it affects external files
 
 [actions.t](../file/actions.t.html)\[[1248](../source/actions.t.html#1248)\]
 
-<div class="desc">
+
 
 don't allow repeating with AGAIN
 
-</div>
+
 
 <span id="showCancelMsg"></span>
 
@@ -206,19 +206,19 @@ don't allow repeating with AGAIN
 
 [actions.t](../file/actions.t.html)\[[1169](../source/actions.t.html#1169)\]
 
-<div class="desc">
+
 
 show our cancellation mesage
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execSystemAction"></span>
 
@@ -226,13 +226,13 @@ show our cancellation mesage
 
 [actions.t](../file/actions.t.html)\[[1189](../source/actions.t.html#1189)\]
 
-<div class="desc">
+
 
 Each concrete action subclass must override this to carry out our
 operation. This is called when the user has successfully selected a
 filename for the operation.
 
-</div>
+
 
 <span id="performFileOp"></span>
 
@@ -240,7 +240,7 @@ filename for the operation.
 
 [actions.t](../file/actions.t.html)\[[1180](../source/actions.t.html#1180)\]
 
-<div class="desc">
+
 
 Carry out our file operation.
 
@@ -249,7 +249,7 @@ by the user via the Save Game dialog. Some versions of the Save Game
 dialog let the user enter this additional information, which can be
 stored as part of the saved game metadata.
 
-</div>
+
 
 <span id="setUpFileOp"></span>
 
@@ -257,15 +257,15 @@ stored as part of the saved game metadata.
 
 [actions.t](../file/actions.t.html)\[[1200](../source/actions.t.html#1200)\]
 
-<div class="desc">
+
 
 ask for a file, and carry out our operation is we get one
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

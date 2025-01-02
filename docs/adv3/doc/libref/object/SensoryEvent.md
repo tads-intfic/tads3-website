@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Sensory Event. This is an object representing a transient event, such as
 a sound, visual display, or odor, to which some objects observing the
@@ -38,25 +38,25 @@ notifies observers.
 
 `class `**`SensoryEvent`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SensoryEvent`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SensoryEvent`**  
 [`SightEvent`](../object/SightEvent.html)  
@@ -64,39 +64,39 @@ notifies observers.
 [`SoundEvent`](../object/SoundEvent.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`notifyProp`](#notifyProp)[`sense`](#sense)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`triggerEvent`](#triggerEvent)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="notifyProp"></span>
 
@@ -104,12 +104,12 @@ notifies observers.
 
 [objects.t](../file/objects.t.html)\[[830](../source/objects.t.html#830)\]
 
-<div class="desc">
+
 
 the notification property - this is the property we'll invoke on each
 observer to notify it of the event
 
-</div>
+
 
 <span id="sense"></span>
 
@@ -117,19 +117,19 @@ observer to notify it of the event
 
 [objects.t](../file/objects.t.html)\[[824](../source/objects.t.html#824)\]
 
-<div class="desc">
+
 
 the sense in which the event is observable
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="triggerEvent"></span>
 
@@ -137,7 +137,7 @@ the sense in which the event is observable
 
 [objects.t](../file/objects.t.html)\[[773](../source/objects.t.html#773)\]
 
-<div class="desc">
+
 
 Trigger the event. This routine must be called at the time when the
 event is to occur. We'll notify every interested observer capable of
@@ -151,11 +151,11 @@ The source is used to determine which observers are capable of detecting
 the event: an observer must be able to sense the source object in the
 appropriate sense to be notified of the event.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

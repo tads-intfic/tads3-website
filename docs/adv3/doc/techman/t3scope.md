@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Redefining
@@ -17,7 +17,7 @@ Transcript</a>    
 <a href="t3mi.html" class="nav"><em>Next:</em> Multiple Inheritance</a>
     </span>
 
-</div>
+
 
 
 
@@ -575,7 +575,7 @@ the dark. We could achieve this with getExtraScopeItems:
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -586,4 +586,4 @@ Transcript</a>    
 <a href="t3mi.html" class="nav"><em>Next:</em> Multiple Inheritance</a>
     </span>
 
-</div>
+

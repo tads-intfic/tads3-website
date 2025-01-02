@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A singular qualified noun phrase with an implicit or explicit definite
 article. If there is no article, a definite article is implied (we
@@ -28,15 +28,15 @@ interpret "take box" as though it were "take the box").
 
 `grammar `<span class="gramalt">[`qualifiedSingularNounPhrase`](../object/qualifiedSingularNounPhrase.html)`(definite)`</span>` :   `[`DefiniteNounProd`](../object/DefiniteNounProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`qualifiedSingularNounPhrase(definite)`**  
 [`DefiniteNounProd`](../object/DefiniteNounProd.html)  
@@ -47,11 +47,11 @@ interpret "take box" as though it were "take the box").
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -68,11 +68,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -90,25 +90,25 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

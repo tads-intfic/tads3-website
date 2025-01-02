@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Source File
@@ -17,7 +17,7 @@ Structure</a>    
 <a href="preproc.html" class="nav"><em>Next:</em> The Preprocessor</a>
     </span>
 
-</div>
+
 
 
 
@@ -78,7 +78,7 @@ option - this is simply the filename minus the ".tcm" suffix. For
 example, to compile source code created using code page 1250 (Windows
 Central/Eastern Europe), you'd use this command:
 
-<div class="cmdline">
+
 
     t3make -cs cp1250 mygame.t
 
@@ -211,11 +211,11 @@ can avoid confusing the compiler simply by inserting a space character
 or a \#charset directive at the very start of the file, or by using the
 -cs compiler option.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -226,4 +226,4 @@ Structure</a>    
 <a href="preproc.html" class="nav"><em>Next:</em> The Preprocessor</a>
     </span>
 
-</div>
+

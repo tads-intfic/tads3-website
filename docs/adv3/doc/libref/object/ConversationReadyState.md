@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "ready for conversation" state. This can be used as the base class for
 actor states when the actor is receptive to conversation, and we want to
@@ -54,15 +54,15 @@ frequently be shared among several 'ready' states.
 
 `class `**`ConversationReadyState`**` :   `[`ActorState`](../object/ActorState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ConversationReadyState`**  
 [`ActorState`](../object/ActorState.html)  
@@ -73,27 +73,27 @@ frequently be shared among several 'ready' states.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`getImpliedConvState`](#getImpliedConvState)[`inConvState`](#inConvState)[`stateSuggestedTopics`](#stateSuggestedTopics)
 
@@ -110,11 +110,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`enterConversation`](#enterConversation)[`enterFromConversation`](#enterFromConversation)[`handleConversation`](#handleConversation)[`initializeActorState`](#initializeActorState)[`initiateTopic`](#initiateTopic)[`notifyTopicResponse`](#notifyTopicResponse)[`showGreetingMsg`](#showGreetingMsg)
 
@@ -132,11 +132,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="getImpliedConvState"></span>
 
@@ -144,11 +144,11 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[4753](../source/actor.t.html#4753)\]
 
-<div class="desc">
+
 
 my implied conversational state is my in-conversation state
 
-</div>
+
 
 <span id="inConvState"></span>
 
@@ -156,7 +156,7 @@ my implied conversational state is my in-conversation state
 
 [actor.t](../file/actor.t.html)\[[4750](../source/actor.t.html#4750)\]
 
-<div class="desc">
+
 
 The associated in-conversation state. This should be set to an
 InConversationState object that controls the actor's behavior while
@@ -164,7 +164,7 @@ carrying on a conversation. Note that the library will automatically set
 this if the instance is nested (via its 'location' property) inside an
 InConversationState object.
 
-</div>
+
 
 <span id="stateSuggestedTopics"></span>
 
@@ -172,7 +172,7 @@ InConversationState object.
 
 [actor.t](../file/actor.t.html)\[[4934](../source/actor.t.html#4934)\]
 
-<div class="desc">
+
 
 Get this state's suggested topic list. ConversationReady states
 shouldn't normally have topic entries of their own, since a
@@ -180,15 +180,15 @@ ConvversationReady state usually forwards conversation handling to its
 corresponding in-conversation state. So, simply return the suggestion
 list from our in-conversation state object.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="enterConversation"></span>
 
@@ -196,14 +196,14 @@ list from our in-conversation state object.
 
 [actor.t](../file/actor.t.html)\[[4899](../source/actor.t.html#4899)\]
 
-<div class="desc">
+
 
 Enter a conversation with the given actor, either explicitly (via HELLO
 or TALK TO) or implicitly (by directly asking a question, etc). 'entry'
 gives the TopicEntry that's triggering the implicit conversation entry;
 if this is nil, it means that we're being triggered explicitly.
 
-</div>
+
 
 <span id="enterFromConversation"></span>
 
@@ -211,7 +211,7 @@ if this is nil, it means that we're being triggered explicitly.
 
 [actor.t](../file/actor.t.html)\[[4815](../source/actor.t.html#4815)\]
 
-<div class="desc">
+
 
 Enter this state from a conversation. This should show any message we
 want to display when we're ending a conversation and switching from the
@@ -235,7 +235,7 @@ The regular ByeTopic will handle explicit GOODBYE commands, and the
 others (ImpByeTopic, BoredByeTopic, LeaveByeTopic) will handle the
 implied kinds.
 
-</div>
+
 
 <span id="handleConversation"></span>
 
@@ -243,11 +243,11 @@ implied kinds.
 
 [actor.t](../file/actor.t.html)\[[4839](../source/actor.t.html#4839)\]
 
-<div class="desc">
+
 
 handle a conversational action directed to our actor
 
-</div>
+
 
 <span id="initializeActorState"></span>
 
@@ -255,11 +255,11 @@ handle a conversational action directed to our actor
 
 [actor.t](../file/actor.t.html)\[[4937](../source/actor.t.html#4937)\]
 
-<div class="desc">
+
 
 initialize the actor state object
 
-</div>
+
 
 <span id="initiateTopic"></span>
 
@@ -267,14 +267,14 @@ initialize the actor state object
 
 [actor.t](../file/actor.t.html)\[[4875](../source/actor.t.html#4875)\]
 
-<div class="desc">
+
 
 Initiate conversation based on the given simulation object. This is an
 internal method that isn't usually called directly from game code; game
 code usually calls the Actor's initiateTopic(), which calls this routine
 to check for a topic that's part of the state object.
 
-</div>
+
 
 <span id="notifyTopicResponse"></span>
 
@@ -282,13 +282,13 @@ to check for a topic that's part of the state object.
 
 [actor.t](../file/actor.t.html)\[[4886](../source/actor.t.html#4886)\]
 
-<div class="desc">
+
 
 Receive notification that a TopicEntry is being used (via its
 handleTopic method) to respond to a command. If the TopicEntry is
 conversational, automatically enter our in-conversation state.
 
-</div>
+
 
 <span id="showGreetingMsg"></span>
 
@@ -296,7 +296,7 @@ conversational, automatically enter our in-conversation state.
 
 [actor.t](../file/actor.t.html)\[[4783](../source/actor.t.html#4783)\]
 
-<div class="desc">
+
 
 Show our greeting message. If 'explicit' is true, it means that the
 player character is greeting us through an explicit greeting command,
@@ -323,11 +323,11 @@ conversation with our actor using ASK ABOUT or the like, without
 explicitly saying HELLO first). The regular HelloTopic will handle
 explicit greetings, and the ImpHelloTopic will handle the implied kind.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A HelloTopic is a TopicEntry that handles an explicit greeting (the
 player character explicitly saying Hello to this actor). It also handles
@@ -37,15 +37,15 @@ preference.
 
 `class `**`HelloTopic`**` :   `[`GreetingTopic`](../object/GreetingTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`HelloTopic`**  
 [`GreetingTopic`](../object/GreetingTopic.html)  
@@ -58,30 +58,30 @@ preference.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`HelloTopic`**  
 [`ActorHelloTopic`](../object/ActorHelloTopic.html)  
 [`ImpHelloTopic`](../object/ImpHelloTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`matchObj`](#matchObj)
 
@@ -102,11 +102,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`handleTopic`](#handleTopic)
 
@@ -129,11 +129,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -141,19 +141,19 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3811](../source/actor.t.html#3811)\]
 
-<div class="desc">
+
 
 A HelloTopic matches either helloTopicObj or impHelloTopicObj
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="handleTopic"></span>
 
@@ -161,15 +161,15 @@ A HelloTopic matches either helloTopicObj or impHelloTopicObj
 
 [actor.t](../file/actor.t.html)\[[3813](../source/actor.t.html#3813)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

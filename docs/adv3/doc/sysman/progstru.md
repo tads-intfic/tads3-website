@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Source Code
@@ -17,7 +17,7 @@ Structure
 <a href="charmap.html" class="nav"><em>Next:</em> Source File Character
 Sets</a>     </span>
 
-</div>
+
 
 
 
@@ -307,7 +307,7 @@ bundling.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -318,4 +318,4 @@ Structure
 <a href="charmap.html" class="nav"><em>Next:</em> Source File Character
 Sets</a>     </span>
 
-</div>
+

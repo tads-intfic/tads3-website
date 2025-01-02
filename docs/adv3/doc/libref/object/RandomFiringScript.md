@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Random-Firing script add-in. This is a mix-in class that you can add to
 the superclass list of any Script subclass to make the script execute
@@ -53,64 +53,64 @@ realistic.
 
 `class `**`RandomFiringScript`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RandomFiringScript`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RandomFiringScript`**  
 [`RandomEventList`](../object/RandomEventList.html)  
 [`ShuffledEventList`](../object/ShuffledEventList.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`eventPercent`](#eventPercent)[`eventReduceAfter`](#eventReduceAfter)[`eventReduceTo`](#eventReduceTo)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkEventOdds`](#checkEventOdds)[`doScript`](#doScript)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="eventPercent"></span>
 
@@ -118,7 +118,7 @@ realistic.
 
 [misc.t](../file/misc.t.html)\[[933](../source/misc.t.html#933)\]
 
-<div class="desc">
+
 
 Percentage of the time an event occurs. By default, we execute an event
 100% of the time - meaning every time that doScript() is invoked. If you
@@ -133,7 +133,7 @@ means that we'll randomly execute or not on each invocation, and
 averaged over a large number of invocations, we'll execute about a third
 of the time.
 
-</div>
+
 
 <span id="eventReduceAfter"></span>
 
@@ -141,7 +141,7 @@ of the time.
 
 [misc.t](../file/misc.t.html)\[[948](../source/misc.t.html#948)\]
 
-<div class="desc">
+
 
 Random atmospheric events can get repetitive after a while, so we
 provide an easy way to reduce the frequency of our events after a while.
@@ -154,7 +154,7 @@ generated at full frequency; after we've fired events that many times,
 we'll change eventPercent to eventReduceTo. If eventReduceAfter is nil,
 we won't ever change eventPercent.
 
-</div>
+
 
 <span id="eventReduceTo"></span>
 
@@ -162,19 +162,19 @@ we won't ever change eventPercent.
 
 [misc.t](../file/misc.t.html)\[[949](../source/misc.t.html#949)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkEventOdds"></span>
 
@@ -182,12 +182,12 @@ we won't ever change eventPercent.
 
 [misc.t](../file/misc.t.html)\[[966](../source/misc.t.html#966)\]
 
-<div class="desc">
+
 
 Check the event odds to see if we want to fire an event at all on this
 invocation.
 
-</div>
+
 
 <span id="doScript"></span>
 
@@ -195,16 +195,16 @@ invocation.
 
 [misc.t](../file/misc.t.html)\[[955](../source/misc.t.html#955)\]
 
-<div class="desc">
+
 
 When doScript() is invoked, check the event probabilities before
 proceeding.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

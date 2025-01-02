@@ -26,48 +26,48 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Basic resolver for indirect objects
 
 `class `**`IobjResolver`**` :   `[`Resolver`](../object/Resolver.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`IobjResolver`**  
 [`Resolver`](../object/Resolver.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`whichMessageObject`](#whichMessageObject)[`whichObject`](#whichObject)
 
@@ -76,11 +76,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`getAll`](#getAll)[`getAllDefaults`](#getAllDefaults)[`getDefaultObject`](#getDefaultObject)
 
@@ -89,11 +89,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="whichMessageObject"></span>
 
@@ -101,11 +101,11 @@ Inherited from `Resolver` :
 
 [resolver.t](../file/resolver.t.html)\[[788](../source/resolver.t.html#788)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="whichObject"></span>
 
@@ -113,19 +113,19 @@ Inherited from `Resolver` :
 
 [resolver.t](../file/resolver.t.html)\[[787](../source/resolver.t.html#787)\]
 
-<div class="desc">
+
 
 we resolve indirect objects for message generation purposes
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterAmbiguousNounPhrase"></span>
 
@@ -133,11 +133,11 @@ we resolve indirect objects for message generation purposes
 
 [resolver.t](../file/resolver.t.html)\[[812](../source/resolver.t.html#812)\]
 
-<div class="desc">
+
 
 filter an ambiguous noun phrase
 
-</div>
+
 
 <span id="filterPluralPhrase"></span>
 
@@ -145,12 +145,12 @@ filter an ambiguous noun phrase
 
 [resolver.t](../file/resolver.t.html)\[[823](../source/resolver.t.html#823)\]
 
-<div class="desc">
+
 
 Filter a plural phrase to reduce the set to the logical subset, if
 possible. If there is no logical subset, simply return the original set.
 
-</div>
+
 
 <span id="getAll"></span>
 
@@ -158,11 +158,11 @@ possible. If there is no logical subset, simply return the original set.
 
 [resolver.t](../file/resolver.t.html)\[[791](../source/resolver.t.html#791)\]
 
-<div class="desc">
+
 
 resolve 'all' for the indirect object
 
-</div>
+
 
 <span id="getAllDefaults"></span>
 
@@ -170,11 +170,11 @@ resolve 'all' for the indirect object
 
 [resolver.t](../file/resolver.t.html)\[[802](../source/resolver.t.html#802)\]
 
-<div class="desc">
+
 
 get all possible default objects
 
-</div>
+
 
 <span id="getDefaultObject"></span>
 
@@ -182,16 +182,16 @@ get all possible default objects
 
 [resolver.t](../file/resolver.t.html)\[[833](../source/resolver.t.html#833)\]
 
-<div class="desc">
+
 
 Get the default object or objects for this phrase. Since we resolve
 indirect objects, we'll ask the action for a default indirect object.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

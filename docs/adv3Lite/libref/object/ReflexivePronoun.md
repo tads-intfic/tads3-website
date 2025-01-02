@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for reflexive pronouns. These are pronouns like "himself"
 that specifically refer to an antecedent in the same sentence, rather
@@ -46,43 +46,43 @@ typical IF command syntax.
 
 `class `**`ReflexivePronoun`**` :   `[`Pronoun`](../object/Pronoun.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ReflexivePronoun`**  
 [`Pronoun`](../object/Pronoun.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`Herself`](../object/Herself.html)[`Himself`](../object/Himself.html)[`Itself`](../object/Itself.html)[`Myself`](../object/Myself.html)[`Ourselves`](../object/Ourselves.html)[`Themselves`](../object/Themselves.html)[`Yourself`](../object/Yourself.html)[`Yourselves`](../object/Yourselves.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`all`](#all)[`person`](#person)[`pronoun`](#pronoun)
 
@@ -91,11 +91,11 @@ Inherited from `Pronoun` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`resolve`](#resolve)
 
@@ -104,11 +104,11 @@ Inherited from `Pronoun` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="all"></span>
 
@@ -116,12 +116,12 @@ Inherited from `Pronoun` :
 
 [parser.t](../file/parser.t.html)\[[4863](../source/parser.t.html#4863)\]
 
-<div class="desc">
+
 
 Class property - list of all reflexive pronoun objects. This keeps the
 reflexive pronouns in a separate list from the base Pronoun list.
 
-</div>
+
 
 <span id="person"></span>
 
@@ -129,11 +129,11 @@ reflexive pronouns in a separate list from the base Pronoun list.
 
 [parser.t](../file/parser.t.html)\[[4856](../source/parser.t.html#4856)\]
 
-<div class="desc">
+
 
 my grammatical person is the same as my underlying pronoun's
 
-</div>
+
 
 <span id="pronoun"></span>
 
@@ -141,20 +141,20 @@ my grammatical person is the same as my underlying pronoun's
 
 [parser.t](../file/parser.t.html)\[[4853](../source/parser.t.html#4853)\]
 
-<div class="desc">
+
 
 Get the corresponding ordinary (non-reflexive) form of the pronoun. For
 example, for HIMSELF we'd return HIM.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -162,11 +162,11 @@ example, for HIMSELF we'd return HIM.
 
 [parser.t](../file/parser.t.html)\[[4832](../source/parser.t.html#4832)\]
 
-<div class="desc">
+
 
 during construction, set the regular pronoun to point back at me
 
-</div>
+
 
 <span id="resolve"></span>
 
@@ -174,7 +174,7 @@ during construction, set the regular pronoun to point back at me
 
 [parser.t](../file/parser.t.html)\[[4847](../source/parser.t.html#4847)\]
 
-<div class="desc">
+
 
 A reflexive pronoun binds to another noun phrase contained in the same
 command, so we resolve using the parser's "late binding" scheme. We
@@ -184,11 +184,11 @@ will know to come back to this pronoun after it's finished resolving
 earlier phrases, and look for the appropriate pronoun binding within
 those other phrases.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

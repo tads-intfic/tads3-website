@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Regular
@@ -17,7 +17,7 @@ Set</a>    
 <a href="tadsio.html" class="nav"><em>Next:</em> tads-io Function Set</a>
     </span>
 
-</div>
+
 
 
 
@@ -1801,7 +1801,7 @@ or more digits on one side or the other of the decimal.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1812,4 +1812,4 @@ Set</a>    
 <a href="tadsio.html" class="nav"><em>Next:</em> tads-io Function Set</a>
     </span>
 
-</div>
+

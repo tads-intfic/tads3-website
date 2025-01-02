@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Adventium is the basic stuff of the game universe. This is the default
 material for any object that doesn't specify a different material. This
@@ -28,26 +28,26 @@ type of material is opaque to all senses.
 
 **`adventium`**` :   `[`Material`](../object/Material.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`adventium`**  
 [`Material`](../object/Material.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
 
@@ -55,11 +55,11 @@ type of material is opaque to all senses.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -68,11 +68,11 @@ Inherited from `Material` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="hearThru"></span>
 
@@ -80,11 +80,11 @@ Inherited from `Material` :
 
 [sense.t](../file/sense.t.html)\[[53](../source/sense.t.html#53)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="seeThru"></span>
 
@@ -92,11 +92,11 @@ Inherited from `Material` :
 
 [sense.t](../file/sense.t.html)\[[52](../source/sense.t.html#52)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="smellThru"></span>
 
@@ -104,11 +104,11 @@ Inherited from `Material` :
 
 [sense.t](../file/sense.t.html)\[[54](../source/sense.t.html#54)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="touchThru"></span>
 
@@ -116,25 +116,25 @@ Inherited from `Material` :
 
 [sense.t](../file/sense.t.html)\[[55](../source/sense.t.html#55)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,49 +26,49 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `class `**`TurnStartRule`**` :   `[`Rule`](../object/Rule.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TurnStartRule`**  
 [`Rule`](../object/Rule.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`commandSpacingRule`](../object/commandSpacingRule.html)[`displayCommandPromptRule`](../object/displayCommandPromptRule.html)[`promptDaemonRule`](../object/promptDaemonRule.html)[`scoreNotificationRule`](../object/scoreNotificationRule.html)[`startInputLineRule`](../object/startInputLineRule.html)[`updateStatusLineRule`](../object/updateStatusLineRule.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`location`](#location)
 
@@ -77,11 +77,11 @@ Inherited from `Rule` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -90,11 +90,11 @@ Inherited from `Rule` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="location"></span>
 
@@ -102,25 +102,25 @@ Inherited from `Rule` :
 
 [sysrules.t](../file/sysrules.t.html)\[[545](../source/sysrules.t.html#545)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 28/08/2022 from adv3Lite version 1
 
-</div>
+

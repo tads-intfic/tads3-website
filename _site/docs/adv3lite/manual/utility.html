@@ -392,11 +392,12 @@ c.prop’ would have had from within an ‘obj’ method.</li>
 
 <p>The createLiveIterator() method thus allows us to write code like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      local a = 'Hello World! ';
+<p>`
+      local a = ‘Hello World! ‘;
       foreach(local cur in a)
-         "&lt;&lt;cur&gt;&gt;\n"; 
-     
-</code></pre></div></div>
+         “«cur»\n”;</p>
+
+<p>`</p>
 
 <p>Executing this will then indeed result in a display of the string ‘Hello
 World!’. This will principally be useful when we want to iterate over

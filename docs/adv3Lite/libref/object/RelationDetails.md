@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Debugging action to list what a relation currently relates \[RELATIONS
 EXTENSION\]
 
 **`RelationDetails`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RelationDetails`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -46,11 +46,11 @@ EXTENSION\]
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`literal`](#literal)
 
@@ -69,11 +69,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)
 
@@ -94,11 +94,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="literal"></span>
 
@@ -106,20 +106,20 @@ Inherited from `Redirector` :
 
 [relations.t](../file/relations.t.html)\[[931](../source/relations.t.html#931)\]
 
-<div class="desc">
+
 
 Display the name of the current object and list the items to which it
 relates.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -127,15 +127,15 @@ relates.
 
 [relations.t](../file/relations.t.html)\[[839](../source/relations.t.html#839)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

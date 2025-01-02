@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`pluralDummy_`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`pluralDummy_`**  
 [`Thing`](../object/Thing.html)  
@@ -46,11 +46,11 @@ Details](#_Methods_)
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`dummyName`](#dummyName)  [`name`](#name)  [`plural`](#plural)  `
 
@@ -69,11 +69,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`noteName`](#noteName)  `
 
@@ -94,11 +94,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="dummyName"></span>
 
@@ -106,11 +106,11 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4130](../source/english.t.html#4130)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -118,11 +118,11 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4131](../source/english.t.html#4131)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="plural"></span>
 
@@ -130,19 +130,19 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4137](../source/english.t.html#4137)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="noteName"></span>
 
@@ -151,15 +151,15 @@ Inherited from `LMentionable` :
 [messages.t](../file/messages.t.html)\[[1180](../source/messages.t.html#1180)\],
 [english.t](../file/english.t.html)\[[4132](../source/english.t.html#4132)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

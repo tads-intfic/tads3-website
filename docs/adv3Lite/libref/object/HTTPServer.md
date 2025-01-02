@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 HTTP Server Object. This implements a multi-threaded, background server
 that runs concurrently with the game program. The server listens for and
@@ -82,41 +82,41 @@ program to handle, via the network message queue.
 
 `intrinsic class `**`HTTPServer`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`HTTPServer`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -124,11 +124,11 @@ program to handle, via the network message queue.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getAddress`](#getAddress)[`getIPAddress`](#getIPAddress)[`getPortNum`](#getPortNum)[`shutdown`](#shutdown)
 
@@ -137,19 +137,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getAddress"></span>
 
@@ -157,14 +157,14 @@ Inherited from `Object` :
 
 [httpsrv.h](../file/httpsrv.h.html)\[[120](../source/httpsrv.h.html#120)\]
 
-<div class="desc">
+
 
 Get the listening address. This returns a string giving the original
 binding address specified when the object was constructed. This can
 contain either a host name or an IP address, since either form can be
 used in the constructor.
 
-</div>
+
 
 <span id="getIPAddress"></span>
 
@@ -172,12 +172,12 @@ used in the constructor.
 
 [httpsrv.h](../file/httpsrv.h.html)\[[126](../source/httpsrv.h.html#126)\]
 
-<div class="desc">
+
 
 Get the listening IP address. This returns the numerical IP address
 where the server is listening for connections.
 
-</div>
+
 
 <span id="getPortNum"></span>
 
@@ -185,7 +185,7 @@ where the server is listening for connections.
 
 [httpsrv.h](../file/httpsrv.h.html)\[[136](../source/httpsrv.h.html#136)\]
 
-<div class="desc">
+
 
 Get the port number. This returns an integer giving the TCP/IP network
 port number on which this server is listening for incoming connections.
@@ -193,7 +193,7 @@ Clients connect to the port by including it in the HTTP URL, after the
 host name. For example, if the server is on port 10815, the client would
 connect to a URL of the form http://myserver.com:10815/index.html.
 
-</div>
+
 
 <span id="shutdown"></span>
 
@@ -201,7 +201,7 @@ connect to a URL of the form http://myserver.com:10815/index.html.
 
 [httpsrv.h](../file/httpsrv.h.html)\[[112](../source/httpsrv.h.html#112)\]
 
-<div class="desc">
+
 
 Shut down the server. This immediately disconnects the server from its
 network port; no further client connections will be accepted once the
@@ -228,11 +228,11 @@ in the meantime. If you don't have any other work, you can avoid burning
 CPU time by calling shutdown(true), which waits (without consuming CPU
 time) for the server to exit.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The GONEAR action allows the game author to move the player character to
 anywhere on the map, while testing.
 
 **`GoNear`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GoNear`**  
 [`TAction`](../object/TAction.html)  
@@ -45,11 +45,11 @@ anywhere on the map, while testing.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`againRepeatsParse`](#againRepeatsParse)[`unhides`](#unhides)
 
@@ -65,11 +65,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addExtraScopeItems`](#addExtraScopeItems)[`afterAction`](#afterAction)[`beforeAction`](#beforeAction)[`turnSequence`](#turnSequence)
 
@@ -87,11 +87,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="againRepeatsParse"></span>
 
@@ -99,11 +99,11 @@ Inherited from `Redirector` :
 
 [debug.t](../file/debug.t.html)\[[172](../source/debug.t.html#172)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="unhides"></span>
 
@@ -111,19 +111,19 @@ Inherited from `Redirector` :
 
 [debug.t](../file/debug.t.html)\[[184](../source/debug.t.html#184)\]
 
-<div class="desc">
+
 
 The GoNear action should work even on a hidden item
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addExtraScopeItems"></span>
 
@@ -131,11 +131,11 @@ The GoNear action should work even on a hidden item
 
 [debug.t](../file/debug.t.html)\[[175](../source/debug.t.html#175)\]
 
-<div class="desc">
+
 
 The GONEAR action requires universal scope
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -143,11 +143,11 @@ The GONEAR action requires universal scope
 
 [debug.t](../file/debug.t.html)\[[180](../source/debug.t.html#180)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -155,11 +155,11 @@ The GONEAR action requires universal scope
 
 [debug.t](../file/debug.t.html)\[[179](../source/debug.t.html#179)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="turnSequence"></span>
 
@@ -167,15 +167,15 @@ The GONEAR action requires universal scope
 
 [debug.t](../file/debug.t.html)\[[181](../source/debug.t.html#181)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

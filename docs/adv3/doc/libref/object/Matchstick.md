@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Matchstick is a self-igniting match from a matchbook. (We use this
 lengthy name rather than simply "Match" because the latter is too
@@ -40,15 +40,15 @@ Language modifications for Matchstick
 
 `class `**`Matchstick`**` :   `[`FireSource`](../object/FireSource.html)[`LightSource`](../object/LightSource.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Matchstick`**  
 [`FireSource`](../object/FireSource.html)  
@@ -59,27 +59,27 @@ Language modifications for Matchstick
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allStates`](#allStates)[`brightnessOn`](#brightnessOn)[`burnLength`](#burnLength)[`getState`](#getState)[`isEquivalent`](#isEquivalent)[`isLit`](#isLit)
 
@@ -96,11 +96,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`desc`](#desc)[`dobjFor(Burn)`](#dobjFor(Burn))[`dobjFor(Extinguish)`](#dobjFor(Extinguish))[`dobjFor(Light)`](#dobjFor(Light))[`dobjFor(Strike)`](#dobjFor(Strike))[`iobjFor(BurnWith)`](#iobjFor(BurnWith))[`matchBurnedOut`](#matchBurnedOut)
 
@@ -117,11 +117,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allStates"></span>
 
@@ -129,11 +129,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[1967](../source/extras.t.html#1967)\]
 
-<div class="desc">
+
 
 get a list of all states
 
-</div>
+
 
 <span id="brightnessOn"></span>
 
@@ -141,11 +141,11 @@ get a list of all states
 
 [extras.t](../file/extras.t.html)\[[1946](../source/extras.t.html#1946)\]
 
-<div class="desc">
+
 
 matches have fairly feeble light
 
-</div>
+
 
 <span id="burnLength"></span>
 
@@ -153,11 +153,11 @@ matches have fairly feeble light
 
 [extras.t](../file/extras.t.html)\[[1952](../source/extras.t.html#1952)\]
 
-<div class="desc">
+
 
 amount of time we burn, in turns
 
-</div>
+
 
 <span id="getState"></span>
 
@@ -165,11 +165,11 @@ amount of time we burn, in turns
 
 [extras.t](../file/extras.t.html)\[[1964](../source/extras.t.html#1964)\]
 
-<div class="desc">
+
 
 get our state
 
-</div>
+
 
 <span id="isEquivalent"></span>
 
@@ -177,11 +177,11 @@ get our state
 
 [extras.t](../file/extras.t.html)\[[2072](../source/extras.t.html#2072)\]
 
-<div class="desc">
+
 
 matches usually come in bunches of equivalents
 
-</div>
+
 
 <span id="isLit"></span>
 
@@ -189,19 +189,19 @@ matches usually come in bunches of equivalents
 
 [extras.t](../file/extras.t.html)\[[1949](../source/extras.t.html#1949)\]
 
-<div class="desc">
+
 
 not lit initially
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -209,11 +209,11 @@ not lit initially
 
 [extras.t](../file/extras.t.html)\[[1955](../source/extras.t.html#1955)\]
 
-<div class="desc">
+
 
 default long description describes burning status
 
-</div>
+
 
 <span id="dobjFor(Burn)"></span>
 
@@ -221,11 +221,11 @@ default long description describes burning status
 
 [extras.t](../file/extras.t.html)\[[1970](../source/extras.t.html#1970)\]
 
-<div class="desc">
+
 
 "burn" action
 
-</div>
+
 
 <span id="dobjFor(Extinguish)"></span>
 
@@ -233,11 +233,11 @@ default long description describes burning status
 
 [extras.t](../file/extras.t.html)\[[2027](../source/extras.t.html#2027)\]
 
-<div class="desc">
+
 
 "extinguish"
 
-</div>
+
 
 <span id="dobjFor(Light)"></span>
 
@@ -245,11 +245,11 @@ default long description describes burning status
 
 [en_us.t](../file/en_us.t.html)\[[2919](../source/en_us.t.html#2919)\]
 
-<div class="desc">
+
 
 "light match" means "burn match"
 
-</div>
+
 
 <span id="dobjFor(Strike)"></span>
 
@@ -257,11 +257,11 @@ default long description describes burning status
 
 [en_us.t](../file/en_us.t.html)\[[2916](../source/en_us.t.html#2916)\]
 
-<div class="desc">
+
 
 "strike match" means "light match"
 
-</div>
+
 
 <span id="iobjFor(BurnWith)"></span>
 
@@ -269,11 +269,11 @@ default long description describes burning status
 
 [extras.t](../file/extras.t.html)\[[2006](../source/extras.t.html#2006)\]
 
-<div class="desc">
+
 
 start our burn-out timer going
 
-</div>
+
 
 <span id="matchBurnedOut"></span>
 
@@ -281,15 +281,15 @@ start our burn-out timer going
 
 [extras.t](../file/extras.t.html)\[[2049](../source/extras.t.html#2049)\]
 
-<div class="desc">
+
 
 fuse handler for burning out
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

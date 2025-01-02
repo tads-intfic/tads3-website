@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="ui.html" class="nav">The User Interface</a> \> The Banner Window
@@ -17,7 +17,7 @@ Function</a>    
 <a href="web.html" class="nav"><em>Next:</em> Playing on the Web</a>    
 </span>
 
-</div>
+
 
 
 
@@ -531,7 +531,7 @@ important ways:
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -542,4 +542,4 @@ Function</a>    
 <a href="web.html" class="nav"><em>Next:</em> Playing on the Web</a>    
 </span>
 
-</div>
+

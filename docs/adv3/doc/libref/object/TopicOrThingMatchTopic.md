@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A TopicEntry that can match a Thing or a Topic. This can be used to
 combine ASK/TELL-type responses and GIVE/SHOW-type responses in a single
@@ -44,15 +44,15 @@ because the object is known but not currently in scope.
 
 `class `**`TopicOrThingMatchTopic`**` :   `[`ThingMatchTopic`](../object/ThingMatchTopic.html)[`TopicMatchTopic`](../object/TopicMatchTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicOrThingMatchTopic`**  
 [`ThingMatchTopic`](../object/ThingMatchTopic.html)  
@@ -63,30 +63,30 @@ because the object is known but not currently in scope.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TopicOrThingMatchTopic`**  
 [`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
 [`AskTellShowTopic`](../object/AskTellShowTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -102,11 +102,11 @@ Inherited from `TopicMatchTopic` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`setTopicPronouns`](#setTopicPronouns)
 
@@ -122,19 +122,19 @@ Inherited from `TopicMatchTopic` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isMatchPossible"></span>
 
@@ -142,13 +142,13 @@ Inherited from `TopicMatchTopic` :
 
 [actor.t](../file/actor.t.html)\[[3153](../source/actor.t.html#3153)\]
 
-<div class="desc">
+
 
 if we're being asked to match a ResolvedTopic, use the inherited
 TopicMatchTopic handling; otherwise, use the inherited ThingMatchTopic
 handling
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -156,11 +156,11 @@ handling
 
 [actor.t](../file/actor.t.html)\[[3140](../source/actor.t.html#3140)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -168,15 +168,15 @@ handling
 
 [actor.t](../file/actor.t.html)\[[3160](../source/actor.t.html#3160)\]
 
-<div class="desc">
+
 
 if a match is possible from either subclass, allow it
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

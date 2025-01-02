@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A DefaultAnyTopic is a DefaultTopic that can match any kind of
 conversational command, except for HELLO and GOODBYE (unless
@@ -34,15 +34,15 @@ matchGreetings is true.
 
 `class `**`DefaultAnyTopic`**` :   `[`DefaultTopic`](../object/DefaultTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefaultAnyTopic`**  
 [`DefaultTopic`](../object/DefaultTopic.html)  
@@ -54,30 +54,30 @@ matchGreetings is true.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`DefaultAnyTopic`**  
 [`DefaultAgendaTopic`](../object/DefaultAgendaTopic.html)  
 [`DefaultAnyNonSayTopic`](../object/DefaultAnyNonSayTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)[`matchGreetings`](#matchGreetings)[`matchObj`](#matchObj)
 
@@ -96,11 +96,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -121,11 +121,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -133,12 +133,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4085](../source/actor.t.html#4085)\]
 
-<div class="desc">
+
 
 DefaultAnyTopics are included in all the lists of their TopicDatabase
 that contain lists of conversational responses.
 
-</div>
+
 
 <span id="matchGreetings"></span>
 
@@ -146,14 +146,14 @@ that contain lists of conversational responses.
 
 [actor.t](../file/actor.t.html)\[[4103](../source/actor.t.html#4103)\]
 
-<div class="desc">
+
 
 Flag - should we match HELLO and BYE? By default we don't since many
 DefaultAnyTopic responses won't be suitable for this purpose, but this
 can be overridden to true for DefaultAnyTopics that should match HELLO
 and BYE as well as other conversational commands.
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -161,27 +161,27 @@ and BYE as well as other conversational commands.
 
 [actor.t](../file/actor.t.html)\[[4094](../source/actor.t.html#4094)\]
 
-<div class="desc">
+
 
 A DefaultAnyTopic matches any conversational command and should also
 match Commands (where the matchObj will be an action); they can
 optionally match HELLO and BYE as well.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

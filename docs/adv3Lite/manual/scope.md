@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Scope  
@@ -16,7 +16,7 @@ Model</a>    
 <a href="debug.html" class="nav"><em>Next:</em> Debugging Commands</a>
     </span>
 
-</div>
+
 
 
 
@@ -116,7 +116,7 @@ different way of defining scope for that particular action.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -126,4 +126,4 @@ Model</a>    
 <a href="debug.html" class="nav"><em>Next:</em> Debugging Commands</a>
     </span>
 
-</div>
+

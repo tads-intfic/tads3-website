@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 Tokenizer - customizable tokenizer class for use with the intrinsic
 class 'grammar-production' parser.
@@ -28,42 +28,42 @@ tokenizer quite extensively simply by subclassing the Tokenizer class
 and overriding the 'rules\_' property with a new set of rules
 declarations.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`Tokenizer`](../object/Tokenizer.html)[`TokenizerError`](../object/TokenizerError.html)[`TokErrorNoMatch`](../object/TokErrorNoMatch.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`main`](#main)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="main"></span>
 
@@ -71,15 +71,15 @@ declarations.
 
 [tok.t](../file/tok.t.html)\[[396](../source/tok.t.html#396)\]
 
-<div class="desc">
+
 
 Test Section
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

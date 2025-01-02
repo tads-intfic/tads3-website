@@ -975,9 +975,9 @@ property of [Action](../object/Action.html) in
 [**`extraReport`**](../file/adv3.h.html#extraReport) - macro in
 [adv3.h](../file/adv3.h.html)\[[1346](../source/adv3.h.html#1346)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

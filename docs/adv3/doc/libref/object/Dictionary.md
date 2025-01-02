@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The Dictionary intrinsic class is a specialized lookup table class
 designed for storing the vocabulary table for a parser. Dictionary works
@@ -40,41 +40,41 @@ associates the word with an object.
 
 `intrinsic class `**`Dictionary`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Dictionary`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -82,11 +82,11 @@ associates the word with an object.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addWord`](#addWord)[`correctSpelling`](#correctSpelling)[`findWord`](#findWord)[`forEachWord`](#forEachWord)[`isWordDefined`](#isWordDefined)[`removeWord`](#removeWord)[`setComparator`](#setComparator)
 
@@ -95,19 +95,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addWord"></span>
 
@@ -115,12 +115,12 @@ Inherited from `Object` :
 
 [dict.h](../file/dict.h.html)\[[137](../source/dict.h.html#137)\]
 
-<div class="desc">
+
 
 Add a word to the dictionary, associating the given object with the
 given string and property combination.
 
-</div>
+
 
 <span id="correctSpelling"></span>
 
@@ -128,7 +128,7 @@ given string and property combination.
 
 [dict.h](../file/dict.h.html)\[[224](../source/dict.h.html#224)\]
 
-<div class="desc">
+
 
 Get a list of possible spelling corrections for the given word. This
 searches the dictionary for words that match the given word within the
@@ -174,7 +174,7 @@ distance. Custom comparators (not of the StringComparator class) are
 ignored: if you use a custom comparator, this method will only find
 matches based on the exact text of the dictionary words.
 
-</div>
+
 
 <span id="findWord"></span>
 
@@ -182,7 +182,7 @@ matches based on the exact text of the dictionary words.
 
 [dict.h](../file/dict.h.html)\[[131](../source/dict.h.html#131)\]
 
-<div class="desc">
+
 
 Find a word; returns a list giving the objects associated with the
 string in the dictionary. If voc_prop is specified, only objects
@@ -205,7 +205,7 @@ exactly and one with truncation. The match result code lets the caller
 determine if some matches are "better" than others, based on how the
 string matched for each individual object entry.
 
-</div>
+
 
 <span id="forEachWord"></span>
 
@@ -213,7 +213,7 @@ string matched for each individual object entry.
 
 [dict.h](../file/dict.h.html)\[[175](../source/dict.h.html#175)\]
 
-<div class="desc">
+
 
 Invoke the callback func(obj, str, prop) for each word in the
 dictionary. Note that the callback can be invoked with a single string
@@ -222,7 +222,7 @@ word/object/property association; in other words, the callback is
 invoked once for each association created with addWord() or during
 compilation.
 
-</div>
+
 
 <span id="isWordDefined"></span>
 
@@ -230,7 +230,7 @@ compilation.
 
 [dict.h](../file/dict.h.html)\[[165](../source/dict.h.html#165)\]
 
-<div class="desc">
+
 
 Check to see if the given string 'str' is defined in the dictionary.
 Returns true if the word is defined, nil if not.
@@ -249,7 +249,7 @@ comparator does; for example, the caller might use the filter to
 determine if the dictionary contains any matches for 'str' that match
 without any truncation.
 
-</div>
+
 
 <span id="removeWord"></span>
 
@@ -257,13 +257,13 @@ without any truncation.
 
 [dict.h](../file/dict.h.html)\[[144](../source/dict.h.html#144)\]
 
-<div class="desc">
+
 
 Remove the given word association from the dictionary. This removes only
 the association for the given object; other objects associated with the
 same word are not affected.
 
-</div>
+
 
 <span id="setComparator"></span>
 
@@ -271,7 +271,7 @@ same word are not affected.
 
 [dict.h](../file/dict.h.html)\[[104](../source/dict.h.html#104)\]
 
-<div class="desc">
+
 
 Set the comparator object. This defines how words are compared. The
 object must provide the following methods, which comprise the
@@ -329,11 +329,11 @@ hash values must be equal, or, equivalently, that two unequal strings
 must have different hash values. Hash collisions are explicitly allowed,
 so two strings that don't match can still have the same hash value.)
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

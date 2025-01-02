@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Numbered Dial - something you can turn to a range of numeric values.
 
 `class `**`NumberedDial`**` :   `[`Dial`](../object/Dial.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NumberedDial`**  
 [`Dial`](../object/Dial.html)  
@@ -50,27 +50,27 @@ Numbered Dial - something you can turn to a range of numeric values.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`maxSetting`](#maxSetting)[`minSetting`](#minSetting)
 
@@ -88,11 +88,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canonicalizeSetting`](#canonicalizeSetting)[`isValidSetting`](#isValidSetting)
 
@@ -110,11 +110,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="maxSetting"></span>
 
@@ -122,11 +122,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5487](../source/objects.t.html#5487)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="minSetting"></span>
 
@@ -134,20 +134,20 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5486](../source/objects.t.html#5486)\]
 
-<div class="desc">
+
 
 The range of settings - the dial can be set to values from the minimum
 to the maximum, inclusive.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canonicalizeSetting"></span>
 
@@ -155,12 +155,12 @@ to the maximum, inclusive.
 
 [objects.t](../file/objects.t.html)\[[5493](../source/objects.t.html#5493)\]
 
-<div class="desc">
+
 
 Canonicalize a proposed setting value. For numbers, strip off any
 leading zeros, since these don't change the meaning of the value.
 
-</div>
+
 
 <span id="isValidSetting"></span>
 
@@ -168,16 +168,16 @@ leading zeros, since these don't change the meaning of the value.
 
 [objects.t](../file/objects.t.html)\[[5515](../source/objects.t.html#5515)\]
 
-<div class="desc">
+
 
 Check a setting for validity. A setting is valid only if it's a number
 within the allowed range for the dial.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

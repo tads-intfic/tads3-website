@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for the inventory sub-lister for items being carried. This is
 a minor specialization of the basic inventory lister; in this version,
@@ -41,15 +41,15 @@ contents, since we assume the caller will be doing this.
 
 `class `**`InventorySublister`**` :   `[`InventoryLister`](../object/InventoryLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`InventorySublister`**  
 [`InventoryLister`](../object/InventoryLister.html)  
@@ -57,28 +57,28 @@ contents, since we assume the caller will be doing this.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`actorCarryingSublister`](../object/actorCarryingSublister.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -89,11 +89,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListEmpty`](#showListEmpty)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)[`showSeparateContents`](#showSeparateContents)
 
@@ -105,19 +105,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -125,11 +125,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1707](../source/lister.t.html#1707)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -137,11 +137,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1705](../source/lister.t.html#1705)\]
 
-<div class="desc">
+
 
 don't show any prefix, suffix, or 'empty' messages
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -149,11 +149,11 @@ don't show any prefix, suffix, or 'empty' messages
 
 [lister.t](../file/lister.t.html)\[[1706](../source/lister.t.html#1706)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showSeparateContents"></span>
 
@@ -161,15 +161,15 @@ don't show any prefix, suffix, or 'empty' messages
 
 [lister.t](../file/lister.t.html)\[[1710](../source/lister.t.html#1710)\]
 
-<div class="desc">
+
 
 don't show out-of-line contents
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

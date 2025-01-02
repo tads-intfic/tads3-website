@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Acknowledgements and
@@ -17,7 +17,7 @@ Book</a>    
 <a href="tools.html" class="nav"><em>Next:</em> Tools of the Trade</a>
     </span>
 
-</div>
+
 
 
 
@@ -81,7 +81,7 @@ instructions on using it on non-Windows systems.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -92,4 +92,4 @@ Book</a>    
 <a href="tools.html" class="nav"><em>Next:</em> Tools of the Trade</a>
     </span>
 
-</div>
+

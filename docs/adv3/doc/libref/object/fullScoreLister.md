@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 List interface for showing the full score list
 
 **`fullScoreLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`fullScoreLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -54,11 +54,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getContents`](#getContents)[`getListedContents`](#getListedContents)[`isListed`](#isListed)[`listCardinality`](#listCardinality)[`showContentsList`](#showContentsList)[`showInlineContentsList`](#showInlineContentsList)[`showListItem`](#showListItem)[`showListPrefixTall`](#showListPrefixTall)
 
@@ -67,19 +67,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getContents"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Lister` :
 
 [score.t](../file/score.t.html)\[[208](../source/score.t.html#208)\]
 
-<div class="desc">
+
 
 achievements have no containment hierarchy
 
-</div>
+
 
 <span id="getListedContents"></span>
 
@@ -99,11 +99,11 @@ achievements have no containment hierarchy
 
 [score.t](../file/score.t.html)\[[209](../source/score.t.html#209)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -111,11 +111,11 @@ achievements have no containment hierarchy
 
 [score.t](../file/score.t.html)\[[202](../source/score.t.html#202)\]
 
-<div class="desc">
+
 
 every achievement is listed
 
-</div>
+
 
 <span id="listCardinality"></span>
 
@@ -123,11 +123,11 @@ every achievement is listed
 
 [score.t](../file/score.t.html)\[[205](../source/score.t.html#205)\]
 
-<div class="desc">
+
 
 each item counts as a singular object grammatically
 
-</div>
+
 
 <span id="showContentsList"></span>
 
@@ -135,11 +135,11 @@ each item counts as a singular object grammatically
 
 [score.t](../file/score.t.html)\[[210](../source/score.t.html#210)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showInlineContentsList"></span>
 
@@ -147,11 +147,11 @@ each item counts as a singular object grammatically
 
 [score.t](../file/score.t.html)\[[211](../source/score.t.html#211)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -159,11 +159,11 @@ each item counts as a singular object grammatically
 
 [score.t](../file/score.t.html)\[[214](../source/score.t.html#214)\]
 
-<div class="desc">
+
 
 show an item
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -171,15 +171,15 @@ show an item
 
 [score.t](../file/score.t.html)\[[195](../source/score.t.html#195)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

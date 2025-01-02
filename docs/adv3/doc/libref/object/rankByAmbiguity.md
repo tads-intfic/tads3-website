@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Rank by ambiguous noun phrases. We apply this criterion on the second
 pass only, because it's a weak test: we might end up narrowing things
@@ -35,26 +35,26 @@ interpretation will definitely stay unambiguous.
 
 **`rankByAmbiguity`**` :   `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`rankByAmbiguity`**  
 [`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -62,11 +62,11 @@ interpretation will definitely stay unambiguous.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`comparePass2`](#comparePass2)
 
@@ -75,19 +75,19 @@ Inherited from `CommandRankingCriterion` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="comparePass2"></span>
 
@@ -95,17 +95,17 @@ Inherited from `CommandRankingCriterion` :
 
 [parser.t](../file/parser.t.html)\[[6083](../source/parser.t.html#6083)\]
 
-<div class="desc">
+
 
 Do nothing on the first pass, because we want any first-pass criterion
 to prevail over our weak test. Instead, check for a difference in
 ambiguity only on the second pass.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

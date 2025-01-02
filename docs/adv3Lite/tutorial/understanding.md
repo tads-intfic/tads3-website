@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
@@ -17,7 +17,7 @@ Source File</a>    
 <a href="locations.html" class="nav"><em>Next:</em> Defining the Game's
 Locations</a>     </span>
 
-</div>
+
 
 
 
@@ -28,12 +28,12 @@ Locations</a>     </span>
 You may recall that the source file begins with the following three
 lines:
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-`
+```
 
 *Every* source file you create for use with an adv3Lite game should
 begin in precisely the same way. When you come to create a larger game,
@@ -44,9 +44,9 @@ source files with the same three lines as above.
 
 The first line is:
 
-`
+```
     #charset "us-ascii"
-`
+```
 
 This tells the compiler which *character set* you are using in your
 source file (in this case, us-ascii), so that it knows how to translate
@@ -66,10 +66,10 @@ comment or whitespace.
 
 The next two lines are also compiler directives. These are:
 
-`
+```
     #include <tads.h>
     #include "advlite.h"
-`
+```
 
 The \#include directive tells the compiler to copy the contents of
 whatever file is specified immediately afterwards into that place in
@@ -116,7 +116,7 @@ There are two ways of marking texts as comments in TADS 3:
 The following are thus examples of comments in the source file we have
 just created:
 
-`
+```
        // obtain IFID from http://www.tads.org/ifidgen/ifidgen
        
        /* Define the initial player character; this is compulsory */
@@ -127,7 +127,7 @@ just created:
      *   convenient name. If you change it to something else, rememember to change
      *   gameMain.initialPlayerChar accordingly.
      */
-`
+```
 
 ## Object Definitions
 
@@ -140,7 +140,7 @@ or two other things), but we needn't worry about any of those for now.
 Most of what you'll be doing when writing IF in TADS 3 is defining
 objects. Let's take a closer look at the first one in our source file:
 
-`
+```
     versionInfo: GameID
         IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
         name = 'The Adventures of Heidi'
@@ -155,7 +155,7 @@ objects. Let's take a closer look at the first one in our source file:
             by Roger Firth and Sonja Kesserich.'    
         
     ;
-`
+```
 
 The object definition begins with the name of the object (here
 `versionInfo`), followed by a colon, followed by
@@ -216,12 +216,12 @@ single quote marks after `IFID = `).
 
 The next object in our source file is:
 
-`
+```
     gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
     ;
-`
+```
 
 This is where you can define certain other basic information about your
 game, such as certain options and what it does on start-up. For the full
@@ -239,7 +239,7 @@ The final two objects define the player character's starting location
 and the object representing the player character. These must be present
 for your game to compile correctly:
 
-`
+```
     /* The starting location; this can be called anything you like */
 
     beforeCottage: Room 'In front of a Cottage'
@@ -259,7 +259,7 @@ for your game to compile correctly:
         person = 2   
         contType = Carrier    
     ;
-`
+```
 
 Note the use of the + sign to indicate the me object is located inside
 the beforeCottage location. You'll probably be using this notation a
@@ -275,7 +275,7 @@ in what follows.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -286,4 +286,4 @@ Source File</a>    
 <a href="locations.html" class="nav"><em>Next:</em> Defining the Game's
 Locations</a>     </span>
 
-</div>
+

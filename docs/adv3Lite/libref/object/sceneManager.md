@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The sceneManager object is used to control the scene-switching and
 execution mechanism.
 
 **`sceneManager`**` :   `[`InitObject`](../object/InitObject.html)[`Event`](../object/Event.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`sceneManager`**  
 [`InitObject`](../object/InitObject.html)  
@@ -45,11 +45,11 @@ execution mechanism.
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`eventOrder`](#eventOrder)[`execBeforeMe`](#execBeforeMe)
 
@@ -63,11 +63,11 @@ Inherited from `Event` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)[`executeEvent`](#executeEvent)[`notifyAfter`](#notifyAfter)[`notifyBefore`](#notifyBefore)
 
@@ -81,11 +81,11 @@ Inherited from `Event` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="eventOrder"></span>
 
@@ -93,12 +93,12 @@ Inherited from `Event` :
 
 [scene.t](../file/scene.t.html)\[[34](../source/scene.t.html#34)\]
 
-<div class="desc">
+
 
 Run the executeEvent() method for the first time to set up any scenes
 that should be active at the start of play.
 
-</div>
+
 
 <span id="execBeforeMe"></span>
 
@@ -106,19 +106,19 @@ that should be active at the start of play.
 
 [scene.t](../file/scene.t.html)\[[69](../source/scene.t.html#69)\]
 
-<div class="desc">
+
 
 If the scene is happening, call its eachTurn() method
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -126,11 +126,11 @@ If the scene is happening, call its eachTurn() method
 
 [scene.t](../file/scene.t.html)\[[17](../source/scene.t.html#17)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="executeEvent"></span>
 
@@ -138,11 +138,11 @@ If the scene is happening, call its eachTurn() method
 
 [scene.t](../file/scene.t.html)\[[39](../source/scene.t.html#39)\]
 
-<div class="desc">
+
 
 The executeEvent() method is run each turn to drive the Scenes mechanism
 
-</div>
+
 
 <span id="notifyAfter"></span>
 
@@ -150,11 +150,11 @@ The executeEvent() method is run each turn to drive the Scenes mechanism
 
 [scene.t](../file/scene.t.html)\[[82](../source/scene.t.html#82)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notifyBefore"></span>
 
@@ -162,15 +162,15 @@ The executeEvent() method is run each turn to drive the Scenes mechanism
 
 [scene.t](../file/scene.t.html)\[[72](../source/scene.t.html#72)\]
 
-<div class="desc">
+
 
 Run the beforeAction method on every currently active Scene
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A QueryTopic is a kind of SpecialTopic that extends the range of
 questions that the player (character) can ask an NPC from ASK ABOUT
@@ -38,15 +38,15 @@ particular QueryTopic matches.
 
 `class `**`QueryTopic`**` :   `[`SpecialTopic`](../object/SpecialTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`QueryTopic`**  
 [`SpecialTopic`](../object/SpecialTopic.html)  
@@ -58,27 +58,27 @@ particular QueryTopic matches.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)[`qtype`](#qtype)
 
@@ -97,11 +97,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`buildName`](#buildName)[`initializeTopicEntry`](#initializeTopicEntry)[`matchTopic`](#matchTopic)
 
@@ -121,11 +121,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -133,11 +133,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4646](../source/actor.t.html#4646)\]
 
-<div class="desc">
+
 
 A QueryTopic belongs in the queryTopics list of its TopicDatabase
 
-</div>
+
 
 <span id="qtype"></span>
 
@@ -145,20 +145,20 @@ A QueryTopic belongs in the queryTopics list of its TopicDatabase
 
 [actor.t](../file/actor.t.html)\[[4578](../source/actor.t.html#4578)\]
 
-<div class="desc">
+
 
 The list of query types we match, e.g. 'where'. To match multiple types
 list them divided by a vertical bar, e.g. 'if\|whether'
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="buildName"></span>
 
@@ -166,12 +166,12 @@ list them divided by a vertical bar, e.g. 'if\|whether'
 
 [actor.t](../file/actor.t.html)\[[4622](../source/actor.t.html#4622)\]
 
-<div class="desc">
+
 
 When we build the name of a QueryTopic (for use in a list of topic
 suggestions) we need to include the query type (qType).
 
-</div>
+
 
 <span id="initializeTopicEntry"></span>
 
@@ -179,11 +179,11 @@ suggestions) we need to include the query type (qType).
 
 [actor.t](../file/actor.t.html)\[[4581](../source/actor.t.html#4581)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -191,16 +191,16 @@ suggestions) we need to include the query type (qType).
 
 [actor.t](../file/actor.t.html)\[[4551](../source/actor.t.html#4551)\]
 
-<div class="desc">
+
 
 Check whether this QueryTopic matches the question asked. For it to do
 so it must match not only the topic but the qType (query type)
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

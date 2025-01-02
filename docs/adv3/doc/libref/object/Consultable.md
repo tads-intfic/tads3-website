@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "consultable" object. This is an inanimate object that can be
 consulted about various topics, almost the way an actor can be asked
@@ -77,15 +77,15 @@ pre-condition for the Consult action.
 
 `class `**`Consultable`**` :   `[`Thing`](../object/Thing.html)[`TopicDatabase`](../object/TopicDatabase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Consultable`**  
 [`Thing`](../object/Thing.html)  
@@ -95,27 +95,27 @@ pre-condition for the Consult action.
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`consultTopics`](#consultTopics)
 
@@ -130,11 +130,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Consult)`](#dobjFor(Consult))[`dobjFor(ConsultAbout)`](#dobjFor(ConsultAbout))[`resolveConsultTopic`](#resolveConsultTopic)[`topicNotFound`](#topicNotFound)
 
@@ -149,11 +149,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="consultTopics"></span>
 
@@ -161,22 +161,22 @@ Inherited from `TopicDatabase` :
 
 [objects.t](../file/objects.t.html)\[[1657](../source/objects.t.html#1657)\]
 
-<div class="desc">
+
 
 Our topic entry database for consultatation topics. This will be
 automatically built during initialization from the set of ConsultTopic
 objects located within me, so there's usually no need to initialize this
 manually.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Consult)"></span>
 
@@ -184,13 +184,13 @@ manually.
 
 [objects.t](../file/objects.t.html)\[[1564](../source/objects.t.html#1564)\]
 
-<div class="desc">
+
 
 If they consult us without a topic, just ask for a topic. Treat it as
 logical, but rank it as improbable, in case there's anything else around
 that can be consulted without any topic specified.
 
-</div>
+
 
 <span id="dobjFor(ConsultAbout)"></span>
 
@@ -198,11 +198,11 @@ that can be consulted without any topic specified.
 
 [objects.t](../file/objects.t.html)\[[1572](../source/objects.t.html#1572)\]
 
-<div class="desc">
+
 
 consult about a topic
 
-</div>
+
 
 <span id="resolveConsultTopic"></span>
 
@@ -210,7 +210,7 @@ consult about a topic
 
 [objects.t](../file/objects.t.html)\[[1641](../source/objects.t.html#1641)\]
 
-<div class="desc">
+
 
 Resolve the topic phrase for a CONSULT ABOUT command. The CONSULT ABOUT
 action refers this to the direct object of the action, so that the
@@ -247,7 +247,7 @@ getTargetActor() method returns the actor performing the action; and its
 objInPhysicalScope(obj) method lets you determine if an object is in
 physical scope for the actor.
 
-</div>
+
 
 <span id="topicNotFound"></span>
 
@@ -255,15 +255,15 @@ physical scope for the actor.
 
 [objects.t](../file/objects.t.html)\[[1587](../source/objects.t.html#1587)\]
 
-<div class="desc">
+
 
 show the default response for a topic we couldn't find
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

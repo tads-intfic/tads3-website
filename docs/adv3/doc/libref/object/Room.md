@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Room: the basic class for top-level game locations (that is, game
 locations that aren't inside any other simulation objects, but are at
@@ -63,15 +63,15 @@ English-specific modifications for Room.
 
 `class `**`Room`**` :   `[`Fixture`](../object/Fixture.html)[`BasicLocation`](../object/BasicLocation.html)[`RoomAutoConnector`](../object/RoomAutoConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Room`**  
 [`Fixture`](../object/Fixture.html)  
@@ -91,11 +91,11 @@ English-specific modifications for Room.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Room`**  
 [`DarkRoom`](../object/DarkRoom.html)  
@@ -104,19 +104,19 @@ English-specific modifications for Room.
 [`ShipboardRoom`](../object/ShipboardRoom.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`atmosphereList`](#atmosphereList)[`brightness`](#brightness)[`destName`](#destName)[`isTopLevel`](#isTopLevel)[`name`](#name)[`putDestMessage`](#putDestMessage)[`roomFloor`](#roomFloor)[`roomParts`](#roomParts)
 
@@ -153,11 +153,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`childInName`](#childInName)[`childInNameWithOwner`](#childInNameWithOwner)[`dobjFor(Board)`](#dobjFor(Board))[`dobjFor(Enter)`](#dobjFor(Enter))[`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(GetOutOf)`](#dobjFor(GetOutOf))[`dobjFor(LieOn)`](#dobjFor(LieOn))[`dobjFor(ListenTo)`](#dobjFor(ListenTo))[`dobjFor(LookBehind)`](#dobjFor(LookBehind))[`dobjFor(LookIn)`](#dobjFor(LookIn))[`dobjFor(LookUnder)`](#dobjFor(LookUnder))[`dobjFor(SitOn)`](#dobjFor(SitOn))[`dobjFor(Smell)`](#dobjFor(Smell))[`dobjFor(StandOn)`](#dobjFor(StandOn))[`getDestName`](#getDestName)[`getExtraScopeItems`](#getExtraScopeItems)[`getNominalActorContainer`](#getNominalActorContainer)[`getNominalDropDestination`](#getNominalDropDestination)[`getRoomPartLocation`](#getRoomPartLocation)[`hideFromAll`](#hideFromAll)[`hideFromDefault`](#hideFromDefault)[`initializeThing`](#initializeThing)[`mustMoveObjInto`](#mustMoveObjInto)[`roomDaemon`](#roomDaemon)[`tryMovingObjInto`](#tryMovingObjInto)
 
@@ -195,11 +195,11 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="atmosphereList"></span>
 
@@ -207,7 +207,7 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[4395](../source/travel.t.html#4395)\]
 
-<div class="desc">
+
 
 My "atmosphere" list. This can be set to an EventList object to provide
 atmosphere messages while the player character is within this room. The
@@ -215,7 +215,7 @@ default roomDaemon will show one message from this EventList (by calling
 the EventList's doScript() method) on each turn the player character is
 in this location.
 
-</div>
+
 
 <span id="brightness"></span>
 
@@ -223,14 +223,14 @@ in this location.
 
 [travel.t](../file/travel.t.html)\[[4362](../source/travel.t.html#4362)\]
 
-<div class="desc">
+
 
 Most rooms provide their own implicit lighting. We'll use 'medium'
 lighting (level 3) by default, which provides enough light for all
 activities, but is reduced to dim light (level 2) when it goes through
 obscuring media or over distance.
 
-</div>
+
 
 <span id="destName"></span>
 
@@ -238,13 +238,13 @@ obscuring media or over distance.
 
 [travel.t](../file/travel.t.html)\[[4386](../source/travel.t.html#4386)\]
 
-<div class="desc">
+
 
 Our destination name, if we have one. By default, we make this nil,
 which means the room cannot be described as a destination of connectors
 from adjoining locations.
 
-</div>
+
 
 <span id="isTopLevel"></span>
 
@@ -252,13 +252,13 @@ from adjoining locations.
 
 [travel.t](../file/travel.t.html)\[[4334](../source/travel.t.html#4334)\]
 
-<div class="desc">
+
 
 we're a "top-level" location: we don't have any other object containing
 us, but we're nonetheless part of the game world, so we're at the top
 level of the containment tree
 
-</div>
+
 
 <span id="name"></span>
 
@@ -266,7 +266,7 @@ level of the containment tree
 
 [en_us.t](../file/en_us.t.html)\[[2960](../source/en_us.t.html#2960)\]
 
-<div class="desc">
+
 
 The ordinary 'name' property is used the same way it's used for any
 other object, to refer to the room when it shows up in library messages
@@ -287,7 +287,7 @@ proper names that want to preserve their capitalization in the ordinary
 name: "You can't eat the Hall of the Ancient Kings." These cases need to
 be customized as well.
 
-</div>
+
 
 <span id="putDestMessage"></span>
 
@@ -295,12 +295,12 @@ be customized as well.
 
 [travel.t](../file/travel.t.html)\[[4438](../source/travel.t.html#4438)\]
 
-<div class="desc">
+
 
 Since we could be our own nominal drop destination, we need a message to
 describe things being put here.
 
-</div>
+
 
 <span id="roomFloor"></span>
 
@@ -308,13 +308,13 @@ describe things being put here.
 
 [travel.t](../file/travel.t.html)\[[4533](../source/travel.t.html#4533)\]
 
-<div class="desc">
+
 
 Get the room's floor. This looks for an object of class Floor in the
 roomParts list; if there is no such object, we'll return nil, indicating
 that the room has no floor at all.
 
-</div>
+
 
 <span id="roomParts"></span>
 
@@ -322,7 +322,7 @@ that the room has no floor at all.
 
 [travel.t](../file/travel.t.html)\[[4524](../source/travel.t.html#4524)\]
 
-<div class="desc">
+
 
 Get the list of extra parts for the room. An indoor location has walls,
 floor, and ceiling; these are all generic objects that are included for
@@ -333,15 +333,15 @@ eliminate the default objects from appearing in the room. Note that if
 the room has a floor, it should always be represented by an object of
 class Floor, and should always be part of this list.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="childInName"></span>
 
@@ -349,7 +349,7 @@ class Floor, and should always be part of this list.
 
 [en_us.t](../file/en_us.t.html)\[[3000](../source/en_us.t.html#3000)\]
 
-<div class="desc">
+
 
 For top-level rooms, describe an object as being in the room by
 describing it as being in the room's nominal drop destination, since
@@ -362,7 +362,7 @@ The nominal drop destination is usually something like the floor or the
 ground, so it's only suitable when we're in the same location as what
 we're describing.
 
-</div>
+
 
 <span id="childInNameWithOwner"></span>
 
@@ -370,11 +370,11 @@ we're describing.
 
 [en_us.t](../file/en_us.t.html)\[[3008](../source/en_us.t.html#3008)\]
 
-<div class="desc">
+
 
 if the PC isn't inside us, we're viewing this remotely
 
-</div>
+
 
 <span id="dobjFor(Board)"></span>
 
@@ -382,7 +382,7 @@ if the PC isn't inside us, we're viewing this remotely
 
 [travel.t](../file/travel.t.html)\[[4660](../source/travel.t.html#4660)\]
 
-<div class="desc">
+
 
 for BOARD and ENTER, there are three possibilities:
 
@@ -396,7 +396,7 @@ is the same as GET OUT OF \<outermost nested room within self\>
 connector, in which case ENTER \<self\> should be handled as TRAVEL VIA
 \<connector from actor's current location to self\>
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -404,11 +404,11 @@ connector, in which case ENTER \<self\> should be handled as TRAVEL VIA
 
 [travel.t](../file/travel.t.html)\[[4661](../source/travel.t.html#4661)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -416,13 +416,13 @@ connector, in which case ENTER \<self\> should be handled as TRAVEL VIA
 
 [travel.t](../file/travel.t.html)\[[4570](../source/travel.t.html#4570)\]
 
-<div class="desc">
+
 
 When we're in the room, treat EXAMINE \<ROOM\> the same as LOOK AROUND.
 (This will only work if the room is given vocabulary like a normal
 object.)
 
-</div>
+
 
 <span id="dobjFor(GetOutOf)"></span>
 
@@ -430,13 +430,13 @@ object.)
 
 [travel.t](../file/travel.t.html)\[[4624](../source/travel.t.html#4624)\]
 
-<div class="desc">
+
 
 treat an explicit GET OUT OF \<ROOM\> as OUT if there's an apparent
 destination for OUT; otherwise treat it as "vague travel," which simply
 tells the player that they need to specify a direction
 
-</div>
+
 
 <span id="dobjFor(LieOn)"></span>
 
@@ -444,11 +444,11 @@ tells the player that they need to specify a direction
 
 [travel.t](../file/travel.t.html)\[[4617](../source/travel.t.html#4617)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ListenTo)"></span>
 
@@ -456,11 +456,11 @@ tells the player that they need to specify a direction
 
 [travel.t](../file/travel.t.html)\[[4612](../source/travel.t.html#4612)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookBehind)"></span>
 
@@ -468,11 +468,11 @@ tells the player that they need to specify a direction
 
 [travel.t](../file/travel.t.html)\[[4608](../source/travel.t.html#4608)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookIn)"></span>
 
@@ -480,11 +480,11 @@ tells the player that they need to specify a direction
 
 [travel.t](../file/travel.t.html)\[[4604](../source/travel.t.html#4604)\]
 
-<div class="desc">
+
 
 treat LOOK IN \<room\> as EXAMINE \<room\>
 
-</div>
+
 
 <span id="dobjFor(LookUnder)"></span>
 
@@ -492,11 +492,11 @@ treat LOOK IN \<room\> as EXAMINE \<room\>
 
 [travel.t](../file/travel.t.html)\[[4607](../source/travel.t.html#4607)\]
 
-<div class="desc">
+
 
 LOOK UNDER and BEHIND are illogical
 
-</div>
+
 
 <span id="dobjFor(SitOn)"></span>
 
@@ -504,11 +504,11 @@ LOOK UNDER and BEHIND are illogical
 
 [travel.t](../file/travel.t.html)\[[4616](../source/travel.t.html#4616)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Smell)"></span>
 
@@ -516,11 +516,11 @@ LOOK UNDER and BEHIND are illogical
 
 [travel.t](../file/travel.t.html)\[[4611](../source/travel.t.html#4611)\]
 
-<div class="desc">
+
 
 treat SMELL/LISTEN TO \<room\> as just SMELL/LISTEN
 
-</div>
+
 
 <span id="dobjFor(StandOn)"></span>
 
@@ -528,11 +528,11 @@ treat SMELL/LISTEN TO \<room\> as just SMELL/LISTEN
 
 [travel.t](../file/travel.t.html)\[[4615](../source/travel.t.html#4615)\]
 
-<div class="desc">
+
 
 map STAND/SIT/LIE ON \<room\> to my default floor
 
-</div>
+
 
 <span id="getDestName"></span>
 
@@ -540,7 +540,7 @@ map STAND/SIT/LIE ON \<room\> to my default floor
 
 [travel.t](../file/travel.t.html)\[[4379](../source/travel.t.html#4379)\]
 
-<div class="desc">
+
 
 Get my "destination name," as seen by the given actor from the given
 origin location. This gives the name we can use to describe this
@@ -555,7 +555,7 @@ seen by different actors.
 If this location's name cannot or should not be described from an
 adjoining location, this should simply return nil.
 
-</div>
+
 
 <span id="getExtraScopeItems"></span>
 
@@ -563,7 +563,7 @@ adjoining location, this should simply return nil.
 
 [travel.t](../file/travel.t.html)\[[4551](../source/travel.t.html#4551)\]
 
-<div class="desc">
+
 
 Get any extra items in scope in this location. These are items that are
 to be in scope even if they're not reachable through any of the normal
@@ -578,7 +578,7 @@ objects in scope because they're essential features of the room; for
 example, a location that is part of a stairway would probably have the
 stairs in scope by virtue of the actor standing on them.
 
-</div>
+
 
 <span id="getNominalActorContainer"></span>
 
@@ -586,12 +586,12 @@ stairs in scope by virtue of the actor standing on them.
 
 [travel.t](../file/travel.t.html)\[[4445](../source/travel.t.html#4445)\]
 
-<div class="desc">
+
 
 The nominal actor container. By default, this is the room's nominal drop
 destination, which is usually the floor or equivalent.
 
-</div>
+
 
 <span id="getNominalDropDestination"></span>
 
@@ -599,7 +599,7 @@ destination, which is usually the floor or equivalent.
 
 [travel.t](../file/travel.t.html)\[[4423](../source/travel.t.html#4423)\]
 
-<div class="desc">
+
 
 The nominal drop destination - this is the location where we describe
 objects as being when they're actually directly within the room.
@@ -607,7 +607,7 @@ objects as being when they're actually directly within the room.
 By default, we return the object representing the room's floor. If
 there's no floor, we simply return 'self'.
 
-</div>
+
 
 <span id="getRoomPartLocation"></span>
 
@@ -615,7 +615,7 @@ there's no floor, we simply return 'self'.
 
 [travel.t](../file/travel.t.html)\[[4488](../source/travel.t.html#4488)\]
 
-<div class="desc">
+
 
 Get the apparent location of one of our room parts.
 
@@ -629,7 +629,7 @@ this room.
 
 If the part isn't in this location, we'll return nil.
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -637,12 +637,12 @@ If the part isn't in this location, we'll return nil.
 
 [travel.t](../file/travel.t.html)\[[4340](../source/travel.t.html#4340)\]
 
-<div class="desc">
+
 
 we generally do not want rooms to be included when a command refers to
 'all'
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -650,11 +650,11 @@ we generally do not want rooms to be included when a command refers to
 
 [travel.t](../file/travel.t.html)\[[4343](../source/travel.t.html#4343)\]
 
-<div class="desc">
+
 
 don't consider myself a default for STAND ON, SIT ON, or LIE ON
 
-</div>
+
 
 <span id="initializeThing"></span>
 
@@ -662,11 +662,11 @@ don't consider myself a default for STAND ON, SIT ON, or LIE ON
 
 [travel.t](../file/travel.t.html)\[[4317](../source/travel.t.html#4317)\]
 
-<div class="desc">
+
 
 Initialize
 
-</div>
+
 
 <span id="mustMoveObjInto"></span>
 
@@ -674,11 +674,11 @@ Initialize
 
 [travel.t](../file/travel.t.html)\[[4463](../source/travel.t.html#4463)\]
 
-<div class="desc">
+
 
 explain that something must be in the room first
 
-</div>
+
 
 <span id="roomDaemon"></span>
 
@@ -686,12 +686,12 @@ explain that something must be in the room first
 
 [travel.t](../file/travel.t.html)\[[4401](../source/travel.t.html#4401)\]
 
-<div class="desc">
+
 
 Room daemon - this is invoked on the player character's immediate
 location once per turn in a daemon.
 
-</div>
+
 
 <span id="tryMovingObjInto"></span>
 
@@ -699,16 +699,16 @@ location once per turn in a daemon.
 
 [travel.t](../file/travel.t.html)\[[4451](../source/travel.t.html#4451)\]
 
-<div class="desc">
+
 
 move something into a room is accomplished by putting the object on the
 floor
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

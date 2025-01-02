@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Summing Up  
@@ -16,7 +16,7 @@ nest?</a>    
 <a href="goldskull.html" class="nav"><em>Next:</em> Goldskull</a>    
 </span>
 
-</div>
+
 
 
 
@@ -86,7 +86,7 @@ chapters that follow we'll continue to explore some of the detail.
 Finally, here's the complete listing of *The Adventures of Heidi* as
 we've now left it:
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -239,13 +239,13 @@ we've now left it:
         
         direction = [portDir, starboardDir, foreDir, aftDir]
     ;
-`
+```
 
 
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -255,4 +255,4 @@ nest?</a>    
 <a href="goldskull.html" class="nav"><em>Next:</em> Goldskull</a>    
 </span>
 
-</div>
+

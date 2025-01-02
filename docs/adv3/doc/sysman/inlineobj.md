@@ -3,13 +3,13 @@ layout: docs
 ---
 Inline Objects
 
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Inline Objects  
@@ -17,7 +17,7 @@ Inline Objects
     <a href="opoverload.html" class="nav"><em>Next:</em> Operator
 Overloading</a>     </span>
 
-</div>
+
 
 
 
@@ -246,7 +246,7 @@ call.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -255,4 +255,4 @@ call.
     <a href="opoverload.html" class="nav"><em>Next:</em> Operator
 Overloading</a>     </span>
 
-</div>
+

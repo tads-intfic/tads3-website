@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The EVALUATE action allows any expression to be evaluated
 
 **`Evaluate`**` :   `[`LiteralAction`](../object/LiteralAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Evaluate`**  
 [`LiteralAction`](../object/LiteralAction.html)  
@@ -45,11 +45,11 @@ The EVALUATE action allows any expression to be evaluated
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`includeInUndo`](#includeInUndo)  `
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`afterAction`](#afterAction)  [`beforeAction`](#beforeAction)  [`exec`](#exec)  [`turnSequence`](#turnSequence)  `
 
@@ -92,11 +92,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -104,20 +104,20 @@ Inherited from `Redirector` :
 
 [debug.t](../file/debug.t.html)\[[239](../source/debug.t.html#239)\]
 
-<div class="desc">
+
 
 If the attempt to evaluate the expression caused any other kind of
 error, display the exception message.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -125,11 +125,11 @@ error, display the exception message.
 
 [debug.t](../file/debug.t.html)\[[240](../source/debug.t.html#240)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -137,11 +137,11 @@ error, display the exception message.
 
 [debug.t](../file/debug.t.html)\[[241](../source/debug.t.html#241)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -149,11 +149,11 @@ error, display the exception message.
 
 [debug.t](../file/debug.t.html)\[[206](../source/debug.t.html#206)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="turnSequence"></span>
 
@@ -161,15 +161,15 @@ error, display the exception message.
 
 [debug.t](../file/debug.t.html)\[[242](../source/debug.t.html#242)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1485,9 +1485,9 @@ method of [libScore](../object/libScore.html) in
 [**`RuntimeError`**](../object/RuntimeError.html) - class in
 [\_main.t](../file/_main.t.html)\[[777](../source/_main.t.html#777)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Door. This is a travel connector that can be opened and closed with
 player commands. This is a simple subclass of BasicDoor that adds
@@ -34,15 +34,15 @@ support for player commands to manipulate the door.
 
 `class `**`Door`**` :   `[`Openable`](../object/Openable.html)[`BasicDoor`](../object/BasicDoor.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Door`**  
 [`Openable`](../object/Openable.html)  
@@ -68,29 +68,29 @@ support for player commands to manipulate the door.
 `                                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Door`**  
 [`AutoClosingDoor`](../object/AutoClosingDoor.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`initiallyOpen`](#initiallyOpen)
 
@@ -136,11 +136,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotTravel`](#cannotTravel)[`connectorTravelPreCond`](#connectorTravelPreCond)[`dobjFor(Close)`](#dobjFor(Close))[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LookBehind)`](#dobjFor(LookBehind))[`dobjFor(LookThrough)`](#dobjFor(LookThrough))[`getDoorOpenPreCond`](#getDoorOpenPreCond)
 
@@ -189,11 +189,11 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="initiallyOpen"></span>
 
@@ -201,19 +201,19 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[2879](../source/travel.t.html#2879)\]
 
-<div class="desc">
+
 
 make us initially closed
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotTravel"></span>
 
@@ -221,11 +221,11 @@ make us initially closed
 
 [travel.t](../file/travel.t.html)\[[2882](../source/travel.t.html#2882)\]
 
-<div class="desc">
+
 
 if we can't travel because the door is closed, say so
 
-</div>
+
 
 <span id="connectorTravelPreCond"></span>
 
@@ -233,11 +233,11 @@ if we can't travel because the door is closed, say so
 
 [travel.t](../file/travel.t.html)\[[2898](../source/travel.t.html#2898)\]
 
-<div class="desc">
+
 
 the door must be open before we can travel this way
 
-</div>
+
 
 <span id="dobjFor(Close)"></span>
 
@@ -245,11 +245,11 @@ the door must be open before we can travel this way
 
 [travel.t](../file/travel.t.html)\[[2914](../source/travel.t.html#2914)\]
 
-<div class="desc">
+
 
 return the result
 
-</div>
+
 
 <span id="dobjFor(Lock)"></span>
 
@@ -257,11 +257,11 @@ return the result
 
 [travel.t](../file/travel.t.html)\[[2926](../source/travel.t.html#2926)\]
 
-<div class="desc">
+
 
 boost the likelihood if they just traveled through us
 
-</div>
+
 
 <span id="dobjFor(LookBehind)"></span>
 
@@ -269,11 +269,11 @@ boost the likelihood if they just traveled through us
 
 [travel.t](../file/travel.t.html)\[[2942](../source/travel.t.html#2942)\]
 
-<div class="desc">
+
 
 looking behind a door implies opening it to see what's on the other side
 
-</div>
+
 
 <span id="dobjFor(LookThrough)"></span>
 
@@ -281,11 +281,11 @@ looking behind a door implies opening it to see what's on the other side
 
 [travel.t](../file/travel.t.html)\[[2965](../source/travel.t.html#2965)\]
 
-<div class="desc">
+
 
 looking through a door requires it to be open
 
-</div>
+
 
 <span id="getDoorOpenPreCond"></span>
 
@@ -293,17 +293,17 @@ looking through a door requires it to be open
 
 [travel.t](../file/travel.t.html)\[[2895](../source/travel.t.html#2895)\]
 
-<div class="desc">
+
 
 get the 'door open' precondition - by default, we create a standard
 doorOpen precondition for this object, but this can be overridden if
 desired to create custom doorOpen variations
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

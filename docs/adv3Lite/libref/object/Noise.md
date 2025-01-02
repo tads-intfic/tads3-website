@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Noise is an object representing a sound (as opposed to the object that
 might be emitting that sound). The desc property of a Noise is displayed
@@ -41,15 +41,15 @@ SENSORY EXTENSION\]
 
 `class `**`Noise`**` :   `[`SensoryEmanation`](../object/SensoryEmanation.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Noise`**  
 [`SensoryEmanation`](../object/SensoryEmanation.html)  
@@ -64,29 +64,29 @@ SENSORY EXTENSION\]
 `                                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Noise`**  
 [`SimpleNoise`](../object/SimpleNoise.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`decorationActions`](#decorationActions)[`isNoise`](#isNoise)[`notImportantMsg`](#notImportantMsg)[`sightSize`](#sightSize)[`tooFarAwayToSeeDetailMsg`](#tooFarAwayToSeeDetailMsg)
 
@@ -114,11 +114,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(ListenTo)`](#dobjFor(ListenTo))[`emanate`](#emanate)[`emanationDesc`](#emanationDesc)
 
@@ -146,11 +146,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="decorationActions"></span>
 
@@ -158,11 +158,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[89](../source/extras.t.html#89)\]
 
-<div class="desc">
+
 
 A Noise responds to EXAMINE SOMETHING or LISTEN TO SOMETHING
 
-</div>
+
 
 <span id="isNoise"></span>
 
@@ -170,11 +170,11 @@ A Noise responds to EXAMINE SOMETHING or LISTEN TO SOMETHING
 
 [extras.t](../file/extras.t.html)\[[113](../source/extras.t.html#113)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notImportantMsg"></span>
 
@@ -182,11 +182,11 @@ A Noise responds to EXAMINE SOMETHING or LISTEN TO SOMETHING
 
 [extras.t](../file/extras.t.html)\[[94](../source/extras.t.html#94)\]
 
-<div class="desc">
+
 
 The message to display when any other action is attempted with a Noise
 
-</div>
+
 
 <span id="sightSize"></span>
 
@@ -194,12 +194,12 @@ The message to display when any other action is attempted with a Noise
 
 [extras.t](../file/extras.t.html)\[[105](../source/extras.t.html#105)\]
 
-<div class="desc">
+
 
 Since we turn LISTEN TO into EXAMINE we want our sightSize to be our
 soundSize.
 
-</div>
+
 
 <span id="tooFarAwayToSeeDetailMsg"></span>
 
@@ -207,20 +207,20 @@ soundSize.
 
 [extras.t](../file/extras.t.html)\[[111](../source/extras.t.html#111)\]
 
-<div class="desc">
+
 
 For the same reason we want to use our tooFarAwayToHearlMsg for our
 tooFarWayToSeeDetailMsg.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -228,11 +228,11 @@ tooFarWayToSeeDetailMsg.
 
 [extras.t](../file/extras.t.html)\[[99](../source/extras.t.html#99)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ListenTo)"></span>
 
@@ -240,11 +240,11 @@ tooFarWayToSeeDetailMsg.
 
 [extras.t](../file/extras.t.html)\[[97](../source/extras.t.html#97)\]
 
-<div class="desc">
+
 
 Treat Listening to a Noise as equivalent to Examining it.
 
-</div>
+
 
 <span id="emanate"></span>
 
@@ -252,13 +252,13 @@ Treat Listening to a Noise as equivalent to Examining it.
 
 [sensory.t](../file/sensory.t.html)\[[303](../source/sensory.t.html#303)\]
 
-<div class="desc">
+
 
 Only carry out the inherited handling if the player hasn't issued a
 LISTEN command on this turn, otherwise there's the risk of duplicate
 messages. \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="emanationDesc"></span>
 
@@ -266,7 +266,7 @@ messages. \[DEFINED IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[276](../source/sensory.t.html#276)\]
 
-<div class="desc">
+
 
 The message to be displayed to show that there's a sound here. The
 default implementation should be serviceable in many cases, but game
@@ -275,11 +275,11 @@ By default we execute our script if we are one, otherwise we use our own
 listenDesc or remoteListenDesc as appropriate. \[DEFINED IN SENSORY
 EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

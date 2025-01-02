@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> How to Create
@@ -17,7 +17,7 @@ When to Use Which</a>    
 <a href="t3precond.html" class="nav"><em>Next:</em> Custom
 Preconditions</a>     </span>
 
-</div>
+
 
 
 
@@ -574,7 +574,7 @@ decomposition along these same lines.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -585,4 +585,4 @@ When to Use Which</a>    
 <a href="t3precond.html" class="nav"><em>Next:</em> Custom
 Preconditions</a>     </span>
 
-</div>
+

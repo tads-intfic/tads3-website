@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Conclusion  
@@ -15,7 +15,7 @@ layout: docs
     *Next:* <a href="changelog.html" class="nav">Change Log</a>
    </span>
 
-</div>
+
 
 
 
@@ -49,7 +49,7 @@ November 2013*
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -58,4 +58,4 @@ November 2013*
     *Next:* <a href="changelog.html" class="nav">Change Log</a>
    </span>
 
-</div>
+

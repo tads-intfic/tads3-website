@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 short form of non-player character description inventory lister
 
 **`actorHoldingDescInventoryListerShort`**` :   `[`actorInventoryLister`](../object/actorInventoryLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`actorHoldingDescInventoryListerShort`**  
 [`actorInventoryLister`](../object/actorInventoryLister.html)  
@@ -44,11 +44,11 @@ short form of non-player character description inventory lister
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -65,11 +65,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showInventoryCarryingOnly`](#showInventoryCarryingOnly)[`showInventoryEmpty`](#showInventoryEmpty)[`showInventoryLongLists`](#showInventoryLongLists)[`showInventoryShortLists`](#showInventoryShortLists)[`showInventoryWearingOnly`](#showInventoryWearingOnly)
 
@@ -87,19 +87,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showInventoryCarryingOnly"></span>
 
@@ -107,11 +107,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4712](../source/msg_neu.t.html#4712)\]
 
-<div class="desc">
+
 
 we're carrying nothing but wearing some items
 
-</div>
+
 
 <span id="showInventoryEmpty"></span>
 
@@ -119,11 +119,11 @@ we're carrying nothing but wearing some items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4703](../source/msg_neu.t.html#4703)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showInventoryLongLists"></span>
 
@@ -131,11 +131,11 @@ we're carrying nothing but wearing some items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4725](../source/msg_neu.t.html#4725)\]
 
-<div class="desc">
+
 
 short lists - combine carried and worn in a single sentence
 
-</div>
+
 
 <span id="showInventoryShortLists"></span>
 
@@ -143,11 +143,11 @@ short lists - combine carried and worn in a single sentence
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4717](../source/msg_neu.t.html#4717)\]
 
-<div class="desc">
+
 
 we have only carried items to report
 
-</div>
+
 
 <span id="showInventoryWearingOnly"></span>
 
@@ -155,15 +155,15 @@ we have only carried items to report
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4707](../source/msg_neu.t.html#4707)\]
 
-<div class="desc">
+
 
 empty inventory - saying nothing in an actor description
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

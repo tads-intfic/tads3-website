@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Grammar rule token descriptor. GrammarProd.getGrammarInfo() instantiates
 one of these objects to represent each token slot in an alternative; a
@@ -34,61 +34,61 @@ GrammarAltInfo object's gramTokens property has a list of these objects.
 
 `class `**`GrammarAltTokInfo`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GrammarAltTokInfo`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`gramTargetProp`](#gramTargetProp)[`gramTokenInfo`](#gramTokenInfo)[`gramTokenType`](#gramTokenType)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="gramTargetProp"></span>
 
@@ -96,13 +96,13 @@ GrammarAltInfo object's gramTokens property has a list of these objects.
 
 [gramprod.t](../file/gramprod.t.html)\[[114](../source/gramprod.t.html#114)\]
 
-<div class="desc">
+
 
 The target property - this is the property of the \*match object\* that
 will store the match information for the token. In a 'grammar'
 statement, this is the property after the '-\>' symbol for this token.
 
-</div>
+
 
 <span id="gramTokenInfo"></span>
 
@@ -110,7 +110,7 @@ statement, this is the property after the '-\>' symbol for this token.
 
 [gramprod.t](../file/gramprod.t.html)\[[143](../source/gramprod.t.html#143)\]
 
-<div class="desc">
+
 
 Detailed information for the token slot, which depends on the token
 type:
@@ -132,7 +132,7 @@ this slot matches
 
 GramTokTypeStar - no extra information (the value will be nil)
 
-</div>
+
 
 <span id="gramTokenType"></span>
 
@@ -140,20 +140,20 @@ GramTokTypeStar - no extra information (the value will be nil)
 
 [gramprod.t](../file/gramprod.t.html)\[[120](../source/gramprod.t.html#120)\]
 
-<div class="desc">
+
 
 The token type. This is one of the GramTokTypeXxx values (see
 gramprod.h) indicating what kind of token slot this is.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -161,7 +161,7 @@ gramprod.h) indicating what kind of token slot this is.
 
 [gramprod.t](../file/gramprod.t.html)\[[100](../source/gramprod.t.html#100)\]
 
-<div class="desc">
+
 
 Constructor. GrammarProd.getGrammarInfo() calls this once for each token
 in each alternative in the production, passing in values to fully
@@ -171,11 +171,11 @@ information that depends on the token type. Note that we use '...' at
 the end of the argument list so that we'll be compatible with any future
 changes to GrammarProd that add more arguments to this method.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

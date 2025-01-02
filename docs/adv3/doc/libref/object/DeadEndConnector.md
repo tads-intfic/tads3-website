@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Dead End Connector is a connector that appears to lead somewhere, but
 which turns out to be impassable for reasons that aren't apparent until
@@ -44,15 +44,15 @@ have caved in.
 
 `class `**`DeadEndConnector`**` :   `[`TravelMessage`](../object/TravelMessage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DeadEndConnector`**  
 [`TravelMessage`](../object/TravelMessage.html)  
@@ -64,27 +64,27 @@ have caved in.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`apparentDestName`](#apparentDestName)[`rememberCircularPassage`](#rememberCircularPassage)
 
@@ -105,11 +105,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`apparentDest`](#apparentDest)[`connectorBack`](#connectorBack)[`getApparentDestination`](#getApparentDestination)[`getDestination`](#getDestination)
 
@@ -130,11 +130,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="apparentDestName"></span>
 
@@ -142,7 +142,7 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[2185](../source/travel.t.html#2185)\]
 
-<div class="desc">
+
 
 The apparent destination name. If the actor is meant to know the
 apparent destination from the outset, or if traversing the connector
@@ -158,7 +158,7 @@ of the dead end, after all). This is simply where the connector
 much, then you should just leave this nil, since the destination will
 never become apparent to the PC.
 
-</div>
+
 
 <span id="rememberCircularPassage"></span>
 
@@ -166,19 +166,19 @@ never become apparent to the PC.
 
 [travel.t](../file/travel.t.html)\[[2257](../source/travel.t.html#2257)\]
 
-<div class="desc">
+
 
 do remember circular trips, since that's the only kind we make
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="apparentDest"></span>
 
@@ -186,7 +186,7 @@ do remember circular trips, since that's the only kind we make
 
 [travel.t](../file/travel.t.html)\[[2198](../source/travel.t.html#2198)\]
 
-<div class="desc">
+
 
 Our apparent destination. By default, we create a FakeDestination object
 to represent our apparent destination if we have a non-nil name for the
@@ -198,7 +198,7 @@ that actual location. This default is for the typical case where the
 supposed destination doesn't actually exist on the game map as a real
 room.
 
-</div>
+
 
 <span id="connectorBack"></span>
 
@@ -206,11 +206,11 @@ room.
 
 [travel.t](../file/travel.t.html)\[[2251](../source/travel.t.html#2251)\]
 
-<div class="desc">
+
 
 there's no corresponding connector back for a dead end
 
-</div>
+
 
 <span id="getApparentDestination"></span>
 
@@ -218,11 +218,11 @@ there's no corresponding connector back for a dead end
 
 [travel.t](../file/travel.t.html)\[[2224](../source/travel.t.html#2224)\]
 
-<div class="desc">
+
 
 get our apparent destination
 
-</div>
+
 
 <span id="getDestination"></span>
 
@@ -230,15 +230,15 @@ get our apparent destination
 
 [travel.t](../file/travel.t.html)\[[2254](../source/travel.t.html#2254)\]
 
-<div class="desc">
+
 
 our actual destination is always our origin
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

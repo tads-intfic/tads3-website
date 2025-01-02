@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A StorageServerError is thrown when a file operation on a remote storage
 server fails. The storage server is used when the game runs on a Web
@@ -40,15 +40,15 @@ server, or an invalid request (e.g., incorrect user credentials).
 
 `class `**`StorageServerError`**` :   `[`RuntimeError`](../object/RuntimeError.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`StorageServerError`**  
 [`RuntimeError`](../object/RuntimeError.html)  
@@ -56,27 +56,27 @@ server, or an invalid request (e.g., incorrect user credentials).
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`errCode`](#errCode)[`errMsg`](#errMsg)
 
@@ -88,11 +88,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`displayException`](#displayException)
 
@@ -104,11 +104,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="errCode"></span>
 
@@ -116,11 +116,11 @@ Inherited from `Exception` :
 
 [\_main.t](../file/_main.t.html)\[[938](../source/_main.t.html#938)\]
 
-<div class="desc">
+
 
 the storage server error code
 
-</div>
+
 
 <span id="errMsg"></span>
 
@@ -128,22 +128,22 @@ the storage server error code
 
 [\_main.t](../file/_main.t.html)\[[946](../source/_main.t.html#946)\]
 
-<div class="desc">
+
 
 error message - this is the message text we get back from the storage
 server for a request that's successful at the HTTP level but fails on
 the storage server, OR a message describing the HTTP error or network
 error that caused the request to fail
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -151,11 +151,11 @@ error that caused the request to fail
 
 [\_main.t](../file/_main.t.html)\[[890](../source/_main.t.html#890)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="displayException"></span>
 
@@ -163,15 +163,15 @@ error that caused the request to fail
 
 [\_main.t](../file/_main.t.html)\[[949](../source/_main.t.html#949)\]
 
-<div class="desc">
+
 
 display the exception
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

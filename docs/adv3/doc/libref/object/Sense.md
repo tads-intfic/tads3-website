@@ -26,68 +26,68 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Sense: the basic class for senses.
 
 `class `**`Sense`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Sense`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`sight`](../object/sight.html)[`smell`](../object/smell.html)[`sound`](../object/sound.html)[`touch`](../object/touch.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`ambienceProp`](#ambienceProp)[`presenceProp`](#presenceProp)[`sizeProp`](#sizeProp)[`thruProp`](#thruProp)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canObjBeSensed`](#canObjBeSensed)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="ambienceProp"></span>
 
@@ -95,7 +95,7 @@ Sense: the basic class for senses.
 
 [sense.t](../file/sense.t.html)\[[173](../source/sense.t.html#173)\]
 
-<div class="desc">
+
 
 Each sense can define this property to specify a property pointer used
 to define a Thing's "ambient" energy emissions. Senses which do not use
@@ -108,7 +108,7 @@ Sight, on the other hand, can make use not only of light emitted by an
 object but of light reflected by the object. So, sight defines an
 ambience property, whereas hearing, touch, and smell do not.
 
-</div>
+
 
 <span id="presenceProp"></span>
 
@@ -116,7 +116,7 @@ ambience property, whereas hearing, touch, and smell do not.
 
 [sense.t](../file/sense.t.html)\[[158](../source/sense.t.html#158)\]
 
-<div class="desc">
+
 
 Each sense must define the property presenceProp as a property pointer
 giving the xxxPresence property for the sense. The xxxPresence property
@@ -145,7 +145,7 @@ without a presence can still be sensed if there's a non-opaque sense
 path to the object. Presence only determines whether or not an object is
 \*actively\* calling attention to itself.
 
-</div>
+
 
 <span id="sizeProp"></span>
 
@@ -153,7 +153,7 @@ path to the object. Presence only determines whether or not an object is
 
 [sense.t](../file/sense.t.html)\[[125](../source/sense.t.html#125)\]
 
-<div class="desc">
+
 
 Each sense must define the property sizeProp as a property pointer
 giving the xxxSize property for the sense. The xxxSize property is the
@@ -165,7 +165,7 @@ The purpose of an object's size in a given sense is to determine how
 well the object can be sensed through an obscuring medium or at a
 distance.
 
-</div>
+
 
 <span id="thruProp"></span>
 
@@ -173,22 +173,22 @@ distance.
 
 [sense.t](../file/sense.t.html)\[[111](../source/sense.t.html#111)\]
 
-<div class="desc">
+
 
 Each sense must define the property thruProp as a property pointer
 giving the xxxThru property for the sense. The xxxThru property is the
 property of a material which determines how the sense passes through
 that material.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canObjBeSensed"></span>
 
@@ -196,7 +196,7 @@ that material.
 
 [sense.t](../file/sense.t.html)\[[188](../source/sense.t.html#188)\]
 
-<div class="desc">
+
 
 Determine if, in general, the given object can be sensed under the given
 conditions. Returns true if so, nil if not. By default, if the ambient
@@ -210,11 +210,11 @@ conditions.
 \- Medium or large objects can be sensed in any conditions other than
 opaque.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

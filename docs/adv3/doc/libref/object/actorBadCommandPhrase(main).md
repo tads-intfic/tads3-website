@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An actor-targeted command with a bad command phrase. This is used as a
 fallback if we fail to match anything on the first attempt at parsing
@@ -30,15 +30,15 @@ messages for the rest of the command.
 
 `grammar `<span class="gramalt">[`actorBadCommandPhrase`](../object/actorBadCommandPhrase.html)`(main)`</span>` :   `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`actorBadCommandPhrase(main)`**  
 [`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
@@ -52,11 +52,11 @@ messages for the rest of the command.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -79,11 +79,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`resolveNouns`](#resolveNouns)
 
@@ -106,19 +106,19 @@ Inherited from `FirstCommandProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -126,15 +126,15 @@ Inherited from `FirstCommandProd` :
 
 [en_us.t](../file/en_us.t.html)\[[5153](../source/en_us.t.html#5153)\]
 
-<div class="desc">
+
 
 to resolve nouns, we merely resolve the actor
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

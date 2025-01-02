@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Attachable is a NearbyAttachable that can be attached to more than
 one thing at a time, like a length of cable connecting two devices.
 
 `class `**`Attachable`**` :   `[`NearbyAttachable`](../object/NearbyAttachable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Attachable`**  
 [`NearbyAttachable`](../object/NearbyAttachable.html)  
@@ -55,27 +55,27 @@ one thing at a time, like a length of cable connecting two devices.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`attachedTo`](#attachedTo)  [`attachedToList`](#attachedToList)  [`cannotAttachToMoreMsg`](#cannotAttachToMoreMsg)  [`maxAttachedTo`](#maxAttachedTo)  [`multiPluggable`](#multiPluggable)  `
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`allowAttach`](#allowAttach)  [`dobjFor(AttachTo)`](#dobjFor(AttachTo))  [`isAttachedTo`](#isAttachedTo)  [`makeAttachedTo`](#makeAttachedTo)  [`makeDetachedFrom`](#makeDetachedFrom)  [`reverseConnect`](#reverseConnect)  `
 
@@ -131,11 +131,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="attachedTo"></span>
 
@@ -143,13 +143,13 @@ Inherited from `LMentionable` :
 
 [attachables.t](../file/attachables.t.html)\[[563](../source/attachables.t.html#563)\]
 
-<div class="desc">
+
 
 Strictly speaking, the attachedTo property of an Attachable is a bit
 arbitrary when the Attachable is attached to more than one thing; we
 arbitrarily choose the first thing in its attachedToList.
 
-</div>
+
 
 <span id="attachedToList"></span>
 
@@ -157,12 +157,12 @@ arbitrarily choose the first thing in its attachedToList.
 
 [attachables.t](../file/attachables.t.html)\[[569](../source/attachables.t.html#569)\]
 
-<div class="desc">
+
 
 The list of things to which I'm attached (as opposed to things attached
 to me).
 
-</div>
+
 
 <span id="cannotAttachToMoreMsg"></span>
 
@@ -170,11 +170,11 @@ to me).
 
 [attachables.t](../file/attachables.t.html)\[[634](../source/attachables.t.html#634)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="maxAttachedTo"></span>
 
@@ -182,7 +182,7 @@ to me).
 
 [attachables.t](../file/attachables.t.html)\[[578](../source/attachables.t.html#578)\]
 
-<div class="desc">
+
 
 The maximum number of things I can be attached to at once. By default
 this is 2, since probably the most commonly use for an Attachable is to
@@ -190,7 +190,7 @@ join or link two other things, but this can easily be overridden as
 required. If you want there to be no limit to the number of things I can
 be attached to at once, make maxAttachedTo nil.
 
-</div>
+
 
 <span id="multiPluggable"></span>
 
@@ -198,20 +198,20 @@ be attached to at once, make maxAttachedTo nil.
 
 [attachables.t](../file/attachables.t.html)\[[651](../source/attachables.t.html#651)\]
 
-<div class="desc">
+
 
 By default an Attachable can be plugged into more than one thing at a
 time
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="allowAttach"></span>
 
@@ -219,13 +219,13 @@ time
 
 [attachables.t](../file/attachables.t.html)\[[612](../source/attachables.t.html#612)\]
 
-<div class="desc">
+
 
 We allow attachment to another obj either for the inherited reason (that
 obh is in my list of allowable attachements) or, if we want to reverse
 the connection with obj, that obj can be attached to us.
 
-</div>
+
 
 <span id="dobjFor(AttachTo)"></span>
 
@@ -233,11 +233,11 @@ the connection with obj, that obj can be attached to us.
 
 [attachables.t](../file/attachables.t.html)\[[618](../source/attachables.t.html#618)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isAttachedTo"></span>
 
@@ -245,13 +245,13 @@ the connection with obj, that obj can be attached to us.
 
 [attachables.t](../file/attachables.t.html)\[[642](../source/attachables.t.html#642)\]
 
-<div class="desc">
+
 
 I'm attached to obj in the broad sense of having an attachement
 relationship with obj either if obj is attached to me or if obj is in
 the list of things to which I'm attached.
 
-</div>
+
 
 <span id="makeAttachedTo"></span>
 
@@ -259,11 +259,11 @@ the list of things to which I'm attached.
 
 [attachables.t](../file/attachables.t.html)\[[581](../source/attachables.t.html#581)\]
 
-<div class="desc">
+
 
 To make me attached to obj, add obj to my attachedTo list.
 
-</div>
+
 
 <span id="makeDetachedFrom"></span>
 
@@ -271,11 +271,11 @@ To make me attached to obj, add obj to my attachedTo list.
 
 [attachables.t](../file/attachables.t.html)\[[589](../source/attachables.t.html#589)\]
 
-<div class="desc">
+
 
 To make something detached from me, remove obj from my attachedTo list.
 
-</div>
+
 
 <span id="reverseConnect"></span>
 
@@ -283,7 +283,7 @@ To make something detached from me, remove obj from my attachedTo list.
 
 [attachables.t](../file/attachables.t.html)\[[602](../source/attachables.t.html#602)\]
 
-<div class="desc">
+
 
 Since an ATTACHABLE could potentially be in a many-to-many relationship,
 we may sometimes want to control the order of connection (i.e. which is
@@ -291,11 +291,11 @@ considered to be the connected object and which the object it's
 connected to). If reverseConnect(obj) returns true then we'll turn
 CONNECT obj TO self into CONNECT self TO obj.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

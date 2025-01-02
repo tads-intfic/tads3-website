@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 base class for FOOTNOTES xxx commands
 
 `DefineSystemAction(Footnotes)      `*`// original source text`*  
 `class `**`FootnotesAction`**` :   `[`SystemAction`](../object/SystemAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FootnotesAction`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -51,11 +51,11 @@ base class for FOOTNOTES xxx commands
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`FootnotesAction`**  
 [`FootnotesFullAction`](../object/FootnotesFullAction.html)  
@@ -66,19 +66,19 @@ base class for FOOTNOTES xxx commands
 [`predicate(FootnotesOff)`](../object/predicate(FootnotesOff).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`showFootnotes`](#showFootnotes)
 
@@ -95,11 +95,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execSystemAction`](#execSystemAction)
 
@@ -117,11 +117,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="showFootnotes"></span>
 
@@ -129,20 +129,20 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1610](../source/actions.t.html#1610)\]
 
-<div class="desc">
+
 
 the footnote status I set when this command is activated - this must be
 overridden by each subclass
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execSystemAction"></span>
 
@@ -150,15 +150,15 @@ overridden by each subclass
 
 [actions.t](../file/actions.t.html)\[[1591](../source/actions.t.html#1591)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

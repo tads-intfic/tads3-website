@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`Hello`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Hello`**  
 [`IAction`](../object/IAction.html)  
@@ -44,11 +44,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`baseActionClass`](#baseActionClass)[`curObj`](#curObj)[`isConversational`](#isConversational)
 
@@ -64,11 +64,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)
 
@@ -86,11 +86,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="baseActionClass"></span>
 
@@ -98,11 +98,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1817](../source/actions.t.html#1817)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="curObj"></span>
 
@@ -110,12 +110,12 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1882](../source/actions.t.html#1882)\]
 
-<div class="desc">
+
 
 If the player char is currently talking to someone, say so and carry out
 a repeat greeting.
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -123,19 +123,19 @@ a repeat greeting.
 
 [actions.t](../file/actions.t.html)\[[1884](../source/actions.t.html#1884)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -143,15 +143,15 @@ a repeat greeting.
 
 [actions.t](../file/actions.t.html)\[[1819](../source/actions.t.html#1819)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

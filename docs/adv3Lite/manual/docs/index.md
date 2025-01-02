@@ -3,11 +3,11 @@ layout: docs
 ---
 Adv3Lite Bookshelf
 
-<div class="title">
+
 
 <img src="title2.gif" data-border="0" />
 
-</div>
+
 
 
 
@@ -134,7 +134,7 @@ HTML.)
 
 # Change Logs
 
-<div class="indent">
+
 
 <a href="manual/changelog.html" target="_blank"><strong>Adv3Lite Library
 Change History</strong></a>. A chronological log of changes to Adv3Lite,
@@ -146,7 +146,7 @@ the alternative TADS 3 Adventure Framework Library.
 
 # Notes
 
-<div class="indent">
+
 
 These books are copyrighted by their respective authors. In general,
 they may be used and distributed without charge, subject to certain
@@ -161,7 +161,7 @@ is available as a
 <a href="http://www.adobe.com/products/acrobat/readstep.html"
 target="_blank">free download from Adobe</a>.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
@@ -185,4 +185,4 @@ each question you reply NO to, go to the next item in the list).
 4.  Perhaps you should start with the
     <a href="tutorial/index.html" target="_blank">Adv3Lite Tutorial</a>
 
-</div>
+

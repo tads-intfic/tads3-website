@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An "underside" is a special type of container that describes its
 contents as being under the object. This is appropriate for objects that
@@ -35,15 +35,15 @@ have a space underneath, such as a bed or a table.
 
 `class `**`Underside`**` :   `[`SpaceOverlay`](../object/SpaceOverlay.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Underside`**  
 [`SpaceOverlay`](../object/SpaceOverlay.html)  
@@ -53,29 +53,29 @@ have a space underneath, such as a bed or a table.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Underside`**  
 [`RestrictedUnderside`](../object/RestrictedUnderside.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`abandonContentsLister`](#abandonContentsLister)[`actorInPrep`](#actorInPrep)[`actorOutOfPrep`](#actorOutOfPrep)[`allowPutUnder`](#allowPutUnder)[`alreadyPutInMsg`](#alreadyPutInMsg)[`cannotPutInSelfMsg`](#cannotPutInSelfMsg)[`circularlyInMessage`](#circularlyInMessage)[`contentsLister`](#contentsLister)[`descContentsLister`](#descContentsLister)[`inlineContentsLister`](#inlineContentsLister)[`lookInLister`](#lookInLister)[`objInPrep`](#objInPrep)[`putDestMessage`](#putDestMessage)[`takeFromNotInMessage`](#takeFromNotInMessage)[`tooFullMsg`](#tooFullMsg)[`tooLargeForContainerMsg`](#tooLargeForContainerMsg)
 
@@ -93,11 +93,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(LookUnder)`](#dobjFor(LookUnder))[`iobjFor(PutUnder)`](#iobjFor(PutUnder))[`nestedLookIn`](#nestedLookIn)[`tryMovingObjInto`](#tryMovingObjInto)
 
@@ -115,11 +115,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="abandonContentsLister"></span>
 
@@ -127,11 +127,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[838](../source/extras.t.html#838)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorInPrep"></span>
 
@@ -139,11 +139,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2109](../source/en_us.t.html#2109)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorOutOfPrep"></span>
 
@@ -151,11 +151,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2110](../source/en_us.t.html#2110)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="allowPutUnder"></span>
 
@@ -163,13 +163,13 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[828](../source/extras.t.html#828)\]
 
-<div class="desc">
+
 
 Can actors put new objects under self, using the PUT UNDER command? By
 default, we allow it. Override this property to nil if new objects
 cannot be added by player commands.
 
-</div>
+
 
 <span id="alreadyPutInMsg"></span>
 
@@ -177,11 +177,11 @@ cannot be added by player commands.
 
 [extras.t](../file/extras.t.html)\[[859](../source/extras.t.html#859)\]
 
-<div class="desc">
+
 
 can't put something under me when it's already under me
 
-</div>
+
 
 <span id="cannotPutInSelfMsg"></span>
 
@@ -189,11 +189,11 @@ can't put something under me when it's already under me
 
 [extras.t](../file/extras.t.html)\[[856](../source/extras.t.html#856)\]
 
-<div class="desc">
+
 
 can't put self under self
 
-</div>
+
 
 <span id="circularlyInMessage"></span>
 
@@ -201,11 +201,11 @@ can't put self under self
 
 [extras.t](../file/extras.t.html)\[[844](../source/extras.t.html#844)\]
 
-<div class="desc">
+
 
 customize the message indicating another object is already in me
 
-</div>
+
 
 <span id="contentsLister"></span>
 
@@ -213,11 +213,11 @@ customize the message indicating another object is already in me
 
 [extras.t](../file/extras.t.html)\[[834](../source/extras.t.html#834)\]
 
-<div class="desc">
+
 
 use custom contents listers, for our special "under" wording
 
-</div>
+
 
 <span id="descContentsLister"></span>
 
@@ -225,11 +225,11 @@ use custom contents listers, for our special "under" wording
 
 [extras.t](../file/extras.t.html)\[[835](../source/extras.t.html#835)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="inlineContentsLister"></span>
 
@@ -237,11 +237,11 @@ use custom contents listers, for our special "under" wording
 
 [extras.t](../file/extras.t.html)\[[837](../source/extras.t.html#837)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lookInLister"></span>
 
@@ -249,11 +249,11 @@ use custom contents listers, for our special "under" wording
 
 [extras.t](../file/extras.t.html)\[[836](../source/extras.t.html#836)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="objInPrep"></span>
 
@@ -261,11 +261,11 @@ use custom contents listers, for our special "under" wording
 
 [en_us.t](../file/en_us.t.html)\[[2108](../source/en_us.t.html#2108)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="putDestMessage"></span>
 
@@ -273,11 +273,11 @@ use custom contents listers, for our special "under" wording
 
 [extras.t](../file/extras.t.html)\[[847](../source/extras.t.html#847)\]
 
-<div class="desc">
+
 
 message phrase for objects put under me
 
-</div>
+
 
 <span id="takeFromNotInMessage"></span>
 
@@ -285,11 +285,11 @@ message phrase for objects put under me
 
 [extras.t](../file/extras.t.html)\[[841](../source/extras.t.html#841)\]
 
-<div class="desc">
+
 
 customize the message for taking something from that's not under me
 
-</div>
+
 
 <span id="tooFullMsg"></span>
 
@@ -297,11 +297,11 @@ customize the message for taking something from that's not under me
 
 [extras.t](../file/extras.t.html)\[[850](../source/extras.t.html#850)\]
 
-<div class="desc">
+
 
 message when we don't have room to put another object under me
 
-</div>
+
 
 <span id="tooLargeForContainerMsg"></span>
 
@@ -309,19 +309,19 @@ message when we don't have room to put another object under me
 
 [extras.t](../file/extras.t.html)\[[853](../source/extras.t.html#853)\]
 
-<div class="desc">
+
 
 message when an object is too large (all by itself) to fit under me
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(LookUnder)"></span>
 
@@ -329,11 +329,11 @@ message when an object is too large (all by itself) to fit under me
 
 [extras.t](../file/extras.t.html)\[[897](../source/extras.t.html#897)\]
 
-<div class="desc">
+
 
 Looking "under" a surface simply shows the surface's contents.
 
-</div>
+
 
 <span id="iobjFor(PutUnder)"></span>
 
@@ -341,11 +341,11 @@ Looking "under" a surface simply shows the surface's contents.
 
 [extras.t](../file/extras.t.html)\[[868](../source/extras.t.html#868)\]
 
-<div class="desc">
+
 
 Handle putting things under me
 
-</div>
+
 
 <span id="nestedLookIn"></span>
 
@@ -353,11 +353,11 @@ Handle putting things under me
 
 [extras.t](../file/extras.t.html)\[[831](../source/extras.t.html#831)\]
 
-<div class="desc">
+
 
 we need to LOOK UNDER this object to see its contents
 
-</div>
+
 
 <span id="tryMovingObjInto"></span>
 
@@ -365,15 +365,15 @@ we need to LOOK UNDER this object to see its contents
 
 [extras.t](../file/extras.t.html)\[[862](../source/extras.t.html#862)\]
 
-<div class="desc">
+
 
 our implied containment verb is PUT UNDER
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

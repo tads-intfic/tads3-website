@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Overview  
@@ -16,7 +16,7 @@ layout: docs
 <a href="actorobj.html" class="nav"><em>Next:</em> The Actor Object</a>
     </span>
 
-</div>
+
 
 
 
@@ -181,7 +181,7 @@ tags](tags.html) below.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -191,4 +191,4 @@ tags](tags.html) below.
 <a href="actorobj.html" class="nav"><em>Next:</em> The Actor Object</a>
     </span>
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Distant item. This is an object that's too far away to manipulate, but
 can be seen. This is useful for scenery objects that are at a great
@@ -39,15 +39,15 @@ take or move.
 
 `class `**`Distant`**` :   `[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Distant`**  
 [`Fixture`](../object/Fixture.html)  
@@ -57,28 +57,28 @@ take or move.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`defaultSky`](../object/defaultSky.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -96,11 +96,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Default)`](#dobjFor(Default))[`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(ListenTo)`](#dobjFor(ListenTo))[`dobjFor(ShowTo)`](#dobjFor(ShowTo))[`hideFromAll`](#hideFromAll)[`iobjFor(Default)`](#iobjFor(Default))
 
@@ -118,19 +118,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Default)"></span>
 
@@ -138,11 +138,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[2244](../source/objects.t.html#2244)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -150,14 +150,14 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[2259](../source/objects.t.html#2259)\]
 
-<div class="desc">
+
 
 Explicitly allow examining and listening to a Distant item. To do this,
 override the 'verify' methods explicitly; we only need to inherit the
 base class handling, but we need to explicitly do so to 'override' the
 catch-all default handlers.
 
-</div>
+
 
 <span id="dobjFor(ListenTo)"></span>
 
@@ -165,11 +165,11 @@ catch-all default handlers.
 
 [objects.t](../file/objects.t.html)\[[2260](../source/objects.t.html#2260)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ShowTo)"></span>
 
@@ -177,11 +177,11 @@ catch-all default handlers.
 
 [objects.t](../file/objects.t.html)\[[2263](../source/objects.t.html#2263)\]
 
-<div class="desc">
+
 
 similarly, allow showing a distant item
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -189,11 +189,11 @@ similarly, allow showing a distant item
 
 [objects.t](../file/objects.t.html)\[[2242](../source/objects.t.html#2242)\]
 
-<div class="desc">
+
 
 don't include in 'all'
 
-</div>
+
 
 <span id="iobjFor(Default)"></span>
 
@@ -201,15 +201,15 @@ don't include in 'all'
 
 [objects.t](../file/objects.t.html)\[[2248](../source/objects.t.html#2248)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

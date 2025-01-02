@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \>
@@ -16,7 +16,7 @@ StackFrameDesc
     <a href="string.html" class="nav"><em>Next:</em> String</a>    
 </span>
 
-</div>
+
 
 
 
@@ -188,7 +188,7 @@ snapshot, since the true local variables will no longer exist.
 
 `getDefiningObj()`
 
-<div class="fdef">
+
 
 Retrieves the value of `definingobj` from the
 frame, returning the value. This is the object which actually contains
@@ -201,26 +201,26 @@ to an ordinary function rather than a method, returns nil.
 
 `getInvokee()`
 
-<div class="fdef">
+
 
 Retrieve the value of `invokee` in the frame,
 returning the value.
 
-</div>
+
 
 `getSelf()`
 
-<div class="fdef">
+
 
 Retrieves the value of `self` from the frame,
 returning the value. If the level refers to an ordinary function rather
 than a method, returns nil.
 
-</div>
+
 
 `getTargetObj()`
 
-<div class="fdef">
+
 
 Retrieves the value of `targetobj` from the
 frame, returning the value. `targetobj` is the
@@ -231,22 +231,22 @@ another object's method as though it belonged to the calling object. If
 the level refers to an ordinary function rather than a method, returns
 nil.
 
-</div>
+
 
 `getTargetProp()`
 
-<div class="fdef">
+
 
 Retrieves the value of `targetprop` from the
 frame, returning the value. This is the property value on the right side
 of the "." expression that invoked the method. If the level refers to an
 ordinary function rather than a method, returns nil.
 
-</div>
+
 
 `getVars()`
 
-<div class="fdef">
+
 
 Returns a LookupTable containing all of the local variables in the
 frame. The table is keyed by variable name (each name is given as a
@@ -268,11 +268,11 @@ of their names (using `keysToList()`). Second,
 it lets you get a fixed snapshot copy of the locals, in case you want
 the values at a particular point in time.
 
-</div>
+
 
 `isActive()`
 
-<div class="fdef">
+
 
 Determines if the frame is still active. Returns
 `true` if so, `nil` if
@@ -290,13 +290,13 @@ the StackFrameDesc, which then uses the snapshot copy whenever you
 access the locals. This means that you can access the locals even after
 the true stack frame has been deleted.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -306,4 +306,4 @@ StackFrameDesc
     <a href="string.html" class="nav"><em>Next:</em> String</a>    
 </span>
 
-</div>
+

@@ -53,49 +53,50 @@ you’re not using Workbench, navigate to your Heidi directory and open
 start.t in your text editor. You should now see a file that looks like
 this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
+<p>`
+    #charset “us-ascii”</p>
 
-    #include &lt;tads.h&gt;
-    #include "advlite.h"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
+#include "advlite.h"
 
-    versionInfo: GameID
-        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-        name = 'My Game'
-        byline = 'by A.N. Author'
-        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
-                      A.N. Author&lt;/a&gt;'
-        version = '1'
-        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
-        desc = 'Your blurb here.'
-        htmlDesc = 'Your blurb here.'    
-        
-    ;
+versionInfo: GameID
+    IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+    name = 'My Game'
+    byline = 'by A.N. Author'
+    htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                  A.N. Author&lt;/a&gt;'
+    version = '1'
+    authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+    desc = 'Your blurb here.'
+    htmlDesc = 'Your blurb here.'    
+    
+;
 
-    gameMain: GameMainDef
-        /* Define the initial player character; this is compulsory */
-        initialPlayerChar = me
-    ;
+gameMain: GameMainDef
+    /* Define the initial player character; this is compulsory */
+    initialPlayerChar = me
+;
 
 
-    /* The starting location; this can be called anything you like */
+/* The starting location; this can be called anything you like */
 
-    startroom: Room 'The Starting Location'
-        "Add your description here. "
-    ;
+startroom: Room 'The Starting Location'
+    "Add your description here. "
+;
 
-    /* 
-     *   The player character object. This doesn't have to be called me, but me is a
-     *   convenient name. If you change it to something else, rememember to change
-     *   gameMain.initialPlayerChar accordingly.
-     */
+/* 
+ *   The player character object. This doesn't have to be called me, but me is a
+ *   convenient name. If you change it to something else, rememember to change
+ *   gameMain.initialPlayerChar accordingly.
+ */
 
-    + me: Thing 'you'   
-        isFixed = true    
-        proper = true
-        ownsContents = true
-        person = 2   
-        contType = Carrier    
-    ;
++ me: Thing 'you'   
+    isFixed = true    
+    proper = true
+    ownsContents = true
+    person = 2   
+    contType = Carrier    
+; `
 </code></pre></div></div>
 
 <p>Don’t worry too much about what all that means for the moment, we’ll be
@@ -119,51 +120,52 @@ source file a little less generic and a little more relevant to the game
 we’re about to write. Edit your copy of the file so it reads as it does
 below (to help you with this the main changes are shown in bold):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
+<p>`
+    #charset “us-ascii”</p>
 
-    #include &lt;tads.h&gt;
-    #include "advlite.h"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;tads.h&gt;
+#include "advlite.h"
 
-    versionInfo: GameID
-        IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
-        name = 'The Adventures of Heidi'
-        byline = 'by A.N. Author'
-        htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
-                      A.N. Author&lt;/a&gt;'
-        version = '1'
-        authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
-        desc = 'A simple game borrowed from the Inform Beginner\'s Guide by Roger
-            Firth and Sonja Kesserich.'
-        htmlDesc = 'A simple game borrowed from the &lt;i&gt;Inform Beginner\'s Guide&lt;/i&gt;
-            by Roger Firth and Sonja Kesserich.'    
-        
-    ;
+versionInfo: GameID
+    IFID = '' // obtain IFID from http://www.tads.org/ifidgen/ifidgen
+    name = 'The Adventures of Heidi'
+    byline = 'by A.N. Author'
+    htmlByline = 'by &lt;a href="mailto:an.author@somemail.com"&gt;
+                  A.N. Author&lt;/a&gt;'
+    version = '1'
+    authorEmail = 'A.N. Author &lt;an.author@somemail.com&gt;'
+    desc = 'A simple game borrowed from the Inform Beginner\'s Guide by Roger
+        Firth and Sonja Kesserich.'
+    htmlDesc = 'A simple game borrowed from the &lt;i&gt;Inform Beginner\'s Guide&lt;/i&gt;
+        by Roger Firth and Sonja Kesserich.'    
+    
+;
 
-    gameMain: GameMainDef
-        /* Define the initial player character; this is compulsory */
-        initialPlayerChar = me
-    ;
+gameMain: GameMainDef
+    /* Define the initial player character; this is compulsory */
+    initialPlayerChar = me
+;
 
 
-    /* The starting location; this can be called anything you like */
+/* The starting location; this can be called anything you like */
 
-    beforeCottage: Room 'In front of a Cottage'
-        "You stand outside a cottage. The forest stretches east. "
-    ;
+beforeCottage: Room 'In front of a Cottage'
+    "You stand outside a cottage. The forest stretches east. "
+;
 
-    /* 
-     *   The player character object. This doesn't have to be called me, but me is a
-     *   convenient name. If you change it to something else, rememember to change
-     *   gameMain.initialPlayerChar accordingly.
-     */
+/* 
+ *   The player character object. This doesn't have to be called me, but me is a
+ *   convenient name. If you change it to something else, rememember to change
+ *   gameMain.initialPlayerChar accordingly.
+ */
 
-    + me: Thing 'you;;heidi'   
-        isFixed = true    
-        proper = true
-        ownsContents = true
-        person = 2   
-        contType = Carrier    
-    ;
++ me: Thing 'you;;heidi'   
+    isFixed = true    
+    proper = true
+    ownsContents = true
+    person = 2   
+    contType = Carrier    
+; `
 </code></pre></div></div>
 
 <p>If you like, you can also change the byline, htmlByline and authorEmail

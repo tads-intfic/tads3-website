@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Settable - an abstract class for things you can set to different
 settings; the settings can be essentially anything, such as numbers (or
@@ -34,15 +34,15 @@ other markers) on a dial, or stops on a sliding switch.
 
 `class `**`Settable`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Settable`**  
 [`Thing`](../object/Thing.html)  
@@ -50,11 +50,11 @@ other markers) on a dial, or stops on a sliding switch.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Settable`**  
 [`Dial`](../object/Dial.html)  
@@ -62,19 +62,19 @@ other markers) on a dial, or stops on a sliding switch.
 [`NumberedDial`](../object/NumberedDial.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curSetting`](#curSetting)[`okaySetToMsgProp`](#okaySetToMsgProp)[`setToInvalidMsgProp`](#setToInvalidMsgProp)
 
@@ -86,11 +86,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canonicalizeSetting`](#canonicalizeSetting)[`dobjFor(Set)`](#dobjFor(Set))[`dobjFor(SetTo)`](#dobjFor(SetTo))[`isValidSetting`](#isValidSetting)[`makeSetting`](#makeSetting)
 
@@ -102,11 +102,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curSetting"></span>
 
@@ -114,13 +114,13 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5347](../source/objects.t.html#5347)\]
 
-<div class="desc">
+
 
 Our current setting. This is an arbitrary string value. The value
 initially assigned here is our initial setting; we'll update this
 whenever we're set to another setting.
 
-</div>
+
 
 <span id="okaySetToMsgProp"></span>
 
@@ -128,11 +128,11 @@ whenever we're set to another setting.
 
 [objects.t](../file/objects.t.html)\[[5449](../source/objects.t.html#5449)\]
 
-<div class="desc">
+
 
 our message property for acknowledging a new setting
 
-</div>
+
 
 <span id="setToInvalidMsgProp"></span>
 
@@ -140,19 +140,19 @@ our message property for acknowledging a new setting
 
 [objects.t](../file/objects.t.html)\[[5446](../source/objects.t.html#5446)\]
 
-<div class="desc">
+
 
 our message property for an invalid setting
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canonicalizeSetting"></span>
 
@@ -160,7 +160,7 @@ our message property for an invalid setting
 
 [objects.t](../file/objects.t.html)\[[5357](../source/objects.t.html#5357)\]
 
-<div class="desc">
+
 
 Canonicalize a proposed setting. This ensures that the setting is in a
 specific primary format when there are superficially different ways of
@@ -168,7 +168,7 @@ expressing the same value. For example, if the setting is numeric, this
 could do things like trim off leading zeros; for a text value, it could
 ensure the value is in the proper case.
 
-</div>
+
 
 <span id="dobjFor(Set)"></span>
 
@@ -176,11 +176,11 @@ ensure the value is in the proper case.
 
 [objects.t](../file/objects.t.html)\[[5398](../source/objects.t.html#5398)\]
 
-<div class="desc">
+
 
 "set \<self\>" action
 
-</div>
+
 
 <span id="dobjFor(SetTo)"></span>
 
@@ -188,11 +188,11 @@ ensure the value is in the proper case.
 
 [objects.t](../file/objects.t.html)\[[5407](../source/objects.t.html#5407)\]
 
-<div class="desc">
+
 
 "set \<self\> to \<literal\>" action
 
-</div>
+
 
 <span id="isValidSetting"></span>
 
@@ -200,7 +200,7 @@ ensure the value is in the proper case.
 
 [objects.t](../file/objects.t.html)\[[5386](../source/objects.t.html#5386)\]
 
-<div class="desc">
+
 
 Is the given text a valid setting? Returns true if so, nil if not. This
 should not display any messages; simply indicate whether or not the
@@ -209,7 +209,7 @@ setting is valid.
 This is always called with the \*canonical\* value of the proposed new
 setting, as returned by canonicalizeSetting().
 
-</div>
+
 
 <span id="makeSetting"></span>
 
@@ -217,17 +217,17 @@ setting, as returned by canonicalizeSetting().
 
 [objects.t](../file/objects.t.html)\[[5372](../source/objects.t.html#5372)\]
 
-<div class="desc">
+
 
 Change our setting. This is always called with the canonical version of
 the new setting, as returned by canonicalizeSetting(). Subclasses can
 override this routine to apply any side effects of changing the value.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

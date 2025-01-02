@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The senses. We define sight, sound, smell, and touch. We do not define a
 separate sense for taste, since it would add nothing to our model: you
@@ -51,26 +51,26 @@ by default.
 
 **`sight`**` :   `[`Sense`](../object/Sense.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`sight`**  
 [`Sense`](../object/Sense.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`ambienceProp`](#ambienceProp)[`presenceProp`](#presenceProp)[`sizeProp`](#sizeProp)[`thruProp`](#thruProp)
 
@@ -78,11 +78,11 @@ by default.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -91,11 +91,11 @@ Inherited from `Sense` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="ambienceProp"></span>
 
@@ -103,11 +103,11 @@ Inherited from `Sense` :
 
 [sense.t](../file/sense.t.html)\[[256](../source/sense.t.html#256)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="presenceProp"></span>
 
@@ -115,11 +115,11 @@ Inherited from `Sense` :
 
 [sense.t](../file/sense.t.html)\[[255](../source/sense.t.html#255)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sizeProp"></span>
 
@@ -127,11 +127,11 @@ Inherited from `Sense` :
 
 [sense.t](../file/sense.t.html)\[[254](../source/sense.t.html#254)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="thruProp"></span>
 
@@ -139,25 +139,25 @@ Inherited from `Sense` :
 
 [sense.t](../file/sense.t.html)\[[253](../source/sense.t.html#253)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

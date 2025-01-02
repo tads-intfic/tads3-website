@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Basic class for pronoun phrases. The specific pronouns are
 language-dependent; each instance should define its pronounType property
@@ -34,15 +34,15 @@ to an appropriate PronounXxx constant.
 
 `class `**`PronounProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PronounProd`**  
 [`NounPhraseProd`](../object/NounPhraseProd.html)  
@@ -50,11 +50,11 @@ to an appropriate PronounXxx constant.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PronounProd`**  
 [`HerProd`](../object/HerProd.html)  
@@ -106,19 +106,19 @@ to an appropriate PronounXxx constant.
 [`completeNounPhraseWithoutAll(yourself)`](../object/completeNounPhraseWithoutAll(yourself).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isPlural`](#isPlural)[`isPossessive`](#isPossessive)[`pronounType`](#pronounType)
 
@@ -130,11 +130,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkAnaphoricBinding`](#checkAnaphoricBinding)[`resolveNouns`](#resolveNouns)
 
@@ -146,11 +146,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isPlural"></span>
 
@@ -158,14 +158,14 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[1481](../source/parser.t.html#1481)\]
 
-<div class="desc">
+
 
 Is this pronoun a singular or a plural? A pronoun like "it" or "he" is
 singular, because it refers to a single antecedent; "them" is plural.
 Language modules that define their own custom pronoun subclasses should
 override this as needed.
 
-</div>
+
 
 <span id="isPossessive"></span>
 
@@ -173,11 +173,11 @@ override this as needed.
 
 [parser.t](../file/parser.t.html)\[[1473](../source/parser.t.html#1473)\]
 
-<div class="desc">
+
 
 is this a possessive usage?
 
-</div>
+
 
 <span id="pronounType"></span>
 
@@ -185,21 +185,21 @@ is this a possessive usage?
 
 [parser.t](../file/parser.t.html)\[[1470](../source/parser.t.html#1470)\]
 
-<div class="desc">
+
 
 our pronoun specifier - this must be set in each rule instance to one of
 the PronounXxx constants to specify which pronoun to use when resolving
 the pronoun phrase
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkAnaphoricBinding"></span>
 
@@ -207,7 +207,7 @@ the pronoun phrase
 
 [parser.t](../file/parser.t.html)\[[1492](../source/parser.t.html#1492)\]
 
-<div class="desc">
+
 
 Check for an anaphoric binding. Returns a list (which is allowed to be
 empty) if this can refer back to an earlier noun phrase in the same
@@ -217,7 +217,7 @@ not something in this same sentence. In most languages, pronouns don't
 refer to objects in other noun phrases within the same predicate unless
 they're reflexive.
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -225,15 +225,15 @@ they're reflexive.
 
 [parser.t](../file/parser.t.html)\[[1399](../source/parser.t.html#1399)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

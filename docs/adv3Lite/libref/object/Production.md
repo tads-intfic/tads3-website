@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Our root class for grammar productions. (A "production" represents a
 match to a syntax rule, as defined with a 'grammar' template.)
@@ -47,25 +47,25 @@ though, we'll treat the next clause as a sentence opener again.
 
 `class `**`Production`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Production`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Production`**  
 [`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
@@ -537,39 +537,39 @@ though, we'll treat the next clause as a sentence opener again.
 [`yesOrNoPhrase(yes)`](../object/yesOrNoPhrase(yes).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`determiner`](#determiner)[`nounPhraseRole`](#nounPhraseRole)[`npClass`](#npClass)[`parent`](#parent)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addNounListItem`](#addNounListItem)[`build`](#build)[`findAction`](#findAction)[`findChild`](#findChild)[`findParent`](#findParent)[`getNounPhraseRole`](#getNounPhraseRole)[`getText`](#getText)[`getTokens`](#getTokens)[`grammarInfoForBuild`](#grammarInfoForBuild)[`isChildOf`](#isChildOf)[`noteEndOfSentence`](#noteEndOfSentence)[`visitLiteral`](#visitLiteral)[`visitProd`](#visitProd)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="determiner"></span>
 
@@ -577,14 +577,14 @@ though, we'll treat the next clause as a sentence opener again.
 
 [parser.t](../file/parser.t.html)\[[3487](../source/parser.t.html#3487)\]
 
-<div class="desc">
+
 
 The determiner that this production applies to the noun phrase it's part
 of, as a Determiner object. If this is non-nil, this Determiner will be
 set in the current NounPhrase when we visit this production in the build
 process.
 
-</div>
+
 
 <span id="nounPhraseRole"></span>
 
@@ -592,7 +592,7 @@ process.
 
 [parser.t](../file/parser.t.html)\[[3446](../source/parser.t.html#3446)\]
 
-<div class="desc">
+
 
 My assigned noun phrase role, as a NounRole object. This must be
 explicitly set for the top node in a noun slot (which can be a noun list
@@ -604,7 +604,7 @@ the role that the sub-tree plays in the predicate grammar.
 Non-positional languages that use grammatical case or other ways of
 encoding the role information must set this some other way.
 
-</div>
+
 
 <span id="npClass"></span>
 
@@ -612,7 +612,7 @@ encoding the role information must set this some other way.
 
 [parser.t](../file/parser.t.html)\[[3432](../source/parser.t.html#3432)\]
 
-<div class="desc">
+
 
 The NounPhrase subclass to use for noun phrases within this sub-tree. By
 default, we look to our parent; if we don't have a parent, we use the
@@ -622,7 +622,7 @@ Special phrase types (topics, literals, and numbers) have their own
 NounPhrase subclasses. This is important because the resolution rules
 for these phrase types differ from the regular object resolution rules.
 
-</div>
+
 
 <span id="parent"></span>
 
@@ -630,7 +630,7 @@ for these phrase types differ from the regular object resolution rules.
 
 [parser.t](../file/parser.t.html)\[[3502](../source/parser.t.html#3502)\]
 
-<div class="desc">
+
 
 My parent production. The low-level GrammarProd mechanism doesn't set
 this up, so we set it up ourselves in the course of building out the
@@ -643,15 +643,15 @@ can always look at 'parent' within your own build() routine or a child
 build() routine, but you can't necessarily look at it across the tree or
 within your own children.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addNounListItem"></span>
 
@@ -659,7 +659,7 @@ within your own children.
 
 [parser.t](../file/parser.t.html)\[[3404](../source/parser.t.html#3404)\]
 
-<div class="desc">
+
 
 Add a new NounPhrase item to the list under construction. Certain
 productions are associated with specific functional slots in the
@@ -678,7 +678,7 @@ assigned role.
 If nounPhraseRole is nil, then we simply pass the request up to our
 parent. Eventually we should reach a node encoding the function slot.
 
-</div>
+
 
 <span id="build"></span>
 
@@ -686,12 +686,12 @@ parent. Eventually we should reach a node encoding the function slot.
 
 [parser.t](../file/parser.t.html)\[[3329](../source/parser.t.html#3329)\]
 
-<div class="desc">
+
 
 Build the command for this production and its children. By default,
 we'll simply traverse into our children.
 
-</div>
+
 
 <span id="findAction"></span>
 
@@ -699,12 +699,12 @@ we'll simply traverse into our children.
 
 [parser.t](../file/parser.t.html)\[[3538](../source/parser.t.html#3538)\]
 
-<div class="desc">
+
 
 Find the action. This finds the child of type VerbProduction, then
 retrieves the action from the verb production.
 
-</div>
+
 
 <span id="findChild"></span>
 
@@ -712,11 +712,11 @@ retrieves the action from the verb production.
 
 [parser.t](../file/parser.t.html)\[[3550](../source/parser.t.html#3550)\]
 
-<div class="desc">
+
 
 Find a child of a given class.
 
-</div>
+
 
 <span id="findParent"></span>
 
@@ -724,13 +724,13 @@ Find a child of a given class.
 
 [parser.t](../file/parser.t.html)\[[3509](../source/parser.t.html#3509)\]
 
-<div class="desc">
+
 
 Find a parent matching a given test. We'll scan up the parent tree,
 looking for the nearest parent p for which func(p) returns true,
 returning p. If we can't find one, we return nil.
 
-</div>
+
 
 <span id="getNounPhraseRole"></span>
 
@@ -738,12 +738,12 @@ returning p. If we can't find one, we return nil.
 
 [parser.t](../file/parser.t.html)\[[3452](../source/parser.t.html#3452)\]
 
-<div class="desc">
+
 
 Get our noun phrase role. If we don't have a role defined directly,
 we'll inherit the role from our parent node.
 
-</div>
+
 
 <span id="getText"></span>
 
@@ -751,11 +751,11 @@ we'll inherit the role from our parent node.
 
 [parser.t](../file/parser.t.html)\[[3304](../source/parser.t.html#3304)\]
 
-<div class="desc">
+
 
 get the original text of the command for this match
 
-</div>
+
 
 <span id="getTokens"></span>
 
@@ -763,11 +763,11 @@ get the original text of the command for this match
 
 [parser.t](../file/parser.t.html)\[[3315](../source/parser.t.html#3315)\]
 
-<div class="desc">
+
 
 get my original token list, in canonical tokenizer format
 
-</div>
+
 
 <span id="grammarInfoForBuild"></span>
 
@@ -775,7 +775,7 @@ get my original token list, in canonical tokenizer format
 
 [parser.t](../file/parser.t.html)\[[3379](../source/parser.t.html#3379)\]
 
-<div class="desc">
+
 
 Get the grammar match list for build() purposes. By default, this simply
 returns the grammarInfo() results, which are automatically generated by
@@ -783,7 +783,7 @@ the compiler to return a list of the "-\>prop" values from the matched
 grammar rule. Some rules might want to modify that default value list,
 so we provide this routine as an override hook.
 
-</div>
+
 
 <span id="isChildOf"></span>
 
@@ -791,11 +791,11 @@ so we provide this routine as an override hook.
 
 [parser.t](../file/parser.t.html)\[[3520](../source/parser.t.html#3520)\]
 
-<div class="desc">
+
 
 Is this production a child of the given production?
 
-</div>
+
 
 <span id="noteEndOfSentence"></span>
 
@@ -803,12 +803,12 @@ Is this production a child of the given production?
 
 [parser.t](../file/parser.t.html)\[[3416](../source/parser.t.html#3416)\]
 
-<div class="desc">
+
 
 Note an end-of-sentence marker. We'll simply notify our parent by
 default.
 
-</div>
+
 
 <span id="visitLiteral"></span>
 
@@ -816,13 +816,13 @@ default.
 
 [parser.t](../file/parser.t.html)\[[3463](../source/parser.t.html#3463)\]
 
-<div class="desc">
+
 
 Visit a literal token child in our sub-tree. This is called during the
 build process for each literal token in our child list. By default, we
 add the token to the command's current noun phrase.
 
-</div>
+
 
 <span id="visitProd"></span>
 
@@ -830,17 +830,17 @@ add the token to the command's current noun phrase.
 
 [parser.t](../file/parser.t.html)\[[3475](../source/parser.t.html#3475)\]
 
-<div class="desc">
+
 
 Visit a production object in our list. This is called during the build
 process for each production object in our child list. By default, we
 simply build the child production recursively.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A base class for simple miscellaneous topics. These handle things like
 YES, NO, HELLO, and GOODBYE, where the topic is entirely contained in
@@ -35,26 +35,26 @@ topic.
 
 `class `**`MiscTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MiscTopic`**  
 [`TopicEntry`](../object/TopicEntry.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`MiscTopic`**  
 [`ActorByeTopic`](../object/ActorByeTopic.html)  
@@ -71,19 +71,19 @@ topic.
 [`YesTopic`](../object/YesTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -92,11 +92,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)
 
@@ -105,19 +105,19 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isMatchPossible"></span>
 
@@ -125,12 +125,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3273](../source/actor.t.html#3273)\]
 
-<div class="desc">
+
 
 a match is always possible for simple verb topics (since the player
 could always type the verb)
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -138,15 +138,15 @@ could always type the verb)
 
 [actor.t](../file/actor.t.html)\[[3260](../source/actor.t.html#3260)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Ensure that the vocab of any SymPassages located in the player
 character's starting location have the vocab appropriate to the side
@@ -28,15 +28,15 @@ from which they're viewed.
 
 **`symVocabPreinit`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`symVocabPreinit`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -44,11 +44,11 @@ from which they're viewed.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`execBeforeMe`](#execBeforeMe)
 
@@ -60,11 +60,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`exec`](#exec)
 
@@ -75,11 +75,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="execBeforeMe"></span>
 
@@ -87,22 +87,22 @@ Inherited from `ModuleExecObject` :
 
 [symconn.t](../file/symconn.t.html)\[[238](../source/symconn.t.html#238)\]
 
-<div class="desc">
+
 
 The updateSymVocab() method depends on MultiLocs (which includes
 SymPassages) having already been added to their locations' contents
 list, so we need to ensure that the initialization of MultiLocs has been
 carried out first.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -110,15 +110,15 @@ carried out first.
 
 [symconn.t](../file/symconn.t.html)\[[228](../source/symconn.t.html#228)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

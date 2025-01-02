@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A special topic for "nothing." It's occasionally useful to be able to
 construct a TopicTAction with an empty topic phrase. For the topic
@@ -29,26 +29,26 @@ though it won't refer to anything.
 
 **`resolvedTopicNothing`**` :   `[`ResolvedTopic`](../object/ResolvedTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`resolvedTopicNothing`**  
 [`ResolvedTopic`](../object/ResolvedTopic.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`inScopeList`](#inScopeList)[`likelyList`](#likelyList)[`otherList`](#otherList)
 
@@ -57,11 +57,11 @@ Inherited from `ResolvedTopic` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getTopicText`](#getTopicText)[`getTopicTokens`](#getTopicTokens)[`getTopicWords`](#getTopicWords)
 
@@ -70,11 +70,11 @@ Inherited from `ResolvedTopic` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="inScopeList"></span>
 
@@ -82,11 +82,11 @@ Inherited from `ResolvedTopic` :
 
 [action.t](../file/action.t.html)\[[6320](../source/action.t.html#6320)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="likelyList"></span>
 
@@ -94,11 +94,11 @@ Inherited from `ResolvedTopic` :
 
 [action.t](../file/action.t.html)\[[6321](../source/action.t.html#6321)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="otherList"></span>
 
@@ -106,19 +106,19 @@ Inherited from `ResolvedTopic` :
 
 [action.t](../file/action.t.html)\[[6322](../source/action.t.html#6322)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getTopicText"></span>
 
@@ -126,11 +126,11 @@ Inherited from `ResolvedTopic` :
 
 [action.t](../file/action.t.html)\[[6324](../source/action.t.html#6324)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getTopicTokens"></span>
 
@@ -138,11 +138,11 @@ Inherited from `ResolvedTopic` :
 
 [action.t](../file/action.t.html)\[[6325](../source/action.t.html#6325)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getTopicWords"></span>
 
@@ -150,15 +150,15 @@ Inherited from `ResolvedTopic` :
 
 [action.t](../file/action.t.html)\[[6326](../source/action.t.html#6326)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

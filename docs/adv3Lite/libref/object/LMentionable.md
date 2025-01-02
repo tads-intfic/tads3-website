@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 LMentionable is the language-specific base class for Mentionable.
 
@@ -40,25 +40,25 @@ language.
 
 `class `**`LMentionable`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LMentionable`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`LMentionable`**  
 [`Mentionable`](../object/Mentionable.html)  
@@ -130,39 +130,39 @@ language.
 [`Topic`](../object/Topic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`acronymPluralPat`](#acronymPluralPat)[`alphaCharPat`](#alphaCharPat)[`aName`](#aName)[`apostPluralPat`](#apostPluralPat)[`apostSPat`](#apostSPat)[`deannotatePat`](#deannotatePat)[`dictComp`](#dictComp)[`dummyName`](#dummyName)[`elevenEighteenPat`](#elevenEighteenPat)[`emptyVocabWords`](#emptyVocabWords)[`esPluralPat`](#esPluralPat)[`firstWordPat`](#firstWordPat)[`heName`](#heName)[`herName`](#herName)[`hersName`](#hersName)[`himName`](#himName)[`iesPluralPat`](#iesPluralPat)[`irregularPlurals`](#irregularPlurals)[`isHer`](#isHer)[`isHim`](#isHim)[`isIt`](#isIt)[`lastWordPat`](#lastWordPat)[`leadingTagOrQuotePat`](#leadingTagOrQuotePat)[`menPluralPat`](#menPluralPat)[`objInName`](#objInName)[`objIntoName`](#objIntoName)[`objName`](#objName)[`objOutOfName`](#objOutOfName)[`oneLetterAnWordPat`](#oneLetterAnWordPat)[`oneLetterWordPat`](#oneLetterWordPat)[`ownerNamed`](#ownerNamed)[`pluralPat`](#pluralPat)[`posPat`](#posPat)[`possAdj`](#possAdj)[`possEnding`](#possEnding)[`possNoun`](#possNoun)[`prepList`](#prepList)[`prepPhrasePat`](#prepPhrasePat)[`prepWordPat`](#prepWordPat)[`pronounMap`](#pronounMap)[`properNamePat`](#properNamePat)[`properPat`](#properPat)[`reflexiveName`](#reflexiveName)[`specialAOrAn`](#specialAOrAn)[`tagOrQuotePat`](#tagOrQuotePat)[`thatName`](#thatName)[`thatObjName`](#thatObjName)[`theName`](#theName)[`theObjName`](#theObjName)[`trimPat`](#trimPat)[`truncationLength`](#truncationLength)[`weakWordPat`](#weakWordPat)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addDictWord`](#addDictWord)[`addVocab`](#addVocab)[`addVocabWord`](#addVocabWord)[`aNameFrom`](#aNameFrom)[`aNameFromPoss`](#aNameFromPoss)[`classInit`](#classInit)[`contify`](#contify)[`distinguishedName`](#distinguishedName)[`ifPronoun`](#ifPronoun)[`inheritVocab`](#inheritVocab)[`initVocab`](#initVocab)[`initVocabWord`](#initVocabWord)[`locify`](#locify)[`matchPronoun`](#matchPronoun)[`pluralNameFrom`](#pluralNameFrom)[`pluralWordFrom`](#pluralWordFrom)[`possessify`](#possessify)[`pronoun`](#pronoun)[`removeVocabWord`](#removeVocabWord)[`replaceVocab`](#replaceVocab)[`theNameFrom`](#theNameFrom)[`theNameIs`](#theNameIs)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="acronymPluralPat"></span>
 
@@ -170,11 +170,11 @@ language.
 
 [english.t](../file/english.t.html)\[[1860](../source/english.t.html#1860)\]
 
-<div class="desc">
+
 
 pattern for acronyms and numbers
 
-</div>
+
 
 <span id="alphaCharPat"></span>
 
@@ -182,11 +182,11 @@ pattern for acronyms and numbers
 
 [english.t](../file/english.t.html)\[[1720](../source/english.t.html#1720)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="aName"></span>
 
@@ -194,13 +194,13 @@ pattern for acronyms and numbers
 
 [english.t](../file/english.t.html)\[[50](../source/english.t.html#50)\]
 
-<div class="desc">
+
 
 Get the indefinite form of the name, nominative case.
 
 \[Required\]
 
-</div>
+
 
 <span id="apostPluralPat"></span>
 
@@ -208,11 +208,11 @@ Get the indefinite form of the name, nominative case.
 
 [english.t](../file/english.t.html)\[[1857](../source/english.t.html#1857)\]
 
-<div class="desc">
+
 
 pattern for plurals that add apostrophe-s
 
-</div>
+
 
 <span id="apostSPat"></span>
 
@@ -220,11 +220,11 @@ pattern for plurals that add apostrophe-s
 
 [english.t](../file/english.t.html)\[[1179](../source/english.t.html#1179)\]
 
-<div class="desc">
+
 
 pattern for apostrophe-s words
 
-</div>
+
 
 <span id="deannotatePat"></span>
 
@@ -232,11 +232,11 @@ pattern for apostrophe-s words
 
 [english.t](../file/english.t.html)\[[1292](../source/english.t.html#1292)\]
 
-<div class="desc">
+
 
 regular expression for removing annotations from a short name
 
-</div>
+
 
 <span id="dictComp"></span>
 
@@ -244,11 +244,11 @@ regular expression for removing annotations from a short name
 
 [english.t](../file/english.t.html)\[[1863](../source/english.t.html#1863)\]
 
-<div class="desc">
+
 
 class property: the main dictionary StringComparator
 
-</div>
+
 
 <span id="dummyName"></span>
 
@@ -256,13 +256,13 @@ class property: the main dictionary StringComparator
 
 [english.t](../file/english.t.html)\[[1881](../source/english.t.html#1881)\]
 
-<div class="desc">
+
 
 The dummyName is a property that displays nothing, for use when we want
 to use an object in a sentence without actually displaying any text for
 it (e.g. to provide a subject for a verb to agree with).
 
-</div>
+
 
 <span id="elevenEighteenPat"></span>
 
@@ -270,11 +270,11 @@ it (e.g. to provide a subject for a verb to agree with).
 
 [english.t](../file/english.t.html)\[[1721](../source/english.t.html#1721)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="emptyVocabWords"></span>
 
@@ -282,7 +282,7 @@ it (e.g. to provide a subject for a verb to agree with).
 
 [english.t](../file/english.t.html)\[[193](../source/english.t.html#193)\]
 
-<div class="desc">
+
 
 The VocabWords list for empty objects. These are words (usually
 adjectives) that can be applied to an object that can be distinguished
@@ -292,7 +292,7 @@ for matching during parsing.
 
 \[Required\]
 
-</div>
+
 
 <span id="esPluralPat"></span>
 
@@ -300,11 +300,11 @@ for matching during parsing.
 
 [english.t](../file/english.t.html)\[[1848](../source/english.t.html#1848)\]
 
-<div class="desc">
+
 
 pattern for nouns with -es plurals
 
-</div>
+
 
 <span id="firstWordPat"></span>
 
@@ -312,11 +312,11 @@ pattern for nouns with -es plurals
 
 [english.t](../file/english.t.html)\[[1716](../source/english.t.html#1716)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="heName"></span>
 
@@ -324,13 +324,13 @@ pattern for nouns with -es plurals
 
 [english.t](../file/english.t.html)\[[120](../source/english.t.html#120)\]
 
-<div class="desc">
+
 
 The subjective-case pronoun for this object. We'll try to infer the
 pronoun from the gender and number flags: if plural, 'they'; if isHim,
 'he'; if isHer 'she'; otherwise 'it'.
 
-</div>
+
 
 <span id="herName"></span>
 
@@ -338,13 +338,13 @@ pronoun from the gender and number flags: if plural, 'they'; if isHim,
 
 [english.t](../file/english.t.html)\[[135](../source/english.t.html#135)\]
 
-<div class="desc">
+
 
 The possessive adjective pronoun for this object. We'll try to infer the
 pronoun from the gender and number flags: if plural, 'their'; if isHim,
 'his'; if isHer, 'her'; otherwise 'its'.
 
-</div>
+
 
 <span id="hersName"></span>
 
@@ -352,13 +352,13 @@ pronoun from the gender and number flags: if plural, 'their'; if isHim,
 
 [english.t](../file/english.t.html)\[[142](../source/english.t.html#142)\]
 
-<div class="desc">
+
 
 The possessive noun pronoun for this object. We'll try to infer the
 pronoun from the gender and number flags: if plural, 'theirs'; if isHim,
 'his'; if isHer, 'hers'; otherwise 'its'.
 
-</div>
+
 
 <span id="himName"></span>
 
@@ -366,13 +366,13 @@ pronoun from the gender and number flags: if plural, 'theirs'; if isHim,
 
 [english.t](../file/english.t.html)\[[127](../source/english.t.html#127)\]
 
-<div class="desc">
+
 
 The objective-case pronoun for this object. We'll try to infer the
 pronoun from the gender and number flags: if plural, 'them'; if isHim,
 'him'; if isHer 'her'; otherwise 'it'.
 
-</div>
+
 
 <span id="iesPluralPat"></span>
 
@@ -380,11 +380,11 @@ pronoun from the gender and number flags: if plural, 'them'; if isHim,
 
 [english.t](../file/english.t.html)\[[1851](../source/english.t.html#1851)\]
 
-<div class="desc">
+
 
 pattern for nouns y -\> -ies plurals)
 
-</div>
+
 
 <span id="irregularPlurals"></span>
 
@@ -392,11 +392,11 @@ pattern for nouns y -\> -ies plurals)
 
 [english.t](../file/english.t.html)\[[1842](../source/english.t.html#1842)\]
 
-<div class="desc">
+
 
 lookup table for irregular plurals - we build this at preinit time
 
-</div>
+
 
 <span id="isHer"></span>
 
@@ -404,11 +404,11 @@ lookup table for irregular plurals - we build this at preinit time
 
 [english.t](../file/english.t.html)\[[223](../source/english.t.html#223)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isHim"></span>
 
@@ -416,11 +416,11 @@ lookup table for irregular plurals - we build this at preinit time
 
 [english.t](../file/english.t.html)\[[222](../source/english.t.html#222)\]
 
-<div class="desc">
+
 
 Determine the gender of this object
 
-</div>
+
 
 <span id="isIt"></span>
 
@@ -428,13 +428,13 @@ Determine the gender of this object
 
 [english.t](../file/english.t.html)\[[230](../source/english.t.html#230)\]
 
-<div class="desc">
+
 
 By default an object is neuter if it's neither masculine nor feminine,
 but that can be overridden in cases where something might be referred to
 as either 'him' or 'it' for example.
 
-</div>
+
 
 <span id="lastWordPat"></span>
 
@@ -442,11 +442,11 @@ as either 'him' or 'it' for example.
 
 [english.t](../file/english.t.html)\[[1779](../source/english.t.html#1779)\]
 
-<div class="desc">
+
 
 pattern for pulling the last word out of a phrase
 
-</div>
+
 
 <span id="leadingTagOrQuotePat"></span>
 
@@ -454,11 +454,11 @@ pattern for pulling the last word out of a phrase
 
 [english.t](../file/english.t.html)\[[1715](../source/english.t.html#1715)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="menPluralPat"></span>
 
@@ -466,11 +466,11 @@ pattern for pulling the last word out of a phrase
 
 [english.t](../file/english.t.html)\[[1854](../source/english.t.html#1854)\]
 
-<div class="desc">
+
 
 pattern for words ending in 'men' (chairman, fireman, etc)
 
-</div>
+
 
 <span id="objInName"></span>
 
@@ -478,12 +478,12 @@ pattern for words ending in 'men' (chairman, fireman, etc)
 
 [english.t](../file/english.t.html)\[[401](../source/english.t.html#401)\]
 
-<div class="desc">
+
 
 The prepositional phrase for something located inside this object, e.g.
 'in the box' or 'on the table
 
-</div>
+
 
 <span id="objIntoName"></span>
 
@@ -491,12 +491,12 @@ The prepositional phrase for something located inside this object, e.g.
 
 [english.t](../file/english.t.html)\[[408](../source/english.t.html#408)\]
 
-<div class="desc">
+
 
 The prepositional phrase for something being moved inside this object,
 e.g. 'into the box' or 'onto the table
 
-</div>
+
 
 <span id="objName"></span>
 
@@ -504,7 +504,7 @@ e.g. 'into the box' or 'onto the table
 
 [english.t](../file/english.t.html)\[[79](../source/english.t.html#79)\]
 
-<div class="desc">
+
 
 Get the objective form of the name. The regular 'name' property gives
 the subjective form - i.e., the form that appears as the subject of a
@@ -521,7 +521,7 @@ to be overridden for the player character object, which usually uses a
 pronoun as its name ("you" for a second-person game, "I" for a
 first-person game).
 
-</div>
+
 
 <span id="objOutOfName"></span>
 
@@ -529,12 +529,12 @@ first-person game).
 
 [english.t](../file/english.t.html)\[[414](../source/english.t.html#414)\]
 
-<div class="desc">
+
 
 The pronominal phrase for something leaving this object, e.g. 'out of
 the box'
 
-</div>
+
 
 <span id="oneLetterAnWordPat"></span>
 
@@ -542,11 +542,11 @@ the box'
 
 [english.t](../file/english.t.html)\[[1719](../source/english.t.html#1719)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="oneLetterWordPat"></span>
 
@@ -554,11 +554,11 @@ the box'
 
 [english.t](../file/english.t.html)\[[1718](../source/english.t.html#1718)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="ownerNamed"></span>
 
@@ -566,12 +566,12 @@ the box'
 
 [english.t](../file/english.t.html)\[[200](../source/english.t.html#200)\]
 
-<div class="desc">
+
 
 Flag, do we want our theName to be constructed from our owner's name,
 e.g. "Bob's wallet" rather than "the wallet".
 
-</div>
+
 
 <span id="pluralPat"></span>
 
@@ -579,11 +579,11 @@ e.g. "Bob's wallet" rather than "the wallet".
 
 [english.t](../file/english.t.html)\[[1299](../source/english.t.html#1299)\]
 
-<div class="desc">
+
 
 pattern for plural annotations
 
-</div>
+
 
 <span id="posPat"></span>
 
@@ -591,11 +591,11 @@ pattern for plural annotations
 
 [english.t](../file/english.t.html)\[[1296](../source/english.t.html#1296)\]
 
-<div class="desc">
+
 
 pattern for part-of-speech annotations
 
-</div>
+
 
 <span id="possAdj"></span>
 
@@ -603,7 +603,7 @@ pattern for part-of-speech annotations
 
 [english.t](../file/english.t.html)\[[93](../source/english.t.html#93)\]
 
-<div class="desc">
+
 
 Get the possessive adjective-like form of the name. This is the form of
 the name we use as a qualifier phrase when showing an object we possess.
@@ -617,7 +617,7 @@ so we do this via the possEnding property.
 However, it does vary for pronouns. By default, we check the name to see
 if it's a pronoun, and apply the correct pronoun mapping if so.
 
-</div>
+
 
 <span id="possEnding"></span>
 
@@ -625,14 +625,14 @@ if it's a pronoun, and apply the correct pronoun mapping if so.
 
 [english.t](../file/english.t.html)\[[115](../source/english.t.html#115)\]
 
-<div class="desc">
+
 
 The correct ending for our possessive form. This is usually apostrophe-s
 for an English noun, except where the noun is plural and ends with an
 's', which case we just want an apostrophe; for example "the clerks'
 lunch" but "the women's dinner".
 
-</div>
+
 
 <span id="possNoun"></span>
 
@@ -640,7 +640,7 @@ lunch" but "the women's dinner".
 
 [english.t](../file/english.t.html)\[[108](../source/english.t.html#108)\]
 
-<div class="desc">
+
 
 Get the possessive noun-like form of the name. This is the form of the
 possessive we use in a genetive "of" phrase or a "being" predicate, such
@@ -652,7 +652,7 @@ However, it diverges for some of the pronouns: "my" vs "mine", "her" vs
 "hers", "their" vs "theirs", "our" vs "ours". We check the name to see
 if it's a pronoun, and apply the appropriate pronoun mapping if so.
 
-</div>
+
 
 <span id="prepList"></span>
 
@@ -660,11 +660,11 @@ if it's a pronoun, and apply the appropriate pronoun mapping if so.
 
 [english.t](../file/english.t.html)\[[1289](../source/english.t.html#1289)\]
 
-<div class="desc">
+
 
 preposition list, as a regular expression OR pattern
 
-</div>
+
 
 <span id="prepPhrasePat"></span>
 
@@ -672,14 +672,14 @@ preposition list, as a regular expression OR pattern
 
 [english.t](../file/english.t.html)\[[1775](../source/english.t.html#1775)\]
 
-<div class="desc">
+
 
 if we need to add 's as the plural ending - this should be either a
 simple straight quote ('\\'), or HTML markup for a curly quote regular
 expression for separating the main phrase and prepositional phrase from
 a "noun prep noun" phrase
 
-</div>
+
 
 <span id="prepWordPat"></span>
 
@@ -687,13 +687,13 @@ a "noun prep noun" phrase
 
 [english.t](../file/english.t.html)\[[1282](../source/english.t.html#1282)\]
 
-<div class="desc">
+
 
 Regular expression pattern for matching a single preposition word. A
 word is a preposition if it's in our preposition list, OR it's annotated
 explicitly with "\[prep\]" at the end.
 
-</div>
+
 
 <span id="pronounMap"></span>
 
@@ -701,11 +701,11 @@ explicitly with "\[prep\]" at the end.
 
 [english.t](../file/english.t.html)\[[1873](../source/english.t.html#1873)\]
 
-<div class="desc">
+
 
 class property: pronoun lookup table (built during preinit)
 
-</div>
+
 
 <span id="properNamePat"></span>
 
@@ -713,12 +713,12 @@ class property: pronoun lookup table (built during preinit)
 
 [english.t](../file/english.t.html)\[[857](../source/english.t.html#857)\]
 
-<div class="desc">
+
 
 pattern for detecting a proper name - each word starts with a capital
 letter
 
-</div>
+
 
 <span id="properPat"></span>
 
@@ -726,12 +726,12 @@ letter
 
 [english.t](../file/english.t.html)\[[1305](../source/english.t.html#1305)\]
 
-<div class="desc">
+
 
 pattern for proper nouns: starts with a capital, and at least one
 lower-case letter within
 
-</div>
+
 
 <span id="reflexiveName"></span>
 
@@ -739,11 +739,11 @@ lower-case letter within
 
 [english.t](../file/english.t.html)\[[161](../source/english.t.html#161)\]
 
-<div class="desc">
+
 
 The reflexive name as a pronoun, e.g. himself, herself, itself
 
-</div>
+
 
 <span id="specialAOrAn"></span>
 
@@ -751,12 +751,12 @@ The reflexive name as a pronoun, e.g. himself, herself, itself
 
 [english.t](../file/english.t.html)\[[1711](../source/english.t.html#1711)\]
 
-<div class="desc">
+
 
 lookup table of special-case a/an words (we build this automatically
 during classInit from CustomVocab objects)
 
-</div>
+
 
 <span id="tagOrQuotePat"></span>
 
@@ -764,11 +764,11 @@ during classInit from CustomVocab objects)
 
 [english.t](../file/english.t.html)\[[1714](../source/english.t.html#1714)\]
 
-<div class="desc">
+
 
 pre-compile some regular expressions for aName
 
-</div>
+
 
 <span id="thatName"></span>
 
@@ -776,14 +776,14 @@ pre-compile some regular expressions for aName
 
 [english.t](../file/english.t.html)\[[150](../source/english.t.html#150)\]
 
-<div class="desc">
+
 
 The demonstrative pronoun for this object, nominative case. For a
 singular gendered object, or a first- or second-person object, we'll use
 the regular pronoun (I, you, he, her). For any other singular object,
 we'll use 'that', and for plural, 'those'.
 
-</div>
+
 
 <span id="thatObjName"></span>
 
@@ -791,14 +791,14 @@ we'll use 'that', and for plural, 'those'.
 
 [english.t](../file/english.t.html)\[[158](../source/english.t.html#158)\]
 
-<div class="desc">
+
 
 The demonstrative pronoun, objective case. For a singular gendered
 object, or a first- or second-person object, we'll use the regular
 pronoun (me, you, him, her). For any other singular object, we'll use
 'that', and for plural, 'those'.
 
-</div>
+
 
 <span id="theName"></span>
 
@@ -806,13 +806,13 @@ pronoun (me, you, him, her). For any other singular object, we'll use
 
 [english.t](../file/english.t.html)\[[57](../source/english.t.html#57)\]
 
-<div class="desc">
+
 
 Get the definite form of the name, nominative case.
 
 \[Required\]
 
-</div>
+
 
 <span id="theObjName"></span>
 
@@ -820,11 +820,11 @@ Get the definite form of the name, nominative case.
 
 [english.t](../file/english.t.html)\[[60](../source/english.t.html#60)\]
 
-<div class="desc">
+
 
 Definite name, objective case.
 
-</div>
+
 
 <span id="trimPat"></span>
 
@@ -832,11 +832,11 @@ Definite name, objective case.
 
 [english.t](../file/english.t.html)\[[1845](../source/english.t.html#1845)\]
 
-<div class="desc">
+
 
 regular expression for trimming leading and trailing spaces
 
-</div>
+
 
 <span id="truncationLength"></span>
 
@@ -844,12 +844,12 @@ regular expression for trimming leading and trailing spaces
 
 [english.t](../file/english.t.html)\[[1869](../source/english.t.html#1869)\]
 
-<div class="desc">
+
 
 class property: the truncation length to use for the main dictionary
 StringComparator.
 
-</div>
+
 
 <span id="weakWordPat"></span>
 
@@ -857,19 +857,19 @@ StringComparator.
 
 [english.t](../file/english.t.html)\[[1285](../source/english.t.html#1285)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addDictWord"></span>
 
@@ -877,12 +877,12 @@ StringComparator.
 
 [english.t](../file/english.t.html)\[[1185](../source/english.t.html#1185)\]
 
-<div class="desc">
+
 
 Add a word to the dictionary and to our vocabulary list for the given
 match flags.
 
-</div>
+
 
 <span id="addVocab"></span>
 
@@ -890,13 +890,13 @@ match flags.
 
 [english.t](../file/english.t.html)\[[1229](../source/english.t.html#1229)\]
 
-<div class="desc">
+
 
 Add additional vocab words to those already in use for this object. If
 we specify the name part this will replace the existing name for the
 object.
 
-</div>
+
 
 <span id="addVocabWord"></span>
 
@@ -904,11 +904,11 @@ object.
 
 [english.t](../file/english.t.html)\[[1272](../source/english.t.html#1272)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="aNameFrom"></span>
 
@@ -916,7 +916,7 @@ object.
 
 [english.t](../file/english.t.html)\[[1493](../source/english.t.html#1493)\]
 
-<div class="desc">
+
 
 Apply an indefinite article ("a box", "an orange", "some lint") to the
 given name string 'str' for this object. We'll try to figure out which
@@ -951,7 +951,7 @@ decision" and "an unassuming man"). We simply always use 'an' for a word
 starting with 'u', but this will have to be overridden when the 'u'
 sounds like 'y'.
 
-</div>
+
 
 <span id="aNameFromPoss"></span>
 
@@ -959,7 +959,7 @@ sounds like 'y'.
 
 [english.t](../file/english.t.html)\[[1698](../source/english.t.html#1698)\]
 
-<div class="desc">
+
 
 Get the indefinite name for a version of our name that has a possessive
 qualifier. The caller is responsible for ensuring that the possessive is
@@ -974,7 +974,7 @@ is a plural or mass noun, we have to use "some of" in the possessive
 case, rather than the usual "some": "some water" in the normal case, but
 "some of Bob's water" in the possessive case.
 
-</div>
+
 
 <span id="classInit"></span>
 
@@ -982,7 +982,7 @@ case, rather than the usual "some": "some water" in the normal case, but
 
 [english.t](../file/english.t.html)\[[268](../source/english.t.html#268)\]
 
-<div class="desc">
+
 
 Class initialization. The library calls this at preinit time, before
 calling construct() on any instances, to set up any pre-built tables in
@@ -996,7 +996,7 @@ access during execution.
 
 \[Required\]
 
-</div>
+
 
 <span id="contify"></span>
 
@@ -1004,13 +1004,13 @@ access during execution.
 
 [english.t](../file/english.t.html)\[[1454](../source/english.t.html#1454)\]
 
-<div class="desc">
+
 
 Apply a contents qualifier to the name for my container. 'obj' is the
 object (my container), and 'str' is the name under construction. We'll
 add the appropriate prepositional phrase: "the bucket OF WATER".
 
-</div>
+
 
 <span id="distinguishedName"></span>
 
@@ -1018,7 +1018,7 @@ add the appropriate prepositional phrase: "the bucket OF WATER".
 
 [english.t](../file/english.t.html)\[[1321](../source/english.t.html#1321)\]
 
-<div class="desc">
+
 
 Generate the "distinguished name" for this object, given a list of
 Distinguisher objects that we're using to tell it apart from others in a
@@ -1032,7 +1032,7 @@ the qualifying phrases implied by the distinguishers.
 
 \[Required\]
 
-</div>
+
 
 <span id="ifPronoun"></span>
 
@@ -1040,12 +1040,12 @@ the qualifying phrases implied by the distinguishers.
 
 [english.t](../file/english.t.html)\[[168](../source/english.t.html#168)\]
 
-<div class="desc">
+
 
 Pronoun-or-name mapper. If our name is a pronoun, return the given
 pronoun name property. Otherwise return the given name string.
 
-</div>
+
 
 <span id="inheritVocab"></span>
 
@@ -1053,7 +1053,7 @@ pronoun name property. Otherwise return the given name string.
 
 [english.t](../file/english.t.html)\[[870](../source/english.t.html#870)\]
 
-<div class="desc">
+
 
 Inherit vocab from our superclasses according to the following scheme:  
 1. A + sign in the name section will be replaced with the name from our
@@ -1064,7 +1064,7 @@ section.
 3 If our pronouns section is empty or contains a +, inherit pronouns
 from our superclass, otherwise leave it unchanged.
 
-</div>
+
 
 <span id="initVocab"></span>
 
@@ -1072,7 +1072,7 @@ from our superclass, otherwise leave it unchanged.
 
 [english.t](../file/english.t.html)\[[546](../source/english.t.html#546)\]
 
-<div class="desc">
+
 
 initVocab() - Parse the 'vocab' string. This is called during preinit
 and on dynamically constructing a new Mentionable, to initialize up the
@@ -1202,7 +1202,7 @@ properties to true when we see the corresponding pronouns.
 
 \[Required\]
 
-</div>
+
 
 <span id="initVocabWord"></span>
 
@@ -1210,7 +1210,7 @@ properties to true when we see the corresponding pronouns.
 
 [english.t](../file/english.t.html)\[[982](../source/english.t.html#982)\]
 
-<div class="desc">
+
 
 Initialize vocabulary for one word from the 'vocab' list. 'w' is the
 word text, with optional part-of-speech and plural-form annotations
@@ -1226,7 +1226,7 @@ input can only match this word without any truncation, and MatchNoApprox
 to specify that input can only match without character approximations
 (e.g., 'a' matching 'a-umlaut').
 
-</div>
+
 
 <span id="locify"></span>
 
@@ -1234,14 +1234,14 @@ to specify that input can only match without character approximations
 
 [english.t](../file/english.t.html)\[[1439](../source/english.t.html#1439)\]
 
-<div class="desc">
+
 
 Apply a locational qualifier to the name for an object contained within
 me. 'obj' is the object (something among my contents), and 'str' is the
 name under construction. We'll add the appropriate prepositional phrase:
 "the box UNDER THE TABLE".
 
-</div>
+
 
 <span id="matchPronoun"></span>
 
@@ -1249,7 +1249,7 @@ name under construction. We'll add the appropriate prepositional phrase:
 
 [english.t](../file/english.t.html)\[[344](../source/english.t.html#344)\]
 
-<div class="desc">
+
 
 Match a pronoun. This returns true if this object is a valid antecedent
 for this pronoun grammatically: that is, it matches the pronoun in
@@ -1270,7 +1270,7 @@ the parser handles them directly.
 
 \[Required\]
 
-</div>
+
 
 <span id="pluralNameFrom"></span>
 
@@ -1278,7 +1278,7 @@ the parser handles them directly.
 
 [english.t](../file/english.t.html)\[[1738](../source/english.t.html#1738)\]
 
-<div class="desc">
+
 
 Get the plural form of the given name. If the string ends in
 vowel-plus-'y' or anything other than 'y', we'll add an 's'; otherwise
@@ -1294,7 +1294,7 @@ irregularPlural lists in any CustomVocab objects. Add new items to the
 irregular plural list by creating one or more CustomVocab objects with
 their own irregularPlural lists.
 
-</div>
+
 
 <span id="pluralWordFrom"></span>
 
@@ -1302,13 +1302,13 @@ their own irregularPlural lists.
 
 [english.t](../file/english.t.html)\[[1787](../source/english.t.html#1787)\]
 
-<div class="desc">
+
 
 Get the plural of the given word. If there's an irregular plural entry
 for the word, we return that; otherwise we infer the plural from the
 spelling. 'apost' is the string to use for an apostrophe ('&rsquo;').
 
-</div>
+
 
 <span id="possessify"></span>
 
@@ -1316,7 +1316,7 @@ spelling. 'apost' is the string to use for an apostrophe ('&rsquo;').
 
 [english.t](../file/english.t.html)\[[1418](../source/english.t.html#1418)\]
 
-<div class="desc">
+
 
 Generate a possessive name for an object that we own, given a string
 under construction for the object's name. 'obj' is the object we're
@@ -1342,7 +1342,7 @@ The default behavior is as follows. In Definite mode, we return
 "\<name\>'s \<string\>". In Indefinite mode, we return "\<string\> of
 \<name\>" (for a final result like "a book of Bob's").
 
-</div>
+
 
 <span id="pronoun"></span>
 
@@ -1350,14 +1350,14 @@ The default behavior is as follows. In Definite mode, we return
 
 [english.t](../file/english.t.html)\[[364](../source/english.t.html#364)\]
 
-<div class="desc">
+
 
 Get the pronoun to use for this object. This returns the Pronoun object
 suitable for representing this object in a generated message.
 
 \[Required\]
 
-</div>
+
 
 <span id="removeVocabWord"></span>
 
@@ -1365,14 +1365,14 @@ suitable for representing this object in a generated message.
 
 [english.t](../file/english.t.html)\[[1263](../source/english.t.html#1263)\]
 
-<div class="desc">
+
 
 Remove a word from this object's vocabulary. If the matchFlags parameter
 is supplied it should be one of MatchNoun, MatchAdj, MatchPrep or
 MatchPlural, in which case only VocabWords matching the corresponding
 part of speech (as well as word) will be removed.
 
-</div>
+
 
 <span id="replaceVocab"></span>
 
@@ -1380,12 +1380,12 @@ part of speech (as well as word) will be removed.
 
 [english.t](../file/english.t.html)\[[1209](../source/english.t.html#1209)\]
 
-<div class="desc">
+
 
 reinitialize the vocab of this object from scratch, using the string voc
 in place of the original vocab property.
 
-</div>
+
 
 <span id="theNameFrom"></span>
 
@@ -1393,7 +1393,7 @@ in place of the original vocab property.
 
 [english.t](../file/english.t.html)\[[210](../source/english.t.html#210)\]
 
-<div class="desc">
+
 
 Get the definite form of the name, given the name string under
 construction. The English default is "the \<name\>", unless the object
@@ -1401,7 +1401,7 @@ is already qualified, in which case it's just the base name. If,
 however, we're ownerNamed and we have a nominalOwner, return our owner's
 possessive adjective followed by our name (e.g. "Bob's wallet").
 
-</div>
+
 
 <span id="theNameIs"></span>
 
@@ -1409,17 +1409,17 @@ possessive adjective followed by our name (e.g. "Bob's wallet").
 
 [english.t](../file/english.t.html)\[[238](../source/english.t.html#238)\]
 
-<div class="desc">
+
 
 The name with a definite article (or just the proper or qualified name)
 followed by the appropriate form of the verb 'to be'. This can be useful
 for producing sentences of which this object is the subject.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

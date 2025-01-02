@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Command tokenizer for US English. Other language modules should provide
 their own tokenizers to allow for differences in punctuation and other
@@ -28,26 +28,26 @@ lexical elements.
 
 **`cmdTokenizer`**` :   `[`Tokenizer`](../object/Tokenizer.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`cmdTokenizer`**  
 [`Tokenizer`](../object/Tokenizer.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`patAlphaDashAlpha`](#patAlphaDashAlpha)[`patPunct`](#patPunct)[`patSpelledTens`](#patSpelledTens)[`patSpelledUnits`](#patSpelledUnits)[`rules_`](#rules_)
 
@@ -55,11 +55,11 @@ lexical elements.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`acceptAbbrTok`](#acceptAbbrTok)[`buildOrigText`](#buildOrigText)[`tokCvtAbbr`](#tokCvtAbbr)[`tokCvtApostropheS`](#tokCvtApostropheS)[`tokCvtPluralApostrophe`](#tokCvtPluralApostrophe)[`tokCvtSpelledNumber`](#tokCvtSpelledNumber)
 
@@ -68,11 +68,11 @@ Inherited from `Tokenizer` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="patAlphaDashAlpha"></span>
 
@@ -80,11 +80,11 @@ Inherited from `Tokenizer` :
 
 [en_us.t](../file/en_us.t.html)\[[4962](../source/en_us.t.html#4962)\]
 
-<div class="desc">
+
 
 add the part after the hyphen
 
-</div>
+
 
 <span id="patPunct"></span>
 
@@ -92,11 +92,11 @@ add the part after the hyphen
 
 [en_us.t](../file/en_us.t.html)\[[5081](../source/en_us.t.html#5081)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="patSpelledTens"></span>
 
@@ -104,11 +104,11 @@ add the part after the hyphen
 
 [en_us.t](../file/en_us.t.html)\[[5077](../source/en_us.t.html#5077)\]
 
-<div class="desc">
+
 
 some pre-compiled regular expressions
 
-</div>
+
 
 <span id="patSpelledUnits"></span>
 
@@ -116,11 +116,11 @@ some pre-compiled regular expressions
 
 [en_us.t](../file/en_us.t.html)\[[5079](../source/en_us.t.html#5079)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="rules_"></span>
 
@@ -128,19 +128,19 @@ some pre-compiled regular expressions
 
 [en_us.t](../file/en_us.t.html)\[[4764](../source/en_us.t.html#4764)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="acceptAbbrTok"></span>
 
@@ -148,7 +148,7 @@ some pre-compiled regular expressions
 
 [en_us.t](../file/en_us.t.html)\[[4974](../source/en_us.t.html#4974)\]
 
-<div class="desc">
+
 
 Check to see if we want to accept an abbreviated token - this is a token
 that ends in a period, which we use for abbreviated words like "Mr." or
@@ -158,7 +158,7 @@ since the only way we'll accept a period in a word token is as the last
 character; there is thus no way that a token ending in a period could be
 a truncation of any longer valid token.
 
-</div>
+
 
 <span id="buildOrigText"></span>
 
@@ -166,7 +166,7 @@ a truncation of any longer valid token.
 
 [en_us.t](../file/en_us.t.html)\[[5013](../source/en_us.t.html#5013)\]
 
-<div class="desc">
+
 
 Given a list of token strings, rebuild the original input string. We
 can't recover the exact input string, because the tokenization process
@@ -174,7 +174,7 @@ throws away whitespace information, but we can at least come up with
 something that will display cleanly and produce the same results when
 run through the tokenizer.
 
-</div>
+
 
 <span id="tokCvtAbbr"></span>
 
@@ -182,7 +182,7 @@ run through the tokenizer.
 
 [en_us.t](../file/en_us.t.html)\[[4994](../source/en_us.t.html#4994)\]
 
-<div class="desc">
+
 
 Process an abbreviated token.
 
@@ -195,7 +195,7 @@ punctuation will also be able to try to match the result. This will
 ensure that we try it both ways - as abbreviation and as a word with
 punctuation - and pick the one that gives us the best result.
 
-</div>
+
 
 <span id="tokCvtApostropheS"></span>
 
@@ -203,13 +203,13 @@ punctuation - and pick the one that gives us the best result.
 
 [en_us.t](../file/en_us.t.html)\[[4900](../source/en_us.t.html#4900)\]
 
-<div class="desc">
+
 
 Handle an apostrophe-s word. We'll return this as two separate tokens:
 one for the word preceding the apostrophe-s, and one for the
 apostrophe-s itself.
 
-</div>
+
 
 <span id="tokCvtPluralApostrophe"></span>
 
@@ -217,12 +217,12 @@ apostrophe-s itself.
 
 [en_us.t](../file/en_us.t.html)\[[4924](../source/en_us.t.html#4924)\]
 
-<div class="desc">
+
 
 Handle a plural apostrophe word ("the smiths' house"). We'll return this
 as two tokens: one for the plural word, and one for the apostrophe.
 
-</div>
+
 
 <span id="tokCvtSpelledNumber"></span>
 
@@ -230,17 +230,17 @@ as two tokens: one for the plural word, and one for the apostrophe.
 
 [en_us.t](../file/en_us.t.html)\[[4948](../source/en_us.t.html#4948)\]
 
-<div class="desc">
+
 
 Handle a spelled-out hyphenated number from 21 to 99. We'll return this
 as three separate tokens: a word for the tens name, a word for the
 hyphen, and a word for the units name.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

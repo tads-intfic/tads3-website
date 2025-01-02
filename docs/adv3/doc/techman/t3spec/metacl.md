@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -17,7 +17,7 @@ The Metaclasses
 <a href="opcode.html" class="nav"><em>Next:</em> Byte-Code Instruction
 Set</a>     </span>
 
-</div>
+
 
 
 
@@ -483,18 +483,18 @@ The WeakRefLookupTable metaclass is a subclass of LookupTable that works
 the same way, except that it only stores weak references to the values
 in the table.
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -505,4 +505,4 @@ The Metaclasses
 <a href="opcode.html" class="nav"><em>Next:</em> Byte-Code Instruction
 Set</a>     </span>
 
-</div>
+

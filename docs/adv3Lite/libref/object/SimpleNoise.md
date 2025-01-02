@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SimpleNoise is an object representing a free-standing sound directly
 present in a location rather than attached to any specific object. It
@@ -36,15 +36,15 @@ EXTENSION\]
 
 `class `**`SimpleNoise`**` :   `[`Noise`](../object/Noise.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SimpleNoise`**  
 [`Noise`](../object/Noise.html)  
@@ -60,27 +60,27 @@ EXTENSION\]
 `                                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isProminentNoise`](#isProminentNoise)[`listenDesc`](#listenDesc)
 
@@ -111,11 +111,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`desc`](#desc)[`emanationDesc`](#emanationDesc)
 
@@ -146,11 +146,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isProminentNoise"></span>
 
@@ -158,12 +158,12 @@ Inherited from `LMentionable` :
 
 [sensory.t](../file/sensory.t.html)\[[330](../source/sensory.t.html#330)\]
 
-<div class="desc">
+
 
 A SimpleNoise is a prominent noise by default, since we want it to show
 up in response to a LISTEN command.
 
-</div>
+
 
 <span id="listenDesc"></span>
 
@@ -171,20 +171,20 @@ up in response to a LISTEN command.
 
 [sensory.t](../file/sensory.t.html)\[[324](../source/sensory.t.html#324)\]
 
-<div class="desc">
+
 
 The listenDesc of a SimpleNoise is simply its desc.\[DEFINED IN SENSORY
 EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -192,12 +192,12 @@ EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[321](../source/sensory.t.html#321)\]
 
-<div class="desc">
+
 
 Unless this is overridden, our desc property simply executes our script.
 \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="emanationDesc"></span>
 
@@ -205,17 +205,17 @@ Unless this is overridden, our desc property simply executes our script.
 
 [sensory.t](../file/sensory.t.html)\[[338](../source/sensory.t.html#338)\]
 
-<div class="desc">
+
 
 The message to be displayed to show that there's a noise here. We
 display either our own listenDesc or our remoteListenDesc, as
 appropriate. \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

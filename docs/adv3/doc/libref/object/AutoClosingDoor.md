@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Automatically closing door. This type of door closes behind an actor as
 the actor traverses the connector.
 
 `class `**`AutoClosingDoor`**` :   `[`Door`](../object/Door.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AutoClosingDoor`**  
 [`Door`](../object/Door.html)  
@@ -68,27 +68,27 @@ the actor traverses the connector.
 `                                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -137,11 +137,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(TravelVia)`](#dobjFor(TravelVia))[`reportAutoClose`](#reportAutoClose)
 
@@ -193,19 +193,19 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(TravelVia)"></span>
 
@@ -213,11 +213,11 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[3025](../source/travel.t.html#3025)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="reportAutoClose"></span>
 
@@ -225,18 +225,18 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[3056](../source/travel.t.html#3056)\]
 
-<div class="desc">
+
 
 Report the automatic closure. The TravelVia action() calls this after
 closing the door to generate a message mentioning that the door was
 closed. By default, we just show the standard doorClosesBehindMsg
 library message.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

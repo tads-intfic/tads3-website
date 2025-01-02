@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SimpleOdor is an object representing a free-standing smell directly
 present in a location rather than attached to any specific object. It
@@ -36,15 +36,15 @@ EXTENSION\]
 
 `class `**`SimpleOdor`**` :   `[`Odor`](../object/Odor.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SimpleOdor`**  
 [`Odor`](../object/Odor.html)  
@@ -60,27 +60,27 @@ EXTENSION\]
 `                                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isProminentSmell`](#isProminentSmell)[`smellDesc`](#smellDesc)
 
@@ -111,11 +111,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`desc`](#desc)[`emanationDesc`](#emanationDesc)
 
@@ -146,11 +146,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isProminentSmell"></span>
 
@@ -158,12 +158,12 @@ Inherited from `LMentionable` :
 
 [sensory.t](../file/sensory.t.html)\[[246](../source/sensory.t.html#246)\]
 
-<div class="desc">
+
 
 A SimpleOdor is a prominent smell by default, since we want it to show
 up in response to a SMELL command. \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="smellDesc"></span>
 
@@ -171,20 +171,20 @@ up in response to a SMELL command. \[DEFINED IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[240](../source/sensory.t.html#240)\]
 
-<div class="desc">
+
 
 The smellDesc of a SimpleOdor is simply its desc.\[DEFINED IN SENSORY
 EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -192,12 +192,12 @@ EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[237](../source/sensory.t.html#237)\]
 
-<div class="desc">
+
 
 Unless this is overridden, our desc property simply executes our script.
 \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="emanationDesc"></span>
 
@@ -205,17 +205,17 @@ Unless this is overridden, our desc property simply executes our script.
 
 [sensory.t](../file/sensory.t.html)\[[254](../source/sensory.t.html#254)\]
 
-<div class="desc">
+
 
 The message to be displayed to show that there's a smell here. We
 display either our own smellDesc or our remoteSmellDesc, as appropriate.
 DEFINED IN SENSORY EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

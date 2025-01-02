@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A StairwayUp is Thing the player character can climb up. It might
 represent an upward staircase, but it could also represent a tree, mast
@@ -36,15 +36,15 @@ room.
 
 `class `**`StairwayUp`**` :   `[`TravelConnector`](../object/TravelConnector.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`StairwayUp`**  
 [`TravelConnector`](../object/TravelConnector.html)  
@@ -58,27 +58,27 @@ room.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isClimbable`](#isClimbable)[`isFixed`](#isFixed)[`PushTravelVia`](#PushTravelVia)[`traversalMsg`](#traversalMsg)
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Climb)`](#dobjFor(Climb))[`dobjFor(ClimbUp)`](#dobjFor(ClimbUp))[`sayActorFollowing`](#sayActorFollowing)[`sayDeparting`](#sayDeparting)
 
@@ -128,11 +128,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isClimbable"></span>
 
@@ -140,11 +140,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[617](../source/extras.t.html#617)\]
 
-<div class="desc">
+
 
 A StairwayUp is climbable
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -152,11 +152,11 @@ A StairwayUp is climbable
 
 [extras.t](../file/extras.t.html)\[[614](../source/extras.t.html#614)\]
 
-<div class="desc">
+
 
 A StairwayUp is usually something fixed in place.
 
-</div>
+
 
 <span id="PushTravelVia"></span>
 
@@ -164,12 +164,12 @@ A StairwayUp is usually something fixed in place.
 
 [extras.t](../file/extras.t.html)\[[623](../source/extras.t.html#623)\]
 
-<div class="desc">
+
 
 The appropriate PushTravelAction for pushing something something up a
 StairwayUp.
 
-</div>
+
 
 <span id="traversalMsg"></span>
 
@@ -177,19 +177,19 @@ StairwayUp.
 
 [extras.t](../file/extras.t.html)\[[651](../source/extras.t.html#651)\]
 
-<div class="desc">
+
 
 Create message parameter substitutions for the follower and leader
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Climb)"></span>
 
@@ -197,11 +197,11 @@ Create message parameter substitutions for the follower and leader
 
 [extras.t](../file/extras.t.html)\[[605](../source/extras.t.html#605)\]
 
-<div class="desc">
+
 
 Climbing a StairwayUp is equivalent to travelling via it.
 
-</div>
+
 
 <span id="dobjFor(ClimbUp)"></span>
 
@@ -209,11 +209,11 @@ Climbing a StairwayUp is equivalent to travelling via it.
 
 [extras.t](../file/extras.t.html)\[[611](../source/extras.t.html#611)\]
 
-<div class="desc">
+
 
 Climbing up a Stairway up is the same as Climbing it.
 
-</div>
+
 
 <span id="sayActorFollowing"></span>
 
@@ -221,12 +221,12 @@ Climbing up a Stairway up is the same as Climbing it.
 
 [extras.t](../file/extras.t.html)\[[642](../source/extras.t.html#642)\]
 
-<div class="desc">
+
 
 Display message announcing that follower is following leader up this
 staircase.
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -234,17 +234,17 @@ staircase.
 
 [extras.t](../file/extras.t.html)\[[630](../source/extras.t.html#630)\]
 
-<div class="desc">
+
 
 Display message announcing that traveler (typically an NPC whose
 departure is witnessed by the player character) has left via this
 staircase.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

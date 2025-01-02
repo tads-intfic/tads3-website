@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 HTTP Request object. This object represents an HTTP protocol request
 from a client to one of our servers. HTTPRequest objects are created by
@@ -42,41 +42,41 @@ HTTPRequest extensions
 
 `intrinsic class `**`HTTPRequest`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`HTTPRequest`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -84,11 +84,11 @@ HTTPRequest extensions
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`endChunkedReply`](#endChunkedReply)[`getBody`](#getBody)[`getClientAddress`](#getClientAddress)[`getCookie`](#getCookie)[`getCookies`](#getCookies)[`getFormFields`](#getFormFields)[`getHeaders`](#getHeaders)[`getQuery`](#getQuery)[`getQueryParam`](#getQueryParam)[`getServer`](#getServer)[`getVerb`](#getVerb)[`parseQuery`](#parseQuery)[`sendReply`](#sendReply)[`sendReplyAsync`](#sendReplyAsync)[`sendReplyCatch`](#sendReplyCatch)[`sendReplyChunk`](#sendReplyChunk)[`setCookie`](#setCookie)[`startChunkedReply`](#startChunkedReply)
 
@@ -97,19 +97,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="endChunkedReply"></span>
 
@@ -117,7 +117,7 @@ Inherited from `Object` :
 
 [httpreq.h](../file/httpreq.h.html)\[[340](../source/httpreq.h.html#340)\]
 
-<div class="desc">
+
 
 Finish a chunked reply. This completes a chunked reply started with
 startChunkedReply(). After calling this routine, the request is
@@ -132,7 +132,7 @@ determine the final value for a header until after generating full
 reply. If this argument is included, it works just like the 'headers'
 argument to sendReply().
 
-</div>
+
 
 <span id="getBody"></span>
 
@@ -140,7 +140,7 @@ argument to sendReply().
 
 [httpreq.h](../file/httpreq.h.html)\[[184](../source/httpreq.h.html#184)\]
 
-<div class="desc">
+
 
 Get the body of the request, if any. Some types of HTTP requests, such
 as POST and PUT, contain a message body. This returns the raw, unparsed
@@ -161,7 +161,7 @@ multipart/form-data, which is used to POST forms that include uploaded
 files; this can be parsed with getFormFields() to retrieve the data
 fields, and getUploads() to get the uploaded file data.
 
-</div>
+
 
 <span id="getClientAddress"></span>
 
@@ -169,7 +169,7 @@ fields, and getUploads() to get the uploaded file data.
 
 [httpreq.h](../file/httpreq.h.html)\[[193](../source/httpreq.h.html#193)\]
 
-<div class="desc">
+
 
 Get the network address of the client. This returns a list:
 \['ip-address', port\], where 'ip-address' is a string with the IP
@@ -177,7 +177,7 @@ address of the client, in decimal notation ('192.168.1.15', for
 example), and 'port' is an integer giving the network port number on the
 client side.
 
-</div>
+
 
 <span id="getCookie"></span>
 
@@ -185,13 +185,13 @@ client side.
 
 [httpreq.h](../file/httpreq.h.html)\[[123](../source/httpreq.h.html#123)\]
 
-<div class="desc">
+
 
 Look up a cookie. This looks for the given cookie name in the cookies
 sent by the client, and returns a string containing the cookie's text if
 found. If the cookie isn't found, returns nil.
 
-</div>
+
 
 <span id="getCookies"></span>
 
@@ -199,7 +199,7 @@ found. If the cookie isn't found, returns nil.
 
 [httpreq.h](../file/httpreq.h.html)\[[132](../source/httpreq.h.html#132)\]
 
-<div class="desc">
+
 
 Get the cookies sent with the request by the client. This returns a
 LookupTable of the cookies, with each key set to a cookie name and the
@@ -207,7 +207,7 @@ corresponding value set to the cookie's text. Cookies are assumed to
 contain only plan ASCII characters; any 8-bit characters in a cookie's
 name or value will be replaced by '?' characters.
 
-</div>
+
 
 <span id="getFormFields"></span>
 
@@ -215,7 +215,7 @@ name or value will be replaced by '?' characters.
 
 [httpreq.h](../file/httpreq.h.html)\[[161](../source/httpreq.h.html#161)\]
 
-<div class="desc">
+
 
 Get the form data-entry field values. This returns a LookupTable
 containing the field values sent with the request. Each key in the table
@@ -242,7 +242,7 @@ posted form data and returns nil. We return nil rather than an empty
 lookup table so that the caller can tell that this doesn't appear to be
 a form submission request at all.
 
-</div>
+
 
 <span id="getHeaders"></span>
 
@@ -250,7 +250,7 @@ a form submission request at all.
 
 [httpreq.h](../file/httpreq.h.html)\[[116](../source/httpreq.h.html#116)\]
 
-<div class="desc">
+
 
 Get the headers sent with the request by the client. This returns a
 LookupTable object: the keys are the header names, and the values are
@@ -264,7 +264,7 @@ verb, the query string, and (optionally) the HTTP version string (in
 that order, with spaces separating the elements). The method includes
 this so that you can inspect the unparsed request line, if desired.
 
-</div>
+
 
 <span id="getQuery"></span>
 
@@ -272,7 +272,7 @@ this so that you can inspect the unparsed request line, if desired.
 
 [httpreq.h](../file/httpreq.h.html)\[[60](../source/httpreq.h.html#60)\]
 
-<div class="desc">
+
 
 Get the query string. This is the portion of the URL after the server
 address. For example, if the client web browser navigated to the URL
@@ -282,7 +282,7 @@ address. For example, if the client web browser navigated to the URL
 This is the raw query string, exactly as the client sent it. Any '%xx'
 character sequences are still present in this version of the string.
 
-</div>
+
 
 <span id="getQueryParam"></span>
 
@@ -290,7 +290,7 @@ character sequences are still present in this version of the string.
 
 [httpreq.h](../file/httpreq.h.html)\[[100](../source/httpreq.h.html#100)\]
 
-<div class="desc">
+
 
 Get a parameter from the query string. This parses the query string and
 returns the parameter with the specified name, if present, or nil if
@@ -302,7 +302,7 @@ whole table, but it's less efficient if you're looking up many
 parameters because this routine has to re-parse the query string on each
 call.
 
-</div>
+
 
 <span id="getServer"></span>
 
@@ -310,12 +310,12 @@ call.
 
 [httpreq.h](../file/httpreq.h.html)\[[35](../source/httpreq.h.html#35)\]
 
-<div class="desc">
+
 
 Get the HTTPServer object. This is the server that received the network
 request that 'self' represents.
 
-</div>
+
 
 <span id="getVerb"></span>
 
@@ -323,7 +323,7 @@ request that 'self' represents.
 
 [httpreq.h](../file/httpreq.h.html)\[[48](../source/httpreq.h.html#48)\]
 
-<div class="desc">
+
 
 Get the verb. This is the HTTP verb that the client sent with the
 request to indicate what action to perform. The standard HTTP verbs are
@@ -335,7 +335,7 @@ allowing you to write a custom server for a custom client; however, this
 isn't recommended, since proxies and firewalls often block what they
 consider ill-formed requests.
 
-</div>
+
 
 <span id="parseQuery"></span>
 
@@ -343,7 +343,7 @@ consider ill-formed requests.
 
 [httpreq.h](../file/httpreq.h.html)\[[87](../source/httpreq.h.html#87)\]
 
-<div class="desc">
+
 
 Parse the query string. This returns a LookupTable containing the parsed
 elements of the query. The element table\[1\] is the base resource name:
@@ -371,7 +371,7 @@ name is '/C%C3%A1fe', the resource name will be parsed to 'Cfe' (%C3%A1
 is the percent-encoded representation of the UTF-8 character small A
 with acute accent).
 
-</div>
+
 
 <span id="sendReply"></span>
 
@@ -379,7 +379,7 @@ with acute accent).
 
 [httpreq.h](../file/httpreq.h.html)\[[289](../source/httpreq.h.html#289)\]
 
-<div class="desc">
+
 
 Send the reply to the request.
 
@@ -442,7 +442,7 @@ Content-length: length in bytes of 'body'
 After sending the reply, the request is completed, and no further reply
 can be sent.
 
-</div>
+
 
 <span id="sendReplyAsync"></span>
 
@@ -450,7 +450,7 @@ can be sent.
 
 [httpreq.h](../file/httpreq.h.html)\[[375](../source/httpreq.h.html#375)\]
 
-<div class="desc">
+
 
 Send the reply to the request asynchronously. This works like
 sendReply(), except that this method starts a new background thread to
@@ -483,7 +483,7 @@ relate the event back to the request that generated the reply, and
 status information indicating whether or not the transfer was
 successful.
 
-</div>
+
 
 <span id="sendReplyCatch"></span>
 
@@ -491,7 +491,7 @@ successful.
 
 [webui.t](../file/webui.t.html)\[[122](../source/webui.t.html#122)\]
 
-<div class="desc">
+
 
 Send a reply, catching "socket disconnect" exceptions. In most cases,
 server objects will want to use this method rather than the native
@@ -511,7 +511,7 @@ error. This generally makes the client's socket management transparent
 to the server, since if the client is still running they'll just connect
 again with a new socket and retry any lost requests.
 
-</div>
+
 
 <span id="sendReplyChunk"></span>
 
@@ -519,7 +519,7 @@ again with a new socket and retry any lost requests.
 
 [httpreq.h](../file/httpreq.h.html)\[[324](../source/httpreq.h.html#324)\]
 
-<div class="desc">
+
 
 Send a piece of a chunked reply. This can be called any number of times
 after calling startChunkedReply() to send the pieces of a chunked reply.
@@ -528,7 +528,7 @@ after calling startChunkedReply() to send the pieces of a chunked reply.
 are sent as UTF-8 text; or a ByteArray, in which case the raw bytes are
 sent.
 
-</div>
+
 
 <span id="setCookie"></span>
 
@@ -536,7 +536,7 @@ sent.
 
 [httpreq.h](../file/httpreq.h.html)\[[223](../source/httpreq.h.html#223)\]
 
-<div class="desc">
+
 
 Set a cookie in the reply. This sets a cookie with the given name and
 value, both given as strings. The value string starts with the text to
@@ -566,7 +566,7 @@ headers. Calling this routine doesn't actually send anything immediately
 to the client, but simply stores the cookie with the pending request, to
 be sent with the reply.
 
-</div>
+
 
 <span id="startChunkedReply"></span>
 
@@ -574,7 +574,7 @@ be sent with the reply.
 
 [httpreq.h](../file/httpreq.h.html)\[[313](../source/httpreq.h.html#313)\]
 
-<div class="desc">
+
 
 Start a chunked reply. This sends the initial headers of a reply that
 will be generated in pieces. This is an alternative to sending the
@@ -597,11 +597,11 @@ After calling this routine, call sendReplyChunk() as many times as
 needed to send the pieces of the reply. After sending all of the pieces,
 call endChunkedReply() to finish the reply.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

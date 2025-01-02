@@ -20,33 +20,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 QUIT option for finishGame. The language-specific code should modify
 this to specify the description and response keywords.
 
 **`finishOptionQuit`**` :   `[`FinishOption`](../object/FinishOption.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`finishOptionQuit`**  
 [`FinishOption`](../object/FinishOption.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`desc`](#desc)[`listOrder`](#listOrder)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)
 
@@ -55,11 +55,11 @@ Inherited from `FinishOption` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doOption`](#doOption)
 
@@ -68,11 +68,11 @@ Inherited from `FinishOption` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -80,11 +80,11 @@ Inherited from `FinishOption` :
 
 [english.t](../file/english.t.html)\[[3691](../source/english.t.html#3691)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="listOrder"></span>
 
@@ -92,12 +92,12 @@ Inherited from `FinishOption` :
 
 [misc.t](../file/misc.t.html)\[[1146](../source/misc.t.html#1146)\]
 
-<div class="desc">
+
 
 carry out the Quit action - this will signal a QuittingException, so
 this call will never return
 
-</div>
+
 
 <span id="responseChar"></span>
 
@@ -105,11 +105,11 @@ this call will never return
 
 [english.t](../file/english.t.html)\[[3693](../source/english.t.html#3693)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="responseKeyword"></span>
 
@@ -117,19 +117,19 @@ this call will never return
 
 [english.t](../file/english.t.html)\[[3692](../source/english.t.html#3692)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doOption"></span>
 
@@ -137,15 +137,15 @@ this call will never return
 
 [misc.t](../file/misc.t.html)\[[1138](../source/misc.t.html#1138)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

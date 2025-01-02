@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="lib.html" class="nav">The System Library</a> \> Replacing the
@@ -17,7 +17,7 @@ Definitions</a>    
 <a href="ui.html" class="nav"><em>Next:</em> The User Interface</a>    
 </span>
 
-</div>
+
 
 
 
@@ -45,7 +45,7 @@ you use those classes.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -56,4 +56,4 @@ Definitions</a>    
 <a href="ui.html" class="nav"><em>Next:</em> The User Interface</a>    
 </span>
 
-</div>
+

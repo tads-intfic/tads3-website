@@ -20,33 +20,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Finish Options lister. This lister is used to offer the player options
 in finishGame().
 
 **`finishOptionsLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`finishOptionsLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -55,11 +55,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isListed`](#isListed)[`listCardinality`](#listCardinality)[`showListItem`](#showListItem)[`showListPrefixWide`](#showListPrefixWide)[`showListSeparator`](#showListSeparator)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -68,19 +68,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -88,11 +88,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5168](../source/msg_neu.t.html#5168)\]
 
-<div class="desc">
+
 
 end the question, add a blank line, and show the "\>" prompt
 
-</div>
+
 
 <span id="listCardinality"></span>
 
@@ -100,11 +100,11 @@ end the question, add a blank line, and show the "\>" prompt
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5169](../source/msg_neu.t.html#5169)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -112,11 +112,11 @@ end the question, add a blank line, and show the "\>" prompt
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5171](../source/msg_neu.t.html#5171)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -124,11 +124,11 @@ end the question, add a blank line, and show the "\>" prompt
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5158](../source/msg_neu.t.html#5158)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSeparator"></span>
 
@@ -136,11 +136,11 @@ end the question, add a blank line, and show the "\>" prompt
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5177](../source/msg_neu.t.html#5177)\]
 
-<div class="desc">
+
 
 obj is a FinishOption object; show its description
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -148,15 +148,15 @@ obj is a FinishOption object; show its description
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5162](../source/msg_neu.t.html#5162)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

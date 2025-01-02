@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Transitive Action class - this is an action that takes a direct object.
 
@@ -48,15 +48,15 @@ English-specific additions for single-object verbs.
 
 `class `**`TAction`**` :   `[`Action`](../object/Action.html)[`Resolver`](../object/Resolver.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TAction`**  
 [`Action`](../object/Action.html)  
@@ -66,11 +66,11 @@ English-specific additions for single-object verbs.
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TAction`**  
 [`AttackAction`](../object/AttackAction.html)  
@@ -356,19 +356,19 @@ English-specific additions for single-object verbs.
 [`predicate(Wear)`](../object/predicate(Wear).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionAllowsAll`](#actionAllowsAll)[`actionDobjProp`](#actionDobjProp)[`actor_`](#actor_)[`askDobjResponseProd`](#askDobjResponseProd)[`checkDobjProp`](#checkDobjProp)[`dobjCur_`](#dobjCur_)[`dobjInfoCur_`](#dobjInfoCur_)[`dobjList_`](#dobjList_)[`dobjMatch`](#dobjMatch)[`dobjResolver_`](#dobjResolver_)[`issuer_`](#issuer_)[`preCondDobjProp`](#preCondDobjProp)[`predicateNounPhrases`](#predicateNounPhrases)[`remapDobjProp`](#remapDobjProp)[`verDobjProp`](#verDobjProp)[`whichMessageObject`](#whichMessageObject)
 
@@ -383,11 +383,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`adjustDefaultObjectPrep`](#adjustDefaultObjectPrep)[`announceAllDefaultObjects`](#announceAllDefaultObjects)[`announceDefaultObject`](#announceDefaultObject)[`canDobjResolveTo`](#canDobjResolveTo)[`checkAction`](#checkAction)[`checkRemapping`](#checkRemapping)[`construct`](#construct)[`createDobjResolver`](#createDobjResolver)[`createForMissingDobj`](#createForMissingDobj)[`createForRetry`](#createForRetry)[`doActionMain`](#doActionMain)[`execAction`](#execAction)[`filterAmbiguousDobj`](#filterAmbiguousDobj)[`filterPluralDobj`](#filterPluralDobj)[`getAllDobj`](#getAllDobj)[`getCurrentObjects`](#getCurrentObjects)[`getDefaultDobj`](#getDefaultDobj)[`getDobj`](#getDobj)[`getDobjCount`](#getDobjCount)[`getDobjFlags`](#getDobjFlags)[`getDobjInfo`](#getDobjInfo)[`getDobjResolver`](#getDobjResolver)[`getDobjTokens`](#getDobjTokens)[`getDobjWords`](#getDobjWords)[`getMatchForRole`](#getMatchForRole)[`getMessageParam`](#getMessageParam)[`getObjectForRole`](#getObjectForRole)[`getObjResponseProd`](#getObjResponseProd)[`getPreCondDescList`](#getPreCondDescList)[`getPreCondPropForRole`](#getPreCondPropForRole)[`getQuestionInf`](#getQuestionInf)[`getRemapPropForRole`](#getRemapPropForRole)[`getResolvedDobjList`](#getResolvedDobjList)[`getResolvedObjList`](#getResolvedObjList)[`getResolveInfo`](#getResolveInfo)[`getRoleFromIndex`](#getRoleFromIndex)[`getVerbPhrase`](#getVerbPhrase)[`getVerbPhrase1`](#getVerbPhrase1)[`getVerifyPropForRole`](#getVerifyPropForRole)[`initForMissingDobj`](#initForMissingDobj)[`initResolver`](#initResolver)[`initTentative`](#initTentative)[`resetAction`](#resetAction)[`resolvedObjectsInScope`](#resolvedObjectsInScope)[`resolveNouns`](#resolveNouns)[`retryWithAmbiguousDobj`](#retryWithAmbiguousDobj)[`retryWithMissingDobj`](#retryWithMissingDobj)[`setCurrentObjects`](#setCurrentObjects)[`setObjectMatches`](#setObjectMatches)[`setResolvedDobj`](#setResolvedDobj)[`setResolvedObjects`](#setResolvedObjects)[`testRetryDefaultDobj`](#testRetryDefaultDobj)[`verifyAction`](#verifyAction)[`whatObj`](#whatObj)
 
@@ -402,11 +402,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionAllowsAll"></span>
 
@@ -414,7 +414,7 @@ Inherited from `Resolver` :
 
 [action.t](../file/action.t.html)\[[3669](../source/action.t.html#3669)\]
 
-<div class="desc">
+
 
 Does this action allow "all" to be used in noun phrases? By default, we
 allow it or not according to a gameMain property.
@@ -423,7 +423,7 @@ Note that the inventory management verbs (TAKE, TAKE FROM, DROP, PUT IN,
 PUT ON) override this to allow "all" to be used, so disallowing "all"
 here (or via gameMain) won't disable "all" for those verbs.
 
-</div>
+
 
 <span id="actionDobjProp"></span>
 
@@ -431,11 +431,11 @@ here (or via gameMain) won't disable "all" for those verbs.
 
 [action.t](../file/action.t.html)\[[3620](../source/action.t.html#3620)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actor_"></span>
 
@@ -443,11 +443,11 @@ here (or via gameMain) won't disable "all" for those verbs.
 
 [action.t](../file/action.t.html)\[[3786](../source/action.t.html#3786)\]
 
-<div class="desc">
+
 
 target actor
 
-</div>
+
 
 <span id="askDobjResponseProd"></span>
 
@@ -455,7 +455,7 @@ target actor
 
 [action.t](../file/action.t.html)\[[3221](../source/action.t.html#3221)\]
 
-<div class="desc">
+
 
 The root production to use to parse missing direct object responses. By
 default, this is nounList, but individual actions can override this as
@@ -466,7 +466,7 @@ special responses. For example, in English, some verbs might want to
 override this with a specialized production that allows the appropriate
 preposition in the response.
 
-</div>
+
 
 <span id="checkDobjProp"></span>
 
@@ -474,11 +474,11 @@ preposition in the response.
 
 [action.t](../file/action.t.html)\[[3619](../source/action.t.html#3619)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjCur_"></span>
 
@@ -486,14 +486,14 @@ preposition in the response.
 
 [action.t](../file/action.t.html)\[[3745](../source/action.t.html#3745)\]
 
-<div class="desc">
+
 
 The resolved direct object on which we're currently executing the
 command. To execute the command, we iterate through the direct object
 list, calling the execution sequence for each object in the list. We set
 this to the current object in each iteration.
 
-</div>
+
 
 <span id="dobjInfoCur_"></span>
 
@@ -501,11 +501,11 @@ this to the current object in each iteration.
 
 [action.t](../file/action.t.html)\[[3748](../source/action.t.html#3748)\]
 
-<div class="desc">
+
 
 the full ResolveInfo associated with dobjCur\_
 
-</div>
+
 
 <span id="dobjList_"></span>
 
@@ -513,11 +513,11 @@ the full ResolveInfo associated with dobjCur\_
 
 [action.t](../file/action.t.html)\[[3737](../source/action.t.html#3737)\]
 
-<div class="desc">
+
 
 my resolved list of direct objects
 
-</div>
+
 
 <span id="dobjMatch"></span>
 
@@ -525,11 +525,11 @@ my resolved list of direct objects
 
 [action.t](../file/action.t.html)\[[3734](../source/action.t.html#3734)\]
 
-<div class="desc">
+
 
 the predicate must assign the direct object production tree here
 
-</div>
+
 
 <span id="dobjResolver_"></span>
 
@@ -537,11 +537,11 @@ the predicate must assign the direct object production tree here
 
 [action.t](../file/action.t.html)\[[3751](../source/action.t.html#3751)\]
 
-<div class="desc">
+
 
 my cached direct object resolver
 
-</div>
+
 
 <span id="issuer_"></span>
 
@@ -549,11 +549,11 @@ my cached direct object resolver
 
 [action.t](../file/action.t.html)\[[3783](../source/action.t.html#3783)\]
 
-<div class="desc">
+
 
 issuing actor
 
-</div>
+
 
 <span id="preCondDobjProp"></span>
 
@@ -561,11 +561,11 @@ issuing actor
 
 [action.t](../file/action.t.html)\[[3617](../source/action.t.html#3617)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="predicateNounPhrases"></span>
 
@@ -573,11 +573,11 @@ issuing actor
 
 [action.t](../file/action.t.html)\[[3269](../source/action.t.html#3269)\]
 
-<div class="desc">
+
 
 a transitive action has one noun phrase: the direct object
 
-</div>
+
 
 <span id="remapDobjProp"></span>
 
@@ -585,11 +585,11 @@ a transitive action has one noun phrase: the direct object
 
 [action.t](../file/action.t.html)\[[3618](../source/action.t.html#3618)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verDobjProp"></span>
 
@@ -597,7 +597,7 @@ a transitive action has one noun phrase: the direct object
 
 [action.t](../file/action.t.html)\[[3616](../source/action.t.html#3616)\]
 
-<div class="desc">
+
 
 The direct object preconditions, verifier, remapper, check, and action
 methods for this action. Each concrete action must define these
@@ -615,7 +615,7 @@ DefineTAction macro applies this convention, so in most cases library
 and game authors will never have to create all of those property names
 manually.
 
-</div>
+
 
 <span id="whichMessageObject"></span>
 
@@ -623,22 +623,22 @@ manually.
 
 [action.t](../file/action.t.html)\[[3795](../source/action.t.html#3795)\]
 
-<div class="desc">
+
 
 By default, our direct object plays the direct object role in generated
 messages. Subclasses can override this if the resolved object is to play
 a different role. Note that this only affects generated messages; for
 parsing purposes, our object is always in the DirectObject role.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="adjustDefaultObjectPrep"></span>
 
@@ -646,7 +646,7 @@ parsing purposes, our object is always in the DirectObject role.
 
 [en_us.t](../file/en_us.t.html)\[[8466](../source/en_us.t.html#8466)\]
 
-<div class="desc">
+
 
 Adjust the preposition. In some cases, the verb will want to vary the
 preposition according to the object. This method can return a custom
@@ -654,7 +654,7 @@ preposition in place of the one in the verbPhrase. By default, we just
 use the fixed preposition from the verbPhrase, which is passed in to us
 in 'prep'.
 
-</div>
+
 
 <span id="announceAllDefaultObjects"></span>
 
@@ -662,11 +662,11 @@ in 'prep'.
 
 [en_us.t](../file/en_us.t.html)\[[8469](../source/en_us.t.html#8469)\]
 
-<div class="desc">
+
 
 announce all defaulted objects
 
-</div>
+
 
 <span id="announceDefaultObject"></span>
 
@@ -674,11 +674,11 @@ announce all defaulted objects
 
 [en_us.t](../file/en_us.t.html)\[[8434](../source/en_us.t.html#8434)\]
 
-<div class="desc">
+
 
 announce a default object used with this action
 
-</div>
+
 
 <span id="canDobjResolveTo"></span>
 
@@ -686,7 +686,7 @@ announce a default object used with this action
 
 [action.t](../file/action.t.html)\[[3241](../source/action.t.html#3241)\]
 
-<div class="desc">
+
 
 Can the direct object potentially resolve to the given simulation
 object? This only determines if the object is a \*syntactic\* match,
@@ -694,7 +694,7 @@ meaning that it can match at a vocabulary and grammar level. This
 doesn't test it for logicalness or check that it's an otherwise valid
 resolution.
 
-</div>
+
 
 <span id="checkAction"></span>
 
@@ -702,7 +702,7 @@ resolution.
 
 [action.t](../file/action.t.html)\[[3555](../source/action.t.html#3555)\]
 
-<div class="desc">
+
 
 Check the command.
 
@@ -711,7 +711,7 @@ properties (the dobjFor(Default) and dobjFor(All) 'check' methods) on
 the direct object, then calls the individual 'check' routine for this
 specific action.
 
-</div>
+
 
 <span id="checkRemapping"></span>
 
@@ -719,11 +719,11 @@ specific action.
 
 [action.t](../file/action.t.html)\[[3531](../source/action.t.html#3531)\]
 
-<div class="desc">
+
 
 Check for remapping
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -731,11 +731,11 @@ Check for remapping
 
 [action.t](../file/action.t.html)\[[3067](../source/action.t.html#3067)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="createDobjResolver"></span>
 
@@ -743,13 +743,13 @@ Check for remapping
 
 [action.t](../file/action.t.html)\[[3651](../source/action.t.html#3651)\]
 
-<div class="desc">
+
 
 Create a resolver for the direct object. By default, we are our own
 resolver. Some actions might want to override this to create and return
 a specialized resolver instance if special resolution rules are needed.
 
-</div>
+
 
 <span id="createForMissingDobj"></span>
 
@@ -757,12 +757,12 @@ a specialized resolver instance if special resolution rules are needed.
 
 [action.t](../file/action.t.html)\[[3182](../source/action.t.html#3182)\]
 
-<div class="desc">
+
 
 Create an instance of this action for retrying a given single-object
 action with a missing direct object.
 
-</div>
+
 
 <span id="createForRetry"></span>
 
@@ -770,11 +770,11 @@ action with a missing direct object.
 
 [action.t](../file/action.t.html)\[[3085](../source/action.t.html#3085)\]
 
-<div class="desc">
+
 
 Create an action for retrying an original action with changes.
 
-</div>
+
 
 <span id="doActionMain"></span>
 
@@ -782,12 +782,12 @@ Create an action for retrying an original action with changes.
 
 [action.t](../file/action.t.html)\[[3431](../source/action.t.html#3431)\]
 
-<div class="desc">
+
 
 Execute the action. We'll run through the execution sequence once for
 each resolved direct object.
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -795,11 +795,11 @@ each resolved direct object.
 
 [action.t](../file/action.t.html)\[[3584](../source/action.t.html#3584)\]
 
-<div class="desc">
+
 
 Execute the command.
 
-</div>
+
 
 <span id="filterAmbiguousDobj"></span>
 
@@ -807,11 +807,11 @@ Execute the command.
 
 [action.t](../file/action.t.html)\[[3683](../source/action.t.html#3683)\]
 
-<div class="desc">
+
 
 filter an ambiguous direct object noun phrase
 
-</div>
+
 
 <span id="filterPluralDobj"></span>
 
@@ -819,11 +819,11 @@ filter an ambiguous direct object noun phrase
 
 [action.t](../file/action.t.html)\[[3692](../source/action.t.html#3692)\]
 
-<div class="desc">
+
 
 filter a plural phrase
 
-</div>
+
 
 <span id="getAllDobj"></span>
 
@@ -831,14 +831,14 @@ filter a plural phrase
 
 [action.t](../file/action.t.html)\[[3677](../source/action.t.html#3677)\]
 
-<div class="desc">
+
 
 Resolve 'all' for the direct object, given a list of everything in
 scope. By default, we'll simply return everything in scope; some actions
 might want to override this to return a more specific list of objects
 suitable for 'all'.
 
-</div>
+
 
 <span id="getCurrentObjects"></span>
 
@@ -846,12 +846,12 @@ suitable for 'all'.
 
 [action.t](../file/action.t.html)\[[3484](../source/action.t.html#3484)\]
 
-<div class="desc">
+
 
 Get the list of active objects. We have only a direct object, so we'll
 return a list with the current direct object.
 
-</div>
+
 
 <span id="getDefaultDobj"></span>
 
@@ -859,11 +859,11 @@ return a list with the current direct object.
 
 [action.t](../file/action.t.html)\[[3700](../source/action.t.html#3700)\]
 
-<div class="desc">
+
 
 get the default direct object
 
-</div>
+
 
 <span id="getDobj"></span>
 
@@ -871,11 +871,11 @@ get the default direct object
 
 [action.t](../file/action.t.html)\[[3708](../source/action.t.html#3708)\]
 
-<div class="desc">
+
 
 get the current direct object of the command
 
-</div>
+
 
 <span id="getDobjCount"></span>
 
@@ -883,11 +883,11 @@ get the current direct object of the command
 
 [action.t](../file/action.t.html)\[[3717](../source/action.t.html#3717)\]
 
-<div class="desc">
+
 
 get the number of direct objects
 
-</div>
+
 
 <span id="getDobjFlags"></span>
 
@@ -895,11 +895,11 @@ get the number of direct objects
 
 [action.t](../file/action.t.html)\[[3714](../source/action.t.html#3714)\]
 
-<div class="desc">
+
 
 get the object resolution flags for the direct object
 
-</div>
+
 
 <span id="getDobjInfo"></span>
 
@@ -907,11 +907,11 @@ get the object resolution flags for the direct object
 
 [action.t](../file/action.t.html)\[[3711](../source/action.t.html#3711)\]
 
-<div class="desc">
+
 
 get the full ResolveInfo associated with the current direct object
 
-</div>
+
 
 <span id="getDobjResolver"></span>
 
@@ -919,7 +919,7 @@ get the full ResolveInfo associated with the current direct object
 
 [action.t](../file/action.t.html)\[[3631](../source/action.t.html#3631)\]
 
-<div class="desc">
+
 
 Get my direct object resolver. If I don't already have one, create one
 and cache it; if I've already cached one, return it. Note that we cache
@@ -928,7 +928,7 @@ the resolver because it can sometimes take a bit of work to set one up
 the resolver only during the object resolution phase; since game state
 can't change during this phase, it's safe to keep a cached copy.
 
-</div>
+
 
 <span id="getDobjTokens"></span>
 
@@ -936,11 +936,11 @@ can't change during this phase, it's safe to keep a cached copy.
 
 [action.t](../file/action.t.html)\[[3720](../source/action.t.html#3720)\]
 
-<div class="desc">
+
 
 get the original token list of the current direct object phrase
 
-</div>
+
 
 <span id="getDobjWords"></span>
 
@@ -948,11 +948,11 @@ get the original token list of the current direct object phrase
 
 [action.t](../file/action.t.html)\[[3727](../source/action.t.html#3727)\]
 
-<div class="desc">
+
 
 get the original words (as a list of strings) of the current dobj
 
-</div>
+
 
 <span id="getMatchForRole"></span>
 
@@ -960,11 +960,11 @@ get the original words (as a list of strings) of the current dobj
 
 [action.t](../file/action.t.html)\[[3286](../source/action.t.html#3286)\]
 
-<div class="desc">
+
 
 get the match tree for the noun phrase in the given role
 
-</div>
+
 
 <span id="getMessageParam"></span>
 
@@ -972,12 +972,12 @@ get the match tree for the noun phrase in the given role
 
 [action.t](../file/action.t.html)\[[3413](../source/action.t.html#3413)\]
 
-<div class="desc">
+
 
 Get a message parameter object for the action. We define 'dobj' as the
 direct object, in addition to any inherited targets.
 
-</div>
+
 
 <span id="getObjectForRole"></span>
 
@@ -985,11 +985,11 @@ direct object, in addition to any inherited targets.
 
 [action.t](../file/action.t.html)\[[3279](../source/action.t.html#3279)\]
 
-<div class="desc">
+
 
 get the resolved object in a given role
 
-</div>
+
 
 <span id="getObjResponseProd"></span>
 
@@ -997,11 +997,11 @@ get the resolved object in a given role
 
 [action.t](../file/action.t.html)\[[3224](../source/action.t.html#3224)\]
 
-<div class="desc">
+
 
 get the missing object response production for a given role
 
-</div>
+
 
 <span id="getPreCondDescList"></span>
 
@@ -1009,11 +1009,11 @@ get the missing object response production for a given role
 
 [action.t](../file/action.t.html)\[[3469](../source/action.t.html#3469)\]
 
-<div class="desc">
+
 
 get the precondition descriptor list for the action
 
-</div>
+
 
 <span id="getPreCondPropForRole"></span>
 
@@ -1021,11 +1021,11 @@ get the precondition descriptor list for the action
 
 [action.t](../file/action.t.html)\[[3299](../source/action.t.html#3299)\]
 
-<div class="desc">
+
 
 get the 'preCond' property for a given object role
 
-</div>
+
 
 <span id="getQuestionInf"></span>
 
@@ -1033,11 +1033,11 @@ get the 'preCond' property for a given object role
 
 [en_us.t](../file/en_us.t.html)\[[8476](../source/en_us.t.html#8476)\]
 
-<div class="desc">
+
 
 show the verb's basic infinitive form for an interrogative
 
-</div>
+
 
 <span id="getRemapPropForRole"></span>
 
@@ -1045,11 +1045,11 @@ show the verb's basic infinitive form for an interrogative
 
 [action.t](../file/action.t.html)\[[3305](../source/action.t.html#3305)\]
 
-<div class="desc">
+
 
 get the 'remap' property for a given object role
 
-</div>
+
 
 <span id="getResolvedDobjList"></span>
 
@@ -1057,11 +1057,11 @@ get the 'remap' property for a given object role
 
 [action.t](../file/action.t.html)\[[3351](../source/action.t.html#3351)\]
 
-<div class="desc">
+
 
 get the list of resolved direct objects
 
-</div>
+
 
 <span id="getResolvedObjList"></span>
 
@@ -1069,11 +1069,11 @@ get the list of resolved direct objects
 
 [action.t](../file/action.t.html)\[[3344](../source/action.t.html#3344)\]
 
-<div class="desc">
+
 
 get the list of resolved objects in the given role
 
-</div>
+
 
 <span id="getResolveInfo"></span>
 
@@ -1081,11 +1081,11 @@ get the list of resolved objects in the given role
 
 [action.t](../file/action.t.html)\[[3311](../source/action.t.html#3311)\]
 
-<div class="desc">
+
 
 get the ResolveInfo for the given object
 
-</div>
+
 
 <span id="getRoleFromIndex"></span>
 
@@ -1093,11 +1093,11 @@ get the ResolveInfo for the given object
 
 [action.t](../file/action.t.html)\[[3272](../source/action.t.html#3272)\]
 
-<div class="desc">
+
 
 get the role of an object
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -1105,11 +1105,11 @@ get the role of an object
 
 [en_us.t](../file/en_us.t.html)\[[8492](../source/en_us.t.html#8492)\]
 
-<div class="desc">
+
 
 get the verb phrase in infinitive or participle form
 
-</div>
+
 
 <span id="getVerbPhrase1"></span>
 
@@ -1117,7 +1117,7 @@ get the verb phrase in infinitive or participle form
 
 [en_us.t](../file/en_us.t.html)\[[8534](../source/en_us.t.html#8534)\]
 
-<div class="desc">
+
 
 Given the text of the direct object phrase, build the verb phrase for a
 one-object verb. This is a class method that can be used by other kinds
@@ -1128,7 +1128,7 @@ the present participle form (nil); 'vp' is the verbPhrase string;
 'dobjText' is the direct object phrase's text; and 'dobjIsPronoun' is
 true if the dobj text is rendered as a pronoun.
 
-</div>
+
 
 <span id="getVerifyPropForRole"></span>
 
@@ -1136,11 +1136,11 @@ true if the dobj text is rendered as a pronoun.
 
 [action.t](../file/action.t.html)\[[3293](../source/action.t.html#3293)\]
 
-<div class="desc">
+
 
 get the 'verify' property for a given object role
 
-</div>
+
 
 <span id="initForMissingDobj"></span>
 
@@ -1148,7 +1148,7 @@ get the 'verify' property for a given object role
 
 [action.t](../file/action.t.html)\[[3209](../source/action.t.html#3209)\]
 
-<div class="desc">
+
 
 Initialize this action in preparation for retrying with a missing direct
 object. This routine must copy any phrases from the original action that
@@ -1157,7 +1157,7 @@ can't have anything pre-resolved in the original, since the original
 must simply be an IAction. Subclasses must override as appropriate for
 the kinds of base actions from which they can be retried.
 
-</div>
+
 
 <span id="initResolver"></span>
 
@@ -1165,11 +1165,11 @@ the kinds of base actions from which they can be retried.
 
 [action.t](../file/action.t.html)\[[3769](../source/action.t.html#3769)\]
 
-<div class="desc">
+
 
 Initialize me as a resolver.
 
-</div>
+
 
 <span id="initTentative"></span>
 
@@ -1177,11 +1177,11 @@ Initialize me as a resolver.
 
 [action.t](../file/action.t.html)\[[3520](../source/action.t.html#3520)\]
 
-<div class="desc">
+
 
 initialize tentative resolutions for other noun phrases
 
-</div>
+
 
 <span id="resetAction"></span>
 
@@ -1189,11 +1189,11 @@ initialize tentative resolutions for other noun phrases
 
 [action.t](../file/action.t.html)\[[3073](../source/action.t.html#3073)\]
 
-<div class="desc">
+
 
 inherit only the Action constructor
 
-</div>
+
 
 <span id="resolvedObjectsInScope"></span>
 
@@ -1201,11 +1201,11 @@ inherit only the Action constructor
 
 [action.t](../file/action.t.html)\[[3402](../source/action.t.html#3402)\]
 
-<div class="desc">
+
 
 check that the resolved objects are in scope
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -1213,12 +1213,12 @@ check that the resolved objects are in scope
 
 [action.t](../file/action.t.html)\[[3253](../source/action.t.html#3253)\]
 
-<div class="desc">
+
 
 Resolve objects. This is called at the start of command execution to
 resolve noun phrases in the command to specific objects.
 
-</div>
+
 
 <span id="retryWithAmbiguousDobj"></span>
 
@@ -1226,12 +1226,12 @@ resolve noun phrases in the command to specific objects.
 
 [action.t](../file/action.t.html)\[[3138](../source/action.t.html#3138)\]
 
-<div class="desc">
+
 
 Retry an action as a single-object action with an ambiguous direct
 object. We'll ask which of the given possible objects is intended.
 
-</div>
+
 
 <span id="retryWithMissingDobj"></span>
 
@@ -1239,7 +1239,7 @@ object. We'll ask which of the given possible objects is intended.
 
 [action.t](../file/action.t.html)\[[3127](../source/action.t.html#3127)\]
 
-<div class="desc">
+
 
 Retry an intransitive action as a single-object action. We'll obtain a
 indirect object using the normal means (first looking for a default,
@@ -1249,7 +1249,7 @@ is the original zero-object action.
 This routine terminates with 'exit' if it doesn't throw some other
 error.
 
-</div>
+
 
 <span id="setCurrentObjects"></span>
 
@@ -1257,11 +1257,11 @@ error.
 
 [action.t](../file/action.t.html)\[[3490](../source/action.t.html#3490)\]
 
-<div class="desc">
+
 
 set the current objects
 
-</div>
+
 
 <span id="setObjectMatches"></span>
 
@@ -1269,11 +1269,11 @@ set the current objects
 
 [action.t](../file/action.t.html)\[[3389](../source/action.t.html#3389)\]
 
-<div class="desc">
+
 
 manually set the unresolved object noun phrase match trees
 
-</div>
+
 
 <span id="setResolvedDobj"></span>
 
@@ -1281,11 +1281,11 @@ manually set the unresolved object noun phrase match trees
 
 [action.t](../file/action.t.html)\[[3368](../source/action.t.html#3368)\]
 
-<div class="desc">
+
 
 set the resolved direct object
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -1293,11 +1293,11 @@ set the resolved direct object
 
 [action.t](../file/action.t.html)\[[3361](../source/action.t.html#3361)\]
 
-<div class="desc">
+
 
 manually set the resolved objects - we'll set the direct object
 
-</div>
+
 
 <span id="testRetryDefaultDobj"></span>
 
@@ -1305,14 +1305,14 @@ manually set the resolved objects - we'll set the direct object
 
 [action.t](../file/action.t.html)\[[3164](../source/action.t.html#3164)\]
 
-<div class="desc">
+
 
 Test to see if askForDobj() would find a default direct object. Returns
 true if there's a default, nil if not. If this returns true, then
 askForDobj() will simply take the default and proceed; otherwise, it
 will have to actually ask the user for the missing information.
 
-</div>
+
 
 <span id="verifyAction"></span>
 
@@ -1320,11 +1320,11 @@ will have to actually ask the user for the missing information.
 
 [action.t](../file/action.t.html)\[[3499](../source/action.t.html#3499)\]
 
-<div class="desc">
+
 
 Verify the action.
 
-</div>
+
 
 <span id="whatObj"></span>
 
@@ -1332,15 +1332,15 @@ Verify the action.
 
 [en_us.t](../file/en_us.t.html)\[[8423](../source/en_us.t.html#8423)\]
 
-<div class="desc">
+
 
 return an interrogative word for an object of the action
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

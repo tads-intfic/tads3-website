@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 flag that the actor's being addressed in the second person
 
 `grammar `<span class="gramalt">[`firstCommandPhrase`](../object/firstCommandPhrase.html)`(askTellActorTo)`</span>` :   `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`firstCommandPhrase(askTellActorTo)`**  
 [`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
@@ -48,11 +48,11 @@ flag that the actor's being addressed in the second person
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execActorPhrase`](#execActorPhrase)
 
@@ -102,19 +102,19 @@ Inherited from `FirstCommandProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execActorPhrase"></span>
 
@@ -122,15 +122,15 @@ Inherited from `FirstCommandProd` :
 
 [en_us.t](../file/en_us.t.html)\[[5113](../source/en_us.t.html#5113)\]
 
-<div class="desc">
+
 
 "execute" the target actor phrase
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

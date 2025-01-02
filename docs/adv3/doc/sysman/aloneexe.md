@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="tools.html" class="nav">The Tools</a> \> Stand-Alone
@@ -16,7 +16,7 @@ Executables
     <a href="terp.html" class="nav"><em>Next:</em> Running Programs: The
 Interpreter</a>     </span>
 
-</div>
+
 
 
 
@@ -110,7 +110,7 @@ HTML TADS interpreter.
 
 You run maketrx32 like this:
 
-<div class="cmdline">
+
 
     maketrx32 -t3 mygame.t3
 
@@ -122,11 +122,11 @@ version, which runs in a DOS window). If you want to create a graphical
 Windows application with HTML display support instead, add the -html
 option:
 
-<div class="cmdline">
+
 
     maketrx32 -t3 -html mygame.t3
 
-</div>
+
 
 ## Character mapping files and stand-alone games
 
@@ -172,11 +172,11 @@ executables you create. If you do, you must perform these steps:
 To create your own character map library file, you use the TADS 3
 resource compiler, t3res. Use a command like this:
 
-<div class="cmdline">
+
 
     t3res -create mylib.t3r charmap\cp1252.tcm charmap\cp437.tcm
 
-</div>
+
 
 Note that the filenames must either be in the "charmap" subdirectory or
 in the current directory, or the interpreter will not find the character
@@ -193,20 +193,20 @@ executables, since maketrx32 will automatically use your new file.
 However, if you give your new character map library file a different
 name, you must explicitly add it to the bundle using the -clib option:
 
-<div class="cmdline">
+
 
     maketrx32 -t3 -clib mylib.t3r mygame.t3
 
-</div>
+
 
 The -clib option tells maketrx32 to add your character map library
 instead of the standard one.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -216,4 +216,4 @@ Executables
     <a href="terp.html" class="nav"><em>Next:</em> Running Programs: The
 Interpreter</a>     </span>
 
-</div>
+

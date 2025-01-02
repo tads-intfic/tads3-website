@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for passages between rooms. This can be used for a passage
 that not only connects the rooms but also exists as an object in its own
@@ -43,15 +43,15 @@ a passage that can be opened and closed.
 
 `class `**`Passage`**` :   `[`Linkable`](../object/Linkable.html)[`Fixture`](../object/Fixture.html)[`TravelConnector`](../object/TravelConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Passage`**  
 [`Linkable`](../object/Linkable.html)  
@@ -67,11 +67,11 @@ a passage that can be opened and closed.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Passage`**  
 [`Stairway`](../object/Stairway.html)  
@@ -87,19 +87,19 @@ a passage that can be opened and closed.
 [`PathPassage`](../object/PathPassage.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`destination`](#destination)[`isOpen_`](#isOpen_)[`otherSide`](#otherSide)
 
@@ -126,11 +126,11 @@ Inherited from `TravelConnector` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canActorTravel`](#canActorTravel)[`cannotTravel`](#cannotTravel)[`connectorBack`](#connectorBack)[`dobjFor(LookThrough)`](#dobjFor(LookThrough))[`dobjFor(TravelVia)`](#dobjFor(TravelVia))[`fixedSource`](#fixedSource)[`getDestination`](#getDestination)[`getFacets`](#getFacets)[`initializeThing`](#initializeThing)[`initMasterObject`](#initMasterObject)[`isConnectorPassable`](#isConnectorPassable)[`isConnectorVisibleInDark`](#isConnectorVisibleInDark)[`isOpen`](#isOpen)
 
@@ -158,11 +158,11 @@ Inherited from `TravelConnector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="destination"></span>
 
@@ -170,7 +170,7 @@ Inherited from `TravelConnector` :
 
 [travel.t](../file/travel.t.html)\[[2423](../source/travel.t.html#2423)\]
 
-<div class="desc">
+
 
 Our destination - this is where the actor ends up when traveling through
 the passage (assuming the passage is open). By default, we return the
@@ -183,7 +183,7 @@ If our otherSide is nil, the passage doesn't go anywhere. This can be
 useful to create things that look and act like passages, but which don't
 actually go anywhere - in other words, passage-like decorations.
 
-</div>
+
 
 <span id="isOpen_"></span>
 
@@ -191,11 +191,11 @@ actually go anywhere - in other words, passage-like decorations.
 
 [travel.t](../file/travel.t.html)\[[2439](../source/travel.t.html#2439)\]
 
-<div class="desc">
+
 
 internal open/closed status - open by default
 
-</div>
+
 
 <span id="otherSide"></span>
 
@@ -203,22 +203,22 @@ internal open/closed status - open by default
 
 [travel.t](../file/travel.t.html)\[[2502](../source/travel.t.html#2502)\]
 
-<div class="desc">
+
 
 Our corresponding passage object on the other side of the passage. This
 will be set automatically during initialization based on the
 masterObject property of the slave - it is not generally necessary to
 set this manually.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canActorTravel"></span>
 
@@ -226,11 +226,11 @@ set this manually.
 
 [travel.t](../file/travel.t.html)\[[2526](../source/travel.t.html#2526)\]
 
-<div class="desc">
+
 
 can the given actor travel through this passage?
 
-</div>
+
 
 <span id="cannotTravel"></span>
 
@@ -238,14 +238,14 @@ can the given actor travel through this passage?
 
 [travel.t](../file/travel.t.html)\[[2542](../source/travel.t.html#2542)\]
 
-<div class="desc">
+
 
 Display our message when we don't allow the actor to travel through the
 passage because the passage is closed. By default, we'll simply display
 the default cannotTravel message for the actor's location, but this can
 be overridden to provide a more specific report of the problem.
 
-</div>
+
 
 <span id="connectorBack"></span>
 
@@ -253,11 +253,11 @@ be overridden to provide a more specific report of the problem.
 
 [travel.t](../file/travel.t.html)\[[2515](../source/travel.t.html#2515)\]
 
-<div class="desc">
+
 
 the connector back is our complementary side, if we have one
 
-</div>
+
 
 <span id="dobjFor(LookThrough)"></span>
 
@@ -265,11 +265,11 @@ the connector back is our complementary side, if we have one
 
 [travel.t](../file/travel.t.html)\[[2576](../source/travel.t.html#2576)\]
 
-<div class="desc">
+
 
 inherit the default checks
 
-</div>
+
 
 <span id="dobjFor(TravelVia)"></span>
 
@@ -277,11 +277,11 @@ inherit the default checks
 
 [travel.t](../file/travel.t.html)\[[2549](../source/travel.t.html#2549)\]
 
-<div class="desc">
+
 
 carry out travel via this connector
 
-</div>
+
 
 <span id="fixedSource"></span>
 
@@ -289,13 +289,13 @@ carry out travel via this connector
 
 [travel.t](../file/travel.t.html)\[[2512](../source/travel.t.html#2512)\]
 
-<div class="desc">
+
 
 our source is always our destination, since we have a one-to-one
 relationship with our comlementary passage in the destination location
 (we point to it, it points to us)
 
-</div>
+
 
 <span id="getDestination"></span>
 
@@ -303,11 +303,11 @@ relationship with our comlementary passage in the destination location
 
 [travel.t](../file/travel.t.html)\[[2426](../source/travel.t.html#2426)\]
 
-<div class="desc">
+
 
 get my destination - just return my 'destination' property
 
-</div>
+
 
 <span id="getFacets"></span>
 
@@ -315,11 +315,11 @@ get my destination - just return my 'destination' property
 
 [travel.t](../file/travel.t.html)\[[2505](../source/travel.t.html#2505)\]
 
-<div class="desc">
+
 
 our other side is the other facet of the passage
 
-</div>
+
 
 <span id="initializeThing"></span>
 
@@ -327,12 +327,12 @@ our other side is the other facet of the passage
 
 [travel.t](../file/travel.t.html)\[[2468](../source/travel.t.html#2468)\]
 
-<div class="desc">
+
 
 Initialize. If we're a slave, we'll set up the otherSide relationship
 between this passage and our master passage.
 
-</div>
+
 
 <span id="initMasterObject"></span>
 
@@ -340,14 +340,14 @@ between this passage and our master passage.
 
 [travel.t](../file/travel.t.html)\[[2494](../source/travel.t.html#2494)\]
 
-<div class="desc">
+
 
 Initialize the master object. The other side of a two-sided door will
 call this on the master object to let the master object know about the
 other side. 'other' is the other-side object. By default, we'll simply
 remember the other object in our own 'otherSide' property.
 
-</div>
+
 
 <span id="isConnectorPassable"></span>
 
@@ -355,11 +355,11 @@ remember the other object in our own 'otherSide' property.
 
 [travel.t](../file/travel.t.html)\[[2462](../source/travel.t.html#2462)\]
 
-<div class="desc">
+
 
 a passage is passable when it's open
 
-</div>
+
 
 <span id="isConnectorVisibleInDark"></span>
 
@@ -367,7 +367,7 @@ a passage is passable when it's open
 
 [travel.t](../file/travel.t.html)\[[2458](../source/travel.t.html#2458)\]
 
-<div class="desc">
+
 
 We're not visible in the dark if we're closed. If we're open, the normal
 rules apply.
@@ -384,7 +384,7 @@ it's closed, it's probably better to make the passage self-illuminating
 (i.e., with brightness 1), because this will put the passage in scope
 and thus allow it to be manipulated.
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -392,15 +392,15 @@ and thus allow it to be manipulated.
 
 [travel.t](../file/travel.t.html)\[[2429](../source/travel.t.html#2429)\]
 
-<div class="desc">
+
 
 get our open/closed status
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

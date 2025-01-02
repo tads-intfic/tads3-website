@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
@@ -17,7 +17,7 @@ Nest</a>    
 <a href="finishing.html" class="nav"><em>Next:</em> Finishing Touches</a>
     </span>
 
-</div>
+
 
 
 
@@ -27,12 +27,12 @@ The description of the clearing mentions a tall sycamore tree standing
 at its centre. We'd better define it next. A first attempt based on what
 we've done so far is:
 
-`
+```
     + tree: Thing 'tall sycamore tree;;stout proud'     
         "Standing proud in the middle of the clearing, the stout tree looks easy to
         climb."
     ;
-`
+```
 
 Add this to your file just after the definition of the nest (in the
 clearing). Because both the nest and the tree have a single + sign, both
@@ -42,7 +42,7 @@ after a fashion. When the player character travels to the clearing the
 tree is now mentioned twice in the room description. Even worse, Heidi
 can pick up the tree and carry it around with her!
 
-<div class="cmdline">
+
 
     In front of a Cottage
     You stand outside a cottage. The forest stretches east. 
@@ -75,7 +75,7 @@ can pick up the tree and carry it around with her!
 We should fix this at once. We can do so by adding
 `isFixed = true` to the definition of the tree.
 
-`
+```
      
     + tree: Thing 'tall sycamore tree;;stout proud'     
         "Standing proud in the middle of the clearing, the stout tree looks easy to
@@ -83,7 +83,7 @@ We should fix this at once. We can do so by adding
         
         isFixed = true
     ;
-`
+```
 
 If you try compiling and running the game again, you should find it now
 works rather better: the tree isn't listed twice in the clearing and
@@ -117,7 +117,7 @@ The definition of the `branch` object should
 come directly after the definition for
 `topOfTree`, and should look like this:
 
-`
+```
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -125,16 +125,16 @@ come directly after the definition for
         isListed = true
         contType = On
     ;
-`
+```
 
 Once you've made all the appropriate changes, try compiling and running
 the game again and see what you can now do in it.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -145,4 +145,4 @@ Nest</a>    
 <a href="finishing.html" class="nav"><em>Next:</em> Finishing Touches</a>
     </span>
 
-</div>
+

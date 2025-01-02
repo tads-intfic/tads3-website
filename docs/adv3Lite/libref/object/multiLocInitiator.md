@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Preinitilizer for MultiLocs
 
 **`multiLocInitiator`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`multiLocInitiator`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -42,11 +42,11 @@ Preinitilizer for MultiLocs
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`execBeforeMe`](#execBeforeMe)
 
@@ -58,11 +58,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)
 
@@ -73,11 +73,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="execBeforeMe"></span>
 
@@ -85,20 +85,20 @@ Inherited from `ModuleExecObject` :
 
 [thing.t](../file/thing.t.html)\[[9982](../source/thing.t.html#9982)\]
 
-<div class="desc">
+
 
 Make sure we've preinitialized Regions first, so that their roomLists
 are ready when we want to use them.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -106,15 +106,15 @@ are ready when we want to use them.
 
 [thing.t](../file/thing.t.html)\[[9966](../source/thing.t.html#9966)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

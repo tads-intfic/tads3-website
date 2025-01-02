@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 MultiLoc: this class can be multiply inherited by any object that must
 exist in more than one place at a time. To use this class, put it BEFORE
@@ -70,45 +70,45 @@ they're all actually parts of one larger object.
 
 `class `**`MultiLoc`**` :   `[`BaseMultiLoc`](../object/BaseMultiLoc.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MultiLoc`**  
 [`BaseMultiLoc`](../object/BaseMultiLoc.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`MultiLoc`**  
 [`SenseConnector`](../object/SenseConnector.html)  
 [`DistanceConnector`](../object/DistanceConnector.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`getConnectedContainers`](#getConnectedContainers)
 
@@ -117,11 +117,11 @@ Inherited from `BaseMultiLoc` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addDirectConnections`](#addDirectConnections)[`baseMoveInto`](#baseMoveInto)[`baseMoveIntoAdd`](#baseMoveIntoAdd)[`baseMoveOutOf`](#baseMoveOutOf)[`cloneForMultiInstanceContents`](#cloneForMultiInstanceContents)[`cloneMultiInstanceContents`](#cloneMultiInstanceContents)[`forEachConnectedContainer`](#forEachConnectedContainer)[`forEachContainer`](#forEachContainer)[`getDropDestination`](#getDropDestination)[`initializeLocation`](#initializeLocation)[`moveIntoAdd`](#moveIntoAdd)[`moveOutOf`](#moveOutOf)[`reInitializeLocation`](#reInitializeLocation)[`restoreLocation`](#restoreLocation)[`saveLocation`](#saveLocation)[`sensePathToLoc`](#sensePathToLoc)[`shineOnLoc`](#shineOnLoc)
 
@@ -130,11 +130,11 @@ Inherited from `BaseMultiLoc` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="getConnectedContainers"></span>
 
@@ -142,20 +142,20 @@ Inherited from `BaseMultiLoc` :
 
 [objects.t](../file/objects.t.html)\[[2832](../source/objects.t.html#2832)\]
 
-<div class="desc">
+
 
 get a list of my connected containers; by default, we don't connect our
 containers, so this is an empty list
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addDirectConnections"></span>
 
@@ -163,7 +163,7 @@ containers, so this is an empty list
 
 [objects.t](../file/objects.t.html)\[[2866](../source/objects.t.html#2866)\]
 
-<div class="desc">
+
 
 Add the direct containment connections for this item to a lookup table.
 
@@ -175,7 +175,7 @@ the connection table. However, the MultiLoc itself, and its contents,
 point of view inside self, we will add all of our containers to the
 connection list.
 
-</div>
+
 
 <span id="baseMoveInto"></span>
 
@@ -183,12 +183,12 @@ connection list.
 
 [objects.t](../file/objects.t.html)\[[2722](../source/objects.t.html#2722)\]
 
-<div class="desc">
+
 
 Basic routine to move this object into a given single container. Removes
 the object from all of its other containers. Performs no notifications.
 
-</div>
+
 
 <span id="baseMoveIntoAdd"></span>
 
@@ -196,12 +196,12 @@ the object from all of its other containers. Performs no notifications.
 
 [objects.t](../file/objects.t.html)\[[2747](../source/objects.t.html#2747)\]
 
-<div class="desc">
+
 
 Add this object to a new location - base version that performs no
 notifications.
 
-</div>
+
 
 <span id="baseMoveOutOf"></span>
 
@@ -209,12 +209,12 @@ notifications.
 
 [objects.t](../file/objects.t.html)\[[2776](../source/objects.t.html#2776)\]
 
-<div class="desc">
+
 
 Base routine to move myself out of a given container. Performs no
 notifications.
 
-</div>
+
 
 <span id="cloneForMultiInstanceContents"></span>
 
@@ -222,14 +222,14 @@ notifications.
 
 [objects.t](../file/objects.t.html)\[[2848](../source/objects.t.html#2848)\]
 
-<div class="desc">
+
 
 Create a clone of this object for inclusion in a MultiInstance's
 contents tree. We don't actually need to make a copy of the object,
 because a MultiLoc can be in several locations simultaneously; all we
 need to do is add ourselves to the new location.
 
-</div>
+
 
 <span id="cloneMultiInstanceContents"></span>
 
@@ -237,13 +237,13 @@ need to do is add ourselves to the new location.
 
 [objects.t](../file/objects.t.html)\[[2839](../source/objects.t.html#2839)\]
 
-<div class="desc">
+
 
 Clone this object's contents for inclusion in a MultiInstance's contents
 tree. A MultiLoc is capable of being in multiple places at once, so we
 can just use our original contents tree as is.
 
-</div>
+
 
 <span id="forEachConnectedContainer"></span>
 
@@ -251,12 +251,12 @@ can just use our original contents tree as is.
 
 [objects.t](../file/objects.t.html)\[[2826](../source/objects.t.html#2826)\]
 
-<div class="desc">
+
 
 Call a function on each connected container. By default, we don't
 connect our containers for sense purposes, so we do nothing here.
 
-</div>
+
 
 <span id="forEachContainer"></span>
 
@@ -264,14 +264,14 @@ connect our containers for sense purposes, so we do nothing here.
 
 [objects.t](../file/objects.t.html)\[[2814](../source/objects.t.html#2814)\]
 
-<div class="desc">
+
 
 Call a function on each container. We'll invoke the function as follows
 for each container 'cont':
 
 (func)(cont, args...)
 
-</div>
+
 
 <span id="getDropDestination"></span>
 
@@ -279,7 +279,7 @@ for each container 'cont':
 
 [objects.t](../file/objects.t.html)\[[2950](../source/objects.t.html#2950)\]
 
-<div class="desc">
+
 
 Get the drop destination. The default implementation in Thing won't work
 for us, because it delegates to its location to find the drop
@@ -302,7 +302,7 @@ game scenario. There's no general way to handle such situations, but it
 should be possible to determine the correct handling for specific
 scenarios.
 
-</div>
+
 
 <span id="initializeLocation"></span>
 
@@ -310,12 +310,12 @@ scenarios.
 
 [objects.t](../file/objects.t.html)\[[2609](../source/objects.t.html#2609)\]
 
-<div class="desc">
+
 
 Initialize my location's contents list - add myself to my container
 during initialization
 
-</div>
+
 
 <span id="moveIntoAdd"></span>
 
@@ -323,11 +323,11 @@ during initialization
 
 [objects.t](../file/objects.t.html)\[[2759](../source/objects.t.html#2759)\]
 
-<div class="desc">
+
 
 Add this object to a new location.
 
-</div>
+
 
 <span id="moveOutOf"></span>
 
@@ -335,12 +335,12 @@ Add this object to a new location.
 
 [objects.t](../file/objects.t.html)\[[2789](../source/objects.t.html#2789)\]
 
-<div class="desc">
+
 
 Remove myself from a given container, leaving myself in any other
 containers.
 
-</div>
+
 
 <span id="reInitializeLocation"></span>
 
@@ -348,7 +348,7 @@ containers.
 
 [objects.t](../file/objects.t.html)\[[2634](../source/objects.t.html#2634)\]
 
-<div class="desc">
+
 
 Re-initialize the location list. This calls buildLocationList() to
 re-evaluate the location rules, then updates the locationList to match
@@ -367,7 +367,7 @@ state - hence we only move the MultiLoc into containers it wasn't in
 previously, and we only remove it from existing containers that it's no
 longer in.
 
-</div>
+
 
 <span id="restoreLocation"></span>
 
@@ -375,11 +375,11 @@ longer in.
 
 [objects.t](../file/objects.t.html)\[[2692](../source/objects.t.html#2692)\]
 
-<div class="desc">
+
 
 restore a previously saved location
 
-</div>
+
 
 <span id="saveLocation"></span>
 
@@ -387,11 +387,11 @@ restore a previously saved location
 
 [objects.t](../file/objects.t.html)\[[2685](../source/objects.t.html#2685)\]
 
-<div class="desc">
+
 
 save my location for later restoration
 
-</div>
+
 
 <span id="sensePathToLoc"></span>
 
@@ -399,14 +399,14 @@ save my location for later restoration
 
 [objects.t](../file/objects.t.html)\[[2919](../source/objects.t.html#2919)\]
 
-<div class="desc">
+
 
 Build a sense path to my location or locations. Note that even though we
 don't by default connect our different containers together, we still
 build a sense path from within to outside, because we can see from
 within out to all of our containers.
 
-</div>
+
 
 <span id="shineOnLoc"></span>
 
@@ -414,17 +414,17 @@ within out to all of our containers.
 
 [objects.t](../file/objects.t.html)\[[2905](../source/objects.t.html#2905)\]
 
-<div class="desc">
+
 
 Transmit ambient energy to my location or locations. Note that even
 though we don't by default shine light from one of our containers to
 another, we still shine light from within me to each of our containers.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

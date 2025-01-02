@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| The Core
 Library  
@@ -15,7 +15,7 @@ Library
 Definition</a>    
 <a href="thing.html" class="nav"><em>Next:</em> Things</a>     </span>
 
-</div>
+
 
 
 
@@ -31,7 +31,7 @@ write a simple TADS 3 game with adv3Lite.
 Some aspects of the core library, such as actions and startup and ending
 code will be dealt with in later sections.
 
-<div class="sectoc">
+
 
 [Things](thing.html)  
 [Rooms and Regions](room.html)  
@@ -46,11 +46,11 @@ code will be dealt with in later sections.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| The Core
@@ -59,4 +59,4 @@ Library
     <a href="thing.html" class="nav"><em>Next:</em> Things</a>    
 </span>
 
-</div>
+

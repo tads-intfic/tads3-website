@@ -28,7 +28,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The native string type.
 
@@ -42,41 +42,41 @@ Modify the String intrinsic class to provide a to-symbol mapping
 
 `intrinsic class `**`String`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`String`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`trimPat`](#trimPat)
 
@@ -84,11 +84,11 @@ Modify the String intrinsic class to provide a to-symbol mapping
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`compareIgnoreCase`](#compareIgnoreCase)[`compareTo`](#compareTo)[`delFirst`](#delFirst)[`delLast`](#delLast)[`digestMD5`](#digestMD5)[`endsWith`](#endsWith)[`find`](#find)[`findAll`](#findAll)[`findLast`](#findLast)[`findReplace`](#findReplace)[`firstChar`](#firstChar)[`htmlify`](#htmlify)[`lastChar`](#lastChar)[`left`](#left)[`length`](#length)[`mapToByteArray`](#mapToByteArray)[`match`](#match)[`right`](#right)[`sha256`](#sha256)[`specialsToHtml`](#specialsToHtml)[`specialsToText`](#specialsToText)[`splice`](#splice)[`split`](#split)[`startsWith`](#startsWith)[`substr`](#substr)[`toFoldedCase`](#toFoldedCase)[`toLower`](#toLower)[`toTitleCase`](#toTitleCase)[`toUnicode`](#toUnicode)[`toUpper`](#toUpper)[`trim`](#trim)[`unpackBytes`](#unpackBytes)[`urlDecode`](#urlDecode)[`urlEncode`](#urlEncode)[`valToSymbol`](#valToSymbol)
 
@@ -97,11 +97,11 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="trimPat"></span>
 
@@ -109,19 +109,19 @@ Inherited from `Object` :
 
 [misc.t](../file/misc.t.html)\[[1714](../source/misc.t.html#1714)\]
 
-<div class="desc">
+
 
 regular expression for trimming leading and trailing spaces
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="compareIgnoreCase"></span>
 
@@ -129,7 +129,7 @@ regular expression for trimming leading and trailing spaces
 
 [systype.h](../file/systype.h.html)\[[799](../source/systype.h.html#799)\]
 
-<div class="desc">
+
 
 Compare this string to another string, ignoring case. The two strings
 are compared on the basis of the "case folded" versions of their
@@ -142,7 +142,7 @@ greater than zero if this string sorts after the other.
 As with compareTo(), this only produces alphabetically correct sorting
 order when comparing ASCII strings.
 
-</div>
+
 
 <span id="compareTo"></span>
 
@@ -150,7 +150,7 @@ order when comparing ASCII strings.
 
 [systype.h](../file/systype.h.html)\[[784](../source/systype.h.html#784)\]
 
-<div class="desc">
+
 
 Compare this string to another string, using Unicode character code
 points as the collation order. Returns an integer less than zero if this
@@ -171,7 +171,7 @@ the unaccented characters. For example, A-caron sorts after Z-caron,
 which sorts after A-breve, which sorts after Y-acute, which sorts after
 A-acute, which sorts after plain Z.
 
-</div>
+
 
 <span id="delFirst"></span>
 
@@ -179,11 +179,11 @@ A-acute, which sorts after plain Z.
 
 [misc.t](../file/misc.t.html)\[[1723](../source/misc.t.html#1723)\]
 
-<div class="desc">
+
 
 remove the first character
 
-</div>
+
 
 <span id="delLast"></span>
 
@@ -191,11 +191,11 @@ remove the first character
 
 [misc.t](../file/misc.t.html)\[[1726](../source/misc.t.html#1726)\]
 
-<div class="desc">
+
 
 remove the last character
 
-</div>
+
 
 <span id="digestMD5"></span>
 
@@ -203,14 +203,14 @@ remove the last character
 
 [systype.h](../file/systype.h.html)\[[681](../source/systype.h.html#681)\]
 
-<div class="desc">
+
 
 Get the MD5 digest of the string. This calculates the 128-bit RSA MD5
 digest value, returning the digest as a 32-character string of hex
 digits. The hash value is computed on the UTF-8 representation of the
 string.
 
-</div>
+
 
 <span id="endsWith"></span>
 
@@ -218,11 +218,11 @@ string.
 
 [systype.h](../file/systype.h.html)\[[410](../source/systype.h.html#410)\]
 
-<div class="desc">
+
 
 determine if we end with the given string
 
-</div>
+
 
 <span id="find"></span>
 
@@ -230,7 +230,7 @@ determine if we end with the given string
 
 [systype.h](../file/systype.h.html)\[[395](../source/systype.h.html#395)\]
 
-<div class="desc">
+
 
 Find a substring or pattern within the subject string (self), searching
 the string from left to right returning the index of the first match
@@ -253,7 +253,7 @@ character index in the string. We're using the term loosely, in
 particular ignoring anything related to the reading order or display
 direction for different languages or scripts.)
 
-</div>
+
 
 <span id="findAll"></span>
 
@@ -261,7 +261,7 @@ direction for different languages or scripts.)
 
 [systype.h](../file/systype.h.html)\[[862](../source/systype.h.html#862)\]
 
-<div class="desc">
+
 
 Find all occurrences of substring or pattern within a string, returning
 a list of the results.
@@ -291,7 +291,7 @@ element in the return list is the return value from calling 'func' for
 the corresponding match; if 'func' is omitted, each element in the
 return list is a string with the text of that match.
 
-</div>
+
 
 <span id="findLast"></span>
 
@@ -299,7 +299,7 @@ return list is a string with the text of that match.
 
 [systype.h](../file/systype.h.html)\[[830](../source/systype.h.html#830)\]
 
-<div class="desc">
+
 
 Find the last instance of a substring or pattern within the string,
 searching the subject string (self) from right to left (that is, from
@@ -327,7 +327,7 @@ from higher to lower character index in the string. We're using the term
 loosely, in particular ignoring anything related to the reading order or
 display direction for different languages or scripts.)
 
-</div>
+
 
 <span id="findReplace"></span>
 
@@ -335,7 +335,7 @@ display direction for different languages or scripts.)
 
 [systype.h](../file/systype.h.html)\[[510](../source/systype.h.html#510)\]
 
-<div class="desc">
+
 
 Replace one occurrence or all occurrences of the given substring with
 the given new string.
@@ -411,7 +411,7 @@ serial mode re-scans the updated string after replacing each 'origStr'
 element, so replacement text could itself be further modified. Parallel
 mode, in contrast, never re-scans replacement text.
 
-</div>
+
 
 <span id="firstChar"></span>
 
@@ -419,11 +419,11 @@ mode, in contrast, never re-scans replacement text.
 
 [misc.t](../file/misc.t.html)\[[1717](../source/misc.t.html#1717)\]
 
-<div class="desc">
+
 
 get the first character
 
-</div>
+
 
 <span id="htmlify"></span>
 
@@ -431,11 +431,11 @@ get the first character
 
 [systype.h](../file/systype.h.html)\[[404](../source/systype.h.html#404)\]
 
-<div class="desc">
+
 
 htmlify a string
 
-</div>
+
 
 <span id="lastChar"></span>
 
@@ -443,11 +443,11 @@ htmlify a string
 
 [misc.t](../file/misc.t.html)\[[1720](../source/misc.t.html#1720)\]
 
-<div class="desc">
+
 
 get the last character
 
-</div>
+
 
 <span id="left"></span>
 
@@ -455,11 +455,11 @@ get the last character
 
 [misc.t](../file/misc.t.html)\[[1729](../source/misc.t.html#1729)\]
 
-<div class="desc">
+
 
 leftmost n characters; if n is negative, leftmost (length-n)
 
-</div>
+
 
 <span id="length"></span>
 
@@ -467,11 +467,11 @@ leftmost n characters; if n is negative, leftmost (length-n)
 
 [systype.h](../file/systype.h.html)\[[361](../source/systype.h.html#361)\]
 
-<div class="desc">
+
 
 get the length of the string
 
-</div>
+
 
 <span id="mapToByteArray"></span>
 
@@ -479,7 +479,7 @@ get the length of the string
 
 [systype.h](../file/systype.h.html)\[[429](../source/systype.h.html#429)\]
 
-<div class="desc">
+
 
 Map to a byte array, converting to the given character set. If 'charset'
 is provided, it must be an object of intrinsic class CharacterSet, or a
@@ -495,7 +495,7 @@ byte value. A byte can only hold values from 0 to 255, so a numeric
 overflow error is thrown if any character code in the source string is
 outside this range.
 
-</div>
+
 
 <span id="match"></span>
 
@@ -503,7 +503,7 @@ outside this range.
 
 [systype.h](../file/systype.h.html)\[[884](../source/systype.h.html#884)\]
 
-<div class="desc">
+
 
 Match the given string or RexPattern object to this string value,
 starting at the start of the string or at the given index, if specified.
@@ -523,7 +523,7 @@ further in the string, whereas find() searches for a match at each
 subsequent character of the string until a match is found or the string
 is exhausted.
 
-</div>
+
 
 <span id="right"></span>
 
@@ -531,11 +531,11 @@ is exhausted.
 
 [misc.t](../file/misc.t.html)\[[1732](../source/misc.t.html#1732)\]
 
-<div class="desc">
+
 
 rightmost n characters; if n is negative, rightmost (length-n)
 
-</div>
+
 
 <span id="sha256"></span>
 
@@ -543,14 +543,14 @@ rightmost n characters; if n is negative, rightmost (length-n)
 
 [systype.h](../file/systype.h.html)\[[673](../source/systype.h.html#673)\]
 
-<div class="desc">
+
 
 Get the SHA-256 hash of the string. This calculates the 256-bit Secure
 Hash Algorithm 2 hash value, returning the hash as a 64-character string
 of hex digits. The hash value is computed on the UTF-8 representation of
 the string.
 
-</div>
+
 
 <span id="specialsToHtml"></span>
 
@@ -558,7 +558,7 @@ the string.
 
 [systype.h](../file/systype.h.html)\[[603](../source/systype.h.html#603)\]
 
-<div class="desc">
+
 
 Convert special characters and TADS markups to standard HTML markups.
 Returns a new string with the contents of the 'self' string processed as
@@ -610,7 +610,7 @@ browser-specific syntax. This function is specifically for standardizing
 TADS-specific syntax, so that games can use the traditional TADS syntax
 with the Web UI.
 
-</div>
+
 
 <span id="specialsToText"></span>
 
@@ -618,7 +618,7 @@ with the Web UI.
 
 [systype.h](../file/systype.h.html)\[[650](../source/systype.h.html#650)\]
 
-<div class="desc">
+
 
 Convert special characters and HTML markups to plain text, as it would
 appear if written out through the regular console output writer and
@@ -664,7 +664,7 @@ characters within a line
 
 &#dddd; -\> Unicode character dddd
 
-</div>
+
 
 <span id="splice"></span>
 
@@ -672,13 +672,13 @@ characters within a line
 
 [systype.h](../file/systype.h.html)\[[517](../source/systype.h.html#517)\]
 
-<div class="desc">
+
 
 Splice: delete 'del' characters starting at 'idx', and insert the string
 'ins' in their place. 'ins' is optional; if omitted, this simply does
 the deletion without inserting anything.
 
-</div>
+
 
 <span id="split"></span>
 
@@ -686,7 +686,7 @@ the deletion without inserting anything.
 
 [systype.h](../file/systype.h.html)\[[547](../source/systype.h.html#547)\]
 
-<div class="desc">
+
 
 Split the string into substrings at the given delimiter, or of a given
 fixed length.
@@ -715,7 +715,7 @@ of the result list. If 'limit' is 1, we simply return a list consisting
 of the source string, since a limit of one element means that we can't
 make any splits at all.
 
-</div>
+
 
 <span id="startsWith"></span>
 
@@ -723,11 +723,11 @@ make any splits at all.
 
 [systype.h](../file/systype.h.html)\[[407](../source/systype.h.html#407)\]
 
-<div class="desc">
+
 
 determine if we start with the given string
 
-</div>
+
 
 <span id="substr"></span>
 
@@ -735,11 +735,11 @@ determine if we start with the given string
 
 [systype.h](../file/systype.h.html)\[[364](../source/systype.h.html#364)\]
 
-<div class="desc">
+
 
 extract a substring
 
-</div>
+
 
 <span id="toFoldedCase"></span>
 
@@ -747,7 +747,7 @@ extract a substring
 
 [systype.h](../file/systype.h.html)\[[760](../source/systype.h.html#760)\]
 
-<div class="desc">
+
 
 Convert the string to "folded" case. Returns a new string with the
 case-folded version of this string.
@@ -767,7 +767,7 @@ small 'j' followed by a combining caron character). Without this
 normalization, the upper- and lower-case renderings of such characters
 wouldn't match.
 
-</div>
+
 
 <span id="toLower"></span>
 
@@ -775,11 +775,11 @@ wouldn't match.
 
 [systype.h](../file/systype.h.html)\[[370](../source/systype.h.html#370)\]
 
-<div class="desc">
+
 
 convert to lower case
 
-</div>
+
 
 <span id="toTitleCase"></span>
 
@@ -787,7 +787,7 @@ convert to lower case
 
 [systype.h](../file/systype.h.html)\[[738](../source/systype.h.html#738)\]
 
-<div class="desc">
+
 
 Convert each character in the string to title case, according to the
 Unicode character database definitions. Returns a new string with the
@@ -808,7 +808,7 @@ Note that this routine converts every character in the string to title
 case, so it's not by itself a full title formatter - it's simply a
 character case converter.
 
-</div>
+
 
 <span id="toUnicode"></span>
 
@@ -816,12 +816,12 @@ character case converter.
 
 [systype.h](../file/systype.h.html)\[[401](../source/systype.h.html#401)\]
 
-<div class="desc">
+
 
 convert to a list of Unicode character codes, or get the Unicode
 character code for the single character at the given index
 
-</div>
+
 
 <span id="toUpper"></span>
 
@@ -829,11 +829,11 @@ character code for the single character at the given index
 
 [systype.h](../file/systype.h.html)\[[367](../source/systype.h.html#367)\]
 
-<div class="desc">
+
 
 convert to upper case
 
-</div>
+
 
 <span id="trim"></span>
 
@@ -841,11 +841,11 @@ convert to upper case
 
 [misc.t](../file/misc.t.html)\[[1708](../source/misc.t.html#1708)\]
 
-<div class="desc">
+
 
 Trim spaces. Removes leading and trailing spaces from the string.
 
-</div>
+
 
 <span id="unpackBytes"></span>
 
@@ -853,7 +853,7 @@ Trim spaces. Removes leading and trailing spaces from the string.
 
 [systype.h](../file/systype.h.html)\[[715](../source/systype.h.html#715)\]
 
-<div class="desc">
+
 
 Unpack this string, interpreting the characters in the string as byte
 values, and unpacking the bytes according to the format string. Each
@@ -871,7 +871,7 @@ a list consisting of the unpacked values.
 
 See Byte Packing in the System Manual for more details.
 
-</div>
+
 
 <span id="urlDecode"></span>
 
@@ -879,14 +879,14 @@ See Byte Packing in the System Manual for more details.
 
 [systype.h](../file/systype.h.html)\[[665](../source/systype.h.html#665)\]
 
-<div class="desc">
+
 
 Decode a URL parameter string. This reverses the effect of urlEncode(),
 returning a string with the encodings translated back into ordinary
 characters. Any sequences that do not form valid UTF-8 characters are
 converted to '?'.
 
-</div>
+
 
 <span id="urlEncode"></span>
 
@@ -894,13 +894,13 @@ converted to '?'.
 
 [systype.h](../file/systype.h.html)\[[657](../source/systype.h.html#657)\]
 
-<div class="desc">
+
 
 Encode a URL parameter string. Spaces are encoded as "+", and all other
 non-alphanumeric characters except - and \_ are encoded as "%xx"
 sequences.
 
-</div>
+
 
 <span id="valToSymbol"></span>
 
@@ -908,15 +908,15 @@ sequences.
 
 [reflect.t](../file/reflect.t.html)\[[288](../source/reflect.t.html#288)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

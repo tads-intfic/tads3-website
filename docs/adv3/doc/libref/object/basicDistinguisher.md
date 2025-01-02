@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "Basic" Distinguisher. This distinguisher can tell two objects apart if
 one or the other object is not marked as isEquivalent, OR if the two
@@ -30,26 +30,26 @@ isEquivalent and having the same equivalence keys.
 
 **`basicDistinguisher`**` :   `[`Distinguisher`](../object/Distinguisher.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`basicDistinguisher`**  
 [`Distinguisher`](../object/Distinguisher.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -57,11 +57,11 @@ isEquivalent and having the same equivalence keys.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`name`](#name)[`theName`](#theName)
 
@@ -70,19 +70,19 @@ Inherited from `Distinguisher` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="aName"></span>
 
@@ -90,11 +90,11 @@ Inherited from `Distinguisher` :
 
 [en_us.t](../file/en_us.t.html)\[[3523](../source/en_us.t.html#3523)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canDistinguish"></span>
 
@@ -102,11 +102,11 @@ Inherited from `Distinguisher` :
 
 [disambig.t](../file/disambig.t.html)\[[102](../source/disambig.t.html#102)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="countName"></span>
 
@@ -114,11 +114,11 @@ Inherited from `Distinguisher` :
 
 [en_us.t](../file/en_us.t.html)\[[3525](../source/en_us.t.html#3525)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -126,11 +126,11 @@ Inherited from `Distinguisher` :
 
 [en_us.t](../file/en_us.t.html)\[[3522](../source/en_us.t.html#3522)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theName"></span>
 
@@ -138,15 +138,15 @@ Inherited from `Distinguisher` :
 
 [en_us.t](../file/en_us.t.html)\[[3524](../source/en_us.t.html#3524)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

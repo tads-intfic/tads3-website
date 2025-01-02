@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Possessive nouns
 
 `class `**`PossessivePronounNounProd`**` :   `[`PronounProd`](../object/PronounProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PossessivePronounNounProd`**  
 [`PronounProd`](../object/PronounProd.html)  
@@ -49,11 +49,11 @@ Possessive nouns
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PossessivePronounNounProd`**  
 [`HersNounProd`](../object/HersNounProd.html)  
@@ -70,19 +70,19 @@ Possessive nouns
 [`possessiveNounPhrase(yours)`](../object/possessiveNounPhrase(yours).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isPossessive`](#isPossessive)
 
@@ -97,11 +97,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -116,11 +116,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isPossessive"></span>
 
@@ -128,25 +128,25 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[2731](../source/parser.t.html#2731)\]
 
-<div class="desc">
+
 
 this is a possessive usage of the pronoun
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

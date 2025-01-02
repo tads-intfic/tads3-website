@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 LCS - class that computes the Longest Common Subsequence for two lists
 or vectors.
@@ -54,61 +54,61 @@ to a list of character values.
 
 `class `**`LCS`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LCS`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`lcsA`](#lcsA)[`lcsB`](#lcsB)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="lcsA"></span>
 
@@ -116,11 +116,11 @@ to a list of character values.
 
 [misc.t](../file/misc.t.html)\[[2183](../source/misc.t.html#2183)\]
 
-<div class="desc">
+
 
 the LCS, as lists of character indices into the respective strings
 
-</div>
+
 
 <span id="lcsB"></span>
 
@@ -128,19 +128,19 @@ the LCS, as lists of character indices into the respective strings
 
 [misc.t](../file/misc.t.html)\[[2184](../source/misc.t.html#2184)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -148,15 +148,15 @@ the LCS, as lists of character indices into the respective strings
 
 [misc.t](../file/misc.t.html)\[[2119](../source/misc.t.html#2119)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

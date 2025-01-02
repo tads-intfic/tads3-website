@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 ActorResolutionError - this is for resolution errors that are in the
 context of what the target actor of the command (the addressee) can see.
@@ -35,15 +35,15 @@ provides the target actor information.
 
 `class `**`ActorResolutionError`**` :   `[`ResolutionError`](../object/ResolutionError.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ActorResolutionError`**  
 [`ResolutionError`](../object/ResolutionError.html)  
@@ -52,11 +52,11 @@ provides the target actor information.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ActorResolutionError`**  
 [`InsufficientNounsError`](../object/InsufficientNounsError.html)  
@@ -67,19 +67,19 @@ provides the target actor information.
 [`AmbiguousMultiDefiniteError`](../object/AmbiguousMultiDefiniteError.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cmd`](#cmd)
 
@@ -94,11 +94,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -113,11 +113,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cmd"></span>
 
@@ -125,19 +125,19 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5308](../source/parser.t.html#5308)\]
 
-<div class="desc">
+
 
 the command that we were attempting to resolve
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -145,15 +145,15 @@ the command that we were attempting to resolve
 
 [parser.t](../file/parser.t.html)\[[5301](../source/parser.t.html#5301)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

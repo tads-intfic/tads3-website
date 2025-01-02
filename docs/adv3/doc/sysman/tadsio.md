@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> tads-io
@@ -16,7 +16,7 @@ Function Set
     <a href="tadsnet.html" class="nav"><em>Next:</em> tads-net Function
 Set</a>     </span>
 
-</div>
+
 
 
 
@@ -61,7 +61,7 @@ section.
 
 `bannerClear(*handle*)`
 
-<div class="fdef">
+
 
 Clears the banner's display. Removes all text from the banner, and moves
 the output position back to the upper left corner of the banner's
@@ -72,7 +72,7 @@ window.
 `bannerCreate(*parent*, *where*, *other*,
 *windowType*, *align*, *size*, *sizeUnits*, *style*)`
 
-<div class="fdef">
+
 
 Creates a new banner window with the given parameters.
 
@@ -243,11 +243,11 @@ This function returns a handle to the new banner, or
 The banner handle can be used to operate on the banner in other
 `bannerXxx()` functions.
 
-</div>
+
 
 `bannerDelete(*handle*)`
 
-<div class="fdef">
+
 
 Delete the given banner. This removes the banner from the display, and
 recalculates the layout for all of the other banners remaining on the
@@ -261,20 +261,20 @@ presence. A banner always obtains its display space by splitting its
 parent, so once the parent is gone, a child has no way of obtaining any
 screen space of its own and thus becomes invisible.
 
-</div>
+
 
 `bannerFlush(*handle*)`
 
-<div class="fdef">
+
 
 Flushes the text output buffer for the given banner, immediately
 updating the display with any pending text.
 
-</div>
+
 
 `bannerGetInfo(*banner*)`
 
-<div class="fdef">
+
 
 Retrieves information on the banner. This function returns a list of
 values, as follows:
@@ -306,32 +306,32 @@ values, as follows:
 - \[6\] - the pixel width of the banner. This is used on GUI platforms
   only; on character-mode platforms, this will always be zero.
 
-</div>
+
 
 `bannerGoTo(*handle*, *row*, *col*)`
 
-<div class="fdef">
+
 
 Move the output position in the given text grid banner to the given row
 and column. Rows and columns are numbered from 1 at the upper left
 corner. This function can be used only in text grid windows; in other
 types of windows, it has no effect.
 
-</div>
+
 
 `bannerSay(*handle*, ...)`
 
-<div class="fdef">
+
 
 Writes one or more text items to the banner. This function treats the
 parameters following *handle* the same way that
 `tadsSay()` does.
 
-</div>
+
 
 `bannerSetScreenColor(*handle*, *color*)`
 
-<div class="fdef">
+
 
 Set the background color in the banner. This immediately changes the
 entire window's background to the given color (in other words, this
@@ -343,12 +343,12 @@ function can't be used in ordinary text windows
 (`BannerTypeText`); use the HTML
 `\<BODY BGCOLOR\>` tag instead.
 
-</div>
+
 
 `bannerSetSize(*handle*, *size*, *sizeUnits*,
 *isAdvisory*)`
 
-<div class="fdef">
+
 
 Set the size of the banner. The *size* and *sizeUnits* parameters have
 the same meanings they do in `bannerCreate()`.
@@ -364,11 +364,11 @@ requested; set *isAdvisory* to `nil` when you
 will not follow up with a call to
 `bannerSizeToContents()`.
 
-</div>
+
 
 `bannerSetTextColor(*handle*, *fg*, *bg*)`
 
-<div class="fdef">
+
 
 Set the text color in the given banner to the given foreground (*fg*)
 and background (*bg*) colors. The new color settings are used for text
@@ -421,11 +421,11 @@ background color. This indicates that the text should be drawn with a
 transparent background, and thus should simply be drawn against the
 banner's current background color.
 
-</div>
+
 
 `bannerSizeToContents(*handle*)`
 
-<div class="fdef">
+
 
 Resizes the given banner based on the current contents of the banner.
 For a top-aligned or bottom-aligned banner, this sets the banner's
@@ -452,22 +452,22 @@ exact content-based size. On platforms where
 set the exact content-based size; on other platforms, this will at least
 set the size to a suitable approximation.
 
-</div>
+
 
 `clearScreen()`
 
-<div class="fdef">
+
 
 Clear the main console window, if possible. The actual effect of this
 function varies by system; some interpreters clear the window, some
 display enough newlines to scroll any existing text off the top of the
 window, and some ignore the call completely.
 
-</div>
+
 
 `flushOutput()`
 
-<div class="fdef">
+
 
 Immediately flushes text to the output. When you display output using
 `tadsSay()`, the text you write isn't
@@ -485,13 +485,13 @@ wait" message before the long-running computation begins.
 
 This function takes no arguments and returns no value.
 
-</div>
+
 
 <span id="getLocalCharSet"></span>
 
 `getLocalCharSet(*which*)`
 
-<div class="fdef">
+
 
 Returns a string giving the name of the active local character set
 selected by *which*, which can have one of the following values:
@@ -522,12 +522,12 @@ The character set name returned can be used to create a
 [`CharacterSet`](charset.html) object to perform
 character-to-byte and byte-to-character mappings.
 
-</div>
+
 
 `inputDialog(*icon*, *prompt*, *buttons*,
 *defaultButton*, *cancelButton*)`
 
-<div class="fdef">
+
 
 Displays an "alert box" dialog (also known as a "message box"), and
 waits for the user to respond. This displays a dialog that includes a
@@ -614,11 +614,11 @@ systems. (There's no way to distinguish end-of-file and resource errors,
 but that's not too important because in either case the best course of
 action for the game is simply to exit.)
 
-</div>
+
 
 `inputEvent(*timeout*?)`
 
-<div class="fdef">
+
 
 Wait for an event, with the optional *timeout*, given in milliseconds.
 If the *timeout* value is omitted or `nil`,
@@ -825,14 +825,14 @@ has happened, so the interpreter should always be able to carry on with
 its own processing whether or not your code does anything in response to
 a particular event.
 
-</div>
+
 
 <span id="inputFile"></span>
 
 `inputFile(*prompt*, *dialogType*, *fileType*,
 *flags*)`
 
-<div class="fdef">
+
 
 Display a file selector dialog and wait for the user to respond. On GUI
 systems, this displays a standard system file selector dialog; on
@@ -946,11 +946,11 @@ special permission. For example, converting the FileName to a string and
 then attempting to open the file via the string will revert to the
 ordinary file safety rules for the file.
 
-</div>
+
 
 `inputKey()`
 
-<div class="fdef">
+
 
 Read a keystroke from the user. Waits for the user to press a key, then
 returns a string with the key the user pressed.
@@ -960,11 +960,11 @@ The key strings have the same meaning as for an
 `InEvtKey` event from
 `inputEvent()`.
 
-</div>
+
 
 `inputLine()`
 
-<div class="fdef">
+
 
 Read a line of text input from the user. Returns the text of the input
 as a string. (The returned string will **not** contain a newline
@@ -972,11 +972,11 @@ character.) Returns `nil` if an "end of file"
 error occurs, which usually indicates that the user has closed the
 interpreter application.
 
-</div>
+
 
 `inputLineCancel(*reset*)`
 
-<div class="fdef">
+
 
 Cancels an editing session interrupted by a timeout. This function must
 be called after `inputLineTimeout()` returns the
@@ -1000,11 +1000,11 @@ line of text that was under construction when the timeout occurred, and
 will restore the editing state (cursor position, selected text range,
 and so on) that was in effect.
 
-</div>
+
 
 `inputLineTimeout(*timeout*?)`
 
-<div class="fdef">
+
 
 Read a line of text input from the user, with an optional *timeout*
 given in milliseconds. See the section on real-time input
@@ -1099,24 +1099,24 @@ with the timeout expiring, and no intervening call to
 timeout occurred, this function will resume editing of the interrupted
 command line.
 
-</div>
+
 
 `logConsoleClose(*handle*)`
 
-<div class="fdef">
+
 
 Closes the given console. This function closes the operating system
 file, so no further text can be written to the console after this
 function is called.
 
-</div>
+
 
 <span id="logConsoleCreate"></span>
 
 `logConsoleCreate(*filename*, *charset*,
 *width*)`
 
-<div class="fdef">
+
 
 Creates a "log console." A log console is a special system object that
 behaves much like the main game window, except that all of the text
@@ -1168,11 +1168,11 @@ allow write access to the target file. [FileName](filename.html) objects
 obtained from [inputFile()](tadsio.html#inputFile) "save" dialogs are
 always accessible.
 
-</div>
+
 
 `logConsoleSay(*handle*, ...)`
 
-<div class="fdef">
+
 
 Writes the given arguments to the given log console. This behaves just
 like `tadsSay()`, but writes the text to the
@@ -1209,21 +1209,21 @@ best for situations where you specifically want to bypass the normal
 output stream handling for the main game window, and instead go directly
 to the file.
 
-</div>
+
 
 `morePrompt()`
 
-<div class="fdef">
+
 
 Display the MORE prompt on the main console window, and wait for the
 user to respond. This can be used when you want to pause execution and
 wait for the user to acknowledge some output before proceeding.
 
-</div>
+
 
 `resExists(*resname*)`
 
-<div class="fdef">
+
 
 Check to see if the given resource can be found. Returns true if the
 resource is present, nil if not. For HTML TADS 3, this looks for an HTML
@@ -1239,13 +1239,13 @@ in any external resource files (image.3r0 through image.3r9), and
 finally in an external file whose name is derived from the URL according
 to local system conventions.
 
-</div>
+
 
 <span id="setLogFile"></span>
 
 `setLogFile(*fname*, *logType*?)`
 
-<div class="fdef">
+
 
 Log console output to a file, or stop logging.
 
@@ -1300,13 +1300,13 @@ allow write access to the target file. [FileName](filename.html) objects
 obtained from [inputFile()](tadsio.html#inputFile) "save" dialogs are
 always accessible.
 
-</div>
+
 
 <span id="setScriptFile"></span>
 
 `setScriptFile(*filename*, *flags*?)`
 
-<div class="fdef">
+
 
 Start reading commands from a script file, or cancel existing script
 input.
@@ -1395,11 +1395,11 @@ allow read access to the target file. [FileName](filename.html) objects
 obtained from [inputFile()](tadsio.html#inputFile) "open" dialogs are
 always accessible.
 
-</div>
+
 
 `statusMode(*mode*)`
 
-<div class="fdef">
+
 
 Set the "status line mode." This can be used to control the status line
 in non-HTML mode and for older text-only interpreters that don't support
@@ -1423,21 +1423,21 @@ back to `StatModeNormal`:
     statusMode(StatModeNormal);
 ```
 
-</div>
+
 
 `statusRight(*txt*)`
 
-<div class="fdef">
+
 
 Write the text string *txt* to the right half of the status line. This
 can be used to control the right portion of the status line on older
 text-only interpreters that don't support the Banner API.
 
-</div>
+
 
 `systemInfo(*infoType*, ...)`
 
-<div class="fdef">
+
 
 Retrieve information about the TADS 3 application environment. This
 retrieves information on the interpreter and operating system that's
@@ -1614,13 +1614,13 @@ The *infoType* codes are:
   codes have the same meanings as the codes returns for
   `SysInfoAudioFade`.
 
-</div>
+
 
 <span id="tadsSay"></span>
 
 `tadsSay(*val*, ...)`
 
-<div class="fdef">
+
 
 Display one or more values. Each value is displayed on the console,
 starting with the first argument; the displayed values are not separated
@@ -1642,18 +1642,18 @@ upon its type:
 
 The function has no return value.
 
-</div>
+
 
 `timeDelay(*delay*)`
 
-<div class="fdef">
+
 
 Pause execution for the given number of milliseconds. The precision of
 system timers varies, so the actual delay might differ somewhat from the
 exact time specified on some systems according to the available hardware
 timer precision.
 
-</div>
+
 
 ## <span id="rtinput"></span>Real-time input
 
@@ -1885,23 +1885,23 @@ editing later, albeit not transparently.
 Here's what this looks like to the user. First, here's the way the
 screen looks when the user is first presented with the command line:
 
-<div class="cmdline">
+
 
     What do you, the detective, want to do next?
     >|
 
-</div>
+
 
 (That vertical bar, `\|`, is meant to represent
 the cursor, where text the user types is inserted.) Now, the user starts
 typing a command, and the screen looks like this after a bit:
 
-<div class="cmdline">
+
 
     What do you, the detective, want to do next?
     >look at the v|
 
-</div>
+
 
 Now, at this point, our timeout expires, and we discover that it's time
 to move Miss Marmalade into the same room where the player character is
@@ -1911,7 +1911,7 @@ resuming editing transparently, then we add our displayed messages.
 Finally, we call `inputLineTimeout()` again to
 resume editing. Here's what the user sees:
 
-<div class="cmdline">
+
 
     What do you, the detective, want to do next?
     >look at the v
@@ -1922,7 +1922,7 @@ resume editing. Here's what the user sees:
 
     >look at the v|
 
-</div>
+
 
 Notice that the partially-constructed command line now appears twice on
 the screen - once before the interruption, and again after. The first
@@ -1952,11 +1952,11 @@ we'd have to re-display the `\>` prompt before
 we resume editing the command; we could do this before the call to
 `inputLineTimeout()`.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1966,4 +1966,4 @@ Function Set
     <a href="tadsnet.html" class="nav"><em>Next:</em> tads-net Function
 Set</a>     </span>
 
-</div>
+

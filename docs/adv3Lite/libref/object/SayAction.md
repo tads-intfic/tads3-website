@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`SayAction`**` :   `[`ImplicitConversationAction`](../object/ImplicitConversationAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SayAction`**  
 [`ImplicitConversationAction`](../object/ImplicitConversationAction.html)  
@@ -46,11 +46,11 @@ Details](#_Methods_)
 `                                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`baseActionClass`](#baseActionClass)[`defaultProperty`](#defaultProperty)[`topicListProperty`](#topicListProperty)
 
@@ -72,11 +72,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -100,11 +100,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="baseActionClass"></span>
 
@@ -112,11 +112,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2158](../source/actions.t.html#2158)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="defaultProperty"></span>
 
@@ -124,11 +124,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2160](../source/actions.t.html#2160)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="topicListProperty"></span>
 
@@ -136,25 +136,25 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2159](../source/actions.t.html#2159)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

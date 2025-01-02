@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Drop Descriptor. This is passed to the receiveDrop() method of a "drop
 destination" when an object is discarded via commands such as DROP or
@@ -36,73 +36,73 @@ appropriate report message.
 
 `class `**`DropType`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DropType`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`DropType`**  
 [`DropTypeThrow`](../object/DropTypeThrow.html)  
 [`DropTypeShortThrow`](../object/DropTypeShortThrow.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`dropTypeDrop`](../object/dropTypeDrop.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getReportPrefix`](#getReportPrefix)[`standardReport`](#standardReport)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getReportPrefix"></span>
 
@@ -111,7 +111,7 @@ only</span>
 
 [thing.t](../file/thing.t.html)\[[299](../source/thing.t.html#299)\]
 
-<div class="desc">
+
 
 Get a short report describing the action without saying where the object
 ended up. This is roughly the same as the standard report, but omits any
@@ -128,7 +128,7 @@ the box. It falls into the chasm.")
 
 'obj' is the object being dropped, and 'dest' is the drop destination.
 
-</div>
+
 
 <span id="standardReport"></span>
 
@@ -137,7 +137,7 @@ only</span>
 
 [thing.t](../file/thing.t.html)\[[279](../source/thing.t.html#279)\]
 
-<div class="desc">
+
 
 Generate the standard report message for the action. The drop
 destination's receiveDrop() method can call this if the standard message
@@ -145,11 +145,11 @@ is adequate to describe the result of the action.
 
 'obj' is the object being dropped, and 'dest' is the drop destination.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

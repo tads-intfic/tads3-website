@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A special OutputStream for the left half of the status line (the short
 description area) in text mode. We use a separate stream for this
@@ -35,15 +35,15 @@ flexibility.
 
 `transient `**`statusLeftOutputStream`**` :   `[`OutputStream`](../object/OutputStream.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`statusLeftOutputStream`**  
 [`OutputStream`](../object/OutputStream.html)  
@@ -52,11 +52,11 @@ flexibility.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -70,11 +70,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`writeFromStream`](#writeFromStream)
 
@@ -88,19 +88,19 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="writeFromStream"></span>
 
@@ -108,15 +108,15 @@ Inherited from `ModuleExecObject` :
 
 [status.t](../file/status.t.html)\[[65](../source/status.t.html#65)\]
 
-<div class="desc">
+
 
 we sit atop the system-level main console output stream
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

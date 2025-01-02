@@ -26,48 +26,48 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The IntrinsicClass intrinsic class. Objects of this type represent the
 intrinsic classes themselves.
 
 `intrinsic class `**`IntrinsicClass`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`IntrinsicClass`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ intrinsic classes themselves.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isIntrinsicClass`](#isIntrinsicClass)
 
@@ -88,19 +88,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isIntrinsicClass"></span>
 
@@ -108,7 +108,7 @@ Inherited from `Object` :
 
 [systype.h](../file/systype.h.html)\[[127](../source/systype.h.html#127)\]
 
-<div class="desc">
+
 
 Class method: is the given value an IntrinsicClass object? This returns
 true if so, nil if not.
@@ -126,11 +126,11 @@ example, isIntrinsicClass(\[1,2,3\]) returns nil, because \[1,2,3\] is a
 List instance. If you get the superclass list for \[1,2,3\], though,
 that will be \[List\], and isIntrinsicClass(List) returns true.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

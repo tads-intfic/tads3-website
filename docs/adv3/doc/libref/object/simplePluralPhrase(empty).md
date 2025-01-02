@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 If the command has qualifiers that require a plural, but omits
 everything else, we can have an empty simple noun phrase.
 
 `grammar `<span class="gramalt">[`simplePluralPhrase`](../object/simplePluralPhrase.html)`(empty)`</span>` :   `[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`simplePluralPhrase(empty)`**  
 [`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)  
@@ -44,11 +44,11 @@ everything else, we can have an empty simple noun phrase.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -62,11 +62,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getAdjustedTokens`](#getAdjustedTokens)[`getVocabMatchList`](#getVocabMatchList)
 
@@ -81,19 +81,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getAdjustedTokens"></span>
 
@@ -101,11 +101,11 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6961](../source/en_us.t.html#6961)\]
 
-<div class="desc">
+
 
 we have an empty noun phrase
 
-</div>
+
 
 <span id="getVocabMatchList"></span>
 
@@ -113,15 +113,15 @@ we have an empty noun phrase
 
 [en_us.t](../file/en_us.t.html)\[[6956](../source/en_us.t.html#6956)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

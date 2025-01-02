@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A StairwayDown is Thing the player character can climb down. It might
 represent an downward staircase, but it could also represent a tree,
@@ -36,15 +36,15 @@ enclosing room.
 
 `class `**`StairwayDown`**` :   `[`TravelConnector`](../object/TravelConnector.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`StairwayDown`**  
 [`TravelConnector`](../object/TravelConnector.html)  
@@ -58,27 +58,27 @@ enclosing room.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canClimbDownMe`](#canClimbDownMe)[`cannotClimbMsg`](#cannotClimbMsg)[`isFixed`](#isFixed)[`PushTravelVia`](#PushTravelVia)[`traversalMsg`](#traversalMsg)
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(ClimbDown)`](#dobjFor(ClimbDown))[`sayActorFollowing`](#sayActorFollowing)[`sayDeparting`](#sayDeparting)
 
@@ -128,11 +128,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canClimbDownMe"></span>
 
@@ -140,11 +140,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[673](../source/extras.t.html#673)\]
 
-<div class="desc">
+
 
 A StairwayDown is something one can climb down
 
-</div>
+
 
 <span id="cannotClimbMsg"></span>
 
@@ -152,11 +152,11 @@ A StairwayDown is something one can climb down
 
 [extras.t](../file/extras.t.html)\[[709](../source/extras.t.html#709)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -164,11 +164,11 @@ A StairwayDown is something one can climb down
 
 [extras.t](../file/extras.t.html)\[[670](../source/extras.t.html#670)\]
 
-<div class="desc">
+
 
 A StairwayDown is usually something fixed in place.
 
-</div>
+
 
 <span id="PushTravelVia"></span>
 
@@ -176,12 +176,12 @@ A StairwayDown is usually something fixed in place.
 
 [extras.t](../file/extras.t.html)\[[679](../source/extras.t.html#679)\]
 
-<div class="desc">
+
 
 The appropriate PushTravelAction for pushing something something down a
 StairwayDown.
 
-</div>
+
 
 <span id="traversalMsg"></span>
 
@@ -189,19 +189,19 @@ StairwayDown.
 
 [extras.t](../file/extras.t.html)\[[706](../source/extras.t.html#706)\]
 
-<div class="desc">
+
 
 Create message parameter substitutions for the follower and leader
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(ClimbDown)"></span>
 
@@ -209,11 +209,11 @@ Create message parameter substitutions for the follower and leader
 
 [extras.t](../file/extras.t.html)\[[664](../source/extras.t.html#664)\]
 
-<div class="desc">
+
 
 Climbing down a StairwayDown is equivalent to travelling via it.
 
-</div>
+
 
 <span id="sayActorFollowing"></span>
 
@@ -221,12 +221,12 @@ Climbing down a StairwayDown is equivalent to travelling via it.
 
 [extras.t](../file/extras.t.html)\[[697](../source/extras.t.html#697)\]
 
-<div class="desc">
+
 
 Display message announcing that follower is following leader down this
 staircase.
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -234,17 +234,17 @@ staircase.
 
 [extras.t](../file/extras.t.html)\[[686](../source/extras.t.html#686)\]
 
-<div class="desc">
+
 
 Display message announcing that traveler (typically an NPC whose
 departure is witnessed by the player character)has left via this
 staircase.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

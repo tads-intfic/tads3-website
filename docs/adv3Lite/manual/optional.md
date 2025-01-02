@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Optional
 Modules  
@@ -15,7 +15,7 @@ Modules
     <a href="attachable.html" class="nav"><em>Next:</em> Attachables</a>
     </span>
 
-</div>
+
 
 
 
@@ -30,7 +30,7 @@ standard).
 One of the optional modules, [Actors](actor.html) will be left until
 later, when it will get a whole part to itself.
 
-<div class="sectoc">
+
 
 [Attachables](attachable.html)  
 [Events](event.html)  
@@ -51,11 +51,11 @@ later, when it will get a whole part to itself.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Optional
@@ -64,4 +64,4 @@ Modules
     <a href="attachable.html" class="nav"><em>Next:</em> Attachables</a>
     </span>
 
-</div>
+

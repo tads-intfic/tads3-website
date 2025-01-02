@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A default topic entry for a consultable. You can include one (or more)
 of these in a consultable's database to provide a topic of last resort
@@ -34,15 +34,15 @@ that answers to any topics that aren't in the database themselves.
 
 `class `**`DefaultConsultTopic`**` :   `[`DefaultTopic`](../object/DefaultTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefaultConsultTopic`**  
 [`DefaultTopic`](../object/DefaultTopic.html)  
@@ -50,27 +50,27 @@ that answers to any topics that aren't in the database themselves.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)
 
@@ -82,11 +82,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`setTopicPronouns`](#setTopicPronouns)
 
@@ -98,11 +98,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -110,19 +110,19 @@ Inherited from `TopicEntry` :
 
 [objects.t](../file/objects.t.html)\[[1684](../source/objects.t.html#1684)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -130,15 +130,15 @@ Inherited from `TopicEntry` :
 
 [objects.t](../file/objects.t.html)\[[1685](../source/objects.t.html#1685)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

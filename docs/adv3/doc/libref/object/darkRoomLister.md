@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The basic room lister for dark rooms
 
 **`darkRoomLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`darkRoomLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -54,11 +54,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -67,19 +67,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4437](../source/msg_neu.t.html#4437)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -99,11 +99,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4432](../source/msg_neu.t.html#4432)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -111,15 +111,15 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4435](../source/msg_neu.t.html#4435)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

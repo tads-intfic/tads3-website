@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `grammar `**[`defaultVerbPhrase`](../object/defaultVerbPhrase.html)`(noun)`**` :   `[`VerbProduction`](../object/VerbProduction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`defaultVerbPhrase(noun)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -42,11 +42,11 @@ Details](#_Methods_)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`action`](#action)[`missingQ`](#missingQ)[`verbPhrase`](#verbPhrase)
 
@@ -58,11 +58,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -74,11 +74,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -86,11 +86,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[106](../source/grammar.t.html#106)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="missingQ"></span>
 
@@ -98,11 +98,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[108](../source/grammar.t.html#108)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -110,25 +110,25 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[107](../source/grammar.t.html#107)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

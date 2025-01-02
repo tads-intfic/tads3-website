@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Passage represents a physical object an actor can travel through, like
 a passage or portal. A Passage is also a TravelConnector so it can be
@@ -34,15 +34,15 @@ defined on the appropriate direction property of its enclosing room.
 
 `class `**`Passage`**` :   `[`TravelConnector`](../object/TravelConnector.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Passage`**  
 [`TravelConnector`](../object/TravelConnector.html)  
@@ -56,29 +56,29 @@ defined on the appropriate direction property of its enclosing room.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Passage`**  
 [`PathPassage`](../object/PathPassage.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canGoThroughMe`](#canGoThroughMe)[`isFixed`](#isFixed)[`PushTravelVia`](#PushTravelVia)
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Enter)`](#dobjFor(Enter))[`dobjFor(GoAlong)`](#dobjFor(GoAlong))[`dobjFor(GoThrough)`](#dobjFor(GoThrough))[`iobjFor(PushTravelThrough)`](#iobjFor(PushTravelThrough))
 
@@ -128,11 +128,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canGoThroughMe"></span>
 
@@ -140,11 +140,11 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[743](../source/extras.t.html#743)\]
 
-<div class="desc">
+
 
 A Passage is something one can go through
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -152,11 +152,11 @@ A Passage is something one can go through
 
 [extras.t](../file/extras.t.html)\[[740](../source/extras.t.html#740)\]
 
-<div class="desc">
+
 
 A Passage is usually something fixed in place.
 
-</div>
+
 
 <span id="PushTravelVia"></span>
 
@@ -164,20 +164,20 @@ A Passage is usually something fixed in place.
 
 [extras.t](../file/extras.t.html)\[[749](../source/extras.t.html#749)\]
 
-<div class="desc">
+
 
 The appropriate PushTravelAction for pushing something something through
 a Passage.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -185,11 +185,11 @@ a Passage.
 
 [extras.t](../file/extras.t.html)\[[734](../source/extras.t.html#734)\]
 
-<div class="desc">
+
 
 Entering a Passage is the same as going through it
 
-</div>
+
 
 <span id="dobjFor(GoAlong)"></span>
 
@@ -197,11 +197,11 @@ Entering a Passage is the same as going through it
 
 [extras.t](../file/extras.t.html)\[[737](../source/extras.t.html#737)\]
 
-<div class="desc">
+
 
 Going along a Passage is the same as going through it
 
-</div>
+
 
 <span id="dobjFor(GoThrough)"></span>
 
@@ -209,11 +209,11 @@ Going along a Passage is the same as going through it
 
 [extras.t](../file/extras.t.html)\[[720](../source/extras.t.html#720)\]
 
-<div class="desc">
+
 
 Going through a Passage is equivalent to travelling via it.
 
-</div>
+
 
 <span id="iobjFor(PushTravelThrough)"></span>
 
@@ -221,15 +221,15 @@ Going through a Passage is equivalent to travelling via it.
 
 [extras.t](../file/extras.t.html)\[[727](../source/extras.t.html#727)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

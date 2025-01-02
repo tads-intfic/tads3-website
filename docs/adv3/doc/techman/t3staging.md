@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Using Nested
@@ -17,7 +17,7 @@ Rooms as Staging Locations
 <a href="t3odd_noun.html" class="nav"><em>Next:</em> Handling Odd Noun
 Phrases</a>     </span>
 
-</div>
+
 
 
 
@@ -560,7 +560,7 @@ otherwise inaccessible exit.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -571,4 +571,4 @@ Rooms as Staging Locations
 <a href="t3odd_noun.html" class="nav"><em>Next:</em> Handling Odd Noun
 Phrases</a>     </span>
 
-</div>
+

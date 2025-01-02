@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "conversational" agenda item. This type of item is ready to execute
 only when the actor hasn't engaged in conversation during the same turn.
@@ -36,42 +36,42 @@ until we get a turn where the player didn't directly talk to us.
 
 `class `**`ConvAgendaItem`**` :   `[`AgendaItem`](../object/AgendaItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ConvAgendaItem`**  
 [`AgendaItem`](../object/AgendaItem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isReady`](#isReady)[`otherActor`](#otherActor)
 
@@ -80,11 +80,11 @@ Inherited from `AgendaItem` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -93,11 +93,11 @@ Inherited from `AgendaItem` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isReady"></span>
 
@@ -105,11 +105,11 @@ Inherited from `AgendaItem` :
 
 [actor.t](../file/actor.t.html)\[[5609](../source/actor.t.html#5609)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="otherActor"></span>
 
@@ -117,27 +117,27 @@ Inherited from `AgendaItem` :
 
 [actor.t](../file/actor.t.html)\[[5618](../source/actor.t.html#5618)\]
 
-<div class="desc">
+
 
 The actor we're planning to address - by default, this is the PC. If the
 conversational overture will be directed to another NPC, you can specify
 that other actor here.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

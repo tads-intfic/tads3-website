@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An "unthing" is an object that represents the \*absence\* of an object.
 It's occasionally useful to respond specially when the player mentions
@@ -38,15 +38,15 @@ that says "that isn't here" rather than "that isn't important".
 
 `class `**`Unthing`**` :   `[`Decoration`](../object/Decoration.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Unthing`**  
 [`Decoration`](../object/Decoration.html)  
@@ -57,27 +57,27 @@ that says "that isn't here" rather than "that isn't important".
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`notHereMsg`](#notHereMsg)[`notImportantMsg`](#notImportantMsg)
 
@@ -97,11 +97,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`acceptCommand`](#acceptCommand)[`basicExamine`](#basicExamine)[`basicExamineListen`](#basicExamineListen)[`basicExamineSmell`](#basicExamineSmell)[`filterResolveList`](#filterResolveList)[`hideFromDefault`](#hideFromDefault)[`throwNoMatchForLocation`](#throwNoMatchForLocation)[`throwNoMatchForPossessive`](#throwNoMatchForPossessive)[`throwNothingInLocation`](#throwNothingInLocation)[`throwUnthingAsQualifier`](#throwUnthingAsQualifier)
 
@@ -122,11 +122,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="notHereMsg"></span>
 
@@ -134,7 +134,7 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[2151](../source/objects.t.html#2151)\]
 
-<div class="desc">
+
 
 The message to display when the player refers to this object. This can
 be a library message property, or a single-quoted string. This message
@@ -142,7 +142,7 @@ will probably always be overridden in practice, since the point of this
 class is to provide a more specific explanation of why the object isn't
 here.
 
-</div>
+
 
 <span id="notImportantMsg"></span>
 
@@ -150,19 +150,19 @@ here.
 
 [objects.t](../file/objects.t.html)\[[2173](../source/objects.t.html#2173)\]
 
-<div class="desc">
+
 
 use our custom message for the inherited Decoration responses
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="acceptCommand"></span>
 
@@ -170,12 +170,12 @@ use our custom message for the inherited Decoration responses
 
 [objects.t](../file/objects.t.html)\[[2225](../source/objects.t.html#2225)\]
 
-<div class="desc">
+
 
 trying to given an order to an Unthing acts the same way as any other
 kind of interaction
 
-</div>
+
 
 <span id="basicExamine"></span>
 
@@ -183,12 +183,12 @@ kind of interaction
 
 [objects.t](../file/objects.t.html)\[[2160](../source/objects.t.html#2160)\]
 
-<div class="desc">
+
 
 by default, use our 'not here' message for our descriptions (in all of
 the standard senses)
 
-</div>
+
 
 <span id="basicExamineListen"></span>
 
@@ -196,11 +196,11 @@ the standard senses)
 
 [objects.t](../file/objects.t.html)\[[2161](../source/objects.t.html#2161)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="basicExamineSmell"></span>
 
@@ -208,11 +208,11 @@ the standard senses)
 
 [objects.t](../file/objects.t.html)\[[2166](../source/objects.t.html#2166)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="filterResolveList"></span>
 
@@ -220,12 +220,12 @@ the standard senses)
 
 [objects.t](../file/objects.t.html)\[[2211](../source/objects.t.html#2211)\]
 
-<div class="desc">
+
 
 if there's anything at all in a resolve list other than me, always
 remove me
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -233,11 +233,11 @@ remove me
 
 [objects.t](../file/objects.t.html)\[[2154](../source/objects.t.html#2154)\]
 
-<div class="desc">
+
 
 an Unthing shouldn't be picked as a default
 
-</div>
+
 
 <span id="throwNoMatchForLocation"></span>
 
@@ -245,11 +245,11 @@ an Unthing shouldn't be picked as a default
 
 [objects.t](../file/objects.t.html)\[[2185](../source/objects.t.html#2185)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="throwNoMatchForPossessive"></span>
 
@@ -257,7 +257,7 @@ an Unthing shouldn't be picked as a default
 
 [objects.t](../file/objects.t.html)\[[2184](../source/objects.t.html#2184)\]
 
-<div class="desc">
+
 
 Because we're not actually here, use custom error messages when we're
 used as a possessive or locational qualifier. The standard messages say
@@ -267,7 +267,7 @@ here, so we can't "appear" or "seem" to own or contain anything.
 Instead, we need to indicate that the qualifying object itself (i.e.,
 'self') isn't here at all.
 
-</div>
+
 
 <span id="throwNothingInLocation"></span>
 
@@ -275,11 +275,11 @@ Instead, we need to indicate that the qualifying object itself (i.e.,
 
 [objects.t](../file/objects.t.html)\[[2186](../source/objects.t.html#2186)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="throwUnthingAsQualifier"></span>
 
@@ -287,16 +287,16 @@ Instead, we need to indicate that the qualifying object itself (i.e.,
 
 [objects.t](../file/objects.t.html)\[[2192](../source/objects.t.html#2192)\]
 
-<div class="desc">
+
 
 throw a generic message when we're used as a qualifier - we'll simply
 get our "not here" message and display that
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

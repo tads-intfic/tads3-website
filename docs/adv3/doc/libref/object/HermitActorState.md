@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "hermit" actor state is a state where the actor is unresponsive to
 conversational overtures (ASK ABOUT, TELL ABOUT, HELLO, GOODBYE, YES,
@@ -35,15 +35,15 @@ at conversation will be met with the 'noResponse' message.
 
 `class `**`HermitActorState`**` :   `[`ActorState`](../object/ActorState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`HermitActorState`**  
 [`ActorState`](../object/ActorState.html)  
@@ -54,27 +54,27 @@ at conversation will be met with the 'noResponse' message.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`limitSuggestions`](#limitSuggestions)
 
@@ -91,11 +91,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`handleConversation`](#handleConversation)[`noResponse`](#noResponse)
 
@@ -113,11 +113,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="limitSuggestions"></span>
 
@@ -125,7 +125,7 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[5278](../source/actor.t.html#5278)\]
 
-<div class="desc">
+
 
 Since the hermit state blocks topics from outside the state, don't offer
 suggestions for other topics while in this state.
@@ -145,15 +145,15 @@ that there are still useful topics to explore with the NPC. The player
 might otherwise assume that the NPC is out of useful topics, and not
 bother trying again later when the NPC becomes more responsive.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="handleConversation"></span>
 
@@ -161,11 +161,11 @@ bother trying again later when the NPC becomes more responsive.
 
 [actor.t](../file/actor.t.html)\[[5251](../source/actor.t.html#5251)\]
 
-<div class="desc">
+
 
 all conversation actions get the same default response
 
-</div>
+
 
 <span id="noResponse"></span>
 
@@ -173,7 +173,7 @@ all conversation actions get the same default response
 
 [actor.t](../file/actor.t.html)\[[5248](../source/actor.t.html#5248)\]
 
-<div class="desc">
+
 
 Show our response to any conversational command. We'll simply show the
 standard "there's no response" message by default, but subclasses can
@@ -192,11 +192,11 @@ myList: ShuffledEventList {
 \['message1', 'message2', 'message3'\] }  
 ;
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

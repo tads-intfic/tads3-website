@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Turn command recording off. This stops recording the command log started
 with the most recent RECORD command.
 
 **`RecordOff`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RecordOff`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -46,11 +46,11 @@ with the most recent RECORD command.
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInUndo`](#includeInUndo)
 
@@ -69,11 +69,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`turnOffRecording`](#turnOffRecording)
 
@@ -94,11 +94,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -106,19 +106,19 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2565](../source/actions.t.html#2565)\]
 
-<div class="desc">
+
 
 we can't include this in undo, as it affects external files
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -126,11 +126,11 @@ we can't include this in undo, as it affects external files
 
 [actions.t](../file/actions.t.html)\[[2535](../source/actions.t.html#2535)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="turnOffRecording"></span>
 
@@ -138,15 +138,15 @@ we can't include this in undo, as it affects external files
 
 [actions.t](../file/actions.t.html)\[[2542](../source/actions.t.html#2542)\]
 
-<div class="desc">
+
 
 turn off recording
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

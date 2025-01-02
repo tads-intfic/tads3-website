@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A common, abstract base class for things that cannot be moved. You
 shouldn't use this class to create game objects directly; you should
@@ -42,15 +42,15 @@ type of Thing.
 
 `class `**`NonPortable`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NonPortable`**  
 [`Thing`](../object/Thing.html)  
@@ -58,11 +58,11 @@ type of Thing.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NonPortable`**  
 [`Fixture`](../object/Fixture.html)  
@@ -108,19 +108,19 @@ type of Thing.
 [`Person`](../object/Person.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`bulk`](#bulk)[`contentsListed`](#contentsListed)[`isListed`](#isListed)[`isListedInContents`](#isListedInContents)[`isListedInInventory`](#isListedInInventory)[`weight`](#weight)
 
@@ -132,11 +132,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`contentsInFixedIn`](#contentsInFixedIn)[`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(ShowTo)`](#dobjFor(ShowTo))[`isHeldBy`](#isHeldBy)[`meetsObjHeld`](#meetsObjHeld)
 
@@ -148,11 +148,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="bulk"></span>
 
@@ -160,11 +160,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1744](../source/objects.t.html#1744)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="contentsListed"></span>
 
@@ -172,13 +172,13 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1721](../source/objects.t.html#1721)\]
 
-<div class="desc">
+
 
 By default, if the object's contents would be listed in a direct
 examination, then also list them when showing an inventory list, or
 describing the enclosing room or an enclosing object.
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -186,7 +186,7 @@ describing the enclosing room or an enclosing object.
 
 [objects.t](../file/objects.t.html)\[[1712](../source/objects.t.html#1712)\]
 
-<div class="desc">
+
 
 An immovable objects is not listed in room or container contents
 listings. Since the object is immovable, it's in effect a permanent
@@ -194,7 +194,7 @@ feature of its location, so it should be described as such: either
 directly as part of its location's description text, or via its own
 specialDesc.
 
-</div>
+
 
 <span id="isListedInContents"></span>
 
@@ -202,11 +202,11 @@ specialDesc.
 
 [objects.t](../file/objects.t.html)\[[1713](../source/objects.t.html#1713)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isListedInInventory"></span>
 
@@ -214,11 +214,11 @@ specialDesc.
 
 [objects.t](../file/objects.t.html)\[[1714](../source/objects.t.html#1714)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="weight"></span>
 
@@ -226,7 +226,7 @@ specialDesc.
 
 [objects.t](../file/objects.t.html)\[[1743](../source/objects.t.html#1743)\]
 
-<div class="desc">
+
 
 Since non-portables aren't carried, their weight and bulk are largely
 irrelevant. Even so, when a non-portable is a component of another
@@ -235,15 +235,15 @@ can affect the behavior of the parent object. So, it's simplest to use a
 default of zero for these so that there are no surprises about the
 parent's behavior.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="contentsInFixedIn"></span>
 
@@ -251,7 +251,7 @@ parent's behavior.
 
 [objects.t](../file/objects.t.html)\[[1730](../source/objects.t.html#1730)\]
 
-<div class="desc">
+
 
 Are my contents within a fixed item that is within the given location?
 Since we're fixed in place, our contents are certainly within a fixed
@@ -259,7 +259,7 @@ item, so we merely need to check if we're fixed in place within the
 given location. We are if we're in the given location or we ourselves
 are fixed in place in the given location.
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -267,14 +267,14 @@ are fixed in place in the given location.
 
 [objects.t](../file/objects.t.html)\[[1774](../source/objects.t.html#1774)\]
 
-<div class="desc">
+
 
 Thing decreases the likelihood that we want to examine an object when
 the object isn't being held. That's fine for portable objects, but
 nonportables can never be held, so we don't want that decrease in
 logicalness.
 
-</div>
+
 
 <span id="dobjFor(ShowTo)"></span>
 
@@ -282,12 +282,12 @@ logicalness.
 
 [objects.t](../file/objects.t.html)\[[1766](../source/objects.t.html#1766)\]
 
-<div class="desc">
+
 
 showing an immovable to someone simply requires that it be in sight:
 we're not holding it up to show it, we're simply pointing it out
 
-</div>
+
 
 <span id="isHeldBy"></span>
 
@@ -295,7 +295,7 @@ we're not holding it up to show it, we're simply pointing it out
 
 [objects.t](../file/objects.t.html)\[[1753](../source/objects.t.html#1753)\]
 
-<div class="desc">
+
 
 Non-portable objects can't be held, since they can't be carried.
 However, in some cases, it's useful to include non-portable objects
@@ -303,7 +303,7 @@ within an actor, such as when creating component parts of an actor
 (hands, say). In these cases, the non-portables aren't held, but rather
 are components or similar.
 
-</div>
+
 
 <span id="meetsObjHeld"></span>
 
@@ -311,16 +311,16 @@ are components or similar.
 
 [objects.t](../file/objects.t.html)\[[1759](../source/objects.t.html#1759)\]
 
-<div class="desc">
+
 
 We're not being held, but if our location is an actor, then we're as
 good as held because we're effectively part of the actor.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

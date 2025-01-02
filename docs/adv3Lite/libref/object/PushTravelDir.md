@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`PushTravelDir`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PushTravelDir`**  
 [`TAction`](../object/TAction.html)  
@@ -44,11 +44,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`curIobj`](#curIobj)[`direction`](#direction)[`isPushTravelAction`](#isPushTravelAction)[`travelAllowed`](#travelAllowed)
 
@@ -64,11 +64,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doTravel`](#doTravel)[`execAction`](#execAction)
 
@@ -86,11 +86,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="curIobj"></span>
 
@@ -98,11 +98,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1656](../source/actions.t.html#1656)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="direction"></span>
 
@@ -110,11 +110,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1655](../source/actions.t.html#1655)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isPushTravelAction"></span>
 
@@ -122,11 +122,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1560](../source/actions.t.html#1560)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="travelAllowed"></span>
 
@@ -134,21 +134,21 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[1654](../source/actions.t.html#1654)\]
 
-<div class="desc">
+
 
 If our direction isn't attached to an object, it must be to a method or
 string that's going to display a message explaining why we can't travel.
 So call the nonTravel() function to handle it.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doTravel"></span>
 
@@ -156,11 +156,11 @@ So call the nonTravel() function to handle it.
 
 [actions.t](../file/actions.t.html)\[[1659](../source/actions.t.html#1659)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -168,15 +168,15 @@ So call the nonTravel() function to handle it.
 
 [actions.t](../file/actions.t.html)\[[1562](../source/actions.t.html#1562)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

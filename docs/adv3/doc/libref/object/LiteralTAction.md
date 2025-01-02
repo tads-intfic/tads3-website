@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An action with a direct object and a literal, such as "turn dial to
 \<setting\>" or "type \<string\> on keypad". We'll accept anything as
@@ -62,15 +62,15 @@ phrase.
 
 `class `**`LiteralTAction`**` :   `[`LiteralActionBase`](../object/LiteralActionBase.html)[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LiteralTAction`**  
 [`LiteralActionBase`](../object/LiteralActionBase.html)  
@@ -83,11 +83,11 @@ phrase.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`LiteralTAction`**  
 [`EnterOnAction`](../object/EnterOnAction.html)  
@@ -102,19 +102,19 @@ phrase.
 [`predicate(TypeLiteralOnWhat)`](../object/predicate(TypeLiteralOnWhat).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`predicateNounPhrases`](#predicateNounPhrases)[`whichMessageLiteral`](#whichMessageLiteral)[`whichMessageObject`](#whichMessageObject)[`whichObject`](#whichObject)
 
@@ -135,11 +135,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`announceDefaultObject`](#announceDefaultObject)[`getCurrentObjects`](#getCurrentObjects)[`getMatchForRole`](#getMatchForRole)[`getObjectForRole`](#getObjectForRole)[`getOtherMessageObjectPronoun`](#getOtherMessageObjectPronoun)[`getOtherObjectRole`](#getOtherObjectRole)[`getQuestionInf`](#getQuestionInf)[`getRoleFromIndex`](#getRoleFromIndex)[`getVerbPhrase`](#getVerbPhrase)[`initForMissingDobj`](#initForMissingDobj)[`initForMissingLiteral`](#initForMissingLiteral)[`resolveNouns`](#resolveNouns)[`retryWithMissingLiteral`](#retryWithMissingLiteral)[`setCurrentObjects`](#setCurrentObjects)[`setObjectMatches`](#setObjectMatches)[`setResolvedObjects`](#setResolvedObjects)[`whatObj`](#whatObj)
 
@@ -160,11 +160,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="predicateNounPhrases"></span>
 
@@ -172,11 +172,11 @@ Inherited from `Resolver` :
 
 [action.t](../file/action.t.html)\[[5353](../source/action.t.html#5353)\]
 
-<div class="desc">
+
 
 we have a direct object and a literal phrase
 
-</div>
+
 
 <span id="whichMessageLiteral"></span>
 
@@ -184,11 +184,11 @@ we have a direct object and a literal phrase
 
 [action.t](../file/action.t.html)\[[5480](../source/action.t.html#5480)\]
 
-<div class="desc">
+
 
 object role played by the literal phrase
 
-</div>
+
 
 <span id="whichMessageObject"></span>
 
@@ -196,7 +196,7 @@ object role played by the literal phrase
 
 [action.t](../file/action.t.html)\[[5506](../source/action.t.html#5506)\]
 
-<div class="desc">
+
 
 What we call our direct object might actually be playing the grammatical
 role of the indirect object - in order to inherit easily from TAction,
@@ -207,7 +207,7 @@ care about its real role. So, override the resolver method
 whichMessageObject so that it returns whichever role is NOT served by
 the topic object.
 
-</div>
+
 
 <span id="whichObject"></span>
 
@@ -215,20 +215,20 @@ the topic object.
 
 [action.t](../file/action.t.html)\[[5494](../source/action.t.html#5494)\]
 
-<div class="desc">
+
 
 the true grammatical role of the resolved object is always the direct
 object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="announceDefaultObject"></span>
 
@@ -236,11 +236,11 @@ object
 
 [en_us.t](../file/en_us.t.html)\[[9015](../source/en_us.t.html#9015)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getCurrentObjects"></span>
 
@@ -248,13 +248,13 @@ object
 
 [action.t](../file/action.t.html)\[[5417](../source/action.t.html#5417)\]
 
-<div class="desc">
+
 
 Get a list of the current objects. We include only the direct object
 here, since the literal text is not a resolved object but simply literal
 text.
 
-</div>
+
 
 <span id="getMatchForRole"></span>
 
@@ -262,11 +262,11 @@ text.
 
 [action.t](../file/action.t.html)\[[5383](../source/action.t.html#5383)\]
 
-<div class="desc">
+
 
 get the match tree for the given role
 
-</div>
+
 
 <span id="getObjectForRole"></span>
 
@@ -274,11 +274,11 @@ get the match tree for the given role
 
 [action.t](../file/action.t.html)\[[5373](../source/action.t.html#5373)\]
 
-<div class="desc">
+
 
 get the resolved object in a given role
 
-</div>
+
 
 <span id="getOtherMessageObjectPronoun"></span>
 
@@ -286,13 +286,13 @@ get the resolved object in a given role
 
 [en_us.t](../file/en_us.t.html)\[[9049](../source/en_us.t.html#9049)\]
 
-<div class="desc">
+
 
 When we want to show a verb infinitive phrase that involves a pronoun
 for the literal phrase, refer to the literal as 'that' rather than 'it'
 or anything else.
 
-</div>
+
 
 <span id="getOtherObjectRole"></span>
 
@@ -300,11 +300,11 @@ or anything else.
 
 [action.t](../file/action.t.html)\[[5366](../source/action.t.html#5366)\]
 
-<div class="desc">
+
 
 get the OtherObject role for the given role
 
-</div>
+
 
 <span id="getQuestionInf"></span>
 
@@ -312,11 +312,11 @@ get the OtherObject role for the given role
 
 [en_us.t](../file/en_us.t.html)\[[9034](../source/en_us.t.html#9034)\]
 
-<div class="desc">
+
 
 use the same handling we use for a regular two-object action
 
-</div>
+
 
 <span id="getRoleFromIndex"></span>
 
@@ -324,11 +324,11 @@ use the same handling we use for a regular two-object action
 
 [action.t](../file/action.t.html)\[[5356](../source/action.t.html#5356)\]
 
-<div class="desc">
+
 
 get an object role
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -336,12 +336,12 @@ get an object role
 
 [en_us.t](../file/en_us.t.html)\[[9083](../source/en_us.t.html#9083)\]
 
-<div class="desc">
+
 
 We're asking about the resolved object, so the other pronoun is for the
 literal phrase: always use 'that' to refer to the literal phrase.
 
-</div>
+
 
 <span id="initForMissingDobj"></span>
 
@@ -349,11 +349,11 @@ literal phrase: always use 'that' to refer to the literal phrase.
 
 [action.t](../file/action.t.html)\[[5453](../source/action.t.html#5453)\]
 
-<div class="desc">
+
 
 initialize with a missing direct object phrase
 
-</div>
+
 
 <span id="initForMissingLiteral"></span>
 
@@ -361,11 +361,11 @@ initialize with a missing direct object phrase
 
 [action.t](../file/action.t.html)\[[5465](../source/action.t.html#5465)\]
 
-<div class="desc">
+
 
 initialize for a missing literal phrase
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -373,11 +373,11 @@ initialize for a missing literal phrase
 
 [action.t](../file/action.t.html)\[[5315](../source/action.t.html#5315)\]
 
-<div class="desc">
+
 
 Resolve objects.
 
-</div>
+
 
 <span id="retryWithMissingLiteral"></span>
 
@@ -385,7 +385,7 @@ Resolve objects.
 
 [action.t](../file/action.t.html)\[[5435](../source/action.t.html#5435)\]
 
-<div class="desc">
+
 
 Retry a single-object action as an action taking both an object and a
 literal phrase. We'll treat the original action's direct object list as
@@ -394,7 +394,7 @@ our direct object list, and obtain a literal phrase interactively.
 This routine terminates with 'exit' if it doesn't throw some other
 error.
 
-</div>
+
 
 <span id="setCurrentObjects"></span>
 
@@ -402,11 +402,11 @@ error.
 
 [action.t](../file/action.t.html)\[[5420](../source/action.t.html#5420)\]
 
-<div class="desc">
+
 
 set the current objects
 
-</div>
+
 
 <span id="setObjectMatches"></span>
 
@@ -414,11 +414,11 @@ set the current objects
 
 [action.t](../file/action.t.html)\[[5403](../source/action.t.html#5403)\]
 
-<div class="desc">
+
 
 manually set the pre-resolved match trees
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -426,11 +426,11 @@ manually set the pre-resolved match trees
 
 [action.t](../file/action.t.html)\[[5393](../source/action.t.html#5393)\]
 
-<div class="desc">
+
 
 manually set the resolved objects
 
-</div>
+
 
 <span id="whatObj"></span>
 
@@ -438,18 +438,18 @@ manually set the resolved objects
 
 [en_us.t](../file/en_us.t.html)\[[9028](../source/en_us.t.html#9028)\]
 
-<div class="desc">
+
 
 Use the same handling as for a regular two-object action. We can only
 default the actual object in this kind of verb; the actual object always
 fills the DirectObject slot, but in message generation it might use a
 different slot, so use the message generation slot here.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

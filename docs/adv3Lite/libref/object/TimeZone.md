@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 TimeZone intrinsic class. A TimeZone object represents a location entry
 in the IANA zoneinfo database. It contains information on the location's
@@ -117,41 +117,41 @@ Standard Time, and Cuba Summer Time).
 
 `intrinsic class `**`TimeZone`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TimeZone`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -159,11 +159,11 @@ Standard Time, and Cuba Summer Time).
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getHistory`](#getHistory)[`getLocation`](#getLocation)[`getNames`](#getNames)[`getRules`](#getRules)
 
@@ -172,19 +172,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getHistory"></span>
 
@@ -192,7 +192,7 @@ Inherited from `Object` :
 
 [date.h](../file/date.h.html)\[[566](../source/date.h.html#566)\]
 
-<div class="desc">
+
 
 Get the history item that applies to a given date, or the entire
 enumerated history of clock changes in this timezone.
@@ -235,7 +235,7 @@ things up for the typical case. For changes after the last enumerated
 entry, TADS applies the rules, so transitions in the far future will be
 correctly figured when needed.
 
-</div>
+
 
 <span id="getLocation"></span>
 
@@ -243,7 +243,7 @@ correctly figured when needed.
 
 [date.h](../file/date.h.html)\[[628](../source/date.h.html#628)\]
 
-<div class="desc">
+
 
 Get the zone's location. This returns a list: \[country, lat, lon,
 comment\], where 'country' is a string with the country code (a
@@ -253,7 +253,7 @@ and minutes) or +ddmmss (and seconds), 'lon' is the longitude as a
 string in the format +dddmm or +dddmmss, and 'comment' is a string with
 any comment text from the zoneinfo database.
 
-</div>
+
 
 <span id="getNames"></span>
 
@@ -261,7 +261,7 @@ any comment text from the zoneinfo database.
 
 [date.h](../file/date.h.html)\[[520](../source/date.h.html#520)\]
 
-<div class="desc">
+
 
 Get the name or names for this timezone. This returns a list of strings
 with the timezone's names, as defined in the IANA zoneinfo database. The
@@ -272,7 +272,7 @@ several major cities in a region that share the same timezone rules.
 When a zone has aliases, the primary name is listed first, followed by
 the aliases.
 
-</div>
+
 
 <span id="getRules"></span>
 
@@ -280,7 +280,7 @@ the aliases.
 
 [date.h](../file/date.h.html)\[[616](../source/date.h.html#616)\]
 
-<div class="desc">
+
 
 Get the ongoing rules that are in effect after the last enumerated
 history item. This returns a list of the rules for future changes to the
@@ -327,11 +327,11 @@ be applied to the full date-and-time value, since an 's' or 'u' could
 conceivably cause the local date and the date in the rule's zone to
 differ by a day at the time of day of the rule.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

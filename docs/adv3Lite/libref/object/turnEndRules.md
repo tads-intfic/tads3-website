@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The turnEndRules execute the various things that need to happen at the
 end of each turn, including the current location's roomDaemon, any
@@ -30,15 +30,15 @@ to occur at the end of each turn. \[SYSRULES EXTENSION\]
 
 **`turnEndRules`**` :   `[`RuleBook`](../object/RuleBook.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`turnEndRules`**  
 [`RuleBook`](../object/RuleBook.html)  
@@ -47,11 +47,11 @@ to occur at the end of each turn. \[SYSRULES EXTENSION\]
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contValue`](#contValue)[`priority`](#priority)[`priority`](#priority)[`priority`](#priority)[`priority`](#priority)
 
@@ -66,11 +66,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`follow`](#follow)[`follow`](#follow)[`follow`](#follow)
 
@@ -84,11 +84,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contValue"></span>
 
@@ -96,11 +96,11 @@ Inherited from `ModuleExecObject` :
 
 [sysrules.t](../file/sysrules.t.html)\[[76](../source/sysrules.t.html#76)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -108,11 +108,11 @@ Inherited from `ModuleExecObject` :
 
 [sysrules.t](../file/sysrules.t.html)\[[85](../source/sysrules.t.html#85)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -120,12 +120,12 @@ Inherited from `ModuleExecObject` :
 
 [sysrules.t](../file/sysrules.t.html)\[[96](../source/sysrules.t.html#96)\]
 
-<div class="desc">
+
 
 Execute the player character's current location's roomDaemon. \[SYSRULES
 EXTENSION\] + roomDaemonRule: Rule follow() {
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -133,12 +133,12 @@ EXTENSION\] + roomDaemonRule: Rule follow() {
 
 [sysrules.t](../file/sysrules.t.html)\[[113](../source/sysrules.t.html#113)\]
 
-<div class="desc">
+
 
 If the events.t module is included, execute all current Daemons and
 Fuses.
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -146,19 +146,19 @@ Fuses.
 
 [sysrules.t](../file/sysrules.t.html)\[[123](../source/sysrules.t.html#123)\]
 
-<div class="desc">
+
 
 Advance the turn counter
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="follow"></span>
 
@@ -166,12 +166,12 @@ Advance the turn counter
 
 [sysrules.t](../file/sysrules.t.html)\[[81](../source/sysrules.t.html#81)\]
 
-<div class="desc">
+
 
 \[SYSRULES EXTENSION\] By default add a paragraph break before doing
 anything else at the end of turn.
 
-</div>
+
 
 <span id="follow"></span>
 
@@ -179,12 +179,12 @@ anything else at the end of turn.
 
 [sysrules.t](../file/sysrules.t.html)\[[104](../source/sysrules.t.html#104)\]
 
-<div class="desc">
+
 
 If the events.t module is included, execute all current Daemons and
 Fuses \[SYSRULES EXTENSION\]
 
-</div>
+
 
 <span id="follow"></span>
 
@@ -192,15 +192,15 @@ Fuses \[SYSRULES EXTENSION\]
 
 [sysrules.t](../file/sysrules.t.html)\[[118](../source/sysrules.t.html#118)\]
 
-<div class="desc">
+
 
 Advance the turn counter \[SYSRULES EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

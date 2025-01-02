@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Switch is a Thing than can be turned on and off
 
 `class `**`Switch`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Switch`**  
 [`Thing`](../object/Thing.html)  
@@ -52,29 +52,29 @@ A Switch is a Thing than can be turned on and off
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Switch`**  
 [`Flashlight`](../object/Flashlight.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isSwitchable`](#isSwitchable)
 
@@ -93,11 +93,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Flip)`](#dobjFor(Flip))
 
@@ -118,11 +118,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isSwitchable"></span>
 
@@ -130,19 +130,19 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[965](../source/extras.t.html#965)\]
 
-<div class="desc">
+
 
 A Switch is switchable
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Flip)"></span>
 
@@ -150,15 +150,15 @@ A Switch is switchable
 
 [extras.t](../file/extras.t.html)\[[968](../source/extras.t.html#968)\]
 
-<div class="desc">
+
 
 FLIP SWITCH is equivalent to SWITCH SWITCH
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

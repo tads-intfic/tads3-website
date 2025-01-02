@@ -26,50 +26,50 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 PostRestoreObject - every instance of this class is notified, via its
 execute() method, immediately after we restore the game.
 
 `class `**`PostRestoreObject`**` :   `[`ModuleExecObject`](../object/ModuleExecObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PostRestoreObject`**  
 [`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`bannerTracker`](../object/bannerTracker.html)[`inputManager`](../object/inputManager.html)[`tipManager`](../object/tipManager.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`restoreCode`](#restoreCode)
 
@@ -78,11 +78,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -91,11 +91,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="restoreCode"></span>
 
@@ -103,7 +103,7 @@ Inherited from `ModuleExecObject` :
 
 [actions.t](../file/actions.t.html)\[[217](../source/actions.t.html#217)\]
 
-<div class="desc">
+
 
 The "restore code," which is the (normally integer) value passed as the
 second argument to restoreGame(). The restore code gives us some idea of
@@ -120,21 +120,21 @@ double-clicking on a saved game file from the desktop.
 Games and library extensions can use their own additional restore codes
 in their calls to restoreGame().
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -17,52 +17,52 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 This module defines classes and constants related to the File intrinsic
 class. In particular, this module defines the Exception subclasses
 thrown by File methods.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`FileClosedException`](../object/FileClosedException.html)[`FileCreationException`](../object/FileCreationException.html)[`FileException`](../object/FileException.html)[`FileInfo`](../object/FileInfo.html)[`FileIOException`](../object/FileIOException.html)[`FileModeException`](../object/FileModeException.html)[`FileNotFoundException`](../object/FileNotFoundException.html)[`FileOpenException`](../object/FileOpenException.html)[`FileSafetyException`](../object/FileSafetyException.html)[`FileSyncException`](../object/FileSyncException.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

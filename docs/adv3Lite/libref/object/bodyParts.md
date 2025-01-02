@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 First, trap attempts to refer to body parts
 
 **`bodyParts`**` :   `[`MultiLoc`](../object/MultiLoc.html)[`Unthing`](../object/Unthing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`bodyParts`**  
 [`MultiLoc`](../object/MultiLoc.html)  
@@ -51,11 +51,11 @@ First, trap attempts to refer to body parts
 `                                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`initialLocationClass`](#initialLocationClass)[`notHereMsg`](#notHereMsg)
 
@@ -86,11 +86,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -121,11 +121,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="initialLocationClass"></span>
 
@@ -133,11 +133,11 @@ Inherited from `LMentionable` :
 
 [newbie.t](../file/newbie.t.html)\[[376](../source/newbie.t.html#376)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notHereMsg"></span>
 
@@ -145,25 +145,25 @@ Inherited from `LMentionable` :
 
 [newbie.t](../file/newbie.t.html)\[[369](../source/newbie.t.html#369)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

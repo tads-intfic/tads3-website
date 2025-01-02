@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Postures. A posture describes how an actor is internally positioned:
 standing, lying, sitting. We represent postures with objects of class
@@ -39,62 +39,62 @@ Give the postures some additional attributes
 
 `class `**`Posture`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Posture`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`lying`](../object/lying.html)[`sitting`](../object/sitting.html)[`standing`](../object/standing.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`msgVerbI`](#msgVerbI)[`msgVerbIPast`](#msgVerbIPast)[`msgVerbIPresent`](#msgVerbIPresent)[`msgVerbT`](#msgVerbT)[`msgVerbTPast`](#msgVerbTPast)[`msgVerbTPresent`](#msgVerbTPresent)[`participle`](#participle)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`setActorToPosture`](#setActorToPosture)[`tryMakingPosture`](#tryMakingPosture)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="msgVerbI"></span>
 
@@ -102,13 +102,13 @@ Give the postures some additional attributes
 
 [en_us.t](../file/en_us.t.html)\[[2604](../source/en_us.t.html#2604)\]
 
-<div class="desc">
+
 
 Intransitive and transitive forms of the verb, for use in library
 messages. Each of these methods simply calls one of the two
 corresponding fixed-tense properties, depending on the current tense.
 
-</div>
+
 
 <span id="msgVerbIPast"></span>
 
@@ -116,11 +116,11 @@ corresponding fixed-tense properties, depending on the current tense.
 
 [en_us.t](../file/en_us.t.html)\[[2616](../source/en_us.t.html#2616)\]
 
-<div class="desc">
+
 
 our past-tense intransitive form ("he stood up")
 
-</div>
+
 
 <span id="msgVerbIPresent"></span>
 
@@ -128,11 +128,11 @@ our past-tense intransitive form ("he stood up")
 
 [en_us.t](../file/en_us.t.html)\[[2613](../source/en_us.t.html#2613)\]
 
-<div class="desc">
+
 
 our present-tense intransitive form ("he stands up")
 
-</div>
+
 
 <span id="msgVerbT"></span>
 
@@ -140,11 +140,11 @@ our present-tense intransitive form ("he stands up")
 
 [en_us.t](../file/en_us.t.html)\[[2605](../source/en_us.t.html#2605)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="msgVerbTPast"></span>
 
@@ -152,11 +152,11 @@ our present-tense intransitive form ("he stands up")
 
 [en_us.t](../file/en_us.t.html)\[[2622](../source/en_us.t.html#2622)\]
 
-<div class="desc">
+
 
 our past-tense transitive form ("he stood on the chair")
 
-</div>
+
 
 <span id="msgVerbTPresent"></span>
 
@@ -164,11 +164,11 @@ our past-tense transitive form ("he stood on the chair")
 
 [en_us.t](../file/en_us.t.html)\[[2619](../source/en_us.t.html#2619)\]
 
-<div class="desc">
+
 
 our present-tense transitive form ("he stands on the chair")
 
-</div>
+
 
 <span id="participle"></span>
 
@@ -176,19 +176,19 @@ our present-tense transitive form ("he stands on the chair")
 
 [en_us.t](../file/en_us.t.html)\[[2625](../source/en_us.t.html#2625)\]
 
-<div class="desc">
+
 
 our participle form
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="setActorToPosture"></span>
 
@@ -196,11 +196,11 @@ our participle form
 
 [actor.t](../file/actor.t.html)\[[111](../source/actor.t.html#111)\]
 
-<div class="desc">
+
 
 put the actor into our posture via a nested action
 
-</div>
+
 
 <span id="tryMakingPosture"></span>
 
@@ -208,16 +208,16 @@ put the actor into our posture via a nested action
 
 [actor.t](../file/actor.t.html)\[[108](../source/actor.t.html#108)\]
 
-<div class="desc">
+
 
 Try getting the current actor into this posture within the given
 location, by running an appropriate implied command.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

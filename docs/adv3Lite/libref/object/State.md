@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A State represents a changeable condition of a Mentionable that can be
 used as part of the object's name in command input. For example, a state
@@ -49,43 +49,43 @@ states as needed, of course.
 
 `class `**`State`**` :   `[`LState`](../object/LState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`State`**  
 [`LState`](../object/LState.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`DirState`](../object/DirState.html)[`LitUnlit`](../object/LitUnlit.html)[`OpenClosed`](../object/OpenClosed.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`adjectives`](#adjectives)[`all`](#all)[`stateProp`](#stateProp)[`vocabTab`](#vocabTab)[`vocabWords`](#vocabWords)
 
@@ -94,11 +94,11 @@ Inherited from `LState` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`appliesTo`](#appliesTo)[`classInit`](#classInit)[`construct`](#construct)[`getVocab`](#getVocab)[`matchName`](#matchName)
 
@@ -107,11 +107,11 @@ Inherited from `LState` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="adjectives"></span>
 
@@ -119,7 +119,7 @@ Inherited from `LState` :
 
 [thing.t](../file/thing.t.html)\[[878](../source/thing.t.html#878)\]
 
-<div class="desc">
+
 
 State/adjective initializer list.
 
@@ -137,7 +137,7 @@ adjective - this is the one that addToName() will use to generate an
 object name for display. The rest are used to parse input; they'll all
 be matched to the state.
 
-</div>
+
 
 <span id="all"></span>
 
@@ -145,11 +145,11 @@ be matched to the state.
 
 [thing.t](../file/thing.t.html)\[[894](../source/thing.t.html#894)\]
 
-<div class="desc">
+
 
 class property: master list of all State objects
 
-</div>
+
 
 <span id="stateProp"></span>
 
@@ -157,7 +157,7 @@ class property: master list of all State objects
 
 [thing.t](../file/thing.t.html)\[[814](../source/thing.t.html#814)\]
 
-<div class="desc">
+
 
 The Mentionable property that indicates the current condition of an
 object that has this State. The range of values that this property takes
@@ -165,7 +165,7 @@ on in the Mentionable is up to the State to define. For some states,
 this will be a simple boolean: Lit/Unlit, Open/Closed, On/Off, etc. For
 others, this might be an integer range or a set of string values.
 
-</div>
+
 
 <span id="vocabTab"></span>
 
@@ -173,11 +173,11 @@ others, this might be an integer range or a set of string values.
 
 [thing.t](../file/thing.t.html)\[[858](../source/thing.t.html#858)\]
 
-<div class="desc">
+
 
 state vocabulary lookup table (built automatically during preinit)
 
-</div>
+
 
 <span id="vocabWords"></span>
 
@@ -185,7 +185,7 @@ state vocabulary lookup table (built automatically during preinit)
 
 [thing.t](../file/thing.t.html)\[[891](../source/thing.t.html#891)\]
 
-<div class="desc">
+
 
 \*Full\* vocabulary initializer list. If the 'adjectives' list isn't
 sufficiently flexible for your needs, you can use this initializer list
@@ -198,15 +198,15 @@ for the word.
 \[\[nil, 'unlit', MatchAdj\],  
 \[true, 'lit', MatchAdj\]\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="appliesTo"></span>
 
@@ -214,12 +214,12 @@ for the word.
 
 [thing.t](../file/thing.t.html)\[[821](../source/thing.t.html#821)\]
 
-<div class="desc">
+
 
 Does this state apply to the given object? By default, we consider any
 object that defines the state property to exhibit the state.
 
-</div>
+
 
 <span id="classInit"></span>
 
@@ -227,11 +227,11 @@ object that defines the state property to exhibit the state.
 
 [thing.t](../file/thing.t.html)\[[939](../source/thing.t.html#939)\]
 
-<div class="desc">
+
 
 class initialization
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -239,11 +239,11 @@ class initialization
 
 [thing.t](../file/thing.t.html)\[[897](../source/thing.t.html#897)\]
 
-<div class="desc">
+
 
 construction
 
-</div>
+
 
 <span id="getVocab"></span>
 
@@ -251,13 +251,13 @@ construction
 
 [thing.t](../file/thing.t.html)\[[851](../source/thing.t.html#851)\]
 
-<div class="desc">
+
 
 Get the vocabulary words that apply to the given state. For example, a
 Lit/Unlit object might return 'lit' if state is true and 'unlit' if
 state is nil.
 
-</div>
+
 
 <span id="matchName"></span>
 
@@ -265,7 +265,7 @@ state is nil.
 
 [thing.t](../file/thing.t.html)\[[835](../source/thing.t.html#835)\]
 
-<div class="desc">
+
 
 Match a token from the object name for the given state value.
 Mentionable.matchName() calls this to see if a token applies because of
@@ -278,11 +278,11 @@ condition.
 For example, a Lit/Unlit state would return MatchAdj for 'lit' if
 'state' is true, 0 otherwise.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

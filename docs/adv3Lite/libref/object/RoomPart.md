@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The RoomPart class is used to define room parts (walls, ceiling, sky)
 common to many locations. \[DEFINED IN ROOMPARTS EXTENSION\]
 
 `class `**`RoomPart`**` :   `[`MultiLoc`](../object/MultiLoc.html)[`Decoration`](../object/Decoration.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RoomPart`**  
 [`MultiLoc`](../object/MultiLoc.html)  
@@ -57,30 +57,30 @@ common to many locations. \[DEFINED IN ROOMPARTS EXTENSION\]
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RoomPart`**  
 [`Ceiling`](../object/Ceiling.html)  
 [`DefaultWall`](../object/DefaultWall.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`initialLocationClass`](#initialLocationClass)
 
@@ -108,11 +108,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`examineStatus`](#examineStatus)
 
@@ -141,11 +141,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="initialLocationClass"></span>
 
@@ -153,19 +153,19 @@ Inherited from `LMentionable` :
 
 [roomparts.t](../file/roomparts.t.html)\[[33](../source/roomparts.t.html#33)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -173,16 +173,16 @@ Inherited from `LMentionable` :
 
 [roomparts.t](../file/roomparts.t.html)\[[39](../source/roomparts.t.html#39)\]
 
-<div class="desc">
+
 
 When examining a room part we list all the roomPartDescs of all the
 items in the room associated with this RoomPart.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

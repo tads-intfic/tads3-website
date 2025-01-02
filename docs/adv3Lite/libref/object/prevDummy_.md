@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 prevDummy\_ is used by the {prev} message parameter substitution to
 enable a subsequent verb to agree with a previous list defined through
@@ -28,15 +28,15 @@ one of the string templates.
 
 **`prevDummy_`**` :   `[`Mentionable`](../object/Mentionable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`prevDummy_`**  
 [`Mentionable`](../object/Mentionable.html)  
@@ -44,11 +44,11 @@ one of the string templates.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`dummyName`](#dummyName)[`name`](#name)[`plural`](#plural)
 
@@ -60,11 +60,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`noteName`](#noteName)
 
@@ -76,11 +76,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="dummyName"></span>
 
@@ -88,11 +88,11 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4146](../source/english.t.html#4146)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4147](../source/english.t.html#4147)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="plural"></span>
 
@@ -112,19 +112,19 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4153](../source/english.t.html#4153)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="noteName"></span>
 
@@ -132,15 +132,15 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4148](../source/english.t.html#4148)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

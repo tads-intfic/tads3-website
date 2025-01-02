@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A special kind of agenda item for monitoring "boredom" during a
 conversation. We check to see if our actor is in a conversation, and the
@@ -36,42 +36,42 @@ paying any attention to us.
 
 `class `**`BoredomAgendaItem`**` :   `[`AgendaItem`](../object/AgendaItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BoredomAgendaItem`**  
 [`AgendaItem`](../object/AgendaItem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`agendaOrder`](#agendaOrder)
 
@@ -80,11 +80,11 @@ Inherited from `AgendaItem` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`invokeItem`](#invokeItem)[`isReady`](#isReady)
 
@@ -93,11 +93,11 @@ Inherited from `AgendaItem` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="agendaOrder"></span>
 
@@ -105,21 +105,21 @@ Inherited from `AgendaItem` :
 
 [actor.t](../file/actor.t.html)\[[5218](../source/actor.t.html#5218)\]
 
-<div class="desc">
+
 
 by default, handle boredom before other agenda items - we do this
 because an ongoing conversation will be the first thing on the NPC's
 mind
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -127,11 +127,11 @@ mind
 
 [actor.t](../file/actor.t.html)\[[5182](../source/actor.t.html#5182)\]
 
-<div class="desc">
+
 
 we construct these dynamically during actor initialization
 
-</div>
+
 
 <span id="invokeItem"></span>
 
@@ -139,11 +139,11 @@ we construct these dynamically during actor initialization
 
 [actor.t](../file/actor.t.html)\[[5204](../source/actor.t.html#5204)\]
 
-<div class="desc">
+
 
 on invocation, end the conversation
 
-</div>
+
 
 <span id="isReady"></span>
 
@@ -151,16 +151,16 @@ on invocation, end the conversation
 
 [actor.t](../file/actor.t.html)\[[5192](../source/actor.t.html#5192)\]
 
-<div class="desc">
+
 
 we're ready to run if our actor is in an InConversationState and its
 boredom count has reached the limit for the state
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

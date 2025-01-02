@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 \<.inputline\> - we use this to display the text actually entered by the
 user on a command line. Note that this isn't used for the prompt text -
@@ -28,15 +28,15 @@ it's used only for the command-line text itself.
 
 **`inputlineStyleTag`**` :   `[`HtmlStyleTag`](../object/HtmlStyleTag.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`inputlineStyleTag`**  
 [`HtmlStyleTag`](../object/HtmlStyleTag.html)  
@@ -44,11 +44,11 @@ it's used only for the command-line text itself.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`htmlCloseText`](#htmlCloseText)[`htmlOpenText`](#htmlOpenText)[`plainCloseText`](#plainCloseText)[`plainOpenText`](#plainOpenText)
 
@@ -60,11 +60,11 @@ Inherited from `StyleTag` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -74,11 +74,11 @@ Inherited from `StyleTag` :
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="htmlCloseText"></span>
 
@@ -86,11 +86,11 @@ Inherited from `StyleTag` :
 
 [output.t](../file/output.t.html)\[[993](../source/output.t.html#993)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="htmlOpenText"></span>
 
@@ -98,11 +98,11 @@ Inherited from `StyleTag` :
 
 [output.t](../file/output.t.html)\[[992](../source/output.t.html#992)\]
 
-<div class="desc">
+
 
 in HTML mode, switch in and out of TADS-Input font
 
-</div>
+
 
 <span id="plainCloseText"></span>
 
@@ -110,11 +110,11 @@ in HTML mode, switch in and out of TADS-Input font
 
 [output.t](../file/output.t.html)\[[997](../source/output.t.html#997)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="plainOpenText"></span>
 
@@ -122,25 +122,25 @@ in HTML mode, switch in and out of TADS-Input font
 
 [output.t](../file/output.t.html)\[[996](../source/output.t.html#996)\]
 
-<div class="desc">
+
 
 in plain mode, do nothing
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

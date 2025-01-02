@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Command describes the results of parsing one player predicate - that
 is, a single verb phrase, with all its parts. This includes the action
@@ -48,63 +48,63 @@ apostrophe-S).
 
 `class `**`Command`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Command`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Command`**  
 [`FuncCommand`](../object/FuncCommand.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`acc`](#acc)[`accInfo`](#accInfo)[`accNPs`](#accNPs)[`accs`](#accs)[`action`](#action)[`actions`](#actions)[`actor`](#actor)[`actorNPs`](#actorNPs)[`actorPerson`](#actorPerson)[`actors`](#actors)[`afterReports`](#afterReports)[`aobj`](#aobj)[`badMulti`](#badMulti)[`cmdErr`](#cmdErr)[`disambig`](#disambig)[`disambigIdx`](#disambigIdx)[`dobj`](#dobj)[`dobjInfo`](#dobjInfo)[`dobjNPs`](#dobjNPs)[`dobjs`](#dobjs)[`endOfSentence`](#endOfSentence)[`implicitActionReports`](#implicitActionReports)[`iobj`](#iobj)[`iobjInfo`](#iobjInfo)[`iobjNPs`](#iobjNPs)[`iobjs`](#iobjs)[`lastAction`](#lastAction)[`madeTopic`](#madeTopic)[`matchedAll`](#matchedAll)[`matchedMulti`](#matchedMulti)[`miscWordLists`](#miscWordLists)[`missingNouns`](#missingNouns)[`nextTokens`](#nextTokens)[`npList`](#npList)[`npListSorted`](#npListSorted)[`npToResolve`](#npToResolve)[`originalAction`](#originalAction)[`parseTree`](#parseTree)[`predActive`](#predActive)[`predPriority`](#predPriority)[`priority`](#priority)[`reflexiveAnte`](#reflexiveAnte)[`tokenLen`](#tokenLen)[`verbProd`](#verbProd)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addDisambigNP`](#addDisambigNP)[`addNounListItem`](#addNounListItem)[`addNounProd`](#addNounProd)[`afterReport`](#afterReport)[`buildCommandString`](#buildCommandString)[`buildObjLists`](#buildObjLists)[`calcPriority`](#calcPriority)[`changeAction`](#changeAction)[`clone`](#clone)[`cloneNP`](#cloneNP)[`construct`](#construct)[`emptyNounRole`](#emptyNounRole)[`exec`](#exec)[`execCombos`](#execCombos)[`execDoer`](#execDoer)[`execIter`](#execIter)[`fetchDisambigReply`](#fetchDisambigReply)[`fixPriority`](#fixPriority)[`forEachNP`](#forEachNP)[`forEachObj`](#forEachObj)[`getCommandPhrase`](#getCommandPhrase)[`noteMiscWords`](#noteMiscWords)[`npTokenLen`](#npTokenLen)[`numNounSlots`](#numNounSlots)[`resolveNouns`](#resolveNouns)[`resolveReflexive`](#resolveReflexive)[`saveReflexiveAnte`](#saveReflexiveAnte)[`sortList`](#sortList)[`startDisambigReply`](#startDisambigReply)[`terseOK`](#terseOK)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="acc"></span>
 
@@ -112,11 +112,11 @@ apostrophe-S).
 
 [command.t](../file/command.t.html)\[[1244](../source/command.t.html#1244)\]
 
-<div class="desc">
+
 
 the accessory object for the current iteration
 
-</div>
+
 
 <span id="accInfo"></span>
 
@@ -124,11 +124,11 @@ the accessory object for the current iteration
 
 [command.t](../file/command.t.html)\[[1250](../source/command.t.html#1250)\]
 
-<div class="desc">
+
 
 the NPMatch object for the current accessory
 
-</div>
+
 
 <span id="accNPs"></span>
 
@@ -136,11 +136,11 @@ the NPMatch object for the current accessory
 
 [command.t](../file/command.t.html)\[[1238](../source/command.t.html#1238)\]
 
-<div class="desc">
+
 
 the accessory phrases, as a list of NounPhrase objects
 
-</div>
+
 
 <span id="accs"></span>
 
@@ -148,11 +148,11 @@ the accessory phrases, as a list of NounPhrase objects
 
 [command.t](../file/command.t.html)\[[1241](../source/command.t.html#1241)\]
 
-<div class="desc">
+
 
 the list of resolved accessory objects, as NPMatch objects
 
-</div>
+
 
 <span id="action"></span>
 
@@ -160,11 +160,11 @@ the list of resolved accessory objects, as NPMatch objects
 
 [command.t](../file/command.t.html)\[[1185](../source/command.t.html#1185)\]
 
-<div class="desc">
+
 
 the Action object giving the action to be performed
 
-</div>
+
 
 <span id="actions"></span>
 
@@ -172,11 +172,11 @@ the Action object giving the action to be performed
 
 [command.t](../file/command.t.html)\[[341](../source/command.t.html#341)\]
 
-<div class="desc">
+
 
 A list of actions executed directly by this command or via a Doer
 
-</div>
+
 
 <span id="actor"></span>
 
@@ -184,11 +184,11 @@ A list of actions executed directly by this command or via a Doer
 
 [command.t](../file/command.t.html)\[[1194](../source/command.t.html#1194)\]
 
-<div class="desc">
+
 
 the resolved actor; we determine this before disambiguation
 
-</div>
+
 
 <span id="actorNPs"></span>
 
@@ -196,11 +196,11 @@ the resolved actor; we determine this before disambiguation
 
 [command.t](../file/command.t.html)\[[1197](../source/command.t.html#1197)\]
 
-<div class="desc">
+
 
 the actor(s) to whom the command is addressed, as a NounPhrase list
 
-</div>
+
 
 <span id="actorPerson"></span>
 
@@ -208,7 +208,7 @@ the actor(s) to whom the command is addressed, as a NounPhrase list
 
 [command.t](../file/command.t.html)\[[1211](../source/command.t.html#1211)\]
 
-<div class="desc">
+
 
 The grammatical person in which we're addressing the actor. This is 2
 for a second-person address, 3 for third-person orders. (It's hard to
@@ -218,7 +218,7 @@ The conventional IF syntax for giving orders is ACTOR, DO SOMETHING,
 which addresses ACTOR in the second person (as YOU). This means that
 second-person pronouns
 
-</div>
+
 
 <span id="actors"></span>
 
@@ -226,11 +226,11 @@ second-person pronouns
 
 [command.t](../file/command.t.html)\[[1200](../source/command.t.html#1200)\]
 
-<div class="desc">
+
 
 the actor(s), as NPMatch objects
 
-</div>
+
 
 <span id="afterReports"></span>
 
@@ -238,12 +238,12 @@ the actor(s), as NPMatch objects
 
 [command.t](../file/command.t.html)\[[354](../source/command.t.html#354)\]
 
-<div class="desc">
+
 
 A list of strings containing reports to be displayed at the end of the
 command execution cycle for this command.
 
-</div>
+
 
 <span id="aobj"></span>
 
@@ -251,11 +251,11 @@ command execution cycle for this command.
 
 [command.t](../file/command.t.html)\[[1247](../source/command.t.html#1247)\]
 
-<div class="desc">
+
 
 synonym for the accessory object
 
-</div>
+
 
 <span id="badMulti"></span>
 
@@ -263,13 +263,13 @@ synonym for the accessory object
 
 [command.t](../file/command.t.html)\[[1300](../source/command.t.html#1300)\]
 
-<div class="desc">
+
 
 Error flag: we have a noun list (grammatically) where a single noun is
 required. When this occurs, this will be set to the role where the error
 was noted.
 
-</div>
+
 
 <span id="cmdErr"></span>
 
@@ -277,12 +277,12 @@ was noted.
 
 [command.t](../file/command.t.html)\[[1317](../source/command.t.html#1317)\]
 
-<div class="desc">
+
 
 The error we encountered building the command, if any. This is usually a
 noun resolution error.
 
-</div>
+
 
 <span id="disambig"></span>
 
@@ -290,7 +290,7 @@ noun resolution error.
 
 [command.t](../file/command.t.html)\[[1262](../source/command.t.html#1262)\]
 
-<div class="desc">
+
 
 Disambiguation replies. Each time the player answers a disambiguation
 question, we add the reply to this list. We then go back and re-resolve
@@ -301,7 +301,7 @@ Note that this is a list of list. Each reply is a list of NounPhrase
 objects, and we might have a series of replies, so one list represents
 one reply.
 
-</div>
+
 
 <span id="disambigIdx"></span>
 
@@ -309,11 +309,11 @@ one reply.
 
 [command.t](../file/command.t.html)\[[1265](../source/command.t.html#1265)\]
 
-<div class="desc">
+
 
 the next available disambiguation reply
 
-</div>
+
 
 <span id="dobj"></span>
 
@@ -321,11 +321,11 @@ the next available disambiguation reply
 
 [command.t](../file/command.t.html)\[[1220](../source/command.t.html#1220)\]
 
-<div class="desc">
+
 
 the current direct object for the current action iteration
 
-</div>
+
 
 <span id="dobjInfo"></span>
 
@@ -333,11 +333,11 @@ the current direct object for the current action iteration
 
 [command.t](../file/command.t.html)\[[1223](../source/command.t.html#1223)\]
 
-<div class="desc">
+
 
 the NPMatch object for the current iteration's direct object
 
-</div>
+
 
 <span id="dobjNPs"></span>
 
@@ -345,11 +345,11 @@ the NPMatch object for the current iteration's direct object
 
 [command.t](../file/command.t.html)\[[1214](../source/command.t.html#1214)\]
 
-<div class="desc">
+
 
 the direct object phrases, as a list of NounPhrase objects
 
-</div>
+
 
 <span id="dobjs"></span>
 
@@ -357,11 +357,11 @@ the direct object phrases, as a list of NounPhrase objects
 
 [command.t](../file/command.t.html)\[[1217](../source/command.t.html#1217)\]
 
-<div class="desc">
+
 
 the list of resolved direct objects, as NPMatch objects
 
-</div>
+
 
 <span id="endOfSentence"></span>
 
@@ -369,7 +369,7 @@ the list of resolved direct objects, as NPMatch objects
 
 [command.t](../file/command.t.html)\[[1275](../source/command.t.html#1275)\]
 
-<div class="desc">
+
 
 Is this command at the end of a sentence? The grammar match sets this to
 true if the input syntax puts this predicate at the end of a sentence.
@@ -378,7 +378,7 @@ after this predicate. This tells the parser that the next predicate in
 the same line is the start of a new sentence, so sentence-opening syntax
 is allowed.
 
-</div>
+
 
 <span id="implicitActionReports"></span>
 
@@ -386,13 +386,13 @@ is allowed.
 
 [command.t](../file/command.t.html)\[[383](../source/command.t.html#383)\]
 
-<div class="desc">
+
 
 A list of reports of previous implicit actions performed in the course
 of executing this command which can be used if we need to collate a
 report of a stack of implicit actions.
 
-</div>
+
 
 <span id="iobj"></span>
 
@@ -400,11 +400,11 @@ report of a stack of implicit actions.
 
 [command.t](../file/command.t.html)\[[1232](../source/command.t.html#1232)\]
 
-<div class="desc">
+
 
 the indirect object for the current iteration
 
-</div>
+
 
 <span id="iobjInfo"></span>
 
@@ -412,11 +412,11 @@ the indirect object for the current iteration
 
 [command.t](../file/command.t.html)\[[1235](../source/command.t.html#1235)\]
 
-<div class="desc">
+
 
 the NPMatch object for the current indirect object
 
-</div>
+
 
 <span id="iobjNPs"></span>
 
@@ -424,11 +424,11 @@ the NPMatch object for the current indirect object
 
 [command.t](../file/command.t.html)\[[1226](../source/command.t.html#1226)\]
 
-<div class="desc">
+
 
 the indirect object phrases, as a list of NounPhrase objects
 
-</div>
+
 
 <span id="iobjs"></span>
 
@@ -436,11 +436,11 @@ the indirect object phrases, as a list of NounPhrase objects
 
 [command.t](../file/command.t.html)\[[1229](../source/command.t.html#1229)\]
 
-<div class="desc">
+
 
 the list of resolved indirect objects, as NPMatch objects
 
-</div>
+
 
 <span id="lastAction"></span>
 
@@ -448,11 +448,11 @@ the list of resolved indirect objects, as NPMatch objects
 
 [command.t](../file/command.t.html)\[[1188](../source/command.t.html#1188)\]
 
-<div class="desc">
+
 
 the Previous action performed by this command
 
-</div>
+
 
 <span id="madeTopic"></span>
 
@@ -460,11 +460,11 @@ the Previous action performed by this command
 
 [command.t](../file/command.t.html)\[[1327](../source/command.t.html#1327)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchedAll"></span>
 
@@ -472,11 +472,11 @@ the Previous action performed by this command
 
 [command.t](../file/command.t.html)\[[1322](../source/command.t.html#1322)\]
 
-<div class="desc">
+
 
 Does this command apply to objects matched to ALL?
 
-</div>
+
 
 <span id="matchedMulti"></span>
 
@@ -484,11 +484,11 @@ Does this command apply to objects matched to ALL?
 
 [command.t](../file/command.t.html)\[[1325](../source/command.t.html#1325)\]
 
-<div class="desc">
+
 
 Does this command apply to objects matched to multiple objects?
 
-</div>
+
 
 <span id="miscWordLists"></span>
 
@@ -496,13 +496,13 @@ Does this command apply to objects matched to multiple objects?
 
 [command.t](../file/command.t.html)\[[1126](../source/command.t.html#1126)\]
 
-<div class="desc">
+
 
 List of noun phrases containing misc word phrases. The misc word phrase
 grammar rules will notify us when they're visited in the build process,
 and we'll note them here.
 
-</div>
+
 
 <span id="missingNouns"></span>
 
@@ -510,12 +510,12 @@ and we'll note them here.
 
 [command.t](../file/command.t.html)\[[1132](../source/command.t.html#1132)\]
 
-<div class="desc">
+
 
 Do we have any missing or empty noun phrases in the match? The verb and
 noun phrases will fill this in.
 
-</div>
+
 
 <span id="nextTokens"></span>
 
@@ -523,7 +523,7 @@ noun phrases will fill this in.
 
 [command.t](../file/command.t.html)\[[1311](../source/command.t.html#1311)\]
 
-<div class="desc">
+
 
 The token list for the next predicate. The first predicate production
 fills this in during the build process with the token list for the next
@@ -533,7 +533,7 @@ what's left of the token list after the tokens used for our own
 predicate and after any conjunctions or punctuation marks that separate
 our predicate from the next one.
 
-</div>
+
 
 <span id="npList"></span>
 
@@ -541,7 +541,7 @@ our predicate from the next one.
 
 [command.t](../file/command.t.html)\[[1285](../source/command.t.html#1285)\]
 
-<div class="desc">
+
 
 The noun phrase roles (as NounRole objects), in the order they actually
 appear in the user input. We build this list as the VerbProduction adds
@@ -549,7 +549,7 @@ our noun phrases. The phrase order is important when there are reflexive
 pronouns, because a reflexive pronoun generally refers back to the
 nearest preceding phrase of the same number and gender.
 
-</div>
+
 
 <span id="npListSorted"></span>
 
@@ -557,13 +557,13 @@ nearest preceding phrase of the same number and gender.
 
 [command.t](../file/command.t.html)\[[1293](../source/command.t.html#1293)\]
 
-<div class="desc">
+
 
 A copy of the npList sorted to ensure that the direct and indirect
 objects of a TIAction are verified in the order specified on that
 action.
 
-</div>
+
 
 <span id="npToResolve"></span>
 
@@ -571,7 +571,7 @@ action.
 
 [command.t](../file/command.t.html)\[[895](../source/command.t.html#895)\]
 
-<div class="desc">
+
 
 If the parser has just asked the player to supply a missing object via
 the askMissingObject() function, we don't want to resolve the nouns for
@@ -582,7 +582,7 @@ rather than for all the roles in the command. If npToResolve is nil (as
 it normally will be) then it will be ignored, and all noun roles will be
 resolved.
 
-</div>
+
 
 <span id="originalAction"></span>
 
@@ -590,12 +590,12 @@ resolved.
 
 [command.t](../file/command.t.html)\[[347](../source/command.t.html#347)\]
 
-<div class="desc">
+
 
 The originalAction this Command started out with, which may be changed
 by a Doer (or some other mechanism)
 
-</div>
+
 
 <span id="parseTree"></span>
 
@@ -603,7 +603,7 @@ by a Doer (or some other mechanism)
 
 [command.t](../file/command.t.html)\[[1182](../source/command.t.html#1182)\]
 
-<div class="desc">
+
 
 The parse tree (the root of the grammar match), if applicable. Commands
 built from user input have a parse tree; those built internally don't.
@@ -613,7 +613,7 @@ phrases) before the command was completed. The question replies will be
 represented in noun phrases or other data added to the command after the
 initial parse.
 
-</div>
+
 
 <span id="predActive"></span>
 
@@ -621,11 +621,11 @@ initial parse.
 
 [command.t](../file/command.t.html)\[[1170](../source/command.t.html#1170)\]
 
-<div class="desc">
+
 
 is our predicate currently active (see VerbProduction.isActive)
 
-</div>
+
 
 <span id="predPriority"></span>
 
@@ -633,11 +633,11 @@ is our predicate currently active (see VerbProduction.isActive)
 
 [command.t](../file/command.t.html)\[[1167](../source/command.t.html#1167)\]
 
-<div class="desc">
+
 
 the predicate priority (see VerbProduction.priority)
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -645,11 +645,11 @@ the predicate priority (see VerbProduction.priority)
 
 [command.t](../file/command.t.html)\[[1119](../source/command.t.html#1119)\]
 
-<div class="desc">
+
 
 the calculated priority
 
-</div>
+
 
 <span id="reflexiveAnte"></span>
 
@@ -657,11 +657,11 @@ the calculated priority
 
 [command.t](../file/command.t.html)\[[986](../source/command.t.html#986)\]
 
-<div class="desc">
+
 
 table of reflexive pronoun antecedents
 
-</div>
+
 
 <span id="tokenLen"></span>
 
@@ -669,7 +669,7 @@ table of reflexive pronoun antecedents
 
 [command.t](../file/command.t.html)\[[1150](../source/command.t.html#1150)\]
 
-<div class="desc">
+
 
 The number of tokens from the command line that we matched for the
 command. The CommandProduction object sets this for us as it builds the
@@ -686,7 +686,7 @@ text on the line from scratch after executing the first predicate, in
 case the execution changes the game state in such a way that the parsing
 changes.
 
-</div>
+
 
 <span id="verbProd"></span>
 
@@ -694,19 +694,19 @@ changes.
 
 [command.t](../file/command.t.html)\[[1191](../source/command.t.html#1191)\]
 
-<div class="desc">
+
 
 the VerbProduction object for the command
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addDisambigNP"></span>
 
@@ -714,12 +714,12 @@ the VerbProduction object for the command
 
 [command.t](../file/command.t.html)\[[705](../source/command.t.html#705)\]
 
-<div class="desc">
+
 
 Add a disambiguation list item. This adds a NounPhrase item to the
 current reply list.
 
-</div>
+
 
 <span id="addNounListItem"></span>
 
@@ -727,11 +727,11 @@ current reply list.
 
 [command.t](../file/command.t.html)\[[633](../source/command.t.html#633)\]
 
-<div class="desc">
+
 
 add a noun phrase to the given role (a NounRole)
 
-</div>
+
 
 <span id="addNounProd"></span>
 
@@ -739,13 +739,13 @@ add a noun phrase to the given role (a NounRole)
 
 [command.t](../file/command.t.html)\[[615](../source/command.t.html#615)\]
 
-<div class="desc">
+
 
 Add a noun production, building it out as though it had been part of the
 original parse tree. This can be used to add a noun phrase after the
 initial parsing, such as when the player supplies a missing object.
 
-</div>
+
 
 <span id="afterReport"></span>
 
@@ -753,14 +753,14 @@ initial parsing, such as when the player supplies a missing object.
 
 [command.t](../file/command.t.html)\[[365](../source/command.t.html#365)\]
 
-<div class="desc">
+
 
 Run through our list of afterReports displaying each in turn. We do this
 on the Command rather than on any of the Actions since actions may
 invoke other actions (implicit, remapped, nested or replaced), while the
 afterReports pertain to the command as a whole.
 
-</div>
+
 
 <span id="buildCommandString"></span>
 
@@ -769,12 +769,12 @@ afterReports pertain to the command as a whole.
 [command.t](../file/command.t.html)\[[334](../source/command.t.html#334)\],
 [english.t](../file/english.t.html)\[[2110](../source/english.t.html#2110)\]
 
-<div class="desc">
+
 
 Rebuild the original command string from the tokens. We call this out as
 a separate method so language-specific code can override it.
 
-</div>
+
 
 <span id="buildObjLists"></span>
 
@@ -782,13 +782,13 @@ a separate method so language-specific code can override it.
 
 [command.t](../file/command.t.html)\[[902](../source/command.t.html#902)\]
 
-<div class="desc">
+
 
 Build the object lists. This runs through each NounPhrase in the command
 to build its 'objs' list, then builds the corresponding master list in
 the Command object.
 
-</div>
+
 
 <span id="calcPriority"></span>
 
@@ -796,7 +796,7 @@ the Command object.
 
 [command.t](../file/command.t.html)\[[1091](../source/command.t.html#1091)\]
 
-<div class="desc">
+
 
 Calculate the parsing priority.
 
@@ -875,7 +875,7 @@ leave extra tokens for later, we can't be sure that we'll be able to
 make any sense of what's left over, whereas tokens in the current match
 are known to fit a grammar rule.)
 
-</div>
+
 
 <span id="changeAction"></span>
 
@@ -883,11 +883,11 @@ are known to fit a grammar rule.)
 
 [command.t](../file/command.t.html)\[[497](../source/command.t.html#497)\]
 
-<div class="desc">
+
 
 Change the action to a new action with a new set of objects
 
-</div>
+
 
 <span id="clone"></span>
 
@@ -895,11 +895,11 @@ Change the action to a new action with a new set of objects
 
 [command.t](../file/command.t.html)\[[129](../source/command.t.html#129)\]
 
-<div class="desc">
+
 
 clone - create a new Command based on this Command
 
-</div>
+
 
 <span id="cloneNP"></span>
 
@@ -907,11 +907,11 @@ clone - create a new Command based on this Command
 
 [command.t](../file/command.t.html)\[[154](../source/command.t.html#154)\]
 
-<div class="desc">
+
 
 clone a noun phrase that's part of this command
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -919,7 +919,7 @@ clone a noun phrase that's part of this command
 
 [command.t](../file/command.t.html)\[[41](../source/command.t.html#41)\]
 
-<div class="desc">
+
 
 Create the command object. There are several ways to create a command:
 
@@ -943,7 +943,7 @@ Mentionable object), an Action object, and the object list.
 new Command() - create a blank Command, for setting up externally or in
 a subclass.
 
-</div>
+
 
 <span id="emptyNounRole"></span>
 
@@ -951,11 +951,11 @@ a subclass.
 
 [command.t](../file/command.t.html)\[[732](../source/command.t.html#732)\]
 
-<div class="desc">
+
 
 mark a noun phrase role as empty
 
-</div>
+
 
 <span id="exec"></span>
 
@@ -963,14 +963,14 @@ mark a noun phrase role as empty
 
 [command.t](../file/command.t.html)\[[183](../source/command.t.html#183)\]
 
-<div class="desc">
+
 
 Execute the action. This carries out the entire command processing
 sequence for the action. If the action involves a list of objects (as in
 TAKE ALL or DROP BOOK AND CANDLE), we iterate over the listed objects,
 executing the action on each object in turn.
 
-</div>
+
 
 <span id="execCombos"></span>
 
@@ -978,7 +978,7 @@ executing the action on each object in turn.
 
 [command.t](../file/command.t.html)\[[394](../source/command.t.html#394)\]
 
-<div class="desc">
+
 
 Execute the command for each combination of objects for noun role index
 'n' and above. 'lst' is a list containing a partial object combination
@@ -988,7 +988,7 @@ DirectObject, IndirectObject, AccessoryObject) relating to this action.
 Callers are responsible for sorting predRoles into the correct order
 before calling this method.
 
-</div>
+
 
 <span id="execDoer"></span>
 
@@ -996,13 +996,13 @@ before calling this method.
 
 [command.t](../file/command.t.html)\[[474](../source/command.t.html#474)\]
 
-<div class="desc">
+
 
 Execute the command via the Doers that match the command's action and
 objects. 'lst' is the object combination to execute: \[action, dobj,
 iobj, ...\].
 
-</div>
+
 
 <span id="execIter"></span>
 
@@ -1010,13 +1010,13 @@ iobj, ...\].
 
 [command.t](../file/command.t.html)\[[441](../source/command.t.html#441)\]
 
-<div class="desc">
+
 
 Execute one iteration of the command for a particular combination of
 objects. 'lst' is the object combination to execute: this is an
 \[action, dobj, iobj, ...\] list.
 
-</div>
+
 
 <span id="fetchDisambigReply"></span>
 
@@ -1024,12 +1024,12 @@ objects. 'lst' is the object combination to execute: this is an
 
 [command.t](../file/command.t.html)\[[724](../source/command.t.html#724)\]
 
-<div class="desc">
+
 
 Fetch a disambiguation reply. If we have more replies available, this
 returns the next reply's noun phrase list, otherwise nil.
 
-</div>
+
 
 <span id="fixPriority"></span>
 
@@ -1037,14 +1037,14 @@ returns the next reply's noun phrase list, otherwise nil.
 
 [command.t](../file/command.t.html)\[[1108](../source/command.t.html#1108)\]
 
-<div class="desc">
+
 
 Set a fixed priority. This makes the priority a fixed value rather than
 a calculated value. We call this before sorting a list of commands, so
 that we don't have to recalculate the priority value repeatedly during
 the sort.
 
-</div>
+
 
 <span id="forEachNP"></span>
 
@@ -1052,11 +1052,11 @@ the sort.
 
 [command.t](../file/command.t.html)\[[870](../source/command.t.html#870)\]
 
-<div class="desc">
+
 
 carry out a callback for each noun phrase in each list
 
-</div>
+
 
 <span id="forEachObj"></span>
 
@@ -1064,13 +1064,13 @@ carry out a callback for each noun phrase in each list
 
 [command.t](../file/command.t.html)\[[524](../source/command.t.html#524)\]
 
-<div class="desc">
+
 
 Invoke a callback for each object in the current command iteration. This
 invokes the callback on the direct object, indirect object, accessory,
 and any other custom roles added by the game.
 
-</div>
+
 
 <span id="getCommandPhrase"></span>
 
@@ -1078,14 +1078,14 @@ and any other custom roles added by the game.
 
 [command.t](../file/command.t.html)\[[1335](../source/command.t.html#1335)\]
 
-<div class="desc">
+
 
 Get the command phrase entered by the player, with the words used to
 match the direct, indirect and accessory objects replaced by (dobj),
 (iobj) and (acc) respectively; e.g. PUT RED BALL ON TABLE becomes 'put
 (dobj) on (iobj)'
 
-</div>
+
 
 <span id="noteMiscWords"></span>
 
@@ -1093,11 +1093,11 @@ match the direct, indirect and accessory objects replaced by (dobj),
 
 [command.t](../file/command.t.html)\[[1111](../source/command.t.html#1111)\]
 
-<div class="desc">
+
 
 note a noun phrase with a miscellaneous word list
 
-</div>
+
 
 <span id="npTokenLen"></span>
 
@@ -1105,11 +1105,11 @@ note a noun phrase with a miscellaneous word list
 
 [command.t](../file/command.t.html)\[[1153](../source/command.t.html#1153)\]
 
-<div class="desc">
+
 
 Calculate the sum of the token lengths of our noun phrases
 
-</div>
+
 
 <span id="numNounSlots"></span>
 
@@ -1117,11 +1117,11 @@ Calculate the sum of the token lengths of our noun phrases
 
 [command.t](../file/command.t.html)\[[1164](../source/command.t.html#1164)\]
 
-<div class="desc">
+
 
 Calculate the number of noun slots we have filled in
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -1129,11 +1129,11 @@ Calculate the number of noun slots we have filled in
 
 [command.t](../file/command.t.html)\[[746](../source/command.t.html#746)\]
 
-<div class="desc">
+
 
 resolve the noun phrases
 
-</div>
+
 
 <span id="resolveReflexive"></span>
 
@@ -1141,12 +1141,12 @@ resolve the noun phrases
 
 [command.t](../file/command.t.html)\[[968](../source/command.t.html#968)\]
 
-<div class="desc">
+
 
 Resolve a reflexive pronoun on behalf of one of the NounPhrases within
 this command.
 
-</div>
+
 
 <span id="saveReflexiveAnte"></span>
 
@@ -1154,7 +1154,7 @@ this command.
 
 [command.t](../file/command.t.html)\[[940](../source/command.t.html#940)\]
 
-<div class="desc">
+
 
 Save a potential antecedent for a reflexive pronoun coming up later in
 the command. Each time we visit a noun phrase during the reflexive
@@ -1166,7 +1166,7 @@ nearest preceding noun. Note that the noun phrase shouldn't call this
 routine to note reflexive pronouns, since they don't bind to earlier
 reflexive pronouns - they only bind to regular noun phrases.
 
-</div>
+
 
 <span id="sortList"></span>
 
@@ -1174,7 +1174,7 @@ reflexive pronouns - they only bind to regular noun phrases.
 
 [command.t](../file/command.t.html)\[[995](../source/command.t.html#995)\]
 
-<div class="desc">
+
 
 Class method: Sort a list of Command matches, in priority order. The
 priority order is the order for processing predicate grammar matches:
@@ -1182,7 +1182,7 @@ start at the highest priority, and work through the list until you find
 one where the noun phrases resolve to valid game-world objects; that's
 the one to execute.
 
-</div>
+
 
 <span id="startDisambigReply"></span>
 
@@ -1190,12 +1190,12 @@ the one to execute.
 
 [command.t](../file/command.t.html)\[[689](../source/command.t.html#689)\]
 
-<div class="desc">
+
 
 Start processing a new disambiguation reply. This adds a reply to a
 disambiguation question.
 
-</div>
+
 
 <span id="terseOK"></span>
 
@@ -1203,7 +1203,7 @@ disambiguation question.
 
 [command.t](../file/command.t.html)\[[569](../source/command.t.html#569)\]
 
-<div class="desc">
+
 
 Are terse messages OK for this command? A terse message is a simple
 acknowledgment of a standard command, such as "Taken", "Dropped",
@@ -1227,11 +1227,11 @@ difference, allowing the player to wrongly assume that the parser did
 what they thought it was going to do and potentially leading to
 confusion down the road.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

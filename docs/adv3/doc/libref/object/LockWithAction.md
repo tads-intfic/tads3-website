@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `DefineTIAction(LockWith)      `*`// original source text`*  
 `class `**`LockWithAction`**` :   `[`TIAction`](../object/TIAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LockWithAction`**  
 [`TIAction`](../object/TIAction.html)  
@@ -53,29 +53,29 @@ Details](#_Methods_)
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`LockWithAction`**  
 [`predicate(LockWith)`](../object/predicate(LockWith).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`resolveFirst`](#resolveFirst)
 
@@ -96,11 +96,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getAllIobj`](#getAllIobj)
 
@@ -121,11 +121,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="resolveFirst"></span>
 
@@ -133,22 +133,22 @@ Inherited from `Resolver` :
 
 [actions.t](../file/actions.t.html)\[[2515](../source/actions.t.html#2515)\]
 
-<div class="desc">
+
 
 Resolve the direct object (the lock) first, so that we know what we're
 trying to unlock when we're verifying the key. This allows us to
 (optionally) boost the likelihood of a known good key for
 disambiguation.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getAllIobj"></span>
 
@@ -156,15 +156,15 @@ disambiguation.
 
 [actions.t](../file/actions.t.html)\[[2518](../source/actions.t.html#2518)\]
 
-<div class="desc">
+
 
 limit 'all' for the indirect object to items in inventory
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

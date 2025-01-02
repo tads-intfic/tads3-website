@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for worn-inventory listers. This lister uses a special
 listing method to show the items, so that items being worn are shown
@@ -35,15 +35,15 @@ appear in inventory listings.
 
 `class `**`WearingLister`**` :   `[`InventoryLister`](../object/InventoryLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WearingLister`**  
 [`InventoryLister`](../object/InventoryLister.html)  
@@ -51,29 +51,29 @@ appear in inventory listings.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`WearingLister`**  
 [`WearingSublister`](../object/WearingSublister.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -84,11 +84,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListItem`](#showListItem)[`showListItemCounted`](#showListItemCounted)
 
@@ -100,19 +100,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -120,11 +120,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1592](../source/lister.t.html#1592)\]
 
-<div class="desc">
+
 
 show the list item using the "worn listing" name
 
-</div>
+
 
 <span id="showListItemCounted"></span>
 
@@ -132,15 +132,15 @@ show the list item using the "worn listing" name
 
 [lister.t](../file/lister.t.html)\[[1594](../source/lister.t.html#1594)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

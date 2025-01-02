@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Replacement command string exception. Abort any current command line,
 and start over with a brand new input string. Note that any pending,
@@ -34,15 +34,15 @@ unparsed tokens on the previous command line should be discarded.
 
 `class `**`ReplacementCommandStringException`**` :   `[`ParserException`](../object/ParserException.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ReplacementCommandStringException`**  
 [`ParserException`](../object/ParserException.html)  
@@ -50,27 +50,27 @@ unparsed tokens on the previous command line should be discarded.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`issuingActor_`](#issuingActor_)[`newCommand_`](#newCommand_)[`targetActor_`](#targetActor_)
 
@@ -81,11 +81,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -96,11 +96,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="issuingActor_"></span>
 
@@ -108,11 +108,11 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[7045](../source/parser.t.html#7045)\]
 
-<div class="desc">
+
 
 the actor issuing the command
 
-</div>
+
 
 <span id="newCommand_"></span>
 
@@ -120,11 +120,11 @@ the actor issuing the command
 
 [parser.t](../file/parser.t.html)\[[7042](../source/parser.t.html#7042)\]
 
-<div class="desc">
+
 
 the new command string
 
-</div>
+
 
 <span id="targetActor_"></span>
 
@@ -132,19 +132,19 @@ the new command string
 
 [parser.t](../file/parser.t.html)\[[7048](../source/parser.t.html#7048)\]
 
-<div class="desc">
+
 
 the default target actor of the command
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -152,15 +152,15 @@ the default target actor of the command
 
 [parser.t](../file/parser.t.html)\[[7026](../source/parser.t.html#7026)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

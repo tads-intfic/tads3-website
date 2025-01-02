@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Rule to check whether the illumination level has changed for the actor
 and make the appropriate announcement if so. \[SYSRULES EXTENSION\]
 
 **`checkIlluminationRule`**` :   `[`AfterRule`](../object/AfterRule.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`checkIlluminationRule`**  
 [`AfterRule`](../object/AfterRule.html)  
@@ -43,11 +43,11 @@ and make the appropriate announcement if so. \[SYSRULES EXTENSION\]
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`priority`](#priority)
 
@@ -59,11 +59,11 @@ Inherited from `Rule` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`follow`](#follow)
 
@@ -74,11 +74,11 @@ Inherited from `Rule` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -86,22 +86,22 @@ Inherited from `Rule` :
 
 [sysrules.t](../file/sysrules.t.html)\[[182](../source/sysrules.t.html#182)\]
 
-<div class="desc">
+
 
 If the actor is still in the same room s/he started out in, check
 whether the current illumination level has changed, and, if so, either
 show a room description or announce the onset of darkness, as
 appropriate.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="follow"></span>
 
@@ -109,15 +109,15 @@ appropriate.
 
 [sysrules.t](../file/sysrules.t.html)\[[154](../source/sysrules.t.html#154)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

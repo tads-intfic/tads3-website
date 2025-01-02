@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Collective - this is an object that can be used to refer to a group of
 other (usually equivalent) objects collectively. In most cases, this
@@ -41,15 +41,15 @@ when the player uses the collective term. \[COLLECTIVE EXTENSION\]
 
 `class `**`Collective`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Collective`**  
 [`Thing`](../object/Thing.html)  
@@ -61,29 +61,29 @@ when the player uses the collective term. \[COLLECTIVE EXTENSION\]
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Collective`**  
 [`DispensingCollective`](../object/DispensingCollective.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`collectiveDobjMatch`](#collectiveDobjMatch)[`collectiveIobjMatch`](#collectiveIobjMatch)[`collectiveToks`](#collectiveToks)[`extraToks`](#extraToks)[`numberWanted`](#numberWanted)
 
@@ -102,11 +102,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`collectiveAction`](#collectiveAction)[`filterResolveList`](#filterResolveList)[`isCollectiveFor`](#isCollectiveFor)
 
@@ -127,11 +127,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="collectiveDobjMatch"></span>
 
@@ -139,12 +139,12 @@ Inherited from `LMentionable` :
 
 [collective.t](../file/collective.t.html)\[[52](../source/collective.t.html#52)\]
 
-<div class="desc">
+
 
 Did the player's command match any of our collectiveToks ? \[COLLECTIVE
 EXTENSION\]
 
-</div>
+
 
 <span id="collectiveIobjMatch"></span>
 
@@ -152,12 +152,12 @@ EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[55](../source/collective.t.html#55)\]
 
-<div class="desc">
+
 
 Did the player's command match any of our collectiveToks ? \[COLLECTIVE
 EXTENSION\]
 
-</div>
+
 
 <span id="collectiveToks"></span>
 
@@ -165,7 +165,7 @@ EXTENSION\]
 
 [collective.t](../file/collective.t.html)\[[39](../source/collective.t.html#39)\]
 
-<div class="desc">
+
 
 A list of one or more tokens, any of which might be used to refer to me
 as a plural object. E.g. if the Collective is a bunch of grapes,
@@ -180,7 +180,7 @@ achieve what's needed. This property only needs to be user-defined in
 cases where using the name won't work, even in conjunction with the
 extraToks property.
 
-</div>
+
 
 <span id="extraToks"></span>
 
@@ -188,7 +188,7 @@ extraToks property.
 
 [collective.t](../file/collective.t.html)\[[48](../source/collective.t.html#48)\]
 
-<div class="desc">
+
 
 A list of additional tokens added to our collectiveToks at preInit. This
 might be needed, for example, if a Collective called 'stack of cans'
@@ -196,7 +196,7 @@ also answers to 'pile of tins' (i.e., if it has 'pile' and 'tins'
 defined as additional nouns it its vocab property), in which case we'd
 need to defined these tokens \['pile', 'tins'\] here.
 
-</div>
+
 
 <span id="numberWanted"></span>
 
@@ -204,19 +204,19 @@ need to defined these tokens \['pile', 'tins'\] here.
 
 [collective.t](../file/collective.t.html)\[[58](../source/collective.t.html#58)\]
 
-<div class="desc">
+
 
 The number of dispensible items being requested.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="collectiveAction"></span>
 
@@ -224,11 +224,11 @@ The number of dispensible items being requested.
 
 [collective.t](../file/collective.t.html)\[[139](../source/collective.t.html#139)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="filterResolveList"></span>
 
@@ -236,12 +236,12 @@ The number of dispensible items being requested.
 
 [collective.t](../file/collective.t.html)\[[61](../source/collective.t.html#61)\]
 
-<div class="desc">
+
 
 For the COLLECTIVE EXTENSION decide whether to select the collective
 object (ourselves) or an individual item.
 
-</div>
+
 
 <span id="isCollectiveFor"></span>
 
@@ -249,7 +249,7 @@ object (ourselves) or an individual item.
 
 [collective.t](../file/collective.t.html)\[[136](../source/collective.t.html#136)\]
 
-<div class="desc">
+
 
 Determine if I'm a collective object for the given object.
 
@@ -266,11 +266,11 @@ The np parameter can be used, inter alia, to determine the role
 
 \[COLLECTIVE EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

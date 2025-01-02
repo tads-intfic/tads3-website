@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Rank by unmatched possessive-qualified phrases. If we have two unknown
 phrases, one with a possessive qualifier and one without, and other
@@ -35,26 +35,26 @@ as long as it's not Bob's we're looking for.
 
 **`rankByNonMatchPoss`**` :   `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`rankByNonMatchPoss`**  
 [`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -62,11 +62,11 @@ as long as it's not Bob's we're looking for.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
 
@@ -74,19 +74,19 @@ as long as it's not Bob's we're looking for.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="comparePass1"></span>
 
@@ -94,13 +94,13 @@ as long as it's not Bob's we're looking for.
 
 [parser.t](../file/parser.t.html)\[[5953](../source/parser.t.html#5953)\]
 
-<div class="desc">
+
 
 ignore on pass 1 - this only counts if other factors are equal, so we
 want to consider all of the other factors on pass 1 before taking this
 criterion into account
 
-</div>
+
 
 <span id="comparePass2"></span>
 
@@ -108,15 +108,15 @@ criterion into account
 
 [parser.t](../file/parser.t.html)\[[5956](../source/parser.t.html#5956)\]
 
-<div class="desc">
+
 
 pass 2 - more possessives are better
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

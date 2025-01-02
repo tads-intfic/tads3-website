@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 TADS 3 Library - "neutral" messages for US English
 
@@ -44,43 +44,43 @@ authors now usually prefer to treat the parser as just another part of
 the user interface, which like all good UI's is best when the user
 doesn't notice it.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`BaseContentsLister`](../object/BaseContentsLister.html)[`BaseInlineContentsLister`](../object/BaseInlineContentsLister.html)[`BaseRearContentsLister`](../object/BaseRearContentsLister.html)[`BaseSurfaceContentsLister`](../object/BaseSurfaceContentsLister.html)[`BaseThingContentsLister`](../object/BaseThingContentsLister.html)[`BaseUndersideContentsLister`](../object/BaseUndersideContentsLister.html)[`CustomRoomLister`](../object/CustomRoomLister.html)[`ExitLister`](../object/ExitLister1.html)[`LookWhereContentsLister`](../object/LookWhereContentsLister.html)[`MajorAttachmentLister`](../object/MajorAttachmentLister.html)[`RemoteRoomLister`](../object/RemoteRoomLister.html)[`SimpleAttachmentLister`](../object/SimpleAttachmentLister.html)[`SuggestedTopicLister`](../object/SuggestedTopicLister.html)[`SuggestionListGroup`](../object/SuggestionListGroup.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`aboardVehicleLister`](../object/aboardVehicleLister.html)[`actorHoldingDescInventoryListerLong`](../object/actorHoldingDescInventoryListerLong.html)[`actorHoldingDescInventoryListerShort`](../object/actorHoldingDescInventoryListerShort.html)[`actorInventoryLister`](../object/actorInventoryLister.html)[`actorSingleInventoryLister`](../object/actorSingleInventoryLister.html)[`darkRoomLister`](../object/darkRoomLister.html)[`equivalentStateLister`](../object/equivalentStateLister.html)[`exitsTip`](../object/exitsTip.html)[`explicitExitLister`](../object/explicitExitLister.html)[`finishOptionsLister`](../object/finishOptionsLister.html)[`footnotesTip`](../object/footnotesTip.html)[`fullScoreTip`](../object/fullScoreTip.html)[`implicitAnnouncementGrouper`](../object/implicitAnnouncementGrouper.html)[`inlineListingContentsLister`](../object/inlineListingContentsLister.html)[`keyringExamineContentsLister`](../object/keyringExamineContentsLister.html)[`keyringInlineContentsLister`](../object/keyringInlineContentsLister.html)[`libMessages`](../object/libMessages.html)[`lookAroundExitLister`](../object/lookAroundExitLister.html)[`lookAroundTerseExitLister`](../object/lookAroundTerseExitLister.html)[`npcActionMessages`](../object/npcActionMessages.html)[`npcDeferredMessages`](../object/npcDeferredMessages.html)[`npcDeferredMessagesDirect`](../object/npcDeferredMessagesDirect.html)[`npcMessages`](../object/npcMessages.html)[`npcMessagesDirect`](../object/npcMessagesDirect.html)[`oopsTip`](../object/oopsTip.html)[`openableDescContentsLister`](../object/openableDescContentsLister.html)[`openableOpeningLister`](../object/openableOpeningLister.html)[`otherExitLister`](../object/otherExitLister.html)[`playerActionMessages`](../object/playerActionMessages.html)[`playerMessages`](../object/playerMessages.html)[`rearAbandonContentsLister`](../object/rearAbandonContentsLister.html)[`rearContentsLister`](../object/rearContentsLister.html)[`rearDescContentsLister`](../object/rearDescContentsLister.html)[`rearInlineContentsLister`](../object/rearInlineContentsLister.html)[`rearLookBehindLister`](../object/rearLookBehindLister.html)[`roomLister`](../object/roomLister.html)[`roomPartContentsLister`](../object/roomPartContentsLister.html)[`roomPartDescContentsLister`](../object/roomPartDescContentsLister.html)[`roomPartLookInLister`](../object/roomPartLookInLister.html)[`scoreChangeTip`](../object/scoreChangeTip.html)[`statuslineExitLister`](../object/statuslineExitLister.html)[`suggestionAskForGroup`](../object/suggestionAskForGroup.html)[`suggestionAskGroup`](../object/suggestionAskGroup.html)[`suggestionGiveGroup`](../object/suggestionGiveGroup.html)[`suggestionShowGroup`](../object/suggestionShowGroup.html)[`suggestionTellGroup`](../object/suggestionTellGroup.html)[`suggestionYesNoGroup`](../object/suggestionYesNoGroup.html)[`surfaceContentsLister`](../object/surfaceContentsLister.html)[`surfaceDescContentsLister`](../object/surfaceDescContentsLister.html)[`surfaceInlineContentsLister`](../object/surfaceInlineContentsLister.html)[`surfaceLookInLister`](../object/surfaceLookInLister.html)[`thingContentsLister`](../object/thingContentsLister.html)[`thingDescContentsLister`](../object/thingDescContentsLister.html)[`thingLookInLister`](../object/thingLookInLister.html)[`undersideAbandonContentsLister`](../object/undersideAbandonContentsLister.html)[`undersideContentsLister`](../object/undersideContentsLister.html)[`undersideDescContentsLister`](../object/undersideDescContentsLister.html)[`undersideInlineContentsLister`](../object/undersideInlineContentsLister.html)[`undersideLookUnderLister`](../object/undersideLookUnderLister.html)[`undoTip`](../object/undoTip.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`buildParam`](#buildParam)[`buildSynthParam`](#buildSynthParam)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="buildParam"></span>
 
@@ -88,7 +88,7 @@ doesn't notice it.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[53](../source/msg_neu.t.html#53)\]
 
-<div class="desc">
+
 
 Build a message parameter string with the given parameter type and name.
 
@@ -106,7 +106,7 @@ write this:
   
 \<\<buildParam('The/he', var)\>\> {is} ...
 
-</div>
+
 
 <span id="buildSynthParam"></span>
 
@@ -114,7 +114,7 @@ write this:
 
 [msg_neu.t](../file/msg_neu.t.html)\[[66](../source/msg_neu.t.html#66)\]
 
-<div class="desc">
+
 
 Synthesize a message parameter, and build it into a parameter string
 with the given substitution type.
@@ -123,11 +123,11 @@ For example, buildSynthParam('abc', obj) returns '{abc xxx}', where
 'xxx' is a synthesized message parameter name (created using
 gSynthMessageParam) for the object obj.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

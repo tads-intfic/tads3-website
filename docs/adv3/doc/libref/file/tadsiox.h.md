@@ -25,7 +25,7 @@ layout: docs
 [Summary](#_TemplateSummary_)  
 [Details](#_Templates_)
 
-<div class="fdesc">
+
 
 This header defines the tads-io-ext function sets, which provides
 optional extensions to the standard input/output set.
@@ -36,59 +36,59 @@ certain platforms. Be aware that using this function set will limit your
 program to interpreters that support it, and will prevent your program
 from running on some systems.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 *(none)* <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`enableSystemMenuCommand`](#enableSystemMenuCommand)[`showPopupMenu`](#showPopupMenu)
 
 <span id="_MacroSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Macros</span>  
 
-</div>
+
 
 [`MenuStatEventDisable`](#MenuStatEventDisable)[`MenuStatEventEnable`](#MenuStatEventEnable)[`MenuStatLineDisable`](#MenuStatLineDisable)[`MenuStatLineEnable`](#MenuStatLineEnable)[`PopMenuCancel`](#PopMenuCancel)[`PopMenuEof`](#PopMenuEof)[`PopMenuFail`](#PopMenuFail)[`PopMenuHRef`](#PopMenuHRef)
 
 <span id="_EnumSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Enums</span>  
 
-</div>
+
 
 *(none)* <span id="_TemplateSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Templates</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="enableSystemMenuCommand"></span>
 
@@ -96,7 +96,7 @@ from running on some systems.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[106](../source/tadsiox.h.html#106)\]
 
-<div class="desc">
+
 
 Enable/disable a system menu command. Some interpreters offer a set of
 common system-level game commands via menus, toolbars, or similar UI
@@ -139,7 +139,7 @@ example, if you specify MenuStatEventEnable, then the command is enabled
 for inputEvent(), and its previous status for inputLine() is left
 unchanged.
 
-</div>
+
 
 <span id="showPopupMenu"></span>
 
@@ -147,7 +147,7 @@ unchanged.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[61](../source/tadsiox.h.html#61)\]
 
-<div class="desc">
+
 
 Show a popup menu. This opens a temporary window, drawn in a style
 consistent with the local conventions for popup menus. The new window is
@@ -181,15 +181,15 @@ PopMenuHRef, the list will have a second element, containing a string
 giving the HREF of the hyperlink the user clicked on. For any other
 status codes, the list will have no further elements.
 
-</div>
+
 
 <span id="_Macros_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Macros</span>  
 
-</div>
+
 
 <span id="MenuStatEventDisable"></span>
 
@@ -197,12 +197,12 @@ status codes, the list will have no further elements.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[162](../source/tadsiox.h.html#162)\]
 
-<div class="desc">
+
 
 `(0x0001 | 0x0000)`  
 *no description available*
 
-</div>
+
 
 <span id="MenuStatEventEnable"></span>
 
@@ -210,12 +210,12 @@ status codes, the list will have no further elements.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[161](../source/tadsiox.h.html#161)\]
 
-<div class="desc">
+
 
 `(0x0001 | 0x0002)`  
 *no description available*
 
-</div>
+
 
 <span id="MenuStatLineDisable"></span>
 
@@ -223,12 +223,12 @@ status codes, the list will have no further elements.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[159](../source/tadsiox.h.html#159)\]
 
-<div class="desc">
+
 
 `(0x0004 | 0x0000)`  
 *no description available*
 
-</div>
+
 
 <span id="MenuStatLineEnable"></span>
 
@@ -236,7 +236,7 @@ status codes, the list will have no further elements.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[158](../source/tadsiox.h.html#158)\]
 
-<div class="desc">
+
 
 `(0x0004 | 0x0008)`  
 enableSystemMenuCommand() status codes. You can control the inputLine()
@@ -252,7 +252,7 @@ MenuStatEventEnable and MenuStatEventDisable control the inputEvent()
 status of a command. If neither is specified, the old status is left
 unchagned for inputEvent().
 
-</div>
+
 
 <span id="PopMenuCancel"></span>
 
@@ -260,13 +260,13 @@ unchagned for inputEvent().
 
 [tadsiox.h](../file/tadsiox.h.html)\[[134](../source/tadsiox.h.html#134)\]
 
-<div class="desc">
+
 
 `2`  
 Canceled: the user canceled the menu. This usually means that the user
 clicked outside of the menu, or switched to a different application.
 
-</div>
+
 
 <span id="PopMenuEof"></span>
 
@@ -274,13 +274,13 @@ clicked outside of the menu, or switched to a different application.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[140](../source/tadsiox.h.html#140)\]
 
-<div class="desc">
+
 
 `3`  
 "End of file": this indicates that the application is being terminated,
 so it's not possible to obtain any further input from the user.
 
-</div>
+
 
 <span id="PopMenuFail"></span>
 
@@ -288,13 +288,13 @@ so it's not possible to obtain any further input from the user.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[121](../source/tadsiox.h.html#121)\]
 
-<div class="desc">
+
 
 `0`  
 Failed: the popup menu could not be shown. This could indicate a
 resource problem (low memory, for example) or another system problem.
 
-</div>
+
 
 <span id="PopMenuHRef"></span>
 
@@ -302,36 +302,36 @@ resource problem (low memory, for example) or another system problem.
 
 [tadsiox.h](../file/tadsiox.h.html)\[[128](../source/tadsiox.h.html#128)\]
 
-<div class="desc">
+
 
 `1`  
 HRef: the user clicked on a hyperlink shown in the menu. The list will
 contain a second element giving a string with the HREF of the hyperlink
 the user selected.
 
-</div>
+
 
 <span id="_Enums_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Enums</span>  
 
-</div>
+
 
 *(none)* <span id="_Templates_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Templates</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

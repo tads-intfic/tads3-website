@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An "ask which" travel connector. Rather than just traversing a
 connector, we ask for a direct object for a specified travel verb; if
@@ -57,15 +57,15 @@ to go through.
 
 `class `**`AskConnector`**` :   `[`TravelConnector`](../object/TravelConnector.html)[`ResolveAsker`](../object/ResolveAsker.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AskConnector`**  
 [`TravelConnector`](../object/TravelConnector.html)  
@@ -76,30 +76,30 @@ to go through.
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`AskConnector`**  
 [`DefaultAskConnector`](../object/DefaultAskConnector.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`askTravelDown`](../object/askTravelDown.html)[`askTravelIn`](../object/askTravelIn.html)[`askTravelOut`](../object/askTravelOut.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`promptMessage`](#promptMessage)[`travelAction`](#travelAction)[`travelObjs`](#travelObjs)[`travelObjsPhrase`](#travelObjsPhrase)
 
@@ -116,11 +116,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`askDisambig`](#askDisambig)[`askMissingObject`](#askMissingObject)[`connectorGetConnectorTo`](#connectorGetConnectorTo)[`dobjFor(TravelVia)`](#dobjFor(TravelVia))
 
@@ -137,11 +137,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="promptMessage"></span>
 
@@ -149,7 +149,7 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[1823](../source/travel.t.html#1823)\]
 
-<div class="desc">
+
 
 An extra prompt message to show before the normal parser prompt for a
 missing or ambiguous object. We'll show this just before the normal
@@ -160,7 +160,7 @@ askDisambig() or askMissingObject(). The parser will invoke these to
 generate the prompt, so you can customize the entire messages by
 overriding these.
 
-</div>
+
 
 <span id="travelAction"></span>
 
@@ -168,14 +168,14 @@ overriding these.
 
 [travel.t](../file/travel.t.html)\[[1789](../source/travel.t.html#1789)\]
 
-<div class="desc">
+
 
 The specific travel action to attempt. This must be a TAction - an
 action that takes a direct object (and only a direct object). The
 default is TravelVia, but this should usually be customized in each
 instance to the type of travel appropriate for the possible connectors.
 
-</div>
+
 
 <span id="travelObjs"></span>
 
@@ -183,7 +183,7 @@ instance to the type of travel appropriate for the possible connectors.
 
 [travel.t](../file/travel.t.html)\[[1803](../source/travel.t.html#1803)\]
 
-<div class="desc">
+
 
 The list of possible direct objects for the travel action. If this is
 nil, we'll simply treat the direct object of the travelAction as
@@ -195,7 +195,7 @@ list of possible objects; the parser will then use the ambiguous noun
 phrase rules instead of the missing noun phrase rules to ask the player
 for more information.
 
-</div>
+
 
 <span id="travelObjsPhrase"></span>
 
@@ -203,22 +203,22 @@ for more information.
 
 [travel.t](../file/travel.t.html)\[[1811](../source/travel.t.html#1811)\]
 
-<div class="desc">
+
 
 The phrase to use in the disambiguation question to ask which of the
 travelObjs entries is to be used. The language-specific module provides
 a suitable default, but this should usually be overridden if travelObjs
 is overridden.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="askDisambig"></span>
 
@@ -226,12 +226,12 @@ is overridden.
 
 [travel.t](../file/travel.t.html)\[[1829](../source/travel.t.html#1829)\]
 
-<div class="desc">
+
 
 For each of the ResolveAsker methods that might be invoked, add the
 promptMessage text before the normal parser question.
 
-</div>
+
 
 <span id="askMissingObject"></span>
 
@@ -239,11 +239,11 @@ promptMessage text before the normal parser question.
 
 [travel.t](../file/travel.t.html)\[[1837](../source/travel.t.html#1837)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="connectorGetConnectorTo"></span>
 
@@ -251,13 +251,13 @@ promptMessage text before the normal parser question.
 
 [travel.t](../file/travel.t.html)\[[1882](../source/travel.t.html#1882)\]
 
-<div class="desc">
+
 
 Get a connector leading to the given destination. We'll scan our travel
 objects; for each one that's a TravelConnector, we'll ask it to find the
 connector, and return the result if we get one.
 
-</div>
+
 
 <span id="dobjFor(TravelVia)"></span>
 
@@ -265,15 +265,15 @@ connector, and return the result if we get one.
 
 [travel.t](../file/travel.t.html)\[[1844](../source/travel.t.html#1844)\]
 
-<div class="desc">
+
 
 handle travel via this connector
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

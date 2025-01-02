@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> t3vm Function
@@ -16,7 +16,7 @@ Set
     <a href="tadsgen.html" class="nav"><em>Next:</em> tads-gen Function
 Set</a>     </span>
 
-</div>
+
 
 
 
@@ -28,7 +28,7 @@ applications.
 
 `t3AllocProp()`
 
-<div class="fdef">
+
 
 Allocates a new property ID value, which is a property not previously
 used by any object in the program. Note that property IDs are a somewhat
@@ -39,7 +39,7 @@ defined statically in the program.
 
 `t3DebugTrace(*mode*, ...)`
 
-<div class="fdef">
+
 
 Debugger interface. The *mode* parameter indicates the function to be
 performed. Any arguments after mode are specific to the mode. The valid
@@ -72,13 +72,13 @@ argument, it simply ignores any additional arguments and returns
 `nil`; this allows for compatible extensions to
 the function in the future by the addition of new mode values.
 
-</div>
+
 
 <span id="t3GetGlobalSymbols"></span>
 
 `t3GetGlobalSymbols(*which*?)`
 
-<div class="fdef">
+
 
 Returns information on the program's compile-time symbols.
 
@@ -124,11 +124,11 @@ preinit, even in a regular build, using
 
 For more information, see the [reflection](reflect.html) section.
 
-</div>
+
 
 `t3GetNamedArg(*name*, *defval*?)`
 
-<div class="fdef">
+
 
 Retrieves the value of the [named argument](namedargs.html) with the
 given name.
@@ -141,24 +141,24 @@ argument exists, the function returns the value of the argument.
 doesn't exist and *defval* is omitted, the function instead throws an
 error.
 
-</div>
+
 
 `t3GetNamedArgList()`
 
-<div class="fdef">
+
 
 Retrieves a list of the names of all of the named arguments currently in
 effect. If no named arguments are in effect, returns an empty list. You
 can get the current value of a named argument by calling
 `t3GetNamedArg()` on the name.
 
-</div>
+
 
 <span id="t3GetStackTrace"></span>
 
 `t3GetStackTrace(*level*?, *flags*?)`
 
-<div class="fdef">
+
 
 Returns information on the current call stack, or on a given stack
 level.
@@ -275,21 +275,21 @@ In addition, the class defines the following method:
   lists. Starting in 3.1, full information is available for system
   functions, except for the source code location and local variables.)
 
-</div>
+
 
 `t3GetVMBanner()`
 
-<div class="fdef">
+
 
 Returns the T3 VM banner string, which is a string identifying the VM,
 its version number, and its copyright information. This string is
 suitable for displaying as a start-up banner.
 
-</div>
+
 
 `t3GetVMID()`
 
-<div class="fdef">
+
 
 Returns the T3 VM identification string. This is a short string
 identifying the particular VM implementation; each different
@@ -299,22 +299,22 @@ implementation has the identifying string 'mjr-T3'.
 Note that the VM identification string identifies the VM itself, not the
 host application environment.
 
-</div>
+
 
 `t3GetVMPreinitMode()`
 
-<div class="fdef">
+
 
 Returns `true` if the VM is operating in
 pre-initialization mode, `nil` if the VM is
 operating in normal execution mode. Pre-initialization mode is the mode
 that's active during the preinit phase of compilation.
 
-</div>
+
 
 `t3GetVMVsn()`
 
-<div class="fdef">
+
 
 Get the T3 VM version number. This returns an integer value; the
 high-order 16 bits of the value give the major version number of the VM;
@@ -328,13 +328,13 @@ function,
   number
 - `(V & 0xff)` yields the patch release number
 
-</div>
+
 
 <span id="t3RunGC"></span>
 
 `t3RunGC()`
 
-<div class="fdef">
+
 
 Explicitly runs the [garbage collector](gc.html). This traces through
 memory to determine which objects can be referenced through local
@@ -372,11 +372,11 @@ particular times.
 
 This function has no return value.
 
-</div>
+
 
 `t3SetSay(*val*)`
 
-<div class="fdef">
+
 
 Set the default output function or method to the given value:
 
@@ -423,13 +423,13 @@ The return value allows the caller to save and later restore the setting
 being changed, which is useful when the caller just wants to change the
 setting temporarily while running a particular block of code.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -439,4 +439,4 @@ Set
     <a href="tadsgen.html" class="nav"><em>Next:</em> tads-gen Function
 Set</a>     </span>
 
-</div>
+

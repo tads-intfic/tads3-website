@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 'ByteArray' intrinsic class. This class provides a fixed-size array of
 unsigned 8-bit byte values; each array element is an integer in the
@@ -37,41 +37,41 @@ since it lets you manipulate the raw bytes in a file directly.
 
 `intrinsic class `**`ByteArray`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ByteArray`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -79,11 +79,11 @@ since it lets you manipulate the raw bytes in a file directly.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`copyFrom`](#copyFrom)[`digestMD5`](#digestMD5)[`fillValue`](#fillValue)[`length`](#length)[`mapToString`](#mapToString)[`packBytes`](#packBytes)[`readInt`](#readInt)[`sha256`](#sha256)[`subarray`](#subarray)[`unpackBytes`](#unpackBytes)[`writeInt`](#writeInt)
 
@@ -92,19 +92,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="copyFrom"></span>
 
@@ -112,13 +112,13 @@ Inherited from `Object` :
 
 [bytearr.h](../file/bytearr.h.html)\[[70](../source/bytearr.h.html#70)\]
 
-<div class="desc">
+
 
 Copy bytes from the source array into this array. Bytes are copied into
 this array starting at the given index. The specified number of bytes
 are copied from the source array starting at the given index.
 
-</div>
+
 
 <span id="digestMD5"></span>
 
@@ -126,7 +126,7 @@ are copied from the source array starting at the given index.
 
 [bytearr.h](../file/bytearr.h.html)\[[213](../source/bytearr.h.html#213)\]
 
-<div class="desc">
+
 
 Get the MD5 digest of the string. This calculates the 128-bit RSA MD5
 digest value, returning the digest as a 32-character string of hex
@@ -134,7 +134,7 @@ digits. The hash value is computed on the UTF-8 representation of the
 string. If 'idx' and 'len' are specified, the give the range of bytes to
 include in the hash; the default is to hash the whole array.
 
-</div>
+
 
 <span id="fillValue"></span>
 
@@ -142,13 +142,13 @@ include in the hash; the default is to hash the whole array.
 
 [bytearr.h](../file/bytearr.h.html)\[[78](../source/bytearr.h.html#78)\]
 
-<div class="desc">
+
 
 Fill bytes in this array with the given value. If no starting index or
 length values are given, the entire array is filled with the given byte
 value. The byte value must be an integer in the range 0 to 255.
 
-</div>
+
 
 <span id="length"></span>
 
@@ -156,12 +156,12 @@ value. The byte value must be an integer in the range 0 to 255.
 
 [bytearr.h](../file/bytearr.h.html)\[[55](../source/bytearr.h.html#55)\]
 
-<div class="desc">
+
 
 Get the number of bytes in the array. The length is fixed at creation
 time.
 
-</div>
+
 
 <span id="mapToString"></span>
 
@@ -169,7 +169,7 @@ time.
 
 [bytearr.h](../file/bytearr.h.html)\[[88](../source/bytearr.h.html#88)\]
 
-<div class="desc">
+
 
 Convert a range of bytes in the array to a string, interpreting the
 bytes in the array as characters in the given character set.
@@ -178,7 +178,7 @@ If the starting index and length are not given, the entire byte array is
 converted to a string. 'charset' must be an object of intrinsic class
 CharacterSet.
 
-</div>
+
 
 <span id="packBytes"></span>
 
@@ -186,7 +186,7 @@ CharacterSet.
 
 [bytearr.h](../file/bytearr.h.html)\[[180](../source/bytearr.h.html#180)\]
 
-<div class="desc">
+
 
 Pack data values into bytes according to a format definition string, and
 store the packed bytes in the byte array starting at the given index.
@@ -214,7 +214,7 @@ version.
 
 Refer to Byte Packing in the System Manual for details.
 
-</div>
+
 
 <span id="readInt"></span>
 
@@ -222,7 +222,7 @@ Refer to Byte Packing in the System Manual for details.
 
 [bytearr.h](../file/bytearr.h.html)\[[127](../source/bytearr.h.html#127)\]
 
-<div class="desc">
+
 
 Read an integer value from the byte array. Reads bytes from the starting
 index; the number of bytes read depends on the format. Returns an
@@ -260,7 +260,7 @@ The byte array must be large enough to read the required number of bytes
 starting at the given index. An "index out of range" exception is thrown
 if there aren't enough bytes in the array to satisfy the request.
 
-</div>
+
 
 <span id="sha256"></span>
 
@@ -268,7 +268,7 @@ if there aren't enough bytes in the array to satisfy the request.
 
 [bytearr.h](../file/bytearr.h.html)\[[203](../source/bytearr.h.html#203)\]
 
-<div class="desc">
+
 
 Get the SHA-256 hash of the bytes in the array. This calculates the
 256-bit Secure Hash Algorithm 2 hash value, returning the hash as a
@@ -277,7 +277,7 @@ UTF-8 representation of the string. If 'idx' and 'len' are specified,
 they give the range of bytes to include in the hash; the default is to
 hash the whole array.
 
-</div>
+
 
 <span id="subarray"></span>
 
@@ -285,13 +285,13 @@ hash the whole array.
 
 [bytearr.h](../file/bytearr.h.html)\[[62](../source/bytearr.h.html#62)\]
 
-<div class="desc">
+
 
 create a new ByteArray as a copy of the given range of this array; if
 the length is not given, bytes from the starting index to the end of
 this array are included in the new array
 
-</div>
+
 
 <span id="unpackBytes"></span>
 
@@ -299,7 +299,7 @@ this array are included in the new array
 
 [bytearr.h](../file/bytearr.h.html)\[[193](../source/bytearr.h.html#193)\]
 
-<div class="desc">
+
 
 Unpack bytes from the byte array starting at the given index, and
 translate the bytes into data values according to the given format
@@ -310,7 +310,7 @@ is the format string. Returns a list of the unpacked values.
 
 Refer to Byte Packing in the System Manual for details.
 
-</div>
+
 
 <span id="writeInt"></span>
 
@@ -318,7 +318,7 @@ Refer to Byte Packing in the System Manual for details.
 
 [bytearr.h](../file/bytearr.h.html)\[[151](../source/bytearr.h.html#151)\]
 
-<div class="desc">
+
 
 Write an integer value to the byte array. Writes bytes starting at the
 given index; the number of bytes written depends on the format. The
@@ -341,11 +341,11 @@ example, attempting to store 0xABCD in an 8-bit format will store only
 Note that the signedness doesn't matter when writing a value. The
 signedness is important only when reading the value back in.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

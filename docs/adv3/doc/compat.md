@@ -27,25 +27,25 @@ has run into the same problem, or you can go to
   
   
 
-<div class="bar1">
 
-<div class="heading">
+
+
 
 Workbench on Windows 95/98: "SHELL32.DLL:SHGetFolderPathA" Error
 
-</div>
 
-<div class="content">
+
+
 
 If you're running TADS Workbench on Windows 95 or 98, launching
 Workbench might show the following error messages:
 
-<div class="indented">
+
 
     Error Starting Program
     The HTMLDB3.EXE file is linked to missing export SHELL32.DLL:SHGetFolderPathA.
 
-</div>
+
 
 If you get this error, you should be able to fix it by installing
 Microsoft Internet Explorer version 5 or later. The issue is that
@@ -54,19 +54,19 @@ than what comes with 95 and 98 by default. IE 5 and later automatically
 upgrade this DLL as part of their installation process, so updating the
 DLL is simply a matter of updating IE.
 
-</div>
 
-</div>
 
-<div class="bar2">
 
-<div class="heading">
+
+
+
+
 
 Crash running HTML TADS
 
-</div>
 
-<div class="content">
+
+
 
 If HTML TADS crashes, particularly when you select the "Options" item of
 the "Edit" menu or "Customize" on the "Themes" menu, you probably have
@@ -74,11 +74,11 @@ an out-of-date version of a Windows system file called COMCTL32.DLL. If
 you encounter this problem, you can fix it by downloading this file from
 the Microsoft web site:
 
-<div class="indented">
+
 
 <ftp://ftp.microsoft.com/softlib/mslfiles/com32upd.exe>
 
-</div>
+
 
 After downloading the file, double-click it to run the installation
 program, which will install the upgraded DLL for you. Note that HTML
@@ -87,19 +87,19 @@ installed and warns you at startup if you don't. Although you can choose
 to continue running if TADS displays this warning, we strongly encourage
 you to upgrade your COMCTL32.DLL before running HTML TADS.
 
-</div>
 
-</div>
 
-<div class="bar1">
 
-<div class="heading">
+
+
+
+
 
 Crash using Wine (Windows emulator for Linux)
 
-</div>
 
-<div class="content">
+
+
 
 If you're running HTML TADS in the Wine environment (a Windows emulation
 environment for Linux/Unix systems), you might need to use the
@@ -110,25 +110,25 @@ as WineX. If you're running on Wine, and the interpreter crashes
 immediately when you run it, try running it from the command line like
 this:
 
-<div class="indented">
+
 
     htmltads -noalphablend
 
-</div>
 
-</div>
 
-</div>
 
-<div class="bar2">
 
-<div class="heading">
+
+
+
+
+
 
 Western European characters on localized (Non-English) Windows systems
 
-</div>
 
-<div class="content">
+
+
 
 If you're running a Windows system that uses a character set other than
 US/Western Europe (such as Windows Eastern European or Cyrillic), please
@@ -148,11 +148,11 @@ To check for font substitutions, look at your WIN.INI file (usually in
 your C:\WINDOWS directory). Look for a line that starts with
 "\[fontsubstitutes\]", then look for lines like this:
 
-<div class="indented">
+
 
     Arial,0=Arial,238
 
-</div>
+
 
 (The second number might be something other than 238.) If you find any
 lines like this, you might want to try deleting them or commenting them
@@ -163,12 +163,12 @@ need to reboot your system before your changes take effect.
 registry rather than in WIN.INI. Run REGEDIT and look for a registry key
 with this path:
 
-<div class="indented">
+
 
     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
 
-</div>
 
-</div>
 
-</div>
+
+
+

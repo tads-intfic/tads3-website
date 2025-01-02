@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Input Scripts  
@@ -15,7 +15,7 @@ layout: docs
     <a href="pack.html" class="nav"><em>Next:</em> Byte Packing</a>    
 </span>
 
-</div>
+
 
 
 
@@ -302,7 +302,7 @@ it merely suppresses the warning if it does.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -311,4 +311,4 @@ it merely suppresses the warning if it does.
     <a href="pack.html" class="nav"><em>Next:</em> Byte Packing</a>    
 </span>
 
-</div>
+

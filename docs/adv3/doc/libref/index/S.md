@@ -3492,9 +3492,9 @@ method of [libMessages](../object/libMessages.html) in
 in
 [tadsio.h](../file/tadsio.h.html)\[[195](../source/tadsio.h.html#195)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

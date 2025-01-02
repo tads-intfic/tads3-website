@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An object that uses the same name as another object. This maps all of
 the properties involved in supplying the object's name, number, and
@@ -41,64 +41,64 @@ vocabulary words.
 
 `class `**`NameAsOther`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NameAsOther`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NameAsOther`**  
 [`NameAsParent`](../object/NameAsParent.html)  
 [`ComplexComponent`](../object/ComplexComponent.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`aDisambigName`](#aDisambigName)[`aName`](#aName)[`aNameObj`](#aNameObj)[`disambigEquivName`](#disambigEquivName)[`disambigName`](#disambigName)[`isHer`](#isHer)[`isHim`](#isHim)[`isIt`](#isIt)[`isMassNoun`](#isMassNoun)[`isPlural`](#isPlural)[`isProperName`](#isProperName)[`isQualifiedName`](#isQualifiedName)[`itIs`](#itIs)[`itIsContraction`](#itIsContraction)[`itNom`](#itNom)[`itObj`](#itObj)[`itPossAdj`](#itPossAdj)[`itPossNoun`](#itPossNoun)[`itReflexive`](#itReflexive)[`listName`](#listName)[`name`](#name)[`nameDoes`](#nameDoes)[`nameIs`](#nameIs)[`nameIsnt`](#nameIsnt)[`nameSays`](#nameSays)[`nameSees`](#nameSees)[`pluralName`](#pluralName)[`targetObj`](#targetObj)[`thatIsContraction`](#thatIsContraction)[`thatNom`](#thatNom)[`thatObj`](#thatObj)[`theDisambigName`](#theDisambigName)[`theName`](#theName)[`theNameObj`](#theNameObj)[`theNamePossAdj`](#theNamePossAdj)[`theNamePossNoun`](#theNamePossNoun)[`theNameWithOwner`](#theNameWithOwner)[`verbCan`](#verbCan)[`verbCannot`](#verbCannot)[`verbCant`](#verbCant)[`verbEndingEs`](#verbEndingEs)[`verbEndingIes`](#verbEndingIes)[`verbEndingS`](#verbEndingS)[`verbEndingSD`](#verbEndingSD)[`verbEndingSEd`](#verbEndingSEd)[`verbMust`](#verbMust)[`verbToBe`](#verbToBe)[`verbToCome`](#verbToCome)[`verbToDo`](#verbToDo)[`verbToGo`](#verbToGo)[`verbToHave`](#verbToHave)[`verbToLeave`](#verbToLeave)[`verbToSay`](#verbToSay)[`verbToSee`](#verbToSee)[`verbWas`](#verbWas)[`verbWill`](#verbWill)[`verbWont`](#verbWont)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`aNameOwnerLoc`](#aNameOwnerLoc)[`conjugateRegularVerb`](#conjugateRegularVerb)[`countDisambigName`](#countDisambigName)[`countName`](#countName)[`countNameOwnerLoc`](#countNameOwnerLoc)[`itVerb`](#itVerb)[`nameVerb`](#nameVerb)[`notePromptByOwnerLoc`](#notePromptByOwnerLoc)[`notePromptByPossAdj`](#notePromptByPossAdj)[`theNameOwnerLoc`](#theNameOwnerLoc)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="aDisambigName"></span>
 
@@ -106,11 +106,11 @@ vocabulary words.
 
 [en_us.t](../file/en_us.t.html)\[[1983](../source/en_us.t.html#1983)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="aName"></span>
 
@@ -118,11 +118,11 @@ vocabulary words.
 
 [en_us.t](../file/en_us.t.html)\[[2018](../source/en_us.t.html#2018)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="aNameObj"></span>
 
@@ -130,11 +130,11 @@ vocabulary words.
 
 [en_us.t](../file/en_us.t.html)\[[2019](../source/en_us.t.html#2019)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="disambigEquivName"></span>
 
@@ -142,11 +142,11 @@ vocabulary words.
 
 [en_us.t](../file/en_us.t.html)\[[1985](../source/en_us.t.html#1985)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="disambigName"></span>
 
@@ -154,11 +154,11 @@ vocabulary words.
 
 [en_us.t](../file/en_us.t.html)\[[1981](../source/en_us.t.html#1981)\]
 
-<div class="desc">
+
 
 map the derived name properties as well, in case any are overridden
 
-</div>
+
 
 <span id="isHer"></span>
 
@@ -166,11 +166,11 @@ map the derived name properties as well, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1974](../source/en_us.t.html#1974)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isHim"></span>
 
@@ -178,11 +178,11 @@ map the derived name properties as well, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1973](../source/en_us.t.html#1973)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isIt"></span>
 
@@ -190,11 +190,11 @@ map the derived name properties as well, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1975](../source/en_us.t.html#1975)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isMassNoun"></span>
 
@@ -202,11 +202,11 @@ map the derived name properties as well, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1972](../source/en_us.t.html#1972)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isPlural"></span>
 
@@ -214,11 +214,11 @@ map the derived name properties as well, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1971](../source/en_us.t.html#1971)\]
 
-<div class="desc">
+
 
 map our naming and usage properties to the target object
 
-</div>
+
 
 <span id="isProperName"></span>
 
@@ -226,11 +226,11 @@ map our naming and usage properties to the target object
 
 [en_us.t](../file/en_us.t.html)\[[1976](../source/en_us.t.html#1976)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isQualifiedName"></span>
 
@@ -238,11 +238,11 @@ map our naming and usage properties to the target object
 
 [en_us.t](../file/en_us.t.html)\[[1977](../source/en_us.t.html#1977)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="itIs"></span>
 
@@ -250,11 +250,11 @@ map our naming and usage properties to the target object
 
 [en_us.t](../file/en_us.t.html)\[[1998](../source/en_us.t.html#1998)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="itIsContraction"></span>
 
@@ -262,11 +262,11 @@ map our naming and usage properties to the target object
 
 [en_us.t](../file/en_us.t.html)\[[1999](../source/en_us.t.html#1999)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="itNom"></span>
 
@@ -274,11 +274,11 @@ map our naming and usage properties to the target object
 
 [en_us.t](../file/en_us.t.html)\[[1990](../source/en_us.t.html#1990)\]
 
-<div class="desc">
+
 
 map the pronoun properites, in case any are overridden
 
-</div>
+
 
 <span id="itObj"></span>
 
@@ -286,11 +286,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1991](../source/en_us.t.html#1991)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="itPossAdj"></span>
 
@@ -298,11 +298,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1992](../source/en_us.t.html#1992)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="itPossNoun"></span>
 
@@ -310,11 +310,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1993](../source/en_us.t.html#1993)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="itReflexive"></span>
 
@@ -322,11 +322,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1994](../source/en_us.t.html#1994)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="listName"></span>
 
@@ -334,11 +334,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1986](../source/en_us.t.html#1986)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -346,11 +346,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1978](../source/en_us.t.html#1978)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nameDoes"></span>
 
@@ -358,11 +358,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[2028](../source/en_us.t.html#2028)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nameIs"></span>
 
@@ -370,11 +370,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[2021](../source/en_us.t.html#2021)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nameIsnt"></span>
 
@@ -382,11 +382,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[2022](../source/en_us.t.html#2022)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nameSays"></span>
 
@@ -394,11 +394,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[2035](../source/en_us.t.html#2035)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nameSees"></span>
 
@@ -406,11 +406,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[2033](../source/en_us.t.html#2033)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="pluralName"></span>
 
@@ -418,11 +418,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[2020](../source/en_us.t.html#2020)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="targetObj"></span>
 
@@ -430,11 +430,11 @@ map the pronoun properites, in case any are overridden
 
 [en_us.t](../file/en_us.t.html)\[[1968](../source/en_us.t.html#1968)\]
 
-<div class="desc">
+
 
 the target object - we'll use the same name as this object
 
-</div>
+
 
 <span id="thatIsContraction"></span>
 
@@ -442,11 +442,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[1997](../source/en_us.t.html#1997)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="thatNom"></span>
 
@@ -454,11 +454,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[1995](../source/en_us.t.html#1995)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="thatObj"></span>
 
@@ -466,11 +466,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[1996](../source/en_us.t.html#1996)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theDisambigName"></span>
 
@@ -478,11 +478,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[1982](../source/en_us.t.html#1982)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theName"></span>
 
@@ -490,11 +490,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2003](../source/en_us.t.html#2003)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theNameObj"></span>
 
@@ -502,11 +502,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2004](../source/en_us.t.html#2004)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theNamePossAdj"></span>
 
@@ -514,11 +514,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2005](../source/en_us.t.html#2005)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theNamePossNoun"></span>
 
@@ -526,11 +526,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2006](../source/en_us.t.html#2006)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theNameWithOwner"></span>
 
@@ -538,11 +538,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2007](../source/en_us.t.html#2007)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbCan"></span>
 
@@ -550,11 +550,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2037](../source/en_us.t.html#2037)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbCannot"></span>
 
@@ -562,11 +562,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2038](../source/en_us.t.html#2038)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbCant"></span>
 
@@ -574,11 +574,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2039](../source/en_us.t.html#2039)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbEndingEs"></span>
 
@@ -586,11 +586,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2046](../source/en_us.t.html#2046)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbEndingIes"></span>
 
@@ -598,11 +598,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2047](../source/en_us.t.html#2047)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbEndingS"></span>
 
@@ -610,11 +610,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2043](../source/en_us.t.html#2043)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbEndingSD"></span>
 
@@ -622,11 +622,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2044](../source/en_us.t.html#2044)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbEndingSEd"></span>
 
@@ -634,11 +634,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2045](../source/en_us.t.html#2045)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbMust"></span>
 
@@ -646,11 +646,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2036](../source/en_us.t.html#2036)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbToBe"></span>
 
@@ -658,11 +658,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2024](../source/en_us.t.html#2024)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbToCome"></span>
 
@@ -670,11 +670,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2030](../source/en_us.t.html#2030)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbToDo"></span>
 
@@ -682,11 +682,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2027](../source/en_us.t.html#2027)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbToGo"></span>
 
@@ -694,11 +694,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2029](../source/en_us.t.html#2029)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbToHave"></span>
 
@@ -706,11 +706,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2026](../source/en_us.t.html#2026)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbToLeave"></span>
 
@@ -718,11 +718,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2031](../source/en_us.t.html#2031)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbToSay"></span>
 
@@ -730,11 +730,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2034](../source/en_us.t.html#2034)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbToSee"></span>
 
@@ -742,11 +742,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2032](../source/en_us.t.html#2032)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbWas"></span>
 
@@ -754,11 +754,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2025](../source/en_us.t.html#2025)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbWill"></span>
 
@@ -766,11 +766,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2040](../source/en_us.t.html#2040)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbWont"></span>
 
@@ -778,19 +778,19 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2041](../source/en_us.t.html#2041)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="aNameOwnerLoc"></span>
 
@@ -798,11 +798,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2008](../source/en_us.t.html#2008)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="conjugateRegularVerb"></span>
 
@@ -810,11 +810,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2001](../source/en_us.t.html#2001)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="countDisambigName"></span>
 
@@ -822,11 +822,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[1984](../source/en_us.t.html#1984)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="countName"></span>
 
@@ -834,11 +834,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[1987](../source/en_us.t.html#1987)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="countNameOwnerLoc"></span>
 
@@ -846,11 +846,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2012](../source/en_us.t.html#2012)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="itVerb"></span>
 
@@ -858,11 +858,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2000](../source/en_us.t.html#2000)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nameVerb"></span>
 
@@ -870,11 +870,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2023](../source/en_us.t.html#2023)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notePromptByOwnerLoc"></span>
 
@@ -882,11 +882,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2014](../source/en_us.t.html#2014)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notePromptByPossAdj"></span>
 
@@ -894,11 +894,11 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2016](../source/en_us.t.html#2016)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="theNameOwnerLoc"></span>
 
@@ -906,15 +906,15 @@ the target object - we'll use the same name as this object
 
 [en_us.t](../file/en_us.t.html)\[[2010](../source/en_us.t.html#2010)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -20,33 +20,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Temporary file download page. This page serves temporary files created
 via inputFile() as HTTP downloads to the client.
 
 `transient `**`tempFileDownloadPage`**` :   `[`WebResource`](../object/WebResource.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`tempFileDownloadPage`**  
 [`WebResource`](../object/WebResource.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`nextID`](#nextID)[`vpath`](#vpath)
 
@@ -55,11 +55,11 @@ Inherited from `WebResource` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addFile`](#addFile)[`processRequest`](#processRequest)
 
@@ -68,11 +68,11 @@ Inherited from `WebResource` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="nextID"></span>
 
@@ -80,11 +80,11 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[3359](../source/webui.t.html#3359)\]
 
-<div class="desc">
+
 
 next available ID
 
-</div>
+
 
 <span id="vpath"></span>
 
@@ -92,19 +92,19 @@ next available ID
 
 [webui.t](../file/webui.t.html)\[[3238](../source/webui.t.html#3238)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addFile"></span>
 
@@ -112,11 +112,11 @@ next available ID
 
 [webui.t](../file/webui.t.html)\[[3319](../source/webui.t.html#3319)\]
 
-<div class="desc">
+
 
 add a file to our list of downloadable files
 
-</div>
+
 
 <span id="processRequest"></span>
 
@@ -124,15 +124,15 @@ add a file to our list of downloadable files
 
 [webui.t](../file/webui.t.html)\[[3239](../source/webui.t.html#3239)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

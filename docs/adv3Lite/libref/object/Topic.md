@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Topic is something that the player character can refer to in the
 course of conversation or look up in a book, but which is not
@@ -45,15 +45,15 @@ the English-language tokenizer does with apostrophe-S).
 
 `class `**`Topic`**` :   `[`Mentionable`](../object/Mentionable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Topic`**  
 [`Mentionable`](../object/Mentionable.html)  
@@ -61,27 +61,27 @@ the English-language tokenizer does with apostrophe-S).
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`familiar`](#familiar)[`known`](#known)
 
@@ -93,11 +93,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`getTopicText`](#getTopicText)[`setKnown`](#setKnown)
 
@@ -109,11 +109,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="familiar"></span>
 
@@ -121,12 +121,12 @@ Inherited from `LMentionable` :
 
 [thing.t](../file/thing.t.html)\[[10005](../source/thing.t.html#10005)\]
 
-<div class="desc">
+
 
 Whether the player character knows of the existence of this topic. By
 default we assume this is true.
 
-</div>
+
 
 <span id="known"></span>
 
@@ -134,19 +134,19 @@ default we assume this is true.
 
 [thing.t](../file/thing.t.html)\[[10011](../source/thing.t.html#10011)\]
 
-<div class="desc">
+
 
 Test whether this topic is known to the player character
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -155,11 +155,11 @@ Test whether this topic is known to the player character
 [thing.t](../file/thing.t.html)\[[9995](../source/thing.t.html#9995)\],
 [english.t](../file/english.t.html)\[[2094](../source/english.t.html#2094)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getTopicText"></span>
 
@@ -167,12 +167,12 @@ Test whether this topic is known to the player character
 
 [thing.t](../file/thing.t.html)\[[10017](../source/thing.t.html#10017)\]
 
-<div class="desc">
+
 
 Return a textual description of this topic, which will normally be just
 its name. We use the vocab as fall-back alternative.
 
-</div>
+
 
 <span id="setKnown"></span>
 
@@ -180,15 +180,15 @@ its name. We use the vocab as fall-back alternative.
 
 [thing.t](../file/thing.t.html)\[[10008](../source/thing.t.html#10008)\]
 
-<div class="desc">
+
 
 Make this topic known to the player character
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

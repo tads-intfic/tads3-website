@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Using Build
@@ -17,7 +17,7 @@ Input/Output Issues</a>    
 <a href="t3inc.html" class="nav"><em>Next:</em> Understanding Separate
 Compilation</a>     </span>
 
-</div>
+
 
 
 
@@ -224,7 +224,7 @@ through your new file.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -235,4 +235,4 @@ Input/Output Issues</a>    
 <a href="t3inc.html" class="nav"><em>Next:</em> Understanding Separate
 Compilation</a>     </span>
 
-</div>
+

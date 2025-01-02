@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 QuantifierProduction is a subclass of Production for phrases that add a
 number qualifier, as in "five books".
@@ -43,26 +43,26 @@ as BOTH BOOKS.
 
 `class `**`QuantifierProduction`**` :   `[`Production`](../object/Production.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`QuantifierProduction`**  
 [`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`QuantifierProduction`**  
 [`disambigPhrase(both)`](../object/disambigPhrase(both).html)  
@@ -78,19 +78,19 @@ as BOTH BOOKS.
 [`qualifiedPluralNounPhrase(definiteNum)`](../object/qualifiedPluralNounPhrase(definiteNum).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -99,11 +99,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`build`](#build)[`visitProd`](#visitProd)
 
@@ -112,19 +112,19 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="build"></span>
 
@@ -132,14 +132,14 @@ Inherited from `Production` :
 
 [parser.t](../file/parser.t.html)\[[4413](../source/parser.t.html#4413)\]
 
-<div class="desc">
+
 
 Build out the subtree. If we have a numval embedded in this production,
 we'll use it as the quantifier. Otherwise, we'll expect to find a
 separate quant\_ sub-production among our children, and that it provides
 the quantity.
 
-</div>
+
 
 <span id="visitProd"></span>
 
@@ -147,7 +147,7 @@ the quantity.
 
 [parser.t](../file/parser.t.html)\[[4433](../source/parser.t.html#4433)\]
 
-<div class="desc">
+
 
 Visit a production. When we visit the quantifier phrase, we'll handle it
 specially: we'll add the quantifier value to the main noun phrase, and
@@ -158,11 +158,11 @@ tokens to the noun phrase - they don't belong there, since their
 qualification is captured in the quantifier and shouldn't also be added
 as adjectives.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

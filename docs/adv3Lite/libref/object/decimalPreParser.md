@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Preparser to catch numbers entered with a decimal point, so that the
 decimal point is not treated as terminating a sentence in the command.
@@ -30,15 +30,15 @@ strip off the quotes.
 
 **`decimalPreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`decimalPreParser`**  
 [`StringPreParser`](../object/StringPreParser.html)  
@@ -47,11 +47,11 @@ strip off the quotes.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -66,11 +66,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doParsing`](#doParsing)
 
@@ -84,19 +84,19 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doParsing"></span>
 
@@ -104,15 +104,15 @@ Inherited from `ModuleExecObject` :
 
 [english.t](../file/english.t.html)\[[5972](../source/english.t.html#5972)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

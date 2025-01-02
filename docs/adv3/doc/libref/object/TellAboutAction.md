@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `DefineConvTopicTAction(TellAbout, IndirectObject)      `*`// original source text`*  
 `class `**`TellAboutAction`**` :   `[`ConvTopicTAction`](../object/ConvTopicTAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TellAboutAction`**  
 [`ConvTopicTAction`](../object/ConvTopicTAction.html)  
@@ -56,11 +56,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TellAboutAction`**  
 [`predicate(TellAbout)`](../object/predicate(TellAbout).html)  
@@ -68,19 +68,19 @@ Details](#_Methods_)
 [`predicate(TellAboutWhat)`](../object/predicate(TellAboutWhat).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -106,11 +106,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isConversational`](#isConversational)
 
@@ -137,19 +137,19 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -157,18 +157,18 @@ Inherited from `Resolver` :
 
 [actions.t](../file/actions.t.html)\[[1962](../source/actions.t.html#1962)\]
 
-<div class="desc">
+
 
 TELL ABOUT is a conversational address, as opposed to an order, if the
 direct object of the action is the same as the issuer: in this case, the
 command has the form \<actor\>, TELL ME ABOUT \<topic\>, which has
 exactly the same meaning as ASK \<actor\> ABOUT \<topic\>.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

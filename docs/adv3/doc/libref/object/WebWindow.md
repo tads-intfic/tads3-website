@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Web Window tracker. This is a game object that controls and remembers
 the state of a "window" in the browser user interface. By "window", we
@@ -56,15 +56,15 @@ customized copy of the corresponding HTML page resource.
 
 `class `**`WebWindow`**` :   `[`WebResourceResFile`](../object/WebResourceResFile.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WebWindow`**  
 [`WebResourceResFile`](../object/WebResourceResFile.html)  
@@ -72,11 +72,11 @@ customized copy of the corresponding HTML page resource.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`WebWindow`**  
 [`WebCommandWin`](../object/WebCommandWin.html)  
@@ -84,19 +84,19 @@ customized copy of the corresponding HTML page resource.
 [`WebStatusWin`](../object/WebStatusWin.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`name`](#name)[`pathName`](#pathName)[`src`](#src)[`sthCtx`](#sthCtx)[`vpath`](#vpath)
 
@@ -108,11 +108,11 @@ Inherited from `WebResource` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`clearWindow`](#clearWindow)[`flushWin`](#flushWin)[`getState`](#getState)[`processName`](#processName)[`sendWinEvent`](#sendWinEvent)[`sendWinEventTo`](#sendWinEventTo)[`winFromPath`](#winFromPath)[`write`](#write)
 
@@ -124,11 +124,11 @@ Inherited from `WebResource` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="name"></span>
 
@@ -136,11 +136,11 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[1750](../source/webui.t.html#1750)\]
 
-<div class="desc">
+
 
 the name of this window
 
-</div>
+
 
 <span id="pathName"></span>
 
@@ -148,11 +148,11 @@ the name of this window
 
 [webui.t](../file/webui.t.html)\[[1753](../source/webui.t.html#1753)\]
 
-<div class="desc">
+
 
 the full path name of this window, in "win.sub.sub" format
 
-</div>
+
 
 <span id="src"></span>
 
@@ -160,14 +160,14 @@ the full path name of this window, in "win.sub.sub" format
 
 [webui.t](../file/webui.t.html)\[[1689](../source/webui.t.html#1689)\]
 
-<div class="desc">
+
 
 The window's actual source location, as a resource path. A given
 WebWindow subclass corresponds to a particular HMTL page, since the
 class and the page are facets of the same conceptual object (one facet
 is the browser expression, the other is the game program expression).
 
-</div>
+
 
 <span id="sthCtx"></span>
 
@@ -175,11 +175,11 @@ is the browser expression, the other is the game program expression).
 
 [webui.t](../file/webui.t.html)\[[1747](../source/webui.t.html#1747)\]
 
-<div class="desc">
+
 
 specialsToHtml context
 
-</div>
+
 
 <span id="vpath"></span>
 
@@ -187,7 +187,7 @@ specialsToHtml context
 
 [webui.t](../file/webui.t.html)\[[1680](../source/webui.t.html#1680)\]
 
-<div class="desc">
+
 
 The URL path to the window's HTML definition file, as seen by the
 browser. For the pre-defined library window types, we expose the HTML
@@ -199,15 +199,15 @@ embedded object relative to the containing page, so by placing the
 containing page in the root folder, embedded object paths don't have to
 worry about referencing parent folders.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="clearWindow"></span>
 
@@ -215,11 +215,11 @@ worry about referencing parent folders.
 
 [webui.t](../file/webui.t.html)\[[1718](../source/webui.t.html#1718)\]
 
-<div class="desc">
+
 
 Clear the window. Subclasses must override this.
 
-</div>
+
 
 <span id="flushWin"></span>
 
@@ -227,11 +227,11 @@ Clear the window. Subclasses must override this.
 
 [webui.t](../file/webui.t.html)\[[1707](../source/webui.t.html#1707)\]
 
-<div class="desc">
+
 
 Flush the window. This sends any buffered text to the UI.
 
-</div>
+
 
 <span id="getState"></span>
 
@@ -239,7 +239,7 @@ Flush the window. This sends any buffered text to the UI.
 
 [webui.t](../file/webui.t.html)\[[1728](../source/webui.t.html#1728)\]
 
-<div class="desc">
+
 
 Get the window's current state. This returns a string containing an XML
 fragment that describes the state of the window. This information is
@@ -247,7 +247,7 @@ sent to the HTML page when the browser asks for the current layout state
 when first loaded or when the page is refreshed. The XML format for each
 subclass is specific to the Javascript on the class's HTML page.
 
-</div>
+
 
 <span id="processName"></span>
 
@@ -255,11 +255,11 @@ subclass is specific to the Javascript on the class's HTML page.
 
 [webui.t](../file/webui.t.html)\[[1692](../source/webui.t.html#1692)\]
 
-<div class="desc">
+
 
 process a request path referencing me into my actual resource path
 
-</div>
+
 
 <span id="sendWinEvent"></span>
 
@@ -267,11 +267,11 @@ process a request path referencing me into my actual resource path
 
 [webui.t](../file/webui.t.html)\[[1731](../source/webui.t.html#1731)\]
 
-<div class="desc">
+
 
 send an event related to this window to all clients
 
-</div>
+
 
 <span id="sendWinEventTo"></span>
 
@@ -279,11 +279,11 @@ send an event related to this window to all clients
 
 [webui.t](../file/webui.t.html)\[[1741](../source/webui.t.html#1741)\]
 
-<div class="desc">
+
 
 send a window event to a specific client
 
-</div>
+
 
 <span id="winFromPath"></span>
 
@@ -291,13 +291,13 @@ send a window event to a specific client
 
 [webui.t](../file/webui.t.html)\[[1699](../source/webui.t.html#1699)\]
 
-<div class="desc">
+
 
 Resolve a window path name. For container windows, this should search
 the sub-windows for the given path. By default, we match simply if the
 path matches our name.
 
-</div>
+
 
 <span id="write"></span>
 
@@ -305,16 +305,16 @@ path matches our name.
 
 [webui.t](../file/webui.t.html)\[[1713](../source/webui.t.html#1713)\]
 
-<div class="desc">
+
 
 Write text to the window. Subclasses with stream-oriented APIs must
 override this.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="web.html" class="nav">Playing on the Web</a> \> Setting up a
@@ -17,7 +17,7 @@ game</a>    
 <a href="local.html" class="nav"><em>Next:</em> Translating and
 Localizing TADS</a>     </span>
 
-</div>
+
 
 
 
@@ -257,7 +257,7 @@ This step is optional. If you're running a Linux server, and you have
 root access, you can improve TADS server performance by adding the
 following line to the file /etc/sysctl.conf:
 
-<div class="code">
+
 
     echo "0" > /proc/sys/net/ipv4/tcp_slow_start_after_idle
 ```
@@ -497,11 +497,11 @@ step 4, where Apache launches it.
 
 ![](web-connect-diagram.png)
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -512,4 +512,4 @@ game</a>    
 <a href="local.html" class="nav"><em>Next:</em> Translating and
 Localizing TADS</a>     </span>
 
-</div>
+

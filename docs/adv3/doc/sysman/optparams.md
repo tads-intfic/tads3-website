@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Optional
@@ -17,7 +17,7 @@ Parameters
 <a href="namedargs.html" class="nav"><em>Next:</em> Named Arguments</a>
     </span>
 
-</div>
+
 
 
 
@@ -373,7 +373,7 @@ and you access the unnamed parameters beyond the "..." using
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -384,4 +384,4 @@ Parameters
 <a href="namedargs.html" class="nav"><em>Next:</em> Named Arguments</a>
     </span>
 
-</div>
+

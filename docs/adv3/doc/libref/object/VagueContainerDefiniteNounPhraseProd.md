@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A definite vague container phrase. This selects a single object in a
 given container ("the one in the box"). If more than one object is
@@ -38,15 +38,15 @@ involving the main phrase.
 
 `class `**`VagueContainerDefiniteNounPhraseProd`**` :   `[`VagueContainerNounPhraseProd`](../object/VagueContainerNounPhraseProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VagueContainerDefiniteNounPhraseProd`**  
 [`VagueContainerNounPhraseProd`](../object/VagueContainerNounPhraseProd.html)  
@@ -58,29 +58,29 @@ involving the main phrase.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`VagueContainerDefiniteNounPhraseProd`**  
 [`qualifiedSingularNounPhrase(theOneIn)`](../object/qualifiedSingularNounPhrase(theOneIn).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`npKeeper`](#npKeeper)
 
@@ -99,11 +99,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkContentsList`](#checkContentsList)[`construct`](#construct)
 
@@ -124,11 +124,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="npKeeper"></span>
 
@@ -136,19 +136,19 @@ Inherited from `AmbigResponseKeeper` :
 
 [parser.t](../file/parser.t.html)\[[3505](../source/parser.t.html#3505)\]
 
-<div class="desc">
+
 
 our disambiguation result keeper
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkContentsList"></span>
 
@@ -156,11 +156,11 @@ our disambiguation result keeper
 
 [parser.t](../file/parser.t.html)\[[3464](../source/parser.t.html#3464)\]
 
-<div class="desc">
+
 
 check a contents list
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -168,15 +168,15 @@ check a contents list
 
 [parser.t](../file/parser.t.html)\[[3457](../source/parser.t.html#3457)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

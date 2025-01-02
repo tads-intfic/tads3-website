@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 This class makes it convenient to synthesize a TravelAction given a
 Direction object. To create a travel action for a direction, use
@@ -47,15 +47,15 @@ object. For example:
 `DefineAction(TravelDir, TravelAction)      `*`// original source text`*  
 `class `**`TravelDirAction`**` :   `[`TravelAction`](../object/TravelAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TravelDirAction`**  
 [`TravelAction`](../object/TravelAction.html)  
@@ -65,27 +65,27 @@ object. For example:
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`dir_`](#dir_)
 
@@ -101,11 +101,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`getDirection`](#getDirection)
 
@@ -123,11 +123,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="dir_"></span>
 
@@ -135,19 +135,19 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[2790](../source/actions.t.html#2790)\]
 
-<div class="desc">
+
 
 my direction, normally specified during construction
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -155,11 +155,11 @@ my direction, normally specified during construction
 
 [actions.t](../file/actions.t.html)\[[2780](../source/actions.t.html#2780)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getDirection"></span>
 
@@ -167,15 +167,15 @@ my direction, normally specified during construction
 
 [actions.t](../file/actions.t.html)\[[2787](../source/actions.t.html#2787)\]
 
-<div class="desc">
+
 
 get my direction
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

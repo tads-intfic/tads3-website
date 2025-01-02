@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "multi-instance" object is a simple way of creating copies of an
 object in several places. This is often useful for decorations and other
@@ -81,44 +81,44 @@ the MultiInstance parent to keep its location list consistent.
 
 `class `**`MultiInstance`**` :   `[`BaseMultiLoc`](../object/BaseMultiLoc.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MultiInstance`**  
 [`BaseMultiLoc`](../object/BaseMultiLoc.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`MultiInstance`**  
 [`MultiFaceted`](../object/MultiFaceted.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`instanceList`](#instanceList)[`instanceMixIn`](#instanceMixIn)[`instanceObject`](#instanceObject)
 
@@ -127,11 +127,11 @@ Inherited from `BaseMultiLoc` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addInstance`](#addInstance)[`addToContents`](#addToContents)[`getInstanceIn`](#getInstanceIn)[`initializeLocation`](#initializeLocation)[`moveInto`](#moveInto)[`moveIntoAdd`](#moveIntoAdd)[`moveOutOf`](#moveOutOf)[`removeFromContents`](#removeFromContents)
 
@@ -140,11 +140,11 @@ Inherited from `BaseMultiLoc` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="instanceList"></span>
 
@@ -152,11 +152,11 @@ Inherited from `BaseMultiLoc` :
 
 [objects.t](../file/objects.t.html)\[[3159](../source/objects.t.html#3159)\]
 
-<div class="desc">
+
 
 our vector of active instance objects
 
-</div>
+
 
 <span id="instanceMixIn"></span>
 
@@ -164,11 +164,11 @@ our vector of active instance objects
 
 [objects.t](../file/objects.t.html)\[[3156](../source/objects.t.html#3156)\]
 
-<div class="desc">
+
 
 the mix-in superclass for our instance objects
 
-</div>
+
 
 <span id="instanceObject"></span>
 
@@ -176,19 +176,19 @@ the mix-in superclass for our instance objects
 
 [objects.t](../file/objects.t.html)\[[3051](../source/objects.t.html#3051)\]
 
-<div class="desc">
+
 
 the template object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addInstance"></span>
 
@@ -196,11 +196,11 @@ the template object
 
 [objects.t](../file/objects.t.html)\[[3119](../source/objects.t.html#3119)\]
 
-<div class="desc">
+
 
 internal service routine - add an instance for a given location
 
-</div>
+
 
 <span id="addToContents"></span>
 
@@ -208,13 +208,13 @@ internal service routine - add an instance for a given location
 
 [objects.t](../file/objects.t.html)\[[3147](../source/objects.t.html#3147)\]
 
-<div class="desc">
+
 
 If any contents are added to the MultiInstance object, they must be
 contents of the template object, so add them to the template object
 instead of the MultiInstance parent.
 
-</div>
+
 
 <span id="getInstanceIn"></span>
 
@@ -222,11 +222,11 @@ instead of the MultiInstance parent.
 
 [objects.t](../file/objects.t.html)\[[3115](../source/objects.t.html#3115)\]
 
-<div class="desc">
+
 
 get our instance object (if any) that's in the given location
 
-</div>
+
 
 <span id="initializeLocation"></span>
 
@@ -234,11 +234,11 @@ get our instance object (if any) that's in the given location
 
 [objects.t](../file/objects.t.html)\[[3054](../source/objects.t.html#3054)\]
 
-<div class="desc">
+
 
 initialize my locations
 
-</div>
+
 
 <span id="moveInto"></span>
 
@@ -246,13 +246,13 @@ initialize my locations
 
 [objects.t](../file/objects.t.html)\[[3065](../source/objects.t.html#3065)\]
 
-<div class="desc">
+
 
 Move the MultiInstance into the given location. This removes us from any
 other existing locations and adds us (if we're not already there) to the
 given location.
 
-</div>
+
 
 <span id="moveIntoAdd"></span>
 
@@ -260,12 +260,12 @@ given location.
 
 [objects.t](../file/objects.t.html)\[[3091](../source/objects.t.html#3091)\]
 
-<div class="desc">
+
 
 Add the new location to our set of locations. Any existing locations are
 unaffected.
 
-</div>
+
 
 <span id="moveOutOf"></span>
 
@@ -273,11 +273,11 @@ unaffected.
 
 [objects.t](../file/objects.t.html)\[[3102](../source/objects.t.html#3102)\]
 
-<div class="desc">
+
 
 Remove me from the given location. Other locations are unaffected.
 
-</div>
+
 
 <span id="removeFromContents"></span>
 
@@ -285,16 +285,16 @@ Remove me from the given location. Other locations are unaffected.
 
 [objects.t](../file/objects.t.html)\[[3153](../source/objects.t.html#3153)\]
 
-<div class="desc">
+
 
 remove an object from our contents - we'll delegate this to our template
 object just like we delegate addToContents
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Introduction  
@@ -15,7 +15,7 @@ layout: docs
     <a href="modules.html" class="nav"><em>Next:</em> Core and Optional
 Modules</a>     </span>
 
-</div>
+
 
 
 
@@ -204,7 +204,7 @@ number of puzzling parser problems. Indeed, without Mike's work on TADS
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -213,4 +213,4 @@ number of puzzling parser problems. Indeed, without Mike's work on TADS
     <a href="modules.html" class="nav"><em>Next:</em> Core and Optional
 Modules</a>     </span>
 
-</div>
+

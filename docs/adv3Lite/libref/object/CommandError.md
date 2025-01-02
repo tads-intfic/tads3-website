@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A CommandError is an error in parsing that occurs within the build
 process for a Command object.
 
 `class `**`CommandError`**` :   `[`ParseError`](../object/ParseError.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CommandError`**  
 [`ParseError`](../object/ParseError.html)  
@@ -49,30 +49,30 @@ process for a Command object.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`CommandError`**  
 [`EmptyNounError`](../object/EmptyNounError.html)  
 [`RejectParseTreeError`](../object/RejectParseTreeError.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cmd`](#cmd)[`errStage`](#errStage)
 
@@ -84,11 +84,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -100,11 +100,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cmd"></span>
 
@@ -112,11 +112,11 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5145](../source/parser.t.html#5145)\]
 
-<div class="desc">
+
 
 the Command object where the error occurred
 
-</div>
+
 
 <span id="errStage"></span>
 
@@ -124,20 +124,20 @@ the Command object where the error occurred
 
 [parser.t](../file/parser.t.html)\[[5152](../source/parser.t.html#5152)\]
 
-<div class="desc">
+
 
 these errors occur once we have a valid predicate structure, so we're in
 stage 2 of the parsing when we encounter an error of this type
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -145,15 +145,15 @@ stage 2 of the parsing when we encounter an error of this type
 
 [parser.t](../file/parser.t.html)\[[5138](../source/parser.t.html#5138)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

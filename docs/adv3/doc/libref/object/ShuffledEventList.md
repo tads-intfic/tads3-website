@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Shuffled event list. This is similar to a random event list, except that
 we fire our events in a "shuffled" order rather than an independently
@@ -52,15 +52,15 @@ shuffled - it's always shown in exactly the order given.
 
 `class `**`ShuffledEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)[`EventList`](../object/EventList.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ShuffledEventList`**  
 [`RandomFiringScript`](../object/RandomFiringScript.html)  
@@ -70,27 +70,27 @@ shuffled - it's always shown in exactly the order given.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`firstEvents`](#firstEvents)[`shuffledList_`](#shuffledList_)[`shuffleFirst`](#shuffleFirst)[`suppressRepeats`](#suppressRepeats)
 
@@ -104,11 +104,11 @@ Inherited from `EventList` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doScript`](#doScript)[`getNextRandom`](#getNextRandom)
 
@@ -123,11 +123,11 @@ Inherited from `Script` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="firstEvents"></span>
 
@@ -135,12 +135,12 @@ Inherited from `Script` :
 
 [misc.t](../file/misc.t.html)\[[1273](../source/misc.t.html#1273)\]
 
-<div class="desc">
+
 
 a list of events to go through sequentially, in the exact order
 specified, before firing any events from the main list
 
-</div>
+
 
 <span id="shuffledList_"></span>
 
@@ -148,11 +148,11 @@ specified, before firing any events from the main list
 
 [misc.t](../file/misc.t.html)\[[1378](../source/misc.t.html#1378)\]
 
-<div class="desc">
+
 
 our ShuffledList - we'll initialize this on demand
 
-</div>
+
 
 <span id="shuffleFirst"></span>
 
@@ -160,7 +160,7 @@ our ShuffledList - we'll initialize this on demand
 
 [misc.t](../file/misc.t.html)\[[1283](../source/misc.t.html#1283)\]
 
-<div class="desc">
+
 
 Flag: shuffle the eventList list before we show it for the first time.
 By default, this is set to true, so that the behavior is random on each
@@ -169,7 +169,7 @@ cases to always use the original ordering of the eventList list the
 first time through the list. If this is set to nil, we won't shuffle the
 list the first time through.
 
-</div>
+
 
 <span id="suppressRepeats"></span>
 
@@ -177,7 +177,7 @@ list the first time through.
 
 [misc.t](../file/misc.t.html)\[[1298](../source/misc.t.html#1298)\]
 
-<div class="desc">
+
 
 Flag: suppress repeats in the shuffle. If this is true, it prevents a
 given event from showing up twice in a row, which could otherwise happen
@@ -190,15 +190,15 @@ since such short lists can result in fairly un-random-looking sequences
 when repeats are suppressed, because the available number of
 permutations drops significantly.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doScript"></span>
 
@@ -206,11 +206,11 @@ permutations drops significantly.
 
 [misc.t](../file/misc.t.html)\[[1301](../source/misc.t.html#1301)\]
 
-<div class="desc">
+
 
 process the next step of the script
 
-</div>
+
 
 <span id="getNextRandom"></span>
 
@@ -218,17 +218,17 @@ process the next step of the script
 
 [misc.t](../file/misc.t.html)\[[1358](../source/misc.t.html#1358)\]
 
-<div class="desc">
+
 
 Get the next random event. We'll pick an event from our list of events
 using a ShuffledIntegerList to ensure we pick each value once before
 re-using any values.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

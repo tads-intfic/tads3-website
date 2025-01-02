@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Extending
@@ -17,7 +17,7 @@ Intrinsic Classes
 <a href="export.html" class="nav"><em>Next:</em> Exporting Symbols</a>
     </span>
 
-</div>
+
 
 
 
@@ -34,7 +34,7 @@ To add a method to an intrinsic class, use the
 `modify` syntax for intrinsic classes is almost
 exactly the same as it is for regular objects:
 
-<div class="syntax">
+
 
     modify intrinsicClassName
        method1 ( paramList ) { code }
@@ -201,11 +201,11 @@ also want to deal with integer and BigNumber values as arguments to the
 math operators; the example code above is a little too simplistic in
 that it'll only work with other Complex values.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -216,4 +216,4 @@ Intrinsic Classes
 <a href="export.html" class="nav"><em>Next:</em> Exporting Symbols</a>
     </span>
 
-</div>
+

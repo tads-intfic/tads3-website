@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The TemporaryFile intrinsic class represents a temporary file name in
 the local file system. Temporary files can be used to store data too
@@ -59,41 +59,41 @@ protections that the safety level settings provide for ordinary files.
 
 `intrinsic class `**`TemporaryFile`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TemporaryFile`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -101,11 +101,11 @@ protections that the safety level settings provide for ordinary files.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`deleteFile`](#deleteFile)[`getFilename`](#getFilename)
 
@@ -114,19 +114,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="deleteFile"></span>
 
@@ -134,7 +134,7 @@ Inherited from `Object` :
 
 [file.h](../file/file.h.html)\[[633](../source/file.h.html#633)\]
 
-<div class="desc">
+
 
 Delete the underlying file system object. This deletes the temporary
 file and marks the TemporaryFile object as invalid. After calling this,
@@ -153,7 +153,7 @@ little difference in most situations, but in a program that will run for
 a long time and use a lot of temporary files, it might be worthwhile to
 release resources manually as soon as possible.
 
-</div>
+
 
 <span id="getFilename"></span>
 
@@ -161,7 +161,7 @@ release resources manually as soon as possible.
 
 [file.h](../file/file.h.html)\[[611](../source/file.h.html#611)\]
 
-<div class="desc">
+
 
 Get the name of the underlying file system object. This returns a string
 with the local filename. This is mostly for debugging purposes or for
@@ -172,11 +172,11 @@ settings often prohibit opening files outside of the program's own home
 directory. To open the temp file, you should always pass the
 TemporaryFile object itself in place of the filename.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

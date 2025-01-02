@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 LockableWithKey: a mix-in class that can be combined with an object's
 other superclasses to make the object respond to the verbs "lock" and
@@ -38,15 +38,15 @@ in the superclass list.
 
 `class `**`LockableWithKey`**` :   `[`Lockable`](../object/Lockable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LockableWithKey`**  
 [`Lockable`](../object/Lockable.html)  
@@ -54,29 +54,29 @@ in the superclass list.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`LockableWithKey`**  
 [`KeyedContainer`](../object/KeyedContainer.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`keyList`](#keyList)[`knownKeyList`](#knownKeyList)[`lockStatusObvious`](#lockStatusObvious)[`rememberKnownKeys`](#rememberKnownKeys)
 
@@ -87,11 +87,11 @@ Inherited from `Lockable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`autoUnlockOnOpen`](#autoUnlockOnOpen)[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(Unlock)`](#dobjFor(Unlock))[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))[`getKnownKeyList`](#getKnownKeyList)[`getKnownKeyOwner`](#getKnownKeyOwner)[`isKeyKnown`](#isKeyKnown)[`keyFitsLock`](#keyFitsLock)[`keyIsPlausible`](#keyIsPlausible)[`lockOrUnlockAction`](#lockOrUnlockAction)
 
@@ -103,11 +103,11 @@ Inherited from `Linkable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="keyList"></span>
 
@@ -115,11 +115,11 @@ Inherited from `Linkable` :
 
 [objects.t](../file/objects.t.html)\[[4070](../source/objects.t.html#4070)\]
 
-<div class="desc">
+
 
 the list of objects that can serve as keys for this object
 
-</div>
+
 
 <span id="knownKeyList"></span>
 
@@ -127,13 +127,13 @@ the list of objects that can serve as keys for this object
 
 [objects.t](../file/objects.t.html)\[[4077](../source/objects.t.html#4077)\]
 
-<div class="desc">
+
 
 The list of keys which the player knows will fit this lock. This is used
 to make key disambiguation automatic once the player knows the correct
 key for a lock.
 
-</div>
+
 
 <span id="lockStatusObvious"></span>
 
@@ -141,7 +141,7 @@ key for a lock.
 
 [objects.t](../file/objects.t.html)\[[4138](../source/objects.t.html#4138)\]
 
-<div class="desc">
+
 
 By default, the locked/unlocked status of a keyed lockable is nil. In
 most cases, an object that's locked and unlocked using a key doesn't
@@ -151,7 +151,7 @@ door to a building is locked. Usually, the only way to tell from the
 outside that an exterior door is locked is to try opening it and see if
 it opens.
 
-</div>
+
 
 <span id="rememberKnownKeys"></span>
 
@@ -159,7 +159,7 @@ it opens.
 
 [objects.t](../file/objects.t.html)\[[4120](../source/objects.t.html#4120)\]
 
-<div class="desc">
+
 
 Flag: remember my keys after they're successfully used. If this is true,
 whenever a key is successfully used to lock or unlock this object, we'll
@@ -174,15 +174,15 @@ it shouldn't generally give away any secrets or puzzles for the game to
 assume that a key that was used successfully once with a given lock is
 the one to be used subsequently with the same lock.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="autoUnlockOnOpen"></span>
 
@@ -190,7 +190,7 @@ the one to be used subsequently with the same lock.
 
 [objects.t](../file/objects.t.html)\[[4148](../source/objects.t.html#4148)\]
 
-<div class="desc">
+
 
 Should we automatically unlock on OPEN? We will if our inherited
 handling says so, OR if the current actor is carrying a key that's known
@@ -199,7 +199,7 @@ present as a convenience: if we have a known key, then there's no
 mystery in unlocking this object, and thus for playability we want to
 make its operation fully automatic.
 
-</div>
+
 
 <span id="dobjFor(Lock)"></span>
 
@@ -207,11 +207,11 @@ make its operation fully automatic.
 
 [objects.t](../file/objects.t.html)\[[4158](../source/objects.t.html#4158)\]
 
-<div class="desc">
+
 
 Action handling
 
-</div>
+
 
 <span id="dobjFor(LockWith)"></span>
 
@@ -219,11 +219,11 @@ Action handling
 
 [objects.t](../file/objects.t.html)\[[4265](../source/objects.t.html#4265)\]
 
-<div class="desc">
+
 
 "lock with"
 
-</div>
+
 
 <span id="dobjFor(Unlock)"></span>
 
@@ -231,11 +231,11 @@ Action handling
 
 [objects.t](../file/objects.t.html)\[[4184](../source/objects.t.html#4184)\]
 
-<div class="desc">
+
 
 "unlock"
 
-</div>
+
 
 <span id="dobjFor(UnlockWith)"></span>
 
@@ -243,11 +243,11 @@ Action handling
 
 [objects.t](../file/objects.t.html)\[[4281](../source/objects.t.html#4281)\]
 
-<div class="desc">
+
 
 "unlock with"
 
-</div>
+
 
 <span id="getKnownKeyList"></span>
 
@@ -255,12 +255,12 @@ Action handling
 
 [objects.t](../file/objects.t.html)\[[4083](../source/objects.t.html#4083)\]
 
-<div class="desc">
+
 
 Get my known key list. This simply returns the known key list from the
 known key owner.
 
-</div>
+
 
 <span id="getKnownKeyOwner"></span>
 
@@ -268,13 +268,13 @@ known key owner.
 
 [objects.t](../file/objects.t.html)\[[4091](../source/objects.t.html#4091)\]
 
-<div class="desc">
+
 
 Get the object that own our known key list. If we explicitly have our
 own non-empty known key list, we own the key list; otherwise, our master
 object owns the list, as long as it has a non-nil key list at all.
 
-</div>
+
 
 <span id="isKeyKnown"></span>
 
@@ -282,12 +282,12 @@ object owns the list, as long as it has a non-nil key list at all.
 
 [objects.t](../file/objects.t.html)\[[4127](../source/objects.t.html#4127)\]
 
-<div class="desc">
+
 
 Determine if the player knows that the given key operates this lock.
 Returns true if the key is in our known key list, nil if not.
 
-</div>
+
 
 <span id="keyFitsLock"></span>
 
@@ -295,13 +295,13 @@ Returns true if the key is in our known key list, nil if not.
 
 [objects.t](../file/objects.t.html)\[[4027](../source/objects.t.html#4027)\]
 
-<div class="desc">
+
 
 Determine if the key fits this lock. Returns true if so, nil if not. By
 default, we'll return true if the key is in my keyList. This can be
 overridden to use other key selection criteria.
 
-</div>
+
 
 <span id="keyIsPlausible"></span>
 
@@ -309,7 +309,7 @@ overridden to use other key selection criteria.
 
 [objects.t](../file/objects.t.html)\[[4067](../source/objects.t.html#4067)\]
 
-<div class="desc">
+
 
 Determine if the key is plausibly of the right type for this lock. This
 doesn't check to see if the key actually fits the lock - rather, this
@@ -344,7 +344,7 @@ By default, we'll simply return true. Subclasses specific to a game
 (such as the "card reader" base class or the "door lock" base class) can
 override this to discriminate among the game-specific key classes.
 
-</div>
+
 
 <span id="lockOrUnlockAction"></span>
 
@@ -352,17 +352,17 @@ override this to discriminate among the game-specific key classes.
 
 [objects.t](../file/objects.t.html)\[[4220](../source/objects.t.html#4220)\]
 
-<div class="desc">
+
 
 perform the action processing for LockWith or UnlockWith - these are
 highly symmetrical, in that the only thing that varies is the new lock
 state we establish
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

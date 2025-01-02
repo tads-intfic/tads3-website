@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A FileName represents the name of a file in the local operating system.
 The File object methods that take filename specifications accept
@@ -87,41 +87,41 @@ links on Unix or apply working directories to local paths.
 
 `intrinsic class `**`FileName`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FileName`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -129,11 +129,11 @@ links on Unix or apply working directories to local paths.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addToPath`](#addToPath)[`createDirectory`](#createDirectory)[`deleteFile`](#deleteFile)[`forEachFile`](#forEachFile)[`getAbsolutePath`](#getAbsolutePath)[`getBaseName`](#getBaseName)[`getFileInfo`](#getFileInfo)[`getFileType`](#getFileType)[`getName`](#getName)[`getPath`](#getPath)[`isAbsolute`](#isAbsolute)[`listDir`](#listDir)[`removeDirectory`](#removeDirectory)[`renameFile`](#renameFile)[`toUniversal`](#toUniversal)
 
@@ -142,19 +142,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addToPath"></span>
 
@@ -162,7 +162,7 @@ Inherited from `Object` :
 
 [filename.h](../file/filename.h.html)\[[127](../source/filename.h.html#127)\]
 
-<div class="desc">
+
 
 Add a path element (a string or FileName object) to the end of this
 filename, yielding a new FileName object with the combined path. Uses
@@ -174,7 +174,7 @@ relative path elements (e.g., Unix "." and "..") are processed by
 combining them with adjacent elements as appropriate. For example,
 adding ".." to the Unix path "a/b/c" yields "a/b".
 
-</div>
+
 
 <span id="createDirectory"></span>
 
@@ -182,7 +182,7 @@ adding ".." to the Unix path "a/b/c" yields "a/b".
 
 [filename.h](../file/filename.h.html)\[[285](../source/filename.h.html#285)\]
 
-<div class="desc">
+
 
 Create a directory with the name contained in this object. The file
 safety settings must allow write access to the parent folder.
@@ -195,7 +195,7 @@ will be created as well. For example, on Linux, if dirname is '/a/b/c',
 and directory '/a' exists but not '/a/b', the routine will first create
 '/a/b' and then create '/a/b/c'.
 
-</div>
+
 
 <span id="deleteFile"></span>
 
@@ -203,13 +203,13 @@ and directory '/a' exists but not '/a/b', the routine will first create
 
 [filename.h](../file/filename.h.html)\[[228](../source/filename.h.html#228)\]
 
-<div class="desc">
+
 
 Delete the disk file named by this object. The file safety level must
 allow write access to the file; a file safety exception is thrown if
 not.
 
-</div>
+
 
 <span id="forEachFile"></span>
 
@@ -217,7 +217,7 @@ not.
 
 [filename.h](../file/filename.h.html)\[[270](../source/filename.h.html#270)\]
 
-<div class="desc">
+
 
 Invoke a callback for each file in the directory named by this object.
 'func' is a callback function; for each file in the directory, this is
@@ -226,7 +226,7 @@ If 'recursive' is true, the method recursively scans the contents of
 subdirectories; if 'recursive' is nil or is omitted, only the direct
 contents of the directory are scanned.
 
-</div>
+
 
 <span id="getAbsolutePath"></span>
 
@@ -234,7 +234,7 @@ contents of the directory are scanned.
 
 [filename.h](../file/filename.h.html)\[[156](../source/filename.h.html#156)\]
 
-<div class="desc">
+
 
 Get a FileName giving the absolute path to this file. This applies the
 current working directory and/or volume (e.g., drive letter on Windows)
@@ -247,7 +247,7 @@ more canonical format.
 If it's not possible to convert the filename into an absolute path,
 returns nil.
 
-</div>
+
 
 <span id="getBaseName"></span>
 
@@ -255,14 +255,14 @@ returns nil.
 
 [filename.h](../file/filename.h.html)\[[90](../source/filename.h.html#90)\]
 
-<div class="desc">
+
 
 Get the base filename portion, without the path. This returns a string
 giving the filename without any directory location information; for a
 Unix-style path or Windows-style path, this is simply the last element
 of the path.
 
-</div>
+
 
 <span id="getFileInfo"></span>
 
@@ -270,7 +270,7 @@ of the path.
 
 [filename.h](../file/filename.h.html)\[[221](../source/filename.h.html#221)\]
 
-<div class="desc">
+
 
 Get extended information on the file named by this object. This
 retrieves the size of the file, timestamps, and the file's type, and
@@ -283,7 +283,7 @@ all unless the file named is a symbolic link.
 
 The file safety settings must allow read access to the file.
 
-</div>
+
 
 <span id="getFileType"></span>
 
@@ -291,7 +291,7 @@ The file safety settings must allow read access to the file.
 
 [filename.h](../file/filename.h.html)\[[207](../source/filename.h.html#207)\]
 
-<div class="desc">
+
 
 Get the type of the file. If the file named by this object exists,
 returns an integer with a bitwise combination of FileTypeXxx values
@@ -322,7 +322,7 @@ that more than one bit will be set, so test using '&' (e.g.,
 
 The file safety settings must allow read access to the file.
 
-</div>
+
 
 <span id="getName"></span>
 
@@ -330,7 +330,7 @@ The file safety settings must allow read access to the file.
 
 [filename.h](../file/filename.h.html)\[[82](../source/filename.h.html#82)\]
 
-<div class="desc">
+
 
 Get the filename. This returns a string with the filename this object
 represents, in the local syntax used by the host operating system,
@@ -338,7 +338,7 @@ including the path and base filename portions. (This is the same string
 returned for toString(self), and the same string used if the filename is
 displayed as though it were a string, such as with "\<\< \>\>".)
 
-</div>
+
 
 <span id="getPath"></span>
 
@@ -346,7 +346,7 @@ displayed as though it were a string, such as with "\<\< \>\>".)
 
 [filename.h](../file/filename.h.html)\[[99](../source/filename.h.html#99)\]
 
-<div class="desc">
+
 
 Get the path portion name, without the file name. This returns a
 FileName object containing the path portion of the file name, with the
@@ -354,7 +354,7 @@ last path element removed. If the path only contains one path element
 (so it contains only a file name, not a directory path), this returns
 nil.
 
-</div>
+
 
 <span id="isAbsolute"></span>
 
@@ -362,7 +362,7 @@ nil.
 
 [filename.h](../file/filename.h.html)\[[142](../source/filename.h.html#142)\]
 
-<div class="desc">
+
 
 Is this an absolute path on the local system? An absolute path is one
 that contains a root folder specification, such as a Unix path starting
@@ -376,7 +376,7 @@ in "\path\file" (that's relative to the working drive letter). Similar
 subtleties might apply to other systems; this routine figures it out
 using local conventions.
 
-</div>
+
 
 <span id="listDir"></span>
 
@@ -384,7 +384,7 @@ using local conventions.
 
 [filename.h](../file/filename.h.html)\[[259](../source/filename.h.html#259)\]
 
-<div class="desc">
+
 
 Get a list of files in the directory named by this object. Returns a
 list of FileName objects giving the names of the files.
@@ -403,7 +403,7 @@ specialLink property of the returned information object. Not that if
 you're performing a recursive directory traversal, it might be easier to
 use forEachFile() with the 'recurse' argument flag set to true.
 
-</div>
+
 
 <span id="removeDirectory"></span>
 
@@ -411,7 +411,7 @@ use forEachFile() with the 'recurse' argument flag set to true.
 
 [filename.h](../file/filename.h.html)\[[311](../source/filename.h.html#311)\]
 
-<div class="desc">
+
 
 Remove the directory named by this object. The file safety settings must
 allow write access to the directory.
@@ -436,7 +436,7 @@ choose to remove. (Special system files that are always present, such as
 "." and ".." on Unix, don't count when determining if the directory is
 empty.)
 
-</div>
+
 
 <span id="renameFile"></span>
 
@@ -444,7 +444,7 @@ empty.)
 
 [filename.h](../file/filename.h.html)\[[238](../source/filename.h.html#238)\]
 
-<div class="desc">
+
 
 Rename or move the file. This changes the name and/or file path location
 of the file named by 'self' to the given new path, which can be a string
@@ -452,7 +452,7 @@ giving a filename in local path notation, or a FileName object with the
 new name. The file safety settings must allow write access to both the
 original file and the new file. The new file must not already exist.
 
-</div>
+
 
 <span id="toUniversal"></span>
 
@@ -460,17 +460,17 @@ original file and the new file. The new file must not already exist.
 
 [filename.h](../file/filename.h.html)\[[114](../source/filename.h.html#114)\]
 
-<div class="desc">
+
 
 Get the universal URL-style notation for this file name. Returns a
 string giving the universal notation for the file name (including any
 path portion).
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

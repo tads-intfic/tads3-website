@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="finish.html" class="nav">Finishing Touches</a> \> What More?  
@@ -15,7 +15,7 @@ layout: docs
     <a href="conclusion.html" class="nav"><em>Next:</em> Conclusion</a>
     </span>
 
-</div>
+
 
 # What More?
 
@@ -283,7 +283,7 @@ the one you want for your particular game).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -294,4 +294,4 @@ the one you want for your particular game).
 
 
 
-</div>
+

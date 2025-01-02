@@ -26,32 +26,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An action pre-condition object. Each condition of an action is
 represented by a subclass of this class.
 
 `class `**`PreCondition`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PreCondition`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PreCondition`**  
 [`ObjectPreCondition`](../object/ObjectPreCondition.html)  
@@ -61,40 +61,40 @@ represented by a subclass of this class.
 [`TravelerDirectlyInRoom`](../object/TravelerDirectlyInRoom.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`actorDirectlyInRoom`](../object/actorDirectlyInRoom.html)[`actorReadyToEnterNestedRoom`](../object/actorReadyToEnterNestedRoom.html)[`actorStanding`](../object/actorStanding.html)[`actorTravelReady`](../object/actorTravelReady.html)[`canTalkToObj`](../object/canTalkToObj.html)[`dropDestinationIsOuterRoom`](../object/dropDestinationIsOuterRoom.html)[`nearbyAttachableCond`](../object/nearbyAttachableCond.html)[`objAudible`](../object/objAudible.html)[`objBurning`](../object/objBurning.html)[`objClosed`](../object/objClosed.html)[`objEmpty`](../object/objEmpty.html)[`objHeld`](../object/objHeld.html)[`objNotAttached`](../object/objNotAttached.html)[`objNotWorn`](../object/objNotWorn.html)[`objSmellable`](../object/objSmellable.html)[`objUnlocked`](../object/objUnlocked.html)[`objVisible`](../object/objVisible.html)[`roomToHoldObj`](../object/roomToHoldObj.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`preCondOrder`](#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="preCondOrder"></span>
 
@@ -102,7 +102,7 @@ represented by a subclass of this class.
 
 [precond.t](../file/precond.t.html)\[[67](../source/precond.t.html#67)\]
 
-<div class="desc">
+
 
 Precondition execution order. When we execute preconditions for a given
 action, we'll sort the list of all applicable preconditions in ascending
@@ -114,15 +114,15 @@ applying one precondition can destroy the conditions that the other
 would try to create but not vice versa. When the order doesn't matter,
 this can be left at the default setting.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkPreCondition"></span>
 
@@ -130,7 +130,7 @@ this can be left at the default setting.
 
 [precond.t](../file/precond.t.html)\[[36](../source/precond.t.html#36)\]
 
-<div class="desc">
+
 
 Check the condition on the given object (which may be nil, if this
 condition doesn't apply specifically to one of the objects in the
@@ -143,7 +143,7 @@ If allowImplicit is nil, an implicit command may not be attempted. In
 this case, if the condition is not met, we must simply report a failure
 and use 'exit' to terminate the command.
 
-</div>
+
 
 <span id="verifyPreCondition"></span>
 
@@ -151,7 +151,7 @@ and use 'exit' to terminate the command.
 
 [precond.t](../file/precond.t.html)\[[54](../source/precond.t.html#54)\]
 
-<div class="desc">
+
 
 Verify the condition. This is called during the object verification step
 so that the pre-condition can add verifications of its own. This can be
@@ -166,11 +166,11 @@ actions to meet the condition.
 during verification, the explicitly passed-in object must be used in the
 check rather than the current object in the global current action.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

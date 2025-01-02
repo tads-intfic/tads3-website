@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 SpellingHistory: this maintains the history of attempted spelling
 corrections for the current command. We process each word separately, so
@@ -40,61 +40,61 @@ unwinding the history.
 
 `class `**`SpellingHistory`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SpellingHistory`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`corrections`](#corrections)[`cstack`](#cstack)[`parser`](#parser)[`startTime`](#startTime)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkSpelling`](#checkSpelling)[`clear`](#clear)[`construct`](#construct)[`hasCorrections`](#hasCorrections)[`noteSpelling`](#noteSpelling)[`rollback`](#rollback)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="corrections"></span>
 
@@ -102,14 +102,14 @@ unwinding the history.
 
 [spelling.t](../file/spelling.t.html)\[[772](../source/spelling.t.html#772)\]
 
-<div class="desc">
+
 
 The indices of the words we've corrected so far. We keep track of the
 corrections we've made so that we don't try to further correct a word
 we've already corrected. (We \*do\* try multiple candidates per slot,
 but we do that by backtracking.)
 
-</div>
+
 
 <span id="cstack"></span>
 
@@ -117,14 +117,14 @@ but we do that by backtracking.)
 
 [spelling.t](../file/spelling.t.html)\[[781](../source/spelling.t.html#781)\]
 
-<div class="desc">
+
 
 The attempted correction stack. Each time we correct a word, we'll add a
 SpellingCorrection item to the stack. If we decide a correction didn't
 work after all (i.e., didn't yield a valid parsing), the stack lets us
 retract it and try a different correction candidate.
 
-</div>
+
 
 <span id="parser"></span>
 
@@ -132,11 +132,11 @@ retract it and try a different correction candidate.
 
 [spelling.t](../file/spelling.t.html)\[[761](../source/spelling.t.html#761)\]
 
-<div class="desc">
+
 
 our parser object
 
-</div>
+
 
 <span id="startTime"></span>
 
@@ -144,19 +144,19 @@ our parser object
 
 [spelling.t](../file/spelling.t.html)\[[764](../source/spelling.t.html#764)\]
 
-<div class="desc">
+
 
 starting time (in GetTimeTicks time)
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkSpelling"></span>
 
@@ -164,7 +164,7 @@ starting time (in GetTimeTicks time)
 
 [spelling.t](../file/spelling.t.html)\[[463](../source/spelling.t.html#463)\]
 
-<div class="desc">
+
 
 Check for spelling errors in a token list, and attempt automatic
 spelling correction. We'll scan the token list for a word that isn't in
@@ -176,7 +176,7 @@ ParseError object indicating what error triggered the spelling check.
 
 Returns a new token list if we correct a spelling error, nil otherwise.
 
-</div>
+
 
 <span id="clear"></span>
 
@@ -184,11 +184,11 @@ Returns a new token list if we correct a spelling error, nil otherwise.
 
 [spelling.t](../file/spelling.t.html)\[[786](../source/spelling.t.html#786)\]
 
-<div class="desc">
+
 
 Clear the history
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -196,11 +196,11 @@ Clear the history
 
 [spelling.t](../file/spelling.t.html)\[[438](../source/spelling.t.html#438)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hasCorrections"></span>
 
@@ -208,11 +208,11 @@ Clear the history
 
 [spelling.t](../file/spelling.t.html)\[[448](../source/spelling.t.html#448)\]
 
-<div class="desc">
+
 
 have we made any corrections?
 
-</div>
+
 
 <span id="noteSpelling"></span>
 
@@ -220,12 +220,12 @@ have we made any corrections?
 
 [spelling.t](../file/spelling.t.html)\[[685](../source/spelling.t.html#685)\]
 
-<div class="desc">
+
 
 Note spelling changes between the original token list and the given
 token list.
 
-</div>
+
 
 <span id="rollback"></span>
 
@@ -233,7 +233,7 @@ token list.
 
 [spelling.t](../file/spelling.t.html)\[[646](../source/spelling.t.html#646)\]
 
-<div class="desc">
+
 
 Roll back spelling changes to the last one that actually improved
 matters. 'toks' is the latest token list, and 'err' is the parsing error
@@ -269,11 +269,11 @@ a dictionary word too early in the game. To reduce spurious corrections,
 we only accept corrections that actually make the command more
 parseable.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

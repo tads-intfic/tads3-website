@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Distinguisher. This object encapsulates logic that determines whether or
 not we can tell two objects apart.
@@ -38,70 +38,70 @@ other objects.
 
 `class `**`Distinguisher`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Distinguisher`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`basicDistinguisher`](../object/basicDistinguisher.html)[`litUnlitDistinguisher`](../object/litUnlitDistinguisher.html)[`locationDistinguisher`](../object/locationDistinguisher.html)[`nullDistinguisher`](../object/nullDistinguisher.html)[`ownershipDistinguisher`](../object/ownershipDistinguisher.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canDistinguish`](#canDistinguish)[`matchName`](#matchName)[`notePrompt`](#notePrompt)[`objInScope`](#objInScope)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canDistinguish"></span>
 
@@ -109,11 +109,11 @@ other objects.
 
 [disambig.t](../file/disambig.t.html)\[[27](../source/disambig.t.html#27)\]
 
-<div class="desc">
+
 
 can we distinguish the given two objects?
 
-</div>
+
 
 <span id="matchName"></span>
 
@@ -121,7 +121,7 @@ can we distinguish the given two objects?
 
 [disambig.t](../file/disambig.t.html)\[[79](../source/disambig.t.html#79)\]
 
-<div class="desc">
+
 
 Try matching an object to a noun phrase in a disambiguation reply from
 the player (that is, the player's response to a "Which foo did you mean"
@@ -138,7 +138,7 @@ special phrasing, because the player might respond with a simple
 adjective pertaining to the base object even if there's some external
 distinguishing characteristic handled by the subclass.
 
-</div>
+
 
 <span id="notePrompt"></span>
 
@@ -146,7 +146,7 @@ distinguishing characteristic handled by the subclass.
 
 [disambig.t](../file/disambig.t.html)\[[42](../source/disambig.t.html#42)\]
 
-<div class="desc">
+
 
 Note that we're showing a prompt to the player asking for help in
 narrowing the object list, based on this distinguisher. 'lst' is the
@@ -158,7 +158,7 @@ want to set pronoun antecedents based on the owners mentioned in the
 disambiguation prompt, so that the player's response can refer
 anaphorically to the nouns in the prompt.
 
-</div>
+
 
 <span id="objInScope"></span>
 
@@ -166,7 +166,7 @@ anaphorically to the nouns in the prompt.
 
 [disambig.t](../file/disambig.t.html)\[[55](../source/disambig.t.html#55)\]
 
-<div class="desc">
+
 
 Is the object in scope for the purposes of the disambiguation reply from
 the player? By default, any object in the full match list is in scope.
@@ -176,11 +176,11 @@ add those related objects to the scope by returning true here. For
 example, the locational distinguisher can use the location name as a
 qualifying phrase, so the location name is in scope.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

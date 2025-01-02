@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Hello and Goodbye  
@@ -16,7 +16,7 @@ layout: docs
 <a href="knowledge.html" class="nav"><em>Next:</em> Player Character and
 NPC Knowledge</a>     </span>
 
-</div>
+
 
 
 
@@ -71,14 +71,14 @@ further [below](#deciding)).
 To define what happens at the start of a conversation, we can use a
 **HelloTopic**. For example:
 
-`
+```
     + HelloTopic
         "<q>Hello,</q> you say.\b
         <q>Hi there!</q> Bob replies. <.agenda fireAgenda> "
         
         changeToState = bobTalking
     ;
-`
+```
 
 As we have defined it, this will be triggered when the player uses an
 explicit HELLO command, or BOB, HELLO or TALK TO BOB. If we have not
@@ -113,7 +113,7 @@ at the start of every conversation, whereas we'd probably only want it
 added the first time. In practice, then, we might define the HelloTopic
 to give a list of responses that takes care of this:
 
-`
+```
     + HelloTopic, StopEventList
         [
             '<q>Hello,</q> you say.\b
@@ -124,7 +124,7 @@ to give a list of responses that takes care of this:
         ]
         changeToState = bobTalking
     ;
-`
+```
 
 <span id="nohello"></span>
 
@@ -181,14 +181,14 @@ end.
 At the simplest, we can define a **ByeTopic** in much the same way as we
 define a HelloTopic; for example:
 
-`
+```
     + ByeTopic
         "<q>Goodbye,</q> you say.\b
         <q>Cheerio,</q> he replies. "
 
         changeToState = bobWorking
     ;
-`
+```
 
 Note that this needs to be located either directly in the Actor or in
 the ActorState the actor's in at the time the conversation ends (which
@@ -269,7 +269,7 @@ being terminated:
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -279,4 +279,4 @@ being terminated:
 <a href="knowledge.html" class="nav"><em>Next:</em> Player Character and
 NPC Knowledge</a>     </span>
 
-</div>
+

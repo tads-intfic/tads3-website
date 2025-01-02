@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Lists and
@@ -16,7 +16,7 @@ Listers
 Reports</a>     <a href="t3tips.html" class="nav"><em>Next:</em> Tips: A
 Context-Sensitive Help System</a>     </span>
 
-</div>
+
 
 
 
@@ -1326,7 +1326,7 @@ a better idea where to look.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1336,4 +1336,4 @@ Listers
 Reports</a>     <a href="t3tips.html" class="nav"><em>Next:</em> Tips: A
 Context-Sensitive Help System</a>     </span>
 
-</div>
+

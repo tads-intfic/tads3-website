@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "Style tag" filter. This is an output filter that expands our special
 style tags in output text.
 
 **`styleTagFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`styleTagFilter`**  
 [`OutputFilter`](../object/OutputFilter.html)  
@@ -45,11 +45,11 @@ style tags in output text.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`tagPattern`](#tagPattern)[`tagTable`](#tagTable)
 
@@ -62,11 +62,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)[`filterText`](#filterText)[`translateTag`](#translateTag)
 
@@ -79,11 +79,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="tagPattern"></span>
 
@@ -91,11 +91,11 @@ Inherited from `ModuleExecObject` :
 
 [output.t](../file/output.t.html)\[[927](../source/output.t.html#927)\]
 
-<div class="desc">
+
 
 pre-compile our frequently-used tag search pattern
 
-</div>
+
 
 <span id="tagTable"></span>
 
@@ -103,20 +103,20 @@ pre-compile our frequently-used tag search pattern
 
 [output.t](../file/output.t.html)\[[1035](../source/output.t.html#1035)\]
 
-<div class="desc">
+
 
 Our tag translation table. We'll initialize this during preinit to a
 lookup table with all of the defined StyleTag objects.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -124,11 +124,11 @@ lookup table with all of the defined StyleTag objects.
 
 [output.t](../file/output.t.html)\[[1017](../source/output.t.html#1017)\]
 
-<div class="desc">
+
 
 preinitialization
 
-</div>
+
 
 <span id="filterText"></span>
 
@@ -136,11 +136,11 @@ preinitialization
 
 [output.t](../file/output.t.html)\[[931](../source/output.t.html#931)\]
 
-<div class="desc">
+
 
 filter for a style tag
 
-</div>
+
 
 <span id="translateTag"></span>
 
@@ -148,15 +148,15 @@ filter for a style tag
 
 [output.t](../file/output.t.html)\[[994](../source/output.t.html#994)\]
 
-<div class="desc">
+
 
 Translate a tag
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

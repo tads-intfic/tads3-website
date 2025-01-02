@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Special internal action to note a change to the darkness level. This
 command is invoked internally when a change to the darkness level
@@ -35,15 +35,15 @@ occurs.
 `DefineIAction(NoteDarkness)      `*`// original source text`*  
 `class `**`NoteDarknessAction`**` :   `[`IAction`](../object/IAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NoteDarknessAction`**  
 [`IAction`](../object/IAction.html)  
@@ -52,27 +52,27 @@ occurs.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionTime`](#actionTime)[`includeInUndo`](#includeInUndo)[`isRepeatable`](#isRepeatable)
 
@@ -86,11 +86,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)
 
@@ -105,11 +105,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionTime"></span>
 
@@ -117,11 +117,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[57](../source/actions.t.html#57)\]
 
-<div class="desc">
+
 
 this is an internal command that takes no time
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -129,11 +129,11 @@ this is an internal command that takes no time
 
 [actions.t](../file/actions.t.html)\[[63](../source/actions.t.html#63)\]
 
-<div class="desc">
+
 
 this action doesn't do anything; don't include it in undo
 
-</div>
+
 
 <span id="isRepeatable"></span>
 
@@ -141,19 +141,19 @@ this action doesn't do anything; don't include it in undo
 
 [actions.t](../file/actions.t.html)\[[60](../source/actions.t.html#60)\]
 
-<div class="desc">
+
 
 this isn't a real action, so it's not repeatable
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -161,15 +161,15 @@ this isn't a real action, so it's not repeatable
 
 [actions.t](../file/actions.t.html)\[[37](../source/actions.t.html#37)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

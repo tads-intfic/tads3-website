@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Platform is a nested room upon which an actor can stand. In general,
 when you can stand on something, you can also sit and lie on it as well
@@ -44,15 +44,15 @@ stand on it.
 
 `class `**`BasicPlatform`**` :   `[`BasicBed`](../object/BasicBed.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BasicPlatform`**  
 [`BasicBed`](../object/BasicBed.html)  
@@ -64,11 +64,11 @@ stand on it.
 `                                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BasicPlatform`**  
 [`Booth`](../object/Booth.html)  
@@ -76,19 +76,19 @@ stand on it.
 [`NominalPlatform`](../object/NominalPlatform.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actorInPrep`](#actorInPrep)[`actorOutOfPrep`](#actorOutOfPrep)[`allowedPostures`](#allowedPostures)[`defaultPosture`](#defaultPosture)[`down`](#down)[`effectiveFollowLocation`](#effectiveFollowLocation)[`mustMoveIntoProp`](#mustMoveIntoProp)[`objInPrep`](#objInPrep)[`obviousPostures`](#obviousPostures)
 
@@ -110,11 +110,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getDropDestination`](#getDropDestination)[`makeStandingUp`](#makeStandingUp)[`removeFromNested`](#removeFromNested)[`tryRemovingFromNested`](#tryRemovingFromNested)
 
@@ -137,11 +137,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actorInPrep"></span>
 
@@ -149,11 +149,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2899](../source/en_us.t.html#2899)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorOutOfPrep"></span>
 
@@ -161,11 +161,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2900](../source/en_us.t.html#2900)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="allowedPostures"></span>
 
@@ -173,12 +173,12 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[6625](../source/travel.t.html#6625)\]
 
-<div class="desc">
+
 
 we can sit, lie, and stand on a typical platform, and all of these could
 be reasonably expected to be done
 
-</div>
+
 
 <span id="defaultPosture"></span>
 
@@ -186,11 +186,11 @@ be reasonably expected to be done
 
 [travel.t](../file/travel.t.html)\[[6635](../source/travel.t.html#6635)\]
 
-<div class="desc">
+
 
 default posture in this nested room is sitting
 
-</div>
+
 
 <span id="down"></span>
 
@@ -198,12 +198,12 @@ default posture in this nested room is sitting
 
 [travel.t](../file/travel.t.html)\[[6693](../source/travel.t.html#6693)\]
 
-<div class="desc">
+
 
 Traveling 'down' from a platform should generally be taken to mean 'get
 off platform'.
 
-</div>
+
 
 <span id="effectiveFollowLocation"></span>
 
@@ -211,11 +211,11 @@ off platform'.
 
 [travel.t](../file/travel.t.html)\[[6629](../source/travel.t.html#6629)\]
 
-<div class="desc">
+
 
 an actor can follow another actor onto or off of a platform
 
-</div>
+
 
 <span id="mustMoveIntoProp"></span>
 
@@ -223,11 +223,11 @@ an actor can follow another actor onto or off of a platform
 
 [travel.t](../file/travel.t.html)\[[6632](../source/travel.t.html#6632)\]
 
-<div class="desc">
+
 
 tryMovingIntoNested failure message is "must get on platform"
 
-</div>
+
 
 <span id="objInPrep"></span>
 
@@ -235,11 +235,11 @@ tryMovingIntoNested failure message is "must get on platform"
 
 [en_us.t](../file/en_us.t.html)\[[2898](../source/en_us.t.html#2898)\]
 
-<div class="desc">
+
 
 by default, one stands \*on\* a platform
 
-</div>
+
 
 <span id="obviousPostures"></span>
 
@@ -247,19 +247,19 @@ by default, one stands \*on\* a platform
 
 [travel.t](../file/travel.t.html)\[[6626](../source/travel.t.html#6626)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getDropDestination"></span>
 
@@ -267,11 +267,11 @@ by default, one stands \*on\* a platform
 
 [travel.t](../file/travel.t.html)\[[6638](../source/travel.t.html#6638)\]
 
-<div class="desc">
+
 
 by default, objects dropped on a platform go onto the platform
 
-</div>
+
 
 <span id="makeStandingUp"></span>
 
@@ -279,13 +279,13 @@ by default, objects dropped on a platform go onto the platform
 
 [travel.t](../file/travel.t.html)\[[6668](../source/travel.t.html#6668)\]
 
-<div class="desc">
+
 
 Make the actor stand up. On a platform, standing is normally allowed, so
 STAND doesn't usually imply "get off platform" as it does in the base
 class.
 
-</div>
+
 
 <span id="removeFromNested"></span>
 
@@ -293,12 +293,12 @@ class.
 
 [travel.t](../file/travel.t.html)\[[6657](../source/travel.t.html#6657)\]
 
-<div class="desc">
+
 
 Replace the current action with one that removes the actor from this
 nested room.
 
-</div>
+
 
 <span id="tryRemovingFromNested"></span>
 
@@ -306,16 +306,16 @@ nested room.
 
 [travel.t](../file/travel.t.html)\[[6647](../source/travel.t.html#6647)\]
 
-<div class="desc">
+
 
 Remove an actor from the platform. "Get off" is the normal command to
 leave a platform.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

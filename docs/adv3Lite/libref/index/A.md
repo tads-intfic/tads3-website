@@ -2085,9 +2085,9 @@ method of [DefaultTopic](../object/DefaultTopic.html) in
 method of [Achievement](../object/Achievement.html) in
 [score.t](../file/score.t.html)\[[172](../source/score.t.html#172)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

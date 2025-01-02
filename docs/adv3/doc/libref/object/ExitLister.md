@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The main exits lister.
 
 **`exitLister`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`exitLister`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -42,11 +42,11 @@ The main exits lister.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`enableHyperlinks`](#enableHyperlinks)[`enableReminder`](#enableReminder)[`enableReminderAlways`](#enableReminderAlways)[`exitsOnOffExplained`](#exitsOnOffExplained)[`roomDescVerbose`](#roomDescVerbose)
 
@@ -57,11 +57,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotGoShowExits`](#cannotGoShowExits)[`execute`](#execute)[`exitsOnOffCommand`](#exitsOnOffCommand)[`getRoomDescLister`](#getRoomDescLister)[`getStatuslineExitsHeight`](#getStatuslineExitsHeight)[`isReminderEnabled`](#isReminderEnabled)[`lookAroundShowExits`](#lookAroundShowExits)[`showExits`](#showExits)[`showExitsCommand`](#showExitsCommand)[`showExitsFrom`](#showExitsFrom)[`showExitsWithLister`](#showExitsWithLister)[`showStatuslineExits`](#showStatuslineExits)
 
@@ -72,11 +72,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="enableHyperlinks"></span>
 
@@ -84,13 +84,13 @@ Inherited from `ModuleExecObject` :
 
 [exits.t](../file/exits.t.html)\[[96](../source/exits.t.html#96)\]
 
-<div class="desc">
+
 
 Flag: use hyperlinks in the directions mentioned in room description
 exit lists, so that players can click on the direction name in the
 listing to enter the direction command.
 
-</div>
+
 
 <span id="enableReminder"></span>
 
@@ -98,7 +98,7 @@ listing to enter the direction command.
 
 [exits.t](../file/exits.t.html)\[[75](../source/exits.t.html#75)\]
 
-<div class="desc">
+
 
 Flag: show automatic exit listings on attempts to move in directions
 that don't allow travel. Enable this by default, since most players
@@ -109,7 +109,7 @@ text) in place of an unspecific "you can't go that way".
 This is an author-configured setting; the library does not provide a
 command to let the player control this setting.
 
-</div>
+
 
 <span id="enableReminderAlways"></span>
 
@@ -117,7 +117,7 @@ command to let the player control this setting.
 
 [exits.t](../file/exits.t.html)\[[89](../source/exits.t.html#89)\]
 
-<div class="desc">
+
 
 Flag: enable the automatic exit reminder even when the room description
 exit listing is enabled. When this is nil, we will NOT show a reminder
@@ -129,7 +129,7 @@ the reminder unconditionally, though, so this option is offered.
 This is an author-configured setting; the library does not provide a
 command to let the player control this setting.
 
-</div>
+
 
 <span id="exitsOnOffExplained"></span>
 
@@ -137,11 +137,11 @@ command to let the player control this setting.
 
 [exits.t](../file/exits.t.html)\[[99](../source/exits.t.html#99)\]
 
-<div class="desc">
+
 
 flag: we've explained how the exits on/off command works
 
-</div>
+
 
 <span id="roomDescVerbose"></span>
 
@@ -149,7 +149,7 @@ flag: we've explained how the exits on/off command works
 
 [exits.t](../file/exits.t.html)\[[62](../source/exits.t.html#62)\]
 
-<div class="desc">
+
 
 Flag: use "verbose" listing style for exit lists in room descriptions.
 When this is set to true, we'll show a sentence-style list of exits
@@ -167,15 +167,15 @@ of information being offered.
 This is an author-configured setting; the library does not provide a
 command to let the player control this setting.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotGoShowExits"></span>
 
@@ -183,11 +183,11 @@ command to let the player control this setting.
 
 [exits.t](../file/exits.t.html)\[[215](../source/exits.t.html#215)\]
 
-<div class="desc">
+
 
 show exits as part of a "cannot go that way" error
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -195,11 +195,11 @@ show exits as part of a "cannot go that way" error
 
 [exits.t](../file/exits.t.html)\[[37](../source/exits.t.html#37)\]
 
-<div class="desc">
+
 
 preinitialization
 
-</div>
+
 
 <span id="exitsOnOffCommand"></span>
 
@@ -207,13 +207,13 @@ preinitialization
 
 [exits.t](../file/exits.t.html)\[[151](../source/exits.t.html#151)\]
 
-<div class="desc">
+
 
 Perform an EXITS ON/OFF/STATUS/LOOK command. 'stat' indicates whether
 we're turning on (true) or off (nil) the statusline exit listing; 'look'
 indicates whether we're turning the room description listing on or off.
 
-</div>
+
 
 <span id="getRoomDescLister"></span>
 
@@ -221,11 +221,11 @@ indicates whether we're turning the room description listing on or off.
 
 [exits.t](../file/exits.t.html)\[[120](../source/exits.t.html#120)\]
 
-<div class="desc">
+
 
 Get the exit lister we use for room descriptions.
 
-</div>
+
 
 <span id="getStatuslineExitsHeight"></span>
 
@@ -233,14 +233,14 @@ Get the exit lister we use for room descriptions.
 
 [exits.t](../file/exits.t.html)\[[193](../source/exits.t.html#193)\]
 
-<div class="desc">
+
 
 Calculate the contribution of the exits list to the height of the status
 line, in lines of text. If we're not configured to display the exits
 list in the status line, then the contribution is zero; otherwise, we'll
 estimate how much space we need to display the exit list.
 
-</div>
+
 
 <span id="isReminderEnabled"></span>
 
@@ -248,13 +248,13 @@ estimate how much space we need to display the exit list.
 
 [exits.t](../file/exits.t.html)\[[107](../source/exits.t.html#107)\]
 
-<div class="desc">
+
 
 Determine if the "reminder" is enabled. The reminder is the list of
 exits we show along with a "can't go that way" message, to reminder the
 player of the valid exits when an invalid one is attempted.
 
-</div>
+
 
 <span id="lookAroundShowExits"></span>
 
@@ -262,11 +262,11 @@ player of the valid exits when an invalid one is attempted.
 
 [exits.t](../file/exits.t.html)\[[207](../source/exits.t.html#207)\]
 
-<div class="desc">
+
 
 show exits as part of a room description
 
-</div>
+
 
 <span id="showExits"></span>
 
@@ -274,11 +274,11 @@ show exits as part of a room description
 
 [exits.t](../file/exits.t.html)\[[169](../source/exits.t.html#169)\]
 
-<div class="desc">
+
 
 show the list of exits from an actor's current location
 
-</div>
+
 
 <span id="showExitsCommand"></span>
 
@@ -286,11 +286,11 @@ show the list of exits from an actor's current location
 
 [exits.t](../file/exits.t.html)\[[129](../source/exits.t.html#129)\]
 
-<div class="desc">
+
 
 perform the "exits" command to show exits on explicit request
 
-</div>
+
 
 <span id="showExitsFrom"></span>
 
@@ -298,11 +298,11 @@ perform the "exits" command to show exits on explicit request
 
 [exits.t](../file/exits.t.html)\[[224](../source/exits.t.html#224)\]
 
-<div class="desc">
+
 
 show the list of exits from a given location for a given actor
 
-</div>
+
 
 <span id="showExitsWithLister"></span>
 
@@ -310,7 +310,7 @@ show the list of exits from a given location for a given actor
 
 [exits.t](../file/exits.t.html)\[[249](../source/exits.t.html#249)\]
 
-<div class="desc">
+
 
 Show the list of exits using a specific lister.
 
@@ -328,7 +328,7 @@ already computed it for other reasons (such as showing a room
 description). If the caller hasn't otherwise computed the value, it can
 be easily computed as loc.wouldBeLitFor(actor).
 
-</div>
+
 
 <span id="showStatuslineExits"></span>
 
@@ -336,15 +336,15 @@ be easily computed as loc.wouldBeLitFor(actor).
 
 [exits.t](../file/exits.t.html)\[[176](../source/exits.t.html#176)\]
 
-<div class="desc">
+
 
 show an exit list display in the status line, if desired
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

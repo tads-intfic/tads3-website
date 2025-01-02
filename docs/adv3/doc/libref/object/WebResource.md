@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A WebResource is a virtual file accessible via the HTTP server. Each
 resource object has a path, which can be given as a simple string that
@@ -37,25 +37,25 @@ matched.
 
 `class `**`WebResource`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WebResource`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`WebResource`**  
 [`WebResourceResFile`](../object/WebResourceResFile.html)  
@@ -65,40 +65,40 @@ matched.
 [`WebStatusWin`](../object/WebStatusWin.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`eventPage`](../object/eventPage.html)[`flushEventsPage`](../object/flushEventsPage.html)[`guestConnectPage`](../object/guestConnectPage.html)[`inputDialogPage`](../object/inputDialogPage.html)[`inputEventPage`](../object/inputEventPage.html)[`inputFileCancel`](../object/inputFileCancel.html)[`inputFilePage`](../object/inputFilePage.html)[`inputLinePage`](../object/inputLinePage.html)[`menuSysEventPage`](../object/menuSysEventPage.html)[`morePromptDonePage`](../object/morePromptDonePage.html)[`setPrefsPage`](../object/setPrefsPage.html)[`setScreenNamePage`](../object/setScreenNamePage.html)[`tempFileDownloadPage`](../object/tempFileDownloadPage.html)[`uiStatePage`](../object/uiStatePage.html)[`uploadFilePage`](../object/uploadFilePage.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`group`](#group)[`priority`](#priority)[`vpath`](#vpath)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`matchRequest`](#matchRequest)[`processRequest`](#processRequest)[`sendAck`](#sendAck)[`sendXML`](#sendXML)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="group"></span>
 
@@ -106,7 +106,7 @@ matched.
 
 [webui.t](../file/webui.t.html)\[[865](../source/webui.t.html#865)\]
 
-<div class="desc">
+
 
 The group this resource is part of. This is the object that "contains"
 the resource, via its 'contents' property; any object will work here,
@@ -120,7 +120,7 @@ under different circumstances. When a server processes a request, it
 does so by looking through the 'contents' list for a group of its
 choice.
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -128,14 +128,14 @@ choice.
 
 [webui.t](../file/webui.t.html)\[[849](../source/webui.t.html#849)\]
 
-<div class="desc">
+
 
 The priority of this resource. If the path is given as a regular
 expression, a given request might match more than one resource. In such
 cases, the matching resource with the highest priority is the one that's
 actually used to process the request.
 
-</div>
+
 
 <span id="vpath"></span>
 
@@ -143,7 +143,7 @@ actually used to process the request.
 
 [webui.t](../file/webui.t.html)\[[827](../source/webui.t.html#827)\]
 
-<div class="desc">
+
 
 The virtual path to the resource. This is the apparent URL path to this
 resource, as seen by the client.
@@ -170,15 +170,15 @@ including upper/lower case. If the virtual path is given as a
 RexPattern, the URL resource path will be matched to the pattern with
 the usual regular expression rules.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="matchRequest"></span>
 
@@ -186,7 +186,7 @@ the usual regular expression rules.
 
 [webui.t](../file/webui.t.html)\[[883](../source/webui.t.html#883)\]
 
-<div class="desc">
+
 
 Determine if this resource matches the given request. 'query' is the
 parsed query from the request, as returned by req.parseQuery(). 'req' is
@@ -202,7 +202,7 @@ could achieve just by specifying the path string or RexPattern. For
 example, you could make the request conditional on the time of day, past
 request history, cookies in the request, parameters, etc.
 
-</div>
+
 
 <span id="processRequest"></span>
 
@@ -210,7 +210,7 @@ request history, cookies in the request, parameters, etc.
 
 [webui.t](../file/webui.t.html)\[[837](../source/webui.t.html#837)\]
 
-<div class="desc">
+
 
 Process the request. This is invoked when we determine that this is the
 highest priority resource object matching the request. 'req' is the
@@ -218,7 +218,7 @@ HTTPRequest object; 'query' is the parsed query data as returned by
 req.parseQuery(). The query information is provided for convenience, in
 case the result depends on the query parameters.
 
-</div>
+
 
 <span id="sendAck"></span>
 
@@ -226,14 +226,14 @@ case the result depends on the query parameters.
 
 [webui.t](../file/webui.t.html)\[[911](../source/webui.t.html#911)\]
 
-<div class="desc">
+
 
 Send a generic request acknowledgment or reply. This wraps the given XML
 fragment in an XML document with the root type given by the last element
 in our path name. If the 'xml' value is omitted, we send "\<ok/\>" by
 default.
 
-</div>
+
 
 <span id="sendXML"></span>
 
@@ -241,16 +241,16 @@ default.
 
 [webui.t](../file/webui.t.html)\[[932](../source/webui.t.html#932)\]
 
-<div class="desc">
+
 
 Send an XML reply. This wraps the given XML fragment in an XML document
 with the given root element.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

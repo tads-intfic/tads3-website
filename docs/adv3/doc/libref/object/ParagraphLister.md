@@ -26,53 +26,53 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Paragraph lister: this shows its list items separated by paragraph
 breaks, with a paragraph break before the first item.
 
 `class `**`ParagraphLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ParagraphLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ParagraphLister`**  
 [`SenseLister`](../object/SenseLister.html)  
 [`SpecialDescContentsLister`](../object/SpecialDescContentsLister.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`specialDescLister`](../object/specialDescLister.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListPrefixWide`](#showListPrefixWide)[`showListSeparator`](#showListSeparator)
 
@@ -94,19 +94,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -114,11 +114,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1401](../source/lister.t.html#1401)\]
 
-<div class="desc">
+
 
 start the list with a paragraph break
 
-</div>
+
 
 <span id="showListSeparator"></span>
 
@@ -126,15 +126,15 @@ start the list with a paragraph break
 
 [lister.t](../file/lister.t.html)\[[1404](../source/lister.t.html#1404)\]
 
-<div class="desc">
+
 
 we show no list separators
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

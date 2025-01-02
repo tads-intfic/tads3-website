@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> CharacterSet  
@@ -15,7 +15,7 @@ layout: docs
     <a href="collect.html" class="nav"><em>Next:</em> Collection</a>    
 </span>
 
-</div>
+
 
 
 
@@ -510,16 +510,16 @@ another computer without the same character mappings.
 
 `getName()`
 
-<div class="fdef">
+
 
 Returns a string giving the name of the character set. This is the same
 as the name that was used to create the character set object.
 
-</div>
+
 
 `isMappable(*val*)`
 
-<div class="fdef">
+
 
 Returns `true` if the character or characters
 *val*, which can be given as an integer (giving a Unicode character
@@ -528,13 +528,13 @@ character set, `nil` if not. If *val* is a
 string, the method returns `true` only if all of
 the characters in the string can be mapped.
 
-</div>
+
 
 <span id="isMappingKnown"></span>
 
 `isMappingKnown()`
 
-<div class="fdef">
+
 
 Returns `true` if the character set has a known
 mapping, `nil` if not. If this returns
@@ -542,11 +542,11 @@ mapping, `nil` if not. If this returns
 object will throw a
 `CharacterSetUnknownException`.
 
-</div>
+
 
 `isRoundTripMappable(*val*)`
 
-<div class="fdef">
+
 
 Returns `true` if the character or characters
 *val*, which can be given as an integer (giving a Unicode character
@@ -570,7 +570,7 @@ plain, unaccented "a"); these usually don't have round-trip mappings
 because the unaccented local character usually maps back to the
 unaccented Unicode character.
 
-</div>
+
 
 ## Examples
 
@@ -671,7 +671,7 @@ load the mapping file once.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -680,4 +680,4 @@ load the mapping file once.
     <a href="collect.html" class="nav"><em>Next:</em> Collection</a>    
 </span>
 
-</div>
+

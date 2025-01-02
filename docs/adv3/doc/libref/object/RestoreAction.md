@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Special "restore" action. This action restores game state previously
 saved with the "save" action.
@@ -34,15 +34,15 @@ saved with the "save" action.
 `DefineSystemAction(Restore)      `*`// original source text`*  
 `class `**`RestoreAction`**` :   `[`SystemAction`](../object/SystemAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RestoreAction`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -52,11 +52,11 @@ saved with the "save" action.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RestoreAction`**  
 [`predicate(Restore)`](../object/predicate(Restore).html)  
@@ -64,19 +64,19 @@ saved with the "save" action.
 [`predicate(RestoreString)`](../object/predicate(RestoreString).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInUndo`](#includeInUndo)
 
@@ -93,11 +93,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`askAndRestore`](#askAndRestore)[`execSystemAction`](#execSystemAction)[`performRestore`](#performRestore)[`startupRestore`](#startupRestore)
 
@@ -115,11 +115,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -127,22 +127,22 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[555](../source/actions.t.html#555)\]
 
-<div class="desc">
+
 
 There's no point in including this in undo. If the command succeeds,
 it's not undoable itself, and there won't be any undo information in the
 newly restored state. If the command fails, it won't make any changes to
 the game state, so there won't be anything to undo.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="askAndRestore"></span>
 
@@ -150,7 +150,7 @@ the game state, so there won't be anything to undo.
 
 [actions.t](../file/actions.t.html)\[[355](../source/actions.t.html#355)\]
 
-<div class="desc">
+
 
 Ask for a file and try to restore it. Returns true on success, nil on
 failure. (Failure could indicate that the user chose to cancel out of
@@ -158,7 +158,7 @@ the file selector, that we couldn't find the file to restore, or that
 the file isn't a valid saved state file. In any case, we show an
 appropriate message on failure.)
 
-</div>
+
 
 <span id="execSystemAction"></span>
 
@@ -166,11 +166,11 @@ appropriate message on failure.)
 
 [actions.t](../file/actions.t.html)\[[336](../source/actions.t.html#336)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="performRestore"></span>
 
@@ -178,13 +178,13 @@ appropriate message on failure.)
 
 [actions.t](../file/actions.t.html)\[[483](../source/actions.t.html#483)\]
 
-<div class="desc">
+
 
 Restore a file. 'code' is the restoreCode value for the
 PostRestoreObject notifications. Returns true on success, nil on
 failure.
 
-</div>
+
 
 <span id="startupRestore"></span>
 
@@ -192,7 +192,7 @@ failure.
 
 [actions.t](../file/actions.t.html)\[[444](../source/actions.t.html#444)\]
 
-<div class="desc">
+
 
 Restore a game on startup. This can be called from mainRestore() to
 restore a saved game directly as part of loading the game. (Most
@@ -205,11 +205,11 @@ simply exit the program. On success, the caller should start the game
 running, usually using runGame(), after showing any desired introductory
 messages.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

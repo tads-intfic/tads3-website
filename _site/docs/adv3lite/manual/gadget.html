@@ -84,14 +84,15 @@ rememember to call the inherited method.</p>
 <p>A <strong>Dial</strong> is simply a Settable that responds to TURN WHATEVER TO VALUE
 in the same way as SET WHATEVER TO VALUE. For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + Dial 'dial'
-        "It can be set to 'off', 'slow' or 'fast'; it's currently set to
-        &lt;&lt;curSetting&gt;&gt;. "
-        
-        curSetting = 'off'
-        
-        validSettings = ['off', 'slow', 'fast']
-    ;
+<p>`
+    + Dial ‘dial’
+        “It can be set to ‘off’, ‘slow’ or ‘fast’; it’s currently set to
+        «curSetting». “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    curSetting = 'off'
+    
+    validSettings = ['off', 'slow', 'fast']
+; `
 </code></pre></div></div>
 
 <p>A <strong>NumberedDial</strong> is a Dial that can be turned to any (integer)
@@ -101,14 +102,15 @@ curSetting is still a single-quoted string (representing a number). For
 example to define a dial that can be set to any number between 1 and 50
 and starts out set to 2 you might do this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + NumberedDial 'dial'
-        "It can be set to any number between 1 and 50; it's currently set to
-        &lt;&lt;curSetting&gt;&gt;. "
-        
-        curSetting = '2'
-        minSetting = 1
-        maxSetting = 50    
-    ;
+<p>`
+    + NumberedDial ‘dial’
+        “It can be set to any number between 1 and 50; it’s currently set to
+        «curSetting». “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    curSetting = '2'
+    minSetting = 1
+    maxSetting = 50    
+; `
 </code></pre></div></div>
 
 <p>By default, a NumberedDial can only be set to integer settings, but if
@@ -179,14 +181,15 @@ a light source into a bag of holding when the player character is in a
 dark room. To prevent this we can make the bag of holding’s affinity for
 light sources zero, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    knapsack: BagOfHolding, Wearable, OpenableContainer 'knapsack; brown canvas large'
-        "It's a large, brown knapsack made of canvas. "
-        
-        affinityFor(obj)
-        {
-            return obj.isLit ? 0 : inherited(obj);
-        }
-    ;
+<p>`
+    knapsack: BagOfHolding, Wearable, OpenableContainer ‘knapsack; brown canvas large’
+        “It’s a large, brown knapsack made of canvas. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    affinityFor(obj)
+    {
+        return obj.isLit ? 0 : inherited(obj);
+    }
+; `
 </code></pre></div></div>
 
 <hr />

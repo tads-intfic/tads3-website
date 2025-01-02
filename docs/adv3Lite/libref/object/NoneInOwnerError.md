@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The owner in a possessive phrase doesn't have any of the objects named.
 
 `class `**`NoneInOwnerError`**` :   `[`ActorResolutionError`](../object/ActorResolutionError.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NoneInOwnerError`**  
 [`ActorResolutionError`](../object/ActorResolutionError.html)  
@@ -50,27 +50,27 @@ The owner in a possessive phrase doesn't have any of the objects named.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`possQual`](#possQual)
 
@@ -88,11 +88,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`display`](#display)
 
@@ -109,11 +109,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="possQual"></span>
 
@@ -121,19 +121,19 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5444](../source/parser.t.html#5444)\]
 
-<div class="desc">
+
 
 the possessive qualifier
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -141,11 +141,11 @@ the possessive qualifier
 
 [parser.t](../file/parser.t.html)\[[5437](../source/parser.t.html#5437)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="display"></span>
 
@@ -153,15 +153,15 @@ the possessive qualifier
 
 [parser.t](../file/parser.t.html)\[[5446](../source/parser.t.html#5446)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

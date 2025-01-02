@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Events  
@@ -15,7 +15,7 @@ layout: docs
     <a href="eventlist.html" class="nav"><em>Next:</em> EventList</a>    
 </span>
 
-</div>
+
 
 
 
@@ -43,7 +43,7 @@ the Fuse will execute on the same turn.
 For example, to define an alarm clock that rings in 10 turns' time after
 you push a button on it, we could define:
 
-`
+```
     alarmClock: Thing 'alarm clock'
         "It has a big red button attached. "
         
@@ -73,7 +73,7 @@ you push a button on it, we could define:
        
        isDown = nil
     ;
-`
+```
 
 Note, by the way, that the property we want to execute has to be listed
 in the arguments to `new Fuse` as a property
@@ -155,9 +155,9 @@ You may wish to stop a Daemon, or prevent a Fuse from executing before
 its due to fire. If you've stored a reference to the Fuse or Daemon you
 can disable it by calling its **removeEvent()** method, e.g.:
 
-`
+```
       daemonID.removeEvent();
-`
+```
 
 If you haven't stored a reference to the Fuse or Daemon you want to
 remove, you can remove it by calling:
@@ -182,7 +182,7 @@ are always executed.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -191,4 +191,4 @@ are always executed.
     <a href="eventlist.html" class="nav"><em>Next:</em>EventList</a>    
 </span>
 
-</div>
+

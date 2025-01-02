@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="goldskull.html" class="nav">Goldskull</a> \> Everything in its
@@ -16,7 +16,7 @@ place
     <a href="retro.html" class="nav"><em>Next:</em> Retrospective</a>    
 </span>
 
-</div>
+
 
 
 
@@ -36,7 +36,7 @@ This determines the way an item is first described in a room listing,
 until the item is moved. Try moving the rock and the pebble into
 startroom and adding an initSpecialDesc to the rock like this:
 
-`
+```
     + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
         
@@ -45,13 +45,13 @@ startroom and adding an initSpecialDesc to the rock like this:
         
         weight = 10
     ;
-`
+```
 
 Once you've made these changes, try recompiling and running the game.
 You should now see the following as the description of the starting
 location on the first turn:
 
-<div class="cmdline">
+
 
     Outside Cave
     Youre standing in the bright sunlight just outside of a large, dark, foreboding cave, which lies to the north.
@@ -71,7 +71,7 @@ incongruous. What would we be even better would be if we could combine
 the mention of both objects into a single sentence. Here's one way we
 can do it:
 
-`
+```
     + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
         
@@ -81,7 +81,7 @@ can do it:
         
         weight = 10
     ;
-`
+```
 
 Let's look at how this works. The smallRock will use its initSpecialDesc
 until it has been moved. When a Thing is moved (via a call to
@@ -105,7 +105,7 @@ again, thus suppressing the additional line "You see a small pebble
 here." Once either the pebble or the rock is moved, this changes, as the
 following transcript illustrates:
 
-<div class="cmdline">
+
 
     Outside Cave
     Youre standing in the bright sunlight just outside of a large, dark, foreboding cave, which lies to the north. 
@@ -142,7 +142,7 @@ following transcript illustrates:
 
     You can see a small rock, a knapsack, and a tiny pebble here.
 
-</div>
+
 
 You may find this combination of techniques useful for getting your room
 descriptions starting out just the way you want.
@@ -165,14 +165,14 @@ rather than letting it merge into the overall description of the room).
 Consider the description of the cave room. As it now appears (with the
 rock and pebble moved outside), the player will see:
 
-<div class="cmdline">
+
 
     Cave
     Youre inside a dark and musty cave. Sunlight pours in from a passage to the south. 
 
     On the stone pedestal you see a gold skull.
 
-</div>
+
 
 This is actually a little odd, since the stone pedestal is only
 mentioned as the supporter of the gold skull, yet it's referred to as
@@ -184,7 +184,7 @@ course we could simply add a mention of the object to the main room
 description, but this seems quite a good opportunity to illustrate the
 use of `specialDesc`:
 
-`
+```
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -205,11 +205,11 @@ use of `specialDesc`:
             }
         }
     ;
-`
+```
 
 The room description then becomes:
 
-<div class="cmdline">
+
 
     Cave
     Youre inside a dark and musty cave. Sunlight pours in from a passage to the south. 
@@ -218,7 +218,7 @@ The room description then becomes:
 
     On the stone pedestal you see a gold skull.
 
-</div>
+
 
 This is probably an improvement. At least the text makes sense, and at
 least the stone pedestal will get a mention even if there's nothing on
@@ -232,7 +232,7 @@ approach would pretty soon become quite unwieldy. What we need is some
 means of listing all the objects currently on the pedestal, whatever
 they happen to be. The following should do the trick:
 
-`
+```
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -255,7 +255,7 @@ they happen to be. The following should do the trick:
             }
         }
     ;
-`
+```
 
 We use `listableContents` rather than just
 `contents` to exclude any fixtures or components
@@ -271,14 +271,14 @@ the list as having been mentioned so it won't appear in the room
 contents listing again. With this definition the room description
 becomes:
 
-<div class="cmdline">
+
 
     Cave
     Youre inside a dark and musty cave. Sunlight pours in from a passage to the south. 
 
     A solitary stone pedestal stands at the centre of the cave, with a gold skull resting on top of it. 
 
-</div>
+
 
 There are several other ways we can tweak how items are displayed in a
 room description listing. For the full story see the section on [Room
@@ -305,7 +305,7 @@ call attention to rows of suspicious-looking holes in the walls of the
 cave. But what we'll actually do here is provide the pedestal with a
 warning inscription:
 
-`
+```
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day, picking out the inscription carved into its front. "
@@ -327,7 +327,7 @@ warning inscription:
             pedestal. '
         
     ; 
-`
+```
 
 For the sake of brevity we've omitted repeating the rest of the
 definition of the pedestal. Note that we don't need to give the
@@ -375,7 +375,7 @@ game. You may remember above we said that the way we'd set up the
 PathPassage notionally leading back to the camp was something of a
 horrible hack. Now we'll see how it should be done:
 
-`
+```
     startroom: Room 'Outside Cave'
         desc = "You're standing in the bright sunlight just outside of a large,
             dark, foreboding cave, which lies to the north. The path back to your
@@ -407,7 +407,7 @@ horrible hack. Now we'll see how it should be done:
             finishGameMsg(ftVictory, [finishOptionUndo]);
         }    
     ;
-`
+```
 
 If you think there's something vaguely familiar about this, then you're
 right. For one thing, much of the code on the
@@ -464,11 +464,11 @@ out the side-effects of travel (through its
 `traveLDesc` method). We shall meet more
 examples of this in due course.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -478,4 +478,4 @@ place
     <a href="retro.html" class="nav"><em>Next:</em> Retrospective</a>    
 </span>
 
-</div>
+

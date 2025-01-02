@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="reviewing.html" class="nav">Reviewing the Basics</a> \> Object
@@ -17,7 +17,7 @@ Containment
 <a href="methods.html" class="nav"><em>Next:</em> Methods, Functions and
 Statements</a>     </span>
 
-</div>
+
 
 
 
@@ -159,9 +159,9 @@ or use what it contains). Instead you should always use the
 around your game world. For example, if you wanted to move Heidi to the
 top of the tree in response to a CLIMB TREE command you would use:
 
-`
+```
       heidi.actionMoveInto(topOfTree);
-`
+```
 
 The difference between `moveInto()` and
 `actionMoveInto()` needn't detain us long here.
@@ -237,7 +237,7 @@ already seen.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -248,4 +248,4 @@ Containment
 <a href="methods.html" class="nav"><em>Next:</em> Methods, Functions and
 Statements</a>     </span>
 
-</div>
+

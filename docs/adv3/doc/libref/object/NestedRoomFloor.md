@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A floor for a nested room. This should be placed directly within a
 nested room object if the nested room is to be described as having a
@@ -36,15 +36,15 @@ On, Stand On) to the enclosing nested room.
 
 `class `**`NestedRoomFloor`**` :   `[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NestedRoomFloor`**  
 [`Fixture`](../object/Fixture.html)  
@@ -54,27 +54,27 @@ On, Stand On) to the enclosing nested room.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -92,11 +92,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(LieOn)`](#dobjFor(LieOn))[`dobjFor(SitOn)`](#dobjFor(SitOn))[`dobjFor(StandOn)`](#dobjFor(StandOn))[`iobjFor(PutOn)`](#iobjFor(PutOn))[`iobjFor(ThrowAt)`](#iobjFor(ThrowAt))
 
@@ -114,19 +114,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(LieOn)"></span>
 
@@ -134,11 +134,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[5161](../source/travel.t.html#5161)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(SitOn)"></span>
 
@@ -146,11 +146,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[5160](../source/travel.t.html#5160)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(StandOn)"></span>
 
@@ -158,11 +158,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[5162](../source/travel.t.html#5162)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(PutOn)"></span>
 
@@ -170,11 +170,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[5158](../source/travel.t.html#5158)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(ThrowAt)"></span>
 
@@ -182,15 +182,15 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[5159](../source/travel.t.html#5159)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

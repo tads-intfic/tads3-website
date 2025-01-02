@@ -20,33 +20,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Plain lister - this lister doesn't show anything for an empty list, and
 doesn't show a list suffix or prefix.
 
 **`plainLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`plainLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -55,11 +55,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -68,19 +68,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -88,11 +88,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1332](../source/lister.t.html#1332)\]
 
-<div class="desc">
+
 
 show the tall prefix
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -100,11 +100,11 @@ show the tall prefix
 
 [lister.t](../file/lister.t.html)\[[1328](../source/lister.t.html#1328)\]
 
-<div class="desc">
+
 
 show the prefix/suffix in wide mode
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -112,15 +112,15 @@ show the prefix/suffix in wide mode
 
 [lister.t](../file/lister.t.html)\[[1329](../source/lister.t.html#1329)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

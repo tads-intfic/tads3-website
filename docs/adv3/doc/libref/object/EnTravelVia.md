@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Create a TravelVia subclass merely so we can supply a verbPhrase. (The
 parser looks for subclasses of each specific Action class to find its
@@ -37,15 +37,15 @@ create a regular subclass in order for the verbPhrase to get found.)
 
 `class `**`EnTravelVia`**` :   `[`TravelViaAction`](../object/TravelViaAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`EnTravelVia`**  
 [`TravelViaAction`](../object/TravelViaAction.html)  
@@ -57,27 +57,27 @@ create a regular subclass in order for the verbPhrase to get found.)
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`verbPhrase`](#verbPhrase)
 
@@ -98,11 +98,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -122,11 +122,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -134,25 +134,25 @@ Inherited from `Resolver` :
 
 [en_us.t](../file/en_us.t.html)\[[10010](../source/en_us.t.html#10010)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

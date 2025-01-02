@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The basic "room lister" object - this is the object that we use by
 default with showList() to construct the listing of the portable items
@@ -28,26 +28,26 @@ in a room when displaying the room's description.
 
 **`roomLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`roomLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -56,11 +56,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -69,19 +69,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -89,11 +89,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4425](../source/msg_neu.t.html#4425)\]
 
-<div class="desc">
+
 
 show the tall prefix
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -101,11 +101,11 @@ show the tall prefix
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4421](../source/msg_neu.t.html#4421)\]
 
-<div class="desc">
+
 
 show the prefix/suffix in wide mode
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -113,15 +113,15 @@ show the prefix/suffix in wide mode
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4422](../source/msg_neu.t.html#4422)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

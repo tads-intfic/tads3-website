@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 DistanceConnector: a special type of SenseConnector that connects its
 locations with distance. This can be used for things like divided rooms,
@@ -43,15 +43,15 @@ Intangible fills both of these needs.
 
 `class `**`DistanceConnector`**` :   `[`SenseConnector`](../object/SenseConnector.html)[`Intangible`](../object/Intangible.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DistanceConnector`**  
 [`SenseConnector`](../object/SenseConnector.html)  
@@ -64,27 +64,27 @@ Intangible fills both of these needs.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -107,11 +107,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkMoveThrough`](#checkMoveThrough)[`checkThrowThrough`](#checkThrowThrough)[`checkTouchThrough`](#checkTouchThrough)[`throwTargetHitWith`](#throwTargetHitWith)[`transSensingThru`](#transSensingThru)
 
@@ -135,19 +135,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkMoveThrough"></span>
 
@@ -155,7 +155,7 @@ Inherited from `VocabObject` :
 
 [sense.t](../file/sense.t.html)\[[806](../source/sense.t.html#806)\]
 
-<div class="desc">
+
 
 Do allow moving an object through a distance connector. This should
 generally only be involved at all when we're moving an object
@@ -166,7 +166,7 @@ preconditions that checks for reachability, which will in most cases
 disallow the action anyway before we get to the point of wanting to move
 anything.
 
-</div>
+
 
 <span id="checkThrowThrough"></span>
 
@@ -174,12 +174,12 @@ anything.
 
 [sense.t](../file/sense.t.html)\[[791](../source/sense.t.html#791)\]
 
-<div class="desc">
+
 
 When checking for throwing through this container, specialize the
 failure message to indicate that distance is the specific problem.
 
-</div>
+
 
 <span id="checkTouchThrough"></span>
 
@@ -187,7 +187,7 @@ failure message to indicate that distance is the specific problem.
 
 [sense.t](../file/sense.t.html)\[[781](../source/sense.t.html#781)\]
 
-<div class="desc">
+
 
 When checking for reaching through this connector, specialize the
 failure message to indicate that distance is the specific problem.
@@ -195,7 +195,7 @@ failure message to indicate that distance is the specific problem.
 reach through the connector, such as "you can't reach that through
 \<self\>."
 
-</div>
+
 
 <span id="throwTargetHitWith"></span>
 
@@ -203,7 +203,7 @@ reach through the connector, such as "you can't reach that through
 
 [sense.t](../file/sense.t.html)\[[827](../source/sense.t.html#827)\]
 
-<div class="desc">
+
 
 Report the reason that we stopped a thrown projectile from hitting its
 intended target. This is called when we're along the path between the
@@ -221,7 +221,7 @@ Note that if you do want to allow throwing a projectile across the
 distance represented by this connector, you can override
 checkThrowThrough() to return checkStatusSuccess.
 
-</div>
+
 
 <span id="transSensingThru"></span>
 
@@ -229,15 +229,15 @@ checkThrowThrough() to return checkStatusSuccess.
 
 [sense.t](../file/sense.t.html)\[[772](../source/sense.t.html#772)\]
 
-<div class="desc">
+
 
 all senses are connected through us, but at a distance
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

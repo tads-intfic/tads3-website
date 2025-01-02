@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> The Web UI  
@@ -15,7 +15,7 @@ layout: docs
     <a href="extensions.html" class="nav"><em>Next:</em> Extensions</a>
     </span>
 
-</div>
+
 
 
 
@@ -304,12 +304,12 @@ should group your resources into one or more folders - that is,
 subdirectories of your main project folder for the game. Second, for
 each folder, add an object definition like this to your game:
 
-<div class="code">
+
 
     WebResourceResFile
        vpath = static new RexPattern('/foldername/')
     ;
-`
+```
 
 That tells the library to treat anything in the "foldername"
 subdirectory of the game folder as an HTML resource, allowing the client
@@ -325,7 +325,7 @@ definition will allow files in subfolders of 'foldername'.)
 In the traditional console UI, the way the game program terminates is
 fairly straightforward. When the player types QUIT, the Adv3Lite command
 loop exits, which unwinds the call stack until the
-`main()` function returns. This terminates the
+```main()` function returns. This terminates the
 game program, at which point the interpreter program exits to the
 operating system. Alternatively, on GUI versions (such as QTads or HTML
 TADS), the player can end the program by closing the main window. This
@@ -461,9 +461,9 @@ hyperlink to a separate Web page.
 To create a command link, use the Adv3LiteWeb function
 `aHref()`:
 
-`
+```
     "To save the game, type <<aHref('SAVE')>>. "
-`
+```
 
 You should continue to use `\<A HREF\>` for
 actual hyperlinks, where the link navigates to another Web page rather
@@ -569,11 +569,11 @@ Adv3Lite library only calls
 mode, so it's fine to write your `\<ABOUTBOX\>`
 code as usual in that method.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *Adv3Lite Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -582,4 +582,4 @@ code as usual in that method.
     <a href="extensions.html" class="nav"><em>Next:</em> Extensions</a>
     </span>
 
-</div>
+

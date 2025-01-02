@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The SceneTopic class (defined in the SCENETOPIC EXTENSION) is the base
 class for SceneStartTopic and SceneEndTopic
 
 `class `**`SceneTopic`**` :   `[`ActorTopicEntry`](../object/ActorTopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SceneTopic`**  
 [`ActorTopicEntry`](../object/ActorTopicEntry.html)  
@@ -52,30 +52,30 @@ class for SceneStartTopic and SceneEndTopic
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SceneTopic`**  
 [`SceneEndTopic`](../object/SceneEndTopic.html)  
 [`SceneStartTopic`](../object/SceneStartTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -91,11 +91,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`afterResponse`](#afterResponse)[`beforeResponse`](#beforeResponse)[`handleTopic`](#handleTopic)
 
@@ -113,19 +113,19 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="afterResponse"></span>
 
@@ -133,11 +133,11 @@ Inherited from `TopicEntry` :
 
 [scenetopic.t](../file/scenetopic.t.html)\[[102](../source/scenetopic.t.html#102)\]
 
-<div class="desc">
+
 
 By default we do nothing here, but game code can override.
 
-</div>
+
 
 <span id="beforeResponse"></span>
 
@@ -145,11 +145,11 @@ By default we do nothing here, but game code can override.
 
 [scenetopic.t](../file/scenetopic.t.html)\[[96](../source/scenetopic.t.html#96)\]
 
-<div class="desc">
+
 
 By default, we just dislpay a spacing paragraph break
 
-</div>
+
 
 <span id="handleTopic"></span>
 
@@ -157,15 +157,15 @@ By default, we just dislpay a spacing paragraph break
 
 [scenetopic.t](../file/scenetopic.t.html)\[[88](../source/scenetopic.t.html#88)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

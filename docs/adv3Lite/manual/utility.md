@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Utility Functions  
@@ -16,7 +16,7 @@ layout: docs
 <a href="lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
 
-</div>
+
 
 
 
@@ -259,12 +259,12 @@ iterate over a collection degenerate to one iteration on a singleton.
 
 The createLiveIterator() method thus allows us to write code like this:
 
-`
+```
       local a = 'Hello World! ';
       foreach(local cur in a)
          "<<cur>>\n"; 
      
-`
+```
 
 Executing this will then indeed result in a display of the string 'Hello
 World!'. This will principally be useful when we want to iterate over
@@ -275,7 +275,7 @@ or Vector) or a singleton value.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -285,4 +285,4 @@ or Vector) or a singleton value.
 <a href="lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
 
-</div>
+

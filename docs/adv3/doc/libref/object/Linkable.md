@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "linkable" object is one that can participate in a master/slave
 relationship. This kind of relationship means that the state of both
@@ -48,25 +48,25 @@ in one side designated as the master.
 
 `class `**`Linkable`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Linkable`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Linkable`**  
 [`BasicOpenable`](../object/BasicOpenable.html)  
@@ -101,47 +101,47 @@ in one side designated as the master.
 [`PathPassage`](../object/PathPassage.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`initializeThing`](#initializeThing)[`masterObject`](#masterObject)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="initializeThing"></span>
 
@@ -149,11 +149,11 @@ in one side designated as the master.
 
 [objects.t](../file/objects.t.html)\[[3340](../source/objects.t.html#3340)\]
 
-<div class="desc">
+
 
 We're normally mixed into a Thing; do some extra work in initialization.
 
-</div>
+
 
 <span id="masterObject"></span>
 
@@ -161,7 +161,7 @@ We're normally mixed into a Thing; do some extra work in initialization.
 
 [objects.t](../file/objects.t.html)\[[3324](../source/objects.t.html#3324)\]
 
-<div class="desc">
+
 
 Get the master object, which holds our state. By default, this is simply
 'self', but some objects might want to override this. For example, doors
@@ -175,11 +175,11 @@ We return self by default so that a linkable object can stand alone if
 desired. That is, a linkable object doesn't have to be part of a pair;
 it can just as well be a single object.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

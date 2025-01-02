@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Possessive adjectives
 
 `class `**`PossessivePronounAdjProd`**` :   `[`PronounProd`](../object/PronounProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PossessivePronounAdjProd`**  
 [`PronounProd`](../object/PronounProd.html)  
@@ -49,11 +49,11 @@ Possessive adjectives
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PossessivePronounAdjProd`**  
 [`HerAdjProd`](../object/HerAdjProd.html)  
@@ -70,19 +70,19 @@ Possessive adjectives
 [`possessiveAdjPhrase(your)`](../object/possessiveAdjPhrase(your).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canBeAnaphor`](#canBeAnaphor)[`isPossessive`](#isPossessive)
 
@@ -97,11 +97,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkAnaphorAgreement`](#checkAnaphorAgreement)[`checkAnaphoricBinding`](#checkAnaphoricBinding)[`getOrigMainText`](#getOrigMainText)
 
@@ -116,11 +116,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canBeAnaphor"></span>
 
@@ -128,14 +128,14 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[2680](../source/parser.t.html#2680)\]
 
-<div class="desc">
+
 
 Can we be an anaphor? By default, we consider third-person possessive
 pronouns to be anaphoric, and others to be non-anaphoric. For example,
 in GIVE BOB MY BOOK, MY always refers to the speaker, so it's clearly
 not anaphoric within the sentence.
 
-</div>
+
 
 <span id="isPossessive"></span>
 
@@ -143,19 +143,19 @@ not anaphoric within the sentence.
 
 [parser.t](../file/parser.t.html)\[[2672](../source/parser.t.html#2672)\]
 
-<div class="desc">
+
 
 this is a possessive usage of the pronoun
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkAnaphorAgreement"></span>
 
@@ -163,7 +163,7 @@ this is a possessive usage of the pronoun
 
 [parser.t](../file/parser.t.html)\[[2691](../source/parser.t.html#2691)\]
 
-<div class="desc">
+
 
 Check agreement to a given anaphoric pronoun binding. The language
 module should override this for each pronoun type to ensure that the
@@ -173,7 +173,7 @@ ranking demerit if we don't agree; it just means that we'll fall back on
 the regular pronoun antecedent rather than trying to use an anaphoric
 binding.
 
-</div>
+
 
 <span id="checkAnaphoricBinding"></span>
 
@@ -181,13 +181,13 @@ binding.
 
 [parser.t](../file/parser.t.html)\[[2627](../source/parser.t.html#2627)\]
 
-<div class="desc">
+
 
 Possessive pronouns can refer to the earlier noun phrases of the same
 predicate, which is to say that they're anaphoric. For example, in GIVE
 BOB HIS BOOK, 'his' refers to Bob.
 
-</div>
+
 
 <span id="getOrigMainText"></span>
 
@@ -195,16 +195,16 @@ BOB HIS BOOK, 'his' refers to Bob.
 
 [parser.t](../file/parser.t.html)\[[2697](../source/parser.t.html#2697)\]
 
-<div class="desc">
+
 
 By default, the "main text" of a possessive pronoun is the same as the
 actual token text. Languages can override this as needed\>
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Pre-condition: the direct object can touch the target object. This is
 useful for situations where the direct object is being manipulated
@@ -29,15 +29,15 @@ action, such as PLUG CORD INTO OUTLET.
 
 **`dobjTouchObj`**` :   `[`TouchObjCondition`](../object/TouchObjCondition.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`dobjTouchObj`**  
 [`TouchObjCondition`](../object/TouchObjCondition.html)  
@@ -45,11 +45,11 @@ action, such as PLUG CORD INTO OUTLET.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`sourceObj`](#sourceObj)
 
@@ -60,11 +60,11 @@ Inherited from `TouchObjCondition` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `TouchObjCondition` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="sourceObj"></span>
 
@@ -87,25 +87,25 @@ Inherited from `TouchObjCondition` :
 
 [precond.t](../file/precond.t.html)\[[724](../source/precond.t.html#724)\]
 
-<div class="desc">
+
 
 the direct object has to be able to touch the target object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

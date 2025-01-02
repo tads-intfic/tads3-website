@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 intransitive form of "oops"
 
 `DefineIAction(OopsI)      `*`// original source text`*  
 `class `**`OopsIAction`**` :   `[`IAction`](../object/IAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`OopsIAction`**  
 [`IAction`](../object/IAction.html)  
@@ -50,29 +50,29 @@ intransitive form of "oops"
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`OopsIAction`**  
 [`predicate(OopsOnly)`](../object/predicate(OopsOnly).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionTime`](#actionTime)
 
@@ -86,11 +86,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doActionMain`](#doActionMain)
 
@@ -105,11 +105,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionTime"></span>
 
@@ -117,19 +117,19 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[3135](../source/actions.t.html#3135)\]
 
-<div class="desc">
+
 
 this is a meta-command, so don't consume any time
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doActionMain"></span>
 
@@ -137,15 +137,15 @@ this is a meta-command, so don't consume any time
 
 [actions.t](../file/actions.t.html)\[[3128](../source/actions.t.html#3128)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

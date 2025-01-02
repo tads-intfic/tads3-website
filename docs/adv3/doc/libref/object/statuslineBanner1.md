@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The banner window for the status line.
 
 **`statuslineBanner`**` :   `[`BannerWindow`](../object/BannerWindow.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`statuslineBanner`**  
 [`BannerWindow`](../object/BannerWindow.html)  
@@ -42,11 +42,11 @@ The banner window for the status line.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -58,11 +58,11 @@ Inherited from `OutputStreamWindow` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`initBannerWindow`](#initBannerWindow)[`removeBanner`](#removeBanner)[`setColorScheme`](#setColorScheme)
 
@@ -74,19 +74,19 @@ Inherited from `OutputStreamWindow` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="initBannerWindow"></span>
 
@@ -94,11 +94,11 @@ Inherited from `OutputStreamWindow` :
 
 [console.t](../file/console.t.html)\[[285](../source/console.t.html#285)\]
 
-<div class="desc">
+
 
 initialize
 
-</div>
+
 
 <span id="removeBanner"></span>
 
@@ -106,11 +106,11 @@ initialize
 
 [console.t](../file/console.t.html)\[[275](../source/console.t.html#275)\]
 
-<div class="desc">
+
 
 close the window
 
-</div>
+
 
 <span id="setColorScheme"></span>
 
@@ -118,7 +118,7 @@ close the window
 
 [console.t](../file/console.t.html)\[[306](../source/console.t.html#306)\]
 
-<div class="desc">
+
 
 Set the color scheme. We simply show a \<BODY\> tag that selects the
 parameterized colors STATUSBG and STATUSTEXT. (These are called
@@ -127,11 +127,11 @@ rather select whatever colors the interpreter wishes to use for the
 status line. In many cases, the interpreter lets the user select these
 colors via a Preferences dialog.)
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

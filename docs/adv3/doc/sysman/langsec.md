@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| The Language  
 <span class="navnp"><a href="terp.html" class="nav"><em>Prev:</em> Running Programs: The
@@ -15,7 +15,7 @@ Interpreter</a>    
 <a href="progstru.html" class="nav"><em>Next:</em> Source Code
 Structure</a>     </span>
 
-</div>
+
 
 
 
@@ -23,7 +23,7 @@ Structure</a>     </span>
 
 This part provides detailed coverage of the TADS 3 language.
 
-<div class="sectoc">
+
 
 [Source Code Structure](progstru.html)  
 [Source File Character Sets](charmap.html)  
@@ -53,11 +53,11 @@ This part provides detailed coverage of the TADS 3 language.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| The Language  
@@ -66,4 +66,4 @@ Interpreter</a>    
 <a href="progstru.html" class="nav"><em>Next:</em> Source Code
 Structure</a>     </span>
 
-</div>
+

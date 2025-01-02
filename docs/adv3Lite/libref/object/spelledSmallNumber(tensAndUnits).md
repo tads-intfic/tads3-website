@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 look up the units word in the dictionary
 
 `grammar `**[`spelledSmallNumber`](../object/spelledSmallNumber.html)`(tensAndUnits)`**` :   `[`Production`](../object/Production.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`spelledSmallNumber(tensAndUnits)`**  
 [`Production`](../object/Production.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`numval`](#numval)
 
@@ -54,11 +54,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`numval`](#numval)
 
@@ -67,11 +67,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="numval"></span>
 
@@ -79,19 +79,19 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[1225](../source/grammar.t.html#1225)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="numval"></span>
 
@@ -99,15 +99,15 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[1226](../source/grammar.t.html#1226)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

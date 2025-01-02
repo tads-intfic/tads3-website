@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Typographical
@@ -17,7 +17,7 @@ Conventions
 <a href="naming.html" class="nav"><em>Next:</em> Naming Conventions</a>
     </span>
 
-</div>
+
 
 
 
@@ -39,7 +39,7 @@ probably find that you're already familiar with our notation.
 
 Example command lines are shown like this:
 
-<div class="cmdline">
+
 
     copy c:\*.* d:\backup
 
@@ -122,11 +122,11 @@ This indicates that you must choose one of the items on either side of
 the bar. This can be repeated to indicate that you must choose one of
 three or more items. For example:
 
-<div class="syntax">
+
 
     A | B | C | D
 
-</div>
+
 
 This mean that you must enter exactly one of A, B, C, or D. The bar
 applies out as far as the nearest enclosing parentheses or square
@@ -154,11 +154,11 @@ need a space to separate two items.
 Here are a couple of examples to illustrate how these diagrams look in
 practice.
 
-<div class="syntax">
+
 
     copy [ /b | /a ]  sourceFile destinationFile
 
-</div>
+
 
 This is the basic syntax for the MS-DOS "copy" command. It means that
 you enter the word "copy" literally, followed by an *optional* "/b" *or*
@@ -167,11 +167,11 @@ we've combined the "\|" vertical bar notation with the "\[ \]"
 optional-item notation: everything within the brackets is optional, but
 if you do include it, you must choose one of the two options listed.
 
-<div class="syntax">
+
 
     ls [ -l ]  [ file ... ] 
 
-</div>
+
 
 This is a minimal syntax for the Unix "ls" (list files) command. It says
 that you type the word "ls" literally, followed by an optional "-l"
@@ -180,11 +180,11 @@ list is optional, since it's enclosed in brackets. In addition, if you
 do type a file list, you can type any number of files, as indicated by
 the ellipsis.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -195,4 +195,4 @@ Conventions
 <a href="naming.html" class="nav"><em>Next:</em> Naming Conventions</a>
     </span>
 
-</div>
+

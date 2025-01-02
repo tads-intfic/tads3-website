@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The FIAT LUX Action can be used to light up the player character (thus
 bringing light to a dark location). Repeating the FIAT LUX action
@@ -28,15 +28,15 @@ removes the light from the player character
 
 **`FiatLux`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FiatLux`**  
 [`IAction`](../object/IAction.html)  
@@ -46,11 +46,11 @@ removes the light from the player character
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -66,11 +66,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`beforeAction`](#beforeAction)  [`execAction`](#execAction)  [`turnSequence`](#turnSequence)  `
 
@@ -88,19 +88,19 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -108,11 +108,11 @@ Inherited from `Redirector` :
 
 [debug.t](../file/debug.t.html)\[[200](../source/debug.t.html#200)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -120,11 +120,11 @@ Inherited from `Redirector` :
 
 [debug.t](../file/debug.t.html)\[[193](../source/debug.t.html#193)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="turnSequence"></span>
 
@@ -132,15 +132,15 @@ Inherited from `Redirector` :
 
 [debug.t](../file/debug.t.html)\[[201](../source/debug.t.html#201)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

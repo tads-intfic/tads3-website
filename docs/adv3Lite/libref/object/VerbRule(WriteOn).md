@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `VerbRule(WriteOn)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(WriteOn)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(WriteOn)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -43,11 +43,11 @@ Details](#_Methods_)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`dobjReply`](#dobjReply)  [`missingQ`](#missingQ)  [`verbPhrase`](#verbPhrase)  `
 
@@ -59,11 +59,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2727](../source/grammar.t.html#2727)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjReply"></span>
 
@@ -99,11 +99,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2730](../source/grammar.t.html#2730)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="missingQ"></span>
 
@@ -111,11 +111,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2729](../source/grammar.t.html#2729)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -123,25 +123,25 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2728](../source/grammar.t.html#2728)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

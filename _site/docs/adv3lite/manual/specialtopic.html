@@ -121,15 +121,16 @@ at the start of the command.</p>
 Topic it matches and then use that Topic as the matchObj of your
 SayTopic; for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    tNotAfraid: Topic 'you\'re not afraid; you are i\'m i am'
-    ;
+<p>`
+    tNotAfraid: Topic ‘you're not afraid; you are i'm i am’
+    ;</p>
 
-    ...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
 
-    + SayTopic @tNotAfraid
-      "&lt;q&gt;I'm not afraid of the dark tower, you know,&lt;/q&gt; you boast.\b
-       &lt;q&gt;Well, you should be,&lt;/q&gt; Bob warns you. "
-    ;
++ SayTopic @tNotAfraid
+  "&lt;q&gt;I'm not afraid of the dark tower, you know,&lt;/q&gt; you boast.\b
+   &lt;q&gt;Well, you should be,&lt;/q&gt; Bob warns you. "
+; `
 </code></pre></div></div>
 
 <p>Note how we define the tNotAfraid Topic object here. Because of the way
@@ -151,11 +152,12 @@ of your code and then make use of it on just the one SayTopic. The
 adv3Lite library accordingly provides a short-cut way of doing this,
 allowing you to define the Topic directly on the SayTopic, like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + SayTopic 'you\'re not afraid; you are i\'m i am'
-      "&lt;q&gt;I'm not afraid of the dark tower, you know,&lt;/q&gt; you boast.\b
-       &lt;q&gt;Well, you should be,&lt;/q&gt; Bob warns you. "
+<p>`
+    + SayTopic ‘you're not afraid; you are i'm i am’
+      “<q>I’m not afraid of the dark tower, you know,</q> you boast.\b
+       <q>Well, you should be,</q> Bob warns you. “
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note that this has the same effect behind the scenes. What happens is
 that the library preinitialization creates an anonymous Topic object
@@ -181,12 +183,13 @@ instead of SAY I’M NOT AFRAID). To deal with this you can define an
 equivalent matchObj for a TellTopic on the SayTopic’s tellMatchObj
 property, like so:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + SayTopic 'you\'re not afraid; you are i\'m i am'
-      "&lt;q&gt;I'm not afraid of the dark tower, you know,&lt;/q&gt; you boast.\b
-       &lt;q&gt;Well, you should be,&lt;/q&gt; Bob warns you. "
-       
-       tellMatchObj = tFear
-    ;
+<p>`
+    + SayTopic ‘you're not afraid; you are i'm i am’
+      “<q>I’m not afraid of the dark tower, you know,</q> you boast.\b
+       <q>Well, you should be,</q> Bob warns you. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   tellMatchObj = tFear
+; `
 </code></pre></div></div>
 
 <p>This assumes that the tFear Topic is defined somewhere else in your
@@ -202,31 +205,32 @@ prevaricate in response to a question Bob asks the player character.
 Since the player does not need to begin a command with SAY to have it
 match a SayTopic this is perfectly possible. You’d do it like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    /* Bob has just asked 'Have you been to the dark tower?' */
+<p>`
+    /* Bob has just asked ‘Have you been to the dark tower?’ */</p>
 
-    + YesTopic
-      "&lt;q&gt;Yes, I have,&lt;/q&gt; you confess.\b
-       &lt;q&gt;You fool!&lt;/q&gt; he groans. "
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ YesTopic
+  "&lt;q&gt;Yes, I have,&lt;/q&gt; you confess.\b
+   &lt;q&gt;You fool!&lt;/q&gt; he groans. "
+;
 
-    + SayTopic @tLie
-       "&lt;q&gt;No, of course not,&lt;/q&gt; you lie hastily. &lt;q&gt;After all,
-        you did warn me.&lt;/q&gt;\b
-        &lt;q&gt;I did,&lt;/q&gt; Bob agrees, just a little warily. "
-        
-        tellMatchObj = tLie
-        includeSayInName = nil
-    ;
++ SayTopic @tLie
+   "&lt;q&gt;No, of course not,&lt;/q&gt; you lie hastily. &lt;q&gt;After all,
+    you did warn me.&lt;/q&gt;\b
+    &lt;q&gt;I did,&lt;/q&gt; Bob agrees, just a little warily. "
+    
+    tellMatchObj = tLie
+    includeSayInName = nil
+;
 
-    + SayTopic 'prevaricate'
-        "&lt;q&gt;Well, not exactly,&lt;/q&gt; you prevaricate.\b
-         &lt;q&gt;What do you mean, &lt;q&gt;not exactly&lt;/q&gt;?&lt;/q&gt; Bob complains testily.
-         &lt;q&gt;Either you have or you haven't!&lt;/q&gt; "
-         
-         includeSayInName = nil
-    ;
++ SayTopic 'prevaricate'
+    "&lt;q&gt;Well, not exactly,&lt;/q&gt; you prevaricate.\b
+     &lt;q&gt;What do you mean, &lt;q&gt;not exactly&lt;/q&gt;?&lt;/q&gt; Bob complains testily.
+     &lt;q&gt;Either you have or you haven't!&lt;/q&gt; "
+     
+     includeSayInName = nil
+;
 
-    tLie: Topic 'lie';
+tLie: Topic 'lie'; `
 </code></pre></div></div>
 
 <p>Note the use of the <strong>includeSayInName</strong> property to suppress the
@@ -381,21 +385,21 @@ Finally, if you want to customize Fred's non response while keeping what
 the player character is deemed to have just said, you could do something
 along the lines of:
 
-```
+`
     ++ DefaultSayTopic
         "&lt;<getActor.pcDefaultSayQuip>&gt;&lt;.p&gt;
         <q>Whatever do you mean?</q> Fred demands. "
     ;
-```
+`
 
 Or, for further customization still:
 
-```
+`
     ++ DefaultSayTopic
         "For some reason you come out with, <q>&lt;&lt;gTopicText.substr(1,1).toUpper()&gt;&gt;&lt;&lt;gTopicText.substr(2).toLower()&gt;&gt;.</q>&lt;.p&gt;
         <q>Whatever do you mean?</q> Fred demands. "
     ;
-```
+`
 
   
 
@@ -408,7 +412,7 @@ defined in a manner similar to SayTopics, except that we need to define
 one further property, the qtype ('how', 'what', 'who', 'why', 'where',
 etc.). We can do this directly in the QueryTopic template, like this:
 
-```
+`
     + QueryTopic 'how' @tHowOld
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -428,7 +432,7 @@ etc.). We can do this directly in the QueryTopic template, like this:
 
     tAge: Topic 'his age'
     ;
-```
+`
 
 Note how we here use the askMatchObj property so that the player would
 get the same response from ASK BOB ABOUT HIS AGE. Note also how we
@@ -443,7 +447,7 @@ aren't any other NPCs where going to put this question to, it's probably
 more convenient to define the Topic vocab directly on the QueryTopic, as
 before:
 
-```
+`
     + QueryTopic 'how' 'old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -451,7 +455,7 @@ before:
 
         askMatchObj = tAge     
     ;
-```
+`
 
 This, by the way, is part of the reason we need to define
 <span id="qtype-idx">qtype</span> as a separate property, and not simply
@@ -463,7 +467,7 @@ lacking the initial ASK. However, when defining a QueryTopic using the
 template form above we can, if we wish, run the qtype and the topic
 vocab together into a single string like this:
 
-```
+`
     + QueryTopic 'how old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -471,7 +475,7 @@ vocab together into a single string like this:
 
         askMatchObj = tAge     
     ;
-```
+`
 
 In this case, where the library doesn't find the qtype property
 seperately defined, it takes the first word of the string to be the
@@ -494,21 +498,21 @@ separate them with a vertical bar. This is most likely to be needed with
 ASK IF and ASK WHETHER, which players are likely to treat as synonyms.
 So, for example, we might define:
 
-```
+`
     + QueryTopic 'if|whether' 'he likes chocolate; you like'
         "<q>Do you like chocolate?</q> you ask.\b
         <q>Of course,</q> he replies. <q>Doesn't everyone?</q>"
     ;
-```
+`
 
 Or, alternatively and equivalently:
 
-```
+`
     + QueryTopic 'if|whether he likes chocolate; you like'
         "<q>Do you like chocolate?</q> you ask.\b
         <q>Of course,</q> he replies. <q>Doesn't everyone?</q>"
     ;
-```
+`
 
 Note here the appearance of 'you like' as additional words in the vocab
 property after the 'he likes chocolate' in the name part. This is to

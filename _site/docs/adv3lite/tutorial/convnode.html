@@ -46,10 +46,11 @@ Angela Wants Answers
 <p>You may recall that one of the exchanges we’ve defined for when the
 player character asks Angela what she’s doing tonight is:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>           '&lt;q&gt;What &lt;i&gt;are&lt;/i&gt; you doing tonight?&lt;/q&gt; you insist.\b
-            &lt;q&gt;I don\'t think that\'s any of your business,&lt;/q&gt; she replies, with
-            rather a bleak smile. &lt;q&gt;Do you?&lt;/q&gt; '
-</code></pre></div></div>
+<p>`
+           ‘<q>What <i>are</i> you doing tonight?</q> you insist.\b
+            <q>I don't think that's any of your business,</q> she replies, with
+            rather a bleak smile. <q>Do you?</q> ‘
+`</p>
 
 <p>Many, if not most players will probably treat the “Do you?” at the end
 of Angela’s reply as a purely rhetorical question, but a few may try
@@ -78,41 +79,42 @@ or NO to Angela’s possibly rhetorical question by adding a
 following <code class="language-plaintext highlighter-rouge">YesTopic</code> and
 <code class="language-plaintext highlighter-rouge">NoTopic</code>:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + QueryTopic, StopEventList 'what' @tDoingTonight
+<p>`
+    + QueryTopic, StopEventList ‘what’ @tDoingTonight
         [
-            '&lt;q&gt;What are you doing tonight?&lt;/q&gt; you ask.\b
-            She cocks one eyebrow at you. &lt;q&gt;I have my plans,&lt;/q&gt; she replies
-            vaguely. ',
-            
-            '&lt;q&gt;What &lt;i&gt;are&lt;/i&gt; you doing tonight?&lt;/q&gt; you insist.\b
-            &lt;q&gt;I don\'t think that\'s any of your business,&lt;/q&gt; she replies, with
-            rather a bleak smile. &lt;q&gt;Do you?&lt;/q&gt; &lt;.convnode not-your-business&gt;',
-            
-            '&lt;q&gt;About tonight...&lt;/q&gt; you begin.\b
-            She cuts you off by pressing her lips together and raising her eyebrows
-            in a mildly disapproving manner, as if to say, &lt;q&gt;That topic is
-            closed.&lt;/q&gt; '       
-        ]
-        
-        convKeys = 'angela'
-    ;
+            ‘<q>What are you doing tonight?</q> you ask.\b
+            She cocks one eyebrow at you. <q>I have my plans,</q> she replies
+            vaguely. ‘,</p>
 
-    + YesTopic
-        "&lt;q&gt;As a matter of fact I do,&lt;/q&gt; you reply boldly.\b
-        &lt;q&gt;In that case we shall have to agree to differ,&lt;/q&gt; she replies, just a
-        little stiffly." 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        '&lt;q&gt;What &lt;i&gt;are&lt;/i&gt; you doing tonight?&lt;/q&gt; you insist.\b
+        &lt;q&gt;I don\'t think that\'s any of your business,&lt;/q&gt; she replies, with
+        rather a bleak smile. &lt;q&gt;Do you?&lt;/q&gt; &lt;.convnode not-your-business&gt;',
         
-        convKeys = ['not-your-business']
-        isActive = nodeActive
-    ;
+        '&lt;q&gt;About tonight...&lt;/q&gt; you begin.\b
+        She cuts you off by pressing her lips together and raising her eyebrows
+        in a mildly disapproving manner, as if to say, &lt;q&gt;That topic is
+        closed.&lt;/q&gt; '       
+    ]
+    
+    convKeys = 'angela'
+;
 
-    + NoTopic
-        "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
-        &lt;q&gt;No; well, there you are then,&lt;/q&gt; she remarks. "
-        
-        convKeys = ['not-your-business']
-        isActive = nodeActive    
-    ;
++ YesTopic
+    "&lt;q&gt;As a matter of fact I do,&lt;/q&gt; you reply boldly.\b
+    &lt;q&gt;In that case we shall have to agree to differ,&lt;/q&gt; she replies, just a
+    little stiffly." 
+    
+    convKeys = ['not-your-business']
+    isActive = nodeActive
+;
+
++ NoTopic
+    "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
+    &lt;q&gt;No; well, there you are then,&lt;/q&gt; she remarks. "
+    
+    convKeys = ['not-your-business']
+    isActive = nodeActive    
+; `
 </code></pre></div></div>
 
 <p>This works, but it may seem a little repetitive to have to repeat the
@@ -125,18 +127,19 @@ Conversation Node. We have already seen how we can use a
 TopicEntries, and we can use a special kind of TopicGroup, a
 <strong>ConvNode</strong>, to do that for us here:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ConvNode 'not-your-business';
+<p>`
+    + ConvNode ‘not-your-business’;</p>
 
-    ++ YesTopic
-        "&lt;q&gt;As a matter of fact I do,&lt;/q&gt; you reply boldly.\b
-        &lt;q&gt;In that case we shall have to agree to differ,&lt;/q&gt; she replies, just a
-        little stiffly."     
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ YesTopic
+    "&lt;q&gt;As a matter of fact I do,&lt;/q&gt; you reply boldly.\b
+    &lt;q&gt;In that case we shall have to agree to differ,&lt;/q&gt; she replies, just a
+    little stiffly."     
+;
 
-    ++ NoTopic
-        "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
-        &lt;q&gt;No; well, there you are then,&lt;/q&gt; she remarks. "  
-    ;
+++ NoTopic
+    "&lt;q&gt;No, I suppose not,&lt;/q&gt; you concede.\b
+    &lt;q&gt;No; well, there you are then,&lt;/q&gt; she remarks. "  
+; `
 </code></pre></div></div>
 
 <p>In most cases, this is probably the easier way to do it; it may also
@@ -165,23 +168,24 @@ Cortez, and Angela wants to know why he’s so interested in the man. We
 could start by adding an AskTellTopic under angelaTalkingState that
 triggers an appropriate Conversation Node:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ AskTellTopic, StopEventList @cortez
+<p>`
+    ++ AskTellTopic, StopEventList @cortez
         [
-            '&lt;q&gt;Do you know who that man waving a gun around at the front of the
-            plane is?&lt;/q&gt; you ask, lowering your voice. &lt;q&gt;It\'s Pablo Cortez, El
-            Diablo\'s right-hand man!&lt;/q&gt;&lt;.inform cortez&gt;\b
-            Her smile becomes rather frosty as she replies, &lt;q&gt;What\'s that to
-            you?&lt;/q&gt; &lt;.convnodet what-to-you&gt;',
-            
-            '&lt;q&gt;You need to be &lt;i&gt;very&lt;/i&gt; careful around Cortez,&lt;/q&gt; you warn
-            her.\b
-            &lt;q&gt;I shall be,&lt;/q&gt; she assures you. '
-        
-        ]
-        autoName = true
-        convKeys = 'top'
-        suggestAs = TellTopic
-    ;
+            ‘<q>Do you know who that man waving a gun around at the front of the
+            plane is?</q> you ask, lowering your voice. <q>It's Pablo Cortez, El
+            Diablo's right-hand man!</q>&lt;.inform cortez&gt;\b
+            Her smile becomes rather frosty as she replies, <q>What's that to
+            you?</q> &lt;.convnodet what-to-you&gt;’,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        '&lt;q&gt;You need to be &lt;i&gt;very&lt;/i&gt; careful around Cortez,&lt;/q&gt; you warn
+        her.\b
+        &lt;q&gt;I shall be,&lt;/q&gt; she assures you. '
+    
+    ]
+    autoName = true
+    convKeys = 'top'
+    suggestAs = TellTopic
+; `
 </code></pre></div></div>
 
 <p>There are a few points to note about the way we’ve defined this
@@ -239,28 +243,29 @@ If you don’t want the suggestion to begin with ‘say’ you can define
 <p>For present purposes we’ll define our Conversation Node with one
 TellTopic and two SayTopics:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ConvNode 'what-to-you';
-        
-    ++ TellTopic @me    
-        "&lt;q&gt;The name's Pond, Sherlock Pond,&lt;/q&gt; you tell her. &lt;q&gt;I'm a British
-        secret agent on the track of these villains!&lt;/q&gt;\b
-        &lt;q&gt;Indeed!&lt;/q&gt; she replies with ill-disguised scepticism. &lt;.inform agent&gt;" 
-        
-        name = 'yourself'
-    ;
+<p>`
+    + ConvNode ‘what-to-you’;</p>
 
-    ++ SayTopic 'Cortez is dangerous'
-        "&lt;q&gt;Pablo Cortez is a &lt;i&gt;very&lt;/i&gt; dangerous man,&lt;/q&gt; you warn her. &lt;q&gt;He's
-        killed more men than I've had hot dinners!&lt;/q&gt;\b
-        &lt;q&gt;Anyone waving a gun around aboard a passenger aircraft might be
-        considered dangerous,&lt;/q&gt; she points out pragmatically. &lt;.inform cortez-dangerous&gt; "    
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ TellTopic @me    
+    "&lt;q&gt;The name's Pond, Sherlock Pond,&lt;/q&gt; you tell her. &lt;q&gt;I'm a British
+    secret agent on the track of these villains!&lt;/q&gt;\b
+    &lt;q&gt;Indeed!&lt;/q&gt; she replies with ill-disguised scepticism. &lt;.inform agent&gt;" 
+    
+    name = 'yourself'
+;
 
-    ++ SayTopic 'she should call security; you'
-        "&lt;q&gt;You should call airport security to deal with him!&lt;/q&gt; you urge her.\b
-        &lt;q&gt;Airport security -- in Narcosia?&lt;/q&gt; she asks incredulously. &lt;q&gt;Somehow I
-        don't think that will exactly help the situation!&lt;/q&gt; "
-    ;
+++ SayTopic 'Cortez is dangerous'
+    "&lt;q&gt;Pablo Cortez is a &lt;i&gt;very&lt;/i&gt; dangerous man,&lt;/q&gt; you warn her. &lt;q&gt;He's
+    killed more men than I've had hot dinners!&lt;/q&gt;\b
+    &lt;q&gt;Anyone waving a gun around aboard a passenger aircraft might be
+    considered dangerous,&lt;/q&gt; she points out pragmatically. &lt;.inform cortez-dangerous&gt; "    
+;
+
+++ SayTopic 'she should call security; you'
+    "&lt;q&gt;You should call airport security to deal with him!&lt;/q&gt; you urge her.\b
+    &lt;q&gt;Airport security -- in Narcosia?&lt;/q&gt; she asks incredulously. &lt;q&gt;Somehow I
+    don't think that will exactly help the situation!&lt;/q&gt; "
+; `
 </code></pre></div></div>
 
 <p>What happens if the player responds with something not corresponding to
@@ -273,15 +278,16 @@ drop. To make this happen we add a <code class="language-plaintext highlighter-r
 game to keep the Conversation Node active for another conversational
 turn:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ DefaultAnyTopic, StopEventList
+<p>`
+    ++ DefaultAnyTopic, StopEventList
         [
-            '&lt;q&gt;No, but what is it to you who this man is?&lt;/q&gt; she interrupts you.
-            &lt;.convstay&gt; ',
-        
-            'She shakes her head. &lt;q&gt;Very well, don\'t answer my question then,&lt;/q&gt;
-            she mutters. '
-        ]
-    ;
+            ‘<q>No, but what is it to you who this man is?</q> she interrupts you.
+            &lt;.convstay&gt; ‘,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        'She shakes her head. &lt;q&gt;Very well, don\'t answer my question then,&lt;/q&gt;
+        she mutters. '
+    ]
+; `
 </code></pre></div></div>
 
 <p>The other thing the player could do to throw our Conversation Node off
@@ -312,26 +318,27 @@ end.</p>
 
 <p>We can add a NodeEndCheck object to our current Conversation Node thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ NodeEndCheck
+<p>`
+    ++ NodeEndCheck
         canEndConversation(reason)
         {
             if(reason == endConvBye)
             {
-                "&lt;q&gt;&lt;q&gt;Goodbye,&lt;/q&gt; isn't an answer,&lt;/q&gt; {the subj angela}
-                complains. &lt;q&gt;Why are you so bothered about this man Cortez?&lt;/q&gt; ";
-                                  
-                return blockEndConv;
-            }
-            
-            if(reason == endConvLeave)
-            {
-                "This doesn't seem a good point to break off the conversation. ";
-                return nil;
-            }
-            
-            return true;
+                “<q><q>Goodbye,</q> isn’t an answer,</q> {the subj angela}
+                complains. <q>Why are you so bothered about this man Cortez?</q> “;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            return blockEndConv;
         }
-    ;
+        
+        if(reason == endConvLeave)
+        {
+            "This doesn't seem a good point to break off the conversation. ";
+            return nil;
+        }
+        
+        return true;
+    }
+; `
 </code></pre></div></div>
 
 <h2 id="angela-demands-an-answer">Angela Demands an Answer</h2>
@@ -358,30 +365,31 @@ to Angela’s agenda list at some suitable point, such as the
 which causes her to reboard the plane once the player is wearing the
 pilot’s uniform (and the takeover scene comes to an end):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + angelaReboardingAgenda: AgendaItem
-        isReady = (takeover.hasHappened)
-        
-        invokeItem()
-        {
-            isDone = true;
-            getActor.moveInto(planeFront);
-            getActor.setState(angelaSeatedState);
-            getActor.addToAgenda(angelaPilotAgenda);
-        }
-        
-    ;
+<p>`
+    + angelaReboardingAgenda: AgendaItem
+        isReady = (takeover.hasHappened)</p>
 
-    + angelaPilotAgenda: ConvAgendaItem    
-        invokeItem()
-        {
-            isDone = true;
-            "{The subj angela} looks up at you sharply and frowns. &lt;q&gt;Hey! You're
-            one of the the passengers, aren't you?&lt;/q&gt; she remarks. &lt;q&gt;I remember
-            looking at your ticket! You certainly aren't our pilot. What are you
-            doing in that uniform?&lt;/q&gt;&lt;.convnodet uniform&gt; ";
-            
-        }
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    invokeItem()
+    {
+        isDone = true;
+        getActor.moveInto(planeFront);
+        getActor.setState(angelaSeatedState);
+        getActor.addToAgenda(angelaPilotAgenda);
+    }
+    
+;
+
++ angelaPilotAgenda: ConvAgendaItem    
+    invokeItem()
+    {
+        isDone = true;
+        "{The subj angela} looks up at you sharply and frowns. &lt;q&gt;Hey! You're
+        one of the the passengers, aren't you?&lt;/q&gt; she remarks. &lt;q&gt;I remember
+        looking at your ticket! You certainly aren't our pilot. What are you
+        doing in that uniform?&lt;/q&gt;&lt;.convnodet uniform&gt; ";
+        
+    }
+; `
 </code></pre></div></div>
 
 <p>Next we can set up the corresponding Conversation Node and populate it
@@ -389,40 +397,41 @@ with some SayTopics. Whichever response the player chooses we’ll have
 Angela ask if the player character really intends to fly the plane and
 then switch to another Conversation Node for an answer to that question:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ConvNode 'uniform';
+<p>`
+    + ConvNode ‘uniform’;</p>
 
-    ++ SayTopic 'all British agents learn to fly'
-        "&lt;q&gt;I told you, I'm a British agent, and all British agents learn to fly --
-        it's part of our training,&lt;/q&gt; you tell her.\b
-        &lt;q&gt;You mean you actually intend to fly this aircraft?&lt;/q&gt; she demands,
-        startled. &lt;.convnodet intend-fly&gt; "
-        
-        isActive = gInformed('agent')
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ SayTopic 'all British agents learn to fly'
+    "&lt;q&gt;I told you, I'm a British agent, and all British agents learn to fly --
+    it's part of our training,&lt;/q&gt; you tell her.\b
+    &lt;q&gt;You mean you actually intend to fly this aircraft?&lt;/q&gt; she demands,
+    startled. &lt;.convnodet intend-fly&gt; "
+    
+    isActive = gInformed('agent')
+;
 
-    ++ SayTopic 'you have a pilot\'s license; i'
-        "&lt;q&gt;It's quite all right, I have a pilot's license,&lt;/q&gt; you assure her.\b
-        &lt;q&gt;Yes, but...&lt;/q&gt; she begins. &lt;q&gt;Do you actually mean to say you intend to
-        fly this plane?&lt;/q&gt; &lt;.convnodet intend-fly&gt; "
-        
-        isActive = !gInformed('agent')
-    ;
+++ SayTopic 'you have a pilot\'s license; i'
+    "&lt;q&gt;It's quite all right, I have a pilot's license,&lt;/q&gt; you assure her.\b
+    &lt;q&gt;Yes, but...&lt;/q&gt; she begins. &lt;q&gt;Do you actually mean to say you intend to
+    fly this plane?&lt;/q&gt; &lt;.convnodet intend-fly&gt; "
+    
+    isActive = !gInformed('agent')
+;
 
-    ++ SayTopic 'you\'re the replacement pilot; you are i am i\'m'
-        "&lt;q&gt;You said you were waiting for the pilot, but there's no sign of him, so
-        I'm standing in for him,&lt;/q&gt; you reply.\b
-        &lt;q&gt;You!&lt;/q&gt; she exclaims. &lt;q&gt;You mean, &lt;i&gt;you're&lt;/i&gt; going to fly this
-        plane?&lt;/q&gt; &lt;.convnodet intend-fly&gt; "
-        
-        isActive = gRevealed('pilot-awaited')
-    ;
+++ SayTopic 'you\'re the replacement pilot; you are i am i\'m'
+    "&lt;q&gt;You said you were waiting for the pilot, but there's no sign of him, so
+    I'm standing in for him,&lt;/q&gt; you reply.\b
+    &lt;q&gt;You!&lt;/q&gt; she exclaims. &lt;q&gt;You mean, &lt;i&gt;you're&lt;/i&gt; going to fly this
+    plane?&lt;/q&gt; &lt;.convnodet intend-fly&gt; "
+    
+    isActive = gRevealed('pilot-awaited')
+;
 
-    ++ SayTopic 'you just found the uniform; i'
-        "&lt;q&gt;I found the uniform, you need a pilot,&lt;/q&gt; you reply with a smile and a
-        shrug. &lt;q&gt;Besides, I do know how to fly -- I have a license.&lt;/q&gt;\b
-        &lt;q&gt;You mean you're intending to fly this plane?&lt;/q&gt; she demands
-        incredulously. &lt;.convnodet intend-fly&gt; "
-    ;
+++ SayTopic 'you just found the uniform; i'
+    "&lt;q&gt;I found the uniform, you need a pilot,&lt;/q&gt; you reply with a smile and a
+    shrug. &lt;q&gt;Besides, I do know how to fly -- I have a license.&lt;/q&gt;\b
+    &lt;q&gt;You mean you're intending to fly this plane?&lt;/q&gt; she demands
+    incredulously. &lt;.convnodet intend-fly&gt; "
+; `
 </code></pre></div></div>
 
 <p>Note the use of the <code class="language-plaintext highlighter-rouge">isActive</code> on the first
@@ -445,21 +454,22 @@ responses to choose from at this point.</p>
 to leave the Conversation Node until he’s chosen one of the above
 SayTopics:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ DefaultAnyTopic, ShuffledEventList
+<p>`
+    ++ DefaultAnyTopic, ShuffledEventList
         [
-            '&lt;q&gt;No, but answer my question,&lt;/q&gt; she interrupts you. &lt;q&gt;What are you
-            doing in that uniform?&lt;/q&gt; &lt;.convstay&gt; ',
-            
-            '&lt;q&gt;That\'s not what I asked,&lt;/q&gt; she complains. &lt;q&gt;Tell me why you\'re
-            wearing that uniform!&lt;/q&gt; &lt;.convstay&gt;',
-            
-            '&lt;q&gt;Why are you wearing that uniform?&lt;/q&gt; she insists, brushing aside
-            your irrelevant remarks. &lt;.convstay&gt; ',
-            
-            '&lt;q&gt;That still doesn\'t tell me what you\'re doing with that
-            uniform,&lt;/q&gt; she complains. &lt;q&gt;Why are you wearing it?&lt;/q&gt; &lt;.convstay&gt; '
-        ]
-    ;
+            ‘<q>No, but answer my question,</q> she interrupts you. <q>What are you
+            doing in that uniform?</q> &lt;.convstay&gt; ‘,</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        '&lt;q&gt;That\'s not what I asked,&lt;/q&gt; she complains. &lt;q&gt;Tell me why you\'re
+        wearing that uniform!&lt;/q&gt; &lt;.convstay&gt;',
+        
+        '&lt;q&gt;Why are you wearing that uniform?&lt;/q&gt; she insists, brushing aside
+        your irrelevant remarks. &lt;.convstay&gt; ',
+        
+        '&lt;q&gt;That still doesn\'t tell me what you\'re doing with that
+        uniform,&lt;/q&gt; she complains. &lt;q&gt;Why are you wearing it?&lt;/q&gt; &lt;.convstay&gt; '
+    ]
+; `
 </code></pre></div></div>
 
 <p>Note how we add a <code class="language-plaintext highlighter-rouge">\&lt;.convstay\&gt;</code> tag to each of
@@ -468,25 +478,26 @@ Conversation Node. The next step is to prevent the player from breaking
 off the conversation prematurely, which we can once again do with a
 NodeEndCheck object:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ NodeEndCheck
+<p>`
+    ++ NodeEndCheck
         canEndConversation(reason)
         {
             switch(reason)
             {
             case endConvBye:
-                "&lt;q&gt;Oh no, you're not avoiding my question like that!&lt;/q&gt; she tells
-                you. &lt;q&gt;Tell me, why are you wearing that pilot's uniform?&lt;/q&gt; ";
+                “<q>Oh no, you’re not avoiding my question like that!</q> she tells
+                you. <q>Tell me, why are you wearing that pilot’s uniform?</q> “;
                 return blockEndConv;
             case endConvLeave:
-                "&lt;q&gt;You're not going anywhere until you tell me what you're doing in
-                that uniform!&lt;/q&gt; {the subj angela} insists. ";
+                “<q>You’re not going anywhere until you tell me what you’re doing in
+                that uniform!</q> {the subj angela} insists. “;
                 return blockEndConv;
             default:
                 return nil;
             }
         }
     ;
-</code></pre></div></div>
+`</p>
 
 <p>The other thing the player could try to deflect Angela’s question is to
 carry out a whole lot of irrelevant non-conversational commands (even
@@ -496,13 +507,14 @@ each turn we remain in the node and there hasn’t been a conversational
 exchange. For that purpose we can define a <strong>NodeContinuationTopic</strong>
 (which we also locate in the ConvNode in question):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ NodeContinuationTopic
-        "&lt;q&gt;&lt;&lt;one of&gt;&gt;I asked you a question&lt;&lt;or&gt;&gt;I'm still waiting for an
-        answer&lt;&lt;cycling&gt;&gt;,&lt;/q&gt; {the subj angela} &lt;&lt;one of&gt;&gt; reminds
-        you&lt;&lt;or&gt;&gt; insists&lt;&lt;or&gt;&gt; repeats&lt;&lt;cycling&gt;&gt;. &lt;q&gt;Why are you wearing that
-        uniform?&lt;/q&gt; "
+<p>`
+    ++ NodeContinuationTopic
+        “<q>«one of»I asked you a question«or»I’m still waiting for an
+        answer«cycling»,</q> {the subj angela} «one of» reminds
+        you«or» insists«or» repeats«cycling». <q>Why are you wearing that
+        uniform?</q> “
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note the use of the <code class="language-plaintext highlighter-rouge">\&lt;\&lt;one of\&gt;\&gt;</code> embedded
 expression constructs to vary what’s displayed slightly on each
@@ -513,60 +525,61 @@ here will suffice for now.</p>
 <p>The final step is to define the Conversation Node the player is taken to
 next, the ‘intend-fly’ node:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + ConvNode 'intend-fly'
-       commonResponse = "\b&lt;q&gt;Very well, then,&lt;/q&gt; she sighs. &lt;q&gt;I suppose we don't
-           have too much choice now, do we? Just as long as you know what you're
-           doing...&lt;/q&gt; "
-    ;
+<p>`
+    + ConvNode ‘intend-fly’
+       commonResponse = “\b<q>Very well, then,</q> she sighs. <q>I suppose we don’t
+           have too much choice now, do we? Just as long as you know what you’re
+           doing…</q> “
+    ;</p>
 
-    ++ YesTopic
-        "&lt;q&gt;Yes, why not?&lt;/q&gt; you reply breezily. &lt;q&gt;You can't wait here all day --
-        Pablo Cortez and his merry crew won't stand for it, for one thing!&lt;/q&gt;
-        &lt;&lt;location.commonResponse&gt;&gt;"
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ YesTopic
+    "&lt;q&gt;Yes, why not?&lt;/q&gt; you reply breezily. &lt;q&gt;You can't wait here all day --
+    Pablo Cortez and his merry crew won't stand for it, for one thing!&lt;/q&gt;
+    &lt;&lt;location.commonResponse&gt;&gt;"
+;
 
-    ++ QueryTopic 'why not'
-        "&lt;q&gt;Why not?&lt;/q&gt; you ask. &lt;q&gt;You need a pilot and I need to get out of here.
-        Besides, I wouldn't want to be in your shoes when this lot run out of
-        patience!&lt;/q&gt; You nod towards the gangsters and drug barons occupying the
-        passenger seats further down the aisle. &lt;&lt;location.commonResponse&gt;&gt;"
-    ;
+++ QueryTopic 'why not'
+    "&lt;q&gt;Why not?&lt;/q&gt; you ask. &lt;q&gt;You need a pilot and I need to get out of here.
+    Besides, I wouldn't want to be in your shoes when this lot run out of
+    patience!&lt;/q&gt; You nod towards the gangsters and drug barons occupying the
+    passenger seats further down the aisle. &lt;&lt;location.commonResponse&gt;&gt;"
+;
 
-    ++ QueryTopic 'whether|if she has a better idea; you have'
-        "&lt;q&gt;Do you have a better idea?&lt;/q&gt; you counter. &lt;q&gt;There's no sign of your
-        regular pilot, and I wouldn't want to be in your shoes when your current
-        passengers run out of patience!&lt;/q&gt; &lt;&lt;location.commonResponse&gt;&gt;"
-    ;
+++ QueryTopic 'whether|if she has a better idea; you have'
+    "&lt;q&gt;Do you have a better idea?&lt;/q&gt; you counter. &lt;q&gt;There's no sign of your
+    regular pilot, and I wouldn't want to be in your shoes when your current
+    passengers run out of patience!&lt;/q&gt; &lt;&lt;location.commonResponse&gt;&gt;"
+;
 
-    ++ DefaultAnyTopic
-        "&lt;q&gt;Please answer my question,&lt;/q&gt; she insists. &lt;q&gt;Do you really intend to
-        fly this plane?&lt;/q&gt; &lt;.convstay&gt;"
-    ;
+++ DefaultAnyTopic
+    "&lt;q&gt;Please answer my question,&lt;/q&gt; she insists. &lt;q&gt;Do you really intend to
+    fly this plane?&lt;/q&gt; &lt;.convstay&gt;"
+;
 
-    ++ NodeEndCheck
-        canEndConversation(reason)
+++ NodeEndCheck
+    canEndConversation(reason)
+    {
+        switch(reason)
         {
-            switch(reason)
-            {
-            case endConvBye:
-                "&lt;q&gt;That's not an answer!&lt;/q&gt; she complains. &lt;q&gt;Tell me, are
-                you proposing to fly this plane yourself?&lt;/q&gt; ";
-                return blockEndConv;
-            case endConvLeave:
-                "&lt;q&gt;Don't walk off until you've told me whether you're proposing to
-                fly this plane,&lt;/q&gt; {the subj angela} insists. &lt;q&gt;Well, are
-                you?&lt;/q&gt; ";
-                return blockEndConv;
-            default:
-                return nil;
-            }
+        case endConvBye:
+            "&lt;q&gt;That's not an answer!&lt;/q&gt; she complains. &lt;q&gt;Tell me, are
+            you proposing to fly this plane yourself?&lt;/q&gt; ";
+            return blockEndConv;
+        case endConvLeave:
+            "&lt;q&gt;Don't walk off until you've told me whether you're proposing to
+            fly this plane,&lt;/q&gt; {the subj angela} insists. &lt;q&gt;Well, are
+            you?&lt;/q&gt; ";
+            return blockEndConv;
+        default:
+            return nil;
         }
-    ;
+    }
+;
 
-    ++ NodeContinuationTopic
-        "&lt;q&gt;I'd appreciate it if you answered my question,&lt;/q&gt; {the subj angela}
-        insists. &lt;q&gt;Are you really proposing to fly this aircraft?&lt;/q&gt; "
-    ;
+++ NodeContinuationTopic
+    "&lt;q&gt;I'd appreciate it if you answered my question,&lt;/q&gt; {the subj angela}
+    insists. &lt;q&gt;Are you really proposing to fly this aircraft?&lt;/q&gt; "
+; `
 </code></pre></div></div>
 
 <p>We’ve saved ourselves a bit of typing here by defining a

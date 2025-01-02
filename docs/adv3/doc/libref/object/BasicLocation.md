@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A basic location - this is the base class for locations that can contain
 actors.
 
 `class `**`BasicLocation`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BasicLocation`**  
 [`Thing`](../object/Thing.html)  
@@ -49,11 +49,11 @@ actors.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BasicLocation`**  
 [`NestedRoom`](../object/NestedRoom.html)  
@@ -74,19 +74,19 @@ actors.
 [`ShipboardRoom`](../object/ShipboardRoom.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotGoThatWayMsg`](#cannotGoThatWayMsg)[`defaultPosture`](#defaultPosture)[`effectiveFollowLocation`](#effectiveFollowLocation)[`listWithActorInTable`](#listWithActorInTable)[`mustDefaultPostureProp`](#mustDefaultPostureProp)[`notTravelReadyMsg`](#notTravelReadyMsg)[`roomLocation`](#roomLocation)[`roomNotifyList`](#roomNotifyList)[`roomTravelPreCond`](#roomTravelPreCond)
 
@@ -98,11 +98,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`actorInGroupPrefix`](#actorInGroupPrefix)[`actorInGroupSuffix`](#actorInGroupSuffix)[`actorIsFamiliar`](#actorIsFamiliar)[`actorKnowsDestination`](#actorKnowsDestination)[`actorTravelingWithin`](#actorTravelingWithin)[`addRoomNotifyItem`](#addRoomNotifyItem)[`cannotGoShowExits`](#cannotGoShowExits)[`cannotGoThatWay`](#cannotGoThatWay)[`cannotGoThatWayInDark`](#cannotGoThatWayInDark)[`cannotTravel`](#cannotTravel)[`checkActorOutOfNested`](#checkActorOutOfNested)[`checkActorReadyToEnterNestedRoom`](#checkActorReadyToEnterNestedRoom)[`checkMovingActorInto`](#checkMovingActorInto)[`checkStagingLocation`](#checkStagingLocation)[`checkTravelerDirectlyInRoom`](#checkTravelerDirectlyInRoom)[`disembarkRoom`](#disembarkRoom)[`dispatchRoomDaemon`](#dispatchRoomDaemon)[`enteringRoom`](#enteringRoom)[`getDropDestination`](#getDropDestination)[`getExtraScopeItems`](#getExtraScopeItems)[`getNominalActorContainer`](#getNominalActorContainer)[`getNominalDropDestination`](#getNominalDropDestination)[`getRoomNotifyList`](#getRoomNotifyList)[`getStatuslineExitsHeight`](#getStatuslineExitsHeight)[`isActorTravelReady`](#isActorTravelReady)[`leavingRoom`](#leavingRoom)[`listWithActorIn`](#listWithActorIn)[`makeStandingUp`](#makeStandingUp)[`removeRoomNotifyItem`](#removeRoomNotifyItem)[`roomActorHereDesc`](#roomActorHereDesc)[`roomActorPostureDesc`](#roomActorPostureDesc)[`roomActorStatus`](#roomActorStatus)[`roomActorThereDesc`](#roomActorThereDesc)[`roomAfterAction`](#roomAfterAction)[`roomBeforeAction`](#roomBeforeAction)[`roomDarkTravel`](#roomDarkTravel)[`roomDesc`](#roomDesc)[`roomListActorPosture`](#roomListActorPosture)[`roomOkayPostureChange`](#roomOkayPostureChange)[`showStatuslineExits`](#showStatuslineExits)[`travelerArriving`](#travelerArriving)[`travelerLeaving`](#travelerLeaving)[`tryMakingDefaultPosture`](#tryMakingDefaultPosture)[`tryMakingTravelReady`](#tryMakingTravelReady)[`wouldBeLitFor`](#wouldBeLitFor)
 
@@ -114,11 +114,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotGoThatWayMsg"></span>
 
@@ -126,14 +126,14 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[4232](../source/travel.t.html#4232)\]
 
-<div class="desc">
+
 
 The message to display when it's not possible to travel in a given
 direction from this room; this is either a single-quoted string or an
 actor action messages property (by default, it's the latter, giving a
 default library message).
 
-</div>
+
 
 <span id="defaultPosture"></span>
 
@@ -141,13 +141,13 @@ default library message).
 
 [travel.t](../file/travel.t.html)\[[3695](../source/travel.t.html#3695)\]
 
-<div class="desc">
+
 
 Default posture for an actor in the location. This is the posture
 assumed by an actor when moving out of a nested room within this
 location.
 
-</div>
+
 
 <span id="effectiveFollowLocation"></span>
 
@@ -155,7 +155,7 @@ location.
 
 [travel.t](../file/travel.t.html)\[[4268](../source/travel.t.html#4268)\]
 
-<div class="desc">
+
 
 Get the effective location of an actor directly within me, for the
 purposes of a "follow" command. To follow someone, we must have the same
@@ -164,7 +164,7 @@ target leaving.
 
 For most rooms, this is simply the room itself.
 
-</div>
+
 
 <span id="listWithActorInTable"></span>
 
@@ -172,12 +172,12 @@ For most rooms, this is simply the room itself.
 
 [travel.t](../file/travel.t.html)\[[3503](../source/travel.t.html#3503)\]
 
-<div class="desc">
+
 
 our listWithActorIn table - this gets initialized to a LookupTable as
 soon as we need one (in listWithActorIn)
 
-</div>
+
 
 <span id="mustDefaultPostureProp"></span>
 
@@ -185,11 +185,11 @@ soon as we need one (in listWithActorIn)
 
 [travel.t](../file/travel.t.html)\[[3698](../source/travel.t.html#3698)\]
 
-<div class="desc">
+
 
 failure report we issue when we can't return to default posture
 
-</div>
+
 
 <span id="notTravelReadyMsg"></span>
 
@@ -197,11 +197,11 @@ failure report we issue when we can't return to default posture
 
 [travel.t](../file/travel.t.html)\[[3840](../source/travel.t.html#3840)\]
 
-<div class="desc">
+
 
 the message explaining what we must do to be travel-ready
 
-</div>
+
 
 <span id="roomLocation"></span>
 
@@ -209,12 +209,12 @@ the message explaining what we must do to be travel-ready
 
 [travel.t](../file/travel.t.html)\[[3988](../source/travel.t.html#3988)\]
 
-<div class="desc">
+
 
 Get the room location. Since we're capable of holding actors, we are our
 own room location.
 
-</div>
+
 
 <span id="roomNotifyList"></span>
 
@@ -222,11 +222,11 @@ own room location.
 
 [travel.t](../file/travel.t.html)\[[3982](../source/travel.t.html#3982)\]
 
-<div class="desc">
+
 
 our list of registered notification items
 
-</div>
+
 
 <span id="roomTravelPreCond"></span>
 
@@ -234,21 +234,21 @@ our list of registered notification items
 
 [travel.t](../file/travel.t.html)\[[4258](../source/travel.t.html#4258)\]
 
-<div class="desc">
+
 
 Get preconditions for travel for an actor in this location. These
 preconditions should be applied by any command that will involve travel
 from this location. By default, we impose no additional requirements.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="actorInGroupPrefix"></span>
 
@@ -256,7 +256,7 @@ from this location. By default, we impose no additional requirements.
 
 [travel.t](../file/travel.t.html)\[[3621](../source/travel.t.html#3621)\]
 
-<div class="desc">
+
 
 Prefix and suffix messages for listing a group of actors nominally in
 this location. 'posture' is the posture of the actors. 'remote' is the
@@ -265,7 +265,7 @@ remote from the point-of-view actor; if everything is local, this will
 be nil. 'lst' is the list of actors being listed. By default, we'll just
 show the standard library messages.
 
-</div>
+
 
 <span id="actorInGroupSuffix"></span>
 
@@ -273,11 +273,11 @@ show the standard library messages.
 
 [travel.t](../file/travel.t.html)\[[3629](../source/travel.t.html#3629)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorIsFamiliar"></span>
 
@@ -285,7 +285,7 @@ show the standard library messages.
 
 [travel.t](../file/travel.t.html)\[[4154](../source/travel.t.html#4154)\]
 
-<div class="desc">
+
 
 Is the actor familiar with this location? In other words, is the actor
 supposed to know the location well at the start of the game?
@@ -304,7 +304,7 @@ Note that this routine doesn't need to "learn" based on the events of
 the game. The familiarity here is meant only to model the actor's
 knowledge as of the start of the game.
 
-</div>
+
 
 <span id="actorKnowsDestination"></span>
 
@@ -312,7 +312,7 @@ knowledge as of the start of the game.
 
 [travel.t](../file/travel.t.html)\[[4122](../source/travel.t.html#4122)\]
 
-<div class="desc">
+
 
 Determine if the given actor has "intrinsic" knowledge of the
 destination of the given travel connector leading away from this
@@ -343,7 +343,7 @@ any default handling for case (2), so individual rooms (or subclasses)
 must override this method if they want to specify intrinsic knowledge
 for any of their outgoing connectors.
 
-</div>
+
 
 <span id="actorTravelingWithin"></span>
 
@@ -351,7 +351,7 @@ for any of their outgoing connectors.
 
 [travel.t](../file/travel.t.html)\[[4085](../source/travel.t.html#4085)\]
 
-<div class="desc">
+
 
 Receive notification of travel among nested rooms. When an actor moves
 between two locations related directly by containing (such as from a
@@ -366,7 +366,7 @@ TravelConnector object rather than by direct containment.
 We do nothing by default. Locations can override this if they wish to
 perform any special handling during this type of travel.
 
-</div>
+
 
 <span id="addRoomNotifyItem"></span>
 
@@ -374,7 +374,7 @@ perform any special handling during this type of travel.
 
 [travel.t](../file/travel.t.html)\[[3970](../source/travel.t.html#3970)\]
 
-<div class="desc">
+
 
 Add an item to our registered notification list for actions in the room.
 
@@ -385,7 +385,7 @@ an action are automatically notified of the action; only items that must
 receive notification even when not connected by containment need to be
 registered here.
 
-</div>
+
 
 <span id="cannotGoShowExits"></span>
 
@@ -393,12 +393,12 @@ registered here.
 
 [travel.t](../file/travel.t.html)\[[3642](../source/travel.t.html#3642)\]
 
-<div class="desc">
+
 
 Show a list of exits from this room as part of failed travel ("you can't
 go that way").
 
-</div>
+
 
 <span id="cannotGoThatWay"></span>
 
@@ -406,14 +406,14 @@ go that way").
 
 [travel.t](../file/travel.t.html)\[[4217](../source/travel.t.html#4217)\]
 
-<div class="desc">
+
 
 Show the default "you can't go that way" message for this location. By
 default, we show a generic message, but individual rooms might want to
 override this to provide a more specific description of why travel isn't
 allowed.
 
-</div>
+
 
 <span id="cannotGoThatWayInDark"></span>
 
@@ -421,7 +421,7 @@ allowed.
 
 [travel.t](../file/travel.t.html)\[[4246](../source/travel.t.html#4246)\]
 
-<div class="desc">
+
 
 Show a version of the "you can't go that way" message for travel while
 in the dark. This is called when the actor is in the dark (i.e., there's
@@ -432,7 +432,7 @@ where you're going in the dark" message.
 This routine is essentially a replacement for the cannotGoThatWay()
 routine that we use when the actor is in the dark.
 
-</div>
+
 
 <span id="cannotTravel"></span>
 
@@ -440,7 +440,7 @@ routine that we use when the actor is in the dark.
 
 [travel.t](../file/travel.t.html)\[[4170](../source/travel.t.html#4170)\]
 
-<div class="desc">
+
 
 The default "you can't go that way" message for travel within this
 location in directions that don't allow travel. This is shown whenever
@@ -453,7 +453,7 @@ The handling depends on whether or not it's dark. If it's dark, we don't
 want to reveal whether or not it's actually possible to perform the
 travel, since there's no light to see where the exits are.
 
-</div>
+
 
 <span id="checkActorOutOfNested"></span>
 
@@ -461,13 +461,13 @@ travel, since there's no light to see where the exits are.
 
 [travel.t](../file/travel.t.html)\[[3812](../source/travel.t.html#3812)\]
 
-<div class="desc">
+
 
 Check, using pre-condition rules, that the actor is removed from this
 nested location and moved to its exit destination. By default, we're not
 a nested location, so there's nothing for us to do.
 
-</div>
+
 
 <span id="checkActorReadyToEnterNestedRoom"></span>
 
@@ -475,13 +475,13 @@ a nested location, so there's nothing for us to do.
 
 [travel.t](../file/travel.t.html)\[[3785](../source/travel.t.html#3785)\]
 
-<div class="desc">
+
 
 Check, using pre-condition rules, that the actor is ready to enter this
 room as a nested location. By default, we do nothing, since we're not
 designed as a nested location.
 
-</div>
+
 
 <span id="checkMovingActorInto"></span>
 
@@ -489,11 +489,11 @@ designed as a nested location.
 
 [travel.t](../file/travel.t.html)\[[3718](../source/travel.t.html#3718)\]
 
-<div class="desc">
+
 
 Try moving the actor into this location.
 
-</div>
+
 
 <span id="checkStagingLocation"></span>
 
@@ -501,12 +501,12 @@ Try moving the actor into this location.
 
 [travel.t](../file/travel.t.html)\[[3710](../source/travel.t.html#3710)\]
 
-<div class="desc">
+
 
 Check this object as a staging location. We're a valid location, so we
 allow this.
 
-</div>
+
 
 <span id="checkTravelerDirectlyInRoom"></span>
 
@@ -514,13 +514,13 @@ allow this.
 
 [travel.t](../file/travel.t.html)\[[3796](../source/travel.t.html#3796)\]
 
-<div class="desc">
+
 
 Check that the traveler is directly in the given room, using
 pre-condition rules. 'nested' is the nested location immediately within
 this room that contains the actor (directly or indirectly).
 
-</div>
+
 
 <span id="disembarkRoom"></span>
 
@@ -528,12 +528,12 @@ this room that contains the actor (directly or indirectly).
 
 [travel.t](../file/travel.t.html)\[[3846](../source/travel.t.html#3846)\]
 
-<div class="desc">
+
 
 An actor is attempting to disembark this location. By default, we'll
 simply turn this into an "exit" command.
 
-</div>
+
 
 <span id="dispatchRoomDaemon"></span>
 
@@ -541,13 +541,13 @@ simply turn this into an "exit" command.
 
 [travel.t](../file/travel.t.html)\[[4275](../source/travel.t.html#4275)\]
 
-<div class="desc">
+
 
 Dispatch the room daemon. This is a daemon routine invoked once per
 turn; we in turn invoke roomDaemon on the current player character's
 current location.
 
-</div>
+
 
 <span id="enteringRoom"></span>
 
@@ -555,7 +555,7 @@ current location.
 
 [travel.t](../file/travel.t.html)\[[3998](../source/travel.t.html#3998)\]
 
-<div class="desc">
+
 
 Receive notification that a traveler is arriving. This is a convenience
 method that rooms can override to carry out side effects of arrival.
@@ -564,7 +564,7 @@ location description) is displayed, so the method can make any
 adjustments to the room's status or contents needed for the arrival. By
 default, we do nothing.
 
-</div>
+
 
 <span id="getDropDestination"></span>
 
@@ -572,7 +572,7 @@ default, we do nothing.
 
 [travel.t](../file/travel.t.html)\[[3862](../source/travel.t.html#3862)\]
 
-<div class="desc">
+
 
 The destination for objects explicitly dropped by an actor within this
 room. By default, we'll return self, because items dropped should simply
@@ -582,7 +582,7 @@ probably want to set the drop destination to the location below the
 tightrope. Likewise, objects like chairs will usually prefer to have
 dropped items go into the enclosing room.
 
-</div>
+
 
 <span id="getExtraScopeItems"></span>
 
@@ -590,7 +590,7 @@ dropped items go into the enclosing room.
 
 [travel.t](../file/travel.t.html)\[[3908](../source/travel.t.html#3908)\]
 
-<div class="desc">
+
 
 Get any extra items in scope for an actor in this location. These are
 items that are to be in scope even if they're not reachable through any
@@ -603,7 +603,7 @@ probably want to include itself in scope, since the actor presumably
 knows he or she is sitting in a chair even if it's too dark to see the
 chair.
 
-</div>
+
 
 <span id="getNominalActorContainer"></span>
 
@@ -611,7 +611,7 @@ chair.
 
 [travel.t](../file/travel.t.html)\[[3894](../source/travel.t.html#3894)\]
 
-<div class="desc">
+
 
 The "nominal actor container" - this is the container which we'll say
 actors are in when we describe actors who are actually in this location.
@@ -620,7 +620,7 @@ describe actors as being in some object other than self. The most common
 case is that normal top-level rooms usually want to describe actors as
 being "on the floor" or similar.
 
-</div>
+
 
 <span id="getNominalDropDestination"></span>
 
@@ -628,7 +628,7 @@ being "on the floor" or similar.
 
 [travel.t](../file/travel.t.html)\[[3883](../source/travel.t.html#3883)\]
 
-<div class="desc">
+
 
 The nominal drop destination - this is the location where objects are
 \*reported\* to go when dropped by an actor in this location. By
@@ -643,7 +643,7 @@ whatever), even though the room itself is the location where the object
 actually ends up. We distinguish between the nominal and actual drop
 location to allow these distinctions in reported messages.
 
-</div>
+
 
 <span id="getRoomNotifyList"></span>
 
@@ -651,7 +651,7 @@ location to allow these distinctions in reported messages.
 
 [travel.t](../file/travel.t.html)\[[3943](../source/travel.t.html#3943)\]
 
-<div class="desc">
+
 
 Get my notification list - this is a list of objects on which we must
 call beforeAction and afterAction when an action is performed within
@@ -665,7 +665,7 @@ list all of the objects connected by containment to the actor, so
 objects that are in this room need not register for explicit
 notification.
 
-</div>
+
 
 <span id="getStatuslineExitsHeight"></span>
 
@@ -673,7 +673,7 @@ notification.
 
 [travel.t](../file/travel.t.html)\[[3664](../source/travel.t.html#3664)\]
 
-<div class="desc">
+
 
 Get the estimated height, in lines of text, of the exits display's
 contribution to the status line. This is used to calculate the extra
@@ -681,7 +681,7 @@ height we need in the status line, if any, to display the exit list. If
 we're not configured to display exits in the status line, this should
 return zero.
 
-</div>
+
 
 <span id="isActorTravelReady"></span>
 
@@ -689,7 +689,7 @@ return zero.
 
 [travel.t](../file/travel.t.html)\[[3826](../source/travel.t.html#3826)\]
 
-<div class="desc">
+
 
 Determine if the current gActor, who is directly in this location, is
 "travel ready." This means that the actor is ready, as far as this
@@ -698,7 +698,7 @@ consider an actor to be travel-ready if the actor is standing; this
 takes care of most nested room situations, such as chairs and beds,
 automatically.
 
-</div>
+
 
 <span id="leavingRoom"></span>
 
@@ -706,14 +706,14 @@ automatically.
 
 [travel.t](../file/travel.t.html)\[[4006](../source/travel.t.html#4006)\]
 
-<div class="desc">
+
 
 Receive notification that a traveler is leaving. This is a convenience
 method that rooms can override to carry out side effects of departure.
 This is called just after any departure message is displayed. By
 default, we do nothing.
 
-</div>
+
 
 <span id="listWithActorIn"></span>
 
@@ -721,7 +721,7 @@ default, we do nothing.
 
 [travel.t](../file/travel.t.html)\[[3484](../source/travel.t.html#3484)\]
 
-<div class="desc">
+
 
 Get the nested room list grouper for an actor in the given posture
 directly in this room. This is used when we're listing the actors within
@@ -736,7 +736,7 @@ stage." This can be overridden if a different arrangement of groups is
 desired; for example, an override could simply return a single grouper
 to list everyone in the room together, regardless of posture.
 
-</div>
+
 
 <span id="makeStandingUp"></span>
 
@@ -744,7 +744,7 @@ to list everyone in the room together, regardless of posture.
 
 [travel.t](../file/travel.t.html)\[[3681](../source/travel.t.html#3681)\]
 
-<div class="desc">
+
 
 Make the actor stand up from this location. By default, we'll simply
 change the actor's posture to "standing," and show a default success
@@ -754,7 +754,7 @@ Subclasses might need to override this. For example, a chair will set
 the actor's location to the room containing the chair when the actor
 stands up from the chair.
 
-</div>
+
 
 <span id="removeRoomNotifyItem"></span>
 
@@ -762,11 +762,11 @@ stands up from the chair.
 
 [travel.t](../file/travel.t.html)\[[3976](../source/travel.t.html#3976)\]
 
-<div class="desc">
+
 
 remove an item from the registered notification list
 
-</div>
+
 
 <span id="roomActorHereDesc"></span>
 
@@ -774,11 +774,11 @@ remove an item from the registered notification list
 
 [travel.t](../file/travel.t.html)\[[3557](../source/travel.t.html#3557)\]
 
-<div class="desc">
+
 
 as part of a room description, mention an actor in this room
 
-</div>
+
 
 <span id="roomActorPostureDesc"></span>
 
@@ -786,11 +786,11 @@ as part of a room description, mention an actor in this room
 
 [travel.t](../file/travel.t.html)\[[3598](../source/travel.t.html#3598)\]
 
-<div class="desc">
+
 
 describe the actor's posture while in this location
 
-</div>
+
 
 <span id="roomActorStatus"></span>
 
@@ -798,11 +798,11 @@ describe the actor's posture while in this location
 
 [travel.t](../file/travel.t.html)\[[3595](../source/travel.t.html#3595)\]
 
-<div class="desc">
+
 
 show the status addendum for an actor in this location
 
-</div>
+
 
 <span id="roomActorThereDesc"></span>
 
@@ -810,14 +810,14 @@ show the status addendum for an actor in this location
 
 [travel.t](../file/travel.t.html)\[[3566](../source/travel.t.html#3566)\]
 
-<div class="desc">
+
 
 Provide a default description for an actor in this location, as seen
 from a remote location (i.e., from a separate top-level room that's
 linked to our top-level room by a sense connector of some kind). By
 default, we'll describe the actor as being in this nested room.
 
-</div>
+
 
 <span id="roomAfterAction"></span>
 
@@ -825,14 +825,14 @@ default, we'll describe the actor as being in this nested room.
 
 [travel.t](../file/travel.t.html)\[[3926](../source/travel.t.html#3926)\]
 
-<div class="desc">
+
 
 Receive notification that we've just finished a command within this
 location. This is called on the room immediately containing the actor
 performing the command, then on the room containing that room, and so on
 to the outermost room.
 
-</div>
+
 
 <span id="roomBeforeAction"></span>
 
@@ -840,14 +840,14 @@ to the outermost room.
 
 [travel.t](../file/travel.t.html)\[[3916](../source/travel.t.html#3916)\]
 
-<div class="desc">
+
 
 Receive notification that we're about to perform a command within this
 location. This is called on the outermost room first, then on the nested
 rooms, from the outside in, until reaching the room directly containing
 the actor performing the command.
 
-</div>
+
 
 <span id="roomDarkTravel"></span>
 
@@ -855,7 +855,7 @@ the actor performing the command.
 
 [travel.t](../file/travel.t.html)\[[4199](../source/travel.t.html#4199)\]
 
-<div class="desc">
+
 
 Receive notification of travel from one dark location to another. This
 is called before the actor is moved from the source location, and can
@@ -868,7 +868,7 @@ default behavior provides the player with no mapping information in the
 dark, since the same message is generated whether or not travel would be
 possible in a given direction were light present.
 
-</div>
+
 
 <span id="roomDesc"></span>
 
@@ -876,13 +876,13 @@ possible in a given direction were light present.
 
 [travel.t](../file/travel.t.html)\[[3554](../source/travel.t.html#3554)\]
 
-<div class="desc">
+
 
 Show our room description: this is the interior description of the room,
 for use when the room is viewed by an actor within the room. By default,
 we show our ordinary 'desc'.
 
-</div>
+
 
 <span id="roomListActorPosture"></span>
 
@@ -890,12 +890,12 @@ we show our ordinary 'desc'.
 
 [travel.t](../file/travel.t.html)\[[3609](../source/travel.t.html#3609)\]
 
-<div class="desc">
+
 
 describe the actor's posture as part of the EXAMINE description of the
 nested room
 
-</div>
+
 
 <span id="roomOkayPostureChange"></span>
 
@@ -903,11 +903,11 @@ nested room
 
 [travel.t](../file/travel.t.html)\[[3602](../source/travel.t.html#3602)\]
 
-<div class="desc">
+
 
 acknowledge a posture change while in this location
 
-</div>
+
 
 <span id="showStatuslineExits"></span>
 
@@ -915,11 +915,11 @@ acknowledge a posture change while in this location
 
 [travel.t](../file/travel.t.html)\[[3650](../source/travel.t.html#3650)\]
 
-<div class="desc">
+
 
 show the exit list in the status line
 
-</div>
+
 
 <span id="travelerArriving"></span>
 
@@ -927,7 +927,7 @@ show the exit list in the status line
 
 [travel.t](../file/travel.t.html)\[[4036](../source/travel.t.html#4036)\]
 
-<div class="desc">
+
 
 Receive notification that a traveler is arriving in the room. 'traveler'
 is the object actually traveling. In most cases this is simply the
@@ -936,7 +936,7 @@ actor; but when the actor is in a vehicle, this is the vehicle instead.
 By default, we set each of the "motive" actors to its default posture,
 then describe the arrival.
 
-</div>
+
 
 <span id="travelerLeaving"></span>
 
@@ -944,7 +944,7 @@ then describe the arrival.
 
 [travel.t](../file/travel.t.html)\[[4017](../source/travel.t.html#4017)\]
 
-<div class="desc">
+
 
 Receive notification that a traveler is about to leave the room.
 'traveler' is the object actually traveling. In most cases this is
@@ -954,7 +954,7 @@ vehicle instead.
 By default, we describe the traveler's departure if the traveler's
 destination is different from its present location.
 
-</div>
+
 
 <span id="tryMakingDefaultPosture"></span>
 
@@ -962,11 +962,11 @@ destination is different from its present location.
 
 [travel.t](../file/travel.t.html)\[[3701](../source/travel.t.html#3701)\]
 
-<div class="desc">
+
 
 run the appropriate implied command to achieve our default posture
 
-</div>
+
 
 <span id="tryMakingTravelReady"></span>
 
@@ -974,7 +974,7 @@ run the appropriate implied command to achieve our default posture
 
 [travel.t](../file/travel.t.html)\[[3837](../source/travel.t.html#3837)\]
 
-<div class="desc">
+
 
 Run an implicit action, if possible, to make the current actor "travel
 ready." This will be called if the actor is directly in this location
@@ -984,7 +984,7 @@ the condition that routine tests should be the condition this routine
 tries to bring into effect. If no implicit action is possible, simply
 return nil.
 
-</div>
+
 
 <span id="wouldBeLitFor"></span>
 
@@ -992,7 +992,7 @@ return nil.
 
 [travel.t](../file/travel.t.html)\[[3518](../source/travel.t.html#3518)\]
 
-<div class="desc">
+
 
 Check the ambient illumination level in the room for the given actor's
 senses to determine if the actor would be able to see if the actor were
@@ -1004,11 +1004,11 @@ run this test, since we could get the information from the actor
 directly. The point of this test is to determine the light level in this
 location without the actor having to be present.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Naming
@@ -17,7 +17,7 @@ Conventions</a>    
 <a href="hello.html" class="nav"><em>Next:</em> Hello, World!</a>    
 </span>
 
-</div>
+
 
 
 
@@ -63,7 +63,7 @@ capitalize the letters "HTML."
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -74,4 +74,4 @@ Conventions</a>    
 <a href="hello.html" class="nav"><em>Next:</em> Hello, World!</a>    
 </span>
 
-</div>
+

@@ -168,9 +168,9 @@ layout: docs
     #define MenuStatEventEnable  (0x0001 | 0x0002)
     #define MenuStatEventDisable (0x0001 | 0x0000)
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

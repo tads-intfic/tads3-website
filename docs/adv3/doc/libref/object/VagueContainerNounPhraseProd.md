@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "vague" container noun phrase. This is a phrase that specifies a
 container but nothing else: "the one in the box", "the ones in the box",
@@ -34,15 +34,15 @@ container but nothing else: "the one in the box", "the ones in the box",
 
 `class `**`VagueContainerNounPhraseProd`**` :   `[`DefiniteNounProd`](../object/DefiniteNounProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VagueContainerNounPhraseProd`**  
 [`DefiniteNounProd`](../object/DefiniteNounProd.html)  
@@ -53,11 +53,11 @@ container but nothing else: "the one in the box", "the ones in the box",
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`VagueContainerNounPhraseProd`**  
 [`AllInContainerNounPhraseProd`](../object/AllInContainerNounPhraseProd.html)  
@@ -68,19 +68,19 @@ container but nothing else: "the one in the box", "the ones in the box",
 [`qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -97,11 +97,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkContentsList`](#checkContentsList)[`resolveNouns`](#resolveNouns)
 
@@ -119,19 +119,19 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkContentsList"></span>
 
@@ -139,11 +139,11 @@ Inherited from `AmbigResponseKeeper` :
 
 [parser.t](../file/parser.t.html)\[[3417](../source/parser.t.html#3417)\]
 
-<div class="desc">
+
 
 check a contents list
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -151,15 +151,15 @@ check a contents list
 
 [parser.t](../file/parser.t.html)\[[3343](../source/parser.t.html#3343)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

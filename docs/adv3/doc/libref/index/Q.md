@@ -77,9 +77,9 @@ method of [MessageBuilder](../object/MessageBuilder.html) in
 method of [StringSettingsItem](../object/StringSettingsItem.html) in
 [settings.t](../file/settings.t.html)\[[251](../source/settings.t.html#251)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

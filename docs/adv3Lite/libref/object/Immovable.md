@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Immovable is something that can't be picked up, although it may not
 be immediately obvious that it can't be moved. For that reason we rule
@@ -35,15 +35,15 @@ out taking an Immovable at the check stage rather than the verify stage
 
 `class `**`Immovable`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Immovable`**  
 [`Thing`](../object/Thing.html)  
@@ -55,27 +55,27 @@ out taking an Immovable at the check stage rather than the verify stage
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotTakeMsg`](#cannotTakeMsg)
 
@@ -94,11 +94,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Take)`](#dobjFor(Take))
 
@@ -119,11 +119,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotTakeMsg"></span>
 
@@ -131,19 +131,19 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[592](../source/extras.t.html#592)\]
 
-<div class="desc">
+
 
 The message to display to explain why this object can't be taken.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -151,15 +151,15 @@ The message to display to explain why this object can't be taken.
 
 [extras.t](../file/extras.t.html)\[[585](../source/extras.t.html#585)\]
 
-<div class="desc">
+
 
 Respond to an attempt to TAKE by ruling it out at the check stage.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

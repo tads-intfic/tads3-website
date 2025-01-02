@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> ByteArray  
@@ -15,7 +15,7 @@ layout: docs
     <a href="charset.html" class="nav"><em>Next:</em> CharacterSet</a>
     </span>
 
-</div>
+
 
 
 
@@ -142,7 +142,7 @@ information on the file input/output.
 `copyFrom(*sourceArray*, *sourceStartIndex*,
 *destStartIndex*, *length*)`
 
-<div class="fdef">
+
 
 Copies bytes from *sourceArray*, which must be another ByteArray object.
 Copies bytes starting with the byte in *sourceArray* indexed by
@@ -159,7 +159,7 @@ been moved.
 
 `digestMD5(*startIndex*?, *length*?)`
 
-<div class="fdef">
+
 
 Calculates the 128-bit RSA MD5 message digest of the string, returning a
 string of 32 hex digits representing the hash value.
@@ -179,11 +179,11 @@ HTTP digest authentication). In an Interactive Fiction context,
 older games. If you're looking for a secure hash, consider SHA-2 (see
 [`sha256()`](#sha256)) instead of MD5.
 
-</div>
+
 
 `fillValue(*val*, *startIndex*?, *length*?)`
 
-<div class="fdef">
+
 
 Stores the value *val* in each element of the array, starting at index
 *startIndex* and filling the next *length* bytes. If *startIndex* and
@@ -192,23 +192,23 @@ Stores the value *val* in each element of the array, starting at index
 element from *startIndex* to the end of the array. The value *val* must
 be an integer in the range 0 to 255.
 
-</div>
+
 
 `length()`
 
-<div class="fdef">
+
 
 Returns the number of bytes in the ByteArray. This is the same as the
 size specified when the object was created.
 
-</div>
+
 
 <span id="mapToString"></span>
 
 `mapToString(*charset*?, *startIndex*?,
 *length*?)`
 
-<div class="fdef">
+
 
 Maps the bytes in the array to a string.
 
@@ -241,14 +241,14 @@ of the bytes in the array are mapped. If *startIndex* is given but
 *length* is missing, the bytes from *startIndex* to the end of the array
 are included in the mapping.
 
-</div>
+
 
 <span id="packBytes"></span>
 
 `packBytes(*startIndex*, *format*, ...)` /
 `ByteArray.packBytes(*format*, ...)`
 
-<div class="fdef">
+
 
 Converts data values into bytes, according to your format
 specifications, and stores the bytes in an existing or new byte array.
@@ -310,11 +310,11 @@ This version of the method returns the newly created ByteArray object.
 
 See [Byte Packing](pack.html) for more information.
 
-</div>
+
 
 `readInt(*startIndex*, *format*)`
 
-<div class="fdef">
+
 
 Note: this routine is still supported, but the newer
 [unpackBytes](#unpackBytes) method can accomplish the same task, usually
@@ -384,13 +384,13 @@ the correct format translation. You'll get strange results if you
 attempt to read values in a format different from the format that was
 used to write them.
 
-</div>
+
 
 <span id="sha256"></span>
 
 `sha256(*startIndex*?, *length*?)`
 
-<div class="fdef">
+
 
 Calculates the 256-bit SHA-2 (Secure Hash Algorithm 2) hash of the
 string, returning a string of 64 hex digits representing the hash value.
@@ -403,24 +403,24 @@ this writing) secure for cryptographic purposes.
 are included in the hash; if *startIndex* is omitted, the entire array
 is hashed.
 
-</div>
+
 
 `subarray(*startIndex*, *length*?)`
 
-<div class="fdef">
+
 
 Returns a new ByteArray consisting of the region of this array starting
 with the byte indexed by *startingIndex* of the number of bytes given by
 *length.* If *length* is not supplied, the new ByteArray consists of all
 of the bytes from *startingIndex* to the last byte of this array.
 
-</div>
+
 
 <span id="unpackBytes"></span>
 
 `unpackBytes(*startIndex*, *format*)`
 
-<div class="fdef">
+
 
 Unpacks bytes from the array, starting at the given index, translating
 the bytes into values according to the given format string.
@@ -454,11 +454,11 @@ starting index:
 
 See [Byte Packing](pack.html) for more information.
 
-</div>
+
 
 `writeInt(*startIndex*, *format*, *val*)`
 
-<div class="fdef">
+
 
 Note: this routine is still supported, but the newer
 [packBytes](#packBytes) method can accomplish the same task, usually a
@@ -504,13 +504,13 @@ value; this means that if you later want to read the integer value back
 out of the byte array, it will be up to your program to specify the
 correct format code.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -519,4 +519,4 @@ correct format code.
     <a href="charset.html" class="nav"><em>Next:</em> CharacterSet</a>
     </span>
 
-</div>
+

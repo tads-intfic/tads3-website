@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A direct room-to-room connector. In most cases, it is not necessary to
 create one of these objects, because rooms can serve as their own
@@ -35,15 +35,15 @@ when a room-to-room connection requires a travel barrier.
 
 `class `**`RoomConnector`**` :   `[`TravelConnector`](../object/TravelConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RoomConnector`**  
 [`TravelConnector`](../object/TravelConnector.html)  
@@ -52,11 +52,11 @@ when a room-to-room connection requires a travel barrier.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RoomConnector`**  
 [`OneWayRoomConnector`](../object/OneWayRoomConnector.html)  
@@ -68,19 +68,19 @@ when a room-to-room connection requires a travel barrier.
 [`ShipboardRoom`](../object/ShipboardRoom.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`room1`](#room1)[`room2`](#room2)
 
@@ -95,11 +95,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`connectorTravelPreCond`](#connectorTravelPreCond)[`fixedSource`](#fixedSource)[`getDestination`](#getDestination)
 
@@ -114,11 +114,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="room1"></span>
 
@@ -126,11 +126,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[2286](../source/travel.t.html#2286)\]
 
-<div class="desc">
+
 
 the two rooms we link
 
-</div>
+
 
 <span id="room2"></span>
 
@@ -138,19 +138,19 @@ the two rooms we link
 
 [travel.t](../file/travel.t.html)\[[2287](../source/travel.t.html#2287)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="connectorTravelPreCond"></span>
 
@@ -158,7 +158,7 @@ the two rooms we link
 
 [travel.t](../file/travel.t.html)\[[2329](../source/travel.t.html#2329)\]
 
-<div class="desc">
+
 
 Get the precondition for this connector. The normal TravelConnector rule
 that the traveler must be in the outbound connector's location is not
@@ -174,7 +174,7 @@ nearest object enclosing the \*traveler\* that has a direction property
 directly linked to 'self'; that enclosing container is the required
 starting location for the travel.
 
-</div>
+
 
 <span id="fixedSource"></span>
 
@@ -182,11 +182,11 @@ starting location for the travel.
 
 [travel.t](../file/travel.t.html)\[[2303](../source/travel.t.html#2303)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getDestination"></span>
 
@@ -194,16 +194,16 @@ starting location for the travel.
 
 [travel.t](../file/travel.t.html)\[[2293](../source/travel.t.html#2293)\]
 
-<div class="desc">
+
 
 get the destination, given the origin: this is the one of the two rooms
 we link that we're not in now
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -78,20 +78,21 @@ example) with a list of objects that can be attached to it (e.g.
 [roundMagnet, squareMagnet, starMagnet]). For example, if we had just
 one magnet we wanted to be able to attach to a fridge we might define:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    + fridge: SimpleAttachable 'fridge; large white; refrigerator door'
-        "It's a large, white floor-standing refrigerator. "
-        remapIn: SubComponent { isOpenable = true }
-        allowableAttachments = [magnet]
-        isFixed = true
-        isListed = nil
-    ;
+<p>`</p>
 
-    ++ magnet: SimpleAttachable 'small magnet; red maple; leaf'
-        "It's red and shaped like a maple-leaf. You must have picked it up on your
-        last trip to Canada. "
-        attachedTo = fridge
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ fridge: SimpleAttachable 'fridge; large white; refrigerator door'
+    "It's a large, white floor-standing refrigerator. "
+    remapIn: SubComponent { isOpenable = true }
+    allowableAttachments = [magnet]
+    isFixed = true
+    isListed = nil
+;
+
+++ magnet: SimpleAttachable 'small magnet; red maple; leaf'
+    "It's red and shaped like a maple-leaf. You must have picked it up on your
+    last trip to Canada. "
+    attachedTo = fridge
+; `
 </code></pre></div></div>
 
 <p>In this example, the magnet starts out attached to the fridge, which is
@@ -235,12 +236,13 @@ Plugged into or Unplugged from another object. It’s then attached to the
 other object, but described as being plugged into it. Attaching one
 PlugAttachable to another is equivalent to plugging it in. For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + plug: PlugAttachable, NearbyAttachable 'electric plug'    
-    ;
+<p>`
+    + plug: PlugAttachable, NearbyAttachable ‘electric plug’  <br />
+    ;</p>
 
-    + socket: PlugAttachable, NearbyAttachable, Fixture 'power socket'
-        allowableAttachments = [plug]
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ socket: PlugAttachable, NearbyAttachable, Fixture 'power socket'
+    allowableAttachments = [plug]
+; `
 </code></pre></div></div>
 
 <p>The number of items that can be plugged into something (the socket) at
@@ -252,29 +254,30 @@ without specifying a particular socket, you can use the
 <code class="language-plaintext highlighter-rouge">PlugAttachable</code> mix-in with an ordinary Thing
 class and define its <strong>needsExplicitSocket</strong> property as nil, e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + tv: PlugAttachable, Switch, Fixture 'television;;tv'
-        "It's currently &lt;&lt;if isOn&gt;&gt;on&lt;&lt;else&gt;&gt;off&lt;&lt;end&gt;&gt;, not that it makes much
-        difference to the quality of what appears on the screen. "
+<p>`
+    + tv: PlugAttachable, Switch, Fixture ‘television;;tv’
+        “It’s currently «if isOn»on«else»off«end», not that it makes much
+        difference to the quality of what appears on the screen. “</p>
 
-        specialDesc = "A TV lurks in one corner of the room. "
-        needsExplicitSocket = nil
-        
-        dobjFor(SwitchOn)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    specialDesc = "A TV lurks in one corner of the room. "
+    needsExplicitSocket = nil
+    
+    dobjFor(SwitchOn)
+    {
+        check()
         {
-            check()
-            {
-                if(!isPluggedIn)
-                    "It's not plugged in. ";
-            }
+            if(!isPluggedIn)
+                "It's not plugged in. ";
         }
-        
-        makePlugged(stat)
-        {
-            inherited(stat);
-            if(!stat)
-                makeOn(nil);
-        }
-    ;
+    }
+    
+    makePlugged(stat)
+    {
+        inherited(stat);
+        if(!stat)
+            makeOn(nil);
+    }
+; `
 </code></pre></div></div>
 
 <hr />

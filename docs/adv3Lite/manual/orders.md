@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Giving Orders to NPCs  
@@ -16,7 +16,7 @@ NPC Knowledge</a>    
 <a href="tags.html" class="nav"><em>Next:</em> String Tags and Object
 Tags</a>     </span>
 
-</div>
+
 
 
 
@@ -90,7 +90,7 @@ a good idea to call the inherited handling at the end, so your
 overridden method still ends by trying to deal with the order via a
 CommandTopic object, for example:
 
-`
+```
     modify Actor
         handleCommand(action)
         {
@@ -100,7 +100,7 @@ CommandTopic object, for example:
               inherited(action);
         }
     ;
-`
+```
 
 Note that if a command is directed to an inanimate object (e.g. BALL,
 JUMP!) that object's handleCommand() method is also called, but in this
@@ -109,7 +109,7 @@ to direct commands at inanimate objects. But you could always override
 this if, for example, you wanted some objects to respond to a magic
 word. For example:
 
-`
+```
     modify Thing    
         handleCommand(action)
         {
@@ -136,7 +136,7 @@ word. For example:
         action = Xyzzy
         verbPhrase = 'say/saying XYZZY'
     ;
-`
+```
 
   
 
@@ -178,7 +178,7 @@ We can also define a DefaultCommandTopic to handle any commands not
 picked up by our CommandTopics. A simple example of how this might all
 work in practice might be:
 
-`
+```
     + CommandTopic @Jump
         "<q>Jump!</q> you cry.\b
         <q>Very well then,</q> he agrees. "
@@ -199,7 +199,7 @@ work in practice might be:
         "<q>Bob, would you <<actionPhrase>> please?</q> you ask.\b
         <q>No, I don't think I will,</q> he replies. "
     ;
-`
+```
 
 If you want the actor to whom you've given the command to perform some
 other action than the one the player orders him to, you can use
@@ -207,7 +207,7 @@ other action than the one the player orders him to, you can use
 command. For example, to make an actor jump when he's told to wait you
 could do this:
 
-`
+```
     + CommandTopic @Wait
         topicResponse()
         {
@@ -216,14 +216,14 @@ could do this:
             doNested(Jump);
         }
     ;
-`
+```
 
 Note, this works in a CommandTopic since the actor being addressed is
 considered the current actor of the command. If you want any other kind
 of TopicEntry to make an actor react, you need to use
 `nestedActorAction()` instead; e.g.:
 
-`
+```
     + TellTopic @george
         topicResponse()
         {
@@ -232,13 +232,13 @@ of TopicEntry to make an actor react, you need to use
             nestedActorAction(getActor, Jump);    
         }    
     ;
-`
+```
 
 
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -248,4 +248,4 @@ NPC Knowledge</a>    
 <a href="tags.html" class="nav"><em>Next:</em> String Tags and Object
 Tags</a>     </span>
 
-</div>
+

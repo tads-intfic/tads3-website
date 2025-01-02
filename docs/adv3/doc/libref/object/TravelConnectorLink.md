@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The base class for Enterables and Exitables. These are physical objects
 associated with travel connectors. For example, the object representing
@@ -40,25 +40,25 @@ specify the destination; instead, these just point to travel connectors.
 
 `class `**`TravelConnectorLink`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TravelConnectorLink`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TravelConnectorLink`**  
 [`Enterable`](../object/Enterable.html)  
@@ -67,39 +67,39 @@ specify the destination; instead, these just point to travel connectors.
 [`ExitPortal`](../object/ExitPortal.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`connector`](#connector)[`sightSize`](#sightSize)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(TravelVia)`](#dobjFor(TravelVia))
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="connector"></span>
 
@@ -107,11 +107,11 @@ specify the destination; instead, these just point to travel connectors.
 
 [travel.t](../file/travel.t.html)\[[3074](../source/travel.t.html#3074)\]
 
-<div class="desc">
+
 
 the underlying travel connector
 
-</div>
+
 
 <span id="sightSize"></span>
 
@@ -119,21 +119,21 @@ the underlying travel connector
 
 [travel.t](../file/travel.t.html)\[[3102](../source/travel.t.html#3102)\]
 
-<div class="desc">
+
 
 These objects are generally things like buildings (exterior or
 interior), which tend to be large enough that their details can be seen
 at a distance.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(TravelVia)"></span>
 
@@ -141,7 +141,7 @@ at a distance.
 
 [travel.t](../file/travel.t.html)\[[3084](../source/travel.t.html#3084)\]
 
-<div class="desc">
+
 
 The internal "TravelVia" action just maps to travel via the underlying
 connector. However, we want to apply our own preconditions, so we don't
@@ -150,11 +150,11 @@ full TravelVia implementation, and then we perform the travel on the
 underlying connector via a replacement action in our own action()
 handler.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

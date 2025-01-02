@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A room "auto-connector". This is a special subclass of RoomConnector
 that can be mixed in to any BasicLocation subclass to make the room
@@ -36,15 +36,15 @@ intermediate connector.
 
 `class `**`RoomAutoConnector`**` :   `[`RoomConnector`](../object/RoomConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RoomAutoConnector`**  
 [`RoomConnector`](../object/RoomConnector.html)  
@@ -54,11 +54,11 @@ intermediate connector.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RoomAutoConnector`**  
 [`Room`](../object/Room.html)  
@@ -68,19 +68,19 @@ intermediate connector.
 [`ShipboardRoom`](../object/ShipboardRoom.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -98,11 +98,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getDestination`](#getDestination)
 
@@ -120,19 +120,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getDestination"></span>
 
@@ -140,7 +140,7 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[2385](../source/travel.t.html#2385)\]
 
-<div class="desc">
+
 
 Suppose that roomA.north = roomB. This means that if an actor is in
 roomA, and executes a "north" command, we'll execute a TravelVia action
@@ -149,11 +149,11 @@ destination of the travel and the travel connector are one and the same.
 So, when the connector is roomB, the destination of travel is also
 simply roomB.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

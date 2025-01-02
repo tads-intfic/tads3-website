@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A topic database entry. Actors and actor state objects store topic
 databases; a topic database is essentially a set of these entries.
@@ -74,25 +74,25 @@ cases.
 
 `class `**`TopicEntry`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicEntry`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TopicEntry`**  
 [`AltTopic`](../object/AltTopic.html)  
@@ -144,39 +144,39 @@ cases.
 [`AskTellShowTopic`](../object/AskTellShowTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`altTalkCount`](#altTalkCount)[`altTopicList`](#altTopicList)[`impliesGreeting`](#impliesGreeting)[`includeInList`](#includeInList)[`isActive`](#isActive)[`isConversational`](#isConversational)[`matchObj`](#matchObj)[`matchScore`](#matchScore)[`talkCount`](#talkCount)[`topicGroupActive`](#topicGroupActive)[`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)[`topicResponse`](#topicResponse)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addAltTopic`](#addAltTopic)[`addSuggestedTopic`](#addSuggestedTopic)[`addTopic`](#addTopic)[`adjustScore`](#adjustScore)[`anyAltIsActive`](#anyAltIsActive)[`breakTopicTie`](#breakTopicTie)[`checkIsActive`](#checkIsActive)[`deferToEntry`](#deferToEntry)[`getActor`](#getActor)[`getTopicOwner`](#getTopicOwner)[`handleTopic`](#handleTopic)[`initializeTopicEntry`](#initializeTopicEntry)[`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`noteAltInvocation`](#noteAltInvocation)[`noteInvocation`](#noteInvocation)[`setTopicPronouns`](#setTopicPronouns)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="altTalkCount"></span>
 
@@ -184,13 +184,13 @@ cases.
 
 [actor.t](../file/actor.t.html)\[[2317](../source/actor.t.html#2317)\]
 
-<div class="desc">
+
 
 The number of times this topic or any nested AltTopic has been invoked
 by the player. Each time the player asks/tells/etc about this topic OR
 any of its AltTopic children, we'll increment this count.
 
-</div>
+
 
 <span id="altTopicList"></span>
 
@@ -198,11 +198,11 @@ any of its AltTopic children, we'll increment this count.
 
 [actor.t](../file/actor.t.html)\[[2373](../source/actor.t.html#2373)\]
 
-<div class="desc">
+
 
 our list of AltTopic children
 
-</div>
+
 
 <span id="impliesGreeting"></span>
 
@@ -210,14 +210,14 @@ our list of AltTopic children
 
 [actor.t](../file/actor.t.html)\[[2175](../source/actor.t.html#2175)\]
 
-<div class="desc">
+
 
 Do we imply a greeting? By default, all conversational topics imply a
 greeting. We separate this out so that the implied greeting can be
 controlled independently of whether or not we're actually
 conversational, if desired.
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -225,13 +225,13 @@ conversational, if desired.
 
 [actor.t](../file/actor.t.html)\[[2294](../source/actor.t.html#2294)\]
 
-<div class="desc">
+
 
 The set of database lists we're part of. This is a list of property
 pointers, giving the TopicDatabase properties of the lists we
 participate in.
 
-</div>
+
 
 <span id="isActive"></span>
 
@@ -239,7 +239,7 @@ participate in.
 
 [actor.t](../file/actor.t.html)\[[2152](../source/actor.t.html#2152)\]
 
-<div class="desc">
+
 
 Is this topic active? This can be used to control how an actor can
 respond without have to worry about adding and removing topics manually
@@ -251,7 +251,7 @@ when the topic entry should become active. We'll never show the topic's
 response when isActive returns nil. By default, we simply return true to
 indicate that the topic entry is active.
 
-</div>
+
 
 <span id="isConversational"></span>
 
@@ -259,7 +259,7 @@ indicate that the topic entry is active.
 
 [actor.t](../file/actor.t.html)\[[2167](../source/actor.t.html#2167)\]
 
-<div class="desc">
+
 
 Flag: we are a "conversational" topic. This is true by default. When
 this is set to nil, a ConversationReadyState will NOT show its greeting
@@ -272,7 +272,7 @@ is appropriate for responses like "You don't think he'd want to talk
 about that", where the response indicates that the player character
 didn't even ask a question (or whatever).
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -280,12 +280,12 @@ didn't even ask a question (or whatever).
 
 [actor.t](../file/actor.t.html)\[[2138](../source/actor.t.html#2138)\]
 
-<div class="desc">
+
 
 My matching simulation object or objects. This can be either a single
 object or a list of objects.
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -293,12 +293,12 @@ object or a list of objects.
 
 [actor.t](../file/actor.t.html)\[[2287](../source/actor.t.html#2287)\]
 
-<div class="desc">
+
 
 Our match strength score. By default, we'll use a score of 100, which is
 just an arbitrary base score.
 
-</div>
+
 
 <span id="talkCount"></span>
 
@@ -306,12 +306,12 @@ just an arbitrary base score.
 
 [actor.t](../file/actor.t.html)\[[2309](../source/actor.t.html#2309)\]
 
-<div class="desc">
+
 
 The number of times this topic has invoked by the player. Each time the
 player asks/tells/etc about this topic, we'll increment this count.
 
-</div>
+
 
 <span id="topicGroupActive"></span>
 
@@ -319,11 +319,11 @@ player asks/tells/etc about this topic, we'll increment this count.
 
 [actor.t](../file/actor.t.html)\[[2370](../source/actor.t.html#2370)\]
 
-<div class="desc">
+
 
 check the group isActive status (for AltTopics nested within)
 
-</div>
+
 
 <span id="topicGroupScoreAdjustment"></span>
 
@@ -331,11 +331,11 @@ check the group isActive status (for AltTopics nested within)
 
 [actor.t](../file/actor.t.html)\[[2367](../source/actor.t.html#2367)\]
 
-<div class="desc">
+
 
 get the topic group score adjustment (for AltTopics nested within)
 
-</div>
+
 
 <span id="topicResponse"></span>
 
@@ -343,22 +343,22 @@ get the topic group score adjustment (for AltTopics nested within)
 
 [actor.t](../file/actor.t.html)\[[2302](../source/actor.t.html#2302)\]
 
-<div class="desc">
+
 
 Our response. This is displayed when we're the topic entry selected to
 handle an ASK or TELL. Each topic entry must override this to show our
 response text (or, alternatively, an entry can override handleTopic so
 that it doesn't call this property).
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addAltTopic"></span>
 
@@ -366,13 +366,13 @@ that it doesn't call this property).
 
 [actor.t](../file/actor.t.html)\[[2360](../source/actor.t.html#2360)\]
 
-<div class="desc">
+
 
 Add an AltTopic entry. This is called by our AltTopic children during
 initialization; we'll simply add the entry to our list of AltTopic
 children.
 
-</div>
+
 
 <span id="addSuggestedTopic"></span>
 
@@ -380,14 +380,14 @@ children.
 
 [actor.t](../file/actor.t.html)\[[2550](../source/actor.t.html#2550)\]
 
-<div class="desc">
+
 
 Add a suggested topic. A suggested topic can be nested within a topic
 entry; doing this associates the suggested topic with the topic entry,
 and automatically associates the suggested topic with the entry's actor
 or actor state.
 
-</div>
+
 
 <span id="addTopic"></span>
 
@@ -395,11 +395,11 @@ or actor state.
 
 [actor.t](../file/actor.t.html)\[[2348](../source/actor.t.html#2348)\]
 
-<div class="desc">
+
 
 add a topic nested within us
 
-</div>
+
 
 <span id="adjustScore"></span>
 
@@ -407,12 +407,12 @@ add a topic nested within us
 
 [actor.t](../file/actor.t.html)\[[2252](../source/actor.t.html#2252)\]
 
-<div class="desc">
+
 
 Adjust my score value for any hierarchical adjustments. We'll add the
 score adjustment for each enclosing object.
 
-</div>
+
 
 <span id="anyAltIsActive"></span>
 
@@ -420,13 +420,13 @@ score adjustment for each enclosing object.
 
 [actor.t](../file/actor.t.html)\[[2228](../source/actor.t.html#2228)\]
 
-<div class="desc">
+
 
 Check to see if any alternative in the alternative group is active. This
 returns true if we're active or if any of our nested AltTopics is
 active.
 
-</div>
+
 
 <span id="breakTopicTie"></span>
 
@@ -434,7 +434,7 @@ active.
 
 [actor.t](../file/actor.t.html)\[[2443](../source/actor.t.html#2443)\]
 
-<div class="desc">
+
 
 Break a tie among matching topics entries. The topic database searcher
 calls this on each matching topic entry when it finds multiple entries
@@ -465,7 +465,7 @@ topic entries that are active in a particular context, and you need a
 special bit of tweaking to pick the right one for a given input phrase.
 Simply pick one of the involved entries and define this method there.
 
-</div>
+
 
 <span id="checkIsActive"></span>
 
@@ -473,14 +473,14 @@ Simply pick one of the involved entries and define this method there.
 
 [actor.t](../file/actor.t.html)\[[2205](../source/actor.t.html#2205)\]
 
-<div class="desc">
+
 
 Determine if this topic is active. This checks the isActive property,
 and also takes into account our relationship to alternative entries for
 the topic. Generally, you should \*define\* (override) isActive, and
 \*call\* this method.
 
-</div>
+
 
 <span id="deferToEntry"></span>
 
@@ -489,7 +489,7 @@ only</span>
 
 [actor.t](../file/actor.t.html)\[[2281](../source/actor.t.html#2281)\]
 
-<div class="desc">
+
 
 Check to see if we want to defer to the given topic from an inferior
 topic database. By default, we never defer to a topic from an inferior
@@ -509,7 +509,7 @@ method is significant. If the method isn't defined at all, we won't
 bother looking for a possible deferral, saving the trouble of searching
 the other databases in the hierarchy.
 
-</div>
+
 
 <span id="getActor"></span>
 
@@ -517,14 +517,14 @@ the other databases in the hierarchy.
 
 [actor.t](../file/actor.t.html)\[[2184](../source/actor.t.html#2184)\]
 
-<div class="desc">
+
 
 Get the actor associated with the topic, if any. By default, we'll
 return our enclosing database's topic owner, if it's an actor - in
 almost all cases, if there's any actor associated with a topic, it's
 simply the owner of the database containing the topic.
 
-</div>
+
 
 <span id="getTopicOwner"></span>
 
@@ -532,12 +532,12 @@ simply the owner of the database containing the topic.
 
 [actor.t](../file/actor.t.html)\[[2323](../source/actor.t.html#2323)\]
 
-<div class="desc">
+
 
 the owner of any AltTopic nested within me is the same as my own topic
 owner, which we take from our location
 
-</div>
+
 
 <span id="handleTopic"></span>
 
@@ -545,7 +545,7 @@ owner, which we take from our location
 
 [actor.t](../file/actor.t.html)\[[2492](../source/actor.t.html#2492)\]
 
-<div class="desc">
+
 
 Handle the topic. This is called when we find that this is the best
 topic entry for the current topic.
@@ -578,7 +578,7 @@ command used with the topic type. For example, for ASK and TELL
 commands, 'topic' is a ResolvedTopic object; for GIVE and SHOW, it's a
 simulation object (i.e., generally a Thing subclass).
 
-</div>
+
 
 <span id="initializeTopicEntry"></span>
 
@@ -586,13 +586,13 @@ simulation object (i.e., generally a Thing subclass).
 
 [actor.t](../file/actor.t.html)\[[2336](../source/actor.t.html#2336)\]
 
-<div class="desc">
+
 
 Initialize. If we have a location property, we'll assume that the
 location is a topic database object, and we'll add ourselves to that
 database.
 
-</div>
+
 
 <span id="isMatchPossible"></span>
 
@@ -601,7 +601,7 @@ description only</span>
 
 [actor.t](../file/actor.t.html)\[[2408](../source/actor.t.html#2408)\]
 
-<div class="desc">
+
 
 Check to see if a match to this topic entry is \*possible\* right now
 for the given actor. For most subclasses, this is inherently imprecise,
@@ -619,7 +619,7 @@ offered. So, specialized topic instances with non-standard match rules
 don't have to worry about this unless they're used as suggestions, or
 unless the game itself needs this information for some other reason.
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -628,7 +628,7 @@ description only</span>
 
 [actor.t](../file/actor.t.html)\[[2387](../source/actor.t.html#2387)\]
 
-<div class="desc">
+
 
 Match a topic. This is abstract in this base class; it must be defined
 by each concrete subclass. This returns nil if there's no match, or an
@@ -641,7 +641,7 @@ example, in ASK and TELL commands, 'topic' is a ResolvedTopic describing
 the topic in the player's command; for GIVE and SHOW commands, it's the
 resolved simulation object.
 
-</div>
+
 
 <span id="noteAltInvocation"></span>
 
@@ -649,14 +649,14 @@ resolved simulation object.
 
 [actor.t](../file/actor.t.html)\[[2532](../source/actor.t.html#2532)\]
 
-<div class="desc">
+
 
 Note that something in our entire alternative group has been invoked. We
 count as a member of our own group, so this is invoked when we're
 invoked; this is also invoked when any AltTopic child of ours is
 invoked.
 
-</div>
+
 
 <span id="noteInvocation"></span>
 
@@ -664,11 +664,11 @@ invoked.
 
 [actor.t](../file/actor.t.html)\[[2514](../source/actor.t.html#2514)\]
 
-<div class="desc">
+
 
 note that we've been invoked
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -676,18 +676,18 @@ note that we've been invoked
 
 [actor.t](../file/actor.t.html)\[[2458](../source/actor.t.html#2458)\]
 
-<div class="desc">
+
 
 Set pronouns for the topic, if possible. If the topic corresponds to a
 game-world object, then we should set the pronoun antecedent to the game
 object. This must be handled per subclass because of the range of
 possible meanings of 'topic'.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

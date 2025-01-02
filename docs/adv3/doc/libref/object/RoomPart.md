@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Room Part - base class for "parts" of rooms, such as floors and walls.
 Room parts are unusual in a couple of ways.
@@ -52,15 +52,15 @@ though they're not really represented that way in the containment model.
 
 `class `**`RoomPart`**` :   `[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RoomPart`**  
 [`Fixture`](../object/Fixture.html)  
@@ -70,31 +70,31 @@ though they're not really represented that way in the containment model.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RoomPart`**  
 [`DefaultWall`](../object/DefaultWall.html)  
 [`Floor`](../object/Floor.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`defaultCeiling`](../object/defaultCeiling.html)[`defaultSky`](../object/defaultSky.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contentsLister`](#contentsLister)[`descContentsLister`](#descContentsLister)[`lookInLister`](#lookInLister)[`nothingBehindMsg`](#nothingBehindMsg)[`nothingThroughMsg`](#nothingThroughMsg)[`nothingUnderMsg`](#nothingUnderMsg)[`sightSize`](#sightSize)[`specialContentsLister`](#specialContentsLister)
 
@@ -112,11 +112,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(LookIn)`](#dobjFor(LookIn))[`examinePartContents`](#examinePartContents)[`examineSpecialContents`](#examineSpecialContents)[`examineStatus`](#examineStatus)[`filterResolveList`](#filterResolveList)[`getHitFallDestination`](#getHitFallDestination)[`hideFromAll`](#hideFromAll)[`hideFromDefault`](#hideFromDefault)[`initializeThing`](#initializeThing)[`isIn`](#isIn)[`isObjListedInRoomPart`](#isObjListedInRoomPart)[`moveIntoAdd`](#moveIntoAdd)[`moveOutOf`](#moveOutOf)
 
@@ -134,11 +134,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contentsLister"></span>
 
@@ -146,11 +146,11 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[5107](../source/travel.t.html#5107)\]
 
-<div class="desc">
+
 
 our contents listers
 
-</div>
+
 
 <span id="descContentsLister"></span>
 
@@ -158,11 +158,11 @@ our contents listers
 
 [travel.t](../file/travel.t.html)\[[5108](../source/travel.t.html#5108)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lookInLister"></span>
 
@@ -170,11 +170,11 @@ our contents listers
 
 [travel.t](../file/travel.t.html)\[[5109](../source/travel.t.html#5109)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nothingBehindMsg"></span>
 
@@ -182,11 +182,11 @@ our contents listers
 
 [travel.t](../file/travel.t.html)\[[5128](../source/travel.t.html#5128)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nothingThroughMsg"></span>
 
@@ -194,11 +194,11 @@ our contents listers
 
 [travel.t](../file/travel.t.html)\[[5129](../source/travel.t.html#5129)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nothingUnderMsg"></span>
 
@@ -206,11 +206,11 @@ our contents listers
 
 [travel.t](../file/travel.t.html)\[[5127](../source/travel.t.html#5127)\]
 
-<div class="desc">
+
 
 we can't look behind/through/under a room part by default
 
-</div>
+
 
 <span id="sightSize"></span>
 
@@ -218,7 +218,7 @@ we can't look behind/through/under a room part by default
 
 [travel.t](../file/travel.t.html)\[[4973](../source/travel.t.html#4973)\]
 
-<div class="desc">
+
 
 Since room parts are generally things like walls and floors that enclose
 the entire room, they're typically visually large, and tend to have
@@ -226,7 +226,7 @@ fairly large-scale details (such as doors and windows). So, by default
 we set the sightSize to 'large' so that the details are visible at a
 distance.
 
-</div>
+
 
 <span id="specialContentsLister"></span>
 
@@ -234,19 +234,19 @@ distance.
 
 [travel.t](../file/travel.t.html)\[[5110](../source/travel.t.html#5110)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -254,13 +254,13 @@ distance.
 
 [travel.t](../file/travel.t.html)\[[4981](../source/travel.t.html#4981)\]
 
-<div class="desc">
+
 
 as with decorations, downgrade the likelihood for Examine, as the
 standard walls, floors, etc. are pretty much background noise that are
 just here in case someone wants to refer to them explicitly
 
-</div>
+
 
 <span id="dobjFor(LookIn)"></span>
 
@@ -268,11 +268,11 @@ just here in case someone wants to refer to them explicitly
 
 [travel.t](../file/travel.t.html)\[[5113](../source/travel.t.html#5113)\]
 
-<div class="desc">
+
 
 look in/on: show our contents
 
-</div>
+
 
 <span id="examinePartContents"></span>
 
@@ -280,11 +280,11 @@ look in/on: show our contents
 
 [travel.t](../file/travel.t.html)\[[4998](../source/travel.t.html#4998)\]
 
-<div class="desc">
+
 
 show our contents
 
-</div>
+
 
 <span id="examineSpecialContents"></span>
 
@@ -292,12 +292,12 @@ show our contents
 
 [travel.t](../file/travel.t.html)\[[5028](../source/travel.t.html#5028)\]
 
-<div class="desc">
+
 
 show our special contents - this shows objects with special descriptions
 that are specifically in this room part
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -305,11 +305,11 @@ that are specifically in this room part
 
 [travel.t](../file/travel.t.html)\[[4991](../source/travel.t.html#4991)\]
 
-<div class="desc">
+
 
 describe the status - shows the things that are in/on the part
 
-</div>
+
 
 <span id="filterResolveList"></span>
 
@@ -317,7 +317,7 @@ describe the status - shows the things that are in/on the part
 
 [travel.t](../file/travel.t.html)\[[4937](../source/travel.t.html#4937)\]
 
-<div class="desc">
+
 
 When multiple room parts show up in a resolve list, and some of the
 parts are local to the actor's immediate location and others aren't,
@@ -325,7 +325,7 @@ keep only the local ones. This helps avoid pointless ambiguity in cases
 where two (or more) top-level locations are linked with a sense
 connector, and one or the other location has custom room part objects.
 
-</div>
+
 
 <span id="getHitFallDestination"></span>
 
@@ -333,13 +333,13 @@ connector, and one or the other location has custom room part objects.
 
 [travel.t](../file/travel.t.html)\[[5052](../source/travel.t.html#5052)\]
 
-<div class="desc">
+
 
 Get the destination for a thrown object that hits me. Since we don't
 have a real location, we must ask the actor for our room part location,
 and then use its hit-and-fall destination.
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -347,13 +347,13 @@ and then use its hit-and-fall destination.
 
 [travel.t](../file/travel.t.html)\[[4924](../source/travel.t.html#4924)\]
 
-<div class="desc">
+
 
 Don't include room parts in 'all'. Room parts are so ubiquitous that we
 never want to assume that they're involved in a command except when it
 is specifically so stated.
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -361,11 +361,11 @@ is specifically so stated.
 
 [travel.t](../file/travel.t.html)\[[4927](../source/travel.t.html#4927)\]
 
-<div class="desc">
+
 
 do allow use as a default, though
 
-</div>
+
 
 <span id="initializeThing"></span>
 
@@ -373,12 +373,12 @@ do allow use as a default, though
 
 [travel.t](../file/travel.t.html)\[[5135](../source/travel.t.html#5135)\]
 
-<div class="desc">
+
 
 initialization - add myself to my location's roomPart list if I have an
 explicit location
 
-</div>
+
 
 <span id="isIn"></span>
 
@@ -386,11 +386,11 @@ explicit location
 
 [travel.t](../file/travel.t.html)\[[5074](../source/travel.t.html#5074)\]
 
-<div class="desc">
+
 
 consider me to be in any room of which I'm a part
 
-</div>
+
 
 <span id="isObjListedInRoomPart"></span>
 
@@ -398,7 +398,7 @@ consider me to be in any room of which I'm a part
 
 [travel.t](../file/travel.t.html)\[[4882](../source/travel.t.html#4882)\]
 
-<div class="desc">
+
 
 When we explicitly examine a RoomPart, list any object that's nominally
 contained in the room part, as long it doesn't have a special
@@ -407,7 +407,7 @@ special description, then examining the room part will automatically
 display that special desc, so we don't want to include the object in a
 separate list of miscellaneous contents of the room part.)
 
-</div>
+
 
 <span id="moveIntoAdd"></span>
 
@@ -415,7 +415,7 @@ separate list of miscellaneous contents of the room part.)
 
 [travel.t](../file/travel.t.html)\[[4901](../source/travel.t.html#4901)\]
 
-<div class="desc">
+
 
 Add this room part to the given room.
 
@@ -426,7 +426,7 @@ the room definitions and never changed. However, if you need to
 dynamically add a room part to a room during the game, you can do so
 using this method.
 
-</div>
+
 
 <span id="moveOutOf"></span>
 
@@ -434,16 +434,16 @@ using this method.
 
 [travel.t](../file/travel.t.html)\[[4912](../source/travel.t.html#4912)\]
 
-<div class="desc">
+
 
 Remove this room part from the given room. This can be used if it's
 necessary to remove the room part dynamically from a room.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

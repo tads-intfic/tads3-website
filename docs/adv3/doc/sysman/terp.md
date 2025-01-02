@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="tools.html" class="nav">The Tools</a> \> Running Programs: The
@@ -17,7 +17,7 @@ Executables</a>    
 <a href="langsec.html" class="nav"><em>Next:</em> The Language</a>    
 </span>
 
-</div>
+
 
 
 
@@ -43,7 +43,7 @@ so you should check your system-specific release notes for details.
 
 For command-line systems, the interpreter accepts this command syntax:
 
-<div class="cmdline">
+
 
     t3run options imageName imageParams
 
@@ -310,11 +310,11 @@ The interpreter options are:
   is the same as the working directory set with [-d](#-d-option), or
   simply the folder containing the .t3 file if there's no -d option.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -325,4 +325,4 @@ Executables</a>    
 <a href="langsec.html" class="nav"><em>Next:</em> The Language</a>    
 </span>
 
-</div>
+

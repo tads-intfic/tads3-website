@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for "list but" rules, which select everything in an
 explicitly provided list minus a set of exceptions; for example, in
@@ -38,15 +38,15 @@ included before exclusions are applied.
 
 `class `**`ListButProd`**` :   `[`ButProd`](../object/ButProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ListButProd`**  
 [`ButProd`](../object/ButProd.html)  
@@ -55,29 +55,29 @@ included before exclusions are applied.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ListButProd`**  
 [`terminalNounPhrase(pluralExcept)`](../object/terminalNounPhrase(pluralExcept).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`addedFlags`](#addedFlags)
 
@@ -91,11 +91,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`flagAllExcepted`](#flagAllExcepted)[`getMainList`](#getMainList)
 
@@ -110,11 +110,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="addedFlags"></span>
 
@@ -122,20 +122,20 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[1845](../source/parser.t.html#1845)\]
 
-<div class="desc">
+
 
 set the "unclear disambig" flag in our results, so we provide an
 indication of which object we chose
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="flagAllExcepted"></span>
 
@@ -143,11 +143,11 @@ indication of which object we chose
 
 [parser.t](../file/parser.t.html)\[[1836](../source/parser.t.html#1836)\]
 
-<div class="desc">
+
 
 flag an error - everything has been excluded
 
-</div>
+
 
 <span id="getMainList"></span>
 
@@ -155,15 +155,15 @@ flag an error - everything has been excluded
 
 [parser.t](../file/parser.t.html)\[[1830](../source/parser.t.html#1830)\]
 
-<div class="desc">
+
 
 our main list is given by the 'np\_' subproduction
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

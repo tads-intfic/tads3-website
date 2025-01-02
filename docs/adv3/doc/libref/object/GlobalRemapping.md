@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 GlobalRemapping makes it possible to transform one action into another
 globally - as opposed to the remapTo mechanism, which lets an object
@@ -53,15 +53,15 @@ dynamically with 'new'.
 
 `class `**`GlobalRemapping`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GlobalRemapping`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -69,28 +69,28 @@ dynamically with 'new'.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`giveMeToAskFor`](../object/giveMeToAskFor.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allGlobalRemappings`](#allGlobalRemappings)[`listNeedsSorting`](#listNeedsSorting)[`remappingOrder`](#remappingOrder)
 
@@ -101,11 +101,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`execute`](#execute)[`findGlobalRemapping`](#findGlobalRemapping)[`getRemapping`](#getRemapping)[`registerGlobalRemapping`](#registerGlobalRemapping)[`unregisterGlobalRemapping`](#unregisterGlobalRemapping)
 
@@ -116,11 +116,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allGlobalRemappings"></span>
 
@@ -128,12 +128,12 @@ Inherited from `ModuleExecObject` :
 
 [exec.t](../file/exec.t.html)\[[771](../source/exec.t.html#771)\]
 
-<div class="desc">
+
 
 Static class property: the master list of remappings. We build this
 automatically at preinit time, and manipulate it via our constructor.
 
-</div>
+
 
 <span id="listNeedsSorting"></span>
 
@@ -141,13 +141,13 @@ automatically at preinit time, and manipulate it via our constructor.
 
 [exec.t](../file/exec.t.html)\[[778](../source/exec.t.html#778)\]
 
-<div class="desc">
+
 
 static class property: the master list needs to be sorted; this is set
 to true each time we update the list, so that the list scanner knows to
 sort it before doing its scan
 
-</div>
+
 
 <span id="remappingOrder"></span>
 
@@ -155,7 +155,7 @@ sort it before doing its scan
 
 [exec.t](../file/exec.t.html)\[[661](../source/exec.t.html#661)\]
 
-<div class="desc">
+
 
 Remapping order - the parser applies global remappings in ascending
 order of this value. In most cases, the order shouldn't matter, since
@@ -165,15 +165,15 @@ to define rules that overlap, so the ordering lets you specify which one
 goes first. In most cases you'll want to apply the more specific rule
 first.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -181,11 +181,11 @@ first.
 
 [exec.t](../file/exec.t.html)\[[740](../source/exec.t.html#740)\]
 
-<div class="desc">
+
 
 construction: add myself to the master list
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -193,11 +193,11 @@ construction: add myself to the master list
 
 [exec.t](../file/exec.t.html)\[[733](../source/exec.t.html#733)\]
 
-<div class="desc">
+
 
 pre-initialization: add each instance to the master list
 
-</div>
+
 
 <span id="findGlobalRemapping"></span>
 
@@ -205,7 +205,7 @@ pre-initialization: add each instance to the master list
 
 [exec.t](../file/exec.t.html)\[[678](../source/exec.t.html#678)\]
 
-<div class="desc">
+
 
 Static class method: look for a remapping. This runs through the master
 list of mappings, looking for a mapping that applies to the given
@@ -220,7 +220,7 @@ remapping, this will simply be the original values passed in as our
 arguments; if we do find a remapping, this will be the new version of
 the command.
 
-</div>
+
 
 <span id="getRemapping"></span>
 
@@ -228,7 +228,7 @@ the command.
 
 [exec.t](../file/exec.t.html)\[[642](../source/exec.t.html#642)\]
 
-<div class="desc">
+
 
 Check for and apply a remapping. This method must be implemented in each
 GlobalRemapping instance to perform the actual remapping work.
@@ -254,7 +254,7 @@ example, you could use this to remap a command of the form "X, GIVE ME
 Y" to "ME, ASK X FOR Y" - note that the target actor changes from X to
 ME.
 
-</div>
+
 
 <span id="registerGlobalRemapping"></span>
 
@@ -262,11 +262,11 @@ ME.
 
 [exec.t](../file/exec.t.html)\[[747](../source/exec.t.html#747)\]
 
-<div class="desc">
+
 
 register myself with the global list, making this an active mapping
 
-</div>
+
 
 <span id="unregisterGlobalRemapping"></span>
 
@@ -274,17 +274,17 @@ register myself with the global list, making this an active mapping
 
 [exec.t](../file/exec.t.html)\[[761](../source/exec.t.html#761)\]
 
-<div class="desc">
+
 
 unregister - this removes me from the global list, making this mapping
 inactive: after being unregistered, the parser won't apply this mapping
 to new commands
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

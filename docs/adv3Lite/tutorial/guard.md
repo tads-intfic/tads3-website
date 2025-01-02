@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="character.html" class="nav">Character Building</a> \> The
@@ -16,7 +16,7 @@ Security Guard
     <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
 </span>
 
-</div>
+
 
 
 
@@ -35,7 +35,7 @@ opposed to various aspects of its behaviour) is defined much like any
 other Thing, except that we define it to be of class Actor. The Actor
 object representing the security guard might look like this:
 
-`
+```
     guard: Actor 'security guard; burly flab; man; him' @securityGate
         "He's a burly-looking fellow, though it's probably as much flab as muscle. "
         
@@ -47,7 +47,7 @@ object representing the security guard might look like this:
             probably result in all the other airport security staff coming after you,
             which is a complication you could do without right now. '
     ;
-`
+```
 
 You can place this code right at the start of your npcs.t file, and then
 recompile and run the game to ensure that the security guard is now
@@ -95,7 +95,7 @@ Object](../manual/actorobj.html), consult the *adv3Lite Library Manual*.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -105,4 +105,4 @@ Security Guard
     <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
 </span>
 
-</div>
+

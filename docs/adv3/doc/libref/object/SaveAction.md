@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Special "save" action. This command saves the current game state to an
 external file for later restoration.
@@ -34,15 +34,15 @@ external file for later restoration.
 `DefineAction(Save, FileOpAction)      `*`// original source text`*  
 `class `**`SaveAction`**` :   `[`FileOpAction`](../object/FileOpAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SaveAction`**  
 [`FileOpAction`](../object/FileOpAction.html)  
@@ -53,11 +53,11 @@ external file for later restoration.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SaveAction`**  
 [`predicate(Save)`](../object/predicate(Save).html)  
@@ -65,19 +65,19 @@ external file for later restoration.
 [`predicate(SaveString)`](../object/predicate(SaveString).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fileDisposition`](#fileDisposition)[`filePromptMsg`](#filePromptMsg)[`fileTypeID`](#fileTypeID)[`includeInUndo`](#includeInUndo)[`isRepeatable`](#isRepeatable)
 
@@ -97,11 +97,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`performFileOp`](#performFileOp)[`showCancelMsg`](#showCancelMsg)
 
@@ -122,11 +122,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fileDisposition"></span>
 
@@ -134,11 +134,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[253](../source/actions.t.html#253)\]
 
-<div class="desc">
+
 
 we're asking for a file to save, or type t3-save
 
-</div>
+
 
 <span id="filePromptMsg"></span>
 
@@ -146,11 +146,11 @@ we're asking for a file to save, or type t3-save
 
 [actions.t](../file/actions.t.html)\[[250](../source/actions.t.html#250)\]
 
-<div class="desc">
+
 
 the file dialog prompt
 
-</div>
+
 
 <span id="fileTypeID"></span>
 
@@ -158,11 +158,11 @@ the file dialog prompt
 
 [actions.t](../file/actions.t.html)\[[254](../source/actions.t.html#254)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -170,14 +170,14 @@ the file dialog prompt
 
 [actions.t](../file/actions.t.html)\[[302](../source/actions.t.html#302)\]
 
-<div class="desc">
+
 
 Saving has no effect on game state, so it's irrelevant whether or not
 it's undoable; but it might be confusing to say we undid a "save"
 command, because the player might think we deleted the saved file. To
 avoid such confusion, do not include "save" commands in the undo log.
 
-</div>
+
 
 <span id="isRepeatable"></span>
 
@@ -185,21 +185,21 @@ avoid such confusion, do not include "save" commands in the undo log.
 
 [actions.t](../file/actions.t.html)\[[309](../source/actions.t.html#309)\]
 
-<div class="desc">
+
 
 Don't allow this to be repeated with AGAIN. There's no point in
 repeating a SAVE immediately, as nothing will have changed in the game
 state to warrant saving again.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="performFileOp"></span>
 
@@ -207,11 +207,11 @@ state to warrant saving again.
 
 [actions.t](../file/actions.t.html)\[[260](../source/actions.t.html#260)\]
 
-<div class="desc">
+
 
 perform a save
 
-</div>
+
 
 <span id="showCancelMsg"></span>
 
@@ -219,15 +219,15 @@ perform a save
 
 [actions.t](../file/actions.t.html)\[[257](../source/actions.t.html#257)\]
 
-<div class="desc">
+
 
 cancel message
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

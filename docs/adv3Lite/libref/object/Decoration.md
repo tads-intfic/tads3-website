@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Decoration is a Fixture that can only be EXAMINEd. Any other action
 results in the display of its notImportantMsg. It's normally used for
@@ -34,15 +34,15 @@ objects that are purely scenery.
 
 `class `**`Decoration`**` :   `[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Decoration`**  
 [`Fixture`](../object/Fixture.html)  
@@ -55,11 +55,11 @@ objects that are purely scenery.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Decoration`**  
 [`Distant`](../object/Distant.html)  
@@ -74,19 +74,19 @@ objects that are purely scenery.
 [`Unthing`](../object/Unthing.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isDecoration`](#isDecoration)
 
@@ -108,11 +108,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`hideFromAll`](#hideFromAll)
 
@@ -135,11 +135,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isDecoration"></span>
 
@@ -147,19 +147,19 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[267](../source/extras.t.html#267)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -168,18 +168,18 @@ description only</span>
 
 [extras.t](../file/extras.t.html)\[[275](../source/extras.t.html#275)\]
 
-<div class="desc">
+
 
 Game code may wish to hide decorations from all commands applied to ALL.
 Tbis can be achieved by overriding hideFromAll() as shown below. This is
 not done in the library since making this change at version 1.61 would
 compromise backward compatibility.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

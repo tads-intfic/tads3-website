@@ -245,9 +245,9 @@ property of [NetReplyEvent](../object/NetReplyEvent.html) in
 [**`hyperlinkStyleTag`**](../object/hyperlinkStyleTag.html) - object in
 [output.t](../file/output.t.html)\[[1006](../source/output.t.html#1006)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

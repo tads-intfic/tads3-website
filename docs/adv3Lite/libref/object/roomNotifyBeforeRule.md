@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Call roomBeforeAction() on the current actor's location, and
 regionBeforeAction() on all the regions it's in.
 
 **`roomNotifyBeforeRule`**` :   `[`BeforeRule`](../object/BeforeRule.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`roomNotifyBeforeRule`**  
 [`BeforeRule`](../object/BeforeRule.html)  
@@ -46,11 +46,11 @@ regionBeforeAction() on all the regions it's in.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`priority`](#priority)
 
@@ -66,11 +66,11 @@ Inherited from `Rule` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`follow`](#follow)
 
@@ -87,11 +87,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -99,20 +99,20 @@ Inherited from `Redirector` :
 
 [sysrules.t](../file/sysrules.t.html)\[[322](../source/sysrules.t.html#322)\]
 
-<div class="desc">
+
 
 Call roomBeforeAction() on the current actor's location, and
 regionBeforeAction() on all the regions it's in.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="follow"></span>
 
@@ -120,15 +120,15 @@ regionBeforeAction() on all the regions it's in.
 
 [sysrules.t](../file/sysrules.t.html)\[[313](../source/sysrules.t.html#313)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

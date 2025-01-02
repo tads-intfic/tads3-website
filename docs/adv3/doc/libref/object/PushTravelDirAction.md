@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 For directional push-and-travel commands, we define a common base class
 that does the work to find the connector based on the room's directional
@@ -38,15 +38,15 @@ DirectionProd object for the associated direction.
 `DefineAction(PushTravelDir, PushTravelAction)      `*`// original source text`*  
 `class `**`PushTravelDirAction`**` :   `[`PushTravelAction`](../object/PushTravelAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PushTravelDirAction`**  
 [`PushTravelAction`](../object/PushTravelAction.html)  
@@ -58,11 +58,11 @@ DirectionProd object for the associated direction.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PushTravelDirAction`**  
 [`predicate(PushTravelDir)`](../object/predicate(PushTravelDir).html)  
@@ -84,19 +84,19 @@ DirectionProd object for the associated direction.
 [`PushWestAction`](../object/PushWestAction.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -116,11 +116,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getDirection`](#getDirection)[`performTravel`](#performTravel)
 
@@ -140,19 +140,19 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getDirection"></span>
 
@@ -160,12 +160,12 @@ Inherited from `Resolver` :
 
 [actions.t](../file/actions.t.html)\[[2929](../source/actions.t.html#2929)\]
 
-<div class="desc">
+
 
 Get the direction we're going. By default, we return the direction
 associated with the dirMatch match object from our grammar match.
 
-</div>
+
 
 <span id="performTravel"></span>
 
@@ -173,15 +173,15 @@ associated with the dirMatch match object from our grammar match.
 
 [actions.t](../file/actions.t.html)\[[2932](../source/actions.t.html#2932)\]
 
-<div class="desc">
+
 
 carry out the nested travel action for a PushTravel
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

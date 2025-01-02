@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "Tentative" noun resolver results gather. This type of results gatherer
 is used to perform a tentative pre-resolution of an object of a
@@ -57,42 +57,42 @@ we'll perform later.
 
 `class `**`TentativeResolveResults`**` :   `[`ResolveResults`](../object/ResolveResults.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TentativeResolveResults`**  
 [`ResolveResults`](../object/ResolveResults.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allowActionRemapping`](#allowActionRemapping)[`allowEquivalentFiltering`](#allowEquivalentFiltering)[`npMissing`](#npMissing)
 
@@ -100,11 +100,11 @@ we'll perform later.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askMissingLiteral`](#askMissingLiteral)[`askMissingObject`](#askMissingObject)[`canResolveInteractively`](#canResolveInteractively)[`construct`](#construct)[`emptyNounPhrase`](#emptyNounPhrase)[`incCommandCount`](#incCommandCount)[`insufficientQuantity`](#insufficientQuantity)[`noMatch`](#noMatch)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchForListBut`](#noMatchForListBut)[`noMatchForLocation`](#noMatchForLocation)[`noMatchForPossessive`](#noMatchForPossessive)[`noMatchForPronoun`](#noMatchForPronoun)[`noMatchPoss`](#noMatchPoss)[`noteActorSpecified`](#noteActorSpecified)[`noteAdjEnding`](#noteAdjEnding)[`noteBadPrep`](#noteBadPrep)[`noteEmptyBut`](#noteEmptyBut)[`noteIndefinite`](#noteIndefinite)[`noteLiteral`](#noteLiteral)[`noteMatches`](#noteMatches)[`noteMiscWordList`](#noteMiscWordList)[`noteNounSlots`](#noteNounSlots)[`notePronoun`](#notePronoun)[`noteWeakPhrasing`](#noteWeakPhrasing)[`nothingInLocation`](#nothingInLocation)[`noVocabMatch`](#noVocabMatch)[`reflexiveNotAllowed`](#reflexiveNotAllowed)[`uniqueObjectRequired`](#uniqueObjectRequired)[`unknownNounPhrase`](#unknownNounPhrase)[`wrongReflexive`](#wrongReflexive)[`zeroQuantity`](#zeroQuantity)
 
@@ -112,11 +112,11 @@ we'll perform later.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowActionRemapping"></span>
 
@@ -124,11 +124,11 @@ we'll perform later.
 
 [action.t](../file/action.t.html)\[[3864](../source/action.t.html#3864)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="allowEquivalentFiltering"></span>
 
@@ -136,14 +136,14 @@ we'll perform later.
 
 [action.t](../file/action.t.html)\[[3872](../source/action.t.html#3872)\]
 
-<div class="desc">
+
 
 during the tentative phase, keep all equivalents - we don't want to make
 any arbitrary choices among equivalents during this phase, because doing
 so could improperly force a choice among otherwise ambiguous resolutions
 to the other phrase
 
-</div>
+
 
 <span id="npMissing"></span>
 
@@ -151,21 +151,21 @@ to the other phrase
 
 [action.t](../file/action.t.html)\[[3912](../source/action.t.html#3912)\]
 
-<div class="desc">
+
 
 flag: the noun phrase we're resolving is a missing noun phrase, which
 means that we'll ask for it to be filled in when we get around to
 resolving it for real
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="ambiguousNounPhrase"></span>
 
@@ -173,12 +173,12 @@ resolving it for real
 
 [action.t](../file/action.t.html)\[[3878](../source/action.t.html#3878)\]
 
-<div class="desc">
+
 
 for ambiguous results, don't attempt to narrow things down - just keep
 the entire list
 
-</div>
+
 
 <span id="askMissingLiteral"></span>
 
@@ -186,12 +186,12 @@ the entire list
 
 [action.t](../file/action.t.html)\[[3902](../source/action.t.html#3902)\]
 
-<div class="desc">
+
 
 no interaction is allowed, so return no tokens if we need to ask for a
 literal
 
-</div>
+
 
 <span id="askMissingObject"></span>
 
@@ -199,12 +199,12 @@ literal
 
 [action.t](../file/action.t.html)\[[3889](../source/action.t.html#3889)\]
 
-<div class="desc">
+
 
 no interaction is allowed, so return nothing if we need to ask for a
 missing object
 
-</div>
+
 
 <span id="canResolveInteractively"></span>
 
@@ -212,11 +212,11 @@ missing object
 
 [action.t](../file/action.t.html)\[[3905](../source/action.t.html#3905)\]
 
-<div class="desc">
+
 
 no interaction is allowed during tentative resolution
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -224,11 +224,11 @@ no interaction is allowed during tentative resolution
 
 [action.t](../file/action.t.html)\[[3829](../source/action.t.html#3829)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="emptyNounPhrase"></span>
 
@@ -236,11 +236,11 @@ no interaction is allowed during tentative resolution
 
 [action.t](../file/action.t.html)\[[3851](../source/action.t.html#3851)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="incCommandCount"></span>
 
@@ -248,11 +248,11 @@ no interaction is allowed during tentative resolution
 
 [action.t](../file/action.t.html)\[[3860](../source/action.t.html#3860)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="insufficientQuantity"></span>
 
@@ -260,11 +260,11 @@ no interaction is allowed during tentative resolution
 
 [action.t](../file/action.t.html)\[[3853](../source/action.t.html#3853)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatch"></span>
 
@@ -272,12 +272,12 @@ no interaction is allowed during tentative resolution
 
 [action.t](../file/action.t.html)\[[3835](../source/action.t.html#3835)\]
 
-<div class="desc">
+
 
 ignore most resolution problems, since this is only a tentative
 resolution pass
 
-</div>
+
 
 <span id="noMatchForAll"></span>
 
@@ -285,11 +285,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3838](../source/action.t.html#3838)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatchForAllBut"></span>
 
@@ -297,11 +297,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3840](../source/action.t.html#3840)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatchForListBut"></span>
 
@@ -309,11 +309,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3841](../source/action.t.html#3841)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatchForLocation"></span>
 
@@ -321,11 +321,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3846](../source/action.t.html#3846)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatchForPossessive"></span>
 
@@ -333,11 +333,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3845](../source/action.t.html#3845)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatchForPronoun"></span>
 
@@ -345,11 +345,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3842](../source/action.t.html#3842)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noMatchPoss"></span>
 
@@ -357,11 +357,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3836](../source/action.t.html#3836)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteActorSpecified"></span>
 
@@ -369,11 +369,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3861](../source/action.t.html#3861)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteAdjEnding"></span>
 
@@ -381,11 +381,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3855](../source/action.t.html#3855)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteBadPrep"></span>
 
@@ -393,11 +393,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3847](../source/action.t.html#3847)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteEmptyBut"></span>
 
@@ -405,11 +405,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3839](../source/action.t.html#3839)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteIndefinite"></span>
 
@@ -417,11 +417,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3856](../source/action.t.html#3856)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteLiteral"></span>
 
@@ -429,11 +429,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3850](../source/action.t.html#3850)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteMatches"></span>
 
@@ -441,11 +441,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3859](../source/action.t.html#3859)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteMiscWordList"></span>
 
@@ -453,11 +453,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3857](../source/action.t.html#3857)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteNounSlots"></span>
 
@@ -465,11 +465,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3862](../source/action.t.html#3862)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notePronoun"></span>
 
@@ -477,11 +477,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3858](../source/action.t.html#3858)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noteWeakPhrasing"></span>
 
@@ -489,11 +489,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3863](../source/action.t.html#3863)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nothingInLocation"></span>
 
@@ -501,11 +501,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3848](../source/action.t.html#3848)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noVocabMatch"></span>
 
@@ -513,11 +513,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3837](../source/action.t.html#3837)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="reflexiveNotAllowed"></span>
 
@@ -525,11 +525,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3843](../source/action.t.html#3843)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="uniqueObjectRequired"></span>
 
@@ -537,11 +537,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3854](../source/action.t.html#3854)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="unknownNounPhrase"></span>
 
@@ -549,11 +549,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3849](../source/action.t.html#3849)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="wrongReflexive"></span>
 
@@ -561,11 +561,11 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3844](../source/action.t.html#3844)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="zeroQuantity"></span>
 
@@ -573,15 +573,15 @@ resolution pass
 
 [action.t](../file/action.t.html)\[[3852](../source/action.t.html#3852)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

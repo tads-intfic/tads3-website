@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Make WHAT IS X behave like EXAMINE X, but then explain the standard
 phrasing of an EXAMINE command.
@@ -28,15 +28,15 @@ phrasing of an EXAMINE command.
 `VerbRule(WhatIsNoun)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(WhatIsNoun)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(WhatIsNoun)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -44,11 +44,11 @@ phrasing of an EXAMINE command.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`isActive`](#isActive)  [`priority`](#priority)  [`verbPhrase`](#verbPhrase)  `
 
@@ -59,11 +59,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Production` :
 
 [newbie.t](../file/newbie.t.html)\[[660](../source/newbie.t.html#660)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isActive"></span>
 
@@ -99,12 +99,12 @@ Inherited from `Production` :
 
 [newbie.t](../file/newbie.t.html)\[[670](../source/newbie.t.html#670)\]
 
-<div class="desc">
+
 
 Don't match this grammar if the player char is in conversation, since in
 that case the player may be attempting a valid conversational command)
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -112,11 +112,11 @@ that case the player may be attempting a valid conversational command)
 
 [newbie.t](../file/newbie.t.html)\[[663](../source/newbie.t.html#663)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -124,25 +124,25 @@ that case the player may be attempting a valid conversational command)
 
 [newbie.t](../file/newbie.t.html)\[[661](../source/newbie.t.html#661)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

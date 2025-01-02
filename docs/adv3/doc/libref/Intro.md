@@ -1,15 +1,15 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
 
 
-<div class="fdesc">
+
+
 
 # TADS 3 Library Reference Manual
 
@@ -96,11 +96,11 @@ or modified.
 
 
 
-<div class="ftr">
+
 
 TADS Library Reference Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
 
-</div>
+
+

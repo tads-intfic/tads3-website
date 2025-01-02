@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Container: an object that can have other objects placed within it.
 
 `class `**`Container`**` :   `[`BasicContainer`](../object/BasicContainer.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Container`**  
 [`BasicContainer`](../object/BasicContainer.html)  
@@ -50,11 +50,11 @@ Container: an object that can have other objects placed within it.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Container`**  
 [`Booth`](../object/Booth.html)  
@@ -68,19 +68,19 @@ Container: an object that can have other objects placed within it.
 [`StretchyContainer`](../object/StretchyContainer.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`lookInDesc`](#lookInDesc)
 
@@ -98,11 +98,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(LookIn)`](#dobjFor(LookIn))[`dobjFor(Search)`](#dobjFor(Search))[`examineContainerStatus`](#examineContainerStatus)[`examineStatus`](#examineStatus)[`iobjFor(PutIn)`](#iobjFor(PutIn))[`tryMovingObjInto`](#tryMovingObjInto)[`tryPuttingObjInBag`](#tryPuttingObjInBag)
 
@@ -120,11 +120,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="lookInDesc"></span>
 
@@ -132,22 +132,22 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[4876](../source/objects.t.html#4876)\]
 
-<div class="desc">
+
 
 Our fixed "look in" description, if any. This is shown on LOOK IN before
 our normal listing of our portable contents; it can be used to describe
 generally what the interior looks like, for example. By default, we show
 nothing here.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(LookIn)"></span>
 
@@ -155,11 +155,11 @@ nothing here.
 
 [objects.t](../file/objects.t.html)\[[4932](../source/objects.t.html#4932)\]
 
-<div class="desc">
+
 
 "Look in"
 
-</div>
+
 
 <span id="dobjFor(Search)"></span>
 
@@ -167,14 +167,14 @@ nothing here.
 
 [objects.t](../file/objects.t.html)\[[4967](../source/objects.t.html#4967)\]
 
-<div class="desc">
+
 
 "Search". This is mostly like Open, except that the actor has to be able
 to reach into the object, not just see into it - searching implies a
 more thorough sort of examination, usually including physically poking
 through the object's contents.
 
-</div>
+
 
 <span id="examineContainerStatus"></span>
 
@@ -182,11 +182,11 @@ through the object's contents.
 
 [objects.t](../file/objects.t.html)\[[4894](../source/objects.t.html#4894)\]
 
-<div class="desc">
+
 
 mention my open/closed status for Examine processing
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -194,12 +194,12 @@ mention my open/closed status for Examine processing
 
 [objects.t](../file/objects.t.html)\[[4882](../source/objects.t.html#4882)\]
 
-<div class="desc">
+
 
 Show our status for "examine". This shows our open/closed status, and
 lists our contents.
 
-</div>
+
 
 <span id="iobjFor(PutIn)"></span>
 
@@ -207,11 +207,11 @@ lists our contents.
 
 [objects.t](../file/objects.t.html)\[[4993](../source/objects.t.html#4993)\]
 
-<div class="desc">
+
 
 Put In processing. A container can accept new contents.
 
-</div>
+
 
 <span id="tryMovingObjInto"></span>
 
@@ -219,12 +219,12 @@ Put In processing. A container can accept new contents.
 
 [objects.t](../file/objects.t.html)\[[4926](../source/objects.t.html#4926)\]
 
-<div class="desc">
+
 
 Try moving an object into this container. For a container, this performs
 a PUT IN command to move the object into self.
 
-</div>
+
 
 <span id="tryPuttingObjInBag"></span>
 
@@ -232,16 +232,16 @@ a PUT IN command to move the object into self.
 
 [objects.t](../file/objects.t.html)\[[4907](../source/objects.t.html#4907)\]
 
-<div class="desc">
+
 
 Try putting an object into me when I'm serving as a bag of holding. For
 a container, this simply does a "put obj in bag".
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

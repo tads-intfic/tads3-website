@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Unmatched disambiguation - we throw this when the user answers a
 disambiguation question with a syntactically valid response that doesn't
@@ -34,15 +34,15 @@ refer to any of the objects in the list of choices offered.
 
 `class `**`UnmatchedDisambigException`**` :   `[`DisambigException`](../object/DisambigException.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`UnmatchedDisambigException`**  
 [`DisambigException`](../object/DisambigException.html)  
@@ -50,27 +50,27 @@ refer to any of the objects in the list of choices offered.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`resp_`](#resp_)
 
@@ -81,11 +81,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -96,11 +96,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="resp_"></span>
 
@@ -108,19 +108,19 @@ Inherited from `Exception` :
 
 [disambig.t](../file/disambig.t.html)\[[507](../source/disambig.t.html#507)\]
 
-<div class="desc">
+
 
 the response text
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -128,15 +128,15 @@ the response text
 
 [disambig.t](../file/disambig.t.html)\[[500](../source/disambig.t.html#500)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

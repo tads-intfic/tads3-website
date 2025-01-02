@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| The Intrinsics  
 <span class="navnp"><a href="errmsg.html" class="nav"><em>Prev:</em> VM Run-Time Error
@@ -15,7 +15,7 @@ Codes</a>    
 <a href="t3vm.html" class="nav"><em>Next:</em> t3vm Function Set</a>    
 </span>
 
-</div>
+
 
 
 
@@ -43,7 +43,7 @@ intensive and common enough that many programs will benefit
 substantially from the speed improvement, an intrinsic implementation
 might be justified.
 
-<div class="sectoc">
+
 
 [t3vm Function Set](t3vm.html)  
 [tads-gen Function Set](tadsgen.html)  
@@ -83,11 +83,11 @@ might be justified.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| The Intrinsics  
@@ -96,4 +96,4 @@ Codes</a>    
 <a href="t3vm.html" class="nav"><em>Next:</em> t3vm Function Set</a>    
 </span>
 
-</div>
+

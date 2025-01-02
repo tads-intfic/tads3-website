@@ -26,32 +26,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The native collection type - this is the base class for lists, vectors,
 and other objects that represent collections of values.
 
 `intrinsic class `**`Collection`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Collection`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Collection`**  
 [`List`](../object/List.html)  
@@ -61,19 +61,19 @@ and other objects that represent collections of values.
 [`AnonFuncPtr`](../object/AnonFuncPtr.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ and other objects that represent collections of values.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`createIterator`](#createIterator)[`createLiveIterator`](#createLiveIterator)
 
@@ -94,19 +94,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="createIterator"></span>
 
@@ -114,14 +114,14 @@ Inherited from `Object` :
 
 [systype.h](../file/systype.h.html)\[[151](../source/systype.h.html#151)\]
 
-<div class="desc">
+
 
 Create an iterator for the collection. This returns a new Iterator
 object that can be used to iterate over the values in the collection.
 The Iterator will use a snapshot of the collection that will never
 change, even if the collection is changed after the iterator is created.
 
-</div>
+
 
 <span id="createLiveIterator"></span>
 
@@ -129,7 +129,7 @@ change, even if the collection is changed after the iterator is created.
 
 [systype.h](../file/systype.h.html)\[[162](../source/systype.h.html#162)\]
 
-<div class="desc">
+
 
 Create a "live iterator" for the collection. This returns a new Iterator
 object that refers directly to the original collection; if the original
@@ -139,11 +139,11 @@ the elements in the collection if the collection changes during the
 course of the iteration. If consistent results are required, use
 createIterator() instead.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

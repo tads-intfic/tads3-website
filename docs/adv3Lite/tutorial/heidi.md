@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Heidi: our first
 adv3Lite game  
@@ -15,7 +15,7 @@ adv3Lite game
    <a href="basicsource.html" class="nav"><em>Next:</em> Creating the Basic
 Source File</a>     </span>
 
-</div>
+
 
 
 
@@ -42,7 +42,7 @@ first making a very rough approximation of the story, and then
 successively refining the details until it’s good enough for an initial
 attempt (there’s time later for more advanced stuff).
 
-<div class="sectoc">
+
 
 [Creating the Basic Source File](basicsource.html)  
 [Understanding the Source File](understanding.html)  
@@ -53,11 +53,11 @@ attempt (there’s time later for more advanced stuff).
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Heidi: our first
@@ -66,4 +66,4 @@ adv3Lite game
    <a href="basicsource.html" class="nav"><em>Next:</em> Creating the Basic
 Source File</a>     </span>
 
-</div>
+

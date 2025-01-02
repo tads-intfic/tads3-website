@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> The Command
@@ -17,7 +17,7 @@ Changing) Awkward Messages</a>    
 <a href="t3transcript.html" class="nav"><em>Next:</em> Manipulating the
 Transcript</a>     </span>
 
-</div>
+
 
 
 
@@ -910,7 +910,7 @@ how you want to prioritize it.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -921,4 +921,4 @@ Changing) Awkward Messages</a>    
 <a href="t3transcript.html" class="nav"><em>Next:</em> Manipulating the
 Transcript</a>     </span>
 
-</div>
+

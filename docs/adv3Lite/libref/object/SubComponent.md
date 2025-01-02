@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SubComponent is a Thing that is part of something else and represents
 the surface, container, underside or rear of the object to which it's
@@ -44,15 +44,15 @@ out from the property on which it is defined.
 
 `class `**`SubComponent`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SubComponent`**  
 [`Thing`](../object/Thing.html)  
@@ -64,27 +64,27 @@ out from the property on which it is defined.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isFixed`](#isFixed)[`origVocab`](#origVocab)
 
@@ -103,11 +103,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`initializeSubComponent`](#initializeSubComponent)[`makeOpen`](#makeOpen)[`matchNameDisambig`](#matchNameDisambig)[`nameAs`](#nameAs)[`preinitThing`](#preinitThing)
 
@@ -128,11 +128,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -140,12 +140,12 @@ Inherited from `LMentionable` :
 
 [thing.t](../file/thing.t.html)\[[9478](../source/thing.t.html#9478)\]
 
-<div class="desc">
+
 
 A SubComponent is always fixed in place since it represents a fixed part
 of its lexicalParent.
 
-</div>
+
 
 <span id="origVocab"></span>
 
@@ -153,20 +153,20 @@ of its lexicalParent.
 
 [thing.t](../file/thing.t.html)\[[9606](../source/thing.t.html#9606)\]
 
-<div class="desc">
+
 
 Our original vocab. We need to store this in case makrOpen() wants to
 restore it.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="initializeSubComponent"></span>
 
@@ -174,13 +174,13 @@ restore it.
 
 [thing.t](../file/thing.t.html)\[[9502](../source/thing.t.html#9502)\]
 
-<div class="desc">
+
 
 Initialize this SubComponent. This sets up the necessary relations
 between the SubCompononent and the object of which it is a part, usually
 its lexicalParent (passed as the parent parameter).
 
-</div>
+
 
 <span id="makeOpen"></span>
 
@@ -188,11 +188,11 @@ its lexicalParent (passed as the parent parameter).
 
 [thing.t](../file/thing.t.html)\[[9563](../source/thing.t.html#9563)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchNameDisambig"></span>
 
@@ -200,11 +200,11 @@ its lexicalParent (passed as the parent parameter).
 
 [thing.t](../file/thing.t.html)\[[9608](../source/thing.t.html#9608)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="nameAs"></span>
 
@@ -213,7 +213,7 @@ its lexicalParent (passed as the parent parameter).
 [thing.t](../file/thing.t.html)\[[9550](../source/thing.t.html#9550)\],
 [english.t](../file/english.t.html)\[[1892](../source/english.t.html#1892)\]
 
-<div class="desc">
+
 
 Take each of our name-related properties from the corresponding
 properties of our lexicalParent. Language-specific modules may need to
@@ -230,7 +230,7 @@ class in his method, we need to copy all the other name related
 properties of the parent object that game authors might conceivably
 customize.
 
-</div>
+
 
 <span id="preinitThing"></span>
 
@@ -238,15 +238,15 @@ customize.
 
 [thing.t](../file/thing.t.html)\[[9481](../source/thing.t.html#9481)\]
 
-<div class="desc">
+
 
 Preinitialize a SubComponent.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

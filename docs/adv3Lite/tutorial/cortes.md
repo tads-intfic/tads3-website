@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="character.html" class="nav">Character Building</a> \> Pablo
@@ -16,7 +16,7 @@ Cortez
     <a href="attendant.html" class="nav"><em>Next:</em> The Flight
 Attendant</a>     </span>
 
-</div>
+
 
 
 
@@ -37,7 +37,7 @@ shoot him.
 
 We start by defining the basic Actor object as before:
 
-`
+```
     cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
@@ -51,7 +51,7 @@ We start by defining the basic Actor object as before:
             quite deadly with that gun. '
             
     ;
-`
+```
 
 The only novelty here is the use of the \<\<first
 time\>\>...\<\<only\>\> construct to ensure that the explanation that
@@ -66,7 +66,7 @@ we're at it we'll customize the message that's otherwise shown when the
 player character attempts to take another actor's possessions to
 something a bit less bland than the library default:
 
-`
+```
     cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
@@ -90,7 +90,7 @@ something a bit less bland than the library default:
         "It's a Beretta 93R, capable of firing at a rate of more than a thousand
         rounds per minute. "
     ;
-`
+```
 
 To make Cortez shoot the player character if he tries to enter the
 cockpit we can use a beforeTravel() notification on the Actor object.
@@ -98,7 +98,7 @@ Although we could use the beforeTravel() method in this case, we'll use
 `actorBeforeTravel()`, again for reasons that
 will become clearer when we come to look at ActorStates:
 
-`
+```
     cortez: Actor 'Pablo Cortez; evil latinate;man;him'
         "He's really quite a handsome man, in a latinate sort of way; if you met him
         in a different context you might not realize quite what an evil devil he
@@ -135,7 +135,7 @@ will become clearer when we come to look at ActorStates:
             }        
         }
     ;
-`
+```
 
 Note the use of the `finishGameMsg(ftDeath,...)`
 to kill the player character. We supply
@@ -176,7 +176,7 @@ As a first example, we'll use an AgendaItem to move Pablo Cortez to the
 front of the plane when the takeover scene starts. The following code
 should be placed immediately after the definition of the gun object:
 
-`
+```
     + cortezArrivalAgenda: AgendaItem
         initiallyActive = true
         isReady = (takeover.isHappening)
@@ -187,7 +187,7 @@ should be placed immediately after the definition of the gun object:
             getActor.moveInto(planeFront);
         }
     ;
-`
+```
 
 Note the use of `getActor` within the
 `invokeItem()` method to get a reference to the
@@ -218,7 +218,7 @@ several ways we could arrange this, but the one we'll use here is to
 hold off adding our second AgendaItem to Cortez's agendaList until the
 first one is invoked:
 
-`
+```
     + cortezArrivalAgenda: AgendaItem
         initiallyActive = true
         isReady = (takeover.isHappening)
@@ -243,7 +243,7 @@ first one is invoked:
             I shall shoot any of you who are still aboard! Now, move, move!</q> ";
         }
     ;
-`
+```
 
 Note the use of
 `getActor.addToAgenda(cortezTalkingAgenda)` to
@@ -260,7 +260,7 @@ to its actor's agendaList with a statement like
 In the case of this DelayedAgendaItem we must also make sure that the
 player is still around to be shot:
 
-`
+```
     + cortezTalkingAgenda: AgendaItem
         isReady = (me.isIn(planeFront))
         
@@ -292,7 +292,7 @@ player is still around to be shot:
                 getActor.moveInto(nil);                
         }
     ;
-`
+```
 
 You may be wondering about that
 `getActor.moveInto(nil)` in the
@@ -323,7 +323,7 @@ flight attendant. In the meantime if you want the full story about
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -333,4 +333,4 @@ Cortez
     <a href="attendant.html" class="nav"><em>Next:</em> The Flight
 Attendant</a>     </span>
 
-</div>
+

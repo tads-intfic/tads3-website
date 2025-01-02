@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Default 'logical' verify result. If a verification result list doesn't
 have an explicitly set result, this is the default value.
 
 **`defaultLogicalVerifyResult`**` :   `[`LogicalVerifyResult`](../object/LogicalVerifyResult.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`defaultLogicalVerifyResult`**  
 [`LogicalVerifyResult`](../object/LogicalVerifyResult.html)  
@@ -44,11 +44,11 @@ have an explicitly set result, this is the default value.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`keyVal`](#keyVal)
 
@@ -63,11 +63,11 @@ Inherited from `MessageResult` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showMessage`](#showMessage)
 
@@ -81,11 +81,11 @@ Inherited from `MessageResult` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="keyVal"></span>
 
@@ -93,19 +93,19 @@ Inherited from `MessageResult` :
 
 [verify.t](../file/verify.t.html)\[[422](../source/verify.t.html#422)\]
 
-<div class="desc">
+
 
 the default logical result has no message
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showMessage"></span>
 
@@ -113,15 +113,15 @@ the default logical result has no message
 
 [verify.t](../file/verify.t.html)\[[418](../source/verify.t.html#418)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

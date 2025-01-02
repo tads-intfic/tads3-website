@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A light source that produces light using a fuel supply. This kind of
 light source uses a daemon to consume fuel whenever it's lit.
 
 `class `**`FueledLightSource`**` :   `[`LightSource`](../object/LightSource.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FueledLightSource`**  
 [`LightSource`](../object/LightSource.html)  
@@ -50,29 +50,29 @@ light source uses a daemon to consume fuel whenever it's lit.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`FueledLightSource`**  
 [`Candle`](../object/Candle.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`brightnessOn`](#brightnessOn)[`burnDaemonObj`](#burnDaemonObj)[`fuelLevel`](#fuelLevel)[`fuelSource`](#fuelSource)[`isLit`](#isLit)
 
@@ -87,11 +87,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`burnDaemon`](#burnDaemon)[`consumeFuel`](#consumeFuel)[`getFuelLevel`](#getFuelLevel)[`makeLit`](#makeLit)[`sayBurnedOut`](#sayBurnedOut)
 
@@ -106,11 +106,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="brightnessOn"></span>
 
@@ -118,11 +118,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[2081](../source/extras.t.html#2081)\]
 
-<div class="desc">
+
 
 provide a bright light by default
 
-</div>
+
 
 <span id="burnDaemonObj"></span>
 
@@ -130,11 +130,11 @@ provide a bright light by default
 
 [extras.t](../file/extras.t.html)\[[2192](../source/extras.t.html#2192)\]
 
-<div class="desc">
+
 
 our daemon object, valid while we're burning
 
-</div>
+
 
 <span id="fuelLevel"></span>
 
@@ -142,11 +142,11 @@ our daemon object, valid while we're burning
 
 [extras.t](../file/extras.t.html)\[[2116](../source/extras.t.html#2116)\]
 
-<div class="desc">
+
 
 our fuel level - we use this when we're our own fuel source
 
-</div>
+
 
 <span id="fuelSource"></span>
 
@@ -154,7 +154,7 @@ our fuel level - we use this when we're our own fuel source
 
 [extras.t](../file/extras.t.html)\[[2096](../source/extras.t.html#2096)\]
 
-<div class="desc">
+
 
 Our fuel source object. If desired, this can be set to a separate object
 to model the fuel supply separately from the light source itself; for
@@ -165,7 +165,7 @@ same object.
 The fuel supply object must expose two methods: getFuelLevel() and
 consumeFuel().
 
-</div>
+
 
 <span id="isLit"></span>
 
@@ -173,19 +173,19 @@ consumeFuel().
 
 [extras.t](../file/extras.t.html)\[[2084](../source/extras.t.html#2084)\]
 
-<div class="desc">
+
 
 not lit initially
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="burnDaemon"></span>
 
@@ -193,11 +193,11 @@ not lit initially
 
 [extras.t](../file/extras.t.html)\[[2146](../source/extras.t.html#2146)\]
 
-<div class="desc">
+
 
 burn daemon - this is called on each turn while we're burning
 
-</div>
+
 
 <span id="consumeFuel"></span>
 
@@ -205,11 +205,11 @@ burn daemon - this is called on each turn while we're burning
 
 [extras.t](../file/extras.t.html)\[[2113](../source/extras.t.html#2113)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getFuelLevel"></span>
 
@@ -217,7 +217,7 @@ burn daemon - this is called on each turn while we're burning
 
 [extras.t](../file/extras.t.html)\[[2112](../source/extras.t.html#2112)\]
 
-<div class="desc">
+
 
 Get my fuel level, and consume fuel. We use these methods only when
 we're our own fuelSource (which we are by default). When we're not our
@@ -231,7 +231,7 @@ extinguish ourself when the fuel level reaches zero.
 If the light source can burn forever, simply return nil as the fuel
 level.
 
-</div>
+
 
 <span id="makeLit"></span>
 
@@ -239,11 +239,11 @@ level.
 
 [extras.t](../file/extras.t.html)\[[2119](../source/extras.t.html#2119)\]
 
-<div class="desc">
+
 
 light or extinguish
 
-</div>
+
 
 <span id="sayBurnedOut"></span>
 
@@ -251,15 +251,15 @@ light or extinguish
 
 [extras.t](../file/extras.t.html)\[[2189](../source/extras.t.html#2189)\]
 
-<div class="desc">
+
 
 mention that we've just burned out
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

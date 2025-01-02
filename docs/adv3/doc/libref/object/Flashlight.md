@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Flashlight is a special kind of light source that can be switched on
 and off.
@@ -43,15 +43,15 @@ the flashlight is switched on but out of power.
 
 `class `**`Flashlight`**` :   `[`LightSource`](../object/LightSource.html)[`Switch`](../object/Switch.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Flashlight`**  
 [`LightSource`](../object/LightSource.html)  
@@ -65,27 +65,27 @@ the flashlight is switched on but out of power.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isOn`](#isOn)
 
@@ -109,11 +109,11 @@ Inherited from `OnOffControl` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Extinguish)`](#dobjFor(Extinguish))[`dobjFor(Light)`](#dobjFor(Light))[`dobjFor(TurnOn)`](#dobjFor(TurnOn))[`initializeThing`](#initializeThing)[`makeOn`](#makeOn)
 
@@ -136,11 +136,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isOn"></span>
 
@@ -148,19 +148,19 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[6000](../source/objects.t.html#6000)\]
 
-<div class="desc">
+
 
 our switch status - start in the 'off' position
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Extinguish)"></span>
 
@@ -168,11 +168,11 @@ our switch status - start in the 'off' position
 
 [objects.t](../file/objects.t.html)\[[6043](../source/objects.t.html#6043)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Light)"></span>
 
@@ -180,11 +180,11 @@ our switch status - start in the 'off' position
 
 [objects.t](../file/objects.t.html)\[[6042](../source/objects.t.html#6042)\]
 
-<div class="desc">
+
 
 treat 'light' and 'extinguish' as 'turn on' and 'turn off'
 
-</div>
+
 
 <span id="dobjFor(TurnOn)"></span>
 
@@ -192,11 +192,11 @@ treat 'light' and 'extinguish' as 'turn on' and 'turn off'
 
 [objects.t](../file/objects.t.html)\[[6046](../source/objects.t.html#6046)\]
 
-<div class="desc">
+
 
 if we turn on the flashlight, but it doesn't light, mention this
 
-</div>
+
 
 <span id="initializeThing"></span>
 
@@ -204,11 +204,11 @@ if we turn on the flashlight, but it doesn't light, mention this
 
 [objects.t](../file/objects.t.html)\[[6027](../source/objects.t.html#6027)\]
 
-<div class="desc">
+
 
 initialize
 
-</div>
+
 
 <span id="makeOn"></span>
 
@@ -216,7 +216,7 @@ initialize
 
 [objects.t](../file/objects.t.html)\[[6010](../source/objects.t.html#6010)\]
 
-<div class="desc">
+
 
 Change the on/off status. Note that switching the flashlight on or off
 should always be done via makeOn - the makeLit inherited from the
@@ -225,11 +225,11 @@ because it doesn't keep the switch on/off and flashlight lit/unlit
 status in sync. This routine is the one to call because it keeps
 everything properly synchronized.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

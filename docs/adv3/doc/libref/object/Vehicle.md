@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Vehicle is a special type of nested room that moves instead of the
 actor in response to travel commands. When an actor in a vehicle types,
@@ -54,15 +54,15 @@ English-specific Vehicle changes
 
 `class `**`Vehicle`**` :   `[`NestedRoom`](../object/NestedRoom.html)[`Traveler`](../object/Traveler.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Vehicle`**  
 [`NestedRoom`](../object/NestedRoom.html)  
@@ -75,27 +75,27 @@ English-specific Vehicle changes
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`aboardVehicleListerObj`](#aboardVehicleListerObj)[`getTravelerActors`](#getTravelerActors)[`getTravelerMotiveActors`](#getTravelerMotiveActors)[`out`](#out)
 
@@ -117,11 +117,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkMovingTravelerInto`](#checkMovingTravelerInto)[`forEachTravelingActor`](#forEachTravelingActor)[`getLocPushTraveler`](#getLocPushTraveler)[`getLocTraveler`](#getLocTraveler)[`isActorTraveling`](#isActorTraveling)[`travelerName`](#travelerName)[`travelerPreCond`](#travelerPreCond)
 
@@ -145,11 +145,11 @@ Inherited from `TravelMessageHandler` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="aboardVehicleListerObj"></span>
 
@@ -157,12 +157,12 @@ Inherited from `TravelMessageHandler` :
 
 [travel.t](../file/travel.t.html)\[[6998](../source/travel.t.html#6998)\]
 
-<div class="desc">
+
 
 the lister object we use to display the list of actors aboard, in
 arrival and departure messages for the vehicle
 
-</div>
+
 
 <span id="getTravelerActors"></span>
 
@@ -170,12 +170,12 @@ arrival and departure messages for the vehicle
 
 [travel.t](../file/travel.t.html)\[[6957](../source/travel.t.html#6957)\]
 
-<div class="desc">
+
 
 Get the actors involved in the travel. This is a list consisting of all
 of the actors contained within the vehicle.
 
-</div>
+
 
 <span id="getTravelerMotiveActors"></span>
 
@@ -183,12 +183,12 @@ of the actors contained within the vehicle.
 
 [travel.t](../file/travel.t.html)\[[6964](../source/travel.t.html#6964)\]
 
-<div class="desc">
+
 
 there are no self-motive actors in a vehicle - the vehicle is doing the
 travel, and the actors within are just moving along with it as cargo
 
-</div>
+
 
 <span id="out"></span>
 
@@ -196,7 +196,7 @@ travel, and the actors within are just moving along with it as cargo
 
 [travel.t](../file/travel.t.html)\[[6887](../source/travel.t.html#6887)\]
 
-<div class="desc">
+
 
 An OUT command while within a vehicle could mean one of two things:
 either to GET OUT of the vehicle, or to ride/drive the vehicle out of
@@ -213,15 +213,15 @@ used while an actor is in the vehicle.
 For some vehicles, it might be more appropriate for OUT to mean GET OUT.
 In these cases, simply override this so that it returns nestedRoomOut.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkMovingTravelerInto"></span>
 
@@ -229,12 +229,12 @@ In these cases, simply override this so that it returns nestedRoomOut.
 
 [travel.t](../file/travel.t.html)\[[6979](../source/travel.t.html#6979)\]
 
-<div class="desc">
+
 
 Check, using pre-condition rules, that the traveler is in the given
 room, moving the traveler to the room if possible.
 
-</div>
+
 
 <span id="forEachTravelingActor"></span>
 
@@ -242,11 +242,11 @@ room, moving the traveler to the room if possible.
 
 [travel.t](../file/travel.t.html)\[[6944](../source/travel.t.html#6944)\]
 
-<div class="desc">
+
 
 invoke a callback for each actor traveling with us
 
-</div>
+
 
 <span id="getLocPushTraveler"></span>
 
@@ -254,7 +254,7 @@ invoke a callback for each actor traveling with us
 
 [travel.t](../file/travel.t.html)\[[6899](../source/travel.t.html#6899)\]
 
-<div class="desc">
+
 
 Get the "location push traveler" - this is the traveler when a
 push-travel command is performed by a traveler within this location. If
@@ -264,7 +264,7 @@ around directly. If the object isn't inside me, then we're presumably
 trying to use the vehicle to push around the object, so the traveler is
 the vehicle or something containing the vehicle.
 
-</div>
+
 
 <span id="getLocTraveler"></span>
 
@@ -272,13 +272,13 @@ the vehicle or something containing the vehicle.
 
 [travel.t](../file/travel.t.html)\[[6824](../source/travel.t.html#6824)\]
 
-<div class="desc">
+
 
 When a traveler is in a vehicle, and the traveler performs a travel
 command, the vehicle is what changes location; the contained traveler
 simply stays put while the vehicle moves.
 
-</div>
+
 
 <span id="isActorTraveling"></span>
 
@@ -286,14 +286,14 @@ simply stays put while the vehicle moves.
 
 [travel.t](../file/travel.t.html)\[[6941](../source/travel.t.html#6941)\]
 
-<div class="desc">
+
 
 Determine if an actor is traveling with me. The normal base class
 implementation works, but it's more efficient just to check to see if
 the actor is inside this object than to construct the entire nested
 contents list just to check to see if the actor's in that list.
 
-</div>
+
 
 <span id="travelerName"></span>
 
@@ -301,12 +301,12 @@ contents list just to check to see if the actor's in that list.
 
 [en_us.t](../file/en_us.t.html)\[[2815](../source/en_us.t.html#2815)\]
 
-<div class="desc">
+
 
 Display the name of the traveler, for use in an arrival or departure
 message.
 
-</div>
+
 
 <span id="travelerPreCond"></span>
 
@@ -314,7 +314,7 @@ message.
 
 [travel.t](../file/travel.t.html)\[[6973](../source/travel.t.html#6973)\]
 
-<div class="desc">
+
 
 Traveler preconditions for the vehicle. By default, we add no
 preconditions of our own, but specific vehicles might want to override
@@ -322,11 +322,11 @@ this. For example, a car might want to require that the doors are
 closed, the engine is running, and the seatbelts are fastened before it
 can travel.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

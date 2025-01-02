@@ -378,9 +378,9 @@ property of [FueledLightSource](../object/FueledLightSource.html) in
 [**`ByteArray`**](../object/ByteArray.html) - class in
 [bytearr.h](../file/bytearr.h.html)\[[26](../source/bytearr.h.html#26)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -77,13 +77,14 @@ trouble to do it.</p>
 
 <p>Thus, for example, we might define a front door key as follows:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     brassKey: Key 'brass key; medium sized'    
-        "It's just a medium sized brass key, typical of the sort used to lock and
-        unlock doors. "
+<p>`
+     brassKey: Key ‘brass key; medium sized’  <br />
+        “It’s just a medium sized brass key, typical of the sort used to lock and
+        unlock doors. “
         plausibleLockList = [frontDoor, frontDoorOutside, backDoor, backDoorOutside]
         actualLockList = [frontDoor, frontDoorOutside]
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note that we have to specify both sides of the frontDoor in the
 actualLockList property if we want the key to work on both sides.
@@ -130,11 +131,12 @@ game author).</p>
 <p>This means that, for example, to define a Door that starts out locked
 and can be unlocked with the brassKey we could just define:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + frontDoor: Door -&gt;frontDoorOutside 'door'
-       keyList = [brassKey]  
-    ;
-     
-</code></pre></div></div>
+<p>`
+    + frontDoor: Door -&gt;frontDoorOutside ‘door’
+       keyList = [brassKey]<br />
+    ;</p>
+
+<p>`</p>
 
 <p>This is an alternative to listing frontDoor in the actualLockList of the
 brassKey (although it wouldn’t matter if you did both). If you like, you

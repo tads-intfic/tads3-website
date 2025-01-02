@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> StringBuffer  
@@ -16,7 +16,7 @@ layout: docs
 <a href="strcomp.html" class="nav"><em>Next:</em> StringComparator</a>
     </span>
 
-</div>
+
 
 
 
@@ -225,7 +225,7 @@ whole spirit of StringBuffer. So it seems best for
 
 `append(*str*)`
 
-<div class="fdef">
+
 
 Appends the string *str* to the end of the StringBuffer's current text.
 If *str* isn't already a string value, it'll be converted to a string,
@@ -237,29 +237,29 @@ can all be converted automatically.
 
 `charAt(*idx*)`
 
-<div class="fdef">
+
 
 Returns an integer giving the Unicode character value of the character
 at index *idx*. The index must be within the bounds of the contents of
 the buffer. A negative value is an index from the end of the string (-1
 refers to the last character).
 
-</div>
+
 
 `copyChars(*idx*, *str*)`
 
-<div class="fdef">
+
 
 Copy characters from the string *str* into the buffer starting at index
 *idx*, overwriting the current contents. The first character is at
 index 1. If *idx* is negative, it's an index from the end of the buffer,
 with the last character at index -1.
 
-</div>
+
 
 `deleteChars(*idx*, *len*?)`
 
-<div class="fdef">
+
 
 Deletes *len* characters from the string starting at index *idx*. The
 first character is at index 1. You can use a negative value for *idx* to
@@ -267,11 +267,11 @@ index from the end of the string, with the last character at index -1.
 If *len* is omitted, all characters from the starting point to the end
 of the string are deleted.
 
-</div>
+
 
 `insert(*str*, *idx*)`
 
-<div class="fdef">
+
 
 Inserts the string *str* into the StringBuffer at index *idx*; that is,
 just before the character currently at the given index. The first
@@ -283,19 +283,19 @@ an index past the end of the string, the result will be the same as
 a string representation if it's not already a string (and a conversion
 is possible).
 
-</div>
+
 
 `length()`
 
-<div class="fdef">
+
 
 Returns the length in characters of the contents of the StringBuffer.
 
-</div>
+
 
 `splice(*idx*, *len*, *str*)`
 
-<div class="fdef">
+
 
 Replaces the *len* characters starting at index *idx* with the
 replacement text *str*. This is essentially a combined delete and insert
@@ -305,11 +305,11 @@ string. As with `append()`, *str* is
 automatically converted to a string representation if it's not already a
 string (and a conversion is possible).
 
-</div>
+
 
 `substr(*idx*, *len*?)`
 
-<div class="fdef">
+
 
 Returns an ordinary string containing the characters in the buffer
 starting at index *idx* and continuing for *len* characters. If you omit
@@ -318,13 +318,13 @@ starting at index *idx* and continuing for *len* characters. If you omit
 `substr(-10)` returns a string containing the
 last 10 characters in the buffer.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -334,4 +334,4 @@ last 10 characters in the buffer.
 <a href="strcomp.html" class="nav"><em>Next:</em> StringComparator</a>
     </span>
 
-</div>
+

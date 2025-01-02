@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The sixteen directions defined in the library
 
 **`northDir`**` :   `[`CompassDirection`](../object/CompassDirection.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`northDir`**  
 [`CompassDirection`](../object/CompassDirection.html)  
@@ -42,11 +42,11 @@ The sixteen directions defined in the library
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`departureName`](#departureName)[`dirProp`](#dirProp)[`name`](#name)[`opposite`](#opposite)[`sortingOrder`](#sortingOrder)
 
@@ -57,11 +57,11 @@ Inherited from `Direction` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -73,11 +73,11 @@ Inherited from `Direction` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="departureName"></span>
 
@@ -85,11 +85,11 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1792](../source/travel.t.html#1792)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dirProp"></span>
 
@@ -97,11 +97,11 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1790](../source/travel.t.html#1790)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -109,11 +109,11 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1791](../source/travel.t.html#1791)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="opposite"></span>
 
@@ -121,11 +121,11 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1794](../source/travel.t.html#1794)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sortingOrder"></span>
 
@@ -133,25 +133,25 @@ Inherited from `Direction` :
 
 [travel.t](../file/travel.t.html)\[[1793](../source/travel.t.html#1793)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Tips on Designing
@@ -17,7 +17,7 @@ Project</a>    
 <a href="t3des1.html" class="nav"><em>Next:</em> IF Design: In
 Practice</a>     </span>
 
-</div>
+
 
 
 
@@ -39,18 +39,18 @@ This chapter is in two parts. The first part is about the practical
 "process" aspects of creating IF. The second is about the aesthetics of
 IF: namely what makes an enjoyable adventure game.
 
-<div class="sectoc">
+
 
 [IF Design: In Practice](t3des1.html)  
 [IF Design: In Theory](t3des2.html)  
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -61,4 +61,4 @@ Project</a>    
 <a href="t3des1.html" class="nav"><em>Next:</em> IF Design: In
 Practice</a>     </span>
 
-</div>
+

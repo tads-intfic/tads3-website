@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="web.html" class="nav">Playing on the Web</a> \> The Web UI  
@@ -16,7 +16,7 @@ layout: docs
 <a href="webdeploy.html" class="nav"><em>Next:</em> Deploying your Web UI
 game</a>     </span>
 
-</div>
+
 
 
 
@@ -300,7 +300,7 @@ should group your resources into one or more folders - that is,
 subdirectories of your main project folder for the game. Second, for
 each folder, add an object definition like this to your game:
 
-<div class="code">
+
 
     WebResourceResFile
        vpath = static new RexPattern('/foldername/')
@@ -700,11 +700,11 @@ convenient alternatives for some of these common tasks. For example, you
 can retrieve any DOM element with a single function call taking a
 path-like name string, and parse XML trees using XMLpath-like syntax.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -714,4 +714,4 @@ path-like name string, and parse XML trees using XMLpath-like syntax.
 <a href="webdeploy.html" class="nav"><em>Next:</em> Deploying your Web UI
 game</a>     </span>
 
-</div>
+

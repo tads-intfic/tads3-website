@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="goldskull.html" class="nav">Goldskull</a> \> Retrospective  
@@ -15,7 +15,7 @@ layout: docs
 place</a>    
 <a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span>
 
-</div>
+
 
 
 
@@ -158,7 +158,7 @@ Goldskull with a complete listing of the game as it ended up.
 
 ## Complete Goldskull Listing
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -356,13 +356,13 @@ Goldskull with a complete listing of the game as it ended up.
         
         getWeight = weight + getWeightWithin()
     ;
-`
+```
 
 
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -371,4 +371,4 @@ Goldskull with a complete listing of the game as it ended up.
 place</a>    
 <a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span>
 
-</div>
+

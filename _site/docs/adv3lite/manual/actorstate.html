@@ -56,52 +56,53 @@ one ActorState to represent her bent over her desk and another to
 represent her in animated conversation. The coding pattern might look
 something like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    guard: Actor 'burly guard; strong powerful; man; him' @doorway
-        "He looks incredibly strong and powerful. "
-    ;
+<p>`
+    guard: Actor ‘burly guard; strong powerful; man; him’ @doorway
+        “He looks incredibly strong and powerful. “
+    ;</p>
 
-    + guardAlertState: ActorState
-       isInitState = true
-       specialDesc = "A burly guard blocks your path, eyeing you suspiciously. "
-       stateDesc = 'You certainly don\'t want to mess with him. '
-       
-       beforeTravel(traveler, connector)
-       {
-          if(traveler == gPlayerChar &amp;&amp; connector == forbiddenDoor)
-          {
-              "The guard blocks your path with a warning snarl. ";
-              exit;
-          }
-       }
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ guardAlertState: ActorState
+   isInitState = true
+   specialDesc = "A burly guard blocks your path, eyeing you suspiciously. "
+   stateDesc = 'You certainly don\'t want to mess with him. '
+   
+   beforeTravel(traveler, connector)
+   {
+      if(traveler == gPlayerChar &amp;&amp; connector == forbiddenDoor)
+      {
+          "The guard blocks your path with a warning snarl. ";
+          exit;
+      }
+   }
+;
 
-    + guardSleepingState: ActorState
-       specialDesc = "The burly guard lies sprawled on the ground, snoring loudly. "
-       stateDesc = 'At least he might be strong and powerful when he\'s awake, but right now he\'s dead
-         to the world. '
-         
-       noResponse = "The guard is far too deep in his slumbers to hear you. "
-    ;
-
-
-    clerk: Actor 'fusty old clerk;; woman; her' @procrastinationOffice
-       "She doesn't look a day under sixty. "
-    ;
++ guardSleepingState: ActorState
+   specialDesc = "The burly guard lies sprawled on the ground, snoring loudly. "
+   stateDesc = 'At least he might be strong and powerful when he\'s awake, but right now he\'s dead
+     to the world. '
+     
+   noResponse = "The guard is far too deep in his slumbers to hear you. "
+;
 
 
-    + clerkWorkingState: ActorState
-       isInitState = true
-       specialDesc = "A fusty old clerk sits bent over her desk, working her way through
-         dusty ledgers. "
-       stateDesc = 'She seems totally intent on her ledgers. '
-    ;
-      
-    + clerkTalkingState: ActorState
-       specialDesc = "The clerk sits looking up at you from behind her desk, eagerly 
-         awaiting you to continue the conversation. "
-       stateDesc = 'But the rapt expression on her face and the animated sparkle in her bright
-         blue eyes as she hangs on your every word somehow make her seem half that age. '
-    ;
+clerk: Actor 'fusty old clerk;; woman; her' @procrastinationOffice
+   "She doesn't look a day under sixty. "
+;
+
+
++ clerkWorkingState: ActorState
+   isInitState = true
+   specialDesc = "A fusty old clerk sits bent over her desk, working her way through
+     dusty ledgers. "
+   stateDesc = 'She seems totally intent on her ledgers. '
+;
+  
++ clerkTalkingState: ActorState
+   specialDesc = "The clerk sits looking up at you from behind her desk, eagerly 
+     awaiting you to continue the conversation. "
+   stateDesc = 'But the rapt expression on her face and the animated sparkle in her bright
+     blue eyes as she hangs on your every word somehow make her seem half that age. '
+; `
 </code></pre></div></div>
 
 <p>Note that the stateDesc on the current ActorState is appended to the
@@ -119,15 +120,17 @@ implemented in different ways in adv3Lite).</p>
 specialDesc property and, optionally, the stateDesc property as well.
 For example the guardSleepingState above could have been defined as:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + guardSleepingState: ActorState
-       "The burly guard lies sprawled on the ground, snoring loudly. "
-       'At least he might be strong and powerful when he\'s awake, but right now he\'s dead
-         to the world. '
-         
-       noResponse = "The guard is far too deep in his slumbers to hear you. "
-    ; 
-     
+<p>`
+     + guardSleepingState: ActorState
+       “The burly guard lies sprawled on the ground, snoring loudly. “
+       ‘At least he might be strong and powerful when he's awake, but right now he's dead
+         to the world. ‘</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   noResponse = "The guard is far too deep in his slumbers to hear you. "
+; 
 </code></pre></div></div>
+
+<p>`</p>
 
 <p><span id="defining"></span></p>
 
@@ -233,16 +236,17 @@ define a list of ‘fidget’ (atmospheric) messages describing what the
 actor is doing while in that state, in order to make the actor appear a
 little more lifelife, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + bobStackingState: ActorState, ShuffledEventList
-        specialDesc = "Bob is busily stacking cans. "
+<p>`
+    + bobStackingState: ActorState, ShuffledEventList
+        specialDesc = “Bob is busily stacking cans. “
         eventList = [
-          'Bob picks up a can and studies its label. ',
-          'Bob puts another can on the stack. ',
-          'Bob pauses to inspect his stack of cans. ',
-          'Bob takes a can from one part of the stack and places it on another part. '
+          ‘Bob picks up a can and studies its label. ‘,
+          ‘Bob puts another can on the stack. ‘,
+          ‘Bob pauses to inspect his stack of cans. ‘,
+          ‘Bob takes a can from one part of the stack and places it on another part. ‘
         ]
     ;
-</code></pre></div></div>
+`</p>
 
 <p>With this definition, one of the messages from the eventList will be
 displayed on each turn that Bob is in bobStackingState and not engaged
@@ -260,21 +264,23 @@ some means of switching from one state to another. The most common means
 is by calling <strong>setState(<em>stat</em>)</strong> on the Actor, where <em>stat</em> is the new
 ActorState you want to change to, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       /* In the code where the guard drinks too much wine */
-       guard.setState(guardSleepingState);
-       
-       /* In the code in which you engage the clerk in conversation */
-       clerk.setState(clerkTalkingState);
+<p>`
+       /* In the code where the guard drinks too much wine */
+       guard.setState(guardSleepingState);</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   /* In the code in which you engage the clerk in conversation */
+   clerk.setState(clerkTalkingState); `
 </code></pre></div></div>
 
 <p>The second method, which can be useful if you’re outputting a string
 just before changing ActorState is to use the &lt;.state <em>newstate</em>&gt; tag:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       /* In the code where the guard drinks too much wine */
-       "The wine bottle slips out of the guard's hand as he slips into a deep slumber. &lt;.state guardSleepingState&gt;";
-       
-       /* In the code in which you engage the clerk in conversation */
-       "The clerk looks up at you expectently. &lt;.state clerkTalkingState&gt;";
+<p>`
+       /* In the code where the guard drinks too much wine */
+       “The wine bottle slips out of the guard’s hand as he slips into a deep slumber. &lt;.state guardSleepingState&gt;”;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   /* In the code in which you engage the clerk in conversation */
+   "The clerk looks up at you expectently. &lt;.state clerkTalkingState&gt;"; `
 </code></pre></div></div>
 
 <p>Note that there may be limitation on where this will work; these will be
@@ -284,39 +290,39 @@ discusses further below.</p>
 define its <strong>changeToState</strong> property to change state on beginning or
 ending a conversation, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    clerk: Actor 'fusty old clerk;; woman; her' @procrastinationOffice
-       "She doesn't look a day under sixty. "
-    ;
+<p>`
+    clerk: Actor ‘fusty old clerk;; woman; her’ @procrastinationOffice
+       “She doesn’t look a day under sixty. “
+    ;</p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ clerkWorkingState: ActorState
+   isInitState = true
+   specialDesc = "A fusty old clerk sits bent over her desk, working her way through
+     dusty ledgers. "
+   stateDesc = 'She seems totally intent on her ledgers. '
+;
 
-    + clerkWorkingState: ActorState
-       isInitState = true
-       specialDesc = "A fusty old clerk sits bent over her desk, working her way through
-         dusty ledgers. "
-       stateDesc = 'She seems totally intent on her ledgers. '
-    ;
+++ HelloTopic
+   "&lt;q&gt;Hello there!&lt;/q&gt; you say.\b
+    &lt;q&gt;Why, hello!&lt;/q&gt; she replies, looking up at you with a surprisingly bright smile. "
+    
+    changeToState = clerkTalkingState   
+;
+   
+  
++ clerkTalkingState: ActorState
+   specialDesc = "The clerk sits looking up at you from behind her desk, eagerly 
+     awaiting you to continue the conversation. "
+   stateDesc = 'But the rapt expression on her face and the animated sparkle in her bright
+     blue eyes as she hangs on your every word somehow make her seem half that age. '
+;
 
-    ++ HelloTopic
-       "&lt;q&gt;Hello there!&lt;/q&gt; you say.\b
-        &lt;q&gt;Why, hello!&lt;/q&gt; she replies, looking up at you with a surprisingly bright smile. "
-        
-        changeToState = clerkTalkingState   
-    ;
-       
-      
-    + clerkTalkingState: ActorState
-       specialDesc = "The clerk sits looking up at you from behind her desk, eagerly 
-         awaiting you to continue the conversation. "
-       stateDesc = 'But the rapt expression on her face and the animated sparkle in her bright
-         blue eyes as she hangs on your every word somehow make her seem half that age. '
-    ;
-
-    ++ ByeTopic
-       "Well, goodbye then, you say.
-        Goodbye, she replies crisply, turning her attention back to her ledgers. "
-        
-        changeToState = clerkWorkingState
-    ;
+++ ByeTopic
+   "Well, goodbye then, you say.
+    Goodbye, she replies crisply, turning her attention back to her ledgers. "
+    
+    changeToState = clerkWorkingState
+; `
 </code></pre></div></div>
 
 <p>This code will cause the clerk to switch to her clerkTalkingState when

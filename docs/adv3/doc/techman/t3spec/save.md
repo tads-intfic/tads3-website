@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -17,7 +17,7 @@ List</a>    
 <a href="tadsspch.html" class="nav"><em>Next:</em> TADS Special
 Characters</a>     </span>
 
-</div>
+
 
 
 
@@ -371,18 +371,18 @@ value for the saved state data stream.
         return val;
     }
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -393,4 +393,4 @@ List</a>    
 <a href="tadsspch.html" class="nav"><em>Next:</em> TADS Special
 Characters</a>     </span>
 
-</div>
+

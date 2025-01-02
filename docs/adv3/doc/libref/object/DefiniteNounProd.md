@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for noun phrase productions with definite articles.
 
 `class `**`DefiniteNounProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefiniteNounProd`**  
 [`NounPhraseProd`](../object/NounPhraseProd.html)  
@@ -50,11 +50,11 @@ Base class for noun phrase productions with definite articles.
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`DefiniteNounProd`**  
 [`BasicPossessiveProd`](../object/BasicPossessiveProd.html)  
@@ -82,19 +82,19 @@ Base class for noun phrase productions with definite articles.
 [`qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -109,11 +109,11 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`reduceDefinite`](#reduceDefinite)[`resolveDefinite`](#resolveDefinite)[`resolveNouns`](#resolveNouns)
 
@@ -128,19 +128,19 @@ Inherited from `AmbigResponseKeeper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="reduceDefinite"></span>
 
@@ -148,7 +148,7 @@ Inherited from `AmbigResponseKeeper` :
 
 [parser.t](../file/parser.t.html)\[[2086](../source/parser.t.html#2086)\]
 
-<div class="desc">
+
 
 Do any additional subclass-specific filtering to further reduce the list
 before we decide whether or not we have sufficient specificity. We call
@@ -157,7 +157,7 @@ this just before deciding whether or not to prompt for more information
 list unchanged; subclasses that have some further way of narrowing down
 the options can use this opportunity to apply that extra narrowing.
 
-</div>
+
 
 <span id="resolveDefinite"></span>
 
@@ -165,11 +165,11 @@ the options can use this opportunity to apply that extra narrowing.
 
 [parser.t](../file/parser.t.html)\[[2008](../source/parser.t.html#2008)\]
 
-<div class="desc">
+
 
 Resolve an underlying phrase using definite noun phrase rules.
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -177,15 +177,15 @@ Resolve an underlying phrase using definite noun phrase rules.
 
 [parser.t](../file/parser.t.html)\[[1997](../source/parser.t.html#1997)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

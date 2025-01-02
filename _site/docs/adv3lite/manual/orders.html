@@ -112,16 +112,17 @@ a good idea to call the inherited handling at the end, so your
 overridden method still ends by trying to deal with the order via a
 CommandTopic object, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Actor
+<p>`
+    modify Actor
         handleCommand(action)
         {
            if(action.ofKind(ThinkAbout) || action.ofKind(AskAbout))
-              "I'm afraid that's a bit too convoluted. ";
+              “I’m afraid that’s a bit too convoluted. “;
            else
               inherited(action);
         }
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note that if a command is directed to an inanimate object (e.g. BALL,
 JUMP!) that object’s handleCommand() method is also called, but in this
@@ -130,32 +131,33 @@ to direct commands at inanimate objects. But you could always override
 this if, for example, you wanted some objects to respond to a magic
 word. For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing    
+<p>`
+    modify Thing  <br />
         handleCommand(action)
         {
             if(isOpenable &amp;&amp; !isOpen &amp;&amp; action = Xyzzy)
             {
-                "\^&lt;&lt;theName&gt;&gt; flies open! ";
+                “\^«theName» flies open! “;
                 makeOpen(true);
             }
             else
                 inherited(action);
         }
-    ;
+    ;</p>
 
-    DefineIAction(Xyzzy)
-        execAction(cmd)
-        {
-            "Your spell falls limp on the air. ";
-        }
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DefineIAction(Xyzzy)
+    execAction(cmd)
+    {
+        "Your spell falls limp on the air. ";
+    }
+;
 
-    VerbRule(Xyzzy)
-        'xyzzy'
-        : VerbProduction
-        action = Xyzzy
-        verbPhrase = 'say/saying XYZZY'
-    ;
+VerbRule(Xyzzy)
+    'xyzzy'
+    : VerbProduction
+    action = Xyzzy
+    verbPhrase = 'say/saying XYZZY'
+; `
 </code></pre></div></div>
 
 <h2 id="commandtopics"><span id="commandtopic">CommandTopics</span></h2>
@@ -198,26 +200,27 @@ refinement before it’s completely reliable.</li>
 picked up by our CommandTopics. A simple example of how this might all
 work in practice might be:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + CommandTopic @Jump
-        "&lt;q&gt;Jump!&lt;/q&gt; you cry.\b
-        &lt;q&gt;Very well then,&lt;/q&gt; he agrees. "
+<p>`
+    + CommandTopic @Jump
+        “<q>Jump!</q> you cry.\b
+        <q>Very well then,</q> he agrees. “
         allowAction = true
-    ;
+    ;</p>
 
-    + CommandTopic @Take
-        "&lt;q&gt;Bob, be a good fellow and pick up that red ball will you?&lt;/q&gt; you
-        request.\b
-        &lt;q&gt;Very well,&lt;/q&gt; he agrees.&lt;.p&gt;"
-        
-        allowAction = true
-        matchDobj = redBall
-        isActive = !redBall.isIn(bob)
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ CommandTopic @Take
+    "&lt;q&gt;Bob, be a good fellow and pick up that red ball will you?&lt;/q&gt; you
+    request.\b
+    &lt;q&gt;Very well,&lt;/q&gt; he agrees.&lt;.p&gt;"
+    
+    allowAction = true
+    matchDobj = redBall
+    isActive = !redBall.isIn(bob)
+;
 
-    + DefaultCommandTopic
-        "&lt;q&gt;Bob, would you &lt;&lt;actionPhrase&gt;&gt; please?&lt;/q&gt; you ask.\b
-        &lt;q&gt;No, I don't think I will,&lt;/q&gt; he replies. "
-    ;
++ DefaultCommandTopic
+    "&lt;q&gt;Bob, would you &lt;&lt;actionPhrase&gt;&gt; please?&lt;/q&gt; you ask.\b
+    &lt;q&gt;No, I don't think I will,&lt;/q&gt; he replies. "
+; `
 </code></pre></div></div>
 
 <p>If you want the actor to whom you’ve given the command to perform some
@@ -226,30 +229,32 @@ other action than the one the player orders him to, you can use
 command. For example, to make an actor jump when he’s told to wait you
 could do this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + CommandTopic @Wait
+<p>`
+    + CommandTopic @Wait
         topicResponse()
         {
-            "&lt;q&gt;Would you wait a moment?&lt;/q&gt; you request.\b
-            &lt;q&gt;If you don't mind my keeping warm while I do,&lt;/q&gt; he replies.\b";
+            “<q>Would you wait a moment?</q> you request.\b
+            <q>If you don’t mind my keeping warm while I do,</q> he replies.\b”;
             doNested(Jump);
         }
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note, this works in a CommandTopic since the actor being addressed is
 considered the current actor of the command. If you want any other kind
 of TopicEntry to make an actor react, you need to use
 <code class="language-plaintext highlighter-rouge">nestedActorAction()</code> instead; e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + TellTopic @george
+<p>`
+    + TellTopic @george
         topicResponse()
         {
-            "&lt;q&gt;You're not looking very active,&lt;/q&gt; you complain.\b
-            &lt;q&gt;How about this then?&lt;/q&gt; he asks.\b";
-            nestedActorAction(getActor, Jump);    
-        }    
+            “<q>You’re not looking very active,</q> you complain.\b
+            <q>How about this then?</q> he asks.\b”;
+            nestedActorAction(getActor, Jump);  <br />
+        }  <br />
     ;
-</code></pre></div></div>
+`</p>
 
 <hr />
 

@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The Date intrinsic class stores a date-and-time value representing a
 particular point in time, and provides methods and operators for date
@@ -158,41 +158,41 @@ Add a method to Date as a workaround for a library bug
 
 `intrinsic class `**`Date`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Date`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -200,11 +200,11 @@ Add a method to Date as a workaround for a library bug
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addInterval`](#addInterval)[`compareTo`](#compareTo)[`findWeekday`](#findWeekday)[`formatDate`](#formatDate)[`formatJulianDate`](#formatJulianDate)[`getClockTime`](#getClockTime)[`getDate`](#getDate)[`getHMS`](#getHMS)[`getISOWeekDate`](#getISOWeekDate)[`getJulianDate`](#getJulianDate)[`getJulianDay`](#getJulianDay)
 
@@ -213,19 +213,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addInterval"></span>
 
@@ -233,7 +233,7 @@ Inherited from `Object` :
 
 [date.h](../file/date.h.html)\[[280](../source/date.h.html#280)\]
 
-<div class="desc">
+
 
 Add an interval to this date, returning a new date object. The interval
 is given as a list of integers: \[years, months, days, hours, minutes,
@@ -242,7 +242,7 @@ seconds\]. The 'seconds' value can be a BigNumber with a fractional part
 omitted from the end of the list; for example, \[0, 2\] adds two months.
 An element can be negative: \[-1\] subtracts one year.
 
-</div>
+
 
 <span id="compareTo"></span>
 
@@ -250,7 +250,7 @@ An element can be negative: \[-1\] subtracts one year.
 
 [date.h](../file/date.h.html)\[[204](../source/date.h.html#204)\]
 
-<div class="desc">
+
 
 Compare to another Date object; returns an integer less than zero if
 this Date is before the other Date, zero if they refer to the same date,
@@ -259,7 +259,7 @@ comparisons can be done with the ordinary comparison operators (\<, \>,
 \<=, \>=, ==, !=), but this is convenient for sorting callbacks since it
 lets you get the greater/equal/less result in one shot.
 
-</div>
+
 
 <span id="findWeekday"></span>
 
@@ -267,7 +267,7 @@ lets you get the greater/equal/less result in one shot.
 
 [date.h](../file/date.h.html)\[[292](../source/date.h.html#292)\]
 
-<div class="desc">
+
 
 Find a given day of the week relative to this date, in its local time
 zone. 'weekday' is the target weekday to find, as an integer: 1 for
@@ -278,7 +278,7 @@ second occurrence on or after this date, and so on. -1 means the first
 occurrence on or before this date; -2 is the second occurrence on or
 before this date; etc.
 
-</div>
+
 
 <span id="formatDate"></span>
 
@@ -286,14 +286,14 @@ before this date; etc.
 
 [date.h](../file/date.h.html)\[[188](../source/date.h.html#188)\]
 
-<div class="desc">
+
 
 Format the date/time value as a Gregorian calendar date, using the given
 format template string. Returns a string with the formatted date/time.
 The date/time is displayed in the given time zone (or the system's local
 time zone if 'tz' isn't specified).
 
-</div>
+
 
 <span id="formatJulianDate"></span>
 
@@ -301,12 +301,12 @@ time zone if 'tz' isn't specified).
 
 [date.h](../file/date.h.html)\[[194](../source/date.h.html#194)\]
 
-<div class="desc">
+
 
 Format the date/time value as a Julian calendar date, using the given
 format template string.
 
-</div>
+
 
 <span id="getClockTime"></span>
 
@@ -314,7 +314,7 @@ format template string.
 
 [date.h](../file/date.h.html)\[[269](../source/date.h.html#269)\]
 
-<div class="desc">
+
 
 Get the wall clock time represented by this Date object, in terms of
 local time in the given time zone (or the system's local time zone is
@@ -323,7 +323,7 @@ second, ms\]. The hour is on a 24-hour clock, with 0 hours representing
 midnight and 23 representing 11 PM. The 'ms' value is a value from 0 to
 999 giving the milliseconds portion of the time.
 
-</div>
+
 
 <span id="getDate"></span>
 
@@ -331,7 +331,7 @@ midnight and 23 representing 11 PM. The 'ms' value is a value from 0 to
 
 [date.h](../file/date.h.html)\[[214](../source/date.h.html#214)\]
 
-<div class="desc">
+
 
 Get the Gregorian calendar date represented by this Date object, in
 terms of local time in the given time zone (or the system's local time
@@ -340,7 +340,7 @@ month, day, weekday\], each value represented as an integer. The weekday
 is 1 for Sunday, 2 for Monday, etc. For example, June 21, 2012 (a
 Thursday) is represented as \[2012,6,21,5\].
 
-</div>
+
 
 <span id="getHMS"></span>
 
@@ -348,13 +348,13 @@ Thursday) is represented as \[2012,6,21,5\].
 
 [misc.t](../file/misc.t.html)\[[2044](../source/misc.t.html#2044)\]
 
-<div class="desc">
+
 
 Get the Hours, Minutes, Seconds and Milliseconds of the current time as
 a four-element list; Date.getClockTime() is meant to do this, but
 doesn't work properly.
 
-</div>
+
 
 <span id="getISOWeekDate"></span>
 
@@ -362,7 +362,7 @@ doesn't work properly.
 
 [date.h](../file/date.h.html)\[[259](../source/date.h.html#259)\]
 
-<div class="desc">
+
 
 Get the ISO 8601 week date. This returns a list with three elements,
 \[year, week, day\], where 'year' is the ISO year number containing the
@@ -377,7 +377,7 @@ can't be split across years, so the entire week belongs to 2004 on the
 ISO calendar. This can work in both directions: Dec 31, 2007 has the ISO
 week date 2008-W01-1.
 
-</div>
+
 
 <span id="getJulianDate"></span>
 
@@ -385,7 +385,7 @@ week date 2008-W01-1.
 
 [date.h](../file/date.h.html)\[[243](../source/date.h.html#243)\]
 
-<div class="desc">
+
 
 Get the Julian calendar date for this Date object, in terms of the local
 time in the given time zone (or the system's local time zone if 'tz'
@@ -393,7 +393,7 @@ isn't specified). Returns a list consisting of \[year, month, day,
 weekday\]. (The weekday on the Julian calendar is always the same as the
 weekday on the Gregorian calendar for a given Date value.)
 
-</div>
+
 
 <span id="getJulianDay"></span>
 
@@ -401,7 +401,7 @@ weekday on the Gregorian calendar for a given Date value.)
 
 [date.h](../file/date.h.html)\[[233](../source/date.h.html#233)\]
 
-<div class="desc">
+
 
 Get the Julian day number. This is the number of days since January 1,
 4713 BCE on the (proleptic) Julian calendar, at noon UTC. This is an
@@ -419,11 +419,11 @@ Note that there's no local time zone involved in this calculation, since
 the Julian day number is specifically defined in terms of universal
 time.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

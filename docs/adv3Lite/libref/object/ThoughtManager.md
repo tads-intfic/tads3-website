@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The base clase for a thought manager object. To use this in a game
 create a single object of this class and locate a number of Thought
@@ -35,15 +35,15 @@ ABOUT
 
 `class `**`ThoughtManager`**` :   [`PreinitObject`](../object/PreinitObject.html)   `[`TopicDatabase`](../object/TopicDatabase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ThoughtManager`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -53,27 +53,27 @@ ABOUT
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`noThoughtMsg`](#noThoughtMsg)  [`thoughtList`](#thoughtList)  `
 
@@ -87,11 +87,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`execute`](#execute)  [`handleTopic`](#handleTopic)  `
 
@@ -105,11 +105,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="noThoughtMsg"></span>
 
@@ -117,11 +117,11 @@ Inherited from `TopicDatabase` :
 
 [thoughts.t](../file/thoughts.t.html)\[[58](../source/thoughts.t.html#58)\]
 
-<div class="desc">
+
 
 The message to display when we don't find a matching Thought
 
-</div>
+
 
 <span id="thoughtList"></span>
 
@@ -129,19 +129,19 @@ The message to display when we don't find a matching Thought
 
 [thoughts.t](../file/thoughts.t.html)\[[54](../source/thoughts.t.html#54)\]
 
-<div class="desc">
+
 
 The list of Thoughts associated with this ThoughtManager object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -149,11 +149,11 @@ The list of Thoughts associated with this ThoughtManager object
 
 [thoughts.t](../file/thoughts.t.html)\[[23](../source/thoughts.t.html#23)\]
 
-<div class="desc">
+
 
 Carry out the ThoughtManager's preinitialization
 
-</div>
+
 
 <span id="handleTopic"></span>
 
@@ -161,15 +161,15 @@ Carry out the ThoughtManager's preinitialization
 
 [thoughts.t](../file/thoughts.t.html)\[[39](../source/thoughts.t.html#39)\]
 
-<div class="desc">
+
 
 Handle a THINK ABOUT command.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

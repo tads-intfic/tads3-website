@@ -2210,9 +2210,9 @@ object in
 [**`DynamicProd`**](../object/DynamicProd.html) - class in
 [gramprod.t](../file/gramprod.t.html)\[[156](../source/gramprod.t.html#156)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

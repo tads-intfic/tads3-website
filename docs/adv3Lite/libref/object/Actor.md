@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Actor is an object representing a living being (or something that
 behaves like a living being, such as an intelligent robot), with which
@@ -36,15 +36,15 @@ implementation of NPCs (non-player characters).
 
 `class `**`Actor`**` :   `[`EndConvBlocker`](../object/EndConvBlocker.html)[`AgendaManager`](../object/AgendaManager.html)[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Actor`**  
 [`EndConvBlocker`](../object/EndConvBlocker.html)  
@@ -63,27 +63,27 @@ implementation of NPCs (non-player characters).
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`active`](#active)[`activeKeys`](#activeKeys)[`actorInformOverheard`](#actorInformOverheard)[`actorStaysPutMsg`](#actorStaysPutMsg)[`allNodes`](#allNodes)[`allStates`](#allStates)[`alreadyTalkingMsg`](#alreadyTalkingMsg)[`attackResponseMsg`](#attackResponseMsg)[`attentionSpan`](#attentionSpan)[`autoImplicitSay`](#autoImplicitSay)[`boredomAgendaItem`](#boredomAgendaItem)[`boredomCount`](#boredomCount)[`cannotAttackMsg`](#cannotAttackMsg)[`cannotKissMsg`](#cannotKissMsg)[`cannotTakeMsg`](#cannotTakeMsg)[`canTalkToMe`](#canTalkToMe)[`cantFollowFromHereMsg`](#cantFollowFromHereMsg)[`canThrowToMe`](#canThrowToMe)[`cantStartFromHereMsg`](#cantStartFromHereMsg)[`contentsListed`](#contentsListed)[`contType`](#contType)[`conversedLastTurn`](#conversedLastTurn)[`conversedThisTurn`](#conversedThisTurn)[`convKeyTab`](#convKeyTab)[`curState`](#curState)[`defaultCountsAsSay`](#defaultCountsAsSay)[`defaultSayResponse`](#defaultSayResponse)[`dontKnowWhereGoneMsg`](#dontKnowWhereGoneMsg)[`enableImplicitSay`](#enableImplicitSay)[`fDaemon`](#fDaemon)[`followActorMsg`](#followActorMsg)[`followAgendaItem`](#followAgendaItem)[`followFuseID`](#followFuseID)[`informedNameTab`](#informedNameTab)[`informOverheard`](#informOverheard)[`isAttackable`](#isAttackable)[`isFixed`](#isFixed)[`keepPendingKeys`](#keepPendingKeys)[`keysManaged`](#keysManaged)[`kissRank`](#kissRank)[`kissResponseMsg`](#kissResponseMsg)[`lastConvTime`](#lastConvTime)[`lastTravelInfo`](#lastTravelInfo)[`noGoodbyeResponseMsg`](#noGoodbyeResponseMsg)[`noHelloResponseMsg`](#noHelloResponseMsg)[`noResponseMsg`](#noResponseMsg)[`notificationOrder`](#notificationOrder)[`ownsContents`](#ownsContents)[`pcArrivalTurn`](#pcArrivalTurn)[`pcConnector`](#pcConnector)[`pcDefaultSayQuip`](#pcDefaultSayQuip)[`pcJustArrived`](#pcJustArrived)[`pendingAgendaList`](#pendingAgendaList)[`pendingKeys`](#pendingKeys)[`physicalTopicObjs`](#physicalTopicObjs)[`refuseCommandMsg`](#refuseCommandMsg)[`specialDescBeforeContents`](#specialDescBeforeContents)[`stateDesc`](#stateDesc)[`suggestionKey`](#suggestionKey)[`touchResponseMsg`](#touchResponseMsg)[`waitToSeeMsg`](#waitToSeeMsg)
 
@@ -112,11 +112,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`activatePendingAgenda`](#activatePendingAgenda)[`actorAfterAction`](#actorAfterAction)[`actorAfterTravel`](#actorAfterTravel)[`actorArrivingTurn`](#actorArrivingTurn)[`actorBeforeAction`](#actorBeforeAction)[`actorBeforeTravel`](#actorBeforeTravel)[`actorCanEndConversation`](#actorCanEndConversation)[`actorRemoteSpecialDesc`](#actorRemoteSpecialDesc)[`actorSay`](#actorSay)[`actorSayHello`](#actorSayHello)[`actorSpecialDesc`](#actorSpecialDesc)[`addPendingKey`](#addPendingKey)[`addToAllAgendas`](#addToAllAgendas)[`addToBothAgendas`](#addToBothAgendas)[`addToCurAgendas`](#addToCurAgendas)[`addToPendingAgenda`](#addToPendingAgenda)[`afterAction`](#afterAction)[`afterTravel`](#afterTravel)[`allowImplicitSay`](#allowImplicitSay)[`allowOtherActorToTake`](#allowOtherActorToTake)[`arouse`](#arouse)[`arrivingTurn`](#arrivingTurn)[`beforeAction`](#beforeAction)[`beforeTravel`](#beforeTravel)[`canCatchThrown`](#canCatchThrown)[`canEndConversation`](#canEndConversation)[`cannotTakeFromActorMsg`](#cannotTakeFromActorMsg)[`condSay`](#condSay)[`convAgendaReady`](#convAgendaReady)[`curNodeIdx`](#curNodeIdx)[`curNodeKey`](#curNodeKey)[`curNodeObj`](#curNodeObj)[`dobjFor(AskAbout)`](#dobjFor(AskAbout))[`dobjFor(AskFor)`](#dobjFor(AskFor))[`dobjFor(Attack)`](#dobjFor(Attack))[`dobjFor(AttackWith)`](#dobjFor(AttackWith))[`dobjFor(Feel)`](#dobjFor(Feel))[`dobjFor(Follow)`](#dobjFor(Follow))[`dobjFor(Kiss)`](#dobjFor(Kiss))[`dobjFor(QueryAbout)`](#dobjFor(QueryAbout))[`dobjFor(SayTo)`](#dobjFor(SayTo))[`dobjFor(TalkAbout)`](#dobjFor(TalkAbout))[`dobjFor(TalkTo)`](#dobjFor(TalkTo))[`dobjFor(TellAbout)`](#dobjFor(TellAbout))[`endConversation`](#endConversation)[`findBestResponse`](#findBestResponse)[`followDaemon`](#followDaemon)[`followFuse`](#followFuse)[`getActor`](#getActor)[`getBestMatch`](#getBestMatch)[`handleCommand`](#handleCommand)[`handleTopic`](#handleTopic)[`informedAbout`](#informedAbout)[`initiateTopic`](#initiateTopic)[`iobjFor(GiveTo)`](#iobjFor(GiveTo))[`iobjFor(ShowTo)`](#iobjFor(ShowTo))[`iobjFor(ThrowTo)`](#iobjFor(ThrowTo))[`makeActivated`](#makeActivated)[`makeDeactivated`](#makeDeactivated)[`manageKeys`](#manageKeys)[`nilResponse`](#nilResponse)[`noteConversed`](#noteConversed)[`notifyRemove`](#notifyRemove)[`remoteSpecialDesc`](#remoteSpecialDesc)[`removeFromAllAgendas`](#removeFromAllAgendas)[`removeFromBothAgendas`](#removeFromBothAgendas)[`removeFromCurAgendas`](#removeFromCurAgendas)[`removeFromPendingAgenda`](#removeFromPendingAgenda)[`sayActorArriving`](#sayActorArriving)[`sayActorCatches`](#sayActorCatches)[`sayActorDeparting`](#sayActorDeparting)[`sayActorDropsCatch`](#sayActorDropsCatch)[`sayActorFollowing`](#sayActorFollowing)[`sayActorFollowingMe`](#sayActorFollowingMe)[`sayArriving`](#sayArriving)[`sayDeparting`](#sayDeparting)[`sayFollowing`](#sayFollowing)[`sayGoodbye`](#sayGoodbye)[`sayHeadAfterActor`](#sayHeadAfterActor)[`sayHello`](#sayHello)[`setFollowMeFuse`](#setFollowMeFuse)[`setInformed`](#setInformed)[`setState`](#setState)[`showSuggestions`](#showSuggestions)[`specialDesc`](#specialDesc)[`startFollowing`](#startFollowing)[`stopFollowing`](#stopFollowing)[`takeTurn`](#takeTurn)[`travelVia`](#travelVia)
 
@@ -149,11 +149,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="active"></span>
 
@@ -161,14 +161,14 @@ Inherited from `LMentionable` :
 
 [actor.t](../file/actor.t.html)\[[2166](../source/actor.t.html#2166)\]
 
-<div class="desc">
+
 
 This definition is needed for the TopicGroup implementation, and should
 not normally be overridden in user game code. It allows TopicEntries and
 TopicGroups to determine their own active status by reference to that of
 their immediate location.
 
-</div>
+
 
 <span id="activeKeys"></span>
 
@@ -176,13 +176,13 @@ their immediate location.
 
 [actor.t](../file/actor.t.html)\[[732](../source/actor.t.html#732)\]
 
-<div class="desc">
+
 
 If this list is not empty then the choice of topic entries to match will
 be restricted to those whose convKeys property includes at least one of
 the key values in this list.
 
-</div>
+
 
 <span id="actorInformOverheard"></span>
 
@@ -190,13 +190,13 @@ the key values in this list.
 
 [actor.t](../file/actor.t.html)\[[1844](../source/actor.t.html#1844)\]
 
-<div class="desc">
+
 
 Should other actors who can notionally hear the PC talking to us
 overhear when information is imparted to us when our current ActorState
 is nil? By default they should.
 
-</div>
+
 
 <span id="actorStaysPutMsg"></span>
 
@@ -204,12 +204,12 @@ is nil? By default they should.
 
 [actor.t](../file/actor.t.html)\[[1330](../source/actor.t.html#1330)\]
 
-<div class="desc">
+
 
 The message to display when this actor doesn't go anywhere when the
 player character tries to follow this actor.
 
-</div>
+
 
 <span id="allNodes"></span>
 
@@ -217,13 +217,13 @@ player character tries to follow this actor.
 
 [actor.t](../file/actor.t.html)\[[1717](../source/actor.t.html#1717)\]
 
-<div class="desc">
+
 
 A list of all ConvNodes associated with this actor. This is a list of
 two element lists of the form \[node-name, node-obj\] where node-name is
 the convKeys property of the node and node is the associated object.
 
-</div>
+
 
 <span id="allStates"></span>
 
@@ -231,12 +231,12 @@ the convKeys property of the node and node is the associated object.
 
 [actor.t](../file/actor.t.html)\[[1965](../source/actor.t.html#1965)\]
 
-<div class="desc">
+
 
 A list of all the ActorStates associated with this Actor; this is
 populated by the preinitialization of the individual ActorStates.
 
-</div>
+
 
 <span id="alreadyTalkingMsg"></span>
 
@@ -244,11 +244,11 @@ populated by the preinitialization of the individual ActorStates.
 
 [actor.t](../file/actor.t.html)\[[1952](../source/actor.t.html#1952)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="attackResponseMsg"></span>
 
@@ -256,12 +256,12 @@ populated by the preinitialization of the individual ActorStates.
 
 [actor.t](../file/actor.t.html)\[[2303](../source/actor.t.html#2303)\]
 
-<div class="desc">
+
 
 The message to display if attacking goes ahead but no HitTopics have
 been defined.
 
-</div>
+
 
 <span id="attentionSpan"></span>
 
@@ -269,14 +269,14 @@ been defined.
 
 [actor.t](../file/actor.t.html)\[[1802](../source/actor.t.html#1802)\]
 
-<div class="desc">
+
 
 The maximum value that our boredomCount can reach before we terminate a
 conversation through 'boredom', because we've given up waiting for the
 player character to say anything. A value of nil (the default) meanns
 that we never terminate a conversation for this reason.
 
-</div>
+
 
 <span id="autoImplicitSay"></span>
 
@@ -284,7 +284,7 @@ that we never terminate a conversation for this reason.
 
 [actor.t](../file/actor.t.html)\[[1076](../source/actor.t.html#1076)\]
 
-<div class="desc">
+
 
 Flag, do we want the allowImplicitSay() method to rule out the
 interpretation of commands as implicit Say commands if there are no
@@ -294,7 +294,7 @@ manner are felt to be inconsistent. If autoImplicitSay is set to nil
 then allowImplicitSay() will simply return the value of
 enableImplicitSay.
 
-</div>
+
 
 <span id="boredomAgendaItem"></span>
 
@@ -302,13 +302,13 @@ enableImplicitSay.
 
 [actor.t](../file/actor.t.html)\[[1548](../source/actor.t.html#1548)\]
 
-<div class="desc">
+
 
 our special "boredom" agenda item - this makes us initiate an end to an
 active conversation when the PC has ignored us for a given number of
 consecutive turns
 
-</div>
+
 
 <span id="boredomCount"></span>
 
@@ -316,14 +316,14 @@ consecutive turns
 
 [actor.t](../file/actor.t.html)\[[1793](../source/actor.t.html#1793)\]
 
-<div class="desc">
+
 
 The count of how many turns have passed during which no conversation has
 actually taken place when we're the player charater's current
 interlocutor. This can be used to terminate the conversation through
 'boredom' if the boredomCount exceeds our attention span.
 
-</div>
+
 
 <span id="cannotAttackMsg"></span>
 
@@ -331,11 +331,11 @@ interlocutor. This can be used to terminate the conversation through
 
 [actor.t](../file/actor.t.html)\[[2297](../source/actor.t.html#2297)\]
 
-<div class="desc">
+
 
 The message to display if isAttackable is nil
 
-</div>
+
 
 <span id="cannotKissMsg"></span>
 
@@ -343,11 +343,11 @@ The message to display if isAttackable is nil
 
 [actor.t](../file/actor.t.html)\[[2250](../source/actor.t.html#2250)\]
 
-<div class="desc">
+
 
 The message to display if isKissable is nil
 
-</div>
+
 
 <span id="cannotTakeMsg"></span>
 
@@ -355,11 +355,11 @@ The message to display if isKissable is nil
 
 [actor.t](../file/actor.t.html)\[[171](../source/actor.t.html#171)\]
 
-<div class="desc">
+
 
 The message to display when someone tries to take this actor.
 
-</div>
+
 
 <span id="canTalkToMe"></span>
 
@@ -367,11 +367,11 @@ The message to display when someone tries to take this actor.
 
 [actor.t](../file/actor.t.html)\[[2180](../source/actor.t.html#2180)\]
 
-<div class="desc">
+
 
 In general we can talk to actors
 
-</div>
+
 
 <span id="cantFollowFromHereMsg"></span>
 
@@ -379,11 +379,11 @@ In general we can talk to actors
 
 [actor.t](../file/actor.t.html)\[[2500](../source/actor.t.html#2500)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canThrowToMe"></span>
 
@@ -391,12 +391,12 @@ In general we can talk to actors
 
 [actor.t](../file/actor.t.html)\[[2351](../source/actor.t.html#2351)\]
 
-<div class="desc">
+
 
 Unlike inaminate objects, actors can be the logical target of a ThrowTo
 action
 
-</div>
+
 
 <span id="cantStartFromHereMsg"></span>
 
@@ -404,11 +404,11 @@ action
 
 [actor.t](../file/actor.t.html)\[[2498](../source/actor.t.html#2498)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="contentsListed"></span>
 
@@ -416,12 +416,12 @@ action
 
 [actor.t](../file/actor.t.html)\[[180](../source/actor.t.html#180)\]
 
-<div class="desc">
+
 
 We don't normally list the contents of an Actor when Looking or
 Examining.
 
-</div>
+
 
 <span id="contType"></span>
 
@@ -429,11 +429,11 @@ Examining.
 
 [actor.t](../file/actor.t.html)\[[174](../source/actor.t.html#174)\]
 
-<div class="desc">
+
 
 The (portable) contents of an actor are regarded as being carried.
 
-</div>
+
 
 <span id="conversedLastTurn"></span>
 
@@ -441,13 +441,13 @@ The (portable) contents of an actor are regarded as being carried.
 
 [actor.t](../file/actor.t.html)\[[724](../source/actor.t.html#724)\]
 
-<div class="desc">
+
 
 Did this actor converse with the player character on the previous turn?
 He/she/it did so if our last conversation time is one less than the
 game's current turn count.
 
-</div>
+
 
 <span id="conversedThisTurn"></span>
 
@@ -455,13 +455,13 @@ game's current turn count.
 
 [actor.t](../file/actor.t.html)\[[717](../source/actor.t.html#717)\]
 
-<div class="desc">
+
 
 Has this actor conversed with the player character on the current turn?
 He/she/it has done so if our last conversation time is the same as the
 game's turn count.
 
-</div>
+
 
 <span id="convKeyTab"></span>
 
@@ -469,14 +469,14 @@ game's turn count.
 
 [actor.t](../file/actor.t.html)\[[1638](../source/actor.t.html#1638)\]
 
-<div class="desc">
+
 
 A Lookup Table holding conversation keys. Entries in this list take the
 form tag -\> list of TopicEntries that match this tag (e.g. the key is a
 convKey tag, expressed as a single-quoted string, and the value is a
 list containing TopicEntries whose convKeys property contains that tag).
 
-</div>
+
 
 <span id="curState"></span>
 
@@ -484,13 +484,13 @@ list containing TopicEntries whose convKeys property contains that tag).
 
 [actor.t](../file/actor.t.html)\[[33](../source/actor.t.html#33)\]
 
-<div class="desc">
+
 
 Our current ActorState. This should normally be treated as a read-only
 property; to change the current ActorState of an actor call the
 setState() method.
 
-</div>
+
 
 <span id="defaultCountsAsSay"></span>
 
@@ -498,7 +498,7 @@ setState() method.
 
 [actor.t](../file/actor.t.html)\[[1066](../source/actor.t.html#1066)\]
 
-<div class="desc">
+
 
 Do we want a DefaultTopic to count as a SayTopic for the purpose of
 deciding whether to allow otherwise not understood commands being
@@ -507,7 +507,7 @@ most likely to be what game authors who don't explicitly define
 SayTopics (or DefaultSayTopics) intend, but game code can override this,
 either on individual actors or on the Actor class.
 
-</div>
+
 
 <span id="defaultSayResponse"></span>
 
@@ -515,11 +515,11 @@ either on individual actors or on the Actor class.
 
 [actor.t](../file/actor.t.html)\[[2232](../source/actor.t.html#2232)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dontKnowWhereGoneMsg"></span>
 
@@ -527,11 +527,11 @@ either on individual actors or on the Actor class.
 
 [actor.t](../file/actor.t.html)\[[2496](../source/actor.t.html#2496)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="enableImplicitSay"></span>
 
@@ -539,7 +539,7 @@ either on individual actors or on the Actor class.
 
 [actor.t](../file/actor.t.html)\[[1057](../source/actor.t.html#1057)\]
 
-<div class="desc">
+
 
 User modifiable flag for use with the allowImplicitSay() method. Do we
 ever want to allow implicit SAY commands for this actor? By default we
@@ -547,7 +547,7 @@ do allow this (true), since this has been the default library behaviour
 up until now, but game authors can change this either on individual
 Actors or by modifying the Actor class.
 
-</div>
+
 
 <span id="fDaemon"></span>
 
@@ -555,13 +555,13 @@ Actors or by modifying the Actor class.
 
 [actor.t](../file/actor.t.html)\[[1172](../source/actor.t.html#1172)\]
 
-<div class="desc">
+
 
 Store the id of the daemon being used to make us follow the player char.
 We can check whether this actor is currently following or not by testing
 whether or not this is nil.
 
-</div>
+
 
 <span id="followActorMsg"></span>
 
@@ -569,11 +569,11 @@ whether or not this is nil.
 
 [actor.t](../file/actor.t.html)\[[1323](../source/actor.t.html#1323)\]
 
-<div class="desc">
+
 
 Otherwise, let the connector handle it.
 
-</div>
+
 
 <span id="followAgendaItem"></span>
 
@@ -581,11 +581,11 @@ Otherwise, let the connector handle it.
 
 [actor.t](../file/actor.t.html)\[[1334](../source/actor.t.html#1334)\]
 
-<div class="desc">
+
 
 Our currently executing FollowAgendaItem, if we have one.
 
-</div>
+
 
 <span id="followFuseID"></span>
 
@@ -593,13 +593,13 @@ Our currently executing FollowAgendaItem, if we have one.
 
 [actor.t](../file/actor.t.html)\[[1254](../source/actor.t.html#1254)\]
 
-<div class="desc">
+
 
 A note of our current following fuse, if we have one; this is used by
 FollowAgendaItem to check whether the player character is ready to
 follow us.
 
-</div>
+
 
 <span id="informedNameTab"></span>
 
@@ -607,11 +607,11 @@ follow us.
 
 [actor.t](../file/actor.t.html)\[[1805](../source/actor.t.html#1805)\]
 
-<div class="desc">
+
 
 Our look up table for things we've been informed about
 
-</div>
+
 
 <span id="informOverheard"></span>
 
@@ -619,14 +619,14 @@ Our look up table for things we've been informed about
 
 [actor.t](../file/actor.t.html)\[[1836](../source/actor.t.html#1836)\]
 
-<div class="desc">
+
 
 Should other actors who can notionally hear the PC talking to us
 overhear when information is imparted to us? I.e. should their
 setInform() methods be called too? If we have a curState we use its
 setting, otherwise we use the value of actorInformOverheard.
 
-</div>
+
 
 <span id="isAttackable"></span>
 
@@ -634,14 +634,14 @@ setting, otherwise we use the value of actorInformOverheard.
 
 [actor.t](../file/actor.t.html)\[[2280](../source/actor.t.html#2280)\]
 
-<div class="desc">
+
 
 By default it's normally possible to attack an actor, even if we don't
 want to allow it. Game code might want to override this to nil for
 actors it's obviously futile to try attacking, such as ghosts, gods and
 giants.
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -649,13 +649,13 @@ giants.
 
 [actor.t](../file/actor.t.html)\[[167](../source/actor.t.html#167)\]
 
-<div class="desc">
+
 
 By default actors can't be picked up and carried around by other actors
 (though game authors can override this if they need to create a portable
 actor).
 
-</div>
+
 
 <span id="keepPendingKeys"></span>
 
@@ -663,13 +663,13 @@ actor).
 
 [actor.t](../file/actor.t.html)\[[746](../source/actor.t.html#746)\]
 
-<div class="desc">
+
 
 If keepPendingKeys is set to true (normally by a \<.convstay\> tag) then
 retain the pending conversation keys (and hence the active ones) for the
 next conversational turn.
 
-</div>
+
 
 <span id="keysManaged"></span>
 
@@ -677,12 +677,12 @@ next conversational turn.
 
 [actor.t](../file/actor.t.html)\[[625](../source/actor.t.html#625)\]
 
-<div class="desc">
+
 
 Flag; has the active/pending key management already been carried out on
 this turn?
 
-</div>
+
 
 <span id="kissRank"></span>
 
@@ -690,12 +690,12 @@ this turn?
 
 [actor.t](../file/actor.t.html)\[[2263](../source/actor.t.html#2263)\]
 
-<div class="desc">
+
 
 An Actor is a more likely target of a KISS action than is an animate
 object.
 
-</div>
+
 
 <span id="kissResponseMsg"></span>
 
@@ -703,12 +703,12 @@ object.
 
 [actor.t](../file/actor.t.html)\[[2257](../source/actor.t.html#2257)\]
 
-<div class="desc">
+
 
 The default response of the actor to an attempt to kiss him/her/it where
 this is not handled anywhere else, but allowKiss is true.
 
-</div>
+
 
 <span id="lastConvTime"></span>
 
@@ -716,13 +716,13 @@ this is not handled anywhere else, but allowKiss is true.
 
 [actor.t](../file/actor.t.html)\[[710](../source/actor.t.html#710)\]
 
-<div class="desc">
+
 
 The last turn on which this actor conversed with the player character.
 We start out with a value of -1 to mean that we haven't conversed at
 all.
 
-</div>
+
 
 <span id="lastTravelInfo"></span>
 
@@ -730,7 +730,7 @@ all.
 
 [actor.t](../file/actor.t.html)\[[899](../source/actor.t.html#899)\]
 
-<div class="desc">
+
 
 If the player character has seen this actor travel then lastTravelInfo
 contains a two-element list comprising the room the actor was seen
@@ -748,7 +748,7 @@ bob.moveInto(nil) you had written frontDoor.travelVia(bob), this
 wouldn't be necessary, since it would be handled for you by
 frontDoor.travelVia()).
 
-</div>
+
 
 <span id="noGoodbyeResponseMsg"></span>
 
@@ -756,11 +756,11 @@ frontDoor.travelVia()).
 
 [actor.t](../file/actor.t.html)\[[1955](../source/actor.t.html#1955)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noHelloResponseMsg"></span>
 
@@ -768,12 +768,12 @@ frontDoor.travelVia()).
 
 [actor.t](../file/actor.t.html)\[[1949](../source/actor.t.html#1949)\]
 
-<div class="desc">
+
 
 The message to display when someone says hello to this actor but there's
 no accessible HelloTopic defined.
 
-</div>
+
 
 <span id="noResponseMsg"></span>
 
@@ -781,12 +781,12 @@ no accessible HelloTopic defined.
 
 [actor.t](../file/actor.t.html)\[[186](../source/actor.t.html#186)\]
 
-<div class="desc">
+
 
 The default response of the actor to a conversational command that is
 not handled anywhere else.
 
-</div>
+
 
 <span id="notificationOrder"></span>
 
@@ -794,12 +794,12 @@ not handled anywhere else.
 
 [actor.t](../file/actor.t.html)\[[2172](../source/actor.t.html#2172)\]
 
-<div class="desc">
+
 
 This property can be used by extensions or game code that wants to
 notify actors in some order of priority.
 
-</div>
+
 
 <span id="ownsContents"></span>
 
@@ -807,11 +807,11 @@ notify actors in some order of priority.
 
 [actor.t](../file/actor.t.html)\[[2158](../source/actor.t.html#2158)\]
 
-<div class="desc">
+
 
 An actor generally owns its contents
 
-</div>
+
 
 <span id="pcArrivalTurn"></span>
 
@@ -819,11 +819,11 @@ An actor generally owns its contents
 
 [actor.t](../file/actor.t.html)\[[925](../source/actor.t.html#925)\]
 
-<div class="desc">
+
 
 The turn on which the player character last arrived in our location
 
-</div>
+
 
 <span id="pcConnector"></span>
 
@@ -831,11 +831,11 @@ The turn on which the player character last arrived in our location
 
 [actor.t](../file/actor.t.html)\[[878](../source/actor.t.html#878)\]
 
-<div class="desc">
+
 
 The Travel Connector just traversed by the player character
 
-</div>
+
 
 <span id="pcDefaultSayQuip"></span>
 
@@ -843,11 +843,11 @@ The Travel Connector just traversed by the player character
 
 [actor.t](../file/actor.t.html)\[[2235](../source/actor.t.html#2235)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="pcJustArrived"></span>
 
@@ -855,11 +855,11 @@ The Travel Connector just traversed by the player character
 
 [actor.t](../file/actor.t.html)\[[928](../source/actor.t.html#928)\]
 
-<div class="desc">
+
 
 Flag -- has the player character just arrived?
 
-</div>
+
 
 <span id="pendingAgendaList"></span>
 
@@ -867,14 +867,14 @@ Flag -- has the player character just arrived?
 
 [actor.t](../file/actor.t.html)\[[2062](../source/actor.t.html#2062)\]
 
-<div class="desc">
+
 
 A list of agenda items to be added to our agenda at some later point.
 The main purpose is to allow game code to set up a list of AgendaItems
 (typically ConvAgendaItems) that become part of the actor's current
 agenda when conversation is initiated via a HelloTopic.
 
-</div>
+
 
 <span id="pendingKeys"></span>
 
@@ -882,13 +882,13 @@ agenda when conversation is initiated via a HelloTopic.
 
 [actor.t](../file/actor.t.html)\[[739](../source/actor.t.html#739)\]
 
-<div class="desc">
+
 
 a list of the keys to be copied into the activeKeys property for use in
 the next conversational turn. These are normally added by game code via
 \<.convnode\> tags and the like in conversational output.
 
-</div>
+
 
 <span id="physicalTopicObjs"></span>
 
@@ -896,14 +896,14 @@ the next conversational turn. These are normally added by game code via
 
 [actor.t](../file/actor.t.html)\[[421](../source/actor.t.html#421)\]
 
-<div class="desc">
+
 
 List of objects corresponding to non-conversation TopicEntry types for
 which an ActorState's noResponseMsg should not be used. We separate this
 lost out here to allow game code to add other game-specific types (e.g.
 hugTopicObj if the game implements a Hug Action and a HugTopic).
 
-</div>
+
 
 <span id="refuseCommandMsg"></span>
 
@@ -911,12 +911,12 @@ hugTopicObj if the game implements a Hug Action and a HugTopic).
 
 [actor.t](../file/actor.t.html)\[[313](../source/actor.t.html#313)\]
 
-<div class="desc">
+
 
 The default message to use in response to a command directed to this
 actor that is not handled in any other way.
 
-</div>
+
 
 <span id="specialDescBeforeContents"></span>
 
@@ -924,11 +924,11 @@ actor that is not handled in any other way.
 
 [actor.t](../file/actor.t.html)\[[131](../source/actor.t.html#131)\]
 
-<div class="desc">
+
 
 We normally list any actors after the miscellaneous contents of a room
 
-</div>
+
 
 <span id="stateDesc"></span>
 
@@ -936,13 +936,13 @@ We normally list any actors after the miscellaneous contents of a room
 
 [actor.t](../file/actor.t.html)\[[72](../source/actor.t.html#72)\]
 
-<div class="desc">
+
 
 Our state-specific description, which is appended to our desc to give
 our full description. By default we simply take this from our current
 ActorState.
 
-</div>
+
 
 <span id="suggestionKey"></span>
 
@@ -950,14 +950,14 @@ ActorState.
 
 [actor.t](../file/actor.t.html)\[[1557](../source/actor.t.html#1557)\]
 
-<div class="desc">
+
 
 If this is non-nil then a TOPICS command will use it to restrict the
 topics suggested to those with this key in their convKeys property. This
 could be used, for example, to provide a top-level 'menu' of topics when
 the full list would otherwise be overwhelming.
 
-</div>
+
 
 <span id="touchResponseMsg"></span>
 
@@ -965,11 +965,11 @@ the full list would otherwise be overwhelming.
 
 [actor.t](../file/actor.t.html)\[[2318](../source/actor.t.html#2318)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="waitToSeeMsg"></span>
 
@@ -977,19 +977,19 @@ the full list would otherwise be overwhelming.
 
 [actor.t](../file/actor.t.html)\[[2492](../source/actor.t.html#2492)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="activatePendingAgenda"></span>
 
@@ -997,13 +997,13 @@ the full list would otherwise be overwhelming.
 
 [actor.t](../file/actor.t.html)\[[2076](../source/actor.t.html#2076)\]
 
-<div class="desc">
+
 
 Make our pending agenda items acting by moving them all from our
 pendingAgendaList to all our actual agenda lists (on the actor and on
 all our DefaultAgendaItems).
 
-</div>
+
 
 <span id="actorAfterAction"></span>
 
@@ -1011,14 +1011,14 @@ all our DefaultAgendaItems).
 
 [actor.t](../file/actor.t.html)\[[812](../source/actor.t.html#812)\]
 
-<div class="desc">
+
 
 Give this actor a chance to respond just after an action prior to any
 response from its current actor state. By default we do nothing, but
 game code can easily override this without any risk of breaking the
 state-dependent afterAction mechanism.
 
-</div>
+
 
 <span id="actorAfterTravel"></span>
 
@@ -1026,14 +1026,14 @@ state-dependent afterAction mechanism.
 
 [actor.t](../file/actor.t.html)\[[936](../source/actor.t.html#936)\]
 
-<div class="desc">
+
 
 Give this actor a chance to react just after another actor travels in
 addition to any reaction from its current actor state. By default we do
 nothing, but game code can easily override this without any risk of
 breaking the state-dependent afterTravel mechanism.
 
-</div>
+
 
 <span id="actorArrivingTurn"></span>
 
@@ -1041,13 +1041,13 @@ breaking the state-dependent afterTravel mechanism.
 
 [actor.t](../file/actor.t.html)\[[1397](../source/actor.t.html#1397)\]
 
-<div class="desc">
+
 
 This method is executed when this actor has just followed the player
 character to a new location and there is no current ActorState. By
 default we do nothing.
 
-</div>
+
 
 <span id="actorBeforeAction"></span>
 
@@ -1055,14 +1055,14 @@ default we do nothing.
 
 [actor.t](../file/actor.t.html)\[[789](../source/actor.t.html#789)\]
 
-<div class="desc">
+
 
 Give this actor a chance to respond just before an action prior to any
 response from its current actor state. By default we do nothing, but
 game code can easily override this without any risk of breaking the
 state-dependent beforeAction mechanism.
 
-</div>
+
 
 <span id="actorBeforeTravel"></span>
 
@@ -1070,14 +1070,14 @@ state-dependent beforeAction mechanism.
 
 [actor.t](../file/actor.t.html)\[[907](../source/actor.t.html#907)\]
 
-<div class="desc">
+
 
 Give this actor a chance to react just before another actor travels in
 addition to any reaction from its current actor state. By default we do
 nothing, but game code can easily override this without any risk of
 breaking the state-dependent beforeTravel mechanism.
 
-</div>
+
 
 <span id="actorCanEndConversation"></span>
 
@@ -1085,7 +1085,7 @@ breaking the state-dependent beforeTravel mechanism.
 
 [actor.t](../file/actor.t.html)\[[1010](../source/actor.t.html#1010)\]
 
-<div class="desc">
+
 
 A state-independent check on whether this actor will allow the current
 conversation to end on account of reason. By default we simply return
@@ -1093,7 +1093,7 @@ true to allow the conversation to end, but game code can override this
 to return nil to disallow the ending of the conversation (presumably
 under specific conditions).
 
-</div>
+
 
 <span id="actorRemoteSpecialDesc"></span>
 
@@ -1101,13 +1101,13 @@ under specific conditions).
 
 [actor.t](../file/actor.t.html)\[[155](../source/actor.t.html#155)\]
 
-<div class="desc">
+
 
 The remoteSpecialDesc to use if we don't have a current ActorState (i.e.
 if curState is nil). By default we say the actor is in the remote
 location.
 
-</div>
+
 
 <span id="actorSay"></span>
 
@@ -1115,13 +1115,13 @@ location.
 
 [actor.t](../file/actor.t.html)\[[649](../source/actor.t.html#649)\]
 
-<div class="desc">
+
 
 This method can be called on the actor when we want to display the text
 of one or both sides of a conversational exchange with the actor without
 going through the TopicEntry mechanism to do so.
 
-</div>
+
 
 <span id="actorSayHello"></span>
 
@@ -1129,11 +1129,11 @@ going through the TopicEntry mechanism to do so.
 
 [actor.t](../file/actor.t.html)\[[1883](../source/actor.t.html#1883)\]
 
-<div class="desc">
+
 
 Have the actor greet the player character on the actor's initiative
 
-</div>
+
 
 <span id="actorSpecialDesc"></span>
 
@@ -1141,13 +1141,13 @@ Have the actor greet the player character on the actor's initiative
 
 [actor.t](../file/actor.t.html)\[[113](../source/actor.t.html#113)\]
 
-<div class="desc">
+
 
 The specialDesc to use if we don't have a current ActorState By default
 we just display a message saying the actor is here or that the actor is
 in a nested room.
 
-</div>
+
 
 <span id="addPendingKey"></span>
 
@@ -1155,11 +1155,11 @@ in a nested room.
 
 [actor.t](../file/actor.t.html)\[[752](../source/actor.t.html#752)\]
 
-<div class="desc">
+
 
 Add a convkey value to our pending keys list (for use as an active key
 
-</div>
+
 
 <span id="addToAllAgendas"></span>
 
@@ -1167,12 +1167,12 @@ Add a convkey value to our pending keys list (for use as an active key
 
 [actor.t](../file/actor.t.html)\[[1998](../source/actor.t.html#1998)\]
 
-<div class="desc">
+
 
 Add an agenda item both to myself and to any DefaultAgendaTopics either
 directly in me or in any of my Actor States
 
-</div>
+
 
 <span id="addToBothAgendas"></span>
 
@@ -1180,12 +1180,12 @@ directly in me or in any of my Actor States
 
 [actor.t](../file/actor.t.html)\[[1987](../source/actor.t.html#1987)\]
 
-<div class="desc">
+
 
 Add an agenda item to both myself and any DefaultAgendaTopic directly
 within me.
 
-</div>
+
 
 <span id="addToCurAgendas"></span>
 
@@ -1193,12 +1193,12 @@ within me.
 
 [actor.t](../file/actor.t.html)\[[2012](../source/actor.t.html#2012)\]
 
-<div class="desc">
+
 
 Add an agenda item to myself and to any DefaultAgendaTopios directly in
 me or in my current ActorState.
 
-</div>
+
 
 <span id="addToPendingAgenda"></span>
 
@@ -1206,11 +1206,11 @@ me or in my current ActorState.
 
 [actor.t](../file/actor.t.html)\[[2065](../source/actor.t.html#2065)\]
 
-<div class="desc">
+
 
 Add an item to our pending agenda list
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -1218,11 +1218,11 @@ Add an item to our pending agenda list
 
 [actor.t](../file/actor.t.html)\[[792](../source/actor.t.html#792)\]
 
-<div class="desc">
+
 
 Notification that an action has just been carried out in our presence
 
-</div>
+
 
 <span id="afterTravel"></span>
 
@@ -1230,12 +1230,12 @@ Notification that an action has just been carried out in our presence
 
 [actor.t](../file/actor.t.html)\[[913](../source/actor.t.html#913)\]
 
-<div class="desc">
+
 
 Notification that travel has just taken place in our presence (usually
 because an actor has just arrived in our location)
 
-</div>
+
 
 <span id="allowImplicitSay"></span>
 
@@ -1243,14 +1243,14 @@ because an actor has just arrived in our location)
 
 [actor.t](../file/actor.t.html)\[[1017](../source/actor.t.html#1017)\]
 
-<div class="desc">
+
 
 Do we want an otherwise not understood input (such as "You're crazy")
 treated as an implicit SAY command (e.g., treated as SAY YOU'RE CRAZY)
 when the player character is in conversatiom with this Actor? Return
 true if so or nil otherwise.
 
-</div>
+
 
 <span id="allowOtherActorToTake"></span>
 
@@ -1258,12 +1258,12 @@ true if so or nil otherwise.
 
 [actor.t](../file/actor.t.html)\[[2155](../source/actor.t.html#2155)\]
 
-<div class="desc">
+
 
 Is another actor allowed to take obj from our inventory? By default we
 return nil to disallow it for all objects.
 
-</div>
+
 
 <span id="arouse"></span>
 
@@ -1271,14 +1271,14 @@ return nil to disallow it for all objects.
 
 [actor.t](../file/actor.t.html)\[[1646](../source/actor.t.html#1646)\]
 
-<div class="desc">
+
 
 Set the curiosityAroused flag to true for all topic entries with this
 convKey. This allows topics to be suggested when and only when the
 player character has some reason to be curious about them, even though
 they were actually available before.
 
-</div>
+
 
 <span id="arrivingTurn"></span>
 
@@ -1286,12 +1286,12 @@ they were actually available before.
 
 [actor.t](../file/actor.t.html)\[[1381](../source/actor.t.html#1381)\]
 
-<div class="desc">
+
 
 This method is executed when this actor has just followed the player
 character to a new location.
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -1299,11 +1299,11 @@ character to a new location.
 
 [actor.t](../file/actor.t.html)\[[759](../source/actor.t.html#759)\]
 
-<div class="desc">
+
 
 Notification that an action is about to be carried out in our presence
 
-</div>
+
 
 <span id="beforeTravel"></span>
 
@@ -1311,13 +1311,13 @@ Notification that an action is about to be carried out in our presence
 
 [actor.t](../file/actor.t.html)\[[820](../source/actor.t.html#820)\]
 
-<div class="desc">
+
 
 Notification that something else is about to travel. By default we defer
 to out actor state, if we have one, but we also give the actor object a
 chance to respond.
 
-</div>
+
 
 <span id="canCatchThrown"></span>
 
@@ -1325,12 +1325,12 @@ chance to respond.
 
 [actor.t](../file/actor.t.html)\[[2357](../source/actor.t.html#2357)\]
 
-<div class="desc">
+
 
 We'll assume that actors can catch anything thrown at them by default,
 but game code may wish to override this assumption.
 
-</div>
+
 
 <span id="canEndConversation"></span>
 
@@ -1338,7 +1338,7 @@ but game code may wish to override this assumption.
 
 [actor.t](../file/actor.t.html)\[[971](../source/actor.t.html#971)\]
 
-<div class="desc">
+
 
 Is the actor willing for this conversation to be ended? We first check
 the current actor state (if any) and then the actor object. If either
@@ -1346,7 +1346,7 @@ raises an object it should display a message saying what the objection
 is (and then return nil). By default we simply return true, allowing the
 conversation to end.
 
-</div>
+
 
 <span id="cannotTakeFromActorMsg"></span>
 
@@ -1354,12 +1354,12 @@ conversation to end.
 
 [actor.t](../file/actor.t.html)\[[2137](../source/actor.t.html#2137)\]
 
-<div class="desc">
+
 
 Return a message saying that the actor cannot take obj from our
 inventory.
 
-</div>
+
 
 <span id="condSay"></span>
 
@@ -1367,7 +1367,7 @@ inventory.
 
 [actor.t](../file/actor.t.html)\[[679](../source/actor.t.html#679)\]
 
-<div class="desc">
+
 
 Conditionally use actorSay() or say() to output str depending on whether
 str appears to be something the actor says or simply a non-verbal
@@ -1376,7 +1376,7 @@ sequence @@ we'll assume it's something the actor says (and strip out
 the @@ that would simply be there to mark str as something the actor
 says, perhaps reported in indirect speech.
 
-</div>
+
 
 <span id="convAgendaReady"></span>
 
@@ -1384,7 +1384,7 @@ says, perhaps reported in indirect speech.
 
 [actor.t](../file/actor.t.html)\[[1975](../source/actor.t.html#1975)\]
 
-<div class="desc">
+
 
 Is this actor ready to invoke a ConvAgendaItem? We're ready if we
 haven't conversed this term and we can speak to the other actor and
@@ -1392,7 +1392,7 @@ we're not at a conversation node. This method is used by the isReady
 property of ConvAgendaItem (to save it having to make three separate
 calls to getActor).
 
-</div>
+
 
 <span id="curNodeIdx"></span>
 
@@ -1400,12 +1400,12 @@ calls to getActor).
 
 [actor.t](../file/actor.t.html)\[[1724](../source/actor.t.html#1724)\]
 
-<div class="desc">
+
 
 Service method used by curNodeKey() and curNodeObj() to identify the
 current ConvNode object, if there is one.
 
-</div>
+
 
 <span id="curNodeKey"></span>
 
@@ -1413,11 +1413,11 @@ current ConvNode object, if there is one.
 
 [actor.t](../file/actor.t.html)\[[1745](../source/actor.t.html#1745)\]
 
-<div class="desc">
+
 
 The string name of our current convNode, if we have one.
 
-</div>
+
 
 <span id="curNodeObj"></span>
 
@@ -1425,11 +1425,11 @@ The string name of our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[1761](../source/actor.t.html#1761)\]
 
-<div class="desc">
+
 
 The object representing our current convNode, if we have one.
 
-</div>
+
 
 <span id="dobjFor(AskAbout)"></span>
 
@@ -1437,11 +1437,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2190](../source/actor.t.html#2190)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(AskFor)"></span>
 
@@ -1449,11 +1449,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2198](../source/actor.t.html#2198)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Attack)"></span>
 
@@ -1461,11 +1461,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2305](../source/actor.t.html#2305)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(AttackWith)"></span>
 
@@ -1473,11 +1473,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2314](../source/actor.t.html#2314)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Feel)"></span>
 
@@ -1485,11 +1485,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2320](../source/actor.t.html#2320)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Follow)"></span>
 
@@ -1497,11 +1497,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2418](../source/actor.t.html#2418)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Kiss)"></span>
 
@@ -1509,11 +1509,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2265](../source/actor.t.html#2265)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(QueryAbout)"></span>
 
@@ -1521,11 +1521,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2239](../source/actor.t.html#2239)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(SayTo)"></span>
 
@@ -1533,11 +1533,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2224](../source/actor.t.html#2224)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(TalkAbout)"></span>
 
@@ -1545,11 +1545,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2214](../source/actor.t.html#2214)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(TalkTo)"></span>
 
@@ -1557,11 +1557,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2182](../source/actor.t.html#2182)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(TellAbout)"></span>
 
@@ -1569,11 +1569,11 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[2206](../source/actor.t.html#2206)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="endConversation"></span>
 
@@ -1581,7 +1581,7 @@ The object representing our current convNode, if we have one.
 
 [actor.t](../file/actor.t.html)\[[947](../source/actor.t.html#947)\]
 
-<div class="desc">
+
 
 Terminate a conversation that's currently going on between this actor
 and the player character. The reason parameter is the reason for ending
@@ -1591,7 +1591,7 @@ location), endConvBoredom (this actor has become bored with waiting for
 the player character to say anything) or endConvActor (this actor wishes
 to terminate the conversation for some other reason of its own).
 
-</div>
+
 
 <span id="findBestResponse"></span>
 
@@ -1599,14 +1599,14 @@ to terminate the conversation for some other reason of its own).
 
 [actor.t](../file/actor.t.html)\[[391](../source/actor.t.html#391)\]
 
-<div class="desc">
+
 
 Find the best response to use for a conversational command directed to
 this actor. prop would normally be a property pointer for the property
 containing the appropriate list or lists of Topic Entries to test, and
 topic is the Topic object we're trying to match.
 
-</div>
+
 
 <span id="followDaemon"></span>
 
@@ -1614,7 +1614,7 @@ topic is the Topic object we're trying to match.
 
 [actor.t](../file/actor.t.html)\[[1087](../source/actor.t.html#1087)\]
 
-<div class="desc">
+
 
 Mechanism to allow this actor to follow the player char. We do this
 rather simplistically by checking whether the player char is still in
@@ -1624,7 +1624,7 @@ can we. On arriving in the player char's new location we announce that
 we've just followed the player char and then run the arrivingTurn method
 on our current actor state (if we have one).
 
-</div>
+
 
 <span id="followFuse"></span>
 
@@ -1632,13 +1632,13 @@ on our current actor state (if we have one).
 
 [actor.t](../file/actor.t.html)\[[1261](../source/actor.t.html#1261)\]
 
-<div class="desc">
+
 
 This method is executed right at the end of a turn on which the player
 has issued a command to follow this actor, and carries out the travel to
 follow this actor if the actor has traveled.
 
-</div>
+
 
 <span id="getActor"></span>
 
@@ -1646,7 +1646,7 @@ follow this actor if the actor has traveled.
 
 [actor.t](../file/actor.t.html)\[[1785](../source/actor.t.html#1785)\]
 
-<div class="desc">
+
 
 We supply a getActor method that returns self so that objects such as
 TopicEntries that may be located either directly or indirectly in us can
@@ -1654,7 +1654,7 @@ get at their associated actor by simply calling getActor on their
 immediate location; at some point such a chain of calls to
 location.getActor will end here.
 
-</div>
+
 
 <span id="getBestMatch"></span>
 
@@ -1662,7 +1662,7 @@ location.getActor will end here.
 
 [actor.t](../file/actor.t.html)\[[325](../source/actor.t.html#325)\]
 
-<div class="desc">
+
 
 Find the best response to the topic produced by the player's command.
 prop is the xxxTopics list property we'll use to search for a matching
@@ -1672,7 +1672,7 @@ the actor. First priority, however, is given to TopicEntries whose
 convKeys match this actor's currentKeys (they match if the two lists
 have at least one element in common).
 
-</div>
+
 
 <span id="handleCommand"></span>
 
@@ -1680,11 +1680,11 @@ have at least one element in common).
 
 [actor.t](../file/actor.t.html)\[[190](../source/actor.t.html#190)\]
 
-<div class="desc">
+
 
 Handle a command (e.g. BOB, JUMP) directed at this actor.
 
-</div>
+
 
 <span id="handleTopic"></span>
 
@@ -1692,14 +1692,14 @@ Handle a command (e.g. BOB, JUMP) directed at this actor.
 
 [actor.t](../file/actor.t.html)\[[429](../source/actor.t.html#429)\]
 
-<div class="desc">
+
 
 Handle a conversational command where prop is a pointer to the property
 containing the appropriate list of TopicEntries to search (e.g.
 &askTopics), topic is the list of Topics to match, and defaultProp is
 pointer to the property to invoke if we can't find a match.
 
-</div>
+
 
 <span id="informedAbout"></span>
 
@@ -1707,12 +1707,12 @@ pointer to the property to invoke if we can't find a match.
 
 [actor.t](../file/actor.t.html)\[[1825](../source/actor.t.html#1825)\]
 
-<div class="desc">
+
 
 Determine whether this actor has been informed about tag. We return true
 if there is a corresponding non-nil entry in our informedNameTab
 
-</div>
+
 
 <span id="initiateTopic"></span>
 
@@ -1720,12 +1720,12 @@ if there is a corresponding non-nil entry in our informedNameTab
 
 [actor.t](../file/actor.t.html)\[[2096](../source/actor.t.html#2096)\]
 
-<div class="desc">
+
 
 Respond to an InitiateTopic triggered on this actor with top as the
 matching object
 
-</div>
+
 
 <span id="iobjFor(GiveTo)"></span>
 
@@ -1733,11 +1733,11 @@ matching object
 
 [actor.t](../file/actor.t.html)\[[2330](../source/actor.t.html#2330)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(ShowTo)"></span>
 
@@ -1745,11 +1745,11 @@ matching object
 
 [actor.t](../file/actor.t.html)\[[2338](../source/actor.t.html#2338)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(ThrowTo)"></span>
 
@@ -1757,11 +1757,11 @@ matching object
 
 [actor.t](../file/actor.t.html)\[[2361](../source/actor.t.html#2361)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="makeActivated"></span>
 
@@ -1769,11 +1769,11 @@ matching object
 
 [actor.t](../file/actor.t.html)\[[1669](../source/actor.t.html#1669)\]
 
-<div class="desc">
+
 
 Set the activated flag to true for all topic entries with this convKey.
 
-</div>
+
 
 <span id="makeDeactivated"></span>
 
@@ -1781,11 +1781,11 @@ Set the activated flag to true for all topic entries with this convKey.
 
 [actor.t](../file/actor.t.html)\[[1693](../source/actor.t.html#1693)\]
 
-<div class="desc">
+
 
 Set the activated flag to nil for all topic entries with this convKey.
 
-</div>
+
 
 <span id="manageKeys"></span>
 
@@ -1793,13 +1793,13 @@ Set the activated flag to nil for all topic entries with this convKey.
 
 [actor.t](../file/actor.t.html)\[[601](../source/actor.t.html#601)\]
 
-<div class="desc">
+
 
 Move pending keys to active keys and clear pending keys if need be. We
 call this out as a separate method to allow it to be directly called
 from elsewhere.
 
-</div>
+
 
 <span id="nilResponse"></span>
 
@@ -1807,11 +1807,11 @@ from elsewhere.
 
 [actor.t](../file/actor.t.html)\[[1959](../source/actor.t.html#1959)\]
 
-<div class="desc">
+
 
 Do nothing if we can't fine a suitable Hello or Bye Topic/
 
-</div>
+
 
 <span id="noteConversed"></span>
 
@@ -1819,11 +1819,11 @@ Do nothing if we can't fine a suitable Hello or Bye Topic/
 
 [actor.t](../file/actor.t.html)\[[628](../source/actor.t.html#628)\]
 
-<div class="desc">
+
 
 Convenience method to note that conversation has occurred on this turn
 
-</div>
+
 
 <span id="notifyRemove"></span>
 
@@ -1831,14 +1831,14 @@ Convenience method to note that conversation has occurred on this turn
 
 [actor.t](../file/actor.t.html)\[[2115](../source/actor.t.html#2115)\]
 
-<div class="desc">
+
 
 The notifyRemove() method is triggered when actionMoveInto() tries to
 move an object that's located within this actor. By default we don't
 allow it since it typically represents an attempt by the player
 character to take something from this actor's inventory.
 
-</div>
+
 
 <span id="remoteSpecialDesc"></span>
 
@@ -1846,7 +1846,7 @@ character to take something from this actor's inventory.
 
 [actor.t](../file/actor.t.html)\[[143](../source/actor.t.html#143)\]
 
-<div class="desc">
+
 
 The specialDesc of this actor when it is viewed from a remote location.
 If we have a current ActorState we use its remoteSpecialDesc, otherwise
@@ -1857,7 +1857,7 @@ viewed (normally the player char).
 Note that this method is generally only relevant if the senseRegion
 module is used.
 
-</div>
+
 
 <span id="removeFromAllAgendas"></span>
 
@@ -1865,13 +1865,13 @@ module is used.
 
 [actor.t](../file/actor.t.html)\[[2035](../source/actor.t.html#2035)\]
 
-<div class="desc">
+
 
 Remove an agenda Item both from this actor and from any associated
 DefaultAgendaTopics directly within this actor or in any of its
 ActorStates.
 
-</div>
+
 
 <span id="removeFromBothAgendas"></span>
 
@@ -1879,12 +1879,12 @@ ActorStates.
 
 [actor.t](../file/actor.t.html)\[[2023](../source/actor.t.html#2023)\]
 
-<div class="desc">
+
 
 Remove an agenda Item both from this actor and from any associated
 DefaultAgendaTopics directly within this actor.
 
-</div>
+
 
 <span id="removeFromCurAgendas"></span>
 
@@ -1892,12 +1892,12 @@ DefaultAgendaTopics directly within this actor.
 
 [actor.t](../file/actor.t.html)\[[2049](../source/actor.t.html#2049)\]
 
-<div class="desc">
+
 
 Remove an agenda item from myself and from any DefaultAgendaTopios
 directly in me or in my current ActorState.
 
-</div>
+
 
 <span id="removeFromPendingAgenda"></span>
 
@@ -1905,11 +1905,11 @@ directly in me or in my current ActorState.
 
 [actor.t](../file/actor.t.html)\[[2085](../source/actor.t.html#2085)\]
 
-<div class="desc">
+
 
 Remove one or more agenda items from our pending agenda
 
-</div>
+
 
 <span id="sayActorArriving"></span>
 
@@ -1917,13 +1917,13 @@ Remove one or more agenda items from our pending agenda
 
 [actor.t](../file/actor.t.html)\[[1419](../source/actor.t.html#1419)\]
 
-<div class="desc">
+
 
 Default message to display when the player character sees this actor
 arriving. We use a very plain-vanilla message here, since in practice
 game code will generally want to override this.
 
-</div>
+
 
 <span id="sayActorCatches"></span>
 
@@ -1931,11 +1931,11 @@ game code will generally want to override this.
 
 [actor.t](../file/actor.t.html)\[[2404](../source/actor.t.html#2404)\]
 
-<div class="desc">
+
 
 Display a message saying that this actor catches obj
 
-</div>
+
 
 <span id="sayActorDeparting"></span>
 
@@ -1943,7 +1943,7 @@ Display a message saying that this actor catches obj
 
 [actor.t](../file/actor.t.html)\[[1368](../source/actor.t.html#1368)\]
 
-<div class="desc">
+
 
 Method to display a message saying that this actor (normally an NPC
 visible to the player character) is departing via conn (a
@@ -1951,7 +1951,7 @@ TravelConnector object, which may be a Room as well as a Door or other
 kind of connector). Note that the default behaviour of
 ActorState.sayDeparting is simply to call this method.
 
-</div>
+
 
 <span id="sayActorDropsCatch"></span>
 
@@ -1959,11 +1959,11 @@ ActorState.sayDeparting is simply to call this method.
 
 [actor.t](../file/actor.t.html)\[[2411](../source/actor.t.html#2411)\]
 
-<div class="desc">
+
 
 Display a message saying that this actor failst to catch obj
 
-</div>
+
 
 <span id="sayActorFollowing"></span>
 
@@ -1971,13 +1971,13 @@ Display a message saying that this actor failst to catch obj
 
 [actor.t](../file/actor.t.html)\[[1198](../source/actor.t.html#1198)\]
 
-<div class="desc">
+
 
 Display a message to say that we've just followed the player character
 to a new location from oldLoc. The library provides a default message
 but this can be overridded as desired.
 
-</div>
+
 
 <span id="sayActorFollowingMe"></span>
 
@@ -1985,11 +1985,11 @@ but this can be overridded as desired.
 
 [actor.t](../file/actor.t.html)\[[1309](../source/actor.t.html#1309)\]
 
-<div class="desc">
+
 
 The message to display when another actor follows this one.
 
-</div>
+
 
 <span id="sayArriving"></span>
 
@@ -1997,12 +1997,12 @@ The message to display when another actor follows this one.
 
 [actor.t](../file/actor.t.html)\[[1403](../source/actor.t.html#1403)\]
 
-<div class="desc">
+
 
 The message to display when the player char sees this actor arriving
 after traveling from loc.
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -2010,7 +2010,7 @@ after traveling from loc.
 
 [actor.t](../file/actor.t.html)\[[1350](../source/actor.t.html#1350)\]
 
-<div class="desc">
+
 
 Display a message describing this actor's departure via conn. This looks
 a bit circuitous in that this method calls the corresponding method on
@@ -2025,7 +2025,7 @@ Note also that the purpose of this method is to describe an NPC's
 departure from the point of view of the player character, not to
 describe the player character's movements.
 
-</div>
+
 
 <span id="sayFollowing"></span>
 
@@ -2033,12 +2033,12 @@ describe the player character's movements.
 
 [actor.t](../file/actor.t.html)\[[1178](../source/actor.t.html#1178)\]
 
-<div class="desc">
+
 
 Display a message to say that we've just followed the player character
 to a new location from oldLoc.
 
-</div>
+
 
 <span id="sayGoodbye"></span>
 
@@ -2046,13 +2046,13 @@ to a new location from oldLoc.
 
 [actor.t](../file/actor.t.html)\[[1914](../source/actor.t.html#1914)\]
 
-<div class="desc">
+
 
 Say goodbye to this actor (farewell from the player character). The
 optional reason parameter is the reason we're saying goodbye, which
 defaults to endConvBye (i.e. the player character saying goodbye)
 
-</div>
+
 
 <span id="sayHeadAfterActor"></span>
 
@@ -2060,12 +2060,12 @@ defaults to endConvBye (i.e. the player character saying goodbye)
 
 [actor.t](../file/actor.t.html)\[[2485](../source/actor.t.html#2485)\]
 
-<div class="desc">
+
 
 reset the lastTravelInfo now that it's been used and is no longer
 relevant.
 
-</div>
+
 
 <span id="sayHello"></span>
 
@@ -2073,12 +2073,12 @@ relevant.
 
 [actor.t](../file/actor.t.html)\[[1851](../source/actor.t.html#1851)\]
 
-<div class="desc">
+
 
 Say hello to the actor (when the greetin is initiated by the player
 character)
 
-</div>
+
 
 <span id="setFollowMeFuse"></span>
 
@@ -2086,13 +2086,13 @@ character)
 
 [actor.t](../file/actor.t.html)\[[1231](../source/actor.t.html#1231)\]
 
-<div class="desc">
+
 
 Set the fuse to enable travel later on the same turn if this actor
 travels in the meantime. This method is called when a FOLLOW command is
 issed with this actor as its direct object.
 
-</div>
+
 
 <span id="setInformed"></span>
 
@@ -2100,13 +2100,13 @@ issed with this actor as its direct object.
 
 [actor.t](../file/actor.t.html)\[[1813](../source/actor.t.html#1813)\]
 
-<div class="desc">
+
 
 Note that we've been informed of something, by adding it to our
 informedNameTab. Tag is an arbitrary single-quoted string value used to
 represent the information in question.
 
-</div>
+
 
 <span id="setState"></span>
 
@@ -2114,12 +2114,12 @@ represent the information in question.
 
 [actor.t](../file/actor.t.html)\[[39](../source/actor.t.html#39)\]
 
-<div class="desc">
+
 
 Set our current ActorState to a new state (stat) or to no state at all
 (if the stat parameter is supplied as nil).
 
-</div>
+
 
 <span id="showSuggestions"></span>
 
@@ -2127,7 +2127,7 @@ Set our current ActorState to a new state (stat) or to no state at all
 
 [actor.t](../file/actor.t.html)\[[1568](../source/actor.t.html#1568)\]
 
-<div class="desc">
+
 
 Show a list of topics the player character might want to discuss with
 this actor. The explicit flag is true if the player has explicitly
@@ -2137,7 +2137,7 @@ then we don't restrict the suggestions by tag, otherwise we restrict the
 suggestions to those that match the tag (or one of the tags in the list
 of tags).
 
-</div>
+
 
 <span id="specialDesc"></span>
 
@@ -2145,14 +2145,14 @@ of tags).
 
 [actor.t](../file/actor.t.html)\[[81](../source/actor.t.html#81)\]
 
-<div class="desc">
+
 
 Our specialDesc (used to describe us in room listing). By default we use
 our ActorState's specialDesc if we have a current ActorState or else our
 actorSpecialDesc if our current ActorState is nil. But if there's a
 current FollowAgendaItem we let it handle the specialDesc instead.
 
-</div>
+
 
 <span id="startFollowing"></span>
 
@@ -2160,12 +2160,12 @@ current FollowAgendaItem we let it handle the specialDesc instead.
 
 [actor.t](../file/actor.t.html)\[[1134](../source/actor.t.html#1134)\]
 
-<div class="desc">
+
 
 Game code can call this method to instruct this actor to start following
 the player char round the map
 
-</div>
+
 
 <span id="stopFollowing"></span>
 
@@ -2173,12 +2173,12 @@ the player char round the map
 
 [actor.t](../file/actor.t.html)\[[1148](../source/actor.t.html#1148)\]
 
-<div class="desc">
+
 
 Game code can call this method to instruct this actor to stop following
 the player char round the map.
 
-</div>
+
 
 <span id="takeTurn"></span>
 
@@ -2186,13 +2186,13 @@ the player char round the map.
 
 [actor.t](../file/actor.t.html)\[[1468](../source/actor.t.html#1468)\]
 
-<div class="desc">
+
 
 The takeTurn() method is called on every Actor every turn to carry out a
 number of housekeeping functions relating to the conversation and agenda
 item systems.
 
-</div>
+
 
 <span id="travelVia"></span>
 
@@ -2200,7 +2200,7 @@ item systems.
 
 [actor.t](../file/actor.t.html)\[[1438](../source/actor.t.html#1438)\]
 
-<div class="desc">
+
 
 Make this actor travel via the connector conn and report its departure.
 If announceArrival is true (the default) we also announce the actor's
@@ -2211,11 +2211,11 @@ second optional parameter as nil. In some cases it may be easier to do
 this and supply your own custom arrival message after calling
 travelVia() than to juggle with the various sayArriving() methods.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

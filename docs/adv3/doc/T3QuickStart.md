@@ -1,9 +1,9 @@
 ---
 layout: docs
 ---
-<div class="main" role="main">
 
-<div class="section">
+
+
 
 # TADS 3 Quick Start Guide
 
@@ -21,9 +21,9 @@ running as quickly as possible. It contains three sections:
 
 Enjoy!
 
-</div>
 
-<div id="installing" class="section">
+
+
 
 ## 1. Installing TADS 3 and Creating a Project
 
@@ -243,7 +243,7 @@ If you're not running Workbench, at your system command prompt, type
 But you should check the README file that came with your system's
 download package - the program name might not be the same everywhere.
 
-</div>
+
 
 <div id="documentation" class="section">
 
@@ -413,9 +413,9 @@ aware of the following basic ideas:
   the code, you can often learn a great deal about how the property or
   method works.
 
-</div>
 
-<div id="sample" class="section">
+
+
 
 ## 3. Jumping Right In: A Sample Game
 
@@ -1479,6 +1479,6 @@ target="_blank">Learning TADS 3</a>.
 
 *Eric Eve — May 2012*
 
-</div>
+
 
 </div>

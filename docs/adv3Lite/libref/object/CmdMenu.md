@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`CmdMenu`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CmdMenu`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -45,11 +45,11 @@ Details](#_Methods_)
 `                                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`excludeCheckFailures`](#excludeCheckFailures)[`manipulationActions`](#manipulationActions)[`maxObjs`](#maxObjs)
 
@@ -68,11 +68,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkInsert`](#checkInsert)[`execAction`](#execAction)[`passCheck`](#passCheck)[`showList`](#showList)[`showOptions`](#showOptions)
 
@@ -93,11 +93,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="excludeCheckFailures"></span>
 
@@ -105,13 +105,13 @@ Inherited from `Redirector` :
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[786](../source/cmdhelp.t.html#786)\]
 
-<div class="desc">
+
 
 We in any case rule out combinations of actions and objects that would
 fail at the verify stage; flag - should we also rule out combinations
 that fail at the check stage? By default we do.
 
-</div>
+
 
 <span id="manipulationActions"></span>
 
@@ -119,12 +119,12 @@ that fail at the check stage? By default we do.
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[775](../source/cmdhelp.t.html#775)\]
 
-<div class="desc">
+
 
 A list of the actions we'll potentially suggest for option 4,
 "Manipulate thing". Note that these must all be TActions.
 
-</div>
+
 
 <span id="maxObjs"></span>
 
@@ -132,20 +132,20 @@ A list of the actions we'll potentially suggest for option 4,
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[840](../source/cmdhelp.t.html#840)\]
 
-<div class="desc">
+
 
 The maximum number of objects in a list before we try to reduce that
 list.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkInsert"></span>
 
@@ -153,12 +153,12 @@ list.
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[810](../source/cmdhelp.t.html#810)\]
 
-<div class="desc">
+
 
 Check whether obj can be inserted in cont with the action act (which
 will be one of PutIn, PutOn, PutUnder or PutBehind).
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -166,12 +166,12 @@ will be one of PutIn, PutOn, PutUnder or PutBehind).
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[109](../source/cmdhelp.t.html#109)\]
 
-<div class="desc">
+
 
 Carry out this action. This is the response to the player entering a
 number at the command prompt. \[CMDHELP EXTENSION\]
 
-</div>
+
 
 <span id="passCheck"></span>
 
@@ -179,11 +179,11 @@ number at the command prompt. \[CMDHELP EXTENSION\]
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[789](../source/cmdhelp.t.html#789)\]
 
-<div class="desc">
+
 
 Determine whether obj would pass the check stage of the act action.
 
-</div>
+
 
 <span id="showList"></span>
 
@@ -191,13 +191,13 @@ Determine whether obj would pass the check stage of the act action.
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[72](../source/cmdhelp.t.html#72)\]
 
-<div class="desc">
+
 
 Show a list of possible actions, where cmd_str is the name of the action
 and lst a list of objects on which it might be tried. \* \[CMDHELP
 EXTENSION\]
 
-</div>
+
 
 <span id="showOptions"></span>
 
@@ -205,15 +205,15 @@ EXTENSION\]
 
 [cmdhelp.t](../file/cmdhelp.t.html)\[[42](../source/cmdhelp.t.html#42)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

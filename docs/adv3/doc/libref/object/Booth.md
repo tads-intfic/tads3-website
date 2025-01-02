@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A booth is a nested room that serves as a small enclosure within a
 larger room. Booths can serve as regular containers as well as nested
@@ -40,15 +40,15 @@ in; a closet; a shallow pit.
 
 `class `**`Booth`**` :   `[`BasicPlatform`](../object/BasicPlatform.html)[`Container`](../object/Container.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Booth`**  
 [`BasicPlatform`](../object/BasicPlatform.html)  
@@ -67,27 +67,27 @@ in; a closet; a shallow pit.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actorInPrep`](#actorInPrep)[`actorOutOfPrep`](#actorOutOfPrep)[`objInPrep`](#objInPrep)
 
@@ -125,11 +125,11 @@ Inherited from `BulkLimiter` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Enter)`](#dobjFor(Enter))[`mapPushTravelIobj`](#mapPushTravelIobj)[`removeFromNested`](#removeFromNested)[`tryMovingIntoNested`](#tryMovingIntoNested)[`tryRemovingFromNested`](#tryRemovingFromNested)
 
@@ -168,11 +168,11 @@ Inherited from `BulkLimiter` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actorInPrep"></span>
 
@@ -180,11 +180,11 @@ Inherited from `BulkLimiter` :
 
 [en_us.t](../file/en_us.t.html)\[[2906](../source/en_us.t.html#2906)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorOutOfPrep"></span>
 
@@ -192,11 +192,11 @@ Inherited from `BulkLimiter` :
 
 [en_us.t](../file/en_us.t.html)\[[2907](../source/en_us.t.html#2907)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="objInPrep"></span>
 
@@ -204,19 +204,19 @@ Inherited from `BulkLimiter` :
 
 [en_us.t](../file/en_us.t.html)\[[2905](../source/en_us.t.html#2905)\]
 
-<div class="desc">
+
 
 by default, one is \*in\* a booth
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -224,11 +224,11 @@ by default, one is \*in\* a booth
 
 [travel.t](../file/travel.t.html)\[[6788](../source/travel.t.html#6788)\]
 
-<div class="desc">
+
 
 "Enter" is equivalent to "get in" (or "board") for a booth
 
-</div>
+
 
 <span id="mapPushTravelIobj"></span>
 
@@ -236,11 +236,11 @@ by default, one is \*in\* a booth
 
 [travel.t](../file/travel.t.html)\[[6791](../source/travel.t.html#6791)\]
 
-<div class="desc">
+
 
 explicitly define the push-travel indirect object mapping
 
-</div>
+
 
 <span id="removeFromNested"></span>
 
@@ -248,12 +248,12 @@ explicitly define the push-travel indirect object mapping
 
 [travel.t](../file/travel.t.html)\[[6779](../source/travel.t.html#6779)\]
 
-<div class="desc">
+
 
 Replace the current action with one that removes the actor from this
 nested room.
 
-</div>
+
 
 <span id="tryMovingIntoNested"></span>
 
@@ -261,12 +261,12 @@ nested room.
 
 [travel.t](../file/travel.t.html)\[[6759](../source/travel.t.html#6759)\]
 
-<div class="desc">
+
 
 Try an implied command to move the actor from outside of this nested
 room into this nested room.
 
-</div>
+
 
 <span id="tryRemovingFromNested"></span>
 
@@ -274,16 +274,16 @@ room into this nested room.
 
 [travel.t](../file/travel.t.html)\[[6769](../source/travel.t.html#6769)\]
 
-<div class="desc">
+
 
 Remove an actor from the booth. "Get out" is the normal command to leave
 this type of room.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

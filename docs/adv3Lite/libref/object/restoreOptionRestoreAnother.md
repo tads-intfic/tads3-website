@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 RESTORE ANOTHER GAME option for failed startup restore. This is just
 like finishOptionRestore, but shows a different option name.
 
 **`restoreOptionRestoreAnother`**` :   `[`finishOptionRestore`](../object/finishOptionRestore.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`restoreOptionRestoreAnother`**  
 [`finishOptionRestore`](../object/finishOptionRestore.html)  
@@ -43,11 +43,11 @@ like finishOptionRestore, but shows a different option name.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`desc`](#desc)
 
@@ -59,11 +59,11 @@ Inherited from `FinishOption` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `FinishOption` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -87,25 +87,25 @@ Inherited from `FinishOption` :
 
 [english.t](../file/english.t.html)\[[3746](../source/english.t.html#3746)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

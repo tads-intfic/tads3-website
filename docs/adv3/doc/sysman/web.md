@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Playing on the
 Web  
@@ -16,7 +16,7 @@ Display Model</a>    
 <a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
 </span>
 
-</div>
+
 
 
 
@@ -62,7 +62,7 @@ really most suitable for a hosted system where you have root access,
 such as a co-located server or VPS (Virtual Private Server). The chapter
 on Web Server Setup explains how to set this up.
 
-<div class="sectoc">
+
 
 [The Web UI](webui.html)  
 [Deploying your Web UI game](webdeploy.html)  
@@ -70,11 +70,11 @@ on Web Server Setup explains how to set this up.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Playing on the
@@ -84,4 +84,4 @@ Display Model</a>    
 <a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
 </span>
 
-</div>
+

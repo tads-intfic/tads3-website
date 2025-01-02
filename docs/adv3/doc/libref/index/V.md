@@ -1119,9 +1119,9 @@ property of [CommandRanking](../object/CommandRanking.html) in
 [setScreenNamePage](../object/setScreenNamePage.html) in
 [webui.t](../file/webui.t.html)\[[3538](../source/webui.t.html#3538)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Operator
@@ -16,7 +16,7 @@ Overloading
     <a href="multmeth.html" class="nav"><em>Next:</em> Multi-Methods</a>
     </span>
 
-</div>
+
 
 
 
@@ -540,7 +540,7 @@ probably best to use this sort of overloading sparingly.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -550,4 +550,4 @@ Overloading
     <a href="multmeth.html" class="nav"><em>Next:</em> Multi-Methods</a>
     </span>
 
-</div>
+

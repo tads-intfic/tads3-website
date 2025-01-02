@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="tools.html" class="nav">The Tools</a> \> Compiling and Linking  
@@ -16,7 +16,7 @@ layout: docs
 <a href="univpath.html" class="nav"><em>Next:</em> Universal Paths</a>
     </span>
 
-</div>
+
 
 
 
@@ -166,7 +166,7 @@ Here's a sample project file.
 
 To read options from a file, use the -f compiler option:
 
-<div class="cmdline">
+
 
     t3make -f calc.t3m
 
@@ -177,11 +177,11 @@ the command line, so you can mix options from a file and the command
 line. For example, if you wanted to use the project file above to
 compile the program for debugging, you could enter a command like this:
 
-<div class="cmdline">
+
 
     t3make -f calc.t3m -d
 
-</div>
+
 
 ### Default Project File
 
@@ -199,21 +199,21 @@ specify additional options on the command line when building with the
 default project file. For example, to build for debugging using the
 default project file, you would simply enter this:
 
-<div class="cmdline">
+
 
     t3make -d
 
-</div>
+
 
 ## The t3make command line
 
 The typical t3make command line looks like this:
 
-<div class="cmdline">
+
 
     t3make -o mygame.t3 -Fo obj -Fy sym game1.t game2.t game3.t
 
-</div>
+
 
 The -o option tells the linker the name of the image file; this is the
 T3 executable file that you run using the TADS 3 interpreter. The -Fo
@@ -231,11 +231,11 @@ your game.
 
 The complete syntax of the t3make command is as follows:
 
-<div class="syntax">
+
 
     t3make [ option ... ]  ]  source [ source ... ]  [ -res resourceOption ... ]  ] 
 
-</div>
+
 
 The options are special keywords that all start with a dash ("-") that
 control the way the compiler works; more on these in a moment. The
@@ -441,11 +441,11 @@ don't use the conventional filename suffixes for your source and library
 files, you must explicitly tell the compiler the type each file by
 prefixing each file with a "-source" or "-lib" specifier. For example:
 
-<div class="cmdline">
+
 
     t3make -o mygame.t3 -source game1.tads -lib mylib.tadslib
 
-</div>
+
 
 Immediately following the name of a library, you can list one or more
 "-x" options to exclude modules that the library includes. This is
@@ -591,7 +591,7 @@ item can be one of the following:
   ```
          graphics\title.jpg=pics/main.jpg
 
-  </div>
+  
 
   That bundles the local file called
   `graphics\title.jpg`, but names the resource
@@ -683,7 +683,7 @@ library file is formatted with one definition per line (blank lines are
 ignored, as are lines starting with the comment character "#"). A
 definition has this format:
 
-<div class="syntax">
+
 
     keyword : value
 ```
@@ -838,11 +838,11 @@ five source files: display.t, keypad.t, arith.t, sci.t, and trig.t.
 Assuming you called this library "calc.tl", you would include the
 library in a compilation like so:
 
-<div class="cmdline">
+
 
     t3make -d -lib calc.tl mygame.t
 
-</div>
+
 
 Because the library name ends in ".tl", you don't need to include a
 "-lib" specifier before it - the compiler infers that the file is a
@@ -900,11 +900,11 @@ Now, suppose you compile a program including the desk.tl library, but
 you want to exclude the trig.t module included in the calc.tl library.
 To do this, you'd write a "-x" option like this:
 
-<div class="cmdline">
+
 
     t3make desk.tl -x calc/trig
 
-</div>
+
 
 ## Default Modules
 
@@ -1035,11 +1035,11 @@ files. With TADS 3, don't do this. Instead, just add all of the source
 files to your project (the ".t3m" file, if you're using the command-line
 compiler).
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1049,4 +1049,4 @@ compiler).
 <a href="univpath.html" class="nav"><em>Next:</em> Universal Paths</a>
     </span>
 
-</div>
+

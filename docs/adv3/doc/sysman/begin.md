@@ -1,19 +1,19 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Opening Moves  
 <span class="navnp"><a href="intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
 
-</div>
+
 
 
 
@@ -21,7 +21,7 @@ layout: docs
 
 This section introduces TADS, and provides a guide to using this manual.
 
-<div class="sectoc">
+
 
 [Introduction](intro.html)  
 [Typographical Conventions](syntax.html)  
@@ -30,15 +30,15 @@ This section introduces TADS, and provides a guide to using this manual.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Opening Moves  
 <span class="navnp"><a href="intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
 
-</div>
+

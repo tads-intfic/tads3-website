@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Labeled Dial - something you can turn to a set of arbitrary text labels.
 
 `class `**`LabeledDial`**` :   `[`Dial`](../object/Dial.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LabeledDial`**  
 [`Dial`](../object/Dial.html)  
@@ -50,27 +50,27 @@ Labeled Dial - something you can turn to a set of arbitrary text labels.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`validSettings`](#validSettings)
 
@@ -88,11 +88,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canonicalizeSetting`](#canonicalizeSetting)[`isValidSetting`](#isValidSetting)
 
@@ -110,11 +110,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="validSettings"></span>
 
@@ -122,21 +122,21 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5541](../source/objects.t.html#5541)\]
 
-<div class="desc">
+
 
 The list of valid settings. Each entry in this list should be a string
 value. We ignore the case of these labels (we convert everything to
 upper-case when comparing labels).
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canonicalizeSetting"></span>
 
@@ -144,7 +144,7 @@ upper-case when comparing labels).
 
 [objects.t](../file/objects.t.html)\[[5551](../source/objects.t.html#5551)\]
 
-<div class="desc">
+
 
 Canonicalize the setting. We consider case insignificant in matching our
 labels, but the canonical version of a setting is the one that appears
@@ -153,7 +153,7 @@ LOUD, and the validSettings list contains 'Extra Loud', we'll want to
 convert the 'EXTRA LOUD' to the capitalization of the validSettings
 entry.
 
-</div>
+
 
 <span id="isValidSetting"></span>
 
@@ -161,16 +161,16 @@ entry.
 
 [objects.t](../file/objects.t.html)\[[5576](../source/objects.t.html#5576)\]
 
-<div class="desc">
+
 
 Check a setting for validity. A setting is valid only if it appears in
 the validSettings list for this dial.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

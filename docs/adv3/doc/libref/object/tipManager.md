@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The tip manager keeps track of which tips we have shown. Since we don't
 want to unnecessarily show any tips more than once, we store this
@@ -34,15 +34,15 @@ later time.
 
 `transient `**`tipManager`**` :   `[`InitObject`](../object/InitObject.html)[`PostRestoreObject`](../object/PostRestoreObject.html)[`PostUndoObject`](../object/PostUndoObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`tipManager`**  
 [`InitObject`](../object/InitObject.html)  
@@ -56,11 +56,11 @@ later time.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`pendingTips`](#pendingTips)[`shownTips`](#shownTips)
 
@@ -80,11 +80,11 @@ Inherited from `PostRestoreObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)[`showTips`](#showTips)
 
@@ -103,11 +103,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="pendingTips"></span>
 
@@ -115,11 +115,11 @@ Inherited from `ModuleExecObject` :
 
 [tips.t](../file/tips.t.html)\[[76](../source/tips.t.html#76)\]
 
-<div class="desc">
+
 
 a vector of tips to be displayed before the next prompt
 
-</div>
+
 
 <span id="shownTips"></span>
 
@@ -127,7 +127,7 @@ a vector of tips to be displayed before the next prompt
 
 [tips.t](../file/tips.t.html)\[[87](../source/tips.t.html#87)\]
 
-<div class="desc">
+
 
 A transient list of shown tips. Note that this must be a list and not a
 vector. When updating a list, we actually replace it with a new list,
@@ -137,15 +137,15 @@ modifies the vector itself and leaves the property with the same
 reference. A vector itself is always persistent, so this change would be
 lost after E.G. a restore.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -153,11 +153,11 @@ lost after E.G. a restore.
 
 [tips.t](../file/tips.t.html)\[[45](../source/tips.t.html#45)\]
 
-<div class="desc">
+
 
 update tip information after a restore, restart or undo
 
-</div>
+
 
 <span id="showTips"></span>
 
@@ -165,16 +165,16 @@ update tip information after a restore, restart or undo
 
 [tips.t](../file/tips.t.html)\[[28](../source/tips.t.html#28)\]
 
-<div class="desc">
+
 
 Show pending tips. This is called by a PromptDaemon before each new
 round of input.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

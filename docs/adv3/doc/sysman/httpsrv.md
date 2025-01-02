@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> HTTPServer  
@@ -15,7 +15,7 @@ layout: docs
     <a href="icic.html" class="nav"><em>Next:</em> IntrinsicClass</a>    
 </span>
 
-</div>
+
 
 
 
@@ -257,7 +257,7 @@ you.
 
 `getAddress()`
 
-<div class="fdef">
+
 
 Returns a string giving the original binding address specified when the
 object was constructed. This is the address on which the server is
@@ -270,27 +270,27 @@ either a host name or a numeric IP address. Returns
 
 `getIPAddress()`
 
-<div class="fdef">
+
 
 Returns a string giving the numeric IP address on which the server is
 listening for connections. This is in the usual decimal format, as in
 '127.0.0.1'. Returns `nil` if no address is
 available.
 
-</div>
+
 
 `getPortNum()`
 
-<div class="fdef">
+
 
 Returns an integer giving the port number on which the server is
 listening.
 
-</div>
+
 
 `shutdown(*wait*?)`
 
-<div class="fdef">
+
 
 Shuts down the server. This closes the network port on which the server
 listens for connections, terminates the listener thread, and terminates
@@ -308,7 +308,7 @@ Calling the `shutdown()` method is optional. If
 your program simply exits, the system will automatically shut down any
 servers that are still active.
 
-</div>
+
 
 ## Save, restore, undo
 
@@ -362,11 +362,11 @@ HTTPServer can only be created if the host name is "localhost" or
 access, from applications on the same machine only. Higher safety levels
 prohibit creating an HTTPServer at all.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -375,4 +375,4 @@ prohibit creating an HTTPServer at all.
     <a href="icic.html" class="nav"><em>Next:</em> IntrinsicClass</a>    
 </span>
 
-</div>
+

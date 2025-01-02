@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="local.html" class="nav">Translating and Localizing TADS</a> \>
@@ -15,7 +15,7 @@ Creating a Character-Mapping File
 <span class="navnp"><a href="errtrans.html" class="nav"><em>Prev:</em> Translating Error
 Messages</a>     </span>
 
-</div>
+
 
 
 
@@ -71,7 +71,7 @@ the "default_display" character.
 utility, included with the TADS distribution, to compile the mapping
 file into the format that TADS uses:
 
-<div class="cmdline">
+
 
     mkchrtab cp1250.txt cp1250.tcm
 
@@ -229,11 +229,11 @@ For some approximation mapping examples, refer to the default 7-bit
 ASCII mapping file "us-ascii.txt" (in the "charmap" subdirectory of the
 TADS 3 distribution).
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -242,4 +242,4 @@ Creating a Character-Mapping File
 <span class="navnp"><a href="errtrans.html" class="nav"><em>Prev:</em> Translating Error
 Messages</a>     </span>
 
-</div>
+

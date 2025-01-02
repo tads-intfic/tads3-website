@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The Player class can be used to define the player character object. If
 there is only one player character in the game (the PC never changes)
@@ -35,15 +35,15 @@ and the Player object will register itself with gameMain and libGlobal.
 
 `class `**`Player`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Player`**  
 [`Thing`](../object/Thing.html)  
@@ -55,27 +55,27 @@ and the Player object will register itself with gameMain and libGlobal.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`contType`](#contType)  [`isFixed`](#isFixed)  [`isInitialPlayerChar`](#isInitialPlayerChar)  [`person`](#person)  `
 
@@ -94,11 +94,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -119,11 +119,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contType"></span>
 
@@ -131,12 +131,12 @@ Inherited from `LMentionable` :
 
 [thing.t](../file/thing.t.html)\[[9239](../source/thing.t.html#9239)\]
 
-<div class="desc">
+
 
 Objects located in the player character are generally regarded as being
 held.
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -144,11 +144,11 @@ held.
 
 [thing.t](../file/thing.t.html)\[[9226](../source/thing.t.html#9226)\]
 
-<div class="desc">
+
 
 The player character can't be picked up
 
-</div>
+
 
 <span id="isInitialPlayerChar"></span>
 
@@ -156,7 +156,7 @@ The player character can't be picked up
 
 [thing.t](../file/thing.t.html)\[[9251](../source/thing.t.html#9251)\]
 
-<div class="desc">
+
 
 Am I the Player object that starts out as the initial player character?
 Most games will only define one Player object so this will normally be
@@ -167,7 +167,7 @@ player character. Note, however, that if a game contains more than one
 potential player character, it may often be better to define the others
 using the Actor class.
 
-</div>
+
 
 <span id="person"></span>
 
@@ -175,27 +175,27 @@ using the Actor class.
 
 [thing.t](../file/thing.t.html)\[[9233](../source/thing.t.html#9233)\]
 
-<div class="desc">
+
 
 The player character is most normally referred to in the first person,
 although this can be overridden to 1 or 3 for first- or third-person
 games.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

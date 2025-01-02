@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 LiteralPhrase is a special kind of NounPhrase for literals (TYPE, WRITE,
 SET TO, etc). These phrases aren't resolved to game-world objects, but
@@ -34,42 +34,42 @@ instead are just treated as literal text.
 
 `class `**`LiteralPhrase`**` :   `[`NounPhrase`](../object/NounPhrase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LiteralPhrase`**  
 [`NounPhrase`](../object/NounPhrase.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -78,11 +78,11 @@ Inherited from `NounPhrase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`matchVocab`](#matchVocab)[`selectObjects`](#selectObjects)
 
@@ -91,19 +91,19 @@ Inherited from `NounPhrase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="matchVocab"></span>
 
@@ -111,11 +111,11 @@ Inherited from `NounPhrase` :
 
 [parser.t](../file/parser.t.html)\[[3126](../source/parser.t.html#3126)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="selectObjects"></span>
 
@@ -123,15 +123,15 @@ Inherited from `NounPhrase` :
 
 [parser.t](../file/parser.t.html)\[[3143](../source/parser.t.html#3143)\]
 
-<div class="desc">
+
 
 Wrap the dummy object in am NPMatch object
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

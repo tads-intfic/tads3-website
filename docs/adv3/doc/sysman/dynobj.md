@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Dynamic Object
@@ -16,7 +16,7 @@ Creation
     <a href="gc.html" class="nav"><em>Next:</em> Garbage Collection and
 Finalization</a>     </span>
 
-</div>
+
 
 
 
@@ -215,7 +215,7 @@ dangling reference).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -225,4 +225,4 @@ Creation
     <a href="gc.html" class="nav"><em>Next:</em> Garbage Collection and
 Finalization</a>     </span>
 
-</div>
+

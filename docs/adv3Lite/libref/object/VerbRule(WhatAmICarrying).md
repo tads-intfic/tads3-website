@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Trap variants on WHAT AM I CARRYING that should be turned into an
 INVENTORY command.
@@ -28,15 +28,15 @@ INVENTORY command.
 `VerbRule(WhatAmICarrying)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(WhatAmICarrying)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(WhatAmICarrying)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -44,11 +44,11 @@ INVENTORY command.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`isActive`](#isActive)  [`priority`](#priority)  [`verbPhrase`](#verbPhrase)  `
 
@@ -59,11 +59,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Production` :
 
 [newbie.t](../file/newbie.t.html)\[[698](../source/newbie.t.html#698)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isActive"></span>
 
@@ -99,11 +99,11 @@ Inherited from `Production` :
 
 [newbie.t](../file/newbie.t.html)\[[701](../source/newbie.t.html#701)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -111,11 +111,11 @@ Inherited from `Production` :
 
 [newbie.t](../file/newbie.t.html)\[[700](../source/newbie.t.html#700)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -123,25 +123,25 @@ Inherited from `Production` :
 
 [newbie.t](../file/newbie.t.html)\[[699](../source/newbie.t.html#699)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

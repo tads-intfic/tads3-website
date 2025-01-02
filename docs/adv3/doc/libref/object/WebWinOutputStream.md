@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Output stream for web banner windows
 
 `class `**`WebWinOutputStream`**` :   `[`OutputStream`](../object/OutputStream.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WebWinOutputStream`**  
 [`OutputStream`](../object/OutputStream.html)  
@@ -49,27 +49,27 @@ Output stream for web banner windows
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`win_`](#win_)
 
@@ -83,11 +83,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`execute`](#execute)[`writeFromStream`](#writeFromStream)
 
@@ -101,11 +101,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="win_"></span>
 
@@ -113,19 +113,19 @@ Inherited from `ModuleExecObject` :
 
 [browser.t](../file/browser.t.html)\[[799](../source/browser.t.html#799)\]
 
-<div class="desc">
+
 
 our status line window
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -133,11 +133,11 @@ our status line window
 
 [browser.t](../file/browser.t.html)\[[779](../source/browser.t.html#779)\]
 
-<div class="desc">
+
 
 construct
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -145,11 +145,11 @@ construct
 
 [browser.t](../file/browser.t.html)\[[789](../source/browser.t.html#789)\]
 
-<div class="desc">
+
 
 ignore preinit - we're always created dynamically
 
-</div>
+
 
 <span id="writeFromStream"></span>
 
@@ -157,15 +157,15 @@ ignore preinit - we're always created dynamically
 
 [browser.t](../file/browser.t.html)\[[792](../source/browser.t.html#792)\]
 
-<div class="desc">
+
 
 write to the underlying window
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

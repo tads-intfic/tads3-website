@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Global Command
@@ -17,7 +17,7 @@ Phrases</a>    
 <a href="t3past.html" class="nav"><em>Next:</em> Writing a Game in the
 Past Tense</a>     </span>
 
-</div>
+
 
 
 
@@ -485,7 +485,7 @@ we're done.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -496,4 +496,4 @@ Phrases</a>    
 <a href="t3past.html" class="nav"><em>Next:</em> Writing a Game in the
 Past Tense</a>     </span>
 
-</div>
+

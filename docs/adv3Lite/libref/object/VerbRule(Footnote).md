@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 This VerbRule is defined directly in the FOOTNOTE extension.
 
@@ -37,15 +37,15 @@ EXTENSION\]
 `VerbRule(Footnote)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(Footnote)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(Footnote)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -53,11 +53,11 @@ EXTENSION\]
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`verbPhrase`](#verbPhrase)  `
 
@@ -69,11 +69,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -85,11 +85,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -97,11 +97,11 @@ Inherited from `Production` :
 
 [footnote.t](../file/footnote.t.html)\[[310](../source/footnote.t.html#310)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -109,25 +109,25 @@ Inherited from `Production` :
 
 [footnote.t](../file/footnote.t.html)\[[311](../source/footnote.t.html#311)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

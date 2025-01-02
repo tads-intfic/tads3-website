@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Bed. This is an extension of Chair that allows actors to lie on it as
 well as sit on it. As with chairs, we have a basic bed, plus a regular
@@ -34,15 +34,15 @@ bed that serves as a surface as well.
 
 `class `**`BasicBed`**` :   `[`BasicChair`](../object/BasicChair.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BasicBed`**  
 [`BasicChair`](../object/BasicChair.html)  
@@ -53,11 +53,11 @@ bed that serves as a surface as well.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BasicBed`**  
 [`BasicPlatform`](../object/BasicPlatform.html)  
@@ -67,19 +67,19 @@ bed that serves as a surface as well.
 [`Bed`](../object/Bed.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allowedPostures`](#allowedPostures)[`defaultPosture`](#defaultPosture)[`mustMoveIntoProp`](#mustMoveIntoProp)[`obviousPostures`](#obviousPostures)
 
@@ -100,11 +100,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -125,11 +125,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowedPostures"></span>
 
@@ -137,12 +137,12 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[6590](../source/travel.t.html#6590)\]
 
-<div class="desc">
+
 
 we can sit, lie, and stand on a typical bed, but only sitting and lying
 are obvious default actions
 
-</div>
+
 
 <span id="defaultPosture"></span>
 
@@ -150,11 +150,11 @@ are obvious default actions
 
 [travel.t](../file/travel.t.html)\[[6597](../source/travel.t.html#6597)\]
 
-<div class="desc">
+
 
 default posture in this nested room is sitting
 
-</div>
+
 
 <span id="mustMoveIntoProp"></span>
 
@@ -162,11 +162,11 @@ default posture in this nested room is sitting
 
 [travel.t](../file/travel.t.html)\[[6594](../source/travel.t.html#6594)\]
 
-<div class="desc">
+
 
 tryMovingIntoNested failure message is "must sit on chair"
 
-</div>
+
 
 <span id="obviousPostures"></span>
 
@@ -174,25 +174,25 @@ tryMovingIntoNested failure message is "must sit on chair"
 
 [travel.t](../file/travel.t.html)\[[6591](../source/travel.t.html#6591)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

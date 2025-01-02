@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "room part item" is an object that's specially described as being part
 of, or attached to, a RoomPart (a wall, ceiling, floor, or the like).
@@ -52,69 +52,69 @@ way, but will only be in effect until the object is moved.
 
 `class `**`RoomPartItem`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RoomPartItem`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`useSpecialDescInContents`](#useSpecialDescInContents)[`useSpecialDescInRoom`](#useSpecialDescInRoom)[`useSpecialDescInRoomPart`](#useSpecialDescInRoomPart)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="useSpecialDescInContents"></span>
 
@@ -122,11 +122,11 @@ way, but will only be in effect until the object is moved.
 
 [travel.t](../file/travel.t.html)\[[5566](../source/travel.t.html#5566)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="useSpecialDescInRoom"></span>
 
@@ -134,12 +134,12 @@ way, but will only be in effect until the object is moved.
 
 [travel.t](../file/travel.t.html)\[[5565](../source/travel.t.html#5565)\]
 
-<div class="desc">
+
 
 don't use the special description in room descriptions, or in examining
 any other container
 
-</div>
+
 
 <span id="useSpecialDescInRoomPart"></span>
 
@@ -147,16 +147,16 @@ any other container
 
 [travel.t](../file/travel.t.html)\[[5537](../source/travel.t.html#5537)\]
 
-<div class="desc">
+
 
 show our special description when examining our associated room part, as
 long as we actually define a special description
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -46,14 +46,15 @@ as a female NPC, and her name, which the player character may or may not
 learn, will be Angela. Once again we’ll start by defining the basic
 Actor object:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    angela: Actor 'flight attendant; statuesque young; woman angela; her'
+<p>`
+    angela: Actor ‘flight attendant; statuesque young; woman angela; her’
         @planeFront
-        "She's a statuesque and by no means unattractive young woman. "
-        
-        checkAttackMsg = 'That would be cruel and unnecessary. '
-        
-        globalParamName = 'angela'
-    ;
+        “She’s a statuesque and by no means unattractive young woman. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    checkAttackMsg = 'That would be cruel and unnecessary. '
+    
+    globalParamName = 'angela'
+; `
 </code></pre></div></div>
 
 <p>The one new feature we’ve introduced here is the <strong>globalParamName</strong>
@@ -193,41 +194,42 @@ ActorState in question. Like AgendaItems, ActorStates are associated
 with their Actor by being located within them using the + syntax. We can
 thus define Angela’s initial ActorState like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + angelaGreetingState: ActorState
+<p>`
+    + angelaGreetingState: ActorState
         isInitState = true
-        specialDesc = "{The subj angela} {is} standing just inside the entrance
-            greeting passengers as they board. "
-        stateDesc = "Right now, she's wearing a fixed professional smile. "
-        
-        beforeTravel(traveler, connector)
+        specialDesc = “{The subj angela} {is} standing just inside the entrance
+            greeting passengers as they board. “
+        stateDesc = “Right now, she’s wearing a fixed professional smile. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeTravel(traveler, connector)
+    {
+        if(traveler == me)
         {
-            if(traveler == me)
+            switch(connector)
             {
-                switch(connector)
+            case cockpitDoor:
+                "&lt;q&gt;I'm afraid you can't go in there, sir,&lt;/q&gt; {the subj angela}
+                stops you. &lt;q&gt;Only flight crew are allowed in the cockpit.&lt;/q&gt;.
+                ";
+                
+                exit;
+               
+            case planeRear:
+                if(!ticketSeen)
                 {
-                case cockpitDoor:
-                    "&lt;q&gt;I'm afraid you can't go in there, sir,&lt;/q&gt; {the subj angela}
-                    stops you. &lt;q&gt;Only flight crew are allowed in the cockpit.&lt;/q&gt;.
-                    ";
-                    
+                    "&lt;q&gt;I'm afraid I can\'t let you board the plane till I\'ve
+                    seen your ticket, sir,&lt;/q&gt; {the subj angela} insists. ";
                     exit;
-                   
-                case planeRear:
-                    if(!ticketSeen)
-                    {
-                        "&lt;q&gt;I'm afraid I can\'t let you board the plane till I\'ve
-                        seen your ticket, sir,&lt;/q&gt; {the subj angela} insists. ";
-                        exit;
-                    }
-                    break;
-                default:
-                    break;
                 }
+                break;
+            default:
+                break;
             }
         }
-        
-        ticketSeen = nil
-    ;
+    }
+    
+    ticketSeen = nil
+; `
 </code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">specialDesc</code> defined on this ActorState is
@@ -246,22 +248,23 @@ ticket, for which purpose we define a custom
 obviously without defining <code class="language-plaintext highlighter-rouge">isInitState = true</code>
 on any of them, and without any need for a beforeTravel() method:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + angelaAssistingState: ActorState
-        specialDesc = "{The subj angela} {is} standing in the middle of the jetway,
-            trying to calm the passengers who have just been forced off the plane. "
-        
-        stateDesc = "Right now, she's looking rather harrassed. "
-    ;
+<p>`
+    + angelaAssistingState: ActorState
+        specialDesc = “{The subj angela} {is} standing in the middle of the jetway,
+            trying to calm the passengers who have just been forced off the plane. “</p>
 
-    + angelaTalkingState: ActorState
-        specialDesc = "{The subj angela} {is} facing you, waiting for you to speak.
-            "    
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    stateDesc = "Right now, she's looking rather harrassed. "
+;
 
-    + angelaSeatedState: ActorState
-        specialDesc = "{The subj angela} {is} sitting near the front of the plane. "
-        stateDesc = "Right now, though, she's looking worried and afraid. "
-    ;
++ angelaTalkingState: ActorState
+    specialDesc = "{The subj angela} {is} facing you, waiting for you to speak.
+        "    
+;
+
++ angelaSeatedState: ActorState
+    specialDesc = "{The subj angela} {is} sitting near the front of the plane. "
+    stateDesc = "Right now, though, she's looking worried and afraid. "
+; `
 </code></pre></div></div>
 
 <p>Our final task in this chapter is to make sure that the flight attendant
@@ -272,30 +275,31 @@ change an Actor’s current ActorState you should always call its
 <code class="language-plaintext highlighter-rouge">whenEnding(</code>) methods of the takeover scene,
 but we’ll once again use a couple of AgendaItems to do the job:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + angelaAssistingAgenda: AgendaItem
+<p>`
+    + angelaAssistingAgenda: AgendaItem
         initiallyActive = true
-        isReady = (takeover.isHappening)
-        
-        invokeItem()
-        {
-            isDone = true;
-            getActor.moveInto(jetway);
-            getActor.setState(angelaAssistingState);
-            getActor.addToAgenda(angelaReboardingAgenda);
-        }
-    ;
+        isReady = (takeover.isHappening)</p>
 
-    + angelaReboardingAgenda: AgendaItem
-        isReady = (takeover.hasHappened)
-        
-        invokeItem()
-        {
-            isDone = true;
-            getActor.moveInto(planeFront);
-            getActor.setState(angelaSeatedState);
-        }
-        
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    invokeItem()
+    {
+        isDone = true;
+        getActor.moveInto(jetway);
+        getActor.setState(angelaAssistingState);
+        getActor.addToAgenda(angelaReboardingAgenda);
+    }
+;
+
++ angelaReboardingAgenda: AgendaItem
+    isReady = (takeover.hasHappened)
+    
+    invokeItem()
+    {
+        isDone = true;
+        getActor.moveInto(planeFront);
+        getActor.setState(angelaSeatedState);
+    }
+    
+; `
 </code></pre></div></div>
 
 <p>If you compile and run the game now, you’ll find that there’s now no way
@@ -311,27 +315,28 @@ soon as the player character is in a position to speak to the actor
 concerned, which in this case will happen as soon as he enters the front
 of the plane:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + angelaTicketAgenda: ConvAgendaItem
-        initiallyActive = true
+<p>`
+    + angelaTicketAgenda: ConvAgendaItem
+        initiallyActive = true</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    invokeItem()
+    {
+        isDone = true;
+        "&lt;q&gt;Welcome aboard, sir,&lt;/q&gt; {the subj angela} greets you with a smile.
+        &lt;q&gt;May I see your ticket please?&lt;/q&gt; ";
         
-        invokeItem()
+        /* Temporary code until we reach Chapter 11 */
+        if(ticket.isDirectlyIn(me))
         {
-            isDone = true;
-            "&lt;q&gt;Welcome aboard, sir,&lt;/q&gt; {the subj angela} greets you with a smile.
-            &lt;q&gt;May I see your ticket please?&lt;/q&gt; ";
-            
-            /* Temporary code until we reach Chapter 11 */
-            if(ticket.isDirectlyIn(me))
-            {
-                "She glances down at the ticket in your hand, and temporarily takes
-                it off you to check it. &lt;q&gt;That's fine, sir,&lt;/q&gt; she assures you as
-                she returns it to you. &lt;q&gt;Please move to the rear of the plane to
-                find a seat.&lt;/q&gt; ";
-                angelaGreetingState.ticketSeen = true;
-            }
-            
+            "She glances down at the ticket in your hand, and temporarily takes
+            it off you to check it. &lt;q&gt;That's fine, sir,&lt;/q&gt; she assures you as
+            she returns it to you. &lt;q&gt;Please move to the rear of the plane to
+            find a seat.&lt;/q&gt; ";
+            angelaGreetingState.ticketSeen = true;
         }
-    ;
+        
+    }
+; `
 </code></pre></div></div>
 
 <p>That’s fine apart from one thing: if the player character boards the
@@ -342,45 +347,46 @@ method of angelaGreetingState reset angelaTicketAgenda (i.e. add it to
 Angela’s agendaList again) if the player character leaves the plane when
 Angela hasn’t seen the ticket:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + angelaGreetingState: ActorState
+<p>`
+    + angelaGreetingState: ActorState
         isInitState = true
-        specialDesc = "{The subj angela} {is} standing just inside the entrance
-            greeting passengers as they board. "
-        stateDesc = "Right now, she's wearing a fixed professional smile. "
-        
-        beforeTravel(traveler, connector)
+        specialDesc = “{The subj angela} {is} standing just inside the entrance
+            greeting passengers as they board. “
+        stateDesc = “Right now, she’s wearing a fixed professional smile. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    beforeTravel(traveler, connector)
+    {
+        if(traveler == me)
         {
-            if(traveler == me)
+            switch(connector)
             {
-                switch(connector)
+            case cockpitDoor:
+                "&lt;q&gt;I'm afraid you can't go in there, sir,&lt;/q&gt; {the subj angela}
+                stops you. &lt;q&gt;Only flight crew are allowed in the cockpit.&lt;/q&gt;.
+                ";
+                
+                exit;
+               
+            case planeRear:
+                if(!ticketSeen)
                 {
-                case cockpitDoor:
-                    "&lt;q&gt;I'm afraid you can't go in there, sir,&lt;/q&gt; {the subj angela}
-                    stops you. &lt;q&gt;Only flight crew are allowed in the cockpit.&lt;/q&gt;.
-                    ";
-                    
+                    "&lt;q&gt;I'm afraid I can\'t let you board the plane till I\'ve
+                    seen your ticket, sir,&lt;/q&gt; {the subj angela} insists. ";
                     exit;
-                   
-                case planeRear:
-                    if(!ticketSeen)
-                    {
-                        "&lt;q&gt;I'm afraid I can\'t let you board the plane till I\'ve
-                        seen your ticket, sir,&lt;/q&gt; {the subj angela} insists. ";
-                        exit;
-                    }
-                    break;
-                case jetway:
-                    if(!ticketSeen)
-                        getActor.addToAgenda(angelaTicketAgenda);
-                    break;
-                default:
-                    break;
                 }
+                break;
+            case jetway:
+                if(!ticketSeen)
+                    getActor.addToAgenda(angelaTicketAgenda);
+                break;
+            default:
+                break;
             }
         }
-        
-        ticketSeen = nil
-    ;
+    }
+    
+    ticketSeen = nil
+; `
 </code></pre></div></div>
 
 <p>And that’s where we’ll leave Angela and her ActorStates for now,

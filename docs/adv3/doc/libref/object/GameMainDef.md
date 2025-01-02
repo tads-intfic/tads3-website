@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The library base class for the gameMain object.
 
@@ -45,61 +45,61 @@ implementation.
 
 `class `**`GameMainDef`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GameMainDef`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allowYouMeMixing`](#allowYouMeMixing)[`allVerbsAllowAll`](#allVerbsAllowAll)[`ambigAnnounceMode`](#ambigAnnounceMode)[`beforeRunsBeforeCheck`](#beforeRunsBeforeCheck)[`cancelCmdLineOnFailure`](#cancelCmdLineOnFailure)[`filterPluralMatches`](#filterPluralMatches)[`initialPlayerChar`](#initialPlayerChar)[`parserTruncLength`](#parserTruncLength)[`scoreRankTable`](#scoreRankTable)[`useDistinguishersInAnnouncements`](#useDistinguishersInAnnouncements)[`usePastTense`](#usePastTense)[`verboseMode`](#verboseMode)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getSaveDesc`](#getSaveDesc)[`maxScore`](#maxScore)[`newGame`](#newGame)[`restoreAndRunGame`](#restoreAndRunGame)[`setAboutBox`](#setAboutBox)[`setGameTitle`](#setGameTitle)[`showGoodbye`](#showGoodbye)[`showIntro`](#showIntro)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowYouMeMixing"></span>
 
@@ -107,7 +107,7 @@ implementation.
 
 [misc.t](../file/misc.t.html)\[[350](../source/misc.t.html#350)\]
 
-<div class="desc">
+
 
 Option flag: allow the player to use "you" and "me" interchangeably in
 referring to the player character. We set this true by default, so that
@@ -141,7 +141,7 @@ narration, and as long as that's true, it should cause no confusion for
 the game to accept "you" and "me" as equivalent in commands. However,
 the library provides this option in case such as situation does arise.
 
-</div>
+
 
 <span id="allVerbsAllowAll"></span>
 
@@ -149,7 +149,7 @@ the library provides this option in case such as situation does arise.
 
 [misc.t](../file/misc.t.html)\[[385](../source/misc.t.html#385)\]
 
-<div class="desc">
+
 
 Option flag: allow ALL to be used for every verb. This is true by
 default, which means that players will be allowed to use ALL with any
@@ -166,7 +166,7 @@ If you're writing an especially puzzle-oriented game, you might want to
 set this to nil. It's a trade-off though, as some people will think your
 game is less player-friendly if you disable ALL.
 
-</div>
+
 
 <span id="ambigAnnounceMode"></span>
 
@@ -174,7 +174,7 @@ game is less player-friendly if you disable ALL.
 
 [misc.t](../file/misc.t.html)\[[499](../source/misc.t.html#499)\]
 
-<div class="desc">
+
 
 How should we handle object announcements when an object is
 automatically disambiguated? This controls how an action is described
@@ -215,7 +215,7 @@ results. In those best-guess situations, the parser always announces its
 decision, because it's entirely plausible that the player meant one of
 the other logical, but less likely, choices.
 
-</div>
+
 
 <span id="beforeRunsBeforeCheck"></span>
 
@@ -223,7 +223,7 @@ the other logical, but less likely, choices.
 
 [misc.t](../file/misc.t.html)\[[518](../source/misc.t.html#518)\]
 
-<div class="desc">
+
 
 Should the "before" notifications (beforeAction, roomBeforeAction, and
 actorAction) run before or after the "check" phase?
@@ -240,7 +240,7 @@ own internal checks by the time "before" is invoked - that way, you can
 invoke side effects without worrying that the command will subsequently
 fail.
 
-</div>
+
 
 <span id="cancelCmdLineOnFailure"></span>
 
@@ -248,7 +248,7 @@ fail.
 
 [misc.t](../file/misc.t.html)\[[421](../source/misc.t.html#421)\]
 
-<div class="desc">
+
 
 When a command fails, should we continue processing any remaining
 commands on the same command line, or simply ignore them? The reason we
@@ -281,7 +281,7 @@ Our traditional approach (from the early adv3 versions, and even in tads
 So, we make this the default. You can abort remaining commands on a
 command failure by setting this to true.
 
-</div>
+
 
 <span id="filterPluralMatches"></span>
 
@@ -289,7 +289,7 @@ command failure by setting this to true.
 
 [misc.t](../file/misc.t.html)\[[366](../source/misc.t.html#366)\]
 
-<div class="desc">
+
 
 Option flag: filter plural phrase matches exclude the most obvious
 illogicalities, such as trying to TAKE an object that's already being
@@ -303,7 +303,7 @@ If you would prefer that plural words are simply matched to everything
 present that matches the vocabulary, without any filtering at all,
 override this and set it to nil.
 
-</div>
+
 
 <span id="initialPlayerChar"></span>
 
@@ -311,13 +311,13 @@ override this and set it to nil.
 
 [misc.t](../file/misc.t.html)\[[61](../source/misc.t.html#61)\]
 
-<div class="desc">
+
 
 The initial player character. Each game's 'gameMain' object MUST define
 this to refer to the Actor object that serves as the initial player
 character.
 
-</div>
+
 
 <span id="parserTruncLength"></span>
 
@@ -325,7 +325,7 @@ character.
 
 [en_us.t](../file/en_us.t.html)\[[191](../source/en_us.t.html#191)\]
 
-<div class="desc">
+
 
 Option setting: the parser's truncation length for player input. As a
 convenience to the player, we can allow the player to truncate long
@@ -355,7 +355,7 @@ dynamically, you must instead create a new StringComparator object with
 the new truncation setting, and call
 languageGlobals.setStringComparator() to select the new object.
 
-</div>
+
 
 <span id="scoreRankTable"></span>
 
@@ -363,7 +363,7 @@ languageGlobals.setStringComparator() to select the new object.
 
 [misc.t](../file/misc.t.html)\[[297](../source/misc.t.html#297)\]
 
-<div class="desc">
+
 
 The score ranking list - this provides a list of names for various score
 levels. If the game provides a non-nil list here, the SCORE and FULL
@@ -381,7 +381,7 @@ points, since it should give the initial, lowest rank.
 If this is set to nil, which it is by default, we'll simply skip score
 ranks entirely.
 
-</div>
+
 
 <span id="useDistinguishersInAnnouncements"></span>
 
@@ -389,7 +389,7 @@ ranks entirely.
 
 [misc.t](../file/misc.t.html)\[[456](../source/misc.t.html#456)\]
 
-<div class="desc">
+
 
 Should we use distinguishers when generating action object announcement
 messages? If this is set, announcement messages that list objects by
@@ -421,7 +421,7 @@ each object in an announcement. You can use this setting if you find
 that the distinguisher mode generates too much fussy detail for your
 taste.
 
-</div>
+
 
 <span id="usePastTense"></span>
 
@@ -429,7 +429,7 @@ taste.
 
 [en_us.t](../file/en_us.t.html)\[[206](../source/en_us.t.html#206)\]
 
-<div class="desc">
+
 
 Option: are we currently using a past tense narrative? By default, we
 aren't.
@@ -443,7 +443,7 @@ Authors who want their game to start in the past tense can achieve this
 by overriding this property on their gameMain object and giving it a
 value of true.
 
-</div>
+
 
 <span id="verboseMode"></span>
 
@@ -451,7 +451,7 @@ value of true.
 
 [misc.t](../file/misc.t.html)\[[312](../source/misc.t.html#312)\]
 
-<div class="desc">
+
 
 Verbose mode. If this is on, the full room description is displayed each
 time the player enters a room, regardless of whether or not the player
@@ -464,15 +464,15 @@ We use a BinarySettingsItem to store the current mode, so that this
 setting's default will be taken from the user's global cross-game
 preferences.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getSaveDesc"></span>
 
@@ -480,7 +480,7 @@ preferences.
 
 [misc.t](../file/misc.t.html)\[[219](../source/misc.t.html#219)\]
 
-<div class="desc">
+
 
 Build a saved game metadata table. This returns a LookupTable containing
 string key/value pairs that are stored in saved game files, providing
@@ -512,7 +512,7 @@ the filename, and is intended to let the user enter a more free-form
 description than would be allowed in a filename. This text, if any, is
 passed to use via the 'userDesc' parameter.
 
-</div>
+
 
 <span id="maxScore"></span>
 
@@ -520,7 +520,7 @@ passed to use via the 'userDesc' parameter.
 
 [misc.t](../file/misc.t.html)\[[264](../source/misc.t.html#264)\]
 
-<div class="desc">
+
 
 The maximum number of points possible in the game. If the game includes
 the scoring module at all, and this is non-nil, the SCORE and FULL SCORE
@@ -532,7 +532,7 @@ point values of the Achievement objects in the game. The game can
 override this if needed to specify a specific maximum possible score,
 rather than relying on the automatic calculation.
 
-</div>
+
 
 <span id="newGame"></span>
 
@@ -540,7 +540,7 @@ rather than relying on the automatic calculation.
 
 [misc.t](../file/misc.t.html)\[[97](../source/misc.t.html#97)\]
 
-<div class="desc">
+
 
 Begin a new game. This default implementation shows the introductory
 message, calls the main command loop, and finally shows the goodbye
@@ -553,7 +553,7 @@ the user's input. If you need only to customize the introduction and
 goodbye messages, you can simply override showIntro() and showGoodbye()
 instead.
 
-</div>
+
 
 <span id="restoreAndRunGame"></span>
 
@@ -561,7 +561,7 @@ instead.
 
 [misc.t](../file/misc.t.html)\[[133](../source/misc.t.html#133)\]
 
-<div class="desc">
+
 
 Restore a game and start it running. This is invoked when the user
 launches the interpreter using a saved game file; for example, on a
@@ -573,7 +573,7 @@ we simply restore the game file if possible, and immediately start the
 game's main command loop. Most games won't need to override this, but
 you can if you need some special effect in the restore-at-startup case.
 
-</div>
+
 
 <span id="setAboutBox"></span>
 
@@ -581,7 +581,7 @@ you can if you need some special effect in the restore-at-startup case.
 
 [misc.t](../file/misc.t.html)\[[181](../source/misc.t.html#181)\]
 
-<div class="desc">
+
 
 Set up the HTML-mode about-box. By default, this does nothing. Games can
 use this routine to show an \<ABOUTBOX\> tag, if desired, to set up the
@@ -591,7 +591,7 @@ Note that an \<ABOUTBOX\> tag must be re-initialized each time the main
 game window is cleared, so this routine should be called again after any
 call to clearScreen().
 
-</div>
+
 
 <span id="setGameTitle"></span>
 
@@ -599,13 +599,13 @@ call to clearScreen().
 
 [misc.t](../file/misc.t.html)\[[166](../source/misc.t.html#166)\]
 
-<div class="desc">
+
 
 Set the interpreter window title, if applicable to the local platform.
 This simply displays a \<TITLE\> tag to set the title to the string
 found in the versionInfo object.
 
-</div>
+
 
 <span id="showGoodbye"></span>
 
@@ -613,7 +613,7 @@ found in the versionInfo object.
 
 [misc.t](../file/misc.t.html)\[[83](../source/misc.t.html#83)\]
 
-<div class="desc">
+
 
 Show the "goodbye" message. This is called after the main command loop
 terminates.
@@ -622,7 +622,7 @@ We don't show anything by default. If you want to show a "thanks for
 playing" type of message as the game exits, override this routine with
 the desired text.
 
-</div>
+
 
 <span id="showIntro"></span>
 
@@ -630,7 +630,7 @@ the desired text.
 
 [misc.t](../file/misc.t.html)\[[73](../source/misc.t.html#73)\]
 
-<div class="desc">
+
 
 Show the game's introduction. This routine is called by the default
 newGame() just before entering the main command loop. The command loop
@@ -641,11 +641,11 @@ Most games will want to override this, to show a prologue message
 setting up the game's initial situation for the player. We don't show
 anything by default.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

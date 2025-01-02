@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Multiple
@@ -17,7 +17,7 @@ Inheritance
 <a href="t3staging.html" class="nav"><em>Next:</em> Using Nested Rooms as
 Staging Locations</a>     </span>
 
-</div>
+
 
 
 
@@ -847,7 +847,7 @@ all.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -858,4 +858,4 @@ Inheritance
 <a href="t3staging.html" class="nav"><em>Next:</em> Using Nested Rooms as
 Staging Locations</a>     </span>
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="lib.html" class="nav">The System Library</a> \> Program
@@ -16,7 +16,7 @@ Initialization
     <a href="tok.html" class="nav"><em>Next:</em> Basic Tokenizer</a>    
 </span>
 
-</div>
+
 
 
 
@@ -406,7 +406,7 @@ modular run-time initialization code.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -416,4 +416,4 @@ Initialization
     <a href="tok.html" class="nav"><em>Next:</em> Basic Tokenizer</a>    
 </span>
 
-</div>
+

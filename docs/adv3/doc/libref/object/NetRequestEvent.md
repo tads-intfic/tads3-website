@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Network Request Event. This type of event occurs when a server (such as
 an HTTPServer object) receives a request from a network client.
@@ -40,42 +40,42 @@ classes for the server types you create in your program.
 
 `class `**`NetRequestEvent`**` :   `[`NetEvent`](../object/NetEvent.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NetRequestEvent`**  
 [`NetEvent`](../object/NetEvent.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`evRequest`](#evRequest)[`evType`](#evType)
 
@@ -84,11 +84,11 @@ Inherited from `NetEvent` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -96,11 +96,11 @@ Inherited from `NetEvent` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="evRequest"></span>
 
@@ -108,7 +108,7 @@ Inherited from `NetEvent` :
 
 [tadsnet.t](../file/tadsnet.t.html)\[[97](../source/tadsnet.t.html#97)\]
 
-<div class="desc">
+
 
 The request object. When the event type is NetEvRequest, this contains a
 request object describing the request. The class of the request object
@@ -116,7 +116,7 @@ varies according to the server type; you can use ofKind() to check which
 type of request it is. For example, for an HTTP request, this will be an
 object of class HTTPRequest.
 
-</div>
+
 
 <span id="evType"></span>
 
@@ -124,19 +124,19 @@ object of class HTTPRequest.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[88](../source/tadsnet.t.html#88)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -144,15 +144,15 @@ object of class HTTPRequest.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[82](../source/tadsnet.t.html#82)\]
 
-<div class="desc">
+
 
 construction
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

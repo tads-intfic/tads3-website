@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`thingPreinit`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`thingPreinit`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -42,11 +42,11 @@ Details](#_Methods_)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`execBeforeMe`](#execBeforeMe)
 
@@ -58,11 +58,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)
 
@@ -73,11 +73,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="execBeforeMe"></span>
 
@@ -85,21 +85,21 @@ Inherited from `ModuleExecObject` :
 
 [thing.t](../file/thing.t.html)\[[9214](../source/thing.t.html#9214)\]
 
-<div class="desc">
+
 
 The player character presumably knows about the objects s/he's
 immediately holding even without explicitly examining them or taking
 inventory
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -107,15 +107,15 @@ inventory
 
 [thing.t](../file/thing.t.html)\[[9201](../source/thing.t.html#9201)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

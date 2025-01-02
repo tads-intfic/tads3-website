@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An AdjPhraseWithVocab is an English-specific subclass of
 NounPhraseWithVocab, specifically for noun phrases that contain entirely
@@ -34,15 +34,15 @@ adjectives.
 
 `class `**`AdjPhraseWithVocab`**` :   `[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AdjPhraseWithVocab`**  
 [`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)  
@@ -51,11 +51,11 @@ adjectives.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`AdjPhraseWithVocab`**  
 [`adjPhrase(adj)`](../object/adjPhrase(adj).html)  
@@ -67,19 +67,19 @@ adjectives.
 [`literalAdjPhrase(string)`](../object/literalAdjPhrase(string).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`adjVocabProp`](#adjVocabProp)
 
@@ -93,11 +93,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addNounMatchList`](#addNounMatchList)
 
@@ -112,11 +112,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="adjVocabProp"></span>
 
@@ -124,19 +124,19 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6459](../source/en_us.t.html#6459)\]
 
-<div class="desc">
+
 
 the property for the adjective literal - this is usually adj\_
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addNounMatchList"></span>
 
@@ -144,17 +144,17 @@ the property for the adjective literal - this is usually adj\_
 
 [en_us.t](../file/en_us.t.html)\[[6466](../source/en_us.t.html#6466)\]
 
-<div class="desc">
+
 
 Add the vocabulary matches that we'd get if we were treating our
 adjective as a noun. This combines the noun interpretation with a list
 of matches we got for the adjective version.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

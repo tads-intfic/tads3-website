@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 lookLister displays a list of miscellaneous objects in a room
 description.
 
 **`lookLister`**` :   `[`ItemLister`](../object/ItemLister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`lookLister`**  
 [`ItemLister`](../object/ItemLister.html)  
@@ -43,11 +43,11 @@ description.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`showSubListing`](#showSubListing)
 
@@ -58,11 +58,11 @@ Inherited from `ItemLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`listed`](#listed)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
@@ -74,11 +74,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="showSubListing"></span>
 
@@ -86,19 +86,19 @@ Inherited from `Lister` :
 
 [english.t](../file/english.t.html)\[[3048](../source/english.t.html#3048)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="listed"></span>
 
@@ -106,11 +106,11 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[155](../source/lister.t.html#155)\]
 
-<div class="desc">
+
 
 is the object listed in a LOOK AROUND description?
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -118,11 +118,11 @@ is the object listed in a LOOK AROUND description?
 
 [english.t](../file/english.t.html)\[[3038](../source/english.t.html#3038)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffix"></span>
 
@@ -130,15 +130,15 @@ is the object listed in a LOOK AROUND description?
 
 [english.t](../file/english.t.html)\[[3043](../source/english.t.html#3043)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

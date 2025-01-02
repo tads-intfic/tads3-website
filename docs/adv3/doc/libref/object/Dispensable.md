@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Dispensable is an item that comes from a Dispenser. This is in most
 respects an ordinary item; the only special thing about it is that if
@@ -35,15 +35,15 @@ except "take" and the like.
 
 `class `**`Dispensable`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Dispensable`**  
 [`Thing`](../object/Thing.html)  
@@ -51,27 +51,27 @@ except "take" and the like.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`myDispenser`](#myDispenser)
 
@@ -83,11 +83,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(All)`](#dobjFor(All))[`initializeThing`](#initializeThing)
 
@@ -99,11 +99,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="myDispenser"></span>
 
@@ -111,20 +111,20 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[1811](../source/extras.t.html#1811)\]
 
-<div class="desc">
+
 
 My dispenser. This is usually my initial location, so by default we'll
 pre-initialize this to our location.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(All)"></span>
 
@@ -132,13 +132,13 @@ pre-initialize this to our location.
 
 [extras.t](../file/extras.t.html)\[[1829](../source/extras.t.html#1829)\]
 
-<div class="desc">
+
 
 We're usually in our dispenser initially, so assume that our dispenser
 is simply our initial location. If myDispenser is overridden in a
 subclass, don't overwrite the inherited value.
 
-</div>
+
 
 <span id="initializeThing"></span>
 
@@ -146,15 +146,15 @@ subclass, don't overwrite the inherited value.
 
 [extras.t](../file/extras.t.html)\[[1814](../source/extras.t.html#1814)\]
 
-<div class="desc">
+
 
 pre-initialization
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

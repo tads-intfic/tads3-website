@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Topic
@@ -16,7 +16,7 @@ Entries
     <a href="thought.html" class="nav"><em>Next:</em> Thoughts</a>    
 </span>
 
-</div>
+
 
 
 
@@ -37,14 +37,14 @@ To create a Consultable object in adv3Lite we first define an object of
 class Consultable, in much the same way as we'd define any other Thing,
 for example:
 
-`
+```
     blueBook: Consultable 'blue book; useless trusty of[prep];dictionary information' @desk
         "It's your trusty dictionary of useless information. "
         
         readDesc = "It's not the sort of book you'd want to read from cover to
             cover; it's more for looking things up in. "
     ;
-`
+```
 
 Each item you want the player to be able to look up in the blue book can
 then be represented by a **ConsultTopic** object. These should be
@@ -88,12 +88,12 @@ defined with some combination of the following properties:
 Most of these properties can be defined through a template. The basic
 template for a TopicEntry looks like this:
 
-`
+```
     TopicEntry template
        +matchScore?
        @matchObj | [matchObj] | 'matchPattern'
        "topicResponse" | [eventList] ?;
-`
+```
 
 This means that a TopicEntry can optionally be defined with a + sign and
 a number giving its matchScore; following that (if it is present) or
@@ -106,7 +106,7 @@ strings) if the TopicEntry is also an EventList.
 To continue the previous example, we might begin to populate our
 dictionary of useless information with ConsultTopics thus:
 
-`
+```
     + ConsultTopic @tLemons    
         "Apparently they're yellow and sour. "
     ;
@@ -122,7 +122,7 @@ dictionary of useless information with ConsultTopics thus:
     + ConsultTopic '(black|red|green) blob(s){0,1}'
        "They're very blobby. "   
     ;
-`
+```
 
 <span id="defaultconsult"></span>
 
@@ -132,17 +132,17 @@ ABRAHAM LINCOLN IN BOOK or CONSULT DICTIONARY ABOUT KNOWN UNKNOWNS for
 example. For that purpose we use a **DefaultConsultTopic** which acts a
 catch-all for anything we haven't specifically defined:
 
-`
+```
     + DefaultConsultTopic
         "You thumb through the blue book in vain for any interesting information on
         that topic. "
     ;
-`
+```
 
 Alternatively, we might mix in the DefaultConsultTopic with an EventList
 class to provide a sequence of responses:
 
-`
+```
     + DefaultConsultTopic, StopEventList
       [
         'You thumb through the blue book in vain for any interesting information on
@@ -156,7 +156,7 @@ class to provide a sequence of responses:
         'Oh dear! Yet again you fail to find what you\'re looking for. '    
        ]
     ;
-`
+```
 
 If you don't need Consultables or any other kind of TopicEntries then
 you can exclude topicEntry.t from your build, but note that topicEntry
@@ -164,7 +164,7 @@ must be present if you want to use thoughts.t or actor.t.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -176,4 +176,4 @@ Entries
 
 
 
-</div>
+

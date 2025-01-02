@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Include objects that are directly in the actor's location, or within
 fixed items in the actor's location, or directly in the actor's
@@ -39,15 +39,15 @@ everything already directly in the indirect object.
 `DefineTIAction(PutOn)      `*`// original source text`*  
 `class `**`PutOnAction`**` :   `[`TIAction`](../object/TIAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PutOnAction`**  
 [`TIAction`](../object/TIAction.html)  
@@ -59,29 +59,29 @@ everything already directly in the indirect object.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PutOnAction`**  
 [`predicate(PutOn)`](../object/predicate(PutOn).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionAllowsAll`](#actionAllowsAll)
 
@@ -102,11 +102,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getAllDobj`](#getAllDobj)
 
@@ -127,11 +127,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionAllowsAll"></span>
 
@@ -139,19 +139,19 @@ Inherited from `Resolver` :
 
 [actions.t](../file/actions.t.html)\[[1920](../source/actions.t.html#1920)\]
 
-<div class="desc">
+
 
 this is a basic inventory-management verb, so allow ALL with it
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getAllDobj"></span>
 
@@ -159,15 +159,15 @@ this is a basic inventory-management verb, so allow ALL with it
 
 [actions.t](../file/actions.t.html)\[[1923](../source/actions.t.html#1923)\]
 
-<div class="desc">
+
 
 get the ALL list for the direct object
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

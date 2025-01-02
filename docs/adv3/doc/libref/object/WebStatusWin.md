@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Status line window
 
 `class `**`WebStatusWin`**` :   `[`WebWindow`](../object/WebWindow.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WebStatusWin`**  
 [`WebWindow`](../object/WebWindow.html)  
@@ -49,28 +49,28 @@ Status line window
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`statuslineBanner`](../object/statuslineBanner.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`deltas_`](#deltas_)[`src`](#src)[`txt_`](#txt_)[`vpath`](#vpath)
 
@@ -85,11 +85,11 @@ Inherited from `WebResource` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`clearWindow`](#clearWindow)[`flushWin`](#flushWin)[`getState`](#getState)[`resize`](#resize)[`setStatus`](#setStatus)[`setStatusText`](#setStatusText)[`write`](#write)
 
@@ -104,11 +104,11 @@ Inherited from `WebResource` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="deltas_"></span>
 
@@ -116,11 +116,11 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[2684](../source/webui.t.html#2684)\]
 
-<div class="desc">
+
 
 do we have any deltas since the last flush?
 
-</div>
+
 
 <span id="src"></span>
 
@@ -128,11 +128,11 @@ do we have any deltas since the last flush?
 
 [webui.t](../file/webui.t.html)\[[2578](../source/webui.t.html#2578)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="txt_"></span>
 
@@ -140,11 +140,11 @@ do we have any deltas since the last flush?
 
 [webui.t](../file/webui.t.html)\[[2687](../source/webui.t.html#2687)\]
 
-<div class="desc">
+
 
 the current status message
 
-</div>
+
 
 <span id="vpath"></span>
 
@@ -152,19 +152,19 @@ the current status message
 
 [webui.t](../file/webui.t.html)\[[2577](../source/webui.t.html#2577)\]
 
-<div class="desc">
+
 
 my request path and actual resource path
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="clearWindow"></span>
 
@@ -172,11 +172,11 @@ my request path and actual resource path
 
 [webui.t](../file/webui.t.html)\[[2644](../source/webui.t.html#2644)\]
 
-<div class="desc">
+
 
 clear the window
 
-</div>
+
 
 <span id="flushWin"></span>
 
@@ -184,11 +184,11 @@ clear the window
 
 [webui.t](../file/webui.t.html)\[[2650](../source/webui.t.html#2650)\]
 
-<div class="desc">
+
 
 flush pending text to the window
 
-</div>
+
 
 <span id="getState"></span>
 
@@ -196,11 +196,11 @@ flush pending text to the window
 
 [webui.t](../file/webui.t.html)\[[2678](../source/webui.t.html#2678)\]
 
-<div class="desc">
+
 
 get the current state to send to the browser
 
-</div>
+
 
 <span id="resize"></span>
 
@@ -208,14 +208,14 @@ get the current state to send to the browser
 
 [webui.t](../file/webui.t.html)\[[2675](../source/webui.t.html#2675)\]
 
-<div class="desc">
+
 
 Refigure the window size. The status line is generally set up to be
 automatically sized to its contents, which requires that we tell the UI
 when it's time to recalculate the layout to reflect the current contents
 after a change.
 
-</div>
+
 
 <span id="setStatus"></span>
 
@@ -223,7 +223,7 @@ after a change.
 
 [webui.t](../file/webui.t.html)\[[2589](../source/webui.t.html#2589)\]
 
-<div class="desc">
+
 
 Set the room and score/turns portions of the status line. This sets the
 left side of the status line to the 'room' text (which can contain HTML
@@ -233,7 +233,7 @@ just show the score value; otherwise we'll format these as
 "score/turns". If no score value is present, we'll leave the right side
 blank.
 
-</div>
+
 
 <span id="setStatusText"></span>
 
@@ -241,12 +241,12 @@ blank.
 
 [webui.t](../file/webui.t.html)\[[2620](../source/webui.t.html#2620)\]
 
-<div class="desc">
+
 
 Set the text of the status line. This sets the entire status window to
 the given HTML text, without any additional formatting.
 
-</div>
+
 
 <span id="write"></span>
 
@@ -254,15 +254,15 @@ the given HTML text, without any additional formatting.
 
 [webui.t](../file/webui.t.html)\[[2634](../source/webui.t.html#2634)\]
 
-<div class="desc">
+
 
 add text to the status line
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

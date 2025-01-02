@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 messages.t
@@ -26,43 +26,43 @@ This module forms part of the adv3Lite library (c) 2012-13 Eric Eve, but
 is based substantially on the Mercury Library (c) 2012 Michael J.
 Roberts
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`CustomMessages`](../object/CustomMessages.html)[`MessageCtx`](../object/MessageCtx.html)[`MessageParams`](../object/MessageParams.html)[`VerbTense`](../object/VerbTense.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`dummy_`](../object/dummy_.html)[`Future`](../object/Future.html)[`FuturePerfect`](../object/FuturePerfect.html)[`messageDummyCommand`](../object/messageDummyCommand.html)[`Narrator`](../object/Narrator.html)[`Past`](../object/Past.html)[`PastPerfect`](../object/PastPerfect.html)[`Perfect`](../object/Perfect.html)[`pluralDummy_`](../object/pluralDummy_.html)[`Present`](../object/Present.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`bmsg`](#bmsg)[`buildMessage`](#buildMessage)[`debugMessage`](#debugMessage)[`dmsg`](#dmsg)[`message`](#message)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="bmsg"></span>
 
@@ -70,11 +70,11 @@ Roberts
 
 [messages.t](../file/messages.t.html)\[[799](../source/messages.t.html#799)\]
 
-<div class="desc">
+
 
 bmsg returns the text of a message formatted by the message formatter.
 
-</div>
+
 
 <span id="buildMessage"></span>
 
@@ -82,14 +82,14 @@ bmsg returns the text of a message formatted by the message formatter.
 
 [messages.t](../file/messages.t.html)\[[133](../source/messages.t.html#133)\]
 
-<div class="desc">
+
 
 Build a message to be shown by message()
 
 We put this in a separate function to make it easy to obtain the text of
 a message for subsequent use without first displaying it.
 
-</div>
+
 
 <span id="debugMessage"></span>
 
@@ -97,13 +97,13 @@ a message for subsequent use without first displaying it.
 
 [messages.t](../file/messages.t.html)\[[364](../source/messages.t.html#364)\]
 
-<div class="desc">
+
 
 Message debugging. This shows the message before processing: the ID, the
 default source text with the {...} parameters, the overriding custom
 source text, and the arguments.
 
-</div>
+
 
 <span id="dmsg"></span>
 
@@ -111,7 +111,7 @@ source text, and the arguments.
 
 [messages.t](../file/messages.t.html)\[[792](../source/messages.t.html#792)\]
 
-<div class="desc">
+
 
 Use the message builder to format a message without supplying a key to
 look up at alternative message. We can use this with library messages
@@ -119,7 +119,7 @@ that employ object properties (e.g. cannotTakeMsg) or user code.
 
 dmsg() displays the resultant message.
 
-</div>
+
 
 <span id="message"></span>
 
@@ -127,7 +127,7 @@ dmsg() displays the resultant message.
 
 [messages.t](../file/messages.t.html)\[[114](../source/messages.t.html#114)\]
 
-<div class="desc">
+
 
 Show a message.
 
@@ -154,11 +154,11 @@ Parameters can be provided as strings, which are substituted in
 literally; or as objects, whose names are inserted according to the
 grammar in the template text.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

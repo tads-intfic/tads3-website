@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Turn scripting off. This stops recording the game transcript started
 with the most recent SCRIPT command.
@@ -34,15 +34,15 @@ with the most recent SCRIPT command.
 `DefineSystemAction(ScriptOff)      `*`// original source text`*  
 `class `**`ScriptOffAction`**` :   `[`SystemAction`](../object/SystemAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ScriptOffAction`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -52,29 +52,29 @@ with the most recent SCRIPT command.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ScriptOffAction`**  
 [`predicate(ScriptOff)`](../object/predicate(ScriptOff).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInUndo`](#includeInUndo)
 
@@ -91,11 +91,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execSystemAction`](#execSystemAction)[`turnOffScripting`](#turnOffScripting)
 
@@ -113,11 +113,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -125,19 +125,19 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[1378](../source/actions.t.html#1378)\]
 
-<div class="desc">
+
 
 we can't include this in undo, as it affects external files
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execSystemAction"></span>
 
@@ -145,11 +145,11 @@ we can't include this in undo, as it affects external files
 
 [actions.t](../file/actions.t.html)\[[1350](../source/actions.t.html#1350)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="turnOffScripting"></span>
 
@@ -157,15 +157,15 @@ we can't include this in undo, as it affects external files
 
 [actions.t](../file/actions.t.html)\[[1357](../source/actions.t.html#1357)\]
 
-<div class="desc">
+
 
 turn off scripting
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

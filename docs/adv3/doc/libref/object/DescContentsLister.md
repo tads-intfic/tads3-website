@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Base class for description contents listers. This is used to list the
 contents of an object when we examine the object, or when we explicitly
@@ -34,45 +34,45 @@ LOOK IN the object.
 
 `class `**`DescContentsLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DescContentsLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`DescContentsLister`**  
 [`LookWhereContentsLister`](../object/LookWhereContentsLister.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`keyringExamineContentsLister`](../object/keyringExamineContentsLister.html)[`rearDescContentsLister`](../object/rearDescContentsLister.html)[`surfaceDescContentsLister`](../object/surfaceDescContentsLister.html)[`thingDescContentsLister`](../object/thingDescContentsLister.html)[`undersideDescContentsLister`](../object/undersideDescContentsLister.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isListed`](#isListed)
 
@@ -94,19 +94,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -114,17 +114,17 @@ Inherited from `Lister` :
 
 [lister.t](../file/lister.t.html)\[[1765](../source/lister.t.html#1765)\]
 
-<div class="desc">
+
 
 Use the explicit look-in flag for listing contents. We might list items
 within an object on explicit examination of the item that we wouldn't
 list in a room or inventory list containing the item.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

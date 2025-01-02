@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "fixture," which is something that's obviously a part of the room.
 These objects cannot be removed from their containers. This class is
@@ -44,15 +44,15 @@ immovable for some non-obvious reason.
 
 `class `**`Fixture`**` :   `[`NonPortable`](../object/NonPortable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Fixture`**  
 [`NonPortable`](../object/NonPortable.html)  
@@ -61,11 +61,11 @@ immovable for some non-obvious reason.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Fixture`**  
 [`Component`](../object/Component.html)  
@@ -104,19 +104,19 @@ immovable for some non-obvious reason.
 [`SecretFixture`](../object/SecretFixture.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`cannotMoveMsg`](#cannotMoveMsg)[`cannotPutMsg`](#cannotPutMsg)[`cannotTakeMsg`](#cannotTakeMsg)
 
@@ -131,11 +131,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Move)`](#dobjFor(Move))[`dobjFor(MoveTo)`](#dobjFor(MoveTo))[`dobjFor(MoveWith)`](#dobjFor(MoveWith))[`dobjFor(Pull)`](#dobjFor(Pull))[`dobjFor(Push)`](#dobjFor(Push))[`dobjFor(PushTravel)`](#dobjFor(PushTravel))[`dobjFor(PutBehind)`](#dobjFor(PutBehind))[`dobjFor(PutIn)`](#dobjFor(PutIn))[`dobjFor(PutOn)`](#dobjFor(PutOn))[`dobjFor(PutUnder)`](#dobjFor(PutUnder))[`dobjFor(Take)`](#dobjFor(Take))[`dobjFor(TakeFrom)`](#dobjFor(TakeFrom))[`dobjFor(ThrowAt)`](#dobjFor(ThrowAt))[`dobjFor(ThrowDir)`](#dobjFor(ThrowDir))[`hideFromAll`](#hideFromAll)[`hideFromDefault`](#hideFromDefault)[`isOwnedBy`](#isOwnedBy)[`verifyMoveTo`](#verifyMoveTo)
 
@@ -150,11 +150,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="cannotMoveMsg"></span>
 
@@ -162,11 +162,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1852](../source/objects.t.html#1852)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotPutMsg"></span>
 
@@ -174,11 +174,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1853](../source/objects.t.html#1853)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotTakeMsg"></span>
 
@@ -186,21 +186,21 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1851](../source/objects.t.html#1851)\]
 
-<div class="desc">
+
 
 The messages to use for illogical messages. These can be overridden with
 new properties (of playerActionMessages and the like), or simply with
 single-quoted strings to display.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Move)"></span>
 
@@ -208,11 +208,11 @@ single-quoted strings to display.
 
 [objects.t](../file/objects.t.html)\[[1839](../source/objects.t.html#1839)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(MoveTo)"></span>
 
@@ -220,11 +220,11 @@ single-quoted strings to display.
 
 [objects.t](../file/objects.t.html)\[[1841](../source/objects.t.html#1841)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(MoveWith)"></span>
 
@@ -232,11 +232,11 @@ single-quoted strings to display.
 
 [objects.t](../file/objects.t.html)\[[1840](../source/objects.t.html#1840)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Pull)"></span>
 
@@ -244,11 +244,11 @@ single-quoted strings to display.
 
 [objects.t](../file/objects.t.html)\[[1838](../source/objects.t.html#1838)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Push)"></span>
 
@@ -256,11 +256,11 @@ single-quoted strings to display.
 
 [objects.t](../file/objects.t.html)\[[1837](../source/objects.t.html#1837)\]
 
-<div class="desc">
+
 
 fixed objects can't be pushed, pulled, or moved
 
-</div>
+
 
 <span id="dobjFor(PushTravel)"></span>
 
@@ -268,11 +268,11 @@ fixed objects can't be pushed, pulled, or moved
 
 [objects.t](../file/objects.t.html)\[[1842](../source/objects.t.html#1842)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutBehind)"></span>
 
@@ -280,11 +280,11 @@ fixed objects can't be pushed, pulled, or moved
 
 [objects.t](../file/objects.t.html)\[[1834](../source/objects.t.html#1834)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutIn)"></span>
 
@@ -292,11 +292,11 @@ fixed objects can't be pushed, pulled, or moved
 
 [objects.t](../file/objects.t.html)\[[1831](../source/objects.t.html#1831)\]
 
-<div class="desc">
+
 
 fixed objects can't be put anywhere
 
-</div>
+
 
 <span id="dobjFor(PutOn)"></span>
 
@@ -304,11 +304,11 @@ fixed objects can't be put anywhere
 
 [objects.t](../file/objects.t.html)\[[1832](../source/objects.t.html#1832)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(PutUnder)"></span>
 
@@ -316,11 +316,11 @@ fixed objects can't be put anywhere
 
 [objects.t](../file/objects.t.html)\[[1833](../source/objects.t.html#1833)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -328,13 +328,13 @@ fixed objects can't be put anywhere
 
 [objects.t](../file/objects.t.html)\[[1827](../source/objects.t.html#1827)\]
 
-<div class="desc">
+
 
 a fixed item can't be taken - this would be caught by verifyMoveTo
 anyway, but provide a more explicit message when a fixed item is
 explicitly taken
 
-</div>
+
 
 <span id="dobjFor(TakeFrom)"></span>
 
@@ -342,11 +342,11 @@ explicitly taken
 
 [objects.t](../file/objects.t.html)\[[1828](../source/objects.t.html#1828)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ThrowAt)"></span>
 
@@ -354,11 +354,11 @@ explicitly taken
 
 [objects.t](../file/objects.t.html)\[[1843](../source/objects.t.html#1843)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(ThrowDir)"></span>
 
@@ -366,11 +366,11 @@ explicitly taken
 
 [objects.t](../file/objects.t.html)\[[1844](../source/objects.t.html#1844)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -378,13 +378,13 @@ explicitly taken
 
 [objects.t](../file/objects.t.html)\[[1804](../source/objects.t.html#1804)\]
 
-<div class="desc">
+
 
 Hide fixtures from "all" for certain commands. Fixtures are obviously
 part of the location, so a reaonable person wouldn't even consider
 trying to do things like take them or move them.
 
-</div>
+
 
 <span id="hideFromDefault"></span>
 
@@ -392,11 +392,11 @@ trying to do things like take them or move them.
 
 [objects.t](../file/objects.t.html)\[[1813](../source/objects.t.html#1813)\]
 
-<div class="desc">
+
 
 don't hide from defaults, though
 
-</div>
+
 
 <span id="isOwnedBy"></span>
 
@@ -404,12 +404,12 @@ don't hide from defaults, though
 
 [objects.t](../file/objects.t.html)\[[1859](../source/objects.t.html#1859)\]
 
-<div class="desc">
+
 
 A component can be said to be owned by its location's owner or by its
 location.
 
-</div>
+
 
 <span id="verifyMoveTo"></span>
 
@@ -417,15 +417,15 @@ location.
 
 [objects.t](../file/objects.t.html)\[[1816](../source/objects.t.html#1816)\]
 
-<div class="desc">
+
 
 a fixed item can't be moved by an actor action
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

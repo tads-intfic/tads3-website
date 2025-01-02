@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SenseTimeFuse is a TimeFuse that only displays its output if senseObj
 can sense obj via the sense passed in the senseProp parameter at the
@@ -34,15 +34,15 @@ time the fuse executes. \[PART OF THE OBJTIME EXTENSION\]
 
 `class `**`SenseTimeFuse`**` :   `[`TimeFuse`](../object/TimeFuse.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SenseTimeFuse`**  
 [`TimeFuse`](../object/TimeFuse.html)  
@@ -51,27 +51,27 @@ time the fuse executes. \[PART OF THE OBJTIME EXTENSION\]
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -85,11 +85,11 @@ Inherited from `Event` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -104,19 +104,19 @@ Inherited from `Event` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -124,7 +124,7 @@ Inherited from `Event` :
 
 [objtime.t](../file/objtime.t.html)\[[333](../source/objtime.t.html#333)\]
 
-<div class="desc">
+
 
 senseObj is the object which must be sensed for this Fuse's text to be
 displayed. senseProp is one of &canSee, &canReach, &canHear, &canSmell.
@@ -132,11 +132,11 @@ If these parameters are omitted then the senseObj will be the same as
 the obj whose prop property is executed by the Fuse, and the senseProp
 will be &canSee, probably the most common case.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

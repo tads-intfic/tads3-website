@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A travel connector that can't be traversed, and which shows a custom
 failure message when traversal is attempted. Instances should define
@@ -40,15 +40,15 @@ describe why travel can't be accomplished.
 
 `class `**`NoTravelMessage`**` :   `[`TravelMessage`](../object/TravelMessage.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NoTravelMessage`**  
 [`TravelMessage`](../object/TravelMessage.html)  
@@ -60,29 +60,29 @@ describe why travel can't be accomplished.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NoTravelMessage`**  
 [`FakeConnector`](../object/FakeConnector.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`npcTravelDesc`](#npcTravelDesc)
 
@@ -102,11 +102,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(TravelVia)`](#dobjFor(TravelVia))[`isConnectorApparent`](#isConnectorApparent)[`isConnectorPassable`](#isConnectorPassable)
 
@@ -127,11 +127,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="npcTravelDesc"></span>
 
@@ -139,21 +139,21 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[2101](../source/travel.t.html#2101)\]
 
-<div class="desc">
+
 
 Because no travel is possible, we want a non-empty message for NPC's as
 well as for the PC; by default, use the same message for all actors by
 using travelDesc for NPC's.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(TravelVia)"></span>
 
@@ -161,11 +161,11 @@ using travelDesc for NPC's.
 
 [travel.t](../file/travel.t.html)\[[2085](../source/travel.t.html#2085)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isConnectorApparent"></span>
 
@@ -173,11 +173,11 @@ using travelDesc for NPC's.
 
 [travel.t](../file/travel.t.html)\[[2104](../source/travel.t.html#2104)\]
 
-<div class="desc">
+
 
 travel is not apparently possible in this direction
 
-</div>
+
 
 <span id="isConnectorPassable"></span>
 
@@ -185,15 +185,15 @@ travel is not apparently possible in this direction
 
 [travel.t](../file/travel.t.html)\[[2105](../source/travel.t.html#2105)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

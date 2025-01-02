@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`Examine`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Examine`**  
 [`TAction`](../object/TAction.html)  
@@ -44,11 +44,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`againRepeatsParse`](#againRepeatsParse)[`announceMultiAction`](#announceMultiAction)[`signal`](#signal)
 
@@ -64,11 +64,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`getAll`](#getAll)
 
@@ -86,11 +86,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="againRepeatsParse"></span>
 
@@ -98,11 +98,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[898](../source/actions.t.html#898)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="announceMultiAction"></span>
 
@@ -110,11 +110,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[891](../source/actions.t.html#891)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="signal"></span>
 
@@ -122,19 +122,19 @@ Inherited from `Redirector` :
 
 [signals.t](../file/signals.t.html)\[[367](../source/signals.t.html#367)\]
 
-<div class="desc">
+
 
 \[SIGNALS EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -142,11 +142,11 @@ Inherited from `Redirector` :
 
 [newbie.t](../file/newbie.t.html)\[[674](../source/newbie.t.html#674)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getAll"></span>
 
@@ -154,15 +154,15 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[893](../source/actions.t.html#893)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

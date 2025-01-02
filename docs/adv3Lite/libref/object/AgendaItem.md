@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An "agenda item." Each actor can have its own "agenda," which is a list
 of these items. Each item represents an action that the actor wants to
@@ -54,25 +54,25 @@ high-priority agenda items.
 
 `class `**`AgendaItem`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AgendaItem`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`AgendaItem`**  
 [`BoredomAgendaItem`](../object/BoredomAgendaItem.html)  
@@ -81,39 +81,39 @@ high-priority agenda items.
 [`FollowAgendaItem`](../object/FollowAgendaItem.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`agendaOrder`](#agendaOrder)[`calledBy`](#calledBy)[`initiallyActive`](#initiallyActive)[`invokedByActor`](#invokedByActor)[`isDone`](#isDone)[`isReady`](#isReady)[`name`](#name)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getActor`](#getActor)[`invokeItem`](#invokeItem)[`invokeItemBase`](#invokeItemBase)[`registerItem`](#registerItem)[`report`](#report)[`resetItem`](#resetItem)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="agendaOrder"></span>
 
@@ -121,14 +121,14 @@ high-priority agenda items.
 
 [actor.t](../file/actor.t.html)\[[5837](../source/actor.t.html#5837)\]
 
-<div class="desc">
+
 
 The ordering of the item relative to other agenda items. When we choose
 an agenda item to execute, we always choose the lowest numbered item
 that's ready to run. You can leave this with the default value if you
 don't care about the order.
 
-</div>
+
 
 <span id="calledBy"></span>
 
@@ -136,11 +136,11 @@ don't care about the order.
 
 [actor.t](../file/actor.t.html)\[[5863](../source/actor.t.html#5863)\]
 
-<div class="desc">
+
 
 The object from whose agendaList this AgendaItem was invoked
 
-</div>
+
 
 <span id="initiallyActive"></span>
 
@@ -148,13 +148,13 @@ The object from whose agendaList this AgendaItem was invoked
 
 [actor.t](../file/actor.t.html)\[[5804](../source/actor.t.html#5804)\]
 
-<div class="desc">
+
 
 Is this item active at the start of the game? Override this to true to
 make the item initially active; we'll add it to the actor's agenda
 during the game's initialization.
 
-</div>
+
 
 <span id="invokedByActor"></span>
 
@@ -162,13 +162,13 @@ during the game's initialization.
 
 [actor.t](../file/actor.t.html)\[[5860](../source/actor.t.html#5860)\]
 
-<div class="desc">
+
 
 invokeItem can test the invokedByActor property to decide whether what
 the actor says should be a conversational gambit started on the actor's
 own initiative or as a (default) response to something the pc has just
 
-</div>
+
 
 <span id="isDone"></span>
 
@@ -176,7 +176,7 @@ own initiative or as a (default) response to something the pc has just
 
 [actor.t](../file/actor.t.html)\[[5829](../source/actor.t.html#5829)\]
 
-<div class="desc">
+
 
 Is this item done? On each turn, we'll remove any items marked as done
 from the actor's agenda list. We remove items marked as done before
@@ -191,7 +191,7 @@ needs to execute once can simply set isDone to true in its invokeItem()
 method; an item that's to be repeated until some success condition
 obtains can override isDone to return the success condition.
 
-</div>
+
 
 <span id="isReady"></span>
 
@@ -199,14 +199,14 @@ obtains can override isDone to return the success condition.
 
 [actor.t](../file/actor.t.html)\[[5812](../source/actor.t.html#5812)\]
 
-<div class="desc">
+
 
 Is this item ready to execute? The actor will only execute an agenda
 item when this condition is met. By default, we're ready to execute.
 Items can override this to provide a declarative condition of readiness
 if desired.
 
-</div>
+
 
 <span id="name"></span>
 
@@ -214,19 +214,19 @@ if desired.
 
 [actor.t](../file/actor.t.html)\[[5894](../source/actor.t.html#5894)\]
 
-<div class="desc">
+
 
 An optional tag, specified as a single-quoted string.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getActor"></span>
 
@@ -234,14 +234,14 @@ An optional tag, specified as a single-quoted string.
 
 [actor.t](../file/actor.t.html)\[[5797](../source/actor.t.html#5797)\]
 
-<div class="desc">
+
 
 My actor - agenda items should be nested within the actor using '+' so
 that we can find our actor. Note that this doesn't add the item to the
 actor's agenda - that has to be done explicitly with
 actor.addToAgenda().
 
-</div>
+
 
 <span id="invokeItem"></span>
 
@@ -249,13 +249,13 @@ actor.addToAgenda().
 
 [actor.t](../file/actor.t.html)\[[5871](../source/actor.t.html#5871)\]
 
-<div class="desc">
+
 
 Execute this item. This is invoked during the actor's turn when the item
 is the first item that's ready to execute in the actor's agenda list. We
 do nothing by default.
 
-</div>
+
 
 <span id="invokeItemBase"></span>
 
@@ -263,14 +263,14 @@ do nothing by default.
 
 [actor.t](../file/actor.t.html)\[[5845](../source/actor.t.html#5845)\]
 
-<div class="desc">
+
 
 The caller is passed as a parameter so we can tell whether we're being
 called from an Actor or from a DefaultAgendaTopic, which may affect what
 we want to do -- for example the wording of what the actor says at this
 point.
 
-</div>
+
 
 <span id="registerItem"></span>
 
@@ -278,12 +278,12 @@ point.
 
 [actor.t](../file/actor.t.html)\[[5891](../source/actor.t.html#5891)\]
 
-<div class="desc">
+
 
 Carry out any additional registration when we're added to our actor's
 agenda. We do nothing here, but this is needed on FollowAgendaItem.
 
-</div>
+
 
 <span id="report"></span>
 
@@ -291,14 +291,14 @@ agenda. We do nothing here, but this is needed on FollowAgendaItem.
 
 [actor.t](../file/actor.t.html)\[[5902](../source/actor.t.html#5902)\]
 
-<div class="desc">
+
 
 A convenience method that can be used from within our invokeItem to
 display some text only if the player character can see us (or, if the
 optional second parameter is supplied, sense us through some other
 sense, e.g. &canHear or &canSmell).
 
-</div>
+
 
 <span id="resetItem"></span>
 
@@ -306,18 +306,18 @@ sense, e.g. &canHear or &canSmell).
 
 [actor.t](../file/actor.t.html)\[[5880](../source/actor.t.html#5880)\]
 
-<div class="desc">
+
 
 Reset the item. This is invoked whenever the item is added to an actor's
 agenda. By default, we'll set isDone to nil as long as isDone isn't a
 method; this makes it easier to reuse agenda items, since we don't have
 to worry about clearing out the isDone flag when reusing an item.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

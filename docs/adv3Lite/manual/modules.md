@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Core and Optional
@@ -17,7 +17,7 @@ Overview</a>    
 <a href="mingame.html" class="nav"><em>Next:</em> Minimal Game
 Definition</a>     </span>
 
-</div>
+
 
 
 
@@ -259,7 +259,7 @@ guidance on this), but specify the adv3Liter library instead
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -269,4 +269,4 @@ Modules
     <a href="mingame.html" class="nav"><em>Next:</em> Minimal Game
 Definition</a>     </span>
 
-</div>
+

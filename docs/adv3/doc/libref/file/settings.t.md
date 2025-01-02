@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 TADS 3 Library - settings file management
 
@@ -52,47 +52,47 @@ alternative libraries or stand-alone (non-library-based) games can reuse
 it. This file has no dependencies on anything in adv3 (at least, it
 shouldn't).
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`BinarySettingsItem`](../object/BinarySettingsItem.html)[`SettingsFileComment`](../object/SettingsFileComment.html)[`SettingsFileData`](../object/SettingsFileData.html)[`SettingsFileItem`](../object/SettingsFileItem.html)[`SettingsItem`](../object/SettingsItem.html)[`SettingsNotSupportedException`](../object/SettingsNotSupportedException.html)[`StringSettingsItem`](../object/StringSettingsItem.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`settingsManager`](../object/settingsManager.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

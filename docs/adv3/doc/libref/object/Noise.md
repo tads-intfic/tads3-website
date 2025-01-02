@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Noise - this is an intangible object representing a sound.
 
@@ -41,15 +41,15 @@ the container.
 
 `class `**`Noise`**` :   `[`SensoryEmanation`](../object/SensoryEmanation.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Noise`**  
 [`SensoryEmanation`](../object/SensoryEmanation.html)  
@@ -59,29 +59,29 @@ the container.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Noise`**  
 [`SimpleNoise`](../object/SimpleNoise.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isSoundListedInRoom`](#isSoundListedInRoom)[`soundPresence`](#soundPresence)
 
@@ -99,11 +99,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotSeeSource`](#cannotSeeSource)[`dobjFor(Examine)`](#dobjFor(Examine))[`dobjFor(ListenTo)`](#dobjFor(ListenTo))[`soundHereDesc`](#soundHereDesc)
 
@@ -121,11 +121,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isSoundListedInRoom"></span>
 
@@ -133,14 +133,14 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[668](../source/objects.t.html#668)\]
 
-<div class="desc">
+
 
 By default, a noise is listed in a room description (i.e., on LOOK or
 entry to a room) unless it's an ambient background noise.. Set this to
 nil to omit the noise from the room description, while still allowing it
 to be heard in an explicit LISTEN command.
 
-</div>
+
 
 <span id="soundPresence"></span>
 
@@ -148,20 +148,20 @@ to be heard in an explicit LISTEN command.
 
 [objects.t](../file/objects.t.html)\[[660](../source/objects.t.html#660)\]
 
-<div class="desc">
+
 
 by default, we have a definite presence in the sound sense if we're
 emanating our noise
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotSeeSource"></span>
 
@@ -169,11 +169,11 @@ emanating our noise
 
 [objects.t](../file/objects.t.html)\[[674](../source/objects.t.html#674)\]
 
-<div class="desc">
+
 
 explain that we can't see the source because of the obstructor
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -181,11 +181,11 @@ explain that we can't see the source because of the obstructor
 
 [objects.t](../file/objects.t.html)\[[680](../source/objects.t.html#680)\]
 
-<div class="desc">
+
 
 "examine" requires that the object is audible
 
-</div>
+
 
 <span id="dobjFor(ListenTo)"></span>
 
@@ -193,11 +193,11 @@ explain that we can't see the source because of the obstructor
 
 [objects.t](../file/objects.t.html)\[[677](../source/objects.t.html#677)\]
 
-<div class="desc">
+
 
 treat "listen to" the same as "examine"
 
-</div>
+
 
 <span id="soundHereDesc"></span>
 
@@ -205,15 +205,15 @@ treat "listen to" the same as "examine"
 
 [objects.t](../file/objects.t.html)\[[671](../source/objects.t.html#671)\]
 
-<div class="desc">
+
 
 show our description as part of a room description
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A default topic entry. This is an easy way to create an entry that will
 be used as a last resort, if no other entry is found. This kind of entry
@@ -89,26 +89,26 @@ illogical.
 
 `class `**`DefaultTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefaultTopic`**  
 [`TopicEntry`](../object/TopicEntry.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`DefaultTopic`**  
 [`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
@@ -124,19 +124,19 @@ illogical.
 [`DefaultTellTopic`](../object/DefaultTellTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`excludeMatch`](#excludeMatch)[`matchScore`](#matchScore)
 
@@ -145,11 +145,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`setTopicPronouns`](#setTopicPronouns)
 
@@ -158,11 +158,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="excludeMatch"></span>
 
@@ -170,7 +170,7 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3612](../source/actor.t.html#3612)\]
 
-<div class="desc">
+
 
 A list of objects to exclude from the default match. This can be used to
 create a default topic that matches everything EXCEPT a few specific
@@ -180,7 +180,7 @@ want a particular topic to escape the catch-all and be sent instead to
 the Actor's topic database, you can put that topic in the exclude list
 for the catch-all, making it a catch-almost-all.
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -188,19 +188,19 @@ for the catch-all, making it a catch-almost-all.
 
 [actor.t](../file/actor.t.html)\[[3638](../source/actor.t.html#3638)\]
 
-<div class="desc">
+
 
 use a low default matching score
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isMatchPossible"></span>
 
@@ -208,11 +208,11 @@ use a low default matching score
 
 [actor.t](../file/actor.t.html)\[[3641](../source/actor.t.html#3641)\]
 
-<div class="desc">
+
 
 a match is always possible for a default topic
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -220,11 +220,11 @@ a match is always possible for a default topic
 
 [actor.t](../file/actor.t.html)\[[3615](../source/actor.t.html#3615)\]
 
-<div class="desc">
+
 
 match anything except topics in our exclude list
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -232,15 +232,15 @@ match anything except topics in our exclude list
 
 [actor.t](../file/actor.t.html)\[[3644](../source/actor.t.html#3644)\]
 
-<div class="desc">
+
 
 set the topic pronoun
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

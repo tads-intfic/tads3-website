@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Transcript Transform: Complex Multi-object Separation. If we have an
 action that's being applied to one of a bunch of iterated objects, and
@@ -30,26 +30,26 @@ following commands by a paragraph separator.
 
 **`complexMultiTransform`**` :   `[`TranscriptTransform`](../object/TranscriptTransform.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`complexMultiTransform`**  
 [`TranscriptTransform`](../object/TranscriptTransform.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -57,11 +57,11 @@ following commands by a paragraph separator.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`applyTransform`](#applyTransform)
 
@@ -69,19 +69,19 @@ following commands by a paragraph separator.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="applyTransform"></span>
 
@@ -89,15 +89,15 @@ following commands by a paragraph separator.
 
 [report.t](../file/report.t.html)\[[1769](../source/report.t.html#1769)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Invoke the active SpecialTopic. This isn't a real command - the player
 will never actually type this; rather, it's a pseudo-command that we
@@ -43,15 +43,15 @@ intentionally use some near-English gibberish.
 `DefineLiteralAction(SpecialTopic)      `*`// original source text`*  
 `class `**`SpecialTopicAction`**` :   `[`LiteralAction`](../object/LiteralAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SpecialTopicAction`**  
 [`LiteralAction`](../object/LiteralAction.html)  
@@ -63,29 +63,29 @@ intentionally use some near-English gibberish.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SpecialTopicAction`**  
 [`predicate(SpecialTopic)`](../object/predicate(SpecialTopic).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -105,11 +105,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`decodeOrig`](#decodeOrig)[`encodeOrig`](#encodeOrig)[`execAction`](#execAction)[`getEnteredText`](#getEnteredText)[`repeatAction`](#repeatAction)
 
@@ -130,19 +130,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="decodeOrig"></span>
 
@@ -150,11 +150,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[2099](../source/actions.t.html#2099)\]
 
-<div class="desc">
+
 
 decode our encoding
 
-</div>
+
 
 <span id="encodeOrig"></span>
 
@@ -162,12 +162,12 @@ decode our encoding
 
 [actions.t](../file/actions.t.html)\[[2092](../source/actions.t.html#2092)\]
 
-<div class="desc">
+
 
 encode the original text for our literal phrase: turn double quotes into
 '%q' sequences, and turn percent signs into '%%' sequences
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -175,11 +175,11 @@ encode the original text for our literal phrase: turn double quotes into
 
 [actions.t](../file/actions.t.html)\[[2034](../source/actions.t.html#2034)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getEnteredText"></span>
 
@@ -187,12 +187,12 @@ encode the original text for our literal phrase: turn double quotes into
 
 [actions.t](../file/actions.t.html)\[[2085](../source/actions.t.html#2085)\]
 
-<div class="desc">
+
 
 Get the original player-entered text. This is our literal phrase, with
 the embedded-quote encoding decoded.
 
-</div>
+
 
 <span id="repeatAction"></span>
 
@@ -200,17 +200,17 @@ the embedded-quote encoding decoded.
 
 [actions.t](../file/actions.t.html)\[[2048](../source/actions.t.html#2048)\]
 
-<div class="desc">
+
 
 Repeat the action, for an AGAIN command. We need to make sure the
 special text interpretation we gave to the command still holds; if not,
 reparse the original text and try that.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

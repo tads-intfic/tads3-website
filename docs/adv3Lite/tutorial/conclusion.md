@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="finish.html" class="nav">Finishing Touches</a> \> Conclusion  
 <span class="navnp"><a href="whatmore.html" class="nav"><em>Prev:</em> What More?</a>
 </span>
 
-</div>
+
 
 
 
@@ -75,7 +75,7 @@ February 2013*
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -85,4 +85,4 @@ February 2013*
 
 
 
-</div>
+

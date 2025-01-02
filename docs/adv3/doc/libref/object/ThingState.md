@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 "State" of a Thing. This is an object abstractly describing the state of
 an object that can assume different states.
@@ -50,62 +50,62 @@ Language-specific modifications for ThingState.
 
 `class `**`ThingState`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ThingState`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`lightSourceStateOff`](../object/lightSourceStateOff.html)[`lightSourceStateOn`](../object/lightSourceStateOn.html)[`matchStateLit`](../object/matchStateLit.html)[`matchStateUnlit`](../object/matchStateUnlit.html)[`unwornState`](../object/unwornState.html)[`wornState`](../object/wornState.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`listingOrder`](#listingOrder)[`listName_`](#listName_)[`stateTokens`](#stateTokens)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`findStateToken`](#findStateToken)[`inventoryName`](#inventoryName)[`listName`](#listName)[`matchName`](#matchName)[`wornName`](#wornName)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="listingOrder"></span>
 
@@ -113,11 +113,11 @@ Language-specific modifications for ThingState.
 
 [thing.t](../file/thing.t.html)\[[504](../source/thing.t.html#504)\]
 
-<div class="desc">
+
 
 the relative listing order
 
-</div>
+
 
 <span id="listName_"></span>
 
@@ -125,7 +125,7 @@ the relative listing order
 
 [en_us.t](../file/en_us.t.html)\[[325](../source/en_us.t.html#325)\]
 
-<div class="desc">
+
 
 our list name setting - we define this so that we can be easily
 initialized with a template (we can't initialize listName() directly in
@@ -133,7 +133,7 @@ this manner because it's a method, but we define the listName() method
 to simply return this property value, which we can initialize with a
 template)
 
-</div>
+
 
 <span id="stateTokens"></span>
 
@@ -141,7 +141,7 @@ template)
 
 [en_us.t](../file/en_us.t.html)\[[242](../source/en_us.t.html#242)\]
 
-<div class="desc">
+
 
 Our state-specific tokens. This is a list of vocabulary words that are
 state-specific: that is, if a word is in this list, the word can ONLY
@@ -168,15 +168,15 @@ You can re-use a word in multiple states. For example, you could have a
 "red painted" state and a "blue painted" state, along with an
 "unpainted" state.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="findStateToken"></span>
 
@@ -184,14 +184,14 @@ You can re-use a word in multiple states. For example, you could have a
 
 [en_us.t](../file/en_us.t.html)\[[293](../source/en_us.t.html#293)\]
 
-<div class="desc">
+
 
 Check a token list for any tokens matching any of our state-specific
 words. Returns true if we find any such words, nil if not.
 
 'toks' is the \*adjusted\* token list used in matchName().
 
-</div>
+
 
 <span id="inventoryName"></span>
 
@@ -199,12 +199,12 @@ words. Returns true if we find any such words, nil if not.
 
 [thing.t](../file/thing.t.html)\[[494](../source/thing.t.html#494)\]
 
-<div class="desc">
+
 
 The state name to use in inventory lists. By default, we just use the
 base name. 'lst' has the same meaning as in listName().
 
-</div>
+
 
 <span id="listName"></span>
 
@@ -213,7 +213,7 @@ base name. 'lst' has the same meaning as in listName().
 [thing.t](../file/thing.t.html)\[[488](../source/thing.t.html#488)\],
 [en_us.t](../file/en_us.t.html)\[[316](../source/en_us.t.html#316)\]
 
-<div class="desc">
+
 
 The name of the state to use in ordinary room/object contents listings.
 If the name is nil, no extra state information is shown in a listing for
@@ -232,7 +232,7 @@ all in this same state, this will be the list of items. Everything in
 [en_us.t](../file/en_us.t.html)\[[316](../source/en_us.t.html#316)\]:*  
 get our name
 
-</div>
+
 
 <span id="matchName"></span>
 
@@ -241,7 +241,7 @@ get our name
 [thing.t](../file/thing.t.html)\[[520](../source/thing.t.html#520)\],
 [en_us.t](../file/en_us.t.html)\[[250](../source/en_us.t.html#250)\]
 
-<div class="desc">
+
 
 Match the name of an object in this state. 'obj' is the object to be
 matched; 'origTokens' and 'adjustedTokens' have the same meanings they
@@ -262,7 +262,7 @@ for any words that apply only to \*other\* states the object can assume;
 if we find any, we'll reject the match, since the phrase must be
 referring to an object in a different state.
 
-</div>
+
 
 <span id="wornName"></span>
 
@@ -270,16 +270,16 @@ referring to an object in a different state.
 
 [thing.t](../file/thing.t.html)\[[501](../source/thing.t.html#501)\]
 
-<div class="desc">
+
 
 The state name to use in listings of items being worn. By default, we
 just use the base name. 'lst' has the same meaning as in listName().
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 failure report
 
 `class `**`FailCommandReport`**` :   `[`FullCommandReport`](../object/FullCommandReport.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FailCommandReport`**  
 [`FullCommandReport`](../object/FullCommandReport.html)  
@@ -51,27 +51,27 @@ failure report
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isFailure`](#isFailure)[`seqNum`](#seqNum)
 
@@ -87,11 +87,11 @@ Inherited from `MessageResult` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -108,11 +108,11 @@ Inherited from `MessageResult` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isFailure"></span>
 
@@ -120,11 +120,11 @@ Inherited from `MessageResult` :
 
 [report.t](../file/report.t.html)\[[242](../source/report.t.html#242)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="seqNum"></span>
 
@@ -132,25 +132,25 @@ Inherited from `MessageResult` :
 
 [report.t](../file/report.t.html)\[[241](../source/report.t.html#241)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

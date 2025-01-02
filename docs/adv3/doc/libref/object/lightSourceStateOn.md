@@ -20,33 +20,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Light source list states. An illuminated light source shows its status
 as "providing light"; an unlit light source shows no extra status.
 
 **`lightSourceStateOn`**` :   `[`ThingState`](../object/ThingState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`lightSourceStateOn`**  
 [`ThingState`](../object/ThingState.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`stateTokens`](#stateTokens)
 
@@ -55,11 +55,11 @@ Inherited from `ThingState` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -68,11 +68,11 @@ Inherited from `ThingState` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="stateTokens"></span>
 
@@ -80,25 +80,25 @@ Inherited from `ThingState` :
 
 [en_us.t](../file/en_us.t.html)\[[3616](../source/en_us.t.html#3616)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

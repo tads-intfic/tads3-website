@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Basic "but" rule, which selects a list of plurals minus a list of
 specifically excepted objects. This can be used to construct more
@@ -39,15 +39,15 @@ this list and remove the objects in it from our main list.
 
 `class `**`ButProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ButProd`**  
 [`NounPhraseProd`](../object/NounPhraseProd.html)  
@@ -55,11 +55,11 @@ this list and remove the objects in it from our main list.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ButProd`**  
 [`EverythingButProd`](../object/EverythingButProd.html)  
@@ -70,19 +70,19 @@ this list and remove the objects in it from our main list.
 [`terminalNounPhrase(pluralExcept)`](../object/terminalNounPhrase(pluralExcept).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`addedFlags`](#addedFlags)
 
@@ -94,11 +94,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterFinalList`](#filterFinalList)[`flagAllExcepted`](#flagAllExcepted)[`getMainList`](#getMainList)[`resolveNouns`](#resolveNouns)
 
@@ -110,11 +110,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="addedFlags"></span>
 
@@ -122,19 +122,19 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[1776](../source/parser.t.html#1776)\]
 
-<div class="desc">
+
 
 by default, add no extra flags to our resolved object list
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterFinalList"></span>
 
@@ -142,11 +142,11 @@ by default, add no extra flags to our resolved object list
 
 [parser.t](../file/parser.t.html)\[[1773](../source/parser.t.html#1773)\]
 
-<div class="desc">
+
 
 filter the final list - by default we just return the same list
 
-</div>
+
 
 <span id="flagAllExcepted"></span>
 
@@ -154,11 +154,11 @@ filter the final list - by default we just return the same list
 
 [parser.t](../file/parser.t.html)\[[1770](../source/parser.t.html#1770)\]
 
-<div class="desc">
+
 
 flag an error - everything has been excluded by the 'but' list
 
-</div>
+
 
 <span id="getMainList"></span>
 
@@ -166,11 +166,11 @@ flag an error - everything has been excluded by the 'but' list
 
 [parser.t](../file/parser.t.html)\[[1767](../source/parser.t.html#1767)\]
 
-<div class="desc">
+
 
 get my main list, which is the list of items to include
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -178,15 +178,15 @@ get my main list, which is the list of items to include
 
 [parser.t](../file/parser.t.html)\[[1668](../source/parser.t.html#1668)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

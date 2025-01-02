@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 VerbProduction is a special Production subclass for verb (predicate)
 rules. This production has special processing for building out the
@@ -81,26 +81,26 @@ English-specific VerbProduction additions
 
 `class `**`VerbProduction`**` :   `[`Production`](../object/Production.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbProduction`**  
 [`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`VerbProduction`**  
 [`defaultVerbPhrase(noun)`](../object/defaultVerbPhrase(noun).html)  
@@ -354,19 +354,19 @@ English-specific VerbProduction additions
 [`VerbRule(Yes)`](../object/VerbRule(Yes).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isActive`](#isActive)[`priority`](#priority)
 
@@ -375,11 +375,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`answerMissing`](#answerMissing)[`build`](#build)[`missingRoleProd`](#missingRoleProd)[`visitProd`](#visitProd)
 
@@ -388,11 +388,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isActive"></span>
 
@@ -400,12 +400,12 @@ Inherited from `Production` :
 
 [parser.t](../file/parser.t.html)\[[3977](../source/parser.t.html#3977)\]
 
-<div class="desc">
+
 
 Do we want to consider this production to be active; we may want some
 VerbRules to be active only under certain circumstanes.
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -413,7 +413,7 @@ VerbRules to be active only under certain circumstanes.
 
 [parser.t](../file/parser.t.html)\[[3971](../source/parser.t.html#3971)\]
 
-<div class="desc">
+
 
 The "priority" of this grammar rule. This is a contributor to the
 Command priority - see Command.priority for an explanation of how that's
@@ -426,15 +426,15 @@ default or ask the player for the missing information), use 25. Other
 values are for fine-tuning as needed in the individual grammar rules. A
 higher value means higher priority.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="answerMissing"></span>
 
@@ -442,7 +442,7 @@ higher value means higher priority.
 
 [parser.t](../file/parser.t.html)\[[4040](../source/parser.t.html#4040)\]
 
-<div class="desc">
+
 
 The parser calls answerMissing() when the player answers a query for a
 missing noun phrase in the last command. There's nothing that needs to
@@ -450,7 +450,7 @@ happen here, and by default we do nothing; this is purely advisory. This
 routine gives the language module a chance to alter the command
 according to the reply, if necessary.
 
-</div>
+
 
 <span id="build"></span>
 
@@ -458,11 +458,11 @@ according to the reply, if necessary.
 
 [parser.t](../file/parser.t.html)\[[3980](../source/parser.t.html#3980)\]
 
-<div class="desc">
+
 
 build the command
 
-</div>
+
 
 <span id="missingRoleProd"></span>
 
@@ -470,7 +470,7 @@ build the command
 
 [grammar.t](../file/grammar.t.html)\[[3688](../source/grammar.t.html#3688)\]
 
-<div class="desc">
+
 
 Get the grammar production for the given noun phrase role, for answering
 missing-noun questions ("What do you want to open?"). By default, we'll
@@ -489,7 +489,7 @@ singleNoun for anything else.
 
 \[Required\]
 
-</div>
+
 
 <span id="visitProd"></span>
 
@@ -497,18 +497,18 @@ singleNoun for anything else.
 
 [parser.t](../file/parser.t.html)\[[4002](../source/parser.t.html#4002)\]
 
-<div class="desc">
+
 
 Visit a production during the build process. If this is one of our noun
 phrase slots, we tell the command to add a new noun phrase of this type,
 and make it the current phrase; then we recursively build out this child
 to populate the new noun phrase.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

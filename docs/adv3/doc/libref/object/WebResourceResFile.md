@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A resource file request handler. This handles a request by sending the
 contents of the resource file matching the given name.
@@ -70,26 +70,26 @@ organized.
 
 `class `**`WebResourceResFile`**` :   `[`WebResource`](../object/WebResource.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WebResourceResFile`**  
 [`WebResource`](../object/WebResource.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`WebResourceResFile`**  
 [`WebWindow`](../object/WebWindow.html)  
@@ -98,20 +98,20 @@ organized.
 [`WebStatusWin`](../object/WebStatusWin.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`coverArtResource`](../object/coverArtResource.html)[`webMainWin`](../object/webMainWin.html)[`webuiResources`](../object/webuiResources.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`binaryExts`](#binaryExts)[`browserExtToMime`](#browserExtToMime)
 
@@ -120,11 +120,11 @@ Inherited from `WebResource` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isTextFile`](#isTextFile)[`matchRequest`](#matchRequest)[`processName`](#processName)[`processRequest`](#processRequest)
 
@@ -133,11 +133,11 @@ Inherited from `WebResource` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="binaryExts"></span>
 
@@ -145,11 +145,11 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[1083](../source/webui.t.html#1083)\]
 
-<div class="desc">
+
 
 table of common binary file extensions
 
-</div>
+
 
 <span id="browserExtToMime"></span>
 
@@ -157,19 +157,19 @@ table of common binary file extensions
 
 [webui.t](../file/webui.t.html)\[[1043](../source/webui.t.html#1043)\]
 
-<div class="desc">
+
 
 extension to MIME type map for important browser file types
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isTextFile"></span>
 
@@ -177,13 +177,13 @@ extension to MIME type map for important browser file types
 
 [webui.t](../file/webui.t.html)\[[1061](../source/webui.t.html#1061)\]
 
-<div class="desc">
+
 
 Determine if the given file is a text file or a binary file. By default,
 we base the determination solely on the filename suffix, checking the
 extension against a list of common file types.
 
-</div>
+
 
 <span id="matchRequest"></span>
 
@@ -191,13 +191,13 @@ extension against a list of common file types.
 
 [webui.t](../file/webui.t.html)\[[986](../source/webui.t.html#986)\]
 
-<div class="desc">
+
 
 Match a request. A resource file resource matches if we match the
 virtual path setting for the resource, and the requested resource file
 exists.
 
-</div>
+
 
 <span id="processName"></span>
 
@@ -205,14 +205,14 @@ exists.
 
 [webui.t](../file/webui.t.html)\[[1054](../source/webui.t.html#1054)\]
 
-<div class="desc">
+
 
 Process the name. This takes the path string from the query, and returns
 the resource file name to look for. By default, we simply return the
 same name specified by the client, minus the leading '/' (since resource
 paths are always relative).
 
-</div>
+
 
 <span id="processRequest"></span>
 
@@ -220,15 +220,15 @@ paths are always relative).
 
 [webui.t](../file/webui.t.html)\[[992](../source/webui.t.html#992)\]
 
-<div class="desc">
+
 
 process the request: send the resource file's contents
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

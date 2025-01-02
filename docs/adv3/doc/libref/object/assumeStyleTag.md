@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 \<.assume\> - style for "assumption" messages, showing an assumption the
 parser is making. This style is used for showing objects used by default
@@ -29,26 +29,26 @@ some ambiguity, and implied commands.
 
 **`assumeStyleTag`**` :   `[`StyleTag`](../object/StyleTag.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`assumeStyleTag`**  
 [`StyleTag`](../object/StyleTag.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`closeText`](#closeText)[`openText`](#openText)
 
@@ -57,11 +57,11 @@ Inherited from `StyleTag` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -69,11 +69,11 @@ Inherited from `StyleTag` :
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="closeText"></span>
 
@@ -81,11 +81,11 @@ Inherited from `StyleTag` :
 
 [output.t](../file/output.t.html)\[[904](../source/output.t.html#904)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="openText"></span>
 
@@ -93,25 +93,25 @@ Inherited from `StyleTag` :
 
 [output.t](../file/output.t.html)\[[903](../source/output.t.html#903)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

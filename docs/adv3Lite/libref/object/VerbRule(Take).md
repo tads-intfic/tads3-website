@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Verb grammar (predicate) rules for English.
 
@@ -115,15 +115,15 @@ that slot into this universal phrase structure.)
 `VerbRule(Take)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(Take)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(Take)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -131,11 +131,11 @@ that slot into this universal phrase structure.)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`missingQ`](#missingQ)  [`verbPhrase`](#verbPhrase)  `
 
@@ -147,11 +147,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -163,11 +163,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -175,11 +175,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[1507](../source/grammar.t.html#1507)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="missingQ"></span>
 
@@ -187,11 +187,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[1509](../source/grammar.t.html#1509)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -199,25 +199,25 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[1508](../source/grammar.t.html#1508)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

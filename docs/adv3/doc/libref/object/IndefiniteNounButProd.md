@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Noun phrase with an indefinite article and an exclusion ("any of the
 books except the red one")
 
 `class `**`IndefiniteNounButProd`**` :   `[`ButProd`](../object/ButProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`IndefiniteNounButProd`**  
 [`ButProd`](../object/ButProd.html)  
@@ -50,29 +50,29 @@ books except the red one")
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`IndefiniteNounButProd`**  
 [`terminalNounPhrase(anyBut)`](../object/terminalNounPhrase(anyBut).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`addedFlags`](#addedFlags)
 
@@ -86,11 +86,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterFinalList`](#filterFinalList)[`flagAllExcepted`](#flagAllExcepted)[`getMainList`](#getMainList)[`resolveMainPhrase`](#resolveMainPhrase)
 
@@ -105,11 +105,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="addedFlags"></span>
 
@@ -117,20 +117,20 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[2604](../source/parser.t.html#2604)\]
 
-<div class="desc">
+
 
 set the "unclear disambig" flag in our results, so we provide an
 indication of which object we chose
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterFinalList"></span>
 
@@ -138,11 +138,11 @@ indication of which object we chose
 
 [parser.t](../file/parser.t.html)\[[2594](../source/parser.t.html#2594)\]
 
-<div class="desc">
+
 
 filter the final list
 
-</div>
+
 
 <span id="flagAllExcepted"></span>
 
@@ -150,11 +150,11 @@ filter the final list
 
 [parser.t](../file/parser.t.html)\[[2588](../source/parser.t.html#2588)\]
 
-<div class="desc">
+
 
 flag an error - everything has been excluded
 
-</div>
+
 
 <span id="getMainList"></span>
 
@@ -162,11 +162,11 @@ flag an error - everything has been excluded
 
 [parser.t](../file/parser.t.html)\[[2569](../source/parser.t.html#2569)\]
 
-<div class="desc">
+
 
 get our main list
 
-</div>
+
 
 <span id="resolveMainPhrase"></span>
 
@@ -174,15 +174,15 @@ get our main list
 
 [parser.t](../file/parser.t.html)\[[2559](../source/parser.t.html#2559)\]
 
-<div class="desc">
+
 
 resolve our main phrase
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

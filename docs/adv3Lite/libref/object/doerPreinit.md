@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Initialize the Doer objects. This parses each Doer's command string to
 generate a list of command templates.
 
 **`doerPreinit`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`doerPreinit`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -43,11 +43,11 @@ generate a list of command templates.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -59,11 +59,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)[`expandNounLists`](#expandNounLists)
 
@@ -74,19 +74,19 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -94,11 +94,11 @@ Inherited from `ModuleExecObject` :
 
 [doer.t](../file/doer.t.html)\[[914](../source/doer.t.html#914)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="expandNounLists"></span>
 
@@ -106,17 +106,17 @@ Inherited from `ModuleExecObject` :
 
 [doer.t](../file/doer.t.html)\[[1081](../source/doer.t.html#1081)\]
 
-<div class="desc">
+
 
 Expand an initial template list. This takes a list of the form \[action,
 'a\|b\|c', 'd\|e\|f'\], and converts it into multiple lists with an
 individual noun in each slot.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

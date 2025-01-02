@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 TADS 3 Library - miscellaneous definitions
 
@@ -25,43 +25,43 @@ This module contains miscellaneous definitions that don't have a natural
 grouping with any larger modules, and which aren't complex enough to
 justify modules of their own.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`CyclicEventList`](../object/CyclicEventList.html)[`EventList`](../object/EventList.html)[`ExternalEventList`](../object/ExternalEventList.html)[`FinishOption`](../object/FinishOption.html)[`FinishType`](../object/FinishType.html)[`GameMainDef`](../object/GameMainDef.html)[`RandomEventList`](../object/RandomEventList.html)[`RandomFiringScript`](../object/RandomFiringScript.html)[`Script`](../object/Script.html)[`ShuffledEventList`](../object/ShuffledEventList.html)[`ShuffledIntegerList`](../object/ShuffledIntegerList.html)[`ShuffledList`](../object/ShuffledList.html)[`StopEventList`](../object/StopEventList.html)[`SyncEventList`](../object/SyncEventList.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`adv3LibInit`](../object/adv3LibInit.html)[`adv3LibPreinit`](../object/adv3LibPreinit.html)[`finishOptionAmusing`](../object/finishOptionAmusing.html)[`finishOptionCredits`](../object/finishOptionCredits.html)[`finishOptionFullScore`](../object/finishOptionFullScore.html)[`finishOptionQuit`](../object/finishOptionQuit.html)[`finishOptionRestart`](../object/finishOptionRestart.html)[`finishOptionRestore`](../object/finishOptionRestore.html)[`finishOptionScore`](../object/finishOptionScore.html)[`finishOptionUndo`](../object/finishOptionUndo.html)[`ftDeath`](../object/ftDeath.html)[`ftFailure`](../object/ftFailure.html)[`ftGameOver`](../object/ftGameOver.html)[`ftVictory`](../object/ftVictory.html)[`libGlobal`](../object/libGlobal.html)[`restoreOptionRestoreAnother`](../object/restoreOptionRestoreAnother.html)[`restoreOptionStartOver`](../object/restoreOptionStartOver.html)[`settingsUI`](../object/settingsUI.html)[`verboseModeSettingsItem`](../object/verboseModeSettingsItem.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`cls`](#cls)[`failedRestoreOptions`](#failedRestoreOptions)[`finishGame`](#finishGame)[`finishGameMsg`](#finishGameMsg)[`isListSubset`](#isListSubset)[`main`](#main)[`mainCommon`](#mainCommon)[`mainRestore`](#mainRestore)[`nilToList`](#nilToList)[`overrides`](#overrides)[`partitionList`](#partitionList)[`processOptions`](#processOptions)[`runGame`](#runGame)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="cls"></span>
 
@@ -69,7 +69,7 @@ justify modules of their own.
 
 [misc.t](../file/misc.t.html)\[[550](../source/misc.t.html#550)\]
 
-<div class="desc">
+
 
 Clear the main game window. In most cases, you should call this rather
 than calling the low-level clearScreen() function directly, since this
@@ -84,7 +84,7 @@ to ensure that the about-box will still be around; this is necessary
 because any existing \<ABOUTBOX\> tag is lost after the screen is
 cleared.
 
-</div>
+
 
 <span id="failedRestoreOptions"></span>
 
@@ -92,14 +92,14 @@ cleared.
 
 [misc.t](../file/misc.t.html)\[[1992](../source/misc.t.html#1992)\]
 
-<div class="desc">
+
 
 Show failed startup restore options. If a restore operation fails at
 startup, we won't just proceed with the game, but ask the user what they
 want to do; we'll offer the options of restoring another game, quitting,
 or starting the game from the beginning.
 
-</div>
+
 
 <span id="finishGame"></span>
 
@@ -107,11 +107,11 @@ or starting the game from the beginning.
 
 [misc.t](../file/misc.t.html)\[[1981](../source/misc.t.html#1981)\]
 
-<div class="desc">
+
 
 finish the game, offering the given extra options but no message
 
-</div>
+
 
 <span id="finishGameMsg"></span>
 
@@ -119,7 +119,7 @@ finish the game, offering the given extra options but no message
 
 [misc.t](../file/misc.t.html)\[[1903](../source/misc.t.html#1903)\]
 
-<div class="desc">
+
 
 Finish the game, showing a message explaining why the game has ended.
 This can be called when an event occurs that ends the game, such as the
@@ -143,7 +143,7 @@ options, such as finishOptionUndo and finishOptionCredits; in addition,
 the game can subclass FinishOption to create its own custom options, as
 desired.
 
-</div>
+
 
 <span id="isListSubset"></span>
 
@@ -151,12 +151,12 @@ desired.
 
 [misc.t](../file/misc.t.html)\[[2469](../source/misc.t.html#2469)\]
 
-<div class="desc">
+
 
 Determine if list a is a subset of list b. a is a subset of b if every
 element of a is in b.
 
-</div>
+
 
 <span id="main"></span>
 
@@ -164,7 +164,7 @@ element of a is in b.
 
 [misc.t](../file/misc.t.html)\[[599](../source/misc.t.html#599)\]
 
-<div class="desc">
+
 
 Main program entrypoint. The core run-time start-up code calls this
 after running pre-initialization and load-time initialization. This
@@ -172,7 +172,7 @@ entrypoint is called when we're starting the game normally; when the
 game is launched through a saved-position file, mainRestore() will be
 invoked instead.
 
-</div>
+
 
 <span id="mainCommon"></span>
 
@@ -180,12 +180,12 @@ invoked instead.
 
 [misc.t](../file/misc.t.html)\[[624](../source/misc.t.html#624)\]
 
-<div class="desc">
+
 
 Common main entrypoint - this handles starting a new game or restoring
 an existing saved state.
 
-</div>
+
 
 <span id="mainRestore"></span>
 
@@ -193,7 +193,7 @@ an existing saved state.
 
 [misc.t](../file/misc.t.html)\[[614](../source/misc.t.html#614)\]
 
-<div class="desc">
+
 
 Main program entrypoint for restoring a saved-position file. This is
 invoked from the core run-time start-up code when the game is launched
@@ -202,7 +202,7 @@ Windows, double-clicking on a saved-position file on the Windows desktop
 launches the interpreter, which looks in the save file to find the game
 executable to run, then starts the game and invokes this entrypoint.
 
-</div>
+
 
 <span id="nilToList"></span>
 
@@ -210,7 +210,7 @@ executable to run, then starts the game and invokes this entrypoint.
 
 [misc.t](../file/misc.t.html)\[[2438](../source/misc.t.html#2438)\]
 
-<div class="desc">
+
 
 nilToList - convert a 'nil' value to an empty list. This can be useful
 for mix-in classes that will be used in different inheritance contexts,
@@ -218,7 +218,7 @@ since the classes might or might not inherit a base class definition for
 list-valued methods such as preconditions. This provides a usable
 default for list-valued methods that return nothing from superclasses.
 
-</div>
+
 
 <span id="overrides"></span>
 
@@ -226,7 +226,7 @@ default for list-valued methods that return nothing from superclasses.
 
 [misc.t](../file/misc.t.html)\[[678](../source/misc.t.html#678)\]
 
-<div class="desc">
+
 
 Determine if the given object overrides the definition of the given
 property inherited from the given base class. Returns true if the object
@@ -234,7 +234,7 @@ derives from the given base class, and the object's definition of the
 property comes from a different place than the base class's definition
 of the property.
 
-</div>
+
 
 <span id="partitionList"></span>
 
@@ -242,7 +242,7 @@ of the property.
 
 [misc.t](../file/misc.t.html)\[[2457](../source/misc.t.html#2457)\]
 
-<div class="desc">
+
 
 partitionList - partition a list into a pair of two lists, the first
 containing items that match the predicate 'fn', the second containing
@@ -257,7 +257,7 @@ returns nil.
 
 (Contributed by Tommy Nordgren.)
 
-</div>
+
 
 <span id="processOptions"></span>
 
@@ -265,12 +265,12 @@ returns nil.
 
 [misc.t](../file/misc.t.html)\[[2003](../source/misc.t.html#2003)\]
 
-<div class="desc">
+
 
 Process a list of finishing options. We'll loop, showing prompts and
 reading responses, until we get a response that terminates the loop.
 
-</div>
+
 
 <span id="runGame"></span>
 
@@ -278,7 +278,7 @@ reading responses, until we get a response that terminates the loop.
 
 [misc.t](../file/misc.t.html)\[[577](../source/misc.t.html#577)\]
 
-<div class="desc">
+
 
 Run the game. We start by showing the description of the initial
 location, if desired, and then we read and interpret commands until the
@@ -295,11 +295,11 @@ true, we'll show a full description of the player character's initial
 location, as though the player were to type "look around" as the first
 command.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -3,7 +3,7 @@ layout: docs
 ---
 Welcome to the TADS Player Kit
 
-<div id="main">
+
 
 <div>
 
@@ -75,6 +75,6 @@ should read the compatibility notes in particular if:
 <span style="font-size: 85%; color: #606060;"> Copyright ©1999, 2012 by
 Michael J. Roberts. </span>
 
-</div>
+
 
 </div>

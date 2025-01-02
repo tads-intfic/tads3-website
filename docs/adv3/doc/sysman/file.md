@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> File  
@@ -15,7 +15,7 @@ layout: docs
     <a href="filename.html" class="nav"><em>Next:</em> FileName</a>    
 </span>
 
-</div>
+
 
 
 
@@ -108,7 +108,7 @@ differentiate which type of format you're using to access the file.
 `File.openDataFile(*filename*, *access*)`  
 `File.openRawFile(*filename*, *access*)`
 
-<div class="fdef">
+
 
 The *filename* argument is one of the following:
 
@@ -204,7 +204,7 @@ indicating which type of error occurred:
 `openTextResource(*resName*, *charset*?)`  
 `openRawResource(*resName*)`
 
-<div class="fdef">
+
 
 The *resName* argument gives the name of the resource to be opened. This
 is given as a URL-style relative path name: the "/" character is used as
@@ -255,7 +255,7 @@ subsequently to read from the resource. On failure, they throw the same
 types of exceptions as the `openFileXxx()`
 methods.
 
-</div>
+
 
 ## <span id="namingRules"></span>Local system file naming rules
 
@@ -477,7 +477,7 @@ in the traditional stand-alone interpreter.
 
 `closeFile()`
 
-<div class="fdef">
+
 
 Close the file. This flushes internal buffers to the external storage
 device and releases all operating system resources associated with the
@@ -516,11 +516,11 @@ in general to correct these sorts of errors programmatically, but it's
 often worth notifying the user so they're aware of the possible data
 loss right away.
 
-</div>
+
 
 `deleteFile(*filename*)`
 
-<div class="fdef">
+
 
 Deletes the file with the given name. This erases the file from the disk
 or other media. *filename* is a string giving the name of the file, or
@@ -543,11 +543,11 @@ concurrent access by other programs, to name a few.
 See the [FileName](filename.html) class for a more comprehensive set of
 file manipulation functions.
 
-</div>
+
 
 `digestMD5(*length*?)`
 
-<div class="fdef">
+
 
 Calculates the MD5 digest of the contents of the file, starting at the
 current seek location and including *length* bytes from the file. If
@@ -559,20 +559,20 @@ Returns a string of 32 hex digits with the digest result. This method
 has the side effect of reading bytes from the file, so on return the
 seek position is set to the next byte after the bytes digested.
 
-</div>
+
 
 `getCharacterSet()`
 
-<div class="fdef">
+
 
 Returns the CharacterSet object that the file is using for its character
 translations. This is useful only with files in text format.
 
-</div>
+
 
 `getFileMode()`
 
-<div class="fdef">
+
 
 Returns the file's current data mode. The return value is one of the
 following constants:
@@ -584,11 +584,11 @@ following constants:
 - `FileModeRaw` - raw (binary) mode
   (`openRawFile()`)
 
-</div>
+
 
 `getFileSize()`
 
-<div class="fdef">
+
 
 Returns the size in bytes of the file. This is the size of the file as
 it appears on disk, so this might not be the same as the apparent size
@@ -597,11 +597,11 @@ file is being read as a text file, character set translations and
 newline format conversions will usually make the in-memory
 representation differ somewhat from the binary representation on disk.
 
-</div>
+
 
 `getPos()`
 
-<div class="fdef">
+
 
 Returns an integer giving the current read/write position in the file;
 this is simply the byte offset in the file of the next read or write
@@ -609,13 +609,13 @@ operation. When a file is first opened, this will return zero, because
 the first read or write operation will occur at the first byte of the
 file, which is at offset zero.
 
-</div>
+
 
 <span id="getRootName"></span>
 
 `getRootName(*filename*)`
 
-<div class="fdef">
+
 
 Note: we recommended using the newer
 [FileName.getBaseName()](filename.html#getBaseName) instead of this
@@ -652,13 +652,13 @@ systems. However, you might from time to time still encounter a filename
 string containing a path, from sources such as
 `inputFile()` or the program startup arguments.
 
-</div>
+
 
 <span id="packBytes"></span>
 
 `packBytes(*format*, ...)`
 
-<div class="fdef">
+
 
 Converts data values into bytes, according to your format
 specifications, and writes the bytes to the file.
@@ -675,13 +675,13 @@ the number of bytes actually written.)
 
 See [Byte Packing](pack.html) for full details.
 
-</div>
+
 
 <span id="readBytes"></span>
 
 `readBytes(*byteArr*, *start*?, *cnt*?)`
 
-<div class="fdef">
+
 
 This function, which is used only for raw files, reads bytes from the
 file into *byteArr*, which must be an object of intrinsic class
@@ -700,11 +700,11 @@ available in the file.
 Note that if the file is open for write-only access, a FileModeException
 will be thrown.
 
-</div>
+
 
 `readFile()`
 
-<div class="fdef">
+
 
 Reads data from the file and returns the value. This function reads data
 according to the file's format:
@@ -748,11 +748,11 @@ method throws a `FileIOException`.
 Note that if the file is open for write-only access, a
 `FileModeException` will be thrown.
 
-</div>
+
 
 `setCharacterSet(*charset*)`
 
-<div class="fdef">
+
 
 Sets the character mapping that the file uses for its character
 translations. *charset* can be one of the following:
@@ -763,11 +763,11 @@ translations. *charset* can be one of the following:
 - `nil`. This selects the local system's default
   character set for text files.
 
-</div>
+
 
 `setFileMode(*mode*, *charset*?)`
 
-<div class="fdef">
+
 
 Change the file mode. *mode* is a FileModeXxx value giving the desired
 new file mode (`FileModeText`,
@@ -787,11 +787,11 @@ local system's default character set for file contents is used.
 After you switch modes, subsequent read and write operations will
 interpret the file's contents according to the new mode.
 
-</div>
+
 
 `setPos(*pos*)`
 
-<div class="fdef">
+
 
 Set the read/write position in the file to *pos*, which is an integer
 giving a byte offset in the file. The first byte in the file is at
@@ -812,11 +812,11 @@ without confusing the File object. However, if you're defining your own
 multi-byte structures, you naturally have to be careful to move the file
 position only to the proper boundaries within your own structures.
 
-</div>
+
 
 `setPosEnd()`
 
-<div class="fdef">
+
 
 Sets the read/write position in the file to the end of the file. Any
 subsequent writing to the file will place new bytes after the last
@@ -833,11 +833,11 @@ end of a file, because whatever multi-byte data structures occur in the
 file should be complete units, hence moving to the end of the file
 should set the position to the end of the last structure.
 
-</div>
+
 
 `sha256(*length*?)`
 
-<div class="fdef">
+
 
 Calculates the 256-bit SHA-2 hash of the contents of the file, starting
 at the current seek location and hashing *length* bytes from the file.
@@ -849,13 +849,13 @@ Returns a string of 64 hex digits with the hash result. This method has
 the side effect of reading bytes from the file for the hash, so on
 return the seek position is set to the next byte after the bytes hashed.
 
-</div>
+
 
 <span id="unpackBytes"></span>
 
 `unpackBytes(*format*)`
 
-<div class="fdef">
+
 
 Reads bytes from the file, and converts them to data values according to
 your format specifications. Returns a list of the converted values.
@@ -870,13 +870,13 @@ to satisfy the format string.
 
 See [Byte Packing](pack.html) for full details.
 
-</div>
+
 
 <span id="writeBytes"></span>
 
 `writeBytes(*source*, *start*?, *cnt*?)`
 
-<div class="fdef">
+
 
 This function, which is used only for raw files, writes a range of bytes
 to the file from the given *source* object. *source* must be one of the
@@ -907,11 +907,11 @@ occur reading the source object.
 Note that if the file is open for read-only access, a
 `FileModeException` will be thrown.
 
-</div>
+
 
 `writeFile(*val*)`
 
-<div class="fdef">
+
 
 Writes the value *val* to the file. The value is written according to
 the file's format:
@@ -954,7 +954,7 @@ the method throws a `FileIOException`. If the
 file is open for read-only access, a
 `FileModeException` is thrown.
 
-</div>
+
 
 ## Interaction with save/restore, undo, and restart
 
@@ -975,11 +975,11 @@ this, the File object throws a
 `FileSyncException` if any of these operations
 are attempted on an unsynchronized file.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -988,4 +988,4 @@ are attempted on an unsynchronized file.
     <a href="filename.html" class="nav"><em>Next:</em> FileName</a>    
 </span>
 
-</div>
+

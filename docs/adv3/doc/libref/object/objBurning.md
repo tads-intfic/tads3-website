@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Pre-condition: object is burning. This can be used for matches, candles,
 and the like. If the object's isLit is nil, we'll attempt a "burn"
@@ -28,26 +28,26 @@ command on the object.
 
 **`objBurning`**` :   `[`PreCondition`](../object/PreCondition.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`objBurning`**  
 [`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -56,11 +56,11 @@ Inherited from `PreCondition` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
 
@@ -68,19 +68,19 @@ Inherited from `PreCondition` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkPreCondition"></span>
 
@@ -88,11 +88,11 @@ Inherited from `PreCondition` :
 
 [precond.t](../file/precond.t.html)\[[1085](../source/precond.t.html#1085)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verifyPreCondition"></span>
 
@@ -100,15 +100,15 @@ Inherited from `PreCondition` :
 
 [precond.t](../file/precond.t.html)\[[1112](../source/precond.t.html#1112)\]
 
-<div class="desc">
+
 
 abort the command
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

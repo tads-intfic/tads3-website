@@ -1317,9 +1317,9 @@ grammar in
 [**`NumTypeZero`**](../file/bignum.h.html#NumTypeZero) - macro in
 [bignum.h](../file/bignum.h.html)\[[333](../source/bignum.h.html#333)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

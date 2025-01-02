@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A simple connector that displays a message when the connector is
 traversed.
 
 `class `**`TravelMessage`**` :   `[`TravelWithMessage`](../object/TravelWithMessage.html)[`TravelConnector`](../object/TravelConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TravelMessage`**  
 [`TravelWithMessage`](../object/TravelWithMessage.html)  
@@ -52,11 +52,11 @@ traversed.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TravelMessage`**  
 [`DeadEndConnector`](../object/DeadEndConnector.html)  
@@ -64,19 +64,19 @@ traversed.
 [`FakeConnector`](../object/FakeConnector.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`destination`](#destination)
 
@@ -94,11 +94,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`fixedSource`](#fixedSource)[`getDestination`](#getDestination)
 
@@ -116,11 +116,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="destination"></span>
 
@@ -128,19 +128,19 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[2064](../source/travel.t.html#2064)\]
 
-<div class="desc">
+
 
 my destination location
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="fixedSource"></span>
 
@@ -148,11 +148,11 @@ my destination location
 
 [travel.t](../file/travel.t.html)\[[2070](../source/travel.t.html#2070)\]
 
-<div class="desc">
+
 
 our source is the same as our destination
 
-</div>
+
 
 <span id="getDestination"></span>
 
@@ -160,15 +160,15 @@ our source is the same as our destination
 
 [travel.t](../file/travel.t.html)\[[2067](../source/travel.t.html#2067)\]
 
-<div class="desc">
+
 
 get my destination
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

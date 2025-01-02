@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An action with a topic phrase as its only object, such as "think about
 \<topic\>".
@@ -47,15 +47,15 @@ object.
 
 `class `**`TopicAction`**` :   `[`TopicActionBase`](../object/TopicActionBase.html)[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicAction`**  
 [`TopicActionBase`](../object/TopicActionBase.html)  
@@ -66,27 +66,27 @@ object.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`predicateNounPhrases`](#predicateNounPhrases)
 
@@ -103,11 +103,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getQuestionInf`](#getQuestionInf)[`getVerbPhrase`](#getVerbPhrase)[`resolveNouns`](#resolveNouns)[`setObjectMatches`](#setObjectMatches)[`setResolvedObjects`](#setResolvedObjects)[`whatObj`](#whatObj)
 
@@ -125,11 +125,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="predicateNounPhrases"></span>
 
@@ -137,19 +137,19 @@ Inherited from `BasicProd` :
 
 [action.t](../file/action.t.html)\[[5756](../source/action.t.html#5756)\]
 
-<div class="desc">
+
 
 we have a topic noun phrase
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getQuestionInf"></span>
 
@@ -157,11 +157,11 @@ we have a topic noun phrase
 
 [en_us.t](../file/en_us.t.html)\[[9140](../source/en_us.t.html#9140)\]
 
-<div class="desc">
+
 
 handle this as though the topic text were a direct object phrase
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -169,11 +169,11 @@ handle this as though the topic text were a direct object phrase
 
 [en_us.t](../file/en_us.t.html)\[[9133](../source/en_us.t.html#9133)\]
 
-<div class="desc">
+
 
 use the same processing as TAction
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -181,12 +181,12 @@ use the same processing as TAction
 
 [action.t](../file/action.t.html)\[[5732](../source/action.t.html#5732)\]
 
-<div class="desc">
+
 
 Resolve objects. We don't actually have any normal objects to resolve,
 but we do have to get the resolved topic phrase.
 
-</div>
+
 
 <span id="setObjectMatches"></span>
 
@@ -194,11 +194,11 @@ but we do have to get the resolved topic phrase.
 
 [action.t](../file/action.t.html)\[[5749](../source/action.t.html#5749)\]
 
-<div class="desc">
+
 
 manually set the pre-resolved match trees
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -206,11 +206,11 @@ manually set the pre-resolved match trees
 
 [action.t](../file/action.t.html)\[[5742](../source/action.t.html#5742)\]
 
-<div class="desc">
+
 
 manually set the resolved objects
 
-</div>
+
 
 <span id="whatObj"></span>
 
@@ -218,15 +218,15 @@ manually set the resolved objects
 
 [en_us.t](../file/en_us.t.html)\[[9127](../source/en_us.t.html#9127)\]
 
-<div class="desc">
+
 
 get an interrogative word for an object of the action
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

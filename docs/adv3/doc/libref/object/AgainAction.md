@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Special "again" action. This command repeats the previous command.
 
 `DefineIAction(Again)      `*`// original source text`*  
 `class `**`AgainAction`**` :   `[`IAction`](../object/IAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AgainAction`**  
 [`IAction`](../object/IAction.html)  
@@ -50,29 +50,29 @@ Special "again" action. This command repeats the previous command.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`AgainAction`**  
 [`predicate(Again)`](../object/predicate(Again).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionTime`](#actionTime)[`includeInUndo`](#includeInUndo)[`isRepeatable`](#isRepeatable)[`lastAction`](#lastAction)[`lastIssuingActor`](#lastIssuingActor)[`lastTargetActor`](#lastTargetActor)[`lastTargetActorPhrase`](#lastTargetActorPhrase)
 
@@ -86,11 +86,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`clearForAgain`](#clearForAgain)[`doAction`](#doAction)[`saveForAgain`](#saveForAgain)
 
@@ -105,11 +105,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionTime"></span>
 
@@ -117,12 +117,12 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[172](../source/actions.t.html#172)\]
 
-<div class="desc">
+
 
 this command itself consumes no time on the game clock (although the
 action we perform might)
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -130,12 +130,12 @@ action we perform might)
 
 [actions.t](../file/actions.t.html)\[[78](../source/actions.t.html#78)\]
 
-<div class="desc">
+
 
 the undo command itself is not undoable (but the underlying command that
 we repeat might be)
 
-</div>
+
 
 <span id="isRepeatable"></span>
 
@@ -143,11 +143,11 @@ we repeat might be)
 
 [actions.t](../file/actions.t.html)\[[72](../source/actions.t.html#72)\]
 
-<div class="desc">
+
 
 for obvious reasons, 'again' is not itself repeatable with 'again'
 
-</div>
+
 
 <span id="lastAction"></span>
 
@@ -155,11 +155,11 @@ for obvious reasons, 'again' is not itself repeatable with 'again'
 
 [actions.t](../file/actions.t.html)\[[84](../source/actions.t.html#84)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lastIssuingActor"></span>
 
@@ -167,11 +167,11 @@ for obvious reasons, 'again' is not itself repeatable with 'again'
 
 [actions.t](../file/actions.t.html)\[[81](../source/actions.t.html#81)\]
 
-<div class="desc">
+
 
 information on the most recent command
 
-</div>
+
 
 <span id="lastTargetActor"></span>
 
@@ -179,11 +179,11 @@ information on the most recent command
 
 [actions.t](../file/actions.t.html)\[[82](../source/actions.t.html#82)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lastTargetActorPhrase"></span>
 
@@ -191,19 +191,19 @@ information on the most recent command
 
 [actions.t](../file/actions.t.html)\[[83](../source/actions.t.html#83)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="clearForAgain"></span>
 
@@ -211,11 +211,11 @@ information on the most recent command
 
 [actions.t](../file/actions.t.html)\[[97](../source/actions.t.html#97)\]
 
-<div class="desc">
+
 
 forget the last command, so that AGAIN cannot be used
 
-</div>
+
 
 <span id="doAction"></span>
 
@@ -223,7 +223,7 @@ forget the last command, so that AGAIN cannot be used
 
 [actions.t](../file/actions.t.html)\[[107](../source/actions.t.html#107)\]
 
-<div class="desc">
+
 
 Execute the 'again' command. This action is special enough that we
 override its entire action processing sequence - this is necessary in
@@ -232,7 +232,7 @@ any case is desirable because we don't want 'again' to count as a
 command in its own right; it's essentially just a macro that we replace
 with the original command.
 
-</div>
+
 
 <span id="saveForAgain"></span>
 
@@ -240,15 +240,15 @@ with the original command.
 
 [actions.t](../file/actions.t.html)\[[87](../source/actions.t.html#87)\]
 
-<div class="desc">
+
 
 save the most recent command so that it can be repeated if desired
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `VerbRule(GiveToType2)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(GiveToType2)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(GiveToType2)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -43,11 +43,11 @@ Details](#_Methods_)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`iobjReply`](#iobjReply)  [`isPrepositionalPhrasing`](#isPrepositionalPhrasing)  [`missingQ`](#missingQ)  [`verbPhrase`](#verbPhrase)  `
 
@@ -59,11 +59,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2059](../source/grammar.t.html#2059)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjReply"></span>
 
@@ -99,11 +99,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2062](../source/grammar.t.html#2062)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isPrepositionalPhrasing"></span>
 
@@ -111,11 +111,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2065](../source/grammar.t.html#2065)\]
 
-<div class="desc">
+
 
 this is a non-prepositional phrasing
 
-</div>
+
 
 <span id="missingQ"></span>
 
@@ -123,11 +123,11 @@ this is a non-prepositional phrasing
 
 [grammar.t](../file/grammar.t.html)\[[2061](../source/grammar.t.html#2061)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -135,25 +135,25 @@ this is a non-prepositional phrasing
 
 [grammar.t](../file/grammar.t.html)\[[2060](../source/grammar.t.html#2060)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

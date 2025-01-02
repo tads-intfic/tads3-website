@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `VerbRule(Yes)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(Yes)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(Yes)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -43,11 +43,11 @@ Details](#_Methods_)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`priority`](#priority)  [`verbPhrase`](#verbPhrase)  `
 
@@ -59,11 +59,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2025](../source/grammar.t.html#2025)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -99,11 +99,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[2028](../source/grammar.t.html#2028)\]
 
-<div class="desc">
+
 
 Give this priority over SAY TOPIC
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -111,25 +111,25 @@ Give this priority over SAY TOPIC
 
 [grammar.t](../file/grammar.t.html)\[[2026](../source/grammar.t.html#2026)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

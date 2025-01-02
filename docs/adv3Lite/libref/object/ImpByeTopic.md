@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An implied goodbye topic. This handles ONLY automatic (implied)
 conversation endings, which happen when we walk away from an actor we're
@@ -40,15 +40,15 @@ specific ImpByeTopic.
 
 `class `**`ImpByeTopic`**` :   `[`GreetingTopic`](../object/GreetingTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ImpByeTopic`**  
 [`GreetingTopic`](../object/GreetingTopic.html)  
@@ -61,27 +61,27 @@ specific ImpByeTopic.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`matchObj`](#matchObj)[`matchScore`](#matchScore)
 
@@ -102,11 +102,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -130,11 +130,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -142,12 +142,12 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3902](../source/actor.t.html#3902)\]
 
-<div class="desc">
+
 
 The ImpByeTopic matches endConvLeave, endConvBoredom, or endConvActor
 (but not endConvBye).
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -155,26 +155,26 @@ The ImpByeTopic matches endConvLeave, endConvBoredom, or endConvActor
 
 [actor.t](../file/actor.t.html)\[[3908](../source/actor.t.html#3908)\]
 
-<div class="desc">
+
 
 Give ImpByeTopic a high matchScore so that it takes precedence over
 ByeTopic when both are present.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

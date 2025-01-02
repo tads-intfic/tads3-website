@@ -698,11 +698,11 @@ layout: docs
         {
         case 0:
             /* start the left-aligned portion */
-            return '<div class="statusleft">';
+            return '';
 
         case 1:
             /* close the left portion, and start the right-aligned portion */
-            return '</div><div class="statusright">';
+            return '';
 
         case 2:
             /* 
@@ -713,7 +713,7 @@ layout: docs
              *   so we need to manually extend the main vertical box's height
              *   past the floating sections. 
              */
-            return '</div><div class="statusStrut"></div>';
+            return '';
 
         case 3:
         case 4:
@@ -817,9 +817,9 @@ layout: docs
     transient statuslineBanner: WebStatusWin, WebBannerWin
     ;
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

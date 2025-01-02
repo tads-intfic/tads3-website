@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An ActorState represents a state (possibly one of many) an actor can be
 in or get into. This can control how the actor is described and the
@@ -37,15 +37,15 @@ belong.
 
 `class `**`ActorState`**` :   `[`EndConvBlocker`](../object/EndConvBlocker.html)[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ActorState`**  
 [`EndConvBlocker`](../object/EndConvBlocker.html)  
@@ -55,27 +55,27 @@ belong.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`active`](#active)[`attentionSpan`](#attentionSpan)[`getActor`](#getActor)[`informOverheard`](#informOverheard)[`isInitState`](#isInitState)[`noResponse`](#noResponse)[`pcJustArrived`](#pcJustArrived)[`specialDesc`](#specialDesc)[`stateDesc`](#stateDesc)
 
@@ -88,11 +88,11 @@ Inherited from `ActorTopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`activateState`](#activateState)[`addToActor`](#addToActor)[`afterAction`](#afterAction)[`afterTravel`](#afterTravel)[`arrivingTurn`](#arrivingTurn)[`beforeAction`](#beforeAction)[`beforeTravel`](#beforeTravel)[`canEndConversation`](#canEndConversation)[`deactivateState`](#deactivateState)[`getBestMatch`](#getBestMatch)[`initializeActorState`](#initializeActorState)[`remoteSpecialDesc`](#remoteSpecialDesc)[`sayArriving`](#sayArriving)[`sayDeparting`](#sayDeparting)[`sayFollowing`](#sayFollowing)
 
@@ -107,11 +107,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="active"></span>
 
@@ -119,7 +119,7 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[2701](../source/actor.t.html#2701)\]
 
-<div class="desc">
+
 
 The active property is used by any TopicGroups and TopicEntries located
 directly within us to determine whether they in turn are active.
@@ -128,7 +128,7 @@ ActorState; the property is simply provided so that TopicGroups and
 TopicEntries can call location.active regardless of whether they're
 located in TopicGroups, ActorStates or Actors.
 
-</div>
+
 
 <span id="attentionSpan"></span>
 
@@ -136,7 +136,7 @@ located in TopicGroups, ActorStates or Actors.
 
 [actor.t](../file/actor.t.html)\[[2642](../source/actor.t.html#2642)\]
 
-<div class="desc">
+
 
 Our actor's attention span while our actor is in this ActorState. This
 is the number of turns the actor will wait for the player character to
@@ -146,7 +146,7 @@ terminates it through 'boredom'. A value of nil (the default) means our
 actor is infinitely patient and will never terminate a conversation for
 this reason.
 
-</div>
+
 
 <span id="getActor"></span>
 
@@ -154,12 +154,12 @@ this reason.
 
 [actor.t](../file/actor.t.html)\[[2630](../source/actor.t.html#2630)\]
 
-<div class="desc">
+
 
 Our associated actor. This is set to our location at preinit by our
 initializeActorState method.
 
-</div>
+
 
 <span id="informOverheard"></span>
 
@@ -167,14 +167,14 @@ initializeActorState method.
 
 [actor.t](../file/actor.t.html)\[[2832](../source/actor.t.html#2832)\]
 
-<div class="desc">
+
 
 Should other actors who can notionally hear the PC talking to us
 overhear when information is imparted to us and we're in this
 ActorState? I.e. should their setInform() methods be called too? By
 default they should.
 
-</div>
+
 
 <span id="isInitState"></span>
 
@@ -182,12 +182,12 @@ default they should.
 
 [actor.t](../file/actor.t.html)\[[2539](../source/actor.t.html#2539)\]
 
-<div class="desc">
+
 
 Set isInitState to true if you want this ActorState to be the one the
 associated Actor starts out in.
 
-</div>
+
 
 <span id="noResponse"></span>
 
@@ -195,7 +195,7 @@ associated Actor starts out in.
 
 [actor.t](../file/actor.t.html)\[[2715](../source/actor.t.html#2715)\]
 
-<div class="desc">
+
 
 If the noResponse method is defined (i.e. non-nil) then this ActorState
 will behave like a TADS 3 HermitActorState, i.e. the noResponse message
@@ -208,7 +208,7 @@ anything no attempt will be made to match a TopicEntry, but it if
 doesn't display anything the conversational command will go on to be
 handled as normal.
 
-</div>
+
 
 <span id="pcJustArrived"></span>
 
@@ -216,11 +216,11 @@ handled as normal.
 
 [actor.t](../file/actor.t.html)\[[2681](../source/actor.t.html#2681)\]
 
-<div class="desc">
+
 
 Flag -- has the player character just arrived?
 
-</div>
+
 
 <span id="specialDesc"></span>
 
@@ -228,12 +228,12 @@ Flag -- has the player character just arrived?
 
 [actor.t](../file/actor.t.html)\[[2525](../source/actor.t.html#2525)\]
 
-<div class="desc">
+
 
 The specialDesc from the actor's current ActorState is used as the
 specialDesc for that actor in a room listing.
 
-</div>
+
 
 <span id="stateDesc"></span>
 
@@ -241,21 +241,21 @@ specialDesc for that actor in a room listing.
 
 [actor.t](../file/actor.t.html)\[[2519](../source/actor.t.html#2519)\]
 
-<div class="desc">
+
 
 The stateDesc from the actor's current ActorState is appended to the
 desc defined on the actor when the actor is described via an EXAMINE
 command.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="activateState"></span>
 
@@ -263,12 +263,12 @@ command.
 
 [actor.t](../file/actor.t.html)\[[2656](../source/actor.t.html#2656)\]
 
-<div class="desc">
+
 
 Activate the state - this is called when we're about to become the
 active state for an actor. We do nothing by default.
 
-</div>
+
 
 <span id="addToActor"></span>
 
@@ -276,11 +276,11 @@ active state for an actor. We do nothing by default.
 
 [actor.t](../file/actor.t.html)\[[2567](../source/actor.t.html#2567)\]
 
-<div class="desc">
+
 
 Add this ActorState to our actor's list of ActorStates
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -288,13 +288,13 @@ Add this ActorState to our actor's list of ActorStates
 
 [actor.t](../file/actor.t.html)\[[2585](../source/actor.t.html#2585)\]
 
-<div class="desc">
+
 
 The afterAction() method is called on an actor's current ActorState when
 the actor is in scope for the action that's just taken place. This
 allows game code to define state-specific reactions.
 
-</div>
+
 
 <span id="afterTravel"></span>
 
@@ -302,13 +302,13 @@ allows game code to define state-specific reactions.
 
 [actor.t](../file/actor.t.html)\[[2678](../source/actor.t.html#2678)\]
 
-<div class="desc">
+
 
 The afterTravel notification triggered when the Actor is in this
 ActorState and traveler has just traveled via connector. By default we
 do nothing.
 
-</div>
+
 
 <span id="arrivingTurn"></span>
 
@@ -316,12 +316,12 @@ do nothing.
 
 [actor.t](../file/actor.t.html)\[[2648](../source/actor.t.html#2648)\]
 
-<div class="desc">
+
 
 the arrivingTurn method is executed when an actor in this state has just
 followed the player char to a new location.
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -329,13 +329,13 @@ followed the player char to a new location.
 
 [actor.t](../file/actor.t.html)\[[2593](../source/actor.t.html#2593)\]
 
-<div class="desc">
+
 
 The beforeAction() method is called on an actor's current ActorState
 when the actor is in scope for the action that's just about to take
 place. This allows game code to define state-specific reactions.
 
-</div>
+
 
 <span id="beforeTravel"></span>
 
@@ -343,13 +343,13 @@ place. This allows game code to define state-specific reactions.
 
 [actor.t](../file/actor.t.html)\[[2671](../source/actor.t.html#2671)\]
 
-<div class="desc">
+
 
 The beforeTravel notification triggered when the Actor is in this
 ActorState and traveler is just about to travel via connector. By
 default we do nothing.
 
-</div>
+
 
 <span id="canEndConversation"></span>
 
@@ -357,7 +357,7 @@ default we do nothing.
 
 [actor.t](../file/actor.t.html)\[[2691](../source/actor.t.html#2691)\]
 
-<div class="desc">
+
 
 Determine whether our actor will allow a current conversation to be
 terminated for reason when in this ActorState. Return true to allow the
@@ -365,7 +365,7 @@ conversation to be terminated and nil otherwise. By default we simply
 return true. If we return nil we should also display a message
 explaining why we're not allowing the conversation to end.
 
-</div>
+
 
 <span id="deactivateState"></span>
 
@@ -373,13 +373,13 @@ explaining why we're not allowing the conversation to end.
 
 [actor.t](../file/actor.t.html)\[[2663](../source/actor.t.html#2663)\]
 
-<div class="desc">
+
 
 Deactivate the state - this is called when we're the active state for an
 actor, and the actor is about to switch to a new state. We do nothing by
 default.
 
-</div>
+
 
 <span id="getBestMatch"></span>
 
@@ -387,7 +387,7 @@ default.
 
 [actor.t](../file/actor.t.html)\[[2725](../source/actor.t.html#2725)\]
 
-<div class="desc">
+
 
 The getBestMatch() method is already defined on TopicDatabase, from
 which ActorState inherits via ActorTopicDatabase. ActorState overrides
@@ -396,7 +396,7 @@ possibility that the prop parameter might be passed as either a list or
 a property pointer to a list property, and the need to take into account
 the actor's activeKeys list.
 
-</div>
+
 
 <span id="initializeActorState"></span>
 
@@ -404,11 +404,11 @@ the actor's activeKeys list.
 
 [actor.t](../file/actor.t.html)\[[2543](../source/actor.t.html#2543)\]
 
-<div class="desc">
+
 
 Initialize this ActorState (this is actually called at preinit).
 
-</div>
+
 
 <span id="remoteSpecialDesc"></span>
 
@@ -416,13 +416,13 @@ Initialize this ActorState (this is actually called at preinit).
 
 [actor.t](../file/actor.t.html)\[[2532](../source/actor.t.html#2532)\]
 
-<div class="desc">
+
 
 If our associated actor is viewed from a remote location, use the
 ActorState's remoteSpecialDesc to describe the actor in a room listing.
 By default we just use the specialDesc.
 
-</div>
+
 
 <span id="sayArriving"></span>
 
@@ -430,13 +430,13 @@ By default we just use the specialDesc.
 
 [actor.t](../file/actor.t.html)\[[2623](../source/actor.t.html#2623)\]
 
-<div class="desc">
+
 
 The message to display when the player char sees this actor arriving
 after traveling from loc. By default we simply use our actor's
 sayActorArriving(fromLoc) method.
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -444,14 +444,14 @@ sayActorArriving(fromLoc) method.
 
 [actor.t](../file/actor.t.html)\[[2616](../source/actor.t.html#2616)\]
 
-<div class="desc">
+
 
 Display a message saying that our associated actor (typically an NPC
 whose departure is being viewed by the player character) is departing
 via conn. By default we simply use our actor's sayActorDeparting(conn)
 method.
 
-</div>
+
 
 <span id="sayFollowing"></span>
 
@@ -459,17 +459,17 @@ method.
 
 [actor.t](../file/actor.t.html)\[[2600](../source/actor.t.html#2600)\]
 
-<div class="desc">
+
 
 Display a message saying that we're following the player character from
 oldLoc when our actor is in this ActorState (and the actor is following
 the player character)
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

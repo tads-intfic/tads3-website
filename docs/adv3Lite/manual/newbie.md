@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Newbie Help  
@@ -15,7 +15,7 @@ layout: docs
     <a href="pathfind.html" class="nav"><em>Next:</em> Path Finding</a>
     </span>
 
-</div>
+
 
 
 
@@ -62,7 +62,7 @@ helpMessage object in your own code to override one or more of these
 methods. For example, you might want to display a transcript that's more
 relevant to your own game you might do something like this:
 
-`
+```
     modify helpMsg
       showSample()
       {
@@ -82,7 +82,7 @@ relevant to your own game you might do something like this:
             gPlayerChar.getOutermostRoom.lookAroundWithin();          
       }
     ;
-`
+```
 
 <span id="trapping"></span>
 
@@ -145,11 +145,11 @@ Unthing. If you find the bodyParts object a nuisance (perhaps because
 your game actually uses a lot of body parts) you can banish it
 altogether like so:
 
-`
+```
     modify bodyParts
       initialLocationClass = nil
     ;
-`
+```
 
 <span id="playerhelper"></span>
 
@@ -236,11 +236,11 @@ threshold to somewhere else, the simplest check might be whether the
 player character is still in his/her starting location, for which we can
 just write this:
 
-`
+```
     modify playerHelper
         firstCheckCriterion() { return gLocation == startLocation; }
     ;
-`
+```
 
 This would, however, be quite inappropriate in a one-room game or a game
 where there's a lot to interact with in the starting location. In such a
@@ -255,7 +255,7 @@ of the game if s/he hasn't managed at least two out of those four
 obvious actions after ten turns. We might then write the
 firstCheckCriterion thus:
 
-`
+```
     modify playerHelper
         firstCheckCriterion() 
         { 
@@ -265,7 +265,7 @@ firstCheckCriterion thus:
             return checkList.countWhich({x: x == true}) < 2; 
         }    
     ;
-`
+```
 
 One other thing we can do if the player appears to be getting stuck is
 to start the [ExtraHints](hint.html#extra) mechanism, if we are using it
@@ -273,14 +273,14 @@ in our game, by calling extraHintManager.startDaemon(). We could, for
 example, override firstCheckMsg to do this rather than displaying a
 message telling players that they're not making much progress:
 
-`
+```
     modify playerHelper
         firstCheckMsg() 
         { 
             extraHintManager.activate();
         }    
     ;
-`
+```
 
 Some game authors may prefer this as a less intrusive (or less
 belittling) approach.
@@ -292,7 +292,7 @@ command.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -303,4 +303,4 @@ command.
 
 
 
-</div>
+

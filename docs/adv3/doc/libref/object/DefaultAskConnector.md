@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "default ask connector" is an AskConnector that we use for certain
 directions (down, in, out) as the library default connector for the
@@ -34,15 +34,15 @@ directions.
 
 `class `**`DefaultAskConnector`**` :   `[`AskConnector`](../object/AskConnector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DefaultAskConnector`**  
 [`AskConnector`](../object/AskConnector.html)  
@@ -54,28 +54,28 @@ directions.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`noTravelDown`](../object/noTravelDown.html)[`noTravelIn`](../object/noTravelIn.html)[`noTravelOut`](../object/noTravelOut.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -95,11 +95,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`isConnectorApparent`](#isConnectorApparent)[`isConnectorPassable`](#isConnectorPassable)
 
@@ -119,19 +119,19 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="isConnectorApparent"></span>
 
@@ -139,12 +139,12 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[1921](../source/travel.t.html#1921)\]
 
-<div class="desc">
+
 
 since this is a default connector for all locations, indicate that no
 travel is apparently possible in this direction
 
-</div>
+
 
 <span id="isConnectorPassable"></span>
 
@@ -152,15 +152,15 @@ travel is apparently possible in this direction
 
 [travel.t](../file/travel.t.html)\[[1924](../source/travel.t.html#1924)\]
 
-<div class="desc">
+
 
 this is not a passable connector
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

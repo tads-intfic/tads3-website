@@ -268,19 +268,21 @@ want to change the way a list is introduced or concluded by overriding
 globally, in which case you can just modify the lister concerned, for
 example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     modify lookLister
+<p>`
+     modify lookLister
         showListPrefix(lst, pl, parent)
         {
-            "Lying on the floor &lt;&lt;if pl&gt;&gt;are&lt;&lt;else&gt;&gt;is&lt;&lt;end&gt;&gt; ";
-        }
-        
-        showListSuffix(lst, pl, parent)
-        {
-            ". ";
-        }    
-    ; 
-     
+            “Lying on the floor «if pl»are«else»is«end» “;
+        }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    showListSuffix(lst, pl, parent)
+    {
+        ". ";
+    }    
+; 
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>This would then affect the way in which miscellaneous items were listed
 in every room in the game. More typically, though, we might want to
@@ -334,26 +336,28 @@ wanted to use the same custom lister on a number of different objects).
 For example, to customize the lister used when opening or looking in a
 box you could do something like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     + largeBox: OpenableContainer 'large box'
-        
-        myOpeningContentsLister: openingContentsLister
+<p>`
+     + largeBox: OpenableContainer ‘large box’</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myOpeningContentsLister: openingContentsLister
+    {
+        showListPrefix(lst, pl, parent)
         {
-            showListPrefix(lst, pl, parent)
-            {
-                "On ripping open the box {i} discover{s/ed} ";
-            }
+            "On ripping open the box {i} discover{s/ed} ";
         }
-        
-        myLookInLister: lookInLister
+    }
+    
+    myLookInLister: lookInLister
+    {
+        showListPrefix(lst, pl, parent)
         {
-            showListPrefix(lst, pl, parent)
-            {
-                "Lurking inside the box &lt;&lt;if pl&gt;&gt;are&lt;&lt;else&gt;&gt;is&lt;&lt;end&gt;&gt; ";
-            }
+            "Lurking inside the box &lt;&lt;if pl&gt;&gt;are&lt;&lt;else&gt;&gt;is&lt;&lt;end&gt;&gt; ";
         }
-    ;
-     
+    }
+;
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>For more information on customizing the way items are listed in room
 descriptions, see the chapters on <a href="roomdesc.html">Room Descriptions</a> and

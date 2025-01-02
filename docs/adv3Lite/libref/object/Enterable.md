@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Enterable is a Thing one can go inside. It is usually used to
 represent the exterior of an object like a building, so that going
@@ -34,15 +34,15 @@ inside will take the actor to a new location representing the interior.
 
 `class `**`Enterable`**` :   `[`ProxyDest`](../object/ProxyDest.html)[`Fixture`](../object/Fixture.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Enterable`**  
 [`ProxyDest`](../object/ProxyDest.html)  
@@ -57,27 +57,27 @@ inside will take the actor to a new location representing the interior.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`connector`](#connector)[`destination`](#destination)[`isEnterable`](#isEnterable)
 
@@ -101,11 +101,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(Enter)`](#dobjFor(Enter))[`iobjFor(PushTravelEnter)`](#iobjFor(PushTravelEnter))
 
@@ -131,11 +131,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="connector"></span>
 
@@ -143,7 +143,7 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[859](../source/extras.t.html#859)\]
 
-<div class="desc">
+
 
 Our connector is the TravelConnector via which an actor travels on
 entering this object. This may be a Room, or some other TravelConnector
@@ -156,7 +156,7 @@ straight to a room) and sometimes more natural to set the connector
 property (when it's a door, say). With connector = (destination) by
 default, it should work either way.
 
-</div>
+
 
 <span id="destination"></span>
 
@@ -164,14 +164,14 @@ default, it should work either way.
 
 [extras.t](../file/extras.t.html)\[[867](../source/extras.t.html#867)\]
 
-<div class="desc">
+
 
 If entering this object leads straight to another room, it may seem more
 natural to define a destination property; provided we don't override
 connector as well, this has the same effect as pointing connector
 directly to the room.
 
-</div>
+
 
 <span id="isEnterable"></span>
 
@@ -179,19 +179,19 @@ directly to the room.
 
 [extras.t](../file/extras.t.html)\[[870](../source/extras.t.html#870)\]
 
-<div class="desc">
+
 
 An Enterable is usually enterable
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -199,11 +199,11 @@ An Enterable is usually enterable
 
 [extras.t](../file/extras.t.html)\[[800](../source/extras.t.html#800)\]
 
-<div class="desc">
+
 
 To enter an Enterable the actor must travel via its connector.
 
-</div>
+
 
 <span id="iobjFor(PushTravelEnter)"></span>
 
@@ -211,15 +211,15 @@ To enter an Enterable the actor must travel via its connector.
 
 [extras.t](../file/extras.t.html)\[[807](../source/extras.t.html#807)\]
 
-<div class="desc">
+
 
 The handling of an attempt to push something inside this object
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

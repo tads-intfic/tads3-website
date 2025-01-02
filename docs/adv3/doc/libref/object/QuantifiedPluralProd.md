@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Quantified plural phrase.
 
 `class `**`QuantifiedPluralProd`**` :   `[`PluralProd`](../object/PluralProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`QuantifiedPluralProd`**  
 [`PluralProd`](../object/PluralProd.html)  
@@ -49,11 +49,11 @@ Quantified plural phrase.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`QuantifiedPluralProd`**  
 [`ExactQuantifiedPluralProd`](../object/ExactQuantifiedPluralProd.html)  
@@ -65,19 +65,19 @@ Quantified plural phrase.
 [`qualifiedPluralNounPhrase(anyNum)`](../object/qualifiedPluralNounPhrase(anyNum).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -91,11 +91,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getQuantity`](#getQuantity)[`getVerifyKeepers`](#getVerifyKeepers)[`resolveMainPhrase`](#resolveMainPhrase)[`resolveNouns`](#resolveNouns)[`selectExactCount`](#selectExactCount)
 
@@ -110,19 +110,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getQuantity"></span>
 
@@ -130,12 +130,12 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[2242](../source/parser.t.html#2242)\]
 
-<div class="desc">
+
 
 get the quantity specified - by default, this comes from the quantifier
 phrase in "quant\_"
 
-</div>
+
 
 <span id="getVerifyKeepers"></span>
 
@@ -143,12 +143,12 @@ phrase in "quant\_"
 
 [parser.t](../file/parser.t.html)\[[2358](../source/parser.t.html#2358)\]
 
-<div class="desc">
+
 
 Since the player explicitly told us to use a given number of matching
 objects, keep the required number, logical or not.
 
-</div>
+
 
 <span id="resolveMainPhrase"></span>
 
@@ -156,7 +156,7 @@ objects, keep the required number, logical or not.
 
 [parser.t](../file/parser.t.html)\[[2232](../source/parser.t.html#2232)\]
 
-<div class="desc">
+
 
 Resolve the main noun phrase. By default, we simply resolve np\_, but we
 make this separately overridable to allow this class to be subclassed
@@ -167,7 +167,7 @@ via the results object and return nil. If this routine returns nil, our
 main resolver will simply return an empty list without further flagging
 of any errors.
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -175,11 +175,11 @@ of any errors.
 
 [parser.t](../file/parser.t.html)\[[2245](../source/parser.t.html#2245)\]
 
-<div class="desc">
+
 
 resolve the noun phrase
 
-</div>
+
 
 <span id="selectExactCount"></span>
 
@@ -187,7 +187,7 @@ resolve the noun phrase
 
 [parser.t](../file/parser.t.html)\[[2342](../source/parser.t.html#2342)\]
 
-<div class="desc">
+
 
 Select the desired number of matches from what the normal disambiguation
 filtering leaves us with.
@@ -200,11 +200,11 @@ By default, we'll simply select an arbitrary subset, since we simply
 want any 'num' of the matches. This can be overridden if other behaviors
 are needed.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

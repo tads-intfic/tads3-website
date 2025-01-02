@@ -20,32 +20,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 List interface for showing the full score list
 
 **`fullScoreLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`fullScoreLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -53,11 +53,11 @@ List interface for showing the full score list
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`listed`](#listed)[`showList`](#showList)[`showListPrefix`](#showListPrefix)
 
@@ -66,19 +66,19 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="listed"></span>
 
@@ -86,11 +86,11 @@ Inherited from `Lister` :
 
 [score.t](../file/score.t.html)\[[217](../source/score.t.html#217)\]
 
-<div class="desc">
+
 
 every achievement is listed
 
-</div>
+
 
 <span id="showList"></span>
 
@@ -98,11 +98,11 @@ every achievement is listed
 
 [score.t](../file/score.t.html)\[[220](../source/score.t.html#220)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefix"></span>
 
@@ -110,15 +110,15 @@ every achievement is listed
 
 [score.t](../file/score.t.html)\[[210](../source/score.t.html#210)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

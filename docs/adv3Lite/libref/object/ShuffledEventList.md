@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Shuffled event list. This is similar to a random event list, except that
 we fire our events in a "shuffled" order rather than an independently
@@ -57,15 +57,15 @@ Mofiications to ShuffledEventList for EventListItem extension
 
 `class `**`ShuffledEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)[`EventList`](../object/EventList.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ShuffledEventList`**  
 [`RandomFiringScript`](../object/RandomFiringScript.html)  
@@ -75,27 +75,27 @@ Mofiications to ShuffledEventList for EventListItem extension
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`firstEvents`](#firstEvents)[`shuffledList_`](#shuffledList_)[`shuffleFirst`](#shuffleFirst)[`suppressRepeats`](#suppressRepeats)
 
@@ -109,11 +109,11 @@ Inherited from `EventList` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addItem`](#addItem)[`doScript`](#doScript)[`getNextRandom`](#getNextRandom)[`resetList`](#resetList)
 
@@ -128,11 +128,11 @@ Inherited from `Script` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="firstEvents"></span>
 
@@ -140,12 +140,12 @@ Inherited from `Script` :
 
 [eventList.t](../file/eventList.t.html)\[[405](../source/eventList.t.html#405)\]
 
-<div class="desc">
+
 
 a list of events to go through sequentially, in the exact order
 specified, before firing any events from the main list
 
-</div>
+
 
 <span id="shuffledList_"></span>
 
@@ -153,11 +153,11 @@ specified, before firing any events from the main list
 
 [eventList.t](../file/eventList.t.html)\[[510](../source/eventList.t.html#510)\]
 
-<div class="desc">
+
 
 our ShuffledList - we'll initialize this on demand
 
-</div>
+
 
 <span id="shuffleFirst"></span>
 
@@ -165,7 +165,7 @@ our ShuffledList - we'll initialize this on demand
 
 [eventList.t](../file/eventList.t.html)\[[415](../source/eventList.t.html#415)\]
 
-<div class="desc">
+
 
 Flag: shuffle the eventList list before we show it for the first time.
 By default, this is set to true, so that the behavior is random on each
@@ -174,7 +174,7 @@ cases to always use the original ordering of the eventList list the
 first time through the list. If this is set to nil, we won't shuffle the
 list the first time through.
 
-</div>
+
 
 <span id="suppressRepeats"></span>
 
@@ -182,7 +182,7 @@ list the first time through.
 
 [eventList.t](../file/eventList.t.html)\[[430](../source/eventList.t.html#430)\]
 
-<div class="desc">
+
 
 Flag: suppress repeats in the shuffle. If this is true, it prevents a
 given event from showing up twice in a row, which could otherwise happen
@@ -195,15 +195,15 @@ since such short lists can result in fairly un-random-looking sequences
 when repeats are suppressed, because the available number of
 permutations drops significantly.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addItem"></span>
 
@@ -211,11 +211,11 @@ permutations drops significantly.
 
 [eventListItem.t](../file/eventListItem.t.html)\[[417](../source/eventListItem.t.html#417)\]
 
-<div class="desc">
+
 
 apply our suppressRepeats option to the shuffled list
 
-</div>
+
 
 <span id="doScript"></span>
 
@@ -223,11 +223,11 @@ apply our suppressRepeats option to the shuffled list
 
 [eventList.t](../file/eventList.t.html)\[[433](../source/eventList.t.html#433)\]
 
-<div class="desc">
+
 
 process the next step of the script
 
-</div>
+
 
 <span id="getNextRandom"></span>
 
@@ -236,7 +236,7 @@ process the next step of the script
 [eventList.t](../file/eventList.t.html)\[[490](../source/eventList.t.html#490)\],
 [eventListItem.t](../file/eventListItem.t.html)\[[369](../source/eventListItem.t.html#369)\]
 
-<div class="desc">
+
 
 Get the next random event. We'll pick an event from our list of events
 using a ShuffledIntegerList to ensure we pick each value once before
@@ -249,7 +249,7 @@ chooses any as yet unused EventListItem from our eventList that's now
 ready to fire. If none is found, we use the inherited behaviour to
 select the next item indicated by our shuffledList\_ .
 
-</div>
+
 
 <span id="resetList"></span>
 
@@ -257,7 +257,7 @@ select the next item indicated by our shuffledList\_ .
 
 [eventListItem.t](../file/eventListItem.t.html)\[[401](../source/eventListItem.t.html#401)\]
 
-<div class="desc">
+
 
 Reset our eventList to clear out EventListItems that are done with
 (isDone = true). This is not called from any library code by default,
@@ -270,11 +270,11 @@ iteration of a ShuffledEventList, when the items are about to be
 reshuffled in any case. You can make this happen by setting the
 resetOnReshuffle property to true,
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

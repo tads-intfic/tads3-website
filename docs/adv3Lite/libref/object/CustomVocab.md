@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 CustomVocab objects define special-case vocabulary for the parser and
 name generation routines.
@@ -39,62 +39,62 @@ of the CustomVocab objects defined throughout the game.
 
 `class `**`CustomVocab`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CustomVocab`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`englishCustomVocab`](../object/englishCustomVocab.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`irregularPlurals`](#irregularPlurals)[`specialAOrAn`](#specialAOrAn)[`verbParams`](#verbParams)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="irregularPlurals"></span>
 
@@ -102,7 +102,7 @@ of the CustomVocab objects defined throughout the game.
 
 [english.t](../file/english.t.html)\[[2377](../source/english.t.html#2377)\]
 
-<div class="desc">
+
 
 Irregular plural list. This is a list of words with plurals that can't
 be inferred from any of the usual spelling rules. The entries are in
@@ -110,7 +110,7 @@ pairs: singular, \[plurals\]. The plurals are given in a list, since
 some words have more than one valid plural. The first plural is the
 preferred one; the remaining entries are alternates.
 
-</div>
+
 
 <span id="specialAOrAn"></span>
 
@@ -118,7 +118,7 @@ preferred one; the remaining entries are alternates.
 
 [english.t](../file/english.t.html)\[[2367](../source/english.t.html#2367)\]
 
-<div class="desc">
+
 
 The list of special-case a/an words. Choosing 'a' or 'an' is purely
 phonetic, and English orthography is notoriously inconsistent
@@ -137,7 +137,7 @@ The entries here are simply strings of the form 'a word' or 'an word'.
 Start with the appropriate form of a/an, then add a space, then the
 special word to match.
 
-</div>
+
 
 <span id="verbParams"></span>
 
@@ -145,7 +145,7 @@ special word to match.
 
 [english.t](../file/english.t.html)\[[2402](../source/english.t.html#2402)\]
 
-<div class="desc">
+
 
 Verbs for substitution parameter strings. This is a list of strings,
 using the following template:
@@ -170,21 +170,21 @@ auxiliary verbs (could, should, etc). The English library pre-defines
 "to be" and all of the auxiliary verbs, so there's no need to define
 those with this mechanism.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

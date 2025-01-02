@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "multi-faceted" object is similar to a MultiInstance object, with the
 addition that the instance objects are "facets" of one another. This
@@ -58,15 +58,15 @@ refers to the new facet in the new location.
 
 `class `**`MultiFaceted`**` :   `[`MultiInstance`](../object/MultiInstance.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MultiFaceted`**  
 [`MultiInstance`](../object/MultiInstance.html)  
@@ -74,27 +74,27 @@ refers to the new facet in the new location.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`instanceMixIn`](#instanceMixIn)
 
@@ -106,11 +106,11 @@ Inherited from `BaseMultiLoc` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getFacets`](#getFacets)
 
@@ -122,11 +122,11 @@ Inherited from `BaseMultiLoc` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="instanceMixIn"></span>
 
@@ -134,19 +134,19 @@ Inherited from `BaseMultiLoc` :
 
 [objects.t](../file/objects.t.html)\[[3269](../source/objects.t.html#3269)\]
 
-<div class="desc">
+
 
 the mix-in superclass for our instance objects
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getFacets"></span>
 
@@ -154,15 +154,15 @@ the mix-in superclass for our instance objects
 
 [objects.t](../file/objects.t.html)\[[3266](../source/objects.t.html#3266)\]
 
-<div class="desc">
+
 
 our instance objects represent our facets for parsing purposes
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

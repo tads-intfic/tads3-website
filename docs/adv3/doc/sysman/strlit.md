@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> String Literals  
@@ -15,7 +15,7 @@ layout: docs
     <a href="enum.html" class="nav"><em>Next:</em> Enumerators</a>    
 </span>
 
-</div>
+
 
 
 
@@ -1532,7 +1532,7 @@ unknown \\ combinations, and simply leaves the entire sequence
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1541,4 +1541,4 @@ unknown \\ combinations, and simply leaves the entire sequence
     <a href="enum.html" class="nav"><em>Next:</em> Enumerators</a>    
 </span>
 
-</div>
+

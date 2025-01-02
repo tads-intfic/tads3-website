@@ -26,33 +26,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Fuse. A fuse is an event that fires once at a given time in the future.
 Once a fuse is executed, it is removed from further scheduling.
 
 `class `**`Fuse`**` :   `[`Event`](../object/Event.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Fuse`**  
 [`Event`](../object/Event.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Fuse`**  
 [`SenseFuse`](../object/SenseFuse.html)  
@@ -60,19 +60,19 @@ Once a fuse is executed, it is removed from further scheduling.
 [`SenseTimeFuse`](../object/SenseTimeFuse.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ Inherited from `Event` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`executeEvent`](#executeEvent)
 
@@ -94,19 +94,19 @@ Inherited from `Event` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -114,13 +114,13 @@ Inherited from `Event` :
 
 [events.t](../file/events.t.html)\[[347](../source/events.t.html#347)\]
 
-<div class="desc">
+
 
 Creation. 'turns' is the number of turns in the future at which the fuse
 is executed; if turns is 0, the fuse will be executed on the current
 turn.
 
-</div>
+
 
 <span id="executeEvent"></span>
 
@@ -128,15 +128,15 @@ turn.
 
 [events.t](../file/events.t.html)\[[360](../source/events.t.html#360)\]
 
-<div class="desc">
+
 
 execute the fuse
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

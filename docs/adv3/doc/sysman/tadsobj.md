@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> TadsObject  
@@ -15,7 +15,7 @@ layout: docs
     <a href="tempfile.html" class="nav"><em>Next:</em> TemporaryFile</a>
     </span>
 
-</div>
+
 
 
 
@@ -43,7 +43,7 @@ methods, described below.
 
 `createClone()`
 
-<div class="fdef">
+
 
 Creates a new object that is an identical copy of this object. The new
 object will have the same superclasses as the original, and the
@@ -63,7 +63,7 @@ Vector.
 
 `createInstance(...)`
 
-<div class="fdef">
+
 
 Creates a new instance of the target object. This method's arguments are
 passed directly to the constructor, if any, of the new object; this
@@ -120,11 +120,11 @@ get the effect we want:
     ;
 ```
 
-</div>
+
 
 `createInstanceOf(...)`
 
-<div class="fdef">
+
 
 Creates a new instance based on multiple superclasses. This is a static
 (class-level) method, so you can call it directly on TadsObject. With no
@@ -187,29 +187,29 @@ since B is specified without being wrapped in a list.
 Note that if constructors are invoked at all, they can only be called in
 the same order in which they appear in the superclass list.
 
-</div>
+
 
 `createTransientInstance(...)`
 
-<div class="fdef">
+
 
 This works like `createInstance()`, except that
 the new instance is transient.
 
-</div>
+
 
 `createTransientInstanceOf(...)`
 
-<div class="fdef">
+
 
 This works like `createInstanceOf()`, except
 that the new instance is transient.
 
-</div>
+
 
 `getMethod(*prop*)`
 
-<div class="fdef">
+
 
 Gets a function pointer to one of the object's methods. *prop* is a
 property pointer value giving the property of the object to retrieve. If
@@ -251,13 +251,13 @@ named. But these aren't what we normally call anonymous function
 objects, which are the type of object created with the
 `function` syntax.)
 
-</div>
+
 
 <span id="setMethod"></span>
 
 `setMethod(*prop*, *func*)`
 
-<div class="fdef">
+
 
 Assigns the function *func* as a method of the object, using the
 property *prop*.
@@ -419,11 +419,11 @@ the anonymous method.
 With this change, running the program will indeed set
 `obj2.prop` to 100.
 
-</div>
+
 
 `setSuperclassList(*lst*)`
 
-<div class="fdef">
+
 
 Sets the object's superclasses to the values in *lst*, which must be a
 list (or [list-like object](opoverload.html#listlike)) containing
@@ -434,13 +434,13 @@ with one exception: lst is allowed to be
 containing the TadsObject class itself), in which case the object
 becomes a root TadsObject object.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -449,4 +449,4 @@ becomes a root TadsObject object.
     <a href="tempfile.html" class="nav"><em>Next:</em> TemporaryFile</a>
     </span>
 
-</div>
+

@@ -26,49 +26,49 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Actor Resolver. We use this to resolve the actor to whom a command is
 directed: the actor must be in scope for the player character.
 
 `class `**`ActorResolver`**` :   `[`Resolver`](../object/Resolver.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ActorResolver`**  
 [`Resolver`](../object/Resolver.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`whichMessageObject`](#whichMessageObject)[`whichObject`](#whichObject)
 
@@ -77,11 +77,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`getAll`](#getAll)[`getAllDefaults`](#getAllDefaults)[`getDefaultObject`](#getDefaultObject)[`getRawPronounAntecedent`](#getRawPronounAntecedent)[`resolveUnknownNounPhrase`](#resolveUnknownNounPhrase)
 
@@ -90,11 +90,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="whichMessageObject"></span>
 
@@ -102,11 +102,11 @@ Inherited from `Resolver` :
 
 [resolver.t](../file/resolver.t.html)\[[1048](../source/resolver.t.html#1048)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="whichObject"></span>
 
@@ -114,19 +114,19 @@ Inherited from `Resolver` :
 
 [resolver.t](../file/resolver.t.html)\[[1047](../source/resolver.t.html#1047)\]
 
-<div class="desc">
+
 
 we resolve target actors
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -134,11 +134,11 @@ we resolve target actors
 
 [resolver.t](../file/resolver.t.html)\[[883](../source/resolver.t.html#883)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="filterAmbiguousNounPhrase"></span>
 
@@ -146,12 +146,12 @@ we resolve target actors
 
 [resolver.t](../file/resolver.t.html)\[[929](../source/resolver.t.html#929)\]
 
-<div class="desc">
+
 
 Filter an ambiguous list of objects. We will filter according to which
 objects are most logical as targets of commands.
 
-</div>
+
 
 <span id="filterPluralPhrase"></span>
 
@@ -159,11 +159,11 @@ objects are most logical as targets of commands.
 
 [resolver.t](../file/resolver.t.html)\[[976](../source/resolver.t.html#976)\]
 
-<div class="desc">
+
 
 Filter a plural list
 
-</div>
+
 
 <span id="getAll"></span>
 
@@ -171,13 +171,13 @@ Filter a plural list
 
 [resolver.t](../file/resolver.t.html)\[[912](../source/resolver.t.html#912)\]
 
-<div class="desc">
+
 
 Get the "all" list - this is the list of objects that we should use when
 the object of the command is the special word "all". By default, we'll
 return everything in scope.
 
-</div>
+
 
 <span id="getAllDefaults"></span>
 
@@ -185,11 +185,11 @@ return everything in scope.
 
 [resolver.t](../file/resolver.t.html)\[[919](../source/resolver.t.html#919)\]
 
-<div class="desc">
+
 
 get the default object list
 
-</div>
+
 
 <span id="getDefaultObject"></span>
 
@@ -197,11 +197,11 @@ get the default object list
 
 [resolver.t](../file/resolver.t.html)\[[987](../source/resolver.t.html#987)\]
 
-<div class="desc">
+
 
 get a default object
 
-</div>
+
 
 <span id="getRawPronounAntecedent"></span>
 
@@ -209,12 +209,12 @@ get a default object
 
 [resolver.t](../file/resolver.t.html)\[[1004](../source/resolver.t.html#1004)\]
 
-<div class="desc">
+
 
 Get a raw pronoun antecedent list. Since we are resolving the target
 actor, pronouns are relative to the issuing actor.
 
-</div>
+
 
 <span id="resolveUnknownNounPhrase"></span>
 
@@ -222,15 +222,15 @@ actor, pronouns are relative to the issuing actor.
 
 [resolver.t](../file/resolver.t.html)\[[994](../source/resolver.t.html#994)\]
 
-<div class="desc">
+
 
 resolve a noun phrase involving unknown words
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

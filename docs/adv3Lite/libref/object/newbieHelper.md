@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 **`newbieHelper`**` :   `[`Actor`](../object/Actor.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`newbieHelper`**  
 [`Actor`](../object/Actor.html)  
@@ -52,11 +52,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`bulk`](#bulk)[`isActive`](#isActive)
 
@@ -86,11 +86,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`topicResponse`](#topicResponse)[`topicResponse`](#topicResponse)
 
@@ -123,11 +123,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="bulk"></span>
 
@@ -135,11 +135,11 @@ Inherited from `LMentionable` :
 
 [newbie.t](../file/newbie.t.html)\[[966](../source/newbie.t.html#966)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isActive"></span>
 
@@ -147,19 +147,19 @@ Inherited from `LMentionable` :
 
 [newbie.t](../file/newbie.t.html)\[[967](../source/newbie.t.html#967)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="topicResponse"></span>
 
@@ -167,11 +167,11 @@ Inherited from `LMentionable` :
 
 [newbie.t](../file/newbie.t.html)\[[972](../source/newbie.t.html#972)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="topicResponse"></span>
 
@@ -179,16 +179,16 @@ Inherited from `LMentionable` :
 
 [newbie.t](../file/newbie.t.html)\[[988](../source/newbie.t.html#988)\]
 
-<div class="desc">
+
 
 Trap commands like WHERE CAN I GO. Perform an EXITS command to list the
 exits, but then tell the player to use the wording EXITS in future.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 25/05/2013 from adv3Lite version 0.9
 
-</div>
+

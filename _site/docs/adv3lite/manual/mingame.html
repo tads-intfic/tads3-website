@@ -52,22 +52,23 @@ more properties to be defined on it to make it function properly as a
 player character. You must also remember to include the library header.
 An absolutely minimal adv3Lite game might therefore look like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
-    #include "advlite.h"
+<p>`
+    #charset “us-ascii”
+    #include “advlite.h”</p>
 
-    gameMain: GameMainDef
-        initialPlayerChar = me
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gameMain: GameMainDef
+    initialPlayerChar = me
+;
 
-    startLoc: Room 'Starting Location'
-       "This is the featureless starting location. "
-    ;
+startLoc: Room 'Starting Location'
+   "This is the featureless starting location. "
+;
 
-    + me: Thing         
-        isFixed = true            
-        person = 2 // or person = 1 for a first-person game    
-        contType = Carrier   
-    ;
++ me: Thing         
+    isFixed = true            
+    person = 2 // or person = 1 for a first-person game    
+    contType = Carrier   
+; `
 </code></pre></div></div>
 
 <p>Alternatively, you could achieve the same result a little more concisely
@@ -77,18 +78,19 @@ gameMain object, but you need not set is initialPlayerChar property
 since the object you define with the Player class takes care of
 identifying itself as the initial player character:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
-    #include "advlite.h"
+<p>`
+    #charset “us-ascii”
+    #include “advlite.h”</p>
 
-    gameMain: GameMainDef    
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gameMain: GameMainDef    
+;
 
-    startLoc: Room 'Starting Location'
-       "This is the featureless starting location. "
-    ;
+startLoc: Room 'Starting Location'
+   "This is the featureless starting location. "
+;
 
-    + me: Player   
-    ;
++ me: Player   
+; `
 </code></pre></div></div>
 
 <p>In practice, any real game would want also to include a
@@ -99,117 +101,119 @@ the player character and a more fully-implemented starting location. The
 actual starting code for a real game might therefore look more like
 this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    #charset "us-ascii"
-    #include "advlite.h"
+<p>`
+    #charset “us-ascii”
+    #include “advlite.h”</p>
 
-    versionInfo: GameID
-        IFID = '0D9D2F69-90D5-4BDA-A21F-5B64C878D0AB'
-        name = 'Fire!'
-        byline = 'by Eric Eve'
-        htmlByline = 'by &lt;a href="mailto:eric.eve@hmc.ox.ac.uk"&gt;
-                      Eric Eve&lt;/a&gt;'
-        version = '1'
-        authorEmail = 'Eric Eve &lt;eric.eve@hmc.ox.ac.uk&gt;'
-        desc = 'A test game for the advlite library.'
-        htmlDesc = ''
-        
-        showAbout()
-        {
-            "This is a demonstration/test game for the advlite library. It should
-            be possible to reach a winning solution using a basic subset of common
-            IF commands.&lt;.p&gt;";
-        }
-        
-        showCredit()
-        {
-            "adv3Lite libary by Eric Eve with substantial chunks borrowed from the
-            Mercury and adv3 libraries by Mike Roberts. ";
-        }
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>versionInfo: GameID
+    IFID = '0D9D2F69-90D5-4BDA-A21F-5B64C878D0AB'
+    name = 'Fire!'
+    byline = 'by Eric Eve'
+    htmlByline = 'by &lt;a href="mailto:eric.eve@hmc.ox.ac.uk"&gt;
+                  Eric Eve&lt;/a&gt;'
+    version = '1'
+    authorEmail = 'Eric Eve &lt;eric.eve@hmc.ox.ac.uk&gt;'
+    desc = 'A test game for the advlite library.'
+    htmlDesc = ''
+    
+    showAbout()
+    {
+        "This is a demonstration/test game for the advlite library. It should
+        be possible to reach a winning solution using a basic subset of common
+        IF commands.&lt;.p&gt;";
+    }
+    
+    showCredit()
+    {
+        "adv3Lite libary by Eric Eve with substantial chunks borrowed from the
+        Mercury and adv3 libraries by Mike Roberts. ";
+    }
+;
 
 
-    gameMain: GameMainDef
-        initialPlayerChar = me
+gameMain: GameMainDef
+    initialPlayerChar = me
+    
+    showIntro()
+    {       
+        cls();
+               
+        "&lt;b&gt;&lt;font color='red'&gt;FIRE!&lt;/font&gt;&lt;/b&gt;  You woke up just now, choking
+            from the smoke that was already starting to fill your bedroom,
+            threw something on and hurried downstairs -- narrowly missing
+            tripping over the beach ball so thoughtgfully left on the landing
+            by your &lt;i&gt;dear&lt;/i&gt; nephew Jason -- you &lt;i&gt;knew&lt;/i&gt; having him to
+            stay yesterday would be trouble -- perhaps he's even responsible
+            for the fire (not that he's around any more to blame -- that's one
+            less thing to worry about anyway).\b
+            So, here you are, in the hall, all ready to dash out of the house
+            before it burns down around you. There's just one problem: in your
+            hurry to get downstairs you left your front door key in your
+            bedroom.&lt;.p&gt;";
+    }
+ ;
+ 
+ hall: Room, ShuffledEventList 'Hall' 'hall'   
+    "&lt;&lt;one of&gt;&gt;At least the fire hasn't reached the ground floor yet. The hall
+    is still blessedly clear of smoke, though you can see the smoke billowing
+    around at the top of the stairs you've just come down. The front door
+    leading out to the safety of the drive is just a few paces to the west -- if
+    only you'd remembered that key! Otherwise all seems normal: \v&lt;&lt;or&gt;&gt;At a
+    less troubled time you'd feel quite proud of this hall. A fine oak staircase
+    sweeps up to the floor above, matching the solid front door that stands just
+    to the west. &lt;&lt;stopping&gt;&gt;The pictures you bought last year look totally
+    oblivious of the flames that might engulf them, and since so far the fire
+    seems confined to the top floor there's nothing blocking your path north to
+    the lounge, east to the kitchen, or south to the study.  "
+    
+    south = study
+    north = lounge
+    east = kitchen
+    up = landing
+    west = frontDoor
+    out asExit(west)
+       
+    roomDaemon  { doScript; }
+    
+    eventList = 
+    [
+        'Wisps of smoke drift down the stairs. ',
         
-        showIntro()
-        {       
-            cls();
-                   
-            "&lt;b&gt;&lt;font color='red'&gt;FIRE!&lt;/font&gt;&lt;/b&gt;  You woke up just now, choking
-                from the smoke that was already starting to fill your bedroom,
-                threw something on and hurried downstairs -- narrowly missing
-                tripping over the beach ball so thoughtgfully left on the landing
-                by your &lt;i&gt;dear&lt;/i&gt; nephew Jason -- you &lt;i&gt;knew&lt;/i&gt; having him to
-                stay yesterday would be trouble -- perhaps he's even responsible
-                for the fire (not that he's around any more to blame -- that's one
-                less thing to worry about anyway).\b
-                So, here you are, in the hall, all ready to dash out of the house
-                before it burns down around you. There's just one problem: in your
-                hurry to get downstairs you left your front door key in your
-                bedroom.&lt;.p&gt;";
-        }
-     ;
-     
-     hall: Room, ShuffledEventList 'Hall' 'hall'   
-        "&lt;&lt;one of&gt;&gt;At least the fire hasn't reached the ground floor yet. The hall
-        is still blessedly clear of smoke, though you can see the smoke billowing
-        around at the top of the stairs you've just come down. The front door
-        leading out to the safety of the drive is just a few paces to the west -- if
-        only you'd remembered that key! Otherwise all seems normal: \v&lt;&lt;or&gt;&gt;At a
-        less troubled time you'd feel quite proud of this hall. A fine oak staircase
-        sweeps up to the floor above, matching the solid front door that stands just
-        to the west. &lt;&lt;stopping&gt;&gt;The pictures you bought last year look totally
-        oblivious of the flames that might engulf them, and since so far the fire
-        seems confined to the top floor there's nothing blocking your path north to
-        the lounge, east to the kitchen, or south to the study.  "
+        'You momentarily catch sight of the smoke billowing at the top of the
+        staircase. ',
         
-        south = study
-        north = lounge
-        east = kitchen
-        up = landing
-        west = frontDoor
-        out asExit(west)
-           
-        roomDaemon  { doScript; }
+        'There\'s an ominous creak upstairs. ',
         
-        eventList = 
-        [
-            'Wisps of smoke drift down the stairs. ',
-            
-            'You momentarily catch sight of the smoke billowing at the top of the
-            staircase. ',
-            
-            'There\'s an ominous creak upstairs. ',
-            
-            'You fancy you feel a wave of hot air gush about your face. '
-        ]
-        
-        regions = downstairs
-        
-        listenDesc = "There's a disturbing crackling of flames somewhere upstairs. "
-    ;
+        'You fancy you feel a wave of hot air gush about your face. '
+    ]
+    
+    regions = downstairs
+    
+    listenDesc = "There's a disturbing crackling of flames somewhere upstairs. "
+;
 
-    + me: Thing     
-        desc = "You look as bedraggled as you feel. "    
-        isFixed = true            
-        person = 2 
-        contType = Carrier   
-    ;
++ me: Thing     
+    desc = "You look as bedraggled as you feel. "    
+    isFixed = true            
+    person = 2 
+    contType = Carrier   
+;
 
-    downstairs: Region
-        regions = indoors
-    ;
+downstairs: Region
+    regions = indoors
+;
 
-    upstairs: Region
-        regions = indoors
-    ;
+upstairs: Region
+    regions = indoors
+;
 
-    indoors: Region
-        /* The pc is presumably familiar with the layout of his own house */
-        familiar = true
-    ;    
-            
+indoors: Region
+    /* The pc is presumably familiar with the layout of his own house */
+    familiar = true
+;    
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>Don’t worry if not all of this code makes sense to you yet. It will all
 be explained in due course (not least what to authors used to the adv3
@@ -329,30 +333,31 @@ copy of the System Manual simply by editing the file <strong>sysman.html</strong
 your adv3Lite/docs directory. When you first open this file you should
 find it looks like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;html&gt;
+<p>`
+    &lt;html&gt;
     &lt;head&gt;
-    &lt;title&gt;System Manual&lt;/title&gt;
-    &lt;meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.html"&gt;
+    <title>System Manual</title>
+    <meta http-equiv="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.html" /></p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- REPLACE THE URL ABOVE WITH THE PATH TO THE TADS 3 System documentation on your system--&gt;
 
-    &lt;!-- REPLACE THE URL ABOVE WITH THE PATH TO THE TADS 3 System documentation on your system--&gt;
+&lt;!-- For a 64-bit Windows System (e.g. Windows 7) this might be: --&gt;
+&lt;!-- &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.html"&gt; --&gt;
 
-    &lt;!-- For a 64-bit Windows System (e.g. Windows 7) this might be: --&gt;
-    &lt;!-- &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.html"&gt; --&gt;
+&lt;!-- FOR A 32-Bit Windows system (e.g. Windows XP) this might be: --&gt;
+&lt;!--  &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.html"&gt; --&gt;
 
-    &lt;!-- FOR A 32-Bit Windows system (e.g. Windows XP) this might be: --&gt;
-    &lt;!--  &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.html"&gt; --&gt;
-
-    &lt;!-- FOR UNIX-like systems it might be something along the lines of --&gt;
-    &lt;!--  &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin /TADS 3/doc/sysman/toc.html"&gt; --&gt;
-    &lt;/head&gt;
+&lt;!-- FOR UNIX-like systems it might be something along the lines of --&gt;
+&lt;!--  &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin /TADS 3/doc/sysman/toc.html"&gt; --&gt;
+&lt;/head&gt; `
 </code></pre></div></div>
 
 <p>To make it redirect to your local copy of the System Manual, you’ll need
 to edit the line:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     
-    &lt;meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.html"&gt;
+<p>`</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.html"&gt; `
 </code></pre></div></div>
 
 <p>So that the url it redirects to is the location of the System Manual’s
@@ -360,23 +365,26 @@ toc.html file on your machine. For example, if you’re running a 64-bit
 version of Windows (such as Windows 7) you’ll probably need to change
 this line to:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.html"&gt; 
-     
-</code></pre></div></div>
+<p>`
+    <meta http-equiv="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.html" /></p>
+
+<p>`</p>
 
 <p>For a 32-bit version of Windows (e.g. Windows XP) you’d most likely
 need:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.html"&gt; 
-     
-</code></pre></div></div>
+<p>`
+    <meta http-equiv="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.html" /></p>
+
+<p>`</p>
 
 <p>On a MAC or LINUX system the change will need to be slightly more
 extensive, possibly to something like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin/TADS 3/doc/sysman/toc.html"&gt; 
-     
-</code></pre></div></div>
+<p>`
+    <meta http-equiv="REFRESH" content="0; url=file:///c:/usr/bin/TADS 3/doc/sysman/toc.html" /></p>
+
+<p>`</p>
 
 <p>As an alternative, you may be able simply to comment out the existing
 <code class="language-plaintext highlighter-rouge">\&lt;meta HTTP-EQUIV="REFRESH"</code> line and uncomment

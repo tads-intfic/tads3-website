@@ -877,9 +877,9 @@ of [BigNumber](../object/BigNumber.html) in
 [**`RuntimeError`**](../object/RuntimeError.html) - class in
 [\_main.t](../file/_main.t.html)\[[777](../source/_main.t.html#777)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

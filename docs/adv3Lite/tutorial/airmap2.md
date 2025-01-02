@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Extending the Map  
@@ -16,7 +16,7 @@ layout: docs
 <a href="airmap3.html" class="nav"><em>Next:</em> Aboard the Plane</a>
     </span>
 
-</div>
+
 
 
 
@@ -53,7 +53,7 @@ Workbench use your text editor to create a new blank file called
 "gatearea.t", then edit your copy of airport.t3m to add the following
 line at the end:
 
-<div class="cmdline">
+
 
     -source gatearea
 
@@ -62,12 +62,12 @@ line at the end:
 Whichever way you used to create the new file, the next step is to make
 sure it starts with the following three lines:
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-`
+```
 
 The easiest way to do that is probably to copy these lines from start.t
 and paste them into gatearea.t. Once you've done that, you're good to
@@ -76,7 +76,7 @@ go.
 There's not much new about the first version of this area of the map, so
 we'll just go straight away and list it:
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -168,7 +168,7 @@ we'll just go straight away and list it:
     //    east = planeFront
         
     ;
-`
+```
 
 Note that we've commented out the line `east =
 planeFront` on the jetway, since the planeFront room hasn't been
@@ -208,7 +208,7 @@ board will respond to specifically, instead of simply using the
 dobjFor(Default) handling (which displays the "too far away" message).
 The display board should then look like this:
 
-`
+```
     + Distant 'display board; departure'
         "The display imparts the following information:\b
         TI 179 to Buenos Aires <FONT COLOR=GREEN>BOARDING GATE 3</FONT>\n
@@ -220,7 +220,7 @@ The display board should then look like this:
         
         readDesc = desc
     ;
-`
+```
 
 We have included GoTo in the list of decorationActions because a player
 might reasonably issue the command GO TO DISPLAY BOARD from another
@@ -249,7 +249,7 @@ urgency to the proceedings). To do this we'll define a special object
 just to provide the announcements; this can be put right at the end of
 the gatearea.t file:
 
-`
+```
     announcementObj: ShuffledEventList
         eventList =
         [
@@ -305,7 +305,7 @@ the gatearea.t file:
         
         prefix = 'An announcement comes over the public address system: '
     ;
-`
+```
 
 Okay, so let's explain this one step at a time.
 
@@ -397,7 +397,7 @@ at which to do so might be when the player character passes through the
 metal detector, so we'll make a small adjustment to the method's
 `travelDesc` method to make this happen:
 
-`
+```
     + metalDetector: Passage 'metal detector; crude; frame'
         "The metal detector is little more than a crude metal frame, just large
         enough to step through, with a power cable trailing across the floor. "
@@ -426,7 +426,7 @@ metal detector, so we'll make a small adjustment to the method's
             announcementObj.start();
         }
     ;
-`
+```
 
 The fact that the player character may pass through the metal detector
 several times doesn't really matter, since once the Daemon is running,
@@ -437,11 +437,11 @@ Once you've made all the necessary changes to your versions of start.t
 and gatearea.t, try compiling and running the game again and moving
 round the now extended map to make sure everything works as it should.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -451,4 +451,4 @@ round the now extended map to make sure everything works as it should.
 <a href="airmap3.html" class="nav"><em>Next:</em> Aboard the Plane</a>
     </span>
 
-</div>
+

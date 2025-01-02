@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Container is a Thing that other things can be put inside
 
 `class `**`Container`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Container`**  
 [`Thing`](../object/Thing.html)  
@@ -52,11 +52,11 @@ A Container is a Thing that other things can be put inside
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Container`**  
 [`Booth`](../object/Booth.html)  
@@ -65,19 +65,19 @@ A Container is a Thing that other things can be put inside
 [`LockableContainer`](../object/LockableContainer.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contType`](#contType)[`isOpen`](#isOpen)
 
@@ -96,11 +96,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -121,11 +121,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contType"></span>
 
@@ -133,12 +133,12 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[125](../source/extras.t.html#125)\]
 
-<div class="desc">
+
 
 The containment type of a container is In; i.e. things located in a
 Container are considered to be in it.
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -146,25 +146,25 @@ Container are considered to be in it.
 
 [extras.t](../file/extras.t.html)\[[119](../source/extras.t.html#119)\]
 
-<div class="desc">
+
 
 Containers are open by default
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

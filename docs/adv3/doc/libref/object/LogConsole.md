@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Log Console output stream. This is a simple wrapper for the system log
 console, which allows console-style output to be captured to a file,
@@ -39,15 +39,15 @@ operations.
 
 `class `**`LogConsole`**` :   `[`OutputStream`](../object/OutputStream.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LogConsole`**  
 [`OutputStream`](../object/OutputStream.html)  
@@ -56,27 +56,27 @@ operations.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`handle_`](#handle_)
 
@@ -90,11 +90,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`captureToFile`](#captureToFile)[`closeConsole`](#closeConsole)[`construct`](#construct)[`writeFromStream`](#writeFromStream)
 
@@ -108,11 +108,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="handle_"></span>
 
@@ -120,19 +120,19 @@ Inherited from `ModuleExecObject` :
 
 [output.t](../file/output.t.html)\[[1936](../source/output.t.html#1936)\]
 
-<div class="desc">
+
 
 our system log console handle
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="captureToFile"></span>
 
@@ -140,14 +140,14 @@ our system log console handle
 
 [output.t](../file/output.t.html)\[[1884](../source/output.t.html#1884)\]
 
-<div class="desc">
+
 
 Utility method: create a log file, set up to capture all console output
 to the log file, run the given callback function, and then close the log
 file and restore the console output. This can be used as a simple means
 of creating a file that captures the output of a command.
 
-</div>
+
 
 <span id="closeConsole"></span>
 
@@ -155,13 +155,13 @@ of creating a file that captures the output of a command.
 
 [output.t](../file/output.t.html)\[[1919](../source/output.t.html#1919)\]
 
-<div class="desc">
+
 
 Close the console. This closes the underlying system log console, which
 closes the operating system file. No further text can be written to the
 console after it's closed.
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -169,11 +169,11 @@ console after it's closed.
 
 [output.t](../file/output.t.html)\[[1899](../source/output.t.html#1899)\]
 
-<div class="desc">
+
 
 create a log console
 
-</div>
+
 
 <span id="writeFromStream"></span>
 
@@ -181,15 +181,15 @@ create a log console
 
 [output.t](../file/output.t.html)\[[1933](../source/output.t.html#1933)\]
 
-<div class="desc">
+
 
 low-level stream writer - write to our system log console
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

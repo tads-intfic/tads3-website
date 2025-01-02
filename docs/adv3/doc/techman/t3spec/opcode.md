@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="../topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
@@ -17,7 +17,7 @@ Byte-Code Instruction Set
 <a href="format.html" class="nav"><em>Next:</em> Image File Format</a>
     </span>
 
-</div>
+
 
 
 
@@ -4075,18 +4075,18 @@ meaning of a byte code sequence.
 > [NAMEDARGPTR](#opc_namedargptr)  
 > [NAMEDARGTAB](#opc_namedargtab)  
 
-<div class="t3spec_version">
+
 
 Copyright © 2001, 2009 by Michael J. Roberts.  
 Revision: December, 2009
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="../toc.html" class="nav">Table of Contents</a> \|
@@ -4097,4 +4097,4 @@ Byte-Code Instruction Set
 <a href="format.html" class="nav"><em>Next:</em> Image File Format</a>
     </span>
 
-</div>
+

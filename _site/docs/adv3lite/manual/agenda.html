@@ -96,22 +96,23 @@ true (or a method that returns true) when the time is right for the
 AgendaItem to be invoked. In addition, AgendaItems should always be
 located directly in the Actor to which they relate. For example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    guard: Actor 'burly guard; strong powerful; man; him' @doorway
-        "He looks incredibly strong and powerful. "
-    ;
+<p>`
+    guard: Actor ‘burly guard; strong powerful; man; him’ @doorway
+        “He looks incredibly strong and powerful. “
+    ;</p>
 
-    + guardWarnAgenda: AgendaItem
-        isReady = Q.canSee(guard, gPlayerChar)
-        
-        invokeItem()
-        {
-            "The guard straightens up at your approach, tightening his grip on his spear
-             and letting out a fierce growl, as if to say, &lt;q&gt;Don't you even dare 
-             &lt;i&gt;think&lt;/i&gt; about going through this door!&lt;/q&gt; ";
-             
-             isDone = true;
-        }
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ guardWarnAgenda: AgendaItem
+    isReady = Q.canSee(guard, gPlayerChar)
+    
+    invokeItem()
+    {
+        "The guard straightens up at your approach, tightening his grip on his spear
+         and letting out a fierce growl, as if to say, &lt;q&gt;Don't you even dare 
+         &lt;i&gt;think&lt;/i&gt; about going through this door!&lt;/q&gt; ";
+         
+         isDone = true;
+    }
+; `
 </code></pre></div></div>
 
 <p>Here we’ve defined an AgendaItem that will be invoked as soon as the
@@ -213,23 +214,25 @@ agendaList. The delay is set by calling the DelayedAgendaItem’s
 DelayedAgendaItem. This allows you to add a DelayedAgendaItem to the
 actor’s agendaList and set the delay in a single statement, e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        bob.addToAgenda(someDelayedAgendaItem.setDelay(3));
-</code></pre></div></div>
+<p>`
+        bob.addToAgenda(someDelayedAgendaItem.setDelay(3));
+`</p>
 
 <p>Note that the delay is enforced on the isReady property of the
 DelayedAgendaItem, so that if you want to enforce some other condition
 as well you need to <em>and</em> it with the inherited condition, e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + guardReactionAgenda: DelayedAgendaItem
-         isReady = inherited &amp;&amp; canSee(guard, gPlayerChar)
-         
-         invokeItem()
-         {
-             isDone = true;
-             "The guard hefts his spear threateningly and prods you in the stomach,
-               as if to say, &lt;q&gt;Go now, while you still can!&lt;/q&gt; ";
-         }
-    ;
+<p>`
+    + guardReactionAgenda: DelayedAgendaItem
+         isReady = inherited &amp;&amp; canSee(guard, gPlayerChar)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     invokeItem()
+     {
+         isDone = true;
+         "The guard hefts his spear threateningly and prods you in the stomach,
+           as if to say, &lt;q&gt;Go now, while you still can!&lt;/q&gt; ";
+     }
+; `
 </code></pre></div></div>
 
 <p><span id="convagenda"></span></p>
@@ -247,36 +250,38 @@ Once again, if you need to define a further condition on the isReady
 property of a ConvAgendaItem you need to <em>and</em> it with the inherited
 handling, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + clerkPartyAgenda: ConvAgendaItem
-        isReady = inherited &amp;&amp; gRevealed('office-party')
+<p>`
+    + clerkPartyAgenda: ConvAgendaItem
+        isReady = inherited &amp;&amp; gRevealed(‘office-party’)</p>
 
-        invokeItem()
-        {
-            isDone = true;
-            "&lt;q&gt;By the way, I hope I didn't give you the wrong impression,&lt;/q&gt;
-            the clerk tells you cautiously. &lt;q&gt;Our office party last week 
-            wasn't &lt;i&gt;that&lt;/i&gt; wild. ";
-        }
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    invokeItem()
+    {
+        isDone = true;
+        "&lt;q&gt;By the way, I hope I didn't give you the wrong impression,&lt;/q&gt;
+        the clerk tells you cautiously. &lt;q&gt;Our office party last week 
+        wasn't &lt;i&gt;that&lt;/i&gt; wild. ";
+    }
+; `
 </code></pre></div></div>
 
 <p>Note that if you want something to behave as both a DelayedAgendaItem
 and a ConvAgendaItem you can just define it with both classes,e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + clerkJacketAgenda: DelayedAgendaItem, ConvAgendaItem
+<p>`
+    + clerkJacketAgenda: DelayedAgendaItem, ConvAgendaItem
        invokeItem()
        {
           isDone = true;
-          "&lt;q&gt;I've been meaning to ask you,&lt;/q&gt; says the clerk. &lt;q&gt;Where &lt;i&gt;did&lt;/i&gt;
-           you buy that jacket?&lt;/q&gt; ";
+          “<q>I’ve been meaning to ask you,</q> says the clerk. <q>Where <i>did</i>
+           you buy that jacket?</q> “;
        }
-    ;
+    ;</p>
 
-     ...
-     
-     /* Somewhere else in the code */
-     
-        clerk.addToAgenda(clerkJacketAgenda.setDelay(10));
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ...
+ 
+ /* Somewhere else in the code */
+ 
+    clerk.addToAgenda(clerkJacketAgenda.setDelay(10)); `
 </code></pre></div></div>
 
 <p><span id="followagenda"></span></p>
@@ -294,35 +299,36 @@ to lead the player character, and an <strong>arrivingDesc</strong> method to des
 the leading actor arriving in a new destination having just led the
 player character there; for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        
-    + FollowAgendaItem
-        initiallyActive = true
-        
-        connectorList = [hall, kitchen, diningRoom]
-        
-        specialDesc()
-        {
-           "Bob is waiting for you to follow him ";
-           switch(getActor.getOutermostRoom)
-           {
-              case study:
-                "north into the hall. ";
-                break;
-              case hall:
-                "east into the kitchen. ";
-                break;
-              case kitchen:
-                "north into the diningRoom. ";
-                break;
-           }
-        }
-        
-        arrivingDesc()
-        {
-           "Bob crosses the room and waits for you to follow him
-            &lt;&lt;nextDirection.departureName&gt;&gt;. ";
-        }
-    ;
+<p>`</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ FollowAgendaItem
+    initiallyActive = true
+    
+    connectorList = [hall, kitchen, diningRoom]
+    
+    specialDesc()
+    {
+       "Bob is waiting for you to follow him ";
+       switch(getActor.getOutermostRoom)
+       {
+          case study:
+            "north into the hall. ";
+            break;
+          case hall:
+            "east into the kitchen. ";
+            break;
+          case kitchen:
+            "north into the diningRoom. ";
+            break;
+       }
+    }
+    
+    arrivingDesc()
+    {
+       "Bob crosses the room and waits for you to follow him
+        &lt;&lt;nextDirection.departureName&gt;&gt;. ";
+    }
+; `
 </code></pre></div></div>
 
 <p><span id="followprops"></span></p>

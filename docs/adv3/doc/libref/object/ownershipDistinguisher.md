@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Ownership Distinguisher. This distinguisher can tell two objects apart
 if they have different owners. "Unowned" objects are identified by their
@@ -36,26 +36,26 @@ objects by location.
 
 **`ownershipDistinguisher`**` :   `[`Distinguisher`](../object/Distinguisher.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ownershipDistinguisher`**  
 [`Distinguisher`](../object/Distinguisher.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -63,11 +63,11 @@ objects by location.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`matchName`](#matchName)[`name`](#name)[`notePrompt`](#notePrompt)[`objInScope`](#objInScope)[`theName`](#theName)
 
@@ -75,19 +75,19 @@ objects by location.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="aName"></span>
 
@@ -95,11 +95,11 @@ objects by location.
 
 [en_us.t](../file/en_us.t.html)\[[3534](../source/en_us.t.html#3534)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canDistinguish"></span>
 
@@ -107,11 +107,11 @@ objects by location.
 
 [disambig.t](../file/disambig.t.html)\[[130](../source/disambig.t.html#130)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="countName"></span>
 
@@ -119,11 +119,11 @@ objects by location.
 
 [en_us.t](../file/en_us.t.html)\[[3536](../source/en_us.t.html#3536)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchName"></span>
 
@@ -131,11 +131,11 @@ objects by location.
 
 [disambig.t](../file/disambig.t.html)\[[180](../source/disambig.t.html#180)\]
 
-<div class="desc">
+
 
 otherwise, use the inherited handling
 
-</div>
+
 
 <span id="name"></span>
 
@@ -143,11 +143,11 @@ otherwise, use the inherited handling
 
 [en_us.t](../file/en_us.t.html)\[[3533](../source/en_us.t.html#3533)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notePrompt"></span>
 
@@ -155,11 +155,11 @@ otherwise, use the inherited handling
 
 [en_us.t](../file/en_us.t.html)\[[3539](../source/en_us.t.html#3539)\]
 
-<div class="desc">
+
 
 note that we're prompting based on this distinguisher
 
-</div>
+
 
 <span id="objInScope"></span>
 
@@ -167,12 +167,12 @@ note that we're prompting based on this distinguisher
 
 [disambig.t](../file/disambig.t.html)\[[160](../source/disambig.t.html#160)\]
 
-<div class="desc">
+
 
 One or both objects are owned, so we can tell them apart if and only if
 they have different owners.
 
-</div>
+
 
 <span id="theName"></span>
 
@@ -180,15 +180,15 @@ they have different owners.
 
 [en_us.t](../file/en_us.t.html)\[[3535](../source/en_us.t.html#3535)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

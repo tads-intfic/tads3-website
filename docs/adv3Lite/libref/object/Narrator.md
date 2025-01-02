@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Global narration parameters. This object's properties control the way
 parameter-based messages are generated. The message generator consults
@@ -30,45 +30,45 @@ adapt to the latest settings.
 
 **`Narrator`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Narrator`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`tense`](#tense)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="tense"></span>
 
@@ -76,7 +76,7 @@ adapt to the latest settings.
 
 [messages.t](../file/messages.t.html)\[[52](../source/messages.t.html#52)\]
 
-<div class="desc">
+
 
 The verb tense of the narration. This is one of the VerbTense objects
 (Present, Past, Perfect, Past Perfect, Future, Future Perfect). This
@@ -107,21 +107,21 @@ of marginal value; in English, at least, other tenses are rare in any
 kind of narrative fiction, and are mostly limited to experimental or
 novelty use.)
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

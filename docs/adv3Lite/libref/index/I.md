@@ -1883,9 +1883,9 @@ in
 [**`Itself`**](../object/Itself.html) - object in
 [parser.t](../file/parser.t.html)\[[4877](../source/parser.t.html#4877)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

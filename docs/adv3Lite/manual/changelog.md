@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Change Log</a> \> Change Log  
@@ -15,7 +15,7 @@ layout: docs
     <a href="manual_idx.html" class="nav"><em>Next:</em> Index</a>
    </span>
 
-</div>
+
 
 
 
@@ -1530,7 +1530,7 @@ previously resolved object (the direct object, say) to another,
 erroneous object when the player supplied another missing object (the
 indirect object) say. For example:
 
-<div class="cmdline">
+
 
      >UNLOCK DOOR
      Which door do you mean, the red door or the blue door?
@@ -4960,7 +4960,7 @@ the plausibleKeyList and actualKeyList properties of a Key. For example,
 in the following definition the silver key will work as presumably
 intended:
 
-`
+```
     cabinet: Fixture 'cabinet'
        remapIn: SubComponent
        {
@@ -4976,7 +4976,7 @@ intended:
        plausibleLockList = [cabinet]
        actualLockList = [cabinet]
     ;
-`
+```
 
 ------------------------------------------------------------------------
 
@@ -5596,11 +5596,11 @@ been the name of the actor in question).
 Bug fixed in which the condition for deciding whether a SimpleAttachable
 should be listed separately was the wrong way round.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -5609,6 +5609,6 @@ should be listed separately was the wrong way round.
    <a href="manual_idx.html" class="nav"><em>Next:</em> Index</a>    
 </span>
 
-</div>
+
 
 \>

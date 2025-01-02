@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> The Object
@@ -17,7 +17,7 @@ Entrypoint</a>    
 <a href="objdef.html" class="nav"><em>Next:</em> Object Definitions</a>
     </span>
 
-</div>
+
 
 
 
@@ -354,7 +354,7 @@ object that's involved.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -365,4 +365,4 @@ Entrypoint</a>    
 <a href="objdef.html" class="nav"><em>Next:</em> Object Definitions</a>
     </span>
 
-</div>
+

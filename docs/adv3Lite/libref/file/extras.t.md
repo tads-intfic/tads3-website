@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 extras.t
@@ -30,46 +30,46 @@ classes since authors can always just set the appropriate properties on
 thing, but some authors may find them a convenience, or may find that
 using them improves the clarity of their code.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`Booth`](../object/Booth.html)[`CollectiveGroup`](../object/CollectiveGroup.html)[`Component`](../object/Component.html)[`Container`](../object/Container.html)[`ContainerDoor`](../object/ContainerDoor.html)[`Decoration`](../object/Decoration.html)[`Distant`](../object/Distant.html)[`Enterable`](../object/Enterable.html)[`Fixture`](../object/Fixture.html)[`Flashlight`](../object/Flashlight.html)[`Food`](../object/Food.html)[`Heavy`](../object/Heavy.html)[`Immovable`](../object/Immovable.html)[`KeyedContainer`](../object/KeyedContainer.html)[`LockableContainer`](../object/LockableContainer.html)[`MinorItem`](../object/MinorItem.html)[`Noise`](../object/Noise.html)[`Odor`](../object/Odor.html)[`OpenableContainer`](../object/OpenableContainer.html)[`Passage`](../object/Passage.html)[`PathPassage`](../object/PathPassage.html)[`Platform`](../object/Platform.html)[`ProxyDest`](../object/ProxyDest.html)[`RearContainer`](../object/RearContainer.html)[`SecretDoor`](../object/SecretDoor.html)[`SensoryEmanation`](../object/SensoryEmanation.html)[`StairwayDown`](../object/StairwayDown.html)[`StairwayUp`](../object/StairwayUp.html)[`Surface`](../object/Surface.html)[`Switch`](../object/Switch.html)[`Underside`](../object/Underside.html)[`Unthing`](../object/Unthing.html)[`Wearable`](../object/Wearable.html)
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

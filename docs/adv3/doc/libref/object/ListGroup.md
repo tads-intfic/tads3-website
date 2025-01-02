@@ -26,32 +26,32 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 List Group Interface. An instance of this object is created for each set
 of objects that are to be grouped together.
 
 `class `**`ListGroup`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ListGroup`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ListGroup`**  
 [`ListGroupCustom`](../object/ListGroupCustom.html)  
@@ -63,39 +63,39 @@ of objects that are to be grouped together.
 [`RoomActorGrouper`](../object/RoomActorGrouper.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`groupDisplaysSublist`](#groupDisplaysSublist)[`minGroupSize`](#minGroupSize)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`createGroupSublister`](#createGroupSublister)[`groupCardinality`](#groupCardinality)[`groupNounPhraseCount`](#groupNounPhraseCount)[`showGroupItem`](#showGroupItem)[`showGroupItemCounted`](#showGroupItemCounted)[`showGroupList`](#showGroupList)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="groupDisplaysSublist"></span>
 
@@ -103,7 +103,7 @@ of objects that are to be grouped together.
 
 [lister.t](../file/lister.t.html)\[[1933](../source/lister.t.html#1933)\]
 
-<div class="desc">
+
 
 Determine if showing the group list will introduce a sublist into an
 enclosing list. This should return true if we will show a sublist
@@ -112,7 +112,7 @@ some extra grouping into its enclosing list. This should return nil if
 the sublist we display will be clearly set off in some way (for example,
 by being enclosed in parentheses).
 
-</div>
+
 
 <span id="minGroupSize"></span>
 
@@ -120,7 +120,7 @@ by being enclosed in parentheses).
 
 [lister.t](../file/lister.t.html)\[[1945](../source/lister.t.html#1945)\]
 
-<div class="desc">
+
 
 The minimum number of elements for which we should retain the group in a
 listing. By default, we need two elements to display a group; any group
@@ -130,15 +130,15 @@ groups to be retained. In most cases, it's undesirable to retain
 single-element groups, but when grouping is used to partition a list
 into two or more fixed portions, single-element groups become desirable.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="createGroupSublister"></span>
 
@@ -146,7 +146,7 @@ into two or more fixed portions, single-element groups become desirable.
 
 [lister.t](../file/lister.t.html)\[[1999](../source/lister.t.html#1999)\]
 
-<div class="desc">
+
 
 Create the group sublister.
 
@@ -163,7 +163,7 @@ that usually need to be changed for the sublist.
 This can be overridden to use a completely customized Lister object for
 the group list, if desired.
 
-</div>
+
 
 <span id="groupCardinality"></span>
 
@@ -171,7 +171,7 @@ the group list, if desired.
 
 [lister.t](../file/lister.t.html)\[[1968](../source/lister.t.html#1968)\]
 
-<div class="desc">
+
 
 Determine the cardinality of the group listing, grammatically speaking.
 This is the number of items that the group seems to be for the purposes
@@ -191,7 +191,7 @@ group. This should be overridden when necessary, such as when the group
 message is singular in usage even if the list has multiple items (as in
 "\$1.38 in change").
 
-</div>
+
 
 <span id="groupNounPhraseCount"></span>
 
@@ -199,7 +199,7 @@ message is singular in usage even if the list has multiple items (as in
 
 [lister.t](../file/lister.t.html)\[[1980](../source/lister.t.html#1980)\]
 
-<div class="desc">
+
 
 Get the number of noun phrases this group will display. This differs
 from the cardinality in that it doesn't matter how many \*objects\* the
@@ -210,7 +210,7 @@ phrase.
 By default, we simply return the number of items in the group, since
 most groups individually list their items.
 
-</div>
+
 
 <span id="showGroupItem"></span>
 
@@ -218,7 +218,7 @@ most groups individually list their items.
 
 [lister.t](../file/lister.t.html)\[[1909](../source/lister.t.html#1909)\]
 
-<div class="desc">
+
 
 Show an item in the group's sublist. The sublister calls this to display
 each item in the group when the group calls the sublister to display the
@@ -234,7 +234,7 @@ use this mechanism as a convenience, so that a separate group sublister
 class doesn't have to be created simply to customize the display of
 group items.
 
-</div>
+
 
 <span id="showGroupItemCounted"></span>
 
@@ -242,12 +242,12 @@ group items.
 
 [lister.t](../file/lister.t.html)\[[1919](../source/lister.t.html#1919)\]
 
-<div class="desc">
+
 
 Show a counted item in our group list. This is the counted item
 equivalent of showGroupItem.
 
-</div>
+
 
 <span id="showGroupList"></span>
 
@@ -255,7 +255,7 @@ equivalent of showGroupItem.
 
 [lister.t](../file/lister.t.html)\[[1890](../source/lister.t.html#1890)\]
 
-<div class="desc">
+
 
 Show a list of items from this group. All of the items in the list will
 be members of this list group; we are to display a sentence fragment
@@ -267,11 +267,11 @@ showList().
 Note that we are not to display any separator before or after our list;
 the caller is responsible for that.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

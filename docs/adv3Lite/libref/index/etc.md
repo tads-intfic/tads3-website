@@ -71,9 +71,9 @@ function in
 [**`_tads_io_say`**](../file/tads.h.html#_tads_io_say) - macro in
 [tads.h](../file/tads.h.html)\[[29](../source/tads.h.html#29)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

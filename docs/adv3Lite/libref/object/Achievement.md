@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An Achievement is an object used to award points in the score. For most
 purposes, an achievement can be described simply by a string, but the
@@ -70,63 +70,63 @@ Achievement object is awarded
 
 `class `**`Achievement`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Achievement`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Achievement`**  
 [`SimpleAchievement`](../object/SimpleAchievement.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`achieved`](#achieved)[`desc`](#desc)[`lastListOrder`](#lastListOrder)[`listOrder`](#listOrder)[`maxPoints`](#maxPoints)[`points`](#points)[`scoreCount`](#scoreCount)[`totalPoints`](#totalPoints)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addToScoreOnce`](#addToScoreOnce)[`awardPoints`](#awardPoints)[`awardPointsOnce`](#awardPointsOnce)[`listFullScoreItem`](#listFullScoreItem)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="achieved"></span>
 
@@ -134,13 +134,13 @@ Achievement object is awarded
 
 [score.t](../file/score.t.html)\[[183](../source/score.t.html#183)\]
 
-<div class="desc">
+
 
 Has this achievement been achieved? By default it has if our scoreCount
 is greater than 0 (i.e. if points have been awarded for this achievement
 at least once.
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -148,7 +148,7 @@ at least once.
 
 [score.t](../file/score.t.html)\[[99](../source/score.t.html#99)\]
 
-<div class="desc">
+
 
 Describe the achievement - this must display a string explaining the
 reason the points associated with this achievement were awarded.
@@ -165,7 +165,7 @@ example, the game might keep a list of treasures found with the
 achievement, adding to the list each time the achievement is scored, and
 displaying the contents of the list when the description is shown.
 
-</div>
+
 
 <span id="lastListOrder"></span>
 
@@ -173,11 +173,11 @@ displaying the contents of the list when the description is shown.
 
 [score.t](../file/score.t.html)\[[187](../source/score.t.html#187)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="listOrder"></span>
 
@@ -185,11 +185,11 @@ displaying the contents of the list when the description is shown.
 
 [score.t](../file/score.t.html)\[[185](../source/score.t.html#185)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="maxPoints"></span>
 
@@ -197,14 +197,14 @@ displaying the contents of the list when the description is shown.
 
 [score.t](../file/score.t.html)\[[78](../source/score.t.html#78)\]
 
-<div class="desc">
+
 
 The MAXIMUM number of points this Achievement can award. This is by
 default just our 'points' value, on the assumption that the achievement
 is scored only once. The library uses this value during
 pre-initialization to compute the maximum possible score in the game.
 
-</div>
+
 
 <span id="points"></span>
 
@@ -212,7 +212,7 @@ pre-initialization to compute the maximum possible score in the game.
 
 [score.t](../file/score.t.html)\[[69](../source/score.t.html#69)\]
 
-<div class="desc">
+
 
 The number of points this Achievement scores individually. By default,
 we set this to nil. If you use the awardPoints() or awardPointsOnce()
@@ -222,7 +222,7 @@ If you set this to a non-nil value, the library will use it pre-compute
 the maximum possible score in the game, saving you the trouble of
 figuring out the maximum score by hand.
 
-</div>
+
 
 <span id="scoreCount"></span>
 
@@ -230,13 +230,13 @@ figuring out the maximum score by hand.
 
 [score.t](../file/score.t.html)\[[118](../source/score.t.html#118)\]
 
-<div class="desc">
+
 
 The number of times the achievement has been awarded. Each time the
 achievement is passed to addToScore(), this is incremented. Note that
 this is distinct from the number of points.
 
-</div>
+
 
 <span id="totalPoints"></span>
 
@@ -244,21 +244,21 @@ this is distinct from the number of points.
 
 [score.t](../file/score.t.html)\[[126](../source/score.t.html#126)\]
 
-<div class="desc">
+
 
 the number of points awarded for the achievement; if this achievement
 has been accomplished multiple times, this reflects the aggregate number
 of points awarded for all of the times it has been accomplished
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addToScoreOnce"></span>
 
@@ -266,7 +266,7 @@ of points awarded for all of the times it has been accomplished
 
 [score.t](../file/score.t.html)\[[138](../source/score.t.html#138)\]
 
-<div class="desc">
+
 
 Add this achievement to the score one time only, awarding the given
 number of points. This can be used to score an achievement without
@@ -276,7 +276,7 @@ do nothing at all; otherwise, it'll score the achievement with the given
 number of points. Returns true if we do award the points, nil if not
 (because we've awarded them before).
 
-</div>
+
 
 <span id="awardPoints"></span>
 
@@ -284,12 +284,12 @@ number of points. Returns true if we do award the points, nil if not
 
 [score.t](../file/score.t.html)\[[160](../source/score.t.html#160)\]
 
-<div class="desc">
+
 
 Award this Achievement's score, using the score value specified in my
 'points' property.
 
-</div>
+
 
 <span id="awardPointsOnce"></span>
 
@@ -297,14 +297,14 @@ Award this Achievement's score, using the score value specified in my
 
 [score.t](../file/score.t.html)\[[172](../source/score.t.html#172)\]
 
-<div class="desc">
+
 
 Award this Achievement's score, but ensure that we're never awarded more
 than one time. If this Achievement has already been awarded, this does
 nothing at all. Returns true if we do award the points, nil if not
 (because we've awarded them before).
 
-</div>
+
 
 <span id="listFullScoreItem"></span>
 
@@ -312,15 +312,15 @@ nothing at all. Returns true if we do award the points, nil if not
 
 [score.t](../file/score.t.html)\[[102](../source/score.t.html#102)\]
 
-<div class="desc">
+
 
 show myself in a full-score listing
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

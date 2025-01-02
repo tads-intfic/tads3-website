@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="cockpit.html" class="nav">Cockpit Controls</a> \> Defining
@@ -17,7 +17,7 @@ Cockpit</a>    
 <a href="responding.html" class="nav"><em>Next:</em> Responding to
 Actions</a>     </span>
 
-</div>
+
 
 
 # Defining Actions
@@ -49,7 +49,7 @@ all do the same thing. One way to do this is to define a new
 **VerbRule** that recognizes PUSH X FORWARD and PUSH FORWARD ON X and
 makes either trigger the Push action. This is what it might look like:
 
-`
+```
     VerbRule(PushForward)
         'push' multiDobj 'forward'
         | 'push' 'forward' 'on' multiDobj
@@ -58,7 +58,7 @@ makes either trigger the Push action. This is what it might look like:
         verbPhrase = 'push/pushing forward (what)'
         missingQ = 'what do you want to push forward'
     ;
-`       
+```       
 
 Let's take this piece by piece. First we begin our specification of the
 new grammar for the Push action with
@@ -115,13 +115,13 @@ be defined).
 We'll now handle PULL BACK the easier way, by modifying an existing
 VerbRule:
 
-`
+```
     modify VerbRule(Pull)
         ('pull' multiDobj ( | 'back')) |
         'pull' 'back' 'on' multiDobj    
         : 
     ;
-`
+```
 
 Note how we end this definition with a colon, and then the terminating
 semicolon. This is just a syntactic quirk of how a VerbRule is modified
@@ -160,18 +160,18 @@ TAction class (think of TAction as meaning 'Transitive Action' — an
 action that takes an object). The library provides a DefineTAction()
 macro that makes it simple to define such objects:
 
-`
+```
     DefineTAction(TurnLeft)
     ;
 
     DefineTAction(TurnRight)
     ;
-`
+```
 
 The next job is to define the grammar that will trigger these actions.
 We've already seen how to do this, using the VerbRule construct:
 
-`
+```
     VerbRule(TurnLeft)
         'turn' singleDobj (| 'to' (| 'the')) ('left' | 'port')
         : VerbProduction
@@ -189,7 +189,7 @@ We've already seen how to do this, using the VerbRule construct:
         missinqQ = 'what do you want to turn right'
         priority = 60
     ;
-`
+```
 
 The one extra thing we've added here to both definitions is
 `priority = 60`. This is to ensure that both
@@ -218,7 +218,7 @@ handling of the TurnLeft and TurnRight actions in blocks marked
 I'm the direct object of TurnLeft or TurnRight command?". All we need is
 something like this:
 
-`
+```
     modify Thing
         dobjFor(TurnLeft)
         {
@@ -254,7 +254,7 @@ something like this:
             
         }
     ;
-`
+```
 
 Again, let's work through this step by step.
 
@@ -276,13 +276,13 @@ here if we needed to, but for these two actions
 
 The next piece of code is the verify() method in each section:
 
-`
+```
             verify()
             {
                 if(!isTurnable)
                     illogical(cannotTurnMsg);
             }
-`
+```
 
 As has been intimated previously, verify() methods perform two
 functions:
@@ -304,7 +304,7 @@ action, so we may as well use them here, but if they didn't exist it
 would be a good idea to invent them, for example if we'd implementing a
 Cross verb (as in CROSS BRIDGE or CROSS RIVER):
 
-`
+```
     modify Thing
         dobjFor(Cross)
         {
@@ -319,7 +319,7 @@ Cross verb (as in CROSS BRIDGE or CROSS RIVER):
         isCrossable = nil
         cannotCrossMsg = '{The subj dobj} {is} not something {i} {can} cross. '
     ;
-`
+```
 
 The advantage of this coding pattern is that I don't then need to
 override the verify() method either to make something crossable or to
@@ -333,12 +333,12 @@ something he's standing on.
 
 The final section we've defined on the modified Thing for TurnLeft is:
 
-`
+```
             report()
             {
                 "Turning <<gActionListStr>> to the left has no effect. ";
             }
-`
+```
 
 What this does is probably fairly obvious: it displays a message like,
 "Turning the doodah to the left has no effect." How it works is rather
@@ -422,7 +422,7 @@ to help you on your way.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -433,4 +433,4 @@ Cockpit</a>    
 <a href="responding.html" class="nav"><em>Next:</em> Responding to
 Actions</a>     </span>
 
-</div>
+

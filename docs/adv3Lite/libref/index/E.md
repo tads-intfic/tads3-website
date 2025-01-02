@@ -663,9 +663,9 @@ property of [Region](../object/Region.html) in
 [Collective](../object/Collective.html) in
 [collective.t](../file/collective.t.html)\[[48](../source/collective.t.html#48)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

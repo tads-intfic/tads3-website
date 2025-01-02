@@ -2220,9 +2220,9 @@ of [Script](../object/Script.html) in
 [**`CyclicEventList`**](../object/CyclicEventList.html) - class in
 [eventList.t](../file/eventList.t.html)\[[257](../source/eventList.t.html#257)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

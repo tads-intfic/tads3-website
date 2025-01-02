@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Action Reference  
 <span class="navnp"><a href="debug.html" class="nav"><em>Prev:</em> Debugging Commands</a>
     *Next:* <a href="actor.html" class="nav">Actors</a>    </span>
 
-</div>
+
 
 
 
@@ -2588,7 +2588,7 @@ DMsg(yell)
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -2596,4 +2596,4 @@ DMsg(yell)
 <span class="navnp"><a href="debug.html" class="nav"><em>Prev:</em> Debugging Commands</a>
     *Next:* <a href="actor.html" class="nav">Actors</a>    </span>
 
-</div>
+

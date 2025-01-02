@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 LocType objects are used for Thing.locType property values to specify
 the relationship between an object and its container.
@@ -45,62 +45,62 @@ them with an appropriate English name in their prep properties.
 
 `class `**`LocType`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LocType`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`ExtLocType`](../object/ExtLocType.html)[`IntLocType`](../object/IntLocType.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`intoPrep`](#intoPrep)[`listOrder`](#listOrder)[`prep`](#prep)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="intoPrep"></span>
 
@@ -108,11 +108,11 @@ them with an appropriate English name in their prep properties.
 
 [english.t](../file/english.t.html)\[[5690](../source/english.t.html#5690)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="listOrder"></span>
 
@@ -120,11 +120,11 @@ them with an appropriate English name in their prep properties.
 
 [thing.t](../file/thing.t.html)\[[10035](../source/thing.t.html#10035)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="prep"></span>
 
@@ -132,25 +132,25 @@ them with an appropriate English name in their prep properties.
 
 [english.t](../file/english.t.html)\[[5689](../source/english.t.html#5689)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

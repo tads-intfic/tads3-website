@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Signal is a kind of Relation that can be used to send a signal from a
 sender to all the objects related to that sender via this Signal
@@ -42,15 +42,15 @@ unconnect(sender, signal, receiver);
 
 **`Signal`**` :   `[`Relation`](../object/Relation.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Signal`**  
 [`Relation`](../object/Relation.html)  
@@ -59,11 +59,11 @@ unconnect(sender, signal, receiver);
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`dispatchTab`](#dispatchTab)[`propList`](#propList)[`relationType`](#relationType)
 
@@ -78,11 +78,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addHandler`](#addHandler)[`emit`](#emit)[`removeHandler`](#removeHandler)
 
@@ -96,11 +96,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="dispatchTab"></span>
 
@@ -108,7 +108,7 @@ Inherited from `ModuleExecObject` :
 
 [signals.t](../file/signals.t.html)\[[99](../source/signals.t.html#99)\]
 
-<div class="desc">
+
 
 A LookupTable liniking objects that might emit this signal (potential
 senders) to potential receivers of this signal, so that notifications
@@ -118,7 +118,7 @@ supplied connect() and unconnect() functions.
 
 \[SIGNALS EXTENSION\]
 
-</div>
+
 
 <span id="propList"></span>
 
@@ -126,12 +126,12 @@ supplied connect() and unconnect() functions.
 
 [signals.t](../file/signals.t.html)\[[89](../source/signals.t.html#89)\]
 
-<div class="desc">
+
 
 A list of pointers to the properties to which additional arguments to
 our emit method should be assigned. \[SIGNALS EXTENSION\]
 
-</div>
+
 
 <span id="relationType"></span>
 
@@ -139,19 +139,19 @@ our emit method should be assigned. \[SIGNALS EXTENSION\]
 
 [signals.t](../file/signals.t.html)\[[31](../source/signals.t.html#31)\]
 
-<div class="desc">
+
 
 Signals can potentially relate many things to many other things.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addHandler"></span>
 
@@ -159,11 +159,11 @@ Signals can potentially relate many things to many other things.
 
 [signals.t](../file/signals.t.html)\[[101](../source/signals.t.html#101)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="emit"></span>
 
@@ -171,7 +171,7 @@ Signals can potentially relate many things to many other things.
 
 [signals.t](../file/signals.t.html)\[[46](../source/signals.t.html#46)\]
 
-<div class="desc">
+
 
 Notify every object related to sender by us to handle us as a signal
 from sender.
@@ -185,7 +185,7 @@ this method, unless all the list form arguments come at the end.
 
 \[SIGNALS EXTENSION\]
 
-</div>
+
 
 <span id="removeHandler"></span>
 
@@ -193,15 +193,15 @@ this method, unless all the list form arguments come at the end.
 
 [signals.t](../file/signals.t.html)\[[109](../source/signals.t.html#109)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

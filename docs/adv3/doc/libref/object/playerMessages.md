@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Player Character messages. These messages are generated when the player
 issues a regular command to the player character (i.e., without
@@ -28,15 +28,15 @@ specifying a target actor).
 
 **`playerMessages`**` :   `[`libMessages`](../object/libMessages.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`playerMessages`**  
 [`libMessages`](../object/libMessages.html)  
@@ -44,11 +44,11 @@ specifying a target actor).
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -59,11 +59,11 @@ Inherited from `libMessages` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`allNotAllowed`](#allNotAllowed)[`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askDisambig`](#askDisambig)[`askMissingLiteral`](#askMissingLiteral)[`askMissingObject`](#askMissingObject)[`askUnknownWord`](#askUnknownWord)[`cannotAddressMultiple`](#cannotAddressMultiple)[`cannotChangeActor`](#cannotChangeActor)[`commandNotUnderstood`](#commandNotUnderstood)[`disambigOrdinalOutOfRange`](#disambigOrdinalOutOfRange)[`emptyNounPhrase`](#emptyNounPhrase)[`explainCancelCommandLine`](#explainCancelCommandLine)[`insufficientQuantity`](#insufficientQuantity)[`missingActor`](#missingActor)[`missingLiteral`](#missingLiteral)[`missingObject`](#missingObject)[`noMatch`](#noMatch)[`noMatchCannotSee`](#noMatchCannotSee)[`noMatchDisambig`](#noMatchDisambig)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchForListBut`](#noMatchForListBut)[`noMatchForLocation`](#noMatchForLocation)[`noMatchForPluralPossessive`](#noMatchForPluralPossessive)[`noMatchForPossessive`](#noMatchForPossessive)[`noMatchForPronoun`](#noMatchForPronoun)[`noMatchNotAware`](#noMatchNotAware)[`nothingInLocation`](#nothingInLocation)[`reflexiveNotAllowed`](#reflexiveNotAllowed)[`refuseCommandBusy`](#refuseCommandBusy)[`singleActorRequired`](#singleActorRequired)[`singleObjectRequired`](#singleObjectRequired)[`specialTopicInactive`](#specialTopicInactive)[`uniqueObjectRequired`](#uniqueObjectRequired)[`wordIsUnknown`](#wordIsUnknown)[`wrongReflexive`](#wrongReflexive)[`zeroQuantity`](#zeroQuantity)
 
@@ -75,19 +75,19 @@ Inherited from `MessageHelper` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="allNotAllowed"></span>
 
@@ -95,11 +95,11 @@ Inherited from `MessageHelper` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1793](../source/msg_neu.t.html#1793)\]
 
-<div class="desc">
+
 
 'all' is not allowed with the attempted action
 
-</div>
+
 
 <span id="ambiguousNounPhrase"></span>
 
@@ -107,12 +107,12 @@ Inherited from `MessageHelper` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2057](../source/msg_neu.t.html#2057)\]
 
-<div class="desc">
+
 
 we found an ambiguous noun phrase, but we were unable to perform
 interactive disambiguation
 
-</div>
+
 
 <span id="askDisambig"></span>
 
@@ -120,7 +120,7 @@ interactive disambiguation
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1990](../source/msg_neu.t.html#1990)\]
 
-<div class="desc">
+
 
 Ask the canonical disambiguation question: "Which x do you mean...?".
 'matchList' is the list of ambiguous objects with any redundant
@@ -137,7 +137,7 @@ To prevent interactive disambiguation, do this:
 throw new ParseFailureException(&ambiguousNounPhrase,  
 originalText, matchList, fullMatchList);
 
-</div>
+
 
 <span id="askMissingLiteral"></span>
 
@@ -145,11 +145,11 @@ originalText, matchList, fullMatchList);
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1853](../source/msg_neu.t.html#1853)\]
 
-<div class="desc">
+
 
 Ask for a missing literal phrase.
 
-</div>
+
 
 <span id="askMissingObject"></span>
 
@@ -157,12 +157,12 @@ Ask for a missing literal phrase.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1826](../source/msg_neu.t.html#1826)\]
 
-<div class="desc">
+
 
 Ask for a missing object - this is called when a command is completely
 missing a noun phrase for one of its objects.
 
-</div>
+
 
 <span id="askUnknownWord"></span>
 
@@ -170,12 +170,12 @@ missing a noun phrase for one of its objects.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2087](../source/msg_neu.t.html#2087)\]
 
-<div class="desc">
+
 
 tell the user they entered a word we don't know, offering the chance to
 correct it with "oops"
 
-</div>
+
 
 <span id="cannotAddressMultiple"></span>
 
@@ -183,11 +183,11 @@ correct it with "oops"
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2115](../source/msg_neu.t.html#2115)\]
 
-<div class="desc">
+
 
 cannot speak to multiple actors
 
-</div>
+
 
 <span id="cannotChangeActor"></span>
 
@@ -195,11 +195,11 @@ cannot speak to multiple actors
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2077](../source/msg_neu.t.html#2077)\]
 
-<div class="desc">
+
 
 cannot change actor mid-command
 
-</div>
+
 
 <span id="commandNotUnderstood"></span>
 
@@ -207,11 +207,11 @@ cannot change actor mid-command
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1760](../source/msg_neu.t.html#1760)\]
 
-<div class="desc">
+
 
 invalid command syntax
 
-</div>
+
 
 <span id="disambigOrdinalOutOfRange"></span>
 
@@ -219,7 +219,7 @@ invalid command syntax
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1967](../source/msg_neu.t.html#1967)\]
 
-<div class="desc">
+
 
 The answer to a disambiguation question specifies an invalid ordinal
 ("the fourth one" when only three choices were offered).
@@ -228,7 +228,7 @@ The answer to a disambiguation question specifies an invalid ordinal
 'originalText' is the text of the noun phrase that caused the
 disambiguation question to be asked in the first place.
 
-</div>
+
 
 <span id="emptyNounPhrase"></span>
 
@@ -236,11 +236,11 @@ disambiguation question to be asked in the first place.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1927](../source/msg_neu.t.html#1927)\]
 
-<div class="desc">
+
 
 empty noun phrase ('take the')
 
-</div>
+
 
 <span id="explainCancelCommandLine"></span>
 
@@ -248,7 +248,7 @@ empty noun phrase ('take the')
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2130](../source/msg_neu.t.html#2130)\]
 
-<div class="desc">
+
 
 Remaining actions on the command line were aborted due to the failure of
 the current action. This is just a hook for the game's use, if it wants
@@ -257,7 +257,7 @@ that override this will probably want to use a flag property so that
 they only show this message once - it's really only desirable to explain
 the the mechanism, not to flag it every time it's used.
 
-</div>
+
 
 <span id="insufficientQuantity"></span>
 
@@ -265,11 +265,11 @@ the the mechanism, not to flag it every time it's used.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1940](../source/msg_neu.t.html#1940)\]
 
-<div class="desc">
+
 
 insufficient quantity to meet a command request ('take five books')
 
-</div>
+
 
 <span id="missingActor"></span>
 
@@ -277,11 +277,11 @@ insufficient quantity to meet a command request ('take five books')
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2064](../source/msg_neu.t.html#2064)\]
 
-<div class="desc">
+
 
 the actor is missing in a command
 
-</div>
+
 
 <span id="missingLiteral"></span>
 
@@ -289,11 +289,11 @@ the actor is missing in a command
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1862](../source/msg_neu.t.html#1862)\]
 
-<div class="desc">
+
 
 Show the message for a missing literal phrase.
 
-</div>
+
 
 <span id="missingObject"></span>
 
@@ -301,14 +301,14 @@ Show the message for a missing literal phrase.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1842](../source/msg_neu.t.html#1842)\]
 
-<div class="desc">
+
 
 An object was missing - this is called under essentially the same
 circumstances as askMissingObject, but in cases where interactive
 resolution is impossible and we simply wish to report the problem and do
 not wish to ask for help.
 
-</div>
+
 
 <span id="noMatch"></span>
 
@@ -316,11 +316,11 @@ not wish to ask for help.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1773](../source/msg_neu.t.html#1773)\]
 
-<div class="desc">
+
 
 no match for a noun phrase
 
-</div>
+
 
 <span id="noMatchCannotSee"></span>
 
@@ -328,12 +328,12 @@ no match for a noun phrase
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1779](../source/msg_neu.t.html#1779)\]
 
-<div class="desc">
+
 
 No match message - we can't see a match for the noun phrase. This is the
 default for most verbs.
 
-</div>
+
 
 <span id="noMatchDisambig"></span>
 
@@ -341,11 +341,11 @@ default for most verbs.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1916](../source/msg_neu.t.html#1916)\]
 
-<div class="desc">
+
 
 no match for the response to a disambiguation question
 
-</div>
+
 
 <span id="noMatchForAll"></span>
 
@@ -353,11 +353,11 @@ no match for the response to a disambiguation question
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1799](../source/msg_neu.t.html#1799)\]
 
-<div class="desc">
+
 
 no match for 'all'
 
-</div>
+
 
 <span id="noMatchForAllBut"></span>
 
@@ -365,11 +365,11 @@ no match for 'all'
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1805](../source/msg_neu.t.html#1805)\]
 
-<div class="desc">
+
 
 nothing left for 'all' after removing 'except' items
 
-</div>
+
 
 <span id="noMatchForListBut"></span>
 
@@ -377,11 +377,11 @@ nothing left for 'all' after removing 'except' items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1812](../source/msg_neu.t.html#1812)\]
 
-<div class="desc">
+
 
 nothing left in a plural phrase after removing 'except' items
 
-</div>
+
 
 <span id="noMatchForLocation"></span>
 
@@ -389,11 +389,11 @@ nothing left in a plural phrase after removing 'except' items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1902](../source/msg_neu.t.html#1902)\]
 
-<div class="desc">
+
 
 no match for a containment phrase
 
-</div>
+
 
 <span id="noMatchForPluralPossessive"></span>
 
@@ -401,11 +401,11 @@ no match for a containment phrase
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1895](../source/msg_neu.t.html#1895)\]
 
-<div class="desc">
+
 
 no match for a plural possessive phrase
 
-</div>
+
 
 <span id="noMatchForPossessive"></span>
 
@@ -413,11 +413,11 @@ no match for a plural possessive phrase
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1888](../source/msg_neu.t.html#1888)\]
 
-<div class="desc">
+
 
 no match for a possessive phrase
 
-</div>
+
 
 <span id="noMatchForPronoun"></span>
 
@@ -425,11 +425,11 @@ no match for a possessive phrase
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1815](../source/msg_neu.t.html#1815)\]
 
-<div class="desc">
+
 
 no match for a pronoun
 
-</div>
+
 
 <span id="noMatchNotAware"></span>
 
@@ -437,14 +437,14 @@ no match for a pronoun
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1789](../source/msg_neu.t.html#1789)\]
 
-<div class="desc">
+
 
 No match message - we're not aware of a match for the noun phrase. Some
 sensory actions, such as LISTEN TO and SMELL, use this variation instead
 of the normal version; the things these commands refer to tend to be
 intangible, so "you can't see that" tends to be nonsensical.
 
-</div>
+
 
 <span id="nothingInLocation"></span>
 
@@ -452,11 +452,11 @@ intangible, so "you can't see that" tends to be nonsensical.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1909](../source/msg_neu.t.html#1909)\]
 
-<div class="desc">
+
 
 nothing in a container whose contents are specifically requested
 
-</div>
+
 
 <span id="reflexiveNotAllowed"></span>
 
@@ -464,11 +464,11 @@ nothing in a container whose contents are specifically requested
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1871](../source/msg_neu.t.html#1871)\]
 
-<div class="desc">
+
 
 reflexive pronoun not allowed
 
-</div>
+
 
 <span id="refuseCommandBusy"></span>
 
@@ -476,11 +476,11 @@ reflexive pronoun not allowed
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2109](../source/msg_neu.t.html#2109)\]
 
-<div class="desc">
+
 
 the actor refuses the command because it's busy with something else
 
-</div>
+
 
 <span id="singleActorRequired"></span>
 
@@ -488,11 +488,11 @@ the actor refuses the command because it's busy with something else
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2071](../source/msg_neu.t.html#2071)\]
 
-<div class="desc">
+
 
 only a single actor can be addressed at a time
 
-</div>
+
 
 <span id="singleObjectRequired"></span>
 
@@ -500,11 +500,11 @@ only a single actor can be addressed at a time
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1953](../source/msg_neu.t.html#1953)\]
 
-<div class="desc">
+
 
 a single noun phrase is required, but a noun list was used
 
-</div>
+
 
 <span id="specialTopicInactive"></span>
 
@@ -512,11 +512,11 @@ a single noun phrase is required, but a noun list was used
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1767](../source/msg_neu.t.html#1767)\]
 
-<div class="desc">
+
 
 a special topic can't be used right now, because it's inactive
 
-</div>
+
 
 <span id="uniqueObjectRequired"></span>
 
@@ -524,11 +524,11 @@ a special topic can't be used right now, because it's inactive
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1947](../source/msg_neu.t.html#1947)\]
 
-<div class="desc">
+
 
 a unique object is required, but multiple objects were specified
 
-</div>
+
 
 <span id="wordIsUnknown"></span>
 
@@ -536,12 +536,12 @@ a unique object is required, but multiple objects were specified
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2102](../source/msg_neu.t.html#2102)\]
 
-<div class="desc">
+
 
 tell the user they entered a word we don't know, but don't offer an
 interactive way to fix it (i.e., we can't use OOPS at this point)
 
-</div>
+
 
 <span id="wrongReflexive"></span>
 
@@ -549,12 +549,12 @@ interactive way to fix it (i.e., we can't use OOPS at this point)
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1881](../source/msg_neu.t.html#1881)\]
 
-<div class="desc">
+
 
 a reflexive pronoun disagrees in gender, number, or something else with
 its referent
 
-</div>
+
 
 <span id="zeroQuantity"></span>
 
@@ -562,15 +562,15 @@ its referent
 
 [msg_neu.t](../file/msg_neu.t.html)\[[1933](../source/msg_neu.t.html#1933)\]
 
-<div class="desc">
+
 
 'take zero books'
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

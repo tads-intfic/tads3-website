@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Pre-condition: actor is ready to enter a nested location. This is useful
 for commands that cause travel within a location, such as "sit on
@@ -30,26 +30,26 @@ standing. We simply call the actor to do the work.
 
 **`actorReadyToEnterNestedRoom`**` :   `[`PreCondition`](../object/PreCondition.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`actorReadyToEnterNestedRoom`**  
 [`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -58,11 +58,11 @@ Inherited from `PreCondition` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkPreCondition`](#checkPreCondition)
 
@@ -71,19 +71,19 @@ Inherited from `PreCondition` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkPreCondition"></span>
 
@@ -91,15 +91,15 @@ Inherited from `PreCondition` :
 
 [precond.t](../file/precond.t.html)\[[325](../source/precond.t.html#325)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

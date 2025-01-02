@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 \<plural-phrase\> of \<noun-phrase\>
 
 `grammar `<span class="gramalt">[`compoundPluralPhrase`](../object/compoundPluralPhrase.html)`(of)`</span>` :   `[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`compoundPluralPhrase(of)`**  
 [`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)  
@@ -43,11 +43,11 @@ Details](#_Methods_)
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -61,11 +61,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getAdjustedTokens`](#getAdjustedTokens)[`getVocabMatchList`](#getVocabMatchList)
 
@@ -80,19 +80,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getAdjustedTokens"></span>
 
@@ -100,12 +100,12 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6176](../source/en_us.t.html#6176)\]
 
-<div class="desc">
+
 
 the result is the intersection of the two lists, since we want the list
 of objects with all of the underlying vocabulary words
 
-</div>
+
 
 <span id="getVocabMatchList"></span>
 
@@ -113,15 +113,15 @@ of objects with all of the underlying vocabulary words
 
 [en_us.t](../file/en_us.t.html)\[[6160](../source/en_us.t.html#6160)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

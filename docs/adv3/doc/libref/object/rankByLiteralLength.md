@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Command ranking by literal phrase length. We prefer interpretations that
 treat less text as uninterpreted literal text. By "less text," we simply
@@ -33,26 +33,26 @@ is better.)
 
 **`rankByLiteralLength`**` :   `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`rankByLiteralLength`**  
 [`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -60,11 +60,11 @@ is better.)
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`comparePass1`](#comparePass1)
 
@@ -73,19 +73,19 @@ Inherited from `CommandRankingCriterion` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="comparePass1"></span>
 
@@ -93,15 +93,15 @@ Inherited from `CommandRankingCriterion` :
 
 [parser.t](../file/parser.t.html)\[[5982](../source/parser.t.html#5982)\]
 
-<div class="desc">
+
 
 first pass
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

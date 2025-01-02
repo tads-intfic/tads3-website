@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An ActorState represents the current state of an Actor.
 
@@ -59,15 +59,15 @@ it's time to stack cans, we change "curState" to it points to the
 
 `class `**`ActorState`**` :   `[`TravelMessageHandler`](../object/TravelMessageHandler.html)[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ActorState`**  
 [`TravelMessageHandler`](../object/TravelMessageHandler.html)  
@@ -77,11 +77,11 @@ it's time to stack cans, we change "curState" to it points to the
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ActorState`**  
 [`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
@@ -93,19 +93,19 @@ it's time to stack cans, we change "curState" to it points to the
 [`InConversationState`](../object/InConversationState.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`autoSuggest`](#autoSuggest)[`getImpliedConvState`](#getImpliedConvState)[`isInitState`](#isInitState)[`location`](#location)[`stateDesc`](#stateDesc)[`stateSuggestedTopics`](#stateSuggestedTopics)
 
@@ -119,11 +119,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`activateState`](#activateState)[`afterAction`](#afterAction)[`afterTravel`](#afterTravel)[`arrivingTurn`](#arrivingTurn)[`arrivingWithDesc`](#arrivingWithDesc)[`beforeAction`](#beforeAction)[`beforeTravel`](#beforeTravel)[`construct`](#construct)[`deactivateState`](#deactivateState)[`distantSpecialDesc`](#distantSpecialDesc)[`endConversation`](#endConversation)[`getActor`](#getActor)[`getNominalTraveler`](#getNominalTraveler)[`getSuggestedTopicList`](#getSuggestedTopicList)[`getTopicOwner`](#getTopicOwner)[`handleConversation`](#handleConversation)[`initializeActorState`](#initializeActorState)[`justFollowed`](#justFollowed)[`notifyTopicResponse`](#notifyTopicResponse)[`obeyCommand`](#obeyCommand)[`remoteSpecialDesc`](#remoteSpecialDesc)[`showSpecialDescInContents`](#showSpecialDescInContents)[`specialDesc`](#specialDesc)[`specialDescListWith`](#specialDescListWith)[`suggestTopicsFor`](#suggestTopicsFor)[`takeTurn`](#takeTurn)
 
@@ -138,11 +138,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="autoSuggest"></span>
 
@@ -150,7 +150,7 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[4156](../source/actor.t.html#4156)\]
 
-<div class="desc">
+
 
 Should we automatically suggest topics when the player greets our actor?
 By default, we show our "topic inventory" (the list of currently active
@@ -164,7 +164,7 @@ purpose. Authors who don't like suggested topics at all can simply skip
 defining any SuggestedTopic entries, in which case there will never be
 anything to suggest, rendering this flag moot.
 
-</div>
+
 
 <span id="getImpliedConvState"></span>
 
@@ -172,7 +172,7 @@ anything to suggest, rendering this flag moot.
 
 [actor.t](../file/actor.t.html)\[[4374](../source/actor.t.html#4374)\]
 
-<div class="desc">
+
 
 Get my implied in-conversation state. This is used when our actor
 initiates a conversation without specifying a particular conversation
@@ -183,7 +183,7 @@ current state. States that are coupled with separate in-conversation
 states, such as ConversationReadyState, should return their associated
 conversation states here.
 
-</div>
+
 
 <span id="isInitState"></span>
 
@@ -191,7 +191,7 @@ conversation states here.
 
 [actor.t](../file/actor.t.html)\[[4140](../source/actor.t.html#4140)\]
 
-<div class="desc">
+
 
 Is this the actor's initial state? If so, we'll automatically set the
 actor's curState to point to 'self' during pre-initialization. For
@@ -199,7 +199,7 @@ obvious reasons, this should be set to true for only one state for each
 actor; if multiple states are all flagged as initial for the same actor,
 we'll pick on arbitrarily as the actual initial state.
 
-</div>
+
 
 <span id="location"></span>
 
@@ -207,7 +207,7 @@ we'll pick on arbitrarily as the actual initial state.
 
 [actor.t](../file/actor.t.html)\[[4167](../source/actor.t.html#4167)\]
 
-<div class="desc">
+
 
 The 'location' is the actor that we're associated with.
 
@@ -216,7 +216,7 @@ property isn't used for containment. For convenience, though, use it to
 indicate which actor we're associated with; this lets us use the '+'
 notation to define the state objects associated with an actor.
 
-</div>
+
 
 <span id="stateDesc"></span>
 
@@ -224,7 +224,7 @@ notation to define the state objects associated with an actor.
 
 [actor.t](../file/actor.t.html)\[[4251](../source/actor.t.html#4251)\]
 
-<div class="desc">
+
 
 Our "state" description. This shows information on what the actor is
 \*currently\* doing; we display this after the static part of the
@@ -232,7 +232,7 @@ actor's description on EXAMINE \<ACTOR\>. By default, we add nothing
 here, but state objects that represent scripted activies should override
 this to describe their scripted activities.
 
-</div>
+
 
 <span id="stateSuggestedTopics"></span>
 
@@ -240,20 +240,20 @@ this to describe their scripted activities.
 
 [actor.t](../file/actor.t.html)\[[4361](../source/actor.t.html#4361)\]
 
-<div class="desc">
+
 
 get the topic suggestions for this state - by default, we just return
 our own suggestedTopics list
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="activateState"></span>
 
@@ -261,12 +261,12 @@ our own suggestedTopics list
 
 [actor.t](../file/actor.t.html)\[[4123](../source/actor.t.html#4123)\]
 
-<div class="desc">
+
 
 Activate the state - this is called when we're about to become the
 active state for an actor. We do nothing by default.
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -274,11 +274,11 @@ active state for an actor. We do nothing by default.
 
 [actor.t](../file/actor.t.html)\[[4491](../source/actor.t.html#4491)\]
 
-<div class="desc">
+
 
 handle an after-action notification for our actor
 
-</div>
+
 
 <span id="afterTravel"></span>
 
@@ -286,11 +286,11 @@ handle an after-action notification for our actor
 
 [actor.t](../file/actor.t.html)\[[4521](../source/actor.t.html#4521)\]
 
-<div class="desc">
+
 
 handle an after-travel notification
 
-</div>
+
 
 <span id="arrivingTurn"></span>
 
@@ -298,7 +298,7 @@ handle an after-travel notification
 
 [actor.t](../file/actor.t.html)\[[4706](../source/actor.t.html#4706)\]
 
-<div class="desc">
+
 
 Perform any special action on a group-travel arrival. When group travel
 is performed using the AccompanyingInTravelState class, this is
@@ -310,7 +310,7 @@ this method explicitly.) By default, we do nothing. Since this runs on
 our turn, it's a good place to put any scripted behavior we perform on
 arriving at our new destination after the group travel.
 
-</div>
+
 
 <span id="arrivingWithDesc"></span>
 
@@ -318,7 +318,7 @@ arriving at our new destination after the group travel.
 
 [actor.t](../file/actor.t.html)\[[4692](../source/actor.t.html#4692)\]
 
-<div class="desc">
+
 
 Our group-travel arrival description. By default, when we perform an
 accompanying travel with another actor as the lead actor, the
@@ -337,7 +337,7 @@ complex transitions into the new room state, arrivingTurn() is sometimes
 more appropriate, since it runs like a daemon, after the arrival (and
 thus the new room description) is completed.
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -345,12 +345,12 @@ thus the new room description) is completed.
 
 [actor.t](../file/actor.t.html)\[[4485](../source/actor.t.html#4485)\]
 
-<div class="desc">
+
 
 Handle a before-action notification for our actor. By default, we do
 nothing.
 
-</div>
+
 
 <span id="beforeTravel"></span>
 
@@ -358,11 +358,11 @@ nothing.
 
 [actor.t](../file/actor.t.html)\[[4496](../source/actor.t.html#4496)\]
 
-<div class="desc">
+
 
 handle a before-travel notification
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -370,11 +370,11 @@ handle a before-travel notification
 
 [actor.t](../file/actor.t.html)\[[4117](../source/actor.t.html#4117)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="deactivateState"></span>
 
@@ -382,13 +382,13 @@ handle a before-travel notification
 
 [actor.t](../file/actor.t.html)\[[4130](../source/actor.t.html#4130)\]
 
-<div class="desc">
+
 
 Deactivate the state - this is called when we're the active state for an
 actor, and the actor is about to switch to a new state. We do nothing by
 default.
 
-</div>
+
 
 <span id="distantSpecialDesc"></span>
 
@@ -396,11 +396,11 @@ default.
 
 [actor.t](../file/actor.t.html)\[[4210](../source/actor.t.html#4210)\]
 
-<div class="desc">
+
 
 show the special description for the actor at a distance
 
-</div>
+
 
 <span id="endConversation"></span>
 
@@ -408,7 +408,7 @@ show the special description for the actor at a distance
 
 [actor.t](../file/actor.t.html)\[[4534](../source/actor.t.html#4534)\]
 
-<div class="desc">
+
 
 End the current conversation. 'reason' indicates why we're leaving the
 conversation - this is one of the endConvXxx enums defined in adv3.h.
@@ -418,7 +418,7 @@ to depart, and they're talking to us.
 This returns true if we wish to allow the conversation to end, nil if
 not.
 
-</div>
+
 
 <span id="getActor"></span>
 
@@ -426,13 +426,13 @@ not.
 
 [actor.t](../file/actor.t.html)\[[4174](../source/actor.t.html#4174)\]
 
-<div class="desc">
+
 
 Get the actor associated with the state - this is simply the 'location'
 property. If we're nested inside another ActorState, then our actor is
 our enclosing ActorState's actor.
 
-</div>
+
 
 <span id="getNominalTraveler"></span>
 
@@ -440,14 +440,14 @@ our enclosing ActorState's actor.
 
 [actor.t](../file/actor.t.html)\[[4714](../source/actor.t.html#4714)\]
 
-<div class="desc">
+
 
 For our TravelMessageHandler implementation, the nominal traveler is our
 actor. Note that this is all we need to implement for travel message
 handling, since we simply inherit the default handling for all of the
 arrival/departure messages.
 
-</div>
+
 
 <span id="getSuggestedTopicList"></span>
 
@@ -455,7 +455,7 @@ arrival/departure messages.
 
 [actor.t](../file/actor.t.html)\[[4315](../source/actor.t.html#4315)\]
 
-<div class="desc">
+
 
 Get our suggested topic list. The suggested topic list consists of the
 union of the current ConvNode's suggestion list, the ActorState list,
@@ -469,7 +469,7 @@ ActorState; and the last level is the Actor. Suggestions are limited at
 each level with the 'limitSuggestions' property: if true, suggestions
 from lower levels are not included.
 
-</div>
+
 
 <span id="getTopicOwner"></span>
 
@@ -477,11 +477,11 @@ from lower levels are not included.
 
 [actor.t](../file/actor.t.html)\[[4183](../source/actor.t.html#4183)\]
 
-<div class="desc">
+
 
 the owner of any topic entries within the state is just my actor
 
-</div>
+
 
 <span id="handleConversation"></span>
 
@@ -489,7 +489,7 @@ the owner of any topic entries within the state is just my actor
 
 [actor.t](../file/actor.t.html)\[[4397](../source/actor.t.html#4397)\]
 
-<div class="desc">
+
 
 General conversation handler. This can be used to process most
 conversational commands - ASK, TELL, GIVE, SHOW, etc. The standard
@@ -510,7 +510,7 @@ TopicEntry handle it.
 (the indirect object of ASK ABOUT, for example). convType' is a ConvType
 describing the type of conversational action we're performing.
 
-</div>
+
 
 <span id="initializeActorState"></span>
 
@@ -518,11 +518,11 @@ describing the type of conversational action we're performing.
 
 [actor.t](../file/actor.t.html)\[[4186](../source/actor.t.html#4186)\]
 
-<div class="desc">
+
 
 initialize the actor state
 
-</div>
+
 
 <span id="justFollowed"></span>
 
@@ -530,7 +530,7 @@ initialize the actor state
 
 [actor.t](../file/actor.t.html)\[[4667](../source/actor.t.html#4667)\]
 
-<div class="desc">
+
 
 Receive notification that we just followed another actor as part of our
 programmed following behavior (in other words, due to our
@@ -543,7 +543,7 @@ occurs; for example, if the actor's state depends on the actor's
 location, this can update the state accordingly. We don't do anything by
 default.
 
-</div>
+
 
 <span id="notifyTopicResponse"></span>
 
@@ -551,14 +551,14 @@ default.
 
 [actor.t](../file/actor.t.html)\[[4479](../source/actor.t.html#4479)\]
 
-<div class="desc">
+
 
 Receive notification that a TopicEntry is being used (via its
 handleTopic method) to respond to a command. The TopicEntry will call
 this before it shows its message or takes any other action. By default,
 we do nothing.
 
-</div>
+
 
 <span id="obeyCommand"></span>
 
@@ -566,14 +566,14 @@ we do nothing.
 
 [actor.t](../file/actor.t.html)\[[4259](../source/actor.t.html#4259)\]
 
-<div class="desc">
+
 
 Should we obey an action? If so, returns true; if not, displays an
 appropriate response and returns nil. This will only be called when the
 issuing actor is different from our actor, since a command to oneself is
 implicitly always obeyed.
 
-</div>
+
 
 <span id="remoteSpecialDesc"></span>
 
@@ -581,11 +581,11 @@ implicitly always obeyed.
 
 [actor.t](../file/actor.t.html)\[[4213](../source/actor.t.html#4213)\]
 
-<div class="desc">
+
 
 show the special description for the actor in a remote location
 
-</div>
+
 
 <span id="showSpecialDescInContents"></span>
 
@@ -593,11 +593,11 @@ show the special description for the actor in a remote location
 
 [actor.t](../file/actor.t.html)\[[4238](../source/actor.t.html#4238)\]
 
-<div class="desc">
+
 
 show the special description when we appear in a contents listing
 
-</div>
+
 
 <span id="specialDesc"></span>
 
@@ -605,7 +605,7 @@ show the special description when we appear in a contents listing
 
 [actor.t](../file/actor.t.html)\[[4207](../source/actor.t.html#4207)\]
 
-<div class="desc">
+
 
 Show the special description for the actor when the actor is associated
 with this state. By default, we use the actor's actorHereDesc message,
@@ -616,7 +616,7 @@ States representing scripted activities should override these to
 indicate what the actor is doing: "Bob is sweeping the floor," for
 example.
 
-</div>
+
 
 <span id="specialDescListWith"></span>
 
@@ -624,7 +624,7 @@ example.
 
 [actor.t](../file/actor.t.html)\[[4224](../source/actor.t.html#4224)\]
 
-<div class="desc">
+
 
 The list group(s) for the special description. By default, if our
 specialDesc isn't overridden, we'll keep this in sync with the
@@ -634,7 +634,7 @@ we're not part of any list group. If you want to provide your own
 listing group special to the state, simply override this and speicfy the
 custom list group.
 
-</div>
+
 
 <span id="suggestTopicsFor"></span>
 
@@ -642,14 +642,14 @@ custom list group.
 
 [actor.t](../file/actor.t.html)\[[4278](../source/actor.t.html#4278)\]
 
-<div class="desc">
+
 
 Suggest topics for the given actor to talk to us about. This is called
 when the given actor enters a TOPICS command (in which case 'explicit'
 will be true) or enters a conversation with us via TALK TO or the like
 (in which case 'explicit' will be nil).
 
-</div>
+
 
 <span id="takeTurn"></span>
 
@@ -657,7 +657,7 @@ will be true) or enters a conversation with us via TALK TO or the like
 
 [actor.t](../file/actor.t.html)\[[4619](../source/actor.t.html#4619)\]
 
-<div class="desc">
+
 
 Take a turn. This is called when it's the actor's turn and there's not
 something else the actor needs to be doing (such as following another
@@ -686,11 +686,11 @@ background messages for the actor - just add an EventList class
 (ShuffledEventList is usually the right one) to the state's superclass
 list, and define a list of background message strings.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

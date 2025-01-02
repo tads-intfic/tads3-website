@@ -25,7 +25,7 @@ layout: docs
 [Summary](#_TemplateSummary_)  
 [Details](#_Templates_)
 
-<div class="fdesc">
+
 
 TADS 3 Library - main header
 
@@ -35,69 +35,69 @@ identifiers used throughout the library and in game source.
 Each source code file in the library and in a game should generally
 \#include this header near the top of the source file.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 *(none)* <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_MacroSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Macros</span>  
 
-</div>
+
 
 [`abortImplicit`](#abortImplicit)[`actorStateDobjFor`](#actorStateDobjFor)[`actorStateIobjFor`](#actorStateIobjFor)[`actorStateObjFor`](#actorStateObjFor)[`ADV3_H`](#ADV3_H)[`AHREF_Plain`](#AHREF_Plain)[`AlwaysAnnounce`](#AlwaysAnnounce)[`AnnouncedDefaultObject`](#AnnouncedDefaultObject)[`asDobjFor`](#asDobjFor)[`asDobjWithoutActionFor`](#asDobjWithoutActionFor)[`asExit`](#asExit)[`asIobjFor`](#asIobjFor)[`asIobjWithoutActionFor`](#asIobjWithoutActionFor)[`askForDobj`](#askForDobj)[`askForIobj`](#askForIobj)[`askForLiteral`](#askForLiteral)[`askForTopic`](#askForTopic)[`asObjFor`](#asObjFor)[`asObjWithoutActionFor`](#asObjWithoutActionFor)[`BaseDefineTopicTAction`](#BaseDefineTopicTAction)[`canInherit`](#canInherit)[`ClearDisambig`](#ClearDisambig)[`cosmeticSpacingReport`](#cosmeticSpacingReport)[`dangerous`](#dangerous)[`dbgShowGrammarList`](#dbgShowGrammarList)[`dbgShowGrammarList`](#dbgShowGrammarList)[`dbgShowGrammarWithCaption`](#dbgShowGrammarWithCaption)[`dbgShowGrammarWithCaption`](#dbgShowGrammarWithCaption)[`defaultDescReport`](#defaultDescReport)[`DefaultObject`](#DefaultObject)[`defaultReport`](#defaultReport)[`DefineAction`](#DefineAction)[`DefineConvIAction`](#DefineConvIAction)[`DefineConvTopicTAction`](#DefineConvTopicTAction)[`DefineIAction`](#DefineIAction)[`DefineLiteralAction`](#DefineLiteralAction)[`DefineLiteralTAction`](#DefineLiteralTAction)[`DefineSystemAction`](#DefineSystemAction)[`DefineTAction`](#DefineTAction)[`DefineTActionSub`](#DefineTActionSub)[`DefineTIAction`](#DefineTIAction)[`DefineTIActionSub`](#DefineTIActionSub)[`DefineTopicAction`](#DefineTopicAction)[`DefineTopicTAction`](#DefineTopicTAction)[`DigitFormatGroupComma`](#DigitFormatGroupComma)[`DigitFormatGroupPeriod`](#DigitFormatGroupPeriod)[`DigitFormatGroupSep`](#DigitFormatGroupSep)[`dobjFor`](#dobjFor)[`dobjMsg`](#dobjMsg)[`EndsWithAdj`](#EndsWithAdj)[`exit`](#exit)[`exitAction`](#exitAction)[`extraReport`](#extraReport)[`FirstPerson`](#FirstPerson)[`gAction`](#gAction)[`gActionIn`](#gActionIn)[`gActionIs`](#gActionIs)[`gActor`](#gActor)[`gDobj`](#gDobj)[`gExitLister`](#gExitLister)[`gHintManager`](#gHintManager)[`gIobj`](#gIobj)[`gIssuingActor`](#gIssuingActor)[`gLibMessages`](#gLibMessages)[`gLiteral`](#gLiteral)[`gMessageParams`](#gMessageParams)[`gPlayerChar`](#gPlayerChar)[`gReveal`](#gReveal)[`gRevealed`](#gRevealed)[`gSetKnown`](#gSetKnown)[`gSetSeen`](#gSetSeen)[`gSynthMessageParam`](#gSynthMessageParam)[`gTentativeDobj`](#gTentativeDobj)[`gTentativeIobj`](#gTentativeIobj)[`gTopic`](#gTopic)[`gTopicText`](#gTopicText)[`gTranscript`](#gTranscript)[`gVerifyResults`](#gVerifyResults)[`illogical`](#illogical)[`illogicalAlready`](#illogicalAlready)[`illogicalNow`](#illogicalNow)[`illogicalSelf`](#illogicalSelf)[`inaccessible`](#inaccessible)[`iobjFor`](#iobjFor)[`iobjMsg`](#iobjMsg)[`ListContents`](#ListContents)[`ListCustomFlag`](#ListCustomFlag)[`ListerCustomFlag`](#ListerCustomFlag)[`ListLong`](#ListLong)[`ListRecurse`](#ListRecurse)[`ListTall`](#ListTall)[`logical`](#logical)[`logicalRank`](#logicalRank)[`logicalRankOrd`](#logicalRankOrd)[`LookListPortables`](#LookListPortables)[`LookListSpecials`](#LookListSpecials)[`LookRoomDesc`](#LookRoomDesc)[`LookRoomName`](#LookRoomName)[`M_DOWN`](#M_DOWN)[`M_PREV`](#M_PREV)[`M_QUIT`](#M_QUIT)[`M_SEL`](#M_SEL)[`M_UP`](#M_UP)[`mainReport`](#mainReport)[`mapPushTravelHandlers`](#mapPushTravelHandlers)[`mapPushTravelIobj`](#mapPushTravelIobj)[`MatchedAll`](#MatchedAll)[`maybeRemapTo`](#maybeRemapTo)[`nestedAction`](#nestedAction)[`nestedActorAction`](#nestedActorAction)[`newAction`](#newAction)[`newActorAction`](#newActorAction)[`nonObvious`](#nonObvious)[`objFor`](#objFor)[`objForCheck`](#objForCheck)[`objForCheck`](#objForCheck)[`openableContentsLister`](#openableContentsLister)[`PARSER_DEBUG`](#PARSER_DEBUG)[`PluralTruncated`](#PluralTruncated)[`remapTo`](#remapTo)[`replaceAction`](#replaceAction)[`replaceActorAction`](#replaceActorAction)[`reportAfter`](#reportAfter)[`reportBefore`](#reportBefore)[`reportFailure`](#reportFailure)[`reportQuestion`](#reportQuestion)[`SecondPerson`](#SecondPerson)[`SpellIntAndTens`](#SpellIntAndTens)[`SpellIntCommas`](#SpellIntCommas)[`SpellIntTeenHundreds`](#SpellIntTeenHundreds)[`ThirdPerson`](#ThirdPerson)[`tryImplicitAction`](#tryImplicitAction)[`tryImplicitActionMsg`](#tryImplicitActionMsg)[`UnclearDisambig`](#UnclearDisambig)[`VocabTruncated`](#VocabTruncated)
 
 <span id="_EnumSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Enums</span>  
 
-</div>
+
 
 [`ActorObject`](#ActorObject)[`AnnounceClear`](#AnnounceClear)[`AnnounceUnclear`](#AnnounceUnclear)[`attenuated`](#attenuated)[`blockEndConv`](#blockEndConv)[`DescribeClear`](#DescribeClear)[`DirectObject`](#DirectObject)[`distant`](#distant)[`endConvActor`](#endConvActor)[`endConvBoredom`](#endConvBoredom)[`endConvBye`](#endConvBye)[`endConvTravel`](#endConvTravel)[`FootnotesFull`](#FootnotesFull)[`FootnotesMedium`](#FootnotesMedium)[`FootnotesOff`](#FootnotesOff)[`IndirectObject`](#IndirectObject)[`InventoryTall`](#InventoryTall)[`InventoryWide`](#InventoryWide)[`large`](#large)[`medium`](#medium)[`obscured`](#obscured)[`opaque`](#opaque)[`OtherObject`](#OtherObject)[`PathFrom`](#PathFrom)[`PathIn`](#PathIn)[`PathOut`](#PathOut)[`PathPeer`](#PathPeer)[`PathThrough`](#PathThrough)[`PathTo`](#PathTo)[`PronounHer`](#PronounHer)[`PronounHim`](#PronounHim)[`PronounIt`](#PronounIt)[`PronounMe`](#PronounMe)[`PronounThem`](#PronounThem)[`PronounYou`](#PronounYou)[`rmcAskLiteral`](#rmcAskLiteral)[`rmcAskObject`](#rmcAskObject)[`rmcCommand`](#rmcCommand)[`rmcDisambig`](#rmcDisambig)[`rmcOops`](#rmcOops)[`small`](#small)[`transparent`](#transparent)
 
 <span id="_TemplateSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Templates</span>  
 
-</div>
+
 
 [`Achievement`](#Achievement)[`AltTopic`](#AltTopic)[`AltTopic`](#AltTopic)[`ConvNode`](#ConvNode)[`DefaultTopic`](#DefaultTopic)[`DefaultTopic`](#DefaultTopic)[`EventList`](#EventList)[`Footnote`](#Footnote)[`Goal`](#Goal)[`Hint`](#Hint)[`MenuItem`](#MenuItem)[`MenuLongTopicItem`](#MenuLongTopicItem)[`MenuTopicItem`](#MenuTopicItem)[`MiscTopic`](#MiscTopic)[`MiscTopic`](#MiscTopic)[`MultiLoc`](#MultiLoc)[`ShuffledEventList`](#ShuffledEventList)[`ShuffledList`](#ShuffledList)[`SpecialTopic`](#SpecialTopic)[`SpecialTopic`](#SpecialTopic)[`StyleTag`](#StyleTag)[`SyncEventList`](#SyncEventList)[`Tip`](#Tip)[`TopicEntry`](#TopicEntry)[`TopicEntry`](#TopicEntry)[`TopicEntry`](#TopicEntry)[`TopicEntry`](#TopicEntry)[`TopicGroup`](#TopicGroup)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_Macros_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Macros</span>  
 
-</div>
+
 
 <span id="abortImplicit"></span>
 
@@ -105,12 +105,12 @@ Each source code file in the library and in a game should generally
 
 [adv3.h](../file/adv3.h.html)\[[1569](../source/adv3.h.html#1569)\]
 
-<div class="desc">
+
 
 `throw new AbortImplicitSignal()`  
 a concise macro to throw an AbortImplicitSignal
 
-</div>
+
 
 <span id="actorStateDobjFor"></span>
 
@@ -118,12 +118,12 @@ a concise macro to throw an AbortImplicitSignal
 
 [adv3.h](../file/adv3.h.html)\[[480](../source/adv3.h.html#480)\]
 
-<div class="desc">
+
 
 `actorStateObjFor(Dobj, action)`  
 *no description available*
 
-</div>
+
 
 <span id="actorStateIobjFor"></span>
 
@@ -131,12 +131,12 @@ a concise macro to throw an AbortImplicitSignal
 
 [adv3.h](../file/adv3.h.html)\[[481](../source/adv3.h.html#481)\]
 
-<div class="desc">
+
 
 `actorStateObjFor(Iobj, action)`  
 *no description available*
 
-</div>
+
 
 <span id="actorStateObjFor"></span>
 
@@ -144,7 +144,7 @@ a concise macro to throw an AbortImplicitSignal
 
 [adv3.h](../file/adv3.h.html)\[[471](../source/adv3.h.html#471)\]
 
-<div class="desc">
+
 
 `{ \`  
 `preCond { return curState.preCond##obj##Action; } \`  
@@ -166,7 +166,7 @@ dobjFor(AttackWith) actorStateDobjFor(AttackWith)
 Once you've done this, you'd just write a normal dobjFor(AttackWith)
 handler in each of the ActorState objects associated with the actor.
 
-</div>
+
 
 <span id="ADV3_H"></span>
 
@@ -174,12 +174,12 @@ handler in each of the ActorState objects associated with the actor.
 
 [adv3.h](../file/adv3.h.html)\[[16](../source/adv3.h.html#16)\]
 
-<div class="desc">
+
 
   
 *no description available*
 
-</div>
+
 
 <span id="AHREF_Plain"></span>
 
@@ -187,12 +187,12 @@ handler in each of the ActorState objects associated with the actor.
 
 [adv3.h](../file/adv3.h.html)\[[819](../source/adv3.h.html#819)\]
 
-<div class="desc">
+
 
 `0x0001 /* plain text hyperlink (no underline/color) */`  
 aHref() flags
 
-</div>
+
 
 <span id="AlwaysAnnounce"></span>
 
@@ -200,7 +200,7 @@ aHref() flags
 
 [adv3.h](../file/adv3.h.html)\[[870](../source/adv3.h.html#870)\]
 
-<div class="desc">
+
 
 `0x0010`  
 Always announce the object before executing the command on it. This flag
@@ -210,7 +210,7 @@ based on the simulation state, which might not exactly match what the
 player had in mind) or "any book" (which might select arbitrarily from
 several possibilities, so the player can't know which we'll choose).
 
-</div>
+
 
 <span id="AnnouncedDefaultObject"></span>
 
@@ -218,7 +218,7 @@ several possibilities, so the player can't know which we'll choose).
 
 [adv3.h](../file/adv3.h.html)\[[921](../source/adv3.h.html#921)\]
 
-<div class="desc">
+
 
 `0x0100`  
 We've announced this as a defaulted object. We use this to ensure that
@@ -228,7 +228,7 @@ we're asking for missing objects interactively in a multi-object
 command, since we might want to announce a default before prompting as
 well as before execution.
 
-</div>
+
 
 <span id="asDobjFor"></span>
 
@@ -236,12 +236,12 @@ well as before execution.
 
 [adv3.h](../file/adv3.h.html)\[[357](../source/adv3.h.html#357)\]
 
-<div class="desc">
+
 
 `asObjFor(Dobj, action)`  
 *no description available*
 
-</div>
+
 
 <span id="asDobjWithoutActionFor"></span>
 
@@ -249,12 +249,12 @@ well as before execution.
 
 [adv3.h](../file/adv3.h.html)\[[377](../source/adv3.h.html#377)\]
 
-<div class="desc">
+
 
 `asObjWithoutActionFor(Dobj, action)`  
 *no description available*
 
-</div>
+
 
 <span id="asExit"></span>
 
@@ -262,7 +262,7 @@ well as before execution.
 
 [adv3.h](../file/adv3.h.html)\[[581](../source/adv3.h.html#581)\]
 
-<div class="desc">
+
 
 `= static ((dir).createUnlistedProxy())`  
 Alternative exit definition. This can be used to define a secondary
@@ -297,7 +297,7 @@ make the compass direction primary and make OUT the synonym, the compass
 direction will be listed as an available exit both in the location and
 in any nested rooms within it.
 
-</div>
+
 
 <span id="asIobjFor"></span>
 
@@ -305,12 +305,12 @@ in any nested rooms within it.
 
 [adv3.h](../file/adv3.h.html)\[[358](../source/adv3.h.html#358)\]
 
-<div class="desc">
+
 
 `asObjFor(Iobj, action)`  
 *no description available*
 
-</div>
+
 
 <span id="asIobjWithoutActionFor"></span>
 
@@ -318,12 +318,12 @@ in any nested rooms within it.
 
 [adv3.h](../file/adv3.h.html)\[[378](../source/adv3.h.html#378)\]
 
-<div class="desc">
+
 
 `asObjWithoutActionFor(Iobj, action)`  
 *no description available*
 
-</div>
+
 
 <span id="askForDobj"></span>
 
@@ -331,7 +331,7 @@ in any nested rooms within it.
 
 [adv3.h](../file/adv3.h.html)\[[1516](../source/adv3.h.html#1516)\]
 
-<div class="desc">
+
 
 `(newAction##Action.retryWithMissingDobj(gAction, ResolveAsker))`  
 Ask for a direct object and retry the command using the single-object
@@ -352,7 +352,7 @@ action to execute. For example, if we're processing a plain "in"
 command, we could use askForDobj(Enter) to ask for a direct object for
 the transitive "enter" phrasing.
 
-</div>
+
 
 <span id="askForIobj"></span>
 
@@ -360,7 +360,7 @@ the transitive "enter" phrasing.
 
 [adv3.h](../file/adv3.h.html)\[[1538](../source/adv3.h.html#1538)\]
 
-<div class="desc">
+
 
 `(newAction##Action.retryWithMissingIobj(gAction, ResolveAsker))`  
 Ask for an indirect object and retry the command using the two-object
@@ -381,7 +381,7 @@ form of the action. For example, if we're processing a single-object
 "unlock" command, we would use askForIobj(UnlockWith) to ask for an
 indirect object for the "unlock with" two-object phrasing.
 
-</div>
+
 
 <span id="askForLiteral"></span>
 
@@ -389,14 +389,14 @@ indirect object for the "unlock with" two-object phrasing.
 
 [adv3.h](../file/adv3.h.html)\[[1547](../source/adv3.h.html#1547)\]
 
-<div class="desc">
+
 
 `(newAction##Action.retryWithMissingLiteral(gAction))`  
 Ask for a literal phrase and retry the command using the two-object
 phrasing. This is analogous to askForDobj() and askForIobj(), but for
 literal phrases; we effectively convert a TAction into a LiteralTAction.
 
-</div>
+
 
 <span id="askForTopic"></span>
 
@@ -404,13 +404,13 @@ literal phrases; we effectively convert a TAction into a LiteralTAction.
 
 [adv3.h](../file/adv3.h.html)\[[1554](../source/adv3.h.html#1554)\]
 
-<div class="desc">
+
 
 `(newAction##Action.retryWithMissingTopic(gAction))`  
 Ask for a topic phrase and retry the command using the two-object
 phrasing.
 
-</div>
+
 
 <span id="asObjFor"></span>
 
@@ -418,7 +418,7 @@ phrasing.
 
 [adv3.h](../file/adv3.h.html)\[[348](../source/adv3.h.html#348)\]
 
-<div class="desc">
+
 
 `{ \`  
 `preCond { return preCond##obj##Action; } \`  
@@ -462,7 +462,7 @@ first when confronted with a situation that seems to call for a
 role-reversing asObjFor() mapping, as remapTo() specifically allows for
 object role changes.
 
-</div>
+
 
 <span id="asObjWithoutActionFor"></span>
 
@@ -470,7 +470,7 @@ object role changes.
 
 [adv3.h](../file/adv3.h.html)\[[368](../source/adv3.h.html#368)\]
 
-<div class="desc">
+
 
 `{ \`  
 `preCond { return preCond##obj##Action; } \`  
@@ -486,7 +486,7 @@ useful for two-object verbs where the action processing is entirely
 provided by one or the other object, so applying it to both would be
 redundant.
 
-</div>
+
 
 <span id="BaseDefineTopicTAction"></span>
 
@@ -494,7 +494,7 @@ redundant.
 
 [adv3.h](../file/adv3.h.html)\[[1069](../source/adv3.h.html#1069)\]
 
-<div class="desc">
+
 
 `DefineAction(name, cls) \`  
 `verDobjProp = &verifyDobj##name \`  
@@ -509,7 +509,7 @@ purposes - this should be one of the object role enums (DirectObject,
 IndirectObject, etc) indicating which role the topic plays in the
 action's grammar.
 
-</div>
+
 
 <span id="canInherit"></span>
 
@@ -517,14 +517,14 @@ action's grammar.
 
 [adv3.h](../file/adv3.h.html)\[[47](../source/adv3.h.html#47)\]
 
-<div class="desc">
+
 
 `propInherited(targetprop, targetobj, definingobj, PropDefAny)`  
 canInherit - determine if there's anything to inherit from the current
 method. Returns true if there's a method to inherit, nil if 'inherited'
 in the current context would not invoke any code.
 
-</div>
+
 
 <span id="ClearDisambig"></span>
 
@@ -532,7 +532,7 @@ in the current context would not invoke any code.
 
 [adv3.h](../file/adv3.h.html)\[[878](../source/adv3.h.html#878)\]
 
-<div class="desc">
+
 
 `0x0020`  
 The noun phrase describing this object was ambiguous, and the object was
@@ -540,7 +540,7 @@ selected by automatic disambiguation in a context where it was clear
 which object was indicated. This is used in cases where the objects not
 selected were all illogical for the action context.
 
-</div>
+
 
 <span id="cosmeticSpacingReport"></span>
 
@@ -548,7 +548,7 @@ selected were all illogical for the action context.
 
 [adv3.h](../file/adv3.h.html)\[[1339](../source/adv3.h.html#1339)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new CosmeticSpacingCommandReport(msg, ##params)))`  
 Add an cosmetic internal spacing report. This type of report is used to
@@ -563,7 +563,7 @@ descriptions, we might add some spacing just in case some special
 descriptions will be shown, saving the trouble of checking to see if
 anything actually needs to be shown.
 
-</div>
+
 
 <span id="dangerous"></span>
 
@@ -571,12 +571,12 @@ anything actually needs to be shown.
 
 [adv3.h](../file/adv3.h.html)\[[1213](../source/adv3.h.html#1213)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new DangerousVerifyResult('')))`  
 command is logical but dangerous
 
-</div>
+
 
 <span id="dbgShowGrammarList"></span>
 
@@ -584,13 +584,13 @@ command is logical but dangerous
 
 [adv3.h](../file/adv3.h.html)\[[90](../source/adv3.h.html#90)\]
 
-<div class="desc">
+
 
 `showGrammarList(lst)`  
 Define some convenience macros for parser debug operations. When
 PARSER_DEBUG isn't defined, these macros expand out to nothing.
 
-</div>
+
 
 <span id="dbgShowGrammarList"></span>
 
@@ -598,12 +598,12 @@ PARSER_DEBUG isn't defined, these macros expand out to nothing.
 
 [adv3.h](../file/adv3.h.html)\[[96](../source/adv3.h.html#96)\]
 
-<div class="desc">
+
 
   
 *no description available*
 
-</div>
+
 
 <span id="dbgShowGrammarWithCaption"></span>
 
@@ -611,12 +611,12 @@ PARSER_DEBUG isn't defined, these macros expand out to nothing.
 
 [adv3.h](../file/adv3.h.html)\[[91](../source/adv3.h.html#91)\]
 
-<div class="desc">
+
 
 `showGrammarWithCaption(headline, match)`  
 *no description available*
 
-</div>
+
 
 <span id="dbgShowGrammarWithCaption"></span>
 
@@ -624,12 +624,12 @@ PARSER_DEBUG isn't defined, these macros expand out to nothing.
 
 [adv3.h](../file/adv3.h.html)\[[97](../source/adv3.h.html#97)\]
 
-<div class="desc">
+
 
   
 *no description available*
 
-</div>
+
 
 <span id="defaultDescReport"></span>
 
@@ -637,7 +637,7 @@ PARSER_DEBUG isn't defined, these macros expand out to nothing.
 
 [adv3.h](../file/adv3.h.html)\[[1323](../source/adv3.h.html#1323)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new DefaultDescCommandReport(msg, ##params)))`  
 Set a default descriptive report for the current command. This report
@@ -692,7 +692,7 @@ description reports, because it is suitable and desirable to retain an
 actual descriptive message even when other status information or related
 special descriptions are also shown.
 
-</div>
+
 
 <span id="DefaultObject"></span>
 
@@ -700,13 +700,13 @@ special descriptions are also shown.
 
 [adv3.h](../file/adv3.h.html)\[[911](../source/adv3.h.html#911)\]
 
-<div class="desc">
+
 
 `0x0080`  
 The noun phrase was missing from the command and this object was
 supplied as an implicit default.
 
-</div>
+
 
 <span id="defaultReport"></span>
 
@@ -714,7 +714,7 @@ supplied as an implicit default.
 
 [adv3.h](../file/adv3.h.html)\[[1267](../source/adv3.h.html#1267)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new DefaultCommandReport(msg, ##params)))`  
 Set a default report for the current command. This report will be shown
@@ -733,7 +733,7 @@ the book)". In such cases, a simple acknowledgment that the command was
 successfully performed would add nothing of use but would merely make
 the output more verbose, so we omit it.
 
-</div>
+
 
 <span id="DefineAction"></span>
 
@@ -741,7 +741,7 @@ the output more verbose, so we omit it.
 
 [adv3.h](../file/adv3.h.html)\[[986](../source/adv3.h.html#986)\]
 
-<div class="desc">
+
 
 `class name##Action: ##baseClass \`  
 `baseActionClass = name##Action`  
@@ -754,7 +754,7 @@ several grammar rule subclasses for the given class; this lets us relate
 any instances of those various subclasses back to this same canonical
 class for the action if necessary.
 
-</div>
+
 
 <span id="DefineConvIAction"></span>
 
@@ -762,12 +762,12 @@ class for the action if necessary.
 
 [adv3.h](../file/adv3.h.html)\[[1006](../source/adv3.h.html#1006)\]
 
-<div class="desc">
+
 
 `DefineAction(name, ConvIAction)`  
 define a conversational IAction, such as Hello, Goodbye, Yes, No
 
-</div>
+
 
 <span id="DefineConvTopicTAction"></span>
 
@@ -775,14 +775,14 @@ define a conversational IAction, such as Hello, Goodbye, Yes, No
 
 [adv3.h](../file/adv3.h.html)\[[1086](../source/adv3.h.html#1086)\]
 
-<div class="desc">
+
 
 `BaseDefineTopicTAction(name, which, ConvTopicTAction)`  
 Define a concrete ConvTopicTAction. This is just like defining a
 TopicTAction, but defines the action using the ConvTopicTAction
 subclass.
 
-</div>
+
 
 <span id="DefineIAction"></span>
 
@@ -790,13 +790,13 @@ subclass.
 
 [adv3.h](../file/adv3.h.html)\[[1002](../source/adv3.h.html#1002)\]
 
-<div class="desc">
+
 
 `DefineAction(name, IAction)`  
 Define a concrete IAction, given the root name for the action. We'll
 automatically generate a class with name XxxAction.
 
-</div>
+
 
 <span id="DefineLiteralAction"></span>
 
@@ -804,12 +804,12 @@ automatically generate a class with name XxxAction.
 
 [adv3.h](../file/adv3.h.html)\[[1092](../source/adv3.h.html#1092)\]
 
-<div class="desc">
+
 
 `DefineAction(name, LiteralAction)`  
 Define a concrete LiteralAction, given the root name for the action.
 
-</div>
+
 
 <span id="DefineLiteralTAction"></span>
 
@@ -817,7 +817,7 @@ Define a concrete LiteralAction, given the root name for the action.
 
 [adv3.h](../file/adv3.h.html)\[[1102](../source/adv3.h.html#1102)\]
 
-<div class="desc">
+
 
 `DefineAction(name, LiteralTAction) \`  
 `verDobjProp = &verifyDobj##name \`  
@@ -832,7 +832,7 @@ purposes - this should be one of the object role enums (DirectObject,
 IndirectObject, etc) indicating which role the topic plays in the
 action's grammar.
 
-</div>
+
 
 <span id="DefineSystemAction"></span>
 
@@ -840,14 +840,14 @@ action's grammar.
 
 [adv3.h](../file/adv3.h.html)\[[995](../source/adv3.h.html#995)\]
 
-<div class="desc">
+
 
 `DefineAction(name, SystemAction)`  
 Define a "system" action. System actions are meta-game commands, such as
 SAVE and QUIT, that generally operate the user interface and are not
 part of the game world.
 
-</div>
+
 
 <span id="DefineTAction"></span>
 
@@ -855,7 +855,7 @@ part of the game world.
 
 [adv3.h](../file/adv3.h.html)\[[1015](../source/adv3.h.html#1015)\]
 
-<div class="desc">
+
 
 `DefineTActionSub(name, TAction)`  
 Define a concrete TAction, given the root name for the action. We'll
@@ -863,7 +863,7 @@ automatically generate a class with name XxxAction, a verProp with name
 verXxx, a checkProp with name checkXxx, and an actionProp with name
 actionDobjXxx.
 
-</div>
+
 
 <span id="DefineTActionSub"></span>
 
@@ -871,7 +871,7 @@ actionDobjXxx.
 
 [adv3.h](../file/adv3.h.html)\[[1021](../source/adv3.h.html#1021)\]
 
-<div class="desc">
+
 
 `DefineAction(name, cls) \`  
 `verDobjProp = &verifyDobj##name \`  
@@ -882,7 +882,7 @@ actionDobjXxx.
   
 Define a concrete TAction with a specific base class.
 
-</div>
+
 
 <span id="DefineTIAction"></span>
 
@@ -890,7 +890,7 @@ Define a concrete TAction with a specific base class.
 
 [adv3.h](../file/adv3.h.html)\[[1037](../source/adv3.h.html#1037)\]
 
-<div class="desc">
+
 
 `DefineTIActionSub(name, TIAction)`  
 Define a concrete TIAction, given the root name for the action. We'll
@@ -900,7 +900,7 @@ with name checkDobjXxx, a checkIobjProp with name checkIobjXxx, an
 actionDobjProp with name actionDobjXxx, and an actionIobjProp with name
 actionIobjXxx.
 
-</div>
+
 
 <span id="DefineTIActionSub"></span>
 
@@ -908,7 +908,7 @@ actionIobjXxx.
 
 [adv3.h](../file/adv3.h.html)\[[1043](../source/adv3.h.html#1043)\]
 
-<div class="desc">
+
 
 `DefineAction(name, cls) \`  
 `verDobjProp = &verifyDobj##name \`  
@@ -923,7 +923,7 @@ actionIobjXxx.
 `actionIobjProp = &actionIobj##name`  
 Define a concrete TIAction with a specific base class.
 
-</div>
+
 
 <span id="DefineTopicAction"></span>
 
@@ -931,12 +931,12 @@ Define a concrete TIAction with a specific base class.
 
 [adv3.h](../file/adv3.h.html)\[[1059](../source/adv3.h.html#1059)\]
 
-<div class="desc">
+
 
 `DefineAction(name, TopicAction)`  
 Define a concrete TopicAction, given the root name for the action.
 
-</div>
+
 
 <span id="DefineTopicTAction"></span>
 
@@ -944,12 +944,12 @@ Define a concrete TopicAction, given the root name for the action.
 
 [adv3.h](../file/adv3.h.html)\[[1078](../source/adv3.h.html#1078)\]
 
-<div class="desc">
+
 
 `BaseDefineTopicTAction(name, which, TopicTAction)`  
 *no description available*
 
-</div>
+
 
 <span id="DigitFormatGroupComma"></span>
 
@@ -957,13 +957,13 @@ Define a concrete TopicAction, given the root name for the action.
 
 [adv3.h](../file/adv3.h.html)\[[811](../source/adv3.h.html#811)\]
 
-<div class="desc">
+
 
 `0x0002`  
 Explicitly use a comma/period to separate digit groups, overriding the
 current languageGlobals setting.
 
-</div>
+
 
 <span id="DigitFormatGroupPeriod"></span>
 
@@ -971,12 +971,12 @@ current languageGlobals setting.
 
 [adv3.h](../file/adv3.h.html)\[[812](../source/adv3.h.html#812)\]
 
-<div class="desc">
+
 
 `0x0004`  
 *no description available*
 
-</div>
+
 
 <span id="DigitFormatGroupSep"></span>
 
@@ -984,13 +984,13 @@ current languageGlobals setting.
 
 [adv3.h](../file/adv3.h.html)\[[805](../source/adv3.h.html#805)\]
 
-<div class="desc">
+
 
 `0x0001`  
 Use a group separator character between digit groups, using the default
 setting in languageGlobals.
 
-</div>
+
 
 <span id="dobjFor"></span>
 
@@ -998,12 +998,12 @@ setting in languageGlobals.
 
 [adv3.h](../file/adv3.h.html)\[[309](../source/adv3.h.html#309)\]
 
-<div class="desc">
+
 
 `objFor(Dobj, action)`  
 *no description available*
 
-</div>
+
 
 <span id="dobjMsg"></span>
 
@@ -1011,7 +1011,7 @@ setting in languageGlobals.
 
 [adv3.h](../file/adv3.h.html)\[[1415](../source/adv3.h.html#1415)\]
 
-<div class="desc">
+
 
 `(gDobj == self ? msg : nil)`  
 Thing message property overrides sometimes need to be selective about
@@ -1032,7 +1032,7 @@ This specifies that when the object is involved in a PUT IN command that
 fails with the 'notAContainerMsg' message, the given message should be
 used - but \*only\* when the object is the indirect object.
 
-</div>
+
 
 <span id="EndsWithAdj"></span>
 
@@ -1040,12 +1040,12 @@ used - but \*only\* when the object is the indirect object.
 
 [adv3.h](../file/adv3.h.html)\[[828](../source/adv3.h.html#828)\]
 
-<div class="desc">
+
 
 `0x0001`  
 the noun phrase ends with an adjective
 
-</div>
+
 
 <span id="exit"></span>
 
@@ -1053,12 +1053,12 @@ the noun phrase ends with an adjective
 
 [adv3.h](../file/adv3.h.html)\[[1563](../source/adv3.h.html#1563)\]
 
-<div class="desc">
+
 
 `throw new ExitSignal()`  
 a concise macro to throw an ExitSignal
 
-</div>
+
 
 <span id="exitAction"></span>
 
@@ -1066,12 +1066,12 @@ a concise macro to throw an ExitSignal
 
 [adv3.h](../file/adv3.h.html)\[[1566](../source/adv3.h.html#1566)\]
 
-<div class="desc">
+
 
 `throw new ExitActionSignal()`  
 a concise macro to throw an ExitActionSignal
 
-</div>
+
 
 <span id="extraReport"></span>
 
@@ -1079,13 +1079,13 @@ a concise macro to throw an ExitActionSignal
 
 [adv3.h](../file/adv3.h.html)\[[1346](../source/adv3.h.html#1346)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new ExtraCommandReport(msg, ##params)))`  
 Add an "extra" report. This is an incidental message that doesn't affect
 the display of a default report.
 
-</div>
+
 
 <span id="FirstPerson"></span>
 
@@ -1093,13 +1093,13 @@ the display of a default report.
 
 [adv3.h](../file/adv3.h.html)\[[589](../source/adv3.h.html#589)\]
 
-<div class="desc">
+
 
 `1`  
 "Person" indices. We define these as numbers rather than enums so that
 we can easily use these as list indices.
 
-</div>
+
 
 <span id="gAction"></span>
 
@@ -1107,12 +1107,12 @@ we can easily use these as list indices.
 
 [adv3.h](../file/adv3.h.html)\[[159](../source/adv3.h.html#159)\]
 
-<div class="desc">
+
 
 `(libGlobal.curAction)`  
 the Action object of the command being executed
 
-</div>
+
 
 <span id="gActionIn"></span>
 
@@ -1120,13 +1120,13 @@ the Action object of the command being executed
 
 [adv3.h](../file/adv3.h.html)\[[175](../source/adv3.h.html#175)\]
 
-<div class="desc">
+
 
 `(gAction != nil \`  
 `&& (action#foreach/gAction.actionOfKind(action##Action)/||/))`  
 is the current global action ANY of the specified actions?
 
-</div>
+
 
 <span id="gActionIs"></span>
 
@@ -1134,7 +1134,7 @@ is the current global action ANY of the specified actions?
 
 [adv3.h](../file/adv3.h.html)\[[171](../source/adv3.h.html#171)\]
 
-<div class="desc">
+
 
 `(gAction != nil && gAction.actionOfKind(action##Action))`  
 Determine if the current global action is the specified action. Only the
@@ -1145,7 +1145,7 @@ given action class - we test that it's an instance rather than the
 action class itself because the parser creates an instance of the action
 when it matches the action's syntax.
 
-</div>
+
 
 <span id="gActor"></span>
 
@@ -1153,12 +1153,12 @@ when it matches the action's syntax.
 
 [adv3.h](../file/adv3.h.html)\[[110](../source/adv3.h.html#110)\]
 
-<div class="desc">
+
 
 `(libGlobal.curActor)`  
 the actor performing the current command
 
-</div>
+
 
 <span id="gDobj"></span>
 
@@ -1166,7 +1166,7 @@ the actor performing the current command
 
 [adv3.h](../file/adv3.h.html)\[[118](../source/adv3.h.html#118)\]
 
-<div class="desc">
+
 
 `(gAction.getDobj())`  
 For convenience, define some macros that return the current direct and
@@ -1174,7 +1174,7 @@ indirect objects from the current action. The library only uses direct
 and indirect objects, so games that define additional command objects
 will have to add their own similar macros for those.
 
-</div>
+
 
 <span id="gExitLister"></span>
 
@@ -1182,13 +1182,13 @@ will have to add their own similar macros for those.
 
 [adv3.h](../file/adv3.h.html)\[[227](../source/adv3.h.html#227)\]
 
-<div class="desc">
+
 
 `(libGlobal.exitListerObj)`  
 the exit lister object - if the exits module isn't included in the game,
 this will be nil
 
-</div>
+
 
 <span id="gHintManager"></span>
 
@@ -1196,13 +1196,13 @@ this will be nil
 
 [adv3.h](../file/adv3.h.html)\[[233](../source/adv3.h.html#233)\]
 
-<div class="desc">
+
 
 `(libGlobal.hintManagerObj)`  
 the hint manager object - if the hints module isn't included in the
 game, this will be nil
 
-</div>
+
 
 <span id="gIobj"></span>
 
@@ -1210,12 +1210,12 @@ game, this will be nil
 
 [adv3.h](../file/adv3.h.html)\[[119](../source/adv3.h.html#119)\]
 
-<div class="desc">
+
 
 `(gAction.getIobj())`  
 *no description available*
 
-</div>
+
 
 <span id="gIssuingActor"></span>
 
@@ -1223,7 +1223,7 @@ game, this will be nil
 
 [adv3.h](../file/adv3.h.html)\[[156](../source/adv3.h.html#156)\]
 
-<div class="desc">
+
 
 `(libGlobal.curIssuingActor)`  
 the actor who \*issued\* the current command (this is usually the player
@@ -1231,7 +1231,7 @@ character, because most commands are initiated by the player on the
 command line, but it is also possible for one actor to send a command to
 another programmatically)
 
-</div>
+
 
 <span id="gLibMessages"></span>
 
@@ -1239,7 +1239,7 @@ another programmatically)
 
 [adv3.h](../file/adv3.h.html)\[[255](../source/adv3.h.html#255)\]
 
-<div class="desc">
+
 
 `(libGlobal.libMessageObj)`  
 The current library messages object. This is the source object for
@@ -1259,7 +1259,7 @@ don't need to set this variable - you can simply use 'modify
 libMessages' instead. This variable is designed for cases where you want
 to \*dynamically\* change the standard messages during the game.)
 
-</div>
+
 
 <span id="gLiteral"></span>
 
@@ -1267,12 +1267,12 @@ to \*dynamically\* change the standard messages during the game.)
 
 [adv3.h](../file/adv3.h.html)\[[130](../source/adv3.h.html#130)\]
 
-<div class="desc">
+
 
 `(gAction.getLiteral())`  
 get the current literal phrase text, when the command has one
 
-</div>
+
 
 <span id="gMessageParams"></span>
 
@@ -1280,7 +1280,7 @@ get the current literal phrase text, when the command has one
 
 [adv3.h](../file/adv3.h.html)\[[201](../source/adv3.h.html#201)\]
 
-<div class="desc">
+
 
 `(gAction.setMessageParams(var#foreach/#@var, var/,/))`  
 Some message processors add their own special parameters to messages,
@@ -1298,7 +1298,7 @@ then you'll get one parameter with the text name 'obj' whose expansion
 will be the value of the local variable obj, and another with text name
 'cont' whose expansion is the value of the local variable cont.
 
-</div>
+
 
 <span id="gPlayerChar"></span>
 
@@ -1306,12 +1306,12 @@ will be the value of the local variable obj, and another with text name
 
 [adv3.h](../file/adv3.h.html)\[[221](../source/adv3.h.html#221)\]
 
-<div class="desc">
+
 
 `(libGlobal.playerChar)`  
 get the current player character Actor object
 
-</div>
+
 
 <span id="gReveal"></span>
 
@@ -1319,12 +1319,12 @@ get the current player character Actor object
 
 [adv3.h](../file/adv3.h.html)\[[1772](../source/adv3.h.html#1772)\]
 
-<div class="desc">
+
 
 `(conversationManager.setRevealed(key))`  
 reveal a topic key, as though through \<.reveal\>
 
-</div>
+
 
 <span id="gRevealed"></span>
 
@@ -1332,12 +1332,12 @@ reveal a topic key, as though through \<.reveal\>
 
 [adv3.h](../file/adv3.h.html)\[[1769](../source/adv3.h.html#1769)\]
 
-<div class="desc">
+
 
 `(conversationManager.revealedNameTab[key] != nil)`  
 has a topic key been revealed through \<.reveal\>?
 
-</div>
+
 
 <span id="gSetKnown"></span>
 
@@ -1345,12 +1345,12 @@ has a topic key been revealed through \<.reveal\>?
 
 [adv3.h](../file/adv3.h.html)\[[1775](../source/adv3.h.html#1775)\]
 
-<div class="desc">
+
 
 `(gPlayerChar.setKnowsAbout(obj))`  
 mark a Topic/Thing as known/seen by the player character
 
-</div>
+
 
 <span id="gSetSeen"></span>
 
@@ -1358,12 +1358,12 @@ mark a Topic/Thing as known/seen by the player character
 
 [adv3.h](../file/adv3.h.html)\[[1776](../source/adv3.h.html#1776)\]
 
-<div class="desc">
+
 
 `(gPlayerChar.setHasSeen(obj))`  
 *no description available*
 
-</div>
+
 
 <span id="gSynthMessageParam"></span>
 
@@ -1371,7 +1371,7 @@ mark a Topic/Thing as known/seen by the player character
 
 [adv3.h](../file/adv3.h.html)\[[212](../source/adv3.h.html#212)\]
 
-<div class="desc">
+
 
 `(gAction.synthMessageParam(var))`  
 Synthesize a global message parameter name for the given object and
@@ -1381,7 +1381,7 @@ so it's not safe to use a fixed name string for the object. We'll create
 a unique global message parameter name, associate the object with the
 name, and return the name string.
 
-</div>
+
 
 <span id="gTentativeDobj"></span>
 
@@ -1389,7 +1389,7 @@ name, and return the name string.
 
 [adv3.h](../file/adv3.h.html)\[[147](../source/adv3.h.html#147)\]
 
-<div class="desc">
+
 
 `(gAction.getTentativeDobj())`  
 The tentative pre-resolution lists for the direct and indirect objects.
@@ -1406,7 +1406,7 @@ the earlier-resolved objects yet.
 
 These are not meaningful when resolving single-object actions.
 
-</div>
+
 
 <span id="gTentativeIobj"></span>
 
@@ -1414,12 +1414,12 @@ These are not meaningful when resolving single-object actions.
 
 [adv3.h](../file/adv3.h.html)\[[148](../source/adv3.h.html#148)\]
 
-<div class="desc">
+
 
 `(gAction.getTentativeIobj())`  
 *no description available*
 
-</div>
+
 
 <span id="gTopic"></span>
 
@@ -1427,14 +1427,14 @@ These are not meaningful when resolving single-object actions.
 
 [adv3.h](../file/adv3.h.html)\[[126](../source/adv3.h.html#126)\]
 
-<div class="desc">
+
 
 `(gAction.getTopic())`  
 Get the current ResolvedTopic, and the literal text of the topic phrase
 as the user typed it (but converted to lower case). These are applicable
 when the current action has a topic phrase.
 
-</div>
+
 
 <span id="gTopicText"></span>
 
@@ -1442,12 +1442,12 @@ when the current action has a topic phrase.
 
 [adv3.h](../file/adv3.h.html)\[[127](../source/adv3.h.html#127)\]
 
-<div class="desc">
+
 
 `(gTopic.getTopicText.toLower())`  
 *no description available*
 
-</div>
+
 
 <span id="gTranscript"></span>
 
@@ -1455,12 +1455,12 @@ when the current action has a topic phrase.
 
 [adv3.h](../file/adv3.h.html)\[[183](../source/adv3.h.html#183)\]
 
-<div class="desc">
+
 
 `(mainOutputStream.curTranscript)`  
 the command transcript object - this is valid during command execution
 
-</div>
+
 
 <span id="gVerifyResults"></span>
 
@@ -1468,12 +1468,12 @@ the command transcript object - this is valid during command execution
 
 [adv3.h](../file/adv3.h.html)\[[180](../source/adv3.h.html#180)\]
 
-<div class="desc">
+
 
 `(libGlobal.curVerifyResults)`  
 the verification results object - this is valid during verification
 
-</div>
+
 
 <span id="illogical"></span>
 
@@ -1481,12 +1481,12 @@ the verification results object - this is valid during verification
 
 [adv3.h](../file/adv3.h.html)\[[1233](../source/adv3.h.html#1233)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new IllogicalVerifyResult(msg, ##params)))`  
 command is always illogical
 
-</div>
+
 
 <span id="illogicalAlready"></span>
 
@@ -1494,13 +1494,13 @@ command is always illogical
 
 [adv3.h](../file/adv3.h.html)\[[1228](../source/adv3.h.html#1228)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult( \`  
 `new IllogicalAlreadyVerifyResult(msg, ##params)))`  
 illogical because things are already as the command would make them
 
-</div>
+
 
 <span id="illogicalNow"></span>
 
@@ -1508,12 +1508,12 @@ illogical because things are already as the command would make them
 
 [adv3.h](../file/adv3.h.html)\[[1224](../source/adv3.h.html#1224)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new IllogicalNowVerifyResult(msg, ##params)))`  
 command is currently (but not always) illogical, for the given reason
 
-</div>
+
 
 <span id="illogicalSelf"></span>
 
@@ -1521,12 +1521,12 @@ command is currently (but not always) illogical, for the given reason
 
 [adv3.h](../file/adv3.h.html)\[[1237](../source/adv3.h.html#1237)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new IllogicalSelfVerifyResult(msg, ##params)))`  
 illogical since we're trying to use something on itself (eg, PUT X IN X)
 
-</div>
+
 
 <span id="inaccessible"></span>
 
@@ -1534,12 +1534,12 @@ illogical since we're trying to use something on itself (eg, PUT X IN X)
 
 [adv3.h](../file/adv3.h.html)\[[1241](../source/adv3.h.html#1241)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new InaccessibleVerifyResult(msg, ##params)))`  
 command is being performed on an inaccessible object
 
-</div>
+
 
 <span id="iobjFor"></span>
 
@@ -1547,12 +1547,12 @@ command is being performed on an inaccessible object
 
 [adv3.h](../file/adv3.h.html)\[[310](../source/adv3.h.html#310)\]
 
-<div class="desc">
+
 
 `objFor(Iobj, action)`  
 *no description available*
 
-</div>
+
 
 <span id="iobjMsg"></span>
 
@@ -1560,12 +1560,12 @@ command is being performed on an inaccessible object
 
 [adv3.h](../file/adv3.h.html)\[[1416](../source/adv3.h.html#1416)\]
 
-<div class="desc">
+
 
 `(gIobj == self ? msg : nil)`  
 *no description available*
 
-</div>
+
 
 <span id="ListContents"></span>
 
@@ -1573,13 +1573,13 @@ command is being performed on an inaccessible object
 
 [adv3.h](../file/adv3.h.html)\[[728](../source/adv3.h.html#728)\]
 
-<div class="desc">
+
 
 `0x0008`  
 This is a recursive listing of the contents of an item. This is set by
 showList() in calls it makes to recursive listing levels.
 
-</div>
+
 
 <span id="ListCustomFlag"></span>
 
@@ -1587,7 +1587,7 @@ showList() in calls it makes to recursive listing levels.
 
 [adv3.h](../file/adv3.h.html)\[[757](../source/adv3.h.html#757)\]
 
-<div class="desc">
+
 
 `0x0100`  
 Custom option bits. Flag bits with this value and higher are reserved
@@ -1616,7 +1616,7 @@ macro that retrieves the value, for the convenience of your callers:
 
 \#define ListMyclassMyCustomFlag1 (Myclass.myCustomFlag1)
 
-</div>
+
 
 <span id="ListerCustomFlag"></span>
 
@@ -1624,12 +1624,12 @@ macro that retrieves the value, for the convenience of your callers:
 
 [adv3.h](../file/adv3.h.html)\[[759](../source/adv3.h.html#759)\]
 
-<div class="desc">
+
 
 `static ((inherited.nextCustomFlag) << ((n) - 1))`  
 *no description available*
 
-</div>
+
 
 <span id="ListLong"></span>
 
@@ -1637,7 +1637,7 @@ macro that retrieves the value, for the convenience of your callers:
 
 [adv3.h](../file/adv3.h.html)\[[722](../source/adv3.h.html#722)\]
 
-<div class="desc">
+
 
 `0x0004`  
 use "long list" notation - separates items that contain sublists with
@@ -1645,7 +1645,7 @@ special punctuation, to set off the individual items in the longer
 listing from the items in the sublists (for example, separates items
 with semicolons rather than commas)
 
-</div>
+
 
 <span id="ListRecurse"></span>
 
@@ -1653,7 +1653,7 @@ with semicolons rather than commas)
 
 [adv3.h](../file/adv3.h.html)\[[714](../source/adv3.h.html#714)\]
 
-<div class="desc">
+
 
 `0x0002`  
 Recursively list the contents of each item we list.
@@ -1674,7 +1674,7 @@ room description, and the room contains a desk that isn't listed because
 it's a fixed part of the room, we'll show a separate list of the desk's
 listed contents.
 
-</div>
+
 
 <span id="ListTall"></span>
 
@@ -1682,14 +1682,14 @@ listed contents.
 
 [adv3.h](../file/adv3.h.html)\[[693](../source/adv3.h.html#693)\]
 
-<div class="desc">
+
 
 `0x0001`  
 use "tall" notation, which lists objects in a single column, one item
 per line (the default is "wide" notation, which creates a sentence with
 the object listing)
 
-</div>
+
 
 <span id="logical"></span>
 
@@ -1697,7 +1697,7 @@ the object listing)
 
 [adv3.h](../file/adv3.h.html)\[[1134](../source/adv3.h.html#1134)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new LogicalVerifyResult(100, '', 100)))`  
 Command is logical. There's generally no need to add a logical result
@@ -1707,7 +1707,7 @@ include this for completeness.
 We use 100 as the default likelihood, to leave plenty of room for
 specific likelihood rankings both above and below the default level.
 
-</div>
+
 
 <span id="logicalRank"></span>
 
@@ -1715,7 +1715,7 @@ specific likelihood rankings both above and below the default level.
 
 [adv3.h](../file/adv3.h.html)\[[1201](../source/adv3.h.html#1201)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new LogicalVerifyResult(rank, key, 100)))`  
 Command is logical, and is ranked as indicated among logical results.
@@ -1781,7 +1781,7 @@ action, but probably not the best choice for the action. This is used
 when an object can be used for the action, but would not be expected to
 do anything special with the action.
 
-</div>
+
 
 <span id="logicalRankOrd"></span>
 
@@ -1789,14 +1789,14 @@ do anything special with the action.
 
 [adv3.h](../file/adv3.h.html)\[[1209](../source/adv3.h.html#1209)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new LogicalVerifyResult(rank, key, ord)))`  
 Logical ranking with specific list ordering. This is the same as a
 regular logicalRank, but uses the given list ordering rather than the
 default list ordering (100).
 
-</div>
+
 
 <span id="LookListPortables"></span>
 
@@ -1804,12 +1804,12 @@ default list ordering (100).
 
 [adv3.h](../file/adv3.h.html)\[[1587](../source/adv3.h.html#1587)\]
 
-<div class="desc">
+
 
 `0x0008`  
 show the portable items
 
-</div>
+
 
 <span id="LookListSpecials"></span>
 
@@ -1817,12 +1817,12 @@ show the portable items
 
 [adv3.h](../file/adv3.h.html)\[[1584](../source/adv3.h.html#1584)\]
 
-<div class="desc">
+
 
 `0x0004`  
 show the non-portable items (the specialDesc's)
 
-</div>
+
 
 <span id="LookRoomDesc"></span>
 
@@ -1830,12 +1830,12 @@ show the non-portable items (the specialDesc's)
 
 [adv3.h](../file/adv3.h.html)\[[1581](../source/adv3.h.html#1581)\]
 
-<div class="desc">
+
 
 `0x0002`  
 show the room's long desription (the roomDesc)
 
-</div>
+
 
 <span id="LookRoomName"></span>
 
@@ -1843,12 +1843,12 @@ show the room's long desription (the roomDesc)
 
 [adv3.h](../file/adv3.h.html)\[[1578](../source/adv3.h.html#1578)\]
 
-<div class="desc">
+
 
 `0x0001`  
 show the room name as part of the description
 
-</div>
+
 
 <span id="M_DOWN"></span>
 
@@ -1856,12 +1856,12 @@ show the room name as part of the description
 
 [adv3.h](../file/adv3.h.html)\[[1665](../source/adv3.h.html#1665)\]
 
-<div class="desc">
+
 
 `4`  
 *no description available*
 
-</div>
+
 
 <span id="M_PREV"></span>
 
@@ -1869,12 +1869,12 @@ show the room name as part of the description
 
 [adv3.h](../file/adv3.h.html)\[[1663](../source/adv3.h.html#1663)\]
 
-<div class="desc">
+
 
 `2`  
 *no description available*
 
-</div>
+
 
 <span id="M_QUIT"></span>
 
@@ -1882,13 +1882,13 @@ show the room name as part of the description
 
 [adv3.h](../file/adv3.h.html)\[[1662](../source/adv3.h.html#1662)\]
 
-<div class="desc">
+
 
 `1`  
 The indices for the key values used to navigate menus, which are held in
 the keyList array of MenuItems.
 
-</div>
+
 
 <span id="M_SEL"></span>
 
@@ -1896,12 +1896,12 @@ the keyList array of MenuItems.
 
 [adv3.h](../file/adv3.h.html)\[[1666](../source/adv3.h.html#1666)\]
 
-<div class="desc">
+
 
 `5`  
 *no description available*
 
-</div>
+
 
 <span id="M_UP"></span>
 
@@ -1909,12 +1909,12 @@ the keyList array of MenuItems.
 
 [adv3.h](../file/adv3.h.html)\[[1664](../source/adv3.h.html#1664)\]
 
-<div class="desc">
+
 
 `3`  
 *no description available*
 
-</div>
+
 
 <span id="mainReport"></span>
 
@@ -1922,14 +1922,14 @@ the keyList array of MenuItems.
 
 [adv3.h](../file/adv3.h.html)\[[1354](../source/adv3.h.html#1354)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new MainCommandReport(msg, ##params)))`  
 Set a main report for the current command. This report will be shown as
 the main report from the command, overriding any default report for the
 command.
 
-</div>
+
 
 <span id="mapPushTravelHandlers"></span>
 
@@ -1937,7 +1937,7 @@ command.
 
 [adv3.h](../file/adv3.h.html)\[[443](../source/adv3.h.html#443)\]
 
-<div class="desc">
+
 
 `dobjFor(pushAction) asDobjFor(PushTravel) \`  
 `mapPushTravelIobj(pushAction, travelAction)`  
@@ -1968,7 +1968,7 @@ kind-of-travel handlers to form the combined form. Note that this still
 allows separate treatment of the combined form wherever desired, just by
 overriding these default handlers for the two-object action.
 
-</div>
+
 
 <span id="mapPushTravelIobj"></span>
 
@@ -1976,7 +1976,7 @@ overriding these default handlers for the two-object action.
 
 [adv3.h](../file/adv3.h.html)\[[447](../source/adv3.h.html#447)\]
 
-<div class="desc">
+
 
 `iobjFor(pushAction) \`  
 `{ \`  
@@ -1985,7 +1985,7 @@ overriding these default handlers for the two-object action.
 `}`  
 *no description available*
 
-</div>
+
 
 <span id="MatchedAll"></span>
 
@@ -1993,7 +1993,7 @@ overriding these default handlers for the two-object action.
 
 [adv3.h](../file/adv3.h.html)\[[860](../source/adv3.h.html#860)\]
 
-<div class="desc">
+
 
 `0x0008`  
 The object came from an 'all' phrase. Normally, the only time this makes
@@ -2003,7 +2003,7 @@ explicitly, as though the command had involved multiple objects, because
 otherwise it might not be clear to the user what object had actually
 matched 'all'.
 
-</div>
+
 
 <span id="maybeRemapTo"></span>
 
@@ -2011,14 +2011,14 @@ matched 'all'.
 
 [adv3.h](../file/adv3.h.html)\[[411](../source/adv3.h.html#411)\]
 
-<div class="desc">
+
 
 `{ remap = ((cond) ? [action##Action, ##objs] : inherited()) }`  
 Conditionally remap an action. If 'cond' (a conditional expression)
 evaluated to true, we'll remap the action as directed; otherwise, we'll
 inherit the default handling
 
-</div>
+
 
 <span id="nestedAction"></span>
 
@@ -2026,12 +2026,12 @@ inherit the default handling
 
 [adv3.h](../file/adv3.h.html)\[[1467](../source/adv3.h.html#1467)\]
 
-<div class="desc">
+
 
 `_nestedAction(nil, gActor, action##Action, ##objs)`  
 Run a nested action.
 
-</div>
+
 
 <span id="nestedActorAction"></span>
 
@@ -2039,12 +2039,12 @@ Run a nested action.
 
 [adv3.h](../file/adv3.h.html)\[[1473](../source/adv3.h.html#1473)\]
 
-<div class="desc">
+
 
 `_nestedAction(nil, actor, action##Action, ##objs)`  
 Run a nested action targeted to a given actor.
 
-</div>
+
 
 <span id="newAction"></span>
 
@@ -2052,7 +2052,7 @@ Run a nested action targeted to a given actor.
 
 [adv3.h](../file/adv3.h.html)\[[1490](../source/adv3.h.html#1490)\]
 
-<div class="desc">
+
 
 `_newAction(CommandTranscript, nil, gActor, action##Action, ##objs)`  
 Run a new action. This is a brand new action run as a separate turn, not
@@ -2068,7 +2068,7 @@ replaceAction for that.
 Returns a CommandTranscript object, which provides information on the
 results of the action.
 
-</div>
+
 
 <span id="newActorAction"></span>
 
@@ -2076,12 +2076,12 @@ results of the action.
 
 [adv3.h](../file/adv3.h.html)\[[1494](../source/adv3.h.html#1494)\]
 
-<div class="desc">
+
 
 `_newAction(CommandTranscript, nil, actor, action##Action, ##objs)`  
 run a new action with a specific actor
 
-</div>
+
 
 <span id="nonObvious"></span>
 
@@ -2089,13 +2089,13 @@ run a new action with a specific actor
 
 [adv3.h](../file/adv3.h.html)\[[1220](../source/adv3.h.html#1220)\]
 
-<div class="desc">
+
 
 `(gVerifyResults.addResult(new NonObviousVerifyResult('')))`  
 command is logical but non-obvious: the object should never be taken as
 a default
 
-</div>
+
 
 <span id="objFor"></span>
 
@@ -2103,13 +2103,13 @@ a default
 
 [adv3.h](../file/adv3.h.html)\[[305](../source/adv3.h.html#305)\]
 
-<div class="desc">
+
 
 `objForCheck(which, action) \`  
 `propertyset '*' ## #@which ## #@action`  
 *no description available*
 
-</div>
+
 
 <span id="objForCheck"></span>
 
@@ -2117,12 +2117,12 @@ a default
 
 [adv3.h](../file/adv3.h.html)\[[299](../source/adv3.h.html#299)\]
 
-<div class="desc">
+
 
 `sentinel##which##action = __objref(action##Action, warn)`  
 in debug mode, flag objFor definitions for non-existent actions
 
-</div>
+
 
 <span id="objForCheck"></span>
 
@@ -2130,12 +2130,12 @@ in debug mode, flag objFor definitions for non-existent actions
 
 [adv3.h](../file/adv3.h.html)\[[302](../source/adv3.h.html#302)\]
 
-<div class="desc">
+
 
   
 *no description available*
 
-</div>
+
 
 <span id="openableContentsLister"></span>
 
@@ -2143,7 +2143,7 @@ in debug mode, flag objFor definitions for non-existent actions
 
 [adv3.h](../file/adv3.h.html)\[[1793](../source/adv3.h.html#1793)\]
 
-<div class="desc">
+
 
 `openableDescContentsLister`  
 For compatibility with versions before 3.1.1, define
@@ -2158,7 +2158,7 @@ EXAMINE description). Fortunately we don't have a need for a special
 contentsLister for Openable, so we can avoid breaking existing code by
 mapping the old name to the new name.
 
-</div>
+
 
 <span id="PARSER_DEBUG"></span>
 
@@ -2166,7 +2166,7 @@ mapping the old name to the new name.
 
 [adv3.h](../file/adv3.h.html)\[[81](../source/adv3.h.html#81)\]
 
-<div class="desc">
+
 
   
 If we're compiling for debugging, automatically include the parser debug
@@ -2177,7 +2177,7 @@ Note that you can turn on parser debugging independently of full
 compiler debug information simply by explicitly defining PARSER_DEBUG
 (with the t3make -D option, for example).
 
-</div>
+
 
 <span id="PluralTruncated"></span>
 
@@ -2185,7 +2185,7 @@ compiler debug information simply by explicitly defining PARSER_DEBUG
 
 [adv3.h](../file/adv3.h.html)\[[850](../source/adv3.h.html#850)\]
 
-<div class="desc">
+
 
 `0x0004`  
 One or more plurals was truncated from its full dictionary spelling. (We
@@ -2201,7 +2201,7 @@ preference to ignore a truncated plural any time the word could also be
 interpreted as an untruncated singular, hence we note when we have a
 truncated plural.)
 
-</div>
+
 
 <span id="remapTo"></span>
 
@@ -2209,7 +2209,7 @@ truncated plural.)
 
 [adv3.h](../file/adv3.h.html)\[[404](../source/adv3.h.html#404)\]
 
-<div class="desc">
+
 
 `{ remap = [action##Action, ##objs] }`  
 "Remap" an action. This effectively rewrites the action in the given
@@ -2235,7 +2235,7 @@ could define the following on the desk object:
 
 iobjFor(PutIn) remapTo(PutIn, DirectObject, deskDrawer)
 
-</div>
+
 
 <span id="replaceAction"></span>
 
@@ -2243,7 +2243,7 @@ iobjFor(PutIn) remapTo(PutIn, DirectObject, deskDrawer)
 
 [adv3.h](../file/adv3.h.html)\[[1454](../source/adv3.h.html#1454)\]
 
-<div class="desc">
+
 
 `_replaceAction(gActor, action##Action, ##objs)`  
 Replace the current action with a new action. The new action will be
@@ -2253,7 +2253,7 @@ performed, and the original action will be terminated with 'exit'.
 (we'll add the suffix automatically). 'objs' is a varying-length list of
 the resolved objects - direct object, indirect object, etc.
 
-</div>
+
 
 <span id="replaceActorAction"></span>
 
@@ -2261,13 +2261,13 @@ the resolved objects - direct object, indirect object, etc.
 
 [adv3.h](../file/adv3.h.html)\[[1461](../source/adv3.h.html#1461)\]
 
-<div class="desc">
+
 
 `_replaceAction(actor, action##Action, ##objs)`  
 Replace the current action with a new action directed to a different
 actor (but from the same issuing actor).
 
-</div>
+
 
 <span id="reportAfter"></span>
 
@@ -2275,14 +2275,14 @@ actor (but from the same issuing actor).
 
 [adv3.h](../file/adv3.h.html)\[[1370](../source/adv3.h.html#1370)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new AfterCommandReport(msg, ##params)))`  
 Set an "after" report for the current command. This report will be shown
 after any main report, but will override any default report for the
 command.
 
-</div>
+
 
 <span id="reportBefore"></span>
 
@@ -2290,14 +2290,14 @@ command.
 
 [adv3.h](../file/adv3.h.html)\[[1362](../source/adv3.h.html#1362)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new BeforeCommandReport(msg, ##params)))`  
 Set a "before" report for the current command. This report will be shown
 before any main report, but will override any default report for the
 command.
 
-</div>
+
 
 <span id="reportFailure"></span>
 
@@ -2305,7 +2305,7 @@ command.
 
 [adv3.h](../file/adv3.h.html)\[[1385](../source/adv3.h.html#1385)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new FailCommandReport(msg, ##params)))`  
 Report failure. This overrides any default report, and marks the command
@@ -2319,7 +2319,7 @@ is accompanied by a state change, then a mainReport() should be made in
 addition to the failure report - the main report should indicate the
 state change.
 
-</div>
+
 
 <span id="reportQuestion"></span>
 
@@ -2327,13 +2327,13 @@ state change.
 
 [adv3.h](../file/adv3.h.html)\[[1392](../source/adv3.h.html#1392)\]
 
-<div class="desc">
+
 
 `(gTranscript.addReport(new QuestionCommandReport(msg, ##params)))`  
 Report a question. This shows a report that's really an interactive
 prompt for more information, such as a prompt for a missing object.
 
-</div>
+
 
 <span id="SecondPerson"></span>
 
@@ -2341,12 +2341,12 @@ prompt for more information, such as a prompt for a missing object.
 
 [adv3.h](../file/adv3.h.html)\[[590](../source/adv3.h.html#590)\]
 
-<div class="desc">
+
 
 `2`  
 *no description available*
 
-</div>
+
 
 <span id="SpellIntAndTens"></span>
 
@@ -2354,13 +2354,13 @@ prompt for more information, such as a prompt for a missing object.
 
 [adv3.h](../file/adv3.h.html)\[[785](../source/adv3.h.html#785)\]
 
-<div class="desc">
+
 
 `0x0002`  
 use 'and' before the tens - 125 is 'one hundred and twenty-five' rather
 than 'one hundred twenty-five'
 
-</div>
+
 
 <span id="SpellIntCommas"></span>
 
@@ -2368,13 +2368,13 @@ than 'one hundred twenty-five'
 
 [adv3.h](../file/adv3.h.html)\[[791](../source/adv3.h.html#791)\]
 
-<div class="desc">
+
 
 `0x0004`  
 put a comma after each power group - 123456 is 'one hundred twenty-three
 thousand, four hundred fifty-six'
 
-</div>
+
 
 <span id="SpellIntTeenHundreds"></span>
 
@@ -2382,7 +2382,7 @@ thousand, four hundred fifty-six'
 
 [adv3.h](../file/adv3.h.html)\[[779](../source/adv3.h.html#779)\]
 
-<div class="desc">
+
 
 `0x0001`  
 Use tens of hundreds rather than thousands if possible - 1950 is
@@ -2391,7 +2391,7 @@ This only works if the number (not including the millions and billions)
 is in the range 1,100 to 9,999, because we don't want to say something
 like 'one hundred twenty hundred' for 12,000.
 
-</div>
+
 
 <span id="ThirdPerson"></span>
 
@@ -2399,12 +2399,12 @@ like 'one hundred twenty hundred' for 12,000.
 
 [adv3.h](../file/adv3.h.html)\[[591](../source/adv3.h.html#591)\]
 
-<div class="desc">
+
 
 `3`  
 *no description available*
 
-</div>
+
 
 <span id="tryImplicitAction"></span>
 
@@ -2412,7 +2412,7 @@ like 'one hundred twenty hundred' for 12,000.
 
 [adv3.h](../file/adv3.h.html)\[[1427](../source/adv3.h.html#1427)\]
 
-<div class="desc">
+
 
 `_tryImplicitAction(gIssuingActor, gActor, &announceImplicitAction, \`  
 `action##Action, ##objs)`  
@@ -2422,7 +2422,7 @@ suffix. 'objs' is a varying-length list of the resolved objects in the
 new action - the direct object, indirect object, and any others needed
 for the action.
 
-</div>
+
 
 <span id="tryImplicitActionMsg"></span>
 
@@ -2430,7 +2430,7 @@ for the action.
 
 [adv3.h](../file/adv3.h.html)\[[1442](../source/adv3.h.html#1442)\]
 
-<div class="desc">
+
 
 `_tryImplicitAction(gIssuingActor, gActor, msgProp, \`  
 `action##Action, ##objs)`  
@@ -2444,7 +2444,7 @@ displayed at all.
 the resolved objects - direct object, indirect object, and any others
 needed.
 
-</div>
+
 
 <span id="UnclearDisambig"></span>
 
@@ -2452,7 +2452,7 @@ needed.
 
 [adv3.h](../file/adv3.h.html)\[[905](../source/adv3.h.html#905)\]
 
-<div class="desc">
+
 
 `0x0040`  
 The noun phase describing this object was ambiguous, and the object was
@@ -2479,7 +2479,7 @@ set; even though it started off ambiguous, the user did all of the work
 of selecting the appropriate object, leaving things unambiguous in the
 end.
 
-</div>
+
 
 <span id="VocabTruncated"></span>
 
@@ -2487,21 +2487,21 @@ end.
 
 [adv3.h](../file/adv3.h.html)\[[834](../source/adv3.h.html#834)\]
 
-<div class="desc">
+
 
 `0x0002`  
 one of the words in the noun phrase was truncated from its full
 dictionary spelling
 
-</div>
+
 
 <span id="_Enums_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Enums</span>  
 
-</div>
+
 
 <span id="ActorObject"></span> <span id="DirectObject"></span>
 <span id="IndirectObject"></span>
@@ -2510,7 +2510,7 @@ dictionary spelling
 
 [`adv3.h`](../file/adv3.h.html)`[`[`498`](../source/adv3.h.html#498)`]`
 
-<div class="desc">
+
 
 Object role identifiers. These are used to identify the role of a noun
 phrase in a command.
@@ -2524,7 +2524,7 @@ extensions from adding actions that take more than two noun phrases
 their own additional role identifiers for the third or fourth (etc) noun
 phrase.
 
-</div>
+
 
 <span id="AnnounceClear"></span>
 
@@ -2532,7 +2532,7 @@ phrase.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`950`](../source/adv3.h.html#950)`]`
 
-<div class="desc">
+
 
 Announce clear and unclear disambiguation results, both using
 parenthetical announcement ("(the red door)"). When this setting is
@@ -2541,7 +2541,7 @@ logicalness rules or likelihood rankings to disambiguate a noun phrase.
 There's no announcement when no disambiguation is needed (because the
 noun phrase matches only one in-scope object).
 
-</div>
+
 
 <span id="AnnounceUnclear"></span>
 
@@ -2549,7 +2549,7 @@ noun phrase matches only one in-scope object).
 
 [`adv3.h`](../file/adv3.h.html)`[`[`940`](../source/adv3.h.html#940)`]`
 
-<div class="desc">
+
 
 Announce unclear disambiguation results only. When this setting is
 selected, the parser makes a parenthetical announcement (e.g., "(the red
@@ -2558,7 +2558,7 @@ among more than one logical match. The parser makes no announcement when
 exactly one logical object is in scope, even if other objects match the
 noun phrase by name.
 
-</div>
+
 
 <span id="attenuated"></span>
 
@@ -2566,13 +2566,13 @@ noun phrase by name.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`610`](../source/adv3.h.html#610)`]`
 
-<div class="desc">
+
 
 The sense is passed, but with attenuation of energy level. No other
 obscuration of detail occurs; this is something like tinted glass that
 doesn't distort the transmitted sense but reduces the amount of energy.
 
-</div>
+
 
 <span id="blockEndConv"></span>
 
@@ -2580,12 +2580,12 @@ doesn't distort the transmitted sense but reduces the amount of energy.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`1761`](../source/adv3.h.html#1761)`]`
 
-<div class="desc">
+
 
 Special result code for Actor.canEndConversation() - this indicates that
 the other actor said something to force the conversation to keep going.
 
-</div>
+
 
 <span id="DescribeClear"></span>
 
@@ -2593,7 +2593,7 @@ the other actor said something to force the conversation to keep going.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`963`](../source/adv3.h.html#963)`]`
 
-<div class="desc">
+
 
 Describe clear disambiguation results, rather than announcing them. The
 parser makes the parenthetical announcement, as usual, for unclear
@@ -2605,7 +2605,7 @@ messages. For example, rather than saying just "Taken", the parser would
 reply "You take the red book." The longer messages mention the object by
 name, to make it clear exactly which one was chosen.
 
-</div>
+
 
 <span id="distant"></span>
 
@@ -2613,11 +2613,11 @@ name, to make it clear exactly which one was chosen.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`603`](../source/adv3.h.html#603)`]`
 
-<div class="desc">
+
 
 the sense is passed, but with a loss of detail associated with distance
 
-</div>
+
 
 <span id="endConvActor"></span>
 
@@ -2625,11 +2625,11 @@ the sense is passed, but with a loss of detail associated with distance
 
 [`adv3.h`](../file/adv3.h.html)`[`[`1755`](../source/adv3.h.html#1755)`]`
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="endConvBoredom"></span>
 
@@ -2637,11 +2637,11 @@ the sense is passed, but with a loss of detail associated with distance
 
 [`adv3.h`](../file/adv3.h.html)`[`[`1754`](../source/adv3.h.html#1754)`]`
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="endConvBye"></span>
 
@@ -2649,11 +2649,11 @@ the sense is passed, but with a loss of detail associated with distance
 
 [`adv3.h`](../file/adv3.h.html)`[`[`1752`](../source/adv3.h.html#1752)`]`
 
-<div class="desc">
+
 
 End-of-conversation reason codes
 
-</div>
+
 
 <span id="endConvTravel"></span>
 
@@ -2661,11 +2661,11 @@ End-of-conversation reason codes
 
 [`adv3.h`](../file/adv3.h.html)`[`[`1753`](../source/adv3.h.html#1753)`]`
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="FootnotesFull"></span> <span id="FootnotesMedium"></span>
 <span id="FootnotesOff"></span>
@@ -2674,11 +2674,11 @@ End-of-conversation reason codes
 
 [`adv3.h`](../file/adv3.h.html)`[`[`1614`](../source/adv3.h.html#1614)`]`
 
-<div class="desc">
+
 
 footnote status levels
 
-</div>
+
 
 <span id="InventoryTall"></span> <span id="InventoryWide"></span>
 
@@ -2686,13 +2686,13 @@ footnote status levels
 
 [`adv3.h`](../file/adv3.h.html)`[`[`972`](../source/adv3.h.html#972)`]`
 
-<div class="desc">
+
 
 Inventory modes. "Wide" mode displays the inventory in paragraph form;
 "tall" mode displays as a list, with one item per line, indenting items
 to reflect containment.
 
-</div>
+
 
 <span id="large"></span>
 
@@ -2700,12 +2700,12 @@ to reflect containment.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`639`](../source/adv3.h.html#639)`]`
 
-<div class="desc">
+
 
 Large - the object is large enough that its details can be sensed from a
 distance or through an obscuring medium.
 
-</div>
+
 
 <span id="medium"></span>
 
@@ -2713,13 +2713,13 @@ distance or through an obscuring medium.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`646`](../source/adv3.h.html#646)`]`
 
-<div class="desc">
+
 
 Medium - the object can be sensed at a distance or when obscured, but
 not in any detail. Most objects fall into this category. Note that
 things that are parts of large objects should normally be medium.
 
-</div>
+
 
 <span id="obscured"></span>
 
@@ -2727,14 +2727,14 @@ things that are parts of large objects should normally be medium.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`618`](../source/adv3.h.html#618)`]`
 
-<div class="desc">
+
 
 The sense is passed, but with a loss of detail due to an obscuring layer
 of material. The energy level is also attenuated. This is something like
 dirty or wavy glass that distorts an image transmitted through it but
 doesn't completely block out light.
 
-</div>
+
 
 <span id="opaque"></span>
 
@@ -2742,11 +2742,11 @@ doesn't completely block out light.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`621`](../source/adv3.h.html#621)`]`
 
-<div class="desc">
+
 
 the sense is not passed at all
 
-</div>
+
 
 <span id="OtherObject"></span>
 
@@ -2754,7 +2754,7 @@ the sense is not passed at all
 
 [`adv3.h`](../file/adv3.h.html)`[`[`507`](../source/adv3.h.html#507)`]`
 
-<div class="desc">
+
 
 A special role for the "other" object of a two-object command. This can
 be used in certain contexts (such as remapTo) where a particular object
@@ -2762,7 +2762,7 @@ role is implied by the context, and where the action involved has
 exactly two objects; OtherObject in such contexts means DirectObject
 when the implied role is IndirectObject, and vice versa.
 
-</div>
+
 
 <span id="PathFrom"></span>
 
@@ -2770,11 +2770,11 @@ when the implied role is IndirectObject, and vice versa.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`661`](../source/adv3.h.html#661)`]`
 
-<div class="desc">
+
 
 traverse from the starting point of the path
 
-</div>
+
 
 <span id="PathIn"></span>
 
@@ -2782,11 +2782,11 @@ traverse from the starting point of the path
 
 [`adv3.h`](../file/adv3.h.html)`[`[`664`](../source/adv3.h.html#664)`]`
 
-<div class="desc">
+
 
 traverse into the contents
 
-</div>
+
 
 <span id="PathOut"></span>
 
@@ -2794,11 +2794,11 @@ traverse into the contents
 
 [`adv3.h`](../file/adv3.h.html)`[`[`667`](../source/adv3.h.html#667)`]`
 
-<div class="desc">
+
 
 traverse out to the container
 
-</div>
+
 
 <span id="PathPeer"></span>
 
@@ -2806,11 +2806,11 @@ traverse out to the container
 
 [`adv3.h`](../file/adv3.h.html)`[`[`670`](../source/adv3.h.html#670)`]`
 
-<div class="desc">
+
 
 traverse from an object to a peer at the same containment level
 
-</div>
+
 
 <span id="PathThrough"></span>
 
@@ -2818,13 +2818,13 @@ traverse from an object to a peer at the same containment level
 
 [`adv3.h`](../file/adv3.h.html)`[`[`677`](../source/adv3.h.html#677)`]`
 
-<div class="desc">
+
 
 traverse through an object with no common container on either side of
 the traversal - this is used when we are traversing an object, such as a
 SenseConnector, that connects unrelated locations
 
-</div>
+
 
 <span id="PathTo"></span>
 
@@ -2832,11 +2832,11 @@ SenseConnector, that connects unrelated locations
 
 [`adv3.h`](../file/adv3.h.html)`[`[`680`](../source/adv3.h.html#680)`]`
 
-<div class="desc">
+
 
 traverse to the ending point of the path
 
-</div>
+
 
 <span id="PronounHer"></span> <span id="PronounHim"></span>
 <span id="PronounIt"></span> <span id="PronounMe"></span>
@@ -2846,7 +2846,7 @@ traverse to the ending point of the path
 
 [`adv3.h`](../file/adv3.h.html)`[`[`538`](../source/adv3.h.html#538)`]`
 
-<div class="desc">
+
 
 Pronoun types. These are used to identify pronoun antecedents when
 resolving noun phrases involving pronouns.
@@ -2874,7 +2874,7 @@ versa. When a command is targeted to or issued by an actor other than
 the PC, then "you" refers to the command's target and "me" refers to the
 command's issuer.
 
-</div>
+
 
 <span id="rmcAskLiteral"></span>
 
@@ -2882,11 +2882,11 @@ command's issuer.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`286`](../source/adv3.h.html#286)`]`
 
-<div class="desc">
+
 
 reading a response to a prompt for a missing literal phrase
 
-</div>
+
 
 <span id="rmcAskObject"></span>
 
@@ -2894,11 +2894,11 @@ reading a response to a prompt for a missing literal phrase
 
 [`adv3.h`](../file/adv3.h.html)`[`[`283`](../source/adv3.h.html#283)`]`
 
-<div class="desc">
+
 
 reading a response to a prompt for a missing object phrase
 
-</div>
+
 
 <span id="rmcCommand"></span>
 
@@ -2906,11 +2906,11 @@ reading a response to a prompt for a missing object phrase
 
 [`adv3.h`](../file/adv3.h.html)`[`[`277`](../source/adv3.h.html#277)`]`
 
-<div class="desc">
+
 
 reading a normal command line
 
-</div>
+
 
 <span id="rmcDisambig"></span>
 
@@ -2918,11 +2918,11 @@ reading a normal command line
 
 [`adv3.h`](../file/adv3.h.html)`[`[`289`](../source/adv3.h.html#289)`]`
 
-<div class="desc">
+
 
 reading a response to an interactive disambiguation prompt
 
-</div>
+
 
 <span id="rmcOops"></span>
 
@@ -2930,11 +2930,11 @@ reading a response to an interactive disambiguation prompt
 
 [`adv3.h`](../file/adv3.h.html)`[`[`280`](../source/adv3.h.html#280)`]`
 
-<div class="desc">
+
 
 reading an unknown word response, to check for an "oops" command
 
-</div>
+
 
 <span id="small"></span>
 
@@ -2942,12 +2942,12 @@ reading an unknown word response, to check for an "oops" command
 
 [`adv3.h`](../file/adv3.h.html)`[`[`652`](../source/adv3.h.html#652)`]`
 
-<div class="desc">
+
 
 Small - the object cannot be sensed at a distance at all. This is
 appropriate for detailed parts of medium-class objects.
 
-</div>
+
 
 <span id="transparent"></span>
 
@@ -2955,19 +2955,19 @@ appropriate for detailed parts of medium-class objects.
 
 [`adv3.h`](../file/adv3.h.html)`[`[`600`](../source/adv3.h.html#600)`]`
 
-<div class="desc">
+
 
 the sense is passed without loss of detail
 
-</div>
+
 
 <span id="_Templates_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Templates</span>  
 
-</div>
+
 
 <span id="Achievement"></span>
 
@@ -2975,13 +2975,13 @@ the sense is passed without loss of detail
 
 [adv3.h](../file/adv3.h.html)\[[1622](../source/adv3.h.html#1622)\]
 
-<div class="desc">
+
 
 `+points? "desc";`  
 An achievement defines its descriptive text. It can also optionally
 define the number of points it awards.
 
-</div>
+
 
 <span id="AltTopic"></span>
 
@@ -2989,12 +2989,12 @@ define the number of points it awards.
 
 [adv3.h](../file/adv3.h.html)\[[1740](../source/adv3.h.html#1740)\]
 
-<div class="desc">
+
 
 `"topicResponse" | [eventList];`  
 alternative topics just specify the response string or strings
 
-</div>
+
 
 <span id="AltTopic"></span>
 
@@ -3002,12 +3002,12 @@ alternative topics just specify the response string or strings
 
 [adv3.h](../file/adv3.h.html)\[[1741](../source/adv3.h.html#1741)\]
 
-<div class="desc">
+
 
 `[firstEvents] [eventList];`  
 *no description available*
 
-</div>
+
 
 <span id="ConvNode"></span>
 
@@ -3015,12 +3015,12 @@ alternative topics just specify the response string or strings
 
 [adv3.h](../file/adv3.h.html)\[[1747](../source/adv3.h.html#1747)\]
 
-<div class="desc">
+
 
 `'name';`  
 a conversation node need a name
 
-</div>
+
 
 <span id="DefaultTopic"></span>
 
@@ -3028,12 +3028,12 @@ a conversation node need a name
 
 [adv3.h](../file/adv3.h.html)\[[1736](../source/adv3.h.html#1736)\]
 
-<div class="desc">
+
 
 `"topicResponse" | [eventList];`  
 default topics just specify the response text
 
-</div>
+
 
 <span id="DefaultTopic"></span>
 
@@ -3041,12 +3041,12 @@ default topics just specify the response text
 
 [adv3.h](../file/adv3.h.html)\[[1737](../source/adv3.h.html#1737)\]
 
-<div class="desc">
+
 
 `[firstEvents] [eventList];`  
 *no description available*
 
-</div>
+
 
 <span id="EventList"></span>
 
@@ -3054,12 +3054,12 @@ default topics just specify the response text
 
 [adv3.h](../file/adv3.h.html)\[[1629](../source/adv3.h.html#1629)\]
 
-<div class="desc">
+
 
 `[eventList];`  
 An event list takes a list of strings, objects, and/or functions.
 
-</div>
+
 
 <span id="Footnote"></span>
 
@@ -3067,13 +3067,13 @@ An event list takes a list of strings, objects, and/or functions.
 
 [adv3.h](../file/adv3.h.html)\[[1611](../source/adv3.h.html#1611)\]
 
-<div class="desc">
+
 
 `"desc";`  
 A template for footnotes - all we usually need to define in a footnote
 is its descriptive text, so this makes it easy to define one.
 
-</div>
+
 
 <span id="Goal"></span>
 
@@ -3081,12 +3081,12 @@ is its descriptive text, so this makes it easy to define one.
 
 [adv3.h](../file/adv3.h.html)\[[1674](../source/adv3.h.html#1674)\]
 
-<div class="desc">
+
 
 `->closeWhenAchieved? 'title' 'heading'? [menuContents];`  
 templates for hint system objects
 
-</div>
+
 
 <span id="Hint"></span>
 
@@ -3094,12 +3094,12 @@ templates for hint system objects
 
 [adv3.h](../file/adv3.h.html)\[[1675](../source/adv3.h.html#1675)\]
 
-<div class="desc">
+
 
 `'hintText' [referencedGoals]?;`  
 *no description available*
 
-</div>
+
 
 <span id="MenuItem"></span>
 
@@ -3107,12 +3107,12 @@ templates for hint system objects
 
 [adv3.h](../file/adv3.h.html)\[[1669](../source/adv3.h.html#1669)\]
 
-<div class="desc">
+
 
 `'title' 'heading'?;`  
 some templates for defining menu items
 
-</div>
+
 
 <span id="MenuLongTopicItem"></span>
 
@@ -3120,12 +3120,12 @@ some templates for defining menu items
 
 [adv3.h](../file/adv3.h.html)\[[1671](../source/adv3.h.html#1671)\]
 
-<div class="desc">
+
 
 `'title' 'heading'? 'menuContents';`  
 *no description available*
 
-</div>
+
 
 <span id="MenuTopicItem"></span>
 
@@ -3133,12 +3133,12 @@ some templates for defining menu items
 
 [adv3.h](../file/adv3.h.html)\[[1670](../source/adv3.h.html#1670)\]
 
-<div class="desc">
+
 
 `'title' 'heading'? [menuContents];`  
 *no description available*
 
-</div>
+
 
 <span id="MiscTopic"></span>
 
@@ -3146,12 +3146,12 @@ some templates for defining menu items
 
 [adv3.h](../file/adv3.h.html)\[[1715](../source/adv3.h.html#1715)\]
 
-<div class="desc">
+
 
 `"topicResponse" | [eventList];`  
 miscellanous topics just specify the response text or list
 
-</div>
+
 
 <span id="MiscTopic"></span>
 
@@ -3159,12 +3159,12 @@ miscellanous topics just specify the response text or list
 
 [adv3.h](../file/adv3.h.html)\[[1716](../source/adv3.h.html#1716)\]
 
-<div class="desc">
+
 
 `[firstEvents] [eventList];`  
 *no description available*
 
-</div>
+
 
 <span id="MultiLoc"></span>
 
@@ -3172,13 +3172,13 @@ miscellanous topics just specify the response text or list
 
 [adv3.h](../file/adv3.h.html)\[[1596](../source/adv3.h.html#1596)\]
 
-<div class="desc">
+
 
 `[locationList];`  
 Template for multi-location objects. To put a MultiLoc object in several
 initial locations, simply use a template giving the list of locations.
 
-</div>
+
 
 <span id="ShuffledEventList"></span>
 
@@ -3186,7 +3186,7 @@ initial locations, simply use a template giving the list of locations.
 
 [adv3.h](../file/adv3.h.html)\[[1637](../source/adv3.h.html#1637)\]
 
-<div class="desc">
+
 
 `[firstEvents] [eventList];`  
 A shuffled event list with two lists - the first list is the sequential
@@ -3194,7 +3194,7 @@ initial list, fired in the exact order specified; and the second is the
 random list, with the events that occur in shuffled order after we
 exhaust the initial list.
 
-</div>
+
 
 <span id="ShuffledList"></span>
 
@@ -3202,12 +3202,12 @@ exhaust the initial list.
 
 [adv3.h](../file/adv3.h.html)\[[1643](../source/adv3.h.html#1643)\]
 
-<div class="desc">
+
 
 `[valueList];`  
 low-level shuffled list
 
-</div>
+
 
 <span id="SpecialTopic"></span>
 
@@ -3215,7 +3215,7 @@ low-level shuffled list
 
 [adv3.h](../file/adv3.h.html)\[[1724](../source/adv3.h.html#1724)\]
 
-<div class="desc">
+
 
 ` 'name' [keywordList] | 'matchPat' "topicResponse" | [eventList] ?;`  
 A SpecialTopic takes a keyword list or a regular expression instead of
@@ -3223,7 +3223,7 @@ the regular match criteria. It also takes a suggestion name string and
 the normal response text. There's no need for a score in a special
 topic, since these are unique.
 
-</div>
+
 
 <span id="SpecialTopic"></span>
 
@@ -3231,12 +3231,12 @@ topic, since these are unique.
 
 [adv3.h](../file/adv3.h.html)\[[1730](../source/adv3.h.html#1730)\]
 
-<div class="desc">
+
 
 ` 'name' [keywordList] | 'matchPat' [firstEvents] [eventList];`  
 a ShuffledEventList version of the above
 
-</div>
+
 
 <span id="StyleTag"></span>
 
@@ -3244,12 +3244,12 @@ a ShuffledEventList version of the above
 
 [adv3.h](../file/adv3.h.html)\[[1603](../source/adv3.h.html#1603)\]
 
-<div class="desc">
+
 
 `'tagName' 'openText'? 'closeText'?;`  
 Templates for style tags
 
-</div>
+
 
 <span id="SyncEventList"></span>
 
@@ -3257,12 +3257,12 @@ Templates for style tags
 
 [adv3.h](../file/adv3.h.html)\[[1640](../source/adv3.h.html#1640)\]
 
-<div class="desc">
+
 
 `->masterObject inherited;`  
 a synchronized event list takes its state from another list
 
-</div>
+
 
 <span id="Tip"></span>
 
@@ -3270,12 +3270,12 @@ a synchronized event list takes its state from another list
 
 [adv3.h](../file/adv3.h.html)\[[1650](../source/adv3.h.html#1650)\]
 
-<div class="desc">
+
 
 `"desc";`  
 Define a template for the Tip class.
 
-</div>
+
 
 <span id="TopicEntry"></span>
 
@@ -3283,7 +3283,7 @@ Define a template for the Tip class.
 
 [adv3.h](../file/adv3.h.html)\[[1689](../source/adv3.h.html#1689)\]
 
-<div class="desc">
+
 
 ` +matchScore? @matchObj | [matchObj] | 'matchPattern' "topicResponse" | [eventList] ?;`  
 A TopicEntry can be defined with an optional score, followed by the
@@ -3292,7 +3292,7 @@ matching objects, or a regular expression pattern string), followed by
 the optional response text (which can be given either as a double-quoted
 string or as a list of single-quoted strings to use as an EventList).
 
-</div>
+
 
 <span id="TopicEntry"></span>
 
@@ -3300,12 +3300,12 @@ string or as a list of single-quoted strings to use as an EventList).
 
 [adv3.h](../file/adv3.h.html)\[[1695](../source/adv3.h.html#1695)\]
 
-<div class="desc">
+
 
 ` +matchScore? @matchObj | [matchObj] | 'matchPattern' [firstEvents] [eventList];`  
 a ShuffledEventList version of the above
 
-</div>
+
 
 <span id="TopicEntry"></span>
 
@@ -3313,12 +3313,12 @@ a ShuffledEventList version of the above
 
 [adv3.h](../file/adv3.h.html)\[[1701](../source/adv3.h.html#1701)\]
 
-<div class="desc">
+
 
 ` +matchScore? @matchObj | [matchObj] 'matchPattern' "topicResponse" | [eventList] ?;`  
 we can also include \*both\* the match object/list \*and\* pattern
 
-</div>
+
 
 <span id="TopicEntry"></span>
 
@@ -3326,12 +3326,12 @@ we can also include \*both\* the match object/list \*and\* pattern
 
 [adv3.h](../file/adv3.h.html)\[[1708](../source/adv3.h.html#1708)\]
 
-<div class="desc">
+
 
 ` +matchScore? @matchObj | [matchObj] 'matchPattern' [firstEvents] [eventList];`  
 a ShuffledEventList version of the above
 
-</div>
+
 
 <span id="TopicGroup"></span>
 
@@ -3339,16 +3339,16 @@ a ShuffledEventList version of the above
 
 [adv3.h](../file/adv3.h.html)\[[1744](../source/adv3.h.html#1744)\]
 
-<div class="desc">
+
 
 `+matchScoreAdjustment;`  
 a TopicGroup can specify its score adjustment
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> NPC Travel  
@@ -16,7 +16,7 @@ Conversations with NPCs</a>    
 <a href="t3banner.html" class="nav"><em>Next:</em> Using the Banner
 API</a>     </span>
 
-</div>
+
 
 
 
@@ -173,7 +173,7 @@ And whatever you do, **don't** use moveInto() for NPC travel.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -183,4 +183,4 @@ Conversations with NPCs</a>    
 <a href="t3banner.html" class="nav"><em>Next:</em> Using the Banner
 API</a>     </span>
 
-</div>
+

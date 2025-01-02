@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The Floor Class is used to provide a floor or ground object to each room
 that wants one (by default, every Room). While this serves the secondary
@@ -44,15 +44,15 @@ modify it to use the ROOMPART EXTENSIONS's version of examineStatus.
 
 `class `**`Floor`**` :   `[`MultiLoc`](../object/MultiLoc.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Floor`**  
 [`MultiLoc`](../object/MultiLoc.html)  
@@ -66,28 +66,28 @@ modify it to use the ROOMPART EXTENSIONS's version of examineStatus.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`defaultGround`](../object/defaultGround.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contents`](#contents)[`contentsListed`](#contentsListed)[`contType`](#contType)[`decorationActions`](#decorationActions)[`initialLocationClass`](#initialLocationClass)[`isDecoration`](#isDecoration)[`isFixed`](#isFixed)
 
@@ -109,11 +109,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`examineStatus`](#examineStatus)[`isInitiallyIn`](#isInitiallyIn)
 
@@ -137,11 +137,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contents"></span>
 
@@ -149,14 +149,14 @@ Inherited from `LMentionable` :
 
 [thing.t](../file/thing.t.html)\[[9937](../source/thing.t.html#9937)\]
 
-<div class="desc">
+
 
 The Floor object needs to appear to share the contents of the player
 character's room (or other enclosing container) for certain purposes
 (such as disambiguating by container or the TakeFrom command), but
 nothing is really moved into or out of a Floor).
 
-</div>
+
 
 <span id="contentsListed"></span>
 
@@ -164,14 +164,14 @@ nothing is really moved into or out of a Floor).
 
 [thing.t](../file/thing.t.html)\[[9953](../source/thing.t.html#9953)\]
 
-<div class="desc">
+
 
 By default we probably want to keep the description of a Floor object as
 minimalistic as possible to discourage players from trying to interact
 with it, so we won't listed the 'contents' of a Floor when it's
 examined. This can of course be overridden if desired.
 
-</div>
+
 
 <span id="contType"></span>
 
@@ -179,11 +179,11 @@ examined. This can of course be overridden if desired.
 
 [thing.t](../file/thing.t.html)\[[9921](../source/thing.t.html#9921)\]
 
-<div class="desc">
+
 
 A Floor is something we can put things on.
 
-</div>
+
 
 <span id="decorationActions"></span>
 
@@ -191,13 +191,13 @@ A Floor is something we can put things on.
 
 [thing.t](../file/thing.t.html)\[[9944](../source/thing.t.html#9944)\]
 
-<div class="desc">
+
 
 We can examine a Floor or take something from it, but other actions are
 ruled out. A Floor should generally be treated as a Decoration object
 rather than something with which any extensive interaction is allowed.
 
-</div>
+
 
 <span id="initialLocationClass"></span>
 
@@ -205,11 +205,11 @@ rather than something with which any extensive interaction is allowed.
 
 [thing.t](../file/thing.t.html)\[[9918](../source/thing.t.html#9918)\]
 
-<div class="desc">
+
 
 By default, every room has a floor.
 
-</div>
+
 
 <span id="isDecoration"></span>
 
@@ -217,11 +217,11 @@ By default, every room has a floor.
 
 [thing.t](../file/thing.t.html)\[[9915](../source/thing.t.html#9915)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -229,20 +229,20 @@ By default, every room has a floor.
 
 [thing.t](../file/thing.t.html)\[[9913](../source/thing.t.html#9913)\]
 
-<div class="desc">
+
 
 A Floor is a Decoration, but since the extras.t module is optional we
 have to define is as isFixed = true and isDecoration = true.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -250,12 +250,12 @@ have to define is as isFixed = true and isDecoration = true.
 
 [roomparts.t](../file/roomparts.t.html)\[[143](../source/roomparts.t.html#143)\]
 
-<div class="desc">
+
 
 \[MODIFIED IN ROOMPARTS EXTENSION to use the ROOMPART EXTENSIONS's
 version of examineStatus\]
 
-</div>
+
 
 <span id="isInitiallyIn"></span>
 
@@ -263,18 +263,18 @@ version of examineStatus\]
 
 [thing.t](../file/thing.t.html)\[[9929](../source/thing.t.html#9929)\]
 
-<div class="desc">
+
 
 We narrow down our list of locations to those Rooms that actually define
 this Floor as their floorObj. Some rooms may wish to define a custom
 floorObj, and some (e.g. those representing the top of a mast or tree)
 may want to have no floorObj at all.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

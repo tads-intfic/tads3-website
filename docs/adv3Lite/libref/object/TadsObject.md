@@ -28,7 +28,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The "TADS Object" intrinsic class. All objects that the program defines
 with the "class" or "object" statements descend from this class.
@@ -47,41 +47,41 @@ Add handling for emiting, handling and dispatching signals.
 
 `intrinsic class `**`TadsObject`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TadsObject`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -89,11 +89,11 @@ Add handling for emiting, handling and dispatching signals.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`createClone`](#createClone)[`createInstance`](#createInstance)[`createTransientInstance`](#createTransientInstance)[`dispatchSignal`](#dispatchSignal)[`emit`](#emit)[`getMethod`](#getMethod)[`handle`](#handle)[`objToString`](#objToString)[`setMethod`](#setMethod)[`setSuperclassList`](#setSuperclassList)
 
@@ -102,19 +102,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="createClone"></span>
 
@@ -122,7 +122,7 @@ Inherited from `Object` :
 
 [systype.h](../file/systype.h.html)\[[260](../source/systype.h.html#260)\]
 
-<div class="desc">
+
 
 Create a clone of this object. This creates an exact copy, with the same
 property values, as the original. This does not call any constructors;
@@ -131,7 +131,7 @@ it merely instantiates an exact copy of the original.
 Note that the clone is a "shallow" copy, which means that any objects it
 references are not themselves cloned.
 
-</div>
+
 
 <span id="createInstance"></span>
 
@@ -139,14 +139,14 @@ references are not themselves cloned.
 
 [systype.h](../file/systype.h.html)\[[250](../source/systype.h.html#250)\]
 
-<div class="desc">
+
 
 Create an instance of this object: in other words, create a new object
 whose superclass is this object. The arguments provided are passed to
 the new object's constructor. This method returns a reference to the new
 object.
 
-</div>
+
 
 <span id="createTransientInstance"></span>
 
@@ -154,13 +154,13 @@ object.
 
 [systype.h](../file/systype.h.html)\[[267](../source/systype.h.html#267)\]
 
-<div class="desc">
+
 
 Create a transient instance of this object. This works just like
 createInstance(), but creates a transient instance instead of an
 ordinary (persistent) instance.
 
-</div>
+
 
 <span id="dispatchSignal"></span>
 
@@ -168,7 +168,7 @@ ordinary (persistent) instance.
 
 [signals.t](../file/signals.t.html)\[[177](../source/signals.t.html#177)\]
 
-<div class="desc">
+
 
 Dispatch a signal to the appropriate handler method on this object. We
 look up the property pointer to use on the signal's dispatchTab
@@ -178,7 +178,7 @@ our catch-all generic handle(sender, signal) method.
 
 \[SIGNALS EXTENSION\]
 
-</div>
+
 
 <span id="emit"></span>
 
@@ -186,11 +186,11 @@ our catch-all generic handle(sender, signal) method.
 
 [signals.t](../file/signals.t.html)\[[152](../source/signals.t.html#152)\]
 
-<div class="desc">
+
 
 Emit a signal \[SIGNALS EXTENSION\]
 
-</div>
+
 
 <span id="getMethod"></span>
 
@@ -198,7 +198,7 @@ Emit a signal \[SIGNALS EXTENSION\]
 
 [systype.h](../file/systype.h.html)\[[330](../source/systype.h.html#330)\]
 
-<div class="desc">
+
 
 Get a method value. If the property is a method, this returns a function
 pointer to the method; this does NOT evaluate the method. If the
@@ -210,7 +210,7 @@ won't be able to refer to properties or methods of 'self'. The main use
 of this method is to get a method of one object to assign as a method of
 another object using setMethod().
 
-</div>
+
 
 <span id="handle"></span>
 
@@ -218,14 +218,14 @@ another object using setMethod().
 
 [signals.t](../file/signals.t.html)\[[164](../source/signals.t.html#164)\]
 
-<div class="desc">
+
 
 Handle a signal from sender; game code will need to override particular
 instances. Note that this is a catch-all handler for signals we don't
 recognize or for which more specific handlers haven't been defined.
 \[SIGNALS EXTENSION\]
 
-</div>
+
 
 <span id="objToString"></span>
 
@@ -233,11 +233,11 @@ recognize or for which more specific handlers haven't been defined.
 
 [debug.t](../file/debug.t.html)\[[323](../source/debug.t.html#323)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="setMethod"></span>
 
@@ -245,7 +245,7 @@ recognize or for which more specific handlers haven't been defined.
 
 [systype.h](../file/systype.h.html)\[[341](../source/systype.h.html#341)\]
 
-<div class="desc">
+
 
 Set a method value. Assigns the given function (which must be a function
 pointer value) to the given property of 'self'. This effectively adds a
@@ -255,7 +255,7 @@ The function can be an ordinary named function, or a method pointer
 retrieved from this object or from another object with getMethod().
 Anonymous functions are NOT allowed here.
 
-</div>
+
 
 <span id="setSuperclassList"></span>
 
@@ -263,7 +263,7 @@ Anonymous functions are NOT allowed here.
 
 [systype.h](../file/systype.h.html)\[[317](../source/systype.h.html#317)\]
 
-<div class="desc">
+
 
 Set the superclass list. scList is a list giving the new superclasses.
 The superclasses must all be TadsObject objects, with one exception: the
@@ -271,11 +271,11 @@ list \[TadsObject\] may be passed to create an object based directly on
 TadsObject. No other intrinsic classes can be used in the list, and
 objects of other types cannot be used in the list.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

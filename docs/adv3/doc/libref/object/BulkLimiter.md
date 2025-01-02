@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The common base class for containers and surfaces: things that have
 limited bulk capacities. This class isn't usually used directly;
@@ -34,15 +34,15 @@ subclasses such as Surface and Container are usually used instead.
 
 `class `**`BulkLimiter`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BulkLimiter`**  
 [`Thing`](../object/Thing.html)  
@@ -50,11 +50,11 @@ subclasses such as Surface and Container are usually used instead.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`BulkLimiter`**  
 [`BasicContainer`](../object/BasicContainer.html)  
@@ -83,19 +83,19 @@ subclasses such as Surface and Container are usually used instead.
 [`RestrictedSurface`](../object/RestrictedSurface.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`becomingTooFullMsg`](#becomingTooFullMsg)[`becomingTooLargeMsg`](#becomingTooLargeMsg)[`bulkCapacity`](#bulkCapacity)[`maxSingleBulk`](#maxSingleBulk)[`revealHiddenItems`](#revealHiddenItems)[`tooFullMsg`](#tooFullMsg)
 
@@ -107,11 +107,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`adjustThrowDestination`](#adjustThrowDestination)[`checkBulkChangeWithin`](#checkBulkChangeWithin)[`checkBulkInserted`](#checkBulkInserted)[`examineInterior`](#examineInterior)[`examineInteriorWithLister`](#examineInteriorWithLister)[`notifyInsert`](#notifyInsert)[`verifyPutInInterior`](#verifyPutInInterior)
 
@@ -123,11 +123,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="becomingTooFullMsg"></span>
 
@@ -135,12 +135,12 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[4411](../source/objects.t.html#4411)\]
 
-<div class="desc">
+
 
 the message property to use when doing something to one of our contents
 would cause our overall contents to exceed our capacity
 
-</div>
+
 
 <span id="becomingTooLargeMsg"></span>
 
@@ -148,13 +148,13 @@ would cause our overall contents to exceed our capacity
 
 [objects.t](../file/objects.t.html)\[[4405](../source/objects.t.html#4405)\]
 
-<div class="desc">
+
 
 the message property to use when doing something to one of our contents
 would make it too large to fit all by itself into this container (that
 is, it would cause that object's bulk to exceed our maxSingleBulk)
 
-</div>
+
 
 <span id="bulkCapacity"></span>
 
@@ -162,7 +162,7 @@ is, it would cause that object's bulk to exceed our maxSingleBulk)
 
 [objects.t](../file/objects.t.html)\[[4332](../source/objects.t.html#4332)\]
 
-<div class="desc">
+
 
 A container can limit the cumulative amount of bulk of its contents, and
 the maximum bulk of any one object, using bulkCapacity and
@@ -189,7 +189,7 @@ bulkCapacity exceeds bulk, the player can work around a holding bulk
 limit by piling objects into the container, thus "hiding" the bulks of
 the contents behind the smaller bulk of the container.
 
-</div>
+
 
 <span id="maxSingleBulk"></span>
 
@@ -197,11 +197,11 @@ the contents behind the smaller bulk of the container.
 
 [objects.t](../file/objects.t.html)\[[4333](../source/objects.t.html#4333)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="revealHiddenItems"></span>
 
@@ -209,7 +209,7 @@ the contents behind the smaller bulk of the container.
 
 [objects.t](../file/objects.t.html)\[[4636](../source/objects.t.html#4636)\]
 
-<div class="desc">
+
 
 Flag: reveal any hidden items contained directly within me when my
 interior is explicitly examined, via a command such as LOOK IN \<self\>.
@@ -219,7 +219,7 @@ camouflaged, so a careful, explicit examination would normally reveal
 them. If our hidden objects are so concealed that even explicit
 examination of our interior wouldn't reveal them, set this to nil.
 
-</div>
+
 
 <span id="tooFullMsg"></span>
 
@@ -227,20 +227,20 @@ examination of our interior wouldn't reveal them, set this to nil.
 
 [objects.t](../file/objects.t.html)\[[4397](../source/objects.t.html#4397)\]
 
-<div class="desc">
+
 
 the message property to use when we're too full to hold a new object
 (i.e., the object's bulk would push us over our bulk capacity limit)
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="adjustThrowDestination"></span>
 
@@ -248,14 +248,14 @@ the message property to use when we're too full to hold a new object
 
 [objects.t](../file/objects.t.html)\[[4452](../source/objects.t.html#4452)\]
 
-<div class="desc">
+
 
 Adjust a THROW destination. Since we only allow a limited amount of bulk
 within our contents, we need to make sure the thrown object would fit if
 it landed here. If it doesn't, we'll redirect the landing site to our
 container.
 
-</div>
+
 
 <span id="checkBulkChangeWithin"></span>
 
@@ -263,11 +263,11 @@ container.
 
 [objects.t](../file/objects.t.html)\[[4416](../source/objects.t.html#4416)\]
 
-<div class="desc">
+
 
 Check a bulk change of one of my direct contents.
 
-</div>
+
 
 <span id="checkBulkInserted"></span>
 
@@ -275,13 +275,13 @@ Check a bulk change of one of my direct contents.
 
 [objects.t](../file/objects.t.html)\[[4361](../source/objects.t.html#4361)\]
 
-<div class="desc">
+
 
 Check to see if a proposed insertion - already tentatively in effect
 when this routine is called - would overflow our bulk limits. Reports
 failure and exits if the inserted object would exceed our capacity.
 
-</div>
+
 
 <span id="examineInterior"></span>
 
@@ -289,12 +289,12 @@ failure and exits if the inserted object would exceed our capacity.
 
 [objects.t](../file/objects.t.html)\[[4495](../source/objects.t.html#4495)\]
 
-<div class="desc">
+
 
 Examine my interior. This can be used to handle the action() for LOOK
 IN, or for other commands appropriate to the subclass.
 
-</div>
+
 
 <span id="examineInteriorWithLister"></span>
 
@@ -302,11 +302,11 @@ IN, or for other commands appropriate to the subclass.
 
 [objects.t](../file/objects.t.html)\[[4524](../source/objects.t.html#4524)\]
 
-<div class="desc">
+
 
 examine my interior, listing the contents with the given lister
 
-</div>
+
 
 <span id="notifyInsert"></span>
 
@@ -314,12 +314,12 @@ examine my interior, listing the contents with the given lister
 
 [objects.t](../file/objects.t.html)\[[4339](../source/objects.t.html#4339)\]
 
-<div class="desc">
+
 
 receive notification that we're about to insert an object into this
 container
 
-</div>
+
 
 <span id="verifyPutInInterior"></span>
 
@@ -327,18 +327,18 @@ container
 
 [objects.t](../file/objects.t.html)\[[4559](../source/objects.t.html#4559)\]
 
-<div class="desc">
+
 
 Verify putting something new in my interior. This is suitable for use as
 a verify() method for a command like PutIn or PutOn. Note that this
 routine assumes and requires that gDobj be the object to be added, and
 gIobj be self.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

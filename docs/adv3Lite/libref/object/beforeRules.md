@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The main function of the beforeRules is to carry out our before action
 notifications.
 
 **`beforeRules`**` :   `[`RuleBook`](../object/RuleBook.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`beforeRules`**  
 [`RuleBook`](../object/RuleBook.html)  
@@ -44,11 +44,11 @@ notifications.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contValue`](#contValue)[`currentAction`](#currentAction)
 
@@ -63,11 +63,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contValue"></span>
 
@@ -93,11 +93,11 @@ Inherited from `ModuleExecObject` :
 
 [sysrules.t](../file/sysrules.t.html)\[[246](../source/sysrules.t.html#246)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="currentAction"></span>
 
@@ -105,26 +105,26 @@ Inherited from `ModuleExecObject` :
 
 [sysrules.t](../file/sysrules.t.html)\[[252](../source/sysrules.t.html#252)\]
 
-<div class="desc">
+
 
 The current action; this is set by the current action's beforeAction()
 method.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

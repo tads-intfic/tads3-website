@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A TopicDatabase for an Actor. This is used not only directly for an
 Actor but also for an actor's sub-databases, in ActorState and ConvNode.
@@ -44,26 +44,26 @@ things like threaded conversations.
 
 `class `**`ActorTopicDatabase`**` :   `[`TopicDatabase`](../object/TopicDatabase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ActorTopicDatabase`**  
 [`TopicDatabase`](../object/TopicDatabase.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ActorTopicDatabase`**  
 [`Actor`](../object/Actor.html)  
@@ -80,19 +80,19 @@ things like threaded conversations.
 [`ConvNode`](../object/ConvNode.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`askForTopics`](#askForTopics)[`askTopics`](#askTopics)[`commandTopics`](#commandTopics)[`giveTopics`](#giveTopics)[`initiateTopics`](#initiateTopics)[`miscTopics`](#miscTopics)[`showTopics`](#showTopics)[`specialTopics`](#specialTopics)[`tellTopics`](#tellTopics)
 
@@ -101,11 +101,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`initiateTopic`](#initiateTopic)[`showTopicResponse`](#showTopicResponse)
 
@@ -114,11 +114,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="askForTopics"></span>
 
@@ -126,11 +126,11 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[1077](../source/actor.t.html#1077)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="askTopics"></span>
 
@@ -138,7 +138,7 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[1076](../source/actor.t.html#1076)\]
 
-<div class="desc">
+
 
 Our 'ask about', 'ask for', 'tell about', 'give', 'show', miscellaneous,
 command, and self-initiated topic databases - these are vectors we
@@ -148,7 +148,7 @@ databases will be empty, so we don't bother even creating a vector for a
 topic list until the first topic is added. This means we have to be able
 to cope with these being nil anywhere we use them.
 
-</div>
+
 
 <span id="commandTopics"></span>
 
@@ -156,11 +156,11 @@ to cope with these being nil anywhere we use them.
 
 [actor.t](../file/actor.t.html)\[[1082](../source/actor.t.html#1082)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="giveTopics"></span>
 
@@ -168,11 +168,11 @@ to cope with these being nil anywhere we use them.
 
 [actor.t](../file/actor.t.html)\[[1080](../source/actor.t.html#1080)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="initiateTopics"></span>
 
@@ -180,11 +180,11 @@ to cope with these being nil anywhere we use them.
 
 [actor.t](../file/actor.t.html)\[[1083](../source/actor.t.html#1083)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="miscTopics"></span>
 
@@ -192,11 +192,11 @@ to cope with these being nil anywhere we use them.
 
 [actor.t](../file/actor.t.html)\[[1081](../source/actor.t.html#1081)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showTopics"></span>
 
@@ -204,11 +204,11 @@ to cope with these being nil anywhere we use them.
 
 [actor.t](../file/actor.t.html)\[[1079](../source/actor.t.html#1079)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="specialTopics"></span>
 
@@ -216,11 +216,11 @@ to cope with these being nil anywhere we use them.
 
 [actor.t](../file/actor.t.html)\[[1086](../source/actor.t.html#1086)\]
 
-<div class="desc">
+
 
 our special command database
 
-</div>
+
 
 <span id="tellTopics"></span>
 
@@ -228,19 +228,19 @@ our special command database
 
 [actor.t](../file/actor.t.html)\[[1078](../source/actor.t.html#1078)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="initiateTopic"></span>
 
@@ -248,14 +248,14 @@ our special command database
 
 [actor.t](../file/actor.t.html)\[[1011](../source/actor.t.html#1011)\]
 
-<div class="desc">
+
 
 Initiate conversation on the given simulation object. If we can find an
 InitiateTopic matching the given object, we'll show its topic response
 and return true; if we can't find a topic to initiate, we'll simply
 return nil.
 
-</div>
+
 
 <span id="showTopicResponse"></span>
 
@@ -263,15 +263,15 @@ return nil.
 
 [actor.t](../file/actor.t.html)\[[1031](../source/actor.t.html#1031)\]
 
-<div class="desc">
+
 
 show a topic response
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

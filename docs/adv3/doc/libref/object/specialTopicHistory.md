@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A history of special topics listed in topic inventories. This keeps
 track of special topics that we've recently offered, so that we can
@@ -56,45 +56,45 @@ there on the screen a few lines up.
 
 `transient `**`specialTopicHistory`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`specialTopicHistory`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`historyList`](#historyList)[`maxEntries`](#maxEntries)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkHistory`](#checkHistory)[`noteListing`](#noteListing)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="historyList"></span>
 
@@ -102,12 +102,12 @@ there on the screen a few lines up.
 
 [actor.t](../file/actor.t.html)\[[4051](../source/actor.t.html#4051)\]
 
-<div class="desc">
+
 
 The list of entries. Create it when we first need it, which perInstance
 does for us.
 
-</div>
+
 
 <span id="maxEntries"></span>
 
@@ -115,7 +115,7 @@ does for us.
 
 [actor.t](../file/actor.t.html)\[[3979](../source/actor.t.html#3979)\]
 
-<div class="desc">
+
 
 Maximum number of topics to keep in our inventory. When the history
 exceeds this number, we'll throw away the oldest entry each time we need
@@ -143,15 +143,15 @@ meaningful at some point in the game - but the odds of this even
 happening seem minuscule, and the possibility that it would give away
 meaningful information even if it did happen seems very remote.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkHistory"></span>
 
@@ -159,13 +159,13 @@ meaningful information even if it did happen seems very remote.
 
 [actor.t](../file/actor.t.html)\[[4008](../source/actor.t.html#4008)\]
 
-<div class="desc">
+
 
 Scan the history list (or, if there's no limit to the history, scan all
 of the special topics in the entire game) for a match to an unrecognized
 command. Returns true if we find a match, nil if not.
 
-</div>
+
 
 <span id="noteListing"></span>
 
@@ -173,15 +173,15 @@ command. Returns true if we find a match, nil if not.
 
 [actor.t](../file/actor.t.html)\[[3982](../source/actor.t.html#3982)\]
 
-<div class="desc">
+
 
 note that a special topic 't' is being listed in a topic inventory
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

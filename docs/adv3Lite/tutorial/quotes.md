@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="reviewing.html" class="nav">Reviewing the Basics</a> \> Things
@@ -17,7 +17,7 @@ Modification and Overriding</a>    
 <a href="revisit.html" class="nav"><em>Next:</em> Heidi Revisited</a>    
 </span>
 
-</div>
+
 
 
 
@@ -36,10 +36,10 @@ this". In TADS 3 (and hence in adv3Lite) the distinction between the two
 is important, and to distinguish between the two they are referred to
 respectively as single-quoted strings and double-quoted strings:
 
-`
+```
     'This is a single-quoted string.';
     "This is a double-quoted string.";
-`
+```
 
 The basic distinction between the two is relatively straightforward: a
 single-quoted string is a piece of textual data that can be assigned to
@@ -58,13 +58,13 @@ typical definition of a Thing where the `vocab`
 property is single-quoted string and the `desc`
 property a double-quoted string:
 
-`
+```
     + bird: Thing 'baby bird;;nestling'
         "Too young to fly, the nestling tweets helplessly. "
         
         bulk = 1
     ;
-`
+```
 
 The distinction isn't too badly blurred here. The
 `vocab` property ('baby bird;;nestling', via the
@@ -79,13 +79,13 @@ to a method that displays some text. Indeed, it would have been
 perfectly legal (though in this case pointless) to define the bird
 object thus:
 
-`
+```
     + bird: Thing 'baby bird;;nestling'
         desc() { "Too young to fly, the nestling tweets helplessly. "; }
         
         bulk = 1
     ;
-`
+```
 
 In fact, wherever the library requires a double-quoted string property,
 it's always legal (and sometimes useful) to supply a method that
@@ -149,17 +149,17 @@ superficially resemble an assignment statement, the two are quite
 different things. That means that while the following definition is
 legal:
 
-`
+```
     + bird: Thing 'baby bird;;nestling'
         desc = "Too young to fly, the nestling tweets helplessly. "   
     ;
-`
+```
 
 The following statement is not:
 
-`
+```
     bird.desc = "The nestling looks calmer now. "; // DON'T DO THIS!
-`
+```
 
 You *cannot* assign a double-quoted string directly to a property or
 variable (or pass it as a parameter), since a double-quoted string is
@@ -170,17 +170,17 @@ way to handle the kind of variation in a description (or other
 double-quoted string property) is by including conditional statements
 either in an embedded expression or a method:
 
-`
+```
     + bird: Thing 'baby bird;;nestling'
         "<<if isCalm>>The nestling looks calmer now<<else>>Too young to fly, the nestling tweets helplessly<<end>>. "   
         
         isCalm = nil
     ;
-`
+```
 
 Or:
 
-`
+```
     + bird: Thing 'baby bird;;nestling'
         desc()
         {
@@ -192,7 +192,7 @@ Or:
         
         isCalm = nil
     ;
-`
+```
 
 In this relatively simple case, you'd probably prefer the first way. In
 a more complex case you might well prefer the second.
@@ -200,16 +200,16 @@ a more complex case you might well prefer the second.
 There is a way of sorts of assigning a new double-quoted string value to
 a property. Just for the record, it looks like this:
 
-`
+```
     bird.setMethod(&desc, 'The nestling looks calmer now. ');
-`
+```
 
 Conversely, you can get at the current single-quoted string value of a
 double-quoted string property with a statement like:
 
-`
+```
     local str = bird.getMethod(&desc);
-`
+```
 
 But note that this will only work as expected (a) if desc has been
 defined as a double-quoted string and not as a method (this is one of
@@ -222,9 +222,9 @@ probably avoid it (it's not really what
 `getMethod()` is for). A more reliable way of
 achieving the objective would be:
 
-`
+```
     local str = gOutStream.captureOutput({ : bird.desc });
-`
+```
 
 But that's using features way beyond anything we're likely to cover in
 this tutorial. For now, therefore, I suggest you stick to using the
@@ -271,7 +271,7 @@ make some improvements.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -282,4 +282,4 @@ Modification and Overriding</a>    
 <a href="revisit.html" class="nav"><em>Next:</em> Heidi Revisited</a>    
 </span>
 
-</div>
+

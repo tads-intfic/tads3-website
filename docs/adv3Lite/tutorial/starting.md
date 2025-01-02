@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="finish.html" class="nav">Finishing Touches</a> \> Starting Out
@@ -16,7 +16,7 @@ Right
     <a href="scoring.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
 
-</div>
+
 
 
 
@@ -29,7 +29,7 @@ what the game is actually about. We really need to add a proper
 introduction, which we can do in the **showIntro()** method of the
 `gameMain` object:
 
-`
+```
     gameMain: GameMainDef
         /* Define the initial player character; this is compulsory */
         initialPlayerChar = me
@@ -46,7 +46,7 @@ introduction, which we can do in the **showIntro()** method of the
            airport and now your only hope is to get the first plane out of here.\b";
         }       
     ;
-`
+```
 
 The `gameMain` object can also be used to define
 a number of options that affect the whole game (for a complete list, see
@@ -63,7 +63,7 @@ Another thing players commonly try at the start of the game is X ME
 is meant to be. It's generally a good idea to oblige them by providing a
 custom description on the player character object:
 
-`
+```
     + me: Thing 'you'   
         "Secret agents are normally meant to be well equipped, but your quick
         getaway just now meant you had to leave just about everything behind
@@ -75,11 +75,11 @@ custom description on the player character object:
         person = 2   
         contType = Carrier    
     ;
-`
+```
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -91,4 +91,4 @@ Right
 
 
 
-</div>
+

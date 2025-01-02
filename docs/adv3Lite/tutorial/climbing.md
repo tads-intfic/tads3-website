@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Climbing the
@@ -17,7 +17,7 @@ Cottage</a>    
 <a href="dropping.html" class="nav"><em>Next:</em> Dropping objects from
 the tree</a>     </span>
 
-</div>
+
 
 
 
@@ -25,7 +25,7 @@ the tree</a>     </span>
 
 Here's the next problem the player may encounter:
 
-<div class="cmdline">
+
 
     In front of a Cottage
     You stand outside a cottage. The forest stretches east. 
@@ -63,7 +63,7 @@ as a taste of things to come, and then sticking with the third.
 The first way is to make the tree climbable and then define what happens
 when it's climbed:
 
-`
+```
     + tree: Thing 'tall sycamore tree;;stout proud'     
         "Standing proud in the middle of the clearing, the stout tree looks easy to
         climb."
@@ -81,7 +81,7 @@ when it's climbed:
             }
         }
     ;
-`
+```
 
 This is the way you'll often respond to actions, but we won't go into it
 in much detail for now, leaving the full explanation until later. In
@@ -106,14 +106,14 @@ to define a Doer that intercepts the climb tree action and makes it do
 the same thing as UP instead. The code for that is briefer, and consists
 simply of defining the following object:
 
-`
+```
     Doer 'climb tree'
         execAction(curCmd)
         {
             doInstead(Go, upDir);
         }    
     ;
-`
+```
 
 We'll meet Doers in more detail later. If you're itching with
 curiorisity about them already you can look up
@@ -155,7 +155,7 @@ redirect a command to a totally different action (as here); another
 might be to rule out certain commands altogether. For example, you could
 add the following to your code:
 
-`
+```
     Doer 'go dir'
         execAction(curCmd)
         {
@@ -165,7 +165,7 @@ add the following to your code:
         
         direction = [portDir, starboardDir, foreDir, aftDir]
     ;
-`
+```
 
 This would cause the message "You're not aboard a ship" to be displayed
 if the player typed PORT, STARBOARD, FORE or AFT, which are otherwise
@@ -195,14 +195,14 @@ called `StairwayUp`, because it could typically
 be used for staircases leading up from one floor to another, but it will
 work equally well for the tree:
 
-`
+```
     + tree: StairwayUp 'tall sycamore tree;;stout proud'     
         "Standing proud in the middle of the clearing, the stout tree looks easy to
         climb."
         
         destination = topOfTree
     ;
-`
+```
 
 The only property we now need to define on the tree is its
 `destination` property, which tells the game
@@ -218,7 +218,7 @@ been automatically the case. As a further bonus, we can add a
 `travelDesc` property to describe Heidi climbing
 the tree:
 
-`
+```
     + tree: StairwayUp 'tall sycamore tree;;stout proud'     
         "Standing proud in the middle of the clearing, the stout tree looks easy to
         climb."
@@ -229,7 +229,7 @@ the tree:
             again climb <<stopping>> to the top of the tree. "
         
     ;
-`
+```
 
 Note the use of the embedded expression `\<\<one
 of\>\> ... \<\<or\>\> ... \<\<stopping\>\>` syntax to vary the
@@ -244,7 +244,7 @@ property of the `clearing` to point to the
 `tree` object instead of the
 `topOfTree` room:
 
-`
+```
     clearing: Room 'A forest clearing'
         "A tall sycamore stands in the middle of this clearing. The path winds
         southwest through the trees. "
@@ -252,7 +252,7 @@ property of the `clearing` to point to the
         southwest = forest
         up = tree
     ;
-`
+```
 
 This works because StairwayUp inherits from the TravelConnector class as
 well as the Thing class, and a TravelConnector is another kind of object
@@ -290,11 +290,11 @@ now.
 Now try compiling and running the game again to check that everything
 behaves as you expect.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -305,4 +305,4 @@ Cottage</a>    
 <a href="dropping.html" class="nav"><em>Next:</em> Dropping objects from
 the tree</a>     </span>
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Byte Packing  
@@ -15,7 +15,7 @@ layout: docs
     <a href="bignum.html" class="nav"><em>Next:</em> BigNumber</a>    
 </span>
 
-</div>
+
 
 
 
@@ -1622,7 +1622,7 @@ the group).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1631,4 +1631,4 @@ the group).
     <a href="bignum.html" class="nav"><em>Next:</em> BigNumber</a>    
 </span>
 
-</div>
+

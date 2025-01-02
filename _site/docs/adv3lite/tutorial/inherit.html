@@ -53,19 +53,20 @@ writing Interactive Fiction with adv3Lite.</p>
 <p>You may recall towards the end of the previous chapter we tested for the
 nest being placed on the branch with the following code:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + branch: Thing 'wide firm bough; flat; branch'
-        "It's flat enough to support a small object. "
-        
-        iFixed = true
-        isListed = true
-        contType = On
-        
-        afterAction()
-        {
-            if(nest.isIn(self))
-                finishGameMsg(ftVictory, [finishOptionUndo]);
-        }
-    ;
+<p>`
+    + branch: Thing ‘wide firm bough; flat; branch’
+        “It’s flat enough to support a small object. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    iFixed = true
+    isListed = true
+    contType = On
+    
+    afterAction()
+    {
+        if(nest.isIn(self))
+            finishGameMsg(ftVictory, [finishOptionUndo]);
+    }
+; `
 </code></pre></div></div>
 
 <p>But you may be wondering, where exactly did this
@@ -77,13 +78,14 @@ have to call the <code class="language-plaintext highlighter-rouge">afterAction(
 Thing in scope after the performance of each successful action. On the
 Thing class, however, the afterAction() routine is defined like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Thing:  Mentionable
-      ...
-      
-      afterAction() { }
-     
-      ...
-    ;
+<p>`
+    class Thing:  Mentionable
+      …</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  afterAction() { }
+ 
+  ...
+; `
 </code></pre></div></div>
 
 <p>Thus the <code class="language-plaintext highlighter-rouge">afterAction()</code> method on Thing is an
@@ -104,21 +106,23 @@ determine whether a Thing is switched on or off. It also defines an
 that Thing can be switched on and off (obviously most things can’t). On
 the Thing class this property and this method are defined as follows:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isSwitchable = nil
+<p>`
+    isSwitchable = nil</p>
 
-    makeOn(stat) { isOn = stat; }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>makeOn(stat) { isOn = stat; } `
 </code></pre></div></div>
 
 <p>If we want to create a Thing that can be switched on and off, we’d
 therefore need to override its <code class="language-plaintext highlighter-rouge">isSwitchable</code>
 property to true, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    lightSwitch: Thing 'light switch'
-       "It's just an ordinary light switch that can be turned on and off. "
+<p>`
+    lightSwitch: Thing ‘light switch’
+       “It’s just an ordinary light switch that can be turned on and off. “
        isSwitchable = true
        isFixed = true
     ;
-</code></pre></div></div>
+`</p>
 
 <p>That’s all we have to do in adv3Lite to create a light switch (by the
 way, I hope by now it’s obvious why we also defined
@@ -145,13 +149,14 @@ would be to <em>override</em> the makeOn(stat) method on the lightSwitch to
 light up or turn off a light bulb somewhere. Here’s a first (but
 erroneous) attempt:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    lightSwitch: Thing 'light switch'
-       "It's just an ordinary light switch that can be turned on and off. "
+<p>`
+    lightSwitch: Thing ‘light switch’
+       “It’s just an ordinary light switch that can be turned on and off. “
        isSwitchable = true
-       isFixed = true
-       
-       makeOn(stat) { lightBulb.makeLit(stat); }
-    ;
+       isFixed = true</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   makeOn(stat) { lightBulb.makeLit(stat); }
+; `
 </code></pre></div></div>
 
 <p>Can you see what’s wrong with this? We’ll assume you’ve defined the
@@ -165,17 +170,18 @@ be to copy the original code from
 <code class="language-plaintext highlighter-rouge">Thing.makeOn(stat)</code> into
 <code class="language-plaintext highlighter-rouge">lightSwitch.makeOn(stat)</code>, giving us:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    lightSwitch: Thing 'light switch'
-       "It's just an ordinary light switch that can be turned on and off. "
+<p>`
+    lightSwitch: Thing ‘light switch’
+       “It’s just an ordinary light switch that can be turned on and off. “
        isSwitchable = true
-       isFixed = true
-       
-       makeOn(stat) 
-       { 
-         isOn = stat; 
-         lightBulb.makeLit(stat); 
-       }
-    ;
+       isFixed = true</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   makeOn(stat) 
+   { 
+     isOn = stat; 
+     lightBulb.makeLit(stat); 
+   }
+; `
 </code></pre></div></div>
 
 <p>This would certainly work, and after a fashion it does solve the
@@ -192,17 +198,18 @@ the code sample immediately above, we’re missing out on most of the
 benefits of the inheritance model. The proper solution is to use the
 <strong>inherited</strong> keyword, thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    lightSwitch: Thing 'light switch'
-       "It's just an ordinary light switch that can be turned on and off. "
+<p>`
+    lightSwitch: Thing ‘light switch’
+       “It’s just an ordinary light switch that can be turned on and off. “
        isSwitchable = true
-       isFixed = true
-       
-       makeOn(stat) 
-       { 
-         inherited(stat); 
-         lightBulb.makeLit(stat); 
-       }
-    ;
+       isFixed = true</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   makeOn(stat) 
+   { 
+     inherited(stat); 
+     lightBulb.makeLit(stat); 
+   }
+; `
 </code></pre></div></div>
 
 <p>Here, <code class="language-plaintext highlighter-rouge">inherited(stat)</code> means “at this point in
@@ -241,17 +248,18 @@ code over and over again on each and every light switch. An alternative
 would be to add the desired behaviour to the Thing class by modifying
 it, perhaps like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing
+<p>`
+    modify Thing
        bulbObj = nil
-       isSwitchable = (bulbObj != nil)
-       
-       makeOn(stat)
-       {
-          inherited(stat);
-          if(bulbObj != nil)
-             bulbObj.makeLit(stat);
-       }
-    ;
+       isSwitchable = (bulbObj != nil)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   makeOn(stat)
+   {
+      inherited(stat);
+      if(bulbObj != nil)
+         bulbObj.makeLit(stat);
+   }
+; `
 </code></pre></div></div>
 
 <p>There are several things to note here. The first is that we’ve added a
@@ -276,12 +284,13 @@ defining an associated <code class="language-plaintext highlighter-rouge">bulbOb
 Thing as above we could then define an individual light switch object
 thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    lightSwitch: Thing 'light switch'
-       "It's just an ordinary light switch that can be turned on and off. "
+<p>`
+    lightSwitch: Thing ‘light switch’
+       “It’s just an ordinary light switch that can be turned on and off. “
        bulbObj = lightBulb
-       isFixed = true   
+       isFixed = true <br />
     ;
-</code></pre></div></div>
+`</p>
 
 <p>This is a big improvement if we have a lot of light switches to define
 in our game. It has to be said, though, that unless virtually every
@@ -290,25 +299,26 @@ perhaps even then, this probably isn’t the best way to go about
 addressing this particular issue. We’d almost certainly be better off
 defining a custom LightSwitch class along the following lines:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class LightSwitch: Thing
+<p>`
+    class LightSwitch: Thing
        bulbObj = nil
        isSwitchable = true
-       isFixed = true
-       
-       makeOn(stat)
-       {
-          inherited(stat);
-          if(bulbObj != nil)
-             bulbObj.makeLit(stat);
-       }
-    ;
+       isFixed = true</p>
 
-    ...
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   makeOn(stat)
+   {
+      inherited(stat);
+      if(bulbObj != nil)
+         bulbObj.makeLit(stat);
+   }
+;
 
-    lightSwitch: LightSwitch 'light switch'
-       "It's just an ordinary light switch that can be turned on and off. "
-       bulbObj = lightBulb      
-    ;
+...
+
+lightSwitch: LightSwitch 'light switch'
+   "It's just an ordinary light switch that can be turned on and off. "
+   bulbObj = lightBulb      
+; `
 </code></pre></div></div>
 
 <p>This is neater primarily because this way we can now give the light

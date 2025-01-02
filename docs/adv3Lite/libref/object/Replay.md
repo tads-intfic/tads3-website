@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 REPLAY - play back a command log previously recorded.
 
 **`Replay`**` :   `[`Action`](../object/Action.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Replay`**  
 [`Action`](../object/Action.html)  
@@ -43,11 +43,11 @@ REPLAY - play back a command log previously recorded.
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fileDisposition`](#fileDisposition)[`filePromptMsg`](#filePromptMsg)[`fileTypeID`](#fileTypeID)[`scriptOptionFlags`](#scriptOptionFlags)
 
@@ -60,11 +60,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`inputScriptOkay`](#inputScriptOkay)[`performFileOp`](#performFileOp)[`showCancelMsg`](#showCancelMsg)
 
@@ -79,11 +79,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fileDisposition"></span>
 
@@ -91,11 +91,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2577](../source/actions.t.html#2577)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="filePromptMsg"></span>
 
@@ -103,11 +103,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2574](../source/actions.t.html#2574)\]
 
-<div class="desc">
+
 
 our file dialog parameters - ask for a log file to save
 
-</div>
+
 
 <span id="fileTypeID"></span>
 
@@ -115,11 +115,11 @@ our file dialog parameters - ask for a log file to save
 
 [actions.t](../file/actions.t.html)\[[2576](../source/actions.t.html#2576)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="scriptOptionFlags"></span>
 
@@ -127,19 +127,19 @@ our file dialog parameters - ask for a log file to save
 
 [actions.t](../file/actions.t.html)\[[2583](../source/actions.t.html#2583)\]
 
-<div class="desc">
+
 
 script flags passed to setScriptFile
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="inputScriptOkay"></span>
 
@@ -147,11 +147,11 @@ script flags passed to setScriptFile
 
 [actions.t](../file/actions.t.html)\[[2620](../source/actions.t.html#2620)\]
 
-<div class="desc">
+
 
 acknowledge starting an input script
 
-</div>
+
 
 <span id="performFileOp"></span>
 
@@ -159,11 +159,11 @@ acknowledge starting an input script
 
 [actions.t](../file/actions.t.html)\[[2586](../source/actions.t.html#2586)\]
 
-<div class="desc">
+
 
 replay the given file
 
-</div>
+
 
 <span id="showCancelMsg"></span>
 
@@ -171,15 +171,15 @@ replay the given file
 
 [actions.t](../file/actions.t.html)\[[2580](../source/actions.t.html#2580)\]
 
-<div class="desc">
+
 
 show our cancellation mesasge
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

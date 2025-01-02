@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The reportRules provide a convenient entry point to customize standard
 action reports under particular circumstances. \[SYSRULES EXTENSION\]
 
 **`reportRules`**` :   `[`RuleBook`](../object/RuleBook.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`reportRules`**  
 [`RuleBook`](../object/RuleBook.html)  
@@ -44,11 +44,11 @@ action reports under particular circumstances. \[SYSRULES EXTENSION\]
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contValue`](#contValue)[`currentAction`](#currentAction)
 
@@ -63,11 +63,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -81,11 +81,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contValue"></span>
 
@@ -94,13 +94,13 @@ description only</span>
 
 [sysrules.t](../file/sysrules.t.html)\[[432](../source/sysrules.t.html#432)\]
 
-<div class="desc">
+
 
 This is the one RuleBook where we don't define contValue = nil, since
 normally we'll want the first matching rule to stop execution of the
 rulebook.
 
-</div>
+
 
 <span id="currentAction"></span>
 
@@ -108,25 +108,25 @@ rulebook.
 
 [sysrules.t](../file/sysrules.t.html)\[[425](../source/sysrules.t.html#425)\]
 
-<div class="desc">
+
 
 The current action; this is set by the current action's report() method.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

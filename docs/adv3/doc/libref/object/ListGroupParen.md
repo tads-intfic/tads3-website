@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 List Group implementation: parenthesized sublist. Displays the number of
 items collectively, then displays the list of items in parentheses.
@@ -37,15 +37,15 @@ by compareGroupItems().
 
 `class `**`ListGroupParen`**` :   `[`ListGroupSorted`](../object/ListGroupSorted.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ListGroupParen`**  
 [`ListGroupSorted`](../object/ListGroupSorted.html)  
@@ -53,27 +53,27 @@ by compareGroupItems().
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`groupDisplaysSublist`](#groupDisplaysSublist)
 
@@ -84,11 +84,11 @@ Inherited from `ListGroup` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showGroupCountName`](#showGroupCountName)[`showGroupList`](#showGroupList)
 
@@ -100,11 +100,11 @@ Inherited from `ListGroup` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="groupDisplaysSublist"></span>
 
@@ -112,19 +112,19 @@ Inherited from `ListGroup` :
 
 [lister.t](../file/lister.t.html)\[[2167](../source/lister.t.html#2167)\]
 
-<div class="desc">
+
 
 we don't add a sublist, since we enclose our list in parentheses
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showGroupCountName"></span>
 
@@ -132,7 +132,7 @@ we don't add a sublist, since we enclose our list in parentheses
 
 [lister.t](../file/lister.t.html)\[[2160](../source/lister.t.html#2160)\]
 
-<div class="desc">
+
 
 Show the collective count for the list of objects. By default, we'll
 simply display the countName of the first item in the list, on the
@@ -140,7 +140,7 @@ assumption that each object has the same plural description. However, in
 most cases this should be overridden to provide a more general
 collective name for the group.
 
-</div>
+
 
 <span id="showGroupList"></span>
 
@@ -148,15 +148,15 @@ collective name for the group.
 
 [lister.t](../file/lister.t.html)\[[2120](../source/lister.t.html#2120)\]
 
-<div class="desc">
+
 
 show the group list
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

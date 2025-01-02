@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Doors  
@@ -15,7 +15,7 @@ layout: docs
     <a href="travel.html" class="nav"><em>Next:</em> TravelConnectors and
 Barriers</a>     </span>
 
-</div>
+
 
 
 
@@ -33,7 +33,7 @@ these are two sides of the same door it is further necessary to set the
 **otherSide** property of each Door object to point to the other Door
 object, for example:
 
-`
+```
     hall: Room 'Hall' 'hall'
        "The front door lies to the west. "
        west = frontDoor
@@ -67,7 +67,7 @@ lockability property just as we would on any other Thing.
 
 Another point to note is that in order to keep everything in sync we
 defined the **otherSide** property on both sides of the Door and
-`<span id="doorlocked_idx">isLocked` =
+```<span id="doorlocked_idx">isLocked` =
 true</span> on both sides of the Door. While this is good practice, it
 is not absolutely necessary, however, since if we forget to do it the
 library will attempt to correct it for us. In particular, if we are
@@ -140,7 +140,7 @@ explicitly include the symconn extension in your build.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -151,4 +151,4 @@ Barriers</a>     </span>
 
 
 
-</div>
+

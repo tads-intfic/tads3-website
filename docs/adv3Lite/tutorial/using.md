@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Using the Tools  
@@ -16,7 +16,7 @@ layout: docs
 <a href="heidi.html" class="nav"><em>Next:</em> Heidi: our first adv3Lite
 game</a>     </span>
 
-</div>
+
 
 
 
@@ -89,12 +89,12 @@ the programming tools and files we've just set up.
 
     and:
 
-    <div class="code">
+    
 
         + nest: Thing 'bird\'s nest; carefully woven; moss twigs' "The nest is carefully woven of twigs and moss. "    
             contType = In bulk = 1;
 
-    </div>
+    
 
     It's just that the first way of doing it is much more readable to
     the human eye (and hence much less error-prone) than the second, so
@@ -120,7 +120,7 @@ up straight away, but you will need to do so eventually.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -131,4 +131,4 @@ Tools
 <a href="heidi.html" class="nav"><em>Next:</em> Heidi: our first adv3Lite
 game</a>     </span>
 
-</div>
+

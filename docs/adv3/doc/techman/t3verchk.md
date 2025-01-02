@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Verify, Check,
@@ -17,7 +17,7 @@ and When to Use Which
 <a href="t3verb.html" class="nav"><em>Next:</em> How to Create Verbs</a>
     </span>
 
-</div>
+
 
 
 
@@ -188,7 +188,7 @@ stylized pingpong paddle if you will. First we'll discuss
 
 Say the player types:
 
-<div class="cmdline">
+
 
     >turn fan on
 
@@ -198,12 +198,12 @@ We definitely want to exclude the hand-fan, since it's obvious that the
 hand-fan can't be turned on or off, so this exclusion goes in the
 verify. So we might get the following disambiguation question:
 
-<div class="cmdline">
+
 
     >turn fan on
     Which fan do you mean, the oscillating fan, or the ceiling fan?
 
-</div>
+
 
 Now let's say that one of these fans is already on -- we would want to
 eliminate this option also, or else we're effectively asking: "Which fan
@@ -215,37 +215,37 @@ options.
 So if the ceiling fan is on, and the oscillating fan is off, we want
 something like this:
 
-<div class="cmdline">
+
 
     >turn fan on
     (the oscillating fan)
     Done.
 
-</div>
+
 
 Now let's think about the case in which all three fans fail the
 `verify()` stage: the hand-fan obviously cannot
 be turned on, the other two are already on, so they can't be turned on
 either. If the player types:
 
-<div class="cmdline">
+
 
     >turn fan on
 
-</div>
+
 
 -- we need to ask which fan is intended, so that we can print the
 appropriate failure message. So when all three fail the
 `verify()` stage, a disambiguation question like
 this is asked:
 
-<div class="cmdline">
+
 
     >turn fan on
     Which fan do you mean, the hand-held fan, the oscillating fan,
     or the ceiling fan?
 
-</div>
+
 
 All of these will fail, of course, but they'll fail for different
 reasons, so we need to ask which the player meant before we explain why
@@ -263,20 +263,20 @@ The ceiling fan cannot be taken ever, since it's attached to the
 ceiling. The oscillating fan can be taken when it's off. The hand-held
 fan can be taken at any time. Let's say the oscillating fan is off:
 
-<div class="cmdline">
+
 
     >take fan
 
-</div>
+
 
 It's pretty clear what we want here:
 
-<div class="cmdline">
+
 
     >take fan
     Which fan do you mean, the oscillating fan, or the hand-held fan?
 
-</div>
+
 
 Note that the ceiling fan isn't an option, since it can't be taken: it
 has failed the `verify()` stage. The two good
@@ -284,11 +284,11 @@ options are offered in interactive disambiguation.
 
 Now what if the oscillating fan is on:
 
-<div class="cmdline">
+
 
     >take fan
 
-</div>
+
 
 What do we want here? The answer to this question determines whether or
 not we want the oscillating fan's takeable-condition to be in
@@ -296,24 +296,24 @@ not we want the oscillating fan's takeable-condition to be in
 Is it obvious to the player that the oscillating fan cannot be taken
 when it is on? If not, we want this:
 
-<div class="cmdline">
+
 
     >take fan
     Which fan do you mean, the oscillating fan, or the hand-held fan?
 
-</div>
+
 
 The above is produced when the fan.isOn condition goes in
 `check()`. If we instead put this condition in
 `verify()`, we will get this:
 
-<div class="cmdline">
+
 
     >take fan
     (the hand-held fan)
     Taken.
 
-</div>
+
 
 If we want to eliminate the oscillating fan during object resolution,
 then we put the condition in `verify()`, so that
@@ -331,11 +331,11 @@ directly contained by the player character. The oscillating fan is on,
 and standing on the desk, and the ceiling fan is circling overhead. How
 do we want to handle this:
 
-<div class="cmdline">
+
 
     >take fan
 
-</div>
+
 
 Deciding this will also help us determine whether or not we want the
 `fan.isOn` condition to be in
@@ -343,25 +343,25 @@ Deciding this will also help us determine whether or not we want the
 If it's not obvious that the oscillating fan cannot be taken, we want
 the following:
 
-<div class="cmdline">
+
 
     >take fan
     (the oscillating fan)
     You try to take it, but it's too awkward to grab while it's oscillating.
     Maybe you should turn it off first.
 
-</div>
+
 
 But if we want the following:
 
-<div class="cmdline">
+
 
     >take fan
     Which fan do you mean, the ceiling fan [which cannot be taken], the
     hand-held fan [which you already have], or the oscillating fan [which
     cannot be taken because it's on]?
 
-</div>
+
 
 -- then we should put the oscillating fan's
 `isOn` condition in
@@ -417,14 +417,14 @@ interfere with that action can then do so with
 objects, say NPC's, have a chance to react to it. So a good use of
 `check()` can avoid sequences like this:
 
-<div class="cmdline">
+
 
     >ask stu about chair
     As you are about to speak, Mary kicks you under the table. Glaring at
     her, you redirect your question to Dave.
     The large chair isn't something you need to be asking about.
 
-</div>
+
 
 In the above example, Mary's response was a
 `beforeAction()`, and the line about the large
@@ -445,11 +445,11 @@ the action stage. The `check()` stage should not
 perform preliminary checks which determine which action methods are
 called.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -460,4 +460,4 @@ and When to Use Which
 <a href="t3verb.html" class="nav"><em>Next:</em> How to Create Verbs</a>
     </span>
 
-</div>
+

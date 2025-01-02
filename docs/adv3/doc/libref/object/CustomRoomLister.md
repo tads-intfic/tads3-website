@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A simple customizable room lister. This can be used to create custom
 listers for things like remote room contents listings. We act just like
@@ -35,42 +35,42 @@ provided during construction.
 
 `class `**`CustomRoomLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CustomRoomLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`prefixStr`](#prefixStr)[`suffixStr`](#suffixStr)
 
@@ -79,11 +79,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -92,11 +92,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="prefixStr"></span>
 
@@ -104,11 +104,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4481](../source/msg_neu.t.html#4481)\]
 
-<div class="desc">
+
 
 our prefix and suffix strings
 
-</div>
+
 
 <span id="suffixStr"></span>
 
@@ -116,19 +116,19 @@ our prefix and suffix strings
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4482](../source/msg_neu.t.html#4482)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -136,11 +136,11 @@ our prefix and suffix strings
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4470](../source/msg_neu.t.html#4470)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixTall"></span>
 
@@ -148,11 +148,11 @@ our prefix and suffix strings
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4478](../source/msg_neu.t.html#4478)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -160,11 +160,11 @@ our prefix and suffix strings
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4476](../source/msg_neu.t.html#4476)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -172,15 +172,15 @@ our prefix and suffix strings
 
 [msg_neu.t](../file/msg_neu.t.html)\[[4477](../source/msg_neu.t.html#4477)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

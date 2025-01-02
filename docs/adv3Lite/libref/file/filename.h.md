@@ -25,70 +25,70 @@ layout: docs
 [Summary](#_TemplateSummary_)  
 [Details](#_Templates_)
 
-<div class="fdesc">
+
 
 This header defines the FileName intrinsic class.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 [`FileName`](../object/FileName.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_MacroSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Macros</span>  
 
-</div>
+
 
 [`FileAttrHidden`](#FileAttrHidden)[`FileAttrRead`](#FileAttrRead)[`FileAttrSystem`](#FileAttrSystem)[`FileAttrWrite`](#FileAttrWrite)[`FileTypeBlock`](#FileTypeBlock)[`FileTypeChar`](#FileTypeChar)[`FileTypeDir`](#FileTypeDir)[`FileTypeFile`](#FileTypeFile)[`FileTypeLink`](#FileTypeLink)[`FileTypeParentLink`](#FileTypeParentLink)[`FileTypePipe`](#FileTypePipe)[`FileTypeSelfLink`](#FileTypeSelfLink)[`FileTypeSocket`](#FileTypeSocket)
 
 <span id="_EnumSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Enums</span>  
 
-</div>
+
 
 *(none)* <span id="_TemplateSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Templates</span>  
 
-</div>
+
 
 *(none)* <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 *(none)* <span id="_Macros_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Macros</span>  
 
-</div>
+
 
 <span id="FileAttrHidden"></span>
 
@@ -96,7 +96,7 @@ This header defines the FileName intrinsic class.
 
 [filename.h](../file/filename.h.html)\[[376](../source/filename.h.html#376)\]
 
-<div class="desc">
+
 
 `0x0001`  
 Hidden file. When this attribute is set, the file should be omitted from
@@ -116,7 +116,7 @@ convenience for the user, to reduce clutter in normal directory listings
 by filtering out system or application files (such as preference files,
 caches, or indices) that the user doesn't normally access directly.
 
-</div>
+
 
 <span id="FileAttrRead"></span>
 
@@ -124,7 +124,7 @@ caches, or indices) that the user doesn't normally access directly.
 
 [filename.h](../file/filename.h.html)\[[400](../source/filename.h.html#400)\]
 
-<div class="desc">
+
 
 `0x0004`  
 The file is readable by the current process. If this is set, it means
@@ -134,7 +134,7 @@ will actually succeed, since other conditions could arise, such as
 physical media errors or locking by another process that prevents
 concurrent access.
 
-</div>
+
 
 <span id="FileAttrSystem"></span>
 
@@ -142,7 +142,7 @@ concurrent access.
 
 [filename.h](../file/filename.h.html)\[[390](../source/filename.h.html#390)\]
 
-<div class="desc">
+
 
 `0x0002`  
 System file. This is a file system attribute on some systems (notably
@@ -156,7 +156,7 @@ There's no equivalent of this attribute on most systems other than DOS
 and Windows; it won't ever appear in a file's attributes on systems
 where there's no equivalent.
 
-</div>
+
 
 <span id="FileAttrWrite"></span>
 
@@ -164,7 +164,7 @@ where there's no equivalent.
 
 [filename.h](../file/filename.h.html)\[[410](../source/filename.h.html#410)\]
 
-<div class="desc">
+
 
 `0x0008`  
 The file is writable by the current process. If this is set, it means
@@ -174,7 +174,7 @@ the file will actually succeed, since other conditions could arise, such
 as insufficient disk space, physical media errors, or locking by another
 process that prevents concurrent access.
 
-</div>
+
 
 <span id="FileTypeBlock"></span>
 
@@ -182,12 +182,12 @@ process that prevents concurrent access.
 
 [filename.h](../file/filename.h.html)\[[332](../source/filename.h.html#332)\]
 
-<div class="desc">
+
 
 `0x0008`  
 block-mode device (e.g., Linux raw disk device)
 
-</div>
+
 
 <span id="FileTypeChar"></span>
 
@@ -195,12 +195,12 @@ block-mode device (e.g., Linux raw disk device)
 
 [filename.h](../file/filename.h.html)\[[329](../source/filename.h.html#329)\]
 
-<div class="desc">
+
 
 `0x0004`  
 character-mode device (e.g., console)
 
-</div>
+
 
 <span id="FileTypeDir"></span>
 
@@ -208,12 +208,12 @@ character-mode device (e.g., console)
 
 [filename.h](../file/filename.h.html)\[[326](../source/filename.h.html#326)\]
 
-<div class="desc">
+
 
 `0x0002`  
 directory (folder)
 
-</div>
+
 
 <span id="FileTypeFile"></span>
 
@@ -221,12 +221,12 @@ directory (folder)
 
 [filename.h](../file/filename.h.html)\[[323](../source/filename.h.html#323)\]
 
-<div class="desc">
+
 
 `0x0001`  
 ordinary file (on disk or similar storage device)
 
-</div>
+
 
 <span id="FileTypeLink"></span>
 
@@ -234,12 +234,12 @@ ordinary file (on disk or similar storage device)
 
 [filename.h](../file/filename.h.html)\[[341](../source/filename.h.html#341)\]
 
-<div class="desc">
+
 
 `0x0040`  
 symbolic link (a filename that links to another file or directory)
 
-</div>
+
 
 <span id="FileTypeParentLink"></span>
 
@@ -247,12 +247,12 @@ symbolic link (a filename that links to another file or directory)
 
 [filename.h](../file/filename.h.html)\[[347](../source/filename.h.html#347)\]
 
-<div class="desc">
+
 
 `0x0100`  
 special system-defined parent directory link (such as Unix "..")
 
-</div>
+
 
 <span id="FileTypePipe"></span>
 
@@ -260,12 +260,12 @@ special system-defined parent directory link (such as Unix "..")
 
 [filename.h](../file/filename.h.html)\[[335](../source/filename.h.html#335)\]
 
-<div class="desc">
+
 
 `0x0010`  
 pipe (sometimes called a FIFO) or similar interprocess channel
 
-</div>
+
 
 <span id="FileTypeSelfLink"></span>
 
@@ -273,12 +273,12 @@ pipe (sometimes called a FIFO) or similar interprocess channel
 
 [filename.h](../file/filename.h.html)\[[344](../source/filename.h.html#344)\]
 
-<div class="desc">
+
 
 `0x0080`  
 special system-defined directory link to self (such as Unix ".")
 
-</div>
+
 
 <span id="FileTypeSocket"></span>
 
@@ -286,34 +286,34 @@ special system-defined directory link to self (such as Unix ".")
 
 [filename.h](../file/filename.h.html)\[[338](../source/filename.h.html#338)\]
 
-<div class="desc">
+
 
 `0x0020`  
 network socket
 
-</div>
+
 
 <span id="_Enums_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Enums</span>  
 
-</div>
+
 
 *(none)* <span id="_Templates_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Templates</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

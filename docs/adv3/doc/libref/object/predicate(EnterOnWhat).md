@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `VerbRule(EnterOnWhat)      `*`// original source text`*  
 `grammar `<span class="gramalt">[`predicate`](../object/predicate.html)`(EnterOnWhat)`</span>` :   `[`EnterOnAction`](../object/EnterOnAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`predicate(EnterOnWhat)`**  
 [`EnterOnAction`](../object/EnterOnAction.html)  
@@ -50,11 +50,11 @@ Details](#_Methods_)
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`verbPhrase`](#verbPhrase)
 
@@ -80,11 +80,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -110,11 +110,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -122,19 +122,19 @@ Inherited from `Resolver` :
 
 [en_us.t](../file/en_us.t.html)\[[10214](../source/en_us.t.html#10214)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -142,15 +142,15 @@ Inherited from `Resolver` :
 
 [en_us.t](../file/en_us.t.html)\[[10215](../source/en_us.t.html#10215)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

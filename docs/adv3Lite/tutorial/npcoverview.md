@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="character.html" class="nav">Character Building</a> \> Overview  
@@ -16,7 +16,7 @@ Building</a>    
 <a href="guard.html" class="nav"><em>Next:</em> The Security Guard</a>
     </span>
 
-</div>
+
 
 
 
@@ -53,12 +53,12 @@ editor, then edit your airport.t3m file to add
 Either way, then make sure you copy the following three lines to the
 start of your new source file:
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-`
+```
 
 For the purposes of this tutorial we'll restrict ourselves to
 implementing just three NPCs: Pablo Cortez, the Security Guard by the
@@ -80,7 +80,7 @@ AgendaItems, and leave conversation and TopicEntries to Chapter 11.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -90,4 +90,4 @@ Building</a>    
 <a href="guard.html" class="nav"><em>Next:</em> The Security Guard</a>
     </span>
 
-</div>
+

@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A noun phrase is ambiguous, so we'll have to ask for clarification.
 
 `class `**`AmbiguousError`**` :   `[`ResolutionError`](../object/ResolutionError.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AmbiguousError`**  
 [`ResolutionError`](../object/ResolutionError.html)  
@@ -49,27 +49,27 @@ A noun phrase is ambiguous, so we'll have to ask for clarification.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allowOnRespell`](#allowOnRespell)[`cmd`](#cmd)[`curable`](#curable)[`nameList`](#nameList)
 
@@ -84,11 +84,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`display`](#display)[`tryCuring`](#tryCuring)
 
@@ -102,11 +102,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allowOnRespell"></span>
 
@@ -114,7 +114,7 @@ Inherited from `Exception` :
 
 [parser.t](../file/parser.t.html)\[[5622](../source/parser.t.html#5622)\]
 
-<div class="desc">
+
 
 Accept spelling corrections that trigger an ambiguous noun error. If we
 find an ambiguous noun it means that we have valid overall verb syntax
@@ -122,7 +122,7 @@ find an ambiguous noun it means that we have valid overall verb syntax
 match too many objects. This is pretty good evidence that the respelling
 is valid.
 
-</div>
+
 
 <span id="cmd"></span>
 
@@ -130,11 +130,11 @@ is valid.
 
 [parser.t](../file/parser.t.html)\[[5665](../source/parser.t.html#5665)\]
 
-<div class="desc">
+
 
 the original Command that we were trying to resolve
 
-</div>
+
 
 <span id="curable"></span>
 
@@ -142,12 +142,12 @@ the original Command that we were trying to resolve
 
 [parser.t](../file/parser.t.html)\[[5629](../source/parser.t.html#5629)\]
 
-<div class="desc">
+
 
 this is a curable error, since the player can fix the problem by
 answering the disambiguation question
 
-</div>
+
 
 <span id="nameList"></span>
 
@@ -155,20 +155,20 @@ answering the disambiguation question
 
 [parser.t](../file/parser.t.html)\[[5671](../source/parser.t.html#5671)\]
 
-<div class="desc">
+
 
 The list of object names, with distinguisher information. This is the
 same information returned from Distinguisher.getNames().
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -176,11 +176,11 @@ same information returned from Distinguisher.getNames().
 
 [parser.t](../file/parser.t.html)\[[5601](../source/parser.t.html#5601)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="display"></span>
 
@@ -188,11 +188,11 @@ same information returned from Distinguisher.getNames().
 
 [parser.t](../file/parser.t.html)\[[5608](../source/parser.t.html#5608)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="tryCuring"></span>
 
@@ -200,17 +200,17 @@ same information returned from Distinguisher.getNames().
 
 [parser.t](../file/parser.t.html)\[[5637](../source/parser.t.html#5637)\]
 
-<div class="desc">
+
 
 Try curing the error. After an ambiguous noun error, the player can type
 a partial noun phrase that clarifies which object was intended: a
 distinguishing adjective, a locational phrase, a possessive, etc.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Fundamental
@@ -16,7 +16,7 @@ Datatypes
     <a href="strlit.html" class="nav"><em>Next:</em> String Literals</a>
     </span>
 
-</div>
+
 
 
 
@@ -102,7 +102,7 @@ two distinct enumerator names `a` and
 Enumerator symbols are defined with the `enum`
 statement:
 
-<div class="syntax">
+
 
     enum symbol [ , ... ]  ;
 
@@ -352,11 +352,11 @@ with the same precision as the BigNumber operand.
 
 A floating-point constant is written in the following format:
 
-<div class="syntax">
+
 
     digits [ . [ digits ]  ]  [ E [ + | - ]  digits ] 
 
-</div>
+
 
 The `E` (which can be upper- or lower-case) can
 be used for "scientific notation," to specify a power of ten by which to
@@ -515,11 +515,11 @@ In TADS 2, list constants could be specified by separating the elements
 with commas *or* spaces. TADS 3 requires commas to be used as separators
 in all cases.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -529,4 +529,4 @@ Datatypes
     <a href="strlit.html" class="nav"><em>Next:</em> String Literals</a>
     </span>
 
-</div>
+

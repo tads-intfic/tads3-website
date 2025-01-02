@@ -66,24 +66,25 @@ or a routine to be called.</p>
 
 <p>A simple example menu:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       FirstMenu: MenuItem 'Test menu';
-       + MenuItem 'Pets';
-       ++ MenuItem 'Chinchillas';
-       +++ MenuTopicItem 'About them'
-           menuContents = ['Furry', 'South American', 'Curious', 'Note: Not a coat'];
-       +++ MenuTopicItem 'Benefits'
-            menuContents = ['Non-allergenic', 'Cute', 'Require little space'];
-       +++ MenuTopicItem 'Downsides'
-             menuContents = ['Require dust baths', 'Startle easily'];
-       ++ MenuItem 'Cats';
-       +++ MenuLongTopicItem 'Pure evil'
-          menuContents = 'Cats are, quite simply, pure evil. I would provide
+<p>`
+       FirstMenu: MenuItem ‘Test menu’;
+       + MenuItem ‘Pets’;
+       ++ MenuItem ‘Chinchillas’;
+       +++ MenuTopicItem ‘About them’
+           menuContents = [‘Furry’, ‘South American’, ‘Curious’, ‘Note: Not a coat’];
+       +++ MenuTopicItem ‘Benefits’
+            menuContents = [‘Non-allergenic’, ‘Cute’, ‘Require little space’];
+       +++ MenuTopicItem ‘Downsides’
+             menuContents = [‘Require dust baths’, ‘Startle easily’];
+       ++ MenuItem ‘Cats’;
+       +++ MenuLongTopicItem ‘Pure evil’
+          menuContents = ‘Cats are, quite simply, pure evil. I would provide
                           ample evidence were there room for it in this
-                          simple example.';
-       +++ MenuTopicItem 'Benefits'
-         menuContents = ['They, uh, well...', 'Okay, I can\'t think of any.'];
-     
-</code></pre></div></div>
+                          simple example.’;
+       +++ MenuTopicItem ‘Benefits’
+         menuContents = [‘They, uh, well…’, ‘Okay, I can't think of any.’];</p>
+
+<p>`</p>
 
 <p>To display the menu in the first place, call its <strong>display()</strong> method.
 For example, to display the menu in the above example you would use the
@@ -104,30 +105,32 @@ MenuLongTopicItems to describe various aspects of your game; if you have
 a lot to say you might need to use another level of MenuItems to divide
 your information into sub-menus, e.g.:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       aboutMenu: MenuItem 'About';
-       + MenuItem 'About Adventure';
-       
-       ++ MenuLongTopicItem 'About the Game'
-           menuContents = 'This charming piece is something I cribbed off an obscure
-             work by Crowther and Woods. '
-       ;    
-        
-       ++ MenuLongTopicItem 'Special Commands'
-           menucontents = 'Under no circumstances should you use the commands
-             PLUGH and XYZZY without a special license. '   
-       ;
-        
-       + MenuItem 'Playing TADS games';
-       
-       ++ MenuLongTopicItem 'Standard Commands'
-           menuContents = 'Common IF commands include EXAMINE, TAKE...'
-       ;
-        
-       ++ MenuLongTopicItem 'Conversational Commands'
-           menuContents = 'TADS games use a modified version of the ASK/TELL system...'
-       ;
-     
+<p>`
+       aboutMenu: MenuItem ‘About’;
+       + MenuItem ‘About Adventure’;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   ++ MenuLongTopicItem 'About the Game'
+       menuContents = 'This charming piece is something I cribbed off an obscure
+         work by Crowther and Woods. '
+   ;    
+    
+   ++ MenuLongTopicItem 'Special Commands'
+       menucontents = 'Under no circumstances should you use the commands
+         PLUGH and XYZZY without a special license. '   
+   ;
+    
+   + MenuItem 'Playing TADS games';
+   
+   ++ MenuLongTopicItem 'Standard Commands'
+       menuContents = 'Common IF commands include EXAMINE, TAKE...'
+   ;
+    
+   ++ MenuLongTopicItem 'Conversational Commands'
+       menuContents = 'TADS games use a modified version of the ASK/TELL system...'
+   ;
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>You could then call <code class="language-plaintext highlighter-rouge">aboutMenu.display();</code> in
 the versionInfo.showAbout() method.</p>

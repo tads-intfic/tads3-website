@@ -26,33 +26,33 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A ReplaceRedirector is a Redirector that uses replaceAction (or its
 execNestedAction equivalent) to redirect one action to another.
 
 `class `**`ReplaceRedirector`**` :   `[`Redirector`](../object/Redirector.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ReplaceRedirector`**  
 [`Redirector`](../object/Redirector.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ReplaceRedirector`**  
 [`Action`](../object/Action.html)  
@@ -206,19 +206,19 @@ execNestedAction equivalent) to redirect one action to another.
 [`Wearable`](../object/Wearable.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -226,11 +226,11 @@ execNestedAction equivalent) to redirect one action to another.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`redirect`](#redirect)
 
@@ -239,19 +239,19 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="redirect"></span>
 
@@ -259,7 +259,7 @@ Inherited from `Redirector` :
 
 [thing.t](../file/thing.t.html)\[[961](../source/thing.t.html#961)\]
 
-<div class="desc">
+
 
 User code should normally call this method via doInstead rather than
 directly. cmd is the current command object, altAction is the action we
@@ -269,11 +269,11 @@ determines whether the new action replaces the original one (if true) or
 merely takes place during the execution of the original one, which then
 resumes when the new action is complete (if isReplacement is nil).
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Attachables  
@@ -15,7 +15,7 @@ layout: docs
     <a href="event.html" class="nav"><em>Next:</em> Events</a>    
 </span>
 
-</div>
+
 
 
 
@@ -60,7 +60,7 @@ example) with a list of objects that can be attached to it (e.g.
 \[roundMagnet, squareMagnet, starMagnet\]). For example, if we had just
 one magnet we wanted to be able to attach to a fridge we might define:
 
-`
+```
 
     + fridge: SimpleAttachable 'fridge; large white; refrigerator door'
         "It's a large, white floor-standing refrigerator. "
@@ -75,7 +75,7 @@ one magnet we wanted to be able to attach to a fridge we might define:
         last trip to Canada. "
         attachedTo = fridge
     ;
-`
+```
 
 In this example, the magnet starts out attached to the fridge, which is
 why we define `attachedTo = fridge` and locate
@@ -216,14 +216,14 @@ Plugged into or Unplugged from another object. It's then attached to the
 other object, but described as being plugged into it. Attaching one
 PlugAttachable to another is equivalent to plugging it in. For example:
 
-`
+```
     + plug: PlugAttachable, NearbyAttachable 'electric plug'    
     ;
 
     + socket: PlugAttachable, NearbyAttachable, Fixture 'power socket'
         allowableAttachments = [plug]
     ;
-`
+```
 
 The number of items that can be plugged into something (the socket) at
 any one time is controlled by the socket's **socketCapacity** property,
@@ -234,7 +234,7 @@ without specifying a particular socket, you can use the
 `PlugAttachable` mix-in with an ordinary Thing
 class and define its **needsExplicitSocket** property as nil, e.g.:
 
-`
+```
     + tv: PlugAttachable, Switch, Fixture 'television;;tv'
         "It's currently <<if isOn>>on<<else>>off<<end>>, not that it makes much
         difference to the quality of what appears on the screen. "
@@ -258,13 +258,13 @@ class and define its **needsExplicitSocket** property as nil, e.g.:
                 makeOn(nil);
         }
     ;
-`
+```
 
 
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -272,4 +272,4 @@ class and define its **needsExplicitSocket** property as nil, e.g.:
 <span class="navnp"><a href="optional.html" class="nav"><em>Prev:</em> Optional Modules</a>
     <a href="event.html" class="nav"><em>Next:</em>Events</a>     </span>
 
-</div>
+

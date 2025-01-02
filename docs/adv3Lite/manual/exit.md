@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Exits  
@@ -15,7 +15,7 @@ layout: docs
     <a href="extra.html" class="nav"><em>Next:</em> Extras</a>    
 </span>
 
-</div>
+
 
 
 
@@ -81,7 +81,7 @@ visited location.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -89,4 +89,4 @@ visited location.
 <span class="navnp"><a href="eventlist.html" class="nav"><em>Prev:</em> EventLists</a>
     <a href="extra.html" class="nav"><em>Next:</em>Extras</a>     </span>
 
-</div>
+

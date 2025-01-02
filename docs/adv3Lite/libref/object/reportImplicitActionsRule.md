@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Output any pending implicit action reports \[SYSRULES EXTENSION\]
 
 **`reportImplicitActionsRule`**` :   `[`ReportRule`](../object/ReportRule.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`reportImplicitActionsRule`**  
 [`ReportRule`](../object/ReportRule.html)  
@@ -42,11 +42,11 @@ Output any pending implicit action reports \[SYSRULES EXTENSION\]
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`priority`](#priority)
 
@@ -58,11 +58,11 @@ Inherited from `Rule` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`follow`](#follow)
 
@@ -73,11 +73,11 @@ Inherited from `Rule` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -85,19 +85,19 @@ Inherited from `Rule` :
 
 [sysrules.t](../file/sysrules.t.html)\[[453](../source/sysrules.t.html#453)\]
 
-<div class="desc">
+
 
 Output any pending implicit action reports
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="follow"></span>
 
@@ -105,15 +105,15 @@ Output any pending implicit action reports
 
 [sysrules.t](../file/sysrules.t.html)\[[445](../source/sysrules.t.html#445)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

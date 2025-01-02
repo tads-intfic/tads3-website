@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An "actor" goodbye topic. This handles ONLY goodbyes that happen when
 the NPC terminates the conversation of its own volition via
@@ -34,15 +34,15 @@ npc.endConversation().
 
 `class `**`ActorByeTopic`**` :   `[`GreetingTopic`](../object/GreetingTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ActorByeTopic`**  
 [`GreetingTopic`](../object/GreetingTopic.html)  
@@ -55,27 +55,27 @@ npc.endConversation().
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`matchObj`](#matchObj)[`matchScore`](#matchScore)
 
@@ -96,11 +96,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -124,11 +124,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="matchObj"></span>
 
@@ -136,11 +136,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[3961](../source/actor.t.html#3961)\]
 
-<div class="desc">
+
 
 An ActorByeTopic matches endConvActor only
 
-</div>
+
 
 <span id="matchScore"></span>
 
@@ -148,26 +148,26 @@ An ActorByeTopic matches endConvActor only
 
 [actor.t](../file/actor.t.html)\[[3967](../source/actor.t.html#3967)\]
 
-<div class="desc">
+
 
 Give BoredByeTopic an even higher matchScore so that it takes precedence
 over ImpByeTopic when both are present.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

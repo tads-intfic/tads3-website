@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A ScopeList is a helper object used to build the list of objects in
 scope. This object provides methods for the common ways of adding
@@ -41,61 +41,61 @@ list of in-scope objects satisfying some condition.
 
 `class `**`ScopeList`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ScopeList`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`status_`](#status_)[`vec_`](#vec_)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`add`](#add)[`addAll`](#addAll)[`addOnly`](#addOnly)[`addSelfIlluminatingWithin`](#addSelfIlluminatingWithin)[`addWithin`](#addWithin)[`close`](#close)[`createIterator`](#createIterator)[`createLiveIterator`](#createLiveIterator)[`find`](#find)[`length`](#length)[`subset`](#subset)[`toList`](#toList)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="status_"></span>
 
@@ -103,7 +103,7 @@ list of in-scope objects satisfying some condition.
 
 [query.t](../file/query.t.html)\[[1045](../source/query.t.html#1045)\]
 
-<div class="desc">
+
 
 A LookupTable with the objects already added to the list. We use this to
 avoid redundantly scanning containment trees for objects that we've
@@ -115,7 +115,7 @@ nil (unset) - the object has never been visited
 1 - we've added the object only, not its contents  
 2 - we've added the object and its contents
 
-</div>
+
 
 <span id="vec_"></span>
 
@@ -123,19 +123,19 @@ nil (unset) - the object has never been visited
 
 [query.t](../file/query.t.html)\[[1033](../source/query.t.html#1033)\]
 
-<div class="desc">
+
 
 a vector with the objects in scope
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="add"></span>
 
@@ -143,11 +143,11 @@ a vector with the objects in scope
 
 [query.t](../file/query.t.html)\[[927](../source/query.t.html#927)\]
 
-<div class="desc">
+
 
 Add an object and its contents to the scope.
 
-</div>
+
 
 <span id="addAll"></span>
 
@@ -155,11 +155,11 @@ Add an object and its contents to the scope.
 
 [query.t](../file/query.t.html)\[[957](../source/query.t.html#957)\]
 
-<div class="desc">
+
 
 Add all of the objects in the given list
 
-</div>
+
 
 <span id="addOnly"></span>
 
@@ -167,12 +167,12 @@ Add all of the objects in the given list
 
 [query.t](../file/query.t.html)\[[985](../source/query.t.html#985)\]
 
-<div class="desc">
+
 
 Add a single object to the scope. This doesn't add anything related to
 the object (such as its contents) - just the object itself.
 
-</div>
+
 
 <span id="addSelfIlluminatingWithin"></span>
 
@@ -180,11 +180,11 @@ the object (such as its contents) - just the object itself.
 
 [query.t](../file/query.t.html)\[[975](../source/query.t.html#975)\]
 
-<div class="desc">
+
 
 add each self-illuminating object in the interior contents
 
-</div>
+
 
 <span id="addWithin"></span>
 
@@ -192,12 +192,12 @@ add each self-illuminating object in the interior contents
 
 [query.t](../file/query.t.html)\[[967](../source/query.t.html#967)\]
 
-<div class="desc">
+
 
 Add the interior contents of an object to the scope. This adds only the
 contents, not the object itself.
 
-</div>
+
 
 <span id="close"></span>
 
@@ -205,11 +205,11 @@ contents, not the object itself.
 
 [query.t](../file/query.t.html)\[[1005](../source/query.t.html#1005)\]
 
-<div class="desc">
+
 
 "close" the scope list - this converts the vector to a list
 
-</div>
+
 
 <span id="createIterator"></span>
 
@@ -217,11 +217,11 @@ contents, not the object itself.
 
 [query.t](../file/query.t.html)\[[1027](../source/query.t.html#1027)\]
 
-<div class="desc">
+
 
 create an iterator, for foreach()
 
-</div>
+
 
 <span id="createLiveIterator"></span>
 
@@ -229,11 +229,11 @@ create an iterator, for foreach()
 
 [query.t](../file/query.t.html)\[[1030](../source/query.t.html#1030)\]
 
-<div class="desc">
+
 
 create a live iterator
 
-</div>
+
 
 <span id="find"></span>
 
@@ -241,11 +241,11 @@ create a live iterator
 
 [query.t](../file/query.t.html)\[[1018](../source/query.t.html#1018)\]
 
-<div class="desc">
+
 
 is the given object in scope?
 
-</div>
+
 
 <span id="length"></span>
 
@@ -253,11 +253,11 @@ is the given object in scope?
 
 [query.t](../file/query.t.html)\[[1012](../source/query.t.html#1012)\]
 
-<div class="desc">
+
 
 get the number of items in scope
 
-</div>
+
 
 <span id="subset"></span>
 
@@ -265,11 +265,11 @@ get the number of items in scope
 
 [query.t](../file/query.t.html)\[[1021](../source/query.t.html#1021)\]
 
-<div class="desc">
+
 
 get the subset of the objects in scope matching the given condition
 
-</div>
+
 
 <span id="toList"></span>
 
@@ -277,15 +277,15 @@ get the subset of the objects in scope matching the given condition
 
 [query.t](../file/query.t.html)\[[1024](../source/query.t.html#1024)\]
 
-<div class="desc">
+
 
 return the scope as a simple list of objects
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

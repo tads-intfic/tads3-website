@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "topic match" topic entry. This is a topic entry that matches topic
 phrases in the grammar.
@@ -53,26 +53,26 @@ consider it a match.
 
 `class `**`TopicMatchTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicMatchTopic`**  
 [`TopicEntry`](../object/TopicEntry.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TopicMatchTopic`**  
 [`AskTellTopic`](../object/AskTellTopic.html)  
@@ -87,19 +87,19 @@ consider it a match.
 [`AskTellShowTopic`](../object/AskTellShowTopic.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`matchExactCase`](#matchExactCase)[`matchPattern`](#matchPattern)
 
@@ -108,11 +108,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`findMatchObj`](#findMatchObj)[`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`setTopicPronouns`](#setTopicPronouns)
 
@@ -121,11 +121,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="matchExactCase"></span>
 
@@ -133,11 +133,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[2800](../source/actor.t.html#2800)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="matchPattern"></span>
 
@@ -145,7 +145,7 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[2799](../source/actor.t.html#2799)\]
 
-<div class="desc">
+
 
 A regular expression pattern that we'll match to the actual topic text
 as entered in the command. If 'matchExactCase' is true, we'll match the
@@ -160,15 +160,15 @@ pattern can be included for a single topic entry object. This allows a
 topic entry to match several different ways of entering the topic name,
 or to match several different topics with the same response.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="findMatchObj"></span>
 
@@ -176,13 +176,13 @@ or to match several different topics with the same response.
 
 [actor.t](../file/actor.t.html)\[[2876](../source/actor.t.html#2876)\]
 
-<div class="desc">
+
 
 Match an individual item from our match list to the given ResolvedTopic
 object. We'll check each object in the resolved topic's "in scope" and
 "likely" lists.
 
-</div>
+
 
 <span id="isMatchPossible"></span>
 
@@ -190,14 +190,14 @@ object. We'll check each object in the resolved topic's "in scope" and
 
 [actor.t](../file/actor.t.html)\[[2893](../source/actor.t.html#2893)\]
 
-<div class="desc">
+
 
 It's possible for us to match if any of our matchObj objects are known
 to the actor. If we have no matchObj objects, we must be matching on a
 regular expression or on a custom condition, so we can't speculate on
 matchability; we'll simply return true in those cases.
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -205,7 +205,7 @@ matchability; we'll simply return true in those cases.
 
 [actor.t](../file/actor.t.html)\[[2814](../source/actor.t.html#2814)\]
 
-<div class="desc">
+
 
 Match the topic. By default, we'll match to either the simulation object
 or objects in matchObj, or the pattern in matchPattern. Note that we
@@ -217,7 +217,7 @@ the list of objects that the parser matched to the text.
 
 Subclasses can override this as desired to use other ways of matching.
 
-</div>
+
 
 <span id="setTopicPronouns"></span>
 
@@ -225,15 +225,15 @@ Subclasses can override this as desired to use other ways of matching.
 
 [actor.t](../file/actor.t.html)\[[2926](../source/actor.t.html#2926)\]
 
-<div class="desc">
+
 
 set the topic pronouns
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

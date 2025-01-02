@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "complex" container is an object that can have multiple kinds of
 contents simultaneously. For example, a complex container could act as
@@ -75,15 +75,15 @@ pants.moveInto(washingMachine.subContainer);
 
 `class `**`ComplexContainer`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ComplexContainer`**  
 [`Thing`](../object/Thing.html)  
@@ -91,27 +91,27 @@ pants.moveInto(washingMachine.subContainer);
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`allSubLocations`](#allSubLocations)[`isLocked`](#isLocked)[`isOpen`](#isOpen)[`subContainer`](#subContainer)[`subRear`](#subRear)[`subSurface`](#subSurface)[`subUnderside`](#subUnderside)
 
@@ -123,11 +123,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addToContents`](#addToContents)[`beforeMovePushable`](#beforeMovePushable)[`dobjFor(Board)`](#dobjFor(Board))[`dobjFor(Close)`](#dobjFor(Close))[`dobjFor(Enter)`](#dobjFor(Enter))[`dobjFor(GetOffOf)`](#dobjFor(GetOffOf))[`dobjFor(GetOutOf)`](#dobjFor(GetOutOf))[`dobjFor(LieOn)`](#dobjFor(LieOn))[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(LookBehind)`](#dobjFor(LookBehind))[`dobjFor(LookIn)`](#dobjFor(LookIn))[`dobjFor(LookUnder)`](#dobjFor(LookUnder))[`dobjFor(Open)`](#dobjFor(Open))[`dobjFor(SitOn)`](#dobjFor(SitOn))[`dobjFor(StandOn)`](#dobjFor(StandOn))[`dobjFor(Unlock)`](#dobjFor(Unlock))[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))[`examineStatus`](#examineStatus)[`getAllForTakeFrom`](#getAllForTakeFrom)[`getNestedRoomDest`](#getNestedRoomDest)[`getNestedRoomSource`](#getNestedRoomSource)[`iobjFor(PutBehind)`](#iobjFor(PutBehind))[`iobjFor(PutIn)`](#iobjFor(PutIn))[`iobjFor(PutOn)`](#iobjFor(PutOn))[`iobjFor(PutUnder)`](#iobjFor(PutUnder))[`mainMoveInto`](#mainMoveInto)[`makeLocked`](#makeLocked)[`makeOpen`](#makeOpen)[`notifyComponentOfMove`](#notifyComponentOfMove)[`tryMovingObjInto`](#tryMovingObjInto)[`tryPuttingObjInBag`](#tryPuttingObjInBag)
 
@@ -139,11 +139,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="allSubLocations"></span>
 
@@ -151,11 +151,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[121](../source/extras.t.html#121)\]
 
-<div class="desc">
+
 
 a list of all of our component objects
 
-</div>
+
 
 <span id="isLocked"></span>
 
@@ -163,11 +163,11 @@ a list of all of our component objects
 
 [extras.t](../file/extras.t.html)\[[152](../source/extras.t.html#152)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isOpen"></span>
 
@@ -175,12 +175,12 @@ a list of all of our component objects
 
 [extras.t](../file/extras.t.html)\[[151](../source/extras.t.html#151)\]
 
-<div class="desc">
+
 
 In most cases, the open/closed and locked/unlocked status of a complex
 container refer to the status of the sub-container.
 
-</div>
+
 
 <span id="subContainer"></span>
 
@@ -188,7 +188,7 @@ container refer to the status of the sub-container.
 
 [extras.t](../file/extras.t.html)\[[98](../source/extras.t.html#98)\]
 
-<div class="desc">
+
 
 Our inner container, if any. This is a "secret" object (in other words,
 it doesn't appear to players as a separate named object) that we use to
@@ -215,7 +215,7 @@ them ordinary Component objects.
 
 If this property is left as nil, then we don't have an inner container.
 
-</div>
+
 
 <span id="subRear"></span>
 
@@ -223,13 +223,13 @@ If this property is left as nil, then we don't have an inner container.
 
 [extras.t](../file/extras.t.html)\[[118](../source/extras.t.html#118)\]
 
-<div class="desc">
+
 
 Our rear surface or container, if any. This is a secret internal object
 like the inner container; this object can act as our back surface, or as
 the space just behind us.
 
-</div>
+
 
 <span id="subSurface"></span>
 
@@ -237,12 +237,12 @@ the space just behind us.
 
 [extras.t](../file/extras.t.html)\[[104](../source/extras.t.html#104)\]
 
-<div class="desc">
+
 
 Our inner surface, if any. This is a secret object like the inner
 container; this object acts as our surface.
 
-</div>
+
 
 <span id="subUnderside"></span>
 
@@ -250,21 +250,21 @@ container; this object acts as our surface.
 
 [extras.t](../file/extras.t.html)\[[111](../source/extras.t.html#111)\]
 
-<div class="desc">
+
 
 Our underside, if any. This is a secret object like the inner container;
 this object can act as the space underneath us, or as our bottom
 surface.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addToContents"></span>
 
@@ -272,13 +272,13 @@ surface.
 
 [extras.t](../file/extras.t.html)\[[324](../source/extras.t.html#324)\]
 
-<div class="desc">
+
 
 Add an object to my contents. If the object has a subLocation setting,
 take it as indicating which of my subcontainers is to contain the
 object.
 
-</div>
+
 
 <span id="beforeMovePushable"></span>
 
@@ -286,12 +286,12 @@ object.
 
 [extras.t](../file/extras.t.html)\[[389](../source/extras.t.html#389)\]
 
-<div class="desc">
+
 
 if we're being pushed into a new location (as a PushTraveler), abandon
 the contents of any SpaceOverlay components
 
-</div>
+
 
 <span id="dobjFor(Board)"></span>
 
@@ -299,11 +299,11 @@ the contents of any SpaceOverlay components
 
 [extras.t](../file/extras.t.html)\[[209](../source/extras.t.html#209)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Close)"></span>
 
@@ -311,11 +311,11 @@ the contents of any SpaceOverlay components
 
 [extras.t](../file/extras.t.html)\[[176](../source/extras.t.html#176)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -323,11 +323,11 @@ the contents of any SpaceOverlay components
 
 [extras.t](../file/extras.t.html)\[[211](../source/extras.t.html#211)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(GetOffOf)"></span>
 
@@ -335,11 +335,11 @@ the contents of any SpaceOverlay components
 
 [extras.t](../file/extras.t.html)\[[217](../source/extras.t.html#217)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(GetOutOf)"></span>
 
@@ -347,11 +347,11 @@ the contents of any SpaceOverlay components
 
 [extras.t](../file/extras.t.html)\[[215](../source/extras.t.html#215)\]
 
-<div class="desc">
+
 
 map GET OUT/OFF to whichever complex component we're currently in
 
-</div>
+
 
 <span id="dobjFor(LieOn)"></span>
 
@@ -359,11 +359,11 @@ map GET OUT/OFF to whichever complex component we're currently in
 
 [extras.t](../file/extras.t.html)\[[207](../source/extras.t.html#207)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Lock)"></span>
 
@@ -371,11 +371,11 @@ map GET OUT/OFF to whichever complex component we're currently in
 
 [extras.t](../file/extras.t.html)\[[180](../source/extras.t.html#180)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LockWith)"></span>
 
@@ -383,11 +383,11 @@ map GET OUT/OFF to whichever complex component we're currently in
 
 [extras.t](../file/extras.t.html)\[[181](../source/extras.t.html#181)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookBehind)"></span>
 
@@ -395,11 +395,11 @@ map GET OUT/OFF to whichever complex component we're currently in
 
 [extras.t](../file/extras.t.html)\[[200](../source/extras.t.html#200)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookIn)"></span>
 
@@ -407,11 +407,11 @@ map GET OUT/OFF to whichever complex component we're currently in
 
 [extras.t](../file/extras.t.html)\[[177](../source/extras.t.html#177)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(LookUnder)"></span>
 
@@ -419,11 +419,11 @@ map GET OUT/OFF to whichever complex component we're currently in
 
 [extras.t](../file/extras.t.html)\[[194](../source/extras.t.html#194)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(Open)"></span>
 
@@ -431,12 +431,12 @@ map GET OUT/OFF to whichever complex component we're currently in
 
 [extras.t](../file/extras.t.html)\[[175](../source/extras.t.html#175)\]
 
-<div class="desc">
+
 
 route all commands that treat us as a container to our sub-container
 object
 
-</div>
+
 
 <span id="dobjFor(SitOn)"></span>
 
@@ -444,11 +444,11 @@ object
 
 [extras.t](../file/extras.t.html)\[[205](../source/extras.t.html#205)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(StandOn)"></span>
 
@@ -456,11 +456,11 @@ object
 
 [extras.t](../file/extras.t.html)\[[203](../source/extras.t.html#203)\]
 
-<div class="desc">
+
 
 route commands relevant to nested rooms to our components
 
-</div>
+
 
 <span id="dobjFor(Unlock)"></span>
 
@@ -468,11 +468,11 @@ route commands relevant to nested rooms to our components
 
 [extras.t](../file/extras.t.html)\[[183](../source/extras.t.html#183)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="dobjFor(UnlockWith)"></span>
 
@@ -480,11 +480,11 @@ route commands relevant to nested rooms to our components
 
 [extras.t](../file/extras.t.html)\[[184](../source/extras.t.html#184)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="examineStatus"></span>
 
@@ -492,13 +492,13 @@ route commands relevant to nested rooms to our components
 
 [extras.t](../file/extras.t.html)\[[128](../source/extras.t.html#128)\]
 
-<div class="desc">
+
 
 Show our status. We'll show the status for each of our sub-objects, so
 that we list any contents of our sub-container or sub-surface along with
 our description.
 
-</div>
+
 
 <span id="getAllForTakeFrom"></span>
 
@@ -506,7 +506,7 @@ our description.
 
 [extras.t](../file/extras.t.html)\[[284](../source/extras.t.html#284)\]
 
-<div class="desc">
+
 
 Get a list of objects suitable for matching ALL in TAKE ALL FROM
 \<self\>. By default, if we have a sub-surface and/or sub-container, we
@@ -514,7 +514,7 @@ return everything in scope that's inside either one of those. Otherwise,
 if we have a sub-rear-surface and/or an underside, we'll return
 everything from those.
 
-</div>
+
 
 <span id="getNestedRoomDest"></span>
 
@@ -522,7 +522,7 @@ everything from those.
 
 [extras.t](../file/extras.t.html)\[[243](../source/extras.t.html#243)\]
 
-<div class="desc">
+
 
 Get the destination for nested travel into this object. By default,
 we'll look at the sub-container and sub-surface components to see if
@@ -544,7 +544,7 @@ Fortunately, even though the action class is the same for both
 phrasings, you can still find out exactly which preposition the player
 typed using action.getEnteredVerbPhrase().
 
-</div>
+
 
 <span id="getNestedRoomSource"></span>
 
@@ -552,14 +552,14 @@ typed using action.getEnteredVerbPhrase().
 
 [extras.t](../file/extras.t.html)\[[264](../source/extras.t.html#264)\]
 
-<div class="desc">
+
 
 Get the source for nested travel out of this object. This is used for
 GET OUT OF \<self\> - we figure out which nested room component the
 actor is in, so that we can remap the command to GET OUT OF \<that
 component\>.
 
-</div>
+
 
 <span id="iobjFor(PutBehind)"></span>
 
@@ -567,11 +567,11 @@ component\>.
 
 [extras.t](../file/extras.t.html)\[[198](../source/extras.t.html#198)\]
 
-<div class="desc">
+
 
 route commands that affect our rear to our sub-rear-side
 
-</div>
+
 
 <span id="iobjFor(PutIn)"></span>
 
@@ -579,11 +579,11 @@ route commands that affect our rear to our sub-rear-side
 
 [extras.t](../file/extras.t.html)\[[178](../source/extras.t.html#178)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="iobjFor(PutOn)"></span>
 
@@ -591,11 +591,11 @@ route commands that affect our rear to our sub-rear-side
 
 [extras.t](../file/extras.t.html)\[[188](../source/extras.t.html#188)\]
 
-<div class="desc">
+
 
 route commands that treat us as a surface to our sub-surface
 
-</div>
+
 
 <span id="iobjFor(PutUnder)"></span>
 
@@ -603,11 +603,11 @@ route commands that treat us as a surface to our sub-surface
 
 [extras.t](../file/extras.t.html)\[[192](../source/extras.t.html#192)\]
 
-<div class="desc">
+
 
 route commands that affect our underside to our sub-underside
 
-</div>
+
 
 <span id="mainMoveInto"></span>
 
@@ -615,12 +615,12 @@ route commands that affect our underside to our sub-underside
 
 [extras.t](../file/extras.t.html)\[[370](../source/extras.t.html#370)\]
 
-<div class="desc">
+
 
 If we have any SpaceOverlay children, abandon the contents of the
 overlaid spaces as needed.
 
-</div>
+
 
 <span id="makeLocked"></span>
 
@@ -628,11 +628,11 @@ overlaid spaces as needed.
 
 [extras.t](../file/extras.t.html)\[[162](../source/extras.t.html#162)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="makeOpen"></span>
 
@@ -640,11 +640,11 @@ overlaid spaces as needed.
 
 [extras.t](../file/extras.t.html)\[[154](../source/extras.t.html#154)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="notifyComponentOfMove"></span>
 
@@ -652,12 +652,12 @@ overlaid spaces as needed.
 
 [extras.t](../file/extras.t.html)\[[410](../source/extras.t.html#410)\]
 
-<div class="desc">
+
 
 if the given component is a SpaceOverlay, notify it that we're moving,
 so that it can abandon its contents as needed
 
-</div>
+
 
 <span id="tryMovingObjInto"></span>
 
@@ -665,11 +665,11 @@ so that it can abandon its contents as needed
 
 [extras.t](../file/extras.t.html)\[[427](../source/extras.t.html#427)\]
 
-<div class="desc">
+
 
 pass implicit PUT x IN self operations to our subcontainer
 
-</div>
+
 
 <span id="tryPuttingObjInBag"></span>
 
@@ -677,15 +677,15 @@ pass implicit PUT x IN self operations to our subcontainer
 
 [extras.t](../file/extras.t.html)\[[418](../source/extras.t.html#418)\]
 
-<div class="desc">
+
 
 pass bag-of-holding operations to our sub-container
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

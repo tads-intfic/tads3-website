@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Many of the ideas in this file are based on Emily Short's
 NewbieGrammar.h extension for Inform 6, itself based on observation of
@@ -37,53 +37,53 @@ invalid commands (so that we can then offer more help).
 
 **`helpMessage`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`helpMessage`**  
 `         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`briefIntro`](#briefIntro)[`printMsg`](#printMsg)[`showSample`](#showSample)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="briefIntro"></span>
 
@@ -91,11 +91,11 @@ invalid commands (so that we can then offer more help).
 
 [newbie.t](../file/newbie.t.html)\[[49](../source/newbie.t.html#49)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="printMsg"></span>
 
@@ -103,11 +103,11 @@ invalid commands (so that we can then offer more help).
 
 [newbie.t](../file/newbie.t.html)\[[29](../source/newbie.t.html#29)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showSample"></span>
 
@@ -115,15 +115,15 @@ invalid commands (so that we can then offer more help).
 
 [newbie.t](../file/newbie.t.html)\[[76](../source/newbie.t.html#76)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

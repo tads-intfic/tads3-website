@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Source  
@@ -15,7 +15,7 @@ layout: docs
     *Next:* <a href="actionref.html" class="nav">ActionReference</a>
    </span>
 
-</div>
+
 
 
 
@@ -26,7 +26,7 @@ intended for reference from the [Action Reference](actionref.html). It is
 not a complete listing. For complete listings please see the actual
 source files.
 
-`
+```
     action.t
     /* 
      *   A TravelAction is one that moves (or at least tries to move) the player
@@ -291,11 +291,11 @@ source files.
         /* It's generally possible to undo a travel command. */
         canUndo = true
     ;
-`
+```
 
 ## actions.t
 
-`
+```
     DefineSystemAction(Again)
         
         exec(cmd)
@@ -323,9 +323,9 @@ source files.
         }
         
     ;
-`
+```
 
-`
+```
     DefineIAction(Continue)
         execAction(cmd)
         {
@@ -383,9 +383,9 @@ source files.
         }
         
     ;
-`
+```
 
-`
+```
     DefineSystemAction(ExitsColour)
         execAction(cmd)
         {
@@ -414,9 +414,9 @@ source files.
             }
         }
     ;
-`
+```
 
-`
+```
     DefineIAction(GoBack)
         execAction(cmd)
         {
@@ -453,9 +453,9 @@ source files.
             
         }
     ;
-`
+```
 
-`
+```
     GoIn: TravelAction
         direction = inDir
         predefinedDirection = true
@@ -476,9 +476,9 @@ source files.
             }
         }
     ;
-`
+```
 
-`
+```
     Hello: IAction
         baseActionClass = Hello
         
@@ -539,9 +539,9 @@ source files.
         
         curObj = nil  
     ;
-`
+```
 
-`
+```
     class ImplicitConversationAction: TopicAction
         execAction(cmd)
         {
@@ -598,9 +598,9 @@ source files.
         topicListProperty = nil
         topics = nil
     ;
-`
+```
 
-`
+```
     DefineIAction(Inventory)
         execAction(cmd)
         {
@@ -661,9 +661,9 @@ source files.
         /* Do we want separate lists of what's worn and what's carried? */
         splitListing = true
     ;
-`
+```
 
-`
+```
     DefineIAction(Listen)
         execAction(cmd)
         {
@@ -707,9 +707,9 @@ source files.
         /* Do nothing in the core library; senseRegion.t will override if present */
         listRemoteSounds(lst) { }
     ;
-`
+```
 
-`
+```
     DefineTAction(PushTravelDir)
         execAction(cmd)
         {
@@ -820,9 +820,9 @@ source files.
         
         doTravel() { delegated TravelAction(); }
     ;
-`
+```
 
-`
+```
     DefineIAction(Smell)
         execAction(cmd)
         {
@@ -873,17 +873,17 @@ source files.
         /* Do nothing in the core library; senseRegion.t will override if present */
         listRemoteSmells(lst) { }
     ;
-`
+```
 
-`
+```
     Travel: TravelAction
         direction = (dirMatch.dir)
     ;
-`
+```
 
 ## debug.t
 
-`
+```
     DefineSystemAction(Debug)
         execAction(cmd)
         {
@@ -914,11 +914,11 @@ source files.
             
         }
     ;
-`
+```
 
 ## thing.t
 
-`
+```
     class Thing:  ReplaceRedirector, Mentionable
 
        
@@ -3328,9 +3328,9 @@ source files.
         cannotUnlockWithSelfMsg = BMsg(cannot unlock with self, '{I} {can\'t} unlock
             anything with itself. ' )
     ;
-`
+```
 
-`
+```
      /*  
      *   A Key is any object that can be used to lock or lock selected items whose
      *   lockabilty is lockableWithKey. We define all the special handling on the
@@ -3531,13 +3531,13 @@ source files.
             plausibleLockList = plausibleLockList.appendUnique(actualLockList);
         }
     ;
-`
+```
 
 
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -3546,4 +3546,4 @@ source files.
     *Next:* <a href="actionref.html" class="nav">ActionReference</a>
    </span>
 
-</div>
+

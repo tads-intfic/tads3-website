@@ -46,22 +46,23 @@ almost precisely the same way. All you need to do is to define an object
 of the <strong>ThoughtManager</strong> class and then populate it with <strong>Thought</strong>
 objects, like so:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    myThoughts: ThoughtManager
-    ;
+<p>`
+    myThoughts: ThoughtManager
+    ;</p>
 
-    + Thought @george
-        "To be honest, you're not really sure what he's doing here. "
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ Thought @george
+    "To be honest, you're not really sure what he's doing here. "
+;
 
-    + Thought @tFire
-        "It's a wretched nuiscance. Your nephew's probably to blame for it
-        somehow, but the important thing right now is just to escape from it. "
-    ;
++ Thought @tFire
+    "It's a wretched nuiscance. Your nephew's probably to blame for it
+    somehow, but the important thing right now is just to escape from it. "
+;
 
-    + DefaultThought
-        "You find your thoughts start to wander; for some reason you can't
-        concentrate on that topic right now. "
-    ;
++ DefaultThought
+    "You find your thoughts start to wander; for some reason you can't
+    concentrate on that topic right now. "
+; `
 </code></pre></div></div>
 
 <p>Thought inherits from <a href="topicentry.html">TopicEntry</a>, so you can use all

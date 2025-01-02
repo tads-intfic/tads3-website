@@ -29,7 +29,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A TAction is an action that applies to a single direct object. Other
 action classes that apply to more than one object, such as TIAction,
@@ -38,15 +38,15 @@ account.
 
 `class `**`TAction`**` :   `[`Action`](../object/Action.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TAction`**  
 [`Action`](../object/Action.html)  
@@ -55,11 +55,11 @@ account.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TAction`**  
 [`LiteralTAction`](../object/LiteralTAction.html)  
@@ -69,20 +69,20 @@ account.
 [`TopicTAction`](../object/TopicTAction.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`Attach`](../object/Attach.html)[`Attack`](../object/Attack.html)[`Board`](../object/Board.html)[`Break`](../object/Break.html)[`Burn`](../object/Burn.html)[`Clean`](../object/Clean.html)[`Climb`](../object/Climb.html)[`ClimbDown`](../object/ClimbDown.html)[`ClimbUp`](../object/ClimbUp.html)[`Close`](../object/Close.html)[`Cut`](../object/Cut.html)[`Detach`](../object/Detach.html)[`Dig`](../object/Dig.html)[`Doff`](../object/Doff.html)[`Drink`](../object/Drink.html)[`Drop`](../object/Drop.html)[`Eat`](../object/Eat.html)[`Enter`](../object/Enter.html)[`Examine`](../object/Examine.html)[`ExamineOrGoTo`](../object/ExamineOrGoTo.html)[`Extinguish`](../object/Extinguish.html)[`Fasten`](../object/Fasten.html)[`Feel`](../object/Feel.html)[`Flip`](../object/Flip.html)[`Follow`](../object/Follow.html)[`GetOff`](../object/GetOff.html)[`GetOutOf`](../object/GetOutOf.html)[`GiveToImplicit`](../object/GiveToImplicit.html)[`GoAlong`](../object/GoAlong.html)[`GoNear`](../object/GoNear.html)[`GoThrough`](../object/GoThrough.html)[`GoTo`](../object/GoTo.html)[`JumpOff`](../object/JumpOff.html)[`JumpOver`](../object/JumpOver.html)[`Kiss`](../object/Kiss.html)[`LieIn`](../object/LieIn.html)[`LieOn`](../object/LieOn.html)[`Light`](../object/Light.html)[`ListenTo`](../object/ListenTo.html)[`Lock`](../object/Lock.html)[`LookBehind`](../object/LookBehind.html)[`LookIn`](../object/LookIn.html)[`LookThrough`](../object/LookThrough.html)[`LookUnder`](../object/LookUnder.html)[`Move`](../object/Move.html)[`Open`](../object/Open.html)[`PlugIn`](../object/PlugIn.html)[`Pour`](../object/Pour.html)[`Pull`](../object/Pull.html)[`Purloin`](../object/Purloin.html)[`Push`](../object/Push.html)[`PushTravelDir`](../object/PushTravelDir.html)[`Read`](../object/Read.html)[`Remove`](../object/Remove.html)[`Screw`](../object/Screw.html)[`Search`](../object/Search.html)[`Set`](../object/Set.html)[`ShowToImplicit`](../object/ShowToImplicit.html)[`SitIn`](../object/SitIn.html)[`SitOn`](../object/SitOn.html)[`SmellSomething`](../object/SmellSomething.html)[`StandIn`](../object/StandIn.html)[`StandOn`](../object/StandOn.html)[`Strike`](../object/Strike.html)[`SwitchOff`](../object/SwitchOff.html)[`SwitchOn`](../object/SwitchOn.html)[`SwitchVague`](../object/SwitchVague.html)[`Take`](../object/Take.html)[`TalkTo`](../object/TalkTo.html)[`Taste`](../object/Taste.html)[`Throw`](../object/Throw.html)[`ThrowDir`](../object/ThrowDir.html)[`TravelVia`](../object/TravelVia.html)[`Turn`](../object/Turn.html)[`TypeOnVague`](../object/TypeOnVague.html)[`Unfasten`](../object/Unfasten.html)[`Unlock`](../object/Unlock.html)[`Unplug`](../object/Unplug.html)[`Unscrew`](../object/Unscrew.html)[`Wear`](../object/Wear.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionList`](#actionList)[`announceMultiAction`](#announceMultiAction)[`announceMultiCheck`](#announceMultiCheck)[`announceMultiVerify`](#announceMultiVerify)[`aqinfo`](#aqinfo)[`curDobj`](#curDobj)[`curObj`](#curObj)[`dqinfo`](#dqinfo)[`gActor`](#gActor)[`haltOnMessageInCheck`](#haltOnMessageInCheck)[`iqinfo`](#iqinfo)[`lastVerifyMsg`](#lastVerifyMsg)[`reportFailureAfterSuccess`](#reportFailureAfterSuccess)[`reportList`](#reportList)[`signal`](#signal)[`verifyTab`](#verifyTab)
 
@@ -95,11 +95,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addVerifyResult`](#addVerifyResult)[`check`](#check)[`checkAction`](#checkAction)[`checkPreCond`](#checkPreCond)[`doAction`](#doAction)[`doActionOnce`](#doActionOnce)[`execAction`](#execAction)[`execCycle`](#execCycle)[`execResolvedAction`](#execResolvedAction)[`getAll`](#getAll)[`getMessageParam`](#getMessageParam)[`getVerbPhrase`](#getVerbPhrase)[`getVerbPhrase1`](#getVerbPhrase1)[`makeScopeUniversal`](#makeScopeUniversal)[`reportAction`](#reportAction)[`reset`](#reset)[`resolvedObjectsInScope`](#resolvedObjectsInScope)[`setResolvedObjects`](#setResolvedObjects)
 
@@ -114,11 +114,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionList"></span>
 
@@ -126,12 +126,12 @@ Inherited from `Redirector` :
 
 [action.t](../file/action.t.html)\[[1571](../source/action.t.html#1571)\]
 
-<div class="desc">
+
 
 A list of the direct objects of this action that make it to the action
 stage.
 
-</div>
+
 
 <span id="announceMultiAction"></span>
 
@@ -139,14 +139,14 @@ stage.
 
 [action.t](../file/action.t.html)\[[1593](../source/action.t.html#1593)\]
 
-<div class="desc">
+
 
 set this property to true if you want to announce the object before the
 action result when there's more than one object. If the action routine
 summarizes the result at the end you don't want to do this so you should
 then set this to nil.
 
-</div>
+
 
 <span id="announceMultiCheck"></span>
 
@@ -154,13 +154,13 @@ then set this to nil.
 
 [action.t](../file/action.t.html)\[[1774](../source/action.t.html#1774)\]
 
-<div class="desc">
+
 
 Flag: do we want the object name to appear before a check stage failure
 message if multiple objects are involved in the action. By default we
 do, otherwise it might not be clear which object the message referes to.
 
-</div>
+
 
 <span id="announceMultiVerify"></span>
 
@@ -168,14 +168,14 @@ do, otherwise it might not be clear which object the message referes to.
 
 [action.t](../file/action.t.html)\[[2059](../source/action.t.html#2059)\]
 
-<div class="desc">
+
 
 Flag, do we want to announce the object name before the verify message
 in cases where there's more direct object in the command? By default we
 don't since verify messages generally make it clear enough which objects
 they refer to.
 
-</div>
+
 
 <span id="aqinfo"></span>
 
@@ -183,11 +183,11 @@ they refer to.
 
 [action.t](../file/action.t.html)\[[1630](../source/action.t.html#1630)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="curDobj"></span>
 
@@ -195,11 +195,11 @@ they refer to.
 
 [action.t](../file/action.t.html)\[[1596](../source/action.t.html#1596)\]
 
-<div class="desc">
+
 
 The current direct object of this action
 
-</div>
+
 
 <span id="curObj"></span>
 
@@ -207,12 +207,12 @@ The current direct object of this action
 
 [action.t](../file/action.t.html)\[[1603](../source/action.t.html#1603)\]
 
-<div class="desc">
+
 
 The current object being processed (in a TAction, always the curDObj; in
 a TI Action either the curDobj or the curIOoj).
 
-</div>
+
 
 <span id="dqinfo"></span>
 
@@ -220,12 +220,12 @@ a TI Action either the curDobj or the curIOoj).
 
 [action.t](../file/action.t.html)\[[1628](../source/action.t.html#1628)\]
 
-<div class="desc">
+
 
 Information to allow the DEBUG ACTIONS command to express a complete
 topic phrase
 
-</div>
+
 
 <span id="gActor"></span>
 
@@ -233,12 +233,12 @@ topic phrase
 
 [sysrules.t](../file/sysrules.t.html)\[[527](../source/sysrules.t.html#527)\]
 
-<div class="desc">
+
 
 Set the current actor to the player character at the start of the game
 (to ensure we have a current actor defined).
 
-</div>
+
 
 <span id="haltOnMessageInCheck"></span>
 
@@ -246,14 +246,14 @@ Set the current actor to the player character at the start of the game
 
 [action.t](../file/action.t.html)\[[1806](../source/action.t.html#1806)\]
 
-<div class="desc">
+
 
 This flag is used internally by the library to track whether the output
 of any text from a check() should stop the action, which it normally
 should. Game code should not directly override this property or change
 its value, other than indrectly via the noHalt() function.
 
-</div>
+
 
 <span id="iqinfo"></span>
 
@@ -261,11 +261,11 @@ its value, other than indrectly via the noHalt() function.
 
 [action.t](../file/action.t.html)\[[1629](../source/action.t.html#1629)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lastVerifyMsg"></span>
 
@@ -273,12 +273,12 @@ its value, other than indrectly via the noHalt() function.
 
 [action.t](../file/action.t.html)\[[1585](../source/action.t.html#1585)\]
 
-<div class="desc">
+
 
 Store the last verify failure message so that if we get several
 identical ones in a row, we don't keep repeating them
 
-</div>
+
 
 <span id="reportFailureAfterSuccess"></span>
 
@@ -286,12 +286,12 @@ identical ones in a row, we don't keep repeating them
 
 [action.t](../file/action.t.html)\[[1913](../source/action.t.html#1913)\]
 
-<div class="desc">
+
 
 Flag: when a command processes multiple direct objects, do we want any
 failed attempts to be reported after successful ones?
 
-</div>
+
 
 <span id="reportList"></span>
 
@@ -299,12 +299,12 @@ failed attempts to be reported after successful ones?
 
 [action.t](../file/action.t.html)\[[1565](../source/action.t.html#1565)\]
 
-<div class="desc">
+
 
 A list of the direct objects of this action that make it to the report
 stage.
 
-</div>
+
 
 <span id="signal"></span>
 
@@ -312,12 +312,12 @@ stage.
 
 [signals.t](../file/signals.t.html)\[[341](../source/signals.t.html#341)\]
 
-<div class="desc">
+
 
 The signal (if any) )o be emitted by the direct object of this action.
 \[SIGNALS EXTENSION\]
 
-</div>
+
 
 <span id="verifyTab"></span>
 
@@ -325,21 +325,21 @@ The signal (if any) )o be emitted by the direct object of this action.
 
 [action.t](../file/action.t.html)\[[1578](../source/action.t.html#1578)\]
 
-<div class="desc">
+
 
 A LookupTable containing the verify results for this action. This is
 keyes on the object being verified, with the value being the worst
 verify result encountered for that object so far.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addVerifyResult"></span>
 
@@ -347,13 +347,13 @@ verify result encountered for that object so far.
 
 [action.t](../file/action.t.html)\[[2077](../source/action.t.html#2077)\]
 
-<div class="desc">
+
 
 Add a verify result to this action's verify table. This method is
 normally called by one of the macros (logical, illogical, logicalRank,
 etc.) use in an object's verify routine.
 
-</div>
+
 
 <span id="check"></span>
 
@@ -361,12 +361,12 @@ etc.) use in an object's verify routine.
 
 [action.t](../file/action.t.html)\[[1812](../source/action.t.html#1812)\]
 
-<div class="desc">
+
 
 Call the check method (checkProp) on the appropriate object (obj).
 Return true to indicate that the action succeeds or nil otherwise
 
-</div>
+
 
 <span id="checkAction"></span>
 
@@ -374,12 +374,12 @@ Return true to indicate that the action succeeds or nil otherwise
 
 [action.t](../file/action.t.html)\[[1782](../source/action.t.html#1782)\]
 
-<div class="desc">
+
 
 Run the check phase of the action, both on the direct object and on any
 preconditions.
 
-</div>
+
 
 <span id="checkPreCond"></span>
 
@@ -387,11 +387,11 @@ preconditions.
 
 [action.t](../file/action.t.html)\[[1916](../source/action.t.html#1916)\]
 
-<div class="desc">
+
 
 Run the check stage on the preCondProp of obj
 
-</div>
+
 
 <span id="doAction"></span>
 
@@ -400,7 +400,7 @@ Run the check stage on the preCondProp of obj
 [action.t](../file/action.t.html)\[[2040](../source/action.t.html#2040)\],
 [signals.t](../file/signals.t.html)\[[347](../source/signals.t.html#347)\]
 
-<div class="desc">
+
 
 Return true to tell our caller we succesfully completed the action.
 
@@ -410,7 +410,7 @@ If this action defines an associated signal, then have the direct object
 emit the signal after carrrying out out inherited handling. \[SIGNALS
 EXTENSION\]
 
-</div>
+
 
 <span id="doActionOnce"></span>
 
@@ -418,11 +418,11 @@ EXTENSION\]
 
 [action.t](../file/action.t.html)\[[1971](../source/action.t.html#1971)\]
 
-<div class="desc">
+
 
 Carry out the action phase on the direct object
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -430,11 +430,11 @@ Carry out the action phase on the direct object
 
 [action.t](../file/action.t.html)\[[1684](../source/action.t.html#1684)\]
 
-<div class="desc">
+
 
 Execute this action
 
-</div>
+
 
 <span id="execCycle"></span>
 
@@ -442,13 +442,13 @@ Execute this action
 
 [action.t](../file/action.t.html)\[[1639](../source/action.t.html#1639)\]
 
-<div class="desc">
+
 
 Execute the command cycle for this action. This differs from the base
 Action class in not calling beforeAction directly, since the
 beforeAction() notifications occur within the execResolvedAction method.
 
-</div>
+
 
 <span id="execResolvedAction"></span>
 
@@ -456,13 +456,13 @@ beforeAction() notifications occur within the execResolvedAction method.
 
 [action.t](../file/action.t.html)\[[1708](../source/action.t.html#1708)\]
 
-<div class="desc">
+
 
 Execute this action with a known direct object or objects. Call this
 method when there's no need to resolve the objects used in the command
 but we still want it to pass through every stage
 
-</div>
+
 
 <span id="getAll"></span>
 
@@ -470,13 +470,13 @@ but we still want it to pass through every stage
 
 [action.t](../file/action.t.html)\[[2067](../source/action.t.html#2067)\]
 
-<div class="desc">
+
 
 Return a list of direct objects corresponding to the word ALL in the
 player's command. By default we return everything in scope that isn't a
 a Room.
 
-</div>
+
 
 <span id="getMessageParam"></span>
 
@@ -484,12 +484,12 @@ a Room.
 
 [action.t](../file/action.t.html)\[[2156](../source/action.t.html#2156)\]
 
-<div class="desc">
+
 
 Get a message parameter object for the action. We define 'dobj' as the
 direct object, in addition to any inherited targets.
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -497,11 +497,11 @@ direct object, in addition to any inherited targets.
 
 [english.t](../file/english.t.html)\[[5499](../source/english.t.html#5499)\]
 
-<div class="desc">
+
 
 get the verb phrase in infinitive or participle form
 
-</div>
+
 
 <span id="getVerbPhrase1"></span>
 
@@ -509,7 +509,7 @@ get the verb phrase in infinitive or participle form
 
 [english.t](../file/english.t.html)\[[5534](../source/english.t.html#5534)\]
 
-<div class="desc">
+
 
 Given the text of the direct object phrase, build the verb phrase for a
 one-object verb. This is a class method that can be used by other kinds
@@ -520,7 +520,7 @@ the present participle form (nil); 'vp' is the verbPhrase string;
 'dobjText' is the direct object phrase's text; and 'dobjIsPronoun' is
 true if the dobj text is rendered as a pronoun.
 
-</div>
+
 
 <span id="makeScopeUniversal"></span>
 
@@ -528,13 +528,13 @@ true if the dobj text is rendered as a pronoun.
 
 [action.t](../file/action.t.html)\[[2180](../source/action.t.html#2180)\]
 
-<div class="desc">
+
 
 A convenience method for putting every game object in scope, which may
 be appropriate for certain commands (not least, certain debugging
 commands). It's intended to be called from addExtraScopeItems when
 
-</div>
+
 
 <span id="reportAction"></span>
 
@@ -543,7 +543,7 @@ commands). It's intended to be called from addExtraScopeItems when
 [action.t](../file/action.t.html)\[[2122](../source/action.t.html#2122)\],
 [sysrules.t](../file/sysrules.t.html)\[[494](../source/sysrules.t.html#494)\]
 
-<div class="desc">
+
 
 reportAction() is called only after all the action routines have been
 run and the list of dobjs acted on is known. It only does anything if
@@ -574,7 +574,7 @@ command.
 This modified version uses the reportRules rulebook to make it easy to
 insert differently worded summary reports.
 
-</div>
+
 
 <span id="reset"></span>
 
@@ -582,12 +582,12 @@ insert differently worded summary reports.
 
 [action.t](../file/action.t.html)\[[1609](../source/action.t.html#1609)\]
 
-<div class="desc">
+
 
 Reset values to their starting state when an action is used to execute a
 new command.
 
-</div>
+
 
 <span id="resolvedObjectsInScope"></span>
 
@@ -595,11 +595,11 @@ new command.
 
 [action.t](../file/action.t.html)\[[2146](../source/action.t.html#2146)\]
 
-<div class="desc">
+
 
 Check whether the resolved objects for this action are in scope
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -607,15 +607,15 @@ Check whether the resolved objects for this action are in scope
 
 [action.t](../file/action.t.html)\[[2140](../source/action.t.html#2140)\]
 
-<div class="desc">
+
 
 install the resolved objects in the action
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

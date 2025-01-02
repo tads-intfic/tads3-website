@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Hint encapsulates one hint from a topic. In many cases, hints can be
 listed in a topic simply as strings, rather than using Hint objects.
@@ -39,42 +39,42 @@ the player might not yet have encountered).
 
 `class `**`Hint`**` :   `[`MenuTopicSubItem`](../object/MenuTopicSubItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Hint`**  
 [`MenuTopicSubItem`](../object/MenuTopicSubItem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`hintText`](#hintText)[`referencedGoals`](#referencedGoals)
 
@@ -82,11 +82,11 @@ the player might not yet have encountered).
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getItemText`](#getItemText)
 
@@ -94,11 +94,11 @@ the player might not yet have encountered).
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="hintText"></span>
 
@@ -106,11 +106,11 @@ the player might not yet have encountered).
 
 [hintsys.t](../file/hintsys.t.html)\[[364](../source/hintsys.t.html#364)\]
 
-<div class="desc">
+
 
 the hint text
 
-</div>
+
 
 <span id="referencedGoals"></span>
 
@@ -118,7 +118,7 @@ the hint text
 
 [hintsys.t](../file/hintsys.t.html)\[[381](../source/hintsys.t.html#381)\]
 
-<div class="desc">
+
 
 A list of other Goal objects that this hint references. By default, when
 we show this hint for the first time, we'll promote each goal in this
@@ -133,15 +133,15 @@ make sure that we make hints for the other puzzle available immediately,
 since otherwise the player might be confused by the absence of hints
 about it.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getItemText"></span>
 
@@ -149,18 +149,18 @@ about it.
 
 [hintsys.t](../file/hintsys.t.html)\[[389](../source/hintsys.t.html#389)\]
 
-<div class="desc">
+
 
 Get my hint text. By default, we mark as Open any goals listed in our
 referencedGoals list, then return our hintText string. Individual Hint
 objects can override this as desired to apply any additional side
 effects.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

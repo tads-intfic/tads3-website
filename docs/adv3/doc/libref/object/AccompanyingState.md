@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The basic "accompanying" state. In this state, whenever the actor we're
 accompanying travels to a location we want to follow, we'll travel at
@@ -34,15 +34,15 @@ the same time with the other actor.
 
 `class `**`AccompanyingState`**` :   `[`ActorState`](../object/ActorState.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AccompanyingState`**  
 [`ActorState`](../object/ActorState.html)  
@@ -53,29 +53,29 @@ the same time with the other actor.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`AccompanyingState`**  
 [`GuidedTourState`](../object/GuidedTourState.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -92,11 +92,11 @@ Inherited from `TopicDatabase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`accompanyTravel`](#accompanyTravel)[`beforeTravel`](#beforeTravel)[`getAccompanyingTravelState`](#getAccompanyingTravelState)
 
@@ -114,19 +114,19 @@ Inherited from `TopicDatabase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="accompanyTravel"></span>
 
@@ -134,7 +134,7 @@ Inherited from `TopicDatabase` :
 
 [actor.t](../file/actor.t.html)\[[5302](../source/actor.t.html#5302)\]
 
-<div class="desc">
+
 
 Check to see if we are to accompany the given traveler on the given
 travel. 'traveler' is the Traveler performing the travel, and 'conn' is
@@ -150,7 +150,7 @@ By default, we'll return true to indicate that we want to accompany any
 traveler anywhere they go. This should almost always be overridden in
 practice to be more specific.
 
-</div>
+
 
 <span id="beforeTravel"></span>
 
@@ -158,11 +158,11 @@ practice to be more specific.
 
 [actor.t](../file/actor.t.html)\[[5326](../source/actor.t.html#5326)\]
 
-<div class="desc">
+
 
 handle a before-travel notification for my actor
 
-</div>
+
 
 <span id="getAccompanyingTravelState"></span>
 
@@ -170,7 +170,7 @@ handle a before-travel notification for my actor
 
 [actor.t](../file/actor.t.html)\[[5311](../source/actor.t.html#5311)\]
 
-<div class="desc">
+
 
 Get our accompanying state object. We'll create a basic accompanying
 in-travel state object, returning to the current state when we're done.
@@ -178,11 +178,11 @@ in-travel state object, returning to the current state when we're done.
 might be an Actor, but could also be a Vehicle or other Traveler
 subclass.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

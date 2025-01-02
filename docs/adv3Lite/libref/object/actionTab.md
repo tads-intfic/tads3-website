@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The actionTab object holds a table providing the names (as strings)
 corresponding to the various Action objects, for use with the DEBUG
@@ -28,15 +28,15 @@ ACTIONS option.
 
 **`actionTab`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`actionTab`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -44,11 +44,11 @@ ACTIONS option.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`ctab`](#ctab)
 
@@ -60,11 +60,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)[`symbolToVal`](#symbolToVal)
 
@@ -75,11 +75,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="ctab"></span>
 
@@ -87,19 +87,19 @@ Inherited from `ModuleExecObject` :
 
 [debug.t](../file/debug.t.html)\[[130](../source/debug.t.html#130)\]
 
-<div class="desc">
+
 
 A LookupTable of Actions and their corresponding string names
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -107,11 +107,11 @@ A LookupTable of Actions and their corresponding string names
 
 [debug.t](../file/debug.t.html)\[[132](../source/debug.t.html#132)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="symbolToVal"></span>
 
@@ -119,16 +119,16 @@ A LookupTable of Actions and their corresponding string names
 
 [debug.t](../file/debug.t.html)\[[124](../source/debug.t.html#124)\]
 
-<div class="desc">
+
 
 To return the string val corresponding to the Action val, simply look it
 up in out ctab table
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

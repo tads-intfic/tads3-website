@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Sensory-context-sensitive real-time daemon - this is a real-time daemon
 with an explicit sensory context. This is the daemon counterpart of
@@ -34,15 +34,15 @@ RealTimeSenseFuse.
 
 `class `**`RealTimeSenseDaemon`**` :   `[`RealTimeDaemon`](../object/RealTimeDaemon.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RealTimeSenseDaemon`**  
 [`RealTimeDaemon`](../object/RealTimeDaemon.html)  
@@ -51,27 +51,27 @@ RealTimeSenseFuse.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -86,11 +86,11 @@ Inherited from `BasicEvent` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -105,19 +105,19 @@ Inherited from `BasicEvent` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -125,15 +125,15 @@ Inherited from `BasicEvent` :
 
 [events.t](../file/events.t.html)\[[1284](../source/events.t.html#1284)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

@@ -778,9 +778,9 @@ property of [OutputStreamWindow](../object/OutputStreamWindow.html) in
 object in
 [disambig.t](../file/disambig.t.html)\[[129](../source/disambig.t.html#129)\]  
 
-<div class="ftr">
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

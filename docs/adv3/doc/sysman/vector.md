@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Vector  
@@ -16,7 +16,7 @@ layout: docs
 <a href="wlookup.html" class="nav"><em>Next:</em> WeakRefLookupTable</a>
     </span>
 
-</div>
+
 
 
 
@@ -273,7 +273,7 @@ methods, Vector provides many methods of its own, shown below.
 
 `append(*val*)`
 
-<div class="fdef">
+
 
 Appends the value *val* to the end of the vector, increasing the
 vector's length by one. This method has almost the same effect as the
@@ -289,7 +289,7 @@ Returns `self`.
 
 `appendAll(*val*)`
 
-<div class="fdef">
+
 
 This works like `append(*val*)`, except that if
 *val* is a List or Vector, each element of *val* is individually
@@ -298,11 +298,11 @@ appended to the target Vector. This method works like the
 the Vector, rather than creating a new Vector to store the result.
 Returns `self`.
 
-</div>
+
 
 `appendUnique(*val*)`
 
-<div class="fdef">
+
 
 Appends the elements of the list or Vector *val* to this vector; the
 vector is modified so that it consists only of the unique elements of
@@ -311,11 +311,11 @@ will appear only once. Like `append()` and
 `appendAll()`, this modifies the Vector
 directly.
 
-</div>
+
 
 `applyAll(*func*)`
 
-<div class="fdef">
+
 
 For each element of the vector, this method invokes the callback
 function *func*, passing the current element as the single argument,
@@ -358,12 +358,12 @@ of the initial allocation setting; by explicitly using the initial
 length argument *n*, we ensure that `applyAll()`
 will visit *n* elements.
 
-</div>
+
 
 `copyFrom(*source*, *sourceStart*, *destStart*,
 *count*)`
 
-<div class="fdef">
+
 
 Copies values from a list or from another list or vector into this
 Vector. This function doesn't create a new Vector, but simply modifies
@@ -400,19 +400,19 @@ this:
     x = new Vector(20).copyFrom(lst, 3, 2, 5);
 ```
 
-</div>
+
 
 `countOf(*val*)`
 
-<div class="fdef">
+
 
 Returns the number of elements in the vector whose values equal *val*.
 
-</div>
+
 
 `countWhich(*cond*)`
 
-<div class="fdef">
+
 
 Returns the number of elements in the vector for which the callback
 function *cond* returns a non-false value (anything but
@@ -423,11 +423,11 @@ or 0, the method counts the element. After invoking *cond* for each
 element, the method returns the number of elements for which *cond*
 returned a non-false value.
 
-</div>
+
 
 `fillValue(*value*, *start*?, *count*?)`
 
-<div class="fdef">
+
 
 Fills elements of this Vector with *value*. If only *value* is
 specified, this method simply stores *value* in every element of the
@@ -469,11 +469,11 @@ expressions like this:
     x = new Vector(20).fillValue('A', 1, 20);
 ```
 
-</div>
+
 
 `forEach(*func*)`
 
-<div class="fdef">
+
 
 Invokes the callback function
 `(*func*)(*value*)` for each element, in order
@@ -483,11 +483,11 @@ giving the value of the current element, and returns no value. This
 method returns no value. This method is a convenient means of executing
 some code for each element of the vector.
 
-</div>
+
 
 `forEachAssoc(*func*)`
 
-<div class="fdef">
+
 
 Invokes the callback function `(*func*)(*index*,
 *value*)` for each element, in order from first to last, passing
@@ -497,13 +497,13 @@ the same as `forEach()`, except that this method
 provides the callback with the index as well as the value for each
 element it visits.
 
-</div>
+
 
 <span id="generate"></span>
 
 `generate(*func*, *n*)`
 
-<div class="fdef">
+
 
 Creates a new Vector containing *n* elements by invoking the callback
 function *func* once for each element, and using the return value as the
@@ -523,11 +523,11 @@ first ten positive even integers:
     local e = Vector.generate({i: i*2}, 10);
 ```
 
-</div>
+
 
 `getUnique()`
 
-<div class="fdef">
+
 
 Returns a new vector consisting of the unique elements of the original
 vector. For each value in the original vector, the value will appear in
@@ -539,21 +539,21 @@ are, in order, 1, 5, 2, 3, 4. Note that the size of the new vector is
 just large enough to hold only the unique elements, so the new vector
 might be smaller than the original vector.
 
-</div>
+
 
 `indexOf(*val*)`
 
-<div class="fdef">
+
 
 Finds the first element of the vector whose value equals *val*, and
 returns the index of the element. Returns `nil`
 if none of the vector's elements equals *val*.
 
-</div>
+
 
 `indexOfMax(*func*?)`
 
-<div class="fdef">
+
 
 If *func* is omitted, returns the index of the element with the maximum
 value, comparing values to one another as though using the
@@ -569,11 +569,11 @@ For example, if `v` is a vector containing
 string values as elements, `v.indexOfMax({x:
 x.length()})` returns the index of the longest string.
 
-</div>
+
 
 `indexOfMin(*func*?)`
 
-<div class="fdef">
+
 
 If *func* is omitted, returns the index of the element with the minimum
 value, comparing values to one another as though using the
@@ -589,11 +589,11 @@ For example, if `lst` is a vector containing
 string values as elements, `v.indexOfMin({x:
 x.length()})` returns the index of the shortest string.
 
-</div>
+
 
 `indexWhich(*cond*)`
 
-<div class="fdef">
+
 
 Finds the first element for which the given condition is true. The
 method iterates through the elements of the vector, starting at the
@@ -607,11 +607,11 @@ If the callback returns a false value (`nil` or
 zero) for every element of the vector, the method returns
 `nil`.
 
-</div>
+
 
 `insertAt(*startingIndex*, *val*, ...)`
 
-<div class="fdef">
+
 
 Inserts one or more values into the vector at the giving starting index.
 The size of the vector is increased to accommodate the new elements.
@@ -633,13 +633,13 @@ of range").
 
 Returns the `self` object.
 
-</div>
+
 
 <span id="join"></span>
 
 `join(*sep*?)`
 
-<div class="fdef">
+
 
 Returns a string made by concatenating the elements of the vector
 together in index order. If *sep* is provided, it's a string that's
@@ -650,21 +650,21 @@ Each element is converted to a string using the usual automatic
 conversions before it's concatenated. If an element can't be converted
 to string, the method throws an error.
 
-</div>
+
 
 `lastIndexOf(*val*)`
 
-<div class="fdef">
+
 
 Returns the index of the last element in the vector whose value equals
 *val*. If none of the elements in the vector matches the given value,
 the method returns `nil`.
 
-</div>
+
 
 `lastIndexWhich(*cond*)`
 
-<div class="fdef">
+
 
 Finds the last element for which the given condition is true. This
 method is similar to `indexWhich(*cond*)`, but
@@ -673,11 +673,11 @@ working backwards. Returns the index of the matching element, or
 `nil` if the condition returns false for every
 element.
 
-</div>
+
 
 `lastValWhich(*cond*)`
 
-<div class="fdef">
+
 
 Finds the last element for which the given condition is true, and
 returns the element's value. This method is similar to
@@ -685,21 +685,21 @@ returns the element's value. This method is similar to
 of the matching element rather than its index. Returns
 `nil` if no matching element is found.
 
-</div>
+
 
 `length()`
 
-<div class="fdef">
+
 
 Returns an integer giving the number of elements in the vector. This is
 the number of elements actually stored in the vector, and is unrelated
 to the initial allocation size specified when the vector was created.
 
-</div>
+
 
 `mapAll(*func*)`
 
-<div class="fdef">
+
 
 Creates a new vector consisting of the results of applying the callback
 function *func* to each element of the original vector. This method is
@@ -708,11 +708,11 @@ modifying the elements of the original vector, this method creates a new
 vector, and leaves the elements of the original vector unchanged. The
 return value is the new vector.
 
-</div>
+
 
 `maxVal(*func*?)`
 
-<div class="fdef">
+
 
 If *func* is omitted, returns the maximum of the element values in the
 vector, comparing values to one another as though using the
@@ -729,11 +729,11 @@ For example, if `v` is a vector containing
 string values, `v.maxVal({x: x.length()})`
 returns the longest string element.
 
-</div>
+
 
 `minVal(*func*?)`
 
-<div class="fdef">
+
 
 If *func* is omitted, returns minimum of the element values in the
 vector, comparing values to one another as though using the
@@ -750,11 +750,11 @@ For example, if `v` is a vector containing
 string values, `v.minVal({x: x.length()})`
 returns the shortest string element.
 
-</div>
+
 
 `prepend(*val*)`
 
-<div class="fdef">
+
 
 Inserts the value *val* before the first element of the vector,
 increasing the vector's length by one. This method is similar to
@@ -762,11 +762,11 @@ increasing the vector's length by one. This method is similar to
 the start of the vector rather than at the end. Returns
 `self`.
 
-</div>
+
 
 `removeElement(*val*)`
 
-<div class="fdef">
+
 
 Deletes one or more elements from the vector; each vector element whose
 value equals *val* is removed from the vector. This reduces the length
@@ -774,11 +774,11 @@ of the vector by the number of elements removed. If there is no element
 of the vector whose value equals *val*, the vector is unchanged. Returns
 `self`.
 
-</div>
+
 
 `removeElementAt(*index*)`
 
-<div class="fdef">
+
 
 Deletes one element from the vector at the given index. This reduces the
 length of the vector by one. The *index* value must refer to an existing
@@ -788,11 +788,11 @@ range"). Returns `self`.
 If *index* is negative, it counts from the end of the vector: -1 is the
 last element, -2 is the second to last, and so on.
 
-</div>
+
 
 `removeRange(*startingIndex*, *endingIndex*)`
 
-<div class="fdef">
+
 
 Deletes elements from the vector from *startingIndex* through and
 including *endingIndex*. If *startingIndex* equals *endingIndex*, this
@@ -811,11 +811,11 @@ error ("index out of range").
 
 Returns the `self` object.
 
-</div>
+
 
 `setLength(*newLength*)`
 
-<div class="fdef">
+
 
 Sets the number of elements of the vector to *newLength*. If *newLength*
 is smaller than the number of elements currently in the vector, this
@@ -824,11 +824,11 @@ than the current size, this adds new elements and sets their values to
 `nil`. Returns the
 `self` object.
 
-</div>
+
 
 `sort(*descending*?, *comparisonFunction*?)`
 
-<div class="fdef">
+
 
 Re-orders the elements of the vector into sorted order. By default, this
 method sorts the elements of the vector into ascending order, but you
@@ -847,13 +847,13 @@ order, such as object values.
 The *comparisonFunction* works the same way as the for the
 [List](list.html) class's `sort()` method.
 
-</div>
+
 
 <span id="splice"></span>
 
 `splice(*idx*, *del*, ...)`
 
-<div class="fdef">
+
 
 Splices elements into the vector, by replacing a given range of elements
 with a set of new elements. *idx* is the starting index for the splice,
@@ -884,11 +884,11 @@ with new values. It's also a little more efficient, because it minimizes
 the number of copy operations needed to move elements around in the
 vector to open and/or close gaps as the size of the vector changes.
 
-</div>
+
 
 `subset(*func*)`
 
-<div class="fdef">
+
 
 Creates and returns a new vector containing the elements of this vector
 for which the callback function *func* returns a non-false value (i.e.,
@@ -911,11 +911,11 @@ values are greater than 10.
     y = x.subset({x: x > 10});
 ```
 
-</div>
+
 
 `toList(*start*?, *count*?)`
 
-<div class="fdef">
+
 
 Creates and returns a new list value based on the vector. With no
 arguments, the new list has the same number of elements as the original
@@ -933,11 +933,11 @@ the same values as the vector.
 
 This method does not modify the vector.
 
-</div>
+
 
 `valWhich(*cond*)`
 
-<div class="fdef">
+
 
 Returns the value of the first element for which the callback function
 *cond* returns a non-false value (i.e., any value other than
@@ -951,7 +951,7 @@ the first element for which *cond* returns non-false rather than the
 index of the element. Returns `nil` if no
 matching value is found.
 
-</div>
+
 
 ## Reference Semantics
 
@@ -1065,11 +1065,11 @@ This example displays the value "3" (not "100"), because x and y refer
 to separate objects. Changing a value in the vector to which x refers
 has no effect on the vector to which y refers.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1079,4 +1079,4 @@ has no effect on the vector to which y refers.
 <a href="wlookup.html" class="nav"><em>Next:</em> WeakRefLookupTable</a>
     </span>
 
-</div>
+

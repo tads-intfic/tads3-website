@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Multi-Methods  
@@ -16,7 +16,7 @@ Overloading</a>    
 <a href="dynobj.html" class="nav"><em>Next:</em> Dynamic Object
 Creation</a>     </span>
 
-</div>
+
 
 
 
@@ -164,7 +164,7 @@ type specifications. The type name is simply the name of a class, and
 it's written just before the parameter's variable name. The formal
 syntax is:
 
-<div class="syntax">
+
 
     funcName ( [ type1 ]  param1 [ , ... ]  ) [ multimethod ] 
     {
@@ -483,11 +483,11 @@ lets you call a *specific* inherited version of the function. You do
 this by adding a type list in angle brackets between
 `inherited` and the argument list:
 
-<div class="syntax">
+
 
     inherited < type1 [ , ... ] > ( argument1 [ , ... ]  )
 
-</div>
+
 
 Each type specifier (*type1* and so on) is the name of a class or
 object, just like in a multi-method definition. You can also use the
@@ -696,11 +696,11 @@ initialization - although this would require accessing internal library
 data structures, and there's no guarantee that those structures won't
 change in future updates.)
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -710,4 +710,4 @@ Overloading</a>    
 <a href="dynobj.html" class="nav"><em>Next:</em> Dynamic Object
 Creation</a>     </span>
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Hidden - this is an object that's present but not visible to any actors.
 The object will simply not be visible in the 'sight' sense until
@@ -34,15 +34,15 @@ discovered.
 
 `class `**`Hidden`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Hidden`**  
 [`Thing`](../object/Thing.html)  
@@ -50,27 +50,27 @@ discovered.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`discovered`](#discovered)
 
@@ -82,11 +82,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canBeSensed`](#canBeSensed)[`discover`](#discover)
 
@@ -98,11 +98,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="discovered"></span>
 
@@ -110,7 +110,7 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[944](../source/objects.t.html#944)\]
 
-<div class="desc">
+
 
 Have we been discovered yet?
 
@@ -133,15 +133,15 @@ senseObj(), senseAmbientMax(), or sensePresenceList(), or anything that
 calls those. In most cases, it's safe to call non-sense-related methods,
 like isOpen() or isIn().)
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canBeSensed"></span>
 
@@ -149,11 +149,11 @@ like isOpen() or isIn().)
 
 [objects.t](../file/objects.t.html)\[[908](../source/objects.t.html#908)\]
 
-<div class="desc">
+
 
 we can't be seen until discovered
 
-</div>
+
 
 <span id="discover"></span>
 
@@ -161,15 +161,15 @@ we can't be seen until discovered
 
 [objects.t](../file/objects.t.html)\[[947](../source/objects.t.html#947)\]
 
-<div class="desc">
+
 
 mark the object as discovered
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

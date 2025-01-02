@@ -1403,9 +1403,9 @@ method of [CollectiveGroup](../object/CollectiveGroup.html) in
 [Thing](../object/Thing.html) in
 [thing.t](../file/thing.t.html)\[[3710](../source/thing.t.html#3710)\]  
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

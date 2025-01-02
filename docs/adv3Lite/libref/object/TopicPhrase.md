@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 TopicPhrase is a special kind of NounPhrase for topics (ASK ABOUT, TELL
 ABOUT, TALK ABOUT, LOOK UP, etc). These phrases aren't resolved to
@@ -41,42 +41,42 @@ English-specific part of the library.
 
 `class `**`TopicPhrase`**` :   `[`NounPhrase`](../object/NounPhrase.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TopicPhrase`**  
 [`NounPhrase`](../object/NounPhrase.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -85,11 +85,11 @@ Inherited from `NounPhrase` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`matchNameScope`](#matchNameScope)[`matchVocab`](#matchVocab)[`selectObjects`](#selectObjects)
 
@@ -98,19 +98,19 @@ Inherited from `NounPhrase` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="matchNameScope"></span>
 
@@ -119,11 +119,11 @@ Inherited from `NounPhrase` :
 [parser.t](../file/parser.t.html)\[[3064](../source/parser.t.html#3064)\],
 [english.t](../file/english.t.html)\[[2027](../source/english.t.html#2027)\]
 
-<div class="desc">
+
 
 expand the error text to include the possessive qualifier
 
-</div>
+
 
 <span id="matchVocab"></span>
 
@@ -131,7 +131,7 @@ expand the error text to include the possessive qualifier
 
 [parser.t](../file/parser.t.html)\[[2963](../source/parser.t.html#2963)\]
 
-<div class="desc">
+
 
 Get the list of objects matching the vocabulary words in our noun
 phrase. Populates our 'matches' property with a vector of matching
@@ -139,7 +139,7 @@ objects. This doesn't look at any of our qualifiers, or attempt to
 disambiguate contextually; it simply finds everything in scope that the
 noun phrase could refer to.
 
-</div>
+
 
 <span id="selectObjects"></span>
 
@@ -147,15 +147,15 @@ noun phrase could refer to.
 
 [parser.t](../file/parser.t.html)\[[3088](../source/parser.t.html#3088)\]
 
-<div class="desc">
+
 
 return the list
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

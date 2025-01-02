@@ -26,21 +26,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Noun phrase with an indefinite article
 
 `class `**`IndefiniteNounProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`IndefiniteNounProd`**  
 [`NounPhraseProd`](../object/NounPhraseProd.html)  
@@ -48,11 +48,11 @@ Noun phrase with an indefinite article
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`IndefiniteNounProd`**  
 [`ArbitraryNounProd`](../object/ArbitraryNounProd.html)  
@@ -61,19 +61,19 @@ Noun phrase with an indefinite article
 [`qualifiedSingularNounPhrase(indefinite)`](../object/qualifiedSingularNounPhrase(indefinite).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -85,11 +85,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`areAllEquiv`](#areAllEquiv)[`resolveMainPhrase`](#resolveMainPhrase)[`resolveNouns`](#resolveNouns)[`selectFromList`](#selectFromList)
 
@@ -101,19 +101,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="areAllEquiv"></span>
 
@@ -121,11 +121,11 @@ Inherited from `BasicProd` :
 
 [parser.t](../file/parser.t.html)\[[2499](../source/parser.t.html#2499)\]
 
-<div class="desc">
+
 
 are all of the items in the resolve list equivalents?
 
-</div>
+
 
 <span id="resolveMainPhrase"></span>
 
@@ -133,12 +133,12 @@ are all of the items in the resolve list equivalents?
 
 [parser.t](../file/parser.t.html)\[[2432](../source/parser.t.html#2432)\]
 
-<div class="desc">
+
 
 resolve the main phrase - this is separately overridable to allow
 subclassing
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -146,11 +146,11 @@ subclassing
 
 [parser.t](../file/parser.t.html)\[[2438](../source/parser.t.html#2438)\]
 
-<div class="desc">
+
 
 by default, resolve the main noun phrase
 
-</div>
+
 
 <span id="selectFromList"></span>
 
@@ -158,18 +158,18 @@ by default, resolve the main noun phrase
 
 [parser.t](../file/parser.t.html)\[[2525](../source/parser.t.html#2525)\]
 
-<div class="desc">
+
 
 Select an item from the list of potential matches, given the list sorted
 from most likely to least likely (according to the resolver's ambiguous
 match filter). We'll ask the resolver to make the selection, because
 indefinite noun phrases can mean different things in different contexts.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

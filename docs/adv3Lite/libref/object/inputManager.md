@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Keyboard input manager.
 
 **`inputManager`**` :   `[`PostRestoreObject`](../object/PostRestoreObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`inputManager`**  
 [`PostRestoreObject`](../object/PostRestoreObject.html)  
@@ -42,11 +42,11 @@ Keyboard input manager.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`inProgressDefObj`](#inProgressDefObj)[`inputEventInProgress`](#inputEventInProgress)[`inputLineInProgress`](#inputLineInProgress)[`noInputTimeout`](#noInputTimeout)
 
@@ -58,11 +58,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cancelInputInProgress`](#cancelInputInProgress)[`execute`](#execute)[`getEvent`](#getEvent)[`getEventOrKey`](#getEventOrKey)[`getInputDialog`](#getInputDialog)[`getInputFile`](#getInputFile)[`getInputLine`](#getInputLine)[`getInputLineExt`](#getInputLineExt)[`getKey`](#getKey)[`inputBegin`](#inputBegin)[`inputEventBegin`](#inputEventBegin)[`inputEventEnd`](#inputEventEnd)[`inputLineBegin`](#inputLineBegin)[`inputLineEnd`](#inputLineEnd)[`pauseForMore`](#pauseForMore)
 
@@ -73,11 +73,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="inProgressDefObj"></span>
 
@@ -85,11 +85,11 @@ Inherited from `ModuleExecObject` :
 
 [input.t](../file/input.t.html)\[[577](../source/input.t.html#577)\]
 
-<div class="desc">
+
 
 the InputDef object for the input in progress
 
-</div>
+
 
 <span id="inputEventInProgress"></span>
 
@@ -97,11 +97,11 @@ the InputDef object for the input in progress
 
 [input.t](../file/input.t.html)\[[580](../source/input.t.html#580)\]
 
-<div class="desc">
+
 
 flag: keystroke/event input is in progress
 
-</div>
+
 
 <span id="inputLineInProgress"></span>
 
@@ -109,13 +109,13 @@ flag: keystroke/event input is in progress
 
 [input.t](../file/input.t.html)\[[574](../source/input.t.html#574)\]
 
-<div class="desc">
+
 
 Flag: command line input is in progress. If this is set, it means that
 we interrupted command-line editing by a timeout, so we should not show
 a prompt the next time we go back to the keyboard for input.
 
-</div>
+
 
 <span id="noInputTimeout"></span>
 
@@ -123,7 +123,7 @@ a prompt the next time we go back to the keyboard for input.
 
 [input.t](../file/input.t.html)\[[599](../source/input.t.html#599)\]
 
-<div class="desc">
+
 
 Flag: inputLine does not support timeouts on the current platform. We
 set this when we get an InEvtNoTimeout return code from
@@ -141,15 +141,15 @@ timeouts; that is, we assume that if inputLineTimeout supports timeout,
 then so does inputEvent, and that if one doesn't support timeout, the
 other won't either.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cancelInputInProgress"></span>
 
@@ -157,7 +157,7 @@ other won't either.
 
 [input.t](../file/input.t.html)\[[414](../source/input.t.html#414)\]
 
-<div class="desc">
+
 
 Cancel input in progress.
 
@@ -175,7 +175,7 @@ using inputManager methods for keyboard operations won't have to worry
 about this, because the inputManager methods call this routine when
 necessary.
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -183,11 +183,11 @@ necessary.
 
 [input.t](../file/input.t.html)\[[543](../source/input.t.html#543)\]
 
-<div class="desc">
+
 
 receive post-restore notification
 
-</div>
+
 
 <span id="getEvent"></span>
 
@@ -195,13 +195,13 @@ receive post-restore notification
 
 [input.t](../file/input.t.html)\[[291](../source/input.t.html#291)\]
 
-<div class="desc">
+
 
 Read an event, processing real-time events while waiting, if desired.
 'allowRealTime' and 'promptFunc' work the same way they do with
 getInputLine().
 
-</div>
+
 
 <span id="getEventOrKey"></span>
 
@@ -209,7 +209,7 @@ getInputLine().
 
 [input.t](../file/input.t.html)\[[306](../source/input.t.html#306)\]
 
-<div class="desc">
+
 
 Read an event or keystroke. 'promptFunc' works the same way it does in
 getInputLine(). If 'keyOnly' is true, then we're only interested in
@@ -218,7 +218,7 @@ keystroke events, and we'll ignore any other events entered.
 Note that this routine is not generally called directly; callers should
 usually call the convenience routines getKey() or getEvent(), as needed.
 
-</div>
+
 
 <span id="getInputDialog"></span>
 
@@ -226,12 +226,12 @@ usually call the convenience routines getKey() or getEvent(), as needed.
 
 [input.t](../file/input.t.html)\[[257](../source/input.t.html#257)\]
 
-<div class="desc">
+
 
 Ask for input through a dialog. The arguments are the same as for the
 built-in inputDialog() function.
 
-</div>
+
 
 <span id="getInputFile"></span>
 
@@ -239,11 +239,11 @@ built-in inputDialog() function.
 
 [input.t](../file/input.t.html)\[[243](../source/input.t.html#243)\]
 
-<div class="desc">
+
 
 Ask for an input file.
 
-</div>
+
 
 <span id="getInputLine"></span>
 
@@ -251,7 +251,7 @@ Ask for an input file.
 
 [input.t](../file/input.t.html)\[[79](../source/input.t.html#79)\]
 
-<div class="desc">
+
 
 Read a line of input from the keyboard.
 
@@ -264,7 +264,7 @@ If we're in HTML mode, this will switch into the 'tads-input' font while
 reading the line, so this routine should be used wherever possible
 rather than calling inputLine() or inputLineTimeout() directly.
 
-</div>
+
 
 <span id="getInputLineExt"></span>
 
@@ -272,13 +272,13 @@ rather than calling inputLine() or inputLineTimeout() directly.
 
 [input.t](../file/input.t.html)\[[91](../source/input.t.html#91)\]
 
-<div class="desc">
+
 
 Read a line of input from the keyboard - extended interface, using the
 InputDef object to define the input parameters. 'defObj' is an instance
 of class InputDef, defining how we're to handle the input.
 
-</div>
+
 
 <span id="getKey"></span>
 
@@ -286,12 +286,12 @@ of class InputDef, defining how we're to handle the input.
 
 [input.t](../file/input.t.html)\[[272](../source/input.t.html#272)\]
 
-<div class="desc">
+
 
 Read a keystroke, processing real-time events while waiting.
 'promptFunc' works the same way it does with getInputLine().
 
-</div>
+
 
 <span id="inputBegin"></span>
 
@@ -299,12 +299,12 @@ Read a keystroke, processing real-time events while waiting.
 
 [input.t](../file/input.t.html)\[[525](../source/input.t.html#525)\]
 
-<div class="desc">
+
 
 Begin generic input. Cancels command report list capture, and shows the
 prompt if given.
 
-</div>
+
 
 <span id="inputEventBegin"></span>
 
@@ -312,12 +312,12 @@ prompt if given.
 
 [input.t](../file/input.t.html)\[[441](../source/input.t.html#441)\]
 
-<div class="desc">
+
 
 Begin reading key/event input. We'll cancel any report gatherer so that
 prompt text shows immediately, and show the prompt if desired.
 
-</div>
+
 
 <span id="inputEventEnd"></span>
 
@@ -325,11 +325,11 @@ prompt text shows immediately, and show the prompt if desired.
 
 [input.t](../file/input.t.html)\[[456](../source/input.t.html#456)\]
 
-<div class="desc">
+
 
 End keystroke/event input.
 
-</div>
+
 
 <span id="inputLineBegin"></span>
 
@@ -337,12 +337,12 @@ End keystroke/event input.
 
 [input.t](../file/input.t.html)\[[470](../source/input.t.html#470)\]
 
-<div class="desc">
+
 
 Begin command line editing. If we're in HTML mode, we'll show the
 appropriate codes to establish the input font.
 
-</div>
+
 
 <span id="inputLineEnd"></span>
 
@@ -350,12 +350,12 @@ appropriate codes to establish the input font.
 
 [input.t](../file/input.t.html)\[[496](../source/input.t.html#496)\]
 
-<div class="desc">
+
 
 End command line editing. If we're in HTML mode, we'll show the
 appropriate codes to close the input font.
 
-</div>
+
 
 <span id="pauseForMore"></span>
 
@@ -363,15 +363,15 @@ appropriate codes to close the input font.
 
 [input.t](../file/input.t.html)\[[234](../source/input.t.html#234)\]
 
-<div class="desc">
+
 
 Pause for a MORE prompt.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

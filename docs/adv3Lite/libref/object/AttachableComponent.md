@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An AttachableComponent is an item that effectively becomes a component
 of the object it's attached to, or is treated as a component if it
@@ -34,15 +34,15 @@ starts out attached.
 
 `class `**`AttachableComponent`**` :   `[`SimpleAttachable`](../object/SimpleAttachable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`AttachableComponent`**  
 [`SimpleAttachable`](../object/SimpleAttachable.html)  
@@ -55,27 +55,27 @@ starts out attached.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`attachedTo`](#attachedTo)  [`cannotTakeMsg`](#cannotTakeMsg)  [`initiallyAttached`](#initiallyAttached)  [`isDetachable`](#isDetachable)  [`isFirmAttachment`](#isFirmAttachment)  [`isFixed`](#isFixed)  `
 
@@ -97,11 +97,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`locType`](#locType)  [`preinitThing`](#preinitThing)  `
 
@@ -125,11 +125,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="attachedTo"></span>
 
@@ -137,11 +137,11 @@ Inherited from `LMentionable` :
 
 [attachables.t](../file/attachables.t.html)\[[499](../source/attachables.t.html#499)\]
 
-<div class="desc">
+
 
 The object to which this Component is attached.
 
-</div>
+
 
 <span id="cannotTakeMsg"></span>
 
@@ -149,11 +149,11 @@ The object to which this Component is attached.
 
 [attachables.t](../file/attachables.t.html)\[[501](../source/attachables.t.html#501)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="initiallyAttached"></span>
 
@@ -161,11 +161,11 @@ The object to which this Component is attached.
 
 [attachables.t](../file/attachables.t.html)\[[496](../source/attachables.t.html#496)\]
 
-<div class="desc">
+
 
 Assume that most components start out attached to their containers
 
-</div>
+
 
 <span id="isDetachable"></span>
 
@@ -173,12 +173,12 @@ Assume that most components start out attached to their containers
 
 [attachables.t](../file/attachables.t.html)\[[485](../source/attachables.t.html#485)\]
 
-<div class="desc">
+
 
 We can't normally detach a Component with a straightforward DETACH
 command.
 
-</div>
+
 
 <span id="isFirmAttachment"></span>
 
@@ -186,11 +186,11 @@ command.
 
 [attachables.t](../file/attachables.t.html)\[[442](../source/attachables.t.html#442)\]
 
-<div class="desc">
+
 
 A Component if firmly attached to its parent.
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -198,20 +198,20 @@ A Component if firmly attached to its parent.
 
 [attachables.t](../file/attachables.t.html)\[[491](../source/attachables.t.html#491)\]
 
-<div class="desc">
+
 
 A Component is generally fixed in place (i.e. not separately takeable)
 if it's attached to something.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="locType"></span>
 
@@ -219,11 +219,11 @@ if it's attached to something.
 
 [attachables.t](../file/attachables.t.html)\[[445](../source/attachables.t.html#445)\]
 
-<div class="desc">
+
 
 A Component's locType is PartOf while it's attached
 
-</div>
+
 
 <span id="preinitThing"></span>
 
@@ -231,15 +231,15 @@ A Component's locType is PartOf while it's attached
 
 [attachables.t](../file/attachables.t.html)\[[454](../source/attachables.t.html#454)\]
 
-<div class="desc">
+
 
 Preinitialize a Component.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

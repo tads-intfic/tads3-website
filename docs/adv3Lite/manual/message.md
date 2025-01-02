@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Messages  
 <span class="navnp"><a href="actres.html" class="nav"><em>Prev:</em> Action Results</a>
     <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span>
 
-</div>
+
 
 
 
@@ -124,7 +124,7 @@ for example).
 
 The basic format in which these macros are used is:
 
-<div class="syntax">
+
 
     DMsg(key, msg[, params...])
     BMsg(key, msg[, params...])
@@ -146,7 +146,7 @@ This may all become a bit clearer with a couple of examples, which we
 shall take from the library's definition of dobjFor(Take) on the Thing
 class:
 
-`
+```
     class Thing: Mentionable
         ...
 
@@ -204,7 +204,7 @@ class:
             
         ...
     ;    
-`
+```
 
 First note that we define three messages that might be used at the
 verify stage, cannotTakeMsg, alreadyHeldMsg and cannotTakeMyContainerMsg
@@ -298,7 +298,7 @@ actor, {take} becomes the appropriate form the verb "to take" ('take',
 gActionListStr, which contains a list of the objects just acted on. The
 DMsg in reportDobjTake() might this generate a transcript like this:
 
-<div class="cmdline">
+
 
     >take black cube
     Taken.
@@ -315,7 +315,7 @@ DMsg in reportDobjTake() might this generate a transcript like this:
     >take all
     You take the pad of paper, the diary, the half-eaten bar of chocolate, the glass paper-weight and the safety pin.
 
-</div>
+
 
   
 
@@ -377,7 +377,7 @@ parameters.
 For example, here's how we might define a CustomMessages object to
 replace the dobjFor(Take) messages we looked at above:
 
-`
+```
      
     CustomMessages
         messages = [
@@ -391,7 +391,7 @@ replace the dobjFor(Take) messages we looked at above:
                
         ]
     ;
-`
+```
 
 Note that we can't *change* the parameters used by the message strings
 (the ones that {1} and the like refer to) but that we can continue to
@@ -408,9 +408,9 @@ numerical expressions) and objects (in which case the name property is
 used in the substitution). For example, the following is legal if not
 exactly useful:
 
-`
+```
     DMsg(two things, 'The {1} and the {2} are {3} separate objects. ', redBall, blueBall, 1 + 1);
-`
+```
 
   
 
@@ -418,7 +418,7 @@ Note that some care needs to be taken with a CustomMessages object
 that's meant to supply variable messages via embedded expressions. For
 example the following CustomMessages object won't work as expected:
 
-`
+```
      CustomMessages
         messages = [
             Msg(not important, '<<one of>>Leave it alone<<or>>It\'s not worth messing
@@ -426,7 +426,7 @@ example the following CustomMessages object won't work as expected:
         ]
     ;
      
-`
+```
 
 This is to do with the way the TADS 3 language evaluates embedded
 expressions in single-quoted strings, and with the fact that a
@@ -438,7 +438,7 @@ without any embedded expressions but containing just one of the options.
 The way round this is to wrap the string in an anonymous function, like
 so:
 
-`
+```
       
       CustomMessages
         messages = [
@@ -447,7 +447,7 @@ so:
         ]
     ;
       
-`
+```
 
 In fact, the second parameter of any Msg(), BMsg() or DMsg() macro can
 always be an anonymous function that returns a single-quoted string
@@ -506,7 +506,7 @@ with the gMessageParams(obj) macro.
 
 **Parameter**
 
-</div>
+
 
 **Explanation**
 
@@ -958,7 +958,7 @@ gMessageParams(). A globalParamName is simply a string property you can
 define on any Thing and use later as a message parameter to refer to
 that thing, e.g.:
 
-`
+```
     george: Actor 'George; tall thin; man' @hall
         "He's a tall thin man. "
         isHim = true
@@ -969,7 +969,7 @@ that thing, e.g.:
     ...
 
       "{The subj george} {seems} upset with you. ";
-`
+```
 
 In this case there's little advantage in using the globalParamName over
 simply writing "George seems upset with you." But one reason you might
@@ -986,10 +986,10 @@ the message to be displayed but is not represented by anything in the
 game, so that there's no further message parameter to attach it to. A
 simple example would be:
 
-`
+```
      'There{dummy}{\'s} nothing {here}.'
      
-`
+```
 
 This marks 'There' as the subject of the sentence so that it will come
 out as "There's nothing here" or "There was nothing there" according to
@@ -1004,9 +1004,9 @@ that expands these message substitution parameters isn't smart enough to
 distinguish between the structure of these two sentences unless you help
 it out. So in the first example:
 
-`
+```
     "{He actor} {know} that exercise is good for {him actor}. ";
-`
+```
 
 The expansion would go wrong because the subject of the verb in the
 subordinate clause is "exercise", but the routine that does the
@@ -1019,18 +1019,18 @@ There's nothing in the string "that exercise is good for" that signals
 the actual sentence construction to the expansion routine; from the
 software's point of view it's structually identical to:
 
-`
+```
     "{He actor} {know} everything about {him actor}. ";
-`
+```
 
 Where "He knows everything about himself" would be correct. But in the
 first example we need to tell the game what the actual grammatical
 subject of the subordinate clause is, which we do by marking it with
 `{dummy}`, thus:
 
-`
+```
     "{He actor} {know} that {dummy}exercise is good for {him actor}. ";
-`
+```
 
 This tells the parameter expansion routine that "exercise" and not
 "actor" is now the subject of "is".
@@ -1042,10 +1042,10 @@ a parameter, but for convenience, the library defines the
 names exactly match their local variable names. In other words, if you
 call this macro like this:
 
-`
+```
      gMessageParams(obj, cont);
      
-`
+```
 
 then you'll get one parameter with the text name 'obj' whose expansion
 will be the value of the local variable obj, and another with text name
@@ -1060,10 +1060,10 @@ secure agreement betweeb a verb and its grammatical subject, in
 whichever tense the game happens to be. If you need to write code which
 might vary by person and/or tense, you'll typically write messages like:
 
-`
+```
     "{I} climb{s/ed} over the fence. ";
     "{The subj dobj} {breaks} in two. ";
-`
+```
 
 In the first of these strings, "climb" is a regular verb, so we can
 conjugate it by adding {s/ed} to the end. In the second case "breaks" is
@@ -1081,13 +1081,13 @@ different meanings, so if you're using a verb of this sort you need to
 choose the message parameter substitution that gives you the form you
 want, e.g.:
 
-`
+```
     "{I} hang{s/ed} the murderer on the gallows. ";
     "{I} {hang} the picture on the wall. ";
 
     "{I} {lie} down on the bed. ";
     "{I} lie{s/d} about my age. ";
-`
+```
 
 In either case all six tenses are available (e.g. I hang the murderer on
 the gallows, I hanged the murderer on the gallows, I have hanged the
@@ -1124,10 +1124,10 @@ the same meaning. In such cases use an {s/d} type ending if you want the
 regular form and surround the complete verb in braces if you want the
 irregular form, for example:
 
-`
+```
     "{I} {dive} into the pool. " // past "You dove into the pool", preferred in American English
     "{I} dive{s/d} into the pool. " // past "You dived into the pool", preferred in British English
-`
+```
 
 Normally, either form of verb conjugated with a message parameter
 substitution requires a subject, supplied by a previous message
@@ -1138,20 +1138,20 @@ parameter substitution to represent the subject of the verb, for example
 "There is nothing much here/There was nothing much there." This can be
 written:
 
-`
+```
     "There {is} nothing much {here}. ";
      
-`
+```
 
 In such a case, where the message parameter substitution mechanism finds
 no subject for the verb (in this case, {is}) to agree with, it defaults
 to a third-person singular subject (via the dummy\_ object), so that the
 above statement is equivalent to:
 
-`
+```
     "There {dummy} {is} nothing much {here}. ";
      
-`
+```
 
 Where {dummy} explicitly makes the dummy\_ object the subject of the
 sentence (since the dummy\_ object has an empty name, its presence
@@ -1165,18 +1165,18 @@ here/There were no sausages there/There have been no sausages here/There
 had been no sausages there/There will be no sausages here/There will
 have been no sausages here" according to tense, you'd need to write:
 
-`
+```
     "There {plural} {are} no sausages here. ";
-`
+```
 
 The **{aac}** parameter substitution can be used to ensure continuing
 agreement with the subject of sucessive verbs when the subject is the
 actor. Normally this should't be necessary, but should problems occur
 you can use {aac} to secure actor-verb agreement like so:
 
-`
+```
     "{I} yell{s/ed} and {aac} drop{s/?ed} my guard and {aac} scream{s/ed}.
-`
+```
 
 If your game is only ever going to switch between the present tense and
 the past tense (and never going to use any of the others), then you can
@@ -1185,10 +1185,10 @@ forms, either long-windedly through the **tSel('present', 'past')**
 macro, or more concisely with the **{present\|past}** message
 substitution, for example:
 
-`
+```
     "There {is|was} nothing much {here}. ";
     "There {are|were} no sausages {here|there}. ";
-`
+```
 
 One other point to consider is that the special parameter substitutions
 `{don't verb}` and `{must
@@ -1216,11 +1216,11 @@ in library code to make sure that standard library messages work with
 whatever tense and objects a game may happen to define. In your own game
 code you'll mainly be able to write straightforward strings like:
 
-`
+```
     "You shut the door. ";
     "There are no sausages here. "; 
      
-`
+```
 
 You only need to consider using message parameter substitutions where
 your text might vary, either because you don't know what the subject of
@@ -1274,7 +1274,7 @@ formatted list.
 For example, suppose we have a pond whose contents are a duck, a green
 bottle and an old boot. Then we could write:
 
-`
+```
     /* lst1 becomes 'a duck, a green bottle and an old boot' */
     local lst1 = makeListStr(pond.contents);
 
@@ -1283,25 +1283,25 @@ bottle and an old boot. Then we could write:
 
     /* lst3 becomes 'the duck, the green bottle or the old boot' */
     local lst3 = makeListStr(pond.contents, &theName, 'or');
-`
+```
 
 If we just want the first form embedded in a string, we can use the \<\<
 list of \* \>\> string template, for example.
 
-`
+```
     /* Displays "You see a duck, a green bottle and an old boot in the pond. */
     "You see <<list of pond.contents>> in the pond. ";
-`
+```
 
 If pond.contents were an empty list, then the previous code would output
 "You see nothing in the pond". This may be just what you want, or you
 may want to test that your list has any elements in it (e.g.
 pond.contents.length \> 0) before trying to display your list, e.g.:
 
-`
+```
     "<<if pond.contents.length > 0>>You see <<list of pond.contents>> in the pond. 
      <<else>>The pond seems quite clear of debris.<<end>>> ";     
-`
+```
 
 This is all very well if you are preceeding your list with a verb phrase
 like "You see" of which the list is the object, but what if you want the
@@ -1311,13 +1311,13 @@ form)? For this purpose you can use the *{prev}* tag, which acts as a
 stand-in for the list you've just displayed (whether you use
 makeListStr() or \<\<list of \*\>\>). So for example, you could write:
 
-`
+```
     /* This gives "A duck, a green bottle and an old boot are floating on the pond." */
     "\^<<list of pond.contents>> {prev} {is} floating on the pond. ";
 
     /* Don't do this; it'll produce a run-time error! */ 
     "\^<<list of pond.contents>> {is} floating on the pond. ";
-`
+```
 
 Note that you must use the *{prev}* tag here, or the *{is}* tag (or the
 tag for whichever verb you want to use) won't have a subject to agree
@@ -1329,18 +1329,18 @@ to agree with (as appropriate).
 Because this is a relatively common case, with the verb 'to be' you can
 also use the form \<\<list of \* is\>\>, for example:
 
-`
+```
     /* This also gives "A duck, a green bottle and an old boot are floating on the pond." */
     "\^<<list of pond.contents is>> floating on the pond. ";
-`
+```
 
 This avoids the need to remember to use {prev}, but with any other verb
 you would still need to use it, for example:
 
-`
+```
     * This gives "A duck, a green bottle and an old boot sit on the pond." */
     "\^<<list of pond.contents>> {prev} {sit} on the pond. ";
-`
+```
 
 Finally, you may occasionally want the verb to precede the list, as in
 "Floating around on the pond are a duck, a green bottle and an old
@@ -1348,9 +1348,9 @@ boot." You can do this with the \<\< is list of \* \>\> embedded
 expression (but only for the verb 'to be'), in which case you once again
 don't need to use *{prev}* or another verb tag. For example:
 
-`
+```
     "Floating around on the pond <<is list of pond.contents>>. ";
-`
+```
 
   
 
@@ -1362,7 +1362,7 @@ You can see which ones the library defines by looking at the definition
 of englishCustomVocab.verbParams in english.t. If you need to define
 more you can do so by defining a CustomVocab object like this:
 
-`
+```
     CustomVocab
         verbParams = 
         [
@@ -1371,7 +1371,7 @@ more you can do so by defining a CustomVocab object like this:
             'break/breaks/broke/broken'
         ]   
     ;
-`
+```
 
 The **verbParams** property is defined as is a list of strings, using
 the following template: 'infinitive/present3/past/past-participle'. The
@@ -1393,7 +1393,7 @@ given in a list, since some words have more than one valid plural. The
 first plural is the preferred one; the remaining entries are alternates.
 For example the library definition of its irregularPlurals list begins:
 
-`
+```
     irregularPlurals = [
             'calf', ['calves', 'calfs'],
             'elf', ['elves', 'elfs'],
@@ -1401,7 +1401,7 @@ For example the library definition of its irregularPlurals list begins:
             'hoof', ['hooves', 'hoofs'],
             'knife', ['knives'],
             ...
-`
+```
 
 **specialAOrAn**: usually the indefinite article is 'a' for a word that
 starts with consonant and 'an' for a word that starts with a vowel, but
@@ -1414,7 +1414,7 @@ them.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -1422,4 +1422,4 @@ them.
 <span class="navnp"><a href="actres.html" class="nav"><em>Prev:</em> Action Results</a>
     <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span>
 
-</div>
+

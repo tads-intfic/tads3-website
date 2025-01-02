@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> The Actor Object  
@@ -15,7 +15,7 @@ layout: docs
     <a href="actorstate.html" class="nav"><em>Next:</em> Actor States</a>
     </span>
 
-</div>
+
 
 
 
@@ -67,13 +67,13 @@ just the same way as you'd define them on Thing are:
 
 A minimal Actor definition might thus look something like this:
 
-`
+```
     george: Actor 'George; tall thin; man; him' @hall
         "He's a tall thin man. "    
        
         globalParamName = 'george'
     ;
-`
+```
 
 <span id="additional"></span>
 
@@ -338,7 +338,7 @@ to set the ProxyActor's location property to the Actor it's standing in
 for, which we can do via the @ notation in the ProxyActor template,
 e.g.:
 
-`
+```
     ProxyActor @guard    
     ;
 
@@ -361,13 +361,13 @@ e.g.:
        ...
 
     ;
-`
+```
 
 
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -376,4 +376,4 @@ e.g.:
     <a href="actorstate.html" class="nav"><em>Next:</em> Actor States</a>
     </span>
 
-</div>
+

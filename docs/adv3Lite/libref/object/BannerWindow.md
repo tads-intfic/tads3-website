@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A BannerWindow corresponds to an on-screen banner. For each banner
 window a game wants to display, the game must create an object of this
@@ -45,43 +45,43 @@ manager automatically handles them.
 
 `class `**`BannerWindow`**` :   `[`OutputStreamWindow`](../object/OutputStreamWindow.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`BannerWindow`**  
 [`OutputStreamWindow`](../object/OutputStreamWindow.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 ` [`contentsMenuBanner`](../object/contentsMenuBanner.html)  [`longTopicBanner`](../object/longTopicBanner.html)  [`statuslineBanner`](../object/statuslineBanner1.html)  [`topMenuBanner`](../object/topMenuBanner.html)  `
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`align_`](#align_)  [`handle_`](#handle_)  [`id_`](#id_)  [`inited_`](#inited_)  [`parentID_`](#parentID_)  [`size_`](#size_)  [`sizeUnits_`](#sizeUnits_)  [`styleFlags_`](#styleFlags_)  [`windowType_`](#windowType_)  `
 
@@ -90,11 +90,11 @@ Inherited from `OutputStreamWindow` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`clearWindow`](#clearWindow)  [`construct`](#construct)  [`createOutputStreamObj`](#createOutputStreamObj)  [`createSystemBanner`](#createSystemBanner)  [`cursorTo`](#cursorTo)  [`flushBanner`](#flushBanner)  [`getBannerID`](#getBannerID)  [`initBannerWindow`](#initBannerWindow)  [`removeBanner`](#removeBanner)  [`setScreenColor`](#setScreenColor)  [`setSize`](#setSize)  [`setTextColor`](#setTextColor)  [`showBanner`](#showBanner)  [`showForRestore`](#showForRestore)  [`sizeToContents`](#sizeToContents)  [`updateForRestore`](#updateForRestore)  [`writeToBanner`](#writeToBanner)  `
 
@@ -103,11 +103,11 @@ Inherited from `OutputStreamWindow` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="align_"></span>
 
@@ -115,11 +115,11 @@ Inherited from `OutputStreamWindow` :
 
 [banner.t](../file/banner.t.html)\[[450](../source/banner.t.html#450)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="handle_"></span>
 
@@ -127,11 +127,11 @@ Inherited from `OutputStreamWindow` :
 
 [banner.t](../file/banner.t.html)\[[441](../source/banner.t.html#441)\]
 
-<div class="desc">
+
 
 the handle to my system-level banner window
 
-</div>
+
 
 <span id="id_"></span>
 
@@ -139,14 +139,14 @@ the handle to my system-level banner window
 
 [banner.t](../file/banner.t.html)\[[438](../source/banner.t.html#438)\]
 
-<div class="desc">
+
 
 The creator-assigned ID string to identify the banner persistently. This
 is only needed for banners created dynamically; for BannerWindow objects
 defined statically at compile time, simply leave this value as nil, and
 we'll use the object itself as the identifier.
 
-</div>
+
 
 <span id="inited_"></span>
 
@@ -154,11 +154,11 @@ we'll use the object itself as the identifier.
 
 [banner.t](../file/banner.t.html)\[[429](../source/banner.t.html#429)\]
 
-<div class="desc">
+
 
 flag: this banner has been initialized with initBannerWindow()
 
-</div>
+
 
 <span id="parentID_"></span>
 
@@ -166,12 +166,12 @@ flag: this banner has been initialized with initBannerWindow()
 
 [banner.t](../file/banner.t.html)\[[448](../source/banner.t.html#448)\]
 
-<div class="desc">
+
 
 Creation parameters. We store these when we create the banner, and
 update them as needed when the banner's display attributes are changed.
 
-</div>
+
 
 <span id="size_"></span>
 
@@ -179,11 +179,11 @@ update them as needed when the banner's display attributes are changed.
 
 [banner.t](../file/banner.t.html)\[[451](../source/banner.t.html#451)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="sizeUnits_"></span>
 
@@ -191,11 +191,11 @@ update them as needed when the banner's display attributes are changed.
 
 [banner.t](../file/banner.t.html)\[[452](../source/banner.t.html#452)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="styleFlags_"></span>
 
@@ -203,11 +203,11 @@ update them as needed when the banner's display attributes are changed.
 
 [banner.t](../file/banner.t.html)\[[453](../source/banner.t.html#453)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="windowType_"></span>
 
@@ -215,19 +215,19 @@ update them as needed when the banner's display attributes are changed.
 
 [banner.t](../file/banner.t.html)\[[449](../source/banner.t.html#449)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="clearWindow"></span>
 
@@ -235,12 +235,12 @@ update them as needed when the banner's display attributes are changed.
 
 [banner.t](../file/banner.t.html)\[[309](../source/banner.t.html#309)\]
 
-<div class="desc">
+
 
 Clear my banner window. This clears out all of the contents of our
 on-screen display area.
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -248,7 +248,7 @@ on-screen display area.
 
 [banner.t](../file/banner.t.html)\[[54](../source/banner.t.html#54)\]
 
-<div class="desc">
+
 
 Construct the object.
 
@@ -261,7 +261,7 @@ Note that no ID string is needed for BannerWindow objects defined
 statically at compile-time, because the object itself ('self') is a
 suitably unique and stable identifier.
 
-</div>
+
 
 <span id="createOutputStreamObj"></span>
 
@@ -269,11 +269,11 @@ suitably unique and stable identifier.
 
 [banner.t](../file/banner.t.html)\[[375](../source/banner.t.html#375)\]
 
-<div class="desc">
+
 
 create our banner output stream
 
-</div>
+
 
 <span id="createSystemBanner"></span>
 
@@ -281,7 +281,7 @@ create our banner output stream
 
 [banner.t](../file/banner.t.html)\[[361](../source/banner.t.html#361)\]
 
-<div class="desc">
+
 
 Create the system-level banner window. This can be customized as needed,
 although this default implementation should be suitable for most
@@ -290,7 +290,7 @@ instances.
 Returns true if we are successful in creating the system window, nil if
 we fail.
 
-</div>
+
 
 <span id="cursorTo"></span>
 
@@ -298,12 +298,12 @@ we fail.
 
 [banner.t](../file/banner.t.html)\[[326](../source/banner.t.html#326)\]
 
-<div class="desc">
+
 
 Move the cursor to the given row/column position. This can only be used
 with text-grid banners; for ordinary text banners, this has no effect.
 
-</div>
+
 
 <span id="flushBanner"></span>
 
@@ -311,11 +311,11 @@ with text-grid banners; for ordinary text banners, this has no effect.
 
 [banner.t](../file/banner.t.html)\[[267](../source/banner.t.html#267)\]
 
-<div class="desc">
+
 
 flush any pending output to the banner
 
-</div>
+
 
 <span id="getBannerID"></span>
 
@@ -323,13 +323,13 @@ flush any pending output to the banner
 
 [banner.t](../file/banner.t.html)\[[334](../source/banner.t.html#334)\]
 
-<div class="desc">
+
 
 Get the banner identifier. If our 'id\_' property is set to nil, we'll
 assume that we're a statically-defined object, in which case 'self' is a
 suitable identifier. Otherwise, we'll return the identifier string.
 
-</div>
+
 
 <span id="initBannerWindow"></span>
 
@@ -337,7 +337,7 @@ suitable identifier. Otherwise, we'll return the identifier string.
 
 [banner.t](../file/banner.t.html)\[[422](../source/banner.t.html#422)\]
 
-<div class="desc">
+
 
 Initialize the banner window. This is called during initialization (when
 first starting the game, or when resetting with RESTART). If the banner
@@ -363,7 +363,7 @@ initialized and don't require further initialization. This routine can
 be called multiple times because dependent windows might call us
 directly, before we're called for our regular initialization.
 
-</div>
+
 
 <span id="removeBanner"></span>
 
@@ -371,7 +371,7 @@ directly, before we're called for our regular initialization.
 
 [banner.t](../file/banner.t.html)\[[237](../source/banner.t.html#237)\]
 
-<div class="desc">
+
 
 Remove the banner. This removes the banner's on-screen window. The
 BannerWindow object itself remains valid, but after this method returns,
@@ -383,7 +383,7 @@ space, so once the parent is gone, its children no longer have any way
 to obtain any display space. Our children remain valid objects even
 after we're closed, but they won't be visible on the display.
 
-</div>
+
 
 <span id="setScreenColor"></span>
 
@@ -391,11 +391,11 @@ after we're closed, but they won't be visible on the display.
 
 [banner.t](../file/banner.t.html)\[[319](../source/banner.t.html#319)\]
 
-<div class="desc">
+
 
 set the screen color in the banner window
 
-</div>
+
 
 <span id="setSize"></span>
 
@@ -403,7 +403,7 @@ set the screen color in the banner window
 
 [banner.t](../file/banner.t.html)\[[280](../source/banner.t.html#280)\]
 
-<div class="desc">
+
 
 Set the banner window to a specific size. 'size' is the new size, in
 units given by 'sizeUnits', which is a BannerSizeXxx constant.
@@ -413,7 +413,7 @@ is purely advisory, and that a sizeToContents() call will eventually
 follow to set the actual size. When 'isAdvisory is true, the interpreter
 is free to ignore the request if sizeToContents()
 
-</div>
+
 
 <span id="setTextColor"></span>
 
@@ -421,11 +421,11 @@ is free to ignore the request if sizeToContents()
 
 [banner.t](../file/banner.t.html)\[[316](../source/banner.t.html#316)\]
 
-<div class="desc">
+
 
 set the text color in the banner
 
-</div>
+
 
 <span id="showBanner"></span>
 
@@ -433,7 +433,7 @@ set the text color in the banner
 
 [banner.t](../file/banner.t.html)\[[104](../source/banner.t.html#104)\]
 
-<div class="desc">
+
 
 Show the banner. The game should call this method when it first wants to
 display the banner.
@@ -475,7 +475,7 @@ the window isn't changing. If the caller explicitly wants to create a
 new window even if we already have a window, the caller should simply
 call removeBanner() before calling this routine.
 
-</div>
+
 
 <span id="showForRestore"></span>
 
@@ -483,14 +483,14 @@ call removeBanner() before calling this routine.
 
 [banner.t](../file/banner.t.html)\[[343](../source/banner.t.html#343)\]
 
-<div class="desc">
+
 
 Restore this banner. This is called after a RESTORE or UNDO operation
 that finds that this banner was being displayed at the time the state
 was saved but is not currently displayed in the active UI. We'll show
 the banner using the characteristics saved persistently.
 
-</div>
+
 
 <span id="sizeToContents"></span>
 
@@ -498,13 +498,13 @@ the banner using the characteristics saved persistently.
 
 [banner.t](../file/banner.t.html)\[[299](../source/banner.t.html#299)\]
 
-<div class="desc">
+
 
 Size the banner to its current contents. Note that some systems do not
 support this operation, so callers should always make an advisory call
 to setSize() first to set a size based on the expected content size.
 
-</div>
+
 
 <span id="updateForRestore"></span>
 
@@ -512,7 +512,7 @@ to setSize() first to set a size based on the expected content size.
 
 [banner.t](../file/banner.t.html)\[[390](../source/banner.t.html#390)\]
 
-<div class="desc">
+
 
 Update my contents after being restored. By default, this does nothing;
 instances might want to override this to refresh the contents of the
@@ -523,7 +523,7 @@ example, the status line banner is updated at each new command line via
 a prompt-daemon, so there's no need for the status line banner to do
 anything here.
 
-</div>
+
 
 <span id="writeToBanner"></span>
 
@@ -531,15 +531,15 @@ anything here.
 
 [banner.t](../file/banner.t.html)\[[260](../source/banner.t.html#260)\]
 
-<div class="desc">
+
 
 write the given text to the banner
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

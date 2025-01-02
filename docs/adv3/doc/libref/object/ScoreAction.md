@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Show the current score.
 
 `DefineSystemAction(Score)      `*`// original source text`*  
 `class `**`ScoreAction`**` :   `[`SystemAction`](../object/SystemAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ScoreAction`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -51,29 +51,29 @@ Show the current score.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ScoreAction`**  
 [`predicate(Score)`](../object/predicate(Score).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInUndo`](#includeInUndo)[`mentionedFullScore`](#mentionedFullScore)
 
@@ -90,11 +90,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execSystemAction`](#execSystemAction)
 
@@ -112,11 +112,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -124,11 +124,11 @@ Inherited from `BasicProd` :
 
 [actions.t](../file/actions.t.html)\[[980](../source/actions.t.html#980)\]
 
-<div class="desc">
+
 
 there's no point in including this in undo
 
-</div>
+
 
 <span id="mentionedFullScore"></span>
 
@@ -136,19 +136,19 @@ there's no point in including this in undo
 
 [actions.t](../file/actions.t.html)\[[983](../source/actions.t.html#983)\]
 
-<div class="desc">
+
 
 have we mentioned the FULL SCORE command yet?
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execSystemAction"></span>
 
@@ -156,15 +156,15 @@ have we mentioned the FULL SCORE command yet?
 
 [actions.t](../file/actions.t.html)\[[954](../source/actions.t.html#954)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

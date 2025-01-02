@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Web Banner Window. This is designed as a \*partial\* drop-in replacement
 for the BannerWindow class, using Web UI windows as implemented in the
@@ -44,43 +44,43 @@ window's layout to use the Web UI model.
 
 `class `**`WebBannerWin`**` :   `[`OutputStreamWindow`](../object/OutputStreamWindow.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WebBannerWin`**  
 [`OutputStreamWindow`](../object/OutputStreamWindow.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 ` [`statuslineBanner`](../object/statuslineBanner.html)  `
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -89,11 +89,11 @@ Inherited from `OutputStreamWindow` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`createOutputStreamObj`](#createOutputStreamObj)  [`flushBanner`](#flushBanner)  [`init`](#init)  [`setSize`](#setSize)  [`sizeToContents`](#sizeToContents)  [`writeToBanner`](#writeToBanner)  `
 
@@ -102,19 +102,19 @@ Inherited from `OutputStreamWindow` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="createOutputStreamObj"></span>
 
@@ -122,11 +122,11 @@ Inherited from `OutputStreamWindow` :
 
 [browser.t](../file/browser.t.html)\[[748](../source/browser.t.html#748)\]
 
-<div class="desc">
+
 
 create our output stream subclass
 
-</div>
+
 
 <span id="flushBanner"></span>
 
@@ -134,11 +134,11 @@ create our output stream subclass
 
 [browser.t](../file/browser.t.html)\[[754](../source/browser.t.html#754)\]
 
-<div class="desc">
+
 
 flush output
 
-</div>
+
 
 <span id="init"></span>
 
@@ -146,11 +146,11 @@ flush output
 
 [browser.t](../file/browser.t.html)\[[741](../source/browser.t.html#741)\]
 
-<div class="desc">
+
 
 Initialize. Call this when first displaying the window in the UI.
 
-</div>
+
 
 <span id="setSize"></span>
 
@@ -158,13 +158,13 @@ Initialize. Call this when first displaying the window in the UI.
 
 [browser.t](../file/browser.t.html)\[[770](../source/browser.t.html#770)\]
 
-<div class="desc">
+
 
 Banner window size settings. We simply ignore these; callers must rework
 their layout logic for the Web UI, since the javascript layout system is
 so different.
 
-</div>
+
 
 <span id="sizeToContents"></span>
 
@@ -172,11 +172,11 @@ so different.
 
 [browser.t](../file/browser.t.html)\[[771](../source/browser.t.html#771)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="writeToBanner"></span>
 
@@ -184,15 +184,15 @@ so different.
 
 [browser.t](../file/browser.t.html)\[[760](../source/browser.t.html#760)\]
 
-<div class="desc">
+
 
 write text
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

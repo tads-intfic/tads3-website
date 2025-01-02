@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A base class for file-oriented actions, such as SCRIPT, RECORD, and
 REPLAY. We provide common handling that prompts interactively for a
@@ -35,15 +35,15 @@ out the specific subclassed operation on the file.
 
 `class `**`FileOpAction`**` :   `[`SystemAction`](../object/SystemAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FileOpAction`**  
 [`SystemAction`](../object/SystemAction.html)  
@@ -54,27 +54,27 @@ out the specific subclassed operation on the file.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`fileDisposition`](#fileDisposition)  [`filePromptMsg`](#filePromptMsg)  [`fileTypeID`](#fileTypeID)  [`includeInUndo`](#includeInUndo)  [`isRepeatable`](#isRepeatable)  [`showCancelMsg`](#showCancelMsg)  `
 
@@ -93,11 +93,11 @@ Inherited from `Action` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`execAction`](#execAction)  [`performFileOp`](#performFileOp)  [`setUpFileOp`](#setUpFileOp)  `
 
@@ -118,11 +118,11 @@ Inherited from `Redirector` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fileDisposition"></span>
 
@@ -130,11 +130,11 @@ Inherited from `Redirector` :
 
 [actions.t](../file/actions.t.html)\[[2208](../source/actions.t.html#2208)\]
 
-<div class="desc">
+
 
 the file dialog open/save type
 
-</div>
+
 
 <span id="filePromptMsg"></span>
 
@@ -142,11 +142,11 @@ the file dialog open/save type
 
 [actions.t](../file/actions.t.html)\[[2205](../source/actions.t.html#2205)\]
 
-<div class="desc">
+
 
 our file dialog prompt message
 
-</div>
+
 
 <span id="fileTypeID"></span>
 
@@ -154,11 +154,11 @@ our file dialog prompt message
 
 [actions.t](../file/actions.t.html)\[[2211](../source/actions.t.html#2211)\]
 
-<div class="desc">
+
 
 the file dialog type ID
 
-</div>
+
 
 <span id="includeInUndo"></span>
 
@@ -166,11 +166,11 @@ the file dialog type ID
 
 [actions.t](../file/actions.t.html)\[[2282](../source/actions.t.html#2282)\]
 
-<div class="desc">
+
 
 we can't include this in undo, as it affects external files
 
-</div>
+
 
 <span id="isRepeatable"></span>
 
@@ -178,11 +178,11 @@ we can't include this in undo, as it affects external files
 
 [actions.t](../file/actions.t.html)\[[2285](../source/actions.t.html#2285)\]
 
-<div class="desc">
+
 
 don't allow repeating with AGAIN
 
-</div>
+
 
 <span id="showCancelMsg"></span>
 
@@ -190,19 +190,19 @@ don't allow repeating with AGAIN
 
 [actions.t](../file/actions.t.html)\[[2214](../source/actions.t.html#2214)\]
 
-<div class="desc">
+
 
 show our cancellation mesage
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -210,13 +210,13 @@ show our cancellation mesage
 
 [actions.t](../file/actions.t.html)\[[2234](../source/actions.t.html#2234)\]
 
-<div class="desc">
+
 
 Each concrete action subclass must override this to carry out our
 operation. This is called when the user has successfully selected a
 filename for the operation.
 
-</div>
+
 
 <span id="performFileOp"></span>
 
@@ -224,7 +224,7 @@ filename for the operation.
 
 [actions.t](../file/actions.t.html)\[[2225](../source/actions.t.html#2225)\]
 
-<div class="desc">
+
 
 Carry out our file operation.
 
@@ -233,7 +233,7 @@ by the user via the Save Game dialog. Some versions of the Save Game
 dialog let the user enter this additional information, which can be
 stored as part of the saved game metadata.
 
-</div>
+
 
 <span id="setUpFileOp"></span>
 
@@ -241,15 +241,15 @@ stored as part of the saved game metadata.
 
 [actions.t](../file/actions.t.html)\[[2245](../source/actions.t.html#2245)\]
 
-<div class="desc">
+
 
 ask for a file, and carry out our operation is we get one
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

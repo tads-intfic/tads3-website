@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Custom English vocabulary. Here we define a basic dictionary of
 irregular plurals, a/an words, and verb parameters. Games that want to
@@ -32,26 +32,26 @@ into the dictionary during preinit.
 
 **`englishCustomVocab`**` :   `[`CustomVocab`](../object/CustomVocab.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`englishCustomVocab`**  
 [`CustomVocab`](../object/CustomVocab.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`irregularPlurals`](#irregularPlurals)[`specialAOrAn`](#specialAOrAn)[`verbParams`](#verbParams)
 
@@ -59,11 +59,11 @@ into the dictionary during preinit.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -71,11 +71,11 @@ into the dictionary during preinit.
 
 *(none)* <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="irregularPlurals"></span>
 
@@ -83,11 +83,11 @@ into the dictionary during preinit.
 
 [english.t](../file/english.t.html)\[[2416](../source/english.t.html#2416)\]
 
-<div class="desc">
+
 
 irregular plurals
 
-</div>
+
 
 <span id="specialAOrAn"></span>
 
@@ -95,11 +95,11 @@ irregular plurals
 
 [english.t](../file/english.t.html)\[[2567](../source/english.t.html#2567)\]
 
-<div class="desc">
+
 
 special-case 'a' vs 'an' words
 
-</div>
+
 
 <span id="verbParams"></span>
 
@@ -107,25 +107,25 @@ special-case 'a' vs 'an' words
 
 [english.t](../file/english.t.html)\[[2591](../source/english.t.html#2591)\]
 
-<div class="desc">
+
 
 verb parameters, for {xxx} tokens in message strings
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

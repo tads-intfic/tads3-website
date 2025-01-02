@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Actions  
 <span class="navnp"><a href="thought.html" class="nav"><em>Prev:</em> Thoughts</a>
     <a href="actionoverview.html" class="nav"><em>Next:</em> Overview</a>
     </span>
 
-</div>
+
 
 
 
@@ -23,7 +23,7 @@ layout: docs
 This part describes how to customize the response to player commands,
 and how to define your own actions.
 
-<div class="sectoc">
+
 
 [Overview](actionoverview.html)  
 [Action Results](actres.html)  
@@ -41,11 +41,11 @@ and how to define your own actions.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Actions  
@@ -53,4 +53,4 @@ and how to define your own actions.
     <a href="actionoverview.html" class="nav"><em>Next:</em> Overview</a>
     </span>
 
-</div>
+

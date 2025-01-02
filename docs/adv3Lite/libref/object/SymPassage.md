@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Symmetrical Passage is a single passage object that can be traversed
 in either direction and exists in both the locations it connects.
@@ -44,15 +44,15 @@ of setting up the connection in the reverse direction.
 
 `class `**`SymPassage`**` :   `[`MultiLoc`](../object/MultiLoc.html)[`SymConnector`](../object/SymConnector.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SymPassage`**  
 [`MultiLoc`](../object/MultiLoc.html)  
@@ -69,11 +69,11 @@ of setting up the connection in the reverse direction.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SymPassage`**  
 [`SymDoor`](../object/SymDoor.html)  
@@ -81,19 +81,19 @@ of setting up the connection in the reverse direction.
 [`SymStairway`](../object/SymStairway.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canGoThroughMe`](#canGoThroughMe)[`isFixed`](#isFixed)[`PushTravelVia`](#PushTravelVia)[`room1Desc`](#room1Desc)[`room1Vocab`](#room1Vocab)[`room2Desc`](#room2Desc)[`room2Vocab`](#room2Vocab)[`traversalMsg`](#traversalMsg)
 
@@ -121,11 +121,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`attachedDir`](#attachedDir)[`desc`](#desc)[`dobjFor(Enter)`](#dobjFor(Enter))[`dobjFor(GoAlong)`](#dobjFor(GoAlong))[`dobjFor(GoThrough)`](#dobjFor(GoThrough))[`initConnector`](#initConnector)[`sayActorFollowing`](#sayActorFollowing)[`sayDeparting`](#sayDeparting)
 
@@ -155,11 +155,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canGoThroughMe"></span>
 
@@ -167,12 +167,12 @@ Inherited from `LMentionable` :
 
 [symconn.t](../file/symconn.t.html)\[[473](../source/symconn.t.html#473)\]
 
-<div class="desc">
+
 
 A Passage is something it makes sense to go through. \[SYMCOMM
 EXTENSION\]
 
-</div>
+
 
 <span id="isFixed"></span>
 
@@ -180,11 +180,11 @@ EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[457](../source/symconn.t.html#457)\]
 
-<div class="desc">
+
 
 A passage is generally something fixed in place.\[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="PushTravelVia"></span>
 
@@ -192,12 +192,12 @@ A passage is generally something fixed in place.\[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[480](../source/symconn.t.html#480)\]
 
-<div class="desc">
+
 
 The appropriate action for pushing an object via a passage is
 PushTravelThrough \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="room1Desc"></span>
 
@@ -205,11 +205,11 @@ PushTravelThrough \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[451](../source/symconn.t.html#451)\]
 
-<div class="desc">
+
 
 Our description as seen from room1 \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="room1Vocab"></span>
 
@@ -217,7 +217,7 @@ Our description as seen from room1 \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[583](../source/symconn.t.html#583)\]
 
-<div class="desc">
+
 
 Our vocab when viewed from room1. If we want different vocab (including
 different names) on each side of this passage or door, we don't need to
@@ -226,7 +226,7 @@ will be initialized by the SYMCONN EXTENSION to our initial vocab. So we
 do need to ensure that our initial vocab will be that which applies to
 this passage/door on the side the player first encounters.
 
-</div>
+
 
 <span id="room2Desc"></span>
 
@@ -234,11 +234,11 @@ this passage/door on the side the player first encounters.
 
 [symconn.t](../file/symconn.t.html)\[[454](../source/symconn.t.html#454)\]
 
-<div class="desc">
+
 
 Our description as seen from room2 \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="room2Vocab"></span>
 
@@ -246,12 +246,12 @@ Our description as seen from room2 \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[589](../source/symconn.t.html#589)\]
 
-<div class="desc">
+
 
 Our vocab from the perspective of room2, if we want different vocab to
 apply to the two sides of this passage/door.
 
-</div>
+
 
 <span id="traversalMsg"></span>
 
@@ -259,19 +259,19 @@ apply to the two sides of this passage/door.
 
 [symconn.t](../file/symconn.t.html)\[[532](../source/symconn.t.html#532)\]
 
-<div class="desc">
+
 
 \[SYMCOMM EXTENSION\] delegate our traversal message to the Door class.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="attachedDir"></span>
 
@@ -279,7 +279,7 @@ apply to the two sides of this passage/door.
 
 [symconn.t](../file/symconn.t.html)\[[542](../source/symconn.t.html#542)\]
 
-<div class="desc">
+
 
 Returns the direction property to which this passage is connected in the
 player character's current location, e.g. &west. This is used by
@@ -288,7 +288,7 @@ that the player can refer to us by the direction in which we lead. If
 you don't want this direction to be included in the vocab of this
 object, override attachedDir to nil. \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -296,7 +296,7 @@ object, override attachedDir to nil. \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[442](../source/symconn.t.html#442)\]
 
-<div class="desc">
+
 
 By default we can vary the description of the passage according to the
 location of the actor (and hence, according to which side it's viewed
@@ -304,7 +304,7 @@ from), but if we want the passage to be described in the same way from
 both sides then we can simply override the desc property with a single
 description. \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="dobjFor(Enter)"></span>
 
@@ -312,12 +312,12 @@ description. \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[466](../source/symconn.t.html#466)\]
 
-<div class="desc">
+
 
 Entering a passage is the same as going through it. \[SYMCOMM
 EXTENSION\]
 
-</div>
+
 
 <span id="dobjFor(GoAlong)"></span>
 
@@ -325,11 +325,11 @@ EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[469](../source/symconn.t.html#469)\]
 
-<div class="desc">
+
 
 Going along a Passage is the same as going through it
 
-</div>
+
 
 <span id="dobjFor(GoThrough)"></span>
 
@@ -337,12 +337,12 @@ Going along a Passage is the same as going through it
 
 [symconn.t](../file/symconn.t.html)\[[460](../source/symconn.t.html#460)\]
 
-<div class="desc">
+
 
 Going through a passage is the same as traveling via it.\[ SYMCOMM
 EXTENSION\]
 
-</div>
+
 
 <span id="initConnector"></span>
 
@@ -350,12 +350,12 @@ EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[483](../source/symconn.t.html#483)\]
 
-<div class="desc">
+
 
 Initialize this passage (called at preinit from Room.preinitThing)
 \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="sayActorFollowing"></span>
 
@@ -363,12 +363,12 @@ Initialize this passage (called at preinit from Room.preinitThing)
 
 [symconn.t](../file/symconn.t.html)\[[526](../source/symconn.t.html#526)\]
 
-<div class="desc">
+
 
 Display message announcing that follower is following leader through
 this door. \[SYMCOMM EXTENSION\]
 
-</div>
+
 
 <span id="sayDeparting"></span>
 
@@ -376,17 +376,17 @@ this door. \[SYMCOMM EXTENSION\]
 
 [symconn.t](../file/symconn.t.html)\[[517](../source/symconn.t.html#517)\]
 
-<div class="desc">
+
 
 Display message announcing that traveler has left via this door. The
 traveler would normally be an NPC visible to the player character.
 \[SYMCOMM EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

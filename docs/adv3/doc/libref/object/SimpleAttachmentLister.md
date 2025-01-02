@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A simple lister to show the objects to which a given Attachable object
 is attached. This shows the objects which have symmetrical attachment
@@ -35,44 +35,44 @@ which the parent is attached.
 
 `class `**`SimpleAttachmentLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SimpleAttachmentLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SimpleAttachmentLister`**  
 [`MajorAttachmentLister`](../object/MajorAttachmentLister.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`parent_`](#parent_)
 
@@ -81,11 +81,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`isListed`](#isListed)[`showListEmpty`](#showListEmpty)[`showListPrefixWide`](#showListPrefixWide)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -94,11 +94,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="parent_"></span>
 
@@ -106,20 +106,20 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5131](../source/msg_neu.t.html#5131)\]
 
-<div class="desc">
+
 
 the parent object - this is the object whose attachments are being
 listed
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -127,11 +127,11 @@ listed
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5114](../source/msg_neu.t.html#5114)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -139,11 +139,11 @@ listed
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5125](../source/msg_neu.t.html#5125)\]
 
-<div class="desc">
+
 
 ask the parent if we should list each item
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -151,11 +151,11 @@ ask the parent if we should list each item
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5116](../source/msg_neu.t.html#5116)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -163,11 +163,11 @@ ask the parent if we should list each item
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5119](../source/msg_neu.t.html#5119)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -175,15 +175,15 @@ ask the parent if we should list each item
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5121](../source/msg_neu.t.html#5121)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

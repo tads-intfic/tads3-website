@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The default hint system user interface implementation. All of the
 hint-related verbs operate by calling methods in the object stored in
@@ -30,15 +30,15 @@ implementations if desired.
 
 **`hintManager`**` :   `[`PreinitObject`](../object/PreinitObject.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`hintManager`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -46,11 +46,11 @@ implementations if desired.
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`topHintMenuObj`](#topHintMenuObj)
 
@@ -61,11 +61,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`disableHints`](#disableHints)[`execute`](#execute)[`showHints`](#showHints)[`showHintWarning`](#showHintWarning)
 
@@ -76,11 +76,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="topHintMenuObj"></span>
 
@@ -88,7 +88,7 @@ Inherited from `ModuleExecObject` :
 
 [hintsys.t](../file/hintsys.t.html)\[[562](../source/hintsys.t.html#562)\]
 
-<div class="desc">
+
 
 The top-level hint menu. This must be provided by the game, and should
 be set during initialization. If this is nil, hints won't be available.
@@ -101,15 +101,15 @@ there should be only one such object in the entire game, since if there
 are more than one, only one will be arbitrarily chosen as the registered
 object.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="disableHints"></span>
 
@@ -117,7 +117,7 @@ object.
 
 [hintsys.t](../file/hintsys.t.html)\[[535](../source/hintsys.t.html#535)\]
 
-<div class="desc">
+
 
 Disable hints - this is invoked by the HINTS OFF action.
 
@@ -131,7 +131,7 @@ friend before going to the mall, making the friend promise that they
 won't let you spend more than such and such an amount, no matter how
 much you beg and plead.
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -139,11 +139,11 @@ much you beg and plead.
 
 [hintsys.t](../file/hintsys.t.html)\[[519](../source/hintsys.t.html#519)\]
 
-<div class="desc">
+
 
 during pre-initialization, register as the global hint manager
 
-</div>
+
 
 <span id="showHints"></span>
 
@@ -151,11 +151,11 @@ during pre-initialization, register as the global hint manager
 
 [hintsys.t](../file/hintsys.t.html)\[[567](../source/hintsys.t.html#567)\]
 
-<div class="desc">
+
 
 Show hints - invoke the hint system.
 
-</div>
+
 
 <span id="showHintWarning"></span>
 
@@ -163,17 +163,17 @@ Show hints - invoke the hint system.
 
 [hintsys.t](../file/hintsys.t.html)\[[609](../source/hintsys.t.html#609)\]
 
-<div class="desc">
+
 
 Show a warning before showing any hints. By default, we'll show this at
 most once per session or once per saved game. Returns true if we are to
 proceed to the hints, nil if not.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

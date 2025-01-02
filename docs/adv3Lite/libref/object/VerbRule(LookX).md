@@ -20,22 +20,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `VerbRule(LookX)      `*`// original source text`*  
 `grammar `**[`VerbRule`](../object/VerbRule.html)`(LookX)`**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`VerbRule(LookX)`**  
 [`VerbProduction`](../object/VerbProduction.html)  
@@ -43,11 +43,11 @@ Details](#_Methods_)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`action`](#action)  [`missingQ`](#missingQ)  [`priority`](#priority)  [`verbPhrase`](#verbPhrase)  `
 
@@ -59,11 +59,11 @@ Inherited from `Production` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -75,11 +75,11 @@ Inherited from `Production` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="action"></span>
 
@@ -87,11 +87,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[1550](../source/grammar.t.html#1550)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="missingQ"></span>
 
@@ -99,11 +99,11 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[1552](../source/grammar.t.html#1552)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -111,12 +111,12 @@ Inherited from `Production` :
 
 [grammar.t](../file/grammar.t.html)\[[1558](../source/grammar.t.html#1558)\]
 
-<div class="desc">
+
 
 We give this a lower priority to ensure that LOOK AT FOO is parsed as
 (LOOK AT) FOO rather than LOOK (AT FOO).
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -124,25 +124,25 @@ We give this a lower priority to ensure that LOOK AT FOO is parsed as
 
 [grammar.t](../file/grammar.t.html)\[[1551](../source/grammar.t.html#1551)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

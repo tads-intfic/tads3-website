@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Transitive-with-indirect Action class - this is an action that takes
 both a direct and indirect object. We subclass the basic one-object
@@ -39,15 +39,15 @@ English-specific additions for two-object verbs.
 
 `class `**`TIAction`**` :   `[`TAction`](../object/TAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`TIAction`**  
 [`TAction`](../object/TAction.html)  
@@ -58,11 +58,11 @@ English-specific additions for two-object verbs.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`TIAction`**  
 [`AttachToAction`](../object/AttachToAction.html)  
@@ -145,19 +145,19 @@ English-specific additions for two-object verbs.
 [`predicate(UnscrewWith)`](../object/predicate(UnscrewWith).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionIobjProp`](#actionIobjProp)[`askIobjResponseProd`](#askIobjResponseProd)[`checkIobjProp`](#checkIobjProp)[`execFirst`](#execFirst)[`iobjCur_`](#iobjCur_)[`iobjInfoCur_`](#iobjInfoCur_)[`iobjList_`](#iobjList_)[`iobjMatch`](#iobjMatch)[`iobjResolver_`](#iobjResolver_)[`isPrepositionalPhrasing`](#isPrepositionalPhrasing)[`lastObjList_`](#lastObjList_)[`needAnaphoricBinding_`](#needAnaphoricBinding_)[`omitIobjInDobjQuery`](#omitIobjInDobjQuery)[`preCondIobjProp`](#preCondIobjProp)[`predicateNounPhrases`](#predicateNounPhrases)[`remapIobjProp`](#remapIobjProp)[`resolveFirst`](#resolveFirst)[`resolveFirstEmpty`](#resolveFirstEmpty)[`tentativeDobj_`](#tentativeDobj_)[`tentativeIobj_`](#tentativeIobj_)[`verIobjProp`](#verIobjProp)
 
@@ -175,11 +175,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`announceAllDefaultObjects`](#announceAllDefaultObjects)[`announceDefaultObject`](#announceDefaultObject)[`canIobjResolveTo`](#canIobjResolveTo)[`checkAction`](#checkAction)[`checkRemapping`](#checkRemapping)[`copyTentativeObjs`](#copyTentativeObjs)[`createForMissingIobj`](#createForMissingIobj)[`createIobjResolver`](#createIobjResolver)[`doActionMain`](#doActionMain)[`execAction`](#execAction)[`filterAmbiguousIobj`](#filterAmbiguousIobj)[`filterPluralIobj`](#filterPluralIobj)[`getAllIobj`](#getAllIobj)[`getAnaphoricBinding`](#getAnaphoricBinding)[`getCurrentObjects`](#getCurrentObjects)[`getDefaultIobj`](#getDefaultIobj)[`getIobj`](#getIobj)[`getIobjCount`](#getIobjCount)[`getIobjFlags`](#getIobjFlags)[`getIobjInfo`](#getIobjInfo)[`getIobjResolver`](#getIobjResolver)[`getIobjTokens`](#getIobjTokens)[`getIobjWords`](#getIobjWords)[`getMatchForRole`](#getMatchForRole)[`getMessageParam`](#getMessageParam)[`getObjectForRole`](#getObjectForRole)[`getObjResponseProd`](#getObjResponseProd)[`getOtherMessageObjectPronoun`](#getOtherMessageObjectPronoun)[`getOtherObjectRole`](#getOtherObjectRole)[`getPreCondDescList`](#getPreCondDescList)[`getPreCondPropForRole`](#getPreCondPropForRole)[`getQuestionInf`](#getQuestionInf)[`getRemapPropForRole`](#getRemapPropForRole)[`getResolvedIobjList`](#getResolvedIobjList)[`getResolvedObjList`](#getResolvedObjList)[`getResolveInfo`](#getResolveInfo)[`getRoleFromIndex`](#getRoleFromIndex)[`getTentativeDobj`](#getTentativeDobj)[`getTentativeIobj`](#getTentativeIobj)[`getVerbPhrase`](#getVerbPhrase)[`getVerbPhrase2`](#getVerbPhrase2)[`getVerifyPropForRole`](#getVerifyPropForRole)[`initForMissingDobj`](#initForMissingDobj)[`initForMissingIobj`](#initForMissingIobj)[`initTentative`](#initTentative)[`needRemappedAnnouncement`](#needRemappedAnnouncement)[`resetAction`](#resetAction)[`resolvedObjectsInScope`](#resolvedObjectsInScope)[`resolveNouns`](#resolveNouns)[`retryWithAmbiguousIobj`](#retryWithAmbiguousIobj)[`retryWithMissingIobj`](#retryWithMissingIobj)[`setCurrentObjects`](#setCurrentObjects)[`setObjectMatches`](#setObjectMatches)[`setPronounByInput`](#setPronounByInput)[`setResolvedIobj`](#setResolvedIobj)[`setResolvedObjects`](#setResolvedObjects)[`testRetryDefaultIobj`](#testRetryDefaultIobj)[`verifyAction`](#verifyAction)[`whatObj`](#whatObj)
 
@@ -197,11 +197,11 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionIobjProp"></span>
 
@@ -209,11 +209,11 @@ Inherited from `Resolver` :
 
 [action.t](../file/action.t.html)\[[5174](../source/action.t.html#5174)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="askIobjResponseProd"></span>
 
@@ -221,7 +221,7 @@ Inherited from `Resolver` :
 
 [action.t](../file/action.t.html)\[[4087](../source/action.t.html#4087)\]
 
-<div class="desc">
+
 
 The root production to use to parse missing indirect object responses.
 By default, this is singleNoun, but individual actions can override this
@@ -232,7 +232,7 @@ special responses. For example, in English, most verbs will want to
 override this with a specialized production that allows the appropriate
 preposition in the response.
 
-</div>
+
 
 <span id="checkIobjProp"></span>
 
@@ -240,11 +240,11 @@ preposition in the response.
 
 [action.t](../file/action.t.html)\[[5173](../source/action.t.html#5173)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="execFirst"></span>
 
@@ -252,13 +252,13 @@ preposition in the response.
 
 [action.t](../file/action.t.html)\[[4126](../source/action.t.html#4126)\]
 
-<div class="desc">
+
 
 Determine which object to call first for action processing. By default,
 we execute in the same order as we resolve, but this can be overridden
 if necessary.
 
-</div>
+
 
 <span id="iobjCur_"></span>
 
@@ -266,11 +266,11 @@ if necessary.
 
 [action.t](../file/action.t.html)\[[5149](../source/action.t.html#5149)\]
 
-<div class="desc">
+
 
 current indirect object being executed
 
-</div>
+
 
 <span id="iobjInfoCur_"></span>
 
@@ -278,11 +278,11 @@ current indirect object being executed
 
 [action.t](../file/action.t.html)\[[5152](../source/action.t.html#5152)\]
 
-<div class="desc">
+
 
 the full ResolveInfo associated with iobjCur\_
 
-</div>
+
 
 <span id="iobjList_"></span>
 
@@ -290,11 +290,11 @@ the full ResolveInfo associated with iobjCur\_
 
 [action.t](../file/action.t.html)\[[5146](../source/action.t.html#5146)\]
 
-<div class="desc">
+
 
 the indirect object list
 
-</div>
+
 
 <span id="iobjMatch"></span>
 
@@ -302,12 +302,12 @@ the indirect object list
 
 [action.t](../file/action.t.html)\[[5143](../source/action.t.html#5143)\]
 
-<div class="desc">
+
 
 the predicate grammar must assign the indirect object production tree to
 iobjMatch
 
-</div>
+
 
 <span id="iobjResolver_"></span>
 
@@ -315,11 +315,11 @@ iobjMatch
 
 [action.t](../file/action.t.html)\[[5155](../source/action.t.html#5155)\]
 
-<div class="desc">
+
 
 my cached indirect object resolver
 
-</div>
+
 
 <span id="isPrepositionalPhrasing"></span>
 
@@ -327,7 +327,7 @@ my cached indirect object resolver
 
 [en_us.t](../file/en_us.t.html)\[[8646](../source/en_us.t.html#8646)\]
 
-<div class="desc">
+
 
 For VerbRules: does this verb rule have a prepositional or structural
 phrasing of the direct and indirect object slots? That is, are the
@@ -354,7 +354,7 @@ Most two-object verbs in English use prepositional markers, so we'll set
 this as the default. Individual VerbRules that use purely structural
 phrasing should override this.
 
-</div>
+
 
 <span id="lastObjList_"></span>
 
@@ -362,12 +362,12 @@ phrasing should override this.
 
 [action.t](../file/action.t.html)\[[4500](../source/action.t.html#4500)\]
 
-<div class="desc">
+
 
 The last object list we resolved. We keep track of this so that we can
 provide it as the anaphoric binding, if an anaphor binding is requested.
 
-</div>
+
 
 <span id="needAnaphoricBinding_"></span>
 
@@ -375,14 +375,14 @@ provide it as the anaphoric binding, if an anaphor binding is requested.
 
 [action.t](../file/action.t.html)\[[4508](../source/action.t.html#4508)\]
 
-<div class="desc">
+
 
 Flag: we have been asked for an anaphoric binding, but we don't have a
 binding available. We'll check this after resolving the first-resolved
 noun phrase so that we can go back and re-resolve it again after
 resolving the other noun phrase.
 
-</div>
+
 
 <span id="omitIobjInDobjQuery"></span>
 
@@ -390,7 +390,7 @@ resolving the other noun phrase.
 
 [en_us.t](../file/en_us.t.html)\[[8616](../source/en_us.t.html#8616)\]
 
-<div class="desc">
+
 
 Flag: omit the indirect object in a query for a missing direct object.
 For many verbs, if we already know the indirect object and we need to
@@ -405,7 +405,7 @@ indirect object should be omitted from the queries, which will change
 the phrasing to "what do you want to dig in", "whom do you want to ask",
 and so on.
 
-</div>
+
 
 <span id="preCondIobjProp"></span>
 
@@ -413,11 +413,11 @@ and so on.
 
 [action.t](../file/action.t.html)\[[5172](../source/action.t.html#5172)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="predicateNounPhrases"></span>
 
@@ -425,11 +425,11 @@ and so on.
 
 [action.t](../file/action.t.html)\[[4322](../source/action.t.html#4322)\]
 
-<div class="desc">
+
 
 we have a direct and indirect object
 
-</div>
+
 
 <span id="remapIobjProp"></span>
 
@@ -437,14 +437,14 @@ we have a direct and indirect object
 
 [action.t](../file/action.t.html)\[[5183](../source/action.t.html#5183)\]
 
-<div class="desc">
+
 
 Action-remap properties for the indirect object. By convention, the
 remapper properties are named remapDobjAction and remapIobjAction, for
 the direct and indirect objects, respectively, where Action is replaced
 by the root name of the action.
 
-</div>
+
 
 <span id="resolveFirst"></span>
 
@@ -452,14 +452,14 @@ by the root name of the action.
 
 [action.t](../file/action.t.html)\[[4107](../source/action.t.html#4107)\]
 
-<div class="desc">
+
 
 Resolution order - returns DirectObject or IndirectObject to indicate
 which noun phrase to resolve first in resolveNouns(). By default, we'll
 resolve the indirect object first, but individual actions can override
 this to resolve in a non-default order.
 
-</div>
+
 
 <span id="resolveFirstEmpty"></span>
 
@@ -467,7 +467,7 @@ this to resolve in a non-default order.
 
 [action.t](../file/action.t.html)\[[4119](../source/action.t.html#4119)\]
 
-<div class="desc">
+
 
 Empty phrase resolution order. This is similar to the standard
 resolution order (resolveFirst), but is used only when both the direct
@@ -478,7 +478,7 @@ interactively for the missing phrase. In most cases, it is desirable to
 prompt interactively for a missing direct object first, regardless of
 the usual resolution order.
 
-</div>
+
 
 <span id="tentativeDobj_"></span>
 
@@ -486,13 +486,13 @@ the usual resolution order.
 
 [action.t](../file/action.t.html)\[[5162](../source/action.t.html#5162)\]
 
-<div class="desc">
+
 
 The tentative direct and indirect object lists. A tentative list is
 available for the later-resolved object while resolving the
 earlier-resolved object.
 
-</div>
+
 
 <span id="tentativeIobj_"></span>
 
@@ -500,11 +500,11 @@ earlier-resolved object.
 
 [action.t](../file/action.t.html)\[[5163](../source/action.t.html#5163)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="verIobjProp"></span>
 
@@ -512,22 +512,22 @@ earlier-resolved object.
 
 [action.t](../file/action.t.html)\[[5171](../source/action.t.html#5171)\]
 
-<div class="desc">
+
 
 Verification and action properties for the indirect object. By
 convention, the verification method for the indirect object of a
 two-object action is verIobjXxx; the check method is checkIobjXxx; and
 the action method is actionIobjXxx.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="announceAllDefaultObjects"></span>
 
@@ -535,11 +535,11 @@ the action method is actionIobjXxx.
 
 [en_us.t](../file/en_us.t.html)\[[8767](../source/en_us.t.html#8767)\]
 
-<div class="desc">
+
 
 announce all defaulted objects
 
-</div>
+
 
 <span id="announceDefaultObject"></span>
 
@@ -547,11 +547,11 @@ announce all defaulted objects
 
 [en_us.t](../file/en_us.t.html)\[[8711](../source/en_us.t.html#8711)\]
 
-<div class="desc">
+
 
 announce a default object used with this action
 
-</div>
+
 
 <span id="canIobjResolveTo"></span>
 
@@ -559,7 +559,7 @@ announce a default object used with this action
 
 [action.t](../file/action.t.html)\[[4135](../source/action.t.html#4135)\]
 
-<div class="desc">
+
 
 Can the indirect object potentially resolve to the given simulation
 object? This only determines if the object is a \*syntactic\* match,
@@ -567,7 +567,7 @@ meaning that it can match at a vocabulary and grammar level. This
 doesn't test it for logicalness or check that it's an otherwise valid
 resolution.
 
-</div>
+
 
 <span id="checkAction"></span>
 
@@ -575,7 +575,7 @@ resolution.
 
 [action.t](../file/action.t.html)\[[4976](../source/action.t.html#4976)\]
 
-<div class="desc">
+
 
 Check the command.
 
@@ -584,7 +584,7 @@ For a two-object action, this first calls the catch-all 'check' methods
 (indirect object first), then calls the 'check' methods for this
 specific action (direct object first).
 
-</div>
+
 
 <span id="checkRemapping"></span>
 
@@ -592,11 +592,11 @@ specific action (direct object first).
 
 [action.t](../file/action.t.html)\[[4935](../source/action.t.html#4935)\]
 
-<div class="desc">
+
 
 Check for remapping
 
-</div>
+
 
 <span id="copyTentativeObjs"></span>
 
@@ -604,13 +604,13 @@ Check for remapping
 
 [action.t](../file/action.t.html)\[[5122](../source/action.t.html#5122)\]
 
-<div class="desc">
+
 
 Copy one tentative object list to the other. This is useful when an
 object's verifier for one TIAction wants to forward the call to the
 other object verifier for a different TIAction.
 
-</div>
+
 
 <span id="createForMissingIobj"></span>
 
@@ -618,12 +618,12 @@ other object verifier for a different TIAction.
 
 [action.t](../file/action.t.html)\[[4010](../source/action.t.html#4010)\]
 
-<div class="desc">
+
 
 Create an instance of this action for retrying a given single-object
 action with a missing indirect object.
 
-</div>
+
 
 <span id="createIobjResolver"></span>
 
@@ -631,12 +631,12 @@ action with a missing indirect object.
 
 [action.t](../file/action.t.html)\[[4544](../source/action.t.html#4544)\]
 
-<div class="desc">
+
 
 Create our indirect object resolver. By default, we'll use a basic
 indirect object resolver.
 
-</div>
+
 
 <span id="doActionMain"></span>
 
@@ -644,13 +644,13 @@ indirect object resolver.
 
 [action.t](../file/action.t.html)\[[4590](../source/action.t.html#4590)\]
 
-<div class="desc">
+
 
 Execute the action. We'll run through the execution sequence once for
 each resolved object in our direct or indirect object list, depending on
 which one is the list and which one is the singleton.
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -658,11 +658,11 @@ which one is the list and which one is the singleton.
 
 [action.t](../file/action.t.html)\[[5008](../source/action.t.html#5008)\]
 
-<div class="desc">
+
 
 Execute the command.
 
-</div>
+
 
 <span id="filterAmbiguousIobj"></span>
 
@@ -670,11 +670,11 @@ Execute the command.
 
 [action.t](../file/action.t.html)\[[4560](../source/action.t.html#4560)\]
 
-<div class="desc">
+
 
 filter an ambiguous indirect object noun phrase
 
-</div>
+
 
 <span id="filterPluralIobj"></span>
 
@@ -682,11 +682,11 @@ filter an ambiguous indirect object noun phrase
 
 [action.t](../file/action.t.html)\[[4569](../source/action.t.html#4569)\]
 
-<div class="desc">
+
 
 filter a plural phrase
 
-</div>
+
 
 <span id="getAllIobj"></span>
 
@@ -694,12 +694,12 @@ filter a plural phrase
 
 [action.t](../file/action.t.html)\[[4554](../source/action.t.html#4554)\]
 
-<div class="desc">
+
 
 Resolve 'all' for the indirect object. By default, we'll return
 everything in the scope list.
 
-</div>
+
 
 <span id="getAnaphoricBinding"></span>
 
@@ -707,11 +707,11 @@ everything in the scope list.
 
 [action.t](../file/action.t.html)\[[4476](../source/action.t.html#4476)\]
 
-<div class="desc">
+
 
 Get the anaphoric binding for the noun phrase we're currently resolving.
 
-</div>
+
 
 <span id="getCurrentObjects"></span>
 
@@ -719,11 +719,11 @@ Get the anaphoric binding for the noun phrase we're currently resolving.
 
 [action.t](../file/action.t.html)\[[5101](../source/action.t.html#5101)\]
 
-<div class="desc">
+
 
 Get the list of active objects. We have a direct and indirect object.
 
-</div>
+
 
 <span id="getDefaultIobj"></span>
 
@@ -731,11 +731,11 @@ Get the list of active objects. We have a direct and indirect object.
 
 [action.t](../file/action.t.html)\[[4577](../source/action.t.html#4577)\]
 
-<div class="desc">
+
 
 get the default indirect object
 
-</div>
+
 
 <span id="getIobj"></span>
 
@@ -743,11 +743,11 @@ get the default indirect object
 
 [action.t](../file/action.t.html)\[[5072](../source/action.t.html#5072)\]
 
-<div class="desc">
+
 
 get the current indirect object being executed
 
-</div>
+
 
 <span id="getIobjCount"></span>
 
@@ -755,11 +755,11 @@ get the current indirect object being executed
 
 [action.t](../file/action.t.html)\[[5081](../source/action.t.html#5081)\]
 
-<div class="desc">
+
 
 get the number of direct objects
 
-</div>
+
 
 <span id="getIobjFlags"></span>
 
@@ -767,11 +767,11 @@ get the number of direct objects
 
 [action.t](../file/action.t.html)\[[5078](../source/action.t.html#5078)\]
 
-<div class="desc">
+
 
 get the object resolution flags for the indirect object
 
-</div>
+
 
 <span id="getIobjInfo"></span>
 
@@ -779,11 +779,11 @@ get the object resolution flags for the indirect object
 
 [action.t](../file/action.t.html)\[[5075](../source/action.t.html#5075)\]
 
-<div class="desc">
+
 
 get the full ResolveInfo associated with the current indirect object
 
-</div>
+
 
 <span id="getIobjResolver"></span>
 
@@ -791,12 +791,12 @@ get the full ResolveInfo associated with the current indirect object
 
 [action.t](../file/action.t.html)\[[4526](../source/action.t.html#4526)\]
 
-<div class="desc">
+
 
 get our indirect object resolver, or create one if we haven't already
 cached one
 
-</div>
+
 
 <span id="getIobjTokens"></span>
 
@@ -804,11 +804,11 @@ cached one
 
 [action.t](../file/action.t.html)\[[5084](../source/action.t.html#5084)\]
 
-<div class="desc">
+
 
 get the original token list of the current indirect object phrase
 
-</div>
+
 
 <span id="getIobjWords"></span>
 
@@ -816,11 +816,11 @@ get the original token list of the current indirect object phrase
 
 [action.t](../file/action.t.html)\[[5091](../source/action.t.html#5091)\]
 
-<div class="desc">
+
 
 get the original words (as a list of strings) of the current iobj
 
-</div>
+
 
 <span id="getMatchForRole"></span>
 
@@ -828,11 +828,11 @@ get the original words (as a list of strings) of the current iobj
 
 [action.t](../file/action.t.html)\[[4388](../source/action.t.html#4388)\]
 
-<div class="desc">
+
 
 get the match tree for the noun phrase in the given role
 
-</div>
+
 
 <span id="getMessageParam"></span>
 
@@ -840,13 +840,13 @@ get the match tree for the noun phrase in the given role
 
 [action.t](../file/action.t.html)\[[5057](../source/action.t.html#5057)\]
 
-<div class="desc">
+
 
 Get a message parameter object for the action. We define 'dobj' as the
 direct object and 'iobj' as the indirect object, in addition to any
 inherited targets.
 
-</div>
+
 
 <span id="getObjectForRole"></span>
 
@@ -854,11 +854,11 @@ inherited targets.
 
 [action.t](../file/action.t.html)\[[4335](../source/action.t.html#4335)\]
 
-<div class="desc">
+
 
 get the resolved object in a given role
 
-</div>
+
 
 <span id="getObjResponseProd"></span>
 
@@ -866,11 +866,11 @@ get the resolved object in a given role
 
 [action.t](../file/action.t.html)\[[4090](../source/action.t.html#4090)\]
 
-<div class="desc">
+
 
 get the missing object response production for a given role
 
-</div>
+
 
 <span id="getOtherMessageObjectPronoun"></span>
 
@@ -878,11 +878,11 @@ get the missing object response production for a given role
 
 [en_us.t](../file/en_us.t.html)\[[8852](../source/en_us.t.html#8852)\]
 
-<div class="desc">
+
 
 Get the pronoun for the message object in the given role.
 
-</div>
+
 
 <span id="getOtherObjectRole"></span>
 
@@ -890,11 +890,11 @@ Get the pronoun for the message object in the given role.
 
 [action.t](../file/action.t.html)\[[4381](../source/action.t.html#4381)\]
 
-<div class="desc">
+
 
 get the OtherObject role for the given role
 
-</div>
+
 
 <span id="getPreCondDescList"></span>
 
@@ -902,11 +902,11 @@ get the OtherObject role for the given role
 
 [action.t](../file/action.t.html)\[[5041](../source/action.t.html#5041)\]
 
-<div class="desc">
+
 
 get the precondition descriptor list for the action
 
-</div>
+
 
 <span id="getPreCondPropForRole"></span>
 
@@ -914,11 +914,11 @@ get the precondition descriptor list for the action
 
 [action.t](../file/action.t.html)\[[4401](../source/action.t.html#4401)\]
 
-<div class="desc">
+
 
 get the 'preCond' property for a given object role
 
-</div>
+
 
 <span id="getQuestionInf"></span>
 
@@ -926,11 +926,11 @@ get the 'preCond' property for a given object role
 
 [en_us.t](../file/en_us.t.html)\[[8777](../source/en_us.t.html#8777)\]
 
-<div class="desc">
+
 
 show the verb's basic infinitive form for an interrogative
 
-</div>
+
 
 <span id="getRemapPropForRole"></span>
 
@@ -938,11 +938,11 @@ show the verb's basic infinitive form for an interrogative
 
 [action.t](../file/action.t.html)\[[4407](../source/action.t.html#4407)\]
 
-<div class="desc">
+
 
 get the 'remap' property for a given object role
 
-</div>
+
 
 <span id="getResolvedIobjList"></span>
 
@@ -950,11 +950,11 @@ get the 'remap' property for a given object role
 
 [action.t](../file/action.t.html)\[[4420](../source/action.t.html#4420)\]
 
-<div class="desc">
+
 
 get the list of resolved indirect objects
 
-</div>
+
 
 <span id="getResolvedObjList"></span>
 
@@ -962,11 +962,11 @@ get the list of resolved indirect objects
 
 [action.t](../file/action.t.html)\[[4413](../source/action.t.html#4413)\]
 
-<div class="desc">
+
 
 get the list of resolved objects in the given role
 
-</div>
+
 
 <span id="getResolveInfo"></span>
 
@@ -974,11 +974,11 @@ get the list of resolved objects in the given role
 
 [action.t](../file/action.t.html)\[[4342](../source/action.t.html#4342)\]
 
-<div class="desc">
+
 
 get the ResolveInfo for the given resolved object
 
-</div>
+
 
 <span id="getRoleFromIndex"></span>
 
@@ -986,11 +986,11 @@ get the ResolveInfo for the given resolved object
 
 [action.t](../file/action.t.html)\[[4325](../source/action.t.html#4325)\]
 
-<div class="desc">
+
 
 get an object role
 
-</div>
+
 
 <span id="getTentativeDobj"></span>
 
@@ -998,13 +998,13 @@ get an object role
 
 [action.t](../file/action.t.html)\[[5136](../source/action.t.html#5136)\]
 
-<div class="desc">
+
 
 Get the tentative direct/indirect object resolution lists. A tentative
 list is available for the later-resolved object while resolving the
 earlier-resolved object.
 
-</div>
+
 
 <span id="getTentativeIobj"></span>
 
@@ -1012,11 +1012,11 @@ earlier-resolved object.
 
 [action.t](../file/action.t.html)\[[5137](../source/action.t.html#5137)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -1024,11 +1024,11 @@ earlier-resolved object.
 
 [en_us.t](../file/en_us.t.html)\[[8883](../source/en_us.t.html#8883)\]
 
-<div class="desc">
+
 
 get the verb phrase in infinitive or participle form
 
-</div>
+
 
 <span id="getVerbPhrase2"></span>
 
@@ -1036,7 +1036,7 @@ get the verb phrase in infinitive or participle form
 
 [en_us.t](../file/en_us.t.html)\[[8927](../source/en_us.t.html#8927)\]
 
-<div class="desc">
+
 
 Get the verb phrase for a two-object (dobj + iobj) phrasing. This is a
 class method, so that it can be reused by unrelated (i.e., non-TIAction)
@@ -1044,7 +1044,7 @@ classes that also use two-object syntax but with other internal
 structures. This is the two-object equivalent of
 TAction.getVerbPhrase1().
 
-</div>
+
 
 <span id="getVerifyPropForRole"></span>
 
@@ -1052,11 +1052,11 @@ TAction.getVerbPhrase1().
 
 [action.t](../file/action.t.html)\[[4395](../source/action.t.html#4395)\]
 
-<div class="desc">
+
 
 get the 'verify' property for a given object role
 
-</div>
+
 
 <span id="initForMissingDobj"></span>
 
@@ -1064,7 +1064,7 @@ get the 'verify' property for a given object role
 
 [action.t](../file/action.t.html)\[[4040](../source/action.t.html#4040)\]
 
-<div class="desc">
+
 
 Initialize the action for retrying with a missing direct object.
 
@@ -1076,7 +1076,7 @@ object, the only possibility is that the original action's direct object
 is our INDIRECT object. For example: SWEEP WITH BROOM is turning into
 SWEEP \<what\> WITH BROOM.
 
-</div>
+
 
 <span id="initForMissingIobj"></span>
 
@@ -1084,7 +1084,7 @@ SWEEP \<what\> WITH BROOM.
 
 [action.t](../file/action.t.html)\[[4063](../source/action.t.html#4063)\]
 
-<div class="desc">
+
 
 Initialize the action for retrying with a missing indirect object.
 
@@ -1092,7 +1092,7 @@ We can only be coming from a TAction, so the TAction will have a direct
 object already. Simply copy that as our own direct object. For example:
 UNLOCK DOOR is turning into UNLOCK DOOR WITH \<what\>.
 
-</div>
+
 
 <span id="initTentative"></span>
 
@@ -1100,11 +1100,11 @@ UNLOCK DOOR is turning into UNLOCK DOOR WITH \<what\>.
 
 [action.t](../file/action.t.html)\[[4869](../source/action.t.html#4869)\]
 
-<div class="desc">
+
 
 initialize tentative resolutions for other noun phrases
 
-</div>
+
 
 <span id="needRemappedAnnouncement"></span>
 
@@ -1112,14 +1112,14 @@ initialize tentative resolutions for other noun phrases
 
 [action.t](../file/action.t.html)\[[4823](../source/action.t.html#4823)\]
 
-<div class="desc">
+
 
 Determine if we need to announce this action when the action was
 remapped, based on the resolution information for one of our objects. We
 need to announce a remapped action when either object had unclear
 disambiguation or was defaulted.
 
-</div>
+
 
 <span id="resetAction"></span>
 
@@ -1127,11 +1127,11 @@ disambiguation or was defaulted.
 
 [action.t](../file/action.t.html)\[[3936](../source/action.t.html#3936)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="resolvedObjectsInScope"></span>
 
@@ -1139,11 +1139,11 @@ disambiguation or was defaulted.
 
 [action.t](../file/action.t.html)\[[4511](../source/action.t.html#4511)\]
 
-<div class="desc">
+
 
 check that the resolved objects are in scope
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -1152,7 +1152,7 @@ check that the resolved objects are in scope
 [action.t](../file/action.t.html)\[[4145](../source/action.t.html#4145)\],
 [en_us.t](../file/en_us.t.html)\[[8649](../source/en_us.t.html#8649)\]
 
-<div class="desc">
+
 
 resolve our noun phrases to objects
 
@@ -1160,7 +1160,7 @@ resolve our noun phrases to objects
 [en_us.t](../file/en_us.t.html)\[[8649](../source/en_us.t.html#8649)\]:*  
 resolve noun phrases
 
-</div>
+
 
 <span id="retryWithAmbiguousIobj"></span>
 
@@ -1168,12 +1168,12 @@ resolve noun phrases
 
 [action.t](../file/action.t.html)\[[3966](../source/action.t.html#3966)\]
 
-<div class="desc">
+
 
 Retry an action as a two-object action with an ambiguous indirect
 object. We'll ask which of the given possible objects is intended.
 
-</div>
+
 
 <span id="retryWithMissingIobj"></span>
 
@@ -1181,7 +1181,7 @@ object. We'll ask which of the given possible objects is intended.
 
 [action.t](../file/action.t.html)\[[3955](../source/action.t.html#3955)\]
 
-<div class="desc">
+
 
 Retry a single-object action as a two-object action. We'll treat the
 original action's direct object list as our direct object list, and
@@ -1192,7 +1192,7 @@ default, then prompting the player if we can't find a suitable default).
 This routine terminates with 'exit' if it doesn't throw some other
 error.
 
-</div>
+
 
 <span id="setCurrentObjects"></span>
 
@@ -1200,11 +1200,11 @@ error.
 
 [action.t](../file/action.t.html)\[[5107](../source/action.t.html#5107)\]
 
-<div class="desc">
+
 
 set the current objects
 
-</div>
+
 
 <span id="setObjectMatches"></span>
 
@@ -1212,11 +1212,11 @@ set the current objects
 
 [action.t](../file/action.t.html)\[[4457](../source/action.t.html#4457)\]
 
-<div class="desc">
+
 
 manually set the unresolved object noun phrase match trees
 
-</div>
+
 
 <span id="setPronounByInput"></span>
 
@@ -1224,14 +1224,14 @@ manually set the unresolved object noun phrase match trees
 
 [action.t](../file/action.t.html)\[[4766](../source/action.t.html#4766)\]
 
-<div class="desc">
+
 
 Set the pronoun according to the pronoun type actually used in the
 input. For example, if we said PUT BOX ON IT, we want IT to continue
 referring to whatever IT referred to before this command - we
 specifically do NOT want IT to refer to the BOX in this case.
 
-</div>
+
 
 <span id="setResolvedIobj"></span>
 
@@ -1239,11 +1239,11 @@ specifically do NOT want IT to refer to the BOX in this case.
 
 [action.t](../file/action.t.html)\[[4443](../source/action.t.html#4443)\]
 
-<div class="desc">
+
 
 set a resolved iobj
 
-</div>
+
 
 <span id="setResolvedObjects"></span>
 
@@ -1251,12 +1251,12 @@ set a resolved iobj
 
 [action.t](../file/action.t.html)\[[4433](../source/action.t.html#4433)\]
 
-<div class="desc">
+
 
 Manually set the resolved objects. We'll set our direct and indirect
 objects.
 
-</div>
+
 
 <span id="testRetryDefaultIobj"></span>
 
@@ -1264,14 +1264,14 @@ objects.
 
 [action.t](../file/action.t.html)\[[3989](../source/action.t.html#3989)\]
 
-<div class="desc">
+
 
 Test to see if askForIobj() would find a default indirect object.
 Returns true if there's a default, nil if not. If this returns true,
 then askForIobj() will simply take the default and proceed; otherwise,
 it will have to actually ask the user for the missing information.
 
-</div>
+
 
 <span id="verifyAction"></span>
 
@@ -1279,11 +1279,11 @@ it will have to actually ask the user for the missing information.
 
 [action.t](../file/action.t.html)\[[4837](../source/action.t.html#4837)\]
 
-<div class="desc">
+
 
 Verify the action.
 
-</div>
+
 
 <span id="whatObj"></span>
 
@@ -1291,15 +1291,15 @@ Verify the action.
 
 [en_us.t](../file/en_us.t.html)\[[8685](../source/en_us.t.html#8685)\]
 
-<div class="desc">
+
 
 get the interrogative for one of our objects
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

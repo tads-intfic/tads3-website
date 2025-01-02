@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \>
@@ -16,7 +16,7 @@ WeakRefLookupTable
     <a href="lib.html" class="nav"><em>Next:</em> The System Library</a>
     </span>
 
-</div>
+
 
 
 
@@ -49,7 +49,7 @@ class, just ignore it and use the base LookupTable class.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -59,4 +59,4 @@ WeakRefLookupTable
     <a href="lib.html" class="nav"><em>Next:</em> The System Library</a>
     </span>
 
-</div>
+

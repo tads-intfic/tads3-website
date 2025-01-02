@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Redirector is an object that can redirect one action to another via a
 doInstead wrapper method that provides a common interface. Subclasses
@@ -37,25 +37,25 @@ We begin this module by defing the Redirector class since in adv3Lite
 
 `class `**`Redirector`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Redirector`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Redirector`**  
 [`Doer`](../object/Doer.html)  
@@ -211,47 +211,47 @@ We begin this module by defing the Redirector class since in adv3Lite
 [`Wearable`](../object/Wearable.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doInstead`](#doInstead)[`doNested`](#doNested)[`doOtherAction`](#doOtherAction)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doInstead"></span>
 
@@ -259,13 +259,13 @@ We begin this module by defing the Redirector class since in adv3Lite
 
 [doer.t](../file/doer.t.html)\[[28](../source/doer.t.html#28)\]
 
-<div class="desc">
+
 
 doInstead() turns the current action into altAction with the objects
 specified in args, and executes altAction as a replacement for the
 current action.
 
-</div>
+
 
 <span id="doNested"></span>
 
@@ -273,12 +273,12 @@ current action.
 
 [doer.t](../file/doer.t.html)\[[37](../source/doer.t.html#37)\]
 
-<div class="desc">
+
 
 doNested() executes altAction with the objects specified in args,
 executins altAction as part of the current action.
 
-</div>
+
 
 <span id="doOtherAction"></span>
 
@@ -286,17 +286,17 @@ executins altAction as part of the current action.
 
 [doer.t](../file/doer.t.html)\[[47](../source/doer.t.html#47)\]
 
-<div class="desc">
+
 
 Execute altAction on the objects specified in the args parameter. If
 isReplacement is true make altAction a replacement for the current
 action.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

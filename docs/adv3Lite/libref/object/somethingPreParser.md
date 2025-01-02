@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Trap the use of vague words like 'someone' or 'something' or 'anyone'
 
 **`somethingPreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`somethingPreParser`**  
 [`StringPreParser`](../object/StringPreParser.html)  
@@ -43,11 +43,11 @@ Trap the use of vague words like 'someone' or 'something' or 'anyone'
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`pat`](#pat)
 
@@ -62,11 +62,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`doParsing`](#doParsing)
 
@@ -80,11 +80,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="pat"></span>
 
@@ -92,19 +92,19 @@ Inherited from `ModuleExecObject` :
 
 [newbie.t](../file/newbie.t.html)\[[406](../source/newbie.t.html#406)\]
 
-<div class="desc">
+
 
 if not, display a helpful message
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doParsing"></span>
 
@@ -112,15 +112,15 @@ if not, display a helpful message
 
 [newbie.t](../file/newbie.t.html)\[[382](../source/newbie.t.html#382)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "high nested room" is a nested room that is elevated above the rest of
 the room. This specializes the staging location handling so that it
@@ -34,15 +34,15 @@ generates more specific messages.
 
 `class `**`HighNestedRoom`**` :   `[`NestedRoom`](../object/NestedRoom.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`HighNestedRoom`**  
 [`NestedRoom`](../object/NestedRoom.html)  
@@ -52,27 +52,27 @@ generates more specific messages.
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`stagingLocations`](#stagingLocations)
 
@@ -90,11 +90,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`cannotMoveActorOutOf`](#cannotMoveActorOutOf)[`cannotMoveActorToStagingLocation`](#cannotMoveActorToStagingLocation)
 
@@ -112,11 +112,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="stagingLocations"></span>
 
@@ -124,7 +124,7 @@ Inherited from `VocabObject` :
 
 [travel.t](../file/travel.t.html)\[[6291](../source/travel.t.html#6291)\]
 
-<div class="desc">
+
 
 Staging locations. By default, we'll return an empty list, because a
 high location is not usually reachable directly from its containing
@@ -143,15 +143,15 @@ Note that this empty default setting will also give us no exit
 destination, since the default exit location is the default staging
 location.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="cannotMoveActorOutOf"></span>
 
@@ -159,11 +159,11 @@ location.
 
 [travel.t](../file/travel.t.html)\[[6267](../source/travel.t.html#6267)\]
 
-<div class="desc">
+
 
 if we can't get out, report that it's because we're too high up
 
-</div>
+
 
 <span id="cannotMoveActorToStagingLocation"></span>
 
@@ -171,15 +171,15 @@ if we can't get out, report that it's because we're too high up
 
 [travel.t](../file/travel.t.html)\[[6261](../source/travel.t.html#6261)\]
 
-<div class="desc">
+
 
 report that we're unable to move to a staging location
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

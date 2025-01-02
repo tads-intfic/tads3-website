@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The GrammarProd intrinsic class is a specialized type that's designed
 for creating parsers. An object of this type is created automatically by
@@ -55,41 +55,41 @@ Use addAlt() to populate a new production with token matching rules.
 
 `intrinsic class `**`GrammarProd`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GrammarProd`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -97,11 +97,11 @@ Use addAlt() to populate a new production with token matching rules.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addAlt`](#addAlt)[`clearAlts`](#clearAlts)[`deleteAlt`](#deleteAlt)[`getGrammarInfo`](#getGrammarInfo)[`parseTokens`](#parseTokens)
 
@@ -110,19 +110,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addAlt"></span>
 
@@ -130,7 +130,7 @@ Inherited from `Object` :
 
 [gramprod.h](../file/gramprod.h.html)\[[84](../source/gramprod.h.html#84)\]
 
-<div class="desc">
+
 
 Add a new alternative set of alternatives to the rule list for this
 grammar production.
@@ -154,7 +154,7 @@ must be provided if any symbolic tokens are used in the rule list
 simply the symbol table that t3GetGlobalSymbols() returns during
 preinit.
 
-</div>
+
 
 <span id="clearAlts"></span>
 
@@ -162,7 +162,7 @@ preinit.
 
 [gramprod.h](../file/gramprod.h.html)\[[123](../source/gramprod.h.html#123)\]
 
-<div class="desc">
+
 
 Delete all alternatives from the rule list for this grammar production.
 This resets the rule to an empty production with no alternatives to
@@ -173,7 +173,7 @@ with a subsequent addAlt() call.
 non-nil 'dict' is given, we'll remove all of the production's literals
 from the dictionary.
 
-</div>
+
 
 <span id="deleteAlt"></span>
 
@@ -181,7 +181,7 @@ from the dictionary.
 
 [gramprod.h](../file/gramprod.h.html)\[[111](../source/gramprod.h.html#111)\]
 
-<div class="desc">
+
 
 Delete onen or more alternatives from the rule list for this grammar
 production. 'id' identifies the rule(s) to delete:
@@ -205,7 +205,7 @@ getGrammarInfo().
 non-nil 'dict' is given, we'll remove literals from the dictionary that
 were defined by the alternative and no longer used in the production.
 
-</div>
+
 
 <span id="getGrammarInfo"></span>
 
@@ -213,13 +213,13 @@ were defined by the alternative and no longer used in the production.
 
 [gramprod.h](../file/gramprod.h.html)\[[58](../source/gramprod.h.html#58)\]
 
-<div class="desc">
+
 
 Retrieve a detailed description of the production. This returns a list
 of GrammarAltInfo objects that describe the rule alternatives that make
 up this production.
 
-</div>
+
 
 <span id="parseTokens"></span>
 
@@ -227,17 +227,17 @@ up this production.
 
 [gramprod.h](../file/gramprod.h.html)\[[51](../source/gramprod.h.html#51)\]
 
-<div class="desc">
+
 
 Parse the token list, starting at this production, using the given
 dictionary to look up tokens. Returns a list of match objects. If there
 are no matches to the grammar, simply returns an empty list.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

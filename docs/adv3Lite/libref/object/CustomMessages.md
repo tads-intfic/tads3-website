@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Message customizer object. Language extensions and games can use this
 class to define their own custom messages that override the default
@@ -41,61 +41,61 @@ up during preinit.
 
 `class `**`CustomMessages`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CustomMessages`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`active`](#active)[`all`](#all)[`messages`](#messages)[`msgTab`](#msgTab)[`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="active"></span>
 
@@ -103,7 +103,7 @@ up during preinit.
 
 [messages.t](../file/messages.t.html)\[[849](../source/messages.t.html#849)\]
 
-<div class="desc">
+
 
 Is this customizer active? If you want to change the messages at
 different points in the course of the game, you can use this to turn
@@ -115,7 +115,7 @@ the library consults this every time it looks up a message, so you can
 change the value dynamically, or use a method whose return value changes
 dynamically.
 
-</div>
+
 
 <span id="all"></span>
 
@@ -123,12 +123,12 @@ dynamically.
 
 [messages.t](../file/messages.t.html)\[[890](../source/messages.t.html#890)\]
 
-<div class="desc">
+
 
 class property: the master list of CustomMessages objects defined
 throughout the game
 
-</div>
+
 
 <span id="messages"></span>
 
@@ -136,7 +136,7 @@ throughout the game
 
 [messages.t](../file/messages.t.html)\[[864](../source/messages.t.html#864)\]
 
-<div class="desc">
+
 
 The message list. This can contain any number of messages; the order
 isn't important. Each message is defined with a Msg() macro:
@@ -149,7 +149,7 @@ message that you're customizing. (DON'T use quotes around the ID key.)
 The message text is a single-quoted string giving the message text. This
 can contain curly-brace replacement parameters.
 
-</div>
+
 
 <span id="msgTab"></span>
 
@@ -157,11 +157,11 @@ can contain curly-brace replacement parameters.
 
 [messages.t](../file/messages.t.html)\[[884](../source/messages.t.html#884)\]
 
-<div class="desc">
+
 
 message lookup table - this maps ID keys to message text strings
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -169,7 +169,7 @@ message lookup table - this maps ID keys to message text strings
 
 [messages.t](../file/messages.t.html)\[[835](../source/messages.t.html#835)\]
 
-<div class="desc">
+
 
 The priority determines the precedence of a message defined in this
 object, if the same message is defined in more than one CustomMessages
@@ -186,15 +186,15 @@ infinity, since any custom message of any priority overrides a default.)
 Games will generally want to override all library messages, including
 translations, so we set the default here to 200.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -202,16 +202,16 @@ translations, so we set the default here to 200.
 
 [messages.t](../file/messages.t.html)\[[870](../source/messages.t.html#870)\]
 
-<div class="desc">
+
 
 Construction. Build the lookup table of our messages for fast access at
 run-time.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

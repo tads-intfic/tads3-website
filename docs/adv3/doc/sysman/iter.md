@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Iterator  
 <span class="navnp"><a href="icic.html" class="nav"><em>Prev:</em> IntrinsicClass</a>
     <a href="list.html" class="nav"><em>Next:</em> List</a>     </span>
 
-</div>
+
 
 
 
@@ -40,7 +40,7 @@ the Iterator do not affect the iteration.
 
 `getCurKey()`
 
-<div class="fdef">
+
 
 Returns the key for the current item in the iteration. For List and
 Vector objects, this returns the index of the current value; for
@@ -53,18 +53,18 @@ Iterator) or has moved past the last item.
 
 `getCurVal()`
 
-<div class="fdef">
+
 
 Returns the value of the current item in the iteration (this is the same
 value that the most recent call to getNext() returned). Throws an error
 ("index out of range") if the iteration has not been started yet or has
 moved past the last item.
 
-</div>
+
 
 `getNext()`
 
-<div class="fdef">
+
 
 Returns the next element of the collection. The order in which the
 iterator returns the collection's elements varies by the collection
@@ -92,11 +92,11 @@ After all of the collection's elements have been exhausted, calling
 `getNext()` will cause an error ("out of
 bounds") to be thrown.
 
-</div>
+
 
 `isNextAvailable()`
 
-<div class="fdef">
+
 
 Returns `true` if calling
 `getNext()` will yield a valid item,
@@ -104,23 +104,23 @@ Returns `true` if calling
 `getNext()` to ensure that
 `getNext()` will not throw an error.
 
-</div>
+
 
 `resetIterator()`
 
-<div class="fdef">
+
 
 Resets the iteration to its first element. After calling this method,
 the next call to `getNext()` will yield the
 first element of the collection.
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -128,4 +128,4 @@ first element of the collection.
 <span class="navnp"><a href="icic.html" class="nav"><em>Prev:</em> IntrinsicClass</a>
     <a href="list.html" class="nav"><em>Next:</em> List</a>     </span>
 
-</div>
+

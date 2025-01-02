@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "space overlay" is a special type of container whose contents are
 supposed to be adjacent to the container object (i.e., self), but are
@@ -50,15 +50,15 @@ all along.
 
 `class `**`SpaceOverlay`**` :   `[`BulkLimiter`](../object/BulkLimiter.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SpaceOverlay`**  
 [`BulkLimiter`](../object/BulkLimiter.html)  
@@ -67,11 +67,11 @@ all along.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SpaceOverlay`**  
 [`RearContainer`](../object/RearContainer.html)  
@@ -82,19 +82,19 @@ all along.
 [`RestrictedUnderside`](../object/RestrictedUnderside.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`abandonContentsLister`](#abandonContentsLister)[`abandonLocation`](#abandonLocation)[`alwaysListOnMove`](#alwaysListOnMove)[`neverListOnMove`](#neverListOnMove)
 
@@ -109,11 +109,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`abandonContents`](#abandonContents)[`beforeMovePushable`](#beforeMovePushable)[`getWeight`](#getWeight)[`listContentsForMove`](#listContentsForMove)[`mainMoveInto`](#mainMoveInto)
 
@@ -128,11 +128,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="abandonContentsLister"></span>
 
@@ -140,7 +140,7 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[650](../source/extras.t.html#650)\]
 
-<div class="desc">
+
 
 The lister we use to describe the objects being revealed when we move
 the SpaceOverlay object and abandon the contents. Each concrete kind of
@@ -149,7 +149,7 @@ list should be roughly of the form "Moving the armoire reveals a rusty
 can underneath." Individual objects can override this to customize the
 message further.
 
-</div>
+
 
 <span id="abandonLocation"></span>
 
@@ -157,7 +157,7 @@ message further.
 
 [extras.t](../file/extras.t.html)\[[622](../source/extras.t.html#622)\]
 
-<div class="desc">
+
 
 abandonLocation is where the things under me end up when I'm moved.
 
@@ -178,7 +178,7 @@ this to nil to indicate that objects under/behind me will NOT be
 abandoned when I move; instead, they'll simply stay with me, as though
 they're attached to my underside/back surface.
 
-</div>
+
 
 <span id="alwaysListOnMove"></span>
 
@@ -186,7 +186,7 @@ they're attached to my underside/back surface.
 
 [extras.t](../file/extras.t.html)\[[639](../source/extras.t.html#639)\]
 
-<div class="desc">
+
 
 By default we list our direct contents the first time we're moved, and
 ONLY the first time. If alwaysListOnMove is overridden to true, then
@@ -201,7 +201,7 @@ Setting abandonLocation to nil overrules alwaysListOnMove: if there's no
 abandonment, then we consider nothing to be revealed when we're moved,
 since my contents move along with me.
 
-</div>
+
 
 <span id="neverListOnMove"></span>
 
@@ -209,19 +209,19 @@ since my contents move along with me.
 
 [extras.t](../file/extras.t.html)\[[640](../source/extras.t.html#640)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="abandonContents"></span>
 
@@ -229,7 +229,7 @@ since my contents move along with me.
 
 [extras.t](../file/extras.t.html)\[[661](../source/extras.t.html#661)\]
 
-<div class="desc">
+
 
 Abandon my contents when I'm moved. This is called whenever we're moved
 to a new location, to take care of leaving behind the objects that were
@@ -239,7 +239,7 @@ We'll move my direct contents into abandonLocation, unless that's set to
 nil. We don't move any Component objects within me, since we assume
 those to be attached.
 
-</div>
+
 
 <span id="beforeMovePushable"></span>
 
@@ -247,12 +247,12 @@ those to be attached.
 
 [extras.t](../file/extras.t.html)\[[590](../source/extras.t.html#590)\]
 
-<div class="desc">
+
 
 when we're being pushed to a new location via push-travel, abandon our
 contents before we're moved
 
-</div>
+
 
 <span id="getWeight"></span>
 
@@ -260,14 +260,14 @@ contents before we're moved
 
 [extras.t](../file/extras.t.html)\[[744](../source/extras.t.html#744)\]
 
-<div class="desc">
+
 
 My weight does NOT include my "contents" if we abandon our contents on
 being moved. Our contents are not attached to us as they are in a normal
 sort of container; instead, they're merely colocated, so when we're
 moved, that colocation relationship ends.
 
-</div>
+
 
 <span id="listContentsForMove"></span>
 
@@ -275,12 +275,12 @@ moved, that colocation relationship ends.
 
 [extras.t](../file/extras.t.html)\[[771](../source/extras.t.html#771)\]
 
-<div class="desc">
+
 
 List our contents for moving the object. By default, we examine our
 interior using our abandonContentsLister.
 
-</div>
+
 
 <span id="mainMoveInto"></span>
 
@@ -288,7 +288,7 @@ interior using our abandonContentsLister.
 
 [extras.t](../file/extras.t.html)\[[577](../source/extras.t.html#577)\]
 
-<div class="desc">
+
 
 If we move this object, the objects we contain might stay put rather
 than moving along with the container. For example, if we represent the
@@ -296,11 +296,11 @@ space behind a bookcase, moving the bookcase would leave objects that
 were formerly behind the bookcase just sitting on the floor (or attached
 to the wall, or whatever).
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

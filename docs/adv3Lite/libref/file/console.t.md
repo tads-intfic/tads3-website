@@ -17,7 +17,7 @@ layout: docs
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
 
-<div class="fdesc">
+
 
 TADS 3 Library - console input/output manager
 
@@ -32,42 +32,42 @@ the functions defined here. The reason for separating these functions is
 so that we can substitute the Web UI versions for games that wish to use
 the Web UI insetad of the traditional console UI.
 
-</div>
+
 
 <span id="_ClassSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Classes</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Objects</span>  
 
-</div>
+
 
 [`statuslineBanner`](../object/statuslineBanner1.html)
 <span id="FunctionSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Global Functions</span>  
 
-</div>
+
 
 [`aHref`](#aHref)[`aHrefAlt`](#aHrefAlt)[`aioClearScreen`](#aioClearScreen)[`aioInputDialog`](#aioInputDialog)[`aioInputEvent`](#aioInputEvent)[`aioInputFile`](#aioInputFile)[`aioInputLineCancel`](#aioInputLineCancel)[`aioInputLineTimeout`](#aioInputLineTimeout)[`aioMorePrompt`](#aioMorePrompt)[`aioSay`](#aioSay)[`aioSetLogFile`](#aioSetLogFile)[`checkHtmlMode`](#checkHtmlMode)[`initDisplay`](#initDisplay)[`initUI`](#initUI)[`statusHTML`](#statusHTML)[`terminateUI`](#terminateUI)
 
 <span id="_Functions_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Functions</span>  
 
-</div>
+
 
 <span id="aHref"></span>
 
@@ -75,7 +75,7 @@ the Web UI insetad of the traditional console UI.
 
 [console.t](../file/console.t.html)\[[189](../source/console.t.html#189)\]
 
-<div class="desc">
+
 
 Generate a string to show hyperlinked text. If we're not in HTML mode,
 we'll simply return the text without the hyperlink; otherwise, we'll
@@ -90,7 +90,7 @@ HREF\> tag itself, leaving it to the caller to display the text and the
 The optional 'flags' is a combination of AHREF_xxx flags indicating any
 special properties of the hyperlink.
 
-</div>
+
 
 <span id="aHrefAlt"></span>
 
@@ -98,14 +98,14 @@ special properties of the hyperlink.
 
 [console.t](../file/console.t.html)\[[224](../source/console.t.html#224)\]
 
-<div class="desc">
+
 
 Generate a string to show hyperlinked text, with alternate text if we're
 not in HTML mode. If we're in HTML mode, we'll return linkedTxt linked
 to the given HREF; if we're in plain text mode, we'll return the
 alternate text as-is.
 
-</div>
+
 
 <span id="aioClearScreen"></span>
 
@@ -113,11 +113,11 @@ alternate text as-is.
 
 [console.t](../file/console.t.html)\[[165](../source/console.t.html#165)\]
 
-<div class="desc">
+
 
 Clear the screen
 
-</div>
+
 
 <span id="aioInputDialog"></span>
 
@@ -125,11 +125,11 @@ Clear the screen
 
 [console.t](../file/console.t.html)\[[145](../source/console.t.html#145)\]
 
-<div class="desc">
+
 
 Show an input dialog
 
-</div>
+
 
 <span id="aioInputEvent"></span>
 
@@ -137,11 +137,11 @@ Show an input dialog
 
 [console.t](../file/console.t.html)\[[113](../source/console.t.html#113)\]
 
-<div class="desc">
+
 
 Read an input event
 
-</div>
+
 
 <span id="aioInputFile"></span>
 
@@ -149,11 +149,11 @@ Read an input event
 
 [console.t](../file/console.t.html)\[[135](../source/console.t.html#135)\]
 
-<div class="desc">
+
 
 Show a file selector dialog
 
-</div>
+
 
 <span id="aioInputLineCancel"></span>
 
@@ -161,11 +161,11 @@ Show a file selector dialog
 
 [console.t](../file/console.t.html)\[[102](../source/console.t.html#102)\]
 
-<div class="desc">
+
 
 Cancel a suspended input line
 
-</div>
+
 
 <span id="aioInputLineTimeout"></span>
 
@@ -173,11 +173,11 @@ Cancel a suspended input line
 
 [console.t](../file/console.t.html)\[[93](../source/console.t.html#93)\]
 
-<div class="desc">
+
 
 Get a line of input from the keyboard, with timeout
 
-</div>
+
 
 <span id="aioMorePrompt"></span>
 
@@ -185,11 +185,11 @@ Get a line of input from the keyboard, with timeout
 
 [console.t](../file/console.t.html)\[[124](../source/console.t.html#124)\]
 
-<div class="desc">
+
 
 Show a "More" prompt
 
-</div>
+
 
 <span id="aioSay"></span>
 
@@ -197,11 +197,11 @@ Show a "More" prompt
 
 [console.t](../file/console.t.html)\[[83](../source/console.t.html#83)\]
 
-<div class="desc">
+
 
 Write text to the main game window
 
-</div>
+
 
 <span id="aioSetLogFile"></span>
 
@@ -209,11 +209,11 @@ Write text to the main game window
 
 [console.t](../file/console.t.html)\[[155](../source/console.t.html#155)\]
 
-<div class="desc">
+
 
 Set/remove the output logging file
 
-</div>
+
 
 <span id="checkHtmlMode"></span>
 
@@ -221,11 +221,11 @@ Set/remove the output logging file
 
 [console.t](../file/console.t.html)\[[61](../source/console.t.html#61)\]
 
-<div class="desc">
+
 
 Check to see if we're in HTML mode
 
-</div>
+
 
 <span id="initDisplay"></span>
 
@@ -233,12 +233,12 @@ Check to see if we're in HTML mode
 
 [console.t](../file/console.t.html)\[[39](../source/console.t.html#39)\]
 
-<div class="desc">
+
 
 Initialize the display. The library calls this at the start of the game,
 and after each RESTART, to set up the layout of the game window.
 
-</div>
+
 
 <span id="initUI"></span>
 
@@ -246,14 +246,14 @@ and after each RESTART, to set up the layout of the game window.
 
 [console.t](../file/console.t.html)\[[31](../source/console.t.html#31)\]
 
-<div class="desc">
+
 
 Initialize the user interface. The library calls this once at the start
 of the interpreter session to set up the UI. For the console
 interpreter, we don't need to do anything here; the interpreter takes
 care of setting up the display window for us.
 
-</div>
+
 
 <span id="statusHTML"></span>
 
@@ -261,7 +261,7 @@ care of setting up the display window for us.
 
 [console.t](../file/console.t.html)\[[249](../source/console.t.html#249)\]
 
-<div class="desc">
+
 
 Generate HTML to wrap the left/right portions of the status line. The
 basic status line has three stages: stage 0 precedes the left portion,
@@ -269,7 +269,7 @@ stage 1 comes between the left and right portions, and stage 2 follows
 the right portion. If we're listing exits, we get two more stages: stage
 3 precedes the exit listing, stage 4 follows it.
 
-</div>
+
 
 <span id="terminateUI"></span>
 
@@ -277,16 +277,16 @@ the right portion. If we're listing exits, we get two more stages: stage
 
 [console.t](../file/console.t.html)\[[52](../source/console.t.html#52)\]
 
-<div class="desc">
+
 
 Shut down the user interface. The library calls this once just before
 the game is about to terminate.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

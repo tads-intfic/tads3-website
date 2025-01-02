@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="goldskull.html" class="nav">Goldskull</a> \> Laying out the
@@ -17,7 +17,7 @@ map
 <a href="making.html" class="nav"><em>Next:</em> Making things happen</a>
     </span>
 
-</div>
+
 
 
 
@@ -52,7 +52,7 @@ represent the cave, and three objects: the pedestal, the skull and the
 rock. There's very little that's new here; this is what the code should
 look like:
 
-`
+```
     #charset "us-ascii"
 
     #include <tads.h>
@@ -125,7 +125,7 @@ look like:
     + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
     ;
-`
+```
 
 Changes to the boiler-plate code already provided are marked in bold to
 make them easier to see. There's just a couple of things to note here.
@@ -153,7 +153,7 @@ make sure it all works.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -164,4 +164,4 @@ map
 <a href="making.html" class="nav"><em>Next:</em> Making things happen</a>
     </span>
 
-</div>
+

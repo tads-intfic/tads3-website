@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 File dialog event page. This page is used by the IFDB Storage Server
 file dialog to return information to the game UI. The IFDB dialog page
@@ -37,26 +37,26 @@ finish the job by dismissing the dialog in the UI.
 
 **`inputFilePage`**` :   `[`WebResource`](../object/WebResource.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`inputFilePage`**  
 [`WebResource`](../object/WebResource.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`vpath`](#vpath)
 
@@ -65,11 +65,11 @@ Inherited from `WebResource` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`processRequest`](#processRequest)
 
@@ -78,11 +78,11 @@ Inherited from `WebResource` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="vpath"></span>
 
@@ -90,19 +90,19 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[3472](../source/webui.t.html#3472)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="processRequest"></span>
 
@@ -110,15 +110,15 @@ Inherited from `WebResource` :
 
 [webui.t](../file/webui.t.html)\[[3473](../source/webui.t.html#3473)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

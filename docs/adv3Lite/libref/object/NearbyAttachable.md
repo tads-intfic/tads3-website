@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A NearbyAttachable is (optionally) placed in the same location as the
 object to which it is attached, and moves with the object it's attached
@@ -35,15 +35,15 @@ it's attached to it).
 
 `class `**`NearbyAttachable`**` :   `[`SimpleAttachable`](../object/SimpleAttachable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NearbyAttachable`**  
 [`SimpleAttachable`](../object/SimpleAttachable.html)  
@@ -56,29 +56,29 @@ it's attached to it).
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`NearbyAttachable`**  
 [`Attachable`](../object/Attachable.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`attachedLocation`](#attachedLocation)[`detachedLocation`](#detachedLocation)[`oldLocation`](#oldLocation)
 
@@ -100,11 +100,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`afterAction`](#afterAction)[`beforeAction`](#beforeAction)
 
@@ -128,11 +128,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="attachedLocation"></span>
 
@@ -140,12 +140,12 @@ Inherited from `LMentionable` :
 
 [attachables.t](../file/attachables.t.html)\[[517](../source/attachables.t.html#517)\]
 
-<div class="desc">
+
 
 Our location when attached; by default this is the location of the item
 we're attached to (if there is one)
 
-</div>
+
 
 <span id="detachedLocation"></span>
 
@@ -153,12 +153,12 @@ we're attached to (if there is one)
 
 [attachables.t](../file/attachables.t.html)\[[524](../source/attachables.t.html#524)\]
 
-<div class="desc">
+
 
 Our location when detached; by default this is simply the location of
 the item to which we're attached, if there is one.
 
-</div>
+
 
 <span id="oldLocation"></span>
 
@@ -166,20 +166,20 @@ the item to which we're attached, if there is one.
 
 [attachables.t](../file/attachables.t.html)\[[550](../source/attachables.t.html#550)\]
 
-<div class="desc">
+
 
 Our location just before an action takes place when we're attached to
 something.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -187,12 +187,12 @@ something.
 
 [attachables.t](../file/attachables.t.html)\[[540](../source/attachables.t.html#540)\]
 
-<div class="desc">
+
 
 After any action takes place when we're attached to something, move us
 into our attachedLocation if we're not already there.
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -200,16 +200,16 @@ into our attachedLocation if we're not already there.
 
 [attachables.t](../file/attachables.t.html)\[[530](../source/attachables.t.html#530)\]
 
-<div class="desc">
+
 
 Before any action takes place when we're in scope, make a note of our
 current location if we're attached to anything
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

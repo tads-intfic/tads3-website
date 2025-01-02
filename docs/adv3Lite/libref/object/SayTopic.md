@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A SayTopic is a kind of SpecialTopic that allows the player (character)
 to say virtually anything (within reason) to an NPC; a SayTopic may be
@@ -38,15 +38,15 @@ DON'T KNOW, to trigger an appropriately defined SayTopic.
 
 `class `**`SayTopic`**` :   `[`SpecialTopic`](../object/SpecialTopic.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SayTopic`**  
 [`SpecialTopic`](../object/SpecialTopic.html)  
@@ -58,27 +58,27 @@ DON'T KNOW, to trigger an appropriately defined SayTopic.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeInList`](#includeInList)[`includeSayInName`](#includeSayInName)
 
@@ -97,11 +97,11 @@ Inherited from `TopicEntry` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`buildName`](#buildName)
 
@@ -122,11 +122,11 @@ Inherited from `TopicEntry` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -134,11 +134,11 @@ Inherited from `TopicEntry` :
 
 [actor.t](../file/actor.t.html)\[[4683](../source/actor.t.html#4683)\]
 
-<div class="desc">
+
 
 SayTopics belong in the sayTopics list of their TopicDatabase
 
-</div>
+
 
 <span id="includeSayInName"></span>
 
@@ -146,7 +146,7 @@ SayTopics belong in the sayTopics list of their TopicDatabase
 
 [actor.t](../file/actor.t.html)\[[4693](../source/actor.t.html#4693)\]
 
-<div class="desc">
+
 
 When a SayTopic is suggested we normally precede its name by 'say', e.g.
 'say you are happy'. In some cases an author might want to use a
@@ -154,15 +154,15 @@ SayTopic to match input that's better without the initial 'say', e.g.
 'tell a lie', in which case set includeSayInName to nil to suppress the
 initial 'say' in topic inventory listings.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="buildName"></span>
 
@@ -170,18 +170,18 @@ initial 'say' in topic inventory listings.
 
 [actor.t](../file/actor.t.html)\[[4667](../source/actor.t.html#4667)\]
 
-<div class="desc">
+
 
 When we construct the name of a SayTopic we use the name property of its
 matchObj rather that theName property, since it won't normally make
 sense to include the definite article at the beginning of suggestions of
 things that can be said.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

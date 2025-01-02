@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Disambiguation Ordinal Out Of Range - this is thrown when the user
 answers a disambiguation question with an ordinal, but the ordinal is
@@ -36,15 +36,15 @@ fourth one").
 
 `class `**`DisambigOrdinalOutOfRangeException`**` :   `[`DisambigException`](../object/DisambigException.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`DisambigOrdinalOutOfRangeException`**  
 [`DisambigException`](../object/DisambigException.html)  
@@ -52,27 +52,27 @@ fourth one").
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`ord_`](#ord_)
 
@@ -83,11 +83,11 @@ Inherited from `Exception` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -98,11 +98,11 @@ Inherited from `Exception` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="ord_"></span>
 
@@ -110,19 +110,19 @@ Inherited from `Exception` :
 
 [disambig.t](../file/disambig.t.html)\[[526](../source/disambig.t.html#526)\]
 
-<div class="desc">
+
 
 a string giving the ordinal word entered by the user
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -130,15 +130,15 @@ a string giving the ordinal word entered by the user
 
 [disambig.t](../file/disambig.t.html)\[[519](../source/disambig.t.html#519)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

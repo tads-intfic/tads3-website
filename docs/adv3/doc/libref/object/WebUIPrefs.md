@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Web UI preferences. This object contains the in-memory version of the
 display style preferences file.
@@ -37,61 +37,61 @@ preferences file.
 
 `class `**`WebUIPrefs`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`WebUIPrefs`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`clientSession`](#clientSession)[`curProfile`](#curProfile)[`curProPat`](#curProPat)[`profileTab`](#profileTab)[`proItemPat`](#proItemPat)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`getSettingsFile`](#getSettingsFile)[`getXML`](#getXML)[`loadSettings`](#loadSettings)[`openSettingsFile`](#openSettingsFile)[`readSettings`](#readSettings)[`saveSettings`](#saveSettings)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="clientSession"></span>
 
@@ -99,11 +99,11 @@ preferences file.
 
 [webui.t](../file/webui.t.html)\[[2558](../source/webui.t.html#2558)\]
 
-<div class="desc">
+
 
 the client session for this preference list
 
-</div>
+
 
 <span id="curProfile"></span>
 
@@ -111,11 +111,11 @@ the client session for this preference list
 
 [webui.t](../file/webui.t.html)\[[2567](../source/webui.t.html#2567)\]
 
-<div class="desc">
+
 
 current active profile selected by the user
 
-</div>
+
 
 <span id="curProPat"></span>
 
@@ -123,11 +123,11 @@ current active profile selected by the user
 
 [webui.t](../file/webui.t.html)\[[2434](../source/webui.t.html#2434)\]
 
-<div class="desc">
+
 
 current profile ID pattern - current-profile:xxx
 
-</div>
+
 
 <span id="profileTab"></span>
 
@@ -135,12 +135,12 @@ current profile ID pattern - current-profile:xxx
 
 [webui.t](../file/webui.t.html)\[[2564](../source/webui.t.html#2564)\]
 
-<div class="desc">
+
 
 profile table - this is a LookupTable of WebUIProfile objects keyed by
 profile name
 
-</div>
+
 
 <span id="proItemPat"></span>
 
@@ -148,19 +148,19 @@ profile name
 
 [webui.t](../file/webui.t.html)\[[2437](../source/webui.t.html#2437)\]
 
-<div class="desc">
+
 
 setting ID pattern for profile items - nnn.xxx=yyy
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -168,11 +168,11 @@ setting ID pattern for profile items - nnn.xxx=yyy
 
 [webui.t](../file/webui.t.html)\[[2368](../source/webui.t.html#2368)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getSettingsFile"></span>
 
@@ -180,11 +180,11 @@ setting ID pattern for profile items - nnn.xxx=yyy
 
 [webui.t](../file/webui.t.html)\[[2504](../source/webui.t.html#2504)\]
 
-<div class="desc">
+
 
 get the settings file path
 
-</div>
+
 
 <span id="getXML"></span>
 
@@ -192,11 +192,11 @@ get the settings file path
 
 [webui.t](../file/webui.t.html)\[[2523](../source/webui.t.html#2523)\]
 
-<div class="desc">
+
 
 get the current settings as XML, to send to the web UI
 
-</div>
+
 
 <span id="loadSettings"></span>
 
@@ -204,11 +204,11 @@ get the current settings as XML, to send to the web UI
 
 [webui.t](../file/webui.t.html)\[[2378](../source/webui.t.html#2378)\]
 
-<div class="desc">
+
 
 read the settings file
 
-</div>
+
 
 <span id="openSettingsFile"></span>
 
@@ -216,11 +216,11 @@ read the settings file
 
 [webui.t](../file/webui.t.html)\[[2483](../source/webui.t.html#2483)\]
 
-<div class="desc">
+
 
 open the settings file
 
-</div>
+
 
 <span id="readSettings"></span>
 
@@ -228,11 +228,11 @@ open the settings file
 
 [webui.t](../file/webui.t.html)\[[2393](../source/webui.t.html#2393)\]
 
-<div class="desc">
+
 
 read settings from a file
 
-</div>
+
 
 <span id="saveSettings"></span>
 
@@ -240,15 +240,15 @@ read settings from a file
 
 [webui.t](../file/webui.t.html)\[[2440](../source/webui.t.html#2440)\]
 
-<div class="desc">
+
 
 save the current settings to the user's config file
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

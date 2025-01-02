@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "special" topic. This is a topic that responds to its own unique,
 custom command input. In other words, rather than responding to a normal
@@ -55,15 +55,15 @@ match the topic.
 
 `class `**`SpecialTopic`**` :   `[`TopicEntry`](../object/TopicEntry.html)[`SuggestedTopicTree`](../object/SuggestedTopicTree.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SpecialTopic`**  
 [`TopicEntry`](../object/TopicEntry.html)  
@@ -73,27 +73,27 @@ match the topic.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`fullName`](#fullName)[`includeInList`](#includeInList)[`keywordList`](#keywordList)[`matchPat`](#matchPat)[`name`](#name)[`timesToSuggest`](#timesToSuggest)[`weakPat`](#weakPat)
 
@@ -107,11 +107,11 @@ Inherited from `SuggestedTopic` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getConvNode`](#getConvNode)[`initializeSpecialTopic`](#initializeSpecialTopic)[`isMatchPossible`](#isMatchPossible)[`matchPreParse`](#matchPreParse)[`matchTopic`](#matchTopic)[`noteSuggestion`](#noteSuggestion)
 
@@ -126,11 +126,11 @@ Inherited from `SuggestedTopic` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="fullName"></span>
 
@@ -138,13 +138,13 @@ Inherited from `SuggestedTopic` :
 
 [actor.t](../file/actor.t.html)\[[3816](../source/actor.t.html#3816)\]
 
-<div class="desc">
+
 
 our suggestion (topic inventory) full name is usually the same as the
 base name; special topics usually aren't grouped in topic suggestion
 listings, since each topic usually has its own unique, custom syntax
 
-</div>
+
 
 <span id="includeInList"></span>
 
@@ -152,11 +152,11 @@ listings, since each topic usually has its own unique, custom syntax
 
 [actor.t](../file/actor.t.html)\[[3822](../source/actor.t.html#3822)\]
 
-<div class="desc">
+
 
 include in the specialTopics list of our parent topic database
 
-</div>
+
 
 <span id="keywordList"></span>
 
@@ -164,7 +164,7 @@ include in the specialTopics list of our parent topic database
 
 [actor.t](../file/actor.t.html)\[[3766](../source/actor.t.html#3766)\]
 
-<div class="desc">
+
 
 Our keyword list. Each special topic instance must define a list of
 strings giving the keywords we match. The special topic will match user
@@ -179,7 +179,7 @@ regular expression allows the instance to include punctuation in the
 syntax, or apply more restrictive criteria than simply matching the
 keywords.
 
-</div>
+
 
 <span id="matchPat"></span>
 
@@ -187,12 +187,12 @@ keywords.
 
 [actor.t](../file/actor.t.html)\[[3805](../source/actor.t.html#3805)\]
 
-<div class="desc">
+
 
 our regular expression pattern - we'll build this automatically from the
 keyword list if this isn't otherwise defined
 
-</div>
+
 
 <span id="name"></span>
 
@@ -200,11 +200,11 @@ keyword list if this isn't otherwise defined
 
 [actor.t](../file/actor.t.html)\[[3808](../source/actor.t.html#3808)\]
 
-<div class="desc">
+
 
 our suggestion (topic inventory) base name
 
-</div>
+
 
 <span id="timesToSuggest"></span>
 
@@ -212,14 +212,14 @@ our suggestion (topic inventory) base name
 
 [actor.t](../file/actor.t.html)\[[3830](../source/actor.t.html#3830)\]
 
-<div class="desc">
+
 
 By default, don't limit the number of times we'll suggest this topic.
 Since a special topic is valid only in a particular ConvNode context, we
 normally want all of the topics in that context to be available, even if
 they've been used before.
 
-</div>
+
 
 <span id="weakPat"></span>
 
@@ -227,7 +227,7 @@ they've been used before.
 
 [en_us.t](../file/en_us.t.html)\[[2762](../source/en_us.t.html#2762)\]
 
-<div class="desc">
+
 
 Our "weak" strings - 'i', 'l', 'look': these are weak because a user
 typing one of these strings by itself is probably actually trying to
@@ -235,15 +235,15 @@ enter the command of the same name, rather than entering a special
 topic. These come up in cases where the special topic is something like
 "say I don't know" or "tell him you'll look into it".
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getConvNode"></span>
 
@@ -251,11 +251,11 @@ topic. These come up in cases where the special topic is something like
 
 [actor.t](../file/actor.t.html)\[[3900](../source/actor.t.html#3900)\]
 
-<div class="desc">
+
 
 find our enclosing ConvNode object
 
-</div>
+
 
 <span id="initializeSpecialTopic"></span>
 
@@ -263,7 +263,7 @@ find our enclosing ConvNode object
 
 [actor.t](../file/actor.t.html)\[[3780](../source/actor.t.html#3780)\]
 
-<div class="desc">
+
 
 Initialize the special topic. This runs during pre-initialization, to
 give us a chance to do pre-game set-up.
@@ -275,7 +275,7 @@ claim that the words are unknown when the special topic isn't active. By
 adding the keywords to the dictionary, we let the parser know that
 they're valid words, so that it won't claim that they're unknown.
 
-</div>
+
 
 <span id="isMatchPossible"></span>
 
@@ -283,11 +283,11 @@ they're valid words, so that it won't claim that they're unknown.
 
 [actor.t](../file/actor.t.html)\[[3860](../source/actor.t.html#3860)\]
 
-<div class="desc">
+
 
 a special topic is always matchable, since we match on literal text
 
-</div>
+
 
 <span id="matchPreParse"></span>
 
@@ -296,13 +296,13 @@ a special topic is always matchable, since we match on literal text
 [actor.t](../file/actor.t.html)\[[3867](../source/actor.t.html#3867)\],
 [en_us.t](../file/en_us.t.html)\[[2744](../source/en_us.t.html#2744)\]
 
-<div class="desc">
+
 
 Match a string during pre-parsing. By default, we'll match the string if
 all of its words (as defined by the regular expression parser) match our
 keywords.
 
-</div>
+
 
 <span id="matchTopic"></span>
 
@@ -310,11 +310,11 @@ keywords.
 
 [actor.t](../file/actor.t.html)\[[3833](../source/actor.t.html#3833)\]
 
-<div class="desc">
+
 
 check for a match
 
-</div>
+
 
 <span id="noteSuggestion"></span>
 
@@ -322,15 +322,15 @@ check for a match
 
 [actor.t](../file/actor.t.html)\[[3819](../source/actor.t.html#3819)\]
 
-<div class="desc">
+
 
 on being suggested, update the special topic history
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

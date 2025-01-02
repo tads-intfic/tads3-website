@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Question is an interactive question we ask the player via the regular
 command line. The player then has the option to answer the question, or
@@ -44,25 +44,25 @@ carry out the action of answering the question.
 
 `class `**`Question`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Question`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Question`**  
 [`GramQuestion`](../object/GramQuestion.html)  
@@ -71,39 +71,39 @@ carry out the action of answering the question.
 [`RexQuestion`](../object/RexQuestion.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`answerTemplate`](#answerTemplate)[`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`parseAnswer`](#parseAnswer)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="answerTemplate"></span>
 
@@ -111,11 +111,11 @@ carry out the action of answering the question.
 
 [parser.t](../file/parser.t.html)\[[1074](../source/parser.t.html#1074)\]
 
-<div class="desc">
+
 
 the answer template
 
-</div>
+
 
 <span id="priority"></span>
 
@@ -123,7 +123,7 @@ the answer template
 
 [parser.t](../file/parser.t.html)\[[1057](../source/parser.t.html#1057)\]
 
-<div class="desc">
+
 
 Priority: Should the answer be parsed before checking for a regular
 command entry? If this is true, the parser will try parsing the player's
@@ -149,15 +149,15 @@ the answer interpretation, though. Yes/No questions in particular will
 probably want to do this, because otherwise the parser would take the
 answer as a conversational overture to any nearby NPC.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="parseAnswer"></span>
 
@@ -165,7 +165,7 @@ answer as a conversational overture to any nearby NPC.
 
 [parser.t](../file/parser.t.html)\[[1071](../source/parser.t.html#1071)\]
 
-<div class="desc">
+
 
 Parse the answer. 'toks' is the token list of the user's input, and
 'dict' is the main parser Dictionary object.
@@ -178,11 +178,11 @@ command.
 By default, we simply return nil. Subclasses/instances must override
 this to provide the custom answer parsing.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

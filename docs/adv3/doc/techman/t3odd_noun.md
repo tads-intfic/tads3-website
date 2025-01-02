@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Handling Odd
@@ -17,7 +17,7 @@ Staging Locations</a>    
 <a href="t3globalremap.html" class="nav"><em>Next:</em> Global Command
 Remapping</a>     </span>
 
-</div>
+
 
 
 
@@ -404,7 +404,7 @@ within the execute() method.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -415,4 +415,4 @@ Staging Locations</a>    
 <a href="t3globalremap.html" class="nav"><em>Next:</em> Global Command
 Remapping</a>     </span>
 
-</div>
+

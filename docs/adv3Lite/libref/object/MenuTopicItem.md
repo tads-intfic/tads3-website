@@ -28,7 +28,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 MenuTopicItem displays a series of entries successively. This is
 intended to be used for displaying something like a list of hints for a
@@ -44,15 +44,15 @@ Menu topic item - console UI implementation
 
 `class `**`MenuTopicItem`**` :   `[`MenuItem`](../object/MenuItem.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MenuTopicItem`**  
 [`MenuItem`](../object/MenuItem.html)  
@@ -60,29 +60,29 @@ Menu topic item - console UI implementation
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`MenuTopicItem`**  
 [`Goal`](../object/Goal.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`chunkSize`](#chunkSize)[`heading`](#heading)[`lastDisplayed`](#lastDisplayed)[`menuContents`](#menuContents)[`menuTopicListEnd`](#menuTopicListEnd)[`nextMenuTopicLink`](#nextMenuTopicLink)[`title`](#title)
 
@@ -94,11 +94,11 @@ Inherited from `MenuObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`displaySubItem`](#displaySubItem)[`getNextTopicXML`](#getNextTopicXML)[`getTopicXML`](#getTopicXML)[`getXML`](#getXML)[`redrawWinHtml`](#redrawWinHtml)[`showMenuHtml`](#showMenuHtml)[`showMenuText`](#showMenuText)
 
@@ -110,11 +110,11 @@ Inherited from `MenuObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="chunkSize"></span>
 
@@ -122,13 +122,13 @@ Inherited from `MenuObject` :
 
 [menusys.t](../file/menusys.t.html)\[[447](../source/menusys.t.html#447)\]
 
-<div class="desc">
+
 
 The maximum number of our sub-items that we'll display at once. This is
 only used on interpreters with banner capabilities, and is ignored in
 full-screen mode.
 
-</div>
+
 
 <span id="heading"></span>
 
@@ -136,11 +136,11 @@ full-screen mode.
 
 [menusys.t](../file/menusys.t.html)\[[426](../source/menusys.t.html#426)\]
 
-<div class="desc">
+
 
 heading, displayed while we're showing this topic list
 
-</div>
+
 
 <span id="lastDisplayed"></span>
 
@@ -148,11 +148,11 @@ heading, displayed while we're showing this topic list
 
 [menusys.t](../file/menusys.t.html)\[[440](../source/menusys.t.html#440)\]
 
-<div class="desc">
+
 
 the index of the last item we displayed from our menuContents list
 
-</div>
+
 
 <span id="menuContents"></span>
 
@@ -160,13 +160,13 @@ the index of the last item we displayed from our menuContents list
 
 [menusys.t](../file/menusys.t.html)\[[437](../source/menusys.t.html#437)\]
 
-<div class="desc">
+
 
 A list of strings and/or MenuTopicSubItem items. Each one of these is
 meant to be something like a single hint on our topic. We display these
 items one at a time when our menu item is selected.
 
-</div>
+
 
 <span id="menuTopicListEnd"></span>
 
@@ -174,11 +174,11 @@ items one at a time when our menu item is selected.
 
 [menusys.t](../file/menusys.t.html)\[[450](../source/menusys.t.html#450)\]
 
-<div class="desc">
+
 
 we'll display this after we've shown all of our items
 
-</div>
+
 
 <span id="nextMenuTopicLink"></span>
 
@@ -186,11 +186,11 @@ we'll display this after we've shown all of our items
 
 [menusys.t](../file/menusys.t.html)\[[429](../source/menusys.t.html#429)\]
 
-<div class="desc">
+
 
 hyperlink text for showing the next menu
 
-</div>
+
 
 <span id="title"></span>
 
@@ -198,19 +198,19 @@ hyperlink text for showing the next menu
 
 [menusys.t](../file/menusys.t.html)\[[423](../source/menusys.t.html#423)\]
 
-<div class="desc">
+
 
 the name of this topic, as it appears in our parent menu
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="displaySubItem"></span>
 
@@ -218,14 +218,14 @@ the name of this topic, as it appears in our parent menu
 
 [menucon.t](../file/menucon.t.html)\[[875](../source/menucon.t.html#875)\]
 
-<div class="desc">
+
 
 Display an item from our list. 'idx' is the index in our list of the
 item to display. 'lastBeforeInput' indicates whether or not this is the
 last item we're going to show before pausing for user input. 'eol' gives
 the newline sequence to display at the end of the line.
 
-</div>
+
 
 <span id="getNextTopicXML"></span>
 
@@ -233,11 +233,11 @@ the newline sequence to display at the end of the line.
 
 [menuweb.t](../file/menuweb.t.html)\[[270](../source/menuweb.t.html#270)\]
 
-<div class="desc">
+
 
 get the next topic, in XML format
 
-</div>
+
 
 <span id="getTopicXML"></span>
 
@@ -245,11 +245,11 @@ get the next topic, in XML format
 
 [menuweb.t](../file/menuweb.t.html)\[[281](../source/menuweb.t.html#281)\]
 
-<div class="desc">
+
 
 get the XML formatted description of the item at the given index
 
-</div>
+
 
 <span id="getXML"></span>
 
@@ -257,11 +257,11 @@ get the XML formatted description of the item at the given index
 
 [menuweb.t](../file/menuweb.t.html)\[[242](../source/menuweb.t.html#242)\]
 
-<div class="desc">
+
 
 get the XML description of my menu list
 
-</div>
+
 
 <span id="redrawWinHtml"></span>
 
@@ -269,12 +269,12 @@ get the XML description of my menu list
 
 [menucon.t](../file/menucon.t.html)\[[782](../source/menucon.t.html#782)\]
 
-<div class="desc">
+
 
 redraw the window in HTML mode, starting with the given item at the top
 of the window
 
-</div>
+
 
 <span id="showMenuHtml"></span>
 
@@ -282,11 +282,11 @@ of the window
 
 [menucon.t](../file/menucon.t.html)\[[654](../source/menucon.t.html#654)\]
 
-<div class="desc">
+
 
 Display and run our menu in HTML mode.
 
-</div>
+
 
 <span id="showMenuText"></span>
 
@@ -294,15 +294,15 @@ Display and run our menu in HTML mode.
 
 [menucon.t](../file/menucon.t.html)\[[594](../source/menucon.t.html#594)\]
 
-<div class="desc">
+
 
 Display and run our menu in text mode.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

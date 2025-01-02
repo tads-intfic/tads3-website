@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 System action. These actions are for out-of-game meta-verbs (save,
 restore, undo). These verbs take no objects, must be performed by the
@@ -35,15 +35,15 @@ clock time.
 
 `class `**`SystemAction`**` :   `[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SystemAction`**  
 [`IAction`](../object/IAction.html)  
@@ -52,11 +52,11 @@ clock time.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SystemAction`**  
 [`AboutAction`](../object/AboutAction.html)  
@@ -146,19 +146,19 @@ clock time.
 [`predicate(Version)`](../object/predicate(Version).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actionTime`](#actionTime)
 
@@ -172,11 +172,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execAction`](#execAction)[`execSystemAction`](#execSystemAction)[`getInputFile`](#getInputFile)
 
@@ -191,11 +191,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actionTime"></span>
 
@@ -203,19 +203,19 @@ Inherited from `BasicProd` :
 
 [action.t](../file/action.t.html)\[[6661](../source/action.t.html#6661)\]
 
-<div class="desc">
+
 
 system actions consume no game time
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execAction"></span>
 
@@ -223,11 +223,11 @@ system actions consume no game time
 
 [action.t](../file/action.t.html)\[[6614](../source/action.t.html#6614)\]
 
-<div class="desc">
+
 
 execute the action
 
-</div>
+
 
 <span id="execSystemAction"></span>
 
@@ -235,11 +235,11 @@ execute the action
 
 [action.t](../file/action.t.html)\[[6648](../source/action.t.html#6648)\]
 
-<div class="desc">
+
 
 each subclass must override this to perform its actual action
 
-</div>
+
 
 <span id="getInputFile"></span>
 
@@ -247,17 +247,17 @@ each subclass must override this to perform its actual action
 
 [action.t](../file/action.t.html)\[[6655](../source/action.t.html#6655)\]
 
-<div class="desc">
+
 
 Ask for an input file. We call the input manager, which freezes the
 real-time clock, displays the appropriate local file selector dialog,
 and restarts the clock.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

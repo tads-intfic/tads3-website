@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 An action with a literal phrase as its only object, such as "say \<any
 text\>". We'll accept anything as the literal phrase - a number, a
@@ -48,15 +48,15 @@ object.
 
 `class `**`LiteralAction`**` :   `[`LiteralActionBase`](../object/LiteralActionBase.html)[`IAction`](../object/IAction.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`LiteralAction`**  
 [`LiteralActionBase`](../object/LiteralActionBase.html)  
@@ -67,11 +67,11 @@ object.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`LiteralAction`**  
 [`OopsAction`](../object/OopsAction.html)  
@@ -80,19 +80,19 @@ object.
 [`predicate(SpecialTopic)`](../object/predicate(SpecialTopic).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`predicateNounPhrases`](#predicateNounPhrases)[`verbPhrase`](#verbPhrase)
 
@@ -109,11 +109,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getQuestionInf`](#getQuestionInf)[`getVerbPhrase`](#getVerbPhrase)[`resolveNouns`](#resolveNouns)[`whatObj`](#whatObj)
 
@@ -131,11 +131,11 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="predicateNounPhrases"></span>
 
@@ -143,11 +143,11 @@ Inherited from `BasicProd` :
 
 [action.t](../file/action.t.html)\[[5280](../source/action.t.html#5280)\]
 
-<div class="desc">
+
 
 we have a literal phrase as our only noun phrase
 
-</div>
+
 
 <span id="verbPhrase"></span>
 
@@ -155,19 +155,19 @@ we have a literal phrase as our only noun phrase
 
 [en_us.t](../file/en_us.t.html)\[[8987](../source/en_us.t.html#8987)\]
 
-<div class="desc">
+
 
 provide a base verbPhrase, in case an instance leaves it out
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getQuestionInf"></span>
 
@@ -175,11 +175,11 @@ provide a base verbPhrase, in case an instance leaves it out
 
 [en_us.t](../file/en_us.t.html)\[[9002](../source/en_us.t.html#9002)\]
 
-<div class="desc">
+
 
 handle this as though the literal were a direct object phrase
 
-</div>
+
 
 <span id="getVerbPhrase"></span>
 
@@ -187,11 +187,11 @@ handle this as though the literal were a direct object phrase
 
 [en_us.t](../file/en_us.t.html)\[[8996](../source/en_us.t.html#8996)\]
 
-<div class="desc">
+
 
 use the same processing as TAction
 
-</div>
+
 
 <span id="resolveNouns"></span>
 
@@ -199,12 +199,12 @@ use the same processing as TAction
 
 [action.t](../file/action.t.html)\[[5262](../source/action.t.html#5262)\]
 
-<div class="desc">
+
 
 Resolve objects. We don't actually have any objects to resolve, but we
 do have to get the text for the literal phrase.
 
-</div>
+
 
 <span id="whatObj"></span>
 
@@ -212,15 +212,15 @@ do have to get the text for the literal phrase.
 
 [en_us.t](../file/en_us.t.html)\[[8990](../source/en_us.t.html#8990)\]
 
-<div class="desc">
+
 
 get an interrogative word for an object of the action
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

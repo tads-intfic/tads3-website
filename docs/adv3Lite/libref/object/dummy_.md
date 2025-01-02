@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Dummy object to use as a fallback when a parameter can't be identified
 
 **`dummy_`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`dummy_`**  
 [`Thing`](../object/Thing.html)  
@@ -46,11 +46,11 @@ Dummy object to use as a fallback when a parameter can't be identified
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`dummyName`](#dummyName)[`name`](#name)
 
@@ -69,11 +69,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`noteName`](#noteName)
 
@@ -94,11 +94,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="dummyName"></span>
 
@@ -106,11 +106,11 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4117](../source/english.t.html#4117)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="name"></span>
 
@@ -118,19 +118,19 @@ Inherited from `LMentionable` :
 
 [english.t](../file/english.t.html)\[[4118](../source/english.t.html#4118)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="noteName"></span>
 
@@ -139,15 +139,15 @@ Inherited from `LMentionable` :
 [messages.t](../file/messages.t.html)\[[1176](../source/messages.t.html#1176)\],
 [english.t](../file/english.t.html)\[[4119](../source/english.t.html#4119)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

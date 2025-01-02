@@ -113,48 +113,49 @@ current location at the end of every turn. This could be used to drive a
 ShuffledEventList displaying atmospheric messages, as in the following
 example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    hall: Room, ShuffledEventList 'Hall' 'hall'   
-        "&lt;&lt;one of&gt;&gt;At least the fire hasn't reached the ground floor yet. The hall
-        is still blessedly clear of smoke, though you can see the smoke billowing
-        around at the top of the stairs you've just come down. The front door
-        leading out to the safety of the drive is just a few paces to the west -- if
-        only you'd remembered that key! Otherwise all seems normal: \v&lt;&lt;or&gt;&gt;At a
-        less troubled time you'd feel quite proud of this hall. A fine oak staircase
-        sweeps up to the floor above, matching the solid front door that stands just
-        to the west. &lt;&lt;stopping&gt;&gt;The pictures you bought last year look totally
-        oblivious of the flames that might engulf them, and since so far the fire
-        seems confined to the top floor there's nothing blocking your path north to
-        the lounge, east to the kitchen, or south to the study.  "
+<p>`</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hall: Room, ShuffledEventList 'Hall' 'hall'   
+    "&lt;&lt;one of&gt;&gt;At least the fire hasn't reached the ground floor yet. The hall
+    is still blessedly clear of smoke, though you can see the smoke billowing
+    around at the top of the stairs you've just come down. The front door
+    leading out to the safety of the drive is just a few paces to the west -- if
+    only you'd remembered that key! Otherwise all seems normal: \v&lt;&lt;or&gt;&gt;At a
+    less troubled time you'd feel quite proud of this hall. A fine oak staircase
+    sweeps up to the floor above, matching the solid front door that stands just
+    to the west. &lt;&lt;stopping&gt;&gt;The pictures you bought last year look totally
+    oblivious of the flames that might engulf them, and since so far the fire
+    seems confined to the top floor there's nothing blocking your path north to
+    the lounge, east to the kitchen, or south to the study.  "
+    
+    south = study
+    north = lounge
+    east = kitchen
+    up = landing
+    west = frontDoor
+    out asExit(west)
+    
+    roomDaemon  { doScript; }
+    
+    eventList = 
+    [
+        'Wisps of smoke drift down the stairs. ',
         
-        south = study
-        north = lounge
-        east = kitchen
-        up = landing
-        west = frontDoor
-        out asExit(west)
+        'You momentarily catch sight of the smoke billowing at the top of the
+        staircase. ',
         
-        roomDaemon  { doScript; }
+        'There\'s an ominous creak upstairs. ',
         
-        eventList = 
-        [
-            'Wisps of smoke drift down the stairs. ',
-            
-            'You momentarily catch sight of the smoke billowing at the top of the
-            staircase. ',
-            
-            'There\'s an ominous creak upstairs. ',
-            
-            'You fancy you feel a wave of hot air gush about your face. '
-        ]
-        
-        eventReduceTo = 50
-        eventReduceAfter = 6
-        
-        regions = downstairs
-        
-        listenDesc = "There's a disturbing crackling of flames somewhere upstairs. "
-    ;
+        'You fancy you feel a wave of hot air gush about your face. '
+    ]
+    
+    eventReduceTo = 50
+    eventReduceAfter = 6
+    
+    regions = downstairs
+    
+    listenDesc = "There's a disturbing crackling of flames somewhere upstairs. "
+; `
 </code></pre></div></div>
 
 <p>Although the items in an event list are usually single-quoted strings
@@ -186,30 +187,33 @@ single quoted string in this kind of situation if and only if evaluating
 it won’t change the value of anything. So for example, the following
 would all be quite safe:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    eventList = [
-      '&lt;q&gt;What do you think about&lt;&lt;me.hasSeen(mary)&gt;&gt; Mary&lt;&lt;else&gt;&gt; Jane?&lt;&lt;end&gt;&gt; you ask. '
-      
-      '&lt;q&gt;I personally don\'t care for &lt;&lt;oddBloke.theName&gt;&gt; you say. &lt;.inform dislike-oddbloke&gt; '
-    ]
+<p>`
+    eventList = [
+      ‘<q>What do you think about«me.hasSeen(mary)» Mary«else» Jane?«end» you ask. ‘</q></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  '&lt;q&gt;I personally don\'t care for &lt;&lt;oddBloke.theName&gt;&gt; you say. &lt;.inform dislike-oddbloke&gt; '
+] `
 </code></pre></div></div>
 
 <p>But the following most certainly would NOT:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    eventList = [
-       '&lt;q&gt;Tell me about &lt;&lt;one of&gt;&gt; Jane&lt;&lt;or&gt;&gt; Martha&lt;&lt;or&gt;&gt; green cheese&lt;&lt;cycling&gt;&gt;, you request. ',
-       
-       '&lt;q&gt;I have now said this &lt;&lt;++count&gt;&gt; times!&lt;/q&gt; you declare. '
-    ]
+<p>`
+    eventList = [
+       ‘<q>Tell me about «one of» Jane«or» Martha«or» green cheese«cycling», you request. ‘,</q></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   '&lt;q&gt;I have now said this &lt;&lt;++count&gt;&gt; times!&lt;/q&gt; you declare. '
+] `
 </code></pre></div></div>
 
 <p>You can make the second version safe by using anonymous functions in
 place of single-quoted strings:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    eventList = [
-       {: "&lt;q&gt;Tell me about &lt;&lt;one of&gt;&gt; Jane&lt;&lt;or&gt;&gt; Martha&lt;&lt;or&gt;&gt; green cheese&lt;&lt;cycling&gt;&gt;, you request. " },
-       
-       {: "&lt;q&gt;I have now said this &lt;&lt;++count&gt;&gt; times!&lt;/q&gt; you declare. " }
-    ]
+<p>`
+    eventList = [
+       {: “<q>Tell me about «one of» Jane«or» Martha«or» green cheese«cycling», you request. “ },</q></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   {: "&lt;q&gt;I have now said this &lt;&lt;++count&gt;&gt; times!&lt;/q&gt; you declare. " }
+] `
 </code></pre></div></div>
 
 <p>Note that this is far from being the <em>only</em> situation in which you can

@@ -20,21 +20,21 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Show room exits in the status line (used in HTML mode only)
 
 **`statuslineExitLister`**` :   `[`ExitLister`](../object/ExitLister1.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`statuslineExitLister`**  
 [`ExitLister`](../object/ExitLister1.html)  
@@ -42,11 +42,11 @@ Show room exits in the status line (used in HTML mode only)
 `                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`listerShowsDest`](#listerShowsDest)
 
@@ -57,11 +57,11 @@ Inherited from `ExitLister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`showListEmpty`](#showListEmpty)[`showListItem`](#showListItem)[`showListPrefixWide`](#showListPrefixWide)[`showListSeparator`](#showListSeparator)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -73,11 +73,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="listerShowsDest"></span>
 
@@ -85,19 +85,19 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5457](../source/msg_neu.t.html#5457)\]
 
-<div class="desc">
+
 
 this lister does not show destination names
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -105,11 +105,11 @@ this lister does not show destination names
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5432](../source/msg_neu.t.html#5432)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -117,11 +117,11 @@ this lister does not show destination names
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5444](../source/msg_neu.t.html#5444)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -129,11 +129,11 @@ this lister does not show destination names
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5436](../source/msg_neu.t.html#5436)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSeparator"></span>
 
@@ -141,11 +141,11 @@ this lister does not show destination names
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5449](../source/msg_neu.t.html#5449)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -153,15 +153,15 @@ this lister does not show destination names
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5440](../source/msg_neu.t.html#5440)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

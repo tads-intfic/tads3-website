@@ -69,10 +69,11 @@ else that needs to preserve the straight quotes.</p>
 double-quoted string, is to disable and enable the cquotes output filter
 before and after outputting your text, like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cquoteOutputFilter.deactivate();
-    "&lt;FONT name='Verdana'&gt;No curly quotes here!&lt;/FONT&gt;";
+<p>`
+    cquoteOutputFilter.deactivate();
+    “<FONT name="Verdana">No curly quotes here!</FONT>”;
     cquoteOutputFilter.activate();
-</code></pre></div></div>
+`</p>
 
 <p>The library makes use of a number of other output filters which you may
 occasionally find useful in your own game code. The most convenient way
@@ -92,15 +93,17 @@ Return a string containing the captured text.</li>
 
 <p>A simple example of the second of these might be:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      local str = gOutStream( {: "Hello World!" } );
-      
-</code></pre></div></div>
+<p>`
+      local str = gOutStream( {: “Hello World!” } );</p>
+
+<p>`</p>
 
 <p>Which would result in str containing ‘Hello World!’. A more practical
 example might be:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      local str = gOutStream( {: myObj.doSomething() } );
-</code></pre></div></div>
+<p>`
+      local str = gOutStream( {: myObj.doSomething() } );
+`</p>
 
 <p>When we don’t know in advance what output doSomething() will produce.</p>
 
@@ -157,7 +160,7 @@ the Parser to interpret. For this purpose you can use a
 `StringPreParser` and define its **doParsing()**
 method:
 
-```
+`
      myPreParser: StringPreParser
         doParsing(str, which)
         {
@@ -167,7 +170,7 @@ method:
         }
      
      
-```
+`
 
 Here, *str* is the string typed by the player (possibly adjusted by one
 or more previous StringPreParsers). The *which* parameter gives some
@@ -197,7 +200,7 @@ can ignore it. For example, the adv3Lite library defines a
 **commentPreParser** thus (in order to field play-testers' comments on
 beta versions of your game):
 
-```
+`
      /* ------------------------------------------------------------------------ */
     /*
      *   The "comment" pre-parser.  If the command line starts with a special
@@ -287,7 +290,7 @@ beta versions of your game):
          */
         runOrder = 50
      
-```
+`
 
 Note the use of the **runOrder** property to determine the order in
 which this StringPreParser is consulted in relation to any other
@@ -311,7 +314,7 @@ passed to it into something else, here's the
 (its function is to change commands like WHERE'S THE SALT into a form
 like WHERE IS THE SALT, that the parser can more easily understand):
 
-```
+`
     /* 
      *   For queries, turn an apostrophe-s form into the underlying qtype plus is so
      *   that the grammar defined immediately above can be matched.
@@ -339,7 +342,7 @@ like WHERE IS THE SALT, that the parser can more easily understand):
     ;
      
      
-```
+`
 
 &lt;/div&gt;
 

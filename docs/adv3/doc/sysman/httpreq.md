@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> HTTPRequest  
@@ -15,7 +15,7 @@ layout: docs
     <a href="httpsrv.html" class="nav"><em>Next:</em> HTTPServer</a>    
 </span>
 
-</div>
+
 
 
 
@@ -67,7 +67,7 @@ process as long as the server is running.
 
 `endChunkedReply(*headers*?)`
 
-<div class="fdef">
+
 
 Finishes a chunked reply. This tells the client that the last chunk has
 been sent and that the reply is completed.
@@ -89,7 +89,7 @@ the request is completed, and no further reply can be sent.
 
 `getBody()`
 
-<div class="fdef">
+
 
 Returns the unparsed request message body as a [File](file.html) object.
 The file is open with read-only access. The file is open in text mode if
@@ -118,11 +118,11 @@ the message body using the standard HTTP encodings for form fields. The
 unparsed POST body is useful mostly if you're handling requests from
 custom clients that use custom form encodings.
 
-</div>
+
 
 `getClientAddress()`
 
-<div class="fdef">
+
 
 Retrieves the network address of the client making the request. The
 return value is a list:
@@ -132,11 +132,11 @@ return value is a list:
 - \[2\] is an integer giving the network port number on the client
   machine
 
-</div>
+
 
 `getCookie(*name*)`
 
-<div class="fdef">
+
 
 Returns a string containing the value of the cookie identified by the
 given *name* string. This searches the cookies sent by the client with
@@ -144,11 +144,11 @@ the request for the given name; if a cookie with this name is found, its
 text is returned, otherwise the return value is
 `nil`.
 
-</div>
+
 
 `getCookies()`
 
-<div class="fdef">
+
 
 Returns a LookupTable with the HTTP cookies sent by the client with the
 request. Each cookie name is a key in the table, with the cookie text as
@@ -179,13 +179,13 @@ request to the previous request that set the cookie.
 You can find more information on how cookies work in general in many
 HTTP reference materials on the Web.
 
-</div>
+
 
 <span id="getFormFields"></span>
 
 `getFormFields()`
 
-<div class="fdef">
+
 
 Retrieves the values of the data-entry fields for an HTML form submitted
 through the POST verb. This returns a LookupTable containing the field
@@ -264,11 +264,11 @@ latter is typically used only when there are uploaded files. This method
 works the same way regardless of which format is used, so you don't have
 to check before calling it.
 
-</div>
+
 
 `getHeaders()`
 
-<div class="fdef">
+
 
 Returns a LookupTable with the request headers sent by the client.
 Headers are a standard part of HTTP that contain additional information
@@ -289,11 +289,11 @@ contains the verb, the raw query string, and (except for very old
 browsers that predate the first HTTP standard) the protocol version
 identifier.
 
-</div>
+
 
 `getQuery()`
 
-<div class="fdef">
+
 
 Returns a string containing the raw, unparsed query string as sent by
 the client. This is simply the URL (the address that appears in the
@@ -305,11 +305,11 @@ parsing on the string. If there are query parameters following "?", for
 example, they're left in as part of the returned string. "%" sequences
 are also left as-is.
 
-</div>
+
 
 `getQueryParam(*name*)`
 
-<div class="fdef">
+
 
 Parses the query string (the URL, minus the "http://server" portion) and
 searches for the given parameter name. If the specified parameter is
@@ -332,11 +332,11 @@ reuse the table to look up several parameters, since
 `getQueryParam()` repeats the parsing work each
 time it's called.
 
-</div>
+
 
 `getServer()`
 
-<div class="fdef">
+
 
 Returns the [HTTPServer](httpsrv.html) object for the HTTP server that
 received the network request that this HTTPRequest object represents.
@@ -355,11 +355,11 @@ its `getServer()` return value will be
 by making sure that the HTTPServer object remains referenced until you
 explicitly shut it down.
 
-</div>
+
 
 `getVerb()`
 
-<div class="fdef">
+
 
 Returns a string giving the "verb" the client sent with the request. The
 standard verbs ar GET, POST, OPTIONS, HEAD, PUT, DELETE, TRACE, CONNECT,
@@ -374,11 +374,11 @@ submitting an HTML form. The other verbs are not common for Web
 browsers, but can be used by other types of client applications, such as
 WebDAV clients.
 
-</div>
+
 
 `parseQuery()`
 
-<div class="fdef">
+
 
 This method parses the query string (the string returned by
 `getQuery()`) and returns the result. First, it
@@ -416,11 +416,11 @@ we'll get this LookupTable:
     table['d'] = ''
 ```
 
-</div>
+
 
 `setCookie(*name*, *val*)`
 
-<div class="fdef">
+
 
 Sets a cookie to be sent with the reply. *name* is a string giving the
 name of the cookie, and *val* is the text of the cookie.
@@ -487,14 +487,14 @@ overview:
   over unencrypted socket connections (which are vulnerable to
   eavesdropping).
 
-</div>
+
 
 <span id="sendReply"></span>
 
 `sendReply(*body*, *contentType*?, *status*?,
 *headers*?)`
 
-<div class="fdef">
+
 
 Sends your reply to the request.
 
@@ -589,14 +589,14 @@ completing the request on the client side, so the client will know that
 it doesn't have to wait for any more data from the server as part of
 this request.
 
-</div>
+
 
 <span id="sendReplyAsync"></span>
 
 `sendReplyAsync(*body*, *contentType*?, *status*?,
 *headers*?)`
 
-<div class="fdef">
+
 
 This method sends a reply asynchronously - that is, in a background
 thread that runs concurrently with the main program. This works like
@@ -690,11 +690,11 @@ requests, without waiting for the file transfer to finish. The file
 transfer will proceed in the background thread, leaving the main program
 free to respond to new requests.
 
-</div>
+
 
 `sendReplyChunk(*chunk*)`
 
-<div class="fdef">
+
 
 Sends one piece of a "chunked" reply. The *chunk* argument works the
 same way as the *body* argument to
@@ -708,12 +708,12 @@ must call `endChunkedReply()` after sending the
 last chunk for the request. See
 `startChunkedReply()` for more details.
 
-</div>
+
 
 `startChunkedReply(*contentType*, *resultCode*?,
 *headers*?)`
 
-<div class="fdef">
+
 
 Starts sending a "chunked" reply to the request. A chunked reply is one
 that's sent in pieces, rather than all at once. When you use
@@ -747,7 +747,7 @@ headers with `endChunkedReply()`. This is useful
 if some of the headers depend on the content you're going to send, which
 you might not have generated yet.
 
-</div>
+
 
 ## Save, restore, undo
 
@@ -767,11 +767,11 @@ HTTPServer object to go out of scope and be collected by the garbage
 collector. Replying to an aborted request is invalid and will throw a
 NetException error.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -780,4 +780,4 @@ NetException error.
     <a href="httpsrv.html" class="nav"><em>Next:</em> HTTPServer</a>    
 </span>
 
-</div>
+

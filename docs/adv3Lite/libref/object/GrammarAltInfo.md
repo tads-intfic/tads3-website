@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Rule alternative descriptor. This describes one alternative in a grammar
 production. An alternative is one complete list of matchable tokens.
@@ -43,61 +43,61 @@ a GrammarProd object, there's no such thing as parentheses or nested
 
 `class `**`GrammarAltInfo`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GrammarAltInfo`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`gramBadness`](#gramBadness)[`gramMatchObj`](#gramMatchObj)[`gramTokens`](#gramTokens)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="gramBadness"></span>
 
@@ -105,12 +105,12 @@ a GrammarProd object, there's no such thing as parentheses or nested
 
 [gramprod.t](../file/gramprod.t.html)\[[66](../source/gramprod.t.html#66)\]
 
-<div class="desc">
+
 
 The 'badness' value associated with the alternative. A value of zero
 means that there's no badness.
 
-</div>
+
 
 <span id="gramMatchObj"></span>
 
@@ -118,13 +118,13 @@ means that there's no badness.
 
 [gramprod.t](../file/gramprod.t.html)\[[73](../source/gramprod.t.html#73)\]
 
-<div class="desc">
+
 
 the "match object" class - this is the class that
 GrammarProd.parseTokens() instantiates to represent a match to this
 alternative in the match list that the method returns
 
-</div>
+
 
 <span id="gramTokens"></span>
 
@@ -132,20 +132,20 @@ alternative in the match list that the method returns
 
 [gramprod.t](../file/gramprod.t.html)\[[80](../source/gramprod.t.html#80)\]
 
-<div class="desc">
+
 
 The token descriptor list. This is a list of zero or more
 GrammarAltTokInfo objects describing the tokens making up this rule.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -153,7 +153,7 @@ GrammarAltTokInfo objects describing the tokens making up this rule.
 
 [gramprod.t](../file/gramprod.t.html)\[[54](../source/gramprod.t.html#54)\]
 
-<div class="desc">
+
 
 Constructor. GrammarProd.getGrammarInfo() calls this once for each
 alternative making up the production, passing in the values that define
@@ -163,11 +163,11 @@ additional arguments - we won't do anything with the extra arguments,
 but we'll harmlessly ignore them, so code compiled with this library
 version will continue to work correctly.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

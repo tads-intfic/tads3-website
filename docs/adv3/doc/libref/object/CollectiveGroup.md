@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "collective group" object. This is an abstract object: the player
 doesn't think of this as a physically separate object, but rather as a
@@ -110,15 +110,15 @@ we describe the group of individuals appropriately.
 
 `class `**`CollectiveGroup`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`CollectiveGroup`**  
 [`Thing`](../object/Thing.html)  
@@ -126,29 +126,29 @@ we describe the group of individuals appropriately.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`CollectiveGroup`**  
 [`ItemizingCollectiveGroup`](../object/ItemizingCollectiveGroup.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`isListedInContents`](#isListedInContents)[`isListedInInventory`](#isListedInInventory)[`isPlural`](#isPlural)
 
@@ -160,11 +160,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`addToSenseInfoTable`](#addToSenseInfoTable)[`expandPronounList`](#expandPronounList)[`filterResolveList`](#filterResolveList)[`getVisibleIndividuals`](#getVisibleIndividuals)[`isCollectiveAction`](#isCollectiveAction)[`isCollectiveQuant`](#isCollectiveQuant)[`specialPathFrom`](#specialPathFrom)
 
@@ -176,11 +176,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="isListedInContents"></span>
 
@@ -188,14 +188,14 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[1349](../source/objects.t.html#1349)\]
 
-<div class="desc">
+
 
 CollectiveGroup objects are not normally listable in any situations.
 Since a collective group is merely a parser stand-in for its
 individuals, we don't want it to appear as a separate object in the
 game.
 
-</div>
+
 
 <span id="isListedInInventory"></span>
 
@@ -203,11 +203,11 @@ game.
 
 [objects.t](../file/objects.t.html)\[[1350](../source/objects.t.html#1350)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isPlural"></span>
 
@@ -215,19 +215,19 @@ game.
 
 [objects.t](../file/objects.t.html)\[[1125](../source/objects.t.html#1125)\]
 
-<div class="desc">
+
 
 collective group objects are usually named in plural terms
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="addToSenseInfoTable"></span>
 
@@ -235,7 +235,7 @@ collective group objects are usually named in plural terms
 
 [objects.t](../file/objects.t.html)\[[1287](../source/objects.t.html#1287)\]
 
-<div class="desc">
+
 
 When we have no location, we're an abstract object without any physical
 presence in the game world. However, we still want to show up in the
@@ -243,7 +243,7 @@ senses to the same extent our individuals do. To do this, we override
 this method so that we use the same sense data as the most visible (or
 whatever) of our individuals.
 
-</div>
+
 
 <span id="expandPronounList"></span>
 
@@ -251,7 +251,7 @@ whatever) of our individuals.
 
 [objects.t](../file/objects.t.html)\[[1217](../source/objects.t.html#1217)\]
 
-<div class="desc">
+
 
 "Unfilter" a pronoun antecedent list. We'll restore the individuals to
 the list so that we can choose anew, for the new command, whether to
@@ -278,7 +278,7 @@ for PUSH THEM than we'd get for PUSH BUTTONS. That's where this routine
 comes in: by restoring the individuals, we let filterResolveList() make
 the decision about what to keep anew for the pronoun.
 
-</div>
+
 
 <span id="filterResolveList"></span>
 
@@ -286,7 +286,7 @@ the decision about what to keep anew for the pronoun.
 
 [objects.t](../file/objects.t.html)\[[1152](../source/objects.t.html#1152)\]
 
-<div class="desc">
+
 
 Filter a noun phrase resolution list.
 
@@ -309,7 +309,7 @@ of objects is required. When the player explicitly specifies a quantity
 (by a phrase like "the five coins" or "both coins"), we'll assume they
 want to iterate over individuals rather than operate on the collection.
 
-</div>
+
 
 <span id="getVisibleIndividuals"></span>
 
@@ -317,7 +317,7 @@ want to iterate over individuals rather than operate on the collection.
 
 [objects.t](../file/objects.t.html)\[[1266](../source/objects.t.html#1266)\]
 
-<div class="desc">
+
 
 Get a list of the individuals that can be sensed, given the information
 table for the desired sense (for visible items, this can be obtained by
@@ -330,7 +330,7 @@ Note that it's possible for this to return an empty list. The caller can
 deal with this in a description, for example, by indicating that the
 collection cannot be seen.
 
-</div>
+
 
 <span id="isCollectiveAction"></span>
 
@@ -338,12 +338,12 @@ collection cannot be seen.
 
 [objects.t](../file/objects.t.html)\[[1233](../source/objects.t.html#1233)\]
 
-<div class="desc">
+
 
 Check the action to determine if it's one that we want to handle
 collectively. If so, return true; if not, return nil.
 
-</div>
+
 
 <span id="isCollectiveQuant"></span>
 
@@ -351,12 +351,12 @@ collectively. If so, return true; if not, return nil.
 
 [objects.t](../file/objects.t.html)\[[1247](../source/objects.t.html#1247)\]
 
-<div class="desc">
+
 
 Check to see if we're a collective for the given quantity. By default,
 we return true only when no quantity is specified.
 
-</div>
+
 
 <span id="specialPathFrom"></span>
 
@@ -364,16 +364,16 @@ we return true only when no quantity is specified.
 
 [objects.t](../file/objects.t.html)\[[1326](../source/objects.t.html#1326)\]
 
-<div class="desc">
+
 
 When we have no location, we want to create our own special containment
 path, just as we create our own special SenseInfo.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

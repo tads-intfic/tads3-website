@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Real-time daemon. This is an event that occurs repeatedly at given
 real-time intervals. When a daemon is executed, it is scheduled again
@@ -48,15 +48,15 @@ time.
 
 `class `**`RealTimeDaemon`**` :   `[`RealTimeEvent`](../object/RealTimeEvent.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`RealTimeDaemon`**  
 [`RealTimeEvent`](../object/RealTimeEvent.html)  
@@ -64,29 +64,29 @@ time.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`RealTimeDaemon`**  
 [`RealTimeSenseDaemon`](../object/RealTimeSenseDaemon.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`interval_`](#interval_)
 
@@ -98,11 +98,11 @@ Inherited from `BasicEvent` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`executeEvent`](#executeEvent)
 
@@ -114,11 +114,11 @@ Inherited from `BasicEvent` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="interval_"></span>
 
@@ -126,19 +126,19 @@ Inherited from `BasicEvent` :
 
 [events.t](../file/events.t.html)\[[1275](../source/events.t.html#1275)\]
 
-<div class="desc">
+
 
 my execution interval, in milliseconds
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -146,11 +146,11 @@ my execution interval, in milliseconds
 
 [events.t](../file/events.t.html)\[[1238](../source/events.t.html#1238)\]
 
-<div class="desc">
+
 
 Creation. 'interval' is the number of milliseconds between invocations.
 
-</div>
+
 
 <span id="executeEvent"></span>
 
@@ -158,15 +158,15 @@ Creation. 'interval' is the number of milliseconds between invocations.
 
 [events.t](../file/events.t.html)\[[1254](../source/events.t.html#1254)\]
 
-<div class="desc">
+
 
 execute the daemon
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

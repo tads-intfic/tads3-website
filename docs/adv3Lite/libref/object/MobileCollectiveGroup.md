@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A MobileCollectiveGroup is a CollectiveGroup that can be used to
 represent a collection of portable objects, different members of which
@@ -37,15 +37,15 @@ the start of any turn and moved into nil otherwise.
 
 `class `**`MobileCollectiveGroup`**` :   `[`PreinitObject`](../object/PreinitObject.html)[`CollectiveGroup`](../object/CollectiveGroup.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MobileCollectiveGroup`**  
 [`PreinitObject`](../object/PreinitObject.html)  
@@ -62,27 +62,27 @@ the start of any turn and moved into nil otherwise.
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`myDaemon`](#myDaemon)[`myObjs`](#myObjs)
 
@@ -113,11 +113,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`execute`](#execute)[`scopeCheck`](#scopeCheck)
 
@@ -148,11 +148,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="myDaemon"></span>
 
@@ -160,12 +160,12 @@ Inherited from `LMentionable` :
 
 [mobileCollectiveGroup.t](../file/mobileCollectiveGroup.t.html)\[[79](../source/mobileCollectiveGroup.t.html#79)\]
 
-<div class="desc">
+
 
 Store a reference to the Daemon used to update the location of this
 MobileCollectiveGroup. \[MobileCollectiveGroup EXTENSION\]
 
-</div>
+
 
 <span id="myObjs"></span>
 
@@ -173,20 +173,20 @@ MobileCollectiveGroup. \[MobileCollectiveGroup EXTENSION\]
 
 [mobileCollectiveGroup.t](../file/mobileCollectiveGroup.t.html)\[[73](../source/mobileCollectiveGroup.t.html#73)\]
 
-<div class="desc">
+
 
 The list of objects belonging to this MobileCollectiveGroup; this is
 created automatically at PreInit. \[MobileCollectiveGroup EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="execute"></span>
 
@@ -194,11 +194,11 @@ created automatically at PreInit. \[MobileCollectiveGroup EXTENSION\]
 
 [mobileCollectiveGroup.t](../file/mobileCollectiveGroup.t.html)\[[21](../source/mobileCollectiveGroup.t.html#21)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="scopeCheck"></span>
 
@@ -206,18 +206,18 @@ created automatically at PreInit. \[MobileCollectiveGroup EXTENSION\]
 
 [mobileCollectiveGroup.t](../file/mobileCollectiveGroup.t.html)\[[61](../source/mobileCollectiveGroup.t.html#61)\]
 
-<div class="desc">
+
 
 If the player can see more than one of the objects that belong to this
 CollectiveGroup, move it to the player's location (so that it can stand
 in for those objects when required); otherwise move this CollectiveGroup
 out of the way. \[MobileCollectiveGroup EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| T3 VM Technical
 Documentation  
@@ -16,7 +16,7 @@ Project Starter Templates</a>    
 <a href="t3spec/intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
 
-</div>
+
 
 
 
@@ -37,7 +37,7 @@ the sake of their own curiosity, and in rare cases it might even be
 enlightening in practice to understand exactly what's going on inside
 the machine.
 
-<div class="sectoc">
+
 
 [Introduction](t3spec/intro.html)  
 [Design Philosophy](t3spec/philos.html)  
@@ -57,11 +57,11 @@ the machine.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 Technical Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| T3 VM Technical
@@ -71,4 +71,4 @@ Project Starter Templates</a>    
 <a href="t3spec/intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
 
-</div>
+

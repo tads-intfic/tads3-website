@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Keyring - a place to stash keys
 
@@ -50,15 +50,15 @@ immediately.
 
 `class `**`Keyring`**` :   `[`BagOfHolding`](../object/BagOfHolding.html)[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Keyring`**  
 [`BagOfHolding`](../object/BagOfHolding.html)  
@@ -68,27 +68,27 @@ immediately.
 `                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`descContentsLister`](#descContentsLister)[`inlineContentsLister`](#inlineContentsLister)[`moveAfterTake`](#moveAfterTake)
 
@@ -102,11 +102,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`affinityFor`](#affinityFor)[`afterAction`](#afterAction)[`announceDefaultObject`](#announceDefaultObject)[`appendHeldContents`](#appendHeldContents)[`beforeAction`](#beforeAction)[`dobjFor(Take)`](#dobjFor(Take))[`findWorkingKey`](#findWorkingKey)[`getLooseKeys`](#getLooseKeys)[`iobjFor(AttachTo)`](#iobjFor(AttachTo))[`iobjFor(DetachFrom)`](#iobjFor(DetachFrom))[`iobjFor(LockWith)`](#iobjFor(LockWith))[`iobjFor(PutOn)`](#iobjFor(PutOn))[`iobjFor(UnlockWith)`](#iobjFor(UnlockWith))[`isMyKey`](#isMyKey)[`tryPuttingObjInBag`](#tryPuttingObjInBag)
 
@@ -121,11 +121,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="descContentsLister"></span>
 
@@ -133,11 +133,11 @@ Inherited from `VocabObject` :
 
 [extras.t](../file/extras.t.html)\[[1282](../source/extras.t.html#1282)\]
 
-<div class="desc">
+
 
 lister for showing our contents as part of "examine"
 
-</div>
+
 
 <span id="inlineContentsLister"></span>
 
@@ -145,11 +145,11 @@ lister for showing our contents as part of "examine"
 
 [extras.t](../file/extras.t.html)\[[1279](../source/extras.t.html#1279)\]
 
-<div class="desc">
+
 
 lister for showing our contents in-line as part of a list entry
 
-</div>
+
 
 <span id="moveAfterTake"></span>
 
@@ -157,19 +157,19 @@ lister for showing our contents in-line as part of a list entry
 
 [extras.t](../file/extras.t.html)\[[1419](../source/extras.t.html#1419)\]
 
-<div class="desc">
+
 
 flag: consider moving to keyring after this "take" action
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="affinityFor"></span>
 
@@ -177,11 +177,11 @@ flag: consider moving to keyring after this "take" action
 
 [extras.t](../file/extras.t.html)\[[1299](../source/extras.t.html#1299)\]
 
-<div class="desc">
+
 
 we have high affinity for our keys
 
-</div>
+
 
 <span id="afterAction"></span>
 
@@ -189,11 +189,11 @@ we have high affinity for our keys
 
 [extras.t](../file/extras.t.html)\[[1422](../source/extras.t.html#1422)\]
 
-<div class="desc">
+
 
 receive notification after an action
 
-</div>
+
 
 <span id="announceDefaultObject"></span>
 
@@ -201,7 +201,7 @@ receive notification after an action
 
 [extras.t](../file/extras.t.html)\[[1515](../source/extras.t.html#1515)\]
 
-<div class="desc">
+
 
 Announce myself as a default object for an action.
 
@@ -211,7 +211,7 @@ command, we don't actually do the unlocking with the keyring; so, when
 we're chosen as the default, suppress the announcement, since it would
 imply that we're being used to lock or unlock something.
 
-</div>
+
 
 <span id="appendHeldContents"></span>
 
@@ -219,14 +219,14 @@ imply that we're being used to lock or unlock something.
 
 [extras.t](../file/extras.t.html)\[[1499](../source/extras.t.html#1499)\]
 
-<div class="desc">
+
 
 Append my directly-held contents to a vector when I'm directly held. We
 consider all of the keys on the keyring to be effectively at the same
 containment level as the keyring, so if the keyring is held, so are its
 attached keys.
 
-</div>
+
 
 <span id="beforeAction"></span>
 
@@ -234,11 +234,11 @@ attached keys.
 
 [extras.t](../file/extras.t.html)\[[1395](../source/extras.t.html#1395)\]
 
-<div class="desc">
+
 
 receive notification before an action
 
-</div>
+
 
 <span id="dobjFor(Take)"></span>
 
@@ -246,11 +246,11 @@ receive notification before an action
 
 [extras.t](../file/extras.t.html)\[[1319](../source/extras.t.html#1319)\]
 
-<div class="desc">
+
 
 on taking the keyring, attach any loose keys
 
-</div>
+
 
 <span id="findWorkingKey"></span>
 
@@ -258,11 +258,11 @@ on taking the keyring, attach any loose keys
 
 [extras.t](../file/extras.t.html)\[[1469](../source/extras.t.html#1469)\]
 
-<div class="desc">
+
 
 find among our keys a key that works the direct object
 
-</div>
+
 
 <span id="getLooseKeys"></span>
 
@@ -270,13 +270,13 @@ find among our keys a key that works the direct object
 
 [extras.t](../file/extras.t.html)\[[1351](../source/extras.t.html#1351)\]
 
-<div class="desc">
+
 
 Get the loose keys in the given actor's possession. On taking the
 keyring, we'll attach these loose keys to the keyring automatically. By
 default, we return any keys the actor is directly holding.
 
-</div>
+
 
 <span id="iobjFor(AttachTo)"></span>
 
@@ -284,11 +284,11 @@ default, we return any keys the actor is directly holding.
 
 [extras.t](../file/extras.t.html)\[[1389](../source/extras.t.html#1389)\]
 
-<div class="desc">
+
 
 treat "attach x to keyring" as "put x on keyring"
 
-</div>
+
 
 <span id="iobjFor(DetachFrom)"></span>
 
@@ -296,11 +296,11 @@ treat "attach x to keyring" as "put x on keyring"
 
 [extras.t](../file/extras.t.html)\[[1392](../source/extras.t.html#1392)\]
 
-<div class="desc">
+
 
 treat "detach x from keyring" as "take x from keyring"
 
-</div>
+
 
 <span id="iobjFor(LockWith)"></span>
 
@@ -308,12 +308,12 @@ treat "detach x from keyring" as "take x from keyring"
 
 [extras.t](../file/extras.t.html)\[[1534](../source/extras.t.html#1534)\]
 
-<div class="desc">
+
 
 Allow locking or unlocking an object with a keyring. This will
 automatically try each key on the keyring to see if it fits the lock.
 
-</div>
+
 
 <span id="iobjFor(PutOn)"></span>
 
@@ -321,11 +321,11 @@ automatically try each key on the keyring to see if it fits the lock.
 
 [extras.t](../file/extras.t.html)\[[1354](../source/extras.t.html#1354)\]
 
-<div class="desc">
+
 
 allow putting a key on the keyring
 
-</div>
+
 
 <span id="iobjFor(UnlockWith)"></span>
 
@@ -333,13 +333,13 @@ allow putting a key on the keyring
 
 [extras.t](../file/extras.t.html)\[[1609](../source/extras.t.html#1609)\]
 
-<div class="desc">
+
 
 Try finding a working key. If we find one, replace the command with
 'lock \<lock\> with \<key\>, so that we have the full effect of the
 'lock with' command using the key itself.
 
-</div>
+
 
 <span id="isMyKey"></span>
 
@@ -347,7 +347,7 @@ Try finding a working key. If we find one, replace the command with
 
 [extras.t](../file/extras.t.html)\[[1292](../source/extras.t.html#1292)\]
 
-<div class="desc">
+
 
 Determine if a key fits our keyring. By default, we will accept any
 object of class Key. However, subclasses might want to override this to
@@ -355,7 +355,7 @@ associate particular keys with particular keyrings rather than having a
 single generic keyring. To allow only particular keys onto this keyring,
 override this routine to return true only for the desired keys.
 
-</div>
+
 
 <span id="tryPuttingObjInBag"></span>
 
@@ -363,15 +363,15 @@ override this routine to return true only for the desired keys.
 
 [extras.t](../file/extras.t.html)\[[1312](../source/extras.t.html#1312)\]
 
-<div class="desc">
+
 
 implicitly put a key on the keyring
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

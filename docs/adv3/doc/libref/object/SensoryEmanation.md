@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A sensory emanation. This is an intangible object that represents a
 sound, odor, or the like.
 
 `class `**`SensoryEmanation`**` :   `[`Intangible`](../object/Intangible.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SensoryEmanation`**  
 [`Intangible`](../object/Intangible.html)  
@@ -50,11 +50,11 @@ sound, odor, or the like.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SensoryEmanation`**  
 [`Noise`](../object/Noise.html)  
@@ -63,19 +63,19 @@ sound, odor, or the like.
 [`SimpleOdor`](../object/SimpleOdor.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`descWithoutSource`](#descWithoutSource)[`descWithSource`](#descWithSource)[`displayCount`](#displayCount)[`displaySchedule`](#displaySchedule)[`hereWithoutSource`](#hereWithoutSource)[`hereWithSource`](#hereWithSource)[`isAmbient`](#isAmbient)[`isEmanating`](#isEmanating)[`nextDisplayTime`](#nextDisplayTime)[`noiseList`](#noiseList)[`noLongerHere`](#noLongerHere)[`odorList`](#odorList)[`scheduleIndex`](#scheduleIndex)[`sourceDesc`](#sourceDesc)
 
@@ -90,11 +90,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`calcNextDisplayTime`](#calcNextDisplayTime)[`cannotSeeSource`](#cannotSeeSource)[`canSeeSource`](#canSeeSource)[`continueEmanation`](#continueEmanation)[`dobjFor(Examine)`](#dobjFor(Examine))[`emanationHereDesc`](#emanationHereDesc)[`endEmanation`](#endEmanation)[`getSource`](#getSource)[`noteDisplay`](#noteDisplay)[`noteIndirectDisplay`](#noteIndirectDisplay)[`noteSenseChanges`](#noteSenseChanges)[`noteSenseChangesFor`](#noteSenseChangesFor)[`startEmanation`](#startEmanation)
 
@@ -109,11 +109,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="descWithoutSource"></span>
 
@@ -121,11 +121,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[161](../source/objects.t.html#161)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="descWithSource"></span>
 
@@ -133,11 +133,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[160](../source/objects.t.html#160)\]
 
-<div class="desc">
+
 
 our description, with and without being able to see the source
 
-</div>
+
 
 <span id="displayCount"></span>
 
@@ -145,11 +145,11 @@ our description, with and without being able to see the source
 
 [objects.t](../file/objects.t.html)\[[489](../source/objects.t.html#489)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="displaySchedule"></span>
 
@@ -157,7 +157,7 @@ our description, with and without being able to see the source
 
 [objects.t](../file/objects.t.html)\[[246](../source/objects.t.html#246)\]
 
-<div class="desc">
+
 
 The schedule for displaying messages about the emanation. This is a list
 of intervals between messages, in game clock times. When the player
@@ -187,7 +187,7 @@ interval between first sensing the emanation and displaying the first
 repeat the last interval in the list indefinitely. If the last entry in
 the list is nil, though, we simply never produce another message.
 
-</div>
+
 
 <span id="hereWithoutSource"></span>
 
@@ -195,11 +195,11 @@ the list is nil, though, we simply never produce another message.
 
 [objects.t](../file/objects.t.html)\[[194](../source/objects.t.html#194)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="hereWithSource"></span>
 
@@ -207,7 +207,7 @@ the list is nil, though, we simply never produce another message.
 
 [objects.t](../file/objects.t.html)\[[193](../source/objects.t.html#193)\]
 
-<div class="desc">
+
 
 Our "I am here" message, with and without being able to see the source.
 These are displayed in room descriptions, inventory descriptions, and by
@@ -234,7 +234,7 @@ This mimics human perception: we notice a noise or odor most when we
 first hear it, but if it continues for an extended period without
 changing, we'll eventually stop noticing it.
 
-</div>
+
 
 <span id="isAmbient"></span>
 
@@ -242,7 +242,7 @@ changing, we'll eventually stop noticing it.
 
 [objects.t](../file/objects.t.html)\[[213](../source/objects.t.html#213)\]
 
-<div class="desc">
+
 
 Flag: I'm an "ambient" emanation. This means we essentially are part of
 the background, and are not worth mentioning in our own right. If this
@@ -251,7 +251,7 @@ first becomes reachable in its sense. This should be used for background
 noises and the like: we won't ever make an unsolicited mention of them,
 but they'll still show up in explicit 'listen' commands and so on.
 
-</div>
+
 
 <span id="isEmanating"></span>
 
@@ -259,12 +259,12 @@ but they'll still show up in explicit 'listen' commands and so on.
 
 [objects.t](../file/objects.t.html)\[[149](../source/objects.t.html#149)\]
 
-<div class="desc">
+
 
 Are we currently emanating our sensory information? This can be used as
 an on/off switch to control when we're active.
 
-</div>
+
 
 <span id="nextDisplayTime"></span>
 
@@ -272,11 +272,11 @@ an on/off switch to control when we're active.
 
 [objects.t](../file/objects.t.html)\[[486](../source/objects.t.html#486)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noiseList"></span>
 
@@ -284,11 +284,11 @@ an on/off switch to control when we're active.
 
 [objects.t](../file/objects.t.html)\[[487](../source/objects.t.html#487)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="noLongerHere"></span>
 
@@ -296,13 +296,13 @@ an on/off switch to control when we're active.
 
 [objects.t](../file/objects.t.html)\[[202](../source/objects.t.html#202)\]
 
-<div class="desc">
+
 
 A message to display when the emanation ceases to be within sense range.
 In most cases, this displays nothing at all, but some emanations might
 want to note explicitly when the noise/etc stops.
 
-</div>
+
 
 <span id="odorList"></span>
 
@@ -310,11 +310,11 @@ want to note explicitly when the noise/etc stops.
 
 [objects.t](../file/objects.t.html)\[[488](../source/objects.t.html#488)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="scheduleIndex"></span>
 
@@ -322,7 +322,7 @@ want to note explicitly when the noise/etc stops.
 
 [objects.t](../file/objects.t.html)\[[485](../source/objects.t.html#485)\]
 
-<div class="desc">
+
 
 Internal counters that keep track of our display scheduling.
 scheduleIndex is the index in the displaySchedule list of the interval
@@ -332,7 +332,7 @@ the sound and smell senses, respectively, indicating which objects were
 within sense range on the last turn. displayCount is the number of times
 in a row we've displayed a message already.
 
-</div>
+
 
 <span id="sourceDesc"></span>
 
@@ -340,22 +340,22 @@ in a row we've displayed a message already.
 
 [objects.t](../file/objects.t.html)\[[157](../source/objects.t.html#157)\]
 
-<div class="desc">
+
 
 The description shown when the \*source\* is examined (with "listen to",
 "smell", or whatever verb is appropriate to the type of sense the
 subclass involves). This will also be appended to the regular "examine"
 description, if we're not marked as ambient.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="calcNextDisplayTime"></span>
 
@@ -363,12 +363,12 @@ description, if we're not marked as ambient.
 
 [objects.t](../file/objects.t.html)\[[440](../source/objects.t.html#440)\]
 
-<div class="desc">
+
 
 Calculate our next display time. The caller must set our scheduleIndex
 to the correct index prior to calling this.
 
-</div>
+
 
 <span id="cannotSeeSource"></span>
 
@@ -376,13 +376,13 @@ to the correct index prior to calling this.
 
 [objects.t](../file/objects.t.html)\[[292](../source/objects.t.html#292)\]
 
-<div class="desc">
+
 
 Show a message describing that we cannot see the source of this
 emanation because the given obstructor is in the way. This should be
 overridden for each subclass.
 
-</div>
+
 
 <span id="canSeeSource"></span>
 
@@ -390,11 +390,11 @@ overridden for each subclass.
 
 [objects.t](../file/objects.t.html)\[[306](../source/objects.t.html#306)\]
 
-<div class="desc">
+
 
 determine if our source is apparent and visible
 
-</div>
+
 
 <span id="continueEmanation"></span>
 
@@ -402,13 +402,13 @@ determine if our source is apparent and visible
 
 [objects.t](../file/objects.t.html)\[[394](../source/objects.t.html#394)\]
 
-<div class="desc">
+
 
 Continue the emanation. This is called on each turn in which the
 emanation remains continuously within sense range of the player
 character.
 
-</div>
+
 
 <span id="dobjFor(Examine)"></span>
 
@@ -416,13 +416,13 @@ character.
 
 [objects.t](../file/objects.t.html)\[[595](../source/objects.t.html#595)\]
 
-<div class="desc">
+
 
 Examine the sensory emanation. We'll show our descWithSource or
 descWithoutSource, according to whether or not we can see the source
 object.
 
-</div>
+
 
 <span id="emanationHereDesc"></span>
 
@@ -430,14 +430,14 @@ object.
 
 [objects.t](../file/objects.t.html)\[[254](../source/objects.t.html#254)\]
 
-<div class="desc">
+
 
 Show our "I am here" description. This is the description shown as part
 of our room's description. We show our hereWithSource or
 hereWithoutSource message, according to whether or not we can see the
 source object.
 
-</div>
+
 
 <span id="endEmanation"></span>
 
@@ -445,12 +445,12 @@ source object.
 
 [objects.t](../file/objects.t.html)\[[423](../source/objects.t.html#423)\]
 
-<div class="desc">
+
 
 End the emanation. This is called when the player character can no
 longer sense the emanation.
 
-</div>
+
 
 <span id="getSource"></span>
 
@@ -458,7 +458,7 @@ longer sense the emanation.
 
 [objects.t](../file/objects.t.html)\[[303](../source/objects.t.html#303)\]
 
-<div class="desc">
+
 
 Get the source of the noise/odor/whatever, as perceived by the current
 actor. This is the object we appear to be coming from. By default, an
@@ -467,7 +467,7 @@ apparent to actors, so we'll simply return our direct container.
 
 If the source is not apparent, this should simply return nil.
 
-</div>
+
 
 <span id="noteDisplay"></span>
 
@@ -475,7 +475,7 @@ If the source is not apparent, this should simply return nil.
 
 [objects.t](../file/objects.t.html)\[[333](../source/objects.t.html#333)\]
 
-<div class="desc">
+
 
 Note that we're displaying a message about the emanation. This method
 should be called any time a message about the emanation is displayed,
@@ -487,7 +487,7 @@ message about this object. Note we do not advance through the schedule
 list; instead, we merely delay any further message by the interval at
 the current point in the schedule list.
 
-</div>
+
 
 <span id="noteIndirectDisplay"></span>
 
@@ -495,7 +495,7 @@ the current point in the schedule list.
 
 [objects.t](../file/objects.t.html)\[[355](../source/objects.t.html#355)\]
 
-<div class="desc">
+
 
 Note an indirect message about the emanation. This can be used when we
 don't actually display a message ourselves, but another object (usually
@@ -505,7 +505,7 @@ call this method to let us know we have been described indirectly. This
 method advances our next display time, just as noteDisplay() does, but
 this method doesn't count the display as a direct display.
 
-</div>
+
 
 <span id="noteSenseChanges"></span>
 
@@ -513,14 +513,14 @@ this method doesn't count the display as a direct display.
 
 [objects.t](../file/objects.t.html)\[[497](../source/objects.t.html#497)\]
 
-<div class="desc">
+
 
 Class method implementing the sensory change daemon. This runs on each
 turn to check for changes in the set of objects the player can hear and
 smell, and to generate "still here" messages for objects continuously
 within sense range for multiple turns.
 
-</div>
+
 
 <span id="noteSenseChangesFor"></span>
 
@@ -528,14 +528,14 @@ within sense range for multiple turns.
 
 [objects.t](../file/objects.t.html)\[[519](../source/objects.t.html#519)\]
 
-<div class="desc">
+
 
 Note sense changes for a particular sense. 'listProp' is the property of
 SensoryEmanation giving the list of SenseInfo entries for the sense on
 the previous turn. 'sub' is a subclass of ours (such as Noise) giving
 the type of sensory emanation used for this sense.
 
-</div>
+
 
 <span id="startEmanation"></span>
 
@@ -543,18 +543,18 @@ the type of sensory emanation used for this sense.
 
 [objects.t](../file/objects.t.html)\[[368](../source/objects.t.html#368)\]
 
-<div class="desc">
+
 
 Begin the emanation. This is called from the sense change daemon when
 the item first becomes noticeable to the player character - for example,
 when the player character first enters the room containing the
 emanation, or when the emanation is first activated.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

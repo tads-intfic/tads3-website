@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 We define SensoryEmanation to be the base class for Odor and Noise. It
 doesn't add any functionality here, but makes it possible for the
@@ -40,15 +40,15 @@ as smells and noises. \[MODIFIED FOR SENSORY EXTENSION\]
 
 `class `**`SensoryEmanation`**` :   `[`Decoration`](../object/Decoration.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SensoryEmanation`**  
 [`Decoration`](../object/Decoration.html)  
@@ -62,11 +62,11 @@ as smells and noises. \[MODIFIED FOR SENSORY EXTENSION\]
 `                                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`SensoryEmanation`**  
 [`Noise`](../object/Noise.html)  
@@ -75,19 +75,19 @@ as smells and noises. \[MODIFIED FOR SENSORY EXTENSION\]
 [`SimpleOdor`](../object/SimpleOdor.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`descWithoutSource`](#descWithoutSource)[`descWithSource`](#descWithSource)[`emanationState`](#emanationState)[`isEmanating`](#isEmanating)[`isHidden`](#isHidden)[`lastEmanationTime`](#lastEmanationTime)[`notImportantMsg`](#notImportantMsg)[`schedule`](#schedule)[`scheduleState`](#scheduleState)
 
@@ -112,11 +112,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`emanate`](#emanate)[`emanationDesc`](#emanationDesc)[`hideFromAll`](#hideFromAll)[`reset`](#reset)
 
@@ -141,11 +141,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="descWithoutSource"></span>
 
@@ -153,12 +153,12 @@ Inherited from `LMentionable` :
 
 [sensory.t](../file/sensory.t.html)\[[66](../source/sensory.t.html#66)\]
 
-<div class="desc">
+
 
 Our description when the player character can't see our source \[DEFINED
 IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="descWithSource"></span>
 
@@ -166,12 +166,12 @@ IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[60](../source/sensory.t.html#60)\]
 
-<div class="desc">
+
 
 Our description when the player character can see our source \[DEFINED
 IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="emanationState"></span>
 
@@ -179,12 +179,12 @@ IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[137](../source/sensory.t.html#137)\]
 
-<div class="desc">
+
 
 A counter to keep track of when we're next due to display an emanation
 message \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="isEmanating"></span>
 
@@ -192,12 +192,12 @@ message \[DEFINED IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[72](../source/sensory.t.html#72)\]
 
-<div class="desc">
+
 
 Are we actually emanating? We may not be if something stops us, e.g.
 breaking a ticking clock \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="isHidden"></span>
 
@@ -205,12 +205,12 @@ breaking a ticking clock \[DEFINED IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[78](../source/sensory.t.html#78)\]
 
-<div class="desc">
+
 
 If we're not emanating we can't be sensed at all, so we're hidden
 \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="lastEmanationTime"></span>
 
@@ -218,12 +218,12 @@ If we're not emanating we can't be sensed at all, so we're hidden
 
 [sensory.t](../file/sensory.t.html)\[[149](../source/sensory.t.html#149)\]
 
-<div class="desc">
+
 
 The last time we emanated, relevant to when we started emanating
 \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="notImportantMsg"></span>
 
@@ -231,12 +231,12 @@ The last time we emanated, relevant to when we started emanating
 
 [sensory.t](../file/sensory.t.html)\[[178](../source/sensory.t.html#178)\]
 
-<div class="desc">
+
 
 The message to display when the player tries to do something with us
 other than sense us. \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="schedule"></span>
 
@@ -244,7 +244,7 @@ other than sense us. \[DEFINED IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[161](../source/sensory.t.html#161)\]
 
-<div class="desc">
+
 
 Our emanation schedule. If this is just nil we won't show any emanation
 meessages at all. Otherwise this should be a list of numbers. The first
@@ -255,7 +255,7 @@ the list is nil we stop showing emanation messages. This can be used to
 reduce the frequency of messages to model the player character becoming
 less aware of us. \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="scheduleState"></span>
 
@@ -263,20 +263,20 @@ less aware of us. \[DEFINED IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[143](../source/sensory.t.html#143)\]
 
-<div class="desc">
+
 
 A counter to keep track of where we are in our emanation schedule.
 \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="emanate"></span>
 
@@ -284,14 +284,14 @@ A counter to keep track of where we are in our emanation schedule.
 
 [sensory.t](../file/sensory.t.html)\[[86](../source/sensory.t.html#86)\]
 
-<div class="desc">
+
 
 The emanate method is called on each turn that the player character can
 sense us, and can be used to display a message announcing our presence,
 such as "There's an awful stink here" or "A loud ticking noise comes
 from somewhere. " \[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="emanationDesc"></span>
 
@@ -299,12 +299,12 @@ from somewhere. " \[DEFINED IN SENSORY EXTENSION\]
 
 [sensory.t](../file/sensory.t.html)\[[131](../source/sensory.t.html#131)\]
 
-<div class="desc">
+
 
 The message to display to announce our presence. This is overridden on
 our subclasses.\[DEFINED IN SENSORY EXTENSION\]
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -312,12 +312,12 @@ our subclasses.\[DEFINED IN SENSORY EXTENSION\]
 
 [extras.t](../file/extras.t.html)\[[37](../source/extras.t.html#37)\]
 
-<div class="desc">
+
 
 There's no point in including a SensoryEmanation in any command applying
 to ALL unless the command is one of our decoration actions.
 
-</div>
+
 
 <span id="reset"></span>
 
@@ -325,16 +325,16 @@ to ALL unless the command is one of our decoration actions.
 
 [sensory.t](../file/sensory.t.html)\[[164](../source/sensory.t.html#164)\]
 
-<div class="desc">
+
 
 Reset all out counters to their initial states \[DEFINED IN SENSORY
 EXTENSION\]
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

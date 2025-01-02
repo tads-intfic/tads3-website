@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Topic Groups  
@@ -16,7 +16,7 @@ layout: docs
 <a href="convnode.html" class="nav"><em>Next:</em> Conversation Nodes</a>
     </span>
 
-</div>
+
 
 
 
@@ -51,7 +51,7 @@ The TopicGroup template is defined as `+scoreBoost?
 convKeys properties can be readily defined through the template.
 Consider the following example:
 
-`
+```
     + TopicGroup +10 'alice-info'
        isActive = gRevealed('alice')
     ;
@@ -66,7 +66,7 @@ Consider the following example:
        "<q>Where did you hear about this Alice person?</q> you enquire. 
         <q>From the old vicar,</q> he tells you. "
     ;
-`
+```
 
 This adds the 'alice-info' convKey to both the TopicEntries defined
 above, and ensures that they are only active when the 'alice' tag has
@@ -78,7 +78,7 @@ another when the player types a partial query like WHERE HEAR).
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -88,4 +88,4 @@ another when the player types a partial query like WHERE HEAR).
 <a href="convnode.html" class="nav"><em>Next:</em> Conversation Nodes</a>
     </span>
 
-</div>
+

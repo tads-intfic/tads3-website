@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Occluder: this is a mix-in class that can be used with multiple
 inheritance to combine with other classes (such as SenseConnector, or
@@ -59,69 +59,69 @@ occlude.
 
 `class `**`Occluder`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Occluder`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`clearSenseInfo`](#clearSenseInfo)[`finishSensePath`](#finishSensePath)[`occludeObj`](#occludeObj)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="clearSenseInfo"></span>
 
@@ -129,13 +129,13 @@ occlude.
 
 [sense.t](../file/sense.t.html)\[[712](../source/sense.t.html#712)\]
 
-<div class="desc">
+
 
 When we initialize for the sense path calculation, register to receive
 notification after we've finished building the sense table. We'll use
 the notification to remove any occluded objects from the sense table.
 
-</div>
+
 
 <span id="finishSensePath"></span>
 
@@ -143,7 +143,7 @@ the notification to remove any occluded objects from the sense table.
 
 [sense.t](../file/sense.t.html)\[[735](../source/sense.t.html#735)\]
 
-<div class="desc">
+
 
 Receive notification that the sense path calculation is now finished.
 'objs' is a LookupTable containing all of the objects involved in the
@@ -158,7 +158,7 @@ the table and test each object using our occlusion rule. If we find that
 we do occlude an object, we'll set its transparency to 'opaque' to
 indicate that it cannot be seen.
 
-</div>
+
 
 <span id="occludeObj"></span>
 
@@ -166,18 +166,18 @@ indicate that it cannot be seen.
 
 [sense.t](../file/sense.t.html)\[[700](../source/sense.t.html#700)\]
 
-<div class="desc">
+
 
 Do we occlude the given object, in the given sense and from the given
 point of view? This returns true if the object is occluded, nil if not.
 By default, we simply ask the object whether it's occluded by this
 occluder from the given POV.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

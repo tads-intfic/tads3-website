@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A "nearby" attachable is a subclass of Attachable that adds a
 requirement that the attached objects be in a given location. By
@@ -44,42 +44,42 @@ is being moved away from the other's immediate container.
 
 `class `**`NearbyAttachable`**` :   `[`Attachable`](../object/Attachable.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`NearbyAttachable`**  
 [`Attachable`](../object/Attachable.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -88,11 +88,11 @@ Inherited from `Attachable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(AttachTo)`](#dobjFor(AttachTo))[`getNearbyAttachmentLocs`](#getNearbyAttachmentLocs)[`iobjFor(AttachTo)`](#iobjFor(AttachTo))[`moveWhileAttached`](#moveWhileAttached)[`nestedDetachFrom`](#nestedDetachFrom)
 
@@ -101,19 +101,19 @@ Inherited from `Attachable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(AttachTo)"></span>
 
@@ -121,11 +121,11 @@ Inherited from `Attachable` :
 
 [extras.t](../file/extras.t.html)\[[3312](../source/extras.t.html#3312)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="getNearbyAttachmentLocs"></span>
 
@@ -133,7 +133,7 @@ Inherited from `Attachable` :
 
 [extras.t](../file/extras.t.html)\[[3347](../source/extras.t.html#3347)\]
 
-<div class="desc">
+
 
 Get the target locations for attaching to the given other object. The
 "target locations" are the locations where the objects are required to
@@ -157,7 +157,7 @@ target location for both objects. However, if the other object is
 non-portable, we'll choose its immediate location instead, since we
 obviously can't move it to our container.
 
-</div>
+
 
 <span id="iobjFor(AttachTo)"></span>
 
@@ -165,11 +165,11 @@ obviously can't move it to our container.
 
 [extras.t](../file/extras.t.html)\[[3317](../source/extras.t.html#3317)\]
 
-<div class="desc">
+
 
 require that the objects be in the negotiated locations
 
-</div>
+
 
 <span id="moveWhileAttached"></span>
 
@@ -177,11 +177,11 @@ require that the objects be in the negotiated locations
 
 [extras.t](../file/extras.t.html)\[[3373](../source/extras.t.html#3373)\]
 
-<div class="desc">
+
 
 when an attached object is being moved, detach the objects
 
-</div>
+
 
 <span id="nestedDetachFrom"></span>
 
@@ -189,15 +189,15 @@ when an attached object is being moved, detach the objects
 
 [extras.t](../file/extras.t.html)\[[3404](../source/extras.t.html#3404)\]
 
-<div class="desc">
+
 
 perform a nested DetachFrom action on the given object
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

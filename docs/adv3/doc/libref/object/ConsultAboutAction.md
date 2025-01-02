@@ -26,22 +26,22 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 *no description available*
 
 `DefineTopicTAction(ConsultAbout, IndirectObject)      `*`// original source text`*  
 `class `**`ConsultAboutAction`**` :   `[`TopicTAction`](../object/TopicTAction.html)*`// after macro expansion`*
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ConsultAboutAction`**  
 [`TopicTAction`](../object/TopicTAction.html)  
@@ -55,30 +55,30 @@ Details](#_Methods_)
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ConsultAboutAction`**  
 [`predicate(ConsultAbout)`](../object/predicate(ConsultAbout).html)  
 [`predicate(ConsultWhatAbout)`](../object/predicate(ConsultWhatAbout).html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -102,11 +102,11 @@ Inherited from `Resolver` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterTopic`](#filterTopic)[`getDefaultDobj`](#getDefaultDobj)
 
@@ -130,19 +130,19 @@ Inherited from `Resolver` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterTopic"></span>
 
@@ -150,12 +150,12 @@ Inherited from `Resolver` :
 
 [actions.t](../file/actions.t.html)\[[2414](../source/actions.t.html#2414)\]
 
-<div class="desc">
+
 
 Filter the topic phrase resolution. If we know our direct object, and
 it's a Consultable, refer the resolution to the Consultable.
 
-</div>
+
 
 <span id="getDefaultDobj"></span>
 
@@ -163,15 +163,15 @@ it's a Consultable, refer the resolution to the Consultable.
 
 [actions.t](../file/actions.t.html)\[[2396](../source/actions.t.html#2396)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

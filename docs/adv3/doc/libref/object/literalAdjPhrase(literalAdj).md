@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 In many cases, we might want to write what is semantically a literal
 string qualifier without the quotes. For example, we might want to refer
@@ -31,15 +31,15 @@ same way we'd match them if they were quoted.
 
 `grammar `<span class="gramalt">[`literalAdjPhrase`](../object/literalAdjPhrase.html)`(literalAdj)`</span>` :   `[`AdjPhraseWithVocab`](../object/AdjPhraseWithVocab.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`literalAdjPhrase(literalAdj)`**  
 [`AdjPhraseWithVocab`](../object/AdjPhraseWithVocab.html)  
@@ -49,11 +49,11 @@ same way we'd match them if they were quoted.
 `                                         object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -70,11 +70,11 @@ Inherited from `BasicProd` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getAdjustedTokens`](#getAdjustedTokens)[`getVocabMatchList`](#getVocabMatchList)
 
@@ -92,19 +92,19 @@ Inherited from `BasicProd` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getAdjustedTokens"></span>
 
@@ -112,11 +112,11 @@ Inherited from `BasicProd` :
 
 [en_us.t](../file/en_us.t.html)\[[6574](../source/en_us.t.html#6574)\]
 
-<div class="desc">
+
 
 return the result
 
-</div>
+
 
 <span id="getVocabMatchList"></span>
 
@@ -124,15 +124,15 @@ return the result
 
 [en_us.t](../file/en_us.t.html)\[[6552](../source/en_us.t.html#6552)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

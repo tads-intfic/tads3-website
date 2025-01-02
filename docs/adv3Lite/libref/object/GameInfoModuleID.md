@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A module ID with GameInfo metadata. The GameInfo metadata format is the
 standard TADS format for descriptive data about the game. The usual way
@@ -41,15 +41,15 @@ game, among other things.
 
 `class `**`GameInfoModuleID`**` :   `[`MetadataModuleID`](../object/MetadataModuleID.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`GameInfoModuleID`**  
 [`MetadataModuleID`](../object/MetadataModuleID.html)  
@@ -60,29 +60,29 @@ game, among other things.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`GameInfoModuleID`**  
 [`GameID`](../object/GameID.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`authorEmail`](#authorEmail)[`copyingRules`](#copyingRules)[`desc`](#desc)[`firstPublished`](#firstPublished)[`forgivenessLevel`](#forgivenessLevel)[`gameInfoFilename`](#gameInfoFilename)[`gameUrl`](#gameUrl)[`genreName`](#genreName)[`headline`](#headline)[`htmlDesc`](#htmlDesc)[`IFID`](#IFID)[`languageCode`](#languageCode)[`licenseType`](#licenseType)[`metadataKeys`](#metadataKeys)[`presentationProfile`](#presentationProfile)[`releaseDate`](#releaseDate)[`seriesName`](#seriesName)[`seriesNumber`](#seriesNumber)
 
@@ -99,11 +99,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getGameInfoToday`](#getGameInfoToday)[`writeMetadataFile`](#writeMetadataFile)
 
@@ -120,11 +120,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="authorEmail"></span>
 
@@ -132,7 +132,7 @@ Inherited from `ModuleExecObject` :
 
 [modid.t](../file/modid.t.html)\[[318](../source/modid.t.html#318)\]
 
-<div class="desc">
+
 
 The names and email addresses of the authors, in GameInfo format. This
 list must use the following format:
@@ -147,7 +147,7 @@ addresses, enclosing each in angle brackets. Repeat as needed for
 additional authors. The list does not need to end with a semicolon;
 semicolons are merely used to separate entries.
 
-</div>
+
 
 <span id="copyingRules"></span>
 
@@ -155,7 +155,7 @@ semicolons are merely used to separate entries.
 
 [modid.t](../file/modid.t.html)\[[417](../source/modid.t.html#417)\]
 
-<div class="desc">
+
 
 The copying rules for this game. Most text games these days are released
 as freeware with minimal restrictions on copying, so we use a default of
@@ -180,7 +180,7 @@ LICENSE.TXT file that you distribute with your game, or in the text of
 the game itself (displayed by a LICENSE or COPYRIGHT command, for
 example).
 
-</div>
+
 
 <span id="desc"></span>
 
@@ -188,13 +188,13 @@ example).
 
 [modid.t](../file/modid.t.html)\[[332](../source/modid.t.html#332)\]
 
-<div class="desc">
+
 
 Descriptive text for the game, in plain text format. This is a short
 description that can be used, for example, in a catalog of games. This
 should be a couple of sentences or so.
 
-</div>
+
 
 <span id="firstPublished"></span>
 
@@ -202,7 +202,7 @@ should be a couple of sentences or so.
 
 [modid.t](../file/modid.t.html)\[[362](../source/modid.t.html#362)\]
 
-<div class="desc">
+
 
 The date of first publication. This can be just a year in YYYY format,
 or a full YYYY-MM-DD date. This is the original release date of the
@@ -210,7 +210,7 @@ original version of the game, which is often of interest to archivists.
 This should \*not\* be updated when a new release is made - it's always
 the date of \*original\* publication.
 
-</div>
+
 
 <span id="forgivenessLevel"></span>
 
@@ -218,14 +218,14 @@ the date of \*original\* publication.
 
 [modid.t](../file/modid.t.html)\[[301](../source/modid.t.html#301)\]
 
-<div class="desc">
+
 
 The forgiveness level, according to the Zarfian scale propounded by
 Andrew Plotkin on rec.arts.int-fiction. This must be one of these terms,
 using the exact capitalization shown: Merciful, Polite, Tough, Nasty,
 Cruel.
 
-</div>
+
 
 <span id="gameInfoFilename"></span>
 
@@ -233,12 +233,12 @@ Cruel.
 
 [modid.t](../file/modid.t.html)\[[471](../source/modid.t.html#471)\]
 
-<div class="desc">
+
 
 the GameInfo filename - by default, we write the standard gameinfo.txt
 file
 
-</div>
+
 
 <span id="gameUrl"></span>
 
@@ -246,13 +246,13 @@ file
 
 [modid.t](../file/modid.t.html)\[[325](../source/modid.t.html#325)\]
 
-<div class="desc">
+
 
 The game's web site, if any. If specified, this must be an absolute URL
 with http protocol - that is, it must be of the form
 "http://mydomain.com/...".
 
-</div>
+
 
 <span id="genreName"></span>
 
@@ -260,7 +260,7 @@ with http protocol - that is, it must be of the form
 
 [modid.t](../file/modid.t.html)\[[293](../source/modid.t.html#293)\]
 
-<div class="desc">
+
 
 The genre of the game. Some games don't fit any particular genre, and
 some authors just don't like the idea of having to pigeonhole their
@@ -270,7 +270,7 @@ you keep this short - one word, maybe two - and use a genre name that's
 generally recognized as such. You might want to use Baf's Guide as a
 reference (http://www.wurb.com/if/genre).
 
-</div>
+
 
 <span id="headline"></span>
 
@@ -278,13 +278,13 @@ reference (http://www.wurb.com/if/genre).
 
 [modid.t](../file/modid.t.html)\[[269](../source/modid.t.html#269)\]
 
-<div class="desc">
+
 
 The game's headline. It's become an IF tradition to use a quasi-subtitle
 of the sort that Infocom used, of the form "An Interactive Mystery."
 This can be used to define that subtitle.
 
-</div>
+
 
 <span id="htmlDesc"></span>
 
@@ -292,7 +292,7 @@ This can be used to define that subtitle.
 
 [modid.t](../file/modid.t.html)\[[344](../source/modid.t.html#344)\]
 
-<div class="desc">
+
 
 Descriptive text for the game, as an HTML fragment. This should have the
 same information as the 'desc', but this version can use HTML markups
@@ -302,7 +302,7 @@ text. Any HTML markups should be "in-line" body elements only, not
 larger HTML document. For example, markups like \<i\> and \<b\> are
 fine, but \<p\> and \<table\> should not be used.
 
-</div>
+
 
 <span id="IFID"></span>
 
@@ -310,7 +310,7 @@ fine, but \<p\> and \<table\> should not be used.
 
 [modid.t](../file/modid.t.html)\[[262](../source/modid.t.html#262)\]
 
-<div class="desc">
+
 
 The IFID - this is a UUID uniquely identifying the game, using the
 standard UUID format (xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx, where each 'x'
@@ -345,7 +345,7 @@ explicit IFID list supersedes the implied IFID.) See the Babel spec for
 more information, and for instructions on how to calculate the implied
 IFID for a TADS game that was released without a UUID-style IFID.
 
-</div>
+
 
 <span id="languageCode"></span>
 
@@ -353,7 +353,7 @@ IFID for a TADS game that was released without a UUID-style IFID.
 
 [modid.t](../file/modid.t.html)\[[372](../source/modid.t.html#372)\]
 
-<div class="desc">
+
 
 The language in which this game's text is written. This is the RFC3066
 language code for the main language of the work. For example, games
@@ -361,7 +361,7 @@ written in US English would use 'en-US', while games written in British
 English would use 'en-GB'. Note that each language-specific library
 module should use 'modify' to set this to the default for the library.
 
-</div>
+
 
 <span id="licenseType"></span>
 
@@ -369,7 +369,7 @@ module should use 'modify' to set this to the default for the library.
 
 [modid.t](../file/modid.t.html)\[[389](../source/modid.t.html#389)\]
 
-<div class="desc">
+
 
 The license type for this game. Most text IF games these days are
 released as freeware, so we use this as the default. The GameInfo
@@ -385,7 +385,7 @@ any of the author's rights to set specific license terms. Even so, we
 recommend that you pick an appropriate value here to avoid any
 confusion.
 
-</div>
+
 
 <span id="metadataKeys"></span>
 
@@ -393,14 +393,14 @@ confusion.
 
 [modid.t](../file/modid.t.html)\[[479](../source/modid.t.html#479)\]
 
-<div class="desc">
+
 
 The metadata key mappings. This is a list of key/property pairs. The key
 in each pair is a string giving a standard GameInfo key name, and the
 property gives the property (of self) that we evaluate to get the string
 value for that key.
 
-</div>
+
 
 <span id="presentationProfile"></span>
 
@@ -408,14 +408,14 @@ value for that key.
 
 [modid.t](../file/modid.t.html)\[[425](../source/modid.t.html#425)\]
 
-<div class="desc">
+
 
 The recommended "presentation profile" for the game. 'Default' means
 that the interpreter's default profile should be used. (Some
 interpreters let the user select which profile to use as the default, in
 which case 'Default' means we'll use that profile.)
 
-</div>
+
 
 <span id="releaseDate"></span>
 
@@ -423,7 +423,7 @@ which case 'Default' means we'll use that profile.)
 
 [modid.t](../file/modid.t.html)\[[353](../source/modid.t.html#353)\]
 
-<div class="desc">
+
 
 The release date. By default, we compute this statically to be today's
 date. This means this will be set to the date of compilation. If the
@@ -431,7 +431,7 @@ game wishes to override this, note that the GameInfo format requires
 this to be of the form YYYY-MM-DD. For example, December 9, 2001 would
 be '2001-12-09'.
 
-</div>
+
 
 <span id="seriesName"></span>
 
@@ -439,7 +439,7 @@ be '2001-12-09'.
 
 [modid.t](../file/modid.t.html)\[[281](../source/modid.t.html#281)\]
 
-<div class="desc">
+
 
 If this game is part of a series, such as a trilogy, these can be used
 to identify the name of the series and the position in the series. The
@@ -449,7 +449,7 @@ giving the position in the series. Note that the series number isn't
 required even if a series name is specified, since some series are just
 groups of works without any particular ordering.
 
-</div>
+
 
 <span id="seriesNumber"></span>
 
@@ -457,19 +457,19 @@ groups of works without any particular ordering.
 
 [modid.t](../file/modid.t.html)\[[282](../source/modid.t.html#282)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getGameInfoToday"></span>
 
@@ -477,11 +477,11 @@ groups of works without any particular ordering.
 
 [modid.t](../file/modid.t.html)\[[507](../source/modid.t.html#507)\]
 
-<div class="desc">
+
 
 get today's date, using the GameInfo standard date format (YYYY-MM-DD)
 
-</div>
+
 
 <span id="writeMetadataFile"></span>
 
@@ -489,15 +489,15 @@ get today's date, using the GameInfo standard date format (YYYY-MM-DD)
 
 [modid.t](../file/modid.t.html)\[[428](../source/modid.t.html#428)\]
 
-<div class="desc">
+
 
 write our metadata file
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

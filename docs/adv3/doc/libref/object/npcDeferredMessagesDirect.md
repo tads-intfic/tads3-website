@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Deferred NPC messages. We use this to report deferred messages from an
 NPC to the player. A message is deferred when a parsing error occurs,
@@ -56,26 +56,26 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 **`npcDeferredMessagesDirect`**` :   `[`npcDeferredMessages`](../object/npcDeferredMessages.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`npcDeferredMessagesDirect`**  
 [`npcDeferredMessages`](../object/npcDeferredMessages.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -83,11 +83,11 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askMissingObject`](#askMissingObject)[`commandNotUnderstood`](#commandNotUnderstood)[`emptyNounPhrase`](#emptyNounPhrase)[`insufficientQuantity`](#insufficientQuantity)[`noMatchCannotSee`](#noMatchCannotSee)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchNotAware`](#noMatchNotAware)[`singleObjectRequired`](#singleObjectRequired)[`uniqueObjectRequired`](#uniqueObjectRequired)[`wordIsUnknown`](#wordIsUnknown)[`zeroQuantity`](#zeroQuantity)
 
@@ -95,19 +95,19 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="ambiguousNounPhrase"></span>
 
@@ -115,12 +115,12 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2526](../source/msg_neu.t.html#2526)\]
 
-<div class="desc">
+
 
 we found an ambiguous noun phrase, but we were unable to perform
 interactive disambiguation
 
-</div>
+
 
 <span id="askMissingObject"></span>
 
@@ -128,11 +128,11 @@ interactive disambiguation
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2533](../source/msg_neu.t.html#2533)\]
 
-<div class="desc">
+
 
 an object phrase was missing
 
-</div>
+
 
 <span id="commandNotUnderstood"></span>
 
@@ -140,11 +140,11 @@ an object phrase was missing
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2458](../source/msg_neu.t.html#2458)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="emptyNounPhrase"></span>
 
@@ -152,11 +152,11 @@ an object phrase was missing
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2488](../source/msg_neu.t.html#2488)\]
 
-<div class="desc">
+
 
 empty noun phrase ('take the')
 
-</div>
+
 
 <span id="insufficientQuantity"></span>
 
@@ -164,11 +164,11 @@ empty noun phrase ('take the')
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2502](../source/msg_neu.t.html#2502)\]
 
-<div class="desc">
+
 
 insufficient quantity to meet a command request ('take five books')
 
-</div>
+
 
 <span id="noMatchCannotSee"></span>
 
@@ -176,11 +176,11 @@ insufficient quantity to meet a command request ('take five books')
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2465](../source/msg_neu.t.html#2465)\]
 
-<div class="desc">
+
 
 no match for a noun phrase
 
-</div>
+
 
 <span id="noMatchForAll"></span>
 
@@ -188,11 +188,11 @@ no match for a noun phrase
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2475](../source/msg_neu.t.html#2475)\]
 
-<div class="desc">
+
 
 no match for 'all'
 
-</div>
+
 
 <span id="noMatchForAllBut"></span>
 
@@ -200,11 +200,11 @@ no match for 'all'
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2481](../source/msg_neu.t.html#2481)\]
 
-<div class="desc">
+
 
 nothing left for 'all' after removing 'except' items
 
-</div>
+
 
 <span id="noMatchNotAware"></span>
 
@@ -212,11 +212,11 @@ nothing left for 'all' after removing 'except' items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2469](../source/msg_neu.t.html#2469)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="singleObjectRequired"></span>
 
@@ -224,11 +224,11 @@ nothing left for 'all' after removing 'except' items
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2516](../source/msg_neu.t.html#2516)\]
 
-<div class="desc">
+
 
 a unique object is required, but multiple objects were specified
 
-</div>
+
 
 <span id="uniqueObjectRequired"></span>
 
@@ -236,11 +236,11 @@ a unique object is required, but multiple objects were specified
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2509](../source/msg_neu.t.html#2509)\]
 
-<div class="desc">
+
 
 a unique object is required, but multiple objects were specified
 
-</div>
+
 
 <span id="wordIsUnknown"></span>
 
@@ -248,11 +248,11 @@ a unique object is required, but multiple objects were specified
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2542](../source/msg_neu.t.html#2542)\]
 
-<div class="desc">
+
 
 tell the user they entered a word we don't know
 
-</div>
+
 
 <span id="zeroQuantity"></span>
 
@@ -260,15 +260,15 @@ tell the user they entered a word we don't know
 
 [msg_neu.t](../file/msg_neu.t.html)\[[2495](../source/msg_neu.t.html#2495)\]
 
-<div class="desc">
+
 
 'take zero books'
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

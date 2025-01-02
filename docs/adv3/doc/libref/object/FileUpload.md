@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A FileUpload represents a file uploaded by a network client via a
 protocol server, such as an HTTPServer.
@@ -41,61 +41,61 @@ create use FileUpload to post file attachments to posted forms.
 
 `class `**`FileUpload`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FileUpload`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`contentType`](#contentType)[`file`](#file)[`filename`](#filename)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="contentType"></span>
 
@@ -103,7 +103,7 @@ create use FileUpload to post file attachments to posted forms.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[335](../source/tadsnet.t.html#335)\]
 
-<div class="desc">
+
 
 The content type. This a string giving the MIME type specified by the
 client with the upload. This is the full content-type string, including
@@ -119,7 +119,7 @@ rather than relying on the client's description of the format; in
 particular, be careful not to assume that expected data fields are
 present, in the valid range, etc.
 
-</div>
+
 
 <span id="file"></span>
 
@@ -127,7 +127,7 @@ present, in the valid range, etc.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[318](../source/tadsnet.t.html#318)\]
 
-<div class="desc">
+
 
 The file data.
 
@@ -145,7 +145,7 @@ Otherwise, the file is in raw binary mode (FileModeRaw). If you need the
 file to be opened in a different mode, you can use setFileMode() on the
 file to change the mode.
 
-</div>
+
 
 <span id="filename"></span>
 
@@ -153,7 +153,7 @@ file to change the mode.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[352](../source/tadsnet.t.html#352)\]
 
-<div class="desc">
+
 
 The client-side filename, if specified. This is a string giving the name
 of the file on the client machine. This generally has no particular
@@ -168,15 +168,15 @@ can only use it as a suggestion from the client.
 The client won't necessarily specify a filename at all, in which case
 this will be nil.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -184,15 +184,15 @@ this will be nil.
 
 [tadsnet.t](../file/tadsnet.t.html)\[[293](../source/tadsnet.t.html#293)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

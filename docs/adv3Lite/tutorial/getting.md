@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Getting What You
@@ -17,7 +17,7 @@ Need
 <a href="setting.html" class="nav"><em>Next:</em> Setting it all up</a>
     </span>
 
-</div>
+
 
 
 
@@ -77,7 +77,7 @@ newer version.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Tutorial*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -88,4 +88,4 @@ You Need
 <a href="setting.html" class="nav"><em>Next:</em> Setting it all up</a>
     </span>
 
-</div>
+

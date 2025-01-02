@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> EventList  
 <span class="navnp"><a href="event.html" class="nav"><em>Prev:</em> Events</a>
     <a href="exit.html" class="nav"><em>Next:</em> Exits</a>     </span>
 
-</div>
+
 
 
 
@@ -89,7 +89,7 @@ current location at the end of every turn. This could be used to drive a
 ShuffledEventList displaying atmospheric messages, as in the following
 example:
 
-`
+```
 
     hall: Room, ShuffledEventList 'Hall' 'hall'   
         "<<one of>>At least the fire hasn't reached the ground floor yet. The hall
@@ -132,7 +132,7 @@ example:
         
         listenDesc = "There's a disturbing crackling of flames somewhere upstairs. "
     ;
-`
+```
 
 Although the items in an event list are usually single-quoted strings
 they can be any of the following:
@@ -161,34 +161,34 @@ single quoted string in this kind of situation if and only if evaluating
 it won't change the value of anything. So for example, the following
 would all be quite safe:
 
-`
+```
     eventList = [
       '<q>What do you think about<<me.hasSeen(mary)>> Mary<<else>> Jane?<<end>> you ask. '
       
       '<q>I personally don\'t care for <<oddBloke.theName>> you say. <.inform dislike-oddbloke> '
     ]
-`
+```
 
 But the following most certainly would NOT:
 
-`
+```
     eventList = [
        '<q>Tell me about <<one of>> Jane<<or>> Martha<<or>> green cheese<<cycling>>, you request. ',
        
        '<q>I have now said this <<++count>> times!</q> you declare. '
     ]
-`
+```
 
 You can make the second version safe by using anonymous functions in
 place of single-quoted strings:
 
-`
+```
     eventList = [
        {: "<q>Tell me about <<one of>> Jane<<or>> Martha<<or>> green cheese<<cycling>>, you request. " },
        
        {: "<q>I have now said this <<++count>> times!</q> you declare. " }
     ]
-`
+```
 
 Note that this is far from being the *only* situation in which you can
 get caught out by the unexpected evaluation of embedded expressions in
@@ -201,7 +201,7 @@ System Manual*.
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -209,4 +209,4 @@ System Manual*.
 <span class="navnp"><a href="event.html" class="nav"><em>Prev:</em> Events</a>
     <a href="exit.html" class="nav"><em>Next:</em>Exits</a>     </span>
 
-</div>
+

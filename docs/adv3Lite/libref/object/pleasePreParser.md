@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Trap the words KINDLY and PLEASE in a player's command, and explain that
 they shouldn't be used, giving examples of the kind of commands to use
@@ -29,15 +29,15 @@ part of valid conversational exchange)
 
 **`pleasePreParser`**` :   `[`StringPreParser`](../object/StringPreParser.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`pleasePreParser`**  
 [`StringPreParser`](../object/StringPreParser.html)  
@@ -46,11 +46,11 @@ part of valid conversational exchange)
 `                                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 ` [`pat`](#pat)  `
 
@@ -65,11 +65,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 ` [`doParsing`](#doParsing)  `
 
@@ -83,11 +83,11 @@ Inherited from `ModuleExecObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="pat"></span>
 
@@ -95,19 +95,19 @@ Inherited from `ModuleExecObject` :
 
 [newbie.t](../file/newbie.t.html)\[[454](../source/newbie.t.html#454)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="doParsing"></span>
 
@@ -115,15 +115,15 @@ Inherited from `ModuleExecObject` :
 
 [newbie.t](../file/newbie.t.html)\[[441](../source/newbie.t.html#441)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

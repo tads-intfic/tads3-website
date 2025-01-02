@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Object  
@@ -15,7 +15,7 @@ layout: docs
     <a href="rexpat.html" class="nav"><em>Next:</em> RexPattern</a>    
 </span>
 
-</div>
+
 
 
 
@@ -38,7 +38,7 @@ classes.
 
 `getSuperclassList()`
 
-<div class="fdef">
+
 
 Returns a list containing the immediate superclasses of the object. The
 list contains only the object's direct superclasses, which are the
@@ -67,7 +67,7 @@ but is a superclass only indirectly through class C.
 
 `getPropList()`
 
-<div class="fdef">
+
 
 Returns a list of the properties directly defined by this object. Each
 entry in the list is a property pointer value. The returned list
@@ -76,13 +76,13 @@ properties are not included, but may be obtained by explicitly
 traversing the superclass list and calling this method on each
 superclass.
 
-</div>
+
 
 <span id="getPropParams"></span>
 
 `getPropParams(*prop*)`
 
-<div class="fdef">
+
 
 Returns information on the parameters taken by the given property or
 method of this object. The return value is a list with three elements:
@@ -111,20 +111,20 @@ If the specified property is not defined for the object, the method
 returns `\[0, 0, nil\]`, because it's valid to
 invoke the property with no arguments in this case.
 
-</div>
+
 
 `isClass()`
 
-<div class="fdef">
+
 
 Returns `true` if the object was declared as a
 "class", `nil` otherwise.
 
-</div>
+
 
 `isTransient()`
 
-<div class="fdef">
+
 
 Returns `true` if the object is transient,
 `nil` otherwise. A transient object is one that
@@ -134,11 +134,11 @@ that creates transient instances (such as
 `TadsObject.createTransientInstance()` or
 `TadsObject.createTransientInstanceOf()`).
 
-</div>
+
 
 `ofKind(*cls*)`
 
-<div class="fdef">
+
 
 Determines if the object is an instance of the class *cls*, or an
 instance of any subclass of *cls*. Returns
@@ -146,11 +146,11 @@ instance of any subclass of *cls*. Returns
 not. This method always returns true if *cls* is Object, since every
 object ultimately derives from the Object intrinsic class.
 
-</div>
+
 
 `propDefined(*prop*, *flags*?)`
 
-<div class="fdef">
+
 
 Determines if the object defines or inherits the property *prop* (a
 property pointer value - specify this by applying an ampersand prefix
@@ -177,12 +177,12 @@ are:
   define or inherit the property, the function returns
   `nil`.
 
-</div>
+
 
 `propInherited(*prop*, *origTargetObj*, *definingObj*,
 *flags*?)`
 
-<div class="fdef">
+
 
 Determines if the object inherits the property *prop* (a property
 pointer value). *origTargetObj* is the "original target object," which
@@ -263,11 +263,11 @@ list. So, the call to `inherited()` in
 `A.x()` this time, since that's the next
 superclass in inheritance order for the original target object.
 
-</div>
+
 
 `propType(*prop*)`
 
-<div class="fdef">
+
 
 Returns the datatype of the given property of the given object, or
 `nil` if the object does not define or inherit
@@ -276,13 +276,13 @@ determines its type. The return value is one of the
 `TYPE_xxx` values (see the
 [reflection](reflect.html) section for the list).
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -291,4 +291,4 @@ determines its type. The return value is one of the
     <a href="rexpat.html" class="nav"><em>Next:</em> RexPattern</a>    
 </span>
 
-</div>
+

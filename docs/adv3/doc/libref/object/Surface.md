@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Surface: an object that can have other objects placed on top of it. A
 surface is essentially the same as a regular container, but the contents
@@ -40,15 +40,15 @@ Language modifications for the specialized container types
 
 `class `**`Surface`**` :   `[`BulkLimiter`](../object/BulkLimiter.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Surface`**  
 [`BulkLimiter`](../object/BulkLimiter.html)  
@@ -57,11 +57,11 @@ Language modifications for the specialized container types
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`Surface`**  
 [`Bed`](../object/Bed.html)  
@@ -71,19 +71,19 @@ Language modifications for the specialized container types
 [`RestrictedSurface`](../object/RestrictedSurface.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`actorInPrep`](#actorInPrep)[`actorOutOfPrep`](#actorOutOfPrep)[`alreadyPutInMsg`](#alreadyPutInMsg)[`cannotPutInSelfMsg`](#cannotPutInSelfMsg)[`circularlyInMessage`](#circularlyInMessage)[`contentsLister`](#contentsLister)[`descContentsLister`](#descContentsLister)[`inlineContentsLister`](#inlineContentsLister)[`lookInDesc`](#lookInDesc)[`lookInLister`](#lookInLister)[`objInPrep`](#objInPrep)[`putDestMessage`](#putDestMessage)[`takeFromNotInMessage`](#takeFromNotInMessage)[`tooFullMsg`](#tooFullMsg)
 
@@ -98,11 +98,11 @@ Inherited from `VocabObject` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`dobjFor(LookIn)`](#dobjFor(LookIn))[`iobjFor(PutOn)`](#iobjFor(PutOn))[`tryMovingObjInto`](#tryMovingObjInto)
 
@@ -117,11 +117,11 @@ Inherited from `VocabObject` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="actorInPrep"></span>
 
@@ -129,11 +129,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2103](../source/en_us.t.html#2103)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="actorOutOfPrep"></span>
 
@@ -141,11 +141,11 @@ Inherited from `VocabObject` :
 
 [en_us.t](../file/en_us.t.html)\[[2104](../source/en_us.t.html#2104)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="alreadyPutInMsg"></span>
 
@@ -153,11 +153,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5203](../source/objects.t.html#5203)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="cannotPutInSelfMsg"></span>
 
@@ -165,11 +165,11 @@ Inherited from `VocabObject` :
 
 [objects.t](../file/objects.t.html)\[[5202](../source/objects.t.html#5202)\]
 
-<div class="desc">
+
 
 use the PUT ON forms of the verifier messages
 
-</div>
+
 
 <span id="circularlyInMessage"></span>
 
@@ -177,12 +177,12 @@ use the PUT ON forms of the verifier messages
 
 [objects.t](../file/objects.t.html)\[[5149](../source/objects.t.html#5149)\]
 
-<div class="desc">
+
 
 my message indicating that another object x cannot be put into me
 because I'm already in x
 
-</div>
+
 
 <span id="contentsLister"></span>
 
@@ -190,11 +190,11 @@ because I'm already in x
 
 [objects.t](../file/objects.t.html)\[[5134](../source/objects.t.html#5134)\]
 
-<div class="desc">
+
 
 my contents lister
 
-</div>
+
 
 <span id="descContentsLister"></span>
 
@@ -202,11 +202,11 @@ my contents lister
 
 [objects.t](../file/objects.t.html)\[[5135](../source/objects.t.html#5135)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="inlineContentsLister"></span>
 
@@ -214,11 +214,11 @@ my contents lister
 
 [objects.t](../file/objects.t.html)\[[5137](../source/objects.t.html#5137)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="lookInDesc"></span>
 
@@ -226,13 +226,13 @@ my contents lister
 
 [objects.t](../file/objects.t.html)\[[5131](../source/objects.t.html#5131)\]
 
-<div class="desc">
+
 
 Our fixed LOOK IN description. This is shown in response to LOOK IN
 before we list our portable contents; it can be used to show generally
 what the surface looks like. By default, we say nothing here.
 
-</div>
+
 
 <span id="lookInLister"></span>
 
@@ -240,11 +240,11 @@ what the surface looks like. By default, we say nothing here.
 
 [objects.t](../file/objects.t.html)\[[5136](../source/objects.t.html#5136)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="objInPrep"></span>
 
@@ -252,11 +252,11 @@ what the surface looks like. By default, we say nothing here.
 
 [en_us.t](../file/en_us.t.html)\[[2102](../source/en_us.t.html#2102)\]
 
-<div class="desc">
+
 
 objects contained in a Surface are described as being on the Surface
 
-</div>
+
 
 <span id="putDestMessage"></span>
 
@@ -264,11 +264,11 @@ objects contained in a Surface are described as being on the Surface
 
 [objects.t](../file/objects.t.html)\[[5152](../source/objects.t.html#5152)\]
 
-<div class="desc">
+
 
 message phrase for objects put into me
 
-</div>
+
 
 <span id="takeFromNotInMessage"></span>
 
@@ -276,12 +276,12 @@ message phrase for objects put into me
 
 [objects.t](../file/objects.t.html)\[[5143](../source/objects.t.html#5143)\]
 
-<div class="desc">
+
 
 we're a surface, so taking something from me that's not among my
 contents shows the message as "that's not on the iobj"
 
-</div>
+
 
 <span id="tooFullMsg"></span>
 
@@ -289,19 +289,19 @@ contents shows the message as "that's not on the iobj"
 
 [objects.t](../file/objects.t.html)\[[5155](../source/objects.t.html#5155)\]
 
-<div class="desc">
+
 
 message when we're too full for another object
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="dobjFor(LookIn)"></span>
 
@@ -309,11 +309,11 @@ message when we're too full for another object
 
 [objects.t](../file/objects.t.html)\[[5188](../source/objects.t.html#5188)\]
 
-<div class="desc">
+
 
 Looking "in" a surface simply shows the surface's contents.
 
-</div>
+
 
 <span id="iobjFor(PutOn)"></span>
 
@@ -321,11 +321,11 @@ Looking "in" a surface simply shows the surface's contents.
 
 [objects.t](../file/objects.t.html)\[[5167](../source/objects.t.html#5167)\]
 
-<div class="desc">
+
 
 Put On processing
 
-</div>
+
 
 <span id="tryMovingObjInto"></span>
 
@@ -333,16 +333,16 @@ Put On processing
 
 [objects.t](../file/objects.t.html)\[[5161](../source/objects.t.html#5161)\]
 
-<div class="desc">
+
 
 Try moving an object into this container. For a surface, this performs a
 PUT ON command to move the object onto self.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

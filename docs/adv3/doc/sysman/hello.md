@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Hello, World!  
@@ -15,7 +15,7 @@ layout: docs
     <a href="tools.html" class="nav"><em>Next:</em> The Tools</a>    
 </span>
 
-</div>
+
 
 
 
@@ -50,7 +50,7 @@ includes the directory where you installed the TADS tools.
 Once you have everything set up tool-wise, you should be able to compile
 your program by typing this:
 
-<div class="cmdline">
+
 
     t3make hello.t
 
@@ -68,11 +68,11 @@ your source file), you'll need to go back and fix them before you can
 run the program. If you can't figure out what an error message means,
 you might try adding the "-v" option to the compiler command line:
 
-<div class="cmdline">
+
 
     t3make -v hello.t
 
-</div>
+
 
 That will make the compiler use "verbose" error messages. By default,
 the compiler shows a concise, one-line summary of each problem; in
@@ -85,11 +85,11 @@ file.
 
 Once you've successfully compiled your program, you can run it, like so:
 
-<div class="cmdline">
+
 
     t3run hello.t3
 
-</div>
+
 
 Let's briefly look at each part of the example program.
 
@@ -183,11 +183,11 @@ you still won't have to write any of those things yourself, but you can
 change them if you want to, and as much as you want to, because the
 library is all written in the same language as your game program is.
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -196,4 +196,4 @@ library is all written in the same language as your game program is.
     <a href="tools.html" class="nav"><em>Next:</em> The Tools</a>    
 </span>
 
-</div>
+

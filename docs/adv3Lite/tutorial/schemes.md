@@ -1,20 +1,20 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \| Making a Scene  
 <span class="navnp"><a href="doors.html" class="nav"><em>Prev:</em> Doors and Locks</a>
    <a href="ticket.html" class="nav"><em>Next:</em> Just the Ticket</a>
     </span>
 
-</div>
+
 
 
 
@@ -24,7 +24,7 @@ In this chapter we continue the implementation of the airport game,
 introducing some slightly more advanced features of the library in the
 process.
 
-<div class="sectoc">
+
 
 [Just the Ticket](ticket.html)  
 [The Maintenance Room](maintenance.html)  
@@ -34,11 +34,11 @@ process.
 
 
 
-</div>
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *adv3Lite Library Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \| Schemes and
@@ -47,4 +47,4 @@ Devices
    <a href="ticket.html" class="nav"><em>Next:</em> Just the Ticket</a>
     </span>
 
-</div>
+

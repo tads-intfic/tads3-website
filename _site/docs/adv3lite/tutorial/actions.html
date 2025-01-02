@@ -68,15 +68,16 @@ all do the same thing. One way to do this is to define a new
 <strong>VerbRule</strong> that recognizes PUSH X FORWARD and PUSH FORWARD ON X and
 makes either trigger the Push action. This is what it might look like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VerbRule(PushForward)
-        'push' multiDobj 'forward'
-        | 'push' 'forward' 'on' multiDobj
+<p>`
+    VerbRule(PushForward)
+        ‘push’ multiDobj ‘forward’
+        | ‘push’ ‘forward’ ‘on’ multiDobj
         : VerbProduction
         action = Push
-        verbPhrase = 'push/pushing forward (what)'
-        missingQ = 'what do you want to push forward'
+        verbPhrase = ‘push/pushing forward (what)’
+        missingQ = ‘what do you want to push forward’
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Let’s take this piece by piece. First we begin our specification of the
 new grammar for the Push action with
@@ -133,12 +134,13 @@ be defined).</p>
 <p>We’ll now handle PULL BACK the easier way, by modifying an existing
 VerbRule:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify VerbRule(Pull)
-        ('pull' multiDobj ( | 'back')) |
-        'pull' 'back' 'on' multiDobj    
+<p>`
+    modify VerbRule(Pull)
+        (‘pull’ multiDobj ( | ‘back’)) |
+        ‘pull’ ‘back’ ‘on’ multiDobj  <br />
         : 
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note how we end this definition with a colon, and then the terminating
 semicolon. This is just a syntactic quirk of how a VerbRule is modified
@@ -175,33 +177,35 @@ TAction class (think of TAction as meaning ‘Transitive Action’ — an
 action that takes an object). The library provides a DefineTAction()
 macro that makes it simple to define such objects:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineTAction(TurnLeft)
-    ;
+<p>`
+    DefineTAction(TurnLeft)
+    ;</p>
 
-    DefineTAction(TurnRight)
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DefineTAction(TurnRight)
+; `
 </code></pre></div></div>
 
 <p>The next job is to define the grammar that will trigger these actions.
 We’ve already seen how to do this, using the VerbRule construct:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VerbRule(TurnLeft)
-        'turn' singleDobj (| 'to' (| 'the')) ('left' | 'port')
+<p>`
+    VerbRule(TurnLeft)
+        ‘turn’ singleDobj (| ‘to’ (| ‘the’)) (‘left’ | ‘port’)
         : VerbProduction
         action = TurnLeft
-        verbPhrase = 'turn/turning (what) left'
-        missinqQ = 'what do you want to turn left'
+        verbPhrase = ‘turn/turning (what) left’
+        missinqQ = ‘what do you want to turn left’
         priority = 60
-    ;
+    ;</p>
 
-    VerbRule(TurnRight)
-        'turn' singleDobj (| 'to' (| 'the')) ('right' | 'starboard')
-        : VerbProduction
-        action = TurnRight
-        verbPhrase = 'turn/turning (what) right'
-        missinqQ = 'what do you want to turn right'
-        priority = 60
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VerbRule(TurnRight)
+    'turn' singleDobj (| 'to' (| 'the')) ('right' | 'starboard')
+    : VerbProduction
+    action = TurnRight
+    verbPhrase = 'turn/turning (what) right'
+    missinqQ = 'what do you want to turn right'
+    priority = 60
+; `
 </code></pre></div></div>
 
 <p>The one extra thing we’ve added here to both definitions is
@@ -231,41 +235,42 @@ handling of the TurnLeft and TurnRight actions in blocks marked
 I’m the direct object of TurnLeft or TurnRight command?”. All we need is
 something like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing
+<p>`
+    modify Thing
         dobjFor(TurnLeft)
         {
-            preCond = [touchObj]
-            
-            verify()
-            {
-                if(!isTurnable)
-                    illogical(cannotTurnMsg);
-            }
-                    
-            report()
-            {
-                "Turning &lt;&lt;gActionListStr&gt;&gt; to the left has no effect. ";
-            }
-            
+            preCond = [touchObj]</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        verify()
+        {
+            if(!isTurnable)
+                illogical(cannotTurnMsg);
+        }
+                
+        report()
+        {
+            "Turning &lt;&lt;gActionListStr&gt;&gt; to the left has no effect. ";
         }
         
-        dobjFor(TurnRight)
+    }
+    
+    dobjFor(TurnRight)
+    {
+        preCond = [touchObj]
+        
+        verify()
         {
-            preCond = [touchObj]
-            
-            verify()
-            {
-                if(!isTurnable)
-                    illogical(cannotTurnMsg);
-            }
-            
-            report()
-            {
-                "Turning &lt;&lt;gActionListStr&gt;&gt; to the right has no effect. ";
-            }
-            
+            if(!isTurnable)
+                illogical(cannotTurnMsg);
         }
-    ;
+        
+        report()
+        {
+            "Turning &lt;&lt;gActionListStr&gt;&gt; to the right has no effect. ";
+        }
+        
+    }
+; `
 </code></pre></div></div>
 
 <p>Again, let’s work through this step by step.</p>
@@ -288,12 +293,13 @@ here if we needed to, but for these two actions
 
 <p>The next piece of code is the verify() method in each section:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            verify()
+<p>`
+            verify()
             {
                 if(!isTurnable)
                     illogical(cannotTurnMsg);
             }
-</code></pre></div></div>
+`</p>
 
 <p>As has been intimated previously, verify() methods perform two
 functions:</p>
@@ -317,7 +323,8 @@ action, so we may as well use them here, but if they didn’t exist it
 would be a good idea to invent them, for example if we’d implementing a
 Cross verb (as in CROSS BRIDGE or CROSS RIVER):</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    modify Thing
+<p>`
+    modify Thing
         dobjFor(Cross)
         {
             preCond = [touchObj]
@@ -326,11 +333,11 @@ Cross verb (as in CROSS BRIDGE or CROSS RIVER):</p>
                 if(!isCrossable)
                    illogical(cannotCrossMsg);
             }
-        }
-        
-        isCrossable = nil
-        cannotCrossMsg = '{The subj dobj} {is} not something {i} {can} cross. '
-    ;
+        }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isCrossable = nil
+    cannotCrossMsg = '{The subj dobj} {is} not something {i} {can} cross. '
+; `
 </code></pre></div></div>
 
 <p>The advantage of this coding pattern is that I don’t then need to
@@ -345,11 +352,12 @@ something he’s standing on.</p>
 
 <p>The final section we’ve defined on the modified Thing for TurnLeft is:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            report()
+<p>`
+            report()
             {
-                "Turning &lt;&lt;gActionListStr&gt;&gt; to the left has no effect. ";
+                “Turning «gActionListStr» to the left has no effect. “;
             }
-</code></pre></div></div>
+`</p>
 
 <p>What this does is probably fairly obvious: it displays a message like,
 “Turning the doodah to the left has no effect.” How it works is rather

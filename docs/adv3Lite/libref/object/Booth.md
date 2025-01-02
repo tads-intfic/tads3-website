@@ -27,7 +27,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A Booth is a Container that the player character (and other actors) can
 get in.
@@ -40,15 +40,15 @@ POSTURES EXTENSION\]
 
 `class `**`Booth`**` :   `[`Container`](../object/Container.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`Booth`**  
 [`Container`](../object/Container.html)  
@@ -61,27 +61,27 @@ POSTURES EXTENSION\]
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`canLieInMe`](#canLieInMe)[`canSitInMe`](#canSitInMe)[`canStandInMe`](#canStandInMe)[`isEnterable`](#isEnterable)
 
@@ -103,11 +103,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 
 
@@ -130,11 +130,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="canLieInMe"></span>
 
@@ -142,11 +142,11 @@ Inherited from `LMentionable` :
 
 [postures.t](../file/postures.t.html)\[[595](../source/postures.t.html#595)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canSitInMe"></span>
 
@@ -154,11 +154,11 @@ Inherited from `LMentionable` :
 
 [postures.t](../file/postures.t.html)\[[594](../source/postures.t.html#594)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="canStandInMe"></span>
 
@@ -166,11 +166,11 @@ Inherited from `LMentionable` :
 
 [postures.t](../file/postures.t.html)\[[593](../source/postures.t.html#593)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="isEnterable"></span>
 
@@ -178,25 +178,25 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[225](../source/extras.t.html#225)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 *(none)*
 
-<div class="ftr">
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

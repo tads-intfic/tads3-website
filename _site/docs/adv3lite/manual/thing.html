@@ -82,11 +82,12 @@ define a property that requires one kind of data with data of a
 different type things won’t work as you expect. For example, the
 following three property definitions are anything but equivalent:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        foo = bar   // An object (or possibly an enum or variable or property name)
-        foo = 'bar' // a single-quoted string
-        foo = "bar" // a double-quoted string 
-     
-</code></pre></div></div>
+<p>`
+        foo = bar   // An object (or possibly an enum or variable or property name)
+        foo = ‘bar’ // a single-quoted string
+        foo = “bar” // a double-quoted string</p>
+
+<p>`</p>
 
 <p>If you don’t understand the distinctions being made above then you
 really should read Part III of the <a href="../sysman.html">TADS 3 System Manual</a>
@@ -105,11 +106,12 @@ adv3Lite library the first two of these can be defined in single
 property, the vocab property. So, for example, to define a red ball you
 might write:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing
-       vocab = 'red ball;bouncy rubber; sphere'
-       desc = "It's very bouncy, and appears to be made of rubber. "
+<p>`
+    redBall: Thing
+       vocab = ‘red ball;bouncy rubber; sphere’
+       desc = “It’s very bouncy, and appears to be made of rubber. “
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note how the vocab property works. First we supply the name of the
 object (‘red ball’), then, following the first semicolon we supply any
@@ -137,10 +139,11 @@ property for further details.</p>
 these basic properties, so in a real game our red ball definition would
 normally look like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing 'red ball;bouncy rubber; sphere'
-       "It's very bouncy, and appears to be made of rubber. "
+<p>`
+    redBall: Thing ‘red ball;bouncy rubber; sphere’
+       “It’s very bouncy, and appears to be made of rubber. “
     ;
-</code></pre></div></div>
+`</p>
 
 <p>If the name doesn’t uniquely identify the object — say because there
 were two red balls in our game, the bouncy red rubber ball and a cricket
@@ -150,11 +153,12 @@ when the parser asks the player to disambiguate which ball s/he means
 ball or the red ball?’”). In this admittedly artificial example, we
 would need to define a disambigName on our redBall object so:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    redBall: Thing 'red ball;bouncy rubber; sphere'
-       "It's very bouncy, and appears to be made of rubber. "
-       
-       disambigName = 'bouncy rubber ball'
-    ;
+<p>`
+    redBall: Thing ‘red ball;bouncy rubber; sphere’
+       “It’s very bouncy, and appears to be made of rubber. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   disambigName = 'bouncy rubber ball'
+; `
 </code></pre></div></div>
 
 <p>Normally, though, this should not be necessary.</p>
@@ -429,11 +433,12 @@ matched. We could do this by making it adjust the
 <code class="language-plaintext highlighter-rouge">np.matches</code> list to remove the NPMatch object
 corresponding to itself:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    filterResolveList(np, cmd, mode)
+<p>`
+    filterResolveList(np, cmd, mode)
     {
        np.matches = np.matches.subset({m: m.obj != self});
     }
-</code></pre></div></div>
+`</p>
 
 <p>Here we change the <code class="language-plaintext highlighter-rouge">np.matches</code> list to a subset
 of that list that contains everything except the NPMatch corresponding
@@ -453,15 +458,16 @@ an Unthing if nothing else in scope will match, so we want the
 filterResolveList() method of an Unthing to rule itself out if there are
 any other matches:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Unthing: Decoration
-        ...
+<p>`
+    class Unthing: Decoration
+        …
         filterResolveList(np, cmd, mode)
         {
             if(np.matches.length &gt; 1)
                 np.matches = np.matches.subset({m: m.obj != self});
         }
-    ;    
-</code></pre></div></div>
+    ;  <br />
+`</p>
 
 <p>In other situations we may want to filter according to what action is
 being considered and/or what role (direct object or indirect object) the
@@ -486,46 +492,49 @@ directly, or through the template with an @ sign, or by using the +
 syntax to indicate the containment hierarchy. The three following
 definitions are thus equivalent:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    hall: Room 'Hall'
-    ;
+<p>`
+    hall: Room ‘Hall’
+    ;</p>
 
-    box: Thing 'box'
-      contType = In
-      location = hall
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>box: Thing 'box'
+  contType = In
+  location = hall
+;
 
-    redBall: Thing 'red ball;bouncy rubber; sphere'
-       "It's very bouncy, and appears to be made of rubber. "
-       location = box
-    ;
+redBall: Thing 'red ball;bouncy rubber; sphere'
+   "It's very bouncy, and appears to be made of rubber. "
+   location = box
+; `
 </code></pre></div></div>
 
 <p>Means exactly the same as:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    hall: Room 'Hall'
-    ;
+<p>`
+    hall: Room ‘Hall’
+    ;</p>
 
-    box: Thing 'box' @hall
-      contType = In  
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>box: Thing 'box' @hall
+  contType = In  
+;
 
-    redBall: Thing 'red ball;bouncy rubber; sphere' @box
-       "It's very bouncy, and appears to be made of rubber. "  
-    ;
+redBall: Thing 'red ball;bouncy rubber; sphere' @box
+   "It's very bouncy, and appears to be made of rubber. "  
+; `
 </code></pre></div></div>
 
 <p>Which means exactly the same as:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    hall: Room 'Hall'
-    ;
+<p>`
+    hall: Room ‘Hall’
+    ;</p>
 
-    + box: Thing 'box'
-      contType = In 
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ box: Thing 'box'
+  contType = In 
+;
 
-    ++ redBall: Thing 'red ball;bouncy rubber; sphere'
-       "It's very bouncy, and appears to be made of rubber. "   
-    ;
+++ redBall: Thing 'red ball;bouncy rubber; sphere'
+   "It's very bouncy, and appears to be made of rubber. "   
+; `
 </code></pre></div></div>
 
 <p>The + syntax can be used to nest containment up to any desired depth.</p>
@@ -617,11 +626,12 @@ been moved) or automatically taken by the player character. For example,
 to hide a gold coin and a silver key under a rug, you could define the
 rug thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    rug: Thing 'persian rug; old worn'
-       "The old rug has seen better days; it's now rather worn. "
+<p>`
+    rug: Thing ‘persian rug; old worn’
+       “The old rug has seen better days; it’s now rather worn. “
        hiddenUnder = [goldCoin, silverKey]
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note that in this case the location property of the goldCoin and the
 silverKey should be left at nil at the start of the game. Objects listed
@@ -636,11 +646,12 @@ contType = On and isEnterable = true). We could then define it thus,
 without having to worry about how to make the rug handle multiple kinds
 of containment:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    rug: Platform 'persian rug; old worn'
-       "The old rug has seen better days; it's now rather worn. "
+<p>`
+    rug: Platform ‘persian rug; old worn’
+       “The old rug has seen better days; it’s now rather worn. “
        hiddenUnder = [goldCoin, silverKey]
     ;
-</code></pre></div></div>
+`</p>
 
 <p><span id="canput"></span></p>
 
@@ -768,15 +779,16 @@ ComplexContainer. For example, suppose we want to define an oven (or
 stove) the player character can put things in or on. We could do it like
 this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cooker: Thing 'cooker;blackened;oven stove top'
-        "Normally, you keep it in pretty good shape (or your cleaner does) but right
-        now it's looking suspiciously blackened, especially round the top. "    
+<p>`
+    cooker: Thing ‘cooker;blackened;oven stove top’
+        “Normally, you keep it in pretty good shape (or your cleaner does) but right
+        now it’s looking suspiciously blackened, especially round the top. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isFixed = true
         
-        isFixed = true
-            
-        remapIn: SubComponent  {   isOpenable = true   }
-        remapOn: SubComponent  {  }
-    ;
+    remapIn: SubComponent  {   isOpenable = true   }
+    remapOn: SubComponent  {  }
+; `
 </code></pre></div></div>
 
 <p>Note that there’s no need to define the contType property on these
@@ -792,22 +804,23 @@ manner as in the adv3 library, i.e. by defining the contained objects
 subLocation property. Thus, for example, if there’s a pan on top of the
 stove we’d define it thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    cooker: Thing 'cooker;blackened;oven stove top'
-        "Normally, you keep it in pretty good shape (or your cleaner does) but right
-        now it's looking suspiciously blackened, especially round the top. "    
-        
-        isFixed = true
-            
-        remapIn: SubComponent  {   isOpenable = true   }
-        remapOn: SubComponent  {  }
-    ;
+<p>`
+    cooker: Thing ‘cooker;blackened;oven stove top’
+        “Normally, you keep it in pretty good shape (or your cleaner does) but right
+        now it’s looking suspiciously blackened, especially round the top. “</p>
 
-    + saucepan: Thing 'saucepan;;pan'
-        "It's absolutely blackened. It was obviously left on the stove too long --
-        perhaps that's what started the fire. "
-       
-        subLocation = &amp;remapOn
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    isFixed = true
+        
+    remapIn: SubComponent  {   isOpenable = true   }
+    remapOn: SubComponent  {  }
+;
+
++ saucepan: Thing 'saucepan;;pan'
+    "It's absolutely blackened. It was obviously left on the stove too long --
+    perhaps that's what started the fire. "
+   
+    subLocation = &amp;remapOn
+; `
 </code></pre></div></div>
 
 <h3 id="bulk-and-bulkcapacity"><span id="bulk">Bulk and BulkCapacity</span></h3>
@@ -1072,13 +1085,14 @@ list of actions you want to allow. For example, extras.t defines a
 simple Odor class to represent something that can be smelled as well as
 examined:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Odor: Thing
+<p>`
+    class Odor: Thing
         isDecoration = true
         decorationActions = [Examine, SmellSomething]
-        notImportantMsg = BMsg(only smell, '{I} {can\'t} do that to a smell. ')
-        dobjFor(SmellSomething) asDobjFor(Examine)    
+        notImportantMsg = BMsg(only smell, ‘{I} {can't} do that to a smell. ‘)
+        dobjFor(SmellSomething) asDobjFor(Examine)  <br />
     ;
-</code></pre></div></div>
+`</p>
 
 <p>Note that if you need additional behavioural or state properties you can
 always modify or subclass Thing to define them (or define them on the
@@ -1389,8 +1403,9 @@ of their parts of speech.</p>
 
 <p>The ‘vocab’ string has this overall syntax:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       
-         vocab = 'article short name; adjectives; nouns; pronouns'
+<p>`</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     vocab = 'article short name; adjectives; nouns; pronouns' `
 </code></pre></div></div>
 
 <p>You don’t have to include all of the parts; you can simply stop when
@@ -1546,14 +1561,15 @@ other would be to give the green bottle a
 <code class="language-plaintext highlighter-rouge">matchPhrases</code> property on the dark green bottle
 so that it will match ‘dark green’ or ‘dark’ but not ‘green’ by itself:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ greenBottle: Thing 'green bottle'
-        "It's just an ordinary green bottle. "
-    ;
+<p>`
+    ++ greenBottle: Thing ‘green bottle’
+        “It’s just an ordinary green bottle. “
+    ;</p>
 
-    ++ darkGreenBottle: Thing 'dark green bottle'
-        "It's a dark green bottle. "
-        matchPhrases = ['dark', 'dark green']    
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ darkGreenBottle: Thing 'dark green bottle'
+    "It's a dark green bottle. "
+    matchPhrases = ['dark', 'dark green']    
+; `
 </code></pre></div></div>
 
 <p>The rule is this: if any of the words in the noun phrase entered by the
@@ -1591,17 +1607,18 @@ other. Another case might be where two objects share precisely the same
 vocab words but in a different order, for example a green broad bean and
 a broad green bean. We might handle this case thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ++ broadGreenBean: Thing 'broad green bean'
-        "It's broad and green. "
-        matchPhrases = 'broad green'
-        matchPhrasesExclude = nil    
-    ;
+<p>`
+    ++ broadGreenBean: Thing ‘broad green bean’
+        “It’s broad and green. “
+        matchPhrases = ‘broad green’
+        matchPhrasesExclude = nil  <br />
+    ;</p>
 
-    ++ greenBroadBean: Thing 'green broad bean'
-        "It's green and broad. "
-        matchPhrases = 'green broad'
-        matchPhrasesExclude = nil    
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>++ greenBroadBean: Thing 'green broad bean'
+    "It's green and broad. "
+    matchPhrases = 'green broad'
+    matchPhrasesExclude = nil    
+; `
 </code></pre></div></div>
 
 <p><span id="matchphraseexcludes"></span></p>
@@ -1688,40 +1705,44 @@ defined on the object.</li>
 
 <p>For example, suppose we define the following:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Coin: Thing 'coin; round metal; money; it'
-    ;
+<p>`
+    class Coin: Thing ‘coin; round metal; money; it’
+    ;</p>
 
-    goldCoin: Coin 'gold +; small; pound'
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goldCoin: Coin 'gold +; small; pound'
+;
 
-    silverCoin: Coin 'silver +; tiny; -shilling'
-    ;
+silverCoin: Coin 'silver +; tiny; -shilling'
+; `
 </code></pre></div></div>
 
 <p>The vocab properties of the two coins would end up just as if we had
 defined them thus:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-    goldCoin: Thing 'gold coin; small round metal; pound; it'
-    ;
+<p>`</p>
 
-    silverCoin: Thing 'silver coin; tiny round metal; shilling; it'
-    ;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>goldCoin: Thing 'gold coin; small round metal; pound; it'
+;
+
+silverCoin: Thing 'silver coin; tiny round metal; shilling; it'
+; `
 </code></pre></div></div>
 
 <p>To a limited extent, we can also use the + sign in the name property to
 inherit multiple steps up the class tree, for example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     class Coin: Thing 'coin; round'
-     ;
-     
-     class GoldCoin: Coin 'gold +'
-     ;
-     
-     smallGoldCoin: GoldCoin 'small +'
-     ;
-     
+<p>`
+     class Coin: Thing ‘coin; round’
+     ;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> class GoldCoin: Coin 'gold +'
+ ;
+ 
+ smallGoldCoin: GoldCoin 'small +'
+ ;
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>This would give the <code class="language-plaintext highlighter-rouge">smallGoldCoin</code> object a
 vocab property of ‘small gold coin; round’.</p>
@@ -1729,13 +1750,15 @@ vocab property of ‘small gold coin; round’.</p>
 <p>Note that this kind of use of the + property only works ‘vertically’,
 however. If you defined:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     class Coin: Thing 'coin';
-     
-     class Gold: Thing 'gold';
-     
-     goldCoin: Gold, Coin '+'; 
-     
+<p>`
+     class Coin: Thing ‘coin’;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> class Gold: Thing 'gold';
+ 
+ goldCoin: Gold, Coin '+'; 
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>Then the vocab property of goldCoin would end up simply as ‘gold’, not
 ‘gold coin’ or even ‘goldcoin’, since the + is simply replaced with the
@@ -1745,15 +1768,17 @@ carried out thereafter.</p>
 <p>Note also that the + substitution does not insert any additional spaces.
 This allows you to create definitions like:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class Light: Decoration 'light' 
-       notImportantMsg = 'You can\'t do that with light.'
-    ;
-      
-    moonlight: Light 'moon+';
-    sunlight: Light 'sun+';
-    torchlight: Light 'torch+';  
-     
+<p>`
+    class Light: Decoration ‘light’ 
+       notImportantMsg = ‘You can't do that with light.’
+    ;</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>moonlight: Light 'moon+';
+sunlight: Light 'sun+';
+torchlight: Light 'torch+';  
 </code></pre></div></div>
+
+<p>`</p>
 
 <p>This would result in vocabs (and hence names) of ‘moonlight’, ‘sunlight’
 and ‘torchlight’ respectively.</p>
@@ -1784,13 +1809,14 @@ state objects of your own. For example if your game involves one or more
 objects that can be wet, damp or dry you could define the following
 State objects:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    enum wet, damp, dry;
+<p>`
+    enum wet, damp, dry;</p>
 
-    WetDryDamp: State
-       stateProp = &amp;wetness
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>WetDryDamp: State
+   stateProp = &amp;wetness
 
-       adjectives = [[dry, 'dry'], [damp, 'damp'], [wet, 'wet']]
-    ;
+   adjectives = [[dry, 'dry'], [damp, 'damp'], [wet, 'wet']]
+; `
 </code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">WetDryDamp</code> state will then be applicable
@@ -1844,33 +1870,34 @@ class uses this method to change the vocabulary that can be used to
 refer to a secret door (something that isn’t obviously a door when it’s
 closed) according to whether it’s open or closed:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class SecretDoor: Door
+<p>`
+    class SecretDoor: Door
         isGoThroughable = isOpen
-        isConnectorListed = isOpen   
-        isOpenable = isOpen
+        isConnectorListed = isOpen <br />
+        isOpenable = isOpen</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    vocabWhenOpen = nil
+    vocabWhenClosed = nil
+    
+    preinitThing()
+    {
+        inherited();
+        if(isOpen)
+            vocabWhenOpen = vocab;
+        else
+            vocabWhenClosed = vocab;
+    }
+    
+    makeOpen(stat)
+    {
+        inherited(stat);
+        if(stat &amp;&amp; vocabWhenOpen &amp;&amp; vocab != vocabWhenOpen)
+            replaceVocab(vocabWhenOpen);
         
-        vocabWhenOpen = nil
-        vocabWhenClosed = nil
-        
-        preinitThing()
-        {
-            inherited();
-            if(isOpen)
-                vocabWhenOpen = vocab;
-            else
-                vocabWhenClosed = vocab;
-        }
-        
-        makeOpen(stat)
-        {
-            inherited(stat);
-            if(stat &amp;&amp; vocabWhenOpen &amp;&amp; vocab != vocabWhenOpen)
-                replaceVocab(vocabWhenOpen);
-            
-            if(!stat &amp;&amp; vocabWhenClosed &amp;&amp; vocab != vocabWhenClosed)
-                replaceVocab(vocabWhenClosed);
-        }
-    ;
+        if(!stat &amp;&amp; vocabWhenClosed &amp;&amp; vocab != vocabWhenClosed)
+            replaceVocab(vocabWhenClosed);
+    }
+; `
 </code></pre></div></div>
 
 <hr />

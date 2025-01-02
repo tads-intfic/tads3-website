@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 The File intrinsic class provides access to files in the external file
 system. This lets you create, read, and write files. The class supports
@@ -37,41 +37,41 @@ by giving you direct access to the raw bytes in the file).
 
 `intrinsic class `**`File`**` :   `[`Object`](../object/Object.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`File`**  
 [`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
@@ -79,11 +79,11 @@ by giving you direct access to the raw bytes in the file).
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`closeFile`](#closeFile)[`digestMD5`](#digestMD5)[`getCharacterSet`](#getCharacterSet)[`getFileMode`](#getFileMode)[`getFileSize`](#getFileSize)[`getPos`](#getPos)[`packBytes`](#packBytes)[`readBytes`](#readBytes)[`readFile`](#readFile)[`setCharacterSet`](#setCharacterSet)[`setFileMode`](#setFileMode)[`setPos`](#setPos)[`setPosEnd`](#setPosEnd)[`sha256`](#sha256)[`unpackBytes`](#unpackBytes)[`writeBytes`](#writeBytes)[`writeFile`](#writeFile)
 
@@ -92,19 +92,19 @@ Inherited from `Object` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="closeFile"></span>
 
@@ -112,7 +112,7 @@ Inherited from `Object` :
 
 [file.h](../file/file.h.html)\[[292](../source/file.h.html#292)\]
 
-<div class="desc">
+
 
 Close the file. Flushes any buffered information to the underlying
 system file and releases any system resources (such as share locks or
@@ -151,7 +151,7 @@ the garbage collector. It's considered bad form to depend on this for
 the reasons above, and it's also problematic because you won't have any
 way of finding out if an error should happen on close.
 
-</div>
+
 
 <span id="digestMD5"></span>
 
@@ -159,7 +159,7 @@ way of finding out if an error should happen on close.
 
 [file.h](../file/file.h.html)\[[563](../source/file.h.html#563)\]
 
-<div class="desc">
+
 
 Calculate the MD5 digest of bytes read from the file, starting at the
 current seek location and continuing for the given number of bytes. If
@@ -172,7 +172,7 @@ Returns a string of 32 hex digits giving the digest result.
 
 This can only be used on files opened in raw mode with read access.
 
-</div>
+
 
 <span id="getCharacterSet"></span>
 
@@ -180,12 +180,12 @@ This can only be used on files opened in raw mode with read access.
 
 [file.h](../file/file.h.html)\[[241](../source/file.h.html#241)\]
 
-<div class="desc">
+
 
 get the CharacterSet object the File is currently using; returns nil for
 a non-text file
 
-</div>
+
 
 <span id="getFileMode"></span>
 
@@ -193,12 +193,12 @@ a non-text file
 
 [file.h](../file/file.h.html)\[[458](../source/file.h.html#458)\]
 
-<div class="desc">
+
 
 Get the file mode. This returns one of the FileModeXxx constants,
 indicating the mode used to open the file (text, data, raw).
 
-</div>
+
 
 <span id="getFileSize"></span>
 
@@ -206,11 +206,11 @@ indicating the mode used to open the file (text, data, raw).
 
 [file.h](../file/file.h.html)\[[452](../source/file.h.html#452)\]
 
-<div class="desc">
+
 
 get the size in bytes of the file
 
-</div>
+
 
 <span id="getPos"></span>
 
@@ -218,13 +218,13 @@ get the size in bytes of the file
 
 [file.h](../file/file.h.html)\[[396](../source/file.h.html#396)\]
 
-<div class="desc">
+
 
 Get the current read/write position in the file. Returns the byte offset
 in the file of the next byte to be read or written. Note that this value
 is an offset, so 0 is the offset of the first byte in the file.
 
-</div>
+
 
 <span id="packBytes"></span>
 
@@ -232,7 +232,7 @@ is an offset, so 0 is the offset of the first byte in the file.
 
 [file.h](../file/file.h.html)\[[522](../source/file.h.html#522)\]
 
-<div class="desc">
+
 
 Pack the given data values into bytes according to a format definition
 string, and write the packed bytes to the file. This function is
@@ -251,7 +251,7 @@ possible that more bytes were actually written.)
 
 See Byte Packing in the System Manual for details.
 
-</div>
+
 
 <span id="readBytes"></span>
 
@@ -259,7 +259,7 @@ See Byte Packing in the System Manual for details.
 
 [file.h](../file/file.h.html)\[[365](../source/file.h.html#365)\]
 
-<div class="desc">
+
 
 Read bytes from the file into the given ByteArray object. This can only
 be used for a file opened in 'raw' mode. If 'start' and 'cnt' are given,
@@ -273,7 +273,7 @@ will be less than or equal to the number requested. If the number read
 is less than the number requested, it means that the end of the file was
 encountered, and only the returned number of bytes were available.
 
-</div>
+
 
 <span id="readFile"></span>
 
@@ -281,7 +281,7 @@ encountered, and only the returned number of bytes were available.
 
 [file.h](../file/file.h.html)\[[322](../source/file.h.html#322)\]
 
-<div class="desc">
+
 
 Read from the file. Returns a data value that depends on the file mode,
 as described below, or nil at end of file.
@@ -308,7 +308,7 @@ the private tads-specific data format. The result is a value of one of
 the types writable with writeFile() in 'data' mode. In order to read a
 'data' file, the file must have been previously written in 'data' mode.
 
-</div>
+
 
 <span id="setCharacterSet"></span>
 
@@ -316,7 +316,7 @@ the types writable with writeFile() in 'data' mode. In order to read a
 
 [file.h](../file/file.h.html)\[[251](../source/file.h.html#251)\]
 
-<div class="desc">
+
 
 Set the CharacterSet object the File is to use from now on. This isn't
 meaningful except for text files. 'charset' can be a CharacterSet
@@ -325,7 +325,7 @@ CharacterSet object is automatically created based on the name), or nil
 (in which case the local system's default character set for text files
 is used).
 
-</div>
+
 
 <span id="setFileMode"></span>
 
@@ -333,7 +333,7 @@ is used).
 
 [file.h](../file/file.h.html)\[[501](../source/file.h.html#501)\]
 
-<div class="desc">
+
 
 Change the file mode. 'mode' is a FileModeXxx value giving the desired
 new file mode.
@@ -344,7 +344,7 @@ string giving the name of a character set. If the value is nil or the
 argument is omitted, the local system's default character for file
 contents is used. The 'charset' parameter is ignored for other modes.
 
-</div>
+
 
 <span id="setPos"></span>
 
@@ -352,7 +352,7 @@ contents is used. The 'charset' parameter is ignored for other modes.
 
 [file.h](../file/file.h.html)\[[416](../source/file.h.html#416)\]
 
-<div class="desc">
+
 
 Set the current read/write position in the file. 'pos' is a byte offset
 in the file; 0 is the offset of the first byte.
@@ -370,7 +370,7 @@ instead. So it is never meaningful or safe to set an arbitrary byte
 offset in these file formats; only values known to be valid by virtue of
 having been returned from getPos() can be used here in these modes.
 
-</div>
+
 
 <span id="setPosEnd"></span>
 
@@ -378,14 +378,14 @@ having been returned from getPos() can be used here in these modes.
 
 [file.h](../file/file.h.html)\[[425](../source/file.h.html#425)\]
 
-<div class="desc">
+
 
 Set the current read/write position to the end of the file. This can be
 used, for example, to open a 'data' mode file for read/write/keep access
 (keeping the contents of an existing file) and then adding more data
 after all of the existing data in the file.
 
-</div>
+
 
 <span id="sha256"></span>
 
@@ -393,7 +393,7 @@ after all of the existing data in the file.
 
 [file.h](../file/file.h.html)\[[549](../source/file.h.html#549)\]
 
-<div class="desc">
+
 
 Calculate the 256-bit SHA-2 hash of bytes read from the file, starting
 at the current seek location and continuing for the given number of
@@ -406,7 +406,7 @@ Returns a string of 64 hex digits giving the hash result.
 
 This can only be used on files opened in raw mode with read access.
 
-</div>
+
 
 <span id="unpackBytes"></span>
 
@@ -414,7 +414,7 @@ This can only be used on files opened in raw mode with read access.
 
 [file.h](../file/file.h.html)\[[535](../source/file.h.html#535)\]
 
-<div class="desc">
+
 
 Read bytes and unpack into a data structure, according to the format
 description string 'desc'.
@@ -425,7 +425,7 @@ the format string, returning a list of the unpacked values.
 
 Refer to Byte Packing in the System Manual for details.
 
-</div>
+
 
 <span id="writeBytes"></span>
 
@@ -433,7 +433,7 @@ Refer to Byte Packing in the System Manual for details.
 
 [file.h](../file/file.h.html)\[[388](../source/file.h.html#388)\]
 
-<div class="desc">
+
 
 Write bytes from the given source object into the file. This can only be
 used for a file opened in 'raw' mode.
@@ -454,7 +454,7 @@ bytes are copied from the start position to the end of the array.
 No return value; if an error occurs writing the data, a FileIOException
 is thrown.
 
-</div>
+
 
 <span id="writeFile"></span>
 
@@ -462,7 +462,7 @@ is thrown.
 
 [file.h](../file/file.h.html)\[[349](../source/file.h.html#349)\]
 
-<div class="desc">
+
 
 Write to the file. Writes the given value to the file in a format that
 depends on the file mode, as described below. No return value; if an
@@ -486,11 +486,11 @@ platforms: a file written in 'data' mode on one machine can be copied
 hardware and a different operating system, and read back in 'data' mode
 on the new machine to yield the original values written.
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+

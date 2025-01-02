@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A FuncCommand is a special version of Command that carries out its
 action via a custom callback function, rather than by executing a
@@ -35,42 +35,42 @@ command without having to create a separate Action for it.
 
 `class `**`FuncCommand`**` :   `[`Command`](../object/Command.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`FuncCommand`**  
 [`Command`](../object/Command.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`func`](#func)
 
@@ -79,11 +79,11 @@ Inherited from `Command` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)
 
@@ -92,11 +92,11 @@ Inherited from `Command` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="func"></span>
 
@@ -104,19 +104,19 @@ Inherited from `Command` :
 
 [command.t](../file/command.t.html)\[[1421](../source/command.t.html#1421)\]
 
-<div class="desc">
+
 
 the callback function for carrying out our command action
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -124,16 +124,16 @@ the callback function for carrying out our command action
 
 [command.t](../file/command.t.html)\[[1408](../source/command.t.html#1408)\]
 
-<div class="desc">
+
 
 Create: provide the grammar match object, if any, and the callback
 function to execute to carry out the command.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

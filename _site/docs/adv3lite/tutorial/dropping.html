@@ -49,14 +49,15 @@ were. One solution might be to assume that anything dropped at the top
 of the tree is put on the branch, and we could implement that. This
 would be another good use of a Doer:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Doer 'drop Thing'
-        execAction(curCmd)    
-        {        
+<p>`
+    Doer ‘drop Thing’
+        execAction(curCmd)  <br />
+        {      <br />
             doInstead(PutOn, gDobj, branch);
-        }
-        
-        where = topOfTree
-    ;
+        }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    where = topOfTree
+; `
 </code></pre></div></div>
 
 <p>Here ‘drop Thing’ will match the attempt to drop any Thing (in this
@@ -107,26 +108,27 @@ We could use a Doer to do this, but here we’ll illustrate another way,
 using the <code class="language-plaintext highlighter-rouge">roomBeforeAction()</code> method of the
 location to intercept an action just before it takes place:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    topOfTree: Room 'At the top of the tree'
-        "You cling precariously to the trunk. "
-        
-        down = clearing
-        
-        cannotGoThatWay(dir)
+<p>`
+    topOfTree: Room ‘At the top of the tree’
+        “You cling precariously to the trunk. “</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    down = clearing
+    
+    cannotGoThatWay(dir)
+    {
+        "The only way from here is down. ";
+    }
+    
+    roomBeforeAction()
+    {
+        if(gActionIs(Drop))
         {
-            "The only way from here is down. ";
+            gDobj.actionMoveInto(clearing);
+            "{The subj dobj} {falls} to the ground below. ";
+            exit;
         }
-        
-        roomBeforeAction()
-        {
-            if(gActionIs(Drop))
-            {
-                gDobj.actionMoveInto(clearing);
-                "{The subj dobj} {falls} to the ground below. ";
-                exit;
-            }
-        }
-    ;
+    }
+; `
 </code></pre></div></div>
 
 <p>Now let’s explain how this works. The

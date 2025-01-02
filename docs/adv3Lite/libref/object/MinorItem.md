@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A MinorItem is an unobtrusive and possibly unimportant portable object
 that's worth implementing in the game but sufficiently minor as to be
@@ -36,15 +36,15 @@ directly held by the player character or directly in the enclosing room.
 
 `class `**`MinorItem`**` :   `[`Thing`](../object/Thing.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`MinorItem`**  
 [`Thing`](../object/Thing.html)  
@@ -56,27 +56,27 @@ directly held by the player character or directly in the enclosing room.
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`includeTakeFromPutAll`](#includeTakeFromPutAll)[`lookListed`](#lookListed)
 
@@ -95,11 +95,11 @@ Inherited from `LMentionable` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`canBeIgnored`](#canBeIgnored)[`hideFromAll`](#hideFromAll)
 
@@ -120,11 +120,11 @@ Inherited from `LMentionable` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="includeTakeFromPutAll"></span>
 
@@ -132,12 +132,12 @@ Inherited from `LMentionable` :
 
 [extras.t](../file/extras.t.html)\[[1068](../source/extras.t.html#1068)\]
 
-<div class="desc">
+
 
 Flag: do we want to be included in TAKE ALL FROM X, and PUT ALL
 IN/ON/UNDER/BEHIND X? by default we do.
 
-</div>
+
 
 <span id="lookListed"></span>
 
@@ -145,21 +145,21 @@ IN/ON/UNDER/BEHIND X? by default we do.
 
 [extras.t](../file/extras.t.html)\[[1026](../source/extras.t.html#1026)\]
 
-<div class="desc">
+
 
 We're listed in response to a LOOK command only if we're not fixed in
 place and we can't be ignored for the current action or our current
 location.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="canBeIgnored"></span>
 
@@ -167,13 +167,13 @@ location.
 
 [extras.t](../file/extras.t.html)\[[1039](../source/extras.t.html#1039)\]
 
-<div class="desc">
+
 
 We can be ignored for action unless we're directly in our enclosing room
 or directly in the player character's location or carried by the player
 character or, if desired, the action is TAKEFROM or PutXX
 
-</div>
+
 
 <span id="hideFromAll"></span>
 
@@ -181,15 +181,15 @@ character or, if desired, the action is TAKEFROM or PutXX
 
 [extras.t](../file/extras.t.html)\[[1029](../source/extras.t.html#1029)\]
 
-<div class="desc">
+
 
 We're excluded from a FOO ALL action if we can be ignored for FOO.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 StackFrameDesc intrinsic class. This class provides access to a stack
 frame. It lets us retrieve the values of local variables and method
@@ -55,68 +55,68 @@ including the frame object.
 
 `intrinsic class `**`StackFrameDesc`**` : `
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`StackFrameDesc`**  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 
 
 *(none)* <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getDefiningObj`](#getDefiningObj)[`getInvokee`](#getInvokee)[`getSelf`](#getSelf)[`getTargetObj`](#getTargetObj)[`getTargetProp`](#getTargetProp)[`getVars`](#getVars)[`isActive`](#isActive)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 *(none)* <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getDefiningObj"></span>
 
@@ -124,11 +124,11 @@ including the frame object.
 
 [systype.h](../file/systype.h.html)\[[1293](../source/systype.h.html#1293)\]
 
-<div class="desc">
+
 
 Get the value of 'definingobj' in this frame.
 
-</div>
+
 
 <span id="getInvokee"></span>
 
@@ -136,11 +136,11 @@ Get the value of 'definingobj' in this frame.
 
 [systype.h](../file/systype.h.html)\[[1308](../source/systype.h.html#1308)\]
 
-<div class="desc">
+
 
 Get the value of 'invokee' in this frame.
 
-</div>
+
 
 <span id="getSelf"></span>
 
@@ -148,11 +148,11 @@ Get the value of 'invokee' in this frame.
 
 [systype.h](../file/systype.h.html)\[[1288](../source/systype.h.html#1288)\]
 
-<div class="desc">
+
 
 Get the value of 'self' in this frame.
 
-</div>
+
 
 <span id="getTargetObj"></span>
 
@@ -160,11 +160,11 @@ Get the value of 'self' in this frame.
 
 [systype.h](../file/systype.h.html)\[[1298](../source/systype.h.html#1298)\]
 
-<div class="desc">
+
 
 Get the value of 'targetobj' in this frame.
 
-</div>
+
 
 <span id="getTargetProp"></span>
 
@@ -172,11 +172,11 @@ Get the value of 'targetobj' in this frame.
 
 [systype.h](../file/systype.h.html)\[[1303](../source/systype.h.html#1303)\]
 
-<div class="desc">
+
 
 Get the value of 'targetprop' in this frame.
 
-</div>
+
 
 <span id="getVars"></span>
 
@@ -184,7 +184,7 @@ Get the value of 'targetprop' in this frame.
 
 [systype.h](../file/systype.h.html)\[[1283](../source/systype.h.html#1283)\]
 
-<div class="desc">
+
 
 Get a LookupTable consisting of all of the variables (local variables
 and parameters) in the frame. Each element in the table is keyed by the
@@ -201,7 +201,7 @@ To retrieve the current live value of a variable in the actual stack
 frame, use frame\[name\], where 'frame' is the StackFrameDesc object for
 the frame, and 'name' is a string giving the variable name.
 
-</div>
+
 
 <span id="isActive"></span>
 
@@ -209,7 +209,7 @@ the frame, and 'name' is a string giving the variable name.
 
 [systype.h](../file/systype.h.html)\[[1264](../source/systype.h.html#1264)\]
 
-<div class="desc">
+
 
 Is the stack frame active? A stack frame is active until the function or
 method it represents returns to its caller. When the routine returns,
@@ -223,11 +223,11 @@ locals as normal without worrying about whether or not the actual stack
 frame still exists. This allows you to continue to access and modify the
 values of the variables after the routine has exited.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

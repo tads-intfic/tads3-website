@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 A PreCondition encapsulate a condition that must be fulfilled in order
 for an action to be fulfilled (e.g. a container must be open before we
@@ -35,64 +35,64 @@ fulfilment of the condition it enforces via an implicit action.
 
 `class `**`PreCondition`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`PreCondition`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`PreCondition`**  
 [`ObjectPreCondition`](../object/ObjectPreCondition.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`actorInStagingLocation`](../object/actorInStagingLocation.html)[`actorOutOfNested`](../object/actorOutOfNested.html)[`containerOpen`](../object/containerOpen.html)[`objAudible`](../object/objAudible.html)[`objClosed`](../object/objClosed.html)[`objDetached`](../object/objDetached.html)[`objHeld`](../object/objHeld.html)[`objNotWorn`](../object/objNotWorn.html)[`objOpen`](../object/objOpen.html)[`objSmellable`](../object/objSmellable.html)[`objUnlocked`](../object/objUnlocked.html)[`objVisible`](../object/objVisible.html)[`touchObj`](../object/touchObj.html)[`travelPermitted`](../object/travelPermitted.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`preCondOrder`](#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="preCondOrder"></span>
 
@@ -100,7 +100,7 @@ fulfilment of the condition it enforces via an implicit action.
 
 [precond.t](../file/precond.t.html)\[[64](../source/precond.t.html#64)\]
 
-<div class="desc">
+
 
 Precondition execution order. When we execute preconditions for a given
 action, we'll sort the list of all applicable preconditions in ascending
@@ -112,15 +112,15 @@ applying one precondition can destroy the conditions that the other
 would try to create but not vice versa. When the order doesn't matter,
 this can be left at the default setting.
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="checkPreCondition"></span>
 
@@ -128,7 +128,7 @@ this can be left at the default setting.
 
 [precond.t](../file/precond.t.html)\[[33](../source/precond.t.html#33)\]
 
-<div class="desc">
+
 
 Check the condition on the given object (which may be nil, if this
 condition doesn't apply specifically to one of the objects in the
@@ -141,7 +141,7 @@ If allowImplicit is nil, an implicit command may not be attempted. In
 this case, if the condition is not met, we must simply report a failure
 return nil to terminate the command.
 
-</div>
+
 
 <span id="verifyPreCondition"></span>
 
@@ -149,7 +149,7 @@ return nil to terminate the command.
 
 [precond.t](../file/precond.t.html)\[[51](../source/precond.t.html#51)\]
 
-<div class="desc">
+
 
 Verify the condition. This is called during the object verification step
 so that the pre-condition can add verifications of its own. This can be
@@ -164,11 +164,11 @@ actions to meet the condition.
 during verification, the explicitly passed-in object must be used in the
 check rather than the current object in the global current action.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

@@ -26,7 +26,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Module ID. Each library add-in can define one of these, so that the
 "credits" command and the like can automatically show the version of
@@ -43,25 +43,25 @@ command's output).
 
 `class `**`ModuleID`**` :   object`
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`ModuleID`**  
 `         object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 **`ModuleID`**  
 [`MetadataModuleID`](../object/MetadataModuleID.html)  
@@ -69,40 +69,40 @@ command's output).
 [`GameID`](../object/GameID.html)  
 <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 [`fueledID`](../object/fueledID.html)[`moduleAdv3Lite`](../object/moduleAdv3Lite.html)[`posturesID`](../object/posturesID.html)[`roomPartID`](../object/roomPartID.html)[`sensoryID`](../object/sensoryID.html)[`symconnID`](../object/symconnID.html)[`tiaactionID`](../object/tiaactionID.html)[`viewportID`](../object/viewportID.html)
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`byline`](#byline)[`htmlByline`](#htmlByline)[`listingOrder`](#listingOrder)[`name`](#name)[`version`](#version)
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`getModuleList`](#getModuleList)[`showAbout`](#showAbout)[`showCredit`](#showCredit)[`showVersion`](#showVersion)[`showVersionMsg`](#showVersionMsg)
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="byline"></span>
 
@@ -110,11 +110,11 @@ command's output).
 
 [modid.t](../file/modid.t.html)\[[42](../source/modid.t.html#42)\]
 
-<div class="desc">
+
 
 the "byline" for the module, in plain text and HTML versions
 
-</div>
+
 
 <span id="htmlByline"></span>
 
@@ -122,11 +122,11 @@ the "byline" for the module, in plain text and HTML versions
 
 [modid.t](../file/modid.t.html)\[[43](../source/modid.t.html#43)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="listingOrder"></span>
 
@@ -134,7 +134,7 @@ the "byline" for the module, in plain text and HTML versions
 
 [modid.t](../file/modid.t.html)\[[148](../source/modid.t.html#148)\]
 
-<div class="desc">
+
 
 My listing order. When we compile a list of modules, we'll sort the
 modules first by ascending listing order; any modules with the same
@@ -148,7 +148,7 @@ before any extension credits using the default order value 100 that we
 define here. Extensions are free, however, to use a number lower than 5
 if they wish to appear before the main library credit.
 
-</div>
+
 
 <span id="name"></span>
 
@@ -156,11 +156,11 @@ if they wish to appear before the main library credit.
 
 [modid.t](../file/modid.t.html)\[[39](../source/modid.t.html#39)\]
 
-<div class="desc">
+
 
 my name
 
-</div>
+
 
 <span id="version"></span>
 
@@ -168,19 +168,19 @@ my name
 
 [modid.t](../file/modid.t.html)\[[46](../source/modid.t.html#46)\]
 
-<div class="desc">
+
 
 my version number string
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="getModuleList"></span>
 
@@ -188,12 +188,12 @@ my version number string
 
 [modid.t](../file/modid.t.html)\[[154](../source/modid.t.html#154)\]
 
-<div class="desc">
+
 
 get a list of all of the modules that are part of the game, sorted in
 listing order
 
-</div>
+
 
 <span id="showAbout"></span>
 
@@ -201,7 +201,7 @@ listing order
 
 [modid.t](../file/modid.t.html)\[[132](../source/modid.t.html#132)\]
 
-<div class="desc">
+
 
 Show the "about this game" information. By default, we show nothing
 here. Typically, only the game's module ID object will override this; in
@@ -253,7 +253,7 @@ substantial effort) after the game is already lost.
 \- A description of any special status line displays or other on-screen
 information whose meaning might not be immediately apparent.
 
-</div>
+
 
 <span id="showCredit"></span>
 
@@ -261,7 +261,7 @@ information whose meaning might not be immediately apparent.
 
 [modid.t](../file/modid.t.html)\[[56](../source/modid.t.html#56)\]
 
-<div class="desc">
+
 
 Show my library credit. By default won't show anything. Libraries should
 generally not override this, because we want to leave it up to the
@@ -269,7 +269,7 @@ author to determine how the credits are displayed. If a library
 overrides this, then the author won't be able to control the formatting
 of the library credit, which is undesirable.
 
-</div>
+
 
 <span id="showVersion"></span>
 
@@ -277,7 +277,7 @@ of the library credit, which is undesirable.
 
 [modid.t](../file/modid.t.html)\[[65](../source/modid.t.html#65)\]
 
-<div class="desc">
+
 
 Show version information. By default, we show our name and version
 number, then start a new line. The main game's module ID should
@@ -285,7 +285,7 @@ generally override this to show an appropriate version message for the
 game, and any library add-ins that want to display their version
 information can override this to do so.
 
-</div>
+
 
 <span id="showVersionMsg"></span>
 
@@ -293,15 +293,15 @@ information can override this to do so.
 
 [modid.t](../file/modid.t.html)\[[71](../source/modid.t.html#71)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

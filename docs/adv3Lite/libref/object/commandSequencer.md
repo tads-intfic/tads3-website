@@ -20,7 +20,7 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Command Sequencer Filter. This is an output filter that handles the
 special \<.commandsep\> tag for visual command separation. This tag has
@@ -44,26 +44,26 @@ finishes reading a command line.
 
 `transient `**`commandSequencer`**` :   `[`OutputFilter`](../object/OutputFilter.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`commandSequencer`**  
 [`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`patNextTag`](#patNextTag)[`state_`](#state_)
 
@@ -71,11 +71,11 @@ finishes reading a command line.
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`filterText`](#filterText)[`setCommandMode`](#setCommandMode)[`writeThrough`](#writeThrough)
 
@@ -83,11 +83,11 @@ finishes reading a command line.
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="patNextTag"></span>
 
@@ -95,11 +95,11 @@ finishes reading a command line.
 
 [output.t](../file/output.t.html)\[[1264](../source/output.t.html#1264)\]
 
-<div class="desc">
+
 
 pre-compile our tag sequence pattern
 
-</div>
+
 
 <span id="state_"></span>
 
@@ -107,19 +107,19 @@ pre-compile our tag sequence pattern
 
 [output.t](../file/output.t.html)\[[1543](../source/output.t.html#1543)\]
 
-<div class="desc">
+
 
 our current state - start out in before-command mode
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="filterText"></span>
 
@@ -127,11 +127,11 @@ our current state - start out in before-command mode
 
 [output.t](../file/output.t.html)\[[1272](../source/output.t.html#1272)\]
 
-<div class="desc">
+
 
 Apply our filter
 
-</div>
+
 
 <span id="setCommandMode"></span>
 
@@ -139,13 +139,13 @@ Apply our filter
 
 [output.t](../file/output.t.html)\[[1234](../source/output.t.html#1234)\]
 
-<div class="desc">
+
 
 Force the sequencer into mid-command mode. This can be used to defeat
 the resequencing into before-results mode that occurs if any interactive
 command-line input must be read in the course of a command's execution.
 
-</div>
+
 
 <span id="writeThrough"></span>
 
@@ -153,16 +153,16 @@ command-line input must be read in the course of a command's execution.
 
 [output.t](../file/output.t.html)\[[1240](../source/output.t.html#1240)\]
 
-<div class="desc">
+
 
 Internal routine: write the given text directly through us, skipping any
 filtering we'd otherwise apply.
 
-</div>
 
-<div class="ftr">
+
+
 
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 
-</div>
+

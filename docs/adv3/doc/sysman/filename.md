@@ -1,13 +1,13 @@
 ---
 layout: docs
 ---
-<div class="topbar">
+
 
 <img src="topbar.jpg" data-border="0" />
 
-</div>
 
-<div class="nav">
+
+
 
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> FileName  
@@ -15,7 +15,7 @@ layout: docs
     <a href="gramprod.html" class="nav"><em>Next:</em> GrammarProd</a>
     </span>
 
-</div>
+
 
 
 
@@ -88,7 +88,7 @@ build.
 
 `new FileName()`
 
-<div class="fdef">
+
 
 This creates a FileName object representing the working directory - the
 equivalent of "." on Unix or Windows.
@@ -97,7 +97,7 @@ equivalent of "." on Unix or Windows.
 
 `new FileName(*str*)`
 
-<div class="fdef">
+
 
 *str* is a string containing a filename, using the host operating
 system's syntax. This creates a FileName representing that local
@@ -110,11 +110,11 @@ run-time, such as user input. This lets you wrap the string in a
 FileName object so that you can further manipulate it using local
 conventions.
 
-</div>
+
 
 `new FileName(*path*, *name*)`
 
-<div class="fdef">
+
 
 *path* and *name* can be either filename strings, using the host
 operating system's syntax, or FileName objects. This combines the two
@@ -127,7 +127,7 @@ FileName('images', 'pic.jpg')`. This solves the exact problem we
 mentioned earlier about how you write a directory-path name like
 `'images/pic.jpg'` portably.
 
-</div>
+
 
 You can also use the [fromUniversal()](#fromUniversal) method to create
 a FileName from a hard-coded string in universal syntax.
@@ -193,7 +193,7 @@ the game creates for its own use.
 
 `addToPath(*element*)`
 
-<div class="fdef">
+
 
 Adds the path element *element* to the end of this filename, returning a
 new FileName object with the combined path. *element* can be either
@@ -202,13 +202,13 @@ This method uses the correct local file system syntax to combine the
 path elements. Note that this has the same effect as
 `self+` *element*.
 
-</div>
+
 
 <span id="createDirectory"></span>
 
 `createDirectory(*createParents*?)`
 
-<div class="fdef">
+
 
 Creates a directory, using the name given by this object.
 
@@ -232,13 +232,13 @@ This function throws an error if the directory creation fails. The file
 safety settings must allow write access to the directory containing the
 new subdirectory.
 
-</div>
+
 
 <span id="deleteFile"></span>
 
 `deleteFile()`
 
-<div class="fdef">
+
 
 Deletes the file named by this object. There's no return value; if the
 operation fails, the method throws a run-time error ("error deleting
@@ -247,13 +247,13 @@ file").
 The file safety settings must allow write access to the file; if not, a
 file safety exception is thrown.
 
-</div>
+
 
 <span id="forEachFile"></span>
 
 `forEachFile(*func*, *recursive*?)`
 
-<div class="fdef">
+
 
 Enumerates the files in the directory named by this object, invoking the
 callback function *func* for each file. *func* is invoked as
@@ -271,13 +271,13 @@ for recursive directory tree scans. In addition, since it doesn't build
 a list of results, it uses less memory when you only need to perform an
 operation per file rather than compiling a list of files.
 
-</div>
+
 
 <span id="fromUniversal"></span>
 
 `fromUniversal(*path*)`
 
-<div class="fdef">
+
 
 Creates a new FileName object based on a path expressed in the TADS
 "universal" path syntax. *path* is a string giving a filename path in
@@ -309,13 +309,13 @@ different OS. This method solves the problem by letting you write the
 path in a universal format, and then translating it at run-time to the
 local OS syntax.
 
-</div>
+
 
 <span id="getAbsolutePath"></span>
 
 `getAbsolutePath()`
 
-<div class="fdef">
+
 
 Returns a new FileName object giving the absolute path to this file. If
 the 'self' object's path is a relative path (see
@@ -333,13 +333,13 @@ On some systems, it might not be possible to convert every path to
 absolute format. If the path can't be converted, this returns
 `nil`.
 
-</div>
+
 
 <span id="getFileInfo"></span>
 
 `getFileInfo(*asLink*?)`
 
-<div class="fdef">
+
 
 This method checks to see if the file named by this object exists, and
 if so retrieves its file system metadata, including its size, type, and
@@ -498,13 +498,13 @@ folder's metadata. The parent folders therefore get the same file safety
 treatment as the working folder for the purposes of getFileInfo(). For
 other operations, the parent folders are considered outside the sandbox.
 
-</div>
+
 
 <span id="getFileType"></span>
 
 `getFileType(*asLink*?)`
 
-<div class="fdef">
+
 
 Tests to see if the file named by the object exists, and if so
 determines its type. If the file exists, the return value is an integer
@@ -557,13 +557,13 @@ systems, since these flags cover all of the file types on those systems.
 Future versions of those OSes might add new file types outside of our
 categories, though, and more exotic platforms might already have some.)
 
-</div>
+
 
 <span id="getName"></span>
 
 `getName()`
 
-<div class="fdef">
+
 
 Returns a string giving the filename this object represents, using the
 local syntax of the host operating system. The format of the string
@@ -578,13 +578,13 @@ if the FileName is implicitly converted to a string, such as if you
 display the FileName via `"\<\< \>\>"` string
 embedding.
 
-</div>
+
 
 <span id="getPath"></span>
 
 `getPath()`
 
-<div class="fdef">
+
 
 Returns a string giving the directory location portion of the name
 represented by this FileName object. This separates the FileName into a
@@ -600,13 +600,13 @@ For example, if the FileName represents
 `'pic.jpg'`, this method simply returns an empty
 string, since the stored name doesn't have a directory path portion.
 
-</div>
+
 
 <span id="getRootDirs"></span>
 
 `getRootDirs()`
 
-<div class="fdef">
+
 
 Get a list of the root directories on the local system. Returns a list
 of FileName objects representing the root directories. The list only
@@ -628,13 +628,13 @@ the root list might contain paths like C:\\ D:\\ etc. Some systems have
 no concept of a root directory at all, in which case the result will be
 an empty list; this is the case for the network storage server.
 
-</div>
+
 
 <span id="getBaseName"></span>
 
 `getBaseName()`
 
-<div class="fdef">
+
 
 Returns a string giving the base filename part of the path represented
 by this FileName object. This separates the FileName into a directory
@@ -646,13 +646,13 @@ for `'data/images/pic.jpg'`, the base name is
 this method parses the name according to the local syntax on the host
 machine at run-time.
 
-</div>
+
 
 <span id="isAbsolute"></span>
 
 `isAbsolute()`
 
-<div class="fdef">
+
 
 Determines if the filename that the object represents is an absolute
 path on the local system; returns `true` if so,
@@ -669,13 +669,13 @@ to form a full path. When used without first being combined with a base
 path, a relative path is implicitly relative to a current working
 directory or similar context, which varies by operating system.
 
-</div>
+
 
 <span id="listDir"></span>
 
 `listDir()`
 
-<div class="fdef">
+
 
 Returns a list of the names of the files contained in the directory
 named by this object. The file listing is returned as a list of FileName
@@ -743,13 +743,13 @@ to display to the user, you should filter the list yourself to remove
 hidden and system files, if desired, by checking each file's attributes
 via `getFileInfo()`.
 
-</div>
+
 
 <span id="removeDirectory"></span>
 
 `removeDirectory(*deleteContents*?)`
 
-<div class="fdef">
+
 
 Deletes the directory named by this object.
 
@@ -779,13 +779,13 @@ For obvious reasons, use caution when using the *removeContents* flag.
 This method requires that the file safety settings allow write access to
 the directory to be deleted.
 
-</div>
+
 
 <span id="renameFile"></span>
 
 `renameFile(*newname*)`
 
-<div class="fdef">
+
 
 Renames the file named by this object to *newname*, which may be given
 as a string or a FileName object. The new name is treated as a full
@@ -804,13 +804,13 @@ isn't allowed. The file safety settings must allow write access to both
 the old and new files (so you can't, for example, move a file to a
 directory where you wouldn't have access to the relocated file).
 
-</div>
+
 
 <span id="toUniversal"></span>
 
 `toUniversal()`
 
-<div class="fdef">
+
 
 Returns a string with the FileName's path converted to the TADS
 universal file path notation. This notation is similar to Unix path
@@ -818,13 +818,13 @@ syntax, with "/" as the path separator character. You can convert the
 string back to a local path on the current system, or on a different
 operating system, using [fromUniversal()](#fromUniversal).
 
-</div>
 
-</div>
+
+
 
 ------------------------------------------------------------------------
 
-<div class="navb">
+
 
 *TADS 3 System Manual*  
 <a href="toc.html" class="nav">Table of Contents</a> \|
@@ -833,4 +833,4 @@ operating system, using [fromUniversal()](#fromUniversal).
     <a href="gramprod.html" class="nav"><em>Next:</em> GrammarProd</a>
     </span>
 
-</div>
+

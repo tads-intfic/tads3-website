@@ -26,48 +26,48 @@ Details](#_Properties_)
 [Method  
 Details](#_Methods_)
 
-<div class="fdesc">
+
 
 Suggested topic lister.
 
 `class `**`SuggestedTopicLister`**` :   `[`Lister`](../object/Lister.html)
 
-</div>
+
 
 <span id="_SuperClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Superclass Tree</span>   (in declaration order)
 
-</div>
+
 
 **`SuggestedTopicLister`**  
 [`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Subclass Tree</span>  
 
-</div>
+
 
 *(none)* <span id="_ObjectSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Global Objects</span>  
 
-</div>
+
 
 *(none)* <span id="_PropSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Properties</span>  
 
-</div>
+
 
 [`askingActor`](#askingActor)[`isExplicit`](#isExplicit)[`scopeList`](#scopeList)[`targetActor`](#targetActor)
 
@@ -76,11 +76,11 @@ Inherited from `Lister` :
 
 <span id="_MethodSummary_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Summary of Methods</span>  
 
-</div>
+
 
 [`construct`](#construct)[`contentsListed`](#contentsListed)[`isListed`](#isListed)[`listCardinality`](#listCardinality)[`listWith`](#listWith)[`longListSepEnd`](#longListSepEnd)[`longListSepMiddle`](#longListSepMiddle)[`longListSepTwo`](#longListSepTwo)[`markAsSeen`](#markAsSeen)[`showListEmpty`](#showListEmpty)[`showListItem`](#showListItem)[`showListPrefixWide`](#showListPrefixWide)[`showListSeparator`](#showListSeparator)[`showListSuffixWide`](#showListSuffixWide)
 
@@ -89,11 +89,11 @@ Inherited from `Lister` :
 
 <span id="_Properties_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Properties</span>  
 
-</div>
+
 
 <span id="askingActor"></span>
 
@@ -101,11 +101,11 @@ Inherited from `Lister` :
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5678](../source/msg_neu.t.html#5678)\]
 
-<div class="desc">
+
 
 the actor who's asking for the topic list (usually the PC)
 
-</div>
+
 
 <span id="isExplicit"></span>
 
@@ -113,11 +113,11 @@ the actor who's asking for the topic list (usually the PC)
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5675](../source/msg_neu.t.html#5675)\]
 
-<div class="desc">
+
 
 flag: this is an explicit listing (i.e., a TOPICS command)
 
-</div>
+
 
 <span id="scopeList"></span>
 
@@ -125,11 +125,11 @@ flag: this is an explicit listing (i.e., a TOPICS command)
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5684](../source/msg_neu.t.html#5684)\]
 
-<div class="desc">
+
 
 our cached scope list for the actor
 
-</div>
+
 
 <span id="targetActor"></span>
 
@@ -137,19 +137,19 @@ our cached scope list for the actor
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5681](../source/msg_neu.t.html#5681)\]
 
-<div class="desc">
+
 
 the actor we're talking to
 
-</div>
+
 
 <span id="_Methods_"></span>
 
-<div class="mjhd">
+
 
 <span class="hdln">Methods</span>  
 
-</div>
+
 
 <span id="construct"></span>
 
@@ -157,11 +157,11 @@ the actor we're talking to
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5594](../source/msg_neu.t.html#5594)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="contentsListed"></span>
 
@@ -169,11 +169,11 @@ the actor we're talking to
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5651](../source/msg_neu.t.html#5651)\]
 
-<div class="desc">
+
 
 suggestions have no contents
 
-</div>
+
 
 <span id="isListed"></span>
 
@@ -181,11 +181,11 @@ suggestions have no contents
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5645](../source/msg_neu.t.html#5645)\]
 
-<div class="desc">
+
 
 list suggestions that are currently active
 
-</div>
+
 
 <span id="listCardinality"></span>
 
@@ -193,11 +193,11 @@ list suggestions that are currently active
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5648](../source/msg_neu.t.html#5648)\]
 
-<div class="desc">
+
 
 each item counts as one item grammatically
 
-</div>
+
 
 <span id="listWith"></span>
 
@@ -205,11 +205,11 @@ each item counts as one item grammatically
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5654](../source/msg_neu.t.html#5654)\]
 
-<div class="desc">
+
 
 get the list group
 
-</div>
+
 
 <span id="longListSepEnd"></span>
 
@@ -217,11 +217,11 @@ get the list group
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5672](../source/msg_neu.t.html#5672)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="longListSepMiddle"></span>
 
@@ -229,11 +229,11 @@ get the list group
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5671](../source/msg_neu.t.html#5671)\]
 
-<div class="desc">
+
 
 *no description available*
 
-</div>
+
 
 <span id="longListSepTwo"></span>
 
@@ -241,11 +241,11 @@ get the list group
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5670](../source/msg_neu.t.html#5670)\]
 
-<div class="desc">
+
 
 don't use semicolons, even in long lists
 
-</div>
+
 
 <span id="markAsSeen"></span>
 
@@ -253,11 +253,11 @@ don't use semicolons, even in long lists
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5657](../source/msg_neu.t.html#5657)\]
 
-<div class="desc">
+
 
 mark as seen - nothing to do for suggestions
 
-</div>
+
 
 <span id="showListEmpty"></span>
 
@@ -265,11 +265,11 @@ mark as seen - nothing to do for suggestions
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5620](../source/msg_neu.t.html#5620)\]
 
-<div class="desc">
+
 
 end the sentence; include a paren if not in explicit mode
 
-</div>
+
 
 <span id="showListItem"></span>
 
@@ -277,11 +277,11 @@ end the sentence; include a paren if not in explicit mode
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5660](../source/msg_neu.t.html#5660)\]
 
-<div class="desc">
+
 
 show the item - show the suggestion's theName
 
-</div>
+
 
 <span id="showListPrefixWide"></span>
 
@@ -289,11 +289,11 @@ show the item - show the suggestion's theName
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5607](../source/msg_neu.t.html#5607)\]
 
-<div class="desc">
+
 
 cache the actor's scope list
 
-</div>
+
 
 <span id="showListSeparator"></span>
 
@@ -301,12 +301,12 @@ cache the actor's scope list
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5635](../source/msg_neu.t.html#5635)\]
 
-<div class="desc">
+
 
 say that the list is empty if it was explicitly requested; say nothing
 if the list is being added by the library
 
-</div>
+
 
 <span id="showListSuffixWide"></span>
 
@@ -314,15 +314,15 @@ if the list is being added by the library
 
 [msg_neu.t](../file/msg_neu.t.html)\[[5615](../source/msg_neu.t.html#5615)\]
 
-<div class="desc">
+
 
 show the prefix; include a paren if not in explicit mode
 
-</div>
 
-<div class="ftr">
+
+
 
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
-</div>
+
