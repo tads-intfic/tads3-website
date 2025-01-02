@@ -7,13 +7,13 @@
     <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css"
                            href="/assets/css/styles.css">
-    <title>docs-adv3-doc-tourguide-moduleexecobject-html</title>
+    <title></title>
     <meta property="og:title" content=
-    "docs-adv3-doc-tourguide-moduleexecobject-html">
+    "">
     <meta name="description" content="">
     <meta property="og:description" content="">
 </head>
-<header><div class="header-search">
+<header id="header"><div class="header-search">
     <form class="header-search-form" action="/search" method="get">
       <input type="text" id="search-box" name="query">
       <input type="submit" value="search">
@@ -63,9 +63,18 @@ mustn’t execute until the current object has executed.</p>
 
 
 </main>
-<footer>
+<footer id="footer">
     <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
     <p><a href="/">Back to Homepage</a></p>
 </footer>
 </body>
 </html>
+
+<script>
+    if(window.location !== window.top.location) {
+        let header = document.getElementById('header');
+        let footer = document.getElementById('footer');
+        header.remove();
+        footer.remove();
+    }
+</script>

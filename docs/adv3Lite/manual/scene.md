@@ -148,7 +148,7 @@ description. For that purpose you need to use an
 
   
 
-## Keeping Track of <span id="time_idx">Time</span>
+<h2 id="">Keeping Track of</h2><span id="time_idx">Time</span>
 
 In a sense, Scenes can be said to divide your game into different times
 just as Rooms and Regions divide it into different places, but Scenes

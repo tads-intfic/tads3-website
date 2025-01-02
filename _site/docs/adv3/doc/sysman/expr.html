@@ -7,13 +7,13 @@
     <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css"
                            href="/assets/css/styles.css">
-    <title>docs-adv3-doc-sysman-expr-html</title>
+    <title></title>
     <meta property="og:title" content=
-    "docs-adv3-doc-sysman-expr-html">
+    "">
     <meta name="description" content="">
     <meta property="og:description" content="">
 </head>
-<header><div class="header-search">
+<header id="header"><div class="header-search">
     <form class="header-search-form" action="/search" method="get">
       <input type="text" id="search-box" name="query">
       <input type="submit" value="search">
@@ -541,7 +541,7 @@ task-specific functions can be reused for iterating through completely
 different structures, since they don’t have to know anything about how
 the iteration part works. It makes for a very clean division of labor.</p>
 
-<h3 id="-----"><span id="postinc"></span> <span id="postdec"></span> <span id="preinc"></span> <span id="predec"></span> ++, ––</h3>
+<p>#&lt;h2 id=""&gt;<span id="postinc"></span> <span id="postdec"></span> <span id="preinc"></span>&lt;/h2&gt;<span id="predec"></span> ++, ––</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">++</code> and <code class="language-plaintext highlighter-rouge">--</code>
 operators increment or decrement the contents of their operand. The
@@ -997,7 +997,7 @@ always fills the vacated bits with zeros. For positive values of <em>a</em>,
 <em>a</em> <code class="language-plaintext highlighter-rouge">\&gt;\&gt;</code> <em>n</em> and <em>a</em>
 <code class="language-plaintext highlighter-rouge">\&gt;\&gt;\&gt;</code> <em>n</em> have the same result.</p>
 
-<h3 id="------"><span id="lt"></span>&gt;   <span id="le"></span>&lt;   <span id="gt"></span>&gt;=   <span id="ge"></span>&lt;=</h3>
+<p>#&lt;h2 id=""&gt;<span id="lt"></span>&gt;   <span id="le"></span>&lt;   <span id="gt"></span>&gt;=  &lt;/h2&gt;<span id="ge"></span>&lt;=</p>
 
 <p>These operators each compare two values. Each operator yields true if
 its comparison holds for the two values, nil if not.</p>
@@ -1043,7 +1043,7 @@ comparison”) is generated.</li>
     local z = x &gt; y; // stores true in z
 </code></pre></div></div>
 
-<h3 id="is-in--not-in"><span id="isin"></span>is in   <span id="notin"></span>not in</h3>
+<p>#&lt;h2 id=""&gt;<span id="isin"></span>is in  &lt;/h2&gt;<span id="notin"></span>not in</p>
 
 <p>These operators compare one value to each value in a set of values.
 <code class="language-plaintext highlighter-rouge">is in</code> yields true if the first value is equal
@@ -1095,7 +1095,7 @@ set expressions must be compared.</p>
     local y = (x + 3) is in (y*1, y*2, y*3, y*4, y*5);
 </code></pre></div></div>
 
-<h3 id="--"><span id="eq"></span>==   <span id="ne"></span>!=</h3>
+<p>#&lt;h2 id=""&gt;<span id="eq"></span>==  &lt;/h2&gt;<span id="ne"></span>!=</p>
 
 <p>These operators test for equality and inequality, respectively.
 <code class="language-plaintext highlighter-rouge">==</code> yields true if the two values being
@@ -2157,9 +2157,18 @@ Finalization</a>    
 
 
 </main>
-<footer>
+<footer id="footer">
     <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
     <p><a href="/">Back to Homepage</a></p>
 </footer>
 </body>
 </html>
+
+<script>
+    if(window.location !== window.top.location) {
+        let header = document.getElementById('header');
+        let footer = document.getElementById('footer');
+        header.remove();
+        footer.remove();
+    }
+</script>

@@ -1,7 +1,7 @@
 ---
 layout: docs
 ---
-## Game <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_0">Game</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="doc/gsg/averysimplegame.html"
   target="classes">A very simple game</a>*
@@ -34,7 +34,7 @@ layout: docs
 - <a href="doc/libref/object/FinishType.html"
   target="classes"><code>FinishType</code></a>
 
-## Tangibles <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_1">Tangibles</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="doc/gsg/addingitemstothegame.html"
   target="classes">Adding items to the game</a>*
@@ -75,7 +75,7 @@ layout: docs
 - <a href="doc/libref/object/Wearable.html"
   target="classes"><code>Wearable</code></a>
 
-## Locations & travel <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_2">Locations & travel</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="doc/gsg/definingourfirstroom.html"
   target="classes">Defining our first room</a>*
@@ -185,7 +185,7 @@ layout: docs
     href="doc/libref/object/VerticalDirection.html"
     target="classes"><code>VerticalDirection</code></a>
 
-## Text, HTML, & multimedia <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_3">Text, HTML, & multimedia</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="doc/sysman/strlit.html#specials"
   target="classes">Escaped characters (backslash codes)</a>*
@@ -214,7 +214,7 @@ layout: docs
 - <a href="doc/libref/object/StringBuffer.html"
   target="classes"><code>StringBuffer</code></a>
 
-## Containers & surfaces <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_4">Containers & surfaces</h2><a href="#top" style="font-size: small">[top]</a>
 
 - **<a href="doc/libref/object/Container.html"
   target="classes"><code>Container</code></a>**
@@ -266,7 +266,7 @@ layout: docs
 - <a href="doc/libref/object/Underside.html"
   target="classes"><code>Underside</code></a>
 
-## Gadgetry <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_5">Gadgetry</h2><a href="#top" style="font-size: small">[top]</a>
 
 - <a href="doc/libref/object/Button.html"
   target="classes"><code>Button</code></a>
@@ -309,7 +309,7 @@ layout: docs
   - <a href="doc/libref/object/Dispensable.html"
     target="classes"><code>Dispensable</code></a>
 
-## Attachables <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_6">Attachables</h2><a href="#top" style="font-size: small">[top]</a>
 
 - <a href="doc/libref/object/Attachable.html"
   target="classes"><code>Attachable</code></a>
@@ -323,7 +323,7 @@ layout: docs
   href="doc/libref/object/PlugAttachable.html"
   target="classes"><code>PlugAttachable</code></a>
 
-## Actions & verbs <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_7">Actions & verbs</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="doc/gsg/controllingtheaction.html"
   target="classes">Controlling the action</a>*
@@ -339,7 +339,7 @@ layout: docs
 - <a href="doc/libref/object/TIAction.html"
   target="classes"><code>TIAction</code></a>
 
-## Actors, NPCs, & conversations <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_8">Actors, NPCs, & conversations</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="doc/gsg/abasicburner.html"
   target="classes">A basic burner</a>*
@@ -451,7 +451,7 @@ layout: docs
     href="doc/libref/object/DefaultTellTopic.html"
     target="classes"><code>DefaultTellTopic</code></a>
 
-## Consultables & knowledge <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_9">Consultables & knowledge</h2><a href="#top" style="font-size: small">[top]</a>
 
 - <a href="doc/libref/object/Topic.html"
   target="classes"><code>Topic</code></a>
@@ -465,7 +465,7 @@ layout: docs
 - <a href="doc/libref/object/Footnote.html"
   target="classes"><code>Footnote</code></a>
 
-## Events <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_10">Events</h2><a href="#top" style="font-size: small">[top]</a>
 
 - <a href="doc/libref/object/Daemon.html"
   target="classes"><code>Daemon</code></a>
@@ -518,7 +518,7 @@ layout: docs
 - <a href="doc/libref/object/PromptDaemon.html"
   target="classes"><code>PromptDaemon</code></a>
 
-## Sensory <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_11">Sensory</h2><a href="#top" style="font-size: small">[top]</a>
 
 - <a href="doc/libref/object/Noise.html"
   target="classes"><code>Noise</code></a>
@@ -529,7 +529,7 @@ layout: docs
   - <a href="doc/libref/object/SimpleOdor.html"
     target="classes"><code>SimpleOdor</code></a>
 
-## Hints, goals & menus <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_12">Hints, goals & menus</h2><a href="#top" style="font-size: small">[top]</a>
 
 - <a href="doc/libref/object/Hint.html"
   target="classes"><code>Hint</code></a>
@@ -551,7 +551,7 @@ layout: docs
   href="doc/libref/object/MenuLongTopicItem.html"
   target="classes"><code>MenuLongTopicItem</code></a>
 
-## System <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_13">System</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="doc/libref/file/tadsgen.h.html"
   target="classes">General functions</a>*

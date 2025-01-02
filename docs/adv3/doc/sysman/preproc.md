@@ -1111,7 +1111,7 @@ Here are some examples:
     #define PAREN_STR(a) "(" ## a ")"
     #define CONCAT(a, b) a ## b
     #define CONCAT_STR(a, b) #a ## #b
-    #define DEBUG_PRINT(a) "value of " ## #a ## " = <<a>>"
+    #define DEBUG_PRINT(a) "value of " <h2 id="">#a ## " =</h2><<a>>"
 
     1: PAREN_STR("parens")
     2: CONCAT("abc", "def")

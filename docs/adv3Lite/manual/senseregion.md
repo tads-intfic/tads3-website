@@ -206,7 +206,7 @@ familiar to the Player Character in any case, its
 
   
 
-## Remote <span id="sensing">Sensing</span>
+<h2 id="">Remote</h2><span id="sensing">Sensing</span>
 
 Although the global possibility of seeing, hearing and smelling across
 rooms is determined by the canSeeAcross, canHearAcross and
@@ -284,7 +284,7 @@ terms of bulk).
 
   
 
-## Remote <span id="descriptions">Descriptions</span>
+<h2 id="">Remote</h2><span id="descriptions">Descriptions</span>
 
 A further complication that's introduced when we allow the contents of
 one room to be sensed from another is how the items in the remote

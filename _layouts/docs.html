@@ -1,5 +1,5 @@
-{% include docsheadcode.html %}
-<header>{% include searchbox.html %}</header>
+{% include headcode.html %}
+<header id="header">{% include searchbox.html %}</header>
 <body>
 <main id="content">
 {{ content }}
@@ -7,3 +7,12 @@
 {% include footer.html %}
 </body>
 </html>
+
+<script>
+    if(window.location !== window.top.location) {
+        let header = document.getElementById('header');
+        let footer = document.getElementById('footer');
+        header.remove();
+        footer.remove();
+    }
+</script>

@@ -1,7 +1,6 @@
 ---
-layout: docs
 ---
-## Game <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_0">Game</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/mingame.html" target="classes">A minimal game
   definition</a>*
@@ -31,7 +30,7 @@ layout: docs
 - <a href="libref/object/FinishType.html"
   target="classes"><code>FinishType</code></a>
 
-## Tangibles <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_1">Tangibles</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/thing.html" target="classes">Things</a>*
 - *<a href="libref/object/LMentionable.html#initVocab"
@@ -66,7 +65,7 @@ layout: docs
 - <a href="libref/object/CollectiveGroup.html"
   target="classes"><code>CollectiveGroup</code></a>
 
-## Locations & travel <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_2">Locations & travel</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/room.html" target="classes">Rooms &amp; regions</a>*
 - *<a href="manual/roomdesc.html" target="classes">Room descriptions</a>*
@@ -111,7 +110,7 @@ layout: docs
 - <a href="libref/object/TravelConnector.html"
   target="classes"><code>TravelConnector</code></a>
 
-## Text, HTML, & multimedia <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_3">Text, HTML, & multimedia</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="https://www.tads.org/t3doc/doc/sysman/strlit.html#specials"
   target="classes">Escaped characters (backslash codes)</a>*
@@ -140,7 +139,7 @@ layout: docs
 - <a href="libref/object/StringBuffer.html"
   target="classes"><code>StringBuffer</code></a>
 
-## Containers & surfaces <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_4">Containers & surfaces</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - **<a href="libref/object/Container.html"
   target="classes"><code>Container</code></a>**
@@ -176,7 +175,7 @@ layout: docs
 - <a href="libref/object/CollectiveGroup.html"
   target="classes"><code>CollectiveGroup</code></a>
 
-## Gadgetry <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_5">Gadgetry</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/key.html" target="classes">Keys</a>*
 - *<a href="manual/gadget.html" target="classes">Gadgets</a>*
@@ -202,7 +201,7 @@ layout: docs
 - <a href="libref/object/LockableContainer.html"
   target="classes"><code>LockableContainer</code></a>
 
-## Attachables & components <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_6">Attachables & components</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/attachable.html" target="classes">Attachables</a>*
 
@@ -226,7 +225,7 @@ layout: docs
 - <a href="libref/object/SubComponent.html"
   target="classes"><code>SubComponent</code></a>
 
-## Actions, verbs, & Doers <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_7">Actions, verbs, & Doers</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/action.html" target="classes">Actions</a>*
 - *<a href="manual/doer.html" target="classes">Doers</a>*
@@ -249,7 +248,7 @@ layout: docs
 - <a href="libref/object/TIAction.html"
   target="classes"><code>TIAction</code></a>
 
-## Actors, NPCs, & conversations <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_8">Actors, NPCs, & conversations</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/actor.html" target="classes">Actors</a>*
 
@@ -397,7 +396,7 @@ layout: docs
   - <a href="libref/object/DefaultTellTopic.html"
     target="classes"><code>DefaultTellTopic</code></a>
 
-## Consultables & knowledge <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_9">Consultables & knowledge</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/topic.html" target="classes">Topics</a>*
 - *<a href="manual/topicentry.html" target="classes">Topic Entries</a>*
@@ -428,7 +427,7 @@ layout: docs
 - <a href="libref/object/DefaultThought.html"
   target="classes"><code>DefaultThought</code></a>
 
-## Events & scenes <a href="#top" style="font-size: small">[top]</a>
+<h2 id="">Events & scenes</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/event.html" target="classes">Events</a>*
 - *<a href="manual/eventlist.html" target="classes">EventList</a>*
@@ -464,7 +463,7 @@ layout: docs
 - <a href="libref/object/Scene.html"
   target="classes"><code>Scene</code></a>
 
-## Sensory <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_11">Sensory</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/senseregion.html" target="classes">SenseRegion</a>*
 
@@ -476,7 +475,7 @@ layout: docs
 - <a href="libref/object/SenseRegion.html"
   target="classes"><code>SenseRegion</code></a>
 
-## Hints, goals & menus <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_12">Hints, goals & menus</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/newbie.html" target="classes">Help for New Players &amp;
   playerHelper</a>*
@@ -501,7 +500,7 @@ layout: docs
 - <a href="libref/object/MenuLongTopicItem.html"
   target="classes"><code>MenuLongTopicItem</code></a>
 
-## System <a href="#top" style="font-size: small">[top]</a>
+<h2 id="topic_13">System</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="libref/source/query.t.html#14" target="classes">Q: The
   general-purpose query object</a>*

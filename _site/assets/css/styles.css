@@ -320,12 +320,11 @@ nav {
     margin-right: 10px;
 }
 
-.container {
+/* .container {
     margin: 0 auto;
     padding: 15px 15px;
     max-width: 65ch;
-}
-
+} */
 
 
 section#install {
@@ -1045,4 +1044,33 @@ em > a {
     border-width: 2px;
     border-style: solid;
     border-radius: 0.5em;
+}
+
+#periplus .container {
+    display: flex;
+    height: 100vh;
+  }
+
+#periplus .left-column {
+    width: 300px;
+    overflow-y: auto;
+    height: 100%
+}
+
+#periplus .left-column iframe {
+    height: 50%
+}
+
+ #periplus   .right-column {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+}
+
+#periplus .right-column iframe {
+    height: 100%
+}
+
+#periplus * {
+    padding: .5rem;
 }

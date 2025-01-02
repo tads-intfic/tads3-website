@@ -550,7 +550,7 @@ task-specific functions can be reused for iterating through completely
 different structures, since they don't have to know anything about how
 the iteration part works. It makes for a very clean division of labor.
 
-### <span id="postinc"></span> <span id="postdec"></span> <span id="preinc"></span> <span id="predec"></span> ++, ––
+#<h2 id=""><span id="postinc"></span> <span id="postdec"></span> <span id="preinc"></span></h2><span id="predec"></span> ++, ––
 
 The `++` and `--`
 operators increment or decrement the contents of their operand. The
@@ -1025,7 +1025,7 @@ always fills the vacated bits with zeros. For positive values of *a*,
 *a* `\>\>` *n* and *a*
 `\>\>\>` *n* have the same result.
 
-### <span id="lt"></span>\>   <span id="le"></span>\<   <span id="gt"></span>\>=   <span id="ge"></span>\<=
+#<h2 id=""><span id="lt"></span>\>   <span id="le"></span>\<   <span id="gt"></span>\>=  </h2><span id="ge"></span>\<=
 
 These operators each compare two values. Each operator yields true if
 its comparison holds for the two values, nil if not.
@@ -1068,7 +1068,7 @@ Example:
     local z = x > y; // stores true in z
 ```
 
-### <span id="isin"></span>is in   <span id="notin"></span>not in
+#<h2 id=""><span id="isin"></span>is in  </h2><span id="notin"></span>not in
 
 These operators compare one value to each value in a set of values.
 `is in` yields true if the first value is equal
@@ -1124,7 +1124,7 @@ Example:
     local y = (x + 3) is in (y*1, y*2, y*3, y*4, y*5);
 ```
 
-### <span id="eq"></span>==   <span id="ne"></span>!=
+#<h2 id=""><span id="eq"></span>==  </h2><span id="ne"></span>!=
 
 These operators test for equality and inequality, respectively.
 `==` yields true if the two values being
