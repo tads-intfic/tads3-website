@@ -49,7 +49,7 @@ directions are valid.
 
 </div>
 
-` `[`DestInfo`](../object/DestInfo.html)`  `
+[`DestInfo`](../object/DestInfo.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -58,7 +58,7 @@ directions are valid.
 
 </div>
 
-` `[`exitLister`](../object/exitLister.html)`  `[`exitsMode`](../object/exitsMode.html)`  `
+[`exitLister`](../object/exitLister.html)[`exitsMode`](../object/exitsMode.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

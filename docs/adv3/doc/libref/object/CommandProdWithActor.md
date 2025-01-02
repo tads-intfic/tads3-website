@@ -48,8 +48,8 @@ tree.
 </div>
 
 **`CommandProdWithActor`**  
-`         `[`CommandProd`](../object/CommandProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`CommandProd`](../object/CommandProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -60,10 +60,10 @@ tree.
 </div>
 
 **`CommandProdWithActor`**  
-`         `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
-`                 `[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
-`                 `[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)  
-`                 `[`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
+[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
+[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
+[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)  
+[`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -80,13 +80,13 @@ tree.
 
 </div>
 
-` `[`resolvedActor_`](#resolvedActor_)`  `[`resolver_`](#resolver_)`  `
+[`resolvedActor_`](#resolvedActor_)[`resolver_`](#resolver_)
 
 Inherited from `CommandProd` :  
-` `[`getActorPhrase`](../object/CommandProd.html#getActorPhrase)`  `
+[`getActorPhrase`](../object/CommandProd.html#getActorPhrase)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -96,12 +96,12 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`execActorPhrase`](#execActorPhrase)`  `[`getActorPhrase`](#getActorPhrase)`  `[`getResolver`](#getResolver)`  `[`getTargetActor`](#getTargetActor)`  `[`hasTargetActor`](#hasTargetActor)`  `[`resolveNouns`](#resolveNouns)`  `
+[`execActorPhrase`](#execActorPhrase)[`getActorPhrase`](#getActorPhrase)[`getResolver`](#getResolver)[`getTargetActor`](#getTargetActor)[`hasTargetActor`](#hasTargetActor)[`resolveNouns`](#resolveNouns)
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

@@ -52,11 +52,11 @@ apostrophe-S suffix if present.
 </div>
 
 **`BasicPossessiveProd`**  
-`         `[`DefiniteNounProd`](../object/DefiniteNounProd.html)  
-`                 `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                         `[`BasicProd`](../object/BasicProd.html)  
+[`DefiniteNounProd`](../object/DefiniteNounProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                 object`  
-`                 `[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)  
+[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -67,15 +67,15 @@ apostrophe-S suffix if present.
 </div>
 
 **`BasicPossessiveProd`**  
-`         `[`ButPossessiveProd`](../object/ButPossessiveProd.html)  
-`                 `[`exceptNounPhrase(singlePossessive)`](../object/exceptNounPhrase(singlePossessive).html)  
-`         `[`DisambigPossessiveProd`](../object/DisambigPossessiveProd.html)  
-`                 `[`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
-`         `[`PossessiveNounProd`](../object/PossessiveNounProd.html)  
-`                 `[`qualifiedSingularNounPhrase(possessive)`](../object/qualifiedSingularNounPhrase(possessive).html)  
-`         `[`PossessivePluralProd`](../object/PossessivePluralProd.html)  
-`                 `[`explicitDetPluralNounPhrase(possessive)`](../object/explicitDetPluralNounPhrase(possessive).html)  
-`                 `[`explicitDetPluralOnlyNounPhrase(possessive)`](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
+[`ButPossessiveProd`](../object/ButPossessiveProd.html)  
+[`exceptNounPhrase(singlePossessive)`](../object/exceptNounPhrase(singlePossessive).html)  
+[`DisambigPossessiveProd`](../object/DisambigPossessiveProd.html)  
+[`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
+[`PossessiveNounProd`](../object/PossessiveNounProd.html)  
+[`qualifiedSingularNounPhrase(possessive)`](../object/qualifiedSingularNounPhrase(possessive).html)  
+[`PossessivePluralProd`](../object/PossessivePluralProd.html)  
+[`explicitDetPluralNounPhrase(possessive)`](../object/explicitDetPluralNounPhrase(possessive).html)  
+[`explicitDetPluralOnlyNounPhrase(possessive)`](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -92,18 +92,18 @@ apostrophe-S suffix if present.
 
 </div>
 
-` `[`npKeeper`](#npKeeper)`  `
+[`npKeeper`](#npKeeper)
 
-` `
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `AmbigResponseKeeper` :  
-` `[`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)`  `
+[`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
 
 <span id="_MethodSummary_"></span>
 
@@ -113,19 +113,19 @@ Inherited from `AmbigResponseKeeper` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`resolvePossessive`](#resolvePossessive)`  `[`selectWithPossessive`](#selectWithPossessive)`  `
+[`construct`](#construct)[`resolvePossessive`](#resolvePossessive)[`selectWithPossessive`](#selectWithPossessive)
 
 Inherited from `DefiniteNounProd` :  
-` `[`reduceDefinite`](../object/DefiniteNounProd.html#reduceDefinite)`  `[`resolveDefinite`](../object/DefiniteNounProd.html#resolveDefinite)`  `[`resolveNouns`](../object/DefiniteNounProd.html#resolveNouns)`  `
+[`reduceDefinite`](../object/DefiniteNounProd.html#reduceDefinite)[`resolveDefinite`](../object/DefiniteNounProd.html#resolveDefinite)[`resolveNouns`](../object/DefiniteNounProd.html#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `AmbigResponseKeeper` :  
-` `[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)`  `[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)`  `
+[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

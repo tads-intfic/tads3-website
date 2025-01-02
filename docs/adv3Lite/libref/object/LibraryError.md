@@ -44,7 +44,7 @@ library.
 </div>
 
 **`LibraryError`**  
-`         `[`Exception`](../object/Exception.html)  
+[`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,7 +55,7 @@ library.
 </div>
 
 **`LibraryError`**  
-`         `[`ArgumentMismatchError`](../object/ArgumentMismatchError.html)  
+[`ArgumentMismatchError`](../object/ArgumentMismatchError.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,10 +72,10 @@ library.
 
 </div>
 
-` `[`display`](#display)`  `
+[`display`](#display)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,10 +85,10 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 Inherited from `Exception` :  
-` `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

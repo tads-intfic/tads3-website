@@ -36,7 +36,7 @@ Indirect Object and Accessory Object
 
 </div>
 
-` `[`TIAAction`](../object/TIAAction.html)`  `
+[`TIAAction`](../object/TIAAction.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -45,7 +45,7 @@ Indirect Object and Accessory Object
 
 </div>
 
-` `[`tiaactionID`](../object/tiaactionID.html)`  `
+[`tiaactionID`](../object/tiaactionID.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

@@ -68,10 +68,10 @@ debugger.
 </div>
 
 **`NetEvent`**  
-`         `[`NetReplyDoneEvent`](../object/NetReplyDoneEvent.html)  
-`         `[`NetReplyEvent`](../object/NetReplyEvent.html)  
-`         `[`NetRequestEvent`](../object/NetRequestEvent.html)  
-`         `[`NetTimeoutEvent`](../object/NetTimeoutEvent.html)  
+[`NetReplyDoneEvent`](../object/NetReplyDoneEvent.html)  
+[`NetReplyEvent`](../object/NetReplyEvent.html)  
+[`NetRequestEvent`](../object/NetRequestEvent.html)  
+[`NetTimeoutEvent`](../object/NetTimeoutEvent.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -88,7 +88,7 @@ debugger.
 
 </div>
 
-` `[`evArgs`](#evArgs)`  `[`evType`](#evType)`  `
+[`evArgs`](#evArgs)[`evType`](#evType)
 
 <span id="_MethodSummary_"></span>
 
@@ -98,7 +98,7 @@ debugger.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

@@ -45,7 +45,7 @@ steps were performed with ordinary String objects.
 
 </div>
 
-` `[`StringBuffer`](../object/StringBuffer.html)`  `
+[`StringBuffer`](../object/StringBuffer.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

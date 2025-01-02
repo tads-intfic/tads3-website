@@ -58,7 +58,7 @@ TopicGroup.
 </div>
 
 **`TopicGroup`**  
-`         `[`ConvNode`](../object/ConvNode.html)  
+[`ConvNode`](../object/ConvNode.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -75,7 +75,7 @@ TopicGroup.
 
 </div>
 
-` `[`active`](#active)`  `[`convKeys`](#convKeys)`  `[`getActor`](#getActor)`  `[`isActive`](#isActive)`  `[`scoreBoost`](#scoreBoost)`  `
+[`active`](#active)[`convKeys`](#convKeys)[`getActor`](#getActor)[`isActive`](#isActive)[`scoreBoost`](#scoreBoost)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ TopicGroup.
 
 </div>
 
-` `[`addTopic`](#addTopic)`  `[`nodeActive`](#nodeActive)`  `[`scoreBooster`](#scoreBooster)`  `
+[`addTopic`](#addTopic)[`nodeActive`](#nodeActive)[`scoreBooster`](#scoreBooster)
 
 <span id="_Properties_"></span>
 

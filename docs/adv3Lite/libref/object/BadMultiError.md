@@ -43,8 +43,8 @@ Details](#_Methods_)
 </div>
 
 **`BadMultiError`**  
-`         `[`ParseError`](../object/ParseError.html)  
-`                 `[`Exception`](../object/Exception.html)  
+[`ParseError`](../object/ParseError.html)  
+[`Exception`](../object/Exception.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,13 +70,13 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `ParseError` :  
-` `[`allowOnRespell`](../object/ParseError.html#allowOnRespell)`  `[`curable`](../object/ParseError.html#curable)`  `[`errStage`](../object/ParseError.html#errStage)`  `
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)[`errStage`](../object/ParseError.html#errStage)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,13 +86,13 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`display`](#display)`  `
+[`display`](#display)
 
 Inherited from `ParseError` :  
-` `[`rankCorrection`](../object/ParseError.html#rankCorrection)`  `[`tryCuring`](../object/ParseError.html#tryCuring)`  `
+[`rankCorrection`](../object/ParseError.html#rankCorrection)[`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-` `[`construct`](../object/Exception.html#construct)`  `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`construct`](../object/Exception.html#construct)[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

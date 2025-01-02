@@ -40,7 +40,7 @@ or other background activity.
 </div>
 
 **`initiateConvType`**  
-`         `[`ConvType`](../object/ConvType.html)  
+[`ConvType`](../object/ConvType.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -50,10 +50,10 @@ or other background activity.
 
 </div>
 
-` `[`topicListProp`](#topicListProp)`  `
+[`topicListProp`](#topicListProp)
 
 Inherited from `ConvType` :  
-` `[`defaultResponseProp`](../object/ConvType.html#defaultResponseProp)`  `[`unknownMsg`](../object/ConvType.html#unknownMsg)`  `
+[`defaultResponseProp`](../object/ConvType.html#defaultResponseProp)[`unknownMsg`](../object/ConvType.html#unknownMsg)
 
 <span id="_MethodSummary_"></span>
 
@@ -63,10 +63,10 @@ Inherited from `ConvType` :
 
 </div>
 
-` `
+
 
 Inherited from `ConvType` :  
-` `[`afterResponse`](../object/ConvType.html#afterResponse)`  `[`defaultResponse`](../object/ConvType.html#defaultResponse)`  `
+[`afterResponse`](../object/ConvType.html#afterResponse)[`defaultResponse`](../object/ConvType.html#defaultResponse)
 
 <span id="_Properties_"></span>
 

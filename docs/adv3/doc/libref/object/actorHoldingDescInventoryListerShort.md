@@ -37,10 +37,10 @@ short form of non-player character description inventory lister
 </div>
 
 **`actorHoldingDescInventoryListerShort`**  
-`         `[`actorInventoryLister`](../object/actorInventoryLister.html)  
-`                 `[`DividedInventoryLister`](../object/DividedInventoryLister.html)  
-`                         `[`InventoryLister`](../object/InventoryLister.html)  
-`                                 `[`Lister`](../object/Lister.html)  
+[`actorInventoryLister`](../object/actorInventoryLister.html)  
+[`DividedInventoryLister`](../object/DividedInventoryLister.html)  
+[`InventoryLister`](../object/InventoryLister.html)  
+[`Lister`](../object/Lister.html)  
 `                                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,18 +50,18 @@ short form of non-player character description inventory lister
 
 </div>
 
-` `
+
 
 Inherited from `actorInventoryLister` :  
-` `[`phraseSepPat`](../object/actorInventoryLister.html#phraseSepPat)`  `
+[`phraseSepPat`](../object/actorInventoryLister.html#phraseSepPat)
 
 Inherited from `DividedInventoryLister` :  
-` `[`carryingLister`](../object/DividedInventoryLister.html#carryingLister)`  `[`singleSentenceMaxNouns`](../object/DividedInventoryLister.html#singleSentenceMaxNouns)`  `[`wearingLister`](../object/DividedInventoryLister.html#wearingLister)`  `
+[`carryingLister`](../object/DividedInventoryLister.html#carryingLister)[`singleSentenceMaxNouns`](../object/DividedInventoryLister.html#singleSentenceMaxNouns)[`wearingLister`](../object/DividedInventoryLister.html#wearingLister)
 
-` `
+
 
 Inherited from `Lister` :  
-` `[`nextCustomFlag`](../object/Lister.html#nextCustomFlag)`  `
+[`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
 <span id="_MethodSummary_"></span>
 
@@ -71,19 +71,19 @@ Inherited from `Lister` :
 
 </div>
 
-` `[`showInventoryCarryingOnly`](#showInventoryCarryingOnly)`  `[`showInventoryEmpty`](#showInventoryEmpty)`  `[`showInventoryLongLists`](#showInventoryLongLists)`  `[`showInventoryShortLists`](#showInventoryShortLists)`  `[`showInventoryWearingOnly`](#showInventoryWearingOnly)`  `
+[`showInventoryCarryingOnly`](#showInventoryCarryingOnly)[`showInventoryEmpty`](#showInventoryEmpty)[`showInventoryLongLists`](#showInventoryLongLists)[`showInventoryShortLists`](#showInventoryShortLists)[`showInventoryWearingOnly`](#showInventoryWearingOnly)
 
 Inherited from `actorInventoryLister` :  
-` `[`countPhrases`](../object/actorInventoryLister.html#countPhrases)`  `[`showCombinedInventoryList`](../object/actorInventoryLister.html#showCombinedInventoryList)`  `[`showListContentsPrefixTall`](../object/actorInventoryLister.html#showListContentsPrefixTall)`  `[`showListEmpty`](../object/actorInventoryLister.html#showListEmpty)`  `[`showListPrefixTall`](../object/actorInventoryLister.html#showListPrefixTall)`  `
+[`countPhrases`](../object/actorInventoryLister.html#countPhrases)[`showCombinedInventoryList`](../object/actorInventoryLister.html#showCombinedInventoryList)[`showListContentsPrefixTall`](../object/actorInventoryLister.html#showListContentsPrefixTall)[`showListEmpty`](../object/actorInventoryLister.html#showListEmpty)[`showListPrefixTall`](../object/actorInventoryLister.html#showListPrefixTall)
 
 Inherited from `DividedInventoryLister` :  
-` `[`showList`](../object/DividedInventoryLister.html#showList)`  `
+[`showList`](../object/DividedInventoryLister.html#showList)
 
 Inherited from `InventoryLister` :  
-` `[`isListed`](../object/InventoryLister.html#isListed)`  `[`showContentsList`](../object/InventoryLister.html#showContentsList)`  `[`showInlineContentsList`](../object/InventoryLister.html#showInlineContentsList)`  `[`showListItem`](../object/InventoryLister.html#showListItem)`  `[`showListItemCounted`](../object/InventoryLister.html#showListItemCounted)`  `
+[`isListed`](../object/InventoryLister.html#isListed)[`showContentsList`](../object/InventoryLister.html#showContentsList)[`showInlineContentsList`](../object/InventoryLister.html#showInlineContentsList)[`showListItem`](../object/InventoryLister.html#showListItem)[`showListItemCounted`](../object/InventoryLister.html#showListItemCounted)
 
 Inherited from `Lister` :  
-` `[`contentsListed`](../object/Lister.html#contentsListed)`  `[`contentsListedSeparately`](../object/Lister.html#contentsListedSeparately)`  `[`getArrangedListCardinality`](../object/Lister.html#getArrangedListCardinality)`  `[`getArrangedListNounPhraseCount`](../object/Lister.html#getArrangedListNounPhraseCount)`  `[`getContents`](../object/Lister.html#getContents)`  `[`getFilteredList`](../object/Lister.html#getFilteredList)`  `[`getListedContents`](../object/Lister.html#getListedContents)`  `[`getListGrouping`](../object/Lister.html#getListGrouping)`  `[`getTopLister`](../object/Lister.html#getTopLister)`  `[`listCardinality`](../object/Lister.html#listCardinality)`  `[`listSepEnd`](../object/Lister.html#listSepEnd)`  `[`listSepMiddle`](../object/Lister.html#listSepMiddle)`  `[`listSepTwo`](../object/Lister.html#listSepTwo)`  `[`listWith`](../object/Lister.html#listWith)`  `[`longListSepEnd`](../object/Lister.html#longListSepEnd)`  `[`longListSepMiddle`](../object/Lister.html#longListSepMiddle)`  `[`longListSepTwo`](../object/Lister.html#longListSepTwo)`  `[`showArrangedList`](../object/Lister.html#showArrangedList)`  `[`showListAll`](../object/Lister.html#showListAll)`  `[`showListIndent`](../object/Lister.html#showListIndent)`  `[`showListPrefixWide`](../object/Lister.html#showListPrefixWide)`  `[`showListSeparator`](../object/Lister.html#showListSeparator)`  `[`showListSimple`](../object/Lister.html#showListSimple)`  `[`showListSuffixWide`](../object/Lister.html#showListSuffixWide)`  `[`showSeparateContents`](../object/Lister.html#showSeparateContents)`  `[`showTallListNewline`](../object/Lister.html#showTallListNewline)`  `
+[`contentsListed`](../object/Lister.html#contentsListed)[`contentsListedSeparately`](../object/Lister.html#contentsListedSeparately)[`getArrangedListCardinality`](../object/Lister.html#getArrangedListCardinality)[`getArrangedListNounPhraseCount`](../object/Lister.html#getArrangedListNounPhraseCount)[`getContents`](../object/Lister.html#getContents)[`getFilteredList`](../object/Lister.html#getFilteredList)[`getListedContents`](../object/Lister.html#getListedContents)[`getListGrouping`](../object/Lister.html#getListGrouping)[`getTopLister`](../object/Lister.html#getTopLister)[`listCardinality`](../object/Lister.html#listCardinality)[`listSepEnd`](../object/Lister.html#listSepEnd)[`listSepMiddle`](../object/Lister.html#listSepMiddle)[`listSepTwo`](../object/Lister.html#listSepTwo)[`listWith`](../object/Lister.html#listWith)[`longListSepEnd`](../object/Lister.html#longListSepEnd)[`longListSepMiddle`](../object/Lister.html#longListSepMiddle)[`longListSepTwo`](../object/Lister.html#longListSepTwo)[`showArrangedList`](../object/Lister.html#showArrangedList)[`showListAll`](../object/Lister.html#showListAll)[`showListIndent`](../object/Lister.html#showListIndent)[`showListPrefixWide`](../object/Lister.html#showListPrefixWide)[`showListSeparator`](../object/Lister.html#showListSeparator)[`showListSimple`](../object/Lister.html#showListSimple)[`showListSuffixWide`](../object/Lister.html#showListSuffixWide)[`showSeparateContents`](../object/Lister.html#showSeparateContents)[`showTallListNewline`](../object/Lister.html#showTallListNewline)
 
 <span id="_Properties_"></span>
 

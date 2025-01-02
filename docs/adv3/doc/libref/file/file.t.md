@@ -33,7 +33,7 @@ thrown by File methods.
 
 </div>
 
-` `[`FileClosedException`](../object/FileClosedException.html)`  `[`FileCreationException`](../object/FileCreationException.html)`  `[`FileException`](../object/FileException.html)`  `[`FileInfo`](../object/FileInfo.html)`  `[`FileIOException`](../object/FileIOException.html)`  `[`FileModeException`](../object/FileModeException.html)`  `[`FileNotFoundException`](../object/FileNotFoundException.html)`  `[`FileOpenException`](../object/FileOpenException.html)`  `[`FileSafetyException`](../object/FileSafetyException.html)`  `[`FileSyncException`](../object/FileSyncException.html)`  `
+[`FileClosedException`](../object/FileClosedException.html)[`FileCreationException`](../object/FileCreationException.html)[`FileException`](../object/FileException.html)[`FileInfo`](../object/FileInfo.html)[`FileIOException`](../object/FileIOException.html)[`FileModeException`](../object/FileModeException.html)[`FileNotFoundException`](../object/FileNotFoundException.html)[`FileOpenException`](../object/FileOpenException.html)[`FileSafetyException`](../object/FileSafetyException.html)[`FileSyncException`](../object/FileSyncException.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">

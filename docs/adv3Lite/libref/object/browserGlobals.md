@@ -46,7 +46,7 @@ Browser globals
 
 </div>
 
-` `[`httpServer`](#httpServer)`  `[`logFile`](#logFile)`  `[`logFileType`](#logFileType)`  `
+[`httpServer`](#httpServer)[`logFile`](#logFile)[`logFileType`](#logFileType)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ Browser globals
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

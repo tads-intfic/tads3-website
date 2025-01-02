@@ -31,7 +31,7 @@ layout: docs
 
 </div>
 
-` `[`SymConnector`](../object/SymConnector.html)`  `[`SymDoor`](../object/SymDoor.html)`  `[`SymPassage`](../object/SymPassage.html)`  `[`SymPathPassage`](../object/SymPathPassage.html)`  `[`SymStairway`](../object/SymStairway.html)`  `
+[`SymConnector`](../object/SymConnector.html)[`SymDoor`](../object/SymDoor.html)[`SymPassage`](../object/SymPassage.html)[`SymPathPassage`](../object/SymPathPassage.html)[`SymStairway`](../object/SymStairway.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -40,7 +40,7 @@ layout: docs
 
 </div>
 
-` `[`noExit`](../object/noExit.html)`  `[`symconnID`](../object/symconnID.html)`  `[`symVocabPreinit`](../object/symVocabPreinit.html)`  `
+[`noExit`](../object/noExit.html)[`symconnID`](../object/symconnID.html)[`symVocabPreinit`](../object/symVocabPreinit.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

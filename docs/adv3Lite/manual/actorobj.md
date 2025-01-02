@@ -67,13 +67,13 @@ just the same way as you'd define them on Thing are:
 
 A minimal Actor definition might thus look something like this:
 
-```
+`
     george: Actor 'George; tall thin; man; him' @hall
         "He's a tall thin man. "    
        
         globalParamName = 'george'
     ;
-```
+`
 
 <span id="additional"></span>
 
@@ -338,7 +338,7 @@ to set the ProxyActor's location property to the Actor it's standing in
 for, which we can do via the @ notation in the ProxyActor template,
 e.g.:
 
-```
+`
     ProxyActor @guard    
     ;
 
@@ -361,7 +361,7 @@ e.g.:
        ...
 
     ;
-```
+`
 
 
 

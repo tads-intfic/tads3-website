@@ -94,7 +94,7 @@ return the appropriate results.
 </div>
 
 **`Pronoun`**  
-`         `[`ReflexivePronoun`](../object/ReflexivePronoun.html)  
+[`ReflexivePronoun`](../object/ReflexivePronoun.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -103,7 +103,7 @@ return the appropriate results.
 
 </div>
 
-` `[`Her`](../object/Her.html)`  `[`Him`](../object/Him.html)`  `[`It`](../object/It.html)`  `[`Me`](../object/Me.html)`  `[`Them`](../object/Them.html)`  `[`Us`](../object/Us.html)`  `[`Yall`](../object/Yall.html)`  `[`You`](../object/You.html)`  `
+[`Her`](../object/Her.html)[`Him`](../object/Him.html)[`It`](../object/It.html)[`Me`](../object/Me.html)[`Them`](../object/Them.html)[`Us`](../object/Us.html)[`Yall`](../object/Yall.html)[`You`](../object/You.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -112,7 +112,7 @@ return the appropriate results.
 
 </div>
 
-` `[`all`](#all)`  `[`aName`](#aName)`  `[`ante`](#ante)`  `[`person`](#person)`  `[`reflexive`](#reflexive)`  `[`theName`](#theName)`  `[`theObjName`](#theObjName)`  `
+[`all`](#all)[`aName`](#aName)[`ante`](#ante)[`person`](#person)[`reflexive`](#reflexive)[`theName`](#theName)[`theObjName`](#theObjName)
 
 <span id="_MethodSummary_"></span>
 
@@ -122,7 +122,7 @@ return the appropriate results.
 
 </div>
 
-` `[`construct`](#construct)`  `[`matchObj`](#matchObj)`  `[`resolve`](#resolve)`  `[`setAntecedents`](#setAntecedents)`  `
+[`construct`](#construct)[`matchObj`](#matchObj)[`resolve`](#resolve)[`setAntecedents`](#setAntecedents)
 
 <span id="_Properties_"></span>
 

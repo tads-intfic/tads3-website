@@ -83,7 +83,7 @@ Attempting to use an actor-specific conversation tag in any other
 context is likely both not to work as expected and to give rise to
 hard-to-find bugs. For example, it might be tempting to write:
 
-```
+`
     bob: Actor 'Bob;;man;him' @somewhere
     ;
 
@@ -98,7 +98,7 @@ hard-to-find bugs. For example, it might be tempting to write:
                 Are you claiming to be our king?</q> <.convnodet you-king> ";  
         }
     ;
-```
+`
 
 It's tempting to do this because it's so much shorter and easier than
 going through the long-winded process of triggering a ConvAgendaItem or
@@ -120,7 +120,7 @@ It is primarily for this type of situation that the **actorSay()**
 method has been introduced into the library. The correct (and safe) way
 to write the code fragment above would be:
 
-```
+`
     bob: Actor 'Bob;;man;him' @somewhere
     ;
 
@@ -135,7 +135,7 @@ to write the code fragment above would be:
                 <.convnodet you-king> ');  
         }
     ;
-```
+`
 
 This is safe because it's now clear which actor's conversation node will
 be updated, since we're calling a method on the actor in question

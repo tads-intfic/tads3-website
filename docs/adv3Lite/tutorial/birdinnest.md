@@ -33,7 +33,7 @@ ignore the poor little bird altogether!
 Fortunately this is very easy to fix. All we need to do is to check that
 the nest is on the branch *and* that the bird is in the nest:
 
-```
+`
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -47,7 +47,7 @@ the nest is on the branch *and* that the bird is in the nest:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
-```
+`
 
 We use the `isIn()` method here to test for
 containment: `obj1.isIn(obj2)` is true if obj1
@@ -88,14 +88,14 @@ exclamation mark, `!`. If
 
 For example:
 
-```
+`
     local a = 12, b = 6;
     (a == b * 2) || (b == 7) // true, because a is twice b
     (a == b * 2) && (b == 7) // nil, because b is not 7
     (bird || nest) // true because bird is not nil
     'Hampster' && 'forest' // true because neither string is nil
     (a > b) &&  !bird.ofKind(Thing) // nil because bird does inherit from Thing
-```
+`
 
 Finally note that both `&&` and
 `\|\|` are *short-circuit operators*. This means
@@ -118,10 +118,10 @@ Besides saving time, this short-circuit evaluation makes it safe to
 write code like the following, even when `obj`
 might sometimes be nil:
 
-```
+`
     if(obj && obj.bulk > 4)
        say "It's quite a bulky object. ";
-```
+`
 
 In this example, if `obj` is nil, the expression
 `(obj.bulk \> 4)` is never evaluated; we thus

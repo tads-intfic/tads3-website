@@ -93,7 +93,7 @@ program to handle, via the network message queue.
 </div>
 
 **`HTTPServer`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -118,9 +118,9 @@ program to handle, via the network message queue.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -130,10 +130,10 @@ program to handle, via the network message queue.
 
 </div>
 
-` `[`getAddress`](#getAddress)`  `[`getIPAddress`](#getIPAddress)`  `[`getPortNum`](#getPortNum)`  `[`shutdown`](#shutdown)`  `
+[`getAddress`](#getAddress)[`getIPAddress`](#getIPAddress)[`getPortNum`](#getPortNum)[`shutdown`](#shutdown)
 
 Inherited from `Object` :  
-` `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `[`valToSymbol`](../object/Object.html#valToSymbol)`  `
+[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)[`valToSymbol`](../object/Object.html#valToSymbol)
 
 <span id="_Properties_"></span>
 

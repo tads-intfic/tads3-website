@@ -61,7 +61,7 @@ directly.
 </div>
 
 **`MultiInstanceInstance`**  
-`         `[`MultiFacetedFacet`](../object/MultiFacetedFacet.html)  
+[`MultiFacetedFacet`](../object/MultiFacetedFacet.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -78,7 +78,7 @@ directly.
 
 </div>
 
-` `[`isEquivalent`](#isEquivalent)`  `[`miParent`](#miParent)`  `
+[`isEquivalent`](#isEquivalent)[`miParent`](#miParent)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,7 +88,7 @@ directly.
 
 </div>
 
-` `[`baseMoveInto`](#baseMoveInto)`  `[`construct`](#construct)`  `
+[`baseMoveInto`](#baseMoveInto)[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

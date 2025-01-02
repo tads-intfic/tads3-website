@@ -53,8 +53,8 @@ Base class for items (Actors and DefaultAgendaTopics) that can handle
 </div>
 
 **`AgendaManager`**  
-`         `[`Actor`](../object/Actor.html)  
-`         `[`DefaultAgendaTopic`](../object/DefaultAgendaTopic.html)  
+[`Actor`](../object/Actor.html)  
+[`DefaultAgendaTopic`](../object/DefaultAgendaTopic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -71,7 +71,7 @@ Base class for items (Actors and DefaultAgendaTopics) that can handle
 
 </div>
 
-` `[`agendaList`](#agendaList)`  `
+[`agendaList`](#agendaList)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ Base class for items (Actors and DefaultAgendaTopics) that can handle
 
 </div>
 
-` `[`addToAgenda`](#addToAgenda)`  `[`executeAgenda`](#executeAgenda)`  `[`removeFromAgenda`](#removeFromAgenda)`  `
+[`addToAgenda`](#addToAgenda)[`executeAgenda`](#executeAgenda)[`removeFromAgenda`](#removeFromAgenda)
 
 <span id="_Properties_"></span>
 

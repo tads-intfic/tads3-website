@@ -46,7 +46,7 @@ Settings item - show defaults in status line \[SettingsItem)
 
 </div>
 
-` `[`inRoomDesc`](#inRoomDesc)`  `[`inStatusLine`](#inStatusLine)`  `[`settingID`](#settingID)`  `
+[`inRoomDesc`](#inRoomDesc)[`inStatusLine`](#inStatusLine)[`settingID`](#settingID)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ Settings item - show defaults in status line \[SettingsItem)
 
 </div>
 
-` `[`settingDesc`](#settingDesc)`  `[`settingFromText`](#settingFromText)`  `[`settingToText`](#settingToText)`  `
+[`settingDesc`](#settingDesc)[`settingFromText`](#settingFromText)[`settingToText`](#settingToText)
 
 <span id="_Properties_"></span>
 

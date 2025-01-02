@@ -123,7 +123,7 @@ TopicTActions that aren't already defined in the library, but if, say,
 you wanted to define a WorryAbout command that did something different
 from ThinkAbout you'd start by defining the VerbRule thus:
 
-```
+`
     VerbRule(WorryAbout)
         ('worry' | 'fret') 'about' topicDobj
         : VerbProduction
@@ -131,12 +131,12 @@ from ThinkAbout you'd start by defining the VerbRule thus:
         verbPhrase = 'worry/worrying (about what)'
         missingQ = 'what do you want to worry about'
     ;
-```
+`
 
 You'd probably then handle worries in much the same way as the library
 handles Thoughts:
 
-```
+`
     DefineTopicAction(WorryAbout)
         execAction(cmd)
         {
@@ -186,7 +186,7 @@ handles Thoughts:
         
         matchScore = 1
     ;
-```
+`
 
 Define a TopicTAction requires much the same steps as definind a
 TopicAction, except that the VerbRule needs two object slots, one of
@@ -195,7 +195,7 @@ role; remember that in either case the TopicTAction will treat the
 physical object involved as actual direct object). For example, to
 define a BotherAbout command we might define:
 
-```
+`
     VerbRule(BotherAbout)
         ('bother' | 'worry' | 'vex') singleDobj 'about' topicIobj
         : VerbProduction
@@ -207,12 +207,12 @@ define a BotherAbout command we might define:
       
     DefineTopicTAction(BotherAbout)
     ;
-```
+`
 
 The next step would be to define default handling for this on Thing, to
 the effect that an inanimate object can't be bothered:
 
-```
+`
     modify Thing
       dobjFor(BotherAbout)
       {
@@ -222,7 +222,7 @@ the effect that an inanimate object can't be bothered:
       
       cannotBeBotheredMsg = '{The subj dobj} {can\'t} be bothered. '
     ;
-```
+`
 
 You'd next need to define some handling on the actor class analogous to
 the way it handles conversational topics like AskTopics, but that can be

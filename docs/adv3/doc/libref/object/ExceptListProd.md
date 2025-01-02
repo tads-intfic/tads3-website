@@ -43,7 +43,7 @@ Basic exclusion list ("except the silver one") production base class.
 </div>
 
 **`ExceptListProd`**  
-`         `[`BasicProd`](../object/BasicProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,9 +54,9 @@ Basic exclusion list ("except the silver one") production base class.
 </div>
 
 **`ExceptListProd`**  
-`         `[`exceptList(list)`](../object/exceptList(list).html)  
-`         `[`exceptList(single)`](../object/exceptList(single).html)  
-`         `[`exceptNounPhrase(singleComplete)`](../object/exceptNounPhrase(singleComplete).html)  
+[`exceptList(list)`](../object/exceptList(list).html)  
+[`exceptList(single)`](../object/exceptList(single).html)  
+[`exceptNounPhrase(singleComplete)`](../object/exceptNounPhrase(singleComplete).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -73,10 +73,10 @@ Basic exclusion list ("except the silver one") production base class.
 
 </div>
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,10 +86,10 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

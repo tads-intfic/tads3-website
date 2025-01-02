@@ -47,7 +47,7 @@ objects by location.
 </div>
 
 **`ownershipDistinguisher`**  
-`         `[`Distinguisher`](../object/Distinguisher.html)  
+[`Distinguisher`](../object/Distinguisher.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -57,9 +57,9 @@ objects by location.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -69,9 +69,9 @@ objects by location.
 
 </div>
 
-` `[`aName`](#aName)`  `[`canDistinguish`](#canDistinguish)`  `[`countName`](#countName)`  `[`matchName`](#matchName)`  `[`name`](#name)`  `[`notePrompt`](#notePrompt)`  `[`objInScope`](#objInScope)`  `[`theName`](#theName)`  `
+[`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`matchName`](#matchName)[`name`](#name)[`notePrompt`](#notePrompt)[`objInScope`](#objInScope)[`theName`](#theName)
 
-` `
+
 
 <span id="_Properties_"></span>
 

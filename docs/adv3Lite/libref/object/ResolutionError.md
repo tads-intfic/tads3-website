@@ -45,8 +45,8 @@ game-world objects.
 </div>
 
 **`ResolutionError`**  
-`         `[`ParseError`](../object/ParseError.html)  
-`                 `[`Exception`](../object/Exception.html)  
+[`ParseError`](../object/ParseError.html)  
+[`Exception`](../object/Exception.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,19 +57,19 @@ game-world objects.
 </div>
 
 **`ResolutionError`**  
-`         `[`ActorResolutionError`](../object/ActorResolutionError.html)  
-`                 `[`InsufficientNounsError`](../object/InsufficientNounsError.html)  
-`                 `[`NoneInLocationError`](../object/NoneInLocationError.html)  
-`                 `[`NoneInOwnerError`](../object/NoneInOwnerError.html)  
-`                 `[`NoneWithContentsError`](../object/NoneWithContentsError.html)  
-`                 `[`UnmatchedNounError`](../object/UnmatchedNounError.html)  
-`                         `[`AmbiguousMultiDefiniteError`](../object/AmbiguousMultiDefiniteError.html)  
-`         `[`AmbiguousError`](../object/AmbiguousError.html)  
-`         `[`OrdinalRangeError`](../object/OrdinalRangeError.html)  
-`         `[`PronounError`](../object/PronounError.html)  
-`                 `[`AntecedentScopeError`](../object/AntecedentScopeError.html)  
-`                 `[`NoAntecedentError`](../object/NoAntecedentError.html)  
-`         `[`UnmatchedActorError`](../object/UnmatchedActorError.html)  
+[`ActorResolutionError`](../object/ActorResolutionError.html)  
+[`InsufficientNounsError`](../object/InsufficientNounsError.html)  
+[`NoneInLocationError`](../object/NoneInLocationError.html)  
+[`NoneInOwnerError`](../object/NoneInOwnerError.html)  
+[`NoneWithContentsError`](../object/NoneWithContentsError.html)  
+[`UnmatchedNounError`](../object/UnmatchedNounError.html)  
+[`AmbiguousMultiDefiniteError`](../object/AmbiguousMultiDefiniteError.html)  
+[`AmbiguousError`](../object/AmbiguousError.html)  
+[`OrdinalRangeError`](../object/OrdinalRangeError.html)  
+[`PronounError`](../object/PronounError.html)  
+[`AntecedentScopeError`](../object/AntecedentScopeError.html)  
+[`NoAntecedentError`](../object/NoAntecedentError.html)  
+[`UnmatchedActorError`](../object/UnmatchedActorError.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -86,13 +86,13 @@ game-world objects.
 
 </div>
 
-` `[`np`](#np)`  `[`txt`](#txt)`  `
+[`np`](#np)[`txt`](#txt)
 
 Inherited from `ParseError` :  
-` `[`allowOnRespell`](../object/ParseError.html#allowOnRespell)`  `[`curable`](../object/ParseError.html#curable)`  `[`errStage`](../object/ParseError.html#errStage)`  `
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)[`errStage`](../object/ParseError.html#errStage)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -102,13 +102,13 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`rankCorrection`](#rankCorrection)`  `
+[`construct`](#construct)[`rankCorrection`](#rankCorrection)
 
 Inherited from `ParseError` :  
-` `[`display`](../object/ParseError.html#display)`  `[`tryCuring`](../object/ParseError.html#tryCuring)`  `
+[`display`](../object/ParseError.html#display)[`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-` `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

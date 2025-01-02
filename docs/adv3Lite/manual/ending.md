@@ -62,7 +62,7 @@ player character sets off down the drive from the front of the house.
 The definition of the drive location to achieve this might then look
 something like this:
 
-```
+`
     drive: Room 'Front Drive' 'front drive'
         "The front drive sweeps round from the northwest and comes to an end just in
         front of the house, which stands directly to the east. A narrow path runs
@@ -80,7 +80,7 @@ something like this:
         
         regions = outdoors
     ;
-```
+`
 
 If your game offers the "Amusing" finish option you'll need to do a bit
 more work to define what it actually does. This can be as basic as
@@ -94,7 +94,7 @@ returning true (to tell the library that the option has successfully
 completed and it should now show the list of options again). For
 example:
 
-```
+`
     modify finishOptionAmusing
        doOption()
        {
@@ -105,11 +105,11 @@ example:
            return true;
        }
     ;   
-```
+`
 
 Or:
 
-```
+`
     modify finishOptionAmusing
        doOption()
        {
@@ -119,7 +119,7 @@ Or:
            return true;
        }
     ;   
-```
+`
 
 
 

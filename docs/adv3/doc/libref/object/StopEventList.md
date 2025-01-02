@@ -71,8 +71,8 @@ soul will be in danger from the moment you hear these dark secrets!"
 </div>
 
 **`StopEventList`**  
-`         `[`EventList`](../object/EventList.html)  
-`                 `[`Script`](../object/Script.html)  
+[`EventList`](../object/EventList.html)  
+[`Script`](../object/Script.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -98,12 +98,12 @@ soul will be in danger from the moment you hear these dark secrets!"
 
 </div>
 
-` `
+
 
 Inherited from `EventList` :  
-` `[`curScriptState`](../object/EventList.html#curScriptState)`  `[`eventList`](../object/EventList.html#eventList)`  `[`eventListLen`](../object/EventList.html#eventListLen)`  `
+[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -113,13 +113,13 @@ Inherited from `EventList` :
 
 </div>
 
-` `[`advanceState`](#advanceState)`  `
+[`advanceState`](#advanceState)
 
 Inherited from `EventList` :  
-` `[`construct`](../object/EventList.html#construct)`  `[`doScript`](../object/EventList.html#doScript)`  `[`doScriptEvent`](../object/EventList.html#doScriptEvent)`  `[`scriptDone`](../object/EventList.html#scriptDone)`  `
+[`construct`](../object/EventList.html#construct)[`doScript`](../object/EventList.html#doScript)[`doScriptEvent`](../object/EventList.html#doScriptEvent)[`scriptDone`](../object/EventList.html#scriptDone)
 
 Inherited from `Script` :  
-` `[`getScriptState`](../object/Script.html#getScriptState)`  `
+[`getScriptState`](../object/Script.html#getScriptState)
 
 <span id="_Properties_"></span>
 

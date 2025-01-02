@@ -37,7 +37,7 @@ Definite mode ("the book", "book", "both books", "the three books")
 </div>
 
 **`Definite`**  
-`         `[`Determiner`](../object/Determiner.html)  
+[`Determiner`](../object/Determiner.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ Definite mode ("the book", "book", "both books", "the three books")
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -59,9 +59,9 @@ Definite mode ("the book", "book", "both books", "the three books")
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

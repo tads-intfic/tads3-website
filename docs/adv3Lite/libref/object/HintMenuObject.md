@@ -54,10 +54,10 @@ encapsulates some behavior common to different hint menu classes.
 </div>
 
 **`HintMenuObject`**  
-`         `[`Goal`](../object/Goal.html)  
-`         `[`HintLongTopicItem`](../object/HintLongTopicItem.html)  
-`         `[`HintMenu`](../object/HintMenu.html)  
-`                 `[`TopHintMenu`](../object/TopHintMenu.html)  
+[`Goal`](../object/Goal.html)  
+[`HintLongTopicItem`](../object/HintLongTopicItem.html)  
+[`HintMenu`](../object/HintMenu.html)  
+[`TopHintMenu`](../object/TopHintMenu.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,7 +74,7 @@ encapsulates some behavior common to different hint menu classes.
 
 </div>
 
-` `[`topicOrder`](#topicOrder)`  `
+[`topicOrder`](#topicOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,7 +84,7 @@ encapsulates some behavior common to different hint menu classes.
 
 </div>
 
-` `[`compareForTopicSort`](#compareForTopicSort)`  `
+[`compareForTopicSort`](#compareForTopicSort)
 
 <span id="_Properties_"></span>
 

@@ -45,7 +45,7 @@ customize this so that we block only specific vehicles.
 </div>
 
 **`VehicleBarrier`**  
-`         `[`TravelBarrier`](../object/TravelBarrier.html)  
+[`TravelBarrier`](../object/TravelBarrier.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,9 +71,9 @@ customize this so that we block only specific vehicles.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -83,9 +83,9 @@ customize this so that we block only specific vehicles.
 
 </div>
 
-` `[`canTravelerPass`](#canTravelerPass)`  `[`explainTravelBarrier`](#explainTravelBarrier)`  `
+[`canTravelerPass`](#canTravelerPass)[`explainTravelBarrier`](#explainTravelBarrier)
 
-` `
+
 
 <span id="_Properties_"></span>
 

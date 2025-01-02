@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`commandConvType`**  
-`         `[`ConvType`](../object/ConvType.html)  
+[`ConvType`](../object/ConvType.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ Details](#_Methods_)
 
 </div>
 
-` `[`defaultResponseProp`](#defaultResponseProp)`  `[`topicListProp`](#topicListProp)`  `
+[`defaultResponseProp`](#defaultResponseProp)[`topicListProp`](#topicListProp)
 
 Inherited from `ConvType` :  
-` `[`unknownMsg`](../object/ConvType.html#unknownMsg)`  `
+[`unknownMsg`](../object/ConvType.html#unknownMsg)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `ConvType` :
 
 </div>
 
-` `[`defaultResponse`](#defaultResponse)`  `
+[`defaultResponse`](#defaultResponse)
 
 Inherited from `ConvType` :  
-` `[`afterResponse`](../object/ConvType.html#afterResponse)`  `
+[`afterResponse`](../object/ConvType.html#afterResponse)
 
 <span id="_Properties_"></span>
 

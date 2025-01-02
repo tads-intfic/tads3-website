@@ -71,7 +71,7 @@ object and the direction we saw it depart.
 
 </div>
 
-` `[`connector`](#connector)`  `[`obj`](#obj)`  `[`sourceLocation`](#sourceLocation)`  `
+[`connector`](#connector)[`obj`](#obj)[`sourceLocation`](#sourceLocation)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ object and the direction we saw it depart.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

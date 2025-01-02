@@ -66,14 +66,14 @@ extension file names to your project (t3m) file in the equivalent place:
 between the library files and your own game code files, in the following
 manner:
 
-```
+`
     -lib system
     -lib adv3Lite
     -source extensions/roomparts
     -source start
 
      
-```
+`
 
 Many of the extensions that come with adv3Lite make use of additional
 macros, templates and enums. These are all defined in the advlite.h file

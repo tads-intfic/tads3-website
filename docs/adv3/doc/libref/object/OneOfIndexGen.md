@@ -73,7 +73,7 @@ index value, which is an integer from 1 to numItems.
 
 </div>
 
-` `[`idx_`](#idx_)`  `[`listAttrs`](#listAttrs)`  `[`lst_`](#lst_)`  `[`numItems`](#numItems)`  `
+[`idx_`](#idx_)[`listAttrs`](#listAttrs)[`lst_`](#lst_)[`numItems`](#numItems)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ index value, which is an integer from 1 to numItems.
 
 </div>
 
-` `[`getNextIndex`](#getNextIndex)`  `
+[`getNextIndex`](#getNextIndex)
 
 <span id="_Properties_"></span>
 

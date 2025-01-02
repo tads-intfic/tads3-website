@@ -41,7 +41,7 @@ the response text that follows applies to the announced object.
 </div>
 
 **`announceObjStyleTag`**  
-`         `[`StyleTag`](../object/StyleTag.html)  
+[`StyleTag`](../object/StyleTag.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -51,10 +51,10 @@ the response text that follows applies to the announced object.
 
 </div>
 
-` `[`closeText`](#closeText)`  `[`openText`](#openText)`  `
+[`closeText`](#closeText)[`openText`](#openText)
 
 Inherited from `StyleTag` :  
-` `[`tagName`](../object/StyleTag.html#tagName)`  `
+[`tagName`](../object/StyleTag.html#tagName)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,9 +64,9 @@ Inherited from `StyleTag` :
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

@@ -46,7 +46,7 @@ global data object for this module
 
 </div>
 
-` `[`mainRestoreFunc`](#mainRestoreFunc)`  `[`preinited_`](#preinited_)`  `[`reflectionObj`](#reflectionObj)`  `[`restartID`](#restartID)`  `
+[`mainRestoreFunc`](#mainRestoreFunc)[`preinited_`](#preinited_)[`reflectionObj`](#reflectionObj)[`restartID`](#restartID)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ global data object for this module
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

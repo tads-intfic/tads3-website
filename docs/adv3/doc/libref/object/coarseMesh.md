@@ -38,7 +38,7 @@ allow large objects to pass through.
 </div>
 
 **`coarseMesh`**  
-`         `[`Material`](../object/Material.html)  
+[`Material`](../object/Material.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,9 +48,9 @@ allow large objects to pass through.
 
 </div>
 
-` `[`hearThru`](#hearThru)`  `[`seeThru`](#seeThru)`  `[`smellThru`](#smellThru)`  `[`touchThru`](#touchThru)`  `
+[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ allow large objects to pass through.
 
 </div>
 
-` `
+
 
 Inherited from `Material` :  
-` `[`senseThru`](../object/Material.html#senseThru)`  `
+[`senseThru`](../object/Material.html#senseThru)
 
 <span id="_Properties_"></span>
 

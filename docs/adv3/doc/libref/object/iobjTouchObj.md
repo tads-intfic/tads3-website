@@ -49,8 +49,8 @@ the \*direct\* object.
 </div>
 
 **`iobjTouchObj`**  
-`         `[`TouchObjCondition`](../object/TouchObjCondition.html)  
-`                 `[`PreCondition`](../object/PreCondition.html)  
+[`TouchObjCondition`](../object/TouchObjCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -60,12 +60,12 @@ the \*direct\* object.
 
 </div>
 
-` `[`sourceObj`](#sourceObj)`  `
+[`sourceObj`](#sourceObj)
 
 Inherited from `TouchObjCondition` :  
-` `[`preCondOrder`](../object/TouchObjCondition.html#preCondOrder)`  `
+[`preCondOrder`](../object/TouchObjCondition.html#preCondOrder)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -75,12 +75,12 @@ Inherited from `TouchObjCondition` :
 
 </div>
 
-` `
+
 
 Inherited from `TouchObjCondition` :  
-` `[`checkPreCondition`](../object/TouchObjCondition.html#checkPreCondition)`  `[`construct`](../object/TouchObjCondition.html#construct)`  `[`verifyPreCondition`](../object/TouchObjCondition.html#verifyPreCondition)`  `
+[`checkPreCondition`](../object/TouchObjCondition.html#checkPreCondition)[`construct`](../object/TouchObjCondition.html#construct)[`verifyPreCondition`](../object/TouchObjCondition.html#verifyPreCondition)
 
-` `
+
 
 <span id="_Properties_"></span>
 

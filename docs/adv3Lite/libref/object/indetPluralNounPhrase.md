@@ -5,7 +5,7 @@ layout: docs
 
 `grammar `**[`indetPluralNounPhrase(basic)`](../object/indetPluralNounPhrase(basic).html)**` :   `[`Production`](../object/Production.html)
 
-[`grammar.t`](../file/grammar.t.html)`[`[`677`](../source/grammar.t.html#677)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`677`](../source/grammar.t.html#677)]`
 
 <div class="gramrule">
 
@@ -15,7 +15,7 @@ pluralPhraseWithContents-\>np\_
 
 `grammar `**[`indetPluralNounPhrase(locational)`](../object/indetPluralNounPhrase(locational).html)**` :   `[`LocationalProduction`](../object/LocationalProduction.html)
 
-[`grammar.t`](../file/grammar.t.html)`[`[`682`](../source/grammar.t.html#682)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`682`](../source/grammar.t.html#682)]`
 
 <div class="gramrule">
 

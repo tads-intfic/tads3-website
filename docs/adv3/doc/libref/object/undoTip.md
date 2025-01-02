@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`undoTip`**  
-`         `[`Tip`](../object/Tip.html)  
+[`Tip`](../object/Tip.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `Tip` :  
-` `[`desc`](../object/Tip.html#desc)`  `[`shown`](../object/Tip.html#shown)`  `
+[`desc`](../object/Tip.html#desc)[`shown`](../object/Tip.html#shown)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `Tip` :
 
 </div>
 
-` `[`aHref`](#aHref)`  `
+[`aHref`](#aHref)
 
 Inherited from `Tip` :  
-` `[`makeShown`](../object/Tip.html#makeShown)`  `[`shouldShowTip`](../object/Tip.html#shouldShowTip)`  `[`showTip`](../object/Tip.html#showTip)`  `[`showTipDesc`](../object/Tip.html#showTipDesc)`  `
+[`makeShown`](../object/Tip.html#makeShown)[`shouldShowTip`](../object/Tip.html#shouldShowTip)[`showTip`](../object/Tip.html#showTip)[`showTipDesc`](../object/Tip.html#showTipDesc)
 
 <span id="_Properties_"></span>
 

@@ -47,8 +47,8 @@ narrow down the container itself).
 </div>
 
 **`VagueContainerResolver`**  
-`         `[`BasicContainerResolver`](../object/BasicContainerResolver.html)  
-`                 `[`ProxyResolver`](../object/ProxyResolver.html)  
+[`BasicContainerResolver`](../object/BasicContainerResolver.html)  
+[`ProxyResolver`](../object/ProxyResolver.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -74,12 +74,12 @@ narrow down the container itself).
 
 </div>
 
-` `
+
 
 Inherited from `BasicContainerResolver` :  
-` `[`isSubResolver`](../object/BasicContainerResolver.html#isSubResolver)`  `
+[`isSubResolver`](../object/BasicContainerResolver.html#isSubResolver)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -89,13 +89,13 @@ Inherited from `BasicContainerResolver` :
 
 </div>
 
-` `[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)`  `
+[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)
 
 Inherited from `BasicContainerResolver` :  
-` `[`filterAmbiguousNounPhrase`](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase)`  `[`getQualifierResolver`](../object/BasicContainerResolver.html#getQualifierResolver)`  `
+[`filterAmbiguousNounPhrase`](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase)[`getQualifierResolver`](../object/BasicContainerResolver.html#getQualifierResolver)
 
 Inherited from `ProxyResolver` :  
-` `[`construct`](../object/ProxyResolver.html#construct)`  `[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)`  `[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)`  `
+[`construct`](../object/ProxyResolver.html#construct)[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

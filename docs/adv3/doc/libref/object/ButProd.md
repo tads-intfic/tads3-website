@@ -50,8 +50,8 @@ this list and remove the objects in it from our main list.
 </div>
 
 **`ButProd`**  
-`         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -62,12 +62,12 @@ this list and remove the objects in it from our main list.
 </div>
 
 **`ButProd`**  
-`         `[`EverythingButProd`](../object/EverythingButProd.html)  
-`                 `[`terminalNounPhrase(allBut)`](../object/terminalNounPhrase(allBut).html)  
-`         `[`IndefiniteNounButProd`](../object/IndefiniteNounButProd.html)  
-`                 `[`terminalNounPhrase(anyBut)`](../object/terminalNounPhrase(anyBut).html)  
-`         `[`ListButProd`](../object/ListButProd.html)  
-`                 `[`terminalNounPhrase(pluralExcept)`](../object/terminalNounPhrase(pluralExcept).html)  
+[`EverythingButProd`](../object/EverythingButProd.html)  
+[`terminalNounPhrase(allBut)`](../object/terminalNounPhrase(allBut).html)  
+[`IndefiniteNounButProd`](../object/IndefiniteNounButProd.html)  
+[`terminalNounPhrase(anyBut)`](../object/terminalNounPhrase(anyBut).html)  
+[`ListButProd`](../object/ListButProd.html)  
+[`terminalNounPhrase(pluralExcept)`](../object/terminalNounPhrase(pluralExcept).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -84,13 +84,13 @@ this list and remove the objects in it from our main list.
 
 </div>
 
-` `[`addedFlags`](#addedFlags)`  `
+[`addedFlags`](#addedFlags)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -100,13 +100,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`filterFinalList`](#filterFinalList)`  `[`flagAllExcepted`](#flagAllExcepted)`  `[`getMainList`](#getMainList)`  `[`resolveNouns`](#resolveNouns)`  `
+[`filterFinalList`](#filterFinalList)[`flagAllExcepted`](#flagAllExcepted)[`getMainList`](#getMainList)[`resolveNouns`](#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

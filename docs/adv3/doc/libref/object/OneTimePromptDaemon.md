@@ -63,9 +63,9 @@ as though it were in ordinary action handler code.
 </div>
 
 **`OneTimePromptDaemon`**  
-`         `[`PromptDaemon`](../object/PromptDaemon.html)  
-`                 `[`Event`](../object/Event.html)  
-`                         `[`BasicEvent`](../object/BasicEvent.html)  
+[`PromptDaemon`](../object/PromptDaemon.html)  
+[`Event`](../object/Event.html)  
+[`BasicEvent`](../object/BasicEvent.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -91,16 +91,16 @@ as though it were in ordinary action handler code.
 
 </div>
 
-` `
+
 
 Inherited from `PromptDaemon` :  
-` `[`isPromptDaemon`](../object/PromptDaemon.html#isPromptDaemon)`  `
+[`isPromptDaemon`](../object/PromptDaemon.html#isPromptDaemon)
 
 Inherited from `Event` :  
-` `[`eventOrder`](../object/Event.html#eventOrder)`  `[`nextRunTime`](../object/Event.html#nextRunTime)`  `
+[`eventOrder`](../object/Event.html#eventOrder)[`nextRunTime`](../object/Event.html#nextRunTime)
 
 Inherited from `BasicEvent` :  
-` `[`obj_`](../object/BasicEvent.html#obj_)`  `[`prop_`](../object/BasicEvent.html#prop_)`  `[`sense_`](../object/BasicEvent.html#sense_)`  `[`source_`](../object/BasicEvent.html#source_)`  `
+[`obj_`](../object/BasicEvent.html#obj_)[`prop_`](../object/BasicEvent.html#prop_)[`sense_`](../object/BasicEvent.html#sense_)[`source_`](../object/BasicEvent.html#source_)
 
 <span id="_MethodSummary_"></span>
 
@@ -110,15 +110,15 @@ Inherited from `BasicEvent` :
 
 </div>
 
-` `[`executeEvent`](#executeEvent)`  `
+[`executeEvent`](#executeEvent)
 
-` `
+
 
 Inherited from `Event` :  
-` `[`construct`](../object/Event.html#construct)`  `[`delayEvent`](../object/Event.html#delayEvent)`  `[`getNextRunTime`](../object/Event.html#getNextRunTime)`  `[`removeEvent`](../object/Event.html#removeEvent)`  `
+[`construct`](../object/Event.html#construct)[`delayEvent`](../object/Event.html#delayEvent)[`getNextRunTime`](../object/Event.html#getNextRunTime)[`removeEvent`](../object/Event.html#removeEvent)
 
 Inherited from `BasicEvent` :  
-` `[`callMethod`](../object/BasicEvent.html#callMethod)`  `[`eventMatches`](../object/BasicEvent.html#eventMatches)`  `
+[`callMethod`](../object/BasicEvent.html#callMethod)[`eventMatches`](../object/BasicEvent.html#eventMatches)
 
 <span id="_Properties_"></span>
 

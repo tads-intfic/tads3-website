@@ -63,7 +63,7 @@ overall list is shown in the "long" format.
 </div>
 
 **`ListGroupCustom`**  
-`         `[`ListGroup`](../object/ListGroup.html)  
+[`ListGroup`](../object/ListGroup.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -89,10 +89,10 @@ overall list is shown in the "long" format.
 
 </div>
 
-` `[`groupDisplaysSublist`](#groupDisplaysSublist)`  `
+[`groupDisplaysSublist`](#groupDisplaysSublist)
 
 Inherited from `ListGroup` :  
-` `[`minGroupSize`](../object/ListGroup.html#minGroupSize)`  `
+[`minGroupSize`](../object/ListGroup.html#minGroupSize)
 
 <span id="_MethodSummary_"></span>
 
@@ -102,10 +102,10 @@ Inherited from `ListGroup` :
 
 </div>
 
-` `[`showGroupList`](#showGroupList)`  `[`showGroupMsg`](#showGroupMsg)`  `
+[`showGroupList`](#showGroupList)[`showGroupMsg`](#showGroupMsg)
 
 Inherited from `ListGroup` :  
-` `[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)`  `[`groupCardinality`](../object/ListGroup.html#groupCardinality)`  `[`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount)`  `[`showGroupItem`](../object/ListGroup.html#showGroupItem)`  `[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)`  `
+[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)[`groupCardinality`](../object/ListGroup.html#groupCardinality)[`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount)[`showGroupItem`](../object/ListGroup.html#showGroupItem)[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
 
 <span id="_Properties_"></span>
 

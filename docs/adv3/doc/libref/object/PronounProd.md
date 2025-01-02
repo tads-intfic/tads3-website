@@ -45,8 +45,8 @@ to an appropriate PronounXxx constant.
 </div>
 
 **`PronounProd`**  
-`         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,53 +57,53 @@ to an appropriate PronounXxx constant.
 </div>
 
 **`PronounProd`**  
-`         `[`HerProd`](../object/HerProd.html)  
-`                 `[`completeNounPhraseWithoutAll(her)`](../object/completeNounPhraseWithoutAll(her).html)  
-`         `[`HimProd`](../object/HimProd.html)  
-`                 `[`completeNounPhraseWithoutAll(him)`](../object/completeNounPhraseWithoutAll(him).html)  
-`         `[`ItProd`](../object/ItProd.html)  
-`                 `[`completeNounPhraseWithoutAll(it)`](../object/completeNounPhraseWithoutAll(it).html)  
-`         `[`MeProd`](../object/MeProd.html)  
-`                 `[`completeNounPhraseWithoutAll(me)`](../object/completeNounPhraseWithoutAll(me).html)  
-`         `[`PossessivePronounAdjProd`](../object/PossessivePronounAdjProd.html)  
-`                 `[`HerAdjProd`](../object/HerAdjProd.html)  
-`                         `[`possessiveAdjPhrase(her)`](../object/possessiveAdjPhrase(her).html)  
-`                 `[`HisAdjProd`](../object/HisAdjProd.html)  
-`                         `[`possessiveAdjPhrase(his)`](../object/possessiveAdjPhrase(his).html)  
-`                 `[`ItsAdjProd`](../object/ItsAdjProd.html)  
-`                         `[`possessiveAdjPhrase(its)`](../object/possessiveAdjPhrase(its).html)  
-`                 `[`MyAdjProd`](../object/MyAdjProd.html)  
-`                         `[`possessiveAdjPhrase(my)`](../object/possessiveAdjPhrase(my).html)  
-`                 `[`TheirAdjProd`](../object/TheirAdjProd.html)  
-`                         `[`possessiveAdjPhrase(their)`](../object/possessiveAdjPhrase(their).html)  
-`                 `[`YourAdjProd`](../object/YourAdjProd.html)  
-`                         `[`possessiveAdjPhrase(your)`](../object/possessiveAdjPhrase(your).html)  
-`         `[`PossessivePronounNounProd`](../object/PossessivePronounNounProd.html)  
-`                 `[`HersNounProd`](../object/HersNounProd.html)  
-`                         `[`possessiveNounPhrase(hers)`](../object/possessiveNounPhrase(hers).html)  
-`                 `[`HisNounProd`](../object/HisNounProd.html)  
-`                         `[`possessiveNounPhrase(his)`](../object/possessiveNounPhrase(his).html)  
-`                 `[`ItsNounProd`](../object/ItsNounProd.html)  
-`                         `[`possessiveNounPhrase(its)`](../object/possessiveNounPhrase(its).html)  
-`                 `[`MineNounProd`](../object/MineNounProd.html)  
-`                         `[`possessiveNounPhrase(mine)`](../object/possessiveNounPhrase(mine).html)  
-`                 `[`TheirsNounProd`](../object/TheirsNounProd.html)  
-`                         `[`possessiveNounPhrase(theirs)`](../object/possessiveNounPhrase(theirs).html)  
-`                 `[`YoursNounProd`](../object/YoursNounProd.html)  
-`                         `[`possessiveNounPhrase(yours)`](../object/possessiveNounPhrase(yours).html)  
-`         `[`ReflexivePronounProd`](../object/ReflexivePronounProd.html)  
-`                 `[`HerselfProd`](../object/HerselfProd.html)  
-`                         `[`completeNounPhraseWithoutAll(herself)`](../object/completeNounPhraseWithoutAll(herself).html)  
-`                 `[`HimselfProd`](../object/HimselfProd.html)  
-`                         `[`completeNounPhraseWithoutAll(himself)`](../object/completeNounPhraseWithoutAll(himself).html)  
-`                 `[`ItselfProd`](../object/ItselfProd.html)  
-`                         `[`completeNounPhraseWithoutAll(itself)`](../object/completeNounPhraseWithoutAll(itself).html)  
-`                 `[`ThemselvesProd`](../object/ThemselvesProd.html)  
-`                         `[`completeNounPhraseWithoutAll(themselves)`](../object/completeNounPhraseWithoutAll(themselves).html)  
-`         `[`ThemProd`](../object/ThemProd.html)  
-`                 `[`completeNounPhraseWithoutAll(them)`](../object/completeNounPhraseWithoutAll(them).html)  
-`         `[`YouProd`](../object/YouProd.html)  
-`                 `[`completeNounPhraseWithoutAll(yourself)`](../object/completeNounPhraseWithoutAll(yourself).html)  
+[`HerProd`](../object/HerProd.html)  
+[`completeNounPhraseWithoutAll(her)`](../object/completeNounPhraseWithoutAll(her).html)  
+[`HimProd`](../object/HimProd.html)  
+[`completeNounPhraseWithoutAll(him)`](../object/completeNounPhraseWithoutAll(him).html)  
+[`ItProd`](../object/ItProd.html)  
+[`completeNounPhraseWithoutAll(it)`](../object/completeNounPhraseWithoutAll(it).html)  
+[`MeProd`](../object/MeProd.html)  
+[`completeNounPhraseWithoutAll(me)`](../object/completeNounPhraseWithoutAll(me).html)  
+[`PossessivePronounAdjProd`](../object/PossessivePronounAdjProd.html)  
+[`HerAdjProd`](../object/HerAdjProd.html)  
+[`possessiveAdjPhrase(her)`](../object/possessiveAdjPhrase(her).html)  
+[`HisAdjProd`](../object/HisAdjProd.html)  
+[`possessiveAdjPhrase(his)`](../object/possessiveAdjPhrase(his).html)  
+[`ItsAdjProd`](../object/ItsAdjProd.html)  
+[`possessiveAdjPhrase(its)`](../object/possessiveAdjPhrase(its).html)  
+[`MyAdjProd`](../object/MyAdjProd.html)  
+[`possessiveAdjPhrase(my)`](../object/possessiveAdjPhrase(my).html)  
+[`TheirAdjProd`](../object/TheirAdjProd.html)  
+[`possessiveAdjPhrase(their)`](../object/possessiveAdjPhrase(their).html)  
+[`YourAdjProd`](../object/YourAdjProd.html)  
+[`possessiveAdjPhrase(your)`](../object/possessiveAdjPhrase(your).html)  
+[`PossessivePronounNounProd`](../object/PossessivePronounNounProd.html)  
+[`HersNounProd`](../object/HersNounProd.html)  
+[`possessiveNounPhrase(hers)`](../object/possessiveNounPhrase(hers).html)  
+[`HisNounProd`](../object/HisNounProd.html)  
+[`possessiveNounPhrase(his)`](../object/possessiveNounPhrase(his).html)  
+[`ItsNounProd`](../object/ItsNounProd.html)  
+[`possessiveNounPhrase(its)`](../object/possessiveNounPhrase(its).html)  
+[`MineNounProd`](../object/MineNounProd.html)  
+[`possessiveNounPhrase(mine)`](../object/possessiveNounPhrase(mine).html)  
+[`TheirsNounProd`](../object/TheirsNounProd.html)  
+[`possessiveNounPhrase(theirs)`](../object/possessiveNounPhrase(theirs).html)  
+[`YoursNounProd`](../object/YoursNounProd.html)  
+[`possessiveNounPhrase(yours)`](../object/possessiveNounPhrase(yours).html)  
+[`ReflexivePronounProd`](../object/ReflexivePronounProd.html)  
+[`HerselfProd`](../object/HerselfProd.html)  
+[`completeNounPhraseWithoutAll(herself)`](../object/completeNounPhraseWithoutAll(herself).html)  
+[`HimselfProd`](../object/HimselfProd.html)  
+[`completeNounPhraseWithoutAll(himself)`](../object/completeNounPhraseWithoutAll(himself).html)  
+[`ItselfProd`](../object/ItselfProd.html)  
+[`completeNounPhraseWithoutAll(itself)`](../object/completeNounPhraseWithoutAll(itself).html)  
+[`ThemselvesProd`](../object/ThemselvesProd.html)  
+[`completeNounPhraseWithoutAll(themselves)`](../object/completeNounPhraseWithoutAll(themselves).html)  
+[`ThemProd`](../object/ThemProd.html)  
+[`completeNounPhraseWithoutAll(them)`](../object/completeNounPhraseWithoutAll(them).html)  
+[`YouProd`](../object/YouProd.html)  
+[`completeNounPhraseWithoutAll(yourself)`](../object/completeNounPhraseWithoutAll(yourself).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -120,13 +120,13 @@ to an appropriate PronounXxx constant.
 
 </div>
 
-` `[`isPlural`](#isPlural)`  `[`isPossessive`](#isPossessive)`  `[`pronounType`](#pronounType)`  `
+[`isPlural`](#isPlural)[`isPossessive`](#isPossessive)[`pronounType`](#pronounType)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -136,13 +136,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`checkAnaphoricBinding`](#checkAnaphoricBinding)`  `[`resolveNouns`](#resolveNouns)`  `
+[`checkAnaphoricBinding`](#checkAnaphoricBinding)[`resolveNouns`](#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

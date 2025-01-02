@@ -71,7 +71,7 @@ name.
 
 </div>
 
-` `[`connector`](#connector)`  `
+[`connector`](#connector)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ name.
 
 </div>
 
-` `[`construct`](#construct)`  `[`getDestName`](#getDestName)`  `
+[`construct`](#construct)[`getDestName`](#getDestName)
 
 <span id="_Properties_"></span>
 

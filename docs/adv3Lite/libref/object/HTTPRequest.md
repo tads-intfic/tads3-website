@@ -53,7 +53,7 @@ HTTPRequest extensions
 </div>
 
 **`HTTPRequest`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -78,9 +78,9 @@ HTTPRequest extensions
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -90,10 +90,10 @@ HTTPRequest extensions
 
 </div>
 
-` `[`endChunkedReply`](#endChunkedReply)`  `[`getBody`](#getBody)`  `[`getClientAddress`](#getClientAddress)`  `[`getCookie`](#getCookie)`  `[`getCookies`](#getCookies)`  `[`getFormFields`](#getFormFields)`  `[`getHeaders`](#getHeaders)`  `[`getQuery`](#getQuery)`  `[`getQueryParam`](#getQueryParam)`  `[`getServer`](#getServer)`  `[`getVerb`](#getVerb)`  `[`parseQuery`](#parseQuery)`  `[`sendReply`](#sendReply)`  `[`sendReplyAsync`](#sendReplyAsync)`  `[`sendReplyCatch`](#sendReplyCatch)`  `[`sendReplyChunk`](#sendReplyChunk)`  `[`setCookie`](#setCookie)`  `[`startChunkedReply`](#startChunkedReply)`  `
+[`endChunkedReply`](#endChunkedReply)[`getBody`](#getBody)[`getClientAddress`](#getClientAddress)[`getCookie`](#getCookie)[`getCookies`](#getCookies)[`getFormFields`](#getFormFields)[`getHeaders`](#getHeaders)[`getQuery`](#getQuery)[`getQueryParam`](#getQueryParam)[`getServer`](#getServer)[`getVerb`](#getVerb)[`parseQuery`](#parseQuery)[`sendReply`](#sendReply)[`sendReplyAsync`](#sendReplyAsync)[`sendReplyCatch`](#sendReplyCatch)[`sendReplyChunk`](#sendReplyChunk)[`setCookie`](#setCookie)[`startChunkedReply`](#startChunkedReply)
 
 Inherited from `Object` :  
-` `[`callInherited`](../object/Object.html#callInherited)`  `[`createIterator`](../object/Object.html#createIterator)`  `[`createLiveIterator`](../object/Object.html#createLiveIterator)`  `[`forEach`](../object/Object.html#forEach)`  `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`mapAll`](../object/Object.html#mapAll)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `[`valToSymbol`](../object/Object.html#valToSymbol)`  `
+[`callInherited`](../object/Object.html#callInherited)[`createIterator`](../object/Object.html#createIterator)[`createLiveIterator`](../object/Object.html#createLiveIterator)[`forEach`](../object/Object.html#forEach)[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`mapAll`](../object/Object.html#mapAll)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)[`valToSymbol`](../object/Object.html#valToSymbol)
 
 <span id="_Properties_"></span>
 

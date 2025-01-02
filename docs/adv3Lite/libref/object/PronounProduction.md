@@ -45,7 +45,7 @@ the pronoun role for the phrase.
 </div>
 
 **`PronounProduction`**  
-`         `[`Production`](../object/Production.html)  
+[`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -56,17 +56,17 @@ the pronoun role for the phrase.
 </div>
 
 **`PronounProduction`**  
-`         `[`pronounPhrase(her)`](../object/pronounPhrase(her).html)  
-`         `[`pronounPhrase(herself)`](../object/pronounPhrase(herself).html)  
-`         `[`pronounPhrase(him)`](../object/pronounPhrase(him).html)  
-`         `[`pronounPhrase(himself)`](../object/pronounPhrase(himself).html)  
-`         `[`pronounPhrase(it)`](../object/pronounPhrase(it).html)  
-`         `[`pronounPhrase(itself)`](../object/pronounPhrase(itself).html)  
-`         `[`pronounPhrase(me)`](../object/pronounPhrase(me).html)  
-`         `[`pronounPhrase(them)`](../object/pronounPhrase(them).html)  
-`         `[`pronounPhrase(themselves)`](../object/pronounPhrase(themselves).html)  
-`         `[`pronounPhrase(us)`](../object/pronounPhrase(us).html)  
-`         `[`pronounPhrase(you)`](../object/pronounPhrase(you).html)  
+[`pronounPhrase(her)`](../object/pronounPhrase(her).html)  
+[`pronounPhrase(herself)`](../object/pronounPhrase(herself).html)  
+[`pronounPhrase(him)`](../object/pronounPhrase(him).html)  
+[`pronounPhrase(himself)`](../object/pronounPhrase(himself).html)  
+[`pronounPhrase(it)`](../object/pronounPhrase(it).html)  
+[`pronounPhrase(itself)`](../object/pronounPhrase(itself).html)  
+[`pronounPhrase(me)`](../object/pronounPhrase(me).html)  
+[`pronounPhrase(them)`](../object/pronounPhrase(them).html)  
+[`pronounPhrase(themselves)`](../object/pronounPhrase(themselves).html)  
+[`pronounPhrase(us)`](../object/pronounPhrase(us).html)  
+[`pronounPhrase(you)`](../object/pronounPhrase(you).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -83,10 +83,10 @@ the pronoun role for the phrase.
 
 </div>
 
-` `
+
 
 Inherited from `Production` :  
-` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+` [`determiner`](../object/Production.html#determiner)  [`nounPhraseRole`](../object/Production.html#nounPhraseRole)  [`npClass`](../object/Production.html#npClass)  [`parent`](../object/Production.html#parent)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -96,10 +96,10 @@ Inherited from `Production` :
 
 </div>
 
-` `[`build`](#build)`  `
+` [`build`](#build)  `
 
 Inherited from `Production` :  
-` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `[`visitProd`](../object/Production.html#visitProd)`  `
+` [`addNounListItem`](../object/Production.html#addNounListItem)  [`findAction`](../object/Production.html#findAction)  [`findChild`](../object/Production.html#findChild)  [`findParent`](../object/Production.html#findParent)  [`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)  [`getText`](../object/Production.html#getText)  [`getTokens`](../object/Production.html#getTokens)  [`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)  [`isChildOf`](../object/Production.html#isChildOf)  [`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)  [`visitLiteral`](../object/Production.html#visitLiteral)  [`visitProd`](../object/Production.html#visitProd)  `
 
 <span id="_Properties_"></span>
 

@@ -33,7 +33,7 @@ This module defines the framework for displaying output text.
 
 </div>
 
-` `[`CaptureFilter`](../object/CaptureFilter.html)`  `[`HtmlStyleTag`](../object/HtmlStyleTag.html)`  `[`LogConsole`](../object/LogConsole.html)`  `[`MessageBuilder`](../object/MessageBuilder.html)`  `[`MonitorFilter`](../object/MonitorFilter.html)`  `[`OutputFilter`](../object/OutputFilter.html)`  `[`OutputStream`](../object/OutputStream.html)`  `[`OutputStreamWindow`](../object/OutputStreamWindow.html)`  `[`ParagraphManager`](../object/ParagraphManager.html)`  `[`StringCaptureFilter`](../object/StringCaptureFilter.html)`  `[`StyleTag`](../object/StyleTag.html)`  `[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)`  `
+[`CaptureFilter`](../object/CaptureFilter.html)[`HtmlStyleTag`](../object/HtmlStyleTag.html)[`LogConsole`](../object/LogConsole.html)[`MessageBuilder`](../object/MessageBuilder.html)[`MonitorFilter`](../object/MonitorFilter.html)[`OutputFilter`](../object/OutputFilter.html)[`OutputStream`](../object/OutputStream.html)[`OutputStreamWindow`](../object/OutputStreamWindow.html)[`ParagraphManager`](../object/ParagraphManager.html)[`StringCaptureFilter`](../object/StringCaptureFilter.html)[`StyleTag`](../object/StyleTag.html)[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -42,7 +42,7 @@ This module defines the framework for displaying output text.
 
 </div>
 
-` `[`announceObjStyleTag`](../object/announceObjStyleTag.html)`  `[`assumeStyleTag`](../object/assumeStyleTag.html)`  `[`commandSequencer`](../object/commandSequencer.html)`  `[`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html)`  `[`inputlineStyleTag`](../object/inputlineStyleTag.html)`  `[`mainOutputStream`](../object/mainOutputStream.html)`  `[`mainParagraphManager`](../object/mainParagraphManager.html)`  `[`notificationStyleTag`](../object/notificationStyleTag.html)`  `[`outputManager`](../object/outputManager.html)`  `[`parserStyleTag`](../object/parserStyleTag.html)`  `[`roomdescStyleTag`](../object/roomdescStyleTag.html)`  `[`roomnameStyleTag`](../object/roomnameStyleTag.html)`  `[`roomparaStyleTag`](../object/roomparaStyleTag.html)`  `[`statusroomStyleTag`](../object/statusroomStyleTag.html)`  `[`statusscoreStyleTag`](../object/statusscoreStyleTag.html)`  `[`styleTagFilter`](../object/styleTagFilter.html)`  `
+[`announceObjStyleTag`](../object/announceObjStyleTag.html)[`assumeStyleTag`](../object/assumeStyleTag.html)[`commandSequencer`](../object/commandSequencer.html)[`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html)[`inputlineStyleTag`](../object/inputlineStyleTag.html)[`mainOutputStream`](../object/mainOutputStream.html)[`mainParagraphManager`](../object/mainParagraphManager.html)[`notificationStyleTag`](../object/notificationStyleTag.html)[`outputManager`](../object/outputManager.html)[`parserStyleTag`](../object/parserStyleTag.html)[`roomdescStyleTag`](../object/roomdescStyleTag.html)[`roomnameStyleTag`](../object/roomnameStyleTag.html)[`roomparaStyleTag`](../object/roomparaStyleTag.html)[`statusroomStyleTag`](../object/statusroomStyleTag.html)[`statusscoreStyleTag`](../object/statusscoreStyleTag.html)[`styleTagFilter`](../object/styleTagFilter.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -51,7 +51,7 @@ This module defines the framework for displaying output text.
 
 </div>
 
-` `[`say`](#say)`  `[`withQuotes`](#withQuotes)`  `
+[`say`](#say)[`withQuotes`](#withQuotes)
 
 <span id="_Functions_"></span>
 

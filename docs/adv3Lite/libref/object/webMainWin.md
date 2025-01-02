@@ -44,7 +44,7 @@ customize the HTML of the main page, you can substitute a different HTML
 that file. If you want to use something other than a layout window as
 the front page, you can simply replace this whole class.
 
-`transient `**`webMainWin`**` :   `[`WebResourceInit`](../object/WebResourceInit.html)`   `[`WebLayoutWindow`](../object/WebLayoutWindow.html)`   `[`WebResourceResFile`](../object/WebResourceResFile.html)
+`transient `**`webMainWin`**` :   [`WebResourceInit`](../object/WebResourceInit.html)   [`WebLayoutWindow`](../object/WebLayoutWindow.html)   `[`WebResourceResFile`](../object/WebResourceResFile.html)
 
 </div>
 
@@ -57,15 +57,15 @@ the front page, you can simply replace this whole class.
 </div>
 
 **`webMainWin`**  
-`         `[`WebResourceInit`](../object/WebResourceInit.html)  
+[`WebResourceInit`](../object/WebResourceInit.html)  
 `                 object`  
-`         `[`WebLayoutWindow`](../object/WebLayoutWindow.html)  
-`                 `[`WebWindow`](../object/WebWindow.html)  
-`                         `[`WebResourceResFile`](../object/WebResourceResFile.html)  
-`                                 `[`WebResource`](../object/WebResource.html)  
+[`WebLayoutWindow`](../object/WebLayoutWindow.html)  
+[`WebWindow`](../object/WebWindow.html)  
+[`WebResourceResFile`](../object/WebResourceResFile.html)  
+[`WebResource`](../object/WebResource.html)  
 `                                         object`  
-`         `[`WebResourceResFile`](../object/WebResourceResFile.html)  
-`                 `[`WebResource`](../object/WebResource.html)  
+[`WebResourceResFile`](../object/WebResourceResFile.html)  
+[`WebResource`](../object/WebResource.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -75,26 +75,26 @@ the front page, you can simply replace this whole class.
 
 </div>
 
-` `[`curCmdClient`](#curCmdClient)`  `[`fileDialogResult`](#fileDialogResult)`  `[`fileDialogState`](#fileDialogState)`  `[`inputDialogResult`](#inputDialogResult)`  `[`inputDialogState`](#inputDialogState)`  `[`inputEventResult`](#inputEventResult)`  `[`inputEventState`](#inputEventState)`  `[`menuSysState`](#menuSysState)`  `[`name`](#name)`  `[`pathName`](#pathName)`  `[`synthEventQueue`](#synthEventQueue)`  `[`title`](#title)`  `[`vpath`](#vpath)`  `
+` [`curCmdClient`](#curCmdClient)  [`fileDialogResult`](#fileDialogResult)  [`fileDialogState`](#fileDialogState)  [`inputDialogResult`](#inputDialogResult)  [`inputDialogState`](#inputDialogState)  [`inputEventResult`](#inputEventResult)  [`inputEventState`](#inputEventState)  [`menuSysState`](#menuSysState)  [`name`](#name)  [`pathName`](#pathName)  [`synthEventQueue`](#synthEventQueue)  [`title`](#title)  [`vpath`](#vpath)  `
 
 Inherited from `WebResourceInit` :  
-` `[`server`](../object/WebResourceInit.html#server)`  `
+` [`server`](../object/WebResourceInit.html#server)  `
 
 Inherited from `WebLayoutWindow` :  
-` `[`frames`](../object/WebLayoutWindow.html#frames)`  `[`src`](../object/WebLayoutWindow.html#src)`  `
+` [`frames`](../object/WebLayoutWindow.html#frames)  [`src`](../object/WebLayoutWindow.html#src)  `
 
 Inherited from `WebWindow` :  
-` `[`sthCtx`](../object/WebWindow.html#sthCtx)`  `
+` [`sthCtx`](../object/WebWindow.html#sthCtx)  `
 
 Inherited from `WebResourceResFile` :  
-` `[`binaryExts`](../object/WebResourceResFile.html#binaryExts)`  `[`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)`  `
+` [`binaryExts`](../object/WebResourceResFile.html#binaryExts)  [`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)  `
 
 Inherited from `WebResource` :  
-` `[`group`](../object/WebResource.html#group)`  `[`priority`](../object/WebResource.html#priority)`  `
+` [`group`](../object/WebResource.html#group)  [`priority`](../object/WebResource.html#priority)  `
 
-` `
 
-` `
+
+
 
 <span id="_MethodSummary_"></span>
 
@@ -104,26 +104,26 @@ Inherited from `WebResource` :
 
 </div>
 
-` `[`getInputDialog`](#getInputDialog)`  `[`getInputEvent`](#getInputEvent)`  `[`getInputFile`](#getInputFile)`  `[`getInputFileFromClient`](#getInputFileFromClient)`  `[`getState`](#getState)`  `[`getSyntheticEvent`](#getSyntheticEvent)`  `[`inputFileDismissed`](#inputFileDismissed)`  `[`offerDownload`](#offerDownload)`  `[`postSyntheticEvent`](#postSyntheticEvent)`  `[`processName`](#processName)`  `[`receiveFileSelection`](#receiveFileSelection)`  `[`receiveFileUpload`](#receiveFileUpload)`  `[`receiveInputDialog`](#receiveInputDialog)`  `[`receiveInputEvent`](#receiveInputEvent)`  `[`setTitle`](#setTitle)`  `[`syntheticEventReady`](#syntheticEventReady)`  `
+` [`getInputDialog`](#getInputDialog)  [`getInputEvent`](#getInputEvent)  [`getInputFile`](#getInputFile)  [`getInputFileFromClient`](#getInputFileFromClient)  [`getState`](#getState)  [`getSyntheticEvent`](#getSyntheticEvent)  [`inputFileDismissed`](#inputFileDismissed)  [`offerDownload`](#offerDownload)  [`postSyntheticEvent`](#postSyntheticEvent)  [`processName`](#processName)  [`receiveFileSelection`](#receiveFileSelection)  [`receiveFileUpload`](#receiveFileUpload)  [`receiveInputDialog`](#receiveInputDialog)  [`receiveInputEvent`](#receiveInputEvent)  [`setTitle`](#setTitle)  [`syntheticEventReady`](#syntheticEventReady)  `
 
 Inherited from `WebResourceInit` :  
-` `[`connectUI`](../object/WebResourceInit.html#connectUI)`  `[`processRequest`](../object/WebResourceInit.html#processRequest)`  `
+` [`connectUI`](../object/WebResourceInit.html#connectUI)  [`processRequest`](../object/WebResourceInit.html#processRequest)  `
 
 Inherited from `WebLayoutWindow` :  
-` `[`createFrame`](../object/WebLayoutWindow.html#createFrame)`  `[`flushWin`](../object/WebLayoutWindow.html#flushWin)`  `[`winFromPath`](../object/WebLayoutWindow.html#winFromPath)`  `
+` [`createFrame`](../object/WebLayoutWindow.html#createFrame)  [`flushWin`](../object/WebLayoutWindow.html#flushWin)  [`winFromPath`](../object/WebLayoutWindow.html#winFromPath)  `
 
 Inherited from `WebWindow` :  
-` `[`clearWindow`](../object/WebWindow.html#clearWindow)`  `[`sendWinEvent`](../object/WebWindow.html#sendWinEvent)`  `[`sendWinEventTo`](../object/WebWindow.html#sendWinEventTo)`  `[`write`](../object/WebWindow.html#write)`  `
+` [`clearWindow`](../object/WebWindow.html#clearWindow)  [`sendWinEvent`](../object/WebWindow.html#sendWinEvent)  [`sendWinEventTo`](../object/WebWindow.html#sendWinEventTo)  [`write`](../object/WebWindow.html#write)  `
 
 Inherited from `WebResourceResFile` :  
-` `[`isTextFile`](../object/WebResourceResFile.html#isTextFile)`  `[`matchRequest`](../object/WebResourceResFile.html#matchRequest)`  `
+` [`isTextFile`](../object/WebResourceResFile.html#isTextFile)  [`matchRequest`](../object/WebResourceResFile.html#matchRequest)  `
 
 Inherited from `WebResource` :  
-` `[`sendAck`](../object/WebResource.html#sendAck)`  `[`sendXML`](../object/WebResource.html#sendXML)`  `
+` [`sendAck`](../object/WebResource.html#sendAck)  [`sendXML`](../object/WebResource.html#sendXML)  `
 
-` `
 
-` `
+
+
 
 <span id="_Properties_"></span>
 

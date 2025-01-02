@@ -43,7 +43,7 @@ Base class for parser exceptions
 </div>
 
 **`ParserException`**  
-`         `[`Exception`](../object/Exception.html)  
+[`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,11 +54,11 @@ Base class for parser exceptions
 </div>
 
 **`ParserException`**  
-`         `[`ParseFailureException`](../object/ParseFailureException.html)  
-`         `[`ReplacementCommandStringException`](../object/ReplacementCommandStringException.html)  
-`         `[`RetryCommandTokensException`](../object/RetryCommandTokensException.html)  
-`         `[`TerminateCommandException`](../object/TerminateCommandException.html)  
-`                 `[`CancelCommandLineException`](../object/CancelCommandLineException.html)  
+[`ParseFailureException`](../object/ParseFailureException.html)  
+[`ReplacementCommandStringException`](../object/ReplacementCommandStringException.html)  
+[`RetryCommandTokensException`](../object/RetryCommandTokensException.html)  
+[`TerminateCommandException`](../object/TerminateCommandException.html)  
+[`CancelCommandLineException`](../object/CancelCommandLineException.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -75,10 +75,10 @@ Base class for parser exceptions
 
 </div>
 
-` `
+
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,10 +88,10 @@ Inherited from `Exception` :
 
 </div>
 
-` `
+
 
 Inherited from `Exception` :  
-` `[`construct`](../object/Exception.html#construct)`  `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`construct`](../object/Exception.html#construct)[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

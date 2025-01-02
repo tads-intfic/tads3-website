@@ -75,7 +75,7 @@ in the class objects.)
 
 </div>
 
-` `[`_MultiMethodInheritCtx`](../object/_MultiMethodInheritCtx.html)`  `[`_MultiMethodPlaceholder`](../object/_MultiMethodPlaceholder.html)`  `[`UnboundInheritedMultiMethod`](../object/UnboundInheritedMultiMethod.html)`  `[`UnboundMultiMethod`](../object/UnboundMultiMethod.html)`  `
+[`_MultiMethodInheritCtx`](../object/_MultiMethodInheritCtx.html)[`_MultiMethodPlaceholder`](../object/_MultiMethodPlaceholder.html)[`UnboundInheritedMultiMethod`](../object/UnboundInheritedMultiMethod.html)[`UnboundMultiMethod`](../object/UnboundMultiMethod.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -84,7 +84,7 @@ in the class objects.)
 
 </div>
 
-` `[`_multiMethodEndOfList`](../object/_multiMethodEndOfList.html)`  `[`_multiMethodNonObjectBindings`](../object/_multiMethodNonObjectBindings.html)`  `[`_multiMethodRegistry`](../object/_multiMethodRegistry.html)`  `
+[`_multiMethodEndOfList`](../object/_multiMethodEndOfList.html)[`_multiMethodNonObjectBindings`](../object/_multiMethodNonObjectBindings.html)[`_multiMethodRegistry`](../object/_multiMethodRegistry.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -93,7 +93,7 @@ in the class objects.)
 
 </div>
 
-` `[`_multiMethodBuildBindings`](#_multiMethodBuildBindings)`  `[`_multiMethodCall`](#_multiMethodCall)`  `[`_multiMethodCallInherited`](#_multiMethodCallInherited)`  `[`_multiMethodInherit`](#_multiMethodInherit)`  `[`_multiMethodInheritMain`](#_multiMethodInheritMain)`  `[`_multiMethodRegister`](#_multiMethodRegister)`  `[`_multiMethodSelect`](#_multiMethodSelect)`  `[`getMultiMethodPointer`](#getMultiMethodPointer)`  `
+[`_multiMethodBuildBindings`](#_multiMethodBuildBindings)[`_multiMethodCall`](#_multiMethodCall)[`_multiMethodCallInherited`](#_multiMethodCallInherited)[`_multiMethodInherit`](#_multiMethodInherit)[`_multiMethodInheritMain`](#_multiMethodInheritMain)[`_multiMethodRegister`](#_multiMethodRegister)[`_multiMethodSelect`](#_multiMethodSelect)[`getMultiMethodPointer`](#getMultiMethodPointer)
 
 <span id="_Functions_"></span>
 

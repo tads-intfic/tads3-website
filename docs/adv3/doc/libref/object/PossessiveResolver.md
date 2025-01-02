@@ -45,7 +45,7 @@ object is known to the actor.
 </div>
 
 **`PossessiveResolver`**  
-`         `[`ProxyResolver`](../object/ProxyResolver.html)  
+[`ProxyResolver`](../object/ProxyResolver.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,9 +71,9 @@ object is known to the actor.
 
 </div>
 
-` `[`isSubResolver`](#isSubResolver)`  `
+[`isSubResolver`](#isSubResolver)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ object is known to the actor.
 
 </div>
 
-` `[`objInScope`](#objInScope)`  `
+[`objInScope`](#objInScope)
 
 Inherited from `ProxyResolver` :  
-` `[`construct`](../object/ProxyResolver.html#construct)`  `[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)`  `[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)`  `
+[`construct`](../object/ProxyResolver.html#construct)[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

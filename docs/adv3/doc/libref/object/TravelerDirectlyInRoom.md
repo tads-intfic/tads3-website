@@ -55,7 +55,7 @@ directly in.
 </div>
 
 **`TravelerDirectlyInRoom`**  
-`         `[`PreCondition`](../object/PreCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -81,10 +81,10 @@ directly in.
 
 </div>
 
-` `[`actor_`](#actor_)`  `[`conn_`](#conn_)`  `[`loc_`](#loc_)`  `
+[`actor_`](#actor_)[`conn_`](#conn_)[`loc_`](#loc_)
 
 Inherited from `PreCondition` :  
-` `[`preCondOrder`](../object/PreCondition.html#preCondOrder)`  `
+[`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -94,10 +94,10 @@ Inherited from `PreCondition` :
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `[`construct`](#construct)`  `
+[`checkPreCondition`](#checkPreCondition)[`construct`](#construct)
 
 Inherited from `PreCondition` :  
-` `[`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)`  `
+[`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)
 
 <span id="_Properties_"></span>
 

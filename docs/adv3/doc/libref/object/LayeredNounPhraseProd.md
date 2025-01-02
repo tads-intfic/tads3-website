@@ -46,8 +46,8 @@ resolveNouns to the underlying noun phrase given by the property np\_.
 </div>
 
 **`LayeredNounPhraseProd`**  
-`         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -58,21 +58,21 @@ resolveNouns to the underlying noun phrase given by the property np\_.
 </div>
 
 **`LayeredNounPhraseProd`**  
-`         `[`completeNounPhrase(main)`](../object/completeNounPhrase(main).html)  
-`         `[`completeNounPhraseWithoutAll(qualified)`](../object/completeNounPhraseWithoutAll(qualified).html)  
-`         `[`detPluralNounPhrase(main)`](../object/detPluralNounPhrase(main).html)  
-`         `[`detPluralOnlyNounPhrase(main)`](../object/detPluralOnlyNounPhrase(main).html)  
-`         `[`indetPluralNounPhrase(basic)`](../object/indetPluralNounPhrase(basic).html)  
-`         `[`indetPluralOnlyNounPhrase(basic)`](../object/indetPluralOnlyNounPhrase(basic).html)  
-`         `[`indetSingularNounPhrase(basic)`](../object/indetSingularNounPhrase(basic).html)  
-`         `[`nounPhrase(main)`](../object/nounPhrase(main).html)  
-`         `[`pluralPhrase(main)`](../object/pluralPhrase(main).html)  
-`         `[`possessiveAdjPhrase(npApostropheS)`](../object/possessiveAdjPhrase(npApostropheS).html)  
-`         `[`possessiveAdjPhrase(ppApostropheS)`](../object/possessiveAdjPhrase(ppApostropheS).html)  
-`         `[`possessiveNounPhrase(npApostropheS)`](../object/possessiveNounPhrase(npApostropheS).html)  
-`         `[`qualifiedNounPhrase(main)`](../object/qualifiedNounPhrase(main).html)  
-`         `[`qualifiedPluralNounPhrase(determiner)`](../object/qualifiedPluralNounPhrase(determiner).html)  
-`         `[`singleNoun(normal)`](../object/singleNoun(normal).html)  
+[`completeNounPhrase(main)`](../object/completeNounPhrase(main).html)  
+[`completeNounPhraseWithoutAll(qualified)`](../object/completeNounPhraseWithoutAll(qualified).html)  
+[`detPluralNounPhrase(main)`](../object/detPluralNounPhrase(main).html)  
+[`detPluralOnlyNounPhrase(main)`](../object/detPluralOnlyNounPhrase(main).html)  
+[`indetPluralNounPhrase(basic)`](../object/indetPluralNounPhrase(basic).html)  
+[`indetPluralOnlyNounPhrase(basic)`](../object/indetPluralOnlyNounPhrase(basic).html)  
+[`indetSingularNounPhrase(basic)`](../object/indetSingularNounPhrase(basic).html)  
+[`nounPhrase(main)`](../object/nounPhrase(main).html)  
+[`pluralPhrase(main)`](../object/pluralPhrase(main).html)  
+[`possessiveAdjPhrase(npApostropheS)`](../object/possessiveAdjPhrase(npApostropheS).html)  
+[`possessiveAdjPhrase(ppApostropheS)`](../object/possessiveAdjPhrase(ppApostropheS).html)  
+[`possessiveNounPhrase(npApostropheS)`](../object/possessiveNounPhrase(npApostropheS).html)  
+[`qualifiedNounPhrase(main)`](../object/qualifiedNounPhrase(main).html)  
+[`qualifiedPluralNounPhrase(determiner)`](../object/qualifiedPluralNounPhrase(determiner).html)  
+[`singleNoun(normal)`](../object/singleNoun(normal).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -89,13 +89,13 @@ resolveNouns to the underlying noun phrase given by the property np\_.
 
 </div>
 
-` `
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -105,13 +105,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`resolveNouns`](#resolveNouns)`  `
+[`resolveNouns`](#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

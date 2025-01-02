@@ -51,7 +51,7 @@ Based in part on code in the adv3 Library (c) Michael J. Roberts.
 
 </div>
 
-` `[`main`](#main)`  `[`mainCommandLoop`](#mainCommandLoop)`  `[`mainCommon`](#mainCommon)`  `[`mainRestore`](#mainRestore)`  `[`runGame`](#runGame)`  `
+[`main`](#main)[`mainCommandLoop`](#mainCommandLoop)[`mainCommon`](#mainCommon)[`mainRestore`](#mainRestore)[`runGame`](#runGame)
 
 <span id="_Functions_"></span>
 

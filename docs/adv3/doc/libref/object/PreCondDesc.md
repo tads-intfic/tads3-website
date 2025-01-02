@@ -69,7 +69,7 @@ and the argument we want to pass to its condition check method.
 
 </div>
 
-` `[`arg_`](#arg_)`  `[`cond_`](#cond_)`  `[`index_`](#index_)`  `
+[`arg_`](#arg_)[`cond_`](#cond_)[`index_`](#index_)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ and the argument we want to pass to its condition check method.
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `[`construct`](#construct)`  `
+[`checkPreCondition`](#checkPreCondition)[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

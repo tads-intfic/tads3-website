@@ -81,7 +81,7 @@ items as necessary from the actor's hands to the bag.
 </div>
 
 **`BagOfHolding`**  
-`         `[`Keyring`](../object/Keyring.html)  
+[`Keyring`](../object/Keyring.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -98,7 +98,7 @@ items as necessary from the actor's hands to the bag.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -108,7 +108,7 @@ items as necessary from the actor's hands to the bag.
 
 </div>
 
-` `[`affinityFor`](#affinityFor)`  `[`getBagsOfHolding`](#getBagsOfHolding)`  `
+[`affinityFor`](#affinityFor)[`getBagsOfHolding`](#getBagsOfHolding)
 
 <span id="_Properties_"></span>
 

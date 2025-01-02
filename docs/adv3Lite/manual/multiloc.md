@@ -40,14 +40,14 @@ makes it particular easy to place a MultiLoc in every room in a given
 region. For example, to define a night sky object that appears in every
 Room in the outdoors Region you could do something like this:
 
-```
+`
     sky: MultiLoc, Thing 'sky; dark tiny crescent; moon stars'
        "The sky is dark tonight, with only a crescent moon showing among the myriad of stars. "
        isDecoration = true
        notImportantMsg = 'The sky is way too far above your head. '
        locationList = [outdoors]
     ;
-```
+`
 
 It is very convenient to be able just to specify the region in the
 locationList of a MultiLoc, instead of having to list each room its in
@@ -61,7 +61,7 @@ the other rooms we want the ceiling in by hand, we can specify the
 region and then use the **exceptions** property to list the rooms we
 *don't* want our plain vanilla MultiLoc ceiling to appear in:
 
-```
+`
     ceiling: MultiLoc, Thing 'ceiling'
        
        isDecoration = true
@@ -69,7 +69,7 @@ region and then use the **exceptions** property to list the rooms we
        locationList = [indoors]
        exceptions = [kitchen]
     ;
-```
+`
 
 It is no coincidence that these two examples both use decoration-type
 objects. That is generally the only safe way to use a MultiLoc, since as
@@ -81,14 +81,14 @@ location. For example, suppose we wanted to add a floor to every room in
 the indoors region. Since in real life a floor is something we can stand
 on and put things on we might be tempted to do this:
 
-```
+`
     floor: MultiLoc, Thing 'floor;;ground'  // DON'T DO THIS!!!
        
        contType = On  
        isEnterable = true
        locationList = [indoors]   
     ;
-```
+`
 
 But this would be catastrophic, for as soon as the player placed an
 object on the floor, that object would appear on the floor of every room
@@ -96,17 +96,17 @@ in the house (since it's actually the same floor), which is almost
 certainly not what we want. If you want to define MultiLoc object
 safely, make it a decoration, like this:
 
-```
+`
     floor: MultiLoc, Thing 'floor;;ground' 
        
        isDecoration = true
        locationList = [indoors]   
     ;
-```
+`
 
 Or at the most, perhaps:
 
-```
+`
     floor: MultiLoc, Thing 'floor;;ground' 
        isDecoration = true   
        decorationActions = [Examine, Feel, SmellSomething]  
@@ -114,7 +114,7 @@ Or at the most, perhaps:
        smellDesc = "There's a faint smell of floor polish. "
        locationList = [indoors] 
     ;
-```
+`
 
 The first of these is probably better, however, since if the floor
 responds to *everything* except EXAMINE with "The floor is not
@@ -143,14 +143,14 @@ square you're implementing as four different locations. The fountain is
 accessible from each corner of the square, so if you throw a coin into
 it from one corner you could indeed retrieve the coin from another:
 
-```
+`
     fountain: MultiLoc, Thing 'fountain;large ;water fish mouth'
        "It's a large fountain in the form of an improbable looking fish with water gushing from its mouth. " 
        isFixed = true
        contType = In
        locationList = [squareNE, squareNW, squareSE, squareSW] 
     ;
-```
+`
 
 If we had defined a square region we could simply have used that in the
 locationList, but this seemed a good idea to show what a MultiLoc with

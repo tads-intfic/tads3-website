@@ -28,11 +28,11 @@ Angela Wants Answers
 You may recall that one of the exchanges we've defined for when the
 player character asks Angela what she's doing tonight is:
 
-```
+`
            '<q>What <i>are</i> you doing tonight?</q> you insist.\b
             <q>I don\'t think that\'s any of your business,</q> she replies, with
             rather a bleak smile. <q>Do you?</q> '
-```
+`
 
 Many, if not most players will probably treat the "Do you?" at the end
 of Angela's reply as a purely rhetorical question, but a few may try
@@ -61,7 +61,7 @@ or NO to Angela's possibly rhetorical question by adding a
 following `YesTopic` and
 `NoTopic`:
 
-```
+`
     + QueryTopic, StopEventList 'what' @tDoingTonight
         [
             '<q>What are you doing tonight?</q> you ask.\b
@@ -97,7 +97,7 @@ following `YesTopic` and
         convKeys = ['not-your-business']
         isActive = nodeActive    
     ;
-```
+`
 
 This works, but it may seem a little repetitive to have to repeat the
 `convKeys` and
@@ -109,7 +109,7 @@ Conversation Node. We have already seen how we can use a
 TopicEntries, and we can use a special kind of TopicGroup, a
 **ConvNode**, to do that for us here:
 
-```
+`
     + ConvNode 'not-your-business';
 
     ++ YesTopic
@@ -122,7 +122,7 @@ TopicEntries, and we can use a special kind of TopicGroup, a
         "<q>No, I suppose not,</q> you concede.\b
         <q>No; well, there you are then,</q> she remarks. "  
     ;
-```
+`
 
 In most cases, this is probably the easier way to do it; it may also
 help make it more immediately apparent which TopicEntries relate to a
@@ -150,7 +150,7 @@ Cortez, and Angela wants to know why he's so interested in the man. We
 could start by adding an AskTellTopic under angelaTalkingState that
 triggers an appropriate Conversation Node:
 
-```
+`
     ++ AskTellTopic, StopEventList @cortez
         [
             '<q>Do you know who that man waving a gun around at the front of the
@@ -168,7 +168,7 @@ triggers an appropriate Conversation Node:
         convKeys = 'top'
         suggestAs = TellTopic
     ;
-```
+`
 
 There are a few points to note about the way we've defined this
 AskTellTopic. First, note that we've given it an autoName of true, so
@@ -225,7 +225,7 @@ If you don't want the suggestion to begin with 'say' you can define
 For present purposes we'll define our Conversation Node with one
 TellTopic and two SayTopics:
 
-```
+`
     + ConvNode 'what-to-you';
         
     ++ TellTopic @me    
@@ -248,7 +248,7 @@ TellTopic and two SayTopics:
         <q>Airport security -- in Narcosia?</q> she asks incredulously. <q>Somehow I
         don't think that will exactly help the situation!</q> "
     ;
-```
+`
 
 What happens if the player responds with something not corresponding to
 one of these three TopicEntries? We can trap that by adding a
@@ -260,7 +260,7 @@ drop. To make this happen we add a `\<.convstay\>
 game to keep the Conversation Node active for another conversational
 turn:
 
-```
+`
     ++ DefaultAnyTopic, StopEventList
         [
             '<q>No, but what is it to you who this man is?</q> she interrupts you.
@@ -270,7 +270,7 @@ turn:
             she mutters. '
         ]
     ;
-```
+`
 
 The other thing the player could do to throw our Conversation Node off
 the rails, besides coming up with a response we hadn't planned for, is
@@ -300,7 +300,7 @@ end.
 
 We can add a NodeEndCheck object to our current Conversation Node thus:
 
-```
+`
     ++ NodeEndCheck
         canEndConversation(reason)
         {
@@ -321,7 +321,7 @@ We can add a NodeEndCheck object to our current Conversation Node thus:
             return true;
         }
     ;
-```
+`
 
   
 
@@ -349,7 +349,7 @@ to Angela's agenda list at some suitable point, such as the
 which causes her to reboard the plane once the player is wearing the
 pilot's uniform (and the takeover scene comes to an end):
 
-```
+`
     + angelaReboardingAgenda: AgendaItem
         isReady = (takeover.hasHappened)
         
@@ -374,14 +374,14 @@ pilot's uniform (and the takeover scene comes to an end):
             
         }
     ;
-```
+`
 
 Next we can set up the corresponding Conversation Node and populate it
 with some SayTopics. Whichever response the player chooses we'll have
 Angela ask if the player character really intends to fly the plane and
 then switch to another Conversation Node for an answer to that question:
 
-```
+`
     + ConvNode 'uniform';
 
     ++ SayTopic 'all British agents learn to fly'
@@ -416,7 +416,7 @@ then switch to another Conversation Node for an answer to that question:
         <q>You mean you're intending to fly this plane?</q> she demands
         incredulously. <.convnodet intend-fly> "
     ;
-```
+`
 
 Note the use of the `isActive` on the first
 three SayTopics to determine whether or not they're appropriate in the
@@ -438,7 +438,7 @@ Next we can add a catch-all DefaultAnyTopic that won't allow the player
 to leave the Conversation Node until he's chosen one of the above
 SayTopics:
 
-```
+`
     ++ DefaultAnyTopic, ShuffledEventList
         [
             '<q>No, but answer my question,</q> she interrupts you. <q>What are you
@@ -454,7 +454,7 @@ SayTopics:
             uniform,</q> she complains. <q>Why are you wearing it?</q> <.convstay> '
         ]
     ;
-```
+`
 
 Note how we add a `\<.convstay\>` tag to each of
 the default responses to ensure that we remain in the current
@@ -462,7 +462,7 @@ Conversation Node. The next step is to prevent the player from breaking
 off the conversation prematurely, which we can once again do with a
 NodeEndCheck object:
 
-```
+`
     ++ NodeEndCheck
         canEndConversation(reason)
         {
@@ -481,7 +481,7 @@ NodeEndCheck object:
             }
         }
     ;
-```
+`
 
 The other thing the player could try to deflect Angela's question is to
 carry out a whole lot of irrelevant non-conversational commands (even
@@ -491,14 +491,14 @@ each turn we remain in the node and there hasn't been a conversational
 exchange. For that purpose we can define a **NodeContinuationTopic**
 (which we also locate in the ConvNode in question):
 
-```
+`
     ++ NodeContinuationTopic
         "<q><<one of>>I asked you a question<<or>>I'm still waiting for an
         answer<<cycling>>,</q> {the subj angela} <<one of>> reminds
         you<<or>> insists<<or>> repeats<<cycling>>. <q>Why are you wearing that
         uniform?</q> "
     ;
-```
+`
 
 Note the use of the `\<\<one of\>\>` embedded
 expression constructs to vary what's displayed slightly on each
@@ -509,7 +509,7 @@ here will suffice for now.
 The final step is to define the Conversation Node the player is taken to
 next, the 'intend-fly' node:
 
-```
+`
     + ConvNode 'intend-fly'
        commonResponse = "\b<q>Very well, then,</q> she sighs. <q>I suppose we don't
            have too much choice now, do we? Just as long as you know what you're
@@ -564,7 +564,7 @@ next, the 'intend-fly' node:
         "<q>I'd appreciate it if you answered my question,</q> {the subj angela}
         insists. <q>Are you really proposing to fly this aircraft?</q> "
     ;
-```
+`
 
 We've saved ourselves a bit of typing here by defining a
 `commonResponse` property on the ConvNode object

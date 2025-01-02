@@ -33,7 +33,7 @@ the bird. In this simple game we'll enforce this in the simplest way
 possible, by limiting the amount Heidi can carry at any one time. First
 change the definition of the `me` object:
 
-```
+`
     + me: Thing 'you;;heidi'   
         isFixed = true    
         proper = true
@@ -42,7 +42,7 @@ change the definition of the `me` object:
         contType = Carrier    
         bulkCapacity = 1
     ;
-```
+`
 
 Adding `bulkCapacity = 1` to the definition of
 the `me` object limits the total bulk Heidi can
@@ -57,7 +57,7 @@ For this to have any effect, we also need to give some bulk to the two
 portable objects in question, the bird and the nest, by defining
 `bulk = 1` on both of them:
 
-```
+`
     + bird: Thing 'baby bird;;nestling'
         "Too young to fly, the nestling tweets helplessly. "
         
@@ -79,7 +79,7 @@ portable objects in question, the bird and the nest, by defining
         contType = In   
         bulk = 1
     ;
-```
+`
 
 Try making the changes indicated above and then compiling and running
 the game once more. This time you'll find that Heidi can't pick up the
@@ -96,7 +96,7 @@ this, but the one we'll use here is to use the
 `branch` to test whether the nest is on the
 branch, and then end the game in victory if it is:
 
-```
+`
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -110,7 +110,7 @@ branch, and then end the game in victory if it is:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
-```
+`
 
 This introduces several new concepts at once; we'll explain them briefly
 here and then give a slightly more systematic explanation in the next
@@ -235,7 +235,7 @@ game we should pause and take stock, which is what we'll do in the next
 chapter. In the meantime, here's the complete listing of what the Heidi
 game should now look like:
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
@@ -343,7 +343,7 @@ game should now look like:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
-```
+`
 
 
 

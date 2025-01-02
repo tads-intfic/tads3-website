@@ -55,9 +55,9 @@ SENSORY EXTENSION\]
 </div>
 
 **`SensoryEvent`**  
-`         `[`SightEvent`](../object/SightEvent.html)  
-`         `[`SmellEvent`](../object/SmellEvent.html)  
-`         `[`SoundEvent`](../object/SoundEvent.html)  
+[`SightEvent`](../object/SightEvent.html)  
+[`SmellEvent`](../object/SmellEvent.html)  
+[`SoundEvent`](../object/SoundEvent.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,7 +74,7 @@ SENSORY EXTENSION\]
 
 </div>
 
-` `[`notifyProp`](#notifyProp)`  `[`remoteProp`](#remoteProp)`  `[`senseProp`](#senseProp)`  `
+[`notifyProp`](#notifyProp)[`remoteProp`](#remoteProp)[`senseProp`](#senseProp)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,7 +84,7 @@ SENSORY EXTENSION\]
 
 </div>
 
-` `[`remoteList`](#remoteList)`  `[`triggerEvent`](#triggerEvent)`  `
+[`remoteList`](#remoteList)[`triggerEvent`](#triggerEvent)
 
 <span id="_Properties_"></span>
 

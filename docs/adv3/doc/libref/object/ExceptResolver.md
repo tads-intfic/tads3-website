@@ -51,7 +51,7 @@ never ambiguous.
 </div>
 
 **`ExceptResolver`**  
-`         `[`ProxyResolver`](../object/ProxyResolver.html)  
+[`ProxyResolver`](../object/ProxyResolver.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -77,9 +77,9 @@ never ambiguous.
 
 </div>
 
-` `[`isSubResolver`](#isSubResolver)`  `[`mainList`](#mainList)`  `[`mainListText`](#mainListText)`  `[`origResolver`](#origResolver)`  `
+[`isSubResolver`](#isSubResolver)[`mainList`](#mainList)[`mainListText`](#mainListText)[`origResolver`](#origResolver)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -89,10 +89,10 @@ never ambiguous.
 
 </div>
 
-` `[`construct`](#construct)`  `[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)`  `[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)`  `[`filterPluralPhrase`](#filterPluralPhrase)`  `[`getAll`](#getAll)`  `[`getQualifierResolver`](#getQualifierResolver)`  `[`matchName`](#matchName)`  `[`objInScope`](#objInScope)`  `
+[`construct`](#construct)[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`getAll`](#getAll)[`getQualifierResolver`](#getQualifierResolver)[`matchName`](#matchName)[`objInScope`](#objInScope)
 
 Inherited from `ProxyResolver` :  
-` `[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)`  `[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)`  `
+[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

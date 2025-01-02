@@ -43,7 +43,7 @@ Basic noun phrase list production class.
 </div>
 
 **`NounListProd`**  
-`         `[`BasicProd`](../object/BasicProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,13 +54,13 @@ Basic noun phrase list production class.
 </div>
 
 **`NounListProd`**  
-`         `[`nonTerminalNounMultiList(multi)`](../object/nonTerminalNounMultiList(multi).html)  
-`         `[`nonTerminalNounMultiList(pair)`](../object/nonTerminalNounMultiList(pair).html)  
-`         `[`nounList(list)`](../object/nounList(list).html)  
-`         `[`nounList(nonTerminal)`](../object/nounList(nonTerminal).html)  
-`         `[`nounList(terminal)`](../object/nounList(terminal).html)  
-`         `[`nounMultiList(multi)`](../object/nounMultiList(multi).html)  
-`         `[`nounMultiList(nonterminal)`](../object/nounMultiList(nonterminal).html)  
+[`nonTerminalNounMultiList(multi)`](../object/nonTerminalNounMultiList(multi).html)  
+[`nonTerminalNounMultiList(pair)`](../object/nonTerminalNounMultiList(pair).html)  
+[`nounList(list)`](../object/nounList(list).html)  
+[`nounList(nonTerminal)`](../object/nounList(nonTerminal).html)  
+[`nounList(terminal)`](../object/nounList(terminal).html)  
+[`nounMultiList(multi)`](../object/nounMultiList(multi).html)  
+[`nounMultiList(nonterminal)`](../object/nounMultiList(nonterminal).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -77,10 +77,10 @@ Basic noun phrase list production class.
 
 </div>
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,10 +90,10 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

@@ -44,7 +44,7 @@ is better.)
 </div>
 
 **`rankByLiteralLength`**  
-`         `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -54,9 +54,9 @@ is better.)
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -66,10 +66,10 @@ is better.)
 
 </div>
 
-` `[`comparePass1`](#comparePass1)`  `
+[`comparePass1`](#comparePass1)
 
 Inherited from `CommandRankingCriterion` :  
-` `[`comparePass2`](../object/CommandRankingCriterion.html#comparePass2)`  `
+[`comparePass2`](../object/CommandRankingCriterion.html#comparePass2)
 
 <span id="_Properties_"></span>
 

@@ -43,9 +43,9 @@ A one-off EventListItem
 </div>
 
 **`ELI1`**  
-`         `[`EventListItem`](../object/EventListItem.html)  
-`                 `[`PreinitObject`](../object/PreinitObject.html)  
-`                         `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`EventListItem`](../object/EventListItem.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,16 +71,16 @@ A one-off EventListItem
 
 </div>
 
-` `[`maxFireCt`](#maxFireCt)`  `
+[`maxFireCt`](#maxFireCt)
 
 Inherited from `EventListItem` :  
-` `[`canRemoveWhenDone`](../object/EventListItem.html#canRemoveWhenDone)`  `[`doneWhen`](../object/EventListItem.html#doneWhen)`  `[`fireCt`](../object/EventListItem.html#fireCt)`  `[`isDone`](../object/EventListItem.html#isDone)`  `[`isReady`](../object/EventListItem.html#isReady)`  `[`lastClock`](../object/EventListItem.html#lastClock)`  `[`minInterval`](../object/EventListItem.html#minInterval)`  `[`missedTurn`](../object/EventListItem.html#missedTurn)`  `[`myListObj`](../object/EventListItem.html#myListObj)`  `[`readyTime`](../object/EventListItem.html#readyTime)`  `[`whichList`](../object/EventListItem.html#whichList)`  `
+[`canRemoveWhenDone`](../object/EventListItem.html#canRemoveWhenDone)[`doneWhen`](../object/EventListItem.html#doneWhen)[`fireCt`](../object/EventListItem.html#fireCt)[`isDone`](../object/EventListItem.html#isDone)[`isReady`](../object/EventListItem.html#isReady)[`lastClock`](../object/EventListItem.html#lastClock)[`minInterval`](../object/EventListItem.html#minInterval)[`missedTurn`](../object/EventListItem.html#missedTurn)[`myListObj`](../object/EventListItem.html#myListObj)[`readyTime`](../object/EventListItem.html#readyTime)[`whichList`](../object/EventListItem.html#whichList)
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,15 +90,15 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `
+
 
 Inherited from `EventListItem` :  
-` `[`_invokeItem`](../object/EventListItem.html#_invokeItem)`  `[`addToList`](../object/EventListItem.html#addToList)`  `[`canFire`](../object/EventListItem.html#canFire)`  `[`doScript`](../object/EventListItem.html#doScript)`  `[`execute`](../object/EventListItem.html#execute)`  `[`fallBack`](../object/EventListItem.html#fallBack)`  `[`fallBackResponse`](../object/EventListItem.html#fallBackResponse)`  `[`invokeItem`](../object/EventListItem.html#invokeItem)`  `[`setDelay`](../object/EventListItem.html#setDelay)`  `[`setDone`](../object/EventListItem.html#setDone)`  `[`underused`](../object/EventListItem.html#underused)`  `
+[`_invokeItem`](../object/EventListItem.html#_invokeItem)[`addToList`](../object/EventListItem.html#addToList)[`canFire`](../object/EventListItem.html#canFire)[`doScript`](../object/EventListItem.html#doScript)[`execute`](../object/EventListItem.html#execute)[`fallBack`](../object/EventListItem.html#fallBack)[`fallBackResponse`](../object/EventListItem.html#fallBackResponse)[`invokeItem`](../object/EventListItem.html#invokeItem)[`setDelay`](../object/EventListItem.html#setDelay)[`setDone`](../object/EventListItem.html#setDone)[`underused`](../object/EventListItem.html#underused)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

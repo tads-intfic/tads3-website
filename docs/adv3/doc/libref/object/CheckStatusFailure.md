@@ -45,7 +45,7 @@ kind of failure.
 </div>
 
 **`CheckStatusFailure`**  
-`         `[`CheckStatus`](../object/CheckStatus.html)  
+[`CheckStatus`](../object/CheckStatus.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,10 +71,10 @@ kind of failure.
 
 </div>
 
-` `
+
 
 Inherited from `CheckStatus` :  
-` `[`isSuccess`](../object/CheckStatus.html#isSuccess)`  `[`msgParams`](../object/CheckStatus.html#msgParams)`  `[`msgProp`](../object/CheckStatus.html#msgProp)`  `
+[`isSuccess`](../object/CheckStatus.html#isSuccess)[`msgParams`](../object/CheckStatus.html#msgParams)[`msgProp`](../object/CheckStatus.html#msgProp)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,9 +84,9 @@ Inherited from `CheckStatus` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
-` `
+
 
 <span id="_Properties_"></span>
 

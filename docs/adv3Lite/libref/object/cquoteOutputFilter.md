@@ -38,7 +38,7 @@ cquoteOutputFilter; this turns straight quotes into typographical quotes
 </div>
 
 **`cquoteOutputFilter`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,9 +48,9 @@ cquoteOutputFilter; this turns straight quotes into typographical quotes
 
 </div>
 
-` `[`aggressive`](#aggressive)`  `[`isActive`](#isActive)`  `[`patAggressive`](#patAggressive)`  `[`patIsCont1Tag`](#patIsCont1Tag)`  `[`patIsCont2Tag`](#patIsCont2Tag)`  `[`patIsFormatTag`](#patIsFormatTag)`  `[`patIsHTMLTag`](#patIsHTMLTag)`  `[`patIsPossTag`](#patIsPossTag)`  `
+[`aggressive`](#aggressive)[`isActive`](#isActive)[`patAggressive`](#patAggressive)[`patIsCont1Tag`](#patIsCont1Tag)[`patIsCont2Tag`](#patIsCont2Tag)[`patIsFormatTag`](#patIsFormatTag)[`patIsHTMLTag`](#patIsHTMLTag)[`patIsPossTag`](#patIsPossTag)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -60,9 +60,9 @@ cquoteOutputFilter; this turns straight quotes into typographical quotes
 
 </div>
 
-` `[`activate`](#activate)`  `[`deactivate`](#deactivate)`  `[`filterText`](#filterText)`  `
+[`activate`](#activate)[`deactivate`](#deactivate)[`filterText`](#filterText)
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -40,7 +40,7 @@ though it won't refer to anything.
 </div>
 
 **`resolvedTopicNothing`**  
-`         `[`ResolvedTopic`](../object/ResolvedTopic.html)  
+[`ResolvedTopic`](../object/ResolvedTopic.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -50,10 +50,10 @@ though it won't refer to anything.
 
 </div>
 
-` `[`inScopeList`](#inScopeList)`  `[`likelyList`](#likelyList)`  `[`otherList`](#otherList)`  `
+[`inScopeList`](#inScopeList)[`likelyList`](#likelyList)[`otherList`](#otherList)
 
 Inherited from `ResolvedTopic` :  
-` `[`canMatchLiterally`](../object/ResolvedTopic.html#canMatchLiterally)`  `[`resInfoTab`](../object/ResolvedTopic.html#resInfoTab)`  `[`topicProd`](../object/ResolvedTopic.html#topicProd)`  `
+[`canMatchLiterally`](../object/ResolvedTopic.html#canMatchLiterally)[`resInfoTab`](../object/ResolvedTopic.html#resInfoTab)[`topicProd`](../object/ResolvedTopic.html#topicProd)
 
 <span id="_MethodSummary_"></span>
 
@@ -63,10 +63,10 @@ Inherited from `ResolvedTopic` :
 
 </div>
 
-` `[`getTopicText`](#getTopicText)`  `[`getTopicTokens`](#getTopicTokens)`  `[`getTopicWords`](#getTopicWords)`  `
+[`getTopicText`](#getTopicText)[`getTopicTokens`](#getTopicTokens)[`getTopicWords`](#getTopicWords)
 
 Inherited from `ResolvedTopic` :  
-` `[`canMatchObject`](../object/ResolvedTopic.html#canMatchObject)`  `[`construct`](../object/ResolvedTopic.html#construct)`  `[`getBestMatch`](../object/ResolvedTopic.html#getBestMatch)`  `[`getResolveInfo`](../object/ResolvedTopic.html#getResolveInfo)`  `[`wrapActionObject`](../object/ResolvedTopic.html#wrapActionObject)`  `[`wrapObject`](../object/ResolvedTopic.html#wrapObject)`  `
+[`canMatchObject`](../object/ResolvedTopic.html#canMatchObject)[`construct`](../object/ResolvedTopic.html#construct)[`getBestMatch`](../object/ResolvedTopic.html#getBestMatch)[`getResolveInfo`](../object/ResolvedTopic.html#getResolveInfo)[`wrapActionObject`](../object/ResolvedTopic.html#wrapActionObject)[`wrapObject`](../object/ResolvedTopic.html#wrapObject)
 
 <span id="_Properties_"></span>
 

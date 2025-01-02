@@ -40,7 +40,7 @@ the Query object.
 </div>
 
 **`touchObj`**  
-`         `[`PreCondition`](../object/PreCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -50,9 +50,9 @@ the Query object.
 
 </div>
 
-` `[`preCondOrder`](#preCondOrder)`  `
+[`preCondOrder`](#preCondOrder)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -62,9 +62,9 @@ the Query object.
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `[`verifyPreCondition`](#verifyPreCondition)`  `
+[`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
 
-` `
+
 
 <span id="_Properties_"></span>
 

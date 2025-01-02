@@ -48,7 +48,7 @@ we're looking for a response to a YES or NO command.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -58,7 +58,7 @@ we're looking for a response to a YES or NO command.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

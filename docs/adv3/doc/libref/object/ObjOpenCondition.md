@@ -43,7 +43,7 @@ Pre-condition: the object is open.
 </div>
 
 **`ObjOpenCondition`**  
-`         `[`PreCondition`](../object/PreCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -61,7 +61,7 @@ Pre-condition: the object is open.
 
 </div>
 
-` `[`doorOpen`](../object/doorOpen.html)`  `[`objOpen`](../object/objOpen.html)`  `
+[`doorOpen`](../object/doorOpen.html)[`objOpen`](../object/objOpen.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -70,10 +70,10 @@ Pre-condition: the object is open.
 
 </div>
 
-` `
+
 
 Inherited from `PreCondition` :  
-` `[`preCondOrder`](../object/PreCondition.html#preCondOrder)`  `
+[`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,9 +83,9 @@ Inherited from `PreCondition` :
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `[`conditionFailed`](#conditionFailed)`  `[`verifyPreCondition`](#verifyPreCondition)`  `
+[`checkPreCondition`](#checkPreCondition)[`conditionFailed`](#conditionFailed)[`verifyPreCondition`](#verifyPreCondition)
 
-` `
+
 
 <span id="_Properties_"></span>
 

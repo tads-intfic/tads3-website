@@ -73,7 +73,7 @@ preferences file.
 
 </div>
 
-` `[`clientSession`](#clientSession)`  `[`curProfile`](#curProfile)`  `[`curProPat`](#curProPat)`  `[`profileTab`](#profileTab)`  `[`proItemPat`](#proItemPat)`  `
+` [`clientSession`](#clientSession)  [`curProfile`](#curProfile)  [`curProPat`](#curProPat)  [`profileTab`](#profileTab)  [`proItemPat`](#proItemPat)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ preferences file.
 
 </div>
 
-` `[`construct`](#construct)`  `[`getSettingsFile`](#getSettingsFile)`  `[`getXML`](#getXML)`  `[`loadSettings`](#loadSettings)`  `[`openSettingsFile`](#openSettingsFile)`  `[`readSettings`](#readSettings)`  `[`saveSettings`](#saveSettings)`  `
+` [`construct`](#construct)  [`getSettingsFile`](#getSettingsFile)  [`getXML`](#getXML)  [`loadSettings`](#loadSettings)  [`openSettingsFile`](#openSettingsFile)  [`readSettings`](#readSettings)  [`saveSettings`](#saveSettings)  `
 
 <span id="_Properties_"></span>
 

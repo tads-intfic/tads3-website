@@ -68,7 +68,7 @@ Verification result list.
 
 </div>
 
-` `[`obj_`](#obj_)`  `[`origOrder`](#origOrder)`  `[`remapAction_`](#remapAction_)`  `[`remapRole_`](#remapRole_)`  `[`remapTarget_`](#remapTarget_)`  `[`results_`](#results_)`  `
+[`obj_`](#obj_)[`origOrder`](#origOrder)[`remapAction_`](#remapAction_)[`remapRole_`](#remapRole_)[`remapTarget_`](#remapTarget_)[`results_`](#results_)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ Verification result list.
 
 </div>
 
-` `[`addResult`](#addResult)`  `[`allowAction`](#allowAction)`  `[`allowImplicit`](#allowImplicit)`  `[`compareTo`](#compareTo)`  `[`construct`](#construct)`  `[`excludePluralMatches`](#excludePluralMatches)`  `[`getEffectiveResult`](#getEffectiveResult)`  `[`matchForCombineRemapped`](#matchForCombineRemapped)`  `[`showMessage`](#showMessage)`  `
+[`addResult`](#addResult)[`allowAction`](#allowAction)[`allowImplicit`](#allowImplicit)[`compareTo`](#compareTo)[`construct`](#construct)[`excludePluralMatches`](#excludePluralMatches)[`getEffectiveResult`](#getEffectiveResult)[`matchForCombineRemapped`](#matchForCombineRemapped)[`showMessage`](#showMessage)
 
 <span id="_Properties_"></span>
 

@@ -62,7 +62,7 @@ for the most common cases.
 
 </div>
 
-` `[`ftDeath`](../object/ftDeath.html)`  `[`ftFailure`](../object/ftFailure.html)`  `[`ftGameOver`](../object/ftGameOver.html)`  `[`ftVictory`](../object/ftVictory.html)`  `
+[`ftDeath`](../object/ftDeath.html)[`ftFailure`](../object/ftFailure.html)[`ftGameOver`](../object/ftGameOver.html)[`ftVictory`](../object/ftVictory.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -71,7 +71,7 @@ for the most common cases.
 
 </div>
 
-` `[`finishMsg`](#finishMsg)`  `
+[`finishMsg`](#finishMsg)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ for the most common cases.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

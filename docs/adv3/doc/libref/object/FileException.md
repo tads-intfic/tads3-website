@@ -44,7 +44,7 @@ to allow for generic 'catch' clauses which catch any file-related error.
 </div>
 
 **`FileException`**  
-`         `[`Exception`](../object/Exception.html)  
+[`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,14 +55,14 @@ to allow for generic 'catch' clauses which catch any file-related error.
 </div>
 
 **`FileException`**  
-`         `[`FileClosedException`](../object/FileClosedException.html)  
-`         `[`FileCreationException`](../object/FileCreationException.html)  
-`         `[`FileIOException`](../object/FileIOException.html)  
-`         `[`FileModeException`](../object/FileModeException.html)  
-`         `[`FileNotFoundException`](../object/FileNotFoundException.html)  
-`         `[`FileOpenException`](../object/FileOpenException.html)  
-`         `[`FileSafetyException`](../object/FileSafetyException.html)  
-`         `[`FileSyncException`](../object/FileSyncException.html)  
+[`FileClosedException`](../object/FileClosedException.html)  
+[`FileCreationException`](../object/FileCreationException.html)  
+[`FileIOException`](../object/FileIOException.html)  
+[`FileModeException`](../object/FileModeException.html)  
+[`FileNotFoundException`](../object/FileNotFoundException.html)  
+[`FileOpenException`](../object/FileOpenException.html)  
+[`FileSafetyException`](../object/FileSafetyException.html)  
+[`FileSyncException`](../object/FileSyncException.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,10 +79,10 @@ to allow for generic 'catch' clauses which catch any file-related error.
 
 </div>
 
-` `
+
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,10 +92,10 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`displayException`](#displayException)`  `
+[`displayException`](#displayException)
 
 Inherited from `Exception` :  
-` `[`construct`](../object/Exception.html#construct)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`construct`](../object/Exception.html#construct)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

@@ -49,8 +49,8 @@ separate list.
 </div>
 
 **`completeNounPhraseWithAll(main)`**  
-`         `[`EverythingProd`](../object/EverythingProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`EverythingProd`](../object/EverythingProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -60,13 +60,13 @@ separate list.
 
 </div>
 
-` `
+
 
 Inherited from `EverythingProd` :  
-` `[`filterForCollectives`](../object/EverythingProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/EverythingProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -76,13 +76,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `EverythingProd` :  
-` `[`resolveNouns`](../object/EverythingProd.html#resolveNouns)`  `
+[`resolveNouns`](../object/EverythingProd.html#resolveNouns)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

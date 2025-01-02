@@ -43,7 +43,7 @@ used by permission.
 
 </div>
 
-` `[`BannerOutputStream`](../object/BannerOutputStream.html)`  `[`BannerUIWindow`](../object/BannerUIWindow.html)`  `[`BannerWindow`](../object/BannerWindow.html)`  `
+[`BannerOutputStream`](../object/BannerOutputStream.html)[`BannerUIWindow`](../object/BannerUIWindow.html)[`BannerWindow`](../object/BannerWindow.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -52,7 +52,7 @@ used by permission.
 
 </div>
 
-` `[`bannerInit`](../object/bannerInit.html)`  `[`bannerTracker`](../object/bannerTracker.html)`  `[`bannerUITracker`](../object/bannerUITracker.html)`  `
+[`bannerInit`](../object/bannerInit.html)[`bannerTracker`](../object/bannerTracker.html)[`bannerUITracker`](../object/bannerUITracker.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

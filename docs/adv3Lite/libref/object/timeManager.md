@@ -38,8 +38,8 @@ in the OBJTIME EXTENSION.
 </div>
 
 **`timeManager`**  
-`         `[`InitObject`](../object/InitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`InitObject`](../object/InitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,12 +49,12 @@ in the OBJTIME EXTENSION.
 
 </div>
 
-` `[`additionalTime`](#additionalTime)`  `[`currentTime`](#currentTime)`  `[`replacementTime`](#replacementTime)`  `
+[`additionalTime`](#additionalTime)[`currentTime`](#currentTime)[`replacementTime`](#replacementTime)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,12 +64,12 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`addInterval`](#addInterval)`  `[`advanceTime`](#advanceTime)`  `[`execute`](#execute)`  `[`formatDate`](#formatDate)`  `[`reset`](#reset)`  `[`setTime`](#setTime)`  `
+[`addInterval`](#addInterval)[`advanceTime`](#advanceTime)[`execute`](#execute)[`formatDate`](#formatDate)[`reset`](#reset)[`setTime`](#setTime)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

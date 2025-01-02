@@ -40,7 +40,7 @@ that we're matching against.
 </div>
 
 **`_multiMethodEndOfList`**  
-`         `[`_MultiMethodPlaceholder`](../object/_MultiMethodPlaceholder.html)  
+[`_MultiMethodPlaceholder`](../object/_MultiMethodPlaceholder.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -50,9 +50,9 @@ that we're matching against.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -62,9 +62,9 @@ that we're matching against.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

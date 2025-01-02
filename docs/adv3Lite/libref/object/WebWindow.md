@@ -67,8 +67,8 @@ customized copy of the corresponding HTML page resource.
 </div>
 
 **`WebWindow`**  
-`         `[`WebResourceResFile`](../object/WebResourceResFile.html)  
-`                 `[`WebResource`](../object/WebResource.html)  
+[`WebResourceResFile`](../object/WebResourceResFile.html)  
+[`WebResource`](../object/WebResource.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -79,9 +79,9 @@ customized copy of the corresponding HTML page resource.
 </div>
 
 **`WebWindow`**  
-`         `[`WebCommandWin`](../object/WebCommandWin.html)  
-`         `[`WebLayoutWindow`](../object/WebLayoutWindow.html)  
-`         `[`WebStatusWin`](../object/WebStatusWin.html)  
+[`WebCommandWin`](../object/WebCommandWin.html)  
+[`WebLayoutWindow`](../object/WebLayoutWindow.html)  
+[`WebStatusWin`](../object/WebStatusWin.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -98,13 +98,13 @@ customized copy of the corresponding HTML page resource.
 
 </div>
 
-` `[`name`](#name)`  `[`pathName`](#pathName)`  `[`src`](#src)`  `[`sthCtx`](#sthCtx)`  `[`vpath`](#vpath)`  `
+` [`name`](#name)  [`pathName`](#pathName)  [`src`](#src)  [`sthCtx`](#sthCtx)  [`vpath`](#vpath)  `
 
 Inherited from `WebResourceResFile` :  
-` `[`binaryExts`](../object/WebResourceResFile.html#binaryExts)`  `[`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)`  `
+` [`binaryExts`](../object/WebResourceResFile.html#binaryExts)  [`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)  `
 
 Inherited from `WebResource` :  
-` `[`group`](../object/WebResource.html#group)`  `[`priority`](../object/WebResource.html#priority)`  `
+` [`group`](../object/WebResource.html#group)  [`priority`](../object/WebResource.html#priority)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -114,13 +114,13 @@ Inherited from `WebResource` :
 
 </div>
 
-` `[`clearWindow`](#clearWindow)`  `[`flushWin`](#flushWin)`  `[`getState`](#getState)`  `[`processName`](#processName)`  `[`sendWinEvent`](#sendWinEvent)`  `[`sendWinEventTo`](#sendWinEventTo)`  `[`winFromPath`](#winFromPath)`  `[`write`](#write)`  `
+` [`clearWindow`](#clearWindow)  [`flushWin`](#flushWin)  [`getState`](#getState)  [`processName`](#processName)  [`sendWinEvent`](#sendWinEvent)  [`sendWinEventTo`](#sendWinEventTo)  [`winFromPath`](#winFromPath)  [`write`](#write)  `
 
 Inherited from `WebResourceResFile` :  
-` `[`isTextFile`](../object/WebResourceResFile.html#isTextFile)`  `[`matchRequest`](../object/WebResourceResFile.html#matchRequest)`  `[`processRequest`](../object/WebResourceResFile.html#processRequest)`  `
+` [`isTextFile`](../object/WebResourceResFile.html#isTextFile)  [`matchRequest`](../object/WebResourceResFile.html#matchRequest)  [`processRequest`](../object/WebResourceResFile.html#processRequest)  `
 
 Inherited from `WebResource` :  
-` `[`sendAck`](../object/WebResource.html#sendAck)`  `[`sendXML`](../object/WebResource.html#sendXML)`  `
+` [`sendAck`](../object/WebResource.html#sendAck)  [`sendXML`](../object/WebResource.html#sendXML)  `
 
 <span id="_Properties_"></span>
 

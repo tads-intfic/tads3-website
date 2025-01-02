@@ -63,7 +63,7 @@ nothing will be displayed.
 
 </div>
 
-` `[`exitsTip`](../object/exitsTip.html)`  `[`footnotesTip`](../object/footnotesTip.html)`  `[`fullScoreTip`](../object/fullScoreTip.html)`  `[`oopsTip`](../object/oopsTip.html)`  `[`scoreChangeTip`](../object/scoreChangeTip.html)`  `[`undoTip`](../object/undoTip.html)`  `
+[`exitsTip`](../object/exitsTip.html)[`footnotesTip`](../object/footnotesTip.html)[`fullScoreTip`](../object/fullScoreTip.html)[`oopsTip`](../object/oopsTip.html)[`scoreChangeTip`](../object/scoreChangeTip.html)[`undoTip`](../object/undoTip.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ nothing will be displayed.
 
 </div>
 
-` `[`desc`](#desc)`  `[`shown`](#shown)`  `
+[`desc`](#desc)[`shown`](#shown)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ nothing will be displayed.
 
 </div>
 
-` `[`makeShown`](#makeShown)`  `[`shouldShowTip`](#shouldShowTip)`  `[`showTip`](#showTip)`  `[`showTipDesc`](#showTipDesc)`  `
+[`makeShown`](#makeShown)[`shouldShowTip`](#shouldShowTip)[`showTip`](#showTip)[`showTipDesc`](#showTipDesc)
 
 <span id="_Properties_"></span>
 

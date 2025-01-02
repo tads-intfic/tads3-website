@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`fueledID`**  
-`         `[`ModuleID`](../object/ModuleID.html)  
+[`ModuleID`](../object/ModuleID.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ Details](#_Methods_)
 
 </div>
 
-` `[`byline`](#byline)`  `[`htmlByline`](#htmlByline)`  `[`name`](#name)`  `[`version`](#version)`  `
+[`byline`](#byline)[`htmlByline`](#htmlByline)[`name`](#name)[`version`](#version)
 
 Inherited from `ModuleID` :  
-` `[`listingOrder`](../object/ModuleID.html#listingOrder)`  `
+[`listingOrder`](../object/ModuleID.html#listingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `ModuleID` :
 
 </div>
 
-` `
+
 
 Inherited from `ModuleID` :  
-` `[`getModuleList`](../object/ModuleID.html#getModuleList)`  `[`showAbout`](../object/ModuleID.html#showAbout)`  `[`showCredit`](../object/ModuleID.html#showCredit)`  `[`showVersion`](../object/ModuleID.html#showVersion)`  `[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)`  `
+[`getModuleList`](../object/ModuleID.html#getModuleList)[`showAbout`](../object/ModuleID.html#showAbout)[`showCredit`](../object/ModuleID.html#showCredit)[`showVersion`](../object/ModuleID.html#showVersion)[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
 
 <span id="_Properties_"></span>
 

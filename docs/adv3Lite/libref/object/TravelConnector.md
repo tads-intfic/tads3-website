@@ -70,20 +70,20 @@ different amounts of time to traverse.
 </div>
 
 **`TravelConnector`**  
-`         `[`Door`](../object/Door.html)  
-`                 `[`SecretDoor`](../object/SecretDoor.html)  
-`         `[`Passage`](../object/Passage.html)  
-`                 `[`PathPassage`](../object/PathPassage.html)  
-`         `[`Room`](../object/Room.html)  
-`                 `[`OutdoorRoom`](../object/OutdoorRoom.html)  
-`         `[`StairwayDown`](../object/StairwayDown.html)  
-`         `[`StairwayUp`](../object/StairwayUp.html)  
-`         `[`SymConnector`](../object/SymConnector.html)  
-`                 `[`SymPassage`](../object/SymPassage.html)  
-`                         `[`SymDoor`](../object/SymDoor.html)  
-`                         `[`SymPathPassage`](../object/SymPathPassage.html)  
-`                         `[`SymStairway`](../object/SymStairway.html)  
-`         `[`UnlistedProxyConnector`](../object/UnlistedProxyConnector.html)  
+[`Door`](../object/Door.html)  
+[`SecretDoor`](../object/SecretDoor.html)  
+[`Passage`](../object/Passage.html)  
+[`PathPassage`](../object/PathPassage.html)  
+[`Room`](../object/Room.html)  
+[`OutdoorRoom`](../object/OutdoorRoom.html)  
+[`StairwayDown`](../object/StairwayDown.html)  
+[`StairwayUp`](../object/StairwayUp.html)  
+[`SymConnector`](../object/SymConnector.html)  
+[`SymPassage`](../object/SymPassage.html)  
+[`SymDoor`](../object/SymDoor.html)  
+[`SymPathPassage`](../object/SymPathPassage.html)  
+[`SymStairway`](../object/SymStairway.html)  
+[`UnlistedProxyConnector`](../object/UnlistedProxyConnector.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -92,7 +92,7 @@ different amounts of time to traverse.
 
 </div>
 
-` `[`noExit`](../object/noExit.html)`  `
+[`noExit`](../object/noExit.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -101,7 +101,7 @@ different amounts of time to traverse.
 
 </div>
 
-` `[`destination`](#destination)`  `[`isConnectorApparent`](#isConnectorApparent)`  `[`isConnectorListed`](#isConnectorListed)`  `[`isOpen`](#isOpen)`  `[`PushTravelVia`](#PushTravelVia)`  `[`suppressTravelDescForPushTravel`](#suppressTravelDescForPushTravel)`  `[`transmitsLight`](#transmitsLight)`  `[`travelBarriers`](#travelBarriers)`  `[`traversalTime`](#traversalTime)`  `[`traversed`](#traversed)`  `[`traversedBy`](#traversedBy)`  `
+[`destination`](#destination)[`isConnectorApparent`](#isConnectorApparent)[`isConnectorListed`](#isConnectorListed)[`isOpen`](#isOpen)[`PushTravelVia`](#PushTravelVia)[`suppressTravelDescForPushTravel`](#suppressTravelDescForPushTravel)[`transmitsLight`](#transmitsLight)[`travelBarriers`](#travelBarriers)[`traversalTime`](#traversalTime)[`traversed`](#traversed)[`traversedBy`](#traversedBy)
 
 <span id="_MethodSummary_"></span>
 
@@ -111,7 +111,7 @@ different amounts of time to traverse.
 
 </div>
 
-` `[`afterTravelNotifications`](#afterTravelNotifications)`  `[`beforeTravelNotifications`](#beforeTravelNotifications)`  `[`canTravelerPass`](#canTravelerPass)`  `[`checkPushTravel`](#checkPushTravel)`  `[`checkTravelBarriers`](#checkTravelBarriers)`  `[`dobjFor(GoThrough)`](#dobjFor(GoThrough))`  `[`dobjFor(TravelVia)`](#dobjFor(TravelVia))`  `[`execTravel`](#execTravel)`  `[`explainTravelBarrier`](#explainTravelBarrier)`  `[`getDepartingDirection`](#getDepartingDirection)`  `[`getDestination`](#getDestination)`  `[`getTraveler`](#getTraveler)`  `[`hasBeenTraversedBy`](#hasBeenTraversedBy)`  `[`iobjFor(PushTravelThrough)`](#iobjFor(PushTravelThrough))`  `[`isConnectorVisible`](#isConnectorVisible)`  `[`isDestinationKnown`](#isDestinationKnown)`  `[`noteTraversal`](#noteTraversal)`  `[`sayActorFollowing`](#sayActorFollowing)`  `[`sayDeparting`](#sayDeparting)`  `[`sayNoDestination`](#sayNoDestination)`  `[`travelDesc`](#travelDesc)`  `[`travelVia`](#travelVia)`  `[`traversalMsg`](#traversalMsg)`  `[`traversalTimeFrom`](#traversalTimeFrom)`  `
+[`afterTravelNotifications`](#afterTravelNotifications)[`beforeTravelNotifications`](#beforeTravelNotifications)[`canTravelerPass`](#canTravelerPass)[`checkPushTravel`](#checkPushTravel)[`checkTravelBarriers`](#checkTravelBarriers)[`dobjFor(GoThrough)`](#dobjFor(GoThrough))[`dobjFor(TravelVia)`](#dobjFor(TravelVia))[`execTravel`](#execTravel)[`explainTravelBarrier`](#explainTravelBarrier)[`getDepartingDirection`](#getDepartingDirection)[`getDestination`](#getDestination)[`getTraveler`](#getTraveler)[`hasBeenTraversedBy`](#hasBeenTraversedBy)[`iobjFor(PushTravelThrough)`](#iobjFor(PushTravelThrough))[`isConnectorVisible`](#isConnectorVisible)[`isDestinationKnown`](#isDestinationKnown)[`noteTraversal`](#noteTraversal)[`sayActorFollowing`](#sayActorFollowing)[`sayDeparting`](#sayDeparting)[`sayNoDestination`](#sayNoDestination)[`travelDesc`](#travelDesc)[`travelVia`](#travelVia)[`traversalMsg`](#traversalMsg)[`traversalTimeFrom`](#traversalTimeFrom)
 
 <span id="_Properties_"></span>
 

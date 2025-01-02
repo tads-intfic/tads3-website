@@ -37,7 +37,7 @@ layout: docs
 
 </div>
 
-` `[`Array`](../object/Array.html)`  `
+[`Array`](../object/Array.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -54,7 +54,7 @@ layout: docs
 
 </div>
 
-` `[`_ARRAY_H_`](#_ARRAY_H_)`  `
+[`_ARRAY_H_`](#_ARRAY_H_)
 
 <span id="_EnumSummary_"></span>
 

@@ -46,7 +46,7 @@ our FOOTNOTES settings item \[FOOTNOTE EXTENSION\]
 
 </div>
 
-` `[`showFootnotes`](#showFootnotes)`  `
+[`showFootnotes`](#showFootnotes)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ our FOOTNOTES settings item \[FOOTNOTE EXTENSION\]
 
 </div>
 
-` `[`settingFromText`](#settingFromText)`  `[`settingToText`](#settingToText)`  `
+[`settingFromText`](#settingFromText)[`settingToText`](#settingToText)
 
 <span id="_Properties_"></span>
 

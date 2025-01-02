@@ -38,7 +38,7 @@ different names (so it's inherently language-specific).
 </div>
 
 **`nullDistinguisher`**  
-`         `[`Distinguisher`](../object/Distinguisher.html)  
+[`Distinguisher`](../object/Distinguisher.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,9 +48,9 @@ different names (so it's inherently language-specific).
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ different names (so it's inherently language-specific).
 
 </div>
 
-` `[`aName`](#aName)`  `[`canDistinguish`](#canDistinguish)`  `[`countName`](#countName)`  `[`name`](#name)`  `[`theName`](#theName)`  `
+[`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`name`](#name)[`theName`](#theName)
 
 Inherited from `Distinguisher` :  
-` `[`matchName`](../object/Distinguisher.html#matchName)`  `[`notePrompt`](../object/Distinguisher.html#notePrompt)`  `[`objInScope`](../object/Distinguisher.html#objInScope)`  `
+[`matchName`](../object/Distinguisher.html#matchName)[`notePrompt`](../object/Distinguisher.html#notePrompt)[`objInScope`](../object/Distinguisher.html#objInScope)
 
 <span id="_Properties_"></span>
 

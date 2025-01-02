@@ -49,7 +49,7 @@ mechanisms.
 
 </div>
 
-` `[`noteWithoutScriptWarning`](#noteWithoutScriptWarning)`  `[`recordFile`](#recordFile)`  `[`scriptFile`](#scriptFile)`  `
+[`noteWithoutScriptWarning`](#noteWithoutScriptWarning)[`recordFile`](#recordFile)[`scriptFile`](#scriptFile)
 
 <span id="_MethodSummary_"></span>
 
@@ -59,7 +59,7 @@ mechanisms.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

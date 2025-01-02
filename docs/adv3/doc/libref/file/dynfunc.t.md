@@ -33,7 +33,7 @@ DynamicFunc class.
 
 </div>
 
-` `[`CompilerException`](../object/CompilerException.html)`  `
+[`CompilerException`](../object/CompilerException.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -42,7 +42,7 @@ DynamicFunc class.
 
 </div>
 
-` `[`Compiler`](../object/Compiler.html)`  `
+[`Compiler`](../object/Compiler.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

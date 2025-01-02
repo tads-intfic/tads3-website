@@ -49,7 +49,7 @@ property across the undo.
 
 </div>
 
-` `[`displayed`](#displayed)`  `
+[`displayed`](#displayed)
 
 <span id="_MethodSummary_"></span>
 
@@ -59,7 +59,7 @@ property across the undo.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

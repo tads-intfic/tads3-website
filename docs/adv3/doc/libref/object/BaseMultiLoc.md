@@ -83,11 +83,11 @@ locations by default.
 </div>
 
 **`BaseMultiLoc`**  
-`         `[`MultiInstance`](../object/MultiInstance.html)  
-`                 `[`MultiFaceted`](../object/MultiFaceted.html)  
-`         `[`MultiLoc`](../object/MultiLoc.html)  
-`                 `[`SenseConnector`](../object/SenseConnector.html)  
-`                         `[`DistanceConnector`](../object/DistanceConnector.html)  
+[`MultiInstance`](../object/MultiInstance.html)  
+[`MultiFaceted`](../object/MultiFaceted.html)  
+[`MultiLoc`](../object/MultiLoc.html)  
+[`SenseConnector`](../object/SenseConnector.html)  
+[`DistanceConnector`](../object/DistanceConnector.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -104,7 +104,7 @@ locations by default.
 
 </div>
 
-` `[`initialLocationClass`](#initialLocationClass)`  `[`locationList`](#locationList)`  `
+[`initialLocationClass`](#initialLocationClass)[`locationList`](#locationList)
 
 <span id="_MethodSummary_"></span>
 
@@ -114,7 +114,7 @@ locations by default.
 
 </div>
 
-` `[`buildLocationList`](#buildLocationList)`  `[`isDirectlyIn`](#isDirectlyIn)`  `[`isIn`](#isIn)`  `[`isInitiallyIn`](#isInitiallyIn)`  `[`isListedInContents`](#isListedInContents)`  `[`isOrIsIn`](#isOrIsIn)`  `
+[`buildLocationList`](#buildLocationList)[`isDirectlyIn`](#isDirectlyIn)[`isIn`](#isIn)[`isInitiallyIn`](#isInitiallyIn)[`isListedInContents`](#isListedInContents)[`isOrIsIn`](#isOrIsIn)
 
 <span id="_Properties_"></span>
 

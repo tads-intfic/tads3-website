@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`sound`**  
-`         `[`Sense`](../object/Sense.html)  
+[`Sense`](../object/Sense.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ Details](#_Methods_)
 
 </div>
 
-` `[`presenceProp`](#presenceProp)`  `[`sizeProp`](#sizeProp)`  `[`thruProp`](#thruProp)`  `
+[`presenceProp`](#presenceProp)[`sizeProp`](#sizeProp)[`thruProp`](#thruProp)
 
 Inherited from `Sense` :  
-` `[`ambienceProp`](../object/Sense.html#ambienceProp)`  `
+[`ambienceProp`](../object/Sense.html#ambienceProp)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `Sense` :
 
 </div>
 
-` `
+
 
 Inherited from `Sense` :  
-` `[`canObjBeSensed`](../object/Sense.html#canObjBeSensed)`  `
+[`canObjBeSensed`](../object/Sense.html#canObjBeSensed)
 
 <span id="_Properties_"></span>
 

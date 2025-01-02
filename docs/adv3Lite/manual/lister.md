@@ -241,7 +241,7 @@ want to change the way a list is introduced or concluded by overriding
 globally, in which case you can just modify the lister concerned, for
 example:
 
-```
+`
      modify lookLister
         showListPrefix(lst, pl, parent)
         {
@@ -254,7 +254,7 @@ example:
         }    
     ; 
      
-```
+`
 
 This would then affect the way in which miscellaneous items were listed
 in every room in the game. More typically, though, we might want to
@@ -306,7 +306,7 @@ wanted to use the same custom lister on a number of different objects).
 For example, to customize the lister used when opening or looking in a
 box you could do something like this:
 
-```
+`
      + largeBox: OpenableContainer 'large box'
         
         myOpeningContentsLister: openingContentsLister
@@ -326,7 +326,7 @@ box you could do something like this:
         }
     ;
      
-```
+`
 
 For more information on customizing the way items are listed in room
 descriptions, see the chapters on [Room Descriptions](roomdesc.html) and

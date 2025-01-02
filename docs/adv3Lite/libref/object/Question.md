@@ -65,10 +65,10 @@ carry out the action of answering the question.
 </div>
 
 **`Question`**  
-`         `[`GramQuestion`](../object/GramQuestion.html)  
-`                 `[`YesNoQuestion`](../object/YesNoQuestion.html)  
-`         `[`ParseErrorQuestion`](../object/ParseErrorQuestion.html)  
-`         `[`RexQuestion`](../object/RexQuestion.html)  
+[`GramQuestion`](../object/GramQuestion.html)  
+[`YesNoQuestion`](../object/YesNoQuestion.html)  
+[`ParseErrorQuestion`](../object/ParseErrorQuestion.html)  
+[`RexQuestion`](../object/RexQuestion.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -85,7 +85,7 @@ carry out the action of answering the question.
 
 </div>
 
-` `[`answerTemplate`](#answerTemplate)`  `[`priority`](#priority)`  `
+[`answerTemplate`](#answerTemplate)[`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -95,7 +95,7 @@ carry out the action of answering the question.
 
 </div>
 
-` `[`parseAnswer`](#parseAnswer)`  `
+[`parseAnswer`](#parseAnswer)
 
 <span id="_Properties_"></span>
 

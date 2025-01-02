@@ -45,7 +45,7 @@ during initialization for each set of equivalent items.
 </div>
 
 **`ListGroupEquivalent`**  
-`         `[`ListGroup`](../object/ListGroup.html)  
+[`ListGroup`](../object/ListGroup.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,10 +71,10 @@ during initialization for each set of equivalent items.
 
 </div>
 
-` `[`groupDisplaysSublist`](#groupDisplaysSublist)`  `
+[`groupDisplaysSublist`](#groupDisplaysSublist)
 
 Inherited from `ListGroup` :  
-` `[`minGroupSize`](../object/ListGroup.html#minGroupSize)`  `
+[`minGroupSize`](../object/ListGroup.html#minGroupSize)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,10 +84,10 @@ Inherited from `ListGroup` :
 
 </div>
 
-` `[`groupNounPhraseCount`](#groupNounPhraseCount)`  `[`showGroupList`](#showGroupList)`  `
+[`groupNounPhraseCount`](#groupNounPhraseCount)[`showGroupList`](#showGroupList)
 
 Inherited from `ListGroup` :  
-` `[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)`  `[`groupCardinality`](../object/ListGroup.html#groupCardinality)`  `[`showGroupItem`](../object/ListGroup.html#showGroupItem)`  `[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)`  `
+[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)[`groupCardinality`](../object/ListGroup.html#groupCardinality)[`showGroupItem`](../object/ListGroup.html#showGroupItem)[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
 
 <span id="_Properties_"></span>
 

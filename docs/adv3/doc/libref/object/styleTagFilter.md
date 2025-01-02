@@ -25,7 +25,7 @@ Details](#_Methods_)
 "Style tag" filter. This is an output filter that expands our special
 style tags in output text.
 
-**`styleTagFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)`   `[`PreinitObject`](../object/PreinitObject.html)
+**`styleTagFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
 
 </div>
 
@@ -38,10 +38,10 @@ style tags in output text.
 </div>
 
 **`styleTagFilter`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -51,14 +51,14 @@ style tags in output text.
 
 </div>
 
-` `[`tagPattern`](#tagPattern)`  `[`tagTable`](#tagTable)`  `
+[`tagPattern`](#tagPattern)[`tagTable`](#tagTable)
 
-` `
 
-` `
+
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -68,14 +68,14 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`execute`](#execute)`  `[`filterText`](#filterText)`  `[`translateTag`](#translateTag)`  `
+[`execute`](#execute)[`filterText`](#filterText)[`translateTag`](#translateTag)
 
-` `
 
-` `
+
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

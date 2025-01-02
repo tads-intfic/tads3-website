@@ -31,7 +31,7 @@ layout: docs
 
 </div>
 
-` `[`MobileCollectiveGroup`](../object/MobileCollectiveGroup.html)`  `
+[`MobileCollectiveGroup`](../object/MobileCollectiveGroup.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">

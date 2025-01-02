@@ -35,7 +35,7 @@ you're not using Workbench, navigate to your Heidi directory and open
 start.t in your text editor. You should now see a file that looks like
 this:
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
@@ -79,7 +79,7 @@ this:
         person = 2   
         contType = Carrier    
     ;
-```
+`
 
 Don't worry too much about what all that means for the moment, we'll be
 explaining it all in due course. A couple of points should be emphasized
@@ -100,7 +100,7 @@ source file a little less generic and a little more relevant to the game
 we're about to write. Edit your copy of the file so it reads as it does
 below (to help you with this the main changes are shown in bold):
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
@@ -146,7 +146,7 @@ below (to help you with this the main changes are shown in bold):
         person = 2   
         contType = Carrier    
     ;
-```
+`
 
 If you like, you can also change the byline, htmlByline and authorEmail
 fields to reflect your own name and email address (though for this

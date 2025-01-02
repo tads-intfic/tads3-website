@@ -414,8 +414,8 @@ count suffix, as in `(l s)3`, or a length
 prefix, as in `C/(l s)`.
 
 The following attributes can be applied to a group:
-`\<` `\>`
-`~` `%`. Attributes
+`\<\>`
+`~%`. Attributes
 applied to a group are inherited by everything within the group. For
 example, `(l s q)\>` is equivalent to
 `l\> s\> q\>`.
@@ -429,8 +429,8 @@ unpacked into a list in the unpacking results. For example, unpacking
 `\[1, \[2, 3, 4\], 5\]`.
 
 As with parenthesized groups, when any of the qualifiers
-`\<` `\>`
-`~` `%` are applied to
+`\<\>`
+`~%` are applied to
 the group, they're inherited by all items within the group.
 
 If the `!` modifier is used, each iteration of

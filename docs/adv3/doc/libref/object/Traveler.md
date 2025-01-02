@@ -53,7 +53,7 @@ English-specific Traveler changes
 </div>
 
 **`Traveler`**  
-`         `[`TravelMessageHandler`](../object/TravelMessageHandler.html)  
+[`TravelMessageHandler`](../object/TravelMessageHandler.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -64,10 +64,10 @@ English-specific Traveler changes
 </div>
 
 **`Traveler`**  
-`         `[`Actor`](../object/Actor.html)  
-`                 `[`UntakeableActor`](../object/UntakeableActor.html)  
-`                         `[`Person`](../object/Person.html)  
-`         `[`Vehicle`](../object/Vehicle.html)  
+[`Actor`](../object/Actor.html)  
+[`UntakeableActor`](../object/UntakeableActor.html)  
+[`Person`](../object/Person.html)  
+[`Vehicle`](../object/Vehicle.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -84,9 +84,9 @@ English-specific Traveler changes
 
 </div>
 
-` `[`getTravelerActors`](#getTravelerActors)`  `[`getTravelerMotiveActors`](#getTravelerMotiveActors)`  `
+[`getTravelerActors`](#getTravelerActors)[`getTravelerMotiveActors`](#getTravelerMotiveActors)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -96,10 +96,10 @@ English-specific Traveler changes
 
 </div>
 
-` `[`canTravelVia`](#canTravelVia)`  `[`checkDirectlyInRoom`](#checkDirectlyInRoom)`  `[`checkMovingTravelerInto`](#checkMovingTravelerInto)`  `[`describeArrival`](#describeArrival)`  `[`describeDeparture`](#describeDeparture)`  `[`describeNpcArrival`](#describeNpcArrival)`  `[`describeNpcDeparture`](#describeNpcDeparture)`  `[`explainNoTravelVia`](#explainNoTravelVia)`  `[`forEachTravelingActor`](#forEachTravelingActor)`  `[`getNotifyTable`](#getNotifyTable)`  `[`isActorTraveling`](#isActorTraveling)`  `[`isTravelerCarrying`](#isTravelerCarrying)`  `[`travelerLocName`](#travelerLocName)`  `[`travelerPreCond`](#travelerPreCond)`  `[`travelerRemoteLocName`](#travelerRemoteLocName)`  `[`travelerSeenBy`](#travelerSeenBy)`  `[`travelerTravelTo`](#travelerTravelTo)`  `[`travelerTravelWithin`](#travelerTravelWithin)`  `
+[`canTravelVia`](#canTravelVia)[`checkDirectlyInRoom`](#checkDirectlyInRoom)[`checkMovingTravelerInto`](#checkMovingTravelerInto)[`describeArrival`](#describeArrival)[`describeDeparture`](#describeDeparture)[`describeNpcArrival`](#describeNpcArrival)[`describeNpcDeparture`](#describeNpcDeparture)[`explainNoTravelVia`](#explainNoTravelVia)[`forEachTravelingActor`](#forEachTravelingActor)[`getNotifyTable`](#getNotifyTable)[`isActorTraveling`](#isActorTraveling)[`isTravelerCarrying`](#isTravelerCarrying)[`travelerLocName`](#travelerLocName)[`travelerPreCond`](#travelerPreCond)[`travelerRemoteLocName`](#travelerRemoteLocName)[`travelerSeenBy`](#travelerSeenBy)[`travelerTravelTo`](#travelerTravelTo)[`travelerTravelWithin`](#travelerTravelWithin)
 
 Inherited from `TravelMessageHandler` :  
-` `[`getNominalTraveler`](../object/TravelMessageHandler.html#getNominalTraveler)`  `[`sayArriving`](../object/TravelMessageHandler.html#sayArriving)`  `[`sayArrivingDir`](../object/TravelMessageHandler.html#sayArrivingDir)`  `[`sayArrivingDownStairs`](../object/TravelMessageHandler.html#sayArrivingDownStairs)`  `[`sayArrivingLocally`](../object/TravelMessageHandler.html#sayArrivingLocally)`  `[`sayArrivingThroughPassage`](../object/TravelMessageHandler.html#sayArrivingThroughPassage)`  `[`sayArrivingUpStairs`](../object/TravelMessageHandler.html#sayArrivingUpStairs)`  `[`sayArrivingViaPath`](../object/TravelMessageHandler.html#sayArrivingViaPath)`  `[`sayDeparting`](../object/TravelMessageHandler.html#sayDeparting)`  `[`sayDepartingDir`](../object/TravelMessageHandler.html#sayDepartingDir)`  `[`sayDepartingDownStairs`](../object/TravelMessageHandler.html#sayDepartingDownStairs)`  `[`sayDepartingLocally`](../object/TravelMessageHandler.html#sayDepartingLocally)`  `[`sayDepartingThroughPassage`](../object/TravelMessageHandler.html#sayDepartingThroughPassage)`  `[`sayDepartingUpStairs`](../object/TravelMessageHandler.html#sayDepartingUpStairs)`  `[`sayDepartingViaPath`](../object/TravelMessageHandler.html#sayDepartingViaPath)`  `[`sayTravelingRemotely`](../object/TravelMessageHandler.html#sayTravelingRemotely)`  `
+[`getNominalTraveler`](../object/TravelMessageHandler.html#getNominalTraveler)[`sayArriving`](../object/TravelMessageHandler.html#sayArriving)[`sayArrivingDir`](../object/TravelMessageHandler.html#sayArrivingDir)[`sayArrivingDownStairs`](../object/TravelMessageHandler.html#sayArrivingDownStairs)[`sayArrivingLocally`](../object/TravelMessageHandler.html#sayArrivingLocally)[`sayArrivingThroughPassage`](../object/TravelMessageHandler.html#sayArrivingThroughPassage)[`sayArrivingUpStairs`](../object/TravelMessageHandler.html#sayArrivingUpStairs)[`sayArrivingViaPath`](../object/TravelMessageHandler.html#sayArrivingViaPath)[`sayDeparting`](../object/TravelMessageHandler.html#sayDeparting)[`sayDepartingDir`](../object/TravelMessageHandler.html#sayDepartingDir)[`sayDepartingDownStairs`](../object/TravelMessageHandler.html#sayDepartingDownStairs)[`sayDepartingLocally`](../object/TravelMessageHandler.html#sayDepartingLocally)[`sayDepartingThroughPassage`](../object/TravelMessageHandler.html#sayDepartingThroughPassage)[`sayDepartingUpStairs`](../object/TravelMessageHandler.html#sayDepartingUpStairs)[`sayDepartingViaPath`](../object/TravelMessageHandler.html#sayDepartingViaPath)[`sayTravelingRemotely`](../object/TravelMessageHandler.html#sayTravelingRemotely)
 
 <span id="_Properties_"></span>
 

@@ -44,8 +44,8 @@ the captured text to a string.
 </div>
 
 **`StringCaptureFilter`**  
-`         `[`CaptureFilter`](../object/CaptureFilter.html)  
-`                 `[`OutputFilter`](../object/OutputFilter.html)  
+[`CaptureFilter`](../object/CaptureFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,11 +71,11 @@ the captured text to a string.
 
 </div>
 
-` `[`txt_`](#txt_)`  `
+[`txt_`](#txt_)
 
-` `
 
-` `
+
+
 
 <span id="_MethodSummary_"></span>
 
@@ -85,11 +85,11 @@ the captured text to a string.
 
 </div>
 
-` `[`addText`](#addText)`  `[`filterText`](#filterText)`  `
+[`addText`](#addText)[`filterText`](#filterText)
 
-` `
 
-` `
+
+
 
 <span id="_Properties_"></span>
 

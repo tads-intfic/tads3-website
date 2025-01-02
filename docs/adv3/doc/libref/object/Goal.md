@@ -62,7 +62,7 @@ goals because the player presumably has no need of them any longer; we
 don't show Undiscovered goals to avoid giving away developments later in
 the game before they become relevant.
 
-`class `**`Goal`**` :   `[`MenuTopicItem`](../object/MenuTopicItem.html)`   `[`HintMenuObject`](../object/HintMenuObject.html)
+`class `**`Goal`**` :   `[`MenuTopicItem`](../object/MenuTopicItem.html)[`HintMenuObject`](../object/HintMenuObject.html)
 
 </div>
 
@@ -75,11 +75,11 @@ the game before they become relevant.
 </div>
 
 **`Goal`**  
-`         `[`MenuTopicItem`](../object/MenuTopicItem.html)  
-`                 `[`MenuItem`](../object/MenuItem.html)  
-`                         `[`MenuObject`](../object/MenuObject.html)  
+[`MenuTopicItem`](../object/MenuTopicItem.html)  
+[`MenuItem`](../object/MenuItem.html)  
+[`MenuObject`](../object/MenuObject.html)  
 `                                 object`  
-`         `[`HintMenuObject`](../object/HintMenuObject.html)  
+[`HintMenuObject`](../object/HintMenuObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -105,19 +105,19 @@ the game before they become relevant.
 
 </div>
 
-` `[`closeWhen`](#closeWhen)`  `[`closeWhenAchieved`](#closeWhenAchieved)`  `[`closeWhenDescribed`](#closeWhenDescribed)`  `[`closeWhenKnown`](#closeWhenKnown)`  `[`closeWhenRevealed`](#closeWhenRevealed)`  `[`closeWhenSeen`](#closeWhenSeen)`  `[`closeWhenTrue`](#closeWhenTrue)`  `[`goalFullyDisplayed`](#goalFullyDisplayed)`  `[`goalState`](#goalState)`  `[`isActiveInMenu`](#isActiveInMenu)`  `[`location`](#location)`  `[`menuContents`](#menuContents)`  `[`openWhen`](#openWhen)`  `[`openWhenAchieved`](#openWhenAchieved)`  `[`openWhenDescribed`](#openWhenDescribed)`  `[`openWhenKnown`](#openWhenKnown)`  `[`openWhenRevealed`](#openWhenRevealed)`  `[`openWhenSeen`](#openWhenSeen)`  `[`openWhenTrue`](#openWhenTrue)`  `[`title`](#title)`  `
+[`closeWhen`](#closeWhen)[`closeWhenAchieved`](#closeWhenAchieved)[`closeWhenDescribed`](#closeWhenDescribed)[`closeWhenKnown`](#closeWhenKnown)[`closeWhenRevealed`](#closeWhenRevealed)[`closeWhenSeen`](#closeWhenSeen)[`closeWhenTrue`](#closeWhenTrue)[`goalFullyDisplayed`](#goalFullyDisplayed)[`goalState`](#goalState)[`isActiveInMenu`](#isActiveInMenu)[`location`](#location)[`menuContents`](#menuContents)[`openWhen`](#openWhen)[`openWhenAchieved`](#openWhenAchieved)[`openWhenDescribed`](#openWhenDescribed)[`openWhenKnown`](#openWhenKnown)[`openWhenRevealed`](#openWhenRevealed)[`openWhenSeen`](#openWhenSeen)[`openWhenTrue`](#openWhenTrue)[`title`](#title)
 
 Inherited from `MenuTopicItem` :  
-` `[`chunkSize`](../object/MenuTopicItem.html#chunkSize)`  `[`heading`](../object/MenuTopicItem.html#heading)`  `[`lastDisplayed`](../object/MenuTopicItem.html#lastDisplayed)`  `[`menuTopicListEnd`](../object/MenuTopicItem.html#menuTopicListEnd)`  `[`nextMenuTopicLink`](../object/MenuTopicItem.html#nextMenuTopicLink)`  `
+[`chunkSize`](../object/MenuTopicItem.html#chunkSize)[`heading`](../object/MenuTopicItem.html#heading)[`lastDisplayed`](../object/MenuTopicItem.html#lastDisplayed)[`menuTopicListEnd`](../object/MenuTopicItem.html#menuTopicListEnd)[`nextMenuTopicLink`](../object/MenuTopicItem.html#nextMenuTopicLink)
 
 Inherited from `MenuItem` :  
-` `[`bgcolor`](../object/MenuItem.html#bgcolor)`  `[`curKeyList`](../object/MenuItem.html#curKeyList)`  `[`curMenu`](../object/MenuItem.html#curMenu)`  `[`fgcolor`](../object/MenuItem.html#fgcolor)`  `[`fullScreenMode`](../object/MenuItem.html#fullScreenMode)`  `[`indent`](../object/MenuItem.html#indent)`  `[`isOpen`](../object/MenuItem.html#isOpen)`  `[`keyList`](../object/MenuItem.html#keyList)`  `[`prevMenuLink`](../object/MenuItem.html#prevMenuLink)`  `[`topbarbg`](../object/MenuItem.html#topbarbg)`  `[`topbarfg`](../object/MenuItem.html#topbarfg)`  `[`topMenu`](../object/MenuItem.html#topMenu)`  `
+[`bgcolor`](../object/MenuItem.html#bgcolor)[`curKeyList`](../object/MenuItem.html#curKeyList)[`curMenu`](../object/MenuItem.html#curMenu)[`fgcolor`](../object/MenuItem.html#fgcolor)[`fullScreenMode`](../object/MenuItem.html#fullScreenMode)[`indent`](../object/MenuItem.html#indent)[`isOpen`](../object/MenuItem.html#isOpen)[`keyList`](../object/MenuItem.html#keyList)[`prevMenuLink`](../object/MenuItem.html#prevMenuLink)[`topbarbg`](../object/MenuItem.html#topbarbg)[`topbarfg`](../object/MenuItem.html#topbarfg)[`topMenu`](../object/MenuItem.html#topMenu)
 
 Inherited from `MenuObject` :  
-` `[`contents`](../object/MenuObject.html#contents)`  `[`menuOrder`](../object/MenuObject.html#menuOrder)`  `
+[`contents`](../object/MenuObject.html#contents)[`menuOrder`](../object/MenuObject.html#menuOrder)
 
 Inherited from `HintMenuObject` :  
-` `[`topicOrder`](../object/HintMenuObject.html#topicOrder)`  `
+[`topicOrder`](../object/HintMenuObject.html#topicOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -127,19 +127,19 @@ Inherited from `HintMenuObject` :
 
 </div>
 
-` `[`displaySubItem`](#displaySubItem)`  `[`updateContents`](#updateContents)`  `
+[`displaySubItem`](#displaySubItem)[`updateContents`](#updateContents)
 
 Inherited from `MenuTopicItem` :  
-` `[`getNextTopicXML`](../object/MenuTopicItem.html#getNextTopicXML)`  `[`getTopicXML`](../object/MenuTopicItem.html#getTopicXML)`  `[`getXML`](../object/MenuTopicItem.html#getXML)`  `[`redrawWinHtml`](../object/MenuTopicItem.html#redrawWinHtml)`  `[`showMenuHtml`](../object/MenuTopicItem.html#showMenuHtml)`  `[`showMenuText`](../object/MenuTopicItem.html#showMenuText)`  `
+[`getNextTopicXML`](../object/MenuTopicItem.html#getNextTopicXML)[`getTopicXML`](../object/MenuTopicItem.html#getTopicXML)[`getXML`](../object/MenuTopicItem.html#getXML)[`redrawWinHtml`](../object/MenuTopicItem.html#redrawWinHtml)[`showMenuHtml`](../object/MenuTopicItem.html#showMenuHtml)[`showMenuText`](../object/MenuTopicItem.html#showMenuText)
 
 Inherited from `MenuItem` :  
-` `[`display`](../object/MenuItem.html#display)`  `[`enterSubMenu`](../object/MenuItem.html#enterSubMenu)`  `[`formatXML`](../object/MenuItem.html#formatXML)`  `[`getChildIndex`](../object/MenuItem.html#getChildIndex)`  `[`getKeysXML`](../object/MenuItem.html#getKeysXML)`  `[`getNextMenu`](../object/MenuItem.html#getNextMenu)`  `[`getPrevMenu`](../object/MenuItem.html#getPrevMenu)`  `[`refreshTopMenuBanner`](../object/MenuItem.html#refreshTopMenuBanner)`  `[`removeStatusLine`](../object/MenuItem.html#removeStatusLine)`  `[`removeTopMenuBanner`](../object/MenuItem.html#removeTopMenuBanner)`  `[`showMenu`](../object/MenuItem.html#showMenu)`  `[`showTopMenuBanner`](../object/MenuItem.html#showTopMenuBanner)`  `
+[`display`](../object/MenuItem.html#display)[`enterSubMenu`](../object/MenuItem.html#enterSubMenu)[`formatXML`](../object/MenuItem.html#formatXML)[`getChildIndex`](../object/MenuItem.html#getChildIndex)[`getKeysXML`](../object/MenuItem.html#getKeysXML)[`getNextMenu`](../object/MenuItem.html#getNextMenu)[`getPrevMenu`](../object/MenuItem.html#getPrevMenu)[`refreshTopMenuBanner`](../object/MenuItem.html#refreshTopMenuBanner)[`removeStatusLine`](../object/MenuItem.html#removeStatusLine)[`removeTopMenuBanner`](../object/MenuItem.html#removeTopMenuBanner)[`showMenu`](../object/MenuItem.html#showMenu)[`showTopMenuBanner`](../object/MenuItem.html#showTopMenuBanner)
 
 Inherited from `MenuObject` :  
-` `[`addToContents`](../object/MenuObject.html#addToContents)`  `[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)`  `[`execute`](../object/MenuObject.html#execute)`  `[`initializeContents`](../object/MenuObject.html#initializeContents)`  `[`initializeLocation`](../object/MenuObject.html#initializeLocation)`  `
+[`addToContents`](../object/MenuObject.html#addToContents)[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)[`execute`](../object/MenuObject.html#execute)[`initializeContents`](../object/MenuObject.html#initializeContents)[`initializeLocation`](../object/MenuObject.html#initializeLocation)
 
 Inherited from `HintMenuObject` :  
-` `[`compareForTopicSort`](../object/HintMenuObject.html#compareForTopicSort)`  `
+[`compareForTopicSort`](../object/HintMenuObject.html#compareForTopicSort)
 
 <span id="_Properties_"></span>
 

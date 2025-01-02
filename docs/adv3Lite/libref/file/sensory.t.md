@@ -43,7 +43,7 @@ your build.
 
 </div>
 
-` `[`SensoryEvent`](../object/SensoryEvent.html)`  `[`SightEvent`](../object/SightEvent.html)`  `[`SimpleNoise`](../object/SimpleNoise.html)`  `[`SimpleOdor`](../object/SimpleOdor.html)`  `[`SmellEvent`](../object/SmellEvent.html)`  `[`SoundEvent`](../object/SoundEvent.html)`  `
+[`SensoryEvent`](../object/SensoryEvent.html)[`SightEvent`](../object/SightEvent.html)[`SimpleNoise`](../object/SimpleNoise.html)[`SimpleOdor`](../object/SimpleOdor.html)[`SmellEvent`](../object/SmellEvent.html)[`SoundEvent`](../object/SoundEvent.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -52,7 +52,7 @@ your build.
 
 </div>
 
-` `[`emanationControl`](../object/emanationControl.html)`  `[`sensoryID`](../object/sensoryID.html)`  `
+[`emanationControl`](../object/emanationControl.html)[`sensoryID`](../object/sensoryID.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

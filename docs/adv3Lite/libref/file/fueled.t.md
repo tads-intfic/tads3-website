@@ -42,7 +42,7 @@ your build.
 
 </div>
 
-` `[`FueledLightSource`](../object/FueledLightSource.html)`  `
+[`FueledLightSource`](../object/FueledLightSource.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -51,7 +51,7 @@ your build.
 
 </div>
 
-` `[`fueledID`](../object/fueledID.html)`  `
+[`fueledID`](../object/fueledID.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

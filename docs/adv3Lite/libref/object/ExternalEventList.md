@@ -47,8 +47,8 @@ method).
 </div>
 
 **`ExternalEventList`**  
-`         `[`EventList`](../object/EventList.html)  
-`                 `[`Script`](../object/Script.html)  
+[`EventList`](../object/EventList.html)  
+[`Script`](../object/Script.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -74,12 +74,12 @@ method).
 
 </div>
 
-` `
+
 
 Inherited from `EventList` :  
-` `[`curScriptState`](../object/EventList.html#curScriptState)`  `[`eventList`](../object/EventList.html#eventList)`  `[`eventListLen`](../object/EventList.html#eventListLen)`  `[`resetEachCycle`](../object/EventList.html#resetEachCycle)`  `
+[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)[`resetEachCycle`](../object/EventList.html#resetEachCycle)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -89,13 +89,13 @@ Inherited from `EventList` :
 
 </div>
 
-` `[`scriptDone`](#scriptDone)`  `
+[`scriptDone`](#scriptDone)
 
 Inherited from `EventList` :  
-` `[`addItem`](../object/EventList.html#addItem)`  `[`advanceState`](../object/EventList.html#advanceState)`  `[`construct`](../object/EventList.html#construct)`  `[`doScript`](../object/EventList.html#doScript)`  `[`doScriptEvent`](../object/EventList.html#doScriptEvent)`  `[`resetList`](../object/EventList.html#resetList)`  `
+[`addItem`](../object/EventList.html#addItem)[`advanceState`](../object/EventList.html#advanceState)[`construct`](../object/EventList.html#construct)[`doScript`](../object/EventList.html#doScript)[`doScriptEvent`](../object/EventList.html#doScriptEvent)[`resetList`](../object/EventList.html#resetList)
 
 Inherited from `Script` :  
-` `[`getScriptState`](../object/Script.html#getScriptState)`  `
+[`getScriptState`](../object/Script.html#getScriptState)
 
 <span id="_Properties_"></span>
 

@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`OutOf`**  
-`         `[`ViaType`](../object/ViaType.html)  
+[`ViaType`](../object/ViaType.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ Details](#_Methods_)
 
 </div>
 
-` `[`prep`](#prep)`  `
+[`prep`](#prep)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -59,9 +59,9 @@ Details](#_Methods_)
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

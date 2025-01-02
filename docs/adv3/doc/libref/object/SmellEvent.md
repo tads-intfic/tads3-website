@@ -43,7 +43,7 @@ Smell event
 </div>
 
 **`SmellEvent`**  
-`         `[`SensoryEvent`](../object/SensoryEvent.html)  
+[`SensoryEvent`](../object/SensoryEvent.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -69,9 +69,9 @@ Smell event
 
 </div>
 
-` `[`notifyProp`](#notifyProp)`  `[`sense`](#sense)`  `
+[`notifyProp`](#notifyProp)[`sense`](#sense)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -81,10 +81,10 @@ Smell event
 
 </div>
 
-` `
+
 
 Inherited from `SensoryEvent` :  
-` `[`triggerEvent`](../object/SensoryEvent.html#triggerEvent)`  `
+[`triggerEvent`](../object/SensoryEvent.html#triggerEvent)
 
 <span id="_Properties_"></span>
 

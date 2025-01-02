@@ -58,7 +58,7 @@ Menu Item - user interface implementation for the console
 </div>
 
 **`MenuItem`**  
-`         `[`MenuObject`](../object/MenuObject.html)  
+[`MenuObject`](../object/MenuObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -69,12 +69,12 @@ Menu Item - user interface implementation for the console
 </div>
 
 **`MenuItem`**  
-`         `[`HintMenu`](../object/HintMenu.html)  
-`                 `[`TopHintMenu`](../object/TopHintMenu.html)  
-`         `[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)  
-`                 `[`HintLongTopicItem`](../object/HintLongTopicItem.html)  
-`         `[`MenuTopicItem`](../object/MenuTopicItem.html)  
-`                 `[`Goal`](../object/Goal.html)  
+[`HintMenu`](../object/HintMenu.html)  
+[`TopHintMenu`](../object/TopHintMenu.html)  
+[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)  
+[`HintLongTopicItem`](../object/HintLongTopicItem.html)  
+[`MenuTopicItem`](../object/MenuTopicItem.html)  
+[`Goal`](../object/Goal.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -91,10 +91,10 @@ Menu Item - user interface implementation for the console
 
 </div>
 
-` `[`bgcolor`](#bgcolor)`  `[`curKeyList`](#curKeyList)`  `[`curMenu`](#curMenu)`  `[`fgcolor`](#fgcolor)`  `[`fullScreenMode`](#fullScreenMode)`  `[`heading`](#heading)`  `[`indent`](#indent)`  `[`isOpen`](#isOpen)`  `[`keyList`](#keyList)`  `[`prevMenuLink`](#prevMenuLink)`  `[`title`](#title)`  `[`topbarbg`](#topbarbg)`  `[`topbarfg`](#topbarfg)`  `[`topMenu`](#topMenu)`  `
+[`bgcolor`](#bgcolor)[`curKeyList`](#curKeyList)[`curMenu`](#curMenu)[`fgcolor`](#fgcolor)[`fullScreenMode`](#fullScreenMode)[`heading`](#heading)[`indent`](#indent)[`isOpen`](#isOpen)[`keyList`](#keyList)[`prevMenuLink`](#prevMenuLink)[`title`](#title)[`topbarbg`](#topbarbg)[`topbarfg`](#topbarfg)[`topMenu`](#topMenu)
 
 Inherited from `MenuObject` :  
-` `[`contents`](../object/MenuObject.html#contents)`  `[`menuOrder`](../object/MenuObject.html#menuOrder)`  `
+[`contents`](../object/MenuObject.html#contents)[`menuOrder`](../object/MenuObject.html#menuOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -104,10 +104,10 @@ Inherited from `MenuObject` :
 
 </div>
 
-` `[`display`](#display)`  `[`enterSubMenu`](#enterSubMenu)`  `[`formatXML`](#formatXML)`  `[`getChildIndex`](#getChildIndex)`  `[`getKeysXML`](#getKeysXML)`  `[`getNextMenu`](#getNextMenu)`  `[`getPrevMenu`](#getPrevMenu)`  `[`getXML`](#getXML)`  `[`refreshTopMenuBanner`](#refreshTopMenuBanner)`  `[`removeStatusLine`](#removeStatusLine)`  `[`removeTopMenuBanner`](#removeTopMenuBanner)`  `[`showMenu`](#showMenu)`  `[`showMenuHtml`](#showMenuHtml)`  `[`showMenuText`](#showMenuText)`  `[`showTopMenuBanner`](#showTopMenuBanner)`  `[`updateContents`](#updateContents)`  `
+[`display`](#display)[`enterSubMenu`](#enterSubMenu)[`formatXML`](#formatXML)[`getChildIndex`](#getChildIndex)[`getKeysXML`](#getKeysXML)[`getNextMenu`](#getNextMenu)[`getPrevMenu`](#getPrevMenu)[`getXML`](#getXML)[`refreshTopMenuBanner`](#refreshTopMenuBanner)[`removeStatusLine`](#removeStatusLine)[`removeTopMenuBanner`](#removeTopMenuBanner)[`showMenu`](#showMenu)[`showMenuHtml`](#showMenuHtml)[`showMenuText`](#showMenuText)[`showTopMenuBanner`](#showTopMenuBanner)[`updateContents`](#updateContents)
 
 Inherited from `MenuObject` :  
-` `[`addToContents`](../object/MenuObject.html#addToContents)`  `[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)`  `[`execute`](../object/MenuObject.html#execute)`  `[`initializeContents`](../object/MenuObject.html#initializeContents)`  `[`initializeLocation`](../object/MenuObject.html#initializeLocation)`  `
+[`addToContents`](../object/MenuObject.html#addToContents)[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)[`execute`](../object/MenuObject.html#execute)[`initializeContents`](../object/MenuObject.html#initializeContents)[`initializeLocation`](../object/MenuObject.html#initializeLocation)
 
 <span id="_Properties_"></span>
 

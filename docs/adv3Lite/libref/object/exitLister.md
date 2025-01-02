@@ -37,8 +37,8 @@ The main exits lister.
 </div>
 
 **`exitLister`**  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,13 +48,13 @@ The main exits lister.
 
 </div>
 
-` `[`enableHyperlinks`](#enableHyperlinks)`  `[`enableReminder`](#enableReminder)`  `[`enableReminderAlways`](#enableReminderAlways)`  `[`exitsOnOffExplained`](#exitsOnOffExplained)`  `[`roomDescVerbose`](#roomDescVerbose)`  `
+[`enableHyperlinks`](#enableHyperlinks)[`enableReminder`](#enableReminder)[`enableReminderAlways`](#enableReminderAlways)[`exitsOnOffExplained`](#exitsOnOffExplained)[`roomDescVerbose`](#roomDescVerbose)
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,12 +64,12 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`cannotGoShowExits`](#cannotGoShowExits)`  `[`execute`](#execute)`  `[`exitsOnOffCommand`](#exitsOnOffCommand)`  `[`getRoomDescLister`](#getRoomDescLister)`  `[`getStatuslineExitsHeight`](#getStatuslineExitsHeight)`  `[`isReminderEnabled`](#isReminderEnabled)`  `[`lookAroundShowExits`](#lookAroundShowExits)`  `[`showExits`](#showExits)`  `[`showExitsCommand`](#showExitsCommand)`  `[`showExitsFrom`](#showExitsFrom)`  `[`showExitsWithLister`](#showExitsWithLister)`  `[`showStatuslineExits`](#showStatuslineExits)`  `
+[`cannotGoShowExits`](#cannotGoShowExits)[`execute`](#execute)[`exitsOnOffCommand`](#exitsOnOffCommand)[`getRoomDescLister`](#getRoomDescLister)[`getStatuslineExitsHeight`](#getStatuslineExitsHeight)[`isReminderEnabled`](#isReminderEnabled)[`lookAroundShowExits`](#lookAroundShowExits)[`showExits`](#showExits)[`showExitsCommand`](#showExitsCommand)[`showExitsFrom`](#showExitsFrom)[`showExitsWithLister`](#showExitsWithLister)[`showStatuslineExits`](#showStatuslineExits)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

@@ -38,8 +38,8 @@ like finishOptionRestart, but shows a different option name.
 </div>
 
 **`restoreOptionStartOver`**  
-`         `[`finishOptionRestart`](../object/finishOptionRestart.html)  
-`                 `[`FinishOption`](../object/FinishOption.html)  
+[`finishOptionRestart`](../object/finishOptionRestart.html)  
+[`FinishOption`](../object/FinishOption.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,12 +49,12 @@ like finishOptionRestart, but shows a different option name.
 
 </div>
 
-` `[`desc`](#desc)`  `[`responseChar`](#responseChar)`  `[`responseKeyword`](#responseKeyword)`  `
+[`desc`](#desc)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)
 
-` `
+
 
 Inherited from `FinishOption` :  
-` `[`isListed`](../object/FinishOption.html#isListed)`  `[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)`  `
+[`isListed`](../object/FinishOption.html#isListed)[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,13 +64,13 @@ Inherited from `FinishOption` :
 
 </div>
 
-` `
+
 
 Inherited from `finishOptionRestart` :  
-` `[`doOption`](../object/finishOptionRestart.html#doOption)`  `
+[`doOption`](../object/finishOptionRestart.html#doOption)
 
 Inherited from `FinishOption` :  
-` `[`responseMatches`](../object/FinishOption.html#responseMatches)`  `
+[`responseMatches`](../object/FinishOption.html#responseMatches)
 
 <span id="_Properties_"></span>
 

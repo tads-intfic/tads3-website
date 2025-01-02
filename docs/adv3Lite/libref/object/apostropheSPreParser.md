@@ -39,9 +39,9 @@ matching vocab.
 </div>
 
 **`apostropheSPreParser`**  
-`         `[`StringPreParser`](../object/StringPreParser.html)  
-`                 `[`PreinitObject`](../object/PreinitObject.html)  
-`                         `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`StringPreParser`](../object/StringPreParser.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                                 object`  
 <span id="_PropSummary_"></span>
 
@@ -51,16 +51,16 @@ matching vocab.
 
 </div>
 
-` `[`possTab`](#possTab)`  `
+[`possTab`](#possTab)
 
 Inherited from `StringPreParser` :  
-` `[`isActive`](../object/StringPreParser.html#isActive)`  `[`regList`](../object/StringPreParser.html#regList)`  `[`regListSorted`](../object/StringPreParser.html#regListSorted)`  `[`runOrder`](../object/StringPreParser.html#runOrder)`  `
+[`isActive`](../object/StringPreParser.html#isActive)[`regList`](../object/StringPreParser.html#regList)[`regListSorted`](../object/StringPreParser.html#regListSorted)[`runOrder`](../object/StringPreParser.html#runOrder)
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -70,15 +70,15 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`addEntry`](#addEntry)`  `[`doParsing`](#doParsing)`  `
+[`addEntry`](#addEntry)[`doParsing`](#doParsing)
 
 Inherited from `StringPreParser` :  
-` `[`construct`](../object/StringPreParser.html#construct)`  `[`execute`](../object/StringPreParser.html#execute)`  `[`registerPreParser`](../object/StringPreParser.html#registerPreParser)`  `[`runAll`](../object/StringPreParser.html#runAll)`  `
+[`construct`](../object/StringPreParser.html#construct)[`execute`](../object/StringPreParser.html#execute)[`registerPreParser`](../object/StringPreParser.html#registerPreParser)[`runAll`](../object/StringPreParser.html#runAll)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

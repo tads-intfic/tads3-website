@@ -26,7 +26,7 @@ Real-Time Event Manager. This object manages all of the game's real-time
 events, which are events that occur according to elapsed real-world
 time.
 
-**`realTimeManager`**` :   `[`BasicEventManager`](../object/BasicEventManager.html)`   `[`InitObject`](../object/InitObject.html)
+**`realTimeManager`**` :   `[`BasicEventManager`](../object/BasicEventManager.html)[`InitObject`](../object/InitObject.html)
 
 </div>
 
@@ -39,10 +39,10 @@ time.
 </div>
 
 **`realTimeManager`**  
-`         `[`BasicEventManager`](../object/BasicEventManager.html)  
+[`BasicEventManager`](../object/BasicEventManager.html)  
 `                 object`  
-`         `[`InitObject`](../object/InitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`InitObject`](../object/InitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -52,14 +52,14 @@ time.
 
 </div>
 
-` `[`curEvent_`](#curEvent_)`  `[`elapsedTimeAtSave`](#elapsedTimeAtSave)`  `[`events_`](#events_)`  `[`startingTime`](#startingTime)`  `
+[`curEvent_`](#curEvent_)[`elapsedTimeAtSave`](#elapsedTimeAtSave)[`events_`](#events_)[`startingTime`](#startingTime)
 
-` `
 
-` `
+
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -69,15 +69,15 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`execute`](#execute)`  `[`execute`](#execute)`  `[`execute`](#execute)`  `[`executeEvents`](#executeEvents)`  `[`getElapsedTime`](#getElapsedTime)`  `[`getNextEventTime`](#getNextEventTime)`  `[`restoreElapsedTime`](#restoreElapsedTime)`  `[`saveElapsedTime`](#saveElapsedTime)`  `[`setElapsedTime`](#setElapsedTime)`  `
+[`execute`](#execute)[`execute`](#execute)[`execute`](#execute)[`executeEvents`](#executeEvents)[`getElapsedTime`](#getElapsedTime)[`getNextEventTime`](#getNextEventTime)[`restoreElapsedTime`](#restoreElapsedTime)[`saveElapsedTime`](#saveElapsedTime)[`setElapsedTime`](#setElapsedTime)
 
 Inherited from `BasicEventManager` :  
-` `[`addEvent`](../object/BasicEventManager.html#addEvent)`  `[`removeCurrentEvent`](../object/BasicEventManager.html#removeCurrentEvent)`  `[`removeEvent`](../object/BasicEventManager.html#removeEvent)`  `[`removeMatchingEvents`](../object/BasicEventManager.html#removeMatchingEvents)`  `
+[`addEvent`](../object/BasicEventManager.html#addEvent)[`removeCurrentEvent`](../object/BasicEventManager.html#removeCurrentEvent)[`removeEvent`](../object/BasicEventManager.html#removeEvent)[`removeMatchingEvents`](../object/BasicEventManager.html#removeMatchingEvents)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

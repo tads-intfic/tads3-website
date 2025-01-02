@@ -37,8 +37,8 @@ The main game score object.
 </div>
 
 **`libScore`**  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,13 +48,13 @@ The main game score object.
 
 </div>
 
-` `[`fullScoreList`](#fullScoreList)`  `[`scoreNotify`](#scoreNotify)`  `[`totalScore`](#totalScore)`  `
+[`fullScoreList`](#fullScoreList)[`scoreNotify`](#scoreNotify)[`totalScore`](#totalScore)
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,12 +64,12 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`addToScore_`](#addToScore_)`  `[`calcMaxScore`](#calcMaxScore)`  `[`execute`](#execute)`  `[`runScoreNotifier`](#runScoreNotifier)`  `[`showFullScore`](#showFullScore)`  `[`showScore`](#showScore)`  `[`showScoreMessage`](#showScoreMessage)`  `[`showScoreNoMaxMessage`](#showScoreNoMaxMessage)`  `[`showScoreRank`](#showScoreRank)`  `[`showScoreRankMessage`](#showScoreRankMessage)`  `
+[`addToScore_`](#addToScore_)[`calcMaxScore`](#calcMaxScore)[`execute`](#execute)[`runScoreNotifier`](#runScoreNotifier)[`showFullScore`](#showFullScore)[`showScore`](#showScore)[`showScoreMessage`](#showScoreMessage)[`showScoreNoMaxMessage`](#showScoreNoMaxMessage)[`showScoreRank`](#showScoreRank)[`showScoreRankMessage`](#showScoreRankMessage)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

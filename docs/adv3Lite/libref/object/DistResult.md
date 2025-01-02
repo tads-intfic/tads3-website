@@ -68,7 +68,7 @@ Result object from applying a Distinguisher to a set of objects.
 
 </div>
 
-` `[`appliesTo`](#appliesTo)`  `[`distinguisher`](#distinguisher)`  `[`partitioned`](#partitioned)`  `
+[`appliesTo`](#appliesTo)[`distinguisher`](#distinguisher)[`partitioned`](#partitioned)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ Result object from applying a Distinguisher to a set of objects.
 
 </div>
 
-` `[`construct`](#construct)`  `[`partition`](#partition)`  `[`partSize`](#partSize)`  `
+[`construct`](#construct)[`partition`](#partition)[`partSize`](#partSize)
 
 <span id="_Properties_"></span>
 

@@ -44,7 +44,7 @@ actor's (non top-level room) container.
 </div>
 
 **`ReachProblemReachOut`**  
-`         `[`ReachProblem`](../object/ReachProblem.html)  
+[`ReachProblem`](../object/ReachProblem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ actor's (non top-level room) container.
 
 </div>
 
-` `
+
 
 Inherited from `ReachProblem` :  
-` `[`target_`](../object/ReachProblem.html#target_)`  `
+[`target_`](../object/ReachProblem.html#target_)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `ReachProblem` :
 
 </div>
 
-` `[`check`](#check)`  `
+[`check`](#check)
 
 Inherited from `ReachProblem` :  
-` `[`construct`](../object/ReachProblem.html#construct)`  `[`verify`](../object/ReachProblem.html#verify)`  `
+[`construct`](../object/ReachProblem.html#construct)[`verify`](../object/ReachProblem.html#verify)
 
 <span id="_Properties_"></span>
 

@@ -807,7 +807,7 @@ characters, take out the ones you don't want from the example above,
 leaving the remaining ones in the same order.
 
 Note that, other than the three special range characters
-(`^` `-`
+(`^-`
 `\]`), all of the characters that are special
 elsewhere in a pattern lose their special meaning within a range. So,
 the following range expression matches a period, a star, or a percent

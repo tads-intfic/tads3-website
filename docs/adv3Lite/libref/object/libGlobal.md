@@ -46,7 +46,7 @@ Library global variables
 
 </div>
 
-` `[`commandLineArgs`](#commandLineArgs)`  `[`curAction`](#curAction)`  `[`curActor`](#curActor)`  `[`curCommand`](#curCommand)`  `[`curIssuingActor`](#curIssuingActor)`  `[`exitListerObj`](#exitListerObj)`  `[`extraDestInfo`](#extraDestInfo)`  `[`extraHintManagerObj`](#extraHintManagerObj)`  `[`footnoteClass`](#footnoteClass)`  `[`hintManagerObj`](#hintManagerObj)`  `[`IFID`](#IFID)`  `[`inventoryTall`](#inventoryTall)`  `[`lastAction`](#lastAction)`  `[`lastActorForUndo`](#lastActorForUndo)`  `[`lastCommand`](#lastCommand)`  `[`lastCommandForAgain`](#lastCommandForAgain)`  `[`lastCommandForUndo`](#lastCommandForUndo)`  `[`lastLoc`](#lastLoc)`  `[`lastTypedOnObj`](#lastTypedOnObj)`  `[`lastWrittenOnObj`](#lastWrittenOnObj)`  `[`libMessageObj`](#libMessageObj)`  `[`nameTable_`](#nameTable_)`  `[`objectNameTab`](#objectNameTab)`  `[`parserDebugMode`](#parserDebugMode)`  `[`playerChar`](#playerChar)`  `[`playerCharName`](#playerCharName)`  `[`revealedNameTab`](#revealedNameTab)`  `[`scoreObj`](#scoreObj)`  `[`thoughtManagerObj`](#thoughtManagerObj)`  `[`totalTurns`](#totalTurns)`  `
+` [`commandLineArgs`](#commandLineArgs)  [`curAction`](#curAction)  [`curActor`](#curActor)  [`curCommand`](#curCommand)  [`curIssuingActor`](#curIssuingActor)  [`exitListerObj`](#exitListerObj)  [`extraDestInfo`](#extraDestInfo)  [`extraHintManagerObj`](#extraHintManagerObj)  [`footnoteClass`](#footnoteClass)  [`hintManagerObj`](#hintManagerObj)  [`IFID`](#IFID)  [`inventoryTall`](#inventoryTall)  [`lastAction`](#lastAction)  [`lastActorForUndo`](#lastActorForUndo)  [`lastCommand`](#lastCommand)  [`lastCommandForAgain`](#lastCommandForAgain)  [`lastCommandForUndo`](#lastCommandForUndo)  [`lastLoc`](#lastLoc)  [`lastTypedOnObj`](#lastTypedOnObj)  [`lastWrittenOnObj`](#lastWrittenOnObj)  [`libMessageObj`](#libMessageObj)  [`nameTable_`](#nameTable_)  [`objectNameTab`](#objectNameTab)  [`parserDebugMode`](#parserDebugMode)  [`playerChar`](#playerChar)  [`playerCharName`](#playerCharName)  [`revealedNameTab`](#revealedNameTab)  [`scoreObj`](#scoreObj)  [`thoughtManagerObj`](#thoughtManagerObj)  [`totalTurns`](#totalTurns)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ Library global variables
 
 </div>
 
-` `[`addExtraDestInfo`](#addExtraDestInfo)`  `[`getCommandSwitch`](#getCommandSwitch)`  `[`setRevealed`](#setRevealed)`  `[`setUnrevealed`](#setUnrevealed)`  `
+` [`addExtraDestInfo`](#addExtraDestInfo)  [`getCommandSwitch`](#getCommandSwitch)  [`setRevealed`](#setRevealed)  [`setUnrevealed`](#setUnrevealed)  `
 
 <span id="_Properties_"></span>
 

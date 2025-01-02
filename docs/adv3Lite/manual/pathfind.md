@@ -137,7 +137,7 @@ to which going in that direction leads. So to find which direction an
 actor needs to move in next to continue along a previously calculated
 route, you might use code like:
 
-```
+`
        local dir;
        local idx = routeFinder.cachedPath.indexWhich({x: x[2] == fred.getOutermostRoom});
        if(idx != nil && idx < routeFinder.cachedPath.length)
@@ -162,14 +162,14 @@ route, you might use code like:
              gActor = gPlayerChar; // might or might not be needed, depending on context.
           }
        }
-```
+`
 
 Alternatively you might want to bypass some of the complexities of
 travel by simply moving the NPC into the next room along the route,
 although this might have the unfortunate effect of allowing the NPC to
 move through locked doors and other such obstacles:
 
-```
+`
        local dest;
        local idx = routeFinder.cachedPath.indexWhich({x: x[2] == fred.getOutermostRoom});
        if(idx != nil && idx < routeFinder.cachedPath.length)
@@ -178,7 +178,7 @@ move through locked doors and other such obstacles:
        if(dest != nil)      
             dest.travelVia(fred);     
        
-```
+`
 
 Note that the library assumes that NPCs are omniscient when it comes to
 finding their way around the map; routeFinder simply calculates the
@@ -227,9 +227,9 @@ that the exit always leads where it did last time. To prevent your
 variable exit (if you have one) causing such confusion your
 variable-exit method should somewhere include the statement:
 
-```
+`
       startLoc.setDestInfo(dir, varDest_);  
-```
+`
 
 Where *startLoc* is the Room your variable destination method exit leads
 from, *dir* is the direction it leads in (e.g. northDir) and varDest\_
@@ -252,7 +252,7 @@ scope for a GO TO command, meaning that there could be a lot of objects
 to disambiguate. Normally this won't create too many problems in
 practice, but consider the following minimal game:
 
-```
+`
      field: Room 'Field'
         "A solitary hut stands in the middle of the field. "
         in = hut
@@ -273,7 +273,7 @@ practice, but consider the following minimal game:
         out = field
     ; 
      
-```
+`
 
 There is a potential problem here. On the face of it, if the player
 typed IN and then OUT and then GO TO HUT, the route finder would take
@@ -316,7 +316,7 @@ which we'll talk about below), you may need to specify the
 `ProxyDest` mix-in class yourself. Consider the
 following snippet, for example:
 
-```
+`
      hall: Room 'Hall'
         "The way out is to the west. The study door lies to the north. "
         west = road
@@ -336,7 +336,7 @@ following snippet, for example:
         otherSide = studyDoor
     ;
      
-```
+`
 
 In this case we will get the perverse behaviour where typing GO TO STUDY
 when the player character is in the study will take the player character
@@ -346,12 +346,12 @@ the room share the same noun in their name; if we'd called the door
 to use the ProxyDest mix-in class with the Door; because it's a mix-in
 it must come first in the class list:
 
-```
+`
      + studyDoor: ProxyDest, Door 'door to study[n]'
         otherSide = sDoor
     ;
      
-```
+`
 
 <span id="distant"></span>
 
@@ -369,7 +369,7 @@ GO TO command when there are other possibilities available. That still
 leaves one kind of situation to cater for, however. Consider the
 following example:
 
-```
+`
      field: Room 'Field'
         "A solitary hut stands in the middle of the field. "
         // in = hut
@@ -400,7 +400,7 @@ following example:
         person = 2
     ;  
      
-```
+`
 
 If the player character starts out in the road, s/he will encounter the
 Distant hut object before anything else called 'hut'. In this instance

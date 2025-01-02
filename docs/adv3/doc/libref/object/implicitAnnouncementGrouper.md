@@ -48,7 +48,7 @@ describing the entire list of actions.
 
 </div>
 
-` `[`keepAllFailures`](#keepAllFailures)`  `
+[`keepAllFailures`](#keepAllFailures)
 
 <span id="_MethodSummary_"></span>
 
@@ -58,7 +58,7 @@ describing the entire list of actions.
 
 </div>
 
-` `[`compositeMessage`](#compositeMessage)`  `
+[`compositeMessage`](#compositeMessage)
 
 <span id="_Properties_"></span>
 

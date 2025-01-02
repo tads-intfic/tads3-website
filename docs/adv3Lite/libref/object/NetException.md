@@ -43,7 +43,7 @@ A NetException is the base class for network errors.
 </div>
 
 **`NetException`**  
-`         `[`Exception`](../object/Exception.html)  
+[`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,8 +54,8 @@ A NetException is the base class for network errors.
 </div>
 
 **`NetException`**  
-`         `[`NetSafetyException`](../object/NetSafetyException.html)  
-`         `[`SocketDisconnectException`](../object/SocketDisconnectException.html)  
+[`NetSafetyException`](../object/NetSafetyException.html)  
+[`SocketDisconnectException`](../object/SocketDisconnectException.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,10 +72,10 @@ A NetException is the base class for network errors.
 
 </div>
 
-` `[`errMsg`](#errMsg)`  `
+[`errMsg`](#errMsg)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,10 +85,10 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`displayException`](#displayException)`  `
+[`construct`](#construct)[`displayException`](#displayException)
 
 Inherited from `Exception` :  
-` `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

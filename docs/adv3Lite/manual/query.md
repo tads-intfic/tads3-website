@@ -330,7 +330,7 @@ want ending a conversation with another actor to sever any
 communications link there may have been. A fairly basic scheme to do all
 this might be as follows:
 
-```
+`
      DefineTAction(Phone)
         addExtraScopeItems(role)
         {
@@ -391,7 +391,7 @@ this might be as follows:
         canBePhoned = true
     ; 
      
-```
+`
 
 If you want to try this out for yourself, bear in mind that the way
 we've tried it allows the player character to phone only those actors

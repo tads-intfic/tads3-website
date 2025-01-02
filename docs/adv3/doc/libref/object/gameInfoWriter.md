@@ -46,7 +46,7 @@ TADS GameInfo writer
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ TADS GameInfo writer
 
 </div>
 
-` `[`getGameInfoToday`](#getGameInfoToday)`  `[`writeGameInfo`](#writeGameInfo)`  `
+[`getGameInfoToday`](#getGameInfoToday)[`writeGameInfo`](#writeGameInfo)
 
 <span id="_Properties_"></span>
 

@@ -50,7 +50,7 @@ dir = northDirection
 </div>
 
 **`DirectionProd`**  
-`         `[`BasicProd`](../object/BasicProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -61,22 +61,22 @@ dir = northDirection
 </div>
 
 **`DirectionProd`**  
-`         `[`directionName(aft)`](../object/directionName(aft).html)  
-`         `[`directionName(down)`](../object/directionName(down).html)  
-`         `[`directionName(east)`](../object/directionName(east).html)  
-`         `[`directionName(fore)`](../object/directionName(fore).html)  
-`         `[`directionName(in)`](../object/directionName(in).html)  
-`         `[`directionName(north)`](../object/directionName(north).html)  
-`         `[`directionName(northeast)`](../object/directionName(northeast).html)  
-`         `[`directionName(northwest)`](../object/directionName(northwest).html)  
-`         `[`directionName(out)`](../object/directionName(out).html)  
-`         `[`directionName(port)`](../object/directionName(port).html)  
-`         `[`directionName(south)`](../object/directionName(south).html)  
-`         `[`directionName(southeast)`](../object/directionName(southeast).html)  
-`         `[`directionName(southwest)`](../object/directionName(southwest).html)  
-`         `[`directionName(starboard)`](../object/directionName(starboard).html)  
-`         `[`directionName(up)`](../object/directionName(up).html)  
-`         `[`directionName(west)`](../object/directionName(west).html)  
+[`directionName(aft)`](../object/directionName(aft).html)  
+[`directionName(down)`](../object/directionName(down).html)  
+[`directionName(east)`](../object/directionName(east).html)  
+[`directionName(fore)`](../object/directionName(fore).html)  
+[`directionName(in)`](../object/directionName(in).html)  
+[`directionName(north)`](../object/directionName(north).html)  
+[`directionName(northeast)`](../object/directionName(northeast).html)  
+[`directionName(northwest)`](../object/directionName(northwest).html)  
+[`directionName(out)`](../object/directionName(out).html)  
+[`directionName(port)`](../object/directionName(port).html)  
+[`directionName(south)`](../object/directionName(south).html)  
+[`directionName(southeast)`](../object/directionName(southeast).html)  
+[`directionName(southwest)`](../object/directionName(southwest).html)  
+[`directionName(starboard)`](../object/directionName(starboard).html)  
+[`directionName(up)`](../object/directionName(up).html)  
+[`directionName(west)`](../object/directionName(west).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -93,10 +93,10 @@ dir = northDirection
 
 </div>
 
-` `[`dir`](#dir)`  `
+[`dir`](#dir)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -106,10 +106,10 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

@@ -116,7 +116,7 @@ ActorTopicEntries, allowing you to use these keys to group
 ActorTopicEntries in any way you like and refer to a group of topics
 with a single key. For example if we defined:
 
-```
+`
     + AskTopic @darkTower
        "<q>Tell me about the dark tower,</q> you insist.\b
         <q>Oh no!</q> says Bob. <q>We don't talk about that -- ever!</q>"
@@ -130,7 +130,7 @@ with a single key. For example if we defined:
         
         convKeys = 'bob-fright'
     ;
-```
+`
 
 In this example, the first AskTopic can be referred to with either the
 'tower-node' key or the 'bob-fright' key, but using the 'bob-fright' key
@@ -170,7 +170,7 @@ The main purpose of this is to allow you to activate a whole set of
 ActorTopicEntries at once, when they share a common convKey. For
 example:
 
-```
+`
     + AskTopic @darkTower
        "<q>Just why is that dark tower considered so terrible?</q> you ask.\b
        <q>It all started with the troubles,</q> Bob replies darkly, <q>that and the massacre
@@ -197,7 +197,7 @@ example:
        convKeys = ['troubles', 'farm']
        activated = nil
     ;
-```
+`
 
 In this example, it doesn't make sense for the player character to be
 able to ask about the troubles, the massacre or Longacre Farm until Bob
@@ -430,7 +430,7 @@ contain a list of the topics you don't want the DefaultTopic to handle,
 so that handling of just those topics can be handled elsewhere; for
 example:
 
-```
+`
     bob: Actor 'Bob; short; man; him'
        "He's a short man. "
      ;
@@ -450,7 +450,7 @@ example:
          
         exceptions = [tTroubles]
     ;
-```
+`
 
 This would allow Bob to respond with the special response to ASK BOB
 ABOUT TROUBLES even when Bob is in the bobStacking state, even though
@@ -494,7 +494,7 @@ You can also define a whole series of AltTopics located in an
 ActorTopicEntry, in which case the one that will be used will be the
 last of those for which isActive is true. For example, we might define:
 
-```
+`
     + AskTellTopic @lighthouse 
        "<q>What can you tell me about the lighthouse?</q> you ask.
         <q>I hear it has quite a history.</q>\b
@@ -519,7 +519,7 @@ last of those for which isActive is true. For example, we might define:
        
        isActive = gPlayerChar.hasSeen(lighthouse)
     ;
-```
+`
 
 If the player types ASK BOB ABOUT LIGHTHOUSE or TELL BOB ABOUT
 LIGHTHOUSE then the response that will be used will depend on whether
@@ -576,7 +576,7 @@ to someone, for example, suppose you had created a PieceOfSilver class
 and given the player character thirty instances of it, and had defined a
 GiveTopic like so for the priest:
 
-```
+`
      + GiveTopic @PieceOfSilver
        topicResponse()
        {
@@ -585,7 +585,7 @@ GiveTopic like so for the priest:
        }
     ; 
      
-```
+`
 
 This could lead to an interchange like this:
 
@@ -643,7 +643,7 @@ outputting some text, we set the current action's
 string to be used to generate a summary report at the action's report
 stage, like this:
 
-```
+`
      + GiveTopic @PieceOfSilver
        topicResponse()
        {
@@ -652,7 +652,7 @@ stage, like this:
        }
     ; 
      
-```
+`
 
 Once the GIVE command has been executed on all thirty pieces of silver,
 this report will be displayed with `{1}`
@@ -660,20 +660,20 @@ replaced by a list of the objects just affected, which will
 automatically list all identical objects together into 'thirty pieces of
 silver'. It works like this: when it comes to the report stage, we have:
 
-```
+`
             report()
             {
                 if(gAction.summaryReport != nil)
                     dmsg(gAction.summaryReport, gActionListStr); 
             }
-```
+`
 
 Since summaryReport is now non-nil this becomes in effect:
 
-```
+`
         dmsg(The priest takes {1} and nods in acknowledgement. ', gActionListStr);
      
-```
+`
 
 The macro `gActionListStr` expands to a list of
 the objects just acted on ('thirty pieces of silver') and is inserted
@@ -689,7 +689,7 @@ property of the current action to define a method on the priest that
 should be executed just after the display of our summary report. We'd
 typically do it like this:
 
-```
+`
      + GiveTopic @PieceOfSilver
        topicResponse()
        {
@@ -699,14 +699,14 @@ typically do it like this:
        }
     ; 
      
-```
+`
 
 We'd then need to define a suitable
 `silverCount()` method on the priest, taking
 advantage of the fact that `gAction.reportList`
 will contain a list of the objects that have just been reported on:
 
-```
+`
      priest: Actor 'priest; tall thin ascetic; man; him'
         "He's a tall, thin ascetic-looking man. "
         
@@ -728,7 +728,7 @@ will contain a list of the objects that have just been reported on:
         }
     ;
      
-```
+`
 
 This technique can be used with GiveTopics, ShowTopics or
 GiveShowTopics, but it does come with a limitation: the system can only
@@ -737,7 +737,7 @@ for example, you *mustn't* do this if there's any possibility that the
 player character could hand over a mix of gold and silver coins on any
 one turn:
 
-```
+`
      + GiveTopic @GoldCoin
        topicResponse()
        {
@@ -756,7 +756,7 @@ one turn:
        }
     ;
      
-```
+`
 
 Since if you do do something like this the value of
 `summaryReport` and
@@ -766,7 +766,7 @@ the player types GIVE PRIEST THREE SILVER COINS AND FIVE GOLD COINS.
 Instead you need to combine both sets of coins into a single set of
 properties to ensure a predictable outcome:
 
-```
+`
      + GiveTopic [GoldCoin, SilverCoin]
        topicResponse()
        {
@@ -776,7 +776,7 @@ properties to ensure a predictable outcome:
        }
     ; 
      
-```
+`
 
 This will work fine provided you define your coinCount() method to check
 `gAction.reportList` for both gold and silver
@@ -789,12 +789,12 @@ your code can handle the extraneous old twig gracefully. This may be as
 simple as defining a suitable DefaultGiveShowTopic that names the item
 that triggers it:
 
-```
+`
      + DefaultGiveShowTopic 
        "The priest has no interest in {the dobj}. "
     ; 
      
-```
+`
 
 </div>
 

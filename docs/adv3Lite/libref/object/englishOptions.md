@@ -46,7 +46,7 @@ English module options.
 
 </div>
 
-` `[`decimalPt`](#decimalPt)`  `[`numGroupMark`](#numGroupMark)`  `
+[`decimalPt`](#decimalPt)[`numGroupMark`](#numGroupMark)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ English module options.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

@@ -55,7 +55,7 @@ things like threaded conversations.
 </div>
 
 **`ActorTopicDatabase`**  
-`         `[`TopicDatabase`](../object/TopicDatabase.html)  
+[`TopicDatabase`](../object/TopicDatabase.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -66,18 +66,18 @@ things like threaded conversations.
 </div>
 
 **`ActorTopicDatabase`**  
-`         `[`Actor`](../object/Actor.html)  
-`                 `[`UntakeableActor`](../object/UntakeableActor.html)  
-`                         `[`Person`](../object/Person.html)  
-`         `[`ActorState`](../object/ActorState.html)  
-`                 `[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
-`                         `[`GuidedInTravelState`](../object/GuidedInTravelState.html)  
-`                 `[`AccompanyingState`](../object/AccompanyingState.html)  
-`                         `[`GuidedTourState`](../object/GuidedTourState.html)  
-`                 `[`ConversationReadyState`](../object/ConversationReadyState.html)  
-`                 `[`HermitActorState`](../object/HermitActorState.html)  
-`                 `[`InConversationState`](../object/InConversationState.html)  
-`         `[`ConvNode`](../object/ConvNode.html)  
+[`Actor`](../object/Actor.html)  
+[`UntakeableActor`](../object/UntakeableActor.html)  
+[`Person`](../object/Person.html)  
+[`ActorState`](../object/ActorState.html)  
+[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
+[`GuidedInTravelState`](../object/GuidedInTravelState.html)  
+[`AccompanyingState`](../object/AccompanyingState.html)  
+[`GuidedTourState`](../object/GuidedTourState.html)  
+[`ConversationReadyState`](../object/ConversationReadyState.html)  
+[`HermitActorState`](../object/HermitActorState.html)  
+[`InConversationState`](../object/InConversationState.html)  
+[`ConvNode`](../object/ConvNode.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -94,10 +94,10 @@ things like threaded conversations.
 
 </div>
 
-` `[`askForTopics`](#askForTopics)`  `[`askTopics`](#askTopics)`  `[`commandTopics`](#commandTopics)`  `[`giveTopics`](#giveTopics)`  `[`initiateTopics`](#initiateTopics)`  `[`miscTopics`](#miscTopics)`  `[`showTopics`](#showTopics)`  `[`specialTopics`](#specialTopics)`  `[`tellTopics`](#tellTopics)`  `
+[`askForTopics`](#askForTopics)[`askTopics`](#askTopics)[`commandTopics`](#commandTopics)[`giveTopics`](#giveTopics)[`initiateTopics`](#initiateTopics)[`miscTopics`](#miscTopics)[`showTopics`](#showTopics)[`specialTopics`](#specialTopics)[`tellTopics`](#tellTopics)
 
 Inherited from `TopicDatabase` :  
-` `[`limitSuggestions`](../object/TopicDatabase.html#limitSuggestions)`  `[`suggestedTopics`](../object/TopicDatabase.html#suggestedTopics)`  `[`topicGroupActive`](../object/TopicDatabase.html#topicGroupActive)`  `[`topicGroupScoreAdjustment`](../object/TopicDatabase.html#topicGroupScoreAdjustment)`  `
+[`limitSuggestions`](../object/TopicDatabase.html#limitSuggestions)[`suggestedTopics`](../object/TopicDatabase.html#suggestedTopics)[`topicGroupActive`](../object/TopicDatabase.html#topicGroupActive)[`topicGroupScoreAdjustment`](../object/TopicDatabase.html#topicGroupScoreAdjustment)
 
 <span id="_MethodSummary_"></span>
 
@@ -107,10 +107,10 @@ Inherited from `TopicDatabase` :
 
 </div>
 
-` `[`initiateTopic`](#initiateTopic)`  `[`showTopicResponse`](#showTopicResponse)`  `
+[`initiateTopic`](#initiateTopic)[`showTopicResponse`](#showTopicResponse)
 
 Inherited from `TopicDatabase` :  
-` `[`addSuggestedTopic`](../object/TopicDatabase.html#addSuggestedTopic)`  `[`addTopic`](../object/TopicDatabase.html#addTopic)`  `[`addTopicToList`](../object/TopicDatabase.html#addTopicToList)`  `[`compareVocabMatch`](../object/TopicDatabase.html#compareVocabMatch)`  `[`findTopicResponse`](../object/TopicDatabase.html#findTopicResponse)`  `[`getTopicOwner`](../object/TopicDatabase.html#getTopicOwner)`  `[`handleTopic`](../object/TopicDatabase.html#handleTopic)`  `[`removeSuggestedTopic`](../object/TopicDatabase.html#removeSuggestedTopic)`  `[`removeTopic`](../object/TopicDatabase.html#removeTopic)`  `[`removeTopicFromList`](../object/TopicDatabase.html#removeTopicFromList)`  `[`showSuggestedTopicList`](../object/TopicDatabase.html#showSuggestedTopicList)`  `
+[`addSuggestedTopic`](../object/TopicDatabase.html#addSuggestedTopic)[`addTopic`](../object/TopicDatabase.html#addTopic)[`addTopicToList`](../object/TopicDatabase.html#addTopicToList)[`compareVocabMatch`](../object/TopicDatabase.html#compareVocabMatch)[`findTopicResponse`](../object/TopicDatabase.html#findTopicResponse)[`getTopicOwner`](../object/TopicDatabase.html#getTopicOwner)[`handleTopic`](../object/TopicDatabase.html#handleTopic)[`removeSuggestedTopic`](../object/TopicDatabase.html#removeSuggestedTopic)[`removeTopic`](../object/TopicDatabase.html#removeTopic)[`removeTopicFromList`](../object/TopicDatabase.html#removeTopicFromList)[`showSuggestedTopicList`](../object/TopicDatabase.html#showSuggestedTopicList)
 
 <span id="_Properties_"></span>
 

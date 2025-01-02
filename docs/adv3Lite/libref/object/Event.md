@@ -55,14 +55,14 @@ subclasses rather than the Event class directly.
 </div>
 
 **`Event`**  
-`         `[`Daemon`](../object/Daemon.html)  
-`                 `[`SenseDaemon`](../object/SenseDaemon.html)  
-`         `[`Fuse`](../object/Fuse.html)  
-`                 `[`SenseFuse`](../object/SenseFuse.html)  
-`                 `[`TimeFuse`](../object/TimeFuse.html)  
-`                         `[`SenseTimeFuse`](../object/SenseTimeFuse.html)  
-`         `[`PromptDaemon`](../object/PromptDaemon.html)  
-`                 `[`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html)  
+[`Daemon`](../object/Daemon.html)  
+[`SenseDaemon`](../object/SenseDaemon.html)  
+[`Fuse`](../object/Fuse.html)  
+[`SenseFuse`](../object/SenseFuse.html)  
+[`TimeFuse`](../object/TimeFuse.html)  
+[`SenseTimeFuse`](../object/SenseTimeFuse.html)  
+[`PromptDaemon`](../object/PromptDaemon.html)  
+[`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -71,7 +71,7 @@ subclasses rather than the Event class directly.
 
 </div>
 
-` `[`actorSchedule`](../object/actorSchedule.html)`  `[`sceneManager`](../object/sceneManager.html)`  `
+[`actorSchedule`](../object/actorSchedule.html)[`sceneManager`](../object/sceneManager.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -80,7 +80,7 @@ subclasses rather than the Event class directly.
 
 </div>
 
-` `[`captureText`](#captureText)`  `[`eventOrder`](#eventOrder)`  `[`executed`](#executed)`  `[`interval_`](#interval_)`  `[`isPromptDaemon`](#isPromptDaemon)`  `[`nextRunTime`](#nextRunTime)`  `[`obj_`](#obj_)`  `[`prop_`](#prop_)`  `[`senseObj_`](#senseObj_)`  `[`senseProp_`](#senseProp_)`  `
+[`captureText`](#captureText)[`eventOrder`](#eventOrder)[`executed`](#executed)[`interval_`](#interval_)[`isPromptDaemon`](#isPromptDaemon)[`nextRunTime`](#nextRunTime)[`obj_`](#obj_)[`prop_`](#prop_)[`senseObj_`](#senseObj_)[`senseProp_`](#senseProp_)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,7 +90,7 @@ subclasses rather than the Event class directly.
 
 </div>
 
-` `[`callMethod`](#callMethod)`  `[`construct`](#construct)`  `[`delayEvent`](#delayEvent)`  `[`eventMatches`](#eventMatches)`  `[`executeEvent`](#executeEvent)`  `[`getNextRunTime`](#getNextRunTime)`  `[`removeEvent`](#removeEvent)`  `
+[`callMethod`](#callMethod)[`construct`](#construct)[`delayEvent`](#delayEvent)[`eventMatches`](#eventMatches)[`executeEvent`](#executeEvent)[`getNextRunTime`](#getNextRunTime)[`removeEvent`](#removeEvent)
 
 <span id="_Properties_"></span>
 

@@ -39,8 +39,8 @@ Yes or No phrase. This is a reply to a simple Yes/No question.
 </div>
 
 **`yesOrNoPhrase(yes)`**  
-`         `[`YesOrNoProduction`](../object/YesOrNoProduction.html)  
-`                 `[`Production`](../object/Production.html)  
+[`YesOrNoProduction`](../object/YesOrNoProduction.html)  
+[`Production`](../object/Production.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,12 +50,12 @@ Yes or No phrase. This is a reply to a simple Yes/No question.
 
 </div>
 
-` `[`answer`](#answer)`  `
+` [`answer`](#answer)  `
 
-` `
+
 
 Inherited from `Production` :  
-` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+` [`determiner`](../object/Production.html#determiner)  [`nounPhraseRole`](../object/Production.html#nounPhraseRole)  [`npClass`](../object/Production.html#npClass)  [`parent`](../object/Production.html#parent)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -65,13 +65,13 @@ Inherited from `Production` :
 
 </div>
 
-` `
+
 
 Inherited from `YesOrNoProduction` :  
-` `[`build`](../object/YesOrNoProduction.html#build)`  `
+` [`build`](../object/YesOrNoProduction.html#build)  `
 
 Inherited from `Production` :  
-` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `[`visitProd`](../object/Production.html#visitProd)`  `
+` [`addNounListItem`](../object/Production.html#addNounListItem)  [`findAction`](../object/Production.html#findAction)  [`findChild`](../object/Production.html#findChild)  [`findParent`](../object/Production.html#findParent)  [`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)  [`getText`](../object/Production.html#getText)  [`getTokens`](../object/Production.html#getTokens)  [`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)  [`isChildOf`](../object/Production.html#isChildOf)  [`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)  [`visitLiteral`](../object/Production.html#visitLiteral)  [`visitProd`](../object/Production.html#visitProd)  `
 
 <span id="_Properties_"></span>
 

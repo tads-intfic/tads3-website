@@ -65,7 +65,7 @@ Thing-derived) superclasses.
 </div>
 
 **`Collective`**  
-`         `[`Matchbook`](../object/Matchbook.html)  
+[`Matchbook`](../object/Matchbook.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -82,7 +82,7 @@ Thing-derived) superclasses.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -92,7 +92,7 @@ Thing-derived) superclasses.
 
 </div>
 
-` `[`filterResolveList`](#filterResolveList)`  `[`isCollectiveFor`](#isCollectiveFor)`  `
+[`filterResolveList`](#filterResolveList)[`isCollectiveFor`](#isCollectiveFor)
 
 <span id="_Properties_"></span>
 

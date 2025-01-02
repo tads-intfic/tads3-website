@@ -69,7 +69,7 @@ this class directly with 'new', and the class has no public methods.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ this class directly with 'new', and the class has no public methods.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

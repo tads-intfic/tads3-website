@@ -95,53 +95,53 @@ cases.
 </div>
 
 **`TopicEntry`**  
-`         `[`AltTopic`](../object/AltTopic.html)  
-`         `[`CommandTopic`](../object/CommandTopic.html)  
-`         `[`DefaultTopic`](../object/DefaultTopic.html)  
-`                 `[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
-`                 `[`DefaultAskForTopic`](../object/DefaultAskForTopic.html)  
-`                 `[`DefaultAskTellTopic`](../object/DefaultAskTellTopic.html)  
-`                 `[`DefaultAskTopic`](../object/DefaultAskTopic.html)  
-`                 `[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
-`                 `[`DefaultConsultTopic`](../object/DefaultConsultTopic.html)  
-`                 `[`DefaultGiveShowTopic`](../object/DefaultGiveShowTopic.html)  
-`                 `[`DefaultGiveTopic`](../object/DefaultGiveTopic.html)  
-`                 `[`DefaultInitiateTopic`](../object/DefaultInitiateTopic.html)  
-`                 `[`DefaultShowTopic`](../object/DefaultShowTopic.html)  
-`                 `[`DefaultTellTopic`](../object/DefaultTellTopic.html)  
-`         `[`MiscTopic`](../object/MiscTopic.html)  
-`                 `[`ActorByeTopic`](../object/ActorByeTopic.html)  
-`                 `[`ActorHelloTopic`](../object/ActorHelloTopic.html)  
-`                 `[`BoredByeTopic`](../object/BoredByeTopic.html)  
-`                 `[`ByeTopic`](../object/ByeTopic.html)  
-`                 `[`HelloGoodbyeTopic`](../object/HelloGoodbyeTopic.html)  
-`                 `[`HelloTopic`](../object/HelloTopic.html)  
-`                 `[`ImpByeTopic`](../object/ImpByeTopic.html)  
-`                 `[`ImpHelloTopic`](../object/ImpHelloTopic.html)  
-`                 `[`LeaveByeTopic`](../object/LeaveByeTopic.html)  
-`                 `[`YesNoTopic`](../object/YesNoTopic.html)  
-`                         `[`NoTopic`](../object/NoTopic.html)  
-`                         `[`YesTopic`](../object/YesTopic.html)  
-`         `[`SpecialTopic`](../object/SpecialTopic.html)  
-`         `[`ThingMatchTopic`](../object/ThingMatchTopic.html)  
-`                 `[`GiveShowTopic`](../object/GiveShowTopic.html)  
-`                         `[`GiveTopic`](../object/GiveTopic.html)  
-`                         `[`ShowTopic`](../object/ShowTopic.html)  
-`                 `[`InitiateTopic`](../object/InitiateTopic.html)  
-`                 `[`TopicOrThingMatchTopic`](../object/TopicOrThingMatchTopic.html)  
-`                         `[`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
-`                         `[`AskTellShowTopic`](../object/AskTellShowTopic.html)  
-`         `[`TopicMatchTopic`](../object/TopicMatchTopic.html)  
-`                 `[`AskTellTopic`](../object/AskTellTopic.html)  
-`                         `[`AskAboutForTopic`](../object/AskAboutForTopic.html)  
-`                         `[`AskForTopic`](../object/AskForTopic.html)  
-`                         `[`AskTellAboutForTopic`](../object/AskTellAboutForTopic.html)  
-`                         `[`AskTopic`](../object/AskTopic.html)  
-`                         `[`TellTopic`](../object/TellTopic.html)  
-`                 `[`ConsultTopic`](../object/ConsultTopic.html)  
-`                 `[`TopicOrThingMatchTopic`](../object/TopicOrThingMatchTopic.html)  
-`                         `[`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
-`                         `[`AskTellShowTopic`](../object/AskTellShowTopic.html)  
+[`AltTopic`](../object/AltTopic.html)  
+[`CommandTopic`](../object/CommandTopic.html)  
+[`DefaultTopic`](../object/DefaultTopic.html)  
+[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
+[`DefaultAskForTopic`](../object/DefaultAskForTopic.html)  
+[`DefaultAskTellTopic`](../object/DefaultAskTellTopic.html)  
+[`DefaultAskTopic`](../object/DefaultAskTopic.html)  
+[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
+[`DefaultConsultTopic`](../object/DefaultConsultTopic.html)  
+[`DefaultGiveShowTopic`](../object/DefaultGiveShowTopic.html)  
+[`DefaultGiveTopic`](../object/DefaultGiveTopic.html)  
+[`DefaultInitiateTopic`](../object/DefaultInitiateTopic.html)  
+[`DefaultShowTopic`](../object/DefaultShowTopic.html)  
+[`DefaultTellTopic`](../object/DefaultTellTopic.html)  
+[`MiscTopic`](../object/MiscTopic.html)  
+[`ActorByeTopic`](../object/ActorByeTopic.html)  
+[`ActorHelloTopic`](../object/ActorHelloTopic.html)  
+[`BoredByeTopic`](../object/BoredByeTopic.html)  
+[`ByeTopic`](../object/ByeTopic.html)  
+[`HelloGoodbyeTopic`](../object/HelloGoodbyeTopic.html)  
+[`HelloTopic`](../object/HelloTopic.html)  
+[`ImpByeTopic`](../object/ImpByeTopic.html)  
+[`ImpHelloTopic`](../object/ImpHelloTopic.html)  
+[`LeaveByeTopic`](../object/LeaveByeTopic.html)  
+[`YesNoTopic`](../object/YesNoTopic.html)  
+[`NoTopic`](../object/NoTopic.html)  
+[`YesTopic`](../object/YesTopic.html)  
+[`SpecialTopic`](../object/SpecialTopic.html)  
+[`ThingMatchTopic`](../object/ThingMatchTopic.html)  
+[`GiveShowTopic`](../object/GiveShowTopic.html)  
+[`GiveTopic`](../object/GiveTopic.html)  
+[`ShowTopic`](../object/ShowTopic.html)  
+[`InitiateTopic`](../object/InitiateTopic.html)  
+[`TopicOrThingMatchTopic`](../object/TopicOrThingMatchTopic.html)  
+[`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
+[`AskTellShowTopic`](../object/AskTellShowTopic.html)  
+[`TopicMatchTopic`](../object/TopicMatchTopic.html)  
+[`AskTellTopic`](../object/AskTellTopic.html)  
+[`AskAboutForTopic`](../object/AskAboutForTopic.html)  
+[`AskForTopic`](../object/AskForTopic.html)  
+[`AskTellAboutForTopic`](../object/AskTellAboutForTopic.html)  
+[`AskTopic`](../object/AskTopic.html)  
+[`TellTopic`](../object/TellTopic.html)  
+[`ConsultTopic`](../object/ConsultTopic.html)  
+[`TopicOrThingMatchTopic`](../object/TopicOrThingMatchTopic.html)  
+[`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
+[`AskTellShowTopic`](../object/AskTellShowTopic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -158,7 +158,7 @@ cases.
 
 </div>
 
-` `[`altTalkCount`](#altTalkCount)`  `[`altTopicList`](#altTopicList)`  `[`impliesGreeting`](#impliesGreeting)`  `[`includeInList`](#includeInList)`  `[`isActive`](#isActive)`  `[`isConversational`](#isConversational)`  `[`matchObj`](#matchObj)`  `[`matchScore`](#matchScore)`  `[`talkCount`](#talkCount)`  `[`topicGroupActive`](#topicGroupActive)`  `[`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)`  `[`topicResponse`](#topicResponse)`  `
+[`altTalkCount`](#altTalkCount)[`altTopicList`](#altTopicList)[`impliesGreeting`](#impliesGreeting)[`includeInList`](#includeInList)[`isActive`](#isActive)[`isConversational`](#isConversational)[`matchObj`](#matchObj)[`matchScore`](#matchScore)[`talkCount`](#talkCount)[`topicGroupActive`](#topicGroupActive)[`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)[`topicResponse`](#topicResponse)
 
 <span id="_MethodSummary_"></span>
 
@@ -168,7 +168,7 @@ cases.
 
 </div>
 
-` `[`addAltTopic`](#addAltTopic)`  `[`addSuggestedTopic`](#addSuggestedTopic)`  `[`addTopic`](#addTopic)`  `[`adjustScore`](#adjustScore)`  `[`anyAltIsActive`](#anyAltIsActive)`  `[`breakTopicTie`](#breakTopicTie)`  `[`checkIsActive`](#checkIsActive)`  `[`deferToEntry`](#deferToEntry)`  `[`getActor`](#getActor)`  `[`getTopicOwner`](#getTopicOwner)`  `[`handleTopic`](#handleTopic)`  `[`initializeTopicEntry`](#initializeTopicEntry)`  `[`isMatchPossible`](#isMatchPossible)`  `[`matchTopic`](#matchTopic)`  `[`noteAltInvocation`](#noteAltInvocation)`  `[`noteInvocation`](#noteInvocation)`  `[`setTopicPronouns`](#setTopicPronouns)`  `
+[`addAltTopic`](#addAltTopic)[`addSuggestedTopic`](#addSuggestedTopic)[`addTopic`](#addTopic)[`adjustScore`](#adjustScore)[`anyAltIsActive`](#anyAltIsActive)[`breakTopicTie`](#breakTopicTie)[`checkIsActive`](#checkIsActive)[`deferToEntry`](#deferToEntry)[`getActor`](#getActor)[`getTopicOwner`](#getTopicOwner)[`handleTopic`](#handleTopic)[`initializeTopicEntry`](#initializeTopicEntry)[`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`noteAltInvocation`](#noteAltInvocation)[`noteInvocation`](#noteInvocation)[`setTopicPronouns`](#setTopicPronouns)
 
 <span id="_Properties_"></span>
 

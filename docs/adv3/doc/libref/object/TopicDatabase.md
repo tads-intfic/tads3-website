@@ -61,20 +61,20 @@ stand-alone abstract topic entry container.
 </div>
 
 **`TopicDatabase`**  
-`         `[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)  
-`                 `[`Actor`](../object/Actor.html)  
-`                         `[`UntakeableActor`](../object/UntakeableActor.html)  
-`                                 `[`Person`](../object/Person.html)  
-`                 `[`ActorState`](../object/ActorState.html)  
-`                         `[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
-`                                 `[`GuidedInTravelState`](../object/GuidedInTravelState.html)  
-`                         `[`AccompanyingState`](../object/AccompanyingState.html)  
-`                                 `[`GuidedTourState`](../object/GuidedTourState.html)  
-`                         `[`ConversationReadyState`](../object/ConversationReadyState.html)  
-`                         `[`HermitActorState`](../object/HermitActorState.html)  
-`                         `[`InConversationState`](../object/InConversationState.html)  
-`                 `[`ConvNode`](../object/ConvNode.html)  
-`         `[`Consultable`](../object/Consultable.html)  
+[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)  
+[`Actor`](../object/Actor.html)  
+[`UntakeableActor`](../object/UntakeableActor.html)  
+[`Person`](../object/Person.html)  
+[`ActorState`](../object/ActorState.html)  
+[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
+[`GuidedInTravelState`](../object/GuidedInTravelState.html)  
+[`AccompanyingState`](../object/AccompanyingState.html)  
+[`GuidedTourState`](../object/GuidedTourState.html)  
+[`ConversationReadyState`](../object/ConversationReadyState.html)  
+[`HermitActorState`](../object/HermitActorState.html)  
+[`InConversationState`](../object/InConversationState.html)  
+[`ConvNode`](../object/ConvNode.html)  
+[`Consultable`](../object/Consultable.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -91,7 +91,7 @@ stand-alone abstract topic entry container.
 
 </div>
 
-` `[`limitSuggestions`](#limitSuggestions)`  `[`suggestedTopics`](#suggestedTopics)`  `[`topicGroupActive`](#topicGroupActive)`  `[`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)`  `
+[`limitSuggestions`](#limitSuggestions)[`suggestedTopics`](#suggestedTopics)[`topicGroupActive`](#topicGroupActive)[`topicGroupScoreAdjustment`](#topicGroupScoreAdjustment)
 
 <span id="_MethodSummary_"></span>
 
@@ -101,7 +101,7 @@ stand-alone abstract topic entry container.
 
 </div>
 
-` `[`addSuggestedTopic`](#addSuggestedTopic)`  `[`addTopic`](#addTopic)`  `[`addTopicToList`](#addTopicToList)`  `[`compareVocabMatch`](#compareVocabMatch)`  `[`findTopicResponse`](#findTopicResponse)`  `[`getTopicOwner`](#getTopicOwner)`  `[`handleTopic`](#handleTopic)`  `[`removeSuggestedTopic`](#removeSuggestedTopic)`  `[`removeTopic`](#removeTopic)`  `[`removeTopicFromList`](#removeTopicFromList)`  `[`showSuggestedTopicList`](#showSuggestedTopicList)`  `[`showTopicResponse`](#showTopicResponse)`  `
+[`addSuggestedTopic`](#addSuggestedTopic)[`addTopic`](#addTopic)[`addTopicToList`](#addTopicToList)[`compareVocabMatch`](#compareVocabMatch)[`findTopicResponse`](#findTopicResponse)[`getTopicOwner`](#getTopicOwner)[`handleTopic`](#handleTopic)[`removeSuggestedTopic`](#removeSuggestedTopic)[`removeTopic`](#removeTopic)[`removeTopicFromList`](#removeTopicFromList)[`showSuggestedTopicList`](#showSuggestedTopicList)[`showTopicResponse`](#showTopicResponse)
 
 <span id="_Properties_"></span>
 

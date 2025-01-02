@@ -54,8 +54,8 @@ travelBarrier property, to form a conditional barrier to travel.
 </div>
 
 **`TravelBarrier`**  
-`         `[`PushTravelBarrier`](../object/PushTravelBarrier.html)  
-`         `[`VehicleBarrier`](../object/VehicleBarrier.html)  
+[`PushTravelBarrier`](../object/PushTravelBarrier.html)  
+[`VehicleBarrier`](../object/VehicleBarrier.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ travelBarrier property, to form a conditional barrier to travel.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ travelBarrier property, to form a conditional barrier to travel.
 
 </div>
 
-` `[`canTravelerPass`](#canTravelerPass)`  `[`explainTravelBarrier`](#explainTravelBarrier)`  `
+[`canTravelerPass`](#canTravelerPass)[`explainTravelBarrier`](#explainTravelBarrier)
 
 <span id="_Properties_"></span>
 

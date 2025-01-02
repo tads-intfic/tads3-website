@@ -37,8 +37,8 @@ a noun list can consist of a single terminal noun phrase
 </div>
 
 **`nounList(terminal)`**  
-`         `[`NounListProd`](../object/NounListProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`NounListProd`](../object/NounListProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ a noun list can consist of a single terminal noun phrase
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -63,12 +63,12 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`resolveNouns`](#resolveNouns)`  `
+[`resolveNouns`](#resolveNouns)
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

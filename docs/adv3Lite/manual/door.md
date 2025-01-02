@@ -33,7 +33,7 @@ these are two sides of the same door it is further necessary to set the
 **otherSide** property of each Door object to point to the other Door
 object, for example:
 
-```
+`
     hall: Room 'Hall' 'hall'
        "The front door lies to the west. "
        west = frontDoor
@@ -136,7 +136,7 @@ defined in the [symconn](../../extensions/docs/symconn.html) extension,
 since this allows you to define a door using only one game object
 instead of two. To take advantage of this class you would need to
 explicitly include the symconn extension in your build.
-```
+`
 
 ------------------------------------------------------------------------
 

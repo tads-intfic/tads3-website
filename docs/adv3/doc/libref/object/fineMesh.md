@@ -37,7 +37,7 @@ Fine Mesh is transparent to all senses except touch.
 </div>
 
 **`fineMesh`**  
-`         `[`Material`](../object/Material.html)  
+[`Material`](../object/Material.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ Fine Mesh is transparent to all senses except touch.
 
 </div>
 
-` `[`hearThru`](#hearThru)`  `[`seeThru`](#seeThru)`  `[`smellThru`](#smellThru)`  `[`touchThru`](#touchThru)`  `
+[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -59,10 +59,10 @@ Fine Mesh is transparent to all senses except touch.
 
 </div>
 
-` `
+
 
 Inherited from `Material` :  
-` `[`senseThru`](../object/Material.html#senseThru)`  `
+[`senseThru`](../object/Material.html#senseThru)
 
 <span id="_Properties_"></span>
 

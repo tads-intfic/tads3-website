@@ -40,9 +40,9 @@ choice.
 </div>
 
 **`singleNoun(empty)`**  
-`         `[`EmptyNounPhraseProd`](../object/EmptyNounPhraseProd.html)  
-`                 `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                         `[`BasicProd`](../object/BasicProd.html)  
+[`EmptyNounPhraseProd`](../object/EmptyNounPhraseProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                 object`  
 <span id="_PropSummary_"></span>
 
@@ -52,16 +52,16 @@ choice.
 
 </div>
 
-` `[`fallbackResponseProd`](#fallbackResponseProd)`  `[`responseProd`](#responseProd)`  `
+[`fallbackResponseProd`](#fallbackResponseProd)[`responseProd`](#responseProd)
 
 Inherited from `EmptyNounPhraseProd` :  
-` `[`asker_`](../object/EmptyNounPhraseProd.html#asker_)`  `[`newMatch`](../object/EmptyNounPhraseProd.html#newMatch)`  `
+[`asker_`](../object/EmptyNounPhraseProd.html#asker_)[`newMatch`](../object/EmptyNounPhraseProd.html#newMatch)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -71,16 +71,16 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `EmptyNounPhraseProd` :  
-` `[`getImpliedObject`](../object/EmptyNounPhraseProd.html#getImpliedObject)`  `[`getOrigText`](../object/EmptyNounPhraseProd.html#getOrigText)`  `[`getOrigTokenList`](../object/EmptyNounPhraseProd.html#getOrigTokenList)`  `[`isEmptyPhrase`](../object/EmptyNounPhraseProd.html#isEmptyPhrase)`  `[`resolveNouns`](../object/EmptyNounPhraseProd.html#resolveNouns)`  `[`setPrompt`](../object/EmptyNounPhraseProd.html#setPrompt)`  `
+[`getImpliedObject`](../object/EmptyNounPhraseProd.html#getImpliedObject)[`getOrigText`](../object/EmptyNounPhraseProd.html#getOrigText)[`getOrigTokenList`](../object/EmptyNounPhraseProd.html#getOrigTokenList)[`isEmptyPhrase`](../object/EmptyNounPhraseProd.html#isEmptyPhrase)[`resolveNouns`](../object/EmptyNounPhraseProd.html#resolveNouns)[`setPrompt`](../object/EmptyNounPhraseProd.html#setPrompt)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

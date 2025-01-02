@@ -38,8 +38,8 @@ when it is first opened.
 </div>
 
 **`openingContentsLister`**  
-`         `[`ItemLister`](../object/ItemLister.html)  
-`                 `[`Lister`](../object/Lister.html)  
+[`ItemLister`](../object/ItemLister.html)  
+[`Lister`](../object/Lister.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,12 +49,12 @@ when it is first opened.
 
 </div>
 
-` `[`listRecursively`](#listRecursively)`  `[`showSubListing`](#showSubListing)`  `
+[`listRecursively`](#listRecursively)[`showSubListing`](#showSubListing)
 
 Inherited from `ItemLister` :  
-` `[`contentsListedProp`](../object/ItemLister.html#contentsListedProp)`  `[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)`  `[`showWornInfo`](../object/ItemLister.html#showWornInfo)`  `
+[`contentsListedProp`](../object/ItemLister.html#contentsListedProp)[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)[`showWornInfo`](../object/ItemLister.html#showWornInfo)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -64,13 +64,13 @@ Inherited from `ItemLister` :
 
 </div>
 
-` `[`listed`](#listed)`  `[`showListEmpty`](#showListEmpty)`  `[`showListPrefix`](#showListPrefix)`  `[`showListSuffix`](#showListSuffix)`  `
+[`listed`](#listed)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
 Inherited from `ItemLister` :  
-` `[`listName`](../object/ItemLister.html#listName)`  `[`show`](../object/ItemLister.html#show)`  `[`showList`](../object/ItemLister.html#showList)`  `
+[`listName`](../object/ItemLister.html#listName)[`show`](../object/ItemLister.html#show)[`showList`](../object/ItemLister.html#showList)
 
 Inherited from `Lister` :  
-` `[`buildList`](../object/Lister.html#buildList)`  `[`listOrder`](../object/Lister.html#listOrder)`  `
+[`buildList`](../object/Lister.html#buildList)[`listOrder`](../object/Lister.html#listOrder)
 
 <span id="_Properties_"></span>
 

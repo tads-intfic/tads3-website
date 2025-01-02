@@ -36,7 +36,7 @@ particular a DynamicRegion cannot be part of any other Region.
 
 </div>
 
-` `[`DynamicRegion`](../object/DynamicRegion.html)`  `
+[`DynamicRegion`](../object/DynamicRegion.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">

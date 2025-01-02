@@ -57,7 +57,7 @@ main TADS 3 library.
 
 </div>
 
-` `[`MenuItem`](../object/MenuItem.html)`  `[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)`  `[`MenuObject`](../object/MenuObject.html)`  `[`MenuTopicItem`](../object/MenuTopicItem.html)`  `[`MenuTopicSubItem`](../object/MenuTopicSubItem.html)`  `
+[`MenuItem`](../object/MenuItem.html)[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)[`MenuObject`](../object/MenuObject.html)[`MenuTopicItem`](../object/MenuTopicItem.html)[`MenuTopicSubItem`](../object/MenuTopicSubItem.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -66,7 +66,7 @@ main TADS 3 library.
 
 </div>
 
-` `[`menuOutputStream`](../object/menuOutputStream.html)`  `[`menuParagraphManager`](../object/menuParagraphManager.html)`  `
+[`menuOutputStream`](../object/menuOutputStream.html)[`menuParagraphManager`](../object/menuParagraphManager.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

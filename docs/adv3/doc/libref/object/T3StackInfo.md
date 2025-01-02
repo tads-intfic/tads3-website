@@ -70,7 +70,7 @@ represents a level in the stack trace.
 
 </div>
 
-` `[`argList_`](#argList_)`  `[`frameDesc_`](#frameDesc_)`  `[`func_`](#func_)`  `[`locals_`](#locals_)`  `[`namedArgs_`](#namedArgs_)`  `[`obj_`](#obj_)`  `[`prop_`](#prop_)`  `[`self_`](#self_)`  `[`srcInfo_`](#srcInfo_)`  `
+[`argList_`](#argList_)[`frameDesc_`](#frameDesc_)[`func_`](#func_)[`locals_`](#locals_)[`namedArgs_`](#namedArgs_)[`obj_`](#obj_)[`prop_`](#prop_)[`self_`](#self_)[`srcInfo_`](#srcInfo_)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ represents a level in the stack trace.
 
 </div>
 
-` `[`construct`](#construct)`  `[`isSystem`](#isSystem)`  `
+[`construct`](#construct)[`isSystem`](#isSystem)
 
 <span id="_Properties_"></span>
 

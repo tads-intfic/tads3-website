@@ -44,7 +44,7 @@ regular expressions.
 </div>
 
 **`RexQuestion`**  
-`         `[`Question`](../object/Question.html)  
+[`Question`](../object/Question.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ regular expressions.
 
 </div>
 
-` `[`answerFunc`](#answerFunc)`  `[`answerPat`](#answerPat)`  `
+[`answerFunc`](#answerFunc)[`answerPat`](#answerPat)
 
 Inherited from `Question` :  
-` `[`answerTemplate`](../object/Question.html#answerTemplate)`  `[`priority`](../object/Question.html#priority)`  `
+[`answerTemplate`](../object/Question.html#answerTemplate)[`priority`](../object/Question.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,9 +83,9 @@ Inherited from `Question` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`parseAnswer`](#parseAnswer)`  `
+[`construct`](#construct)[`parseAnswer`](#parseAnswer)
 
-` `
+
 
 <span id="_Properties_"></span>
 

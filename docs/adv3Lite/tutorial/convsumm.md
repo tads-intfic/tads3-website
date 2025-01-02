@@ -145,7 +145,7 @@ Since some readers may have found it a little hard to keep track of
 exactly what goes where, here's a complete listing of all the code
 related to the Angela NPC as far as we have reached:
 
-```
+`
     angela: Actor 'flight attendant; statuesque young; woman angela; her'
         @planeFront
         "She's a statuesque and by no means unattractive young woman. "
@@ -772,7 +772,7 @@ related to the Angela NPC as far as we have reached:
             May I see your ticket please? ";        
         }
     ;
-```
+`
 
 
 

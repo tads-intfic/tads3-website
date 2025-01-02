@@ -73,7 +73,7 @@ within the ProxyActor just as if it were the Actor.
 
 </div>
 
-` `[`active`](#active)`  `[`getActor`](#getActor)`  `[`location`](#location)`  `
+` [`active`](#active)  [`getActor`](#getActor)  [`location`](#location)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ within the ProxyActor just as if it were the Actor.
 
 </div>
 
-` `[`addTopic`](#addTopic)`  `
+` [`addTopic`](#addTopic)  `
 
 <span id="_Properties_"></span>
 

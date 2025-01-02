@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`helloConvType`**  
-`         `[`ConvType`](../object/ConvType.html)  
+[`ConvType`](../object/ConvType.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ Details](#_Methods_)
 
 </div>
 
-` `[`defaultResponseProp`](#defaultResponseProp)`  `[`topicListProp`](#topicListProp)`  `[`unknownMsg`](#unknownMsg)`  `
+[`defaultResponseProp`](#defaultResponseProp)[`topicListProp`](#topicListProp)[`unknownMsg`](#unknownMsg)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -59,9 +59,9 @@ Details](#_Methods_)
 
 </div>
 
-` `[`afterResponse`](#afterResponse)`  `[`defaultResponse`](#defaultResponse)`  `
+[`afterResponse`](#afterResponse)[`defaultResponse`](#defaultResponse)
 
-` `
+
 
 <span id="_Properties_"></span>
 

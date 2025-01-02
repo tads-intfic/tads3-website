@@ -48,7 +48,7 @@ Modify the String intrinsic class to provide a to-symbol mapping
 </div>
 
 **`String`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -73,9 +73,9 @@ Modify the String intrinsic class to provide a to-symbol mapping
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -85,10 +85,10 @@ Modify the String intrinsic class to provide a to-symbol mapping
 
 </div>
 
-` `[`compareIgnoreCase`](#compareIgnoreCase)`  `[`compareTo`](#compareTo)`  `[`digestMD5`](#digestMD5)`  `[`endsWith`](#endsWith)`  `[`find`](#find)`  `[`findAll`](#findAll)`  `[`findLast`](#findLast)`  `[`findReplace`](#findReplace)`  `[`htmlify`](#htmlify)`  `[`length`](#length)`  `[`mapToByteArray`](#mapToByteArray)`  `[`match`](#match)`  `[`sha256`](#sha256)`  `[`specialsToHtml`](#specialsToHtml)`  `[`specialsToText`](#specialsToText)`  `[`splice`](#splice)`  `[`split`](#split)`  `[`startsWith`](#startsWith)`  `[`substr`](#substr)`  `[`toFoldedCase`](#toFoldedCase)`  `[`toLower`](#toLower)`  `[`toTitleCase`](#toTitleCase)`  `[`toUnicode`](#toUnicode)`  `[`toUpper`](#toUpper)`  `[`unpackBytes`](#unpackBytes)`  `[`urlDecode`](#urlDecode)`  `[`urlEncode`](#urlEncode)`  `[`valToSymbol`](#valToSymbol)`  `
+[`compareIgnoreCase`](#compareIgnoreCase)[`compareTo`](#compareTo)[`digestMD5`](#digestMD5)[`endsWith`](#endsWith)[`find`](#find)[`findAll`](#findAll)[`findLast`](#findLast)[`findReplace`](#findReplace)[`htmlify`](#htmlify)[`length`](#length)[`mapToByteArray`](#mapToByteArray)[`match`](#match)[`sha256`](#sha256)[`specialsToHtml`](#specialsToHtml)[`specialsToText`](#specialsToText)[`splice`](#splice)[`split`](#split)[`startsWith`](#startsWith)[`substr`](#substr)[`toFoldedCase`](#toFoldedCase)[`toLower`](#toLower)[`toTitleCase`](#toTitleCase)[`toUnicode`](#toUnicode)[`toUpper`](#toUpper)[`unpackBytes`](#unpackBytes)[`urlDecode`](#urlDecode)[`urlEncode`](#urlEncode)[`valToSymbol`](#valToSymbol)
 
 Inherited from `Object` :  
-` `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `
+[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)
 
 <span id="_Properties_"></span>
 

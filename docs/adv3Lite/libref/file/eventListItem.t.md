@@ -33,7 +33,7 @@ By Eric Eve based on work by John Ziegler
 
 </div>
 
-` `[`ELI`](../object/ELI.html)`  `[`ELI1`](../object/ELI1.html)`  `[`EventListItem`](../object/EventListItem.html)`  `
+[`ELI`](../object/ELI.html)[`ELI1`](../object/ELI1.html)[`EventListItem`](../object/EventListItem.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">

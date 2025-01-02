@@ -72,7 +72,7 @@ ticketAchievement (a condition that the Goal class happens to make it
 easy to test for). We might accordingly define the start of our hint
 system thus:
 
-```
+`
     TopHintMenu;
 
     + Goal 'Where can I find a plane ticket?'
@@ -90,7 +90,7 @@ system thus:
         openWhenSeen = angela
         closeWhenAchieved = ticketAchievement
     ;
-```
+`
 
 Note that we can use the Goal template to specify both its
 `title` property ('Where can I find a plane
@@ -124,7 +124,7 @@ through the maintenance room door. We can do that by defining a separate
 **Hint** object that opens the secondary Goal when the corresponding
 hint is displayed, like this:
 
-```
+`
     + Goal 'How do I get the ID card through the metal detector?'
         [
             'Did you take a good look at the ID card? ',
@@ -196,7 +196,7 @@ hint is displayed, like this:
         
         closeWhenAchieved = powerAchievement
     ;
-```
+`
 
 There's nothing magical about locating the Hint objects within the Goal
 objects like this; it doesn't associate the Hint with the Goal, it
@@ -235,7 +235,7 @@ is to add a `\<.reveal
 maintenance-door-locked\>` tag to the end of the message that says
 the door is locked:
 
-```
+`
     + maintenanceRoomDoor: Door 'metal door'
         "It's marked <q>Personal de Mantenimiento S&oacute;lo</q>, and <<if isOpen>>
         is currently open<<else>> looks firmly closed<<end>>. "
@@ -246,7 +246,7 @@ the door is locked:
         
         lockedMsg = (inherited + '<.reveal maintenance-door-locked>')
     ;
-```
+`
 
 We have gone far enough now to illustrate the main principles of
 implementing a hint system in adv3Lite; completing the hints for the

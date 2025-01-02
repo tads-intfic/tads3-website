@@ -91,7 +91,7 @@ Achievement object is awarded
 </div>
 
 **`Achievement`**  
-`         `[`SimpleAchievement`](../object/SimpleAchievement.html)  
+[`SimpleAchievement`](../object/SimpleAchievement.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -108,7 +108,7 @@ Achievement object is awarded
 
 </div>
 
-` `[`desc`](#desc)`  `[`maxPoints`](#maxPoints)`  `[`points`](#points)`  `[`scoreCount`](#scoreCount)`  `[`totalPoints`](#totalPoints)`  `
+[`desc`](#desc)[`maxPoints`](#maxPoints)[`points`](#points)[`scoreCount`](#scoreCount)[`totalPoints`](#totalPoints)
 
 <span id="_MethodSummary_"></span>
 
@@ -118,7 +118,7 @@ Achievement object is awarded
 
 </div>
 
-` `[`addToScoreOnce`](#addToScoreOnce)`  `[`awardPoints`](#awardPoints)`  `[`awardPointsOnce`](#awardPointsOnce)`  `[`listFullScoreItem`](#listFullScoreItem)`  `
+[`addToScoreOnce`](#addToScoreOnce)[`awardPoints`](#awardPoints)[`awardPointsOnce`](#awardPointsOnce)[`listFullScoreItem`](#listFullScoreItem)
 
 <span id="_Properties_"></span>
 

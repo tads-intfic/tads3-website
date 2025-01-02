@@ -45,8 +45,8 @@ the file is full, or that a physical media error occurred.
 </div>
 
 **`FileIOException`**  
-`         `[`FileException`](../object/FileException.html)  
-`                 `[`Exception`](../object/Exception.html)  
+[`FileException`](../object/FileException.html)  
+[`Exception`](../object/Exception.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -72,12 +72,12 @@ the file is full, or that a physical media error occurred.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+` [`errmsg_`](../object/Exception.html#errmsg_)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -87,12 +87,12 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`displayException`](#displayException)`  `
+` [`displayException`](#displayException)  `
 
-` `
+
 
 Inherited from `Exception` :  
-` `[`construct`](../object/Exception.html#construct)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+` [`construct`](../object/Exception.html#construct)  [`getExceptionMessage`](../object/Exception.html#getExceptionMessage)  [`showStackTrace`](../object/Exception.html#showStackTrace)  `
 
 <span id="_Properties_"></span>
 

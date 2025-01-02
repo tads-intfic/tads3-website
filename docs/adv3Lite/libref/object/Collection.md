@@ -44,7 +44,7 @@ and other objects that represent collections of values.
 </div>
 
 **`Collection`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -54,11 +54,11 @@ and other objects that represent collections of values.
 </div>
 
 **`Collection`**  
-`         `[`List`](../object/List.html)  
-`         `[`LookupTable`](../object/LookupTable.html)  
-`                 `[`WeakRefLookupTable`](../object/WeakRefLookupTable.html)  
-`         `[`Vector`](../object/Vector.html)  
-`                 `[`AnonFuncPtr`](../object/AnonFuncPtr.html)  
+[`List`](../object/List.html)  
+[`LookupTable`](../object/LookupTable.html)  
+[`WeakRefLookupTable`](../object/WeakRefLookupTable.html)  
+[`Vector`](../object/Vector.html)  
+[`AnonFuncPtr`](../object/AnonFuncPtr.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -75,9 +75,9 @@ and other objects that represent collections of values.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -87,10 +87,10 @@ and other objects that represent collections of values.
 
 </div>
 
-` `[`createIterator`](#createIterator)`  `[`createLiveIterator`](#createLiveIterator)`  `
+[`createIterator`](#createIterator)[`createLiveIterator`](#createLiveIterator)
 
 Inherited from `Object` :  
-` `[`callInherited`](../object/Object.html#callInherited)`  `[`forEach`](../object/Object.html#forEach)`  `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`mapAll`](../object/Object.html#mapAll)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `[`valToSymbol`](../object/Object.html#valToSymbol)`  `
+[`callInherited`](../object/Object.html#callInherited)[`forEach`](../object/Object.html#forEach)[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`mapAll`](../object/Object.html#mapAll)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)[`valToSymbol`](../object/Object.html#valToSymbol)
 
 <span id="_Properties_"></span>
 

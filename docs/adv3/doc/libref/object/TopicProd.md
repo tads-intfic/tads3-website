@@ -45,9 +45,9 @@ production.
 </div>
 
 **`TopicProd`**  
-`         `[`SingleNounProd`](../object/SingleNounProd.html)  
-`                 `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                         `[`BasicProd`](../object/BasicProd.html)  
+[`SingleNounProd`](../object/SingleNounProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -58,11 +58,11 @@ production.
 </div>
 
 **`TopicProd`**  
-`         `[`EmptyTopicPhraseProd`](../object/EmptyTopicPhraseProd.html)  
-`         `[`PrepSingleTopicProd`](../object/PrepSingleTopicProd.html)  
-`                 `[`aboutTopicPhrase(main)`](../object/aboutTopicPhrase(main).html)  
-`         `[`topicPhrase(main)`](../object/topicPhrase(main).html)  
-`         `[`topicPhrase(misc)`](../object/topicPhrase(misc).html)  
+[`EmptyTopicPhraseProd`](../object/EmptyTopicPhraseProd.html)  
+[`PrepSingleTopicProd`](../object/PrepSingleTopicProd.html)  
+[`aboutTopicPhrase(main)`](../object/aboutTopicPhrase(main).html)  
+[`topicPhrase(main)`](../object/topicPhrase(main).html)  
+[`topicPhrase(misc)`](../object/topicPhrase(misc).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,15 +79,15 @@ production.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -97,15 +97,15 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`getOrigText`](#getOrigText)`  `[`getOrigTokenList`](#getOrigTokenList)`  `[`resolveNouns`](#resolveNouns)`  `
+[`getOrigText`](#getOrigText)[`getOrigTokenList`](#getOrigTokenList)[`resolveNouns`](#resolveNouns)
 
-` `
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

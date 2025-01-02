@@ -43,7 +43,7 @@ The special 'all' constructions are full noun phrases.
 </div>
 
 **`EverythingProd`**  
-`         `[`BasicProd`](../object/BasicProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,7 +54,7 @@ The special 'all' constructions are full noun phrases.
 </div>
 
 **`EverythingProd`**  
-`         `[`completeNounPhraseWithAll(main)`](../object/completeNounPhraseWithAll(main).html)  
+[`completeNounPhraseWithAll(main)`](../object/completeNounPhraseWithAll(main).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -71,10 +71,10 @@ The special 'all' constructions are full noun phrases.
 
 </div>
 
-` `[`filterForCollectives`](#filterForCollectives)`  `
+[`filterForCollectives`](#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,10 +84,10 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`resolveNouns`](#resolveNouns)`  `
+[`resolveNouns`](#resolveNouns)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

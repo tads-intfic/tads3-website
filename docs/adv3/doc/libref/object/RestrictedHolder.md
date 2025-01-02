@@ -55,11 +55,11 @@ that adds a restriction to what can be contained.
 </div>
 
 **`RestrictedHolder`**  
-`         `[`RestrictedContainer`](../object/RestrictedContainer.html)  
-`         `[`RestrictedRearContainer`](../object/RestrictedRearContainer.html)  
-`         `[`RestrictedRearSurface`](../object/RestrictedRearSurface.html)  
-`         `[`RestrictedSurface`](../object/RestrictedSurface.html)  
-`         `[`RestrictedUnderside`](../object/RestrictedUnderside.html)  
+[`RestrictedContainer`](../object/RestrictedContainer.html)  
+[`RestrictedRearContainer`](../object/RestrictedRearContainer.html)  
+[`RestrictedRearSurface`](../object/RestrictedRearSurface.html)  
+[`RestrictedSurface`](../object/RestrictedSurface.html)  
+[`RestrictedUnderside`](../object/RestrictedUnderside.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -76,7 +76,7 @@ that adds a restriction to what can be contained.
 
 </div>
 
-` `[`validContents`](#validContents)`  `
+[`validContents`](#validContents)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ that adds a restriction to what can be contained.
 
 </div>
 
-` `[`canPutIn`](#canPutIn)`  `[`checkPutDobj`](#checkPutDobj)`  `
+[`canPutIn`](#canPutIn)[`checkPutDobj`](#checkPutDobj)
 
 <span id="_Properties_"></span>
 

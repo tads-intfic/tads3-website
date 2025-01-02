@@ -65,7 +65,7 @@ embedded expression to print the name of the right object, whether it's
 the skull or the rock that's just been removed from the pedestal. The
 resulting code looks like this:
 
-```
+`
     + pedestal: Thing 'stone pedestal; smooth'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -84,7 +84,7 @@ resulting code looks like this:
             }
         }
     ;
-```
+`
 
 We've already encountered the use of the
 `finishGameMsg()` function to end the game. The
@@ -108,7 +108,7 @@ properties too!) that disallows travel if the player character isn't
 carrying the gold skull but announces victory if he is. This involves
 making a couple of additions to the startroom object:
 
-```
+`
     startroom: Room 'Outside Cave'
         desc = "You're standing in the bright sunlight just outside of a large,
             dark, foreboding cave, which lies to the north. The path back to your
@@ -128,7 +128,7 @@ making a couple of additions to the startroom object:
                 ";
         }
     ;
-```
+`
 
 There really isn't anything that's new here, beyond the fact that you
 can attach a method to a direction property and that the method will be

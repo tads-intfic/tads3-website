@@ -65,7 +65,7 @@ be done in either one of two ways:
 The following two definitions are therefore equivalent (assuming the
 darkTower object has a name of 'dark tower'):
 
-```
+`
     + AskTopic @darkTower
        "<q>Tell me about the dark tower,</q> you insist.\b
         <q>Oh no!</q> says Bob. <q>We don't talk about that -- ever!</q>"
@@ -79,7 +79,7 @@ darkTower object has a name of 'dark tower'):
         
         autoName = true
     ;
-```
+`
 
 <span id="suggestas"></span>
 
@@ -96,7 +96,7 @@ particular case you can override it by using the TopicEntry's
 For example, to make the game suggest 'You could tell Bob about your
 visit' with an AskTellTopic you could so the following:
 
-```
+`
     + AskTellTopic @tVisit
        "<q>I visited the dark tower this morning,</q> you announce.\b
         <q>You shouldn't have done that, you really shouldn't,</q> Bob
@@ -109,7 +109,7 @@ visit' with an AskTellTopic you could so the following:
     ....
 
     tVisit: Topic '()your visit; my;' ;
-```
+`
 
 <span id="listorder"></span>
 
@@ -231,7 +231,7 @@ Setting this up is quite straightfoward. You just define the
 of keys (single-quoted strings) that will be matched by the convKeys
 property of the TopicEntries you want to suggest. For example:
 
-```
+`
     + AskTellTalkTopic @darkTower
         keyTopics = 'dark-tower'
         autoName = true
@@ -245,7 +245,7 @@ property of the TopicEntries you want to suggest. For example:
     ;
 
     ...
-```
+`
 
 One potential problem with this is that both the AskTellTalkTopic and
 the topics it suggests would be listed in response to a TOPICS command,
@@ -260,7 +260,7 @@ To implement this scheme you would give all your top-level topics a
 common convKey (such as 'top') and then define that key on the
 **suggestionKey** property of the actor. For example:
 
-```
+`
     bob: Actor 'Bob; worried; man; him' @store
       ...
       suggestionKey = 'top'
@@ -279,7 +279,7 @@ common convKey (such as 'top') and then define that key on the
         autoName = true    
     ; 
     ... 
-```
+`
 
 Note that if you do this, bob's suggestionKey isn't set in stone; it can
 be changed at run-time to anything else (including nil, which removes
@@ -310,7 +310,7 @@ defining a top-level suggestionKey on bob, we could make the dark
 tower's subtopics initially inactive and then have the darkTower
 activate them just prior to suggesting them, like this:
 
-```
+`
     bob: Actor 'Bob; worried; man; him' @store
       ...
       
@@ -330,7 +330,7 @@ activate them just prior to suggesting them, like this:
         activated = nil    
     ; 
     ... 
-```
+`
 
 This would cause all the topic entries with 'dark-tower' as one of their
 convKeys to be activated just prior to their being suggested from the

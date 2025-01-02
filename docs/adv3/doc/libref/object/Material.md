@@ -61,7 +61,7 @@ pass through objects.
 
 </div>
 
-` `[`adventium`](../object/adventium.html)`  `[`coarseMesh`](../object/coarseMesh.html)`  `[`fineMesh`](../object/fineMesh.html)`  `[`glass`](../object/glass.html)`  `[`paper`](../object/paper.html)`  `
+[`adventium`](../object/adventium.html)[`coarseMesh`](../object/coarseMesh.html)[`fineMesh`](../object/fineMesh.html)[`glass`](../object/glass.html)[`paper`](../object/paper.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -70,7 +70,7 @@ pass through objects.
 
 </div>
 
-` `[`hearThru`](#hearThru)`  `[`seeThru`](#seeThru)`  `[`smellThru`](#smellThru)`  `[`touchThru`](#touchThru)`  `
+[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ pass through objects.
 
 </div>
 
-` `[`senseThru`](#senseThru)`  `
+[`senseThru`](#senseThru)
 
 <span id="_Properties_"></span>
 

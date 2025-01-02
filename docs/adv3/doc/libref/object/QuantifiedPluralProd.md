@@ -43,9 +43,9 @@ Quantified plural phrase.
 </div>
 
 **`QuantifiedPluralProd`**  
-`         `[`PluralProd`](../object/PluralProd.html)  
-`                 `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                         `[`BasicProd`](../object/BasicProd.html)  
+[`PluralProd`](../object/PluralProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -56,13 +56,13 @@ Quantified plural phrase.
 </div>
 
 **`QuantifiedPluralProd`**  
-`         `[`ExactQuantifiedPluralProd`](../object/ExactQuantifiedPluralProd.html)  
-`                 `[`BothPluralProd`](../object/BothPluralProd.html)  
-`                         `[`qualifiedPluralNounPhrase(both)`](../object/qualifiedPluralNounPhrase(both).html)  
-`                 `[`explicitDetPluralNounPhrase(definiteNumber)`](../object/explicitDetPluralNounPhrase(definiteNumber).html)  
-`                 `[`explicitDetPluralOnlyNounPhrase(definiteNumber)`](../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html)  
-`                 `[`qualifiedPluralNounPhrase(allNum)`](../object/qualifiedPluralNounPhrase(allNum).html)  
-`         `[`qualifiedPluralNounPhrase(anyNum)`](../object/qualifiedPluralNounPhrase(anyNum).html)  
+[`ExactQuantifiedPluralProd`](../object/ExactQuantifiedPluralProd.html)  
+[`BothPluralProd`](../object/BothPluralProd.html)  
+[`qualifiedPluralNounPhrase(both)`](../object/qualifiedPluralNounPhrase(both).html)  
+[`explicitDetPluralNounPhrase(definiteNumber)`](../object/explicitDetPluralNounPhrase(definiteNumber).html)  
+[`explicitDetPluralOnlyNounPhrase(definiteNumber)`](../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html)  
+[`qualifiedPluralNounPhrase(allNum)`](../object/qualifiedPluralNounPhrase(allNum).html)  
+[`qualifiedPluralNounPhrase(anyNum)`](../object/qualifiedPluralNounPhrase(anyNum).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,15 +79,15 @@ Quantified plural phrase.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -97,16 +97,16 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`getQuantity`](#getQuantity)`  `[`getVerifyKeepers`](#getVerifyKeepers)`  `[`resolveMainPhrase`](#resolveMainPhrase)`  `[`resolveNouns`](#resolveNouns)`  `[`selectExactCount`](#selectExactCount)`  `
+[`getQuantity`](#getQuantity)[`getVerifyKeepers`](#getVerifyKeepers)[`resolveMainPhrase`](#resolveMainPhrase)[`resolveNouns`](#resolveNouns)[`selectExactCount`](#selectExactCount)
 
 Inherited from `PluralProd` :  
-` `[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)`  `
+[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

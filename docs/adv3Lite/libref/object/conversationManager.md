@@ -85,7 +85,7 @@ associated DefaultAgendaTopics.
 \<.known obj\> Mark obj (a Thing or Topic) as now being known (i.e.
 familiar)
 
-**`conversationManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)`   `[`PreinitObject`](../object/PreinitObject.html)
+**`conversationManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
 
 </div>
 
@@ -98,10 +98,10 @@ familiar)
 </div>
 
 **`conversationManager`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -111,15 +111,15 @@ familiar)
 
 </div>
 
-` `[`convnodeSetTurn`](#convnodeSetTurn)`  `[`customTags`](#customTags)`  `[`idToActor`](#idToActor)`  `[`objNameTab`](#objNameTab)`  `[`pendingTopicInventory`](#pendingTopicInventory)`  `[`pendingTopicInventoryKey`](#pendingTopicInventoryKey)`  `[`respondingActor`](#respondingActor)`  `[`tagPat`](#tagPat)`  `
+[`convnodeSetTurn`](#convnodeSetTurn)[`customTags`](#customTags)[`idToActor`](#idToActor)[`objNameTab`](#objNameTab)[`pendingTopicInventory`](#pendingTopicInventory)[`pendingTopicInventoryKey`](#pendingTopicInventoryKey)[`respondingActor`](#respondingActor)[`tagPat`](#tagPat)
 
-` `
+
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -129,14 +129,14 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`doCustomTag`](#doCustomTag)`  `[`execute`](#execute)`  `[`filterText`](#filterText)`  `[`manageKeys`](#manageKeys)`  `[`scheduleTopicInventory`](#scheduleTopicInventory)`  `[`setInformed`](#setInformed)`  `[`setRevealed`](#setRevealed)`  `[`setUnrevealed`](#setUnrevealed)`  `[`showAgendaError`](#showAgendaError)`  `[`showKnownError`](#showKnownError)`  `[`showObjDoesNotBelongToActorError`](#showObjDoesNotBelongToActorError)`  `[`showObjNotExistError`](#showObjNotExistError)`  `[`showStateError`](#showStateError)`  `[`showWrongKindofObjectError`](#showWrongKindofObjectError)`  `[`topicInventoryDaemon`](#topicInventoryDaemon)`  `
+[`doCustomTag`](#doCustomTag)[`execute`](#execute)[`filterText`](#filterText)[`manageKeys`](#manageKeys)[`scheduleTopicInventory`](#scheduleTopicInventory)[`setInformed`](#setInformed)[`setRevealed`](#setRevealed)[`setUnrevealed`](#setUnrevealed)[`showAgendaError`](#showAgendaError)[`showKnownError`](#showKnownError)[`showObjDoesNotBelongToActorError`](#showObjDoesNotBelongToActorError)[`showObjNotExistError`](#showObjNotExistError)[`showStateError`](#showStateError)[`showWrongKindofObjectError`](#showWrongKindofObjectError)[`topicInventoryDaemon`](#topicInventoryDaemon)
 
-` `
 
-` `
+
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

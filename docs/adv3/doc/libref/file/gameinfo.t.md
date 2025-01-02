@@ -50,7 +50,7 @@ describe the archive entry.
 
 </div>
 
-` `[`gameInfoWriter`](../object/gameInfoWriter.html)`  `
+[`gameInfoWriter`](../object/gameInfoWriter.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

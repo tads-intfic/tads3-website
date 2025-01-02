@@ -68,7 +68,7 @@ Except list results object
 
 </div>
 
-` `[`origResults`](#origResults)`  `
+[`origResults`](#origResults)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ Except list results object
 
 </div>
 
-` `[`ambiguousNounPhrase`](#ambiguousNounPhrase)`  `[`construct`](#construct)`  `[`noMatch`](#noMatch)`  `[`noMatchForLocation`](#noMatchForLocation)`  `[`noMatchForPossessive`](#noMatchForPossessive)`  `[`noMatchPoss`](#noMatchPoss)`  `[`nothingInLocation`](#nothingInLocation)`  `[`noVocabMatch`](#noVocabMatch)`  `[`propNotDefined`](#propNotDefined)`  `
+[`ambiguousNounPhrase`](#ambiguousNounPhrase)[`construct`](#construct)[`noMatch`](#noMatch)[`noMatchForLocation`](#noMatchForLocation)[`noMatchForPossessive`](#noMatchForPossessive)[`noMatchPoss`](#noMatchPoss)[`nothingInLocation`](#nothingInLocation)[`noVocabMatch`](#noVocabMatch)[`propNotDefined`](#propNotDefined)
 
 <span id="_Properties_"></span>
 

@@ -44,7 +44,7 @@ timeout interval expires before any actual event occurs.
 </div>
 
 **`NetTimeoutEvent`**  
-`         `[`NetEvent`](../object/NetEvent.html)  
+[`NetEvent`](../object/NetEvent.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ timeout interval expires before any actual event occurs.
 
 </div>
 
-` `[`evType`](#evType)`  `
+[`evType`](#evType)
 
 Inherited from `NetEvent` :  
-` `[`evArgs`](../object/NetEvent.html#evArgs)`  `
+[`evArgs`](../object/NetEvent.html#evArgs)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `NetEvent` :
 
 </div>
 
-` `
+
 
 Inherited from `NetEvent` :  
-` `[`construct`](../object/NetEvent.html#construct)`  `
+[`construct`](../object/NetEvent.html#construct)
 
 <span id="_Properties_"></span>
 

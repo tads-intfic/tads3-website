@@ -267,7 +267,7 @@ as well, so that the plain text version of the information is available
 to tools that can't handle HTML.
 
 **AuthorEmail**  
-Format: *Name* `<`*email*`>` `<`*email*`>;` ...  
+Format: *Name* `<`*email*`><`*email*`>;` ...  
 Example: `AuthorEmail: S.F. Author <sfauthor@mywebsite.org>`  
 TADS 3 versionInfo example:
 `authorEmail = 'S.F. Author <sfauthor@mywebsite.org>'`  

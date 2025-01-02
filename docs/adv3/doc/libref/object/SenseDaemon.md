@@ -44,9 +44,9 @@ sensory context. This is the daemon counterpart of SenseFuse.
 </div>
 
 **`SenseDaemon`**  
-`         `[`Daemon`](../object/Daemon.html)  
-`                 `[`Event`](../object/Event.html)  
-`                         `[`BasicEvent`](../object/BasicEvent.html)  
+[`Daemon`](../object/Daemon.html)  
+[`Event`](../object/Event.html)  
+[`BasicEvent`](../object/BasicEvent.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -72,16 +72,16 @@ sensory context. This is the daemon counterpart of SenseFuse.
 
 </div>
 
-` `
+
 
 Inherited from `Daemon` :  
-` `[`interval_`](../object/Daemon.html#interval_)`  `
+[`interval_`](../object/Daemon.html#interval_)
 
 Inherited from `Event` :  
-` `[`eventOrder`](../object/Event.html#eventOrder)`  `[`isPromptDaemon`](../object/Event.html#isPromptDaemon)`  `[`nextRunTime`](../object/Event.html#nextRunTime)`  `
+[`eventOrder`](../object/Event.html#eventOrder)[`isPromptDaemon`](../object/Event.html#isPromptDaemon)[`nextRunTime`](../object/Event.html#nextRunTime)
 
 Inherited from `BasicEvent` :  
-` `[`obj_`](../object/BasicEvent.html#obj_)`  `[`prop_`](../object/BasicEvent.html#prop_)`  `[`sense_`](../object/BasicEvent.html#sense_)`  `[`source_`](../object/BasicEvent.html#source_)`  `
+[`obj_`](../object/BasicEvent.html#obj_)[`prop_`](../object/BasicEvent.html#prop_)[`sense_`](../object/BasicEvent.html#sense_)[`source_`](../object/BasicEvent.html#source_)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,16 +91,16 @@ Inherited from `BasicEvent` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 Inherited from `Daemon` :  
-` `[`executeEvent`](../object/Daemon.html#executeEvent)`  `
+[`executeEvent`](../object/Daemon.html#executeEvent)
 
 Inherited from `Event` :  
-` `[`delayEvent`](../object/Event.html#delayEvent)`  `[`getNextRunTime`](../object/Event.html#getNextRunTime)`  `[`removeEvent`](../object/Event.html#removeEvent)`  `
+[`delayEvent`](../object/Event.html#delayEvent)[`getNextRunTime`](../object/Event.html#getNextRunTime)[`removeEvent`](../object/Event.html#removeEvent)
 
 Inherited from `BasicEvent` :  
-` `[`callMethod`](../object/BasicEvent.html#callMethod)`  `[`eventMatches`](../object/BasicEvent.html#eventMatches)`  `
+[`callMethod`](../object/BasicEvent.html#callMethod)[`eventMatches`](../object/BasicEvent.html#eventMatches)
 
 <span id="_Properties_"></span>
 

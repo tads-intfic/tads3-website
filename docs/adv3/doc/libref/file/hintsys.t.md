@@ -36,7 +36,7 @@ This module depends on the menus module to display the user interface.
 
 </div>
 
-` `[`Goal`](../object/Goal.html)`  `[`Hint`](../object/Hint.html)`  `[`HintLongTopicItem`](../object/HintLongTopicItem.html)`  `[`HintMenu`](../object/HintMenu.html)`  `[`HintMenuObject`](../object/HintMenuObject.html)`  `[`TopHintMenu`](../object/TopHintMenu.html)`  `
+[`Goal`](../object/Goal.html)[`Hint`](../object/Hint.html)[`HintLongTopicItem`](../object/HintLongTopicItem.html)[`HintMenu`](../object/HintMenu.html)[`HintMenuObject`](../object/HintMenuObject.html)[`TopHintMenu`](../object/TopHintMenu.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -45,7 +45,7 @@ This module depends on the menus module to display the user interface.
 
 </div>
 
-` `[`gameHintStatus`](../object/gameHintStatus.html)`  `[`hintManager`](../object/hintManager.html)`  `[`sessionHintStatus`](../object/sessionHintStatus.html)`  `
+[`gameHintStatus`](../object/gameHintStatus.html)[`hintManager`](../object/hintManager.html)[`sessionHintStatus`](../object/sessionHintStatus.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

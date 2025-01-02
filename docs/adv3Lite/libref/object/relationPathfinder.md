@@ -46,7 +46,7 @@ PART OF THE RELATIONS EXTENSION
 </div>
 
 **`relationPathfinder`**  
-`         `[`Pathfinder`](../object/Pathfinder.html)  
+[`Pathfinder`](../object/Pathfinder.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -56,10 +56,10 @@ PART OF THE RELATIONS EXTENSION
 
 </div>
 
-` `[`relationList`](#relationList)`  `
+[`relationList`](#relationList)
 
 Inherited from `Pathfinder` :  
-` `[`cachedRoute`](../object/Pathfinder.html#cachedRoute)`  `[`currentDestination`](../object/Pathfinder.html#currentDestination)`  `[`nodesVisited`](../object/Pathfinder.html#nodesVisited)`  `[`pathsFound`](../object/Pathfinder.html#pathsFound)`  `[`steps`](../object/Pathfinder.html#steps)`  `
+[`cachedRoute`](../object/Pathfinder.html#cachedRoute)[`currentDestination`](../object/Pathfinder.html#currentDestination)[`nodesVisited`](../object/Pathfinder.html#nodesVisited)[`pathsFound`](../object/Pathfinder.html#pathsFound)[`steps`](../object/Pathfinder.html#steps)
 
 <span id="_MethodSummary_"></span>
 
@@ -69,10 +69,10 @@ Inherited from `Pathfinder` :
 
 </div>
 
-` `[`findDestinations`](#findDestinations)`  `[`findPath`](#findPath)`  `
+[`findDestinations`](#findDestinations)[`findPath`](#findPath)
 
 Inherited from `Pathfinder` :  
-` `[`takeOneStep`](../object/Pathfinder.html#takeOneStep)`  `
+[`takeOneStep`](../object/Pathfinder.html#takeOneStep)
 
 <span id="_Properties_"></span>
 

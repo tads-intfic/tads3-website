@@ -37,7 +37,7 @@ Since ActorTopicEntry inherits from ReplaceRedirector as well as
 TopicEntry, its topicResponse() methods can make use of doInstead() and
 doNested().
 
-`class `**`ActorTopicEntry`**` :   `[`ReplaceRedirector`](../object/ReplaceRedirector.html)`   `[`TopicEntry`](../object/TopicEntry.html)
+`class `**`ActorTopicEntry`**` :   `[`ReplaceRedirector`](../object/ReplaceRedirector.html)[`TopicEntry`](../object/TopicEntry.html)
 
 </div>
 
@@ -50,10 +50,10 @@ doNested().
 </div>
 
 **`ActorTopicEntry`**  
-`         `[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
-`                 `[`Redirector`](../object/Redirector.html)  
+[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
+[`Redirector`](../object/Redirector.html)  
 `                         object`  
-`         `[`TopicEntry`](../object/TopicEntry.html)  
+[`TopicEntry`](../object/TopicEntry.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -64,72 +64,72 @@ doNested().
 </div>
 
 **`ActorTopicEntry`**  
-`         `[`AltTopic`](../object/AltTopic.html)  
-`         `[`AskAboutForTopic`](../object/AskAboutForTopic.html)  
-`         `[`AskForTopic`](../object/AskForTopic.html)  
-`         `[`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
-`         `[`AskTellShowTopic`](../object/AskTellShowTopic.html)  
-`         `[`AskTellTopic`](../object/AskTellTopic.html)  
-`         `[`AskTopic`](../object/AskTopic.html)  
-`         `[`CommandTopic`](../object/CommandTopic.html)  
-`         `[`DefaultTopic`](../object/DefaultTopic.html)  
-`                 `[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
-`                         `[`DefaultAgendaTopic`](../object/DefaultAgendaTopic.html)  
-`                         `[`DefaultAnyNonSayTopic`](../object/DefaultAnyNonSayTopic.html)  
-`                 `[`DefaultAskForTopic`](../object/DefaultAskForTopic.html)  
-`                 `[`DefaultAskQueryTopic`](../object/DefaultAskQueryTopic.html)  
-`                 `[`DefaultAskTellTopic`](../object/DefaultAskTellTopic.html)  
-`                 `[`DefaultAskTopic`](../object/DefaultAskTopic.html)  
-`                 `[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
-`                 `[`DefaultConversationTopic`](../object/DefaultConversationTopic.html)  
-`                         `[`DefaultNonSayTopic`](../object/DefaultNonSayTopic.html)  
-`                 `[`DefaultGiveShowTopic`](../object/DefaultGiveShowTopic.html)  
-`                 `[`DefaultGiveTopic`](../object/DefaultGiveTopic.html)  
-`                 `[`DefaultQueryTopic`](../object/DefaultQueryTopic.html)  
-`                 `[`DefaultSayQueryTopic`](../object/DefaultSayQueryTopic.html)  
-`                 `[`DefaultSayTellTalkTopic`](../object/DefaultSayTellTalkTopic.html)  
-`                 `[`DefaultSayTellTopic`](../object/DefaultSayTellTopic.html)  
-`                 `[`DefaultSayTopic`](../object/DefaultSayTopic.html)  
-`                 `[`DefaultShowTopic`](../object/DefaultShowTopic.html)  
-`                 `[`DefaultTalkTopic`](../object/DefaultTalkTopic.html)  
-`                 `[`DefaultTellTalkTopic`](../object/DefaultTellTalkTopic.html)  
-`                 `[`DefaultTellTopic`](../object/DefaultTellTopic.html)  
-`         `[`GiveShowTopic`](../object/GiveShowTopic.html)  
-`         `[`GiveTopic`](../object/GiveTopic.html)  
-`         `[`InitiateTopic`](../object/InitiateTopic.html)  
-`                 `[`NodeContinuationTopic`](../object/NodeContinuationTopic.html)  
-`                 `[`NodeEndCheck`](../object/NodeEndCheck.html)  
-`         `[`MiscTopic`](../object/MiscTopic.html)  
-`                 `[`GreetingTopic`](../object/GreetingTopic.html)  
-`                         `[`ActorByeTopic`](../object/ActorByeTopic.html)  
-`                         `[`BoredByeTopic`](../object/BoredByeTopic.html)  
-`                         `[`ByeTopic`](../object/ByeTopic.html)  
-`                         `[`HelloGoodbyeTopic`](../object/HelloGoodbyeTopic.html)  
-`                         `[`HelloTopic`](../object/HelloTopic.html)  
-`                                 `[`ActorHelloTopic`](../object/ActorHelloTopic.html)  
-`                                 `[`ImpHelloTopic`](../object/ImpHelloTopic.html)  
-`                         `[`ImpByeTopic`](../object/ImpByeTopic.html)  
-`                         `[`LeaveByeTopic`](../object/LeaveByeTopic.html)  
-`                 `[`HitTopic`](../object/HitTopic.html)  
-`                 `[`KissTopic`](../object/KissTopic.html)  
-`                 `[`NoTopic`](../object/NoTopic.html)  
-`                 `[`TouchTopic`](../object/TouchTopic.html)  
-`                 `[`YesNoTopic`](../object/YesNoTopic.html)  
-`                 `[`YesTopic`](../object/YesTopic.html)  
-`         `[`SceneTopic`](../object/SceneTopic.html)  
-`                 `[`SceneEndTopic`](../object/SceneEndTopic.html)  
-`                 `[`SceneStartTopic`](../object/SceneStartTopic.html)  
-`         `[`ShowTopic`](../object/ShowTopic.html)  
-`         `[`SlaveTopic`](../object/SlaveTopic.html)  
-`         `[`SpecialTopic`](../object/SpecialTopic.html)  
-`                 `[`QueryTopic`](../object/QueryTopic.html)  
-`                 `[`SayTopic`](../object/SayTopic.html)  
-`         `[`TalkTopic`](../object/TalkTopic.html)  
-`                 `[`AskTalkTopic`](../object/AskTalkTopic.html)  
-`                 `[`AskTellTalkTopic`](../object/AskTellTalkTopic.html)  
-`                 `[`TellTalkTopic`](../object/TellTalkTopic.html)  
-`         `[`TellTalkShowTopic`](../object/TellTalkShowTopic.html)  
-`         `[`TellTopic`](../object/TellTopic.html)  
+[`AltTopic`](../object/AltTopic.html)  
+[`AskAboutForTopic`](../object/AskAboutForTopic.html)  
+[`AskForTopic`](../object/AskForTopic.html)  
+[`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
+[`AskTellShowTopic`](../object/AskTellShowTopic.html)  
+[`AskTellTopic`](../object/AskTellTopic.html)  
+[`AskTopic`](../object/AskTopic.html)  
+[`CommandTopic`](../object/CommandTopic.html)  
+[`DefaultTopic`](../object/DefaultTopic.html)  
+[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
+[`DefaultAgendaTopic`](../object/DefaultAgendaTopic.html)  
+[`DefaultAnyNonSayTopic`](../object/DefaultAnyNonSayTopic.html)  
+[`DefaultAskForTopic`](../object/DefaultAskForTopic.html)  
+[`DefaultAskQueryTopic`](../object/DefaultAskQueryTopic.html)  
+[`DefaultAskTellTopic`](../object/DefaultAskTellTopic.html)  
+[`DefaultAskTopic`](../object/DefaultAskTopic.html)  
+[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
+[`DefaultConversationTopic`](../object/DefaultConversationTopic.html)  
+[`DefaultNonSayTopic`](../object/DefaultNonSayTopic.html)  
+[`DefaultGiveShowTopic`](../object/DefaultGiveShowTopic.html)  
+[`DefaultGiveTopic`](../object/DefaultGiveTopic.html)  
+[`DefaultQueryTopic`](../object/DefaultQueryTopic.html)  
+[`DefaultSayQueryTopic`](../object/DefaultSayQueryTopic.html)  
+[`DefaultSayTellTalkTopic`](../object/DefaultSayTellTalkTopic.html)  
+[`DefaultSayTellTopic`](../object/DefaultSayTellTopic.html)  
+[`DefaultSayTopic`](../object/DefaultSayTopic.html)  
+[`DefaultShowTopic`](../object/DefaultShowTopic.html)  
+[`DefaultTalkTopic`](../object/DefaultTalkTopic.html)  
+[`DefaultTellTalkTopic`](../object/DefaultTellTalkTopic.html)  
+[`DefaultTellTopic`](../object/DefaultTellTopic.html)  
+[`GiveShowTopic`](../object/GiveShowTopic.html)  
+[`GiveTopic`](../object/GiveTopic.html)  
+[`InitiateTopic`](../object/InitiateTopic.html)  
+[`NodeContinuationTopic`](../object/NodeContinuationTopic.html)  
+[`NodeEndCheck`](../object/NodeEndCheck.html)  
+[`MiscTopic`](../object/MiscTopic.html)  
+[`GreetingTopic`](../object/GreetingTopic.html)  
+[`ActorByeTopic`](../object/ActorByeTopic.html)  
+[`BoredByeTopic`](../object/BoredByeTopic.html)  
+[`ByeTopic`](../object/ByeTopic.html)  
+[`HelloGoodbyeTopic`](../object/HelloGoodbyeTopic.html)  
+[`HelloTopic`](../object/HelloTopic.html)  
+[`ActorHelloTopic`](../object/ActorHelloTopic.html)  
+[`ImpHelloTopic`](../object/ImpHelloTopic.html)  
+[`ImpByeTopic`](../object/ImpByeTopic.html)  
+[`LeaveByeTopic`](../object/LeaveByeTopic.html)  
+[`HitTopic`](../object/HitTopic.html)  
+[`KissTopic`](../object/KissTopic.html)  
+[`NoTopic`](../object/NoTopic.html)  
+[`TouchTopic`](../object/TouchTopic.html)  
+[`YesNoTopic`](../object/YesNoTopic.html)  
+[`YesTopic`](../object/YesTopic.html)  
+[`SceneTopic`](../object/SceneTopic.html)  
+[`SceneEndTopic`](../object/SceneEndTopic.html)  
+[`SceneStartTopic`](../object/SceneStartTopic.html)  
+[`ShowTopic`](../object/ShowTopic.html)  
+[`SlaveTopic`](../object/SlaveTopic.html)  
+[`SpecialTopic`](../object/SpecialTopic.html)  
+[`QueryTopic`](../object/QueryTopic.html)  
+[`SayTopic`](../object/SayTopic.html)  
+[`TalkTopic`](../object/TalkTopic.html)  
+[`AskTalkTopic`](../object/AskTalkTopic.html)  
+[`AskTellTalkTopic`](../object/AskTellTalkTopic.html)  
+[`TellTalkTopic`](../object/TellTalkTopic.html)  
+[`TellTalkShowTopic`](../object/TellTalkShowTopic.html)  
+[`TellTopic`](../object/TellTopic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -146,14 +146,14 @@ doNested().
 
 </div>
 
-` `[`activated`](#activated)`  `[`active`](#active)`  `[`autoName`](#autoName)`  `[`convKeys`](#convKeys)`  `[`curiosityAroused`](#curiosityAroused)`  `[`getActor`](#getActor)`  `[`impliesGreeting`](#impliesGreeting)`  `[`isConversational`](#isConversational)`  `[`keyTopics`](#keyTopics)`  `[`listOrder`](#listOrder)`  `[`name`](#name)`  `[`suggestAs`](#suggestAs)`  `[`timesInvoked`](#timesInvoked)`  `
+[`activated`](#activated)[`active`](#active)[`autoName`](#autoName)[`convKeys`](#convKeys)[`curiosityAroused`](#curiosityAroused)[`getActor`](#getActor)[`impliesGreeting`](#impliesGreeting)[`isConversational`](#isConversational)[`keyTopics`](#keyTopics)[`listOrder`](#listOrder)[`name`](#name)[`suggestAs`](#suggestAs)[`timesInvoked`](#timesInvoked)
 
-` `
 
-` `
+
+
 
 Inherited from `TopicEntry` :  
-` `[`includeInList`](../object/TopicEntry.html#includeInList)`  `[`isActive`](../object/TopicEntry.html#isActive)`  `[`matchExactCase`](../object/TopicEntry.html#matchExactCase)`  `[`matchObj`](../object/TopicEntry.html#matchObj)`  `[`matchPattern`](../object/TopicEntry.html#matchPattern)`  `[`matchScore`](../object/TopicEntry.html#matchScore)`  `[`scoreBoost`](../object/TopicEntry.html#scoreBoost)`  `[`topicMatched`](../object/TopicEntry.html#topicMatched)`  `
+[`includeInList`](../object/TopicEntry.html#includeInList)[`isActive`](../object/TopicEntry.html#isActive)[`matchExactCase`](../object/TopicEntry.html#matchExactCase)[`matchObj`](../object/TopicEntry.html#matchObj)[`matchPattern`](../object/TopicEntry.html#matchPattern)[`matchScore`](../object/TopicEntry.html#matchScore)[`scoreBoost`](../object/TopicEntry.html#scoreBoost)[`topicMatched`](../object/TopicEntry.html#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -163,16 +163,16 @@ Inherited from `TopicEntry` :
 
 </div>
 
-` `[`activate`](#activate)`  `[`addToConvKeyTable`](#addToConvKeyTable)`  `[`buildName`](#buildName)`  `[`curiositySatisfied`](#curiositySatisfied)`  `[`deactivate`](#deactivate)`  `[`getKeyTopics`](#getKeyTopics)`  `[`handleTopic`](#handleTopic)`  `[`initializeTopicEntry`](#initializeTopicEntry)`  `[`isReachable`](#isReachable)`  `[`nodeActive`](#nodeActive)`  `[`showKeyTopics`](#showKeyTopics)`  `[`timesToSuggest`](#timesToSuggest)`  `
+[`activate`](#activate)[`addToConvKeyTable`](#addToConvKeyTable)[`buildName`](#buildName)[`curiositySatisfied`](#curiositySatisfied)[`deactivate`](#deactivate)[`getKeyTopics`](#getKeyTopics)[`handleTopic`](#handleTopic)[`initializeTopicEntry`](#initializeTopicEntry)[`isReachable`](#isReachable)[`nodeActive`](#nodeActive)[`showKeyTopics`](#showKeyTopics)[`timesToSuggest`](#timesToSuggest)
 
 Inherited from `ReplaceRedirector` :  
-` `[`redirect`](../object/ReplaceRedirector.html#redirect)`  `
+[`redirect`](../object/ReplaceRedirector.html#redirect)
 
 Inherited from `Redirector` :  
-` `[`doInstead`](../object/Redirector.html#doInstead)`  `[`doNested`](../object/Redirector.html#doNested)`  `[`doOtherAction`](../object/Redirector.html#doOtherAction)`  `
+[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 Inherited from `TopicEntry` :  
-` `[`addTopic`](../object/TopicEntry.html#addTopic)`  `[`matchTopic`](../object/TopicEntry.html#matchTopic)`  `[`scoreBooster`](../object/TopicEntry.html#scoreBooster)`  `[`topicResponse`](../object/TopicEntry.html#topicResponse)`  `
+[`addTopic`](../object/TopicEntry.html#addTopic)[`matchTopic`](../object/TopicEntry.html#matchTopic)[`scoreBooster`](../object/TopicEntry.html#scoreBooster)[`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_Properties_"></span>
 

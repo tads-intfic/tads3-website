@@ -46,7 +46,7 @@ Dummy command placeholder for messages generated without a command.
 
 </div>
 
-` `[`actor`](#actor)`  `
+[`actor`](#actor)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ Dummy command placeholder for messages generated without a command.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

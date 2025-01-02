@@ -56,7 +56,7 @@ define are:
 
 So, for example, a typical versionInfo definition might look like this:
 
-```
+`
     versionInfo: GameID
         IFID = '0D9D2F69-90D5-4BDA-A21F-5B64C878D0AB'
         name = 'Fire!'
@@ -84,7 +84,7 @@ So, for example, a typical versionInfo definition might look like this:
             Mercury and adv3 libraries by Mike Roberts. ";               
         }
     ;
-```
+`
 
 In addition, you can override the following settings if you don't like
 the defaults inherited from GameInfoModuleID:
@@ -111,11 +111,11 @@ represent the player character at the start of the game (typically this
 is called me, though you can call it anything you like). A minimal
 gameMain definition will therefore look like this:
 
-```
+`
     gameMain: GameMainDef
        initialPlayerChar = me
     ;
-```
+`
 
 In practice you'll normally want to define rather more than this on your
 gameMain object. The other properties and methods you may want to define
@@ -237,7 +237,7 @@ later version of adv3Lite).
 A fairly typical gameMain definition might thus look something like
 this:
 
-```
+`
     gameMain: GameMainDef
         initialPlayerChar = me
         
@@ -262,7 +262,7 @@ this:
         }
        
     ;
-```
+`
 
   
 <span id="notes"></span>
@@ -275,7 +275,7 @@ you'd typically make it display a string beginning and ending with the
 that picks up all the relevant text from the versionInfo object might
 look like this:
 
-```
+`
       setAboutBox()
         {
             "<ABOUTBOX><CENTER><FONT size=+2 color=red><b><<versionInfo.name>>
@@ -283,7 +283,7 @@ look like this:
              <<versionInfo.byline>>\b
             Version <<versionInfo.version>></CENTER></ABOUTBOX>";
         }
-```
+`
 
 For <span id="tenses">**tenses**</span> other than past or present,
 override `Narrator.tense` to be one of Present
@@ -334,7 +334,7 @@ you create a new adv3Lite new game using the new Project Wizard in TADS
 3 Workbench, the Wizard will create a minimal template game that does
 all this work for you thus:
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
@@ -374,7 +374,7 @@ all this work for you thus:
         person = 2  // change to 1 for a first-person game
         contType = Carrier    
     ;
-```
+`
 
 Except that the versionInfo object will be filled in with the data you
 entered in the wizard. This way of declaring the initial player
@@ -393,7 +393,7 @@ you aren't using Workbench) you can save yourself a small amount of
 typing by using the Player class instead of the Thing class to define
 the player character object:
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
@@ -460,7 +460,7 @@ customized response to X ME.
 <span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em> Topics</a>
     <a href="ending.html" class="nav"><em>Next:</em> Endings</a>    
 </span>
-```
+`
 
 
 

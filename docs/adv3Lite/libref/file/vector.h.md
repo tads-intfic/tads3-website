@@ -39,7 +39,7 @@ This header defines the Vector intrinsic class.
 
 </div>
 
-` `[`Vector`](../object/Vector.html)`  `
+[`Vector`](../object/Vector.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

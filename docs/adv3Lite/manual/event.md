@@ -43,7 +43,7 @@ the Fuse will execute on the same turn.
 For example, to define an alarm clock that rings in 10 turns' time after
 you push a button on it, we could define:
 
-```
+`
     alarmClock: Thing 'alarm clock'
         "It has a big red button attached. "
         
@@ -73,7 +73,7 @@ you push a button on it, we could define:
        
        isDown = nil
     ;
-```
+`
 
 Note, by the way, that the property we want to execute has to be listed
 in the arguments to `new Fuse` as a property
@@ -155,9 +155,9 @@ You may wish to stop a Daemon, or prevent a Fuse from executing before
 its due to fire. If you've stored a reference to the Fuse or Daemon you
 can disable it by calling its **removeEvent()** method, e.g.:
 
-```
+`
       daemonID.removeEvent();
-```
+`
 
 If you haven't stored a reference to the Fuse or Daemon you want to
 remove, you can remove it by calling:

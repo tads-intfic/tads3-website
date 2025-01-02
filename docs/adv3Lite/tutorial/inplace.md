@@ -36,7 +36,7 @@ This determines the way an item is first described in a room listing,
 until the item is moved. Try moving the rock and the pebble into
 startroom and adding an initSpecialDesc to the rock like this:
 
-```
+`
     + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
         
@@ -45,7 +45,7 @@ startroom and adding an initSpecialDesc to the rock like this:
         
         weight = 10
     ;
-```
+`
 
 Once you've made these changes, try recompiling and running the game.
 You should now see the following as the description of the starting
@@ -71,7 +71,7 @@ incongruous. What would we be even better would be if we could combine
 the mention of both objects into a single sentence. Here's one way we
 can do it:
 
-```
+`
     + smallRock: Thing 'small rock; round solid'
          "It's roughly round and looks pretty solid. "
         
@@ -81,7 +81,7 @@ can do it:
         
         weight = 10
     ;
-```
+`
 
 Let's look at how this works. The smallRock will use its initSpecialDesc
 until it has been moved. When a Thing is moved (via a call to
@@ -184,7 +184,7 @@ course we could simply add a mention of the object to the main room
 description, but this seems quite a good opportunity to illustrate the
 use of `specialDesc`:
 
-```
+`
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -205,7 +205,7 @@ use of `specialDesc`:
             }
         }
     ;
-```
+`
 
 The room description then becomes:
 
@@ -232,7 +232,7 @@ approach would pretty soon become quite unwieldy. What we need is some
 means of listing all the objects currently on the pedestal, whatever
 they happen to be. The following should do the trick:
 
-```
+`
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -255,7 +255,7 @@ they happen to be. The following should do the trick:
             }
         }
     ;
-```
+`
 
 We use `listableContents` rather than just
 `contents` to exclude any fixtures or components
@@ -305,7 +305,7 @@ call attention to rows of suspicious-looking holes in the walls of the
 cave. But what we'll actually do here is provide the pedestal with a
 warning inscription:
 
-```
+`
     + pedestal: Fixture, Surface 'stone pedestal; smooth solitary'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day, picking out the inscription carved into its front. "
@@ -327,7 +327,7 @@ warning inscription:
             pedestal. '
         
     ; 
-```
+`
 
 For the sake of brevity we've omitted repeating the rest of the
 definition of the pedestal. Note that we don't need to give the
@@ -375,7 +375,7 @@ game. You may remember above we said that the way we'd set up the
 PathPassage notionally leading back to the camp was something of a
 horrible hack. Now we'll see how it should be done:
 
-```
+`
     startroom: Room 'Outside Cave'
         desc = "You're standing in the bright sunlight just outside of a large,
             dark, foreboding cave, which lies to the north. The path back to your
@@ -407,7 +407,7 @@ horrible hack. Now we'll see how it should be done:
             finishGameMsg(ftVictory, [finishOptionUndo]);
         }    
     ;
-```
+`
 
 If you think there's something vaguely familiar about this, then you're
 right. For one thing, much of the code on the

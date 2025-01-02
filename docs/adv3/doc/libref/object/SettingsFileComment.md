@@ -71,7 +71,7 @@ don't otherwise try to interpret them.
 
 </div>
 
-` `[`str_`](#str_)`  `
+[`str_`](#str_)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ don't otherwise try to interpret them.
 
 </div>
 
-` `[`construct`](#construct)`  `[`writeToFile`](#writeToFile)`  `
+[`construct`](#construct)[`writeToFile`](#writeToFile)
 
 <span id="_Properties_"></span>
 

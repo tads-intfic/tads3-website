@@ -60,7 +60,7 @@ Root class for verb tenses
 
 </div>
 
-` `[`Future`](../object/Future.html)`  `[`FuturePerfect`](../object/FuturePerfect.html)`  `[`Past`](../object/Past.html)`  `[`PastPerfect`](../object/PastPerfect.html)`  `[`Perfect`](../object/Perfect.html)`  `[`Present`](../object/Present.html)`  `
+` [`Future`](../object/Future.html)  [`FuturePerfect`](../object/FuturePerfect.html)  [`Past`](../object/Past.html)  [`PastPerfect`](../object/PastPerfect.html)  [`Perfect`](../object/Perfect.html)  [`Present`](../object/Present.html)  `
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -69,7 +69,7 @@ Root class for verb tenses
 
 </div>
 
-` `[`name`](#name)`  `
+` [`name`](#name)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ Root class for verb tenses
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

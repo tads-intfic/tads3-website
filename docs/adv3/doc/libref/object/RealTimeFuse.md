@@ -44,8 +44,8 @@ time into the game.
 </div>
 
 **`RealTimeFuse`**  
-`         `[`RealTimeEvent`](../object/RealTimeEvent.html)  
-`                 `[`BasicEvent`](../object/BasicEvent.html)  
+[`RealTimeEvent`](../object/RealTimeEvent.html)  
+[`BasicEvent`](../object/BasicEvent.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -56,7 +56,7 @@ time into the game.
 </div>
 
 **`RealTimeFuse`**  
-`         `[`RealTimeSenseFuse`](../object/RealTimeSenseFuse.html)  
+[`RealTimeSenseFuse`](../object/RealTimeSenseFuse.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -73,13 +73,13 @@ time into the game.
 
 </div>
 
-` `
+
 
 Inherited from `RealTimeEvent` :  
-` `[`eventTime`](../object/RealTimeEvent.html#eventTime)`  `
+[`eventTime`](../object/RealTimeEvent.html#eventTime)
 
 Inherited from `BasicEvent` :  
-` `[`obj_`](../object/BasicEvent.html#obj_)`  `[`prop_`](../object/BasicEvent.html#prop_)`  `[`sense_`](../object/BasicEvent.html#sense_)`  `[`source_`](../object/BasicEvent.html#source_)`  `
+[`obj_`](../object/BasicEvent.html#obj_)[`prop_`](../object/BasicEvent.html#prop_)[`sense_`](../object/BasicEvent.html#sense_)[`source_`](../object/BasicEvent.html#source_)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,13 +89,13 @@ Inherited from `BasicEvent` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`executeEvent`](#executeEvent)`  `
+[`construct`](#construct)[`executeEvent`](#executeEvent)
 
 Inherited from `RealTimeEvent` :  
-` `[`getEventTime`](../object/RealTimeEvent.html#getEventTime)`  `[`removeEvent`](../object/RealTimeEvent.html#removeEvent)`  `
+[`getEventTime`](../object/RealTimeEvent.html#getEventTime)[`removeEvent`](../object/RealTimeEvent.html#removeEvent)
 
 Inherited from `BasicEvent` :  
-` `[`callMethod`](../object/BasicEvent.html#callMethod)`  `[`eventMatches`](../object/BasicEvent.html#eventMatches)`  `
+[`callMethod`](../object/BasicEvent.html#callMethod)[`eventMatches`](../object/BasicEvent.html#eventMatches)
 
 <span id="_Properties_"></span>
 

@@ -46,7 +46,7 @@ of internal open/closed state.
 </div>
 
 **`BasicOpenable`**  
-`         `[`Linkable`](../object/Linkable.html)  
+[`Linkable`](../object/Linkable.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,18 +57,18 @@ of internal open/closed state.
 </div>
 
 **`BasicOpenable`**  
-`         `[`BasicDoor`](../object/BasicDoor.html)  
-`                 `[`Door`](../object/Door.html)  
-`                         `[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
-`                 `[`SecretDoor`](../object/SecretDoor.html)  
-`                         `[`HiddenDoor`](../object/HiddenDoor.html)  
-`         `[`Openable`](../object/Openable.html)  
-`                 `[`Door`](../object/Door.html)  
-`                         `[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
-`                 `[`Matchbook`](../object/Matchbook.html)  
-`                 `[`OpenableContainer`](../object/OpenableContainer.html)  
-`                         `[`KeyedContainer`](../object/KeyedContainer.html)  
-`                         `[`LockableContainer`](../object/LockableContainer.html)  
+[`BasicDoor`](../object/BasicDoor.html)  
+[`Door`](../object/Door.html)  
+[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
+[`SecretDoor`](../object/SecretDoor.html)  
+[`HiddenDoor`](../object/HiddenDoor.html)  
+[`Openable`](../object/Openable.html)  
+[`Door`](../object/Door.html)  
+[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
+[`Matchbook`](../object/Matchbook.html)  
+[`OpenableContainer`](../object/OpenableContainer.html)  
+[`KeyedContainer`](../object/KeyedContainer.html)  
+[`LockableContainer`](../object/LockableContainer.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -85,9 +85,9 @@ of internal open/closed state.
 
 </div>
 
-` `[`cannotMoveThroughMsg`](#cannotMoveThroughMsg)`  `[`cannotTouchThroughMsg`](#cannotTouchThroughMsg)`  `[`initiallyOpen`](#initiallyOpen)`  `[`isOpen_`](#isOpen_)`  `[`openDesc`](#openDesc)`  `
+[`cannotMoveThroughMsg`](#cannotMoveThroughMsg)[`cannotTouchThroughMsg`](#cannotTouchThroughMsg)[`initiallyOpen`](#initiallyOpen)[`isOpen_`](#isOpen_)[`openDesc`](#openDesc)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -97,10 +97,10 @@ of internal open/closed state.
 
 </div>
 
-` `[`initializeThing`](#initializeThing)`  `[`isOpen`](#isOpen)`  `[`makeOpen`](#makeOpen)`  `[`tryImplicitRemoveObstructor`](#tryImplicitRemoveObstructor)`  `
+[`initializeThing`](#initializeThing)[`isOpen`](#isOpen)[`makeOpen`](#makeOpen)[`tryImplicitRemoveObstructor`](#tryImplicitRemoveObstructor)
 
 Inherited from `Linkable` :  
-` `[`masterObject`](../object/Linkable.html#masterObject)`  `
+[`masterObject`](../object/Linkable.html#masterObject)
 
 <span id="_Properties_"></span>
 

@@ -31,7 +31,7 @@ Abstract pathfinder
 
 </div>
 
-` `[`Pathfinder`](../object/Pathfinder.html)`  `
+[`Pathfinder`](../object/Pathfinder.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -40,7 +40,7 @@ Abstract pathfinder
 
 </div>
 
-` `[`pcRouteFinder`](../object/pcRouteFinder.html)`  `[`routeFinder`](../object/routeFinder.html)`  `
+[`pcRouteFinder`](../object/pcRouteFinder.html)[`routeFinder`](../object/routeFinder.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

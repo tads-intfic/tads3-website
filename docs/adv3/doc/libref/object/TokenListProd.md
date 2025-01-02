@@ -45,7 +45,7 @@ keep track of the token list that triggered the node.
 </div>
 
 **`TokenListProd`**  
-`         `[`BasicProd`](../object/BasicProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,10 +71,10 @@ keep track of the token list that triggered the node.
 
 </div>
 
-` `[`tokenList`](#tokenList)`  `
+[`tokenList`](#tokenList)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,10 +84,10 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

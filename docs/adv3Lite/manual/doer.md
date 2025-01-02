@@ -72,25 +72,25 @@ symbol name as it appears in the source code. If you use a class name,
 the command matches any object of the class. For example, to handle
 putting any treasure in any container:
 
-```
+`
     cmd = 'put Treasure in Container'
-```
+`
 
 You can match multiple objects or classes in a single noun slot (and you
 can freely mix objects and classes). For example, to handle putting any
 treasure or magic item in a container:
 
-```
+`
     cmd = 'put Treasure|Magical in Container'
-```
+`
 
 You can't use the '\|' syntax with verbs, because the verb syntax covers
 the entire phrase. You can match multiple verbs by writing out the
 entire phrasing for each verb, separating each phrase with a semicolon:
 
-```
+`
     cmd = 'take skull; put skull in Thing'
-```
+`
 
 You can also write a command that matches ANY verb, by using "\*" as the
 verb. You can follow the "\*" with any number of objects; the first is
@@ -113,47 +113,47 @@ along with IActions). It can, however, be made to appear to work with
 **directions** to a limited extent. For example, a Doer defined like
 this will match a GO NORTH command:
 
-```
+`
     Doer
        cmd = 'go north'
        ...
     ;
-```
+`
 
 We can also define a Doer that will match an attempt to move in one of
 several directions, for example:
 
-```
+`
     Doer
        cmd = 'go north|south'
        ...
     ;
-```
+`
 
 This will match both GO NORTH or GO SOUTH (or just N or S for that
 matter). But the way it works isn't quite the way it works with commands
 referring to physical objects, like the TAKE SKULL example. If you
 defined a Doer like this:
 
-```
+`
     Doer
        cmd = 'go xxx'
        ...
     ;
-```
+`
 
 You'd find it would match an attempt to move in any direction (whatever
 xxx was, provided it wasn't the name of a direction). In the case of a
 movement command we could work round this by defining a **direction**
 property on the Doer:
 
-```
+`
     Doer 'go dir'
       direction = northDir
       ...
     ;
      
-```
+`
 
 It would, however, be simpler to define the action as 'go north' to
 achieve the same effect. Note the use of the
@@ -178,7 +178,7 @@ corresponding direction object (e.g. `northDir`)
 to the Doer's `direction` property. So, for
 example we could do the following:
 
-```
+`
     Doer 'go port|starboard|forward|aft'
         exec(curCmd)
         {
@@ -193,7 +193,7 @@ example we could do the following:
         }
         
     ;
-```
+`
 
 This would block any command to go Port, Starboard, Forward or Aft with
 the message shown (rather than printing the normal "You can't go that
@@ -205,7 +205,7 @@ player's command in the exec() method of a Doer in any other way, we
 need to test the value of the current command's
 `verbProd.dirMatch.dir` property, for example:
 
-```
+`
     Doer 'go xxx'
         exec(curCmd)
         {
@@ -223,7 +223,7 @@ need to test the value of the current command's
      
      
      
-```
+`
 
 Incidentally, Doers work even less well at matching commands involving
 literals or topics (conversational commands and the like), but this is
@@ -235,7 +235,7 @@ counterintuitive: you have to use
 <span id="resolvedtop_idx">ResolvedTopic</span> as the name of the
 object or class to be matched. For example this works:
 
-```
+`
     Doer 'think about ResolvedTopic'
         execAction(c)
         {
@@ -245,11 +245,11 @@ object or class to be matched. For example this works:
                 inherited(c);
         }    
     ;
-```
+`
 
 Or you could do it this way:
 
-```
+`
     Doer 'think about ResolvedTopic'
         execAction(c)
         {
@@ -257,12 +257,12 @@ Or you could do it this way:
         }
         when = gCommand.dobj.name == 'relativity'
     ;
-```
+`
 
 For a LiteralAction you can do a similar trick using
 <span id="literalobj_idx">LiteralObject</span>:
 
-```
+`
     Doer 'write LiteralObject'
         execAction(c)
         {
@@ -270,7 +270,7 @@ For a LiteralAction you can do a similar trick using
             to hand. ";
         }
     ;
-```
+`
 
   
 <span id="matching"></span>
@@ -305,7 +305,7 @@ command during combat. Here's one way we could do it with a Doer: first
 define a scene during which the combat takes place then define the
 corresponding Doer:
 
-```
+`
     Doer 'undo'
         exec(curCmd)
         {
@@ -314,7 +314,7 @@ corresponding Doer:
         
         during = combatScene
     ;
-```
+`
 
 Note that we don't need to use the abort macro in this case (though
 doing so would be harmless) since Undo, being a SystemAction, wouldn't
@@ -403,14 +403,14 @@ interpretation. For example, whereas GO THROUGH X normally means passing
 through X or walking through X, a command like GO THROUGH JUNK could be
 a way of saying SEARCH JUNK, so we might define a Doer like this:
 
-```
+`
     Doer 'go through junk'   
         exec(curCmd)
         {
             doInstead(LookIn, gDobj);
         }
     ;
-```
+`
 
 The one slight problem with this is that this Doer will match any
 wording of the GO THROUGH action, including WALK THROUGH JUNK, for
@@ -421,7 +421,7 @@ command (the command verb) is strictly identical to the first word of
 the Doer's cmd property. So in this case do define the Doer to match GO
 THROUGH JUNK but not WALK THROUGH JUNK we'd write:
 
-```
+`
     Doer 'go through junk'    
         strict = true
         
@@ -430,13 +430,13 @@ THROUGH JUNK but not WALK THROUGH JUNK we'd write:
             doInstead(LookIn, gDobj);
         }
     ;
-```
+`
 
 For a travel command, use the special **Go** action followed by the
 direction object corresponding to the direction you want the player
 character to go in; for example:
 
-```
+`
      Doer 'jump'
         execAction(curCmd)
         {       
@@ -446,7 +446,7 @@ character to go in; for example:
         where = cliffEdge
      ;
      
-```
+`
 
 If you prefer, you can use the macros **goInstead()** and **goNested()**
 instead. For example, `goInstead(north)` would
@@ -461,7 +461,7 @@ that inserting the blood-diamond into the crown of the demon king
 results in the player character being instantly transported into the
 nether regions; we might use a Doer like this:
 
-```
+`
      Doer 'put bloodDiamond in crown'
         execAction(c)
         {        
@@ -488,7 +488,7 @@ nether regions; we might use a Doer like this:
         handleAction = true
      ;
      
-```
+`
 
 <span id="handleact"></span>
 
@@ -606,7 +606,7 @@ expect.
 The effect may be illustrated by means of the following examples.
 Suppose on the current room you have defined:
 
-```
+`
      roomBeforeAction()
         {
             if(gActionIs(Wait))
@@ -616,11 +616,11 @@ Suppose on the current room you have defined:
             }
         } 
      
-```
+`
 
 And elsewhere in you code you have the following Doer:
 
-```
+`
      Doer 'wait'
         execAction(c)
         {
@@ -628,14 +628,14 @@ And elsewhere in you code you have the following Doer:
         }   
     ; 
      
-```
+`
 
 Then the response to WAIT would be "You wait patiently, but nothing much
 happens. " Since the beforeAction notifications haven't been sent,
 `roomBeforeAction()` never gets a look-in. But
 if instead you defined the Doer thus:
 
-```
+`
      Doer 'wait'
         execAction(c)
         {
@@ -645,7 +645,7 @@ if instead you defined the Doer thus:
         handleAction = true // NOTE THIS ADDITION
     ; 
      
-```
+`
 
 Then the response to WAIT would be "There's no time to hang around here!
 " In this case the `roomBeforeAction()` method
@@ -673,7 +673,7 @@ want to allow the player character to walk into the copse without using
 any vehicle), and is almost certainly much more easily handled with a
 Doer:
 
-```
+`
     Doer 'enter copse'
         execAction(c)
         {
@@ -686,7 +686,7 @@ Doer:
         when = gPlayerChar.isIn(bike);    
     ;
      
-```
+`
 
   
 <span id="doerpriority"></span>

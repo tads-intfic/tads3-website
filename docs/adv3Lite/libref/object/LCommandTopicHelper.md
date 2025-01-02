@@ -51,9 +51,9 @@ Details](#_Methods_)
 </div>
 
 **`LCommandTopicHelper`**  
-`         `[`CommandTopicHelper`](../object/CommandTopicHelper.html)  
-`                 `[`CommandTopic`](../object/CommandTopic.html)  
-`                 `[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
+[`CommandTopicHelper`](../object/CommandTopicHelper.html)  
+[`CommandTopic`](../object/CommandTopic.html)  
+[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -70,7 +70,7 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ Details](#_Methods_)
 
 </div>
 
-` `[`actionPhrase`](#actionPhrase)`  `[`getName`](#getName)`  `
+[`actionPhrase`](#actionPhrase)[`getName`](#getName)
 
 <span id="_Properties_"></span>
 

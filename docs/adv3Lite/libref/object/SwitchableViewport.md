@@ -44,7 +44,7 @@ when it's switched on. \[DEFINED ON VIEWPORT EXTENSION\]
 </div>
 
 **`SwitchableViewport`**  
-`         `[`Viewport`](../object/Viewport.html)  
+[`Viewport`](../object/Viewport.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ when it's switched on. \[DEFINED ON VIEWPORT EXTENSION\]
 
 </div>
 
-` `[`isSwitchable`](#isSwitchable)`  `[`isViewing`](#isViewing)`  `[`lookThroughToView`](#lookThroughToView)`  `
+[`isSwitchable`](#isSwitchable)[`isViewing`](#isViewing)[`lookThroughToView`](#lookThroughToView)
 
 Inherited from `Viewport` :  
-` `[`examineToView`](../object/Viewport.html#examineToView)`  `[`visibleRooms`](../object/Viewport.html#visibleRooms)`  `
+[`examineToView`](../object/Viewport.html#examineToView)[`visibleRooms`](../object/Viewport.html#visibleRooms)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `Viewport` :
 
 </div>
 
-` `[`makeOn`](#makeOn)`  `
+[`makeOn`](#makeOn)
 
 Inherited from `Viewport` :  
-` `[`describeVisibleRooms`](../object/Viewport.html#describeVisibleRooms)`  `[`dobjFor(LookThrough)`](../object/Viewport.html#dobjFor(LookThrough))`  `[`examineStatus`](../object/Viewport.html#examineStatus)`  `[`setRooms`](../object/Viewport.html#setRooms)`  `
+[`describeVisibleRooms`](../object/Viewport.html#describeVisibleRooms)[`dobjFor(LookThrough)`](../object/Viewport.html#dobjFor(LookThrough))[`examineStatus`](../object/Viewport.html#examineStatus)[`setRooms`](../object/Viewport.html#setRooms)
 
 <span id="_Properties_"></span>
 

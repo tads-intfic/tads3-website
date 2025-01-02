@@ -69,8 +69,8 @@ this method to set the hard-coded value of your choosing.
 </div>
 
 **`SettingsItem`**  
-`         `[`BinarySettingsItem`](../object/BinarySettingsItem.html)  
-`         `[`StringSettingsItem`](../object/StringSettingsItem.html)  
+[`BinarySettingsItem`](../object/BinarySettingsItem.html)  
+[`StringSettingsItem`](../object/StringSettingsItem.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,7 +79,7 @@ this method to set the hard-coded value of your choosing.
 
 </div>
 
-` `[`exitsMode`](../object/exitsMode.html)`  `[`footnoteSettingsItem`](../object/footnoteSettingsItem.html)`  `
+[`exitsMode`](../object/exitsMode.html)[`footnoteSettingsItem`](../object/footnoteSettingsItem.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -88,7 +88,7 @@ this method to set the hard-coded value of your choosing.
 
 </div>
 
-` `[`factoryDefault`](#factoryDefault)`  `[`includeInListing`](#includeInListing)`  `[`settingDesc`](#settingDesc)`  `[`settingID`](#settingID)`  `
+[`factoryDefault`](#factoryDefault)[`includeInListing`](#includeInListing)[`settingDesc`](#settingDesc)[`settingID`](#settingID)
 
 <span id="_MethodSummary_"></span>
 
@@ -98,7 +98,7 @@ this method to set the hard-coded value of your choosing.
 
 </div>
 
-` `[`restoreItem`](#restoreItem)`  `[`saveItem`](#saveItem)`  `[`settingFromText`](#settingFromText)`  `[`settingToText`](#settingToText)`  `
+[`restoreItem`](#restoreItem)[`saveItem`](#saveItem)[`settingFromText`](#settingFromText)[`settingToText`](#settingToText)
 
 <span id="_Properties_"></span>
 

@@ -47,7 +47,7 @@ Rule to run any PromptDaemons if the events module is included
 
 </div>
 
-` `[`priority`](#priority)`  `
+[`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -57,7 +57,7 @@ Rule to run any PromptDaemons if the events module is included
 
 </div>
 
-` `[`follow`](#follow)`  `
+[`follow`](#follow)
 
 <span id="_Properties_"></span>
 

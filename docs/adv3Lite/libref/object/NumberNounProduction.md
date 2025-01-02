@@ -44,7 +44,7 @@ as a direct, indirect, or accessory object.
 </div>
 
 **`NumberNounProduction`**  
-`         `[`Production`](../object/Production.html)  
+[`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,10 +55,10 @@ as a direct, indirect, or accessory object.
 </div>
 
 **`NumberNounProduction`**  
-`         `[`numberObjPhrase(main)`](../object/numberObjPhrase(main).html)  
-`         `[`numberPhrase(digits)`](../object/numberPhrase(digits).html)  
-`         `[`numberPhrase(spelled)`](../object/numberPhrase(spelled).html)  
-`         `[`poundNumberPhrase(main)`](../object/poundNumberPhrase(main).html)  
+[`numberObjPhrase(main)`](../object/numberObjPhrase(main).html)  
+[`numberPhrase(digits)`](../object/numberPhrase(digits).html)  
+[`numberPhrase(spelled)`](../object/numberPhrase(spelled).html)  
+[`poundNumberPhrase(main)`](../object/poundNumberPhrase(main).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -75,10 +75,10 @@ as a direct, indirect, or accessory object.
 
 </div>
 
-` `[`npClass`](#npClass)`  `
+[`npClass`](#npClass)
 
 Inherited from `Production` :  
-` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`parent`](../object/Production.html#parent)`  `
+[`determiner`](../object/Production.html#determiner)[`nounPhraseRole`](../object/Production.html#nounPhraseRole)[`parent`](../object/Production.html#parent)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,10 +88,10 @@ Inherited from `Production` :
 
 </div>
 
-` `
+
 
 Inherited from `Production` :  
-` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`build`](../object/Production.html#build)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `[`visitProd`](../object/Production.html#visitProd)`  `
+[`addNounListItem`](../object/Production.html#addNounListItem)[`build`](../object/Production.html#build)[`findAction`](../object/Production.html#findAction)[`findChild`](../object/Production.html#findChild)[`findParent`](../object/Production.html#findParent)[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)[`getText`](../object/Production.html#getText)[`getTokens`](../object/Production.html#getTokens)[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)[`isChildOf`](../object/Production.html#isChildOf)[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)[`visitLiteral`](../object/Production.html#visitLiteral)[`visitProd`](../object/Production.html#visitProd)
 
 <span id="_Properties_"></span>
 

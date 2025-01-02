@@ -36,7 +36,7 @@ Roberts.
 
 </div>
 
-` `[`CustomRoomLister`](../object/CustomRoomLister.html)`  `[`ItemLister`](../object/ItemLister.html)`  `[`Lister`](../object/Lister.html)`  `
+[`CustomRoomLister`](../object/CustomRoomLister.html)[`ItemLister`](../object/ItemLister.html)[`Lister`](../object/Lister.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -45,7 +45,7 @@ Roberts.
 
 </div>
 
-` `[`descContentsLister`](../object/descContentsLister.html)`  `[`inventoryLister`](../object/inventoryLister.html)`  `[`inventoryTallLister`](../object/inventoryTallLister.html)`  `[`lookContentsLister`](../object/lookContentsLister.html)`  `[`lookInLister`](../object/lookInLister.html)`  `[`lookLister`](../object/lookLister.html)`  `[`openingContentsLister`](../object/openingContentsLister.html)`  `[`plugAttachableLister`](../object/plugAttachableLister.html)`  `[`simpleAttachmentLister`](../object/simpleAttachmentLister.html)`  `[`wornLister`](../object/wornLister.html)`  `
+[`descContentsLister`](../object/descContentsLister.html)[`inventoryLister`](../object/inventoryLister.html)[`inventoryTallLister`](../object/inventoryTallLister.html)[`lookContentsLister`](../object/lookContentsLister.html)[`lookInLister`](../object/lookInLister.html)[`lookLister`](../object/lookLister.html)[`openingContentsLister`](../object/openingContentsLister.html)[`plugAttachableLister`](../object/plugAttachableLister.html)[`simpleAttachmentLister`](../object/simpleAttachmentLister.html)[`wornLister`](../object/wornLister.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

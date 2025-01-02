@@ -43,7 +43,7 @@ action, for example, even if we could treat WIRE FROM BOX as a single
 </div>
 
 **`rankByVerbStructure`**  
-`         `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -53,9 +53,9 @@ action, for example, even if we could treat WIRE FROM BOX as a single
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -65,10 +65,10 @@ action, for example, even if we could treat WIRE FROM BOX as a single
 
 </div>
 
-` `[`comparePass2`](#comparePass2)`  `
+[`comparePass2`](#comparePass2)
 
 Inherited from `CommandRankingCriterion` :  
-` `[`comparePass1`](../object/CommandRankingCriterion.html#comparePass1)`  `
+[`comparePass1`](../object/CommandRankingCriterion.html#comparePass1)
 
 <span id="_Properties_"></span>
 

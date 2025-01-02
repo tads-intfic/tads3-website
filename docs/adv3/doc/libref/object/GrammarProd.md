@@ -66,7 +66,7 @@ Use addAlt() to populate a new production with token matching rules.
 </div>
 
 **`GrammarProd`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -91,9 +91,9 @@ Use addAlt() to populate a new production with token matching rules.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -103,10 +103,10 @@ Use addAlt() to populate a new production with token matching rules.
 
 </div>
 
-` `[`addAlt`](#addAlt)`  `[`clearAlts`](#clearAlts)`  `[`deleteAlt`](#deleteAlt)`  `[`getGrammarInfo`](#getGrammarInfo)`  `[`parseTokens`](#parseTokens)`  `
+[`addAlt`](#addAlt)[`clearAlts`](#clearAlts)[`deleteAlt`](#deleteAlt)[`getGrammarInfo`](#getGrammarInfo)[`parseTokens`](#parseTokens)
 
 Inherited from `Object` :  
-` `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `[`valToSymbol`](../object/Object.html#valToSymbol)`  `
+[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)[`valToSymbol`](../object/Object.html#valToSymbol)
 
 <span id="_Properties_"></span>
 

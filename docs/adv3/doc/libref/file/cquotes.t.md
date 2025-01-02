@@ -48,7 +48,7 @@ fixes for patIsHTMLTag and patIsFormatTag from \*\* Matt McGlone \*\*
 
 </div>
 
-` `[`cquoteOutputFilter`](../object/cquoteOutputFilter.html)`  `
+[`cquoteOutputFilter`](../object/cquoteOutputFilter.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -57,7 +57,7 @@ fixes for patIsHTMLTag and patIsFormatTag from \*\* Matt McGlone \*\*
 
 </div>
 
-` `[`//`](#//)`  `[`//`](#//)`  `[`filterText`](#filterText)`  `[`if`](#if)`  `[`if`](#if)`  `[`if`](#if)`  `
+[`//`](#//)[`//`](#//)[`filterText`](#filterText)[`if`](#if)[`if`](#if)[`if`](#if)
 
 <span id="_Functions_"></span>
 

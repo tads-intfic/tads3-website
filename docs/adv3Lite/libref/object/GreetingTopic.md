@@ -45,12 +45,12 @@ but will instead use one or more of its subclasses
 </div>
 
 **`GreetingTopic`**  
-`         `[`MiscTopic`](../object/MiscTopic.html)  
-`                 `[`ActorTopicEntry`](../object/ActorTopicEntry.html)  
-`                         `[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
-`                                 `[`Redirector`](../object/Redirector.html)  
+[`MiscTopic`](../object/MiscTopic.html)  
+[`ActorTopicEntry`](../object/ActorTopicEntry.html)  
+[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
+[`Redirector`](../object/Redirector.html)  
 `                                         object`  
-`                         `[`TopicEntry`](../object/TopicEntry.html)  
+[`TopicEntry`](../object/TopicEntry.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -61,15 +61,15 @@ but will instead use one or more of its subclasses
 </div>
 
 **`GreetingTopic`**  
-`         `[`ActorByeTopic`](../object/ActorByeTopic.html)  
-`         `[`BoredByeTopic`](../object/BoredByeTopic.html)  
-`         `[`ByeTopic`](../object/ByeTopic.html)  
-`         `[`HelloGoodbyeTopic`](../object/HelloGoodbyeTopic.html)  
-`         `[`HelloTopic`](../object/HelloTopic.html)  
-`                 `[`ActorHelloTopic`](../object/ActorHelloTopic.html)  
-`                 `[`ImpHelloTopic`](../object/ImpHelloTopic.html)  
-`         `[`ImpByeTopic`](../object/ImpByeTopic.html)  
-`         `[`LeaveByeTopic`](../object/LeaveByeTopic.html)  
+[`ActorByeTopic`](../object/ActorByeTopic.html)  
+[`BoredByeTopic`](../object/BoredByeTopic.html)  
+[`ByeTopic`](../object/ByeTopic.html)  
+[`HelloGoodbyeTopic`](../object/HelloGoodbyeTopic.html)  
+[`HelloTopic`](../object/HelloTopic.html)  
+[`ActorHelloTopic`](../object/ActorHelloTopic.html)  
+[`ImpHelloTopic`](../object/ImpHelloTopic.html)  
+[`ImpByeTopic`](../object/ImpByeTopic.html)  
+[`LeaveByeTopic`](../object/LeaveByeTopic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -86,19 +86,19 @@ but will instead use one or more of its subclasses
 
 </div>
 
-` `[`changeToState`](#changeToState)`  `[`impliesGreeting`](#impliesGreeting)`  `[`includeInList`](#includeInList)`  `
+[`changeToState`](#changeToState)[`impliesGreeting`](#impliesGreeting)[`includeInList`](#includeInList)
 
-` `
+
 
 Inherited from `ActorTopicEntry` :  
-` `[`activated`](../object/ActorTopicEntry.html#activated)`  `[`active`](../object/ActorTopicEntry.html#active)`  `[`autoName`](../object/ActorTopicEntry.html#autoName)`  `[`convKeys`](../object/ActorTopicEntry.html#convKeys)`  `[`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused)`  `[`getActor`](../object/ActorTopicEntry.html#getActor)`  `[`isConversational`](../object/ActorTopicEntry.html#isConversational)`  `[`keyTopics`](../object/ActorTopicEntry.html#keyTopics)`  `[`listOrder`](../object/ActorTopicEntry.html#listOrder)`  `[`name`](../object/ActorTopicEntry.html#name)`  `[`suggestAs`](../object/ActorTopicEntry.html#suggestAs)`  `[`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)`  `
+[`activated`](../object/ActorTopicEntry.html#activated)[`active`](../object/ActorTopicEntry.html#active)[`autoName`](../object/ActorTopicEntry.html#autoName)[`convKeys`](../object/ActorTopicEntry.html#convKeys)[`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused)[`getActor`](../object/ActorTopicEntry.html#getActor)[`isConversational`](../object/ActorTopicEntry.html#isConversational)[`keyTopics`](../object/ActorTopicEntry.html#keyTopics)[`listOrder`](../object/ActorTopicEntry.html#listOrder)[`name`](../object/ActorTopicEntry.html#name)[`suggestAs`](../object/ActorTopicEntry.html#suggestAs)[`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)
 
-` `
 
-` `
+
+
 
 Inherited from `TopicEntry` :  
-` `[`isActive`](../object/TopicEntry.html#isActive)`  `[`matchExactCase`](../object/TopicEntry.html#matchExactCase)`  `[`matchObj`](../object/TopicEntry.html#matchObj)`  `[`matchPattern`](../object/TopicEntry.html#matchPattern)`  `[`matchScore`](../object/TopicEntry.html#matchScore)`  `[`scoreBoost`](../object/TopicEntry.html#scoreBoost)`  `[`topicMatched`](../object/TopicEntry.html#topicMatched)`  `
+[`isActive`](../object/TopicEntry.html#isActive)[`matchExactCase`](../object/TopicEntry.html#matchExactCase)[`matchObj`](../object/TopicEntry.html#matchObj)[`matchPattern`](../object/TopicEntry.html#matchPattern)[`matchScore`](../object/TopicEntry.html#matchScore)[`scoreBoost`](../object/TopicEntry.html#scoreBoost)[`topicMatched`](../object/TopicEntry.html#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -108,22 +108,22 @@ Inherited from `TopicEntry` :
 
 </div>
 
-` `[`handleTopic`](#handleTopic)`  `
+[`handleTopic`](#handleTopic)
 
 Inherited from `MiscTopic` :  
-` `[`matchTopic`](../object/MiscTopic.html#matchTopic)`  `
+[`matchTopic`](../object/MiscTopic.html#matchTopic)
 
 Inherited from `ActorTopicEntry` :  
-` `[`activate`](../object/ActorTopicEntry.html#activate)`  `[`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable)`  `[`buildName`](../object/ActorTopicEntry.html#buildName)`  `[`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied)`  `[`deactivate`](../object/ActorTopicEntry.html#deactivate)`  `[`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics)`  `[`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry)`  `[`isReachable`](../object/ActorTopicEntry.html#isReachable)`  `[`nodeActive`](../object/ActorTopicEntry.html#nodeActive)`  `[`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics)`  `[`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)`  `
+[`activate`](../object/ActorTopicEntry.html#activate)[`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable)[`buildName`](../object/ActorTopicEntry.html#buildName)[`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied)[`deactivate`](../object/ActorTopicEntry.html#deactivate)[`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics)[`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry)[`isReachable`](../object/ActorTopicEntry.html#isReachable)[`nodeActive`](../object/ActorTopicEntry.html#nodeActive)[`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics)[`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)
 
 Inherited from `ReplaceRedirector` :  
-` `[`redirect`](../object/ReplaceRedirector.html#redirect)`  `
+[`redirect`](../object/ReplaceRedirector.html#redirect)
 
 Inherited from `Redirector` :  
-` `[`doInstead`](../object/Redirector.html#doInstead)`  `[`doNested`](../object/Redirector.html#doNested)`  `[`doOtherAction`](../object/Redirector.html#doOtherAction)`  `
+[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 Inherited from `TopicEntry` :  
-` `[`addTopic`](../object/TopicEntry.html#addTopic)`  `[`scoreBooster`](../object/TopicEntry.html#scoreBooster)`  `[`topicResponse`](../object/TopicEntry.html#topicResponse)`  `
+[`addTopic`](../object/TopicEntry.html#addTopic)[`scoreBooster`](../object/TopicEntry.html#scoreBooster)[`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_Properties_"></span>
 

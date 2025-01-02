@@ -50,7 +50,7 @@ the player might not yet have encountered).
 </div>
 
 **`Hint`**  
-`         `[`MenuTopicSubItem`](../object/MenuTopicSubItem.html)  
+[`MenuTopicSubItem`](../object/MenuTopicSubItem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -76,9 +76,9 @@ the player might not yet have encountered).
 
 </div>
 
-` `[`hintText`](#hintText)`  `[`referencedGoals`](#referencedGoals)`  `
+[`hintText`](#hintText)[`referencedGoals`](#referencedGoals)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -88,9 +88,9 @@ the player might not yet have encountered).
 
 </div>
 
-` `[`getItemText`](#getItemText)`  `
+[`getItemText`](#getItemText)
 
-` `
+
 
 <span id="_Properties_"></span>
 

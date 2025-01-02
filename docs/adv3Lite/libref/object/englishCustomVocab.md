@@ -43,7 +43,7 @@ into the dictionary during preinit.
 </div>
 
 **`englishCustomVocab`**  
-`         `[`CustomVocab`](../object/CustomVocab.html)  
+[`CustomVocab`](../object/CustomVocab.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -53,9 +53,9 @@ into the dictionary during preinit.
 
 </div>
 
-` `[`irregularPlurals`](#irregularPlurals)`  `[`specialAOrAn`](#specialAOrAn)`  `[`verbParams`](#verbParams)`  `
+[`irregularPlurals`](#irregularPlurals)[`specialAOrAn`](#specialAOrAn)[`verbParams`](#verbParams)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -65,9 +65,9 @@ into the dictionary during preinit.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

@@ -75,7 +75,7 @@ string. During normal play we only need that internal representation.
 
 </div>
 
-` `[`action_`](#action_)`  `[`pat_`](#pat_)`  `[`roles_`](#roles_)`  `[`verb_`](#verb_)`  `
+[`action_`](#action_)[`pat_`](#pat_)[`roles_`](#roles_)[`verb_`](#verb_)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ string. During normal play we only need that internal representation.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

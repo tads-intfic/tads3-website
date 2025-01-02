@@ -76,7 +76,7 @@ Actor subclass.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ Actor subclass.
 
 </div>
 
-` `[`dobjFor(Follow)`](#dobjFor(Follow))`  `[`getTourDest`](#getTourDest)`  `
+[`dobjFor(Follow)`](#dobjFor(Follow))[`getTourDest`](#getTourDest)
 
 <span id="_Properties_"></span>
 

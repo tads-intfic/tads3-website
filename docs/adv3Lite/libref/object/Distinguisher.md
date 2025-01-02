@@ -63,7 +63,7 @@ qualification.
 </div>
 
 **`Distinguisher`**  
-`         `[`StateDistinguisher`](../object/StateDistinguisher.html)  
+[`StateDistinguisher`](../object/StateDistinguisher.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ qualification.
 
 </div>
 
-` `[`contentsDistinguisher`](../object/contentsDistinguisher.html)`  `[`disambigNameDistinguisher`](../object/disambigNameDistinguisher.html)`  `[`locationDistinguisher`](../object/locationDistinguisher.html)`  `[`nameDistinguisher`](../object/nameDistinguisher.html)`  `[`ownerDistinguisher`](../object/ownerDistinguisher.html)`  `
+[`contentsDistinguisher`](../object/contentsDistinguisher.html)[`disambigNameDistinguisher`](../object/disambigNameDistinguisher.html)[`locationDistinguisher`](../object/locationDistinguisher.html)[`nameDistinguisher`](../object/nameDistinguisher.html)[`ownerDistinguisher`](../object/ownerDistinguisher.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -81,7 +81,7 @@ qualification.
 
 </div>
 
-` `[`all`](#all)`  `[`classInitFirst`](#classInitFirst)`  `[`sortOrder`](#sortOrder)`  `
+[`all`](#all)[`classInitFirst`](#classInitFirst)[`sortOrder`](#sortOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,7 +91,7 @@ qualification.
 
 </div>
 
-` `[`appliesTo`](#appliesTo)`  `[`apply`](#apply)`  `[`classInit`](#classInit)`  `[`equal`](#equal)`  `[`getNames`](#getNames)`  `
+[`appliesTo`](#appliesTo)[`apply`](#apply)[`classInit`](#classInit)[`equal`](#equal)[`getNames`](#getNames)
 
 <span id="_Properties_"></span>
 

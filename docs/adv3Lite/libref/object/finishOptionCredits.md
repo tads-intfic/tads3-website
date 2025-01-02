@@ -37,7 +37,7 @@ CREDITS option for finishGame
 </div>
 
 **`finishOptionCredits`**  
-`         `[`FinishOption`](../object/FinishOption.html)  
+[`FinishOption`](../object/FinishOption.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ CREDITS option for finishGame
 
 </div>
 
-` `[`desc`](#desc)`  `[`listOrder`](#listOrder)`  `[`responseChar`](#responseChar)`  `[`responseKeyword`](#responseKeyword)`  `
+[`desc`](#desc)[`listOrder`](#listOrder)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)
 
 Inherited from `FinishOption` :  
-` `[`listed`](../object/FinishOption.html#listed)`  `[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)`  `
+[`listed`](../object/FinishOption.html#listed)[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `FinishOption` :
 
 </div>
 
-` `[`doOption`](#doOption)`  `
+[`doOption`](#doOption)
 
 Inherited from `FinishOption` :  
-` `[`responseMatches`](../object/FinishOption.html#responseMatches)`  `
+[`responseMatches`](../object/FinishOption.html#responseMatches)
 
 <span id="_Properties_"></span>
 

@@ -39,7 +39,7 @@ this single success indicator for all uses.
 </div>
 
 **`checkStatusSuccess`**  
-`         `[`CheckStatus`](../object/CheckStatus.html)  
+[`CheckStatus`](../object/CheckStatus.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,10 +49,10 @@ this single success indicator for all uses.
 
 </div>
 
-` `[`isSuccess`](#isSuccess)`  `
+[`isSuccess`](#isSuccess)
 
 Inherited from `CheckStatus` :  
-` `[`msgParams`](../object/CheckStatus.html#msgParams)`  `[`msgProp`](../object/CheckStatus.html#msgProp)`  `
+[`msgParams`](../object/CheckStatus.html#msgParams)[`msgProp`](../object/CheckStatus.html#msgProp)
 
 <span id="_MethodSummary_"></span>
 
@@ -62,9 +62,9 @@ Inherited from `CheckStatus` :
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

@@ -29,12 +29,12 @@ how to do this, refer to the instructions at the start of the [previous
 section](airmap2.html)). Remember to make sure you new source file begins
 with:
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-```
+`
 
 For the moment we'll stick to a fairly skeletal layout. There'll be
 plenty of complications to add later, especially in the cockpit. We will
@@ -43,10 +43,10 @@ about to define have in common that they're aboard an
 airplane/aeroplane, we'll assign them to a common **Region**, which
 we'll call planeRegion. We'll start out by defining the Region itself:
 
-```
+`
     planeRegion: Region
     ;
-```
+`
 
 That's all there is to it; it's up to rooms to say what regions they
 belong to (by listing them in their `regions`
@@ -70,7 +70,7 @@ compass directions as silent synonyms.
 
 Here's our initial skeletal layout for the plane:
 
-```
+`
     cockpit: Room 'Cockpit' 'cockpit'
         
         aft = planeFront
@@ -145,7 +145,7 @@ Here's our initial skeletal layout for the plane:
     + brassKey: Thing 'small brass key; yale'
         "It's just like all the other yale keys you've ever seen. "    
     ;
-```
+`
 
 There's only a couple of things to remark on here. The first is the use
 of `"A little further forward is a door that
@@ -176,7 +176,7 @@ you like you can think of it as equivalent to a hypothetical
 unMoved(location.listableContents)\>\>` where
 `unMoved()` would be defined as:
 
-```
+`
      unMoved(lst)
      {
          local ret = [];
@@ -189,7 +189,7 @@ unMoved(location.listableContents)\>\>` where
          return ret;
      }
      
-```
+`
 
 The rather odd expression
 `location.listableContents.subset({x: x.moved ==
@@ -222,7 +222,7 @@ the same object twice and put it in two different locations, we'll
 therefore take a shortcut and define the seating only once but put it in
 both locations. We can do that by means of the **MultiLoc** class:
 
-```
+`
      
     MultiLoc, Decoration 'seats; red airline; seating seat; them'
         "Like all airline seats, these ones look like they were designed for the
@@ -233,7 +233,7 @@ both locations. We can do that by means of the **MultiLoc** class:
         
         locationList = [planeFront, planeRear]
     ;
-```
+`
 
 There's a few points to note here. First of all, MultiLoc is what is
 known as a *mix-in* class. This means it must come first in the list of
@@ -280,7 +280,7 @@ minimalist representation of the passengers on the plane. This time
 we'll name the object since we'll later want to remove these passengers
 from the plane.
 
-```
+`
      
     airlinePassengers: MultiLoc, Decoration 'passengers;;men women; them'
         "You sense an air of impatience about them, as if they're all wondering when
@@ -291,7 +291,7 @@ from the plane.
         
         locationList = [planeFront, planeRear]
     ;
-```
+`
 
 ## Making Use of the Region
 
@@ -309,7 +309,7 @@ these announcements wouldn't be audible aboard the plane, so we can use
 `me.isIn(planeRegion)` to silence the
 announcements when the player character is aboard the plane:
 
-```
+`
     announcementObj: ShuffledEventList
         ...
         announce()
@@ -320,7 +320,7 @@ announcements when the player character is aboard the plane:
         
         prefix = 'An announcement comes over the public address system: '
     ;
-```
+`
 
 Secondly, we used shipboard directions (port, starboard, fore and aft)
 as directions of travel aboard the plane, but they're not very
@@ -328,7 +328,7 @@ meaningful anywhere else. In a previous chapter we saw how to use a Doer
 to block the use of these directions altogether. Now we can define one
 that blocks them *except* aboard the plane (i.e. in the planeRegion):
 
-```
+`
     Doer 'go dir'
         exec(c)
         {
@@ -339,7 +339,7 @@ that blocks them *except* aboard the plane (i.e. in the planeRegion):
         direction = [portDir, starboardDir, foreDir, aftDir]
         when = (!me.isIn(planeRegion))
     ;
-```
+`
 
 The `when` property of a Doer can be used to
 specify any condition we please, and the Doer only takes effect when it

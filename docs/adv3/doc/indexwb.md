@@ -46,7 +46,7 @@ own games.
 
 *This book is accompanied by a sample game,* The Further Adventures of
 Heidi*. The game's source files can be found
-here:*` `[`Heidi.t`](gsg/Heidi.t)` `[`Heidi.t3m`](gsg/Heidi.t3m)` `
+here:*` [`Heidi.t`](gsg/Heidi.t) [`Heidi.t3m`](gsg/Heidi.t3m) `
 
 *This book can also be viewed in a [PDF
 version](gsg/Getting%20Started%20in%20TADS%203.pdf). This version is

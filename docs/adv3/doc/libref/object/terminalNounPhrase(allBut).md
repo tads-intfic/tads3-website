@@ -37,10 +37,10 @@ Details](#_Methods_)
 </div>
 
 **`terminalNounPhrase(allBut)`**  
-`         `[`EverythingButProd`](../object/EverythingButProd.html)  
-`                 `[`ButProd`](../object/ButProd.html)  
-`                         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                                 `[`BasicProd`](../object/BasicProd.html)  
+[`EverythingButProd`](../object/EverythingButProd.html)  
+[`ButProd`](../object/ButProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,17 +50,17 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `EverythingButProd` :  
-` `[`addedFlags`](../object/EverythingButProd.html#addedFlags)`  `[`filterForCollectives`](../object/EverythingButProd.html#filterForCollectives)`  `
+[`addedFlags`](../object/EverythingButProd.html#addedFlags)[`filterForCollectives`](../object/EverythingButProd.html#filterForCollectives)
 
-` `
 
-` `
+
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -70,19 +70,19 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `EverythingButProd` :  
-` `[`flagAllExcepted`](../object/EverythingButProd.html#flagAllExcepted)`  `[`getMainList`](../object/EverythingButProd.html#getMainList)`  `
+[`flagAllExcepted`](../object/EverythingButProd.html#flagAllExcepted)[`getMainList`](../object/EverythingButProd.html#getMainList)
 
 Inherited from `ButProd` :  
-` `[`filterFinalList`](../object/ButProd.html#filterFinalList)`  `[`resolveNouns`](../object/ButProd.html#resolveNouns)`  `
+[`filterFinalList`](../object/ButProd.html#filterFinalList)[`resolveNouns`](../object/ButProd.html#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

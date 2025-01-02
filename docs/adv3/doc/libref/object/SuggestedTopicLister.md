@@ -43,7 +43,7 @@ Suggested topic lister.
 </div>
 
 **`SuggestedTopicLister`**  
-`         `[`Lister`](../object/Lister.html)  
+[`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -69,10 +69,10 @@ Suggested topic lister.
 
 </div>
 
-` `[`askingActor`](#askingActor)`  `[`isExplicit`](#isExplicit)`  `[`scopeList`](#scopeList)`  `[`targetActor`](#targetActor)`  `
+[`askingActor`](#askingActor)[`isExplicit`](#isExplicit)[`scopeList`](#scopeList)[`targetActor`](#targetActor)
 
 Inherited from `Lister` :  
-` `[`nextCustomFlag`](../object/Lister.html#nextCustomFlag)`  `
+[`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,10 +82,10 @@ Inherited from `Lister` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`contentsListed`](#contentsListed)`  `[`isListed`](#isListed)`  `[`listCardinality`](#listCardinality)`  `[`listWith`](#listWith)`  `[`longListSepEnd`](#longListSepEnd)`  `[`longListSepMiddle`](#longListSepMiddle)`  `[`longListSepTwo`](#longListSepTwo)`  `[`markAsSeen`](#markAsSeen)`  `[`showListEmpty`](#showListEmpty)`  `[`showListItem`](#showListItem)`  `[`showListPrefixWide`](#showListPrefixWide)`  `[`showListSeparator`](#showListSeparator)`  `[`showListSuffixWide`](#showListSuffixWide)`  `
+[`construct`](#construct)[`contentsListed`](#contentsListed)[`isListed`](#isListed)[`listCardinality`](#listCardinality)[`listWith`](#listWith)[`longListSepEnd`](#longListSepEnd)[`longListSepMiddle`](#longListSepMiddle)[`longListSepTwo`](#longListSepTwo)[`markAsSeen`](#markAsSeen)[`showListEmpty`](#showListEmpty)[`showListItem`](#showListItem)[`showListPrefixWide`](#showListPrefixWide)[`showListSeparator`](#showListSeparator)[`showListSuffixWide`](#showListSuffixWide)
 
 Inherited from `Lister` :  
-` `[`contentsListedSeparately`](../object/Lister.html#contentsListedSeparately)`  `[`getArrangedListCardinality`](../object/Lister.html#getArrangedListCardinality)`  `[`getArrangedListNounPhraseCount`](../object/Lister.html#getArrangedListNounPhraseCount)`  `[`getContents`](../object/Lister.html#getContents)`  `[`getFilteredList`](../object/Lister.html#getFilteredList)`  `[`getListedContents`](../object/Lister.html#getListedContents)`  `[`getListGrouping`](../object/Lister.html#getListGrouping)`  `[`getTopLister`](../object/Lister.html#getTopLister)`  `[`listSepEnd`](../object/Lister.html#listSepEnd)`  `[`listSepMiddle`](../object/Lister.html#listSepMiddle)`  `[`listSepTwo`](../object/Lister.html#listSepTwo)`  `[`showArrangedList`](../object/Lister.html#showArrangedList)`  `[`showContentsList`](../object/Lister.html#showContentsList)`  `[`showInlineContentsList`](../object/Lister.html#showInlineContentsList)`  `[`showList`](../object/Lister.html#showList)`  `[`showListAll`](../object/Lister.html#showListAll)`  `[`showListContentsPrefixTall`](../object/Lister.html#showListContentsPrefixTall)`  `[`showListIndent`](../object/Lister.html#showListIndent)`  `[`showListItemCounted`](../object/Lister.html#showListItemCounted)`  `[`showListPrefixTall`](../object/Lister.html#showListPrefixTall)`  `[`showListSimple`](../object/Lister.html#showListSimple)`  `[`showSeparateContents`](../object/Lister.html#showSeparateContents)`  `[`showTallListNewline`](../object/Lister.html#showTallListNewline)`  `
+[`contentsListedSeparately`](../object/Lister.html#contentsListedSeparately)[`getArrangedListCardinality`](../object/Lister.html#getArrangedListCardinality)[`getArrangedListNounPhraseCount`](../object/Lister.html#getArrangedListNounPhraseCount)[`getContents`](../object/Lister.html#getContents)[`getFilteredList`](../object/Lister.html#getFilteredList)[`getListedContents`](../object/Lister.html#getListedContents)[`getListGrouping`](../object/Lister.html#getListGrouping)[`getTopLister`](../object/Lister.html#getTopLister)[`listSepEnd`](../object/Lister.html#listSepEnd)[`listSepMiddle`](../object/Lister.html#listSepMiddle)[`listSepTwo`](../object/Lister.html#listSepTwo)[`showArrangedList`](../object/Lister.html#showArrangedList)[`showContentsList`](../object/Lister.html#showContentsList)[`showInlineContentsList`](../object/Lister.html#showInlineContentsList)[`showList`](../object/Lister.html#showList)[`showListAll`](../object/Lister.html#showListAll)[`showListContentsPrefixTall`](../object/Lister.html#showListContentsPrefixTall)[`showListIndent`](../object/Lister.html#showListIndent)[`showListItemCounted`](../object/Lister.html#showListItemCounted)[`showListPrefixTall`](../object/Lister.html#showListPrefixTall)[`showListSimple`](../object/Lister.html#showListSimple)[`showSeparateContents`](../object/Lister.html#showSeparateContents)[`showTallListNewline`](../object/Lister.html#showTallListNewline)
 
 <span id="_Properties_"></span>
 

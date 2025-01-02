@@ -35,7 +35,7 @@ logical a command is.
 
 </div>
 
-` `[`DangerousVerifyResult`](../object/DangerousVerifyResult.html)`  `[`IllogicalAlreadyVerifyResult`](../object/IllogicalAlreadyVerifyResult.html)`  `[`IllogicalNowVerifyResult`](../object/IllogicalNowVerifyResult.html)`  `[`IllogicalSelfVerifyResult`](../object/IllogicalSelfVerifyResult.html)`  `[`IllogicalVerifyResult`](../object/IllogicalVerifyResult.html)`  `[`InaccessibleVerifyResult`](../object/InaccessibleVerifyResult.html)`  `[`LogicalVerifyResult`](../object/LogicalVerifyResult.html)`  `[`NonObviousVerifyResult`](../object/NonObviousVerifyResult.html)`  `[`VerifyResult`](../object/VerifyResult.html)`  `[`VerifyResultList`](../object/VerifyResultList.html)`  `
+[`DangerousVerifyResult`](../object/DangerousVerifyResult.html)[`IllogicalAlreadyVerifyResult`](../object/IllogicalAlreadyVerifyResult.html)[`IllogicalNowVerifyResult`](../object/IllogicalNowVerifyResult.html)[`IllogicalSelfVerifyResult`](../object/IllogicalSelfVerifyResult.html)[`IllogicalVerifyResult`](../object/IllogicalVerifyResult.html)[`InaccessibleVerifyResult`](../object/InaccessibleVerifyResult.html)[`LogicalVerifyResult`](../object/LogicalVerifyResult.html)[`NonObviousVerifyResult`](../object/NonObviousVerifyResult.html)[`VerifyResult`](../object/VerifyResult.html)[`VerifyResultList`](../object/VerifyResultList.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -44,7 +44,7 @@ logical a command is.
 
 </div>
 
-` `[`defaultLogicalVerifyResult`](../object/defaultLogicalVerifyResult.html)`  `
+[`defaultLogicalVerifyResult`](../object/defaultLogicalVerifyResult.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

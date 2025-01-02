@@ -61,10 +61,10 @@ specify the destination; instead, these just point to travel connectors.
 </div>
 
 **`TravelConnectorLink`**  
-`         `[`Enterable`](../object/Enterable.html)  
-`                 `[`EntryPortal`](../object/EntryPortal.html)  
-`         `[`Exitable`](../object/Exitable.html)  
-`                 `[`ExitPortal`](../object/ExitPortal.html)  
+[`Enterable`](../object/Enterable.html)  
+[`EntryPortal`](../object/EntryPortal.html)  
+[`Exitable`](../object/Exitable.html)  
+[`ExitPortal`](../object/ExitPortal.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -81,7 +81,7 @@ specify the destination; instead, these just point to travel connectors.
 
 </div>
 
-` `[`connector`](#connector)`  `[`sightSize`](#sightSize)`  `
+[`connector`](#connector)[`sightSize`](#sightSize)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,7 +91,7 @@ specify the destination; instead, these just point to travel connectors.
 
 </div>
 
-` `[`dobjFor(TravelVia)`](#dobjFor(TravelVia))`  `
+[`dobjFor(TravelVia)`](#dobjFor(TravelVia))
 
 <span id="_Properties_"></span>
 

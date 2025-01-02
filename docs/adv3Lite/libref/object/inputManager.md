@@ -37,8 +37,8 @@ Keyboard input manager.
 </div>
 
 **`inputManager`**  
-`         `[`PostRestoreObject`](../object/PostRestoreObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PostRestoreObject`](../object/PostRestoreObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,13 +48,13 @@ Keyboard input manager.
 
 </div>
 
-` `[`inProgressDefObj`](#inProgressDefObj)`  `[`inputEventInProgress`](#inputEventInProgress)`  `[`inputLineInProgress`](#inputLineInProgress)`  `[`noInputTimeout`](#noInputTimeout)`  `
+[`inProgressDefObj`](#inProgressDefObj)[`inputEventInProgress`](#inputEventInProgress)[`inputLineInProgress`](#inputLineInProgress)[`noInputTimeout`](#noInputTimeout)
 
 Inherited from `PostRestoreObject` :  
-` `[`restoreCode`](../object/PostRestoreObject.html#restoreCode)`  `
+[`restoreCode`](../object/PostRestoreObject.html#restoreCode)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,12 +64,12 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`cancelInputInProgress`](#cancelInputInProgress)`  `[`execute`](#execute)`  `[`getEvent`](#getEvent)`  `[`getEventOrKey`](#getEventOrKey)`  `[`getInputDialog`](#getInputDialog)`  `[`getInputFile`](#getInputFile)`  `[`getInputLine`](#getInputLine)`  `[`getInputLineExt`](#getInputLineExt)`  `[`getKey`](#getKey)`  `[`inputBegin`](#inputBegin)`  `[`inputEventBegin`](#inputEventBegin)`  `[`inputEventEnd`](#inputEventEnd)`  `[`inputLineBegin`](#inputLineBegin)`  `[`inputLineEnd`](#inputLineEnd)`  `[`pauseForMore`](#pauseForMore)`  `
+[`cancelInputInProgress`](#cancelInputInProgress)[`execute`](#execute)[`getEvent`](#getEvent)[`getEventOrKey`](#getEventOrKey)[`getInputDialog`](#getInputDialog)[`getInputFile`](#getInputFile)[`getInputLine`](#getInputLine)[`getInputLineExt`](#getInputLineExt)[`getKey`](#getKey)[`inputBegin`](#inputBegin)[`inputEventBegin`](#inputEventBegin)[`inputEventEnd`](#inputEventEnd)[`inputLineBegin`](#inputLineBegin)[`inputLineEnd`](#inputLineEnd)[`pauseForMore`](#pauseForMore)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

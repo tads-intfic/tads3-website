@@ -46,7 +46,7 @@ We only include any of the code in this module in debug builds
 
 </div>
 
-` `[`all`](#all)`  `[`enabled`](#enabled)`  `[`messageIDs`](#messageIDs)`  `
+[`all`](#all)[`enabled`](#enabled)[`messageIDs`](#messageIDs)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ We only include any of the code in this module in debug builds
 
 </div>
 
-` `[`status`](#status)`  `
+[`status`](#status)
 
 <span id="_Properties_"></span>
 

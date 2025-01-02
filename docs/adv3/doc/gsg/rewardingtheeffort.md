@@ -705,7 +705,7 @@ iobjFor(MoveWith)
     }  
   }  
   
-The first thing to note is the `verify()` `and check()` routines that do
+The first thing to note is the `verify()and check()` routines that do
 nothing. We need them to do nothing to make sure they don't veto the use
 of the stick as the indirect object of a **move with** command. Without
 that empty `verify()` method **move nest with stick** would produce the

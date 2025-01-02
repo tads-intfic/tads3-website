@@ -77,7 +77,7 @@ create use FileUpload to post file attachments to posted forms.
 
 </div>
 
-` `[`contentType`](#contentType)`  `[`file`](#file)`  `[`filename`](#filename)`  `
+` [`contentType`](#contentType)  [`file`](#file)  [`filename`](#filename)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ create use FileUpload to post file attachments to posted forms.
 
 </div>
 
-` `[`construct`](#construct)`  `
+` [`construct`](#construct)  `
 
 <span id="_Properties_"></span>
 

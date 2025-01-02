@@ -78,7 +78,7 @@ restore.
 </div>
 
 **`ParagraphManager`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -96,7 +96,7 @@ restore.
 
 </div>
 
-` `[`mainParagraphManager`](../object/mainParagraphManager.html)`  `[`menuParagraphManager`](../object/menuParagraphManager.html)`  `
+[`mainParagraphManager`](../object/mainParagraphManager.html)[`menuParagraphManager`](../object/menuParagraphManager.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -105,9 +105,9 @@ restore.
 
 </div>
 
-` `[`leadingMultiPat`](#leadingMultiPat)`  `[`leadingSinglePat`](#leadingSinglePat)`  `[`renderAfterInput`](#renderAfterInput)`  `[`renderText`](#renderText)`  `[`suppressAfter`](#suppressAfter)`  `[`suppressBefore`](#suppressBefore)`  `
+[`leadingMultiPat`](#leadingMultiPat)[`leadingSinglePat`](#leadingSinglePat)[`renderAfterInput`](#renderAfterInput)[`renderText`](#renderText)[`suppressAfter`](#suppressAfter)[`suppressBefore`](#suppressBefore)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -117,9 +117,9 @@ restore.
 
 </div>
 
-` `[`filterText`](#filterText)`  `
+[`filterText`](#filterText)
 
-` `
+
 
 <span id="_Properties_"></span>
 

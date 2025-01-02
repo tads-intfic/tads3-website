@@ -80,7 +80,7 @@ player character starts addressing her on the Jetway. The following
 definition should be placed immediately after that of the
 `angelaAssistingState` object:
 
-```
+`
     ++ HelloTopic, StopEventList
         [
             '<q>Excuse me, might I have a word?</q> you say.\b
@@ -94,7 +94,7 @@ definition should be placed immediately after that of the
         
         changeToState = angelaTalkingState
     ;
-```
+`
 
 Here we've combined the HelloTopic with a StopEventList to vary the
 greeting used on the first and subsequent occasions. Note that this
@@ -118,7 +118,7 @@ ByeTopic needs to be located in the
 that Angela switches back to her former ActorState at the end of the
 conversation:
 
-```
+`
     ++ ByeTopic
         "<q>Well, cheerio for now then,</q> you say.\b
         <q>Goodbye,</q> she replies with a brisk nod, before turning to yet another
@@ -126,7 +126,7 @@ conversation:
         
         changeToState = angelaAssistingState
     ;
-```
+`
 
 As we've defined it this ByeTopic will be triggered however the player
 character ends the conversation, whether via an explicit BYE command or
@@ -134,7 +134,7 @@ simply if the player character walks away. It may be that we'd rather
 the latter case was handled a bit differently, in which case we can
 define a separate LeaveByeTopic to handle it:
 
-```
+`
     ++ LeaveByeTopic
         "{The subj angela} looks momentarily taken aback at your somewhat abrupt
         departure, but quickly turns back to the other passengers clamouring for
@@ -142,7 +142,7 @@ define a separate LeaveByeTopic to handle it:
         
         changeToState = angelaAssistingState
     ;
-```
+`
 
 That covers most of what you need to know about Greeting Protocols in
 adv3Lite, but for the full story you can consult the section on [Hello

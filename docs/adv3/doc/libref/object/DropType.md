@@ -57,8 +57,8 @@ appropriate report message.
 </div>
 
 **`DropType`**  
-`         `[`DropTypeThrow`](../object/DropTypeThrow.html)  
-`                 `[`DropTypeShortThrow`](../object/DropTypeShortThrow.html)  
+[`DropTypeThrow`](../object/DropTypeThrow.html)  
+[`DropTypeShortThrow`](../object/DropTypeShortThrow.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -67,7 +67,7 @@ appropriate report message.
 
 </div>
 
-` `[`dropTypeDrop`](../object/dropTypeDrop.html)`  `
+[`dropTypeDrop`](../object/dropTypeDrop.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -76,7 +76,7 @@ appropriate report message.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ appropriate report message.
 
 </div>
 
-` `[`getReportPrefix`](#getReportPrefix)`  `[`standardReport`](#standardReport)`  `
+[`getReportPrefix`](#getReportPrefix)[`standardReport`](#standardReport)
 
 <span id="_Properties_"></span>
 

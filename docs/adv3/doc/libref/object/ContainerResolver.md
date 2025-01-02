@@ -45,8 +45,8 @@ contain something in the tentative resolution of the main list.
 </div>
 
 **`ContainerResolver`**  
-`         `[`BasicContainerResolver`](../object/BasicContainerResolver.html)  
-`                 `[`ProxyResolver`](../object/ProxyResolver.html)  
+[`BasicContainerResolver`](../object/BasicContainerResolver.html)  
+[`ProxyResolver`](../object/ProxyResolver.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -72,12 +72,12 @@ contain something in the tentative resolution of the main list.
 
 </div>
 
-` `[`mainList`](#mainList)`  `[`mainListText`](#mainListText)`  `
+[`mainList`](#mainList)[`mainListText`](#mainListText)
 
 Inherited from `BasicContainerResolver` :  
-` `[`isSubResolver`](../object/BasicContainerResolver.html#isSubResolver)`  `
+[`isSubResolver`](../object/BasicContainerResolver.html#isSubResolver)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -87,13 +87,13 @@ Inherited from `BasicContainerResolver` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)`  `
+[`construct`](#construct)[`filterAmbiguousEquivalents`](#filterAmbiguousEquivalents)
 
 Inherited from `BasicContainerResolver` :  
-` `[`filterAmbiguousNounPhrase`](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase)`  `[`getQualifierResolver`](../object/BasicContainerResolver.html#getQualifierResolver)`  `
+[`filterAmbiguousNounPhrase`](../object/BasicContainerResolver.html#filterAmbiguousNounPhrase)[`getQualifierResolver`](../object/BasicContainerResolver.html#getQualifierResolver)
 
 Inherited from `ProxyResolver` :  
-` `[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)`  `[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)`  `
+[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

@@ -55,7 +55,7 @@ phrases.
 </div>
 
 **`GetVerbPhraseContext`**  
-`         `[`ListImpCtx`](../object/ListImpCtx.html)  
+[`ListImpCtx`](../object/ListImpCtx.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -64,7 +64,7 @@ phrases.
 
 </div>
 
-` `[`defaultGetVerbPhraseContext`](../object/defaultGetVerbPhraseContext.html)`  `
+[`defaultGetVerbPhraseContext`](../object/defaultGetVerbPhraseContext.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -73,7 +73,7 @@ phrases.
 
 </div>
 
-` `[`pronounObj`](#pronounObj)`  `
+[`pronounObj`](#pronounObj)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ phrases.
 
 </div>
 
-` `[`isObjPronoun`](#isObjPronoun)`  `[`objNameObj`](#objNameObj)`  `[`setPronounObj`](#setPronounObj)`  `
+[`isObjPronoun`](#isObjPronoun)[`objNameObj`](#objNameObj)[`setPronounObj`](#setPronounObj)
 
 <span id="_Properties_"></span>
 

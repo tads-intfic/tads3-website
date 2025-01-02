@@ -54,8 +54,8 @@ particuar those relating to opening and closing Goals and ExtraHints.
 </div>
 
 **`HintOpener`**  
-`         `[`ExtraHint`](../object/ExtraHint.html)  
-`         `[`Goal`](../object/Goal.html)  
+[`ExtraHint`](../object/ExtraHint.html)  
+[`Goal`](../object/Goal.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ particuar those relating to opening and closing Goals and ExtraHints.
 
 </div>
 
-` `[`closeWhen`](#closeWhen)`  `[`closeWhenAchieved`](#closeWhenAchieved)`  `[`closeWhenExamined`](#closeWhenExamined)`  `[`closeWhenKnown`](#closeWhenKnown)`  `[`closeWhenMoved`](#closeWhenMoved)`  `[`closeWhenRevealed`](#closeWhenRevealed)`  `[`closeWhenSeen`](#closeWhenSeen)`  `[`closeWhenTrue`](#closeWhenTrue)`  `[`openWhen`](#openWhen)`  `[`openWhenAchieved`](#openWhenAchieved)`  `[`openWhenExamined`](#openWhenExamined)`  `[`openWhenKnown`](#openWhenKnown)`  `[`openWhenMoved`](#openWhenMoved)`  `[`openWhenRevealed`](#openWhenRevealed)`  `[`openWhenSeen`](#openWhenSeen)`  `[`openWhenTrue`](#openWhenTrue)`  `
+[`closeWhen`](#closeWhen)[`closeWhenAchieved`](#closeWhenAchieved)[`closeWhenExamined`](#closeWhenExamined)[`closeWhenKnown`](#closeWhenKnown)[`closeWhenMoved`](#closeWhenMoved)[`closeWhenRevealed`](#closeWhenRevealed)[`closeWhenSeen`](#closeWhenSeen)[`closeWhenTrue`](#closeWhenTrue)[`openWhen`](#openWhen)[`openWhenAchieved`](#openWhenAchieved)[`openWhenExamined`](#openWhenExamined)[`openWhenKnown`](#openWhenKnown)[`openWhenMoved`](#openWhenMoved)[`openWhenRevealed`](#openWhenRevealed)[`openWhenSeen`](#openWhenSeen)[`openWhenTrue`](#openWhenTrue)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ particuar those relating to opening and closing Goals and ExtraHints.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

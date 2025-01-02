@@ -39,7 +39,7 @@ travel/push travel before it's attempted.
 </div>
 
 **`travelPermitted`**  
-`         `[`PreCondition`](../object/PreCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,9 +49,9 @@ travel/push travel before it's attempted.
 
 </div>
 
-` `[`preCondOrder`](#preCondOrder)`  `
+[`preCondOrder`](#preCondOrder)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -61,10 +61,10 @@ travel/push travel before it's attempted.
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `
+[`checkPreCondition`](#checkPreCondition)
 
 Inherited from `PreCondition` :  
-` `[`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)`  `
+[`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)
 
 <span id="_Properties_"></span>
 

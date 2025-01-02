@@ -39,7 +39,7 @@ Pre-condition: actor must be "travel ready." The exact meaning of
 </div>
 
 **`actorTravelReady`**  
-`         `[`PreCondition`](../object/PreCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,10 +49,10 @@ Pre-condition: actor must be "travel ready." The exact meaning of
 
 </div>
 
-` `
+
 
 Inherited from `PreCondition` :  
-` `[`preCondOrder`](../object/PreCondition.html#preCondOrder)`  `
+[`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -62,10 +62,10 @@ Inherited from `PreCondition` :
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `
+[`checkPreCondition`](#checkPreCondition)
 
 Inherited from `PreCondition` :  
-` `[`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)`  `
+[`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)
 
 <span id="_Properties_"></span>
 

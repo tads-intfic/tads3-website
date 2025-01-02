@@ -48,7 +48,7 @@ programmatic interface - it doesn't have a user interface.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -58,7 +58,7 @@ programmatic interface - it doesn't have a user interface.
 
 </div>
 
-` `[`restoreSettings`](#restoreSettings)`  `[`retrieveSettings`](#retrieveSettings)`  `[`saveSettings`](#saveSettings)`  `[`storeSettings`](#storeSettings)`  `
+[`restoreSettings`](#restoreSettings)[`retrieveSettings`](#retrieveSettings)[`saveSettings`](#saveSettings)[`storeSettings`](#storeSettings)
 
 <span id="_Properties_"></span>
 

@@ -47,7 +47,7 @@ into the room containing the target object.
 </div>
 
 **`ReachProblemRemote`**  
-`         `[`ReachProblem`](../object/ReachProblem.html)  
+[`ReachProblem`](../object/ReachProblem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,10 +73,10 @@ into the room containing the target object.
 
 </div>
 
-` `[`destRoom`](#destRoom)`  `[`origRoom`](#origRoom)`  `[`target`](#target)`  `
+[`destRoom`](#destRoom)[`origRoom`](#origRoom)[`target`](#target)
 
 Inherited from `ReachProblem` :  
-` `[`target_`](../object/ReachProblem.html#target_)`  `
+[`target_`](../object/ReachProblem.html#target_)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,10 +86,10 @@ Inherited from `ReachProblem` :
 
 </div>
 
-` `[`check`](#check)`  `[`construct`](#construct)`  `[`sayGoTo`](#sayGoTo)`  `[`tooFarAwayMsg`](#tooFarAwayMsg)`  `
+[`check`](#check)[`construct`](#construct)[`sayGoTo`](#sayGoTo)[`tooFarAwayMsg`](#tooFarAwayMsg)
 
 Inherited from `ReachProblem` :  
-` `[`verify`](../object/ReachProblem.html#verify)`  `
+[`verify`](../object/ReachProblem.html#verify)
 
 <span id="_Properties_"></span>
 

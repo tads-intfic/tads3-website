@@ -63,10 +63,10 @@ The English-specific modifications for directions.
 </div>
 
 **`Direction`**  
-`         `[`CompassDirection`](../object/CompassDirection.html)  
-`         `[`RelativeDirection`](../object/RelativeDirection.html)  
-`         `[`ShipboardDirection`](../object/ShipboardDirection.html)  
-`         `[`VerticalDirection`](../object/VerticalDirection.html)  
+[`CompassDirection`](../object/CompassDirection.html)  
+[`RelativeDirection`](../object/RelativeDirection.html)  
+[`ShipboardDirection`](../object/ShipboardDirection.html)  
+[`VerticalDirection`](../object/VerticalDirection.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -83,7 +83,7 @@ The English-specific modifications for directions.
 
 </div>
 
-` `[`allDirections`](#allDirections)`  `[`dirProp`](#dirProp)`  `[`sortingOrder`](#sortingOrder)`  `
+[`allDirections`](#allDirections)[`dirProp`](#dirProp)[`sortingOrder`](#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -93,7 +93,7 @@ The English-specific modifications for directions.
 
 </div>
 
-` `[`defaultConnector`](#defaultConnector)`  `[`initializeDirection`](#initializeDirection)`  `[`initializeDirectionClass`](#initializeDirectionClass)`  `[`sayArriving`](#sayArriving)`  `[`sayDeparting`](#sayDeparting)`  `
+[`defaultConnector`](#defaultConnector)[`initializeDirection`](#initializeDirection)[`initializeDirectionClass`](#initializeDirectionClass)[`sayArriving`](#sayArriving)[`sayDeparting`](#sayDeparting)
 
 <span id="_Properties_"></span>
 

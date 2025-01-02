@@ -38,9 +38,9 @@ have an explicitly set result, this is the default value.
 </div>
 
 **`defaultLogicalVerifyResult`**  
-`         `[`LogicalVerifyResult`](../object/LogicalVerifyResult.html)  
-`                 `[`VerifyResult`](../object/VerifyResult.html)  
-`                         `[`MessageResult`](../object/MessageResult.html)  
+[`LogicalVerifyResult`](../object/LogicalVerifyResult.html)  
+[`VerifyResult`](../object/VerifyResult.html)  
+[`MessageResult`](../object/MessageResult.html)  
 `                                 object`  
 <span id="_PropSummary_"></span>
 
@@ -50,16 +50,16 @@ have an explicitly set result, this is the default value.
 
 </div>
 
-` `[`keyVal`](#keyVal)`  `
+[`keyVal`](#keyVal)
 
 Inherited from `LogicalVerifyResult` :  
-` `[`likelihood`](../object/LogicalVerifyResult.html#likelihood)`  `[`listOrder`](../object/LogicalVerifyResult.html#listOrder)`  `[`resultRank`](../object/LogicalVerifyResult.html#resultRank)`  `
+[`likelihood`](../object/LogicalVerifyResult.html#likelihood)[`listOrder`](../object/LogicalVerifyResult.html#listOrder)[`resultRank`](../object/LogicalVerifyResult.html#resultRank)
 
 Inherited from `VerifyResult` :  
-` `[`allowAction`](../object/VerifyResult.html#allowAction)`  `[`excludePluralMatches`](../object/VerifyResult.html#excludePluralMatches)`  `
+[`allowAction`](../object/VerifyResult.html#allowAction)[`excludePluralMatches`](../object/VerifyResult.html#excludePluralMatches)
 
 Inherited from `MessageResult` :  
-` `[`messageProp_`](../object/MessageResult.html#messageProp_)`  `[`messageText_`](../object/MessageResult.html#messageText_)`  `
+[`messageProp_`](../object/MessageResult.html#messageProp_)[`messageText_`](../object/MessageResult.html#messageText_)
 
 <span id="_MethodSummary_"></span>
 
@@ -69,15 +69,15 @@ Inherited from `MessageResult` :
 
 </div>
 
-` `[`showMessage`](#showMessage)`  `
+[`showMessage`](#showMessage)
 
 Inherited from `LogicalVerifyResult` :  
-` `[`compareTo`](../object/LogicalVerifyResult.html#compareTo)`  `[`construct`](../object/LogicalVerifyResult.html#construct)`  `[`identicalTo`](../object/LogicalVerifyResult.html#identicalTo)`  `[`isWorseThan`](../object/LogicalVerifyResult.html#isWorseThan)`  `[`shouldInsertBefore`](../object/LogicalVerifyResult.html#shouldInsertBefore)`  `
+[`compareTo`](../object/LogicalVerifyResult.html#compareTo)[`construct`](../object/LogicalVerifyResult.html#construct)[`identicalTo`](../object/LogicalVerifyResult.html#identicalTo)[`isWorseThan`](../object/LogicalVerifyResult.html#isWorseThan)[`shouldInsertBefore`](../object/LogicalVerifyResult.html#shouldInsertBefore)
 
-` `
+
 
 Inherited from `MessageResult` :  
-` `[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)`  `[`setMessage`](../object/MessageResult.html#setMessage)`  `
+[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)[`setMessage`](../object/MessageResult.html#setMessage)
 
 <span id="_Properties_"></span>
 

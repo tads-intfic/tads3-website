@@ -73,7 +73,7 @@ saving persistently.
 
 </div>
 
-` `[`statusDispMode`](#statusDispMode)`  `
+[`statusDispMode`](#statusDispMode)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ saving persistently.
 
 </div>
 
-` `[`beginStatusLine`](#beginStatusLine)`  `[`endStatusLine`](#endStatusLine)`  `[`getEstimatedHeightHtml`](#getEstimatedHeightHtml)`  `[`initBannerWindow`](#initBannerWindow)`  `[`setColorScheme`](#setColorScheme)`  `[`showStatusHtml`](#showStatusHtml)`  `[`showStatusLeft`](#showStatusLeft)`  `[`showStatusLine`](#showStatusLine)`  `[`showStatusLineDaemon`](#showStatusLineDaemon)`  `[`showStatusRight`](#showStatusRight)`  `[`showStatusText`](#showStatusText)`  `
+[`beginStatusLine`](#beginStatusLine)[`endStatusLine`](#endStatusLine)[`getEstimatedHeightHtml`](#getEstimatedHeightHtml)[`initBannerWindow`](#initBannerWindow)[`setColorScheme`](#setColorScheme)[`showStatusHtml`](#showStatusHtml)[`showStatusLeft`](#showStatusLeft)[`showStatusLine`](#showStatusLine)[`showStatusLineDaemon`](#showStatusLineDaemon)[`showStatusRight`](#showStatusRight)[`showStatusText`](#showStatusText)
 
 <span id="_Properties_"></span>
 

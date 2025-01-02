@@ -58,8 +58,8 @@ destination.
 </div>
 
 **`ProxyDest`**  
-`         `[`Distant`](../object/Distant.html)  
-`         `[`Enterable`](../object/Enterable.html)  
+[`Distant`](../object/Distant.html)  
+[`Enterable`](../object/Enterable.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -76,7 +76,7 @@ destination.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ destination.
 
 </div>
 
-` `[`filterResolveList`](#filterResolveList)`  `
+[`filterResolveList`](#filterResolveList)
 
 <span id="_Properties_"></span>
 

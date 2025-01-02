@@ -39,8 +39,8 @@ failure report.
 </div>
 
 **`doorOpen`**  
-`         `[`ObjOpenCondition`](../object/ObjOpenCondition.html)  
-`                 `[`PreCondition`](../object/PreCondition.html)  
+[`ObjOpenCondition`](../object/ObjOpenCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,12 +50,12 @@ failure report.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `PreCondition` :  
-` `[`preCondOrder`](../object/PreCondition.html#preCondOrder)`  `
+[`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -65,12 +65,12 @@ Inherited from `PreCondition` :
 
 </div>
 
-` `[`conditionFailed`](#conditionFailed)`  `
+[`conditionFailed`](#conditionFailed)
 
 Inherited from `ObjOpenCondition` :  
-` `[`checkPreCondition`](../object/ObjOpenCondition.html#checkPreCondition)`  `[`verifyPreCondition`](../object/ObjOpenCondition.html#verifyPreCondition)`  `
+[`checkPreCondition`](../object/ObjOpenCondition.html#checkPreCondition)[`verifyPreCondition`](../object/ObjOpenCondition.html#verifyPreCondition)
 
-` `
+
 
 <span id="_Properties_"></span>
 

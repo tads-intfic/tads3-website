@@ -62,7 +62,7 @@ object that will handle the request.
 
 </div>
 
-` `[`mainWebGroup`](../object/mainWebGroup.html)`  `
+` [`mainWebGroup`](../object/mainWebGroup.html)  `
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -71,7 +71,7 @@ object that will handle the request.
 
 </div>
 
-` `[`all`](#all)`  `[`contents`](#contents)`  `[`priority`](#priority)`  `[`server`](#server)`  `
+` [`all`](#all)  [`contents`](#contents)  [`priority`](#priority)  [`server`](#server)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ object that will handle the request.
 
 </div>
 
-` `[`isGroupFor`](#isGroupFor)`  `[`processRequest`](#processRequest)`  `
+` [`isGroupFor`](#isGroupFor)  [`processRequest`](#processRequest)  `
 
 <span id="_Properties_"></span>
 

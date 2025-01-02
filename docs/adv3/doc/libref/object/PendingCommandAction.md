@@ -43,7 +43,7 @@ a pending command based on a pre-resolved Action and its objects
 </div>
 
 **`PendingCommandAction`**  
-`         `[`PendingCommandInfo`](../object/PendingCommandInfo.html)  
+[`PendingCommandInfo`](../object/PendingCommandInfo.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -69,10 +69,10 @@ a pending command based on a pre-resolved Action and its objects
 
 </div>
 
-` `[`action_`](#action_)`  `[`objs_`](#objs_)`  `
+[`action_`](#action_)[`objs_`](#objs_)
 
 Inherited from `PendingCommandInfo` :  
-` `[`hasCommand`](../object/PendingCommandInfo.html#hasCommand)`  `[`issuer_`](../object/PendingCommandInfo.html#issuer_)`  `[`startOfSentence_`](../object/PendingCommandInfo.html#startOfSentence_)`  `
+[`hasCommand`](../object/PendingCommandInfo.html#hasCommand)[`issuer_`](../object/PendingCommandInfo.html#issuer_)[`startOfSentence_`](../object/PendingCommandInfo.html#startOfSentence_)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,9 +82,9 @@ Inherited from `PendingCommandInfo` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`executePending`](#executePending)`  `
+[`construct`](#construct)[`executePending`](#executePending)
 
-` `
+
 
 <span id="_Properties_"></span>
 

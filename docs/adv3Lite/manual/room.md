@@ -56,26 +56,26 @@ that's displayed in bold at the start of a room description), its
 **vocab**. The normal way to define these properties is through the Room
 template. Without the vocab property this looks like this:
 
-```
+`
     kitchen: Room 'Kitchen' 
         "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
         over by the back door to the east, not far from the fridge. The other exits
         are west to the hall, north to the dining-room and down to the cellar. "
     ;
-```
+`
 
 If the vocab property is defined, it is given in a second single-quoted
 string, thus:
 
-```
+`
     kitchen: Room 'Kitchen' 'kitchen' 
         "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
         over by the back door to the east, not far from the fridge. The other exits
         are west to the hall, north to the dining-room and down to the cellar. "
     ;
-```
+`
 
 There are a couple of advantages to defining the vocab property on a
 Room:
@@ -124,12 +124,12 @@ any reason you want to change this format you can do so by modifying the
 of the room) to be displayed in bold italics each time, you could
 override roomnameStyleTag thus:
 
-```
+`
     modify roomnameStyleTag
         openText = '\n<b><i>'
         closeText = '</i></b>\n'
     ;
-```
+`
 
 You could also use \<FONT\> tags here for other effects, for example
 specifying a particular colour, but this needs to be done with caution,
@@ -139,12 +139,12 @@ text on a blue background. On the other hand, there's no reason why you
 shouldn't use a \<FONT\> tag to change the *size* of the room name if
 you so wished, for example:
 
-```
+`
     modify roomnameStyleTag
         openText = '\n<b><FONT SIZE=+2>'
         closeText = '</FONT></b>\n'
     ;
-```
+`
 
 Incidentally, there's also a **roomdescStyleTag** that can be used in a
 similar way to format the long description of a room (but not the
@@ -211,7 +211,7 @@ method that simply displays a string is equivalent to an adv3
 FakeConnector (which is likewise not defined in the adv3Lite library).
 For example:
 
-```
+`
     kitchen: Room 'Kitchen' 'kitchen' 
         "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
@@ -225,7 +225,7 @@ For example:
         south = "Unfortunately, you can't simply walk through the window, and you have no means of opening it. "
         southwest { "You have no reason to visit the pantry. "; }
     ;
-```
+`
 
 This illustrates what is probably likely to be the most common use of a
 method defined on a direction property, but in principle such a method
@@ -308,7 +308,7 @@ the player character to travel via the nornoreast property of the
 current room when the player entered the command NORNOREAST or NNE. You
 would just need to do this:
 
-```
+`
     nornoreastDir: CompassDirection
         name = 'nornoreast'
         dirProp = &nornoreast
@@ -319,7 +319,7 @@ would just need to do this:
     grammar directionName(nornoreast): 'nornoreast' | 'nne' : Production
         dir = nornoreastDir
     ;
-```
+`
 
 With these two definitions, you could then used nornoreast just like any
 of the built-in directions. The **sortingOrder** property on the
@@ -517,7 +517,7 @@ you do. To include a Room in a Region, simply list that Region in the
 Room's region property and create a corresponding Region object, for
 example:
 
-```
+`
     kitchen: Room 'Kitchen' 'kitchen' 
         "This kitchen is equipped much as you'd expect, with, for example, a sink
         over by the window, a large table in the middle of the room, and an oven
@@ -529,20 +529,20 @@ example:
 
     downstairs: Region
     ;
-```
+`
 
 Regions can themselves be included within other regions by setting their
 regions property. For example, to place the downstairs Region entirely
 within the indoors Region we could write:
 
-```
+`
     downstairs: Region
       regions = [indoors]
     ;
 
     indoors: Region
     ;
-```
+`
 
 It is also perfectly legal to define the regions property of Rooms in
 such a way that Regions end up overlapping.
@@ -645,7 +645,7 @@ actually executed. If you want something to take place immediately after
 the traveler enters a region one way to do it would be to set a
 zero-length fuse in the travelerEntering() method, e.g.:
 
-```
+`
     planeRegion: Region
         travelerLeaving(traveler, dest) { "You're about to leave the plane. "; }
         travelerEntering(traveler, origin) 
@@ -655,7 +655,7 @@ zero-length fuse in the travelerEntering() method, e.g.:
         }
         edesc = "You've just boarded the plane. "
     ;
-```
+`
 
 One further point: several of the properties on which the Region
 mechanisms depend are set up by the library at the preinitialization
@@ -685,13 +685,13 @@ mixture of the two.
 The `rooms` property of a Region can be
 specified via a template, thus:
 
-```
+`
      downstairsRegion: Region
        [hall, kitchen, study, lounge]
        regions = [indoorRegion]
     ;
      
-```
+`
 
 In this example, note how putting one Region inside another must still
 be done via the enclosed Region's `regions`

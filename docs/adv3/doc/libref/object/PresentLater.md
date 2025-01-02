@@ -74,7 +74,7 @@ eventual location by calling makePresent().
 
 </div>
 
-` `[`eventualLocation`](#eventualLocation)`  `[`initiallyPresent`](#initiallyPresent)`  `[`plKey`](#plKey)`  `
+[`eventualLocation`](#eventualLocation)[`initiallyPresent`](#initiallyPresent)[`plKey`](#plKey)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,7 +84,7 @@ eventual location by calling makePresent().
 
 </div>
 
-` `[`initializeLocation`](#initializeLocation)`  `[`makePresent`](#makePresent)`  `[`makePresentByKey`](#makePresentByKey)`  `[`makePresentByKeyIf`](#makePresentByKeyIf)`  `[`makePresentIf`](#makePresentIf)`  `
+[`initializeLocation`](#initializeLocation)[`makePresent`](#makePresent)[`makePresentByKey`](#makePresentByKey)[`makePresentByKeyIf`](#makePresentByKeyIf)[`makePresentIf`](#makePresentIf)
 
 <span id="_Properties_"></span>
 

@@ -46,7 +46,7 @@ interpretation will definitely stay unambiguous.
 </div>
 
 **`rankByAmbiguity`**  
-`         `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -56,9 +56,9 @@ interpretation will definitely stay unambiguous.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -68,10 +68,10 @@ interpretation will definitely stay unambiguous.
 
 </div>
 
-` `[`comparePass2`](#comparePass2)`  `
+[`comparePass2`](#comparePass2)
 
 Inherited from `CommandRankingCriterion` :  
-` `[`comparePass1`](../object/CommandRankingCriterion.html#comparePass1)`  `
+[`comparePass1`](../object/CommandRankingCriterion.html#comparePass1)
 
 <span id="_Properties_"></span>
 

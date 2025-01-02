@@ -47,7 +47,7 @@ reshuffle the set of integers and start over.
 </div>
 
 **`ShuffledIntegerList`**  
-`         `[`ShuffledList`](../object/ShuffledList.html)  
+[`ShuffledList`](../object/ShuffledList.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,10 +73,10 @@ reshuffle the set of integers and start over.
 
 </div>
 
-` `[`rangeMax`](#rangeMax)`  `[`rangeMin`](#rangeMin)`  `[`valueList`](#valueList)`  `
+[`rangeMax`](#rangeMax)[`rangeMin`](#rangeMin)[`valueList`](#valueList)
 
 Inherited from `ShuffledList` :  
-` `[`suppressRepeats`](../object/ShuffledList.html#suppressRepeats)`  `[`valuesAvail`](../object/ShuffledList.html#valuesAvail)`  `[`valuesVec`](../object/ShuffledList.html#valuesVec)`  `
+[`suppressRepeats`](../object/ShuffledList.html#suppressRepeats)[`valuesAvail`](../object/ShuffledList.html#valuesAvail)[`valuesVec`](../object/ShuffledList.html#valuesVec)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,10 +86,10 @@ Inherited from `ShuffledList` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`getNextValue`](#getNextValue)`  `
+[`construct`](#construct)[`getNextValue`](#getNextValue)
 
 Inherited from `ShuffledList` :  
-` `[`reshuffle`](../object/ShuffledList.html#reshuffle)`  `
+[`reshuffle`](../object/ShuffledList.html#reshuffle)
 
 <span id="_Properties_"></span>
 

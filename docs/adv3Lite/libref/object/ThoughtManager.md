@@ -33,7 +33,7 @@ create a single object of this class and locate a number of Thought
 objects in it (with the + notation) to represent responses to THINK
 ABOUT
 
-`class `**`ThoughtManager`**` :   `[`PreinitObject`](../object/PreinitObject.html)`   `[`TopicDatabase`](../object/TopicDatabase.html)
+`class `**`ThoughtManager`**` :   [`PreinitObject`](../object/PreinitObject.html)   `[`TopicDatabase`](../object/TopicDatabase.html)
 
 </div>
 
@@ -46,10 +46,10 @@ ABOUT
 </div>
 
 **`ThoughtManager`**  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
-`         `[`TopicDatabase`](../object/TopicDatabase.html)  
+[`TopicDatabase`](../object/TopicDatabase.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -75,15 +75,15 @@ ABOUT
 
 </div>
 
-` `[`noThoughtMsg`](#noThoughtMsg)`  `[`thoughtList`](#thoughtList)`  `
+` [`noThoughtMsg`](#noThoughtMsg)  [`thoughtList`](#thoughtList)  `
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+` [`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)  [`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)  `
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+` [`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)  [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)  [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)  [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)  `
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -93,15 +93,15 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`execute`](#execute)`  `[`handleTopic`](#handleTopic)`  `
+` [`execute`](#execute)  [`handleTopic`](#handleTopic)  `
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+` [`_execute`](../object/ModuleExecObject.html#_execute)  [`classExec`](../object/ModuleExecObject.html#classExec)  `
 
 Inherited from `TopicDatabase` :  
-` `[`addTopic`](../object/TopicDatabase.html#addTopic)`  `[`getBestMatch`](../object/TopicDatabase.html#getBestMatch)`  `
+` [`addTopic`](../object/TopicDatabase.html#addTopic)  [`getBestMatch`](../object/TopicDatabase.html#getBestMatch)  `
 
 <span id="_Properties_"></span>
 

@@ -41,11 +41,11 @@ We've already defined one of these rooms, namely the starting location,
 'In front of a cottage'. Now let's look at its definition a little more
 closely:
 
-```
+`
     beforeCottage: Room 'In front of a Cottage'
         "You stand outside a cottage. The forest stretches east. "
     ;
-```
+`
 
 The programming name of this room (the name by which we can refer to it
 in our code) is **beforeCottage**. It's defined to be of the **Room**
@@ -63,7 +63,7 @@ In fact we have defined a couple of properties, but we have done so
 using a kind of special shorthand called a *template*. The room
 definition above is exactly equivalent to:
 
-```
+`
     beforeCottage: Room 
         roomTitle = 'In front of a Cottage'
         desc = "You stand outside a cottage. The forest stretches east. "
@@ -76,7 +76,7 @@ definition above is exactly equivalent to:
     someRoom: Room 'roomTitle'
         "desc"
     ;
-```
+`
 
 Note, incidentally, how we leave a space between the final full-stop and
 the closing double-quote mark in the desc property. This is common
@@ -86,7 +86,7 @@ text directly afterwards.
 Armed with all this knowledge we can now go ahead and define the other
 three rooms:
 
-```
+`
     forest: Room 'Deep in the forest'
         "Through the dense foliage, you glimpse a building to the west. A track
         heads to the northeast. "
@@ -102,7 +102,7 @@ three rooms:
     topOfTree: Room 'At the top of the tree'
         "You cling precariously to the trunk. "
     ;
-```
+`
 
 But if you compile the game and run it again, you'll find that
 apparently nothing much has changed. In particular, despite what the
@@ -114,7 +114,7 @@ each room, to say where the player character ends up when going in
 particular directions from particular rooms. Amend the rooms so they now
 look like this (with the new code shown in bold below):
 
-```
+`
     beforeCottage: Room 'In front of a Cottage'
         "You stand outside a cottage. The forest stretches east. "
         
@@ -158,7 +158,7 @@ look like this (with the new code shown in bold below):
         
         down = clearing
     ;
-```
+`
 
 If you now compile and run the game (assuming you haven't made any
 mistakes), you should now find things are a bit better. It may still not

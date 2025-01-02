@@ -48,8 +48,8 @@ colon), and helps the player see which results go with which objects.
 </div>
 
 **`MultiObjectAnnouncement`**  
-`         `[`CommandAnnouncement`](../object/CommandAnnouncement.html)  
-`                 `[`CommandReport`](../object/CommandReport.html)  
+[`CommandAnnouncement`](../object/CommandAnnouncement.html)  
+[`CommandReport`](../object/CommandReport.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -75,13 +75,13 @@ colon), and helps the player see which results go with which objects.
 
 </div>
 
-` `[`messageProp_`](#messageProp_)`  `
+[`messageProp_`](#messageProp_)
 
 Inherited from `CommandAnnouncement` :  
-` `[`messageText_`](../object/CommandAnnouncement.html#messageText_)`  `
+[`messageText_`](../object/CommandAnnouncement.html#messageText_)
 
 Inherited from `CommandReport` :  
-` `[`action_`](../object/CommandReport.html#action_)`  `[`isFailure`](../object/CommandReport.html#isFailure)`  `[`isQuestion`](../object/CommandReport.html#isQuestion)`  `[`iter_`](../object/CommandReport.html#iter_)`  `
+[`action_`](../object/CommandReport.html#action_)[`isFailure`](../object/CommandReport.html#isFailure)[`isQuestion`](../object/CommandReport.html#isQuestion)[`iter_`](../object/CommandReport.html#iter_)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,13 +91,13 @@ Inherited from `CommandReport` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 Inherited from `CommandAnnouncement` :  
-` `[`getMessageText`](../object/CommandAnnouncement.html#getMessageText)`  `[`showMessage`](../object/CommandAnnouncement.html#showMessage)`  `
+[`getMessageText`](../object/CommandAnnouncement.html#getMessageText)[`showMessage`](../object/CommandAnnouncement.html#showMessage)
 
 Inherited from `CommandReport` :  
-` `[`getAction`](../object/CommandReport.html#getAction)`  `[`isActionImplicit`](../object/CommandReport.html#isActionImplicit)`  `[`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn)`  `[`isPartOf`](../object/CommandReport.html#isPartOf)`  `[`setAction`](../object/CommandReport.html#setAction)`  `
+[`getAction`](../object/CommandReport.html#getAction)[`isActionImplicit`](../object/CommandReport.html#isActionImplicit)[`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn)[`isPartOf`](../object/CommandReport.html#isPartOf)[`setAction`](../object/CommandReport.html#setAction)
 
 <span id="_Properties_"></span>
 

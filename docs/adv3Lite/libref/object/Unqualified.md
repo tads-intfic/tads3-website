@@ -37,7 +37,7 @@ Unqualified mode ("book")
 </div>
 
 **`Unqualified`**  
-`         `[`Determiner`](../object/Determiner.html)  
+[`Determiner`](../object/Determiner.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ Unqualified mode ("book")
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -59,9 +59,9 @@ Unqualified mode ("book")
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

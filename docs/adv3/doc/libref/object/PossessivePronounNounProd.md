@@ -43,9 +43,9 @@ Possessive nouns
 </div>
 
 **`PossessivePronounNounProd`**  
-`         `[`PronounProd`](../object/PronounProd.html)  
-`                 `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                         `[`BasicProd`](../object/BasicProd.html)  
+[`PronounProd`](../object/PronounProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -56,18 +56,18 @@ Possessive nouns
 </div>
 
 **`PossessivePronounNounProd`**  
-`         `[`HersNounProd`](../object/HersNounProd.html)  
-`                 `[`possessiveNounPhrase(hers)`](../object/possessiveNounPhrase(hers).html)  
-`         `[`HisNounProd`](../object/HisNounProd.html)  
-`                 `[`possessiveNounPhrase(his)`](../object/possessiveNounPhrase(his).html)  
-`         `[`ItsNounProd`](../object/ItsNounProd.html)  
-`                 `[`possessiveNounPhrase(its)`](../object/possessiveNounPhrase(its).html)  
-`         `[`MineNounProd`](../object/MineNounProd.html)  
-`                 `[`possessiveNounPhrase(mine)`](../object/possessiveNounPhrase(mine).html)  
-`         `[`TheirsNounProd`](../object/TheirsNounProd.html)  
-`                 `[`possessiveNounPhrase(theirs)`](../object/possessiveNounPhrase(theirs).html)  
-`         `[`YoursNounProd`](../object/YoursNounProd.html)  
-`                 `[`possessiveNounPhrase(yours)`](../object/possessiveNounPhrase(yours).html)  
+[`HersNounProd`](../object/HersNounProd.html)  
+[`possessiveNounPhrase(hers)`](../object/possessiveNounPhrase(hers).html)  
+[`HisNounProd`](../object/HisNounProd.html)  
+[`possessiveNounPhrase(his)`](../object/possessiveNounPhrase(his).html)  
+[`ItsNounProd`](../object/ItsNounProd.html)  
+[`possessiveNounPhrase(its)`](../object/possessiveNounPhrase(its).html)  
+[`MineNounProd`](../object/MineNounProd.html)  
+[`possessiveNounPhrase(mine)`](../object/possessiveNounPhrase(mine).html)  
+[`TheirsNounProd`](../object/TheirsNounProd.html)  
+[`possessiveNounPhrase(theirs)`](../object/possessiveNounPhrase(theirs).html)  
+[`YoursNounProd`](../object/YoursNounProd.html)  
+[`possessiveNounPhrase(yours)`](../object/possessiveNounPhrase(yours).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -84,16 +84,16 @@ Possessive nouns
 
 </div>
 
-` `[`isPossessive`](#isPossessive)`  `
+[`isPossessive`](#isPossessive)
 
 Inherited from `PronounProd` :  
-` `[`isPlural`](../object/PronounProd.html#isPlural)`  `[`pronounType`](../object/PronounProd.html#pronounType)`  `
+[`isPlural`](../object/PronounProd.html#isPlural)[`pronounType`](../object/PronounProd.html#pronounType)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -103,16 +103,16 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `PronounProd` :  
-` `[`checkAnaphoricBinding`](../object/PronounProd.html#checkAnaphoricBinding)`  `[`resolveNouns`](../object/PronounProd.html#resolveNouns)`  `
+[`checkAnaphoricBinding`](../object/PronounProd.html#checkAnaphoricBinding)[`resolveNouns`](../object/PronounProd.html#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

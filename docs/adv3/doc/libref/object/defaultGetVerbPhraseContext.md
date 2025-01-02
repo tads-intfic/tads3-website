@@ -39,7 +39,7 @@ antecedents.
 </div>
 
 **`defaultGetVerbPhraseContext`**  
-`         `[`GetVerbPhraseContext`](../object/GetVerbPhraseContext.html)  
+[`GetVerbPhraseContext`](../object/GetVerbPhraseContext.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,10 +49,10 @@ antecedents.
 
 </div>
 
-` `
+
 
 Inherited from `GetVerbPhraseContext` :  
-` `[`pronounObj`](../object/GetVerbPhraseContext.html#pronounObj)`  `
+[`pronounObj`](../object/GetVerbPhraseContext.html#pronounObj)
 
 <span id="_MethodSummary_"></span>
 
@@ -62,10 +62,10 @@ Inherited from `GetVerbPhraseContext` :
 
 </div>
 
-` `[`setPronounObj`](#setPronounObj)`  `
+[`setPronounObj`](#setPronounObj)
 
 Inherited from `GetVerbPhraseContext` :  
-` `[`isObjPronoun`](../object/GetVerbPhraseContext.html#isObjPronoun)`  `[`objNameObj`](../object/GetVerbPhraseContext.html#objNameObj)`  `
+[`isObjPronoun`](../object/GetVerbPhraseContext.html#isObjPronoun)[`objNameObj`](../object/GetVerbPhraseContext.html#objNameObj)
 
 <span id="_Properties_"></span>
 

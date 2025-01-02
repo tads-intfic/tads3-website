@@ -37,10 +37,10 @@ plural phrase qualified with a number and optional "any"
 </div>
 
 **`qualifiedPluralNounPhrase(anyNum)`**  
-`         `[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)  
-`                 `[`PluralProd`](../object/PluralProd.html)  
-`                         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                                 `[`BasicProd`](../object/BasicProd.html)  
+[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)  
+[`PluralProd`](../object/PluralProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,17 +50,17 @@ plural phrase qualified with a number and optional "any"
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -70,19 +70,19 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `QuantifiedPluralProd` :  
-` `[`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity)`  `[`getVerifyKeepers`](../object/QuantifiedPluralProd.html#getVerifyKeepers)`  `[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase)`  `[`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)`  `[`selectExactCount`](../object/QuantifiedPluralProd.html#selectExactCount)`  `
+[`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity)[`getVerifyKeepers`](../object/QuantifiedPluralProd.html#getVerifyKeepers)[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase)[`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)[`selectExactCount`](../object/QuantifiedPluralProd.html#selectExactCount)
 
 Inherited from `PluralProd` :  
-` `[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)`  `
+[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

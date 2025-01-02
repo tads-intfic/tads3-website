@@ -80,7 +80,7 @@ the telephone pole.
 </div>
 
 **`ExtraHint`**  
-`         `[`HintOpener`](../object/HintOpener.html)  
+[`HintOpener`](../object/HintOpener.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -106,10 +106,10 @@ the telephone pole.
 
 </div>
 
-` `[`hintDelay`](#hintDelay)`  `[`hintDone`](#hintDone)`  `[`hintText`](#hintText)`  `[`location`](#location)`  `[`openedWhen`](#openedWhen)`  `[`priority`](#priority)`  `
+[`hintDelay`](#hintDelay)[`hintDone`](#hintDone)[`hintText`](#hintText)[`location`](#location)[`openedWhen`](#openedWhen)[`priority`](#priority)
 
 Inherited from `HintOpener` :  
-` `[`closeWhen`](../object/HintOpener.html#closeWhen)`  `[`closeWhenAchieved`](../object/HintOpener.html#closeWhenAchieved)`  `[`closeWhenExamined`](../object/HintOpener.html#closeWhenExamined)`  `[`closeWhenKnown`](../object/HintOpener.html#closeWhenKnown)`  `[`closeWhenMoved`](../object/HintOpener.html#closeWhenMoved)`  `[`closeWhenRevealed`](../object/HintOpener.html#closeWhenRevealed)`  `[`closeWhenSeen`](../object/HintOpener.html#closeWhenSeen)`  `[`closeWhenTrue`](../object/HintOpener.html#closeWhenTrue)`  `[`openWhen`](../object/HintOpener.html#openWhen)`  `[`openWhenAchieved`](../object/HintOpener.html#openWhenAchieved)`  `[`openWhenExamined`](../object/HintOpener.html#openWhenExamined)`  `[`openWhenKnown`](../object/HintOpener.html#openWhenKnown)`  `[`openWhenMoved`](../object/HintOpener.html#openWhenMoved)`  `[`openWhenRevealed`](../object/HintOpener.html#openWhenRevealed)`  `[`openWhenSeen`](../object/HintOpener.html#openWhenSeen)`  `[`openWhenTrue`](../object/HintOpener.html#openWhenTrue)`  `
+[`closeWhen`](../object/HintOpener.html#closeWhen)[`closeWhenAchieved`](../object/HintOpener.html#closeWhenAchieved)[`closeWhenExamined`](../object/HintOpener.html#closeWhenExamined)[`closeWhenKnown`](../object/HintOpener.html#closeWhenKnown)[`closeWhenMoved`](../object/HintOpener.html#closeWhenMoved)[`closeWhenRevealed`](../object/HintOpener.html#closeWhenRevealed)[`closeWhenSeen`](../object/HintOpener.html#closeWhenSeen)[`closeWhenTrue`](../object/HintOpener.html#closeWhenTrue)[`openWhen`](../object/HintOpener.html#openWhen)[`openWhenAchieved`](../object/HintOpener.html#openWhenAchieved)[`openWhenExamined`](../object/HintOpener.html#openWhenExamined)[`openWhenKnown`](../object/HintOpener.html#openWhenKnown)[`openWhenMoved`](../object/HintOpener.html#openWhenMoved)[`openWhenRevealed`](../object/HintOpener.html#openWhenRevealed)[`openWhenSeen`](../object/HintOpener.html#openWhenSeen)[`openWhenTrue`](../object/HintOpener.html#openWhenTrue)
 
 <span id="_MethodSummary_"></span>
 
@@ -119,9 +119,9 @@ Inherited from `HintOpener` :
 
 </div>
 
-` `[`checkClose`](#checkClose)`  `[`doHint`](#doHint)`  `[`setDelay`](#setDelay)`  `[`showHint`](#showHint)`  `
+[`checkClose`](#checkClose)[`doHint`](#doHint)[`setDelay`](#setDelay)[`showHint`](#showHint)
 
-` `
+
 
 <span id="_Properties_"></span>
 

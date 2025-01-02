@@ -50,7 +50,7 @@ adapt to the latest settings.
 
 </div>
 
-` `[`tense`](#tense)`  `
+[`tense`](#tense)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,7 +60,7 @@ adapt to the latest settings.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

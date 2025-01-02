@@ -64,7 +64,7 @@ action.
 
 </div>
 
-` `[`askAboutConvType`](../object/askAboutConvType.html)`  `[`askForConvType`](../object/askForConvType.html)`  `[`byeConvType`](../object/byeConvType.html)`  `[`commandConvType`](../object/commandConvType.html)`  `[`consultConvType`](../object/consultConvType.html)`  `[`giveConvType`](../object/giveConvType.html)`  `[`helloConvType`](../object/helloConvType.html)`  `[`initiateConvType`](../object/initiateConvType.html)`  `[`noConvType`](../object/noConvType.html)`  `[`showConvType`](../object/showConvType.html)`  `[`tellAboutConvType`](../object/tellAboutConvType.html)`  `[`yesConvType`](../object/yesConvType.html)`  `
+[`askAboutConvType`](../object/askAboutConvType.html)[`askForConvType`](../object/askForConvType.html)[`byeConvType`](../object/byeConvType.html)[`commandConvType`](../object/commandConvType.html)[`consultConvType`](../object/consultConvType.html)[`giveConvType`](../object/giveConvType.html)[`helloConvType`](../object/helloConvType.html)[`initiateConvType`](../object/initiateConvType.html)[`noConvType`](../object/noConvType.html)[`showConvType`](../object/showConvType.html)[`tellAboutConvType`](../object/tellAboutConvType.html)[`yesConvType`](../object/yesConvType.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -73,7 +73,7 @@ action.
 
 </div>
 
-` `[`defaultResponseProp`](#defaultResponseProp)`  `[`topicListProp`](#topicListProp)`  `[`unknownMsg`](#unknownMsg)`  `
+[`defaultResponseProp`](#defaultResponseProp)[`topicListProp`](#topicListProp)[`unknownMsg`](#unknownMsg)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ action.
 
 </div>
 
-` `[`afterResponse`](#afterResponse)`  `[`defaultResponse`](#defaultResponse)`  `
+[`afterResponse`](#afterResponse)[`defaultResponse`](#defaultResponse)
 
 <span id="_Properties_"></span>
 

@@ -59,7 +59,7 @@ Normally, though, we don't use these names explicitly but use the
 **dobjFor** and **iobjFor** propertyset macros to write definitions that
 look like this:
 
-```
+`
     dobjFor(Take)
     {
        verify() { ... }
@@ -142,7 +142,7 @@ The code to achieve this might (in outline) look something like this:
          }
       }
     ;
-```
+`
 
 Notice the use of the **illogicalNow()** macro here; this means that the
 action might be illogical under certain circumstance — it's illogical
@@ -322,7 +322,7 @@ respectively (these macros evaluate to true if so or nil otherwise).
 For example, the library defines the following handling of the TakeFrom
 action on the indirect object:
 
-```
+`
     iobjFor(TakeFrom)
         {
             preCond = [touchObj]
@@ -342,12 +342,12 @@ action on the indirect object:
             
             }      
         }
-```
+`
 
 This could also have been written (with exactly the same meaning and
 effect):
 
-```
+`
     iobjFor(TakeFrom)
         {
             preCond = [touchObj]
@@ -367,13 +367,13 @@ effect):
             
             }      
         }
-```
+`
 
 Note that the library is set up to minimize the number of verify
 routines you need to override. For example, the action handling for Dig
 and DigWith is defined like this:
 
-```
+`
      /* Most things are not suitable for digging in*/
         isDiggable = nil
         
@@ -418,7 +418,7 @@ and DigWith is defined like this:
             {that iobj}. ')
         cannotDigWithSelfMsg = BMsg(cannot dig with self, '{I} {can\'t} dig {the
             dobj} with {itself dobj}. ')
-```
+`
 
 This means that instead of having to override the verify methods of
 things you want to dig or dig with to make the commands possible, you
@@ -531,12 +531,12 @@ didn't happen). For example, to make all actions that fail at the verify
 stage not count as a turn we could include the following in our game
 code:
 
-```
+`
      
      modify Action
         failedActionCountsAsTurn = nil
     ;
-```
+`
 
   
 
@@ -662,7 +662,7 @@ To apply PreConditions to objects involved in particular actions we
 simply list the appropriate precondition objects in the appropriate
 **preCond** property, for example:
 
-```
+`
     class Thing: Mentionable
        ...
        dobjFor(PutIn)
@@ -677,13 +677,13 @@ simply list the appropriate precondition objects in the appropriate
            ...
        }
     ;
-```
+`
 
 A further example illustrates how the touchObj precondition can be used
 in conjunction with a checkReach() method to prevent an object being
 touched when it's too hot:
 
-```
+`
     + cooker: Thing 'cooker;blackened;oven stove top'
         "Normally, you keep it in pretty good shape (or your cleaner does) but right
         now it's looking suspiciously blackened, especially round the top. "    
@@ -734,7 +734,7 @@ touched when it's too hot:
         
         cannotBurnMsg = 'The saucepan\'s quite burnt enough already! '
     ;
-```
+`
 
 Occasionally it can be useful to list a PreCondition in the
 `preCond` property of an Action object,
@@ -742,7 +742,7 @@ particularly when the Action is an IAction and we want the actor to be
 in a particular state before the action can take place. For example the
 library defines the Jump action thus:
 
-```
+`
      DefineIAction(Jump)
         execAction(cmd)
         {
@@ -754,7 +754,7 @@ library defines the Jump action thus:
     ;
      
      
-```
+`
 
 This ensures that the actor is removed from any nested room it's in
 before attempting to JUMP (unless it starts out in a nested room for
@@ -780,7 +780,7 @@ should not use any such things here). A check routine should thus
 consist purely of statements that display failure messages to the player
 and conditional statements controlling when they are displayed, e.g.:
 
-```
+`
     partyDress: Thing 'party dress; blue; frock'
       isWearable = true
       wornBy = gPlayerChar
@@ -794,7 +794,7 @@ and conditional statements controlling when they are displayed, e.g.:
                 own room. ";
          }
       }
-```
+`
 
 This incidentally illustrates that when customizing objects to respond
 to actions, there's no need to repeat the parts already defined by the
@@ -832,7 +832,7 @@ implement to hand, and announcing which writing implement the player
 character is using without halting the action in the process. This could
 be implemented thus:
 
-```
+`
     + pieceOfPaper: Thing 'piece of paper'
         "On it is inscribed <q><<writtenText>></q>. "
         
@@ -881,7 +881,7 @@ be implemented thus:
     + blackPen: Thing 'black pen'
         canWriteWithMe = true   
     ;
-```
+`
 
 While we could, in principle, have delayed displaying the "(with the
 black pen)" message until the action stage, this would have been awkward
@@ -932,7 +932,7 @@ a mat reveals a note that was previously concealed beneath) you could do
 so by using the **reportAfter(*msg*)** macro, which will cause *msg* to
 be displayed after any output from the report stage. For example:
 
-```
+`
     mat:Thing 'mat; white place; placemat'
       dobjFor(Take)
       {
@@ -947,7 +947,7 @@ be displayed after any output from the report stage. For example:
          }
       }
     ;
-```
+`
 
 Note that you wouldn't have to code this particular example this way,
 since in practice you'd simply define <span id="code">hiddenUnder =
@@ -962,7 +962,7 @@ parentheic information. For example it is used by the library to
 announce which key it has chosen (e.g. ("(with the brass key)") in
 response to a LOCK or UNLOCK command:
 
-```
+`
       dobjFor(Lock)
       {
          ...
@@ -981,7 +981,7 @@ response to a LOCK or UNLOCK command:
             DMsg(report lock, okayLockMsg, gActionListStr);
          }
       }
-```
+`
 
 Here the report() phase would still be suppressed, however, if the
 action() method displayed anything else (apart from its
@@ -1002,7 +1002,7 @@ current action. These methods are called **doInstead()** and
 something under the tap to result in its being put in the sink; you
 could do it like this:
 
-```
+`
     tap: Fixture 'tap; silver; faucet'
       ...
       iobjFor(PutUnder)
@@ -1014,7 +1014,7 @@ could do it like this:
          }
       }
     ;
-```
+`
 
 You could do the same with replaceAction(), but doInstead() makes it
 easier to synthesize certain kinds of action that are much harder to so
@@ -1022,7 +1022,7 @@ with replaceAction() or nestedAction(). For example if you want the
 player to ask George about the broken candlestick the first time s/he
 looks at it you could write something like:
 
-```
+`
     candlestick: Thing 'silver candlestick; broken'
        "It's broken. "
        
@@ -1040,7 +1040,7 @@ looks at it you could write something like:
        }    
        georgeAsked = nil
     ;
-```
+`
 
 This wouldn't work with `nestedAction()` because
 the AskAbout command expects its indirect object to be a ResolvedTopic,
@@ -1084,7 +1084,7 @@ an indirect object for the TIAction DigWith, and then (if the player
 responds with the name of a suitable object) execute DigWith with the
 existing direct object and newly specified indirect object:
 
-```
+`
     + sand: Fixture 'patch of sand; deep'
        "It's not very big, but it looks like it could be quite deep. "
        
@@ -1099,7 +1099,7 @@ existing direct object and newly specified indirect object:
        {
          ...
     ;     
-```
+`
 
   
 
@@ -1116,7 +1116,7 @@ objects is available; the pseudo-global variable **gActionListStr** then
 contains a single-quoted string listing the items in the form 'the pen,
 the ink and the paper' which can be used in your report, e.g.:
 
-```
+`
     class Thing Mentionable
       dobjFor(Take)
       {
@@ -1131,7 +1131,7 @@ the ink and the paper' which can be used in your report, e.g.:
          }
       }
     ;
-```
+`
 
 This will result in a report such as 'You take the pen, the ink and the
 paper. ' (Note that there's no need to implement this particular example
@@ -1174,7 +1174,7 @@ assign it to a variable which you can then use in a message parameter
 substitution, as in the following example from the library (for
 ThrowDir):
 
-```
+`
         report()
         {
             local obj = gActionListObj;
@@ -1184,7 +1184,7 @@ ThrowDir):
             DMsg(throw dir, '{I} {throw} {the obj} {1}wards and {he obj} {lands}
                 on the ground. ', gAction.direction.name );
         }
-```
+`
 
 Finally, since the report method is designed to give a routine report on
 what may be a group of objects, there's usually little point in defining
@@ -1211,12 +1211,12 @@ The Remap stage is used to replace the current object of an action with
 another object in the same role. For example, to remap putting things in
 a desk to putting them into its drawer we could simply write:
 
-```
+`
     desk: Thing 'desk'
       "It has a single drawer. "
       iobjFor(PutIn) { remap = drawer  }
     ;
-```
+`
 
 Finally, there are situations when you what you want to do is not so
 much to remap one action to another (possibly involving different
@@ -1225,20 +1225,20 @@ For this purpose you can use the macros **asDobjFor(*action*)** and
 **asIobjFor(*action*)**, just as in the adv3 library. For example if we
 wanted pulling the drawer always to equate to opening it we'd write:
 
-```
+`
     drawer: Thing 'drawer'
       isOpenable = true
       contType = In
 
       dobjFor(Pull) asDobjFor(Open)  
     ;
-```
+`
 
 As a second example, the adv3Lite library defines the following on the
 SimpleAttachable class to make FASTEN and UNFASTEN behave just like
 ATTACH and DETACH:
 
-```
+`
     class SimpleAttachable: Thing
       ...
        /* Treat Fasten and Unfasten as equivalent to Attach and Detach */
@@ -1248,7 +1248,7 @@ ATTACH and DETACH:
         iobjFor(UnfastenFrom) asIobjFor(DetachFrom)
         dobjFor(Unfasten) asDobjFor(Detach)  
     ;
-```
+`
 
   
 

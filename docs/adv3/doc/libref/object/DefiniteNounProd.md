@@ -30,7 +30,7 @@ Details](#_Methods_)
 
 Base class for noun phrase productions with definite articles.
 
-`class `**`DefiniteNounProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)`   `[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
+`class `**`DefiniteNounProd`**` :   `[`NounPhraseProd`](../object/NounPhraseProd.html)[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
 
 </div>
 
@@ -43,10 +43,10 @@ Base class for noun phrase productions with definite articles.
 </div>
 
 **`DefiniteNounProd`**  
-`         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
-`         `[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)  
+[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,29 +57,29 @@ Base class for noun phrase productions with definite articles.
 </div>
 
 **`DefiniteNounProd`**  
-`         `[`BasicPossessiveProd`](../object/BasicPossessiveProd.html)  
-`                 `[`ButPossessiveProd`](../object/ButPossessiveProd.html)  
-`                         `[`exceptNounPhrase(singlePossessive)`](../object/exceptNounPhrase(singlePossessive).html)  
-`                 `[`DisambigPossessiveProd`](../object/DisambigPossessiveProd.html)  
-`                         `[`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
-`                 `[`PossessiveNounProd`](../object/PossessiveNounProd.html)  
-`                         `[`qualifiedSingularNounPhrase(possessive)`](../object/qualifiedSingularNounPhrase(possessive).html)  
-`                 `[`PossessivePluralProd`](../object/PossessivePluralProd.html)  
-`                         `[`explicitDetPluralNounPhrase(possessive)`](../object/explicitDetPluralNounPhrase(possessive).html)  
-`                         `[`explicitDetPluralOnlyNounPhrase(possessive)`](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
-`         `[`ContainerNounPhraseProd`](../object/ContainerNounPhraseProd.html)  
-`                 `[`indetPluralNounPhrase(locational)`](../object/indetPluralNounPhrase(locational).html)  
-`                 `[`indetPluralOnlyNounPhrase(locational)`](../object/indetPluralOnlyNounPhrase(locational).html)  
-`                 `[`indetSingularNounPhrase(locational)`](../object/indetSingularNounPhrase(locational).html)  
-`         `[`PreResolvedAmbigProd`](../object/PreResolvedAmbigProd.html)  
-`         `[`qualifiedSingularNounPhrase(definite)`](../object/qualifiedSingularNounPhrase(definite).html)  
-`         `[`VagueContainerNounPhraseProd`](../object/VagueContainerNounPhraseProd.html)  
-`                 `[`AllInContainerNounPhraseProd`](../object/AllInContainerNounPhraseProd.html)  
-`                         `[`qualifiedPluralNounPhrase(theOnesIn)`](../object/qualifiedPluralNounPhrase(theOnesIn).html)  
-`                 `[`VagueContainerDefiniteNounPhraseProd`](../object/VagueContainerDefiniteNounPhraseProd.html)  
-`                         `[`qualifiedSingularNounPhrase(theOneIn)`](../object/qualifiedSingularNounPhrase(theOneIn).html)  
-`                 `[`VagueContainerIndefiniteNounPhraseProd`](../object/VagueContainerIndefiniteNounPhraseProd.html)  
-`                         `[`qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
+[`BasicPossessiveProd`](../object/BasicPossessiveProd.html)  
+[`ButPossessiveProd`](../object/ButPossessiveProd.html)  
+[`exceptNounPhrase(singlePossessive)`](../object/exceptNounPhrase(singlePossessive).html)  
+[`DisambigPossessiveProd`](../object/DisambigPossessiveProd.html)  
+[`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
+[`PossessiveNounProd`](../object/PossessiveNounProd.html)  
+[`qualifiedSingularNounPhrase(possessive)`](../object/qualifiedSingularNounPhrase(possessive).html)  
+[`PossessivePluralProd`](../object/PossessivePluralProd.html)  
+[`explicitDetPluralNounPhrase(possessive)`](../object/explicitDetPluralNounPhrase(possessive).html)  
+[`explicitDetPluralOnlyNounPhrase(possessive)`](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
+[`ContainerNounPhraseProd`](../object/ContainerNounPhraseProd.html)  
+[`indetPluralNounPhrase(locational)`](../object/indetPluralNounPhrase(locational).html)  
+[`indetPluralOnlyNounPhrase(locational)`](../object/indetPluralOnlyNounPhrase(locational).html)  
+[`indetSingularNounPhrase(locational)`](../object/indetSingularNounPhrase(locational).html)  
+[`PreResolvedAmbigProd`](../object/PreResolvedAmbigProd.html)  
+[`qualifiedSingularNounPhrase(definite)`](../object/qualifiedSingularNounPhrase(definite).html)  
+[`VagueContainerNounPhraseProd`](../object/VagueContainerNounPhraseProd.html)  
+[`AllInContainerNounPhraseProd`](../object/AllInContainerNounPhraseProd.html)  
+[`qualifiedPluralNounPhrase(theOnesIn)`](../object/qualifiedPluralNounPhrase(theOnesIn).html)  
+[`VagueContainerDefiniteNounPhraseProd`](../object/VagueContainerDefiniteNounPhraseProd.html)  
+[`qualifiedSingularNounPhrase(theOneIn)`](../object/qualifiedSingularNounPhrase(theOneIn).html)  
+[`VagueContainerIndefiniteNounPhraseProd`](../object/VagueContainerIndefiniteNounPhraseProd.html)  
+[`qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -96,16 +96,16 @@ Base class for noun phrase productions with definite articles.
 
 </div>
 
-` `
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `AmbigResponseKeeper` :  
-` `[`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)`  `
+[`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
 
 <span id="_MethodSummary_"></span>
 
@@ -115,16 +115,16 @@ Inherited from `AmbigResponseKeeper` :
 
 </div>
 
-` `[`reduceDefinite`](#reduceDefinite)`  `[`resolveDefinite`](#resolveDefinite)`  `[`resolveNouns`](#resolveNouns)`  `
+[`reduceDefinite`](#reduceDefinite)[`resolveDefinite`](#resolveDefinite)[`resolveNouns`](#resolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `AmbigResponseKeeper` :  
-` `[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)`  `[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)`  `
+[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

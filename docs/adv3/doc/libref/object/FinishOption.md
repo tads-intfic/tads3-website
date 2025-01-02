@@ -61,7 +61,7 @@ representing options offered by finishGame.
 
 </div>
 
-` `[`finishOptionAmusing`](../object/finishOptionAmusing.html)`  `[`finishOptionCredits`](../object/finishOptionCredits.html)`  `[`finishOptionFullScore`](../object/finishOptionFullScore.html)`  `[`finishOptionQuit`](../object/finishOptionQuit.html)`  `[`finishOptionRestart`](../object/finishOptionRestart.html)`  `[`finishOptionRestore`](../object/finishOptionRestore.html)`  `[`finishOptionScore`](../object/finishOptionScore.html)`  `[`finishOptionUndo`](../object/finishOptionUndo.html)`  `
+[`finishOptionAmusing`](../object/finishOptionAmusing.html)[`finishOptionCredits`](../object/finishOptionCredits.html)[`finishOptionFullScore`](../object/finishOptionFullScore.html)[`finishOptionQuit`](../object/finishOptionQuit.html)[`finishOptionRestart`](../object/finishOptionRestart.html)[`finishOptionRestore`](../object/finishOptionRestore.html)[`finishOptionScore`](../object/finishOptionScore.html)[`finishOptionUndo`](../object/finishOptionUndo.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -70,7 +70,7 @@ representing options offered by finishGame.
 
 </div>
 
-` `[`desc`](#desc)`  `[`isListed`](#isListed)`  `[`responseChar`](#responseChar)`  `[`responseKeyword`](#responseKeyword)`  `[`showScoreInFinish`](#showScoreInFinish)`  `
+[`desc`](#desc)[`isListed`](#isListed)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)[`showScoreInFinish`](#showScoreInFinish)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ representing options offered by finishGame.
 
 </div>
 
-` `[`doOption`](#doOption)`  `[`responseMatches`](#responseMatches)`  `
+[`doOption`](#doOption)[`responseMatches`](#responseMatches)
 
 <span id="_Properties_"></span>
 

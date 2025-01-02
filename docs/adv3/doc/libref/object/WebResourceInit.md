@@ -98,7 +98,7 @@ match.
 
 </div>
 
-` `[`webMainWin`](../object/webMainWin.html)`  `
+[`webMainWin`](../object/webMainWin.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -107,7 +107,7 @@ match.
 
 </div>
 
-` `[`server`](#server)`  `
+[`server`](#server)
 
 <span id="_MethodSummary_"></span>
 
@@ -117,7 +117,7 @@ match.
 
 </div>
 
-` `[`connectUI`](#connectUI)`  `[`processRequest`](#processRequest)`  `
+[`connectUI`](#connectUI)[`processRequest`](#processRequest)
 
 <span id="_Properties_"></span>
 

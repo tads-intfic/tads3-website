@@ -45,7 +45,7 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -55,7 +55,7 @@ Details](#_Methods_)
 
 </div>
 
-` `[`getAdjustedTokens`](#getAdjustedTokens)`  `[`getVocabMatchList`](#getVocabMatchList)`  `
+[`getAdjustedTokens`](#getAdjustedTokens)[`getVocabMatchList`](#getVocabMatchList)
 
 <span id="_Properties_"></span>
 

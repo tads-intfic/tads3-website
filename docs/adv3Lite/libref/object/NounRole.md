@@ -94,7 +94,7 @@ can only imagine how a \*four\*-noun command would be received.)
 
 </div>
 
-` `[`AccessoryObject`](../object/AccessoryObject.html)`  `[`ActorRole`](../object/ActorRole.html)`  `[`DirectObject`](../object/DirectObject.html)`  `[`IndirectObject`](../object/IndirectObject.html)`  `
+[`AccessoryObject`](../object/AccessoryObject.html)[`ActorRole`](../object/ActorRole.html)[`DirectObject`](../object/DirectObject.html)[`IndirectObject`](../object/IndirectObject.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -103,7 +103,7 @@ can only imagine how a \*four\*-noun command would be received.)
 
 </div>
 
-` `[`all`](#all)`  `[`allPredicate`](#allPredicate)`  `[`isPredicate`](#isPredicate)`  `[`matchProp`](#matchProp)`  `[`missingReplyProp`](#missingReplyProp)`  `[`name`](#name)`  `[`npListProp`](#npListProp)`  `[`objListProp`](#objListProp)`  `[`objMatchProp`](#objMatchProp)`  `[`objProp`](#objProp)`  `[`order`](#order)`  `
+[`all`](#all)[`allPredicate`](#allPredicate)[`isPredicate`](#isPredicate)[`matchProp`](#matchProp)[`missingReplyProp`](#missingReplyProp)[`name`](#name)[`npListProp`](#npListProp)[`objListProp`](#objListProp)[`objMatchProp`](#objMatchProp)[`objProp`](#objProp)[`order`](#order)
 
 <span id="_MethodSummary_"></span>
 
@@ -113,7 +113,7 @@ can only imagine how a \*four\*-noun command would be received.)
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

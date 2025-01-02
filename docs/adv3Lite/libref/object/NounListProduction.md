@@ -53,7 +53,7 @@ List(a, List(b, List(c, List(d)))).
 </div>
 
 **`NounListProduction`**  
-`         `[`Production`](../object/Production.html)  
+[`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -64,13 +64,13 @@ List(a, List(b, List(c, List(d)))).
 </div>
 
 **`NounListProduction`**  
-`         `[`disambigList(list)`](../object/disambigList(list).html)  
-`         `[`disambigOrdinalList(head)`](../object/disambigOrdinalList(head).html)  
-`         `[`disambigOrdinalList(tail)`](../object/disambigOrdinalList(tail).html)  
-`         `[`exceptListBody(list)`](../object/exceptListBody(list).html)  
-`         `[`nonTerminalNounMultiList(multi)`](../object/nonTerminalNounMultiList(multi).html)  
-`         `[`nonTerminalNounMultiList(pair)`](../object/nonTerminalNounMultiList(pair).html)  
-`         `[`nounMultiList(multi)`](../object/nounMultiList(multi).html)  
+[`disambigList(list)`](../object/disambigList(list).html)  
+[`disambigOrdinalList(head)`](../object/disambigOrdinalList(head).html)  
+[`disambigOrdinalList(tail)`](../object/disambigOrdinalList(tail).html)  
+[`exceptListBody(list)`](../object/exceptListBody(list).html)  
+[`nonTerminalNounMultiList(multi)`](../object/nonTerminalNounMultiList(multi).html)  
+[`nonTerminalNounMultiList(pair)`](../object/nonTerminalNounMultiList(pair).html)  
+[`nounMultiList(multi)`](../object/nounMultiList(multi).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -87,10 +87,10 @@ List(a, List(b, List(c, List(d)))).
 
 </div>
 
-` `
+
 
 Inherited from `Production` :  
-` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+[`determiner`](../object/Production.html#determiner)[`nounPhraseRole`](../object/Production.html#nounPhraseRole)[`npClass`](../object/Production.html#npClass)[`parent`](../object/Production.html#parent)
 
 <span id="_MethodSummary_"></span>
 
@@ -100,10 +100,10 @@ Inherited from `Production` :
 
 </div>
 
-` `[`visitProd`](#visitProd)`  `
+[`visitProd`](#visitProd)
 
 Inherited from `Production` :  
-` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`build`](../object/Production.html#build)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `
+[`addNounListItem`](../object/Production.html#addNounListItem)[`build`](../object/Production.html#build)[`findAction`](../object/Production.html#findAction)[`findChild`](../object/Production.html#findChild)[`findParent`](../object/Production.html#findParent)[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)[`getText`](../object/Production.html#getText)[`getTokens`](../object/Production.html#getTokens)[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)[`isChildOf`](../object/Production.html#isChildOf)[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)[`visitLiteral`](../object/Production.html#visitLiteral)
 
 <span id="_Properties_"></span>
 

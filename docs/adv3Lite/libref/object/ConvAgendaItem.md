@@ -47,7 +47,7 @@ until we get a turn where the player didn't directly talk to us.
 </div>
 
 **`ConvAgendaItem`**  
-`         `[`AgendaItem`](../object/AgendaItem.html)  
+[`AgendaItem`](../object/AgendaItem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,10 +73,10 @@ until we get a turn where the player didn't directly talk to us.
 
 </div>
 
-` `[`greetingDisplayed`](#greetingDisplayed)`  `[`isReady`](#isReady)`  `[`otherActor`](#otherActor)`  `[`reasonInvoked`](#reasonInvoked)`  `
+[`greetingDisplayed`](#greetingDisplayed)[`isReady`](#isReady)[`otherActor`](#otherActor)[`reasonInvoked`](#reasonInvoked)
 
 Inherited from `AgendaItem` :  
-` `[`agendaOrder`](../object/AgendaItem.html#agendaOrder)`  `[`calledBy`](../object/AgendaItem.html#calledBy)`  `[`initiallyActive`](../object/AgendaItem.html#initiallyActive)`  `[`invokedByActor`](../object/AgendaItem.html#invokedByActor)`  `[`isDone`](../object/AgendaItem.html#isDone)`  `[`name`](../object/AgendaItem.html#name)`  `
+[`agendaOrder`](../object/AgendaItem.html#agendaOrder)[`calledBy`](../object/AgendaItem.html#calledBy)[`initiallyActive`](../object/AgendaItem.html#initiallyActive)[`invokedByActor`](../object/AgendaItem.html#invokedByActor)[`isDone`](../object/AgendaItem.html#isDone)[`name`](../object/AgendaItem.html#name)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,10 +86,10 @@ Inherited from `AgendaItem` :
 
 </div>
 
-` `[`invokeItemBase`](#invokeItemBase)`  `
+[`invokeItemBase`](#invokeItemBase)
 
 Inherited from `AgendaItem` :  
-` `[`getActor`](../object/AgendaItem.html#getActor)`  `[`invokeItem`](../object/AgendaItem.html#invokeItem)`  `[`registerItem`](../object/AgendaItem.html#registerItem)`  `[`report`](../object/AgendaItem.html#report)`  `[`resetItem`](../object/AgendaItem.html#resetItem)`  `
+[`getActor`](../object/AgendaItem.html#getActor)[`invokeItem`](../object/AgendaItem.html#invokeItem)[`registerItem`](../object/AgendaItem.html#registerItem)[`report`](../object/AgendaItem.html#report)[`resetItem`](../object/AgendaItem.html#resetItem)
 
 <span id="_Properties_"></span>
 

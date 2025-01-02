@@ -50,8 +50,8 @@ UI state should not be saved either.
 </div>
 
 **`OutputStream`**  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -62,9 +62,9 @@ UI state should not be saved either.
 </div>
 
 **`OutputStream`**  
-`         `[`BannerOutputStream`](../object/BannerOutputStream.html)  
-`         `[`LogConsole`](../object/LogConsole.html)  
-`         `[`WebWinOutputStream`](../object/WebWinOutputStream.html)  
+[`BannerOutputStream`](../object/BannerOutputStream.html)  
+[`LogConsole`](../object/LogConsole.html)  
+[`WebWinOutputStream`](../object/WebWinOutputStream.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -73,7 +73,7 @@ UI state should not be saved either.
 
 </div>
 
-` `[`mainOutputStream`](../object/mainOutputStream.html)`  `[`menuOutputStream`](../object/menuOutputStream.html)`  `[`statusLeftOutputStream`](../object/statusLeftOutputStream.html)`  `[`statusRightOutputStream`](../object/statusRightOutputStream.html)`  `[`statusTagOutputStream`](../object/statusTagOutputStream.html)`  `
+[`mainOutputStream`](../object/mainOutputStream.html)[`menuOutputStream`](../object/menuOutputStream.html)[`statusLeftOutputStream`](../object/statusLeftOutputStream.html)[`statusRightOutputStream`](../object/statusRightOutputStream.html)[`statusTagOutputStream`](../object/statusTagOutputStream.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -82,13 +82,13 @@ UI state should not be saved either.
 
 </div>
 
-` `[`filterList_`](#filterList_)`  `[`justDidPara`](#justDidPara)`  `[`justDidParaSuppressor`](#justDidParaSuppressor)`  `[`myInputManager`](#myInputManager)`  `[`prefix`](#prefix)`  `
+[`filterList_`](#filterList_)[`justDidPara`](#justDidPara)[`justDidParaSuppressor`](#justDidParaSuppressor)[`myInputManager`](#myInputManager)[`prefix`](#prefix)
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -98,12 +98,12 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`addOutputFilter`](#addOutputFilter)`  `[`addOutputFilterBelow`](#addOutputFilterBelow)`  `[`applyFilters`](#applyFilters)`  `[`applyTextFilters`](#applyTextFilters)`  `[`captureOutput`](#captureOutput)`  `[`captureOutputIgnoreExit`](#captureOutputIgnoreExit)`  `[`construct`](#construct)`  `[`execute`](#execute)`  `[`inputLineEnd`](#inputLineEnd)`  `[`removeOutputFilter`](#removeOutputFilter)`  `[`setPrefix`](#setPrefix)`  `[`watchForOutput`](#watchForOutput)`  `[`writeFromStream`](#writeFromStream)`  `[`writeToStream`](#writeToStream)`  `
+[`addOutputFilter`](#addOutputFilter)[`addOutputFilterBelow`](#addOutputFilterBelow)[`applyFilters`](#applyFilters)[`applyTextFilters`](#applyTextFilters)[`captureOutput`](#captureOutput)[`captureOutputIgnoreExit`](#captureOutputIgnoreExit)[`construct`](#construct)[`execute`](#execute)[`inputLineEnd`](#inputLineEnd)[`removeOutputFilter`](#removeOutputFilter)[`setPrefix`](#setPrefix)[`watchForOutput`](#watchForOutput)[`writeFromStream`](#writeFromStream)[`writeToStream`](#writeToStream)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

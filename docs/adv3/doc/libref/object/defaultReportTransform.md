@@ -41,7 +41,7 @@ non-default reports in the same action.
 </div>
 
 **`defaultReportTransform`**  
-`         `[`TranscriptTransform`](../object/TranscriptTransform.html)  
+[`TranscriptTransform`](../object/TranscriptTransform.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -51,9 +51,9 @@ non-default reports in the same action.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -63,9 +63,9 @@ non-default reports in the same action.
 
 </div>
 
-` `[`applyTransform`](#applyTransform)`  `
+[`applyTransform`](#applyTransform)
 
-` `
+
 
 <span id="_Properties_"></span>
 

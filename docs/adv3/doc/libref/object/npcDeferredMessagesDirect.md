@@ -67,7 +67,7 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 </div>
 
 **`npcDeferredMessagesDirect`**  
-`         `[`npcDeferredMessages`](../object/npcDeferredMessages.html)  
+[`npcDeferredMessages`](../object/npcDeferredMessages.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -77,9 +77,9 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -89,9 +89,9 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 </div>
 
-` `[`ambiguousNounPhrase`](#ambiguousNounPhrase)`  `[`askMissingObject`](#askMissingObject)`  `[`commandNotUnderstood`](#commandNotUnderstood)`  `[`emptyNounPhrase`](#emptyNounPhrase)`  `[`insufficientQuantity`](#insufficientQuantity)`  `[`noMatchCannotSee`](#noMatchCannotSee)`  `[`noMatchForAll`](#noMatchForAll)`  `[`noMatchForAllBut`](#noMatchForAllBut)`  `[`noMatchNotAware`](#noMatchNotAware)`  `[`singleObjectRequired`](#singleObjectRequired)`  `[`uniqueObjectRequired`](#uniqueObjectRequired)`  `[`wordIsUnknown`](#wordIsUnknown)`  `[`zeroQuantity`](#zeroQuantity)`  `
+[`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askMissingObject`](#askMissingObject)[`commandNotUnderstood`](#commandNotUnderstood)[`emptyNounPhrase`](#emptyNounPhrase)[`insufficientQuantity`](#insufficientQuantity)[`noMatchCannotSee`](#noMatchCannotSee)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchNotAware`](#noMatchNotAware)[`singleObjectRequired`](#singleObjectRequired)[`uniqueObjectRequired`](#uniqueObjectRequired)[`wordIsUnknown`](#wordIsUnknown)[`zeroQuantity`](#zeroQuantity)
 
-` `
+
 
 <span id="_Properties_"></span>
 

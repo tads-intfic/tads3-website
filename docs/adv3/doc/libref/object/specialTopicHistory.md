@@ -76,7 +76,7 @@ there on the screen a few lines up.
 
 </div>
 
-` `[`historyList`](#historyList)`  `[`maxEntries`](#maxEntries)`  `
+[`historyList`](#historyList)[`maxEntries`](#maxEntries)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ there on the screen a few lines up.
 
 </div>
 
-` `[`checkHistory`](#checkHistory)`  `[`noteListing`](#noteListing)`  `
+[`checkHistory`](#checkHistory)[`noteListing`](#noteListing)
 
 <span id="_Properties_"></span>
 

@@ -58,10 +58,10 @@ object or objects you want the implicit action to apply to. So, for
 example, to trigger an implicit TAKE RED BALL action in your own code
 you might write:
 
-```
+`
      tryImplicitAction(Take, redBall); 
      
-```
+`
 
 The place where you might typically write such code is in the action
 section of a dobjFor() or iobjFor() block in your own code. For example,
@@ -72,7 +72,7 @@ action if the pen isn't held, you could make the player character take
 the pen automatically via an implicit action provided the pen is within
 reach, something like:
 
-```
+`
      pieceOfPaper: Thing 'piece of paper'
         ...
         dobjFor(WriteOn)
@@ -92,7 +92,7 @@ reach, something like:
             }
         }
      
-```
+`
 
   
 <span id="reporting"></span>
@@ -125,28 +125,28 @@ implicit action reports, and since it's your game you're writing you
 can, if you like, banish all implicit action reports with the following
 few lines of code:
 
-```
+`
     modify Take
         reportImplicitActions = nil
     ;
-```
+`
 
 You can also do this on a per action basis. For example, the following
 code would suppress implicit take reports but allow all other implicit
 actions to be reported:
 
-```
+`
      modify Take
         reportImplicitActions = nil
     ;
      
-```
+`
 
 To suppress the implicit action reports that would stem from a
 particular action applied to particular objects, we can use a
 [Doer](doer.html), like so:
 
-```
+`
      Doer 'look in octopusTank'
         execAction(c)
         {
@@ -162,7 +162,7 @@ particular action applied to particular objects, we can use a
         }       
     ;
      
-```
+`
 
 This would prevent any implicit action reports appearing in response to
 the command LOOK IN OCTOPUS TANK. We could also, of course, use a Doer
@@ -178,7 +178,7 @@ Finally, we can customize some of the fragments of text that go to build
 up implicit action reports by using a
 [CustomMessages](message.html#custmessage_idx) object like so:
 
-```
+`
      CustomMessages
         messages = [
             Msg(implicit action report start, '[after '),
@@ -188,7 +188,7 @@ up implicit action reports by using a
         ]
     ;
      
-```
+`
 
 This example would turn a report like '(first taking the ball)' into
 '\[after taking the ball\]', '(first trying to open the box)' into

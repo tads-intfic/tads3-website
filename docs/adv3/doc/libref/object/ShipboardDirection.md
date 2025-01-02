@@ -43,7 +43,7 @@ The base class for shipboard directions (port, aft, etc).
 </div>
 
 **`ShipboardDirection`**  
-`         `[`Direction`](../object/Direction.html)  
+[`Direction`](../object/Direction.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -61,7 +61,7 @@ The base class for shipboard directions (port, aft, etc).
 
 </div>
 
-` `[`aftDirection`](../object/aftDirection.html)`  `[`foreDirection`](../object/foreDirection.html)`  `[`portDirection`](../object/portDirection.html)`  `[`starboardDirection`](../object/starboardDirection.html)`  `
+[`aftDirection`](../object/aftDirection.html)[`foreDirection`](../object/foreDirection.html)[`portDirection`](../object/portDirection.html)[`starboardDirection`](../object/starboardDirection.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -70,10 +70,10 @@ The base class for shipboard directions (port, aft, etc).
 
 </div>
 
-` `
+
 
 Inherited from `Direction` :  
-` `[`allDirections`](../object/Direction.html#allDirections)`  `[`dirProp`](../object/Direction.html#dirProp)`  `[`sortingOrder`](../object/Direction.html#sortingOrder)`  `
+[`allDirections`](../object/Direction.html#allDirections)[`dirProp`](../object/Direction.html#dirProp)[`sortingOrder`](../object/Direction.html#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `Direction` :
 
 </div>
 
-` `[`defaultConnector`](#defaultConnector)`  `
+[`defaultConnector`](#defaultConnector)
 
 Inherited from `Direction` :  
-` `[`initializeDirection`](../object/Direction.html#initializeDirection)`  `[`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass)`  `[`sayArriving`](../object/Direction.html#sayArriving)`  `[`sayDeparting`](../object/Direction.html#sayDeparting)`  `
+[`initializeDirection`](../object/Direction.html#initializeDirection)[`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass)[`sayArriving`](../object/Direction.html#sayArriving)[`sayDeparting`](../object/Direction.html#sayDeparting)
 
 <span id="_Properties_"></span>
 

@@ -47,7 +47,7 @@ EXTENSION\]
 
 </div>
 
-` `[`priority`](#priority)`  `
+[`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -57,7 +57,7 @@ EXTENSION\]
 
 </div>
 
-` `[`follow`](#follow)`  `
+[`follow`](#follow)
 
 <span id="_Properties_"></span>
 

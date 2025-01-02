@@ -32,7 +32,7 @@ class.
 
 </div>
 
-` `[`DynamicProd`](../object/DynamicProd.html)`  `[`GrammarAltInfo`](../object/GrammarAltInfo.html)`  `[`GrammarAltTokInfo`](../object/GrammarAltTokInfo.html)`  `
+[`DynamicProd`](../object/DynamicProd.html)[`GrammarAltInfo`](../object/GrammarAltInfo.html)[`GrammarAltTokInfo`](../object/GrammarAltTokInfo.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">

@@ -46,7 +46,7 @@ Library global variables
 
 </div>
 
-` `[`actorVisualAmbientCache`](#actorVisualAmbientCache)`  `[`allSenses`](#allSenses)`  `[`canTouchCache`](#canTouchCache)`  `[`commandLineArgs`](#commandLineArgs)`  `[`connectionCache`](#connectionCache)`  `[`curAction`](#curAction)`  `[`curActor`](#curActor)`  `[`curIssuingActor`](#curIssuingActor)`  `[`curVerifyResults`](#curVerifyResults)`  `[`exitListerObj`](#exitListerObj)`  `[`footnoteClass`](#footnoteClass)`  `[`hintManagerObj`](#hintManagerObj)`  `[`IFID`](#IFID)`  `[`lastActorForUndo`](#lastActorForUndo)`  `[`lastCommandForUndo`](#lastCommandForUndo)`  `[`libMessageObj`](#libMessageObj)`  `[`parserDebugMode`](#parserDebugMode)`  `[`playerChar`](#playerChar)`  `[`pointOfView`](#pointOfView)`  `[`pointOfViewActor`](#pointOfViewActor)`  `[`povStack`](#povStack)`  `[`scoreObj`](#scoreObj)`  `[`senseCache`](#senseCache)`  `[`totalTurns`](#totalTurns)`  `
+[`actorVisualAmbientCache`](#actorVisualAmbientCache)[`allSenses`](#allSenses)[`canTouchCache`](#canTouchCache)[`commandLineArgs`](#commandLineArgs)[`connectionCache`](#connectionCache)[`curAction`](#curAction)[`curActor`](#curActor)[`curIssuingActor`](#curIssuingActor)[`curVerifyResults`](#curVerifyResults)[`exitListerObj`](#exitListerObj)[`footnoteClass`](#footnoteClass)[`hintManagerObj`](#hintManagerObj)[`IFID`](#IFID)[`lastActorForUndo`](#lastActorForUndo)[`lastCommandForUndo`](#lastCommandForUndo)[`libMessageObj`](#libMessageObj)[`parserDebugMode`](#parserDebugMode)[`playerChar`](#playerChar)[`pointOfView`](#pointOfView)[`pointOfViewActor`](#pointOfViewActor)[`povStack`](#povStack)[`scoreObj`](#scoreObj)[`senseCache`](#senseCache)[`totalTurns`](#totalTurns)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ Library global variables
 
 </div>
 
-` `[`disableSenseCache`](#disableSenseCache)`  `[`enableSenseCache`](#enableSenseCache)`  `[`getCommandSwitch`](#getCommandSwitch)`  `[`invalSenseCache`](#invalSenseCache)`  `
+[`disableSenseCache`](#disableSenseCache)[`enableSenseCache`](#enableSenseCache)[`getCommandSwitch`](#getCommandSwitch)[`invalSenseCache`](#invalSenseCache)
 
 <span id="_Properties_"></span>
 

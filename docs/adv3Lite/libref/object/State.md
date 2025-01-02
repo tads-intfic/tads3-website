@@ -60,7 +60,7 @@ states as needed, of course.
 </div>
 
 **`State`**  
-`         `[`LState`](../object/LState.html)  
+[`LState`](../object/LState.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -78,7 +78,7 @@ states as needed, of course.
 
 </div>
 
-` `[`DirState`](../object/DirState.html)`  `[`LitUnlit`](../object/LitUnlit.html)`  `[`OpenClosed`](../object/OpenClosed.html)`  `
+[`DirState`](../object/DirState.html)[`LitUnlit`](../object/LitUnlit.html)[`OpenClosed`](../object/OpenClosed.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -87,10 +87,10 @@ states as needed, of course.
 
 </div>
 
-` `[`adjectives`](#adjectives)`  `[`all`](#all)`  `[`stateProp`](#stateProp)`  `[`vocabTab`](#vocabTab)`  `[`vocabWords`](#vocabWords)`  `
+[`adjectives`](#adjectives)[`all`](#all)[`stateProp`](#stateProp)[`vocabTab`](#vocabTab)[`vocabWords`](#vocabWords)
 
 Inherited from `LState` :  
-` `[`additionalInfo`](../object/LState.html#additionalInfo)`  `
+[`additionalInfo`](../object/LState.html#additionalInfo)
 
 <span id="_MethodSummary_"></span>
 
@@ -100,10 +100,10 @@ Inherited from `LState` :
 
 </div>
 
-` `[`appliesTo`](#appliesTo)`  `[`classInit`](#classInit)`  `[`construct`](#construct)`  `[`getVocab`](#getVocab)`  `[`matchName`](#matchName)`  `
+[`appliesTo`](#appliesTo)[`classInit`](#classInit)[`construct`](#construct)[`getVocab`](#getVocab)[`matchName`](#matchName)
 
 Inherited from `LState` :  
-` `[`addToName`](../object/LState.html#addToName)`  `[`getAdditionalInfo`](../object/LState.html#getAdditionalInfo)`  `[`initWord`](../object/LState.html#initWord)`  `
+[`addToName`](../object/LState.html#addToName)[`getAdditionalInfo`](../object/LState.html#getAdditionalInfo)[`initWord`](../object/LState.html#initWord)
 
 <span id="_Properties_"></span>
 

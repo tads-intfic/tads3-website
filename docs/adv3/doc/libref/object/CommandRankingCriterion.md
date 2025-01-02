@@ -65,8 +65,8 @@ to determine if one tree is slightly better than the other.
 </div>
 
 **`CommandRankingCriterion`**  
-`         `[`CommandRankingByProblem`](../object/CommandRankingByProblem.html)  
-`         `[`CommandRankingByWeakness`](../object/CommandRankingByWeakness.html)  
+[`CommandRankingByProblem`](../object/CommandRankingByProblem.html)  
+[`CommandRankingByWeakness`](../object/CommandRankingByWeakness.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -75,7 +75,7 @@ to determine if one tree is slightly better than the other.
 
 </div>
 
-` `[`rankByAmbiguity`](../object/rankByAmbiguity.html)`  `[`rankByLiteralLength`](../object/rankByLiteralLength.html)`  `[`rankByNonMatchPoss`](../object/rankByNonMatchPoss.html)`  `[`rankBySubcommands`](../object/rankBySubcommands.html)`  `[`rankByTokenCount`](../object/rankByTokenCount.html)`  `[`rankByVerbStructure`](../object/rankByVerbStructure.html)`  `
+[`rankByAmbiguity`](../object/rankByAmbiguity.html)[`rankByLiteralLength`](../object/rankByLiteralLength.html)[`rankByNonMatchPoss`](../object/rankByNonMatchPoss.html)[`rankBySubcommands`](../object/rankBySubcommands.html)[`rankByTokenCount`](../object/rankByTokenCount.html)[`rankByVerbStructure`](../object/rankByVerbStructure.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -84,7 +84,7 @@ to determine if one tree is slightly better than the other.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -94,7 +94,7 @@ to determine if one tree is slightly better than the other.
 
 </div>
 
-` `[`comparePass1`](#comparePass1)`  `[`comparePass2`](#comparePass2)`  `
+[`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
 
 <span id="_Properties_"></span>
 

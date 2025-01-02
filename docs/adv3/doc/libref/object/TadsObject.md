@@ -44,7 +44,7 @@ with the "class" or "object" statements descend from this class.
 </div>
 
 **`TadsObject`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -69,9 +69,9 @@ with the "class" or "object" statements descend from this class.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -81,10 +81,10 @@ with the "class" or "object" statements descend from this class.
 
 </div>
 
-` `[`createClone`](#createClone)`  `[`createInstance`](#createInstance)`  `[`createTransientInstance`](#createTransientInstance)`  `[`getMethod`](#getMethod)`  `[`setMethod`](#setMethod)`  `[`setSuperclassList`](#setSuperclassList)`  `
+[`createClone`](#createClone)[`createInstance`](#createInstance)[`createTransientInstance`](#createTransientInstance)[`getMethod`](#getMethod)[`setMethod`](#setMethod)[`setSuperclassList`](#setSuperclassList)
 
 Inherited from `Object` :  
-` `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `[`valToSymbol`](../object/Object.html#valToSymbol)`  `
+[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)[`valToSymbol`](../object/Object.html#valToSymbol)
 
 <span id="_Properties_"></span>
 

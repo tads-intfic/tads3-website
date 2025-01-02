@@ -70,7 +70,7 @@ unconditional) barriers preventing travel.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ unconditional) barriers preventing travel.
 
 </div>
 
-` `[`canTravelerPass`](#canTravelerPass)`  `[`checkTravelBarrier`](#checkTravelBarrier)`  `[`explainTravelBarrier`](#explainTravelBarrier)`  `
+[`canTravelerPass`](#canTravelerPass)[`checkTravelBarrier`](#checkTravelBarrier)[`explainTravelBarrier`](#explainTravelBarrier)
 
 <span id="_Properties_"></span>
 

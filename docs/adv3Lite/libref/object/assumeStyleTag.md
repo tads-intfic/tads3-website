@@ -40,7 +40,7 @@ some ambiguity, and implied commands.
 </div>
 
 **`assumeStyleTag`**  
-`         `[`StyleTag`](../object/StyleTag.html)  
+[`StyleTag`](../object/StyleTag.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -50,10 +50,10 @@ some ambiguity, and implied commands.
 
 </div>
 
-` `[`closeText`](#closeText)`  `[`openText`](#openText)`  `
+` [`closeText`](#closeText)  [`openText`](#openText)  `
 
 Inherited from `StyleTag` :  
-` `[`tagName`](../object/StyleTag.html#tagName)`  `
+` [`tagName`](../object/StyleTag.html#tagName)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -63,9 +63,9 @@ Inherited from `StyleTag` :
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

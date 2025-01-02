@@ -49,7 +49,7 @@ that the current actor can touch the current object.
 </div>
 
 **`TouchObjCondition`**  
-`         `[`PreCondition`](../object/PreCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -67,7 +67,7 @@ that the current actor can touch the current object.
 
 </div>
 
-` `[`dobjTouchObj`](../object/dobjTouchObj.html)`  `[`iobjTouchObj`](../object/iobjTouchObj.html)`  `[`touchObj`](../object/touchObj.html)`  `
+[`dobjTouchObj`](../object/dobjTouchObj.html)[`iobjTouchObj`](../object/iobjTouchObj.html)[`touchObj`](../object/touchObj.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -76,9 +76,9 @@ that the current actor can touch the current object.
 
 </div>
 
-` `[`preCondOrder`](#preCondOrder)`  `[`sourceObj`](#sourceObj)`  `
+[`preCondOrder`](#preCondOrder)[`sourceObj`](#sourceObj)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -88,9 +88,9 @@ that the current actor can touch the current object.
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `[`construct`](#construct)`  `[`verifyPreCondition`](#verifyPreCondition)`  `
+[`checkPreCondition`](#checkPreCondition)[`construct`](#construct)[`verifyPreCondition`](#verifyPreCondition)
 
-` `
+
 
 <span id="_Properties_"></span>
 

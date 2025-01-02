@@ -76,7 +76,7 @@ define a check method or an action method you create a block with
 closing braces (usually several lines apart) and then place your check()
 and action() code between the braces, like so:
 
-```
+`
     dobjFor(Turn)
     {
         check()
@@ -94,7 +94,7 @@ and action() code between the braces, like so:
              hasBeenTurned = true;
         }
     }
-```
+`
 
 Although the adv3Lite library does its best to provide standard handling
 for as many actions as possible, this can only take you so far, as most
@@ -126,7 +126,7 @@ objects**. This is a form of syntax that allows us to define one object
 (the nested anonymous object) directly on the property of another
 object, like so:
 
-```
+`
     enclosingObject: Thing 'whatsit'
        "This is just a demonstration object. "
        
@@ -144,7 +144,7 @@ object, like so:
            
        }
     ;
-```
+`
 
 In this example, the object defined on the
 `someProperty` property of
@@ -194,7 +194,7 @@ objects of the **SubComponent** class directly on the **remapIn**,
 **remapOn**, **remapUnder** and **remapBehind** properties of the Thing
 in question, for example:
 
-```
+`
     chest: Heavy 'large chest'
        remapIn: SubComponent
        {
@@ -206,7 +206,7 @@ in question, for example:
        remapUnder: SubComponent {}
        remapBehind: SubComponent {}
     ;
-```
+`
 
 Note that if we want the chest to be openable or lockable we need to
 define these properties on the remapIn object, not directly on the chest
@@ -237,7 +237,7 @@ if we wanted the chest to start off with a book inside it, a plate on
 top of it, a coin underneath it, and pen behind it we'd define these
 four objects thus:
 
-```
+`
     + book: Thing 'book'
       subLocation = &remapIn
     ;
@@ -253,7 +253,7 @@ four objects thus:
     + pen: Thing 'pen'
       subLocation = &remapBehind
     ;  
-```
+`
 
 If we omitted to define these `subLocation`
 properties then we'd effectively have made the book, plate, coin and pen
@@ -264,7 +264,7 @@ distinct from the main object, such as a desk with a drawer. In which
 case we can point the appropriate remapXXX property to the separate
 container, for example:
 
-```
+`
     desk: Fixture 'desk'
       "It has a single drawer. "
       
@@ -275,7 +275,7 @@ container, for example:
     + drawer: OpenableContainer, Fixture 'drawer'
        bulkCapacity = 8
     ;
-```
+`
 
 With this set-up, LOOK IN DESK, OPEN DESK, CLOSE DESK, PUT SOMETHING IN
 DESK, LOCK DESK etc, will behave exaclty like LOOK IN DRAWER, OPEN
@@ -287,7 +287,7 @@ or handle, otherwise what was meant to be an external component will end
 up shut up inside the container when it's closed. You must be careful
 NOT to do this:
 
-```
+`
     suitcase: OpenableContainer 'suitcase;;case' //DON'T DO THIS!
       "It has a combination lock. "
       lockability = indirectLockable
@@ -297,11 +297,11 @@ NOT to do this:
     + comboLock: Fixture 'combination lock'
      ...
     ;
-```
+`
 
 Instead, you need to do this:
 
-```
+`
     suitcase: Thing 'suitcase;;case' 
       "It has a combination lock. "
       
@@ -316,7 +316,7 @@ Instead, you need to do this:
     + comboLock: Fixture 'combination lock'
      ...
     ;
-```
+`
 
 You can read more about [remapXXX properties and Multiple
 Containment](../manual/thing.html#remapxxx) in the *adv3Lite Library
@@ -336,7 +336,7 @@ properties. For example, if what we really wanted was for the coin and
 the pen to be hidden under and behind the chest until the player
 explicitly looks under and behind it, we should probably have written:
 
-```
+`
     chest: Heavy 'large chest'
        remapIn: SubComponent
        {
@@ -362,7 +362,7 @@ explicitly looks under and behind it, we should probably have written:
 
     pen: Thing 'pen'
     ;  
-```
+`
 
 Note that in this case the coin and the pen start out with no location
 at all (i.e. a location of nil), since they're off stage until the
@@ -486,12 +486,12 @@ statistics. For this kind of topic — something that may be talked about,
 thought about, or looked up, but not manipulated as a physical object
 within the game — we can define Topic objects, for example:
 
-```
+`
     tLove: Topic 'love';
     tLife: Topic 'life';
     tInflationRate: Topic 'rate[n] of inflation';
     tPopulationStats: Topic 'population statistics';
-```
+`
 
 Note that starting the object names of these Topics with t is simply a
 convention; you don't have to adopt it if you don't want to, but it's
@@ -534,23 +534,23 @@ Consultable) we assign it to the TopicEntry's
 response to its `topicResponse` property, which
 we can do via a conveniently defined template:
 
-```
+`
     + ConsultTopic @tLife
        "According to Dodgypedia life is hard to define, but is generally regarded
         as being preferable to the alternative. "
     ;
-```
+`
 
 The matchObj property can also be defined as a list of Topics (and/or
 Things), in which case the TopicEntry will be matched if any of the
 items in the matchObj list are requested:
 
-```
+`
     + ConsultTopic [tLife, tLove]
        "According to the dictionary of hard-nosed economics, such imponderables
         are not worth factoring into one's calculations. "
     ;
-```
+`
 
 The full story on [Topics](../manual/topic.html) and
 [TopicEntries](../manual/topicentry.html) can be found in the *adv3Lite
@@ -579,7 +579,7 @@ There's usually no need to define an abstract TravelConnector as a
 distinct defined object. The most normal way to define one is as an
 anonymous nested object on the direction property of a room, e.g.:
 
-```
+`
     meadow: Room 'Meadow'
       "An extremely muddy path leads off to the south. "
       
@@ -598,7 +598,7 @@ anonymous nested object on the direction property of a room, e.g.:
             boots, as you set off down the path. "
        }
     ;   
-```
+`
 
 ## Scenes
 

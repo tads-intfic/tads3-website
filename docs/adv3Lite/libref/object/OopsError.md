@@ -43,8 +43,8 @@ OopsError is the base class for errors in an OOPS command.
 </div>
 
 **`OopsError`**  
-`         `[`ParseError`](../object/ParseError.html)  
-`                 `[`Exception`](../object/Exception.html)  
+[`ParseError`](../object/ParseError.html)  
+[`Exception`](../object/Exception.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,7 +55,7 @@ OopsError is the base class for errors in an OOPS command.
 </div>
 
 **`OopsError`**  
-`         `[`CantOopsError`](../object/CantOopsError.html)  
+[`CantOopsError`](../object/CantOopsError.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,13 +72,13 @@ OopsError is the base class for errors in an OOPS command.
 
 </div>
 
-` `
+
 
 Inherited from `ParseError` :  
-` `[`allowOnRespell`](../object/ParseError.html#allowOnRespell)`  `[`curable`](../object/ParseError.html#curable)`  `[`errStage`](../object/ParseError.html#errStage)`  `
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)[`errStage`](../object/ParseError.html#errStage)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,13 +88,13 @@ Inherited from `Exception` :
 
 </div>
 
-` `
+
 
 Inherited from `ParseError` :  
-` `[`display`](../object/ParseError.html#display)`  `[`rankCorrection`](../object/ParseError.html#rankCorrection)`  `[`tryCuring`](../object/ParseError.html#tryCuring)`  `
+[`display`](../object/ParseError.html#display)[`rankCorrection`](../object/ParseError.html#rankCorrection)[`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-` `[`construct`](../object/Exception.html#construct)`  `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`construct`](../object/Exception.html#construct)[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

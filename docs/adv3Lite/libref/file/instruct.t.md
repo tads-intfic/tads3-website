@@ -94,7 +94,7 @@ game.
 
 </div>
 
-` `[`InstructionsMenu`](../object/InstructionsMenu.html)`  `[`VerbRule(instructions)`](../object/VerbRule(instructions).html)`  `
+[`InstructionsMenu`](../object/InstructionsMenu.html)[`VerbRule(instructions)`](../object/VerbRule(instructions).html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -103,7 +103,7 @@ game.
 
 </div>
 
-` `[`Instructions`](../object/Instructions.html)`  `[`topInstructionsMenu`](../object/topInstructionsMenu.html)`  `
+[`Instructions`](../object/Instructions.html)[`topInstructionsMenu`](../object/topInstructionsMenu.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

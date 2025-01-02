@@ -60,15 +60,15 @@ pass flags down through the match tree.
 </div>
 
 **`ResolveResults`**  
-`         `[`BasicResolveResults`](../object/BasicResolveResults.html)  
-`                 `[`ActorResolveResults`](../object/ActorResolveResults.html)  
-`                 `[`DisambigResults`](../object/DisambigResults.html)  
-`         `[`CommandRanking`](../object/CommandRanking.html)  
-`                 `[`DisambigRanking`](../object/DisambigRanking.html)  
-`                 `[`MissingObjectRanking`](../object/MissingObjectRanking.html)  
-`                 `[`OopsResults`](../object/OopsResults.html)  
-`         `[`TentativeResolveResults`](../object/TentativeResolveResults.html)  
-`         `[`TryAsActorResolveResults`](../object/TryAsActorResolveResults.html)  
+[`BasicResolveResults`](../object/BasicResolveResults.html)  
+[`ActorResolveResults`](../object/ActorResolveResults.html)  
+[`DisambigResults`](../object/DisambigResults.html)  
+[`CommandRanking`](../object/CommandRanking.html)  
+[`DisambigRanking`](../object/DisambigRanking.html)  
+[`MissingObjectRanking`](../object/MissingObjectRanking.html)  
+[`OopsResults`](../object/OopsResults.html)  
+[`TentativeResolveResults`](../object/TentativeResolveResults.html)  
+[`TryAsActorResolveResults`](../object/TryAsActorResolveResults.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -85,7 +85,7 @@ pass flags down through the match tree.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -95,7 +95,7 @@ pass flags down through the match tree.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

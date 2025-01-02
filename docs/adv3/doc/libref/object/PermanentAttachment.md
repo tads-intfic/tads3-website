@@ -80,7 +80,7 @@ detached from other objects.
 </div>
 
 **`PermanentAttachment`**  
-`         `[`Attachable`](../object/Attachable.html)  
+[`Attachable`](../object/Attachable.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -91,7 +91,7 @@ detached from other objects.
 </div>
 
 **`PermanentAttachment`**  
-`         `[`PermanentAttachmentChild`](../object/PermanentAttachmentChild.html)  
+[`PermanentAttachmentChild`](../object/PermanentAttachmentChild.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -108,10 +108,10 @@ detached from other objects.
 
 </div>
 
-` `[`baseCannotDetachMsg`](#baseCannotDetachMsg)`  `
+[`baseCannotDetachMsg`](#baseCannotDetachMsg)
 
 Inherited from `Attachable` :  
-` `[`attachedObjects`](../object/Attachable.html#attachedObjects)`  `[`attachmentLister`](../object/Attachable.html#attachmentLister)`  `[`majorAttachmentLister`](../object/Attachable.html#majorAttachmentLister)`  `
+[`attachedObjects`](../object/Attachable.html#attachedObjects)[`attachmentLister`](../object/Attachable.html#attachmentLister)[`majorAttachmentLister`](../object/Attachable.html#majorAttachmentLister)
 
 <span id="_MethodSummary_"></span>
 
@@ -121,10 +121,10 @@ Inherited from `Attachable` :
 
 </div>
 
-` `[`cannotDetachMsgFor`](#cannotDetachMsgFor)`  `
+[`cannotDetachMsgFor`](#cannotDetachMsgFor)
 
 Inherited from `Attachable` :  
-` `[`attachTo`](../object/Attachable.html#attachTo)`  `[`beforeTravel`](../object/Attachable.html#beforeTravel)`  `[`canAttachTo`](../object/Attachable.html#canAttachTo)`  `[`canDetachFrom`](../object/Attachable.html#canDetachFrom)`  `[`detachFrom`](../object/Attachable.html#detachFrom)`  `[`dobjFor(AttachTo)`](../object/Attachable.html#dobjFor(AttachTo))`  `[`dobjFor(Detach)`](../object/Attachable.html#dobjFor(Detach))`  `[`dobjFor(DetachFrom)`](../object/Attachable.html#dobjFor(DetachFrom))`  `[`dobjFor(TakeFrom)`](../object/Attachable.html#dobjFor(TakeFrom))`  `[`examineStatus`](../object/Attachable.html#examineStatus)`  `[`explainCannotAttachTo`](../object/Attachable.html#explainCannotAttachTo)`  `[`getNonPermanentAttachments`](../object/Attachable.html#getNonPermanentAttachments)`  `[`handleAttach`](../object/Attachable.html#handleAttach)`  `[`handleDetach`](../object/Attachable.html#handleDetach)`  `[`initializeThing`](../object/Attachable.html#initializeThing)`  `[`iobjFor(AttachTo)`](../object/Attachable.html#iobjFor(AttachTo))`  `[`iobjFor(DetachFrom)`](../object/Attachable.html#iobjFor(DetachFrom))`  `[`iobjFor(TakeFrom)`](../object/Attachable.html#iobjFor(TakeFrom))`  `[`isAttachedTo`](../object/Attachable.html#isAttachedTo)`  `[`isListedAsAttachedTo`](../object/Attachable.html#isListedAsAttachedTo)`  `[`isListedAsMajorFor`](../object/Attachable.html#isListedAsMajorFor)`  `[`isMajorItemFor`](../object/Attachable.html#isMajorItemFor)`  `[`isPermanentlyAttachedTo`](../object/Attachable.html#isPermanentlyAttachedTo)`  `[`mainMoveInto`](../object/Attachable.html#mainMoveInto)`  `[`maybeHandleAttach`](../object/Attachable.html#maybeHandleAttach)`  `[`maybeHandleDetach`](../object/Attachable.html#maybeHandleDetach)`  `[`moveWhileAttached`](../object/Attachable.html#moveWhileAttached)`  `[`travelWhileAttached`](../object/Attachable.html#travelWhileAttached)`  `
+[`attachTo`](../object/Attachable.html#attachTo)[`beforeTravel`](../object/Attachable.html#beforeTravel)[`canAttachTo`](../object/Attachable.html#canAttachTo)[`canDetachFrom`](../object/Attachable.html#canDetachFrom)[`detachFrom`](../object/Attachable.html#detachFrom)[`dobjFor(AttachTo)`](../object/Attachable.html#dobjFor(AttachTo))[`dobjFor(Detach)`](../object/Attachable.html#dobjFor(Detach))[`dobjFor(DetachFrom)`](../object/Attachable.html#dobjFor(DetachFrom))[`dobjFor(TakeFrom)`](../object/Attachable.html#dobjFor(TakeFrom))[`examineStatus`](../object/Attachable.html#examineStatus)[`explainCannotAttachTo`](../object/Attachable.html#explainCannotAttachTo)[`getNonPermanentAttachments`](../object/Attachable.html#getNonPermanentAttachments)[`handleAttach`](../object/Attachable.html#handleAttach)[`handleDetach`](../object/Attachable.html#handleDetach)[`initializeThing`](../object/Attachable.html#initializeThing)[`iobjFor(AttachTo)`](../object/Attachable.html#iobjFor(AttachTo))[`iobjFor(DetachFrom)`](../object/Attachable.html#iobjFor(DetachFrom))[`iobjFor(TakeFrom)`](../object/Attachable.html#iobjFor(TakeFrom))[`isAttachedTo`](../object/Attachable.html#isAttachedTo)[`isListedAsAttachedTo`](../object/Attachable.html#isListedAsAttachedTo)[`isListedAsMajorFor`](../object/Attachable.html#isListedAsMajorFor)[`isMajorItemFor`](../object/Attachable.html#isMajorItemFor)[`isPermanentlyAttachedTo`](../object/Attachable.html#isPermanentlyAttachedTo)[`mainMoveInto`](../object/Attachable.html#mainMoveInto)[`maybeHandleAttach`](../object/Attachable.html#maybeHandleAttach)[`maybeHandleDetach`](../object/Attachable.html#maybeHandleDetach)[`moveWhileAttached`](../object/Attachable.html#moveWhileAttached)[`travelWhileAttached`](../object/Attachable.html#travelWhileAttached)
 
 <span id="_Properties_"></span>
 

@@ -45,7 +45,7 @@ additional definitions that are useful with this class.
 
 </div>
 
-` `[`DynamicFunc`](../object/DynamicFunc.html)`  `
+[`DynamicFunc`](../object/DynamicFunc.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

@@ -37,8 +37,8 @@ A lister used to list the items attached to a SimpleAttachable
 </div>
 
 **`simpleAttachmentLister`**  
-`         `[`ItemLister`](../object/ItemLister.html)  
-`                 `[`Lister`](../object/Lister.html)  
+[`ItemLister`](../object/ItemLister.html)  
+[`Lister`](../object/Lister.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ A lister used to list the items attached to a SimpleAttachable
 
 </div>
 
-` `[`showSubListing`](#showSubListing)`  `
+[`showSubListing`](#showSubListing)
 
 Inherited from `ItemLister` :  
-` `[`contentsListedProp`](../object/ItemLister.html#contentsListedProp)`  `[`listRecursively`](../object/ItemLister.html#listRecursively)`  `[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)`  `[`showWornInfo`](../object/ItemLister.html#showWornInfo)`  `
+[`contentsListedProp`](../object/ItemLister.html#contentsListedProp)[`listRecursively`](../object/ItemLister.html#listRecursively)[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)[`showWornInfo`](../object/ItemLister.html#showWornInfo)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -63,13 +63,13 @@ Inherited from `ItemLister` :
 
 </div>
 
-` `[`listed`](#listed)`  `[`showListPrefix`](#showListPrefix)`  `[`showListSuffix`](#showListSuffix)`  `
+[`listed`](#listed)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
 Inherited from `ItemLister` :  
-` `[`listName`](../object/ItemLister.html#listName)`  `[`show`](../object/ItemLister.html#show)`  `[`showList`](../object/ItemLister.html#showList)`  `
+[`listName`](../object/ItemLister.html#listName)[`show`](../object/ItemLister.html#show)[`showList`](../object/ItemLister.html#showList)
 
 Inherited from `Lister` :  
-` `[`buildList`](../object/Lister.html#buildList)`  `[`listOrder`](../object/Lister.html#listOrder)`  `[`showListEmpty`](../object/Lister.html#showListEmpty)`  `
+[`buildList`](../object/Lister.html#buildList)[`listOrder`](../object/Lister.html#listOrder)[`showListEmpty`](../object/Lister.html#showListEmpty)
 
 <span id="_Properties_"></span>
 

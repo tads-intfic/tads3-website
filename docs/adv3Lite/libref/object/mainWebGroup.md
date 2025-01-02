@@ -38,7 +38,7 @@ WebResource objects.
 </div>
 
 **`mainWebGroup`**  
-`         `[`WebResourceGroup`](../object/WebResourceGroup.html)  
+[`WebResourceGroup`](../object/WebResourceGroup.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,10 +48,10 @@ WebResource objects.
 
 </div>
 
-` `[`priority`](#priority)`  `
+[`priority`](#priority)
 
 Inherited from `WebResourceGroup` :  
-` `[`all`](../object/WebResourceGroup.html#all)`  `[`contents`](../object/WebResourceGroup.html#contents)`  `[`server`](../object/WebResourceGroup.html#server)`  `
+[`all`](../object/WebResourceGroup.html#all)[`contents`](../object/WebResourceGroup.html#contents)[`server`](../object/WebResourceGroup.html#server)
 
 <span id="_MethodSummary_"></span>
 
@@ -61,10 +61,10 @@ Inherited from `WebResourceGroup` :
 
 </div>
 
-` `[`execute`](#execute)`  `[`isGroupFor`](#isGroupFor)`  `
+[`execute`](#execute)[`isGroupFor`](#isGroupFor)
 
 Inherited from `WebResourceGroup` :  
-` `[`processRequest`](../object/WebResourceGroup.html#processRequest)`  `
+[`processRequest`](../object/WebResourceGroup.html#processRequest)
 
 <span id="_Properties_"></span>
 

@@ -44,8 +44,8 @@ that involve vocabulary words.
 </div>
 
 **`DisambigVocabProd`**  
-`         `[`DisambigProd`](../object/DisambigProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`DisambigProd`](../object/DisambigProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -56,8 +56,8 @@ that involve vocabulary words.
 </div>
 
 **`DisambigVocabProd`**  
-`         `[`disambigListItem(noun)`](../object/disambigListItem(noun).html)  
-`         `[`disambigListItem(plural)`](../object/disambigListItem(plural).html)  
+[`disambigListItem(noun)`](../object/disambigListItem(noun).html)  
+[`disambigListItem(plural)`](../object/disambigListItem(plural).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,12 +74,12 @@ that involve vocabulary words.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,13 +89,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `DisambigProd` :  
-` `[`removeAmbigFlags`](../object/DisambigProd.html#removeAmbigFlags)`  `
+[`removeAmbigFlags`](../object/DisambigProd.html#removeAmbigFlags)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

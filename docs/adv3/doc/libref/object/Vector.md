@@ -54,8 +54,8 @@ Some handy Vector extensions
 </div>
 
 **`Vector`**  
-`         `[`Collection`](../object/Collection.html)  
-`                 `[`Object`](../object/Object.html)  
+[`Collection`](../object/Collection.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -65,7 +65,7 @@ Some handy Vector extensions
 </div>
 
 **`Vector`**  
-`         `[`AnonFuncPtr`](../object/AnonFuncPtr.html)  
+[`AnonFuncPtr`](../object/AnonFuncPtr.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -82,11 +82,11 @@ Some handy Vector extensions
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -96,13 +96,13 @@ Some handy Vector extensions
 
 </div>
 
-` `[`append`](#append)`  `[`appendAll`](#appendAll)`  `[`appendUnique`](#appendUnique)`  `[`applyAll`](#applyAll)`  `[`clear`](#clear)`  `[`copyFrom`](#copyFrom)`  `[`countOf`](#countOf)`  `[`countWhich`](#countWhich)`  `[`fillValue`](#fillValue)`  `[`forEach`](#forEach)`  `[`forEachAssoc`](#forEachAssoc)`  `[`getAndRemove`](#getAndRemove)`  `[`getUnique`](#getUnique)`  `[`indexOf`](#indexOf)`  `[`indexOfMax`](#indexOfMax)`  `[`indexOfMin`](#indexOfMin)`  `[`indexWhich`](#indexWhich)`  `[`insertAt`](#insertAt)`  `[`join`](#join)`  `[`lastIndexOf`](#lastIndexOf)`  `[`lastIndexWhich`](#lastIndexWhich)`  `[`lastValWhich`](#lastValWhich)`  `[`length`](#length)`  `[`mapAll`](#mapAll)`  `[`maxVal`](#maxVal)`  `[`minVal`](#minVal)`  `[`pop`](#pop)`  `[`prepend`](#prepend)`  `[`push`](#push)`  `[`removeElement`](#removeElement)`  `[`removeElementAt`](#removeElementAt)`  `[`removeRange`](#removeRange)`  `[`setLength`](#setLength)`  `[`shift`](#shift)`  `[`sort`](#sort)`  `[`splice`](#splice)`  `[`subset`](#subset)`  `[`toList`](#toList)`  `[`valWhich`](#valWhich)`  `
+[`append`](#append)[`appendAll`](#appendAll)[`appendUnique`](#appendUnique)[`applyAll`](#applyAll)[`clear`](#clear)[`copyFrom`](#copyFrom)[`countOf`](#countOf)[`countWhich`](#countWhich)[`fillValue`](#fillValue)[`forEach`](#forEach)[`forEachAssoc`](#forEachAssoc)[`getAndRemove`](#getAndRemove)[`getUnique`](#getUnique)[`indexOf`](#indexOf)[`indexOfMax`](#indexOfMax)[`indexOfMin`](#indexOfMin)[`indexWhich`](#indexWhich)[`insertAt`](#insertAt)[`join`](#join)[`lastIndexOf`](#lastIndexOf)[`lastIndexWhich`](#lastIndexWhich)[`lastValWhich`](#lastValWhich)[`length`](#length)[`mapAll`](#mapAll)[`maxVal`](#maxVal)[`minVal`](#minVal)[`pop`](#pop)[`prepend`](#prepend)[`push`](#push)[`removeElement`](#removeElement)[`removeElementAt`](#removeElementAt)[`removeRange`](#removeRange)[`setLength`](#setLength)[`shift`](#shift)[`sort`](#sort)[`splice`](#splice)[`subset`](#subset)[`toList`](#toList)[`valWhich`](#valWhich)
 
 Inherited from `Collection` :  
-` `[`createIterator`](../object/Collection.html#createIterator)`  `[`createLiveIterator`](../object/Collection.html#createLiveIterator)`  `
+[`createIterator`](../object/Collection.html#createIterator)[`createLiveIterator`](../object/Collection.html#createLiveIterator)
 
 Inherited from `Object` :  
-` `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `[`valToSymbol`](../object/Object.html#valToSymbol)`  `
+[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)[`valToSymbol`](../object/Object.html#valToSymbol)
 
 <span id="_Properties_"></span>
 

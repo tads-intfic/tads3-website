@@ -66,7 +66,7 @@ automatically.
 
 </div>
 
-` `[`dynamicSpecials`](#dynamicSpecials)`  `
+[`dynamicSpecials`](#dynamicSpecials)
 
 <span id="_MethodSummary_"></span>
 
@@ -76,7 +76,7 @@ automatically.
 
 </div>
 
-` `[`canHear`](#canHear)`  `[`canReach`](#canReach)`  `[`canSee`](#canSee)`  `[`canSmell`](#canSmell)`  `[`canTalkTo`](#canTalkTo)`  `[`canThrowTo`](#canThrowTo)`  `[`inLight`](#inLight)`  `[`knownScopeList`](#knownScopeList)`  `[`reachBlocker`](#reachBlocker)`  `[`reachProblem`](#reachProblem)`  `[`reachProblemCheck`](#reachProblemCheck)`  `[`reachProblemVerify`](#reachProblemVerify)`  `[`scentBlocker`](#scentBlocker)`  `[`scopeList`](#scopeList)`  `[`sightBlocker`](#sightBlocker)`  `[`soundBlocker`](#soundBlocker)`  `[`topicScopeList`](#topicScopeList)`  `
+[`canHear`](#canHear)[`canReach`](#canReach)[`canSee`](#canSee)[`canSmell`](#canSmell)[`canTalkTo`](#canTalkTo)[`canThrowTo`](#canThrowTo)[`inLight`](#inLight)[`knownScopeList`](#knownScopeList)[`reachBlocker`](#reachBlocker)[`reachProblem`](#reachProblem)[`reachProblemCheck`](#reachProblemCheck)[`reachProblemVerify`](#reachProblemVerify)[`scentBlocker`](#scentBlocker)[`scopeList`](#scopeList)[`sightBlocker`](#sightBlocker)[`soundBlocker`](#soundBlocker)[`topicScopeList`](#topicScopeList)
 
 <span id="_Properties_"></span>
 

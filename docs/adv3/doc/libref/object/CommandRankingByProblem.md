@@ -59,7 +59,7 @@ number.
 </div>
 
 **`CommandRankingByProblem`**  
-`         `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -77,7 +77,7 @@ number.
 
 </div>
 
-` `[`rankByActorSpecified`](../object/rankByActorSpecified.html)`  `[`rankByAllExcluded`](../object/rankByAllExcluded.html)`  `[`rankByDisambigOrdinals`](../object/rankByDisambigOrdinals.html)`  `[`rankByEmptyBut`](../object/rankByEmptyBut.html)`  `[`rankByIndefinite`](../object/rankByIndefinite.html)`  `[`rankByInsufficient`](../object/rankByInsufficient.html)`  `[`rankByListForSingle`](../object/rankByListForSingle.html)`  `[`rankByMiscWordList`](../object/rankByMiscWordList.html)`  `[`rankByMissing`](../object/rankByMissing.html)`  `[`rankByNonMatch`](../object/rankByNonMatch.html)`  `[`rankByUnwantedPlural`](../object/rankByUnwantedPlural.html)`  `[`rankByVocabNonMatch`](../object/rankByVocabNonMatch.html)`  `
+[`rankByActorSpecified`](../object/rankByActorSpecified.html)[`rankByAllExcluded`](../object/rankByAllExcluded.html)[`rankByDisambigOrdinals`](../object/rankByDisambigOrdinals.html)[`rankByEmptyBut`](../object/rankByEmptyBut.html)[`rankByIndefinite`](../object/rankByIndefinite.html)[`rankByInsufficient`](../object/rankByInsufficient.html)[`rankByListForSingle`](../object/rankByListForSingle.html)[`rankByMiscWordList`](../object/rankByMiscWordList.html)[`rankByMissing`](../object/rankByMissing.html)[`rankByNonMatch`](../object/rankByNonMatch.html)[`rankByUnwantedPlural`](../object/rankByUnwantedPlural.html)[`rankByVocabNonMatch`](../object/rankByVocabNonMatch.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -86,9 +86,9 @@ number.
 
 </div>
 
-` `[`prop_`](#prop_)`  `
+[`prop_`](#prop_)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -98,9 +98,9 @@ number.
 
 </div>
 
-` `[`comparePass1`](#comparePass1)`  `[`comparePass2`](#comparePass2)`  `
+[`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -33,7 +33,7 @@ This module defines objects related to footnotes.
 
 </div>
 
-` `[`Footnote`](../object/Footnote.html)`  `
+[`Footnote`](../object/Footnote.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -42,7 +42,7 @@ This module defines objects related to footnotes.
 
 </div>
 
-` `[`footnoteSettingsItem`](../object/footnoteSettingsItem.html)`  `
+[`footnoteSettingsItem`](../object/footnoteSettingsItem.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

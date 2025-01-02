@@ -54,13 +54,13 @@ otherwise overridden back to an underlying resolver
 </div>
 
 **`ProxyResolver`**  
-`         `[`BasicContainerResolver`](../object/BasicContainerResolver.html)  
-`                 `[`ContainerResolver`](../object/ContainerResolver.html)  
-`                 `[`VagueContainerResolver`](../object/VagueContainerResolver.html)  
-`         `[`ExceptResolver`](../object/ExceptResolver.html)  
-`         `[`InteractiveResolver`](../object/InteractiveResolver.html)  
-`                 `[`DisambigResolver`](../object/DisambigResolver.html)  
-`         `[`PossessiveResolver`](../object/PossessiveResolver.html)  
+[`BasicContainerResolver`](../object/BasicContainerResolver.html)  
+[`ContainerResolver`](../object/ContainerResolver.html)  
+[`VagueContainerResolver`](../object/VagueContainerResolver.html)  
+[`ExceptResolver`](../object/ExceptResolver.html)  
+[`InteractiveResolver`](../object/InteractiveResolver.html)  
+[`DisambigResolver`](../object/DisambigResolver.html)  
+[`PossessiveResolver`](../object/PossessiveResolver.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -77,7 +77,7 @@ otherwise overridden back to an underlying resolver
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ otherwise overridden back to an underlying resolver
 
 </div>
 
-` `[`construct`](#construct)`  `[`getPossessiveResolver`](#getPossessiveResolver)`  `[`propNotDefined`](#propNotDefined)`  `
+[`construct`](#construct)[`getPossessiveResolver`](#getPossessiveResolver)[`propNotDefined`](#propNotDefined)
 
 <span id="_Properties_"></span>
 

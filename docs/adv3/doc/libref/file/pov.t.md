@@ -51,7 +51,7 @@ generated.
 
 </div>
 
-` `[`senseContext`](../object/senseContext.html)`  `
+[`senseContext`](../object/senseContext.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -60,7 +60,7 @@ generated.
 
 </div>
 
-` `[`callFromPOV`](#callFromPOV)`  `[`callWithSenseContext`](#callWithSenseContext)`  `[`clearPOV`](#clearPOV)`  `[`getPOV`](#getPOV)`  `[`getPOVActor`](#getPOVActor)`  `[`getPOVActorDefault`](#getPOVActorDefault)`  `[`getPOVDefault`](#getPOVDefault)`  `[`popPOV`](#popPOV)`  `[`pushPOV`](#pushPOV)`  `[`setPOV`](#setPOV)`  `[`setRootPOV`](#setRootPOV)`  `
+[`callFromPOV`](#callFromPOV)[`callWithSenseContext`](#callWithSenseContext)[`clearPOV`](#clearPOV)[`getPOV`](#getPOV)[`getPOVActor`](#getPOVActor)[`getPOVActorDefault`](#getPOVActorDefault)[`getPOVDefault`](#getPOVDefault)[`popPOV`](#popPOV)[`pushPOV`](#pushPOV)[`setPOV`](#setPOV)[`setRootPOV`](#setRootPOV)
 
 <span id="_Functions_"></span>
 

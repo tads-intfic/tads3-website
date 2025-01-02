@@ -61,7 +61,7 @@ describing the objects matched to the noun phrase.
 
 </div>
 
-` `[`dummyTentativeInfo`](../object/dummyTentativeInfo.html)`  `
+[`dummyTentativeInfo`](../object/dummyTentativeInfo.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -70,7 +70,7 @@ describing the objects matched to the noun phrase.
 
 </div>
 
-` `[`flags_`](#flags_)`  `[`multiAnnounce`](#multiAnnounce)`  `[`np_`](#np_)`  `[`obj_`](#obj_)`  `[`possRank_`](#possRank_)`  `[`pronounType_`](#pronounType_)`  `[`quant_`](#quant_)`  `
+[`flags_`](#flags_)[`multiAnnounce`](#multiAnnounce)[`np_`](#np_)[`obj_`](#obj_)[`possRank_`](#possRank_)[`pronounType_`](#pronounType_)[`quant_`](#quant_)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ describing the objects matched to the noun phrase.
 
 </div>
 
-` `[`construct`](#construct)`  `[`isDistEquivInList`](#isDistEquivInList)`  `[`isEquivalentInList`](#isEquivalentInList)`  `
+[`construct`](#construct)[`isDistEquivInList`](#isDistEquivInList)[`isEquivalentInList`](#isEquivalentInList)
 
 <span id="_Properties_"></span>
 

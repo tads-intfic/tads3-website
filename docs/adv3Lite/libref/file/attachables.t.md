@@ -43,7 +43,7 @@ objects attached to it.
 
 </div>
 
-` `[`Attachable`](../object/Attachable.html)`  `[`AttachableComponent`](../object/AttachableComponent.html)`  `[`NearbyAttachable`](../object/NearbyAttachable.html)`  `[`PlugAttachable`](../object/PlugAttachable.html)`  `[`SimpleAttachable`](../object/SimpleAttachable.html)`  `
+[`Attachable`](../object/Attachable.html)[`AttachableComponent`](../object/AttachableComponent.html)[`NearbyAttachable`](../object/NearbyAttachable.html)[`PlugAttachable`](../object/PlugAttachable.html)[`SimpleAttachable`](../object/SimpleAttachable.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -52,7 +52,7 @@ objects attached to it.
 
 </div>
 
-` `[`reverseAttachableDoer`](../object/reverseAttachableDoer.html)`  `
+[`reverseAttachableDoer`](../object/reverseAttachableDoer.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

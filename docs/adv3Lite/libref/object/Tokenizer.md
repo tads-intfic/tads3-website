@@ -60,7 +60,7 @@ Tokenizer base class
 
 </div>
 
-` `[`cmdTokenizer`](../object/cmdTokenizer.html)`  `
+[`cmdTokenizer`](../object/cmdTokenizer.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -69,7 +69,7 @@ Tokenizer base class
 
 </div>
 
-` `[`rules_`](#rules_)`  `
+[`rules_`](#rules_)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ Tokenizer base class
 
 </div>
 
-` `[`deleteRule`](#deleteRule)`  `[`deleteRuleAt`](#deleteRuleAt)`  `[`insertRule`](#insertRule)`  `[`insertRuleAt`](#insertRuleAt)`  `[`tokCvtLower`](#tokCvtLower)`  `[`tokCvtSkip`](#tokCvtSkip)`  `[`tokenize`](#tokenize)`  `
+[`deleteRule`](#deleteRule)[`deleteRuleAt`](#deleteRuleAt)[`insertRule`](#insertRule)[`insertRuleAt`](#insertRuleAt)[`tokCvtLower`](#tokCvtLower)[`tokCvtSkip`](#tokCvtSkip)[`tokenize`](#tokenize)
 
 <span id="_Properties_"></span>
 

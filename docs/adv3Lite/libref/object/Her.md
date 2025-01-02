@@ -37,7 +37,7 @@ Her - third-person feminine singular
 </div>
 
 **`Her`**  
-`         `[`Pronoun`](../object/Pronoun.html)  
+[`Pronoun`](../object/Pronoun.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ Her - third-person feminine singular
 
 </div>
 
-` `
+
 
 Inherited from `Pronoun` :  
-` `[`all`](../object/Pronoun.html#all)`  `[`aName`](../object/Pronoun.html#aName)`  `[`ante`](../object/Pronoun.html#ante)`  `[`person`](../object/Pronoun.html#person)`  `[`reflexive`](../object/Pronoun.html#reflexive)`  `[`theName`](../object/Pronoun.html#theName)`  `[`theObjName`](../object/Pronoun.html#theObjName)`  `
+[`all`](../object/Pronoun.html#all)[`aName`](../object/Pronoun.html#aName)[`ante`](../object/Pronoun.html#ante)[`person`](../object/Pronoun.html#person)[`reflexive`](../object/Pronoun.html#reflexive)[`theName`](../object/Pronoun.html#theName)[`theObjName`](../object/Pronoun.html#theObjName)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `Pronoun` :
 
 </div>
 
-` `
+
 
 Inherited from `Pronoun` :  
-` `[`construct`](../object/Pronoun.html#construct)`  `[`matchObj`](../object/Pronoun.html#matchObj)`  `[`resolve`](../object/Pronoun.html#resolve)`  `[`setAntecedents`](../object/Pronoun.html#setAntecedents)`  `
+[`construct`](../object/Pronoun.html#construct)[`matchObj`](../object/Pronoun.html#matchObj)[`resolve`](../object/Pronoun.html#resolve)[`setAntecedents`](../object/Pronoun.html#setAntecedents)
 
 <span id="_Properties_"></span>
 

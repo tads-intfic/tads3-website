@@ -59,9 +59,9 @@ notifies observers.
 </div>
 
 **`SensoryEvent`**  
-`         `[`SightEvent`](../object/SightEvent.html)  
-`         `[`SmellEvent`](../object/SmellEvent.html)  
-`         `[`SoundEvent`](../object/SoundEvent.html)  
+[`SightEvent`](../object/SightEvent.html)  
+[`SmellEvent`](../object/SmellEvent.html)  
+[`SoundEvent`](../object/SoundEvent.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -78,7 +78,7 @@ notifies observers.
 
 </div>
 
-` `[`notifyProp`](#notifyProp)`  `[`sense`](#sense)`  `
+[`notifyProp`](#notifyProp)[`sense`](#sense)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,7 +88,7 @@ notifies observers.
 
 </div>
 
-` `[`triggerEvent`](#triggerEvent)`  `
+[`triggerEvent`](#triggerEvent)
 
 <span id="_Properties_"></span>
 

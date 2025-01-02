@@ -5,9 +5,9 @@ layout: docs
 
 `VerbRule(About)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(About)`](../object/VerbRule(About).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(About)`](../object/VerbRule(About).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2377`](../source/grammar.t.html#2377)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2377`](../source/grammar.t.html#2377)]`
 
 <div class="gramrule">
 
@@ -17,9 +17,9 @@ layout: docs
 
 `VerbRule(Again)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Again)`](../object/VerbRule(Again).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Again)`](../object/VerbRule(Again).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2278`](../source/grammar.t.html#2278)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2278`](../source/grammar.t.html#2278)]`
 
 <div class="gramrule">
 
@@ -29,9 +29,9 @@ layout: docs
 
 `VerbRule(AskAbout)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AskAbout)`](../object/VerbRule(AskAbout).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AskAbout)`](../object/VerbRule(AskAbout).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1878`](../source/grammar.t.html#1878)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1878`](../source/grammar.t.html#1878)]`
 
 <div class="gramrule">
 
@@ -41,9 +41,9 @@ layout: docs
 
 `VerbRule(AskAboutImplicit)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AskAboutImplicit)`](../object/VerbRule(AskAboutImplicit).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AskAboutImplicit)`](../object/VerbRule(AskAboutImplicit).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1888`](../source/grammar.t.html#1888)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1888`](../source/grammar.t.html#1888)]`
 
 <div class="gramrule">
 
@@ -53,9 +53,9 @@ layout: docs
 
 `VerbRule(AskAboutWhat)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AskAboutWhat)`](../object/VerbRule(AskAboutWhat).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AskAboutWhat)`](../object/VerbRule(AskAboutWhat).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1898`](../source/grammar.t.html#1898)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1898`](../source/grammar.t.html#1898)]`
 
 <div class="gramrule">
 
@@ -65,9 +65,9 @@ layout: docs
 
 `VerbRule(AskFor)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AskFor)`](../object/VerbRule(AskFor).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AskFor)`](../object/VerbRule(AskFor).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1845`](../source/grammar.t.html#1845)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1845`](../source/grammar.t.html#1845)]`
 
 <div class="gramrule">
 
@@ -78,9 +78,9 @@ layout: docs
 
 `VerbRule(AskForImplicit)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AskForImplicit)`](../object/VerbRule(AskForImplicit).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AskForImplicit)`](../object/VerbRule(AskForImplicit).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1866`](../source/grammar.t.html#1866)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1866`](../source/grammar.t.html#1866)]`
 
 <div class="gramrule">
 
@@ -90,9 +90,9 @@ layout: docs
 
 `VerbRule(AskVague)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AskVague)`](../object/VerbRule(AskVague).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AskVague)`](../object/VerbRule(AskVague).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1973`](../source/grammar.t.html#1973)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1973`](../source/grammar.t.html#1973)]`
 
 <div class="gramrule">
 
@@ -102,9 +102,9 @@ layout: docs
 
 `VerbRule(AskWhomFor)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AskWhomFor)`](../object/VerbRule(AskWhomFor).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AskWhomFor)`](../object/VerbRule(AskWhomFor).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1856`](../source/grammar.t.html#1856)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1856`](../source/grammar.t.html#1856)]`
 
 <div class="gramrule">
 
@@ -114,9 +114,9 @@ layout: docs
 
 `VerbRule(Attach)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Attach)`](../object/VerbRule(Attach).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Attach)`](../object/VerbRule(Attach).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2997`](../source/grammar.t.html#2997)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2997`](../source/grammar.t.html#2997)]`
 
 <div class="gramrule">
 
@@ -126,9 +126,9 @@ layout: docs
 
 `VerbRule(AttachTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AttachTo)`](../object/VerbRule(AttachTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AttachTo)`](../object/VerbRule(AttachTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2987`](../source/grammar.t.html#2987)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2987`](../source/grammar.t.html#2987)]`
 
 <div class="gramrule">
 
@@ -138,9 +138,9 @@ layout: docs
 
 `VerbRule(Attack)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Attack)`](../object/VerbRule(Attack).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Attack)`](../object/VerbRule(Attack).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2215`](../source/grammar.t.html#2215)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2215`](../source/grammar.t.html#2215)]`
 
 <div class="gramrule">
 
@@ -150,9 +150,9 @@ layout: docs
 
 `VerbRule(AttackWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AttackWith)`](../object/VerbRule(AttackWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AttackWith)`](../object/VerbRule(AttackWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2224`](../source/grammar.t.html#2224)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2224`](../source/grammar.t.html#2224)]`
 
 <div class="gramrule">
 
@@ -163,9 +163,9 @@ singleDobj 'with' singleIobj
 
 `VerbRule(AuxQuery)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(AuxQuery)`](../object/VerbRule(AuxQuery).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(AuxQuery)`](../object/VerbRule(AuxQuery).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1809`](../source/grammar.t.html#1809)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1809`](../source/grammar.t.html#1809)]`
 
 <div class="gramrule">
 
@@ -177,9 +177,9 @@ singleDobj 'with' singleIobj
 
 `VerbRule(Board)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Board)`](../object/VerbRule(Board).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Board)`](../object/VerbRule(Board).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3186`](../source/grammar.t.html#3186)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3186`](../source/grammar.t.html#3186)]`
 
 <div class="gramrule">
 
@@ -192,9 +192,9 @@ singleDobj
 
 `VerbRule(Break)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Break)`](../object/VerbRule(Break).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Break)`](../object/VerbRule(Break).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2858`](../source/grammar.t.html#2858)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2858`](../source/grammar.t.html#2858)]`
 
 <div class="gramrule">
 
@@ -204,9 +204,9 @@ singleDobj
 
 `VerbRule(Brief)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Brief)`](../object/VerbRule(Brief).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Brief)`](../object/VerbRule(Brief).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3441`](../source/grammar.t.html#3441)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3441`](../source/grammar.t.html#3441)]`
 
 <div class="gramrule">
 
@@ -216,9 +216,9 @@ singleDobj
 
 `VerbRule(Burn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Burn)`](../object/VerbRule(Burn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Burn)`](../object/VerbRule(Burn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2830`](../source/grammar.t.html#2830)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2830`](../source/grammar.t.html#2830)]`
 
 <div class="gramrule">
 
@@ -228,9 +228,9 @@ singleDobj
 
 `VerbRule(BurnWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(BurnWith)`](../object/VerbRule(BurnWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(BurnWith)`](../object/VerbRule(BurnWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2838`](../source/grammar.t.html#2838)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2838`](../source/grammar.t.html#2838)]`
 
 <div class="gramrule">
 
@@ -241,9 +241,9 @@ singleDobj
 
 `VerbRule(Clean)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Clean)`](../object/VerbRule(Clean).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Clean)`](../object/VerbRule(Clean).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2969`](../source/grammar.t.html#2969)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2969`](../source/grammar.t.html#2969)]`
 
 <div class="gramrule">
 
@@ -253,9 +253,9 @@ singleDobj
 
 `VerbRule(CleanWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(CleanWith)`](../object/VerbRule(CleanWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(CleanWith)`](../object/VerbRule(CleanWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2977`](../source/grammar.t.html#2977)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2977`](../source/grammar.t.html#2977)]`
 
 <div class="gramrule">
 
@@ -265,9 +265,9 @@ singleDobj
 
 `VerbRule(Climb)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Climb)`](../object/VerbRule(Climb).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Climb)`](../object/VerbRule(Climb).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2926`](../source/grammar.t.html#2926)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2926`](../source/grammar.t.html#2926)]`
 
 <div class="gramrule">
 
@@ -277,9 +277,9 @@ singleDobj
 
 `VerbRule(ClimbDown)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ClimbDown)`](../object/VerbRule(ClimbDown).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ClimbDown)`](../object/VerbRule(ClimbDown).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2952`](../source/grammar.t.html#2952)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2952`](../source/grammar.t.html#2952)]`
 
 <div class="gramrule">
 
@@ -289,9 +289,9 @@ singleDobj
 
 `VerbRule(ClimbDownWhat)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ClimbDownWhat)`](../object/VerbRule(ClimbDownWhat).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ClimbDownWhat)`](../object/VerbRule(ClimbDownWhat).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2961`](../source/grammar.t.html#2961)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2961`](../source/grammar.t.html#2961)]`
 
 <div class="gramrule">
 
@@ -301,9 +301,9 @@ singleDobj
 
 `VerbRule(ClimbUp)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ClimbUp)`](../object/VerbRule(ClimbUp).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ClimbUp)`](../object/VerbRule(ClimbUp).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2935`](../source/grammar.t.html#2935)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2935`](../source/grammar.t.html#2935)]`
 
 <div class="gramrule">
 
@@ -313,9 +313,9 @@ singleDobj
 
 `VerbRule(ClimbUpWhat)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ClimbUpWhat)`](../object/VerbRule(ClimbUpWhat).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ClimbUpWhat)`](../object/VerbRule(ClimbUpWhat).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2944`](../source/grammar.t.html#2944)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2944`](../source/grammar.t.html#2944)]`
 
 <div class="gramrule">
 
@@ -325,9 +325,9 @@ singleDobj
 
 `VerbRule(Close)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Close)`](../object/VerbRule(Close).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Close)`](../object/VerbRule(Close).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3033`](../source/grammar.t.html#3033)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3033`](../source/grammar.t.html#3033)]`
 
 <div class="gramrule">
 
@@ -337,9 +337,9 @@ singleDobj
 
 `VerbRule(CmdMenu)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(CmdMenu)`](../object/VerbRule(CmdMenu).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(CmdMenu)`](../object/VerbRule(CmdMenu).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`cmdhelp.t`](../file/cmdhelp.t.html)`[`[`845`](../source/cmdhelp.t.html#845)`]`
+[`cmdhelp.t`](../file/cmdhelp.t.html)[`[`845`](../source/cmdhelp.t.html#845)]`
 
 <div class="gramrule">
 
@@ -349,9 +349,9 @@ numericDobj
 
 `VerbRule(ConsultAbout)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ConsultAbout)`](../object/VerbRule(ConsultAbout).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ConsultAbout)`](../object/VerbRule(ConsultAbout).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2743`](../source/grammar.t.html#2743)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2743`](../source/grammar.t.html#2743)]`
 
 <div class="gramrule">
 
@@ -362,9 +362,9 @@ numericDobj
 
 `VerbRule(ConsultWhatAbout)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ConsultWhatAbout)`](../object/VerbRule(ConsultWhatAbout).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ConsultWhatAbout)`](../object/VerbRule(ConsultWhatAbout).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2764`](../source/grammar.t.html#2764)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2764`](../source/grammar.t.html#2764)]`
 
 <div class="gramrule">
 
@@ -379,9 +379,9 @@ topicIobj
 
 `VerbRule(Continue)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Continue)`](../object/VerbRule(Continue).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Continue)`](../object/VerbRule(Continue).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2470`](../source/grammar.t.html#2470)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2470`](../source/grammar.t.html#2470)]`
 
 <div class="gramrule">
 
@@ -391,9 +391,9 @@ topicIobj
 
 `VerbRule(Credits)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Credits)`](../object/VerbRule(Credits).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Credits)`](../object/VerbRule(Credits).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2370`](../source/grammar.t.html#2370)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2370`](../source/grammar.t.html#2370)]`
 
 <div class="gramrule">
 
@@ -403,9 +403,9 @@ topicIobj
 
 `VerbRule(Cut)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Cut)`](../object/VerbRule(Cut).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Cut)`](../object/VerbRule(Cut).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2866`](../source/grammar.t.html#2866)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2866`](../source/grammar.t.html#2866)]`
 
 <div class="gramrule">
 
@@ -415,9 +415,9 @@ topicIobj
 
 `VerbRule(CutWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(CutWith)`](../object/VerbRule(CutWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(CutWith)`](../object/VerbRule(CutWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2874`](../source/grammar.t.html#2874)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2874`](../source/grammar.t.html#2874)]`
 
 <div class="gramrule">
 
@@ -427,9 +427,9 @@ topicIobj
 
 `VerbRule(Debug)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Debug)`](../object/VerbRule(Debug).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Debug)`](../object/VerbRule(Debug).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`debug.t`](../file/debug.t.html)`[`[`52`](../source/debug.t.html#52)`]`
+[`debug.t`](../file/debug.t.html)[`[`52`](../source/debug.t.html#52)]`
 
 <div class="gramrule">
 
@@ -439,9 +439,9 @@ topicIobj
 
 `VerbRule(DebugI)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(DebugI)`](../object/VerbRule(DebugI).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(DebugI)`](../object/VerbRule(DebugI).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`debug.t`](../file/debug.t.html)`[`[`105`](../source/debug.t.html#105)`]`
+[`debug.t`](../file/debug.t.html)[`[`105`](../source/debug.t.html#105)]`
 
 <div class="gramrule">
 
@@ -451,9 +451,9 @@ topicIobj
 
 `VerbRule(Detach)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Detach)`](../object/VerbRule(Detach).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Detach)`](../object/VerbRule(Detach).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3017`](../source/grammar.t.html#3017)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3017`](../source/grammar.t.html#3017)]`
 
 <div class="gramrule">
 
@@ -463,9 +463,9 @@ topicIobj
 
 `VerbRule(DetachFrom)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(DetachFrom)`](../object/VerbRule(DetachFrom).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(DetachFrom)`](../object/VerbRule(DetachFrom).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3007`](../source/grammar.t.html#3007)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3007`](../source/grammar.t.html#3007)]`
 
 <div class="gramrule">
 
@@ -475,9 +475,9 @@ topicIobj
 
 `VerbRule(Dig)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Dig)`](../object/VerbRule(Dig).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Dig)`](../object/VerbRule(Dig).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2549`](../source/grammar.t.html#2549)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2549`](../source/grammar.t.html#2549)]`
 
 <div class="gramrule">
 
@@ -487,9 +487,9 @@ topicIobj
 
 `VerbRule(DigWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(DigWith)`](../object/VerbRule(DigWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(DigWith)`](../object/VerbRule(DigWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2558`](../source/grammar.t.html#2558)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2558`](../source/grammar.t.html#2558)]`
 
 <div class="gramrule">
 
@@ -499,9 +499,9 @@ topicIobj
 
 `VerbRule(Doff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Doff)`](../object/VerbRule(Doff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Doff)`](../object/VerbRule(Doff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1748`](../source/grammar.t.html#1748)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1748`](../source/grammar.t.html#1748)]`
 
 <div class="gramrule">
 
@@ -512,9 +512,9 @@ topicIobj
 
 `VerbRule(Drink)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Drink)`](../object/VerbRule(Drink).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Drink)`](../object/VerbRule(Drink).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2892`](../source/grammar.t.html#2892)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2892`](../source/grammar.t.html#2892)]`
 
 <div class="gramrule">
 
@@ -524,9 +524,9 @@ topicIobj
 
 `VerbRule(Drop)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Drop)`](../object/VerbRule(Drop).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Drop)`](../object/VerbRule(Drop).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1530`](../source/grammar.t.html#1530)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1530`](../source/grammar.t.html#1530)]`
 
 <div class="gramrule">
 
@@ -537,9 +537,9 @@ topicIobj
 
 `VerbRule(Eat)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Eat)`](../object/VerbRule(Eat).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Eat)`](../object/VerbRule(Eat).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2884`](../source/grammar.t.html#2884)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2884`](../source/grammar.t.html#2884)]`
 
 <div class="gramrule">
 
@@ -549,9 +549,9 @@ topicIobj
 
 `VerbRule(Enter)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Enter)`](../object/VerbRule(Enter).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Enter)`](../object/VerbRule(Enter).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3198`](../source/grammar.t.html#3198)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3198`](../source/grammar.t.html#3198)]`
 
 <div class="gramrule">
 
@@ -563,9 +563,9 @@ singleDobj
 
 `VerbRule(EnterOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(EnterOn)`](../object/VerbRule(EnterOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(EnterOn)`](../object/VerbRule(EnterOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2713`](../source/grammar.t.html#2713)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2713`](../source/grammar.t.html#2713)]`
 
 <div class="gramrule">
 
@@ -576,9 +576,9 @@ singleDobj
 
 `VerbRule(Evaluate)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Evaluate)`](../object/VerbRule(Evaluate).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Evaluate)`](../object/VerbRule(Evaluate).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3482`](../source/grammar.t.html#3482)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3482`](../source/grammar.t.html#3482)]`
 
 <div class="gramrule">
 
@@ -588,9 +588,9 @@ singleDobj
 
 `VerbRule(Examine)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Examine)`](../object/VerbRule(Examine).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Examine)`](../object/VerbRule(Examine).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1539`](../source/grammar.t.html#1539)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1539`](../source/grammar.t.html#1539)]`
 
 <div class="gramrule">
 
@@ -600,9 +600,9 @@ singleDobj
 
 `VerbRule(Exits)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Exits)`](../object/VerbRule(Exits).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Exits)`](../object/VerbRule(Exits).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3388`](../source/grammar.t.html#3388)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3388`](../source/grammar.t.html#3388)]`
 
 <div class="gramrule">
 
@@ -612,9 +612,9 @@ singleDobj
 
 `VerbRule(ExitsColour)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ExitsColour)`](../object/VerbRule(ExitsColour).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ExitsColour)`](../object/VerbRule(ExitsColour).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3407`](../source/grammar.t.html#3407)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3407`](../source/grammar.t.html#3407)]`
 
 <div class="gramrule">
 
@@ -627,9 +627,9 @@ colour\_)
 
 `VerbRule(ExitsMode)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ExitsMode)`](../object/VerbRule(ExitsMode).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ExitsMode)`](../object/VerbRule(ExitsMode).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3395`](../source/grammar.t.html#3395)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3395`](../source/grammar.t.html#3395)]`
 
 <div class="gramrule">
 
@@ -644,9 +644,9 @@ colour\_)
 
 `VerbRule(Extinguish)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Extinguish)`](../object/VerbRule(Extinguish).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Extinguish)`](../object/VerbRule(Extinguish).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2849`](../source/grammar.t.html#2849)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2849`](../source/grammar.t.html#2849)]`
 
 <div class="gramrule">
 
@@ -657,9 +657,9 @@ colour\_)
 
 `VerbRule(ExtraHints)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ExtraHints)`](../object/VerbRule(ExtraHints).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ExtraHints)`](../object/VerbRule(ExtraHints).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3433`](../source/grammar.t.html#3433)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3433`](../source/grammar.t.html#3433)]`
 
 <div class="gramrule">
 
@@ -671,9 +671,9 @@ colour\_)
 
 `VerbRule(Fasten)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Fasten)`](../object/VerbRule(Fasten).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Fasten)`](../object/VerbRule(Fasten).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3216`](../source/grammar.t.html#3216)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3216`](../source/grammar.t.html#3216)]`
 
 <div class="gramrule">
 
@@ -683,9 +683,9 @@ colour\_)
 
 `VerbRule(FastenTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(FastenTo)`](../object/VerbRule(FastenTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(FastenTo)`](../object/VerbRule(FastenTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3224`](../source/grammar.t.html#3224)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3224`](../source/grammar.t.html#3224)]`
 
 <div class="gramrule">
 
@@ -695,9 +695,9 @@ colour\_)
 
 `VerbRule(Feel)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Feel)`](../object/VerbRule(Feel).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Feel)`](../object/VerbRule(Feel).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1611`](../source/grammar.t.html#1611)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1611`](../source/grammar.t.html#1611)]`
 
 <div class="gramrule">
 
@@ -707,9 +707,9 @@ colour\_)
 
 `VerbRule(FiatLux)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(FiatLux)`](../object/VerbRule(FiatLux).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(FiatLux)`](../object/VerbRule(FiatLux).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3475`](../source/grammar.t.html#3475)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3475`](../source/grammar.t.html#3475)]`
 
 <div class="gramrule">
 
@@ -719,9 +719,9 @@ colour\_)
 
 `VerbRule(Flip)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Flip)`](../object/VerbRule(Flip).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Flip)`](../object/VerbRule(Flip).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2786`](../source/grammar.t.html#2786)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2786`](../source/grammar.t.html#2786)]`
 
 <div class="gramrule">
 
@@ -731,9 +731,9 @@ colour\_)
 
 `VerbRule(Follow)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Follow)`](../object/VerbRule(Follow).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Follow)`](../object/VerbRule(Follow).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2206`](../source/grammar.t.html#2206)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2206`](../source/grammar.t.html#2206)]`
 
 <div class="gramrule">
 
@@ -743,9 +743,9 @@ colour\_)
 
 `VerbRule(Footnote)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Footnote)`](../object/VerbRule(Footnote).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Footnote)`](../object/VerbRule(Footnote).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`footnote.t`](../file/footnote.t.html)`[`[`307`](../source/footnote.t.html#307)`]`
+[`footnote.t`](../file/footnote.t.html)[`[`307`](../source/footnote.t.html#307)]`
 
 <div class="gramrule">
 
@@ -755,9 +755,9 @@ colour\_)
 
 `VerbRule(FootnotesFull)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(FootnotesFull)`](../object/VerbRule(FootnotesFull).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(FootnotesFull)`](../object/VerbRule(FootnotesFull).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`footnote.t`](../file/footnote.t.html)`[`[`315`](../source/footnote.t.html#315)`]`
+[`footnote.t`](../file/footnote.t.html)[`[`315`](../source/footnote.t.html#315)]`
 
 <div class="gramrule">
 
@@ -767,9 +767,9 @@ colour\_)
 
 `VerbRule(FootnotesMedium)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(FootnotesMedium)`](../object/VerbRule(FootnotesMedium).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(FootnotesMedium)`](../object/VerbRule(FootnotesMedium).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`footnote.t`](../file/footnote.t.html)`[`[`322`](../source/footnote.t.html#322)`]`
+[`footnote.t`](../file/footnote.t.html)[`[`322`](../source/footnote.t.html#322)]`
 
 <div class="gramrule">
 
@@ -779,9 +779,9 @@ colour\_)
 
 `VerbRule(FootnotesOff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(FootnotesOff)`](../object/VerbRule(FootnotesOff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(FootnotesOff)`](../object/VerbRule(FootnotesOff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`footnote.t`](../file/footnote.t.html)`[`[`329`](../source/footnote.t.html#329)`]`
+[`footnote.t`](../file/footnote.t.html)[`[`329`](../source/footnote.t.html#329)]`
 
 <div class="gramrule">
 
@@ -791,9 +791,9 @@ colour\_)
 
 `VerbRule(FootnotesStatus)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(FootnotesStatus)`](../object/VerbRule(FootnotesStatus).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(FootnotesStatus)`](../object/VerbRule(FootnotesStatus).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`footnote.t`](../file/footnote.t.html)`[`[`336`](../source/footnote.t.html#336)`]`
+[`footnote.t`](../file/footnote.t.html)[`[`336`](../source/footnote.t.html#336)]`
 
 <div class="gramrule">
 
@@ -803,9 +803,9 @@ colour\_)
 
 `VerbRule(FullScore)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(FullScore)`](../object/VerbRule(FullScore).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(FullScore)`](../object/VerbRule(FullScore).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2292`](../source/grammar.t.html#2292)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2292`](../source/grammar.t.html#2292)]`
 
 <div class="gramrule">
 
@@ -815,9 +815,9 @@ colour\_)
 
 `VerbRule(GetOff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GetOff)`](../object/VerbRule(GetOff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GetOff)`](../object/VerbRule(GetOff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3165`](../source/grammar.t.html#3165)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3165`](../source/grammar.t.html#3165)]`
 
 <div class="gramrule">
 
@@ -827,9 +827,9 @@ colour\_)
 
 `VerbRule(GetOut)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GetOut)`](../object/VerbRule(GetOut).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GetOut)`](../object/VerbRule(GetOut).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3174`](../source/grammar.t.html#3174)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3174`](../source/grammar.t.html#3174)]`
 
 <div class="gramrule">
 
@@ -843,9 +843,9 @@ colour\_)
 
 `VerbRule(GetOutOf)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GetOutOf)`](../object/VerbRule(GetOutOf).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GetOutOf)`](../object/VerbRule(GetOutOf).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3155`](../source/grammar.t.html#3155)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3155`](../source/grammar.t.html#3155)]`
 
 <div class="gramrule">
 
@@ -857,9 +857,9 @@ singleDobj
 
 `VerbRule(GiveTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GiveTo)`](../object/VerbRule(GiveTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GiveTo)`](../object/VerbRule(GiveTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2047`](../source/grammar.t.html#2047)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2047`](../source/grammar.t.html#2047)]`
 
 <div class="gramrule">
 
@@ -869,9 +869,9 @@ singleDobj
 
 `VerbRule(GiveToImplicit)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GiveToImplicit)`](../object/VerbRule(GiveToImplicit).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GiveToImplicit)`](../object/VerbRule(GiveToImplicit).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2068`](../source/grammar.t.html#2068)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2068`](../source/grammar.t.html#2068)]`
 
 <div class="gramrule">
 
@@ -881,9 +881,9 @@ singleDobj
 
 `VerbRule(GiveToType2)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GiveToType2)`](../object/VerbRule(GiveToType2).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GiveToType2)`](../object/VerbRule(GiveToType2).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2056`](../source/grammar.t.html#2056)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2056`](../source/grammar.t.html#2056)]`
 
 <div class="gramrule">
 
@@ -893,9 +893,9 @@ singleDobj
 
 `VerbRule(GoAlong)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GoAlong)`](../object/VerbRule(GoAlong).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GoAlong)`](../object/VerbRule(GoAlong).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2531`](../source/grammar.t.html#2531)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2531`](../source/grammar.t.html#2531)]`
 
 <div class="gramrule">
 
@@ -906,9 +906,9 @@ singleDobj
 
 `VerbRule(GoBack)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GoBack)`](../object/VerbRule(GoBack).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GoBack)`](../object/VerbRule(GoBack).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2542`](../source/grammar.t.html#2542)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2542`](../source/grammar.t.html#2542)]`
 
 <div class="gramrule">
 
@@ -918,9 +918,9 @@ singleDobj
 
 `VerbRule(GoNear)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GoNear)`](../object/VerbRule(GoNear).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GoNear)`](../object/VerbRule(GoNear).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3466`](../source/grammar.t.html#3466)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3466`](../source/grammar.t.html#3466)]`
 
 <div class="gramrule">
 
@@ -930,9 +930,9 @@ singleDobj
 
 `VerbRule(Goodbye)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Goodbye)`](../object/VerbRule(Goodbye).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Goodbye)`](../object/VerbRule(Goodbye).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2015`](../source/grammar.t.html#2015)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2015`](../source/grammar.t.html#2015)]`
 
 <div class="gramrule">
 
@@ -942,9 +942,9 @@ singleDobj
 
 `VerbRule(GoSomewhere)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GoSomewhere)`](../object/VerbRule(GoSomewhere).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GoSomewhere)`](../object/VerbRule(GoSomewhere).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`780`](../source/newbie.t.html#780)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`780`](../source/newbie.t.html#780)]`
 
 <div class="gramrule">
 
@@ -958,9 +958,9 @@ singleDobj
 
 `VerbRule(GoThrough)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GoThrough)`](../object/VerbRule(GoThrough).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GoThrough)`](../object/VerbRule(GoThrough).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2521`](../source/grammar.t.html#2521)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2521`](../source/grammar.t.html#2521)]`
 
 <div class="gramrule">
 
@@ -971,9 +971,9 @@ singleDobj
 
 `VerbRule(GoTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(GoTo)`](../object/VerbRule(GoTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(GoTo)`](../object/VerbRule(GoTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2459`](../source/grammar.t.html#2459)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2459`](../source/grammar.t.html#2459)]`
 
 <div class="gramrule">
 
@@ -984,9 +984,9 @@ singleDobj
 
 `VerbRule(Hello)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Hello)`](../object/VerbRule(Hello).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Hello)`](../object/VerbRule(Hello).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2006`](../source/grammar.t.html#2006)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2006`](../source/grammar.t.html#2006)]`
 
 <div class="gramrule">
 
@@ -996,9 +996,9 @@ singleDobj
 
 `VerbRule(Help)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Help)`](../object/VerbRule(Help).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Help)`](../object/VerbRule(Help).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`582`](../source/newbie.t.html#582)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`582`](../source/newbie.t.html#582)]`
 
 <div class="gramrule">
 
@@ -1014,9 +1014,9 @@ singleDobj
 
 `VerbRule(Hints)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Hints)`](../object/VerbRule(Hints).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Hints)`](../object/VerbRule(Hints).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3425`](../source/grammar.t.html#3425)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3425`](../source/grammar.t.html#3425)]`
 
 <div class="gramrule">
 
@@ -1026,9 +1026,9 @@ singleDobj
 
 `VerbRule(HintsOff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(HintsOff)`](../object/VerbRule(HintsOff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(HintsOff)`](../object/VerbRule(HintsOff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3418`](../source/grammar.t.html#3418)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3418`](../source/grammar.t.html#3418)]`
 
 <div class="gramrule">
 
@@ -1038,9 +1038,9 @@ singleDobj
 
 `VerbRule(In)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(In)`](../object/VerbRule(In).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(In)`](../object/VerbRule(In).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2507`](../source/grammar.t.html#2507)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2507`](../source/grammar.t.html#2507)]`
 
 <div class="gramrule">
 
@@ -1050,9 +1050,9 @@ singleDobj
 
 `VerbRule(instructions)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(instructions)`](../object/VerbRule(instructions).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(instructions)`](../object/VerbRule(instructions).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`instruct.t`](../file/instruct.t.html)`[`[`998`](../source/instruct.t.html#998)`]`
+[`instruct.t`](../file/instruct.t.html)[`[`998`](../source/instruct.t.html#998)]`
 
 <div class="gramrule">
 
@@ -1062,9 +1062,9 @@ singleDobj
 
 `VerbRule(Intro)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Intro)`](../object/VerbRule(Intro).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Intro)`](../object/VerbRule(Intro).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`631`](../source/newbie.t.html#631)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`631`](../source/newbie.t.html#631)]`
 
 <div class="gramrule">
 
@@ -1074,9 +1074,9 @@ singleDobj
 
 `VerbRule(Inventory)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Inventory)`](../object/VerbRule(Inventory).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Inventory)`](../object/VerbRule(Inventory).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2235`](../source/grammar.t.html#2235)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2235`](../source/grammar.t.html#2235)]`
 
 <div class="gramrule">
 
@@ -1086,9 +1086,9 @@ singleDobj
 
 `VerbRule(InventoryTall)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(InventoryTall)`](../object/VerbRule(InventoryTall).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(InventoryTall)`](../object/VerbRule(InventoryTall).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2242`](../source/grammar.t.html#2242)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2242`](../source/grammar.t.html#2242)]`
 
 <div class="gramrule">
 
@@ -1098,9 +1098,9 @@ singleDobj
 
 `VerbRule(InventoryWide)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(InventoryWide)`](../object/VerbRule(InventoryWide).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(InventoryWide)`](../object/VerbRule(InventoryWide).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2249`](../source/grammar.t.html#2249)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2249`](../source/grammar.t.html#2249)]`
 
 <div class="gramrule">
 
@@ -1110,9 +1110,9 @@ singleDobj
 
 `VerbRule(Jump)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Jump)`](../object/VerbRule(Jump).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Jump)`](../object/VerbRule(Jump).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2568`](../source/grammar.t.html#2568)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2568`](../source/grammar.t.html#2568)]`
 
 <div class="gramrule">
 
@@ -1122,9 +1122,9 @@ singleDobj
 
 `VerbRule(JumpOff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(JumpOff)`](../object/VerbRule(JumpOff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(JumpOff)`](../object/VerbRule(JumpOff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2582`](../source/grammar.t.html#2582)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2582`](../source/grammar.t.html#2582)]`
 
 <div class="gramrule">
 
@@ -1134,9 +1134,9 @@ singleDobj
 
 `VerbRule(JumpOffIntransitive)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(JumpOffIntransitive)`](../object/VerbRule(JumpOffIntransitive).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(JumpOffIntransitive)`](../object/VerbRule(JumpOffIntransitive).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2575`](../source/grammar.t.html#2575)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2575`](../source/grammar.t.html#2575)]`
 
 <div class="gramrule">
 
@@ -1146,9 +1146,9 @@ singleDobj
 
 `VerbRule(JumpOver)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(JumpOver)`](../object/VerbRule(JumpOver).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(JumpOver)`](../object/VerbRule(JumpOver).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2591`](../source/grammar.t.html#2591)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2591`](../source/grammar.t.html#2591)]`
 
 <div class="gramrule">
 
@@ -1158,9 +1158,9 @@ singleDobj
 
 `VerbRule(KeepGoing)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(KeepGoing)`](../object/VerbRule(KeepGoing).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(KeepGoing)`](../object/VerbRule(KeepGoing).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`495`](../source/newbie.t.html#495)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`495`](../source/newbie.t.html#495)]`
 
 <div class="gramrule">
 
@@ -1172,9 +1172,9 @@ singleDir
 
 `VerbRule(Kiss)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Kiss)`](../object/VerbRule(Kiss).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Kiss)`](../object/VerbRule(Kiss).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1757`](../source/grammar.t.html#1757)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1757`](../source/grammar.t.html#1757)]`
 
 <div class="gramrule">
 
@@ -1184,9 +1184,9 @@ singleDir
 
 `VerbRule(Lie)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Lie)`](../object/VerbRule(Lie).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Lie)`](../object/VerbRule(Lie).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3124`](../source/grammar.t.html#3124)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3124`](../source/grammar.t.html#3124)]`
 
 <div class="gramrule">
 
@@ -1196,9 +1196,9 @@ singleDir
 
 `VerbRule(LieIn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LieIn)`](../object/VerbRule(LieIn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LieIn)`](../object/VerbRule(LieIn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3113`](../source/grammar.t.html#3113)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3113`](../source/grammar.t.html#3113)]`
 
 <div class="gramrule">
 
@@ -1209,9 +1209,9 @@ singleDobj
 
 `VerbRule(LieOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LieOn)`](../object/VerbRule(LieOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LieOn)`](../object/VerbRule(LieOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3103`](../source/grammar.t.html#3103)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3103`](../source/grammar.t.html#3103)]`
 
 <div class="gramrule">
 
@@ -1222,9 +1222,9 @@ singleDobj
 
 `VerbRule(Light)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Light)`](../object/VerbRule(Light).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Light)`](../object/VerbRule(Light).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2814`](../source/grammar.t.html#2814)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2814`](../source/grammar.t.html#2814)]`
 
 <div class="gramrule">
 
@@ -1234,9 +1234,9 @@ singleDobj
 
 `VerbRule(Listen)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Listen)`](../object/VerbRule(Listen).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Listen)`](../object/VerbRule(Listen).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1650`](../source/grammar.t.html#1650)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1650`](../source/grammar.t.html#1650)]`
 
 <div class="gramrule">
 
@@ -1246,9 +1246,9 @@ singleDobj
 
 `VerbRule(ListenTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ListenTo)`](../object/VerbRule(ListenTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ListenTo)`](../object/VerbRule(ListenTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1642`](../source/grammar.t.html#1642)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1642`](../source/grammar.t.html#1642)]`
 
 <div class="gramrule">
 
@@ -1258,9 +1258,9 @@ singleDobj
 
 `VerbRule(ListRelations)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ListRelations)`](../object/VerbRule(ListRelations).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ListRelations)`](../object/VerbRule(ListRelations).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`relations.t`](../file/relations.t.html)`[`[`830`](../source/relations.t.html#830)`]`
+[`relations.t`](../file/relations.t.html)[`[`830`](../source/relations.t.html#830)]`
 
 <div class="gramrule">
 
@@ -1270,9 +1270,9 @@ singleDobj
 
 `VerbRule(ListTests)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ListTests)`](../object/VerbRule(ListTests).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ListTests)`](../object/VerbRule(ListTests).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`debug.t`](../file/debug.t.html)`[`[`433`](../source/debug.t.html#433)`]`
+[`debug.t`](../file/debug.t.html)[`[`433`](../source/debug.t.html#433)]`
 
 <div class="gramrule">
 
@@ -1282,9 +1282,9 @@ singleDobj
 
 `VerbRule(Lock)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Lock)`](../object/VerbRule(Lock).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Lock)`](../object/VerbRule(Lock).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3041`](../source/grammar.t.html#3041)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3041`](../source/grammar.t.html#3041)]`
 
 <div class="gramrule">
 
@@ -1294,9 +1294,9 @@ singleDobj
 
 `VerbRule(LockWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LockWith)`](../object/VerbRule(LockWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LockWith)`](../object/VerbRule(LockWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3057`](../source/grammar.t.html#3057)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3057`](../source/grammar.t.html#3057)]`
 
 <div class="gramrule">
 
@@ -1306,9 +1306,9 @@ singleDobj
 
 `VerbRule(Look)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Look)`](../object/VerbRule(Look).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Look)`](../object/VerbRule(Look).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2264`](../source/grammar.t.html#2264)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2264`](../source/grammar.t.html#2264)]`
 
 <div class="gramrule">
 
@@ -1318,9 +1318,9 @@ singleDobj
 
 `VerbRule(LookBehind)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LookBehind)`](../object/VerbRule(LookBehind).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LookBehind)`](../object/VerbRule(LookBehind).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1603`](../source/grammar.t.html#1603)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1603`](../source/grammar.t.html#1603)]`
 
 <div class="gramrule">
 
@@ -1330,9 +1330,9 @@ singleDobj
 
 `VerbRule(LookHere)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LookHere)`](../object/VerbRule(LookHere).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LookHere)`](../object/VerbRule(LookHere).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`427`](../source/newbie.t.html#427)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`427`](../source/newbie.t.html#427)]`
 
 <div class="gramrule">
 
@@ -1342,9 +1342,9 @@ singleDobj
 
 `VerbRule(LookIn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LookIn)`](../object/VerbRule(LookIn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LookIn)`](../object/VerbRule(LookIn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1570`](../source/grammar.t.html#1570)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1570`](../source/grammar.t.html#1570)]`
 
 <div class="gramrule">
 
@@ -1354,9 +1354,9 @@ singleDobj
 
 `VerbRule(LookThrough)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LookThrough)`](../object/VerbRule(LookThrough).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LookThrough)`](../object/VerbRule(LookThrough).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1587`](../source/grammar.t.html#1587)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1587`](../source/grammar.t.html#1587)]`
 
 <div class="gramrule">
 
@@ -1366,9 +1366,9 @@ singleDobj
 
 `VerbRule(LookUnder)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LookUnder)`](../object/VerbRule(LookUnder).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LookUnder)`](../object/VerbRule(LookUnder).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1595`](../source/grammar.t.html#1595)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1595`](../source/grammar.t.html#1595)]`
 
 <div class="gramrule">
 
@@ -1378,9 +1378,9 @@ singleDobj
 
 `VerbRule(LookUp)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LookUp)`](../object/VerbRule(LookUp).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LookUp)`](../object/VerbRule(LookUp).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2753`](../source/grammar.t.html#2753)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2753`](../source/grammar.t.html#2753)]`
 
 <div class="gramrule">
 
@@ -1393,9 +1393,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(LookX)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(LookX)`](../object/VerbRule(LookX).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(LookX)`](../object/VerbRule(LookX).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1547`](../source/grammar.t.html#1547)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1547`](../source/grammar.t.html#1547)]`
 
 <div class="gramrule">
 
@@ -1405,9 +1405,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Move)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Move)`](../object/VerbRule(Move).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Move)`](../object/VerbRule(Move).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2616`](../source/grammar.t.html#2616)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2616`](../source/grammar.t.html#2616)]`
 
 <div class="gramrule">
 
@@ -1417,9 +1417,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(MoveTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(MoveTo)`](../object/VerbRule(MoveTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(MoveTo)`](../object/VerbRule(MoveTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2624`](../source/grammar.t.html#2624)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2624`](../source/grammar.t.html#2624)]`
 
 <div class="gramrule">
 
@@ -1429,9 +1429,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(MoveWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(MoveWith)`](../object/VerbRule(MoveWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(MoveWith)`](../object/VerbRule(MoveWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2633`](../source/grammar.t.html#2633)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2633`](../source/grammar.t.html#2633)]`
 
 <div class="gramrule">
 
@@ -1441,9 +1441,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(No)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(No)`](../object/VerbRule(No).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(No)`](../object/VerbRule(No).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2031`](../source/grammar.t.html#2031)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2031`](../source/grammar.t.html#2031)]`
 
 <div class="gramrule">
 
@@ -1453,9 +1453,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Notify)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Notify)`](../object/VerbRule(Notify).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Notify)`](../object/VerbRule(Notify).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2299`](../source/grammar.t.html#2299)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2299`](../source/grammar.t.html#2299)]`
 
 <div class="gramrule">
 
@@ -1465,9 +1465,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(NotifyOff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(NotifyOff)`](../object/VerbRule(NotifyOff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(NotifyOff)`](../object/VerbRule(NotifyOff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2313`](../source/grammar.t.html#2313)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2313`](../source/grammar.t.html#2313)]`
 
 <div class="gramrule">
 
@@ -1477,9 +1477,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(NotifyOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(NotifyOn)`](../object/VerbRule(NotifyOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(NotifyOn)`](../object/VerbRule(NotifyOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2306`](../source/grammar.t.html#2306)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2306`](../source/grammar.t.html#2306)]`
 
 <div class="gramrule">
 
@@ -1489,9 +1489,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Open)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Open)`](../object/VerbRule(Open).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Open)`](../object/VerbRule(Open).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3025`](../source/grammar.t.html#3025)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3025`](../source/grammar.t.html#3025)]`
 
 <div class="gramrule">
 
@@ -1501,9 +1501,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Out)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Out)`](../object/VerbRule(Out).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Out)`](../object/VerbRule(Out).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2514`](../source/grammar.t.html#2514)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2514`](../source/grammar.t.html#2514)]`
 
 <div class="gramrule">
 
@@ -1513,9 +1513,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PlugIn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PlugIn)`](../object/VerbRule(PlugIn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PlugIn)`](../object/VerbRule(PlugIn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3274`](../source/grammar.t.html#3274)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3274`](../source/grammar.t.html#3274)]`
 
 <div class="gramrule">
 
@@ -1526,9 +1526,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PlugInto)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PlugInto)`](../object/VerbRule(PlugInto).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PlugInto)`](../object/VerbRule(PlugInto).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3252`](../source/grammar.t.html#3252)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3252`](../source/grammar.t.html#3252)]`
 
 <div class="gramrule">
 
@@ -1538,9 +1538,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PlugIntoWhat)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PlugIntoWhat)`](../object/VerbRule(PlugIntoWhat).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PlugIntoWhat)`](../object/VerbRule(PlugIntoWhat).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3262`](../source/grammar.t.html#3262)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3262`](../source/grammar.t.html#3262)]`
 
 <div class="gramrule">
 
@@ -1550,9 +1550,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Pour)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Pour)`](../object/VerbRule(Pour).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Pour)`](../object/VerbRule(Pour).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2900`](../source/grammar.t.html#2900)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2900`](../source/grammar.t.html#2900)]`
 
 <div class="gramrule">
 
@@ -1562,9 +1562,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PourInto)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PourInto)`](../object/VerbRule(PourInto).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PourInto)`](../object/VerbRule(PourInto).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2908`](../source/grammar.t.html#2908)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2908`](../source/grammar.t.html#2908)]`
 
 <div class="gramrule">
 
@@ -1574,9 +1574,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PourOnto)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PourOnto)`](../object/VerbRule(PourOnto).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PourOnto)`](../object/VerbRule(PourOnto).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2917`](../source/grammar.t.html#2917)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2917`](../source/grammar.t.html#2917)]`
 
 <div class="gramrule">
 
@@ -1586,9 +1586,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Pull)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Pull)`](../object/VerbRule(Pull).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Pull)`](../object/VerbRule(Pull).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2608`](../source/grammar.t.html#2608)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2608`](../source/grammar.t.html#2608)]`
 
 <div class="gramrule">
 
@@ -1598,9 +1598,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Purloin)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Purloin)`](../object/VerbRule(Purloin).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Purloin)`](../object/VerbRule(Purloin).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3458`](../source/grammar.t.html#3458)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3458`](../source/grammar.t.html#3458)]`
 
 <div class="gramrule">
 
@@ -1610,9 +1610,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Push)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Push)`](../object/VerbRule(Push).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Push)`](../object/VerbRule(Push).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2600`](../source/grammar.t.html#2600)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2600`](../source/grammar.t.html#2600)]`
 
 <div class="gramrule">
 
@@ -1622,9 +1622,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PushTravelClimbDown)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PushTravelClimbDown)`](../object/VerbRule(PushTravelClimbDown).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PushTravelClimbDown)`](../object/VerbRule(PushTravelClimbDown).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3379`](../source/grammar.t.html#3379)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3379`](../source/grammar.t.html#3379)]`
 
 <div class="gramrule">
 
@@ -1635,9 +1635,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PushTravelClimbUp)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PushTravelClimbUp)`](../object/VerbRule(PushTravelClimbUp).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PushTravelClimbUp)`](../object/VerbRule(PushTravelClimbUp).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3370`](../source/grammar.t.html#3370)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3370`](../source/grammar.t.html#3370)]`
 
 <div class="gramrule">
 
@@ -1648,9 +1648,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PushTravelDir)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PushTravelDir)`](../object/VerbRule(PushTravelDir).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PushTravelDir)`](../object/VerbRule(PushTravelDir).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3336`](../source/grammar.t.html#3336)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3336`](../source/grammar.t.html#3336)]`
 
 <div class="gramrule">
 
@@ -1660,9 +1660,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PushTravelEnter)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PushTravelEnter)`](../object/VerbRule(PushTravelEnter).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PushTravelEnter)`](../object/VerbRule(PushTravelEnter).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3351`](../source/grammar.t.html#3351)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3351`](../source/grammar.t.html#3351)]`
 
 <div class="gramrule">
 
@@ -1673,9 +1673,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PushTravelGetOutOf)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PushTravelGetOutOf)`](../object/VerbRule(PushTravelGetOutOf).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PushTravelGetOutOf)`](../object/VerbRule(PushTravelGetOutOf).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3360`](../source/grammar.t.html#3360)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3360`](../source/grammar.t.html#3360)]`
 
 <div class="gramrule">
 
@@ -1686,9 +1686,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PushTravelThrough)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PushTravelThrough)`](../object/VerbRule(PushTravelThrough).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PushTravelThrough)`](../object/VerbRule(PushTravelThrough).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3342`](../source/grammar.t.html#3342)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3342`](../source/grammar.t.html#3342)]`
 
 <div class="gramrule">
 
@@ -1699,9 +1699,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PutBehind)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PutBehind)`](../object/VerbRule(PutBehind).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PutBehind)`](../object/VerbRule(PutBehind).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1687`](../source/grammar.t.html#1687)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1687`](../source/grammar.t.html#1687)]`
 
 <div class="gramrule">
 
@@ -1711,9 +1711,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PutIn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PutIn)`](../object/VerbRule(PutIn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PutIn)`](../object/VerbRule(PutIn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1657`](../source/grammar.t.html#1657)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1657`](../source/grammar.t.html#1657)]`
 
 <div class="gramrule">
 
@@ -1724,9 +1724,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PutOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PutOn)`](../object/VerbRule(PutOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PutOn)`](../object/VerbRule(PutOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1667`](../source/grammar.t.html#1667)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1667`](../source/grammar.t.html#1667)]`
 
 <div class="gramrule">
 
@@ -1738,9 +1738,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PutUnder)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PutUnder)`](../object/VerbRule(PutUnder).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PutUnder)`](../object/VerbRule(PutUnder).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1678`](../source/grammar.t.html#1678)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1678`](../source/grammar.t.html#1678)]`
 
 <div class="gramrule">
 
@@ -1750,9 +1750,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(PutWhere)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(PutWhere)`](../object/VerbRule(PutWhere).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(PutWhere)`](../object/VerbRule(PutWhere).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1696`](../source/grammar.t.html#1696)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1696`](../source/grammar.t.html#1696)]`
 
 <div class="gramrule">
 
@@ -1762,9 +1762,9 @@ topicIobj ('in' \| 'on') singleDobj
 
 `VerbRule(Query)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Query)`](../object/VerbRule(Query).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Query)`](../object/VerbRule(Query).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1765`](../source/grammar.t.html#1765)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1765`](../source/grammar.t.html#1765)]`
 
 <div class="gramrule">
 
@@ -1777,9 +1777,9 @@ qtype \| 'if' -\> qtype) topicDobj
 
 `VerbRule(Query2)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Query2)`](../object/VerbRule(Query2).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Query2)`](../object/VerbRule(Query2).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1776`](../source/grammar.t.html#1776)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1776`](../source/grammar.t.html#1776)]`
 
 <div class="gramrule">
 
@@ -1790,9 +1790,9 @@ qtype \| 'if' -\> qtype) topicDobj
 
 `VerbRule(QueryAbout)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(QueryAbout)`](../object/VerbRule(QueryAbout).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(QueryAbout)`](../object/VerbRule(QueryAbout).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1786`](../source/grammar.t.html#1786)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1786`](../source/grammar.t.html#1786)]`
 
 <div class="gramrule">
 
@@ -1805,9 +1805,9 @@ qtype \| 'if' -\> qtype) topicIobj
 
 `VerbRule(QueryVague)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(QueryVague)`](../object/VerbRule(QueryVague).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(QueryVague)`](../object/VerbRule(QueryVague).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1798`](../source/grammar.t.html#1798)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1798`](../source/grammar.t.html#1798)]`
 
 <div class="gramrule">
 
@@ -1820,9 +1820,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Quit)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Quit)`](../object/VerbRule(Quit).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Quit)`](../object/VerbRule(Quit).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2271`](../source/grammar.t.html#2271)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2271`](../source/grammar.t.html#2271)]`
 
 <div class="gramrule">
 
@@ -1832,9 +1832,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Read)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Read)`](../object/VerbRule(Read).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Read)`](../object/VerbRule(Read).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1562`](../source/grammar.t.html#1562)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1562`](../source/grammar.t.html#1562)]`
 
 <div class="gramrule">
 
@@ -1844,9 +1844,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Record)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Record)`](../object/VerbRule(Record).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Record)`](../object/VerbRule(Record).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2405`](../source/grammar.t.html#2405)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2405`](../source/grammar.t.html#2405)]`
 
 <div class="gramrule">
 
@@ -1856,9 +1856,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(RecordEvents)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(RecordEvents)`](../object/VerbRule(RecordEvents).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(RecordEvents)`](../object/VerbRule(RecordEvents).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2419`](../source/grammar.t.html#2419)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2419`](../source/grammar.t.html#2419)]`
 
 <div class="gramrule">
 
@@ -1868,9 +1868,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(RecordEventsString)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(RecordEventsString)`](../object/VerbRule(RecordEventsString).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(RecordEventsString)`](../object/VerbRule(RecordEventsString).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2426`](../source/grammar.t.html#2426)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2426`](../source/grammar.t.html#2426)]`
 
 <div class="gramrule">
 
@@ -1880,9 +1880,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(RecordOff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(RecordOff)`](../object/VerbRule(RecordOff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(RecordOff)`](../object/VerbRule(RecordOff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2433`](../source/grammar.t.html#2433)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2433`](../source/grammar.t.html#2433)]`
 
 <div class="gramrule">
 
@@ -1892,9 +1892,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(RecordString)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(RecordString)`](../object/VerbRule(RecordString).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(RecordString)`](../object/VerbRule(RecordString).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2412`](../source/grammar.t.html#2412)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2412`](../source/grammar.t.html#2412)]`
 
 <div class="gramrule">
 
@@ -1904,9 +1904,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(RelationDetails)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(RelationDetails)`](../object/VerbRule(RelationDetails).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(RelationDetails)`](../object/VerbRule(RelationDetails).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`relations.t`](../file/relations.t.html)`[`[`935`](../source/relations.t.html#935)`]`
+[`relations.t`](../file/relations.t.html)[`[`935`](../source/relations.t.html#935)]`
 
 <div class="gramrule">
 
@@ -1916,9 +1916,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Remove)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Remove)`](../object/VerbRule(Remove).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Remove)`](../object/VerbRule(Remove).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1522`](../source/grammar.t.html#1522)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1522`](../source/grammar.t.html#1522)]`
 
 <div class="gramrule">
 
@@ -1928,9 +1928,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ReplayQuiet)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ReplayQuiet)`](../object/VerbRule(ReplayQuiet).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ReplayQuiet)`](../object/VerbRule(ReplayQuiet).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2451`](../source/grammar.t.html#2451)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2451`](../source/grammar.t.html#2451)]`
 
 <div class="gramrule">
 
@@ -1940,9 +1940,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ReplayString)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ReplayString)`](../object/VerbRule(ReplayString).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ReplayString)`](../object/VerbRule(ReplayString).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2440`](../source/grammar.t.html#2440)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2440`](../source/grammar.t.html#2440)]`
 
 <div class="gramrule">
 
@@ -1953,9 +1953,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Restart)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Restart)`](../object/VerbRule(Restart).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Restart)`](../object/VerbRule(Restart).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2349`](../source/grammar.t.html#2349)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2349`](../source/grammar.t.html#2349)]`
 
 <div class="gramrule">
 
@@ -1965,9 +1965,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Restore)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Restore)`](../object/VerbRule(Restore).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Restore)`](../object/VerbRule(Restore).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2334`](../source/grammar.t.html#2334)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2334`](../source/grammar.t.html#2334)]`
 
 <div class="gramrule">
 
@@ -1977,9 +1977,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(RestoreString)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(RestoreString)`](../object/VerbRule(RestoreString).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(RestoreString)`](../object/VerbRule(RestoreString).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2341`](../source/grammar.t.html#2341)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2341`](../source/grammar.t.html#2341)]`
 
 <div class="gramrule">
 
@@ -1989,9 +1989,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Sample)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Sample)`](../object/VerbRule(Sample).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Sample)`](../object/VerbRule(Sample).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`643`](../source/newbie.t.html#643)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`643`](../source/newbie.t.html#643)]`
 
 <div class="gramrule">
 
@@ -2001,9 +2001,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Save)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Save)`](../object/VerbRule(Save).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Save)`](../object/VerbRule(Save).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2320`](../source/grammar.t.html#2320)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2320`](../source/grammar.t.html#2320)]`
 
 <div class="gramrule">
 
@@ -2013,9 +2013,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(SaveString)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(SaveString)`](../object/VerbRule(SaveString).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(SaveString)`](../object/VerbRule(SaveString).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2327`](../source/grammar.t.html#2327)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2327`](../source/grammar.t.html#2327)]`
 
 <div class="gramrule">
 
@@ -2025,9 +2025,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Say)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Say)`](../object/VerbRule(Say).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Say)`](../object/VerbRule(Say).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2110`](../source/grammar.t.html#2110)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2110`](../source/grammar.t.html#2110)]`
 
 <div class="gramrule">
 
@@ -2037,9 +2037,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(SayTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(SayTo)`](../object/VerbRule(SayTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(SayTo)`](../object/VerbRule(SayTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2118`](../source/grammar.t.html#2118)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2118`](../source/grammar.t.html#2118)]`
 
 <div class="gramrule">
 
@@ -2049,9 +2049,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Score)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Score)`](../object/VerbRule(Score).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Score)`](../object/VerbRule(Score).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2285`](../source/grammar.t.html#2285)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2285`](../source/grammar.t.html#2285)]`
 
 <div class="gramrule">
 
@@ -2061,9 +2061,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Screw)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Screw)`](../object/VerbRule(Screw).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Screw)`](../object/VerbRule(Screw).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3300`](../source/grammar.t.html#3300)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3300`](../source/grammar.t.html#3300)]`
 
 <div class="gramrule">
 
@@ -2073,9 +2073,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ScrewWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ScrewWith)`](../object/VerbRule(ScrewWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ScrewWith)`](../object/VerbRule(ScrewWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3308`](../source/grammar.t.html#3308)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3308`](../source/grammar.t.html#3308)]`
 
 <div class="gramrule">
 
@@ -2085,9 +2085,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ScriptOff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ScriptOff)`](../object/VerbRule(ScriptOff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ScriptOff)`](../object/VerbRule(ScriptOff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2398`](../source/grammar.t.html#2398)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2398`](../source/grammar.t.html#2398)]`
 
 <div class="gramrule">
 
@@ -2097,9 +2097,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ScriptOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ScriptOn)`](../object/VerbRule(ScriptOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ScriptOn)`](../object/VerbRule(ScriptOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2384`](../source/grammar.t.html#2384)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2384`](../source/grammar.t.html#2384)]`
 
 <div class="gramrule">
 
@@ -2109,9 +2109,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ScriptString)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ScriptString)`](../object/VerbRule(ScriptString).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ScriptString)`](../object/VerbRule(ScriptString).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2391`](../source/grammar.t.html#2391)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2391`](../source/grammar.t.html#2391)]`
 
 <div class="gramrule">
 
@@ -2121,9 +2121,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Search)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Search)`](../object/VerbRule(Search).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Search)`](../object/VerbRule(Search).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1579`](../source/grammar.t.html#1579)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1579`](../source/grammar.t.html#1579)]`
 
 <div class="gramrule">
 
@@ -2133,9 +2133,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Seek)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Seek)`](../object/VerbRule(Seek).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Seek)`](../object/VerbRule(Seek).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`1056`](../source/newbie.t.html#1056)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`1056`](../source/newbie.t.html#1056)]`
 
 <div class="gramrule">
 
@@ -2145,9 +2145,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Set)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Set)`](../object/VerbRule(Set).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Set)`](../object/VerbRule(Set).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2671`](../source/grammar.t.html#2671)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2671`](../source/grammar.t.html#2671)]`
 
 <div class="gramrule">
 
@@ -2157,9 +2157,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(SetTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(SetTo)`](../object/VerbRule(SetTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(SetTo)`](../object/VerbRule(SetTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2679`](../source/grammar.t.html#2679)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2679`](../source/grammar.t.html#2679)]`
 
 <div class="gramrule">
 
@@ -2169,9 +2169,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ShowTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ShowTo)`](../object/VerbRule(ShowTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ShowTo)`](../object/VerbRule(ShowTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2078`](../source/grammar.t.html#2078)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2078`](../source/grammar.t.html#2078)]`
 
 <div class="gramrule">
 
@@ -2181,9 +2181,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ShowToImplicit)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ShowToImplicit)`](../object/VerbRule(ShowToImplicit).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ShowToImplicit)`](../object/VerbRule(ShowToImplicit).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2099`](../source/grammar.t.html#2099)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2099`](../source/grammar.t.html#2099)]`
 
 <div class="gramrule">
 
@@ -2193,9 +2193,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(ShowToType2)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ShowToType2)`](../object/VerbRule(ShowToType2).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ShowToType2)`](../object/VerbRule(ShowToType2).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2087`](../source/grammar.t.html#2087)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2087`](../source/grammar.t.html#2087)]`
 
 <div class="gramrule">
 
@@ -2205,9 +2205,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(Sit)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Sit)`](../object/VerbRule(Sit).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Sit)`](../object/VerbRule(Sit).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3097`](../source/grammar.t.html#3097)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3097`](../source/grammar.t.html#3097)]`
 
 <div class="gramrule">
 
@@ -2217,9 +2217,9 @@ qtype \| 'if' -\> qtype)
 
 `VerbRule(SitIn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(SitIn)`](../object/VerbRule(SitIn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(SitIn)`](../object/VerbRule(SitIn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3087`](../source/grammar.t.html#3087)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3087`](../source/grammar.t.html#3087)]`
 
 <div class="gramrule">
 
@@ -2230,9 +2230,9 @@ singleDobj
 
 `VerbRule(SitOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(SitOn)`](../object/VerbRule(SitOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(SitOn)`](../object/VerbRule(SitOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3077`](../source/grammar.t.html#3077)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3077`](../source/grammar.t.html#3077)]`
 
 <div class="gramrule">
 
@@ -2243,9 +2243,9 @@ singleDobj
 
 `VerbRule(Sleep)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Sleep)`](../object/VerbRule(Sleep).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Sleep)`](../object/VerbRule(Sleep).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3209`](../source/grammar.t.html#3209)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3209`](../source/grammar.t.html#3209)]`
 
 <div class="gramrule">
 
@@ -2255,9 +2255,9 @@ singleDobj
 
 `VerbRule(Smell)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Smell)`](../object/VerbRule(Smell).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Smell)`](../object/VerbRule(Smell).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1635`](../source/grammar.t.html#1635)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1635`](../source/grammar.t.html#1635)]`
 
 <div class="gramrule">
 
@@ -2267,9 +2267,9 @@ singleDobj
 
 `VerbRule(SmellSomething)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(SmellSomething)`](../object/VerbRule(SmellSomething).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(SmellSomething)`](../object/VerbRule(SmellSomething).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1627`](../source/grammar.t.html#1627)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1627`](../source/grammar.t.html#1627)]`
 
 <div class="gramrule">
 
@@ -2279,9 +2279,9 @@ singleDobj
 
 `VerbRule(Stand)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Stand)`](../object/VerbRule(Stand).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Stand)`](../object/VerbRule(Stand).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3148`](../source/grammar.t.html#3148)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3148`](../source/grammar.t.html#3148)]`
 
 <div class="gramrule">
 
@@ -2291,9 +2291,9 @@ singleDobj
 
 `VerbRule(StandIn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(StandIn)`](../object/VerbRule(StandIn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(StandIn)`](../object/VerbRule(StandIn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3139`](../source/grammar.t.html#3139)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3139`](../source/grammar.t.html#3139)]`
 
 <div class="gramrule">
 
@@ -2303,9 +2303,9 @@ singleDobj
 
 `VerbRule(StandOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(StandOn)`](../object/VerbRule(StandOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(StandOn)`](../object/VerbRule(StandOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3130`](../source/grammar.t.html#3130)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3130`](../source/grammar.t.html#3130)]`
 
 <div class="gramrule">
 
@@ -2315,9 +2315,9 @@ singleDobj
 
 `VerbRule(Strike)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Strike)`](../object/VerbRule(Strike).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Strike)`](../object/VerbRule(Strike).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2822`](../source/grammar.t.html#2822)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2822`](../source/grammar.t.html#2822)]`
 
 <div class="gramrule">
 
@@ -2327,9 +2327,9 @@ singleDobj
 
 `VerbRule(Switch)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Switch)`](../object/VerbRule(Switch).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Switch)`](../object/VerbRule(Switch).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2778`](../source/grammar.t.html#2778)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2778`](../source/grammar.t.html#2778)]`
 
 <div class="gramrule">
 
@@ -2339,9 +2339,9 @@ singleDobj
 
 `VerbRule(SwitchOff)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(SwitchOff)`](../object/VerbRule(SwitchOff).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(SwitchOff)`](../object/VerbRule(SwitchOff).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2804`](../source/grammar.t.html#2804)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2804`](../source/grammar.t.html#2804)]`
 
 <div class="gramrule">
 
@@ -2352,9 +2352,9 @@ singleDobj
 
 `VerbRule(SwitchOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(SwitchOn)`](../object/VerbRule(SwitchOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(SwitchOn)`](../object/VerbRule(SwitchOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2794`](../source/grammar.t.html#2794)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2794`](../source/grammar.t.html#2794)]`
 
 <div class="gramrule">
 
@@ -2365,9 +2365,9 @@ singleDobj
 
 `VerbRule(Take)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Take)`](../object/VerbRule(Take).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Take)`](../object/VerbRule(Take).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1503`](../source/grammar.t.html#1503)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1503`](../source/grammar.t.html#1503)]`
 
 <div class="gramrule">
 
@@ -2378,9 +2378,9 @@ singleDobj
 
 `VerbRule(TakeFrom)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TakeFrom)`](../object/VerbRule(TakeFrom).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TakeFrom)`](../object/VerbRule(TakeFrom).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1512`](../source/grammar.t.html#1512)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1512`](../source/grammar.t.html#1512)]`
 
 <div class="gramrule">
 
@@ -2392,9 +2392,9 @@ singleDobj
 
 `VerbRule(TalkAbout)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TalkAbout)`](../object/VerbRule(TalkAbout).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TalkAbout)`](../object/VerbRule(TalkAbout).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1954`](../source/grammar.t.html#1954)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1954`](../source/grammar.t.html#1954)]`
 
 <div class="gramrule">
 
@@ -2404,9 +2404,9 @@ singleDobj
 
 `VerbRule(TalkAboutImplicit)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TalkAboutImplicit)`](../object/VerbRule(TalkAboutImplicit).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TalkAboutImplicit)`](../object/VerbRule(TalkAboutImplicit).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1964`](../source/grammar.t.html#1964)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1964`](../source/grammar.t.html#1964)]`
 
 <div class="gramrule">
 
@@ -2416,9 +2416,9 @@ singleDobj
 
 `VerbRule(TalkTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TalkTo)`](../object/VerbRule(TalkTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TalkTo)`](../object/VerbRule(TalkTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1990`](../source/grammar.t.html#1990)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1990`](../source/grammar.t.html#1990)]`
 
 <div class="gramrule">
 
@@ -2428,9 +2428,9 @@ singleDobj
 
 `VerbRule(Taste)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Taste)`](../object/VerbRule(Taste).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Taste)`](../object/VerbRule(Taste).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1619`](../source/grammar.t.html#1619)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1619`](../source/grammar.t.html#1619)]`
 
 <div class="gramrule">
 
@@ -2440,9 +2440,9 @@ singleDobj
 
 `VerbRule(TellAbout)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TellAbout)`](../object/VerbRule(TellAbout).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TellAbout)`](../object/VerbRule(TellAbout).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1912`](../source/grammar.t.html#1912)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1912`](../source/grammar.t.html#1912)]`
 
 <div class="gramrule">
 
@@ -2452,9 +2452,9 @@ singleDobj
 
 `VerbRule(TellAboutImplicit)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TellAboutImplicit)`](../object/VerbRule(TellAboutImplicit).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TellAboutImplicit)`](../object/VerbRule(TellAboutImplicit).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1922`](../source/grammar.t.html#1922)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1922`](../source/grammar.t.html#1922)]`
 
 <div class="gramrule">
 
@@ -2464,9 +2464,9 @@ singleDobj
 
 `VerbRule(TellAboutWhat)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TellAboutWhat)`](../object/VerbRule(TellAboutWhat).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TellAboutWhat)`](../object/VerbRule(TellAboutWhat).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1931`](../source/grammar.t.html#1931)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1931`](../source/grammar.t.html#1931)]`
 
 <div class="gramrule">
 
@@ -2476,9 +2476,9 @@ singleDobj
 
 `VerbRule(TellThat)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TellThat)`](../object/VerbRule(TellThat).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TellThat)`](../object/VerbRule(TellThat).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2126`](../source/grammar.t.html#2126)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2126`](../source/grammar.t.html#2126)]`
 
 <div class="gramrule">
 
@@ -2488,9 +2488,9 @@ singleDobj
 
 `VerbRule(TellTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TellTo)`](../object/VerbRule(TellTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TellTo)`](../object/VerbRule(TellTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1945`](../source/grammar.t.html#1945)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1945`](../source/grammar.t.html#1945)]`
 
 <div class="gramrule">
 
@@ -2500,9 +2500,9 @@ singleDobj
 
 `VerbRule(TellVague)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TellVague)`](../object/VerbRule(TellVague).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TellVague)`](../object/VerbRule(TellVague).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1981`](../source/grammar.t.html#1981)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1981`](../source/grammar.t.html#1981)]`
 
 <div class="gramrule">
 
@@ -2512,9 +2512,9 @@ singleDobj
 
 `VerbRule(Test)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Test)`](../object/VerbRule(Test).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Test)`](../object/VerbRule(Test).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`debug.t`](../file/debug.t.html)`[`[`466`](../source/debug.t.html#466)`]`
+[`debug.t`](../file/debug.t.html)[`[`466`](../source/debug.t.html#466)]`
 
 <div class="gramrule">
 
@@ -2524,9 +2524,9 @@ singleDobj
 
 `VerbRule(Think)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Think)`](../object/VerbRule(Think).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Think)`](../object/VerbRule(Think).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2134`](../source/grammar.t.html#2134)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2134`](../source/grammar.t.html#2134)]`
 
 <div class="gramrule">
 
@@ -2536,9 +2536,9 @@ singleDobj
 
 `VerbRule(ThinkAbout)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ThinkAbout)`](../object/VerbRule(ThinkAbout).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ThinkAbout)`](../object/VerbRule(ThinkAbout).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2141`](../source/grammar.t.html#2141)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2141`](../source/grammar.t.html#2141)]`
 
 <div class="gramrule">
 
@@ -2548,9 +2548,9 @@ singleDobj
 
 `VerbRule(Throw)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Throw)`](../object/VerbRule(Throw).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Throw)`](../object/VerbRule(Throw).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2150`](../source/grammar.t.html#2150)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2150`](../source/grammar.t.html#2150)]`
 
 <div class="gramrule">
 
@@ -2560,9 +2560,9 @@ singleDobj
 
 `VerbRule(ThrowAt)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ThrowAt)`](../object/VerbRule(ThrowAt).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ThrowAt)`](../object/VerbRule(ThrowAt).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2158`](../source/grammar.t.html#2158)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2158`](../source/grammar.t.html#2158)]`
 
 <div class="gramrule">
 
@@ -2572,9 +2572,9 @@ singleDobj
 
 `VerbRule(ThrowDir)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ThrowDir)`](../object/VerbRule(ThrowDir).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ThrowDir)`](../object/VerbRule(ThrowDir).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2188`](../source/grammar.t.html#2188)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2188`](../source/grammar.t.html#2188)]`
 
 <div class="gramrule">
 
@@ -2584,9 +2584,9 @@ singleDobj
 
 `VerbRule(ThrowDirDown)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ThrowDirDown)`](../object/VerbRule(ThrowDirDown).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ThrowDirDown)`](../object/VerbRule(ThrowDirDown).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2198`](../source/grammar.t.html#2198)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2198`](../source/grammar.t.html#2198)]`
 
 <div class="gramrule">
 
@@ -2596,9 +2596,9 @@ singleDobj
 
 `VerbRule(ThrowTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ThrowTo)`](../object/VerbRule(ThrowTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ThrowTo)`](../object/VerbRule(ThrowTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2167`](../source/grammar.t.html#2167)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2167`](../source/grammar.t.html#2167)]`
 
 <div class="gramrule">
 
@@ -2608,9 +2608,9 @@ singleDobj
 
 `VerbRule(ThrowToType2)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(ThrowToType2)`](../object/VerbRule(ThrowToType2).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(ThrowToType2)`](../object/VerbRule(ThrowToType2).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2176`](../source/grammar.t.html#2176)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2176`](../source/grammar.t.html#2176)]`
 
 <div class="gramrule">
 
@@ -2620,9 +2620,9 @@ singleDobj
 
 `VerbRule(Topics)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Topics)`](../object/VerbRule(Topics).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Topics)`](../object/VerbRule(Topics).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1999`](../source/grammar.t.html#1999)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1999`](../source/grammar.t.html#1999)]`
 
 <div class="gramrule">
 
@@ -2632,9 +2632,9 @@ singleDobj
 
 `VerbRule(Travel)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Travel)`](../object/VerbRule(Travel).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Travel)`](../object/VerbRule(Travel).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2486`](../source/grammar.t.html#2486)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2486`](../source/grammar.t.html#2486)]`
 
 <div class="gramrule">
 
@@ -2644,9 +2644,9 @@ singleDobj
 
 `VerbRule(Turn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Turn)`](../object/VerbRule(Turn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Turn)`](../object/VerbRule(Turn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2643`](../source/grammar.t.html#2643)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2643`](../source/grammar.t.html#2643)]`
 
 <div class="gramrule">
 
@@ -2656,9 +2656,9 @@ singleDobj
 
 `VerbRule(TurnTo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TurnTo)`](../object/VerbRule(TurnTo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TurnTo)`](../object/VerbRule(TurnTo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2661`](../source/grammar.t.html#2661)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2661`](../source/grammar.t.html#2661)]`
 
 <div class="gramrule">
 
@@ -2669,9 +2669,9 @@ singleDobj
 
 `VerbRule(TurnWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TurnWith)`](../object/VerbRule(TurnWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TurnWith)`](../object/VerbRule(TurnWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2651`](../source/grammar.t.html#2651)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2651`](../source/grammar.t.html#2651)]`
 
 <div class="gramrule">
 
@@ -2681,9 +2681,9 @@ singleDobj
 
 `VerbRule(TypeLiteralOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TypeLiteralOn)`](../object/VerbRule(TypeLiteralOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TypeLiteralOn)`](../object/VerbRule(TypeLiteralOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2696`](../source/grammar.t.html#2696)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2696`](../source/grammar.t.html#2696)]`
 
 <div class="gramrule">
 
@@ -2693,9 +2693,9 @@ singleDobj
 
 `VerbRule(TypeLiteralOnWhat)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TypeLiteralOnWhat)`](../object/VerbRule(TypeLiteralOnWhat).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TypeLiteralOnWhat)`](../object/VerbRule(TypeLiteralOnWhat).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2705`](../source/grammar.t.html#2705)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2705`](../source/grammar.t.html#2705)]`
 
 <div class="gramrule">
 
@@ -2705,9 +2705,9 @@ singleDobj
 
 `VerbRule(TypeOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(TypeOn)`](../object/VerbRule(TypeOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(TypeOn)`](../object/VerbRule(TypeOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2688`](../source/grammar.t.html#2688)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2688`](../source/grammar.t.html#2688)]`
 
 <div class="gramrule">
 
@@ -2717,9 +2717,9 @@ singleDobj
 
 `VerbRule(Undo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Undo)`](../object/VerbRule(Undo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Undo)`](../object/VerbRule(Undo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2356`](../source/grammar.t.html#2356)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2356`](../source/grammar.t.html#2356)]`
 
 <div class="gramrule">
 
@@ -2729,9 +2729,9 @@ singleDobj
 
 `VerbRule(Unfasten)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Unfasten)`](../object/VerbRule(Unfasten).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Unfasten)`](../object/VerbRule(Unfasten).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3234`](../source/grammar.t.html#3234)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3234`](../source/grammar.t.html#3234)]`
 
 <div class="gramrule">
 
@@ -2741,9 +2741,9 @@ singleDobj
 
 `VerbRule(UnfastenFrom)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(UnfastenFrom)`](../object/VerbRule(UnfastenFrom).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(UnfastenFrom)`](../object/VerbRule(UnfastenFrom).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3242`](../source/grammar.t.html#3242)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3242`](../source/grammar.t.html#3242)]`
 
 <div class="gramrule">
 
@@ -2753,9 +2753,9 @@ singleDobj
 
 `VerbRule(Unlock)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Unlock)`](../object/VerbRule(Unlock).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Unlock)`](../object/VerbRule(Unlock).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3049`](../source/grammar.t.html#3049)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3049`](../source/grammar.t.html#3049)]`
 
 <div class="gramrule">
 
@@ -2765,9 +2765,9 @@ singleDobj
 
 `VerbRule(UnlockWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(UnlockWith)`](../object/VerbRule(UnlockWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(UnlockWith)`](../object/VerbRule(UnlockWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3067`](../source/grammar.t.html#3067)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3067`](../source/grammar.t.html#3067)]`
 
 <div class="gramrule">
 
@@ -2777,9 +2777,9 @@ singleDobj
 
 `VerbRule(Unplug)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Unplug)`](../object/VerbRule(Unplug).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Unplug)`](../object/VerbRule(Unplug).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3292`](../source/grammar.t.html#3292)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3292`](../source/grammar.t.html#3292)]`
 
 <div class="gramrule">
 
@@ -2789,9 +2789,9 @@ singleDobj
 
 `VerbRule(UnplugFrom)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(UnplugFrom)`](../object/VerbRule(UnplugFrom).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(UnplugFrom)`](../object/VerbRule(UnplugFrom).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3283`](../source/grammar.t.html#3283)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3283`](../source/grammar.t.html#3283)]`
 
 <div class="gramrule">
 
@@ -2801,9 +2801,9 @@ singleDobj
 
 `VerbRule(Unscrew)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Unscrew)`](../object/VerbRule(Unscrew).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Unscrew)`](../object/VerbRule(Unscrew).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3318`](../source/grammar.t.html#3318)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3318`](../source/grammar.t.html#3318)]`
 
 <div class="gramrule">
 
@@ -2813,9 +2813,9 @@ singleDobj
 
 `VerbRule(UnscrewWith)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(UnscrewWith)`](../object/VerbRule(UnscrewWith).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(UnscrewWith)`](../object/VerbRule(UnscrewWith).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3326`](../source/grammar.t.html#3326)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3326`](../source/grammar.t.html#3326)]`
 
 <div class="gramrule">
 
@@ -2825,9 +2825,9 @@ singleDobj
 
 `VerbRule(VagueTravel)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(VagueTravel)`](../object/VerbRule(VagueTravel).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(VagueTravel)`](../object/VerbRule(VagueTravel).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2477`](../source/grammar.t.html#2477)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2477`](../source/grammar.t.html#2477)]`
 
 <div class="gramrule">
 
@@ -2837,9 +2837,9 @@ singleDobj
 
 `VerbRule(Verbose)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Verbose)`](../object/VerbRule(Verbose).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Verbose)`](../object/VerbRule(Verbose).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`3448`](../source/grammar.t.html#3448)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`3448`](../source/grammar.t.html#3448)]`
 
 <div class="gramrule">
 
@@ -2849,9 +2849,9 @@ singleDobj
 
 `VerbRule(Version)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Version)`](../object/VerbRule(Version).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Version)`](../object/VerbRule(Version).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2363`](../source/grammar.t.html#2363)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2363`](../source/grammar.t.html#2363)]`
 
 <div class="gramrule">
 
@@ -2861,9 +2861,9 @@ singleDobj
 
 `VerbRule(Wait)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Wait)`](../object/VerbRule(Wait).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Wait)`](../object/VerbRule(Wait).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2257`](../source/grammar.t.html#2257)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2257`](../source/grammar.t.html#2257)]`
 
 <div class="gramrule">
 
@@ -2873,9 +2873,9 @@ singleDobj
 
 `VerbRule(Wear)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Wear)`](../object/VerbRule(Wear).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Wear)`](../object/VerbRule(Wear).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1739`](../source/grammar.t.html#1739)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1739`](../source/grammar.t.html#1739)]`
 
 <div class="gramrule">
 
@@ -2886,9 +2886,9 @@ singleDobj
 
 `VerbRule(WhatAmICarrying)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhatAmICarrying)`](../object/VerbRule(WhatAmICarrying).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhatAmICarrying)`](../object/VerbRule(WhatAmICarrying).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`693`](../source/newbie.t.html#693)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`693`](../source/newbie.t.html#693)]`
 
 <div class="gramrule">
 
@@ -2900,9 +2900,9 @@ singleDobj
 
 `VerbRule(WhatIsNoun)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhatIsNoun)`](../object/VerbRule(WhatIsNoun).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhatIsNoun)`](../object/VerbRule(WhatIsNoun).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`657`](../source/newbie.t.html#657)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`657`](../source/newbie.t.html#657)]`
 
 <div class="gramrule">
 
@@ -2912,9 +2912,9 @@ singleDobj
 
 `VerbRule(WhatNext)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhatNext)`](../object/VerbRule(WhatNext).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhatNext)`](../object/VerbRule(WhatNext).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`603`](../source/newbie.t.html#603)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`603`](../source/newbie.t.html#603)]`
 
 <div class="gramrule">
 
@@ -2927,9 +2927,9 @@ singleDobj
 
 `VerbRule(WhatsHere)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhatsHere)`](../object/VerbRule(WhatsHere).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhatsHere)`](../object/VerbRule(WhatsHere).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`818`](../source/newbie.t.html#818)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`818`](../source/newbie.t.html#818)]`
 
 <div class="gramrule">
 
@@ -2940,9 +2940,9 @@ singleDobj
 
 `VerbRule(WhatsThePoint)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhatsThePoint)`](../object/VerbRule(WhatsThePoint).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhatsThePoint)`](../object/VerbRule(WhatsThePoint).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`724`](../source/newbie.t.html#724)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`724`](../source/newbie.t.html#724)]`
 
 <div class="gramrule">
 
@@ -2954,9 +2954,9 @@ singleDobj
 
 `VerbRule(WhatThisGame)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhatThisGame)`](../object/VerbRule(WhatThisGame).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhatThisGame)`](../object/VerbRule(WhatThisGame).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`741`](../source/newbie.t.html#741)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`741`](../source/newbie.t.html#741)]`
 
 <div class="gramrule">
 
@@ -2969,9 +2969,9 @@ singleDobj
 
 `VerbRule(WhereAmI)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhereAmI)`](../object/VerbRule(WhereAmI).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhereAmI)`](../object/VerbRule(WhereAmI).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`808`](../source/newbie.t.html#808)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`808`](../source/newbie.t.html#808)]`
 
 <div class="gramrule">
 
@@ -2981,9 +2981,9 @@ singleDobj
 
 `VerbRule(WhereGo)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhereGo)`](../object/VerbRule(WhereGo).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhereGo)`](../object/VerbRule(WhereGo).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`869`](../source/newbie.t.html#869)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`869`](../source/newbie.t.html#869)]`
 
 <div class="gramrule">
 
@@ -2995,9 +2995,9 @@ singleDobj
 
 `VerbRule(WhereHelp)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhereHelp)`](../object/VerbRule(WhereHelp).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhereHelp)`](../object/VerbRule(WhereHelp).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`557`](../source/newbie.t.html#557)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`557`](../source/newbie.t.html#557)]`
 
 <div class="gramrule">
 
@@ -3011,9 +3011,9 @@ singleDobj
 
 `VerbRule(WhoAmI)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WhoAmI)`](../object/VerbRule(WhoAmI).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WhoAmI)`](../object/VerbRule(WhoAmI).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`newbie.t`](../file/newbie.t.html)`[`[`846`](../source/newbie.t.html#846)`]`
+[`newbie.t`](../file/newbie.t.html)[`[`846`](../source/newbie.t.html#846)]`
 
 <div class="gramrule">
 
@@ -3023,9 +3023,9 @@ singleDobj
 
 `VerbRule(Write)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Write)`](../object/VerbRule(Write).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Write)`](../object/VerbRule(Write).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2733`](../source/grammar.t.html#2733)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2733`](../source/grammar.t.html#2733)]`
 
 <div class="gramrule">
 
@@ -3035,9 +3035,9 @@ singleDobj
 
 `VerbRule(WriteOn)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(WriteOn)`](../object/VerbRule(WriteOn).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(WriteOn)`](../object/VerbRule(WriteOn).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2724`](../source/grammar.t.html#2724)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2724`](../source/grammar.t.html#2724)]`
 
 <div class="gramrule">
 
@@ -3047,9 +3047,9 @@ singleDobj
 
 `VerbRule(Yell)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Yell)`](../object/VerbRule(Yell).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Yell)`](../object/VerbRule(Yell).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2040`](../source/grammar.t.html#2040)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2040`](../source/grammar.t.html#2040)]`
 
 <div class="gramrule">
 
@@ -3059,9 +3059,9 @@ singleDobj
 
 `VerbRule(Yes)      `*`// original source text`*  
 
-`grammar `**[`VerbRule(Yes)`](../object/VerbRule(Yes).html)**` :   `[`VerbProduction`](../object/VerbProduction.html)`      `*`// after macro expansion`*
+`grammar `**[`VerbRule(Yes)`](../object/VerbRule(Yes).html)**` :   [`VerbProduction`](../object/VerbProduction.html)      `*`// after macro expansion`*
 
-[`grammar.t`](../file/grammar.t.html)`[`[`2022`](../source/grammar.t.html#2022)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`2022`](../source/grammar.t.html#2022)]`
 
 <div class="gramrule">
 

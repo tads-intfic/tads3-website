@@ -47,7 +47,7 @@ blockEndConv method common to Actor, ActorState and NodeEndCheck
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -57,7 +57,7 @@ blockEndConv method common to Actor, ActorState and NodeEndCheck
 
 </div>
 
-` `[`blockEndConv`](#blockEndConv)`  `
+[`blockEndConv`](#blockEndConv)
 
 <span id="_Properties_"></span>
 

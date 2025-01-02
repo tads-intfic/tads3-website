@@ -37,7 +37,7 @@ layout: docs
 
 </div>
 
-` `[`reflectionServices`](../object/reflectionServices.html)`  `
+[`reflectionServices`](../object/reflectionServices.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

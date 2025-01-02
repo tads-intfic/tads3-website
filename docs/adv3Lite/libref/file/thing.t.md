@@ -39,7 +39,7 @@ we rely upon for functionality that varies by language.
 
 </div>
 
-` `[`Floor`](../object/Floor.html)`  `[`Key`](../object/Key.html)`  `[`LocType`](../object/LocType.html)`  `[`Mentionable`](../object/Mentionable.html)`  `[`MultiLoc`](../object/MultiLoc.html)`  `[`Player`](../object/Player.html)`  `[`ReplaceRedirector`](../object/ReplaceRedirector.html)`  `[`State`](../object/State.html)`  `[`SubComponent`](../object/SubComponent.html)`  `[`Thing`](../object/Thing.html)`  `[`Topic`](../object/Topic.html)`  `[`ViaType`](../object/ViaType.html)`  `[`VocabWord`](../object/VocabWord.html)`  `
+[`Floor`](../object/Floor.html)[`Key`](../object/Key.html)[`LocType`](../object/LocType.html)[`Mentionable`](../object/Mentionable.html)[`MultiLoc`](../object/MultiLoc.html)[`Player`](../object/Player.html)[`ReplaceRedirector`](../object/ReplaceRedirector.html)[`State`](../object/State.html)[`SubComponent`](../object/SubComponent.html)[`Thing`](../object/Thing.html)[`Topic`](../object/Topic.html)[`ViaType`](../object/ViaType.html)[`VocabWord`](../object/VocabWord.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -48,7 +48,7 @@ we rely upon for functionality that varies by language.
 
 </div>
 
-` `[`Attached`](../object/Attached.html)`  `[`Behind`](../object/Behind.html)`  `[`Carrier`](../object/Carrier.html)`  `[`defaultGround`](../object/defaultGround.html)`  `[`displayProbe`](../object/displayProbe.html)`  `[`Down`](../object/Down.html)`  `[`ExtLocType`](../object/ExtLocType.html)`  `[`Held`](../object/Held.html)`  `[`In`](../object/In.html)`  `[`IntLocType`](../object/IntLocType.html)`  `[`Into`](../object/Into.html)`  `[`multiLocInitiator`](../object/multiLocInitiator.html)`  `[`On`](../object/On.html)`  `[`OutOf`](../object/OutOf.html)`  `[`Outside`](../object/Outside.html)`  `[`PartOf`](../object/PartOf.html)`  `[`thingPreinit`](../object/thingPreinit.html)`  `[`Through`](../object/Through.html)`  `[`Under`](../object/Under.html)`  `[`Up`](../object/Up.html)`  `[`Worn`](../object/Worn.html)`  `
+[`Attached`](../object/Attached.html)[`Behind`](../object/Behind.html)[`Carrier`](../object/Carrier.html)[`defaultGround`](../object/defaultGround.html)[`displayProbe`](../object/displayProbe.html)[`Down`](../object/Down.html)[`ExtLocType`](../object/ExtLocType.html)[`Held`](../object/Held.html)[`In`](../object/In.html)[`IntLocType`](../object/IntLocType.html)[`Into`](../object/Into.html)[`multiLocInitiator`](../object/multiLocInitiator.html)[`On`](../object/On.html)[`OutOf`](../object/OutOf.html)[`Outside`](../object/Outside.html)[`PartOf`](../object/PartOf.html)[`thingPreinit`](../object/thingPreinit.html)[`Through`](../object/Through.html)[`Under`](../object/Under.html)[`Up`](../object/Up.html)[`Worn`](../object/Worn.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -57,7 +57,7 @@ we rely upon for functionality that varies by language.
 
 </div>
 
-` `[`matchToken`](#matchToken)`  `
+[`matchToken`](#matchToken)
 
 <span id="_Functions_"></span>
 

@@ -37,8 +37,8 @@ Details](#_Methods_)
 </div>
 
 **`exceptList(main)`**  
-`         `[`ExceptListProduction`](../object/ExceptListProduction.html)  
-`                 `[`Production`](../object/Production.html)  
+[`ExceptListProduction`](../object/ExceptListProduction.html)  
+[`Production`](../object/Production.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,13 +48,13 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `ExceptListProduction` :  
-` `[`qualifiedNP`](../object/ExceptListProduction.html#qualifiedNP)`  `
+[`qualifiedNP`](../object/ExceptListProduction.html#qualifiedNP)
 
 Inherited from `Production` :  
-` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+[`determiner`](../object/Production.html#determiner)[`nounPhraseRole`](../object/Production.html#nounPhraseRole)[`npClass`](../object/Production.html#npClass)[`parent`](../object/Production.html#parent)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,13 +64,13 @@ Inherited from `Production` :
 
 </div>
 
-` `
+
 
 Inherited from `ExceptListProduction` :  
-` `[`addNounListItem`](../object/ExceptListProduction.html#addNounListItem)`  `[`build`](../object/ExceptListProduction.html#build)`  `
+[`addNounListItem`](../object/ExceptListProduction.html#addNounListItem)[`build`](../object/ExceptListProduction.html#build)
 
 Inherited from `Production` :  
-` `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `[`visitProd`](../object/Production.html#visitProd)`  `
+[`findAction`](../object/Production.html#findAction)[`findChild`](../object/Production.html#findChild)[`findParent`](../object/Production.html#findParent)[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)[`getText`](../object/Production.html#getText)[`getTokens`](../object/Production.html#getTokens)[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)[`isChildOf`](../object/Production.html#isChildOf)[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)[`visitLiteral`](../object/Production.html#visitLiteral)[`visitProd`](../object/Production.html#visitProd)
 
 <span id="_Properties_"></span>
 

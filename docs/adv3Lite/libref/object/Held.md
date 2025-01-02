@@ -39,8 +39,8 @@ object being held is exterior to the holder, not enclosed.
 </div>
 
 **`Held`**  
-`         `[`ExtLocType`](../object/ExtLocType.html)  
-`                 `[`LocType`](../object/LocType.html)  
+[`ExtLocType`](../object/ExtLocType.html)  
+[`LocType`](../object/LocType.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,12 +50,12 @@ object being held is exterior to the holder, not enclosed.
 
 </div>
 
-` `[`prep`](#prep)`  `
+[`prep`](#prep)
 
-` `
+
 
 Inherited from `LocType` :  
-` `[`intoPrep`](../object/LocType.html#intoPrep)`  `[`listOrder`](../object/LocType.html#listOrder)`  `
+[`intoPrep`](../object/LocType.html#intoPrep)[`listOrder`](../object/LocType.html#listOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -65,11 +65,11 @@ Inherited from `LocType` :
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_Properties_"></span>
 

@@ -75,8 +75,8 @@ realistic.
 </div>
 
 **`RandomFiringScript`**  
-`         `[`RandomEventList`](../object/RandomEventList.html)  
-`         `[`ShuffledEventList`](../object/ShuffledEventList.html)  
+[`RandomEventList`](../object/RandomEventList.html)  
+[`ShuffledEventList`](../object/ShuffledEventList.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -93,7 +93,7 @@ realistic.
 
 </div>
 
-` `[`eventPercent`](#eventPercent)`  `[`eventReduceAfter`](#eventReduceAfter)`  `[`eventReduceTo`](#eventReduceTo)`  `
+[`eventPercent`](#eventPercent)[`eventReduceAfter`](#eventReduceAfter)[`eventReduceTo`](#eventReduceTo)
 
 <span id="_MethodSummary_"></span>
 
@@ -103,7 +103,7 @@ realistic.
 
 </div>
 
-` `[`checkEventOdds`](#checkEventOdds)`  `[`doScript`](#doScript)`  `[`underusedReadyELIidx`](#underusedReadyELIidx)`  `
+[`checkEventOdds`](#checkEventOdds)[`doScript`](#doScript)[`underusedReadyELIidx`](#underusedReadyELIidx)
 
 <span id="_Properties_"></span>
 

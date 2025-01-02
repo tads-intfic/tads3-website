@@ -55,7 +55,7 @@ LState is the language-specific base class for State objects.
 </div>
 
 **`LState`**  
-`         `[`State`](../object/State.html)  
+[`State`](../object/State.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ LState is the language-specific base class for State objects.
 
 </div>
 
-` `[`additionalInfo`](#additionalInfo)`  `
+[`additionalInfo`](#additionalInfo)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ LState is the language-specific base class for State objects.
 
 </div>
 
-` `[`addToName`](#addToName)`  `[`getAdditionalInfo`](#getAdditionalInfo)`  `[`initWord`](#initWord)`  `
+[`addToName`](#addToName)[`getAdditionalInfo`](#getAdditionalInfo)[`initWord`](#initWord)
 
 <span id="_Properties_"></span>
 

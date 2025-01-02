@@ -31,7 +31,7 @@ include the library header
 
 </div>
 
-` `[`VerbRule(CmdMenu)`](../object/VerbRule(CmdMenu).html)`  `
+[`VerbRule(CmdMenu)`](../object/VerbRule(CmdMenu).html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -40,7 +40,7 @@ include the library header
 
 </div>
 
-` `[`CmdMenu`](../object/CmdMenu.html)`  `
+[`CmdMenu`](../object/CmdMenu.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

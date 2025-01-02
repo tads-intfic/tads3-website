@@ -58,12 +58,12 @@ EXTENSION\]
 </div>
 
 **`Rule`**  
-`         `[`AfterRule`](../object/AfterRule.html)  
-`         `[`BeforeRule`](../object/BeforeRule.html)  
-`         `[`InitRule`](../object/InitRule.html)  
-`         `[`PreinitRule`](../object/PreinitRule.html)  
-`         `[`ReportRule`](../object/ReportRule.html)  
-`         `[`TurnEndRule`](../object/TurnEndRule.html)  
+[`AfterRule`](../object/AfterRule.html)  
+[`BeforeRule`](../object/BeforeRule.html)  
+[`InitRule`](../object/InitRule.html)  
+[`PreinitRule`](../object/PreinitRule.html)  
+[`ReportRule`](../object/ReportRule.html)  
+[`TurnEndRule`](../object/TurnEndRule.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -80,7 +80,7 @@ EXTENSION\]
 
 </div>
 
-` `[`action`](#action)`  `[`actor`](#actor)`  `[`aobj`](#aobj)`  `[`dobj`](#dobj)`  `[`during`](#during)`  `[`execAfter`](#execAfter)`  `[`execBefore`](#execBefore)`  `[`iobj`](#iobj)`  `[`isActive`](#isActive)`  `[`location`](#location)`  `[`matchObj`](#matchObj)`  `[`present`](#present)`  `[`priority`](#priority)`  `[`rulebook`](#rulebook)`  `[`rulebooks`](#rulebooks)`  `[`specificity`](#specificity)`  `[`stopValue`](#stopValue)`  `[`where`](#where)`  `[`who`](#who)`  `
+[`action`](#action)[`actor`](#actor)[`aobj`](#aobj)[`dobj`](#dobj)[`during`](#during)[`execAfter`](#execAfter)[`execBefore`](#execBefore)[`iobj`](#iobj)[`isActive`](#isActive)[`location`](#location)[`matchObj`](#matchObj)[`present`](#present)[`priority`](#priority)[`rulebook`](#rulebook)[`rulebooks`](#rulebooks)[`specificity`](#specificity)[`stopValue`](#stopValue)[`where`](#where)[`who`](#who)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,7 +90,7 @@ EXTENSION\]
 
 </div>
 
-` `[`activate`](#activate)`  `[`addTo`](#addTo)`  `[`calcSpecficity`](#calcSpecficity)`  `[`compareTo`](#compareTo)`  `[`deactivate`](#deactivate)`  `[`follow`](#follow)`  `[`initializeRule`](#initializeRule)`  `[`matchConditions`](#matchConditions)`  `[`moveInto`](#moveInto)`  `[`removeFrom`](#removeFrom)`  `[`runAfter`](#runAfter)`  `[`runBefore`](#runBefore)`  `[`setRulebook`](#setRulebook)`  `[`when`](#when)`  `
+[`activate`](#activate)[`addTo`](#addTo)[`calcSpecficity`](#calcSpecficity)[`compareTo`](#compareTo)[`deactivate`](#deactivate)[`follow`](#follow)[`initializeRule`](#initializeRule)[`matchConditions`](#matchConditions)[`moveInto`](#moveInto)[`removeFrom`](#removeFrom)[`runAfter`](#runAfter)[`runBefore`](#runBefore)[`setRulebook`](#setRulebook)[`when`](#when)
 
 <span id="_Properties_"></span>
 

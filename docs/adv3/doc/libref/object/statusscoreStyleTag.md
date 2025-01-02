@@ -37,8 +37,8 @@ Details](#_Methods_)
 </div>
 
 **`statusscoreStyleTag`**  
-`         `[`HtmlStyleTag`](../object/HtmlStyleTag.html)  
-`                 `[`StyleTag`](../object/StyleTag.html)  
+[`HtmlStyleTag`](../object/HtmlStyleTag.html)  
+[`StyleTag`](../object/StyleTag.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,13 +48,13 @@ Details](#_Methods_)
 
 </div>
 
-` `[`htmlCloseText`](#htmlCloseText)`  `[`htmlOpenText`](#htmlOpenText)`  `
+[`htmlCloseText`](#htmlCloseText)[`htmlOpenText`](#htmlOpenText)
 
 Inherited from `HtmlStyleTag` :  
-` `[`closeText`](../object/HtmlStyleTag.html#closeText)`  `[`openText`](../object/HtmlStyleTag.html#openText)`  `[`plainCloseText`](../object/HtmlStyleTag.html#plainCloseText)`  `[`plainOpenText`](../object/HtmlStyleTag.html#plainOpenText)`  `
+[`closeText`](../object/HtmlStyleTag.html#closeText)[`openText`](../object/HtmlStyleTag.html#openText)[`plainCloseText`](../object/HtmlStyleTag.html#plainCloseText)[`plainOpenText`](../object/HtmlStyleTag.html#plainOpenText)
 
 Inherited from `StyleTag` :  
-` `[`tagName`](../object/StyleTag.html#tagName)`  `
+[`tagName`](../object/StyleTag.html#tagName)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,11 +64,11 @@ Inherited from `StyleTag` :
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_Properties_"></span>
 

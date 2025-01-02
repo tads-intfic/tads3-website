@@ -54,26 +54,26 @@ command reports, which must keep track of messages to display.
 </div>
 
 **`MessageResult`**  
-`         `[`CommandReportMessage`](../object/CommandReportMessage.html)  
-`                 `[`CosmeticSpacingCommandReport`](../object/CosmeticSpacingCommandReport.html)  
-`                 `[`DefaultCommandReport`](../object/DefaultCommandReport.html)  
-`                 `[`DefaultDescCommandReport`](../object/DefaultDescCommandReport.html)  
-`                 `[`ExtraCommandReport`](../object/ExtraCommandReport.html)  
-`                 `[`FullCommandReport`](../object/FullCommandReport.html)  
-`                         `[`AfterCommandReport`](../object/AfterCommandReport.html)  
-`                         `[`BeforeCommandReport`](../object/BeforeCommandReport.html)  
-`                         `[`FailCommandReport`](../object/FailCommandReport.html)  
-`                         `[`MainCommandReport`](../object/MainCommandReport.html)  
-`                                 `[`QuestionCommandReport`](../object/QuestionCommandReport.html)  
-`         `[`VerifyResult`](../object/VerifyResult.html)  
-`                 `[`DangerousVerifyResult`](../object/DangerousVerifyResult.html)  
-`                 `[`IllogicalNowVerifyResult`](../object/IllogicalNowVerifyResult.html)  
-`                         `[`IllogicalAlreadyVerifyResult`](../object/IllogicalAlreadyVerifyResult.html)  
-`                 `[`IllogicalVerifyResult`](../object/IllogicalVerifyResult.html)  
-`                         `[`IllogicalSelfVerifyResult`](../object/IllogicalSelfVerifyResult.html)  
-`                 `[`InaccessibleVerifyResult`](../object/InaccessibleVerifyResult.html)  
-`                 `[`LogicalVerifyResult`](../object/LogicalVerifyResult.html)  
-`                 `[`NonObviousVerifyResult`](../object/NonObviousVerifyResult.html)  
+[`CommandReportMessage`](../object/CommandReportMessage.html)  
+[`CosmeticSpacingCommandReport`](../object/CosmeticSpacingCommandReport.html)  
+[`DefaultCommandReport`](../object/DefaultCommandReport.html)  
+[`DefaultDescCommandReport`](../object/DefaultDescCommandReport.html)  
+[`ExtraCommandReport`](../object/ExtraCommandReport.html)  
+[`FullCommandReport`](../object/FullCommandReport.html)  
+[`AfterCommandReport`](../object/AfterCommandReport.html)  
+[`BeforeCommandReport`](../object/BeforeCommandReport.html)  
+[`FailCommandReport`](../object/FailCommandReport.html)  
+[`MainCommandReport`](../object/MainCommandReport.html)  
+[`QuestionCommandReport`](../object/QuestionCommandReport.html)  
+[`VerifyResult`](../object/VerifyResult.html)  
+[`DangerousVerifyResult`](../object/DangerousVerifyResult.html)  
+[`IllogicalNowVerifyResult`](../object/IllogicalNowVerifyResult.html)  
+[`IllogicalAlreadyVerifyResult`](../object/IllogicalAlreadyVerifyResult.html)  
+[`IllogicalVerifyResult`](../object/IllogicalVerifyResult.html)  
+[`IllogicalSelfVerifyResult`](../object/IllogicalSelfVerifyResult.html)  
+[`InaccessibleVerifyResult`](../object/InaccessibleVerifyResult.html)  
+[`LogicalVerifyResult`](../object/LogicalVerifyResult.html)  
+[`NonObviousVerifyResult`](../object/NonObviousVerifyResult.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -90,7 +90,7 @@ command reports, which must keep track of messages to display.
 
 </div>
 
-` `[`messageProp_`](#messageProp_)`  `[`messageText_`](#messageText_)`  `
+[`messageProp_`](#messageProp_)[`messageText_`](#messageText_)
 
 <span id="_MethodSummary_"></span>
 
@@ -100,7 +100,7 @@ command reports, which must keep track of messages to display.
 
 </div>
 
-` `[`construct`](#construct)`  `[`resolveMessageText`](#resolveMessageText)`  `[`setMessage`](#setMessage)`  `[`showMessage`](#showMessage)`  `
+[`construct`](#construct)[`resolveMessageText`](#resolveMessageText)[`setMessage`](#setMessage)[`showMessage`](#showMessage)
 
 <span id="_Properties_"></span>
 

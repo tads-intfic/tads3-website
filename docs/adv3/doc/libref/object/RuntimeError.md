@@ -46,7 +46,7 @@ the run-time error that occurred.
 </div>
 
 **`RuntimeError`**  
-`         `[`Exception`](../object/Exception.html)  
+[`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,7 +57,7 @@ the run-time error that occurred.
 </div>
 
 **`RuntimeError`**  
-`         `[`StorageServerError`](../object/StorageServerError.html)  
+[`StorageServerError`](../object/StorageServerError.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,10 +74,10 @@ the run-time error that occurred.
 
 </div>
 
-` `[`errno_`](#errno_)`  `[`exceptionMessage`](#exceptionMessage)`  `[`stack_`](#stack_)`  `
+[`errno_`](#errno_)[`exceptionMessage`](#exceptionMessage)[`stack_`](#stack_)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,10 +87,10 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`displayException`](#displayException)`  `[`isDebuggerSignal`](#isDebuggerSignal)`  `[`newRuntimeError`](#newRuntimeError)`  `
+[`construct`](#construct)[`displayException`](#displayException)[`isDebuggerSignal`](#isDebuggerSignal)[`newRuntimeError`](#newRuntimeError)
 
 Inherited from `Exception` :  
-` `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

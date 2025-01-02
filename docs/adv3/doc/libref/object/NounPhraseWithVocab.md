@@ -56,8 +56,8 @@ adjective and noun forms.
 </div>
 
 **`NounPhraseWithVocab`**  
-`         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -68,38 +68,38 @@ adjective and noun forms.
 </div>
 
 **`NounPhraseWithVocab`**  
-`         `[`adjPhrase(adjAdj)`](../object/adjPhrase(adjAdj).html)  
-`         `[`AdjPhraseWithVocab`](../object/AdjPhraseWithVocab.html)  
-`                 `[`adjPhrase(adj)`](../object/adjPhrase(adj).html)  
-`                 `[`adjWord(adj)`](../object/adjWord(adj).html)  
-`                 `[`adjWord(adjAbbr)`](../object/adjWord(adjAbbr).html)  
-`                 `[`adjWord(adjApostS)`](../object/adjWord(adjApostS).html)  
-`                 `[`literalAdjPhrase(literalAdj)`](../object/literalAdjPhrase(literalAdj).html)  
-`                 `[`literalAdjPhrase(number)`](../object/literalAdjPhrase(number).html)  
-`                 `[`literalAdjPhrase(string)`](../object/literalAdjPhrase(string).html)  
-`         `[`compoundNounPhrase(of)`](../object/compoundNounPhrase(of).html)  
-`         `[`compoundNounPhrase(simple)`](../object/compoundNounPhrase(simple).html)  
-`         `[`compoundPluralPhrase(of)`](../object/compoundPluralPhrase(of).html)  
-`         `[`compoundPluralPhrase(simple)`](../object/compoundPluralPhrase(simple).html)  
-`         `[`miscWordList(list)`](../object/miscWordList(list).html)  
-`         `[`miscWordList(wordOrNumber)`](../object/miscWordList(wordOrNumber).html)  
-`         `[`NounWordProd`](../object/NounWordProd.html)  
-`                 `[`nounWord(noun)`](../object/nounWord(noun).html)  
-`                 `[`nounWord(nounAbbr)`](../object/nounWord(nounAbbr).html)  
-`         `[`simpleNounPhrase(adj)`](../object/simpleNounPhrase(adj).html)  
-`         `[`simpleNounPhrase(adjAndOne)`](../object/simpleNounPhrase(adjAndOne).html)  
-`         `[`simpleNounPhrase(adjNP)`](../object/simpleNounPhrase(adjNP).html)  
-`         `[`simpleNounPhrase(empty)`](../object/simpleNounPhrase(empty).html)  
-`         `[`simpleNounPhrase(misc)`](../object/simpleNounPhrase(misc).html)  
-`         `[`simpleNounPhrase(noun)`](../object/simpleNounPhrase(noun).html)  
-`         `[`simpleNounPhrase(nounAndNumber)`](../object/simpleNounPhrase(nounAndNumber).html)  
-`         `[`simpleNounPhrase(number)`](../object/simpleNounPhrase(number).html)  
-`         `[`simpleNounPhrase(numberAndNoun)`](../object/simpleNounPhrase(numberAndNoun).html)  
-`         `[`simplePluralPhrase(adjAndOnes)`](../object/simplePluralPhrase(adjAndOnes).html)  
-`         `[`simplePluralPhrase(empty)`](../object/simplePluralPhrase(empty).html)  
-`         `[`simplePluralPhrase(misc)`](../object/simplePluralPhrase(misc).html)  
-`         `[`simplePluralPhrase(plural)`](../object/simplePluralPhrase(plural).html)  
-`         `[`simplePluralPhrase(poundNum)`](../object/simplePluralPhrase(poundNum).html)  
+[`adjPhrase(adjAdj)`](../object/adjPhrase(adjAdj).html)  
+[`AdjPhraseWithVocab`](../object/AdjPhraseWithVocab.html)  
+[`adjPhrase(adj)`](../object/adjPhrase(adj).html)  
+[`adjWord(adj)`](../object/adjWord(adj).html)  
+[`adjWord(adjAbbr)`](../object/adjWord(adjAbbr).html)  
+[`adjWord(adjApostS)`](../object/adjWord(adjApostS).html)  
+[`literalAdjPhrase(literalAdj)`](../object/literalAdjPhrase(literalAdj).html)  
+[`literalAdjPhrase(number)`](../object/literalAdjPhrase(number).html)  
+[`literalAdjPhrase(string)`](../object/literalAdjPhrase(string).html)  
+[`compoundNounPhrase(of)`](../object/compoundNounPhrase(of).html)  
+[`compoundNounPhrase(simple)`](../object/compoundNounPhrase(simple).html)  
+[`compoundPluralPhrase(of)`](../object/compoundPluralPhrase(of).html)  
+[`compoundPluralPhrase(simple)`](../object/compoundPluralPhrase(simple).html)  
+[`miscWordList(list)`](../object/miscWordList(list).html)  
+[`miscWordList(wordOrNumber)`](../object/miscWordList(wordOrNumber).html)  
+[`NounWordProd`](../object/NounWordProd.html)  
+[`nounWord(noun)`](../object/nounWord(noun).html)  
+[`nounWord(nounAbbr)`](../object/nounWord(nounAbbr).html)  
+[`simpleNounPhrase(adj)`](../object/simpleNounPhrase(adj).html)  
+[`simpleNounPhrase(adjAndOne)`](../object/simpleNounPhrase(adjAndOne).html)  
+[`simpleNounPhrase(adjNP)`](../object/simpleNounPhrase(adjNP).html)  
+[`simpleNounPhrase(empty)`](../object/simpleNounPhrase(empty).html)  
+[`simpleNounPhrase(misc)`](../object/simpleNounPhrase(misc).html)  
+[`simpleNounPhrase(noun)`](../object/simpleNounPhrase(noun).html)  
+[`simpleNounPhrase(nounAndNumber)`](../object/simpleNounPhrase(nounAndNumber).html)  
+[`simpleNounPhrase(number)`](../object/simpleNounPhrase(number).html)  
+[`simpleNounPhrase(numberAndNoun)`](../object/simpleNounPhrase(numberAndNoun).html)  
+[`simplePluralPhrase(adjAndOnes)`](../object/simplePluralPhrase(adjAndOnes).html)  
+[`simplePluralPhrase(empty)`](../object/simplePluralPhrase(empty).html)  
+[`simplePluralPhrase(misc)`](../object/simplePluralPhrase(misc).html)  
+[`simplePluralPhrase(plural)`](../object/simplePluralPhrase(plural).html)  
+[`simplePluralPhrase(poundNum)`](../object/simplePluralPhrase(poundNum).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -116,13 +116,13 @@ adjective and noun forms.
 
 </div>
 
-` `
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -132,13 +132,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`combineWordMatches`](#combineWordMatches)`  `[`combineWordMatchItems`](#combineWordMatchItems)`  `[`dictMatchIsExact`](#dictMatchIsExact)`  `[`dictMatchIsStronger`](#dictMatchIsStronger)`  `[`filterDictMatches`](#filterDictMatches)`  `[`getAdjustedTokens`](#getAdjustedTokens)`  `[`getVocabMatchList`](#getVocabMatchList)`  `[`getWordMatches`](#getWordMatches)`  `[`inScopeMatches`](#inScopeMatches)`  `[`intersectWordMatches`](#intersectWordMatches)`  `[`resolveNouns`](#resolveNouns)`  `[`resolveNounsMatchName`](#resolveNounsMatchName)`  `
+[`combineWordMatches`](#combineWordMatches)[`combineWordMatchItems`](#combineWordMatchItems)[`dictMatchIsExact`](#dictMatchIsExact)[`dictMatchIsStronger`](#dictMatchIsStronger)[`filterDictMatches`](#filterDictMatches)[`getAdjustedTokens`](#getAdjustedTokens)[`getVocabMatchList`](#getVocabMatchList)[`getWordMatches`](#getWordMatches)[`inScopeMatches`](#inScopeMatches)[`intersectWordMatches`](#intersectWordMatches)[`resolveNouns`](#resolveNouns)[`resolveNounsMatchName`](#resolveNounsMatchName)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

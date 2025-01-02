@@ -37,7 +37,7 @@ Setting up a SenseRegion is easy. You define a SenseRegion like any
 other kind of Region, and then assign rooms to it by listing the
 SenseRegion in their regions property, for example:
 
-```
+`
     countryside: Region
     ;
 
@@ -76,7 +76,7 @@ SenseRegion in their regions property, for example:
             
         regions = [countryside, meadowRegion]                                                
     ;
-```
+`
 
 By default you can see, hear and smell (but not touch) objects in one
 room from any other room in the SenseRegion (subject to further
@@ -171,7 +171,7 @@ connection can change according to some other factor, such as whether a
 door or window is open or closed. If a window between two rooms blocked
 sound and smell when it was closed you might define:
 
-```
+`
      hall: Room 'Hall'
        "A window looks out to the east. "
        canHearOutTo(loc) { return window.isOpen; }
@@ -192,7 +192,7 @@ sound and smell when it was closed you might define:
     windowRegion: SenseRegion
     ;
      
-```
+`
 
 Note that while a SenseRegion's `familiar`
 property has the same meaning as it does on an ordinary
@@ -302,7 +302,7 @@ overridden the usual specialDesc and/or initSpecialDesc will be used,
 but most of the time it will normally be appropriate to provide an
 alternative for remote viewing, for example:
 
-```
+`
     + Fixture 'scarecrow; poor wretched straw; man sticks'
         "It's a poor wretched thing, little more than a couple of sticks stuffed
         with straw wearing a faded brown coat; a straw man if ever there was one! "
@@ -316,7 +316,7 @@ alternative for remote viewing, for example:
             "Off in the distance a scarecrow stands lonely guard over the field. ";
         }    
     ;
-```
+`
 
 Where items don't have a specialDesc (or initSpecialDesc) they're
 generally listed among the miscellaneous items in the room description.
@@ -324,7 +324,7 @@ The miscellaneous items in remote rooms are listed after those in the
 player character's immediate location, usually prefaced with 'in'
 followed by the name of the room, for example, suppose we had defined:
 
-```
+`
     meadow: Room 'Meadow' 'meadow'
         "Tall grass and wild flowers grow in profusion, forming an
         even carpet that slopes down towards a riverbank to what you instinctively
@@ -352,7 +352,7 @@ followed by the name of the room, for example, suppose we had defined:
        
         regions = [countryside, meadowRegion]                                                
     ;
-```
+`
 
 Now suppose we drop a couple of objects in the riverbank location and
 then return to the meadow location to look around. We might see
@@ -376,7 +376,7 @@ To deal with this we'd probably override the riverbank's
 listing of miscellaneous items to be introduced when they're viewed
 remotely by the pov object. So, for example, we might define:
 
-```
+`
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -390,7 +390,7 @@ remotely by the pov object. So, for example, we might define:
 
         inRoomName(pov) { return 'down by the riverbank'; }    
     ;
-```
+`
 
 This would then give us:
 
@@ -411,7 +411,7 @@ objects are listed in a remote location by using a
 attaching a CustomRoomLister to the remoteContentsLister property of the
 room to be viewed remotely. For example we could define:
 
-```
+`
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -427,7 +427,7 @@ room to be viewed remotely. For example we could define:
             method(lst, pl, irName) 
             { "<.p>Lying close to the riverbank <<if pl>>are<<else>>is<<end>> "; })  
     ;
-```
+`
 
 And this would give us:
 
@@ -444,7 +444,7 @@ And this would give us:
 
 Or as another variation we might define:
 
-```
+`
     riverbank: Room 'Riverbank' 'riverbank;;bank'
         "A broad river runs lazily by just to the west. The way south is blocked by
         a thick belt of trees extending all the way down to the water's edge, but
@@ -460,7 +460,7 @@ Or as another variation we might define:
             pl, irName) { " <<if pl>>lie<<else>>lies<<end>> abandoned down by the
                 riverbank. "; })
     ;
-```
+`
 
 And this would give us:
 
@@ -509,7 +509,7 @@ soundSize and/or smellSize isn't small.
 
 So, for example, we might define:
 
-```
+`
     + crows: Decoration 'crows; nasty big black; birds; them'
         "Nasty big black things. You never did like them, even since one scared you
         as a child. "
@@ -537,7 +537,7 @@ So, for example, we might define:
             only that way can you show the full extent of your contempt for the
             horrid things. '
     ;
-```
+`
 
   
 <span id="listorder"></span>
@@ -561,12 +561,12 @@ For example, if we want the ploughed field's contents to be listed after
 those of the meadow when viewed from the riverBank, we could define the
 following on the ploughedField Room:
 
-```
+`
         remoteRoomListOrder(pov)
         {
             return pov == riverBank ? 200 : inherited(pov);
         }
-```
+`
 
   
 
@@ -638,7 +638,7 @@ used to provide a customized response, or else to make sightSize a
 method that returns medium or large depending on the viewing conditions,
 e.g.:
 
-```
+`
     modify Actor
        sightSize()
        {
@@ -648,7 +648,7 @@ e.g.:
           return medium;
        }
     ;
-```
+`
 
 Similar considerations may apply to listening to a remote actor via a
 commLink.

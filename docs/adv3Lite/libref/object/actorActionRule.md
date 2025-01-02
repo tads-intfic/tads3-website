@@ -38,11 +38,11 @@ actor) \[SYSRULES EXTENSION\]
 </div>
 
 **`actorActionRule`**  
-`         `[`BeforeRule`](../object/BeforeRule.html)  
-`                 `[`Rule`](../object/Rule.html)  
+[`BeforeRule`](../object/BeforeRule.html)  
+[`Rule`](../object/Rule.html)  
 `                         object`  
-`                 `[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
-`                         `[`Redirector`](../object/Redirector.html)  
+[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
+[`Redirector`](../object/Redirector.html)  
 `                                 object`  
 <span id="_PropSummary_"></span>
 
@@ -52,17 +52,17 @@ actor) \[SYSRULES EXTENSION\]
 
 </div>
 
-` `[`priority`](#priority)`  `
+[`priority`](#priority)
 
 Inherited from `BeforeRule` :  
-` `[`currentAction`](../object/BeforeRule.html#currentAction)`  `[`location`](../object/BeforeRule.html#location)`  `
+[`currentAction`](../object/BeforeRule.html#currentAction)[`location`](../object/BeforeRule.html#location)
 
 Inherited from `Rule` :  
-` `[`action`](../object/Rule.html#action)`  `[`actor`](../object/Rule.html#actor)`  `[`aobj`](../object/Rule.html#aobj)`  `[`dobj`](../object/Rule.html#dobj)`  `[`during`](../object/Rule.html#during)`  `[`execAfter`](../object/Rule.html#execAfter)`  `[`execBefore`](../object/Rule.html#execBefore)`  `[`iobj`](../object/Rule.html#iobj)`  `[`isActive`](../object/Rule.html#isActive)`  `[`matchObj`](../object/Rule.html#matchObj)`  `[`present`](../object/Rule.html#present)`  `[`rulebook`](../object/Rule.html#rulebook)`  `[`rulebooks`](../object/Rule.html#rulebooks)`  `[`specificity`](../object/Rule.html#specificity)`  `[`stopValue`](../object/Rule.html#stopValue)`  `[`where`](../object/Rule.html#where)`  `[`who`](../object/Rule.html#who)`  `
+[`action`](../object/Rule.html#action)[`actor`](../object/Rule.html#actor)[`aobj`](../object/Rule.html#aobj)[`dobj`](../object/Rule.html#dobj)[`during`](../object/Rule.html#during)[`execAfter`](../object/Rule.html#execAfter)[`execBefore`](../object/Rule.html#execBefore)[`iobj`](../object/Rule.html#iobj)[`isActive`](../object/Rule.html#isActive)[`matchObj`](../object/Rule.html#matchObj)[`present`](../object/Rule.html#present)[`rulebook`](../object/Rule.html#rulebook)[`rulebooks`](../object/Rule.html#rulebooks)[`specificity`](../object/Rule.html#specificity)[`stopValue`](../object/Rule.html#stopValue)[`where`](../object/Rule.html#where)[`who`](../object/Rule.html#who)
 
-` `
 
-` `
+
+
 
 <span id="_MethodSummary_"></span>
 
@@ -72,18 +72,18 @@ Inherited from `Rule` :
 
 </div>
 
-` `[`follow`](#follow)`  `
+[`follow`](#follow)
 
-` `
+
 
 Inherited from `Rule` :  
-` `[`activate`](../object/Rule.html#activate)`  `[`addTo`](../object/Rule.html#addTo)`  `[`calcSpecficity`](../object/Rule.html#calcSpecficity)`  `[`compareTo`](../object/Rule.html#compareTo)`  `[`deactivate`](../object/Rule.html#deactivate)`  `[`initializeRule`](../object/Rule.html#initializeRule)`  `[`matchConditions`](../object/Rule.html#matchConditions)`  `[`moveInto`](../object/Rule.html#moveInto)`  `[`removeFrom`](../object/Rule.html#removeFrom)`  `[`runAfter`](../object/Rule.html#runAfter)`  `[`runBefore`](../object/Rule.html#runBefore)`  `[`setRulebook`](../object/Rule.html#setRulebook)`  `[`when`](../object/Rule.html#when)`  `
+[`activate`](../object/Rule.html#activate)[`addTo`](../object/Rule.html#addTo)[`calcSpecficity`](../object/Rule.html#calcSpecficity)[`compareTo`](../object/Rule.html#compareTo)[`deactivate`](../object/Rule.html#deactivate)[`initializeRule`](../object/Rule.html#initializeRule)[`matchConditions`](../object/Rule.html#matchConditions)[`moveInto`](../object/Rule.html#moveInto)[`removeFrom`](../object/Rule.html#removeFrom)[`runAfter`](../object/Rule.html#runAfter)[`runBefore`](../object/Rule.html#runBefore)[`setRulebook`](../object/Rule.html#setRulebook)[`when`](../object/Rule.html#when)
 
 Inherited from `ReplaceRedirector` :  
-` `[`redirect`](../object/ReplaceRedirector.html#redirect)`  `
+[`redirect`](../object/ReplaceRedirector.html#redirect)
 
 Inherited from `Redirector` :  
-` `[`doInstead`](../object/Redirector.html#doInstead)`  `[`doNested`](../object/Redirector.html#doNested)`  `[`doOtherAction`](../object/Redirector.html#doOtherAction)`  `
+[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 <span id="_Properties_"></span>
 

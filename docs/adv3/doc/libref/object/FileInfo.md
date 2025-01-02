@@ -68,7 +68,7 @@ File status information. This is returned from file.getFileInfo().
 
 </div>
 
-` `[`fileAccessTime`](#fileAccessTime)`  `[`fileAttrs`](#fileAttrs)`  `[`fileCreateTime`](#fileCreateTime)`  `[`fileLinkTarget`](#fileLinkTarget)`  `[`fileModifyTime`](#fileModifyTime)`  `[`fileSize`](#fileSize)`  `[`fileType`](#fileType)`  `[`isDir`](#isDir)`  `[`specialLink`](#specialLink)`  `
+[`fileAccessTime`](#fileAccessTime)[`fileAttrs`](#fileAttrs)[`fileCreateTime`](#fileCreateTime)[`fileLinkTarget`](#fileLinkTarget)[`fileModifyTime`](#fileModifyTime)[`fileSize`](#fileSize)[`fileType`](#fileType)[`isDir`](#isDir)[`specialLink`](#specialLink)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ File status information. This is returned from file.getFileInfo().
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

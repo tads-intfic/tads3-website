@@ -37,7 +37,7 @@ Slightly modified for use with adv3Lite by Eric Eve
 
 </div>
 
-` `[`Footnote`](../object/Footnote.html)`  `[`VerbRule(Footnote)`](../object/VerbRule(Footnote).html)`  `[`VerbRule(FootnotesFull)`](../object/VerbRule(FootnotesFull).html)`  `[`VerbRule(FootnotesMedium)`](../object/VerbRule(FootnotesMedium).html)`  `[`VerbRule(FootnotesOff)`](../object/VerbRule(FootnotesOff).html)`  `[`VerbRule(FootnotesStatus)`](../object/VerbRule(FootnotesStatus).html)`  `
+[`Footnote`](../object/Footnote.html)[`VerbRule(Footnote)`](../object/VerbRule(Footnote).html)[`VerbRule(FootnotesFull)`](../object/VerbRule(FootnotesFull).html)[`VerbRule(FootnotesMedium)`](../object/VerbRule(FootnotesMedium).html)[`VerbRule(FootnotesOff)`](../object/VerbRule(FootnotesOff).html)[`VerbRule(FootnotesStatus)`](../object/VerbRule(FootnotesStatus).html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -46,7 +46,7 @@ Slightly modified for use with adv3Lite by Eric Eve
 
 </div>
 
-` `[`FootnoteAction`](../object/FootnoteAction.html)`  `[`footnotePreinit`](../object/footnotePreinit.html)`  `[`Footnotes`](../object/Footnotes.html)`  `[`footnoteSettingsItem`](../object/footnoteSettingsItem.html)`  `[`FootnotesFullAction`](../object/FootnotesFullAction.html)`  `[`FootnotesMediumAction`](../object/FootnotesMediumAction.html)`  `[`FootnotesOffAction`](../object/FootnotesOffAction.html)`  `[`FootnotesStatus`](../object/FootnotesStatus.html)`  `
+[`FootnoteAction`](../object/FootnoteAction.html)[`footnotePreinit`](../object/footnotePreinit.html)[`Footnotes`](../object/Footnotes.html)[`footnoteSettingsItem`](../object/footnoteSettingsItem.html)[`FootnotesFullAction`](../object/FootnotesFullAction.html)[`FootnotesMediumAction`](../object/FootnotesMediumAction.html)[`FootnotesOffAction`](../object/FootnotesOffAction.html)[`FootnotesStatus`](../object/FootnotesStatus.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

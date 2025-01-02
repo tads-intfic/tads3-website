@@ -45,7 +45,7 @@ the OutdoorRoom class defined below.
 
 </div>
 
-` `[`Ceiling`](../object/Ceiling.html)`  `[`DefaultWall`](../object/DefaultWall.html)`  `[`OutdoorRoom`](../object/OutdoorRoom.html)`  `[`RoomPart`](../object/RoomPart.html)`  `
+[`Ceiling`](../object/Ceiling.html)[`DefaultWall`](../object/DefaultWall.html)[`OutdoorRoom`](../object/OutdoorRoom.html)[`RoomPart`](../object/RoomPart.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -54,7 +54,7 @@ the OutdoorRoom class defined below.
 
 </div>
 
-` `[`defaultCeiling`](../object/defaultCeiling.html)`  `[`defaultEastWall`](../object/defaultEastWall.html)`  `[`defaultNorthWall`](../object/defaultNorthWall.html)`  `[`defaultSky`](../object/defaultSky.html)`  `[`defaultSouthWall`](../object/defaultSouthWall.html)`  `[`defaultWestWall`](../object/defaultWestWall.html)`  `[`roomPartID`](../object/roomPartID.html)`  `
+[`defaultCeiling`](../object/defaultCeiling.html)[`defaultEastWall`](../object/defaultEastWall.html)[`defaultNorthWall`](../object/defaultNorthWall.html)[`defaultSky`](../object/defaultSky.html)[`defaultSouthWall`](../object/defaultSouthWall.html)[`defaultWestWall`](../object/defaultWestWall.html)[`roomPartID`](../object/roomPartID.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

@@ -52,8 +52,8 @@ of the other to ensure that the two lists are based on a common state.
 </div>
 
 **`SyncEventList`**  
-`         `[`EventList`](../object/EventList.html)  
-`                 `[`Script`](../object/Script.html)  
+[`EventList`](../object/EventList.html)  
+[`Script`](../object/Script.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -79,12 +79,12 @@ of the other to ensure that the two lists are based on a common state.
 
 </div>
 
-` `[`masterObject`](#masterObject)`  `
+[`masterObject`](#masterObject)
 
 Inherited from `EventList` :  
-` `[`curScriptState`](../object/EventList.html#curScriptState)`  `[`eventList`](../object/EventList.html#eventList)`  `[`eventListLen`](../object/EventList.html#eventListLen)`  `[`resetEachCycle`](../object/EventList.html#resetEachCycle)`  `
+[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)[`resetEachCycle`](../object/EventList.html#resetEachCycle)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -94,12 +94,12 @@ Inherited from `EventList` :
 
 </div>
 
-` `[`advanceState`](#advanceState)`  `[`getScriptState`](#getScriptState)`  `[`scriptDone`](#scriptDone)`  `
+[`advanceState`](#advanceState)[`getScriptState`](#getScriptState)[`scriptDone`](#scriptDone)
 
 Inherited from `EventList` :  
-` `[`addItem`](../object/EventList.html#addItem)`  `[`construct`](../object/EventList.html#construct)`  `[`doScript`](../object/EventList.html#doScript)`  `[`doScriptEvent`](../object/EventList.html#doScriptEvent)`  `[`resetList`](../object/EventList.html#resetList)`  `
+[`addItem`](../object/EventList.html#addItem)[`construct`](../object/EventList.html#construct)[`doScript`](../object/EventList.html#doScript)[`doScriptEvent`](../object/EventList.html#doScriptEvent)[`resetList`](../object/EventList.html#resetList)
 
-` `
+
 
 <span id="_Properties_"></span>
 

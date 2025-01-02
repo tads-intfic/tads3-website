@@ -55,7 +55,7 @@ viewable via the viewport. \[DEFINED ON VIEWPORT EXTENSION\]
 </div>
 
 **`Viewport`**  
-`         `[`SwitchableViewport`](../object/SwitchableViewport.html)  
+[`SwitchableViewport`](../object/SwitchableViewport.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ viewable via the viewport. \[DEFINED ON VIEWPORT EXTENSION\]
 
 </div>
 
-` `[`examineToView`](#examineToView)`  `[`isViewing`](#isViewing)`  `[`lookThroughToView`](#lookThroughToView)`  `[`visibleRooms`](#visibleRooms)`  `
+` [`examineToView`](#examineToView)  [`isViewing`](#isViewing)  [`lookThroughToView`](#lookThroughToView)  [`visibleRooms`](#visibleRooms)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ viewable via the viewport. \[DEFINED ON VIEWPORT EXTENSION\]
 
 </div>
 
-` `[`describeVisibleRooms`](#describeVisibleRooms)`  `[`dobjFor(LookThrough)`](#dobjFor(LookThrough))`  `[`examineStatus`](#examineStatus)`  `[`setRooms`](#setRooms)`  `
+` [`describeVisibleRooms`](#describeVisibleRooms)  [`dobjFor(LookThrough)`](#dobjFor(LookThrough))  [`examineStatus`](#examineStatus)  [`setRooms`](#setRooms)  `
 
 <span id="_Properties_"></span>
 

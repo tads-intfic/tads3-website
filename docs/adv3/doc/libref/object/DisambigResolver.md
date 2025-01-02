@@ -49,8 +49,8 @@ Custom disambiguation resolver.
 </div>
 
 **`DisambigResolver`**  
-`         `[`InteractiveResolver`](../object/InteractiveResolver.html)  
-`                 `[`ProxyResolver`](../object/ProxyResolver.html)  
+[`InteractiveResolver`](../object/InteractiveResolver.html)  
+[`ProxyResolver`](../object/ProxyResolver.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -76,11 +76,11 @@ Custom disambiguation resolver.
 
 </div>
 
-` `[`allowAll`](#allowAll)`  `[`distinguisher`](#distinguisher)`  `[`fullMatchList`](#fullMatchList)`  `[`matchList`](#matchList)`  `[`matchText`](#matchText)`  `[`ordinalMatchList`](#ordinalMatchList)`  `
+[`allowAll`](#allowAll)[`distinguisher`](#distinguisher)[`fullMatchList`](#fullMatchList)[`matchList`](#matchList)[`matchText`](#matchText)[`ordinalMatchList`](#ordinalMatchList)
 
-` `
 
-` `
+
+
 
 <span id="_MethodSummary_"></span>
 
@@ -90,13 +90,13 @@ Custom disambiguation resolver.
 
 </div>
 
-` `[`construct`](#construct)`  `[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)`  `[`filterPluralPhrase`](#filterPluralPhrase)`  `[`getAll`](#getAll)`  `[`getQualifierResolver`](#getQualifierResolver)`  `[`matchName`](#matchName)`  `[`objInScope`](#objInScope)`  `[`resolvePronounAntecedent`](#resolvePronounAntecedent)`  `[`selectIndefinite`](#selectIndefinite)`  `
+[`construct`](#construct)[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`getAll`](#getAll)[`getQualifierResolver`](#getQualifierResolver)[`matchName`](#matchName)[`objInScope`](#objInScope)[`resolvePronounAntecedent`](#resolvePronounAntecedent)[`selectIndefinite`](#selectIndefinite)
 
 Inherited from `InteractiveResolver` :  
-` `[`getReflexiveBinding`](../object/InteractiveResolver.html#getReflexiveBinding)`  `[`resolvePronounAsTargetActor`](../object/InteractiveResolver.html#resolvePronounAsTargetActor)`  `
+[`getReflexiveBinding`](../object/InteractiveResolver.html#getReflexiveBinding)[`resolvePronounAsTargetActor`](../object/InteractiveResolver.html#resolvePronounAsTargetActor)
 
 Inherited from `ProxyResolver` :  
-` `[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)`  `[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)`  `
+[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

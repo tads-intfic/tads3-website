@@ -63,7 +63,7 @@ prepositions in the target language.
 
 </div>
 
-` `[`Down`](../object/Down.html)`  `[`Into`](../object/Into.html)`  `[`OutOf`](../object/OutOf.html)`  `[`Through`](../object/Through.html)`  `[`Up`](../object/Up.html)`  `
+` [`Down`](../object/Down.html)  [`Into`](../object/Into.html)  [`OutOf`](../object/OutOf.html)  [`Through`](../object/Through.html)  [`Up`](../object/Up.html)  `
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ prepositions in the target language.
 
 </div>
 
-` `[`prep`](#prep)`  `
+` [`prep`](#prep)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ prepositions in the target language.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

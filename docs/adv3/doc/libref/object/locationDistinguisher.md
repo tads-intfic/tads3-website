@@ -38,7 +38,7 @@ their immediate locations.
 </div>
 
 **`locationDistinguisher`**  
-`         `[`Distinguisher`](../object/Distinguisher.html)  
+[`Distinguisher`](../object/Distinguisher.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,9 +48,9 @@ their immediate locations.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -60,9 +60,9 @@ their immediate locations.
 
 </div>
 
-` `[`aName`](#aName)`  `[`canDistinguish`](#canDistinguish)`  `[`countName`](#countName)`  `[`matchName`](#matchName)`  `[`name`](#name)`  `[`notePrompt`](#notePrompt)`  `[`objInScope`](#objInScope)`  `[`theName`](#theName)`  `
+[`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`matchName`](#matchName)[`name`](#name)[`notePrompt`](#notePrompt)[`objInScope`](#objInScope)[`theName`](#theName)
 
-` `
+
 
 <span id="_Properties_"></span>
 

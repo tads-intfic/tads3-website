@@ -52,7 +52,7 @@ physical objects) for the English-language part of the library.
 </div>
 
 **`ItemLister`**  
-`         `[`Lister`](../object/Lister.html)  
+[`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -63,7 +63,7 @@ physical objects) for the English-language part of the library.
 </div>
 
 **`ItemLister`**  
-`         `[`CustomRoomLister`](../object/CustomRoomLister.html)  
+[`CustomRoomLister`](../object/CustomRoomLister.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ physical objects) for the English-language part of the library.
 
 </div>
 
-` `[`descContentsLister`](../object/descContentsLister.html)`  `[`inventoryLister`](../object/inventoryLister.html)`  `[`inventoryTallLister`](../object/inventoryTallLister.html)`  `[`lookContentsLister`](../object/lookContentsLister.html)`  `[`lookInLister`](../object/lookInLister.html)`  `[`lookLister`](../object/lookLister.html)`  `[`openingContentsLister`](../object/openingContentsLister.html)`  `[`remoteRoomContentsLister`](../object/remoteRoomContentsLister.html)`  `[`remoteSubContentsLister`](../object/remoteSubContentsLister.html)`  `[`simpleAttachmentLister`](../object/simpleAttachmentLister.html)`  `[`subLister`](../object/subLister.html)`  `[`wornLister`](../object/wornLister.html)`  `
+[`descContentsLister`](../object/descContentsLister.html)[`inventoryLister`](../object/inventoryLister.html)[`inventoryTallLister`](../object/inventoryTallLister.html)[`lookContentsLister`](../object/lookContentsLister.html)[`lookInLister`](../object/lookInLister.html)[`lookLister`](../object/lookLister.html)[`openingContentsLister`](../object/openingContentsLister.html)[`remoteRoomContentsLister`](../object/remoteRoomContentsLister.html)[`remoteSubContentsLister`](../object/remoteSubContentsLister.html)[`simpleAttachmentLister`](../object/simpleAttachmentLister.html)[`subLister`](../object/subLister.html)[`wornLister`](../object/wornLister.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -81,9 +81,9 @@ physical objects) for the English-language part of the library.
 
 </div>
 
-` `[`contentsListedProp`](#contentsListedProp)`  `[`listRecursively`](#listRecursively)`  `[`showAdditionalInfo`](#showAdditionalInfo)`  `[`showSubListing`](#showSubListing)`  `[`showWornInfo`](#showWornInfo)`  `
+[`contentsListedProp`](#contentsListedProp)[`listRecursively`](#listRecursively)[`showAdditionalInfo`](#showAdditionalInfo)[`showSubListing`](#showSubListing)[`showWornInfo`](#showWornInfo)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -93,10 +93,10 @@ physical objects) for the English-language part of the library.
 
 </div>
 
-` `[`listName`](#listName)`  `[`show`](#show)`  `[`showList`](#showList)`  `
+[`listName`](#listName)[`show`](#show)[`showList`](#showList)
 
 Inherited from `Lister` :  
-` `[`buildList`](../object/Lister.html#buildList)`  `[`listed`](../object/Lister.html#listed)`  `[`listOrder`](../object/Lister.html#listOrder)`  `[`showListEmpty`](../object/Lister.html#showListEmpty)`  `[`showListPrefix`](../object/Lister.html#showListPrefix)`  `[`showListSuffix`](../object/Lister.html#showListSuffix)`  `
+[`buildList`](../object/Lister.html#buildList)[`listed`](../object/Lister.html#listed)[`listOrder`](../object/Lister.html#listOrder)[`showListEmpty`](../object/Lister.html#showListEmpty)[`showListPrefix`](../object/Lister.html#showListPrefix)[`showListSuffix`](../object/Lister.html#showListSuffix)
 
 <span id="_Properties_"></span>
 

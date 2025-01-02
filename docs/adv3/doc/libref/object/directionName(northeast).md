@@ -37,8 +37,8 @@ Details](#_Methods_)
 </div>
 
 **`directionName(northeast)`**  
-`         `[`DirectionProd`](../object/DirectionProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`DirectionProd`](../object/DirectionProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,13 +48,13 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `DirectionProd` :  
-` `[`dir`](../object/DirectionProd.html#dir)`  `
+[`dir`](../object/DirectionProd.html#dir)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,12 +64,12 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

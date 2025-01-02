@@ -45,9 +45,9 @@ RealTimeSenseFuse.
 </div>
 
 **`RealTimeSenseDaemon`**  
-`         `[`RealTimeDaemon`](../object/RealTimeDaemon.html)  
-`                 `[`RealTimeEvent`](../object/RealTimeEvent.html)  
-`                         `[`BasicEvent`](../object/BasicEvent.html)  
+[`RealTimeDaemon`](../object/RealTimeDaemon.html)  
+[`RealTimeEvent`](../object/RealTimeEvent.html)  
+[`BasicEvent`](../object/BasicEvent.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,16 +73,16 @@ RealTimeSenseFuse.
 
 </div>
 
-` `
+
 
 Inherited from `RealTimeDaemon` :  
-` `[`interval_`](../object/RealTimeDaemon.html#interval_)`  `
+[`interval_`](../object/RealTimeDaemon.html#interval_)
 
 Inherited from `RealTimeEvent` :  
-` `[`eventTime`](../object/RealTimeEvent.html#eventTime)`  `
+[`eventTime`](../object/RealTimeEvent.html#eventTime)
 
 Inherited from `BasicEvent` :  
-` `[`obj_`](../object/BasicEvent.html#obj_)`  `[`prop_`](../object/BasicEvent.html#prop_)`  `[`sense_`](../object/BasicEvent.html#sense_)`  `[`source_`](../object/BasicEvent.html#source_)`  `
+[`obj_`](../object/BasicEvent.html#obj_)[`prop_`](../object/BasicEvent.html#prop_)[`sense_`](../object/BasicEvent.html#sense_)[`source_`](../object/BasicEvent.html#source_)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,16 +92,16 @@ Inherited from `BasicEvent` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 Inherited from `RealTimeDaemon` :  
-` `[`executeEvent`](../object/RealTimeDaemon.html#executeEvent)`  `
+[`executeEvent`](../object/RealTimeDaemon.html#executeEvent)
 
 Inherited from `RealTimeEvent` :  
-` `[`getEventTime`](../object/RealTimeEvent.html#getEventTime)`  `[`removeEvent`](../object/RealTimeEvent.html#removeEvent)`  `
+[`getEventTime`](../object/RealTimeEvent.html#getEventTime)[`removeEvent`](../object/RealTimeEvent.html#removeEvent)
 
 Inherited from `BasicEvent` :  
-` `[`callMethod`](../object/BasicEvent.html#callMethod)`  `[`eventMatches`](../object/BasicEvent.html#eventMatches)`  `
+[`callMethod`](../object/BasicEvent.html#callMethod)[`eventMatches`](../object/BasicEvent.html#eventMatches)
 
 <span id="_Properties_"></span>
 

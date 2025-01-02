@@ -39,7 +39,7 @@ in the cave, even though in reality they're just synonyms for the same
 exit. This is arguably a bit misleading. The solution is to use
 `asExit()`, as shown below:
 
-```
+`
     startroom: Room 'Outside Cave'
         desc = "You're standing in the bright sunlight just outside of a large,
             dark, foreboding cave, which lies to the north. The path back to your
@@ -68,7 +68,7 @@ exit. This is arguably a bit misleading. The solution is to use
         south = startroom 
         out asExit(south)
     ;
-```
+`
 
 The construct `asExit(*dir*)` means "make this
 exit go where the *dir* exit leads but don't show it as a separate exit
@@ -93,7 +93,7 @@ StairwayUp to implement the tree in the Heidi game. In this case the
 class to use is called `Enterable`, and we can
 use it like this:
 
-```
+`
     + caveMouth: Enterable 'cave; dark large foreboding uninviting of[prep];
         mouth entrance'
         "The mouth of the cave is easily large enough to allow entrance, but looks
@@ -101,7 +101,7 @@ use it like this:
         
         destination = cave
     ;
-```
+`
 
 The main point to note here is the use of the
 `destination` property to determine where the
@@ -130,14 +130,14 @@ sensible response (certainly the player shouldn't be told "You see no
 foliage here"). At a first attempt we might define a foliage object
 thus:
 
-```
+`
     +  foliage: Thing 'foliage; thick dense; jungle trees leaves'
         "The foliage is so thick round here that it blocks every route but the one
         you came by and the entrance to the cave. "
         
         isFixed = true    
     ;   
-```
+`
 
 This will do the job, but if players try to do anything with the foliage
 but examine it, they'll just get the various default responses for all
@@ -156,25 +156,25 @@ other code, we don't even need to give it a name, we can define it as an
 names for decoration objects that have no real function beyond acting as
 a kind of backdrop:
 
-```
+`
     +  Thing 'foliage; thick dense; jungle trees leaves'
         "The foliage is so thick round here that it blocks every route but the one
         you came by and the entrance to the cave. "
         
         isDecoration = true   
     ; 
-```
+`
 
 This type of situation is so common that the library defines another
 custom class, Decoration, to deal with it. This allows us to make the
 definition even briefer:
 
-```
+`
     +  Decoration 'foliage; thick dense; jungle trees leaves'
         "The foliage is so thick round here that it blocks every route but the one
         you came by and the entrance to the cave. "    
     ; 
-```
+`
 
 Now, whether you prefer that to the previous version is to some extent a
 matter of taste. The adv3Lite library is designed in such a way as to
@@ -212,11 +212,11 @@ class-inheritance features of the TADS 3 language.
 The sunlight is another candidate for a Decoration object, so we could
 define it like this:
 
-```
+`
     +  Decoration 'sunlight; bright dazzling; sun light'
         "It's so bright it's almost dazzling. "
     ;
-```
+`
 
 This works just fine, but you may feel that the response "The sunlight
 is not important" to attempts to take it, smell it, push it (and do
@@ -225,14 +225,14 @@ appropriate canned message. If so you can replace it with your own
 alternative by overriding the `notImportantMsg`
 property:
 
-```
+`
     +  Decoration 'sunlight; bright dazzling; sun light'
         "It's so bright it's almost dazzling. "
         
         notImportantMsg = 'It\'s pointless even attempting that with something as
             insubstantial as sunlight. '
     ;
-```
+`
 
 That still leaves us with the path. This can't quite be a Decoration,
 since there are actions the player could reasonably attempt with the
@@ -243,13 +243,13 @@ commands like FOLLOW PATH and TAKE PATH (but not GET PATH) mean
 something like "go along the path" (a form of command not recognized by
 the libary). As a first attempt we might try this:
 
-```
+`
     + pathBack: PathPassage 'overgrown path'
         "The heavily overgrown path runs roughly southeast through the trees. "
         
         destination = (location.southeast)    
     ;
-```
+`
 
 This makes the path lead wherever the southeast exit of its immediate
 location (i.e. startroom) leads, and it works after a fashion. But,
@@ -262,7 +262,7 @@ out of the cave can be left as exercises for the interested reader. But
 one thing we will change inside the cave is the definition of the
 pedestal object so that it makes use of classes rather than properties:
 
-```
+`
     + pedestal: Fixture, Surface 'stone pedestal; smooth'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -279,7 +279,7 @@ pedestal object so that it makes use of classes rather than properties:
             }
         }
     ;
-```
+`
 
 This may not save us a lot of typing, but it perhaps makes it easier to
 see at a glance what kind of thing the pedestal is. We'll make some more

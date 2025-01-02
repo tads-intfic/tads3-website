@@ -68,7 +68,7 @@ List entry for the still-to-resolve list
 
 </div>
 
-` `[`fullMatchList`](#fullMatchList)`  `[`matchList`](#matchList)`  `[`origText`](#origText)`  `
+[`fullMatchList`](#fullMatchList)[`matchList`](#matchList)[`origText`](#origText)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ List entry for the still-to-resolve list
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

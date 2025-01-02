@@ -45,8 +45,8 @@ short of the target).
 </div>
 
 **`DropTypeShortThrow`**  
-`         `[`DropTypeThrow`](../object/DropTypeThrow.html)  
-`                 `[`DropType`](../object/DropType.html)  
+[`DropTypeThrow`](../object/DropTypeThrow.html)  
+[`DropType`](../object/DropType.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -72,12 +72,12 @@ short of the target).
 
 </div>
 
-` `
+
 
 Inherited from `DropTypeThrow` :  
-` `[`path_`](../object/DropTypeThrow.html#path_)`  `[`target_`](../object/DropTypeThrow.html#target_)`  `
+[`path_`](../object/DropTypeThrow.html#path_)[`target_`](../object/DropTypeThrow.html#target_)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -87,11 +87,11 @@ Inherited from `DropTypeThrow` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`getReportPrefix`](#getReportPrefix)`  `[`standardReport`](#standardReport)`  `
+[`construct`](#construct)[`getReportPrefix`](#getReportPrefix)[`standardReport`](#standardReport)
 
-` `
 
-` `
+
+
 
 <span id="_Properties_"></span>
 

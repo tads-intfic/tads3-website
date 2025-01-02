@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`cquoteOutputFilter`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ Details](#_Methods_)
 
 </div>
 
-` `[`aggressive`](#aggressive)`  `[`patAggressive`](#patAggressive)`  `[`patIsCont1Tag`](#patIsCont1Tag)`  `[`patIsCont2Tag`](#patIsCont2Tag)`  `[`patIsFormatTag`](#patIsFormatTag)`  `[`patIsHTMLTag`](#patIsHTMLTag)`  `[`patIsPossTag`](#patIsPossTag)`  `
+[`aggressive`](#aggressive)[`patAggressive`](#patAggressive)[`patIsCont1Tag`](#patIsCont1Tag)[`patIsCont2Tag`](#patIsCont2Tag)[`patIsFormatTag`](#patIsFormatTag)[`patIsHTMLTag`](#patIsHTMLTag)[`patIsPossTag`](#patIsPossTag)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -59,9 +59,9 @@ Details](#_Methods_)
 
 </div>
 
-` `[`execute`](#execute)`  `[`filterText`](#filterText)`  `
+[`execute`](#execute)[`filterText`](#filterText)
 
-` `
+
 
 <span id="_Properties_"></span>
 

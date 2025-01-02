@@ -77,7 +77,7 @@ the programming tools and files we've just set up.
     compiler is concerned the following two code samples are exactly
     equivalent:
 
-    ```
+    `
         + nest: Thing 'bird\'s nest; carefully woven; moss twigs'
             "The nest is carefully woven of twigs and moss. "
             
@@ -116,7 +116,7 @@ ones are:
 In the chapters that follow they'll be pointers to further information
 you can find in all these sources. You certainly don't need to look them
 up straight away, but you will need to do so eventually.
-```
+`
 
 ------------------------------------------------------------------------
 

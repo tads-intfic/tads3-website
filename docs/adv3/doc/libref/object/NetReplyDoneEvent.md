@@ -44,7 +44,7 @@ network reply (such as HTTPRequest.sendReplyAsync()) completes.
 </div>
 
 **`NetReplyDoneEvent`**  
-`         `[`NetEvent`](../object/NetEvent.html)  
+[`NetEvent`](../object/NetEvent.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ network reply (such as HTTPRequest.sendReplyAsync()) completes.
 
 </div>
 
-` `[`errMsg`](#errMsg)`  `[`evType`](#evType)`  `[`requestObj`](#requestObj)`  `[`socketErr`](#socketErr)`  `
+[`errMsg`](#errMsg)[`evType`](#evType)[`requestObj`](#requestObj)[`socketErr`](#socketErr)
 
 Inherited from `NetEvent` :  
-` `[`evArgs`](../object/NetEvent.html#evArgs)`  `
+[`evArgs`](../object/NetEvent.html#evArgs)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,9 +83,9 @@ Inherited from `NetEvent` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`isSuccessful`](#isSuccessful)`  `
+[`construct`](#construct)[`isSuccessful`](#isSuccessful)
 
-` `
+
 
 <span id="_Properties_"></span>
 

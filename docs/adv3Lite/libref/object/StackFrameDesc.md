@@ -90,7 +90,7 @@ including the frame object.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -100,7 +100,7 @@ including the frame object.
 
 </div>
 
-` `[`getDefiningObj`](#getDefiningObj)`  `[`getInvokee`](#getInvokee)`  `[`getSelf`](#getSelf)`  `[`getTargetObj`](#getTargetObj)`  `[`getTargetProp`](#getTargetProp)`  `[`getVars`](#getVars)`  `[`isActive`](#isActive)`  `
+[`getDefiningObj`](#getDefiningObj)[`getInvokee`](#getInvokee)[`getSelf`](#getSelf)[`getTargetObj`](#getTargetObj)[`getTargetProp`](#getTargetProp)[`getVars`](#getVars)[`isActive`](#isActive)
 
 <span id="_Properties_"></span>
 

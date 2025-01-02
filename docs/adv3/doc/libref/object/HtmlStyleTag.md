@@ -46,7 +46,7 @@ HTML mode, we display our plainOpenText and plainCloseText.
 </div>
 
 **`HtmlStyleTag`**  
-`         `[`StyleTag`](../object/StyleTag.html)  
+[`StyleTag`](../object/StyleTag.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -64,7 +64,7 @@ HTML mode, we display our plainOpenText and plainCloseText.
 
 </div>
 
-` `[`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html)`  `[`inputlineStyleTag`](../object/inputlineStyleTag.html)`  `[`statusroomStyleTag`](../object/statusroomStyleTag.html)`  `[`statusscoreStyleTag`](../object/statusscoreStyleTag.html)`  `
+[`hyperlinkStyleTag`](../object/hyperlinkStyleTag.html)[`inputlineStyleTag`](../object/inputlineStyleTag.html)[`statusroomStyleTag`](../object/statusroomStyleTag.html)[`statusscoreStyleTag`](../object/statusscoreStyleTag.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -73,10 +73,10 @@ HTML mode, we display our plainOpenText and plainCloseText.
 
 </div>
 
-` `[`closeText`](#closeText)`  `[`htmlCloseText`](#htmlCloseText)`  `[`htmlOpenText`](#htmlOpenText)`  `[`openText`](#openText)`  `[`plainCloseText`](#plainCloseText)`  `[`plainOpenText`](#plainOpenText)`  `
+[`closeText`](#closeText)[`htmlCloseText`](#htmlCloseText)[`htmlOpenText`](#htmlOpenText)[`openText`](#openText)[`plainCloseText`](#plainCloseText)[`plainOpenText`](#plainOpenText)
 
 Inherited from `StyleTag` :  
-` `[`tagName`](../object/StyleTag.html#tagName)`  `
+[`tagName`](../object/StyleTag.html#tagName)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,9 +86,9 @@ Inherited from `StyleTag` :
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

@@ -68,7 +68,7 @@ An object to hold a numerical value.
 
 </div>
 
-` `[`numStr`](#numStr)`  `[`numToks`](#numToks)`  `[`numVal`](#numVal)`  `
+` [`numStr`](#numStr)  [`numToks`](#numToks)  [`numVal`](#numVal)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ An object to hold a numerical value.
 
 </div>
 
-` `[`construct`](#construct)`  `
+` [`construct`](#construct)  `
 
 <span id="_Properties_"></span>
 

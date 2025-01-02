@@ -34,7 +34,7 @@ defined in a TADS 3 game.
 
 </div>
 
-` `[`Rule`](../object/Rule.html)`  `[`RuleBook`](../object/RuleBook.html)`  `
+[`Rule`](../object/Rule.html)[`RuleBook`](../object/RuleBook.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -43,7 +43,7 @@ defined in a TADS 3 game.
 
 </div>
 
-` `[`rulePreinit`](../object/rulePreinit.html)`  `
+[`rulePreinit`](../object/rulePreinit.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

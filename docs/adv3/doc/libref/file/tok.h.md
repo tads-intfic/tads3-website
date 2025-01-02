@@ -55,7 +55,7 @@ This header defines some macros for the standard tokenizer class.
 
 </div>
 
-` `[`getTokOrig`](#getTokOrig)`  `[`getTokType`](#getTokType)`  `[`getTokVal`](#getTokVal)`  `[`tokRuleName`](#tokRuleName)`  `[`tokRulePat`](#tokRulePat)`  `[`tokRuleTest`](#tokRuleTest)`  `[`tokRuleType`](#tokRuleType)`  `[`tokRuleVal`](#tokRuleVal)`  `
+[`getTokOrig`](#getTokOrig)[`getTokType`](#getTokType)[`getTokVal`](#getTokVal)[`tokRuleName`](#tokRuleName)[`tokRulePat`](#tokRulePat)[`tokRuleTest`](#tokRuleTest)[`tokRuleType`](#tokRuleType)[`tokRuleVal`](#tokRuleVal)
 
 <span id="_EnumSummary_"></span>
 

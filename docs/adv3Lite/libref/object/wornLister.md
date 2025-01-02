@@ -37,8 +37,8 @@ wornLister displays a list of items being worn.
 </div>
 
 **`wornLister`**  
-`         `[`ItemLister`](../object/ItemLister.html)  
-`                 `[`Lister`](../object/Lister.html)  
+[`ItemLister`](../object/ItemLister.html)  
+[`Lister`](../object/Lister.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ wornLister displays a list of items being worn.
 
 </div>
 
-` `[`showWornInfo`](#showWornInfo)`  `
+` [`showWornInfo`](#showWornInfo)  `
 
 Inherited from `ItemLister` :  
-` `[`contentsListedProp`](../object/ItemLister.html#contentsListedProp)`  `[`listRecursively`](../object/ItemLister.html#listRecursively)`  `[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)`  `[`showSubListing`](../object/ItemLister.html#showSubListing)`  `
+` [`contentsListedProp`](../object/ItemLister.html#contentsListedProp)  [`listRecursively`](../object/ItemLister.html#listRecursively)  [`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)  [`showSubListing`](../object/ItemLister.html#showSubListing)  `
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -63,13 +63,13 @@ Inherited from `ItemLister` :
 
 </div>
 
-` `[`listed`](#listed)`  `[`showListEmpty`](#showListEmpty)`  `[`showListPrefix`](#showListPrefix)`  `[`showListSuffix`](#showListSuffix)`  `
+` [`listed`](#listed)  [`showListEmpty`](#showListEmpty)  [`showListPrefix`](#showListPrefix)  [`showListSuffix`](#showListSuffix)  `
 
 Inherited from `ItemLister` :  
-` `[`listName`](../object/ItemLister.html#listName)`  `[`show`](../object/ItemLister.html#show)`  `[`showList`](../object/ItemLister.html#showList)`  `
+` [`listName`](../object/ItemLister.html#listName)  [`show`](../object/ItemLister.html#show)  [`showList`](../object/ItemLister.html#showList)  `
 
 Inherited from `Lister` :  
-` `[`buildList`](../object/Lister.html#buildList)`  `[`listOrder`](../object/Lister.html#listOrder)`  `
+` [`buildList`](../object/Lister.html#buildList)  [`listOrder`](../object/Lister.html#listOrder)  `
 
 <span id="_Properties_"></span>
 

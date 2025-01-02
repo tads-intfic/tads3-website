@@ -55,7 +55,7 @@ window's layout to use the Web UI model.
 </div>
 
 **`WebBannerWin`**  
-`         `[`OutputStreamWindow`](../object/OutputStreamWindow.html)  
+[`OutputStreamWindow`](../object/OutputStreamWindow.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,7 +73,7 @@ window's layout to use the Web UI model.
 
 </div>
 
-` `[`statuslineBanner`](../object/statuslineBanner.html)`  `
+[`statuslineBanner`](../object/statuslineBanner.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -82,10 +82,10 @@ window's layout to use the Web UI model.
 
 </div>
 
-` `
+
 
 Inherited from `OutputStreamWindow` :  
-` `[`outputStream_`](../object/OutputStreamWindow.html#outputStream_)`  `
+[`outputStream_`](../object/OutputStreamWindow.html#outputStream_)
 
 <span id="_MethodSummary_"></span>
 
@@ -95,10 +95,10 @@ Inherited from `OutputStreamWindow` :
 
 </div>
 
-` `[`createOutputStreamObj`](#createOutputStreamObj)`  `[`flushBanner`](#flushBanner)`  `[`init`](#init)`  `[`setSize`](#setSize)`  `[`sizeToContents`](#sizeToContents)`  `[`writeToBanner`](#writeToBanner)`  `
+[`createOutputStreamObj`](#createOutputStreamObj)[`flushBanner`](#flushBanner)[`init`](#init)[`setSize`](#setSize)[`sizeToContents`](#sizeToContents)[`writeToBanner`](#writeToBanner)
 
 Inherited from `OutputStreamWindow` :  
-` `[`captureOutput`](../object/OutputStreamWindow.html#captureOutput)`  `[`createOutputStream`](../object/OutputStreamWindow.html#createOutputStream)`  `[`setOutputStream`](../object/OutputStreamWindow.html#setOutputStream)`  `
+[`captureOutput`](../object/OutputStreamWindow.html#captureOutput)[`createOutputStream`](../object/OutputStreamWindow.html#createOutputStream)[`setOutputStream`](../object/OutputStreamWindow.html#setOutputStream)
 
 <span id="_Properties_"></span>
 

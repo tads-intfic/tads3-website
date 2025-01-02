@@ -39,7 +39,7 @@ This header defines the Dictionary intrinsic class.
 
 </div>
 
-` `[`Dictionary`](../object/Dictionary.html)`  `
+[`Dictionary`](../object/Dictionary.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

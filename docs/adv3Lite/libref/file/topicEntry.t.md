@@ -33,7 +33,7 @@ Eric Eve
 
 </div>
 
-` `[`Consultable`](../object/Consultable.html)`  `[`ConsultTopic`](../object/ConsultTopic.html)`  `[`DefaultConsultTopic`](../object/DefaultConsultTopic.html)`  `[`TopicDatabase`](../object/TopicDatabase.html)`  `[`TopicEntry`](../object/TopicEntry.html)`  `
+[`Consultable`](../object/Consultable.html)[`ConsultTopic`](../object/ConsultTopic.html)[`DefaultConsultTopic`](../object/DefaultConsultTopic.html)[`TopicDatabase`](../object/TopicDatabase.html)[`TopicEntry`](../object/TopicEntry.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -42,7 +42,7 @@ Eric Eve
 
 </div>
 
-` `[`consultablePreinit`](../object/consultablePreinit.html)`  `
+[`consultablePreinit`](../object/consultablePreinit.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

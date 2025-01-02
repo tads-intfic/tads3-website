@@ -37,10 +37,10 @@ a plural noun phrase with a definite article
 </div>
 
 **`explicitDetPluralNounPhrase(definite)`**  
-`         `[`DefinitePluralProd`](../object/DefinitePluralProd.html)  
-`                 `[`PluralProd`](../object/PluralProd.html)  
-`                         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                                 `[`BasicProd`](../object/BasicProd.html)  
+[`DefinitePluralProd`](../object/DefinitePluralProd.html)  
+[`PluralProd`](../object/PluralProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,17 +50,17 @@ a plural noun phrase with a definite article
 
 </div>
 
-` `
+
 
 Inherited from `DefinitePluralProd` :  
-` `[`filterForCollectives`](../object/DefinitePluralProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/DefinitePluralProd.html#filterForCollectives)
 
-` `
 
-` `
+
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -70,19 +70,19 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `
+
 
 Inherited from `DefinitePluralProd` :  
-` `[`resolveNouns`](../object/DefinitePluralProd.html#resolveNouns)`  `
+[`resolveNouns`](../object/DefinitePluralProd.html#resolveNouns)
 
 Inherited from `PluralProd` :  
-` `[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)`  `[`getVerifyKeepers`](../object/PluralProd.html#getVerifyKeepers)`  `
+[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)[`getVerifyKeepers`](../object/PluralProd.html#getVerifyKeepers)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

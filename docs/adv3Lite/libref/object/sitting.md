@@ -37,7 +37,7 @@ The sitting posture \[POSTURES EXTENSION\]
 </div>
 
 **`sitting`**  
-`         `[`Posture`](../object/Posture.html)  
+[`Posture`](../object/Posture.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ The sitting posture \[POSTURES EXTENSION\]
 
 </div>
 
-` `[`allowedInProp`](#allowedInProp)`  `[`allowedOnProp`](#allowedOnProp)`  `[`cannotInMsgProp`](#cannotInMsgProp)`  `[`cannotOnMsgProp`](#cannotOnMsgProp)`  `[`participle`](#participle)`  `[`verbPhrase`](#verbPhrase)`  `
+[`allowedInProp`](#allowedInProp)[`allowedOnProp`](#allowedOnProp)[`cannotInMsgProp`](#cannotInMsgProp)[`cannotOnMsgProp`](#cannotOnMsgProp)[`participle`](#participle)[`verbPhrase`](#verbPhrase)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -59,10 +59,10 @@ The sitting posture \[POSTURES EXTENSION\]
 
 </div>
 
-` `
+
 
 Inherited from `Posture` :  
-` `[`canAdoptIn`](../object/Posture.html#canAdoptIn)`  `
+[`canAdoptIn`](../object/Posture.html#canAdoptIn)
 
 <span id="_Properties_"></span>
 

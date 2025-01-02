@@ -40,7 +40,7 @@ properties and constants.
 
 </div>
 
-` `[`GrammarProd`](../object/GrammarProd.html)`  `
+[`GrammarProd`](../object/GrammarProd.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -57,7 +57,7 @@ properties and constants.
 
 </div>
 
-` `[`GramTokTypeLiteral`](#GramTokTypeLiteral)`  `[`GramTokTypeNSpeech`](#GramTokTypeNSpeech)`  `[`GramTokTypeProd`](#GramTokTypeProd)`  `[`GramTokTypeSpeech`](#GramTokTypeSpeech)`  `[`GramTokTypeStar`](#GramTokTypeStar)`  `[`GramTokTypeTokEnum`](#GramTokTypeTokEnum)`  `
+[`GramTokTypeLiteral`](#GramTokTypeLiteral)[`GramTokTypeNSpeech`](#GramTokTypeNSpeech)[`GramTokTypeProd`](#GramTokTypeProd)[`GramTokTypeSpeech`](#GramTokTypeSpeech)[`GramTokTypeStar`](#GramTokTypeStar)[`GramTokTypeTokEnum`](#GramTokTypeTokEnum)
 
 <span id="_EnumSummary_"></span>
 

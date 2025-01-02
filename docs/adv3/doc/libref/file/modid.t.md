@@ -37,7 +37,7 @@ will be able to find all of their ID's.
 
 </div>
 
-` `[`GameID`](../object/GameID.html)`  `[`GameInfoModuleID`](../object/GameInfoModuleID.html)`  `[`MetadataModuleID`](../object/MetadataModuleID.html)`  `[`ModuleID`](../object/ModuleID.html)`  `
+[`GameID`](../object/GameID.html)[`GameInfoModuleID`](../object/GameInfoModuleID.html)[`MetadataModuleID`](../object/MetadataModuleID.html)[`ModuleID`](../object/ModuleID.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -46,7 +46,7 @@ will be able to find all of their ID's.
 
 </div>
 
-` `[`moduleAdv3`](../object/moduleAdv3.html)`  `
+[`moduleAdv3`](../object/moduleAdv3.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

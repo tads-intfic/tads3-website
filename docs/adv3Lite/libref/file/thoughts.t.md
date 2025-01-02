@@ -36,7 +36,7 @@ This file adds support for a THINK about command
 
 </div>
 
-` `[`DefaultThought`](../object/DefaultThought.html)`  `[`Thought`](../object/Thought.html)`  `[`ThoughtManager`](../object/ThoughtManager.html)`  `
+[`DefaultThought`](../object/DefaultThought.html)[`Thought`](../object/Thought.html)[`ThoughtManager`](../object/ThoughtManager.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">

@@ -63,8 +63,8 @@ goInstead() and goNested() macros.
 </div>
 
 **`Direction`**  
-`         `[`CompassDirection`](../object/CompassDirection.html)  
-`         `[`ShipboardDirection`](../object/ShipboardDirection.html)  
+[`CompassDirection`](../object/CompassDirection.html)  
+[`ShipboardDirection`](../object/ShipboardDirection.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -73,7 +73,7 @@ goInstead() and goNested() macros.
 
 </div>
 
-` `[`downDir`](../object/downDir.html)`  `[`inDir`](../object/inDir.html)`  `[`outDir`](../object/outDir.html)`  `[`upDir`](../object/upDir.html)`  `
+[`downDir`](../object/downDir.html)[`inDir`](../object/inDir.html)[`outDir`](../object/outDir.html)[`upDir`](../object/upDir.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -82,7 +82,7 @@ goInstead() and goNested() macros.
 
 </div>
 
-` `[`allDirections`](#allDirections)`  `[`departureName`](#departureName)`  `[`dirProp`](#dirProp)`  `[`name`](#name)`  `[`nameTab`](#nameTab)`  `[`opposite`](#opposite)`  `[`sortingOrder`](#sortingOrder)`  `
+[`allDirections`](#allDirections)[`departureName`](#departureName)[`dirProp`](#dirProp)[`name`](#name)[`nameTab`](#nameTab)[`opposite`](#opposite)[`sortingOrder`](#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,7 +92,7 @@ goInstead() and goNested() macros.
 
 </div>
 
-` `[`classInit`](#classInit)`  `[`initializeDirection`](#initializeDirection)`  `[`oppositeProp`](#oppositeProp)`  `[`propDir`](#propDir)`  `
+[`classInit`](#classInit)[`initializeDirection`](#initializeDirection)[`oppositeProp`](#oppositeProp)[`propDir`](#propDir)
 
 <span id="_Properties_"></span>
 

@@ -46,8 +46,8 @@ through to the underyling stream unchanged.
 </div>
 
 **`SwitchableCaptureFilter`**  
-`         `[`CaptureFilter`](../object/CaptureFilter.html)  
-`                 `[`OutputFilter`](../object/OutputFilter.html)  
+[`CaptureFilter`](../object/CaptureFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -65,7 +65,7 @@ through to the underyling stream unchanged.
 
 </div>
 
-` `[`senseContext`](../object/senseContext.html)`  `
+[`senseContext`](../object/senseContext.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -74,11 +74,11 @@ through to the underyling stream unchanged.
 
 </div>
 
-` `[`isBlocking`](#isBlocking)`  `
+[`isBlocking`](#isBlocking)
 
-` `
 
-` `
+
+
 
 <span id="_MethodSummary_"></span>
 
@@ -88,11 +88,11 @@ through to the underyling stream unchanged.
 
 </div>
 
-` `[`filterText`](#filterText)`  `
+[`filterText`](#filterText)
 
-` `
 
-` `
+
+
 
 <span id="_Properties_"></span>
 

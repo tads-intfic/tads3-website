@@ -45,7 +45,7 @@ message.
 </div>
 
 **`ConvBoundaryReport`**  
-`         `[`CommandReport`](../object/CommandReport.html)  
+[`CommandReport`](../object/CommandReport.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -56,8 +56,8 @@ message.
 </div>
 
 **`ConvBoundaryReport`**  
-`         `[`ConvBeginReport`](../object/ConvBeginReport.html)  
-`         `[`ConvEndReport`](../object/ConvEndReport.html)  
+[`ConvBeginReport`](../object/ConvBeginReport.html)  
+[`ConvEndReport`](../object/ConvEndReport.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,10 +74,10 @@ message.
 
 </div>
 
-` `[`actorID`](#actorID)`  `
+[`actorID`](#actorID)
 
 Inherited from `CommandReport` :  
-` `[`action_`](../object/CommandReport.html#action_)`  `[`isFailure`](../object/CommandReport.html#isFailure)`  `[`isQuestion`](../object/CommandReport.html#isQuestion)`  `[`iter_`](../object/CommandReport.html#iter_)`  `
+[`action_`](../object/CommandReport.html#action_)[`isFailure`](../object/CommandReport.html#isFailure)[`isQuestion`](../object/CommandReport.html#isQuestion)[`iter_`](../object/CommandReport.html#iter_)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,10 +87,10 @@ Inherited from `CommandReport` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 Inherited from `CommandReport` :  
-` `[`getAction`](../object/CommandReport.html#getAction)`  `[`isActionImplicit`](../object/CommandReport.html#isActionImplicit)`  `[`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn)`  `[`isPartOf`](../object/CommandReport.html#isPartOf)`  `[`setAction`](../object/CommandReport.html#setAction)`  `
+[`getAction`](../object/CommandReport.html#getAction)[`isActionImplicit`](../object/CommandReport.html#isActionImplicit)[`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn)[`isPartOf`](../object/CommandReport.html#isPartOf)[`setAction`](../object/CommandReport.html#setAction)
 
 <span id="_Properties_"></span>
 

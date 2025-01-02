@@ -48,8 +48,8 @@ Modify the List intrinsic class to provide a to-symbol mapping
 </div>
 
 **`List`**  
-`         `[`Collection`](../object/Collection.html)  
-`                 `[`Object`](../object/Object.html)  
+[`Collection`](../object/Collection.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -74,11 +74,11 @@ Modify the List intrinsic class to provide a to-symbol mapping
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -88,13 +88,13 @@ Modify the List intrinsic class to provide a to-symbol mapping
 
 </div>
 
-` `[`append`](#append)`  `[`appendUnique`](#appendUnique)`  `[`car`](#car)`  `[`cdr`](#cdr)`  `[`countOf`](#countOf)`  `[`countWhich`](#countWhich)`  `[`forEach`](#forEach)`  `[`forEachAssoc`](#forEachAssoc)`  `[`getUnique`](#getUnique)`  `[`indexOf`](#indexOf)`  `[`indexOfMax`](#indexOfMax)`  `[`indexOfMin`](#indexOfMin)`  `[`indexWhich`](#indexWhich)`  `[`insertAt`](#insertAt)`  `[`intersect`](#intersect)`  `[`join`](#join)`  `[`lastIndexOf`](#lastIndexOf)`  `[`lastIndexWhich`](#lastIndexWhich)`  `[`lastValWhich`](#lastValWhich)`  `[`length`](#length)`  `[`mapAll`](#mapAll)`  `[`maxVal`](#maxVal)`  `[`minVal`](#minVal)`  `[`prepend`](#prepend)`  `[`removeElementAt`](#removeElementAt)`  `[`removeRange`](#removeRange)`  `[`sort`](#sort)`  `[`splice`](#splice)`  `[`sublist`](#sublist)`  `[`subset`](#subset)`  `[`valToSymbol`](#valToSymbol)`  `[`valWhich`](#valWhich)`  `
+[`append`](#append)[`appendUnique`](#appendUnique)[`car`](#car)[`cdr`](#cdr)[`countOf`](#countOf)[`countWhich`](#countWhich)[`forEach`](#forEach)[`forEachAssoc`](#forEachAssoc)[`getUnique`](#getUnique)[`indexOf`](#indexOf)[`indexOfMax`](#indexOfMax)[`indexOfMin`](#indexOfMin)[`indexWhich`](#indexWhich)[`insertAt`](#insertAt)[`intersect`](#intersect)[`join`](#join)[`lastIndexOf`](#lastIndexOf)[`lastIndexWhich`](#lastIndexWhich)[`lastValWhich`](#lastValWhich)[`length`](#length)[`mapAll`](#mapAll)[`maxVal`](#maxVal)[`minVal`](#minVal)[`prepend`](#prepend)[`removeElementAt`](#removeElementAt)[`removeRange`](#removeRange)[`sort`](#sort)[`splice`](#splice)[`sublist`](#sublist)[`subset`](#subset)[`valToSymbol`](#valToSymbol)[`valWhich`](#valWhich)
 
 Inherited from `Collection` :  
-` `[`createIterator`](../object/Collection.html#createIterator)`  `[`createLiveIterator`](../object/Collection.html#createLiveIterator)`  `
+[`createIterator`](../object/Collection.html#createIterator)[`createLiveIterator`](../object/Collection.html#createLiveIterator)
 
 Inherited from `Object` :  
-` `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `
+[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)
 
 <span id="_Properties_"></span>
 

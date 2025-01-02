@@ -51,7 +51,7 @@ classes for the server types you create in your program.
 </div>
 
 **`NetRequestEvent`**  
-`         `[`NetEvent`](../object/NetEvent.html)  
+[`NetEvent`](../object/NetEvent.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -77,10 +77,10 @@ classes for the server types you create in your program.
 
 </div>
 
-` `[`evRequest`](#evRequest)`  `[`evType`](#evType)`  `
+[`evRequest`](#evRequest)[`evType`](#evType)
 
 Inherited from `NetEvent` :  
-` `[`evArgs`](../object/NetEvent.html#evArgs)`  `
+[`evArgs`](../object/NetEvent.html#evArgs)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,9 +90,9 @@ Inherited from `NetEvent` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
-` `
+
 
 <span id="_Properties_"></span>
 

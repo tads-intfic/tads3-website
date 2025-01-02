@@ -37,8 +37,8 @@ settings item for score notification mode
 </div>
 
 **`scoreNotifySettingsItem`**  
-`         `[`BinarySettingsItem`](../object/BinarySettingsItem.html)  
-`                 `[`SettingsItem`](../object/SettingsItem.html)  
+[`BinarySettingsItem`](../object/BinarySettingsItem.html)  
+[`SettingsItem`](../object/SettingsItem.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ settings item for score notification mode
 
 </div>
 
-` `[`isOn`](#isOn)`  `[`settingDesc`](#settingDesc)`  `[`settingID`](#settingID)`  `
+[`isOn`](#isOn)[`settingDesc`](#settingDesc)[`settingID`](#settingID)
 
-` `
+
 
 Inherited from `SettingsItem` :  
-` `[`factoryDefault`](../object/SettingsItem.html#factoryDefault)`  `[`includeInListing`](../object/SettingsItem.html#includeInListing)`  `
+[`factoryDefault`](../object/SettingsItem.html#factoryDefault)[`includeInListing`](../object/SettingsItem.html#includeInListing)
 
 <span id="_MethodSummary_"></span>
 
@@ -63,13 +63,13 @@ Inherited from `SettingsItem` :
 
 </div>
 
-` `
+
 
 Inherited from `BinarySettingsItem` :  
-` `[`settingFromText`](../object/BinarySettingsItem.html#settingFromText)`  `[`settingToText`](../object/BinarySettingsItem.html#settingToText)`  `
+[`settingFromText`](../object/BinarySettingsItem.html#settingFromText)[`settingToText`](../object/BinarySettingsItem.html#settingToText)
 
 Inherited from `SettingsItem` :  
-` `[`restoreItem`](../object/SettingsItem.html#restoreItem)`  `[`saveItem`](../object/SettingsItem.html#saveItem)`  `
+[`restoreItem`](../object/SettingsItem.html#restoreItem)[`saveItem`](../object/SettingsItem.html#saveItem)
 
 <span id="_Properties_"></span>
 

@@ -51,7 +51,7 @@ required; we'll flag it with an explanatory error message for the user.
 </div>
 
 **`BadListProduction`**  
-`         `[`Production`](../object/Production.html)  
+[`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -62,7 +62,7 @@ required; we'll flag it with an explanatory error message for the user.
 </div>
 
 **`BadListProduction`**  
-`         `[`singleNoun(multiple)`](../object/singleNoun(multiple).html)  
+[`singleNoun(multiple)`](../object/singleNoun(multiple).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,10 +79,10 @@ required; we'll flag it with an explanatory error message for the user.
 
 </div>
 
-` `
+
 
 Inherited from `Production` :  
-` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+` [`determiner`](../object/Production.html#determiner)  [`nounPhraseRole`](../object/Production.html#nounPhraseRole)  [`npClass`](../object/Production.html#npClass)  [`parent`](../object/Production.html#parent)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -92,10 +92,10 @@ Inherited from `Production` :
 
 </div>
 
-` `[`build`](#build)`  `
+` [`build`](#build)  `
 
 Inherited from `Production` :  
-` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `[`visitProd`](../object/Production.html#visitProd)`  `
+` [`addNounListItem`](../object/Production.html#addNounListItem)  [`findAction`](../object/Production.html#findAction)  [`findChild`](../object/Production.html#findChild)  [`findParent`](../object/Production.html#findParent)  [`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)  [`getText`](../object/Production.html#getText)  [`getTokens`](../object/Production.html#getTokens)  [`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)  [`isChildOf`](../object/Production.html#isChildOf)  [`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)  [`visitLiteral`](../object/Production.html#visitLiteral)  [`visitProd`](../object/Production.html#visitProd)  `
 
 <span id="_Properties_"></span>
 

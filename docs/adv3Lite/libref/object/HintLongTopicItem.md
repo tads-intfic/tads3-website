@@ -30,7 +30,7 @@ Details](#_Methods_)
 
 A hint menu version of the long topic menu.
 
-`class `**`HintLongTopicItem`**` :   `[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)`   `[`HintMenuObject`](../object/HintMenuObject.html)
+`class `**`HintLongTopicItem`**` :   `[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)[`HintMenuObject`](../object/HintMenuObject.html)
 
 </div>
 
@@ -43,11 +43,11 @@ A hint menu version of the long topic menu.
 </div>
 
 **`HintLongTopicItem`**  
-`         `[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)  
-`                 `[`MenuItem`](../object/MenuItem.html)  
-`                         `[`MenuObject`](../object/MenuObject.html)  
+[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)  
+[`MenuItem`](../object/MenuItem.html)  
+[`MenuObject`](../object/MenuObject.html)  
 `                                 object`  
-`         `[`HintMenuObject`](../object/HintMenuObject.html)  
+[`HintMenuObject`](../object/HintMenuObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,19 +73,19 @@ A hint menu version of the long topic menu.
 
 </div>
 
-` `[`isActiveInMenu`](#isActiveInMenu)`  `
+[`isActiveInMenu`](#isActiveInMenu)
 
 Inherited from `MenuLongTopicItem` :  
-` `[`heading`](../object/MenuLongTopicItem.html#heading)`  `[`isChapterMenu`](../object/MenuLongTopicItem.html#isChapterMenu)`  `[`menuContents`](../object/MenuLongTopicItem.html#menuContents)`  `[`menuLongTopicEnd`](../object/MenuLongTopicItem.html#menuLongTopicEnd)`  `[`title`](../object/MenuLongTopicItem.html#title)`  `
+[`heading`](../object/MenuLongTopicItem.html#heading)[`isChapterMenu`](../object/MenuLongTopicItem.html#isChapterMenu)[`menuContents`](../object/MenuLongTopicItem.html#menuContents)[`menuLongTopicEnd`](../object/MenuLongTopicItem.html#menuLongTopicEnd)[`title`](../object/MenuLongTopicItem.html#title)
 
 Inherited from `MenuItem` :  
-` `[`bgcolor`](../object/MenuItem.html#bgcolor)`  `[`curKeyList`](../object/MenuItem.html#curKeyList)`  `[`curMenu`](../object/MenuItem.html#curMenu)`  `[`fgcolor`](../object/MenuItem.html#fgcolor)`  `[`fullScreenMode`](../object/MenuItem.html#fullScreenMode)`  `[`indent`](../object/MenuItem.html#indent)`  `[`isOpen`](../object/MenuItem.html#isOpen)`  `[`keyList`](../object/MenuItem.html#keyList)`  `[`prevMenuLink`](../object/MenuItem.html#prevMenuLink)`  `[`topbarbg`](../object/MenuItem.html#topbarbg)`  `[`topbarfg`](../object/MenuItem.html#topbarfg)`  `[`topMenu`](../object/MenuItem.html#topMenu)`  `
+[`bgcolor`](../object/MenuItem.html#bgcolor)[`curKeyList`](../object/MenuItem.html#curKeyList)[`curMenu`](../object/MenuItem.html#curMenu)[`fgcolor`](../object/MenuItem.html#fgcolor)[`fullScreenMode`](../object/MenuItem.html#fullScreenMode)[`indent`](../object/MenuItem.html#indent)[`isOpen`](../object/MenuItem.html#isOpen)[`keyList`](../object/MenuItem.html#keyList)[`prevMenuLink`](../object/MenuItem.html#prevMenuLink)[`topbarbg`](../object/MenuItem.html#topbarbg)[`topbarfg`](../object/MenuItem.html#topbarfg)[`topMenu`](../object/MenuItem.html#topMenu)
 
 Inherited from `MenuObject` :  
-` `[`contents`](../object/MenuObject.html#contents)`  `[`menuOrder`](../object/MenuObject.html#menuOrder)`  `
+[`contents`](../object/MenuObject.html#contents)[`menuOrder`](../object/MenuObject.html#menuOrder)
 
 Inherited from `HintMenuObject` :  
-` `[`topicOrder`](../object/HintMenuObject.html#topicOrder)`  `
+[`topicOrder`](../object/HintMenuObject.html#topicOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -95,19 +95,19 @@ Inherited from `HintMenuObject` :
 
 </div>
 
-` `
+
 
 Inherited from `MenuLongTopicItem` :  
-` `[`getXML`](../object/MenuLongTopicItem.html#getXML)`  `[`showMenuCommon`](../object/MenuLongTopicItem.html#showMenuCommon)`  `[`showMenuHtml`](../object/MenuLongTopicItem.html#showMenuHtml)`  `[`showMenuText`](../object/MenuLongTopicItem.html#showMenuText)`  `
+[`getXML`](../object/MenuLongTopicItem.html#getXML)[`showMenuCommon`](../object/MenuLongTopicItem.html#showMenuCommon)[`showMenuHtml`](../object/MenuLongTopicItem.html#showMenuHtml)[`showMenuText`](../object/MenuLongTopicItem.html#showMenuText)
 
 Inherited from `MenuItem` :  
-` `[`display`](../object/MenuItem.html#display)`  `[`enterSubMenu`](../object/MenuItem.html#enterSubMenu)`  `[`formatXML`](../object/MenuItem.html#formatXML)`  `[`getChildIndex`](../object/MenuItem.html#getChildIndex)`  `[`getKeysXML`](../object/MenuItem.html#getKeysXML)`  `[`getNextMenu`](../object/MenuItem.html#getNextMenu)`  `[`getPrevMenu`](../object/MenuItem.html#getPrevMenu)`  `[`refreshTopMenuBanner`](../object/MenuItem.html#refreshTopMenuBanner)`  `[`removeStatusLine`](../object/MenuItem.html#removeStatusLine)`  `[`removeTopMenuBanner`](../object/MenuItem.html#removeTopMenuBanner)`  `[`showMenu`](../object/MenuItem.html#showMenu)`  `[`showTopMenuBanner`](../object/MenuItem.html#showTopMenuBanner)`  `[`updateContents`](../object/MenuItem.html#updateContents)`  `
+[`display`](../object/MenuItem.html#display)[`enterSubMenu`](../object/MenuItem.html#enterSubMenu)[`formatXML`](../object/MenuItem.html#formatXML)[`getChildIndex`](../object/MenuItem.html#getChildIndex)[`getKeysXML`](../object/MenuItem.html#getKeysXML)[`getNextMenu`](../object/MenuItem.html#getNextMenu)[`getPrevMenu`](../object/MenuItem.html#getPrevMenu)[`refreshTopMenuBanner`](../object/MenuItem.html#refreshTopMenuBanner)[`removeStatusLine`](../object/MenuItem.html#removeStatusLine)[`removeTopMenuBanner`](../object/MenuItem.html#removeTopMenuBanner)[`showMenu`](../object/MenuItem.html#showMenu)[`showTopMenuBanner`](../object/MenuItem.html#showTopMenuBanner)[`updateContents`](../object/MenuItem.html#updateContents)
 
 Inherited from `MenuObject` :  
-` `[`addToContents`](../object/MenuObject.html#addToContents)`  `[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)`  `[`execute`](../object/MenuObject.html#execute)`  `[`initializeContents`](../object/MenuObject.html#initializeContents)`  `[`initializeLocation`](../object/MenuObject.html#initializeLocation)`  `
+[`addToContents`](../object/MenuObject.html#addToContents)[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)[`execute`](../object/MenuObject.html#execute)[`initializeContents`](../object/MenuObject.html#initializeContents)[`initializeLocation`](../object/MenuObject.html#initializeLocation)
 
 Inherited from `HintMenuObject` :  
-` `[`compareForTopicSort`](../object/HintMenuObject.html#compareForTopicSort)`  `
+[`compareForTopicSort`](../object/HintMenuObject.html#compareForTopicSort)
 
 <span id="_Properties_"></span>
 

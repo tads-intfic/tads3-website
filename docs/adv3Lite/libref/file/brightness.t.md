@@ -69,7 +69,7 @@ mechanism provided.
 
 </div>
 
-` `[`lightProbe_`](../object/lightProbe_.html)`  `
+[`lightProbe_`](../object/lightProbe_.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

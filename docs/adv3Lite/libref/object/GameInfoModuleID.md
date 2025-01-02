@@ -52,11 +52,11 @@ game, among other things.
 </div>
 
 **`GameInfoModuleID`**  
-`         `[`MetadataModuleID`](../object/MetadataModuleID.html)  
-`                 `[`ModuleID`](../object/ModuleID.html)  
+[`MetadataModuleID`](../object/MetadataModuleID.html)  
+[`ModuleID`](../object/ModuleID.html)  
 `                         object`  
-`                 `[`PreinitObject`](../object/PreinitObject.html)  
-`                         `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -67,7 +67,7 @@ game, among other things.
 </div>
 
 **`GameInfoModuleID`**  
-`         `[`GameID`](../object/GameID.html)  
+[`GameID`](../object/GameID.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -84,18 +84,18 @@ game, among other things.
 
 </div>
 
-` `[`authorEmail`](#authorEmail)`  `[`copyingRules`](#copyingRules)`  `[`desc`](#desc)`  `[`firstPublished`](#firstPublished)`  `[`forgivenessLevel`](#forgivenessLevel)`  `[`gameInfoFilename`](#gameInfoFilename)`  `[`gameUrl`](#gameUrl)`  `[`genreName`](#genreName)`  `[`headline`](#headline)`  `[`htmlDesc`](#htmlDesc)`  `[`IFID`](#IFID)`  `[`languageCode`](#languageCode)`  `[`licenseType`](#licenseType)`  `[`metadataKeys`](#metadataKeys)`  `[`presentationProfile`](#presentationProfile)`  `[`releaseDate`](#releaseDate)`  `[`seriesName`](#seriesName)`  `[`seriesNumber`](#seriesNumber)`  `
+[`authorEmail`](#authorEmail)[`copyingRules`](#copyingRules)[`desc`](#desc)[`firstPublished`](#firstPublished)[`forgivenessLevel`](#forgivenessLevel)[`gameInfoFilename`](#gameInfoFilename)[`gameUrl`](#gameUrl)[`genreName`](#genreName)[`headline`](#headline)[`htmlDesc`](#htmlDesc)[`IFID`](#IFID)[`languageCode`](#languageCode)[`licenseType`](#licenseType)[`metadataKeys`](#metadataKeys)[`presentationProfile`](#presentationProfile)[`releaseDate`](#releaseDate)[`seriesName`](#seriesName)[`seriesNumber`](#seriesNumber)
 
-` `
+
 
 Inherited from `ModuleID` :  
-` `[`byline`](../object/ModuleID.html#byline)`  `[`htmlByline`](../object/ModuleID.html#htmlByline)`  `[`listingOrder`](../object/ModuleID.html#listingOrder)`  `[`name`](../object/ModuleID.html#name)`  `[`version`](../object/ModuleID.html#version)`  `
+[`byline`](../object/ModuleID.html#byline)[`htmlByline`](../object/ModuleID.html#htmlByline)[`listingOrder`](../object/ModuleID.html#listingOrder)[`name`](../object/ModuleID.html#name)[`version`](../object/ModuleID.html#version)
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -105,18 +105,18 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`getGameInfoToday`](#getGameInfoToday)`  `[`writeMetadataFile`](#writeMetadataFile)`  `
+[`getGameInfoToday`](#getGameInfoToday)[`writeMetadataFile`](#writeMetadataFile)
 
 Inherited from `MetadataModuleID` :  
-` `[`execute`](../object/MetadataModuleID.html#execute)`  `
+[`execute`](../object/MetadataModuleID.html#execute)
 
 Inherited from `ModuleID` :  
-` `[`getModuleList`](../object/ModuleID.html#getModuleList)`  `[`showAbout`](../object/ModuleID.html#showAbout)`  `[`showCredit`](../object/ModuleID.html#showCredit)`  `[`showVersion`](../object/ModuleID.html#showVersion)`  `[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)`  `
+[`getModuleList`](../object/ModuleID.html#getModuleList)[`showAbout`](../object/ModuleID.html#showAbout)[`showCredit`](../object/ModuleID.html#showCredit)[`showVersion`](../object/ModuleID.html#showVersion)[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

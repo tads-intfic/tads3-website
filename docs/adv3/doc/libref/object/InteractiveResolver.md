@@ -52,7 +52,7 @@ disambiguation questions and prompts for missing noun phrases.
 </div>
 
 **`InteractiveResolver`**  
-`         `[`ProxyResolver`](../object/ProxyResolver.html)  
+[`ProxyResolver`](../object/ProxyResolver.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -63,7 +63,7 @@ disambiguation questions and prompts for missing noun phrases.
 </div>
 
 **`InteractiveResolver`**  
-`         `[`DisambigResolver`](../object/DisambigResolver.html)  
+[`DisambigResolver`](../object/DisambigResolver.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -80,9 +80,9 @@ disambiguation questions and prompts for missing noun phrases.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -92,10 +92,10 @@ disambiguation questions and prompts for missing noun phrases.
 
 </div>
 
-` `[`getReflexiveBinding`](#getReflexiveBinding)`  `[`resolvePronounAntecedent`](#resolvePronounAntecedent)`  `[`resolvePronounAsTargetActor`](#resolvePronounAsTargetActor)`  `
+[`getReflexiveBinding`](#getReflexiveBinding)[`resolvePronounAntecedent`](#resolvePronounAntecedent)[`resolvePronounAsTargetActor`](#resolvePronounAsTargetActor)
 
 Inherited from `ProxyResolver` :  
-` `[`construct`](../object/ProxyResolver.html#construct)`  `[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)`  `[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)`  `
+[`construct`](../object/ProxyResolver.html#construct)[`getPossessiveResolver`](../object/ProxyResolver.html#getPossessiveResolver)[`propNotDefined`](../object/ProxyResolver.html#propNotDefined)
 
 <span id="_Properties_"></span>
 

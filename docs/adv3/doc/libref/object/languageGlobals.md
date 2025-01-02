@@ -46,7 +46,7 @@ Language-specific globals
 
 </div>
 
-` `[`decimalPointCharacter`](#decimalPointCharacter)`  `[`dictComparator`](#dictComparator)`  `[`digitGroupSeparator`](#digitGroupSeparator)`  `
+[`decimalPointCharacter`](#decimalPointCharacter)[`dictComparator`](#dictComparator)[`digitGroupSeparator`](#digitGroupSeparator)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ Language-specific globals
 
 </div>
 
-` `[`setStringComparator`](#setStringComparator)`  `
+[`setStringComparator`](#setStringComparator)
 
 <span id="_Properties_"></span>
 

@@ -55,7 +55,7 @@ finishes reading a command line.
 </div>
 
 **`commandSequencer`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -65,9 +65,9 @@ finishes reading a command line.
 
 </div>
 
-` `[`patNextTag`](#patNextTag)`  `[`state_`](#state_)`  `
+[`patNextTag`](#patNextTag)[`state_`](#state_)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -77,9 +77,9 @@ finishes reading a command line.
 
 </div>
 
-` `[`filterText`](#filterText)`  `[`setCommandMode`](#setCommandMode)`  `[`writeThrough`](#writeThrough)`  `
+[`filterText`](#filterText)[`setCommandMode`](#setCommandMode)[`writeThrough`](#writeThrough)
 
-` `
+
 
 <span id="_Properties_"></span>
 

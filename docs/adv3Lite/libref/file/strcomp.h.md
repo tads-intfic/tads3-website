@@ -39,7 +39,7 @@ This header defines the StringComparator intrinsic class.
 
 </div>
 
-` `[`StringComparator`](../object/StringComparator.html)`  `
+[`StringComparator`](../object/StringComparator.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -56,7 +56,7 @@ This header defines the StringComparator intrinsic class.
 
 </div>
 
-` `[`StrCompCaseFold`](#StrCompCaseFold)`  `[`StrCompMatch`](#StrCompMatch)`  `[`StrCompTrunc`](#StrCompTrunc)`  `
+[`StrCompCaseFold`](#StrCompCaseFold)[`StrCompMatch`](#StrCompMatch)[`StrCompTrunc`](#StrCompTrunc)
 
 <span id="_EnumSummary_"></span>
 

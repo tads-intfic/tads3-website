@@ -38,8 +38,8 @@ phrases ("first", "the second one") we find in a result.
 </div>
 
 **`rankByDisambigOrdinals`**  
-`         `[`CommandRankingByProblem`](../object/CommandRankingByProblem.html)  
-`                 `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingByProblem`](../object/CommandRankingByProblem.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,11 +49,11 @@ phrases ("first", "the second one") we find in a result.
 
 </div>
 
-` `[`prop_`](#prop_)`  `
+[`prop_`](#prop_)
 
-` `
 
-` `
+
+
 
 <span id="_MethodSummary_"></span>
 
@@ -63,12 +63,12 @@ phrases ("first", "the second one") we find in a result.
 
 </div>
 
-` `
+
 
 Inherited from `CommandRankingByProblem` :  
-` `[`comparePass1`](../object/CommandRankingByProblem.html#comparePass1)`  `[`comparePass2`](../object/CommandRankingByProblem.html#comparePass2)`  `
+[`comparePass1`](../object/CommandRankingByProblem.html#comparePass1)[`comparePass2`](../object/CommandRankingByProblem.html#comparePass2)
 
-` `
+
 
 <span id="_Properties_"></span>
 

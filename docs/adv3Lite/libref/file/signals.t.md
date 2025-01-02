@@ -39,7 +39,7 @@ layout: docs
 
 </div>
 
-` `[`Signal`](../object/Signal.html)`  `
+[`Signal`](../object/Signal.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -48,7 +48,7 @@ layout: docs
 
 </div>
 
-` `[`connect`](#connect)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`DefSignal`](#DefSignal)`  `[`unconnect`](#unconnect)`  `
+[`connect`](#connect)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`DefSignal`](#DefSignal)[`unconnect`](#unconnect)
 
 <span id="_Functions_"></span>
 

@@ -256,7 +256,7 @@ Because the first line of the string ends in an explicit
 `\n`, the compiler preserves the spaces at the
 start of the second line, so the string is stored as though you had
 written `local a =
-'test\n``     ``string';`.
+'test\n``string';`.
 
 What we've seen so far is the compiler's default handling. In addition
 to this default behavior, there are two other "modes" that do slightly
@@ -556,7 +556,7 @@ strings or translated in any way. They're just copied
 character-for-character to the compiled version. The
 `&lt;` entities, for example, are actually
 stored as the chararacters `&`
-`l` `t`
+`lt`
 `;` - they're not converted to
 `\<` characters. Note also that your program
 code can tell the difference: when you compare a stored
@@ -564,7 +564,7 @@ code can tell the difference: when you compare a stored
 `'\<'`, you get a match. When you compare it to
 the string `'&lt;'`, it *doesn't* match, because
 the latter is actually stored as `&`
-`l` `t`
+`lt`
 `;` and thus doesn't match a string stored as
 `\<`.
 

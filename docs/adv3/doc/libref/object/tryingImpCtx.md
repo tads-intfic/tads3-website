@@ -37,7 +37,7 @@ the "just trying" implicit action announcement context
 </div>
 
 **`tryingImpCtx`**  
-`         `[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
+[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ the "just trying" implicit action announcement context
 
 </div>
 
-` `[`useInfPhrase`](#useInfPhrase)`  `
+[`useInfPhrase`](#useInfPhrase)
 
 Inherited from `ImplicitAnnouncementContext` :  
-` `[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx)`  `[`isInList`](../object/ImplicitAnnouncementContext.html#isInList)`  `[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)`  `
+[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx)[`isInList`](../object/ImplicitAnnouncementContext.html#isInList)[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,9 +60,9 @@ Inherited from `ImplicitAnnouncementContext` :
 
 </div>
 
-` `[`buildImplicitAnnouncement`](#buildImplicitAnnouncement)`  `
+[`buildImplicitAnnouncement`](#buildImplicitAnnouncement)
 
-` `
+
 
 <span id="_Properties_"></span>
 

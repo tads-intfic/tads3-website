@@ -45,7 +45,7 @@ topic entry objects, and work in just the same way as ConsultTopics.
 </div>
 
 **`Thought`**  
-`         `[`TopicEntry`](../object/TopicEntry.html)  
+[`TopicEntry`](../object/TopicEntry.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -56,7 +56,7 @@ topic entry objects, and work in just the same way as ConsultTopics.
 </div>
 
 **`Thought`**  
-`         `[`DefaultThought`](../object/DefaultThought.html)  
+[`DefaultThought`](../object/DefaultThought.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -73,10 +73,10 @@ topic entry objects, and work in just the same way as ConsultTopics.
 
 </div>
 
-` `[`includeInList`](#includeInList)`  `
+[`includeInList`](#includeInList)
 
 Inherited from `TopicEntry` :  
-` `[`active`](../object/TopicEntry.html#active)`  `[`isActive`](../object/TopicEntry.html#isActive)`  `[`matchExactCase`](../object/TopicEntry.html#matchExactCase)`  `[`matchObj`](../object/TopicEntry.html#matchObj)`  `[`matchPattern`](../object/TopicEntry.html#matchPattern)`  `[`matchScore`](../object/TopicEntry.html#matchScore)`  `[`scoreBoost`](../object/TopicEntry.html#scoreBoost)`  `[`topicMatched`](../object/TopicEntry.html#topicMatched)`  `
+[`active`](../object/TopicEntry.html#active)[`isActive`](../object/TopicEntry.html#isActive)[`matchExactCase`](../object/TopicEntry.html#matchExactCase)[`matchObj`](../object/TopicEntry.html#matchObj)[`matchPattern`](../object/TopicEntry.html#matchPattern)[`matchScore`](../object/TopicEntry.html#matchScore)[`scoreBoost`](../object/TopicEntry.html#scoreBoost)[`topicMatched`](../object/TopicEntry.html#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,10 +86,10 @@ Inherited from `TopicEntry` :
 
 </div>
 
-` `
+
 
 Inherited from `TopicEntry` :  
-` `[`addTopic`](../object/TopicEntry.html#addTopic)`  `[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)`  `[`matchTopic`](../object/TopicEntry.html#matchTopic)`  `[`scoreBooster`](../object/TopicEntry.html#scoreBooster)`  `[`topicResponse`](../object/TopicEntry.html#topicResponse)`  `
+[`addTopic`](../object/TopicEntry.html#addTopic)[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)[`matchTopic`](../object/TopicEntry.html#matchTopic)[`scoreBooster`](../object/TopicEntry.html#scoreBooster)[`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_Properties_"></span>
 

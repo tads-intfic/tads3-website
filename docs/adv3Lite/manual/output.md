@@ -51,11 +51,11 @@ The other, which you need to use if you want to output text using a
 double-quoted string, is to disable and enable the cquotes output filter
 before and after outputting your text, like this:
 
-```
+`
     cquoteOutputFilter.deactivate();
     "<FONT name='Verdana'>No curly quotes here!</FONT>";
     cquoteOutputFilter.activate();
-```
+`
 
 The library makes use of a number of other output filters which you may
 occasionally find useful in your own game code. The most convenient way
@@ -73,17 +73,17 @@ outputManager.curOutputStream (which you can abbreviate to gOutStream):
 
 A simple example of the second of these might be:
 
-```
+`
       local str = gOutStream( {: "Hello World!" } );
       
-```
+`
 
 Which would result in str containing 'Hello World!'. A more practical
 example might be:
 
-```
+`
       local str = gOutStream( {: myObj.doSomething() } );
-```
+`
 
 When we don't know in advance what output doSomething() will produce.
 
@@ -141,7 +141,7 @@ the Parser to interpret. For this purpose you can use a
 `StringPreParser` and define its **doParsing()**
 method:
 
-```
+`
      myPreParser: StringPreParser
         doParsing(str, which)
         {
@@ -151,7 +151,7 @@ method:
         }
      
      
-```
+`
 
 Here, *str* is the string typed by the player (possibly adjusted by one
 or more previous StringPreParsers). The *which* parameter gives some
@@ -181,7 +181,7 @@ can ignore it. For example, the adv3Lite library defines a
 **commentPreParser** thus (in order to field play-testers' comments on
 beta versions of your game):
 
-```
+`
      /* ------------------------------------------------------------------------ */
     /*
      *   The "comment" pre-parser.  If the command line starts with a special
@@ -271,7 +271,7 @@ beta versions of your game):
          */
         runOrder = 50
      
-```
+`
 
 Note the use of the **runOrder** property to determine the order in
 which this StringPreParser is consulted in relation to any other
@@ -295,7 +295,7 @@ passed to it into something else, here's the
 (its function is to change commands like WHERE'S THE SALT into a form
 like WHERE IS THE SALT, that the parser can more easily understand):
 
-```
+`
     /* 
      *   For queries, turn an apostrophe-s form into the underlying qtype plus is so
      *   that the grammar defined immediately above can be matched.
@@ -323,7 +323,7 @@ like WHERE IS THE SALT, that the parser can more easily understand):
     ;
      
      
-```
+`
 
 </div>
 

@@ -145,7 +145,7 @@ typed some text into the command line.
 Internet hyperlinks come in handy for things like referring players to
 your game's web site, or providing a clickable link that lets the user
 send you email. You can create an internet hyperlink by specifying an
-HREF that starts with one of these "scheme" identifiers: ` `
+HREF that starts with one of these "scheme" identifiers: 
 
 - http:
 - https:

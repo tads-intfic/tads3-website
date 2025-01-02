@@ -55,7 +55,7 @@ real problems.
 </div>
 
 **`CommandRankingByWeakness`**  
-`         `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,7 +73,7 @@ real problems.
 
 </div>
 
-` `[`rankByEndAdj`](../object/rankByEndAdj.html)`  `[`rankByPluralTrunc`](../object/rankByPluralTrunc.html)`  `[`rankByPronoun`](../object/rankByPronoun.html)`  `[`rankByTrunc`](../object/rankByTrunc.html)`  `[`rankByWeakness`](../object/rankByWeakness.html)`  `
+[`rankByEndAdj`](../object/rankByEndAdj.html)[`rankByPluralTrunc`](../object/rankByPluralTrunc.html)[`rankByPronoun`](../object/rankByPronoun.html)[`rankByTrunc`](../object/rankByTrunc.html)[`rankByWeakness`](../object/rankByWeakness.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -82,9 +82,9 @@ real problems.
 
 </div>
 
-` `[`prop_`](#prop_)`  `
+[`prop_`](#prop_)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -94,9 +94,9 @@ real problems.
 
 </div>
 
-` `[`comparePass1`](#comparePass1)`  `[`comparePass2`](#comparePass2)`  `
+[`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
 
-` `
+
 
 <span id="_Properties_"></span>
 

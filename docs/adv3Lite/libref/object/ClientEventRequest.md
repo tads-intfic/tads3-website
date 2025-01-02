@@ -70,7 +70,7 @@ requests that have yet to be answered.
 
 </div>
 
-` `[`req`](#req)`  `[`reqTimeout`](#reqTimeout)`  `
+[`req`](#req)[`reqTimeout`](#reqTimeout)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ requests that have yet to be answered.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

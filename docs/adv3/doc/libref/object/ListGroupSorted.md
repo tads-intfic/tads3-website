@@ -44,7 +44,7 @@ specific sorting order.
 </div>
 
 **`ListGroupSorted`**  
-`         `[`ListGroup`](../object/ListGroup.html)  
+[`ListGroup`](../object/ListGroup.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,9 +55,9 @@ specific sorting order.
 </div>
 
 **`ListGroupSorted`**  
-`         `[`ListGroupParen`](../object/ListGroupParen.html)  
-`         `[`ListGroupPrefixSuffix`](../object/ListGroupPrefixSuffix.html)  
-`                 `[`SuggestionListGroup`](../object/SuggestionListGroup.html)  
+[`ListGroupParen`](../object/ListGroupParen.html)  
+[`ListGroupPrefixSuffix`](../object/ListGroupPrefixSuffix.html)  
+[`SuggestionListGroup`](../object/SuggestionListGroup.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,10 +74,10 @@ specific sorting order.
 
 </div>
 
-` `
+
 
 Inherited from `ListGroup` :  
-` `[`groupDisplaysSublist`](../object/ListGroup.html#groupDisplaysSublist)`  `[`minGroupSize`](../object/ListGroup.html#minGroupSize)`  `
+[`groupDisplaysSublist`](../object/ListGroup.html#groupDisplaysSublist)[`minGroupSize`](../object/ListGroup.html#minGroupSize)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,10 +87,10 @@ Inherited from `ListGroup` :
 
 </div>
 
-` `[`compareGroupItems`](#compareGroupItems)`  `[`showGroupList`](#showGroupList)`  `[`sortListGroup`](#sortListGroup)`  `
+[`compareGroupItems`](#compareGroupItems)[`showGroupList`](#showGroupList)[`sortListGroup`](#sortListGroup)
 
 Inherited from `ListGroup` :  
-` `[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)`  `[`groupCardinality`](../object/ListGroup.html#groupCardinality)`  `[`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount)`  `[`showGroupItem`](../object/ListGroup.html#showGroupItem)`  `[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)`  `
+[`createGroupSublister`](../object/ListGroup.html#createGroupSublister)[`groupCardinality`](../object/ListGroup.html#groupCardinality)[`groupNounPhraseCount`](../object/ListGroup.html#groupNounPhraseCount)[`showGroupItem`](../object/ListGroup.html#showGroupItem)[`showGroupItemCounted`](../object/ListGroup.html#showGroupItemCounted)
 
 <span id="_Properties_"></span>
 

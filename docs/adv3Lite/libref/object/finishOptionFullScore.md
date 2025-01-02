@@ -37,7 +37,7 @@ FULL SCORE option for finishGame
 </div>
 
 **`finishOptionFullScore`**  
-`         `[`FinishOption`](../object/FinishOption.html)  
+[`FinishOption`](../object/FinishOption.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ FULL SCORE option for finishGame
 
 </div>
 
-` `[`desc`](#desc)`  `[`listOrder`](#listOrder)`  `[`responseChar`](#responseChar)`  `[`responseKeyword`](#responseKeyword)`  `[`showScoreInFinish`](#showScoreInFinish)`  `
+[`desc`](#desc)[`listOrder`](#listOrder)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)[`showScoreInFinish`](#showScoreInFinish)
 
 Inherited from `FinishOption` :  
-` `[`listed`](../object/FinishOption.html#listed)`  `
+[`listed`](../object/FinishOption.html#listed)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `FinishOption` :
 
 </div>
 
-` `[`doOption`](#doOption)`  `
+[`doOption`](#doOption)
 
 Inherited from `FinishOption` :  
-` `[`responseMatches`](../object/FinishOption.html#responseMatches)`  `
+[`responseMatches`](../object/FinishOption.html#responseMatches)
 
 <span id="_Properties_"></span>
 

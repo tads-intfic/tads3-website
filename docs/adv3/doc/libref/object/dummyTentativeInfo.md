@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`dummyTentativeInfo`**  
-`         `[`ResolveInfo`](../object/ResolveInfo.html)  
+[`ResolveInfo`](../object/ResolveInfo.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ Details](#_Methods_)
 
 </div>
 
-` `[`flags_`](#flags_)`  `[`obj_`](#obj_)`  `
+[`flags_`](#flags_)[`obj_`](#obj_)
 
 Inherited from `ResolveInfo` :  
-` `[`multiAnnounce`](../object/ResolveInfo.html#multiAnnounce)`  `[`np_`](../object/ResolveInfo.html#np_)`  `[`possRank_`](../object/ResolveInfo.html#possRank_)`  `[`pronounType_`](../object/ResolveInfo.html#pronounType_)`  `[`quant_`](../object/ResolveInfo.html#quant_)`  `
+[`multiAnnounce`](../object/ResolveInfo.html#multiAnnounce)[`np_`](../object/ResolveInfo.html#np_)[`possRank_`](../object/ResolveInfo.html#possRank_)[`pronounType_`](../object/ResolveInfo.html#pronounType_)[`quant_`](../object/ResolveInfo.html#quant_)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `ResolveInfo` :
 
 </div>
 
-` `
+
 
 Inherited from `ResolveInfo` :  
-` `[`construct`](../object/ResolveInfo.html#construct)`  `[`isDistEquivInList`](../object/ResolveInfo.html#isDistEquivInList)`  `[`isEquivalentInList`](../object/ResolveInfo.html#isEquivalentInList)`  `
+[`construct`](../object/ResolveInfo.html#construct)[`isDistEquivInList`](../object/ResolveInfo.html#isDistEquivInList)[`isEquivalentInList`](../object/ResolveInfo.html#isEquivalentInList)
 
 <span id="_Properties_"></span>
 

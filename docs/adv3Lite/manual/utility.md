@@ -259,12 +259,12 @@ iterate over a collection degenerate to one iteration on a singleton.
 
 The createLiveIterator() method thus allows us to write code like this:
 
-```
+`
       local a = 'Hello World! ';
       foreach(local cur in a)
          "<<cur>>\n"; 
      
-```
+`
 
 Executing this will then indeed result in a display of the string 'Hello
 World!'. This will principally be useful when we want to iterate over

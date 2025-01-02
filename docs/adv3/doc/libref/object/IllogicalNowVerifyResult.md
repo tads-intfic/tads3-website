@@ -47,8 +47,8 @@ evident way to be opened or closed to begin with.
 </div>
 
 **`IllogicalNowVerifyResult`**  
-`         `[`VerifyResult`](../object/VerifyResult.html)  
-`                 `[`MessageResult`](../object/MessageResult.html)  
+[`VerifyResult`](../object/VerifyResult.html)  
+[`MessageResult`](../object/MessageResult.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -59,7 +59,7 @@ evident way to be opened or closed to begin with.
 </div>
 
 **`IllogicalNowVerifyResult`**  
-`         `[`IllogicalAlreadyVerifyResult`](../object/IllogicalAlreadyVerifyResult.html)  
+[`IllogicalAlreadyVerifyResult`](../object/IllogicalAlreadyVerifyResult.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -76,13 +76,13 @@ evident way to be opened or closed to begin with.
 
 </div>
 
-` `[`allowAction`](#allowAction)`  `[`resultRank`](#resultRank)`  `
+[`allowAction`](#allowAction)[`resultRank`](#resultRank)
 
 Inherited from `VerifyResult` :  
-` `[`excludePluralMatches`](../object/VerifyResult.html#excludePluralMatches)`  `
+[`excludePluralMatches`](../object/VerifyResult.html#excludePluralMatches)
 
 Inherited from `MessageResult` :  
-` `[`messageProp_`](../object/MessageResult.html#messageProp_)`  `[`messageText_`](../object/MessageResult.html#messageText_)`  `
+[`messageProp_`](../object/MessageResult.html#messageProp_)[`messageText_`](../object/MessageResult.html#messageText_)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,13 +92,13 @@ Inherited from `MessageResult` :
 
 </div>
 
-` `
+
 
 Inherited from `VerifyResult` :  
-` `[`compareTo`](../object/VerifyResult.html#compareTo)`  `[`identicalTo`](../object/VerifyResult.html#identicalTo)`  `[`isWorseThan`](../object/VerifyResult.html#isWorseThan)`  `[`shouldInsertBefore`](../object/VerifyResult.html#shouldInsertBefore)`  `
+[`compareTo`](../object/VerifyResult.html#compareTo)[`identicalTo`](../object/VerifyResult.html#identicalTo)[`isWorseThan`](../object/VerifyResult.html#isWorseThan)[`shouldInsertBefore`](../object/VerifyResult.html#shouldInsertBefore)
 
 Inherited from `MessageResult` :  
-` `[`construct`](../object/MessageResult.html#construct)`  `[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)`  `[`setMessage`](../object/MessageResult.html#setMessage)`  `[`showMessage`](../object/MessageResult.html#showMessage)`  `
+[`construct`](../object/MessageResult.html#construct)[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)[`setMessage`](../object/MessageResult.html#setMessage)[`showMessage`](../object/MessageResult.html#showMessage)
 
 <span id="_Properties_"></span>
 

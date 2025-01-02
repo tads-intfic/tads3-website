@@ -40,8 +40,8 @@ rather allows customized text formatting for hyperlinked text.
 </div>
 
 **`hyperlinkStyleTag`**  
-`         `[`HtmlStyleTag`](../object/HtmlStyleTag.html)  
-`                 `[`StyleTag`](../object/StyleTag.html)  
+[`HtmlStyleTag`](../object/HtmlStyleTag.html)  
+[`StyleTag`](../object/StyleTag.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -51,13 +51,13 @@ rather allows customized text formatting for hyperlinked text.
 
 </div>
 
-` `
+
 
 Inherited from `HtmlStyleTag` :  
-` `[`closeText`](../object/HtmlStyleTag.html#closeText)`  `[`htmlCloseText`](../object/HtmlStyleTag.html#htmlCloseText)`  `[`htmlOpenText`](../object/HtmlStyleTag.html#htmlOpenText)`  `[`openText`](../object/HtmlStyleTag.html#openText)`  `[`plainCloseText`](../object/HtmlStyleTag.html#plainCloseText)`  `[`plainOpenText`](../object/HtmlStyleTag.html#plainOpenText)`  `
+[`closeText`](../object/HtmlStyleTag.html#closeText)[`htmlCloseText`](../object/HtmlStyleTag.html#htmlCloseText)[`htmlOpenText`](../object/HtmlStyleTag.html#htmlOpenText)[`openText`](../object/HtmlStyleTag.html#openText)[`plainCloseText`](../object/HtmlStyleTag.html#plainCloseText)[`plainOpenText`](../object/HtmlStyleTag.html#plainOpenText)
 
 Inherited from `StyleTag` :  
-` `[`tagName`](../object/StyleTag.html#tagName)`  `
+[`tagName`](../object/StyleTag.html#tagName)
 
 <span id="_MethodSummary_"></span>
 
@@ -67,11 +67,11 @@ Inherited from `StyleTag` :
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_Properties_"></span>
 

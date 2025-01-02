@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`ftVictory`**  
-`         `[`FinishType`](../object/FinishType.html)  
+[`FinishType`](../object/FinishType.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `FinishType` :  
-` `[`finishMsg`](../object/FinishType.html#finishMsg)`  `
+[`finishMsg`](../object/FinishType.html#finishMsg)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,9 +60,9 @@ Inherited from `FinishType` :
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

@@ -47,7 +47,7 @@ are things like periods, semicolons, commas, and the words "and" and
 </div>
 
 **`CommandProd`**  
-`         `[`BasicProd`](../object/BasicProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -58,21 +58,21 @@ are things like periods, semicolons, commas, and the words "and" and
 </div>
 
 **`CommandProd`**  
-`         `[`CommandProdWithActor`](../object/CommandProdWithActor.html)  
-`                 `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
-`                         `[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
-`                         `[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)  
-`                         `[`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
-`         `[`CommandProdWithAmbiguousConj`](../object/CommandProdWithAmbiguousConj.html)  
-`                 `[`commandPhrase(ambiguousConj)`](../object/commandPhrase(ambiguousConj).html)  
-`         `[`CommandProdWithDefiniteConj`](../object/CommandProdWithDefiniteConj.html)  
-`                 `[`commandPhrase(definiteConj)`](../object/commandPhrase(definiteConj).html)  
-`         `[`FirstCommandProd`](../object/FirstCommandProd.html)  
-`                 `[`firstCommandPhrase(commandOnly)`](../object/firstCommandPhrase(commandOnly).html)  
-`                 `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
-`                         `[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
-`                         `[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)  
-`                         `[`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
+[`CommandProdWithActor`](../object/CommandProdWithActor.html)  
+[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
+[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
+[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)  
+[`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
+[`CommandProdWithAmbiguousConj`](../object/CommandProdWithAmbiguousConj.html)  
+[`commandPhrase(ambiguousConj)`](../object/commandPhrase(ambiguousConj).html)  
+[`CommandProdWithDefiniteConj`](../object/CommandProdWithDefiniteConj.html)  
+[`commandPhrase(definiteConj)`](../object/commandPhrase(definiteConj).html)  
+[`FirstCommandProd`](../object/FirstCommandProd.html)  
+[`firstCommandPhrase(commandOnly)`](../object/firstCommandPhrase(commandOnly).html)  
+[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
+[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
+[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)  
+[`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -89,10 +89,10 @@ are things like periods, semicolons, commas, and the words "and" and
 
 </div>
 
-` `[`getActorPhrase`](#getActorPhrase)`  `
+[`getActorPhrase`](#getActorPhrase)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -102,10 +102,10 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`execActorPhrase`](#execActorPhrase)`  `[`hasTargetActor`](#hasTargetActor)`  `
+[`execActorPhrase`](#execActorPhrase)[`hasTargetActor`](#hasTargetActor)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

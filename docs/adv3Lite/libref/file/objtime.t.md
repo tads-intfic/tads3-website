@@ -31,7 +31,7 @@ OBJTIME EXTENSION Objective Time module
 
 </div>
 
-` `[`SenseTimeFuse`](../object/SenseTimeFuse.html)`  `[`TimeFuse`](../object/TimeFuse.html)`  `
+[`SenseTimeFuse`](../object/SenseTimeFuse.html)[`TimeFuse`](../object/TimeFuse.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -40,7 +40,7 @@ OBJTIME EXTENSION Objective Time module
 
 </div>
 
-` `[`timeManager`](../object/timeManager.html)`  `
+[`timeManager`](../object/timeManager.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -49,7 +49,7 @@ OBJTIME EXTENSION Objective Time module
 
 </div>
 
-` `[`addTime`](#addTime)`  `[`takeTime`](#takeTime)`  `
+[`addTime`](#addTime)[`takeTime`](#takeTime)
 
 <span id="_Functions_"></span>
 

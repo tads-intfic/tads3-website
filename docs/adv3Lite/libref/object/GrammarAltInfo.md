@@ -79,7 +79,7 @@ a GrammarProd object, there's no such thing as parentheses or nested
 
 </div>
 
-` `[`gramBadness`](#gramBadness)`  `[`gramMatchObj`](#gramMatchObj)`  `[`gramTokens`](#gramTokens)`  `
+[`gramBadness`](#gramBadness)[`gramMatchObj`](#gramMatchObj)[`gramTokens`](#gramTokens)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,7 +89,7 @@ a GrammarProd object, there's no such thing as parentheses or nested
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

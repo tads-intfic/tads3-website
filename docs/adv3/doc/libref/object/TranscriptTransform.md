@@ -60,7 +60,7 @@ Transcript Transform.
 
 </div>
 
-` `[`complexMultiTransform`](../object/complexMultiTransform.html)`  `[`defaultReportTransform`](../object/defaultReportTransform.html)`  `[`implicitGroupTransform`](../object/implicitGroupTransform.html)`  `[`reportOrderTransform`](../object/reportOrderTransform.html)`  `
+[`complexMultiTransform`](../object/complexMultiTransform.html)[`defaultReportTransform`](../object/defaultReportTransform.html)[`implicitGroupTransform`](../object/implicitGroupTransform.html)[`reportOrderTransform`](../object/reportOrderTransform.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -69,7 +69,7 @@ Transcript Transform.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ Transcript Transform.
 
 </div>
 
-` `[`applyTransform`](#applyTransform)`  `
+[`applyTransform`](#applyTransform)
 
 <span id="_Properties_"></span>
 

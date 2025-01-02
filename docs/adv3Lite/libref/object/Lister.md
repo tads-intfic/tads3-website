@@ -69,8 +69,8 @@ List display routines
 </div>
 
 **`Lister`**  
-`         `[`ItemLister`](../object/ItemLister.html)  
-`                 `[`CustomRoomLister`](../object/CustomRoomLister.html)  
+[`ItemLister`](../object/ItemLister.html)  
+[`CustomRoomLister`](../object/CustomRoomLister.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,7 +79,7 @@ List display routines
 
 </div>
 
-` `[`ExitLister`](../object/ExitLister1.html)`  `[`finishOptionsLister`](../object/finishOptionsLister.html)`  `[`fullScoreLister`](../object/fullScoreLister.html)`  `
+[`ExitLister`](../object/ExitLister1.html)[`finishOptionsLister`](../object/finishOptionsLister.html)[`fullScoreLister`](../object/fullScoreLister.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -88,7 +88,7 @@ List display routines
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -98,7 +98,7 @@ List display routines
 
 </div>
 
-` `[`buildList`](#buildList)`  `[`listed`](#listed)`  `[`listOrder`](#listOrder)`  `[`show`](#show)`  `[`showList`](#showList)`  `[`showListEmpty`](#showListEmpty)`  `[`showListPrefix`](#showListPrefix)`  `[`showListSuffix`](#showListSuffix)`  `
+[`buildList`](#buildList)[`listed`](#listed)[`listOrder`](#listOrder)[`show`](#show)[`showList`](#showList)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
 <span id="_Properties_"></span>
 

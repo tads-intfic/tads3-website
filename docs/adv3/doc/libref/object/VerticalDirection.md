@@ -43,7 +43,7 @@ The base class for vertical directions (up, down)
 </div>
 
 **`VerticalDirection`**  
-`         `[`Direction`](../object/Direction.html)  
+[`Direction`](../object/Direction.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -61,7 +61,7 @@ The base class for vertical directions (up, down)
 
 </div>
 
-` `[`downDirection`](../object/downDirection.html)`  `[`upDirection`](../object/upDirection.html)`  `
+[`downDirection`](../object/downDirection.html)[`upDirection`](../object/upDirection.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -70,10 +70,10 @@ The base class for vertical directions (up, down)
 
 </div>
 
-` `
+
 
 Inherited from `Direction` :  
-` `[`allDirections`](../object/Direction.html#allDirections)`  `[`dirProp`](../object/Direction.html#dirProp)`  `[`sortingOrder`](../object/Direction.html#sortingOrder)`  `
+[`allDirections`](../object/Direction.html#allDirections)[`dirProp`](../object/Direction.html#dirProp)[`sortingOrder`](../object/Direction.html#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `Direction` :
 
 </div>
 
-` `
+
 
 Inherited from `Direction` :  
-` `[`defaultConnector`](../object/Direction.html#defaultConnector)`  `[`initializeDirection`](../object/Direction.html#initializeDirection)`  `[`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass)`  `[`sayArriving`](../object/Direction.html#sayArriving)`  `[`sayDeparting`](../object/Direction.html#sayDeparting)`  `
+[`defaultConnector`](../object/Direction.html#defaultConnector)[`initializeDirection`](../object/Direction.html#initializeDirection)[`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass)[`sayArriving`](../object/Direction.html#sayArriving)[`sayDeparting`](../object/Direction.html#sayDeparting)
 
 <span id="_Properties_"></span>
 

@@ -37,8 +37,8 @@ Details](#_Methods_)
 </div>
 
 **`explicitDetPluralOnlyNounPhrase(definiteNumber)`**  
-`         `[`QuantifierProduction`](../object/QuantifierProduction.html)  
-`                 `[`Production`](../object/Production.html)  
+[`QuantifierProduction`](../object/QuantifierProduction.html)  
+[`Production`](../object/Production.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ Details](#_Methods_)
 
 </div>
 
-` `[`determiner`](#determiner)`  `
+[`determiner`](#determiner)
 
-` `
+
 
 Inherited from `Production` :  
-` `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+[`nounPhraseRole`](../object/Production.html#nounPhraseRole)[`npClass`](../object/Production.html#npClass)[`parent`](../object/Production.html#parent)
 
 <span id="_MethodSummary_"></span>
 
@@ -63,13 +63,13 @@ Inherited from `Production` :
 
 </div>
 
-` `
+
 
 Inherited from `QuantifierProduction` :  
-` `[`build`](../object/QuantifierProduction.html#build)`  `[`visitProd`](../object/QuantifierProduction.html#visitProd)`  `
+[`build`](../object/QuantifierProduction.html#build)[`visitProd`](../object/QuantifierProduction.html#visitProd)
 
 Inherited from `Production` :  
-` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `
+[`addNounListItem`](../object/Production.html#addNounListItem)[`findAction`](../object/Production.html#findAction)[`findChild`](../object/Production.html#findChild)[`findParent`](../object/Production.html#findParent)[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)[`getText`](../object/Production.html#getText)[`getTokens`](../object/Production.html#getTokens)[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)[`isChildOf`](../object/Production.html#isChildOf)[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)[`visitLiteral`](../object/Production.html#visitLiteral)
 
 <span id="_Properties_"></span>
 

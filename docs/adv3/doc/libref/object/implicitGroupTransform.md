@@ -56,7 +56,7 @@ before the implicit announcement.
 </div>
 
 **`implicitGroupTransform`**  
-`         `[`TranscriptTransform`](../object/TranscriptTransform.html)  
+[`TranscriptTransform`](../object/TranscriptTransform.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -66,9 +66,9 @@ before the implicit announcement.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -78,9 +78,9 @@ before the implicit announcement.
 
 </div>
 
-` `[`applyTransform`](#applyTransform)`  `[`canGroupWith`](#canGroupWith)`  `[`processDefaultAnnouncements`](#processDefaultAnnouncements)`  `[`unstackRecursiveGroup`](#unstackRecursiveGroup)`  `
+[`applyTransform`](#applyTransform)[`canGroupWith`](#canGroupWith)[`processDefaultAnnouncements`](#processDefaultAnnouncements)[`unstackRecursiveGroup`](#unstackRecursiveGroup)
 
-` `
+
 
 <span id="_Properties_"></span>
 

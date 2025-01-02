@@ -38,8 +38,8 @@ container.
 </div>
 
 **`Attached`**  
-`         `[`ExtLocType`](../object/ExtLocType.html)  
-`                 `[`LocType`](../object/LocType.html)  
+[`ExtLocType`](../object/ExtLocType.html)  
+[`LocType`](../object/LocType.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,12 +49,12 @@ container.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `LocType` :  
-` `[`intoPrep`](../object/LocType.html#intoPrep)`  `[`listOrder`](../object/LocType.html#listOrder)`  `[`prep`](../object/LocType.html#prep)`  `
+` [`intoPrep`](../object/LocType.html#intoPrep)  [`listOrder`](../object/LocType.html#listOrder)  [`prep`](../object/LocType.html#prep)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -64,11 +64,11 @@ Inherited from `LocType` :
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_Properties_"></span>
 

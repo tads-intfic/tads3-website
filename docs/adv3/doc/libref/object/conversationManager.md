@@ -41,7 +41,7 @@ as it was in at the start of the current response
 \<.topics\> - schedule a topic inventory for the end of the turn (just
 before the next command prompt)
 
-**`conversationManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)`   `[`PreinitObject`](../object/PreinitObject.html)
+**`conversationManager`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`PreinitObject`](../object/PreinitObject.html)
 
 </div>
 
@@ -54,10 +54,10 @@ before the next command prompt)
 </div>
 
 **`conversationManager`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -67,14 +67,14 @@ before the next command prompt)
 
 </div>
 
-` `[`customTags`](#customTags)`  `[`idToActor`](#idToActor)`  `[`pendingTopicInventory`](#pendingTopicInventory)`  `[`respondingActor`](#respondingActor)`  `[`revealedNameTab`](#revealedNameTab)`  `[`tagPat`](#tagPat)`  `
+[`customTags`](#customTags)[`idToActor`](#idToActor)[`pendingTopicInventory`](#pendingTopicInventory)[`respondingActor`](#respondingActor)[`revealedNameTab`](#revealedNameTab)[`tagPat`](#tagPat)
 
-` `
 
-` `
+
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,14 +84,14 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`beginResponse`](#beginResponse)`  `[`doCustomTag`](#doCustomTag)`  `[`execute`](#execute)`  `[`filterText`](#filterText)`  `[`finishResponse`](#finishResponse)`  `[`scheduleTopicInventory`](#scheduleTopicInventory)`  `[`setRevealed`](#setRevealed)`  `[`showOrScheduleTopicInventory`](#showOrScheduleTopicInventory)`  `[`topicInventoryDaemon`](#topicInventoryDaemon)`  `
+[`beginResponse`](#beginResponse)[`doCustomTag`](#doCustomTag)[`execute`](#execute)[`filterText`](#filterText)[`finishResponse`](#finishResponse)[`scheduleTopicInventory`](#scheduleTopicInventory)[`setRevealed`](#setRevealed)[`showOrScheduleTopicInventory`](#showOrScheduleTopicInventory)[`topicInventoryDaemon`](#topicInventoryDaemon)
 
-` `
 
-` `
+
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

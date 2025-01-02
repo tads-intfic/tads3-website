@@ -57,7 +57,7 @@ shopkeeper object so that it points to the "sweeping" state object. When
 it's time to stack cans, we change "curState" to it points to the
 "stacking cans" state object.
 
-`class `**`ActorState`**` :   `[`TravelMessageHandler`](../object/TravelMessageHandler.html)`   `[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
+`class `**`ActorState`**` :   `[`TravelMessageHandler`](../object/TravelMessageHandler.html)[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)
 
 </div>
 
@@ -70,10 +70,10 @@ it's time to stack cans, we change "curState" to it points to the
 </div>
 
 **`ActorState`**  
-`         `[`TravelMessageHandler`](../object/TravelMessageHandler.html)  
+[`TravelMessageHandler`](../object/TravelMessageHandler.html)  
 `                 object`  
-`         `[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)  
-`                 `[`TopicDatabase`](../object/TopicDatabase.html)  
+[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)  
+[`TopicDatabase`](../object/TopicDatabase.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -84,13 +84,13 @@ it's time to stack cans, we change "curState" to it points to the
 </div>
 
 **`ActorState`**  
-`         `[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
-`                 `[`GuidedInTravelState`](../object/GuidedInTravelState.html)  
-`         `[`AccompanyingState`](../object/AccompanyingState.html)  
-`                 `[`GuidedTourState`](../object/GuidedTourState.html)  
-`         `[`ConversationReadyState`](../object/ConversationReadyState.html)  
-`         `[`HermitActorState`](../object/HermitActorState.html)  
-`         `[`InConversationState`](../object/InConversationState.html)  
+[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
+[`GuidedInTravelState`](../object/GuidedInTravelState.html)  
+[`AccompanyingState`](../object/AccompanyingState.html)  
+[`GuidedTourState`](../object/GuidedTourState.html)  
+[`ConversationReadyState`](../object/ConversationReadyState.html)  
+[`HermitActorState`](../object/HermitActorState.html)  
+[`InConversationState`](../object/InConversationState.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -107,15 +107,15 @@ it's time to stack cans, we change "curState" to it points to the
 
 </div>
 
-` `[`autoSuggest`](#autoSuggest)`  `[`getImpliedConvState`](#getImpliedConvState)`  `[`isInitState`](#isInitState)`  `[`location`](#location)`  `[`stateDesc`](#stateDesc)`  `[`stateSuggestedTopics`](#stateSuggestedTopics)`  `
+[`autoSuggest`](#autoSuggest)[`getImpliedConvState`](#getImpliedConvState)[`isInitState`](#isInitState)[`location`](#location)[`stateDesc`](#stateDesc)[`stateSuggestedTopics`](#stateSuggestedTopics)
 
-` `
+
 
 Inherited from `ActorTopicDatabase` :  
-` `[`askForTopics`](../object/ActorTopicDatabase.html#askForTopics)`  `[`askTopics`](../object/ActorTopicDatabase.html#askTopics)`  `[`commandTopics`](../object/ActorTopicDatabase.html#commandTopics)`  `[`giveTopics`](../object/ActorTopicDatabase.html#giveTopics)`  `[`initiateTopics`](../object/ActorTopicDatabase.html#initiateTopics)`  `[`miscTopics`](../object/ActorTopicDatabase.html#miscTopics)`  `[`showTopics`](../object/ActorTopicDatabase.html#showTopics)`  `[`specialTopics`](../object/ActorTopicDatabase.html#specialTopics)`  `[`tellTopics`](../object/ActorTopicDatabase.html#tellTopics)`  `
+[`askForTopics`](../object/ActorTopicDatabase.html#askForTopics)[`askTopics`](../object/ActorTopicDatabase.html#askTopics)[`commandTopics`](../object/ActorTopicDatabase.html#commandTopics)[`giveTopics`](../object/ActorTopicDatabase.html#giveTopics)[`initiateTopics`](../object/ActorTopicDatabase.html#initiateTopics)[`miscTopics`](../object/ActorTopicDatabase.html#miscTopics)[`showTopics`](../object/ActorTopicDatabase.html#showTopics)[`specialTopics`](../object/ActorTopicDatabase.html#specialTopics)[`tellTopics`](../object/ActorTopicDatabase.html#tellTopics)
 
 Inherited from `TopicDatabase` :  
-` `[`limitSuggestions`](../object/TopicDatabase.html#limitSuggestions)`  `[`suggestedTopics`](../object/TopicDatabase.html#suggestedTopics)`  `[`topicGroupActive`](../object/TopicDatabase.html#topicGroupActive)`  `[`topicGroupScoreAdjustment`](../object/TopicDatabase.html#topicGroupScoreAdjustment)`  `
+[`limitSuggestions`](../object/TopicDatabase.html#limitSuggestions)[`suggestedTopics`](../object/TopicDatabase.html#suggestedTopics)[`topicGroupActive`](../object/TopicDatabase.html#topicGroupActive)[`topicGroupScoreAdjustment`](../object/TopicDatabase.html#topicGroupScoreAdjustment)
 
 <span id="_MethodSummary_"></span>
 
@@ -125,16 +125,16 @@ Inherited from `TopicDatabase` :
 
 </div>
 
-` `[`activateState`](#activateState)`  `[`afterAction`](#afterAction)`  `[`afterTravel`](#afterTravel)`  `[`arrivingTurn`](#arrivingTurn)`  `[`arrivingWithDesc`](#arrivingWithDesc)`  `[`beforeAction`](#beforeAction)`  `[`beforeTravel`](#beforeTravel)`  `[`construct`](#construct)`  `[`deactivateState`](#deactivateState)`  `[`distantSpecialDesc`](#distantSpecialDesc)`  `[`endConversation`](#endConversation)`  `[`getActor`](#getActor)`  `[`getNominalTraveler`](#getNominalTraveler)`  `[`getSuggestedTopicList`](#getSuggestedTopicList)`  `[`getTopicOwner`](#getTopicOwner)`  `[`handleConversation`](#handleConversation)`  `[`initializeActorState`](#initializeActorState)`  `[`justFollowed`](#justFollowed)`  `[`notifyTopicResponse`](#notifyTopicResponse)`  `[`obeyCommand`](#obeyCommand)`  `[`remoteSpecialDesc`](#remoteSpecialDesc)`  `[`showSpecialDescInContents`](#showSpecialDescInContents)`  `[`specialDesc`](#specialDesc)`  `[`specialDescListWith`](#specialDescListWith)`  `[`suggestTopicsFor`](#suggestTopicsFor)`  `[`takeTurn`](#takeTurn)`  `
+[`activateState`](#activateState)[`afterAction`](#afterAction)[`afterTravel`](#afterTravel)[`arrivingTurn`](#arrivingTurn)[`arrivingWithDesc`](#arrivingWithDesc)[`beforeAction`](#beforeAction)[`beforeTravel`](#beforeTravel)[`construct`](#construct)[`deactivateState`](#deactivateState)[`distantSpecialDesc`](#distantSpecialDesc)[`endConversation`](#endConversation)[`getActor`](#getActor)[`getNominalTraveler`](#getNominalTraveler)[`getSuggestedTopicList`](#getSuggestedTopicList)[`getTopicOwner`](#getTopicOwner)[`handleConversation`](#handleConversation)[`initializeActorState`](#initializeActorState)[`justFollowed`](#justFollowed)[`notifyTopicResponse`](#notifyTopicResponse)[`obeyCommand`](#obeyCommand)[`remoteSpecialDesc`](#remoteSpecialDesc)[`showSpecialDescInContents`](#showSpecialDescInContents)[`specialDesc`](#specialDesc)[`specialDescListWith`](#specialDescListWith)[`suggestTopicsFor`](#suggestTopicsFor)[`takeTurn`](#takeTurn)
 
 Inherited from `TravelMessageHandler` :  
-` `[`sayArriving`](../object/TravelMessageHandler.html#sayArriving)`  `[`sayArrivingDir`](../object/TravelMessageHandler.html#sayArrivingDir)`  `[`sayArrivingDownStairs`](../object/TravelMessageHandler.html#sayArrivingDownStairs)`  `[`sayArrivingLocally`](../object/TravelMessageHandler.html#sayArrivingLocally)`  `[`sayArrivingThroughPassage`](../object/TravelMessageHandler.html#sayArrivingThroughPassage)`  `[`sayArrivingUpStairs`](../object/TravelMessageHandler.html#sayArrivingUpStairs)`  `[`sayArrivingViaPath`](../object/TravelMessageHandler.html#sayArrivingViaPath)`  `[`sayDeparting`](../object/TravelMessageHandler.html#sayDeparting)`  `[`sayDepartingDir`](../object/TravelMessageHandler.html#sayDepartingDir)`  `[`sayDepartingDownStairs`](../object/TravelMessageHandler.html#sayDepartingDownStairs)`  `[`sayDepartingLocally`](../object/TravelMessageHandler.html#sayDepartingLocally)`  `[`sayDepartingThroughPassage`](../object/TravelMessageHandler.html#sayDepartingThroughPassage)`  `[`sayDepartingUpStairs`](../object/TravelMessageHandler.html#sayDepartingUpStairs)`  `[`sayDepartingViaPath`](../object/TravelMessageHandler.html#sayDepartingViaPath)`  `[`sayTravelingRemotely`](../object/TravelMessageHandler.html#sayTravelingRemotely)`  `
+[`sayArriving`](../object/TravelMessageHandler.html#sayArriving)[`sayArrivingDir`](../object/TravelMessageHandler.html#sayArrivingDir)[`sayArrivingDownStairs`](../object/TravelMessageHandler.html#sayArrivingDownStairs)[`sayArrivingLocally`](../object/TravelMessageHandler.html#sayArrivingLocally)[`sayArrivingThroughPassage`](../object/TravelMessageHandler.html#sayArrivingThroughPassage)[`sayArrivingUpStairs`](../object/TravelMessageHandler.html#sayArrivingUpStairs)[`sayArrivingViaPath`](../object/TravelMessageHandler.html#sayArrivingViaPath)[`sayDeparting`](../object/TravelMessageHandler.html#sayDeparting)[`sayDepartingDir`](../object/TravelMessageHandler.html#sayDepartingDir)[`sayDepartingDownStairs`](../object/TravelMessageHandler.html#sayDepartingDownStairs)[`sayDepartingLocally`](../object/TravelMessageHandler.html#sayDepartingLocally)[`sayDepartingThroughPassage`](../object/TravelMessageHandler.html#sayDepartingThroughPassage)[`sayDepartingUpStairs`](../object/TravelMessageHandler.html#sayDepartingUpStairs)[`sayDepartingViaPath`](../object/TravelMessageHandler.html#sayDepartingViaPath)[`sayTravelingRemotely`](../object/TravelMessageHandler.html#sayTravelingRemotely)
 
 Inherited from `ActorTopicDatabase` :  
-` `[`initiateTopic`](../object/ActorTopicDatabase.html#initiateTopic)`  `[`showTopicResponse`](../object/ActorTopicDatabase.html#showTopicResponse)`  `
+[`initiateTopic`](../object/ActorTopicDatabase.html#initiateTopic)[`showTopicResponse`](../object/ActorTopicDatabase.html#showTopicResponse)
 
 Inherited from `TopicDatabase` :  
-` `[`addSuggestedTopic`](../object/TopicDatabase.html#addSuggestedTopic)`  `[`addTopic`](../object/TopicDatabase.html#addTopic)`  `[`addTopicToList`](../object/TopicDatabase.html#addTopicToList)`  `[`compareVocabMatch`](../object/TopicDatabase.html#compareVocabMatch)`  `[`findTopicResponse`](../object/TopicDatabase.html#findTopicResponse)`  `[`handleTopic`](../object/TopicDatabase.html#handleTopic)`  `[`removeSuggestedTopic`](../object/TopicDatabase.html#removeSuggestedTopic)`  `[`removeTopic`](../object/TopicDatabase.html#removeTopic)`  `[`removeTopicFromList`](../object/TopicDatabase.html#removeTopicFromList)`  `[`showSuggestedTopicList`](../object/TopicDatabase.html#showSuggestedTopicList)`  `
+[`addSuggestedTopic`](../object/TopicDatabase.html#addSuggestedTopic)[`addTopic`](../object/TopicDatabase.html#addTopic)[`addTopicToList`](../object/TopicDatabase.html#addTopicToList)[`compareVocabMatch`](../object/TopicDatabase.html#compareVocabMatch)[`findTopicResponse`](../object/TopicDatabase.html#findTopicResponse)[`handleTopic`](../object/TopicDatabase.html#handleTopic)[`removeSuggestedTopic`](../object/TopicDatabase.html#removeSuggestedTopic)[`removeTopic`](../object/TopicDatabase.html#removeTopic)[`removeTopicFromList`](../object/TopicDatabase.html#removeTopicFromList)[`showSuggestedTopicList`](../object/TopicDatabase.html#showSuggestedTopicList)
 
 <span id="_Properties_"></span>
 

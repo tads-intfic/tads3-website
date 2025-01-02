@@ -60,7 +60,7 @@ Details](#_Methods_)
 
 </div>
 
-` `[`pcRouteFinder`](../object/pcRouteFinder.html)`  `[`relationPathfinder`](../object/relationPathfinder.html)`  `[`routeFinder`](../object/routeFinder.html)`  `
+[`pcRouteFinder`](../object/pcRouteFinder.html)[`relationPathfinder`](../object/relationPathfinder.html)[`routeFinder`](../object/routeFinder.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -69,7 +69,7 @@ Details](#_Methods_)
 
 </div>
 
-` `[`cachedRoute`](#cachedRoute)`  `[`currentDestination`](#currentDestination)`  `[`nodesVisited`](#nodesVisited)`  `[`pathsFound`](#pathsFound)`  `[`steps`](#steps)`  `
+[`cachedRoute`](#cachedRoute)[`currentDestination`](#currentDestination)[`nodesVisited`](#nodesVisited)[`pathsFound`](#pathsFound)[`steps`](#steps)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ Details](#_Methods_)
 
 </div>
 
-` `[`findDestinations`](#findDestinations)`  `[`findPath`](#findPath)`  `[`takeOneStep`](#takeOneStep)`  `
+[`findDestinations`](#findDestinations)[`findPath`](#findPath)[`takeOneStep`](#takeOneStep)
 
 <span id="_Properties_"></span>
 

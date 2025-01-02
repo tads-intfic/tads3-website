@@ -37,7 +37,7 @@ Indefinite mode ("a book", "any book", "one of the books", three books")
 </div>
 
 **`Indefinite`**  
-`         `[`Determiner`](../object/Determiner.html)  
+[`Determiner`](../object/Determiner.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ Indefinite mode ("a book", "any book", "one of the books", three books")
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -59,9 +59,9 @@ Indefinite mode ("a book", "any book", "one of the books", three books")
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

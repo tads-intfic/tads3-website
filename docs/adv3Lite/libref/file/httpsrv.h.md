@@ -57,7 +57,7 @@ the game to accept connections from more than one player.
 
 </div>
 
-` `[`HTTPServer`](../object/HTTPServer.html)`  `
+[`HTTPServer`](../object/HTTPServer.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

@@ -39,8 +39,8 @@ case.
 </div>
 
 **`askingImpCtx`**  
-`         `[`tryingImpCtx`](../object/tryingImpCtx.html)  
-`                 `[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
+[`tryingImpCtx`](../object/tryingImpCtx.html)  
+[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,13 +50,13 @@ case.
 
 </div>
 
-` `
+
 
 Inherited from `tryingImpCtx` :  
-` `[`useInfPhrase`](../object/tryingImpCtx.html#useInfPhrase)`  `
+[`useInfPhrase`](../object/tryingImpCtx.html#useInfPhrase)
 
 Inherited from `ImplicitAnnouncementContext` :  
-` `[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx)`  `[`isInList`](../object/ImplicitAnnouncementContext.html#isInList)`  `[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)`  `
+[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx)[`isInList`](../object/ImplicitAnnouncementContext.html#isInList)[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)
 
 <span id="_MethodSummary_"></span>
 
@@ -66,12 +66,12 @@ Inherited from `ImplicitAnnouncementContext` :
 
 </div>
 
-` `
+
 
 Inherited from `tryingImpCtx` :  
-` `[`buildImplicitAnnouncement`](../object/tryingImpCtx.html#buildImplicitAnnouncement)`  `
+[`buildImplicitAnnouncement`](../object/tryingImpCtx.html#buildImplicitAnnouncement)
 
-` `
+
 
 <span id="_Properties_"></span>
 

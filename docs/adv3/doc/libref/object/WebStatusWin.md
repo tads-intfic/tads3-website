@@ -43,9 +43,9 @@ Status line window
 </div>
 
 **`WebStatusWin`**  
-`         `[`WebWindow`](../object/WebWindow.html)  
-`                 `[`WebResourceResFile`](../object/WebResourceResFile.html)  
-`                         `[`WebResource`](../object/WebResource.html)  
+[`WebWindow`](../object/WebWindow.html)  
+[`WebResourceResFile`](../object/WebResourceResFile.html)  
+[`WebResource`](../object/WebResource.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -63,7 +63,7 @@ Status line window
 
 </div>
 
-` `[`statuslineBanner`](../object/statuslineBanner.html)`  `
+[`statuslineBanner`](../object/statuslineBanner.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -72,16 +72,16 @@ Status line window
 
 </div>
 
-` `[`deltas_`](#deltas_)`  `[`src`](#src)`  `[`txt_`](#txt_)`  `[`vpath`](#vpath)`  `
+[`deltas_`](#deltas_)[`src`](#src)[`txt_`](#txt_)[`vpath`](#vpath)
 
 Inherited from `WebWindow` :  
-` `[`name`](../object/WebWindow.html#name)`  `[`pathName`](../object/WebWindow.html#pathName)`  `[`sthCtx`](../object/WebWindow.html#sthCtx)`  `
+[`name`](../object/WebWindow.html#name)[`pathName`](../object/WebWindow.html#pathName)[`sthCtx`](../object/WebWindow.html#sthCtx)
 
 Inherited from `WebResourceResFile` :  
-` `[`binaryExts`](../object/WebResourceResFile.html#binaryExts)`  `[`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)`  `
+[`binaryExts`](../object/WebResourceResFile.html#binaryExts)[`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)
 
 Inherited from `WebResource` :  
-` `[`group`](../object/WebResource.html#group)`  `[`priority`](../object/WebResource.html#priority)`  `
+[`group`](../object/WebResource.html#group)[`priority`](../object/WebResource.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,16 +91,16 @@ Inherited from `WebResource` :
 
 </div>
 
-` `[`clearWindow`](#clearWindow)`  `[`flushWin`](#flushWin)`  `[`getState`](#getState)`  `[`resize`](#resize)`  `[`setStatus`](#setStatus)`  `[`setStatusText`](#setStatusText)`  `[`write`](#write)`  `
+[`clearWindow`](#clearWindow)[`flushWin`](#flushWin)[`getState`](#getState)[`resize`](#resize)[`setStatus`](#setStatus)[`setStatusText`](#setStatusText)[`write`](#write)
 
 Inherited from `WebWindow` :  
-` `[`processName`](../object/WebWindow.html#processName)`  `[`sendWinEvent`](../object/WebWindow.html#sendWinEvent)`  `[`sendWinEventTo`](../object/WebWindow.html#sendWinEventTo)`  `[`winFromPath`](../object/WebWindow.html#winFromPath)`  `
+[`processName`](../object/WebWindow.html#processName)[`sendWinEvent`](../object/WebWindow.html#sendWinEvent)[`sendWinEventTo`](../object/WebWindow.html#sendWinEventTo)[`winFromPath`](../object/WebWindow.html#winFromPath)
 
 Inherited from `WebResourceResFile` :  
-` `[`isTextFile`](../object/WebResourceResFile.html#isTextFile)`  `[`matchRequest`](../object/WebResourceResFile.html#matchRequest)`  `[`processRequest`](../object/WebResourceResFile.html#processRequest)`  `
+[`isTextFile`](../object/WebResourceResFile.html#isTextFile)[`matchRequest`](../object/WebResourceResFile.html#matchRequest)[`processRequest`](../object/WebResourceResFile.html#processRequest)
 
 Inherited from `WebResource` :  
-` `[`sendAck`](../object/WebResource.html#sendAck)`  `[`sendXML`](../object/WebResource.html#sendXML)`  `
+[`sendAck`](../object/WebResource.html#sendAck)[`sendXML`](../object/WebResource.html#sendXML)
 
 <span id="_Properties_"></span>
 

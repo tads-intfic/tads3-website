@@ -58,8 +58,8 @@ window's layout in the broader UI to subclasses.
 </div>
 
 **`OutputStreamWindow`**  
-`         `[`BannerWindow`](../object/BannerWindow.html)  
-`         `[`WebBannerWin`](../object/WebBannerWin.html)  
+[`BannerWindow`](../object/BannerWindow.html)  
+[`WebBannerWin`](../object/WebBannerWin.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -76,7 +76,7 @@ window's layout in the broader UI to subclasses.
 
 </div>
 
-` `[`outputStream_`](#outputStream_)`  `
+[`outputStream_`](#outputStream_)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ window's layout in the broader UI to subclasses.
 
 </div>
 
-` `[`captureOutput`](#captureOutput)`  `[`createOutputStream`](#createOutputStream)`  `[`createOutputStreamObj`](#createOutputStreamObj)`  `[`setOutputStream`](#setOutputStream)`  `
+[`captureOutput`](#captureOutput)[`createOutputStream`](#createOutputStream)[`createOutputStreamObj`](#createOutputStreamObj)[`setOutputStream`](#setOutputStream)
 
 <span id="_Properties_"></span>
 

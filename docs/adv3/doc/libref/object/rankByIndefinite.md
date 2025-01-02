@@ -37,8 +37,8 @@ Details](#_Methods_)
 </div>
 
 **`rankByIndefinite`**  
-`         `[`CommandRankingByProblem`](../object/CommandRankingByProblem.html)  
-`                 `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingByProblem`](../object/CommandRankingByProblem.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `CommandRankingByProblem` :  
-` `[`prop_`](../object/CommandRankingByProblem.html#prop_)`  `
+[`prop_`](../object/CommandRankingByProblem.html#prop_)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -63,12 +63,12 @@ Inherited from `CommandRankingByProblem` :
 
 </div>
 
-` `
+
 
 Inherited from `CommandRankingByProblem` :  
-` `[`comparePass1`](../object/CommandRankingByProblem.html#comparePass1)`  `[`comparePass2`](../object/CommandRankingByProblem.html#comparePass2)`  `
+[`comparePass1`](../object/CommandRankingByProblem.html#comparePass1)[`comparePass2`](../object/CommandRankingByProblem.html#comparePass2)
 
-` `
+
 
 <span id="_Properties_"></span>
 

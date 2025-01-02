@@ -76,7 +76,7 @@ executed in response to TEST FOO.
 
 </div>
 
-` `[`location`](#location)`  `[`reportHolding`](#reportHolding)`  `[`reportMove`](#reportMove)`  `[`testHolding`](#testHolding)`  `[`testList`](#testList)`  `[`testName`](#testName)`  `
+[`location`](#location)[`reportHolding`](#reportHolding)[`reportMove`](#reportMove)[`testHolding`](#testHolding)[`testList`](#testList)[`testName`](#testName)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ executed in response to TEST FOO.
 
 </div>
 
-` `[`getHolding`](#getHolding)`  `[`run`](#run)`  `
+[`getHolding`](#getHolding)[`run`](#run)
 
 <span id="_Properties_"></span>
 

@@ -38,8 +38,8 @@ like finishOptionRestore, but shows a different option name.
 </div>
 
 **`restoreOptionRestoreAnother`**  
-`         `[`finishOptionRestore`](../object/finishOptionRestore.html)  
-`                 `[`FinishOption`](../object/FinishOption.html)  
+[`finishOptionRestore`](../object/finishOptionRestore.html)  
+[`FinishOption`](../object/FinishOption.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,13 +49,13 @@ like finishOptionRestore, but shows a different option name.
 
 </div>
 
-` `[`desc`](#desc)`  `
+[`desc`](#desc)
 
 Inherited from `finishOptionRestore` :  
-` `[`responseChar`](../object/finishOptionRestore.html#responseChar)`  `[`responseKeyword`](../object/finishOptionRestore.html#responseKeyword)`  `
+[`responseChar`](../object/finishOptionRestore.html#responseChar)[`responseKeyword`](../object/finishOptionRestore.html#responseKeyword)
 
 Inherited from `FinishOption` :  
-` `[`isListed`](../object/FinishOption.html#isListed)`  `[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)`  `
+[`isListed`](../object/FinishOption.html#isListed)[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
 
 <span id="_MethodSummary_"></span>
 
@@ -65,13 +65,13 @@ Inherited from `FinishOption` :
 
 </div>
 
-` `
+
 
 Inherited from `finishOptionRestore` :  
-` `[`doOption`](../object/finishOptionRestore.html#doOption)`  `
+[`doOption`](../object/finishOptionRestore.html#doOption)
 
 Inherited from `FinishOption` :  
-` `[`responseMatches`](../object/FinishOption.html#responseMatches)`  `
+[`responseMatches`](../object/FinishOption.html#responseMatches)
 
 <span id="_Properties_"></span>
 

@@ -46,7 +46,7 @@ as long as it's not Bob's we're looking for.
 </div>
 
 **`rankByNonMatchPoss`**  
-`         `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -56,9 +56,9 @@ as long as it's not Bob's we're looking for.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -68,9 +68,9 @@ as long as it's not Bob's we're looking for.
 
 </div>
 
-` `[`comparePass1`](#comparePass1)`  `[`comparePass2`](#comparePass2)`  `
+[`comparePass1`](#comparePass1)[`comparePass2`](#comparePass2)
 
-` `
+
 
 <span id="_Properties_"></span>
 

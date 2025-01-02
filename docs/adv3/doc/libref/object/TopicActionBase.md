@@ -56,27 +56,27 @@ grammar rules based on this class.
 </div>
 
 **`TopicActionBase`**  
-`         `[`TopicAction`](../object/TopicAction.html)  
-`         `[`TopicTAction`](../object/TopicTAction.html)  
-`                 `[`AskVagueAction`](../object/AskVagueAction.html)  
-`                         `[`predicate(AskVague)`](../object/predicate(AskVague).html)  
-`                         `[`predicate(TellVague)`](../object/predicate(TellVague).html)  
-`                 `[`ConsultAboutAction`](../object/ConsultAboutAction.html)  
-`                         `[`predicate(ConsultAbout)`](../object/predicate(ConsultAbout).html)  
-`                         `[`predicate(ConsultWhatAbout)`](../object/predicate(ConsultWhatAbout).html)  
-`                 `[`ConvTopicTAction`](../object/ConvTopicTAction.html)  
-`                         `[`AskAboutAction`](../object/AskAboutAction.html)  
-`                                 `[`predicate(AskAbout)`](../object/predicate(AskAbout).html)  
-`                                 `[`predicate(AskAboutImplicit)`](../object/predicate(AskAboutImplicit).html)  
-`                                 `[`predicate(AskAboutWhat)`](../object/predicate(AskAboutWhat).html)  
-`                         `[`AskForAction`](../object/AskForAction.html)  
-`                                 `[`predicate(AskFor)`](../object/predicate(AskFor).html)  
-`                                 `[`predicate(AskWhomFor)`](../object/predicate(AskWhomFor).html)  
-`                         `[`TellAboutAction`](../object/TellAboutAction.html)  
-`                                 `[`predicate(TellAbout)`](../object/predicate(TellAbout).html)  
-`                                 `[`predicate(TellAboutImplicit)`](../object/predicate(TellAboutImplicit).html)  
-`                                 `[`predicate(TellAboutWhat)`](../object/predicate(TellAboutWhat).html)  
-`                 `[`TellVagueAction`](../object/TellVagueAction.html)  
+[`TopicAction`](../object/TopicAction.html)  
+[`TopicTAction`](../object/TopicTAction.html)  
+[`AskVagueAction`](../object/AskVagueAction.html)  
+[`predicate(AskVague)`](../object/predicate(AskVague).html)  
+[`predicate(TellVague)`](../object/predicate(TellVague).html)  
+[`ConsultAboutAction`](../object/ConsultAboutAction.html)  
+[`predicate(ConsultAbout)`](../object/predicate(ConsultAbout).html)  
+[`predicate(ConsultWhatAbout)`](../object/predicate(ConsultWhatAbout).html)  
+[`ConvTopicTAction`](../object/ConvTopicTAction.html)  
+[`AskAboutAction`](../object/AskAboutAction.html)  
+[`predicate(AskAbout)`](../object/predicate(AskAbout).html)  
+[`predicate(AskAboutImplicit)`](../object/predicate(AskAboutImplicit).html)  
+[`predicate(AskAboutWhat)`](../object/predicate(AskAboutWhat).html)  
+[`AskForAction`](../object/AskForAction.html)  
+[`predicate(AskFor)`](../object/predicate(AskFor).html)  
+[`predicate(AskWhomFor)`](../object/predicate(AskWhomFor).html)  
+[`TellAboutAction`](../object/TellAboutAction.html)  
+[`predicate(TellAbout)`](../object/predicate(TellAbout).html)  
+[`predicate(TellAboutImplicit)`](../object/predicate(TellAboutImplicit).html)  
+[`predicate(TellAboutWhat)`](../object/predicate(TellAboutWhat).html)  
+[`TellVagueAction`](../object/TellVagueAction.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -93,7 +93,7 @@ grammar rules based on this class.
 
 </div>
 
-` `[`topicList_`](#topicList_)`  `[`topicQualResolver_`](#topicQualResolver_)`  `[`topicResolver_`](#topicResolver_)`  `
+[`topicList_`](#topicList_)[`topicQualResolver_`](#topicQualResolver_)[`topicResolver_`](#topicResolver_)
 
 <span id="_MethodSummary_"></span>
 
@@ -103,7 +103,7 @@ grammar rules based on this class.
 
 </div>
 
-` `[`createTopicResolver`](#createTopicResolver)`  `[`getMessageParam`](#getMessageParam)`  `[`getTopic`](#getTopic)`  `[`getTopicQualifierResolver`](#getTopicQualifierResolver)`  `[`getTopicResolver`](#getTopicResolver)`  `[`reparseMatchAsTopic`](#reparseMatchAsTopic)`  `[`resolveTopic`](#resolveTopic)`  `[`setResolvedTopic`](#setResolvedTopic)`  `[`setTopicMatch`](#setTopicMatch)`  `
+[`createTopicResolver`](#createTopicResolver)[`getMessageParam`](#getMessageParam)[`getTopic`](#getTopic)[`getTopicQualifierResolver`](#getTopicQualifierResolver)[`getTopicResolver`](#getTopicResolver)[`reparseMatchAsTopic`](#reparseMatchAsTopic)[`resolveTopic`](#resolveTopic)[`setResolvedTopic`](#setResolvedTopic)[`setTopicMatch`](#setTopicMatch)
 
 <span id="_Properties_"></span>
 

@@ -47,7 +47,7 @@ until we get a turn where the player didn't directly talk to us.
 </div>
 
 **`ConvAgendaItem`**  
-`         `[`AgendaItem`](../object/AgendaItem.html)  
+[`AgendaItem`](../object/AgendaItem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,10 +73,10 @@ until we get a turn where the player didn't directly talk to us.
 
 </div>
 
-` `[`isReady`](#isReady)`  `[`otherActor`](#otherActor)`  `
+[`isReady`](#isReady)[`otherActor`](#otherActor)
 
 Inherited from `AgendaItem` :  
-` `[`agendaOrder`](../object/AgendaItem.html#agendaOrder)`  `[`initiallyActive`](../object/AgendaItem.html#initiallyActive)`  `[`isDone`](../object/AgendaItem.html#isDone)`  `
+[`agendaOrder`](../object/AgendaItem.html#agendaOrder)[`initiallyActive`](../object/AgendaItem.html#initiallyActive)[`isDone`](../object/AgendaItem.html#isDone)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,10 +86,10 @@ Inherited from `AgendaItem` :
 
 </div>
 
-` `
+
 
 Inherited from `AgendaItem` :  
-` `[`execute`](../object/AgendaItem.html#execute)`  `[`getActor`](../object/AgendaItem.html#getActor)`  `[`invokeItem`](../object/AgendaItem.html#invokeItem)`  `[`resetItem`](../object/AgendaItem.html#resetItem)`  `
+[`execute`](../object/AgendaItem.html#execute)[`getActor`](../object/AgendaItem.html#getActor)[`invokeItem`](../object/AgendaItem.html#invokeItem)[`resetItem`](../object/AgendaItem.html#resetItem)
 
 <span id="_Properties_"></span>
 

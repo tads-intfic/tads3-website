@@ -44,7 +44,7 @@ grammar rule.
 </div>
 
 **`GramQuestion`**  
-`         `[`Question`](../object/Question.html)  
+[`Question`](../object/Question.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,7 +55,7 @@ grammar rule.
 </div>
 
 **`GramQuestion`**  
-`         `[`YesNoQuestion`](../object/YesNoQuestion.html)  
+[`YesNoQuestion`](../object/YesNoQuestion.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,10 +72,10 @@ grammar rule.
 
 </div>
 
-` `[`answerFunc`](#answerFunc)`  `[`answerProd`](#answerProd)`  `
+[`answerFunc`](#answerFunc)[`answerProd`](#answerProd)
 
 Inherited from `Question` :  
-` `[`answerTemplate`](../object/Question.html#answerTemplate)`  `[`priority`](../object/Question.html#priority)`  `
+[`answerTemplate`](../object/Question.html#answerTemplate)[`priority`](../object/Question.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,9 +85,9 @@ Inherited from `Question` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`makeCommand`](#makeCommand)`  `[`parseAnswer`](#parseAnswer)`  `
+[`construct`](#construct)[`makeCommand`](#makeCommand)[`parseAnswer`](#parseAnswer)
 
-` `
+
 
 <span id="_Properties_"></span>
 

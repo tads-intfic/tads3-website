@@ -37,13 +37,13 @@ plural phrase qualified with a number and "all"
 </div>
 
 **`qualifiedPluralNounPhrase(allNum)`**  
-`         `[`ExactQuantifiedPluralProd`](../object/ExactQuantifiedPluralProd.html)  
-`                 `[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)  
-`                         `[`PluralProd`](../object/PluralProd.html)  
-`                                 `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                                         `[`BasicProd`](../object/BasicProd.html)  
+[`ExactQuantifiedPluralProd`](../object/ExactQuantifiedPluralProd.html)  
+[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)  
+[`PluralProd`](../object/PluralProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                                 object`  
-`                 `[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)  
+[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -53,22 +53,22 @@ plural phrase qualified with a number and "all"
 
 </div>
 
-` `
 
-` `
 
-` `
 
-` `
+
+
+
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `AmbigResponseKeeper` :  
-` `[`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)`  `
+[`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,25 +78,25 @@ Inherited from `AmbigResponseKeeper` :
 
 </div>
 
-` `
+
 
 Inherited from `ExactQuantifiedPluralProd` :  
-` `[`getVerifyKeepers`](../object/ExactQuantifiedPluralProd.html#getVerifyKeepers)`  `[`selectExactCount`](../object/ExactQuantifiedPluralProd.html#selectExactCount)`  `
+[`getVerifyKeepers`](../object/ExactQuantifiedPluralProd.html#getVerifyKeepers)[`selectExactCount`](../object/ExactQuantifiedPluralProd.html#selectExactCount)
 
 Inherited from `QuantifiedPluralProd` :  
-` `[`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity)`  `[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase)`  `[`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)`  `
+[`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity)[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase)[`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)
 
 Inherited from `PluralProd` :  
-` `[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)`  `
+[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `AmbigResponseKeeper` :  
-` `[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)`  `[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)`  `
+[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

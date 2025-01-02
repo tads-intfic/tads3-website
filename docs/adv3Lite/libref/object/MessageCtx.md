@@ -76,7 +76,7 @@ itself").
 
 </div>
 
-` `[`args`](#args)`  `[`cmd`](#cmd)`  `[`gotVerb`](#gotVerb)`  `[`lastParam`](#lastParam)`  `[`prescan`](#prescan)`  `[`reflexiveAnte`](#reflexiveAnte)`  `[`subj`](#subj)`  `[`vobj`](#vobj)`  `
+` [`args`](#args)  [`cmd`](#cmd)  [`gotVerb`](#gotVerb)  [`lastParam`](#lastParam)  [`prescan`](#prescan)  [`reflexiveAnte`](#reflexiveAnte)  [`subj`](#subj)  [`vobj`](#vobj)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ itself").
 
 </div>
 
-` `[`actorIsPC`](#actorIsPC)`  `[`construct`](#construct)`  `[`endPreScan`](#endPreScan)`  `[`lastParamPlural`](#lastParamPlural)`  `[`noteObj`](#noteObj)`  `[`noteParam`](#noteParam)`  `[`noteVerb`](#noteVerb)`  `[`paramToNum`](#paramToNum)`  `[`paramToString`](#paramToString)`  `[`startSentence`](#startSentence)`  `
+` [`actorIsPC`](#actorIsPC)  [`construct`](#construct)  [`endPreScan`](#endPreScan)  [`lastParamPlural`](#lastParamPlural)  [`noteObj`](#noteObj)  [`noteParam`](#noteParam)  [`noteVerb`](#noteVerb)  [`paramToNum`](#paramToNum)  [`paramToString`](#paramToString)  [`startSentence`](#startSentence)  `
 
 <span id="_Properties_"></span>
 

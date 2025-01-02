@@ -44,7 +44,7 @@ execute() method on each instance of this class.
 </div>
 
 **`PreinitObject`**  
-`         `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,17 +55,17 @@ execute() method on each instance of this class.
 </div>
 
 **`PreinitObject`**  
-`         `[`GlobalRemapping`](../object/GlobalRemapping.html)  
-`         `[`MessageBuilder`](../object/MessageBuilder.html)  
-`         `[`MetadataModuleID`](../object/MetadataModuleID.html)  
-`                 `[`GameInfoModuleID`](../object/GameInfoModuleID.html)  
-`                         `[`GameID`](../object/GameID.html)  
-`         `[`OutputStream`](../object/OutputStream.html)  
-`                 `[`BannerOutputStream`](../object/BannerOutputStream.html)  
-`                 `[`LogConsole`](../object/LogConsole.html)  
-`                 `[`WebWinOutputStream`](../object/WebWinOutputStream.html)  
-`         `[`StringPreParser`](../object/StringPreParser.html)  
-`         `[`TopHintMenu`](../object/TopHintMenu.html)  
+[`GlobalRemapping`](../object/GlobalRemapping.html)  
+[`MessageBuilder`](../object/MessageBuilder.html)  
+[`MetadataModuleID`](../object/MetadataModuleID.html)  
+[`GameInfoModuleID`](../object/GameInfoModuleID.html)  
+[`GameID`](../object/GameID.html)  
+[`OutputStream`](../object/OutputStream.html)  
+[`BannerOutputStream`](../object/BannerOutputStream.html)  
+[`LogConsole`](../object/LogConsole.html)  
+[`WebWinOutputStream`](../object/WebWinOutputStream.html)  
+[`StringPreParser`](../object/StringPreParser.html)  
+[`TopHintMenu`](../object/TopHintMenu.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,7 +74,7 @@ execute() method on each instance of this class.
 
 </div>
 
-` `[`adv3LibPreinit`](../object/adv3LibPreinit.html)`  `[`Compiler`](../object/Compiler.html)`  `[`conversationManager`](../object/conversationManager.html)`  `[`exitLister`](../object/exitLister.html)`  `[`hintManager`](../object/hintManager.html)`  `[`libScore`](../object/libScore.html)`  `[`objectRelations`](../object/objectRelations.html)`  `[`reflectionServices`](../object/reflectionServices.html)`  `[`scoreNotifier`](../object/scoreNotifier.html)`  `[`styleTagFilter`](../object/styleTagFilter.html)`  `
+[`adv3LibPreinit`](../object/adv3LibPreinit.html)[`Compiler`](../object/Compiler.html)[`conversationManager`](../object/conversationManager.html)[`exitLister`](../object/exitLister.html)[`hintManager`](../object/hintManager.html)[`libScore`](../object/libScore.html)[`objectRelations`](../object/objectRelations.html)[`reflectionServices`](../object/reflectionServices.html)[`scoreNotifier`](../object/scoreNotifier.html)[`styleTagFilter`](../object/styleTagFilter.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -83,10 +83,10 @@ execute() method on each instance of this class.
 
 </div>
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -96,10 +96,10 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `[`execute`](../object/ModuleExecObject.html#execute)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)[`execute`](../object/ModuleExecObject.html#execute)
 
 <span id="_Properties_"></span>
 

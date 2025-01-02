@@ -53,12 +53,12 @@ editor, then edit your airport.t3m file to add
 Either way, then make sure you copy the following three lines to the
 start of your new source file:
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
     #include "advlite.h"
-```
+`
 
 For the purposes of this tutorial we'll restrict ourselves to
 implementing just three NPCs: Pablo Cortez, the Security Guard by the

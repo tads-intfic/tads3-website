@@ -61,7 +61,7 @@ matching.
 
 </div>
 
-` `[`_multiMethodEndOfList`](../object/_multiMethodEndOfList.html)`  `[`_multiMethodNonObjectBindings`](../object/_multiMethodNonObjectBindings.html)`  `
+[`_multiMethodEndOfList`](../object/_multiMethodEndOfList.html)[`_multiMethodNonObjectBindings`](../object/_multiMethodNonObjectBindings.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -70,7 +70,7 @@ matching.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ matching.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

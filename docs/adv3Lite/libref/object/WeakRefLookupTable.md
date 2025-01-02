@@ -52,9 +52,9 @@ key/value pair for the value is automatically deleted from the table.
 </div>
 
 **`WeakRefLookupTable`**  
-`         `[`LookupTable`](../object/LookupTable.html)  
-`                 `[`Collection`](../object/Collection.html)  
-`                         `[`Object`](../object/Object.html)  
+[`LookupTable`](../object/LookupTable.html)  
+[`Collection`](../object/Collection.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -79,13 +79,13 @@ key/value pair for the value is automatically deleted from the table.
 
 </div>
 
-` `
 
-` `
 
-` `
 
-` `
+
+
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -95,16 +95,16 @@ key/value pair for the value is automatically deleted from the table.
 
 </div>
 
-` `
+
 
 Inherited from `LookupTable` :  
-` `[`applyAll`](../object/LookupTable.html#applyAll)`  `[`forEach`](../object/LookupTable.html#forEach)`  `[`forEachAssoc`](../object/LookupTable.html#forEachAssoc)`  `[`getBucketCount`](../object/LookupTable.html#getBucketCount)`  `[`getDefaultValue`](../object/LookupTable.html#getDefaultValue)`  `[`getEntryCount`](../object/LookupTable.html#getEntryCount)`  `[`isKeyPresent`](../object/LookupTable.html#isKeyPresent)`  `[`keysToList`](../object/LookupTable.html#keysToList)`  `[`nthKey`](../object/LookupTable.html#nthKey)`  `[`nthVal`](../object/LookupTable.html#nthVal)`  `[`removeElement`](../object/LookupTable.html#removeElement)`  `[`setDefaultValue`](../object/LookupTable.html#setDefaultValue)`  `[`valsToList`](../object/LookupTable.html#valsToList)`  `
+` [`applyAll`](../object/LookupTable.html#applyAll)  [`forEach`](../object/LookupTable.html#forEach)  [`forEachAssoc`](../object/LookupTable.html#forEachAssoc)  [`getBucketCount`](../object/LookupTable.html#getBucketCount)  [`getDefaultValue`](../object/LookupTable.html#getDefaultValue)  [`getEntryCount`](../object/LookupTable.html#getEntryCount)  [`isKeyPresent`](../object/LookupTable.html#isKeyPresent)  [`keysToList`](../object/LookupTable.html#keysToList)  [`nthKey`](../object/LookupTable.html#nthKey)  [`nthVal`](../object/LookupTable.html#nthVal)  [`removeElement`](../object/LookupTable.html#removeElement)  [`setDefaultValue`](../object/LookupTable.html#setDefaultValue)  [`valsToList`](../object/LookupTable.html#valsToList)  `
 
 Inherited from `Collection` :  
-` `[`createIterator`](../object/Collection.html#createIterator)`  `[`createLiveIterator`](../object/Collection.html#createLiveIterator)`  `
+` [`createIterator`](../object/Collection.html#createIterator)  [`createLiveIterator`](../object/Collection.html#createLiveIterator)  `
 
 Inherited from `Object` :  
-` `[`callInherited`](../object/Object.html#callInherited)`  `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`mapAll`](../object/Object.html#mapAll)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `[`valToSymbol`](../object/Object.html#valToSymbol)`  `
+` [`callInherited`](../object/Object.html#callInherited)  [`getPropList`](../object/Object.html#getPropList)  [`getPropParams`](../object/Object.html#getPropParams)  [`getSuperclassList`](../object/Object.html#getSuperclassList)  [`isClass`](../object/Object.html#isClass)  [`isTransient`](../object/Object.html#isTransient)  [`mapAll`](../object/Object.html#mapAll)  [`ofKind`](../object/Object.html#ofKind)  [`propDefined`](../object/Object.html#propDefined)  [`propInherited`](../object/Object.html#propInherited)  [`propType`](../object/Object.html#propType)  [`valToSymbol`](../object/Object.html#valToSymbol)  `
 
 <span id="_Properties_"></span>
 

@@ -68,7 +68,7 @@ we'll perform later.
 </div>
 
 **`TentativeResolveResults`**  
-`         `[`ResolveResults`](../object/ResolveResults.html)  
+[`ResolveResults`](../object/ResolveResults.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -94,9 +94,9 @@ we'll perform later.
 
 </div>
 
-` `[`allowActionRemapping`](#allowActionRemapping)`  `[`allowEquivalentFiltering`](#allowEquivalentFiltering)`  `[`npMissing`](#npMissing)`  `
+[`allowActionRemapping`](#allowActionRemapping)[`allowEquivalentFiltering`](#allowEquivalentFiltering)[`npMissing`](#npMissing)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -106,9 +106,9 @@ we'll perform later.
 
 </div>
 
-` `[`ambiguousNounPhrase`](#ambiguousNounPhrase)`  `[`askMissingLiteral`](#askMissingLiteral)`  `[`askMissingObject`](#askMissingObject)`  `[`canResolveInteractively`](#canResolveInteractively)`  `[`construct`](#construct)`  `[`emptyNounPhrase`](#emptyNounPhrase)`  `[`incCommandCount`](#incCommandCount)`  `[`insufficientQuantity`](#insufficientQuantity)`  `[`noMatch`](#noMatch)`  `[`noMatchForAll`](#noMatchForAll)`  `[`noMatchForAllBut`](#noMatchForAllBut)`  `[`noMatchForListBut`](#noMatchForListBut)`  `[`noMatchForLocation`](#noMatchForLocation)`  `[`noMatchForPossessive`](#noMatchForPossessive)`  `[`noMatchForPronoun`](#noMatchForPronoun)`  `[`noMatchPoss`](#noMatchPoss)`  `[`noteActorSpecified`](#noteActorSpecified)`  `[`noteAdjEnding`](#noteAdjEnding)`  `[`noteBadPrep`](#noteBadPrep)`  `[`noteEmptyBut`](#noteEmptyBut)`  `[`noteIndefinite`](#noteIndefinite)`  `[`noteLiteral`](#noteLiteral)`  `[`noteMatches`](#noteMatches)`  `[`noteMiscWordList`](#noteMiscWordList)`  `[`noteNounSlots`](#noteNounSlots)`  `[`notePronoun`](#notePronoun)`  `[`noteWeakPhrasing`](#noteWeakPhrasing)`  `[`nothingInLocation`](#nothingInLocation)`  `[`noVocabMatch`](#noVocabMatch)`  `[`reflexiveNotAllowed`](#reflexiveNotAllowed)`  `[`uniqueObjectRequired`](#uniqueObjectRequired)`  `[`unknownNounPhrase`](#unknownNounPhrase)`  `[`wrongReflexive`](#wrongReflexive)`  `[`zeroQuantity`](#zeroQuantity)`  `
+[`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askMissingLiteral`](#askMissingLiteral)[`askMissingObject`](#askMissingObject)[`canResolveInteractively`](#canResolveInteractively)[`construct`](#construct)[`emptyNounPhrase`](#emptyNounPhrase)[`incCommandCount`](#incCommandCount)[`insufficientQuantity`](#insufficientQuantity)[`noMatch`](#noMatch)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchForListBut`](#noMatchForListBut)[`noMatchForLocation`](#noMatchForLocation)[`noMatchForPossessive`](#noMatchForPossessive)[`noMatchForPronoun`](#noMatchForPronoun)[`noMatchPoss`](#noMatchPoss)[`noteActorSpecified`](#noteActorSpecified)[`noteAdjEnding`](#noteAdjEnding)[`noteBadPrep`](#noteBadPrep)[`noteEmptyBut`](#noteEmptyBut)[`noteIndefinite`](#noteIndefinite)[`noteLiteral`](#noteLiteral)[`noteMatches`](#noteMatches)[`noteMiscWordList`](#noteMiscWordList)[`noteNounSlots`](#noteNounSlots)[`notePronoun`](#notePronoun)[`noteWeakPhrasing`](#noteWeakPhrasing)[`nothingInLocation`](#nothingInLocation)[`noVocabMatch`](#noVocabMatch)[`reflexiveNotAllowed`](#reflexiveNotAllowed)[`uniqueObjectRequired`](#uniqueObjectRequired)[`unknownNounPhrase`](#unknownNounPhrase)[`wrongReflexive`](#wrongReflexive)[`zeroQuantity`](#zeroQuantity)
 
-` `
+
 
 <span id="_Properties_"></span>
 

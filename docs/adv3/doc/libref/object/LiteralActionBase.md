@@ -55,22 +55,22 @@ specific kinds of literal actions.
 </div>
 
 **`LiteralActionBase`**  
-`         `[`LiteralAction`](../object/LiteralAction.html)  
-`                 `[`OopsAction`](../object/OopsAction.html)  
-`                         `[`predicate(Oops)`](../object/predicate(Oops).html)  
-`                 `[`SpecialTopicAction`](../object/SpecialTopicAction.html)  
-`                         `[`predicate(SpecialTopic)`](../object/predicate(SpecialTopic).html)  
-`         `[`LiteralTAction`](../object/LiteralTAction.html)  
-`                 `[`EnterOnAction`](../object/EnterOnAction.html)  
-`                         `[`predicate(EnterOn)`](../object/predicate(EnterOn).html)  
-`                         `[`predicate(EnterOnWhat)`](../object/predicate(EnterOnWhat).html)  
-`                 `[`SetToAction`](../object/SetToAction.html)  
-`                         `[`predicate(SetTo)`](../object/predicate(SetTo).html)  
-`                 `[`TurnToAction`](../object/TurnToAction.html)  
-`                         `[`predicate(TurnTo)`](../object/predicate(TurnTo).html)  
-`                 `[`TypeLiteralOnAction`](../object/TypeLiteralOnAction.html)  
-`                         `[`predicate(TypeLiteralOn)`](../object/predicate(TypeLiteralOn).html)  
-`                         `[`predicate(TypeLiteralOnWhat)`](../object/predicate(TypeLiteralOnWhat).html)  
+[`LiteralAction`](../object/LiteralAction.html)  
+[`OopsAction`](../object/OopsAction.html)  
+[`predicate(Oops)`](../object/predicate(Oops).html)  
+[`SpecialTopicAction`](../object/SpecialTopicAction.html)  
+[`predicate(SpecialTopic)`](../object/predicate(SpecialTopic).html)  
+[`LiteralTAction`](../object/LiteralTAction.html)  
+[`EnterOnAction`](../object/EnterOnAction.html)  
+[`predicate(EnterOn)`](../object/predicate(EnterOn).html)  
+[`predicate(EnterOnWhat)`](../object/predicate(EnterOnWhat).html)  
+[`SetToAction`](../object/SetToAction.html)  
+[`predicate(SetTo)`](../object/predicate(SetTo).html)  
+[`TurnToAction`](../object/TurnToAction.html)  
+[`predicate(TurnTo)`](../object/predicate(TurnTo).html)  
+[`TypeLiteralOnAction`](../object/TypeLiteralOnAction.html)  
+[`predicate(TypeLiteralOn)`](../object/predicate(TypeLiteralOn).html)  
+[`predicate(TypeLiteralOnWhat)`](../object/predicate(TypeLiteralOnWhat).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -87,7 +87,7 @@ specific kinds of literal actions.
 
 </div>
 
-` `[`text_`](#text_)`  `
+[`text_`](#text_)
 
 <span id="_MethodSummary_"></span>
 
@@ -97,7 +97,7 @@ specific kinds of literal actions.
 
 </div>
 
-` `[`getLiteral`](#getLiteral)`  `[`getMessageParam`](#getMessageParam)`  `[`setObjectMatches`](#setObjectMatches)`  `[`setResolvedObjects`](#setResolvedObjects)`  `
+[`getLiteral`](#getLiteral)[`getMessageParam`](#getMessageParam)[`setObjectMatches`](#setObjectMatches)[`setResolvedObjects`](#setResolvedObjects)
 
 <span id="_Properties_"></span>
 

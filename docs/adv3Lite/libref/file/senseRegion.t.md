@@ -31,7 +31,7 @@ layout: docs
 
 </div>
 
-` `[`ReachProblemRemote`](../object/ReachProblemRemote.html)`  `[`SenseRegion`](../object/SenseRegion.html)`  `
+[`ReachProblemRemote`](../object/ReachProblemRemote.html)[`SenseRegion`](../object/SenseRegion.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -40,7 +40,7 @@ layout: docs
 
 </div>
 
-` `[`QSenseRegion`](../object/QSenseRegion.html)`  `[`remoteRoomContentsLister`](../object/remoteRoomContentsLister.html)`  `[`remoteSubContentsLister`](../object/remoteSubContentsLister.html)`  `[`scopeProbe_`](../object/scopeProbe_.html)`  `
+[`QSenseRegion`](../object/QSenseRegion.html)[`remoteRoomContentsLister`](../object/remoteRoomContentsLister.html)[`remoteSubContentsLister`](../object/remoteSubContentsLister.html)[`scopeProbe_`](../object/scopeProbe_.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

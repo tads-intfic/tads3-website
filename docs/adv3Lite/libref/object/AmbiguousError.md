@@ -43,9 +43,9 @@ A noun phrase is ambiguous, so we'll have to ask for clarification.
 </div>
 
 **`AmbiguousError`**  
-`         `[`ResolutionError`](../object/ResolutionError.html)  
-`                 `[`ParseError`](../object/ParseError.html)  
-`                         `[`Exception`](../object/Exception.html)  
+[`ResolutionError`](../object/ResolutionError.html)  
+[`ParseError`](../object/ParseError.html)  
+[`Exception`](../object/Exception.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,16 +71,16 @@ A noun phrase is ambiguous, so we'll have to ask for clarification.
 
 </div>
 
-` `[`allowOnRespell`](#allowOnRespell)`  `[`cmd`](#cmd)`  `[`curable`](#curable)`  `[`nameList`](#nameList)`  `
+[`allowOnRespell`](#allowOnRespell)[`cmd`](#cmd)[`curable`](#curable)[`nameList`](#nameList)
 
 Inherited from `ResolutionError` :  
-` `[`np`](../object/ResolutionError.html#np)`  `[`txt`](../object/ResolutionError.html#txt)`  `
+[`np`](../object/ResolutionError.html#np)[`txt`](../object/ResolutionError.html#txt)
 
 Inherited from `ParseError` :  
-` `[`errStage`](../object/ParseError.html#errStage)`  `
+[`errStage`](../object/ParseError.html#errStage)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,15 +90,15 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`display`](#display)`  `[`tryCuring`](#tryCuring)`  `
+[`construct`](#construct)[`display`](#display)[`tryCuring`](#tryCuring)
 
 Inherited from `ResolutionError` :  
-` `[`rankCorrection`](../object/ResolutionError.html#rankCorrection)`  `
+[`rankCorrection`](../object/ResolutionError.html#rankCorrection)
 
-` `
+
 
 Inherited from `Exception` :  
-` `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

@@ -53,13 +53,13 @@ Output Filter
 </div>
 
 **`OutputFilter`**  
-`         `[`CaptureFilter`](../object/CaptureFilter.html)  
-`                 `[`StringCaptureFilter`](../object/StringCaptureFilter.html)  
-`                 `[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)  
-`         `[`CommandTranscript`](../object/CommandTranscript.html)  
-`         `[`MessageBuilder`](../object/MessageBuilder.html)  
-`         `[`MonitorFilter`](../object/MonitorFilter.html)  
-`         `[`ParagraphManager`](../object/ParagraphManager.html)  
+[`CaptureFilter`](../object/CaptureFilter.html)  
+[`StringCaptureFilter`](../object/StringCaptureFilter.html)  
+[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)  
+[`CommandTranscript`](../object/CommandTranscript.html)  
+[`MessageBuilder`](../object/MessageBuilder.html)  
+[`MonitorFilter`](../object/MonitorFilter.html)  
+[`ParagraphManager`](../object/ParagraphManager.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -68,7 +68,7 @@ Output Filter
 
 </div>
 
-` `[`commandSequencer`](../object/commandSequencer.html)`  `[`conversationManager`](../object/conversationManager.html)`  `[`styleTagFilter`](../object/styleTagFilter.html)`  `[`typographicalOutputFilter`](../object/typographicalOutputFilter.html)`  `
+[`commandSequencer`](../object/commandSequencer.html)[`conversationManager`](../object/conversationManager.html)[`styleTagFilter`](../object/styleTagFilter.html)[`typographicalOutputFilter`](../object/typographicalOutputFilter.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -77,7 +77,7 @@ Output Filter
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ Output Filter
 
 </div>
 
-` `[`filterText`](#filterText)`  `
+[`filterText`](#filterText)
 
 <span id="_Properties_"></span>
 

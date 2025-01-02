@@ -54,7 +54,7 @@ mix-in class that can be used with other classes.
 </div>
 
 **`FireSource`**  
-`         `[`Matchstick`](../object/Matchstick.html)  
+[`Matchstick`](../object/Matchstick.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -71,7 +71,7 @@ mix-in class that can be used with other classes.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ mix-in class that can be used with other classes.
 
 </div>
 
-` `[`iobjFor(BurnWith)`](#iobjFor(BurnWith))`  `
+[`iobjFor(BurnWith)`](#iobjFor(BurnWith))
 
 <span id="_Properties_"></span>
 

@@ -48,8 +48,8 @@ create a regular subclass in order for the verbPhrase to get found.)
 </div>
 
 **`EnTravelVia`**  
-`         `[`VerbProduction`](../object/VerbProduction.html)  
-`                 `[`Production`](../object/Production.html)  
+[`VerbProduction`](../object/VerbProduction.html)  
+[`Production`](../object/Production.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -75,13 +75,13 @@ create a regular subclass in order for the verbPhrase to get found.)
 
 </div>
 
-` `[`missingQ`](#missingQ)`  `[`verbPhrase`](#verbPhrase)`  `
+[`missingQ`](#missingQ)[`verbPhrase`](#verbPhrase)
 
 Inherited from `VerbProduction` :  
-` `[`isActive`](../object/VerbProduction.html#isActive)`  `[`priority`](../object/VerbProduction.html#priority)`  `
+[`isActive`](../object/VerbProduction.html#isActive)[`priority`](../object/VerbProduction.html#priority)
 
 Inherited from `Production` :  
-` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+[`determiner`](../object/Production.html#determiner)[`nounPhraseRole`](../object/Production.html#nounPhraseRole)[`npClass`](../object/Production.html#npClass)[`parent`](../object/Production.html#parent)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,13 +91,13 @@ Inherited from `Production` :
 
 </div>
 
-` `
+
 
 Inherited from `VerbProduction` :  
-` `[`answerMissing`](../object/VerbProduction.html#answerMissing)`  `[`build`](../object/VerbProduction.html#build)`  `[`missingRoleProd`](../object/VerbProduction.html#missingRoleProd)`  `[`visitProd`](../object/VerbProduction.html#visitProd)`  `
+[`answerMissing`](../object/VerbProduction.html#answerMissing)[`build`](../object/VerbProduction.html#build)[`missingRoleProd`](../object/VerbProduction.html#missingRoleProd)[`visitProd`](../object/VerbProduction.html#visitProd)
 
 Inherited from `Production` :  
-` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `
+[`addNounListItem`](../object/Production.html#addNounListItem)[`findAction`](../object/Production.html#findAction)[`findChild`](../object/Production.html#findChild)[`findParent`](../object/Production.html#findParent)[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)[`getText`](../object/Production.html#getText)[`getTokens`](../object/Production.html#getTokens)[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)[`isChildOf`](../object/Production.html#isChildOf)[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)[`visitLiteral`](../object/Production.html#visitLiteral)
 
 <span id="_Properties_"></span>
 

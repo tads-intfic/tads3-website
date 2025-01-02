@@ -48,8 +48,8 @@ of the second command.
 </div>
 
 **`CommandProdWithAmbiguousConj`**  
-`         `[`CommandProd`](../object/CommandProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`CommandProd`](../object/CommandProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -60,7 +60,7 @@ of the second command.
 </div>
 
 **`CommandProdWithAmbiguousConj`**  
-`         `[`commandPhrase(ambiguousConj)`](../object/commandPhrase(ambiguousConj).html)  
+[`commandPhrase(ambiguousConj)`](../object/commandPhrase(ambiguousConj).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -77,13 +77,13 @@ of the second command.
 
 </div>
 
-` `[`cmdCounted_`](#cmdCounted_)`  `
+[`cmdCounted_`](#cmdCounted_)
 
 Inherited from `CommandProd` :  
-` `[`getActorPhrase`](../object/CommandProd.html#getActorPhrase)`  `
+[`getActorPhrase`](../object/CommandProd.html#getActorPhrase)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -93,13 +93,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`countCommands`](#countCommands)`  `[`getCommandSepIndex`](#getCommandSepIndex)`  `[`getNextCommandIndex`](#getNextCommandIndex)`  `[`isEndOfSentence`](#isEndOfSentence)`  `[`resolveFirstAction`](#resolveFirstAction)`  `[`resolveNouns`](#resolveNouns)`  `
+[`countCommands`](#countCommands)[`getCommandSepIndex`](#getCommandSepIndex)[`getNextCommandIndex`](#getNextCommandIndex)[`isEndOfSentence`](#isEndOfSentence)[`resolveFirstAction`](#resolveFirstAction)[`resolveNouns`](#resolveNouns)
 
 Inherited from `CommandProd` :  
-` `[`execActorPhrase`](../object/CommandProd.html#execActorPhrase)`  `[`hasTargetActor`](../object/CommandProd.html#hasTargetActor)`  `
+[`execActorPhrase`](../object/CommandProd.html#execActorPhrase)[`hasTargetActor`](../object/CommandProd.html#hasTargetActor)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

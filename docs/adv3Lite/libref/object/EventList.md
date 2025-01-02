@@ -56,7 +56,7 @@ then simply stops doing anything once we pass the last event.
 </div>
 
 **`EventList`**  
-`         `[`Script`](../object/Script.html)  
+[`Script`](../object/Script.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -67,12 +67,12 @@ then simply stops doing anything once we pass the last event.
 </div>
 
 **`EventList`**  
-`         `[`CyclicEventList`](../object/CyclicEventList.html)  
-`         `[`ExternalEventList`](../object/ExternalEventList.html)  
-`         `[`RandomEventList`](../object/RandomEventList.html)  
-`         `[`ShuffledEventList`](../object/ShuffledEventList.html)  
-`         `[`StopEventList`](../object/StopEventList.html)  
-`         `[`SyncEventList`](../object/SyncEventList.html)  
+[`CyclicEventList`](../object/CyclicEventList.html)  
+[`ExternalEventList`](../object/ExternalEventList.html)  
+[`RandomEventList`](../object/RandomEventList.html)  
+[`ShuffledEventList`](../object/ShuffledEventList.html)  
+[`StopEventList`](../object/StopEventList.html)  
+[`SyncEventList`](../object/SyncEventList.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -89,9 +89,9 @@ then simply stops doing anything once we pass the last event.
 
 </div>
 
-` `[`curScriptState`](#curScriptState)`  `[`eventList`](#eventList)`  `[`eventListLen`](#eventListLen)`  `[`resetEachCycle`](#resetEachCycle)`  `
+` [`curScriptState`](#curScriptState)  [`eventList`](#eventList)  [`eventListLen`](#eventListLen)  [`resetEachCycle`](#resetEachCycle)  `
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -101,10 +101,10 @@ then simply stops doing anything once we pass the last event.
 
 </div>
 
-` `[`addItem`](#addItem)`  `[`advanceState`](#advanceState)`  `[`construct`](#construct)`  `[`doScript`](#doScript)`  `[`doScriptEvent`](#doScriptEvent)`  `[`resetList`](#resetList)`  `[`scriptDone`](#scriptDone)`  `
+` [`addItem`](#addItem)  [`advanceState`](#advanceState)  [`construct`](#construct)  [`doScript`](#doScript)  [`doScriptEvent`](#doScriptEvent)  [`resetList`](#resetList)  [`scriptDone`](#scriptDone)  `
 
 Inherited from `Script` :  
-` `[`getScriptState`](../object/Script.html#getScriptState)`  `
+` [`getScriptState`](../object/Script.html#getScriptState)  `
 
 <span id="_Properties_"></span>
 

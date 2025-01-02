@@ -88,32 +88,32 @@ are ordered before and after (respectively) a main report.
 </div>
 
 **`CommandReport`**  
-`         `[`CommandAnnouncement`](../object/CommandAnnouncement.html)  
-`                 `[`AmbigObjectAnnouncement`](../object/AmbigObjectAnnouncement.html)  
-`                 `[`CommandSepAnnouncement`](../object/CommandSepAnnouncement.html)  
-`                 `[`DefaultObjectAnnouncement`](../object/DefaultObjectAnnouncement.html)  
-`                 `[`ImplicitActionAnnouncement`](../object/ImplicitActionAnnouncement.html)  
-`                 `[`MultiObjectAnnouncement`](../object/MultiObjectAnnouncement.html)  
-`                 `[`RemappedActionAnnouncement`](../object/RemappedActionAnnouncement.html)  
-`         `[`CommandReportMessage`](../object/CommandReportMessage.html)  
-`                 `[`CosmeticSpacingCommandReport`](../object/CosmeticSpacingCommandReport.html)  
-`                 `[`DefaultCommandReport`](../object/DefaultCommandReport.html)  
-`                 `[`DefaultDescCommandReport`](../object/DefaultDescCommandReport.html)  
-`                 `[`ExtraCommandReport`](../object/ExtraCommandReport.html)  
-`                 `[`FullCommandReport`](../object/FullCommandReport.html)  
-`                         `[`AfterCommandReport`](../object/AfterCommandReport.html)  
-`                         `[`BeforeCommandReport`](../object/BeforeCommandReport.html)  
-`                         `[`FailCommandReport`](../object/FailCommandReport.html)  
-`                         `[`MainCommandReport`](../object/MainCommandReport.html)  
-`                                 `[`QuestionCommandReport`](../object/QuestionCommandReport.html)  
-`         `[`ConvBoundaryReport`](../object/ConvBoundaryReport.html)  
-`                 `[`ConvBeginReport`](../object/ConvBeginReport.html)  
-`                 `[`ConvEndReport`](../object/ConvEndReport.html)  
-`         `[`GroupSeparatorMessage`](../object/GroupSeparatorMessage.html)  
-`         `[`InternalSeparatorMessage`](../object/InternalSeparatorMessage.html)  
-`         `[`MarkerReport`](../object/MarkerReport.html)  
-`                 `[`EndOfDescReport`](../object/EndOfDescReport.html)  
-`                 `[`FailCommandMarker`](../object/FailCommandMarker.html)  
+[`CommandAnnouncement`](../object/CommandAnnouncement.html)  
+[`AmbigObjectAnnouncement`](../object/AmbigObjectAnnouncement.html)  
+[`CommandSepAnnouncement`](../object/CommandSepAnnouncement.html)  
+[`DefaultObjectAnnouncement`](../object/DefaultObjectAnnouncement.html)  
+[`ImplicitActionAnnouncement`](../object/ImplicitActionAnnouncement.html)  
+[`MultiObjectAnnouncement`](../object/MultiObjectAnnouncement.html)  
+[`RemappedActionAnnouncement`](../object/RemappedActionAnnouncement.html)  
+[`CommandReportMessage`](../object/CommandReportMessage.html)  
+[`CosmeticSpacingCommandReport`](../object/CosmeticSpacingCommandReport.html)  
+[`DefaultCommandReport`](../object/DefaultCommandReport.html)  
+[`DefaultDescCommandReport`](../object/DefaultDescCommandReport.html)  
+[`ExtraCommandReport`](../object/ExtraCommandReport.html)  
+[`FullCommandReport`](../object/FullCommandReport.html)  
+[`AfterCommandReport`](../object/AfterCommandReport.html)  
+[`BeforeCommandReport`](../object/BeforeCommandReport.html)  
+[`FailCommandReport`](../object/FailCommandReport.html)  
+[`MainCommandReport`](../object/MainCommandReport.html)  
+[`QuestionCommandReport`](../object/QuestionCommandReport.html)  
+[`ConvBoundaryReport`](../object/ConvBoundaryReport.html)  
+[`ConvBeginReport`](../object/ConvBeginReport.html)  
+[`ConvEndReport`](../object/ConvEndReport.html)  
+[`GroupSeparatorMessage`](../object/GroupSeparatorMessage.html)  
+[`InternalSeparatorMessage`](../object/InternalSeparatorMessage.html)  
+[`MarkerReport`](../object/MarkerReport.html)  
+[`EndOfDescReport`](../object/EndOfDescReport.html)  
+[`FailCommandMarker`](../object/FailCommandMarker.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -130,7 +130,7 @@ are ordered before and after (respectively) a main report.
 
 </div>
 
-` `[`action_`](#action_)`  `[`isFailure`](#isFailure)`  `[`isQuestion`](#isQuestion)`  `[`iter_`](#iter_)`  `
+[`action_`](#action_)[`isFailure`](#isFailure)[`isQuestion`](#isQuestion)[`iter_`](#iter_)
 
 <span id="_MethodSummary_"></span>
 
@@ -140,7 +140,7 @@ are ordered before and after (respectively) a main report.
 
 </div>
 
-` `[`construct`](#construct)`  `[`getAction`](#getAction)`  `[`isActionImplicit`](#isActionImplicit)`  `[`isActionNestedIn`](#isActionNestedIn)`  `[`isPartOf`](#isPartOf)`  `[`setAction`](#setAction)`  `
+[`construct`](#construct)[`getAction`](#getAction)[`isActionImplicit`](#isActionImplicit)[`isActionNestedIn`](#isActionNestedIn)[`isPartOf`](#isPartOf)[`setAction`](#setAction)
 
 <span id="_Properties_"></span>
 

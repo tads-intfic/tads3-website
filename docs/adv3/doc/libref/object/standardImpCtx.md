@@ -37,7 +37,7 @@ the standard implicit action announcement context
 </div>
 
 **`standardImpCtx`**  
-`         `[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
+[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ the standard implicit action announcement context
 
 </div>
 
-` `
+
 
 Inherited from `ImplicitAnnouncementContext` :  
-` `[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx)`  `[`isInList`](../object/ImplicitAnnouncementContext.html#isInList)`  `[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)`  `[`useInfPhrase`](../object/ImplicitAnnouncementContext.html#useInfPhrase)`  `
+[`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx)[`isInList`](../object/ImplicitAnnouncementContext.html#isInList)[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)[`useInfPhrase`](../object/ImplicitAnnouncementContext.html#useInfPhrase)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `ImplicitAnnouncementContext` :
 
 </div>
 
-` `
+
 
 Inherited from `ImplicitAnnouncementContext` :  
-` `[`buildImplicitAnnouncement`](../object/ImplicitAnnouncementContext.html#buildImplicitAnnouncement)`  `
+[`buildImplicitAnnouncement`](../object/ImplicitAnnouncementContext.html#buildImplicitAnnouncement)
 
 <span id="_Properties_"></span>
 

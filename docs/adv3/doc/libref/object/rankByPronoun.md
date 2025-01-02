@@ -37,8 +37,8 @@ Details](#_Methods_)
 </div>
 
 **`rankByPronoun`**  
-`         `[`CommandRankingByWeakness`](../object/CommandRankingByWeakness.html)  
-`                 `[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
+[`CommandRankingByWeakness`](../object/CommandRankingByWeakness.html)  
+[`CommandRankingCriterion`](../object/CommandRankingCriterion.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `CommandRankingByWeakness` :  
-` `[`prop_`](../object/CommandRankingByWeakness.html#prop_)`  `
+[`prop_`](../object/CommandRankingByWeakness.html#prop_)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -63,12 +63,12 @@ Inherited from `CommandRankingByWeakness` :
 
 </div>
 
-` `
+
 
 Inherited from `CommandRankingByWeakness` :  
-` `[`comparePass1`](../object/CommandRankingByWeakness.html#comparePass1)`  `[`comparePass2`](../object/CommandRankingByWeakness.html#comparePass2)`  `
+[`comparePass1`](../object/CommandRankingByWeakness.html#comparePass1)[`comparePass2`](../object/CommandRankingByWeakness.html#comparePass2)
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -38,7 +38,7 @@ This module depends on the menus module to display the user interface.
 
 </div>
 
-` `[`ExtraHint`](../object/ExtraHint.html)`  `[`Goal`](../object/Goal.html)`  `[`Hint`](../object/Hint.html)`  `[`HintLongTopicItem`](../object/HintLongTopicItem.html)`  `[`HintMenu`](../object/HintMenu.html)`  `[`HintMenuObject`](../object/HintMenuObject.html)`  `[`HintOpener`](../object/HintOpener.html)`  `[`TopHintMenu`](../object/TopHintMenu.html)`  `
+[`ExtraHint`](../object/ExtraHint.html)[`Goal`](../object/Goal.html)[`Hint`](../object/Hint.html)[`HintLongTopicItem`](../object/HintLongTopicItem.html)[`HintMenu`](../object/HintMenu.html)[`HintMenuObject`](../object/HintMenuObject.html)[`HintOpener`](../object/HintOpener.html)[`TopHintMenu`](../object/TopHintMenu.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -47,7 +47,7 @@ This module depends on the menus module to display the user interface.
 
 </div>
 
-` `[`extraHintManager`](../object/extraHintManager.html)`  `[`extraHintStyleTag`](../object/extraHintStyleTag.html)`  `[`gameHintStatus`](../object/gameHintStatus.html)`  `[`hintManager`](../object/hintManager.html)`  `[`sessionHintStatus`](../object/sessionHintStatus.html)`  `
+[`extraHintManager`](../object/extraHintManager.html)[`extraHintStyleTag`](../object/extraHintStyleTag.html)[`gameHintStatus`](../object/gameHintStatus.html)[`hintManager`](../object/hintManager.html)[`sessionHintStatus`](../object/sessionHintStatus.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

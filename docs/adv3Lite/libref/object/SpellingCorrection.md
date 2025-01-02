@@ -69,7 +69,7 @@ save information on the attempt in one of these objects.
 
 </div>
 
-` `[`candidates`](#candidates)`  `[`corrections`](#corrections)`  `[`curCand`](#curCand)`  `[`oldToks`](#oldToks)`  `[`parseError`](#parseError)`  `[`unknown`](#unknown)`  `
+[`candidates`](#candidates)[`corrections`](#corrections)[`curCand`](#curCand)[`oldToks`](#oldToks)[`parseError`](#parseError)[`unknown`](#unknown)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ save information on the attempt in one of these objects.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

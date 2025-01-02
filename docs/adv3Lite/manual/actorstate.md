@@ -38,7 +38,7 @@ one ActorState to represent her bent over her desk and another to
 represent her in animated conversation. The coding pattern might look
 something like this:
 
-```
+`
     guard: Actor 'burly guard; strong powerful; man; him' @doorway
         "He looks incredibly strong and powerful. "
     ;
@@ -85,7 +85,7 @@ something like this:
        stateDesc = 'But the rapt expression on her face and the animated sparkle in her bright
          blue eyes as she hangs on your every word somehow make her seem half that age. '
     ;
-```
+`
 
 Note that the stateDesc on the current ActorState is appended to the
 desc defined on the Actor when the Actor is examined. (Authors familiar
@@ -102,7 +102,7 @@ If you wish, you can make use of the ActorState template to define the
 specialDesc property and, optionally, the stateDesc property as well.
 For example the guardSleepingState above could have been defined as:
 
-```
+`
      + guardSleepingState: ActorState
        "The burly guard lies sprawled on the ground, snoring loudly. "
        'At least he might be strong and powerful when he\'s awake, but right now he\'s dead
@@ -111,7 +111,7 @@ For example the guardSleepingState above could have been defined as:
        noResponse = "The guard is far too deep in his slumbers to hear you. "
     ; 
      
-```
+`
 
   
 <span id="defining"></span>
@@ -214,7 +214,7 @@ define a list of 'fidget' (atmospheric) messages describing what the
 actor is doing while in that state, in order to make the actor appear a
 little more lifelife, for example:
 
-```
+`
     + bobStackingState: ActorState, ShuffledEventList
         specialDesc = "Bob is busily stacking cans. "
         eventList = [
@@ -224,7 +224,7 @@ little more lifelife, for example:
           'Bob takes a can from one part of the stack and places it on another part. '
         ]
     ;
-```
+`
 
 With this definition, one of the messages from the eventList will be
 displayed on each turn that Bob is in bobStackingState and not engaged
@@ -243,24 +243,24 @@ some means of switching from one state to another. The most common means
 is by calling **setState(*stat*)** on the Actor, where *stat* is the new
 ActorState you want to change to, for example:
 
-```
+`
        /* In the code where the guard drinks too much wine */
        guard.setState(guardSleepingState);
        
        /* In the code in which you engage the clerk in conversation */
        clerk.setState(clerkTalkingState);
-```
+`
 
 The second method, which can be useful if you're outputting a string
 just before changing ActorState is to use the \<.state *newstate*\> tag:
 
-```
+`
        /* In the code where the guard drinks too much wine */
        "The wine bottle slips out of the guard's hand as he slips into a deep slumber. <.state guardSleepingState>";
        
        /* In the code in which you engage the clerk in conversation */
        "The clerk looks up at you expectently. <.state clerkTalkingState>";
-```
+`
 
 Note that there may be limitation on where this will work; these will be
 discusses further below.
@@ -269,7 +269,7 @@ A third method is to use a GreetingTopic (HelloTopic or ByeTopic) and
 define its **changeToState** property to change state on beginning or
 ending a conversation, for example:
 
-```
+`
     clerk: Actor 'fusty old clerk;; woman; her' @procrastinationOffice
        "She doesn't look a day under sixty. "
     ;
@@ -303,7 +303,7 @@ ending a conversation, for example:
         
         changeToState = clerkWorkingState
     ;
-```
+`
 
 This code will cause the clerk to switch to her clerkTalkingState when
 she's first addressed, and back to her clerkWorkingState when the

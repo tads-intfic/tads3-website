@@ -67,7 +67,7 @@ either disappear from the game or are transported to another location
 </div>
 
 **`Floorless`**  
-`         `[`FloorlessRoom`](../object/FloorlessRoom.html)  
+[`FloorlessRoom`](../object/FloorlessRoom.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -84,7 +84,7 @@ either disappear from the game or are transported to another location
 
 </div>
 
-` `[`bottomRoom`](#bottomRoom)`  `[`roomParts`](#roomParts)`  `
+[`bottomRoom`](#bottomRoom)[`roomParts`](#roomParts)
 
 <span id="_MethodSummary_"></span>
 
@@ -94,7 +94,7 @@ either disappear from the game or are transported to another location
 
 </div>
 
-` `[`receiveDrop`](#receiveDrop)`  `
+[`receiveDrop`](#receiveDrop)
 
 <span id="_Properties_"></span>
 

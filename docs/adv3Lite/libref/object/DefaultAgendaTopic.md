@@ -45,7 +45,7 @@ Note that you should define the topicResponse or eventList property of a
 DefaultAgendaTopic in case none of the agenda items in its agenda list
 turn out to be executable.
 
-`class `**`DefaultAgendaTopic`**` :   `[`AgendaManager`](../object/AgendaManager.html)`   `[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)
+`class `**`DefaultAgendaTopic`**` :   `[`AgendaManager`](../object/AgendaManager.html)[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)
 
 </div>
 
@@ -58,15 +58,15 @@ turn out to be executable.
 </div>
 
 **`DefaultAgendaTopic`**  
-`         `[`AgendaManager`](../object/AgendaManager.html)  
+[`AgendaManager`](../object/AgendaManager.html)  
 `                 object`  
-`         `[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
-`                 `[`DefaultTopic`](../object/DefaultTopic.html)  
-`                         `[`ActorTopicEntry`](../object/ActorTopicEntry.html)  
-`                                 `[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
-`                                         `[`Redirector`](../object/Redirector.html)  
+[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
+[`DefaultTopic`](../object/DefaultTopic.html)  
+[`ActorTopicEntry`](../object/ActorTopicEntry.html)  
+[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
+[`Redirector`](../object/Redirector.html)  
 `                                                 object`  
-`                                 `[`TopicEntry`](../object/TopicEntry.html)  
+[`TopicEntry`](../object/TopicEntry.html)  
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -92,26 +92,26 @@ turn out to be executable.
 
 </div>
 
-` `[`active`](#active)`  `[`matchScore`](#matchScore)`  `
+[`active`](#active)[`matchScore`](#matchScore)
 
 Inherited from `AgendaManager` :  
-` `[`agendaList`](../object/AgendaManager.html#agendaList)`  `
+[`agendaList`](../object/AgendaManager.html#agendaList)
 
 Inherited from `DefaultAnyTopic` :  
-` `[`includeInList`](../object/DefaultAnyTopic.html#includeInList)`  `[`matchGreetings`](../object/DefaultAnyTopic.html#matchGreetings)`  `[`matchObj`](../object/DefaultAnyTopic.html#matchObj)`  `
+[`includeInList`](../object/DefaultAnyTopic.html#includeInList)[`matchGreetings`](../object/DefaultAnyTopic.html#matchGreetings)[`matchObj`](../object/DefaultAnyTopic.html#matchObj)
 
 Inherited from `DefaultTopic` :  
-` `[`exceptions`](../object/DefaultTopic.html#exceptions)`  `
+[`exceptions`](../object/DefaultTopic.html#exceptions)
 
 Inherited from `ActorTopicEntry` :  
-` `[`activated`](../object/ActorTopicEntry.html#activated)`  `[`autoName`](../object/ActorTopicEntry.html#autoName)`  `[`convKeys`](../object/ActorTopicEntry.html#convKeys)`  `[`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused)`  `[`getActor`](../object/ActorTopicEntry.html#getActor)`  `[`impliesGreeting`](../object/ActorTopicEntry.html#impliesGreeting)`  `[`isConversational`](../object/ActorTopicEntry.html#isConversational)`  `[`keyTopics`](../object/ActorTopicEntry.html#keyTopics)`  `[`listOrder`](../object/ActorTopicEntry.html#listOrder)`  `[`name`](../object/ActorTopicEntry.html#name)`  `[`suggestAs`](../object/ActorTopicEntry.html#suggestAs)`  `[`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)`  `
+[`activated`](../object/ActorTopicEntry.html#activated)[`autoName`](../object/ActorTopicEntry.html#autoName)[`convKeys`](../object/ActorTopicEntry.html#convKeys)[`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused)[`getActor`](../object/ActorTopicEntry.html#getActor)[`impliesGreeting`](../object/ActorTopicEntry.html#impliesGreeting)[`isConversational`](../object/ActorTopicEntry.html#isConversational)[`keyTopics`](../object/ActorTopicEntry.html#keyTopics)[`listOrder`](../object/ActorTopicEntry.html#listOrder)[`name`](../object/ActorTopicEntry.html#name)[`suggestAs`](../object/ActorTopicEntry.html#suggestAs)[`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)
 
-` `
 
-` `
+
+
 
 Inherited from `TopicEntry` :  
-` `[`isActive`](../object/TopicEntry.html#isActive)`  `[`matchExactCase`](../object/TopicEntry.html#matchExactCase)`  `[`matchPattern`](../object/TopicEntry.html#matchPattern)`  `[`scoreBoost`](../object/TopicEntry.html#scoreBoost)`  `[`topicMatched`](../object/TopicEntry.html#topicMatched)`  `
+[`isActive`](../object/TopicEntry.html#isActive)[`matchExactCase`](../object/TopicEntry.html#matchExactCase)[`matchPattern`](../object/TopicEntry.html#matchPattern)[`scoreBoost`](../object/TopicEntry.html#scoreBoost)[`topicMatched`](../object/TopicEntry.html#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -121,27 +121,27 @@ Inherited from `TopicEntry` :
 
 </div>
 
-` `[`handleTopic`](#handleTopic)`  `
+[`handleTopic`](#handleTopic)
 
 Inherited from `AgendaManager` :  
-` `[`addToAgenda`](../object/AgendaManager.html#addToAgenda)`  `[`executeAgenda`](../object/AgendaManager.html#executeAgenda)`  `[`removeFromAgenda`](../object/AgendaManager.html#removeFromAgenda)`  `
+[`addToAgenda`](../object/AgendaManager.html#addToAgenda)[`executeAgenda`](../object/AgendaManager.html#executeAgenda)[`removeFromAgenda`](../object/AgendaManager.html#removeFromAgenda)
 
-` `
+
 
 Inherited from `DefaultTopic` :  
-` `[`avoidMatching`](../object/DefaultTopic.html#avoidMatching)`  `[`matchTopic`](../object/DefaultTopic.html#matchTopic)`  `
+[`avoidMatching`](../object/DefaultTopic.html#avoidMatching)[`matchTopic`](../object/DefaultTopic.html#matchTopic)
 
 Inherited from `ActorTopicEntry` :  
-` `[`activate`](../object/ActorTopicEntry.html#activate)`  `[`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable)`  `[`buildName`](../object/ActorTopicEntry.html#buildName)`  `[`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied)`  `[`deactivate`](../object/ActorTopicEntry.html#deactivate)`  `[`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics)`  `[`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry)`  `[`isReachable`](../object/ActorTopicEntry.html#isReachable)`  `[`nodeActive`](../object/ActorTopicEntry.html#nodeActive)`  `[`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics)`  `[`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)`  `
+[`activate`](../object/ActorTopicEntry.html#activate)[`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable)[`buildName`](../object/ActorTopicEntry.html#buildName)[`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied)[`deactivate`](../object/ActorTopicEntry.html#deactivate)[`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics)[`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry)[`isReachable`](../object/ActorTopicEntry.html#isReachable)[`nodeActive`](../object/ActorTopicEntry.html#nodeActive)[`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics)[`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)
 
 Inherited from `ReplaceRedirector` :  
-` `[`redirect`](../object/ReplaceRedirector.html#redirect)`  `
+[`redirect`](../object/ReplaceRedirector.html#redirect)
 
 Inherited from `Redirector` :  
-` `[`doInstead`](../object/Redirector.html#doInstead)`  `[`doNested`](../object/Redirector.html#doNested)`  `[`doOtherAction`](../object/Redirector.html#doOtherAction)`  `
+[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 Inherited from `TopicEntry` :  
-` `[`addTopic`](../object/TopicEntry.html#addTopic)`  `[`scoreBooster`](../object/TopicEntry.html#scoreBooster)`  `[`topicResponse`](../object/TopicEntry.html#topicResponse)`  `
+[`addTopic`](../object/TopicEntry.html#addTopic)[`scoreBooster`](../object/TopicEntry.html#scoreBooster)[`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_Properties_"></span>
 

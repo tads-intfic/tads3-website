@@ -159,9 +159,9 @@ or use what it contains). Instead you should always use the
 around your game world. For example, if you wanted to move Heidi to the
 top of the tree in response to a CLIMB TREE command you would use:
 
-```
+`
       heidi.actionMoveInto(topOfTree);
-```
+`
 
 The difference between `moveInto()` and
 `actionMoveInto()` needn't detain us long here.
@@ -225,7 +225,7 @@ is which is to assume that anything fixed (with
 pointing to the parent person) is something worn by the person, and any
 other portable (i.e. non-fixed) contained child must be something
 carried by the person. An object representing a person has the special
-`contType` `Carrier`
+`contTypeCarrier`
 (which is meant to indicate this special case). The Actor class (which
 we'll meet in a later chapter) defines `contType =
 Carrier` by default; if you use an ordinary Thing to represent a

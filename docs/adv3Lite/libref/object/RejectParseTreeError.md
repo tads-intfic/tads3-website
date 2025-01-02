@@ -47,9 +47,9 @@ displayable error; the parser simply rules out these structures.
 </div>
 
 **`RejectParseTreeError`**  
-`         `[`CommandError`](../object/CommandError.html)  
-`                 `[`ParseError`](../object/ParseError.html)  
-`                         `[`Exception`](../object/Exception.html)  
+[`CommandError`](../object/CommandError.html)  
+[`ParseError`](../object/ParseError.html)  
+[`Exception`](../object/Exception.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -75,16 +75,16 @@ displayable error; the parser simply rules out these structures.
 
 </div>
 
-` `
+
 
 Inherited from `CommandError` :  
-` `[`cmd`](../object/CommandError.html#cmd)`  `[`errStage`](../object/CommandError.html#errStage)`  `
+[`cmd`](../object/CommandError.html#cmd)[`errStage`](../object/CommandError.html#errStage)
 
 Inherited from `ParseError` :  
-` `[`allowOnRespell`](../object/ParseError.html#allowOnRespell)`  `[`curable`](../object/ParseError.html#curable)`  `
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -94,16 +94,16 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`display`](#display)`  `
+[`display`](#display)
 
 Inherited from `CommandError` :  
-` `[`construct`](../object/CommandError.html#construct)`  `
+[`construct`](../object/CommandError.html#construct)
 
 Inherited from `ParseError` :  
-` `[`rankCorrection`](../object/ParseError.html#rankCorrection)`  `[`tryCuring`](../object/ParseError.html#tryCuring)`  `
+[`rankCorrection`](../object/ParseError.html#rankCorrection)[`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-` `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

@@ -36,7 +36,7 @@ Roberts
 
 </div>
 
-` `[`CustomMessages`](../object/CustomMessages.html)`  `[`MessageCtx`](../object/MessageCtx.html)`  `[`MessageParams`](../object/MessageParams.html)`  `[`VerbTense`](../object/VerbTense.html)`  `
+[`CustomMessages`](../object/CustomMessages.html)[`MessageCtx`](../object/MessageCtx.html)[`MessageParams`](../object/MessageParams.html)[`VerbTense`](../object/VerbTense.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -45,7 +45,7 @@ Roberts
 
 </div>
 
-` `[`dummy_`](../object/dummy_.html)`  `[`Future`](../object/Future.html)`  `[`FuturePerfect`](../object/FuturePerfect.html)`  `[`messageDummyCommand`](../object/messageDummyCommand.html)`  `[`Narrator`](../object/Narrator.html)`  `[`Past`](../object/Past.html)`  `[`PastPerfect`](../object/PastPerfect.html)`  `[`Perfect`](../object/Perfect.html)`  `[`pluralDummy_`](../object/pluralDummy_.html)`  `[`Present`](../object/Present.html)`  `
+[`dummy_`](../object/dummy_.html)[`Future`](../object/Future.html)[`FuturePerfect`](../object/FuturePerfect.html)[`messageDummyCommand`](../object/messageDummyCommand.html)[`Narrator`](../object/Narrator.html)[`Past`](../object/Past.html)[`PastPerfect`](../object/PastPerfect.html)[`Perfect`](../object/Perfect.html)[`pluralDummy_`](../object/pluralDummy_.html)[`Present`](../object/Present.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -54,7 +54,7 @@ Roberts
 
 </div>
 
-` `[`bmsg`](#bmsg)`  `[`buildMessage`](#buildMessage)`  `[`debugMessage`](#debugMessage)`  `[`dmsg`](#dmsg)`  `[`message`](#message)`  `
+[`bmsg`](#bmsg)[`buildMessage`](#buildMessage)[`debugMessage`](#debugMessage)[`dmsg`](#dmsg)[`message`](#message)
 
 <span id="_Functions_"></span>
 

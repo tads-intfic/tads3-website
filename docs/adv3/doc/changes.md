@@ -3182,7 +3182,7 @@ This version has no changes related to HTML TADS.
   to follow these links. Any properly configured Windows web browser
   should work. If a web browser is installed, the Windows interpreter
   will use it to show any link whose HREF starts with one of the
-  following prefixes: ` `
+  following prefixes: 
   - http:
   - ftp:
   - news:

@@ -44,9 +44,9 @@ play-testing feedback.
 </div>
 
 **`commentPreParser`**  
-`         `[`StringPreParser`](../object/StringPreParser.html)  
-`                 `[`PreinitObject`](../object/PreinitObject.html)  
-`                         `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`StringPreParser`](../object/StringPreParser.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                                 object`  
 <span id="_PropSummary_"></span>
 
@@ -56,16 +56,16 @@ play-testing feedback.
 
 </div>
 
-` `[`commentPrefix`](#commentPrefix)`  `[`leadPat`](#leadPat)`  `[`runOrder`](#runOrder)`  `[`warningCount`](#warningCount)`  `
+[`commentPrefix`](#commentPrefix)[`leadPat`](#leadPat)[`runOrder`](#runOrder)[`warningCount`](#warningCount)
 
 Inherited from `StringPreParser` :  
-` `[`isActive`](../object/StringPreParser.html#isActive)`  `[`regList`](../object/StringPreParser.html#regList)`  `[`regListSorted`](../object/StringPreParser.html#regListSorted)`  `
+[`isActive`](../object/StringPreParser.html#isActive)[`regList`](../object/StringPreParser.html#regList)[`regListSorted`](../object/StringPreParser.html#regListSorted)
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -75,15 +75,15 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`doParsing`](#doParsing)`  `
+[`doParsing`](#doParsing)
 
 Inherited from `StringPreParser` :  
-` `[`construct`](../object/StringPreParser.html#construct)`  `[`execute`](../object/StringPreParser.html#execute)`  `[`registerPreParser`](../object/StringPreParser.html#registerPreParser)`  `[`runAll`](../object/StringPreParser.html#runAll)`  `
+[`construct`](../object/StringPreParser.html#construct)[`execute`](../object/StringPreParser.html#execute)[`registerPreParser`](../object/StringPreParser.html#registerPreParser)[`runAll`](../object/StringPreParser.html#runAll)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

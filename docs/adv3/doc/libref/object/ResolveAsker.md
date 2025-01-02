@@ -55,8 +55,8 @@ the parser generates for interactive prompting.
 </div>
 
 **`ResolveAsker`**  
-`         `[`AskConnector`](../object/AskConnector.html)  
-`                 `[`DefaultAskConnector`](../object/DefaultAskConnector.html)  
+[`AskConnector`](../object/AskConnector.html)  
+[`DefaultAskConnector`](../object/DefaultAskConnector.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -65,7 +65,7 @@ the parser generates for interactive prompting.
 
 </div>
 
-` `[`enterOnWhatAsker`](../object/enterOnWhatAsker.html)`  `
+[`enterOnWhatAsker`](../object/enterOnWhatAsker.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -74,7 +74,7 @@ the parser generates for interactive prompting.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -84,7 +84,7 @@ the parser generates for interactive prompting.
 
 </div>
 
-` `[`askDisambig`](#askDisambig)`  `[`askMissingObject`](#askMissingObject)`  `
+[`askDisambig`](#askDisambig)[`askMissingObject`](#askMissingObject)
 
 <span id="_Properties_"></span>
 

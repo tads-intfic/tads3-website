@@ -46,7 +46,7 @@ object.
 </div>
 
 **`DropTypeThrow`**  
-`         `[`DropType`](../object/DropType.html)  
+[`DropType`](../object/DropType.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,7 +57,7 @@ object.
 </div>
 
 **`DropTypeThrow`**  
-`         `[`DropTypeShortThrow`](../object/DropTypeShortThrow.html)  
+[`DropTypeShortThrow`](../object/DropTypeShortThrow.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,9 +74,9 @@ object.
 
 </div>
 
-` `[`path_`](#path_)`  `[`target_`](#target_)`  `
+[`path_`](#path_)[`target_`](#target_)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -86,9 +86,9 @@ object.
 
 </div>
 
-` `[`construct`](#construct)`  `[`getReportPrefix`](#getReportPrefix)`  `[`standardReport`](#standardReport)`  `
+[`construct`](#construct)[`getReportPrefix`](#getReportPrefix)[`standardReport`](#standardReport)
 
-` `
+
 
 <span id="_Properties_"></span>
 

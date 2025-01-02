@@ -46,7 +46,7 @@ The touchTopicObj exists solely as something for HitTopics to match.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ The touchTopicObj exists solely as something for HitTopics to match.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

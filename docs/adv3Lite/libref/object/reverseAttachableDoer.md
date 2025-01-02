@@ -37,8 +37,8 @@ Details](#_Methods_)
 </div>
 
 **`reverseAttachableDoer`**  
-`         `[`Doer`](../object/Doer.html)  
-`                 `[`Redirector`](../object/Redirector.html)  
+[`Doer`](../object/Doer.html)  
+[`Redirector`](../object/Redirector.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `Doer` :  
-` `[`cmd`](../object/Doer.html#cmd)`  `[`handleAction`](../object/Doer.html#handleAction)`  `[`ignoreError`](../object/Doer.html#ignoreError)`  `[`priority`](../object/Doer.html#priority)`  `[`strict`](../object/Doer.html#strict)`  `
+[`cmd`](../object/Doer.html#cmd)[`handleAction`](../object/Doer.html#handleAction)[`ignoreError`](../object/Doer.html#ignoreError)[`priority`](../object/Doer.html#priority)[`strict`](../object/Doer.html#strict)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -63,13 +63,13 @@ Inherited from `Doer` :
 
 </div>
 
-` `[`execAction`](#execAction)`  `
+[`execAction`](#execAction)
 
 Inherited from `Doer` :  
-` `[`checkDirection`](../object/Doer.html#checkDirection)`  `[`exec`](../object/Doer.html#exec)`  `[`redirect`](../object/Doer.html#redirect)`  `
+[`checkDirection`](../object/Doer.html#checkDirection)[`exec`](../object/Doer.html#exec)[`redirect`](../object/Doer.html#redirect)
 
 Inherited from `Redirector` :  
-` `[`doInstead`](../object/Redirector.html#doInstead)`  `[`doNested`](../object/Redirector.html#doNested)`  `[`doOtherAction`](../object/Redirector.html#doOtherAction)`  `
+[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 <span id="_Properties_"></span>
 

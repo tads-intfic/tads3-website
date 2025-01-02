@@ -67,7 +67,7 @@ each of these sections by using the following properties:
 Thus, for example, suppose we had a room defined along the following
 lines:
 
-```
+`
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -141,7 +141,7 @@ lines:
             you why this rubbish would be best consigned to the flames. "
           
     ;
-```
+`
 
 Suppose further that an NPC called George follows the player character
 into the room, and the player character opens the desk drawer, drops a
@@ -215,7 +215,7 @@ Armed with these tools we can, for example, amend the specialDesc of the
 desk so that the desk lists its contents in any way we please. For
 example:
 
-```
+`
     + desk: Thing 'desk; fine old'
         "It's a fine old desk with a single drawer. "
         
@@ -233,7 +233,7 @@ example:
         
         remapIn = deskDrawer    
     ;
-```
+`
 
 Which would give us:
 
@@ -272,7 +272,7 @@ can see a note and a blue ball here. " One way we could change this is
 by incorporating a list of miscellaneous items into the room description
 itself, for example:
 
-```
+`
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -287,7 +287,7 @@ itself, for example:
         
         regions = downstairs
     ;
-```
+`
 
 This works after a fashion, but it's less than ideal, not least because
 you may not want this list of miscellaneous items to appear before the
@@ -307,7 +307,7 @@ listing. To use a CustomRoomLister you attach it to the
 roomContentsLister property of the room in question and pass the prefix
 and suffix text you want to use via its constructor, thus:
 
-```
+`
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -323,7 +323,7 @@ and suffix text you want to use via its constructor, thus:
         roomContentsLister = new CustomRoomLister('Someone\'s left ', suffix: '
             lying on the floor. ')
     ;
-```
+`
 
 Note that here the first parameter we pass to the CustomRoomLister's
 constructor is always the prefix string (since this is the most common
@@ -362,7 +362,7 @@ need to name the parameter, use the **method** keyword to define a
 method with three parameters, and then write our method definition
 within curly braces, for example:
 
-```
+`
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -379,13 +379,13 @@ within curly braces, for example:
                                                   method (lst, pl, irName) 
             {"Lying on the floor <<if pl>>are<<else>>is<<end>> ";})
     ;
-```
+`
 
 Note that since we don't need a prefix string here, we supply the first
 parameter as nil. We'd define a suffix method in much the same way, for
 example:
 
-```
+`
     study: Room 'Study' 'study'   
         "This is your favourite room in the whole house, where you do your best
         work, think your best thoughts, and read your best books. The way out is to
@@ -402,7 +402,7 @@ example:
                                                   method (lst, pl, irName) 
             {" <<if pl>>are<<else>>is<<end>> lying on the floor. ";})
     ;
-```
+`
 
 Note that in this case we supply '\\' as the prefix string to make sure
 that the sentence listing the room contents starts with a capital

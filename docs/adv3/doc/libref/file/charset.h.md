@@ -39,7 +39,7 @@ This header defines the CharacterSet intrinsic class.
 
 </div>
 
-` `[`CharacterSet`](../object/CharacterSet.html)`  `
+[`CharacterSet`](../object/CharacterSet.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

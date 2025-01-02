@@ -38,8 +38,8 @@ object defines a number and a value for the number.
 </div>
 
 **`spelledSmallNumber(digit)`**  
-`         `[`NumberProd`](../object/NumberProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`NumberProd`](../object/NumberProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,12 +49,12 @@ object defines a number and a value for the number.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,13 +64,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`getval`](#getval)`  `
+[`getval`](#getval)
 
 Inherited from `NumberProd` :  
-` `[`getStrVal`](../object/NumberProd.html#getStrVal)`  `
+[`getStrVal`](../object/NumberProd.html#getStrVal)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

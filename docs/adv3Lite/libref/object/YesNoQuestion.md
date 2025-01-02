@@ -44,8 +44,8 @@ questions with Yes or No answers.
 </div>
 
 **`YesNoQuestion`**  
-`         `[`GramQuestion`](../object/GramQuestion.html)  
-`                 `[`Question`](../object/Question.html)  
+[`GramQuestion`](../object/GramQuestion.html)  
+[`Question`](../object/Question.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,13 +71,13 @@ questions with Yes or No answers.
 
 </div>
 
-` `[`priority`](#priority)`  `
+` [`priority`](#priority)  `
 
 Inherited from `GramQuestion` :  
-` `[`answerFunc`](../object/GramQuestion.html#answerFunc)`  `[`answerProd`](../object/GramQuestion.html#answerProd)`  `
+` [`answerFunc`](../object/GramQuestion.html#answerFunc)  [`answerProd`](../object/GramQuestion.html#answerProd)  `
 
 Inherited from `Question` :  
-` `[`answerTemplate`](../object/Question.html#answerTemplate)`  `
+` [`answerTemplate`](../object/Question.html#answerTemplate)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -87,12 +87,12 @@ Inherited from `Question` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+` [`construct`](#construct)  `
 
 Inherited from `GramQuestion` :  
-` `[`makeCommand`](../object/GramQuestion.html#makeCommand)`  `[`parseAnswer`](../object/GramQuestion.html#parseAnswer)`  `
+` [`makeCommand`](../object/GramQuestion.html#makeCommand)  [`parseAnswer`](../object/GramQuestion.html#parseAnswer)  `
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -60,7 +60,7 @@ Some helper routines for the library messages.
 
 </div>
 
-` `[`libMessages`](../object/libMessages.html)`  `[`playerActionMessages`](../object/playerActionMessages.html)`  `
+[`libMessages`](../object/libMessages.html)[`playerActionMessages`](../object/playerActionMessages.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -69,7 +69,7 @@ Some helper routines for the library messages.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ Some helper routines for the library messages.
 
 </div>
 
-` `[`askDisambigList`](#askDisambigList)`  `[`shortTIMsg`](#shortTIMsg)`  `[`shortTMsg`](#shortTMsg)`  `
+[`askDisambigList`](#askDisambigList)[`shortTIMsg`](#shortTIMsg)[`shortTMsg`](#shortTMsg)
 
 <span id="_Properties_"></span>
 

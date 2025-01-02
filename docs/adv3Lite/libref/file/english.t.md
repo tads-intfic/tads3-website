@@ -42,7 +42,7 @@ identified with \[Required\].
 
 </div>
 
-` `[`CustomVocab`](../object/CustomVocab.html)`  `[`LCommandTopicHelper`](../object/LCommandTopicHelper.html)`  `[`LMentionable`](../object/LMentionable.html)`  `[`LState`](../object/LState.html)`  `
+[`CustomVocab`](../object/CustomVocab.html)[`LCommandTopicHelper`](../object/LCommandTopicHelper.html)[`LMentionable`](../object/LMentionable.html)[`LState`](../object/LState.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -51,7 +51,7 @@ identified with \[Required\].
 
 </div>
 
-` `[`actorActionContinuer_`](../object/actorActionContinuer_.html)`  `[`decimalPreParser`](../object/decimalPreParser.html)`  `[`DirState`](../object/DirState.html)`  `[`englishCustomVocab`](../object/englishCustomVocab.html)`  `[`englishMessageParams`](../object/englishMessageParams.html)`  `[`englishOptions`](../object/englishOptions.html)`  `[`finishOptionsLister`](../object/finishOptionsLister.html)`  `[`getOnGroundDoer`](../object/getOnGroundDoer.html)`  `[`libMessages`](../object/libMessages.html)`  `[`LitUnlit`](../object/LitUnlit.html)`  `[`OpenClosed`](../object/OpenClosed.html)`  `[`prevDummy_`](../object/prevDummy_.html)`  `[`pronounPreinit`](../object/pronounPreinit.html)`  `[`putOnGroundDoer`](../object/putOnGroundDoer.html)`  `[`removeDoer`](../object/removeDoer.html)`  `[`subLister`](../object/subLister.html)`  `[`takePathDoer`](../object/takePathDoer.html)`  `
+[`actorActionContinuer_`](../object/actorActionContinuer_.html)[`decimalPreParser`](../object/decimalPreParser.html)[`DirState`](../object/DirState.html)[`englishCustomVocab`](../object/englishCustomVocab.html)[`englishMessageParams`](../object/englishMessageParams.html)[`englishOptions`](../object/englishOptions.html)[`finishOptionsLister`](../object/finishOptionsLister.html)[`getOnGroundDoer`](../object/getOnGroundDoer.html)[`libMessages`](../object/libMessages.html)[`LitUnlit`](../object/LitUnlit.html)[`OpenClosed`](../object/OpenClosed.html)[`prevDummy_`](../object/prevDummy_.html)[`pronounPreinit`](../object/pronounPreinit.html)[`putOnGroundDoer`](../object/putOnGroundDoer.html)[`removeDoer`](../object/removeDoer.html)[`subLister`](../object/subLister.html)[`takePathDoer`](../object/takePathDoer.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -60,7 +60,7 @@ identified with \[Required\].
 
 </div>
 
-` `[`andList`](#andList)`  `[`announceBestChoice`](#announceBestChoice)`  `[`askAmbiguous`](#askAmbiguous)`  `[`askMissingNoun`](#askMissingNoun)`  `[`conjugate`](#conjugate)`  `[`conjugateBe`](#conjugateBe)`  `[`conjugateBeNot`](#conjugateBeNot)`  `[`conjugateCan`](#conjugateCan)`  `[`conjugateDoNot`](#conjugateDoNot)`  `[`conjugateDont`](#conjugateDont)`  `[`conjugateHavenot`](#conjugateHavenot)`  `[`conjugateHavnt`](#conjugateHavnt)`  `[`conjugateIm`](#conjugateIm)`  `[`conjugateIsnt`](#conjugateIsnt)`  `[`conjugateIve`](#conjugateIve)`  `[`conjugateMust`](#conjugateMust)`  `[`conjugateRegular`](#conjugateRegular)`  `[`conjugateWas`](#conjugateWas)`  `[`conjugateWasnot`](#conjugateWasnot)`  `[`conjugateWasnt`](#conjugateWasnt)`  `[`genList`](#genList)`  `[`isListStr`](#isListStr)`  `[`langAdjust`](#langAdjust)`  `[`listStrIs`](#listStrIs)`  `[`makeCountedPlural`](#makeCountedPlural)`  `[`makeListInStr`](#makeListInStr)`  `[`makeListStr`](#makeListStr)`  `[`makeSentence`](#makeSentence)`  `[`mentionA`](#mentionA)`  `[`mentionThe`](#mentionThe)`  `[`mergeDuplicates`](#mergeDuplicates)`  `[`nounRoleQuestion`](#nounRoleQuestion)`  `[`npListPronoun`](#npListPronoun)`  `[`orList`](#orList)`  `[`pastParticiple`](#pastParticiple)`  `[`spelledToInt`](#spelledToInt)`  `[`spellNumber`](#spellNumber)`  `[`stripArticle`](#stripArticle)`  `[`yesOrNo`](#yesOrNo)`  `
+[`andList`](#andList)[`announceBestChoice`](#announceBestChoice)[`askAmbiguous`](#askAmbiguous)[`askMissingNoun`](#askMissingNoun)[`conjugate`](#conjugate)[`conjugateBe`](#conjugateBe)[`conjugateBeNot`](#conjugateBeNot)[`conjugateCan`](#conjugateCan)[`conjugateDoNot`](#conjugateDoNot)[`conjugateDont`](#conjugateDont)[`conjugateHavenot`](#conjugateHavenot)[`conjugateHavnt`](#conjugateHavnt)[`conjugateIm`](#conjugateIm)[`conjugateIsnt`](#conjugateIsnt)[`conjugateIve`](#conjugateIve)[`conjugateMust`](#conjugateMust)[`conjugateRegular`](#conjugateRegular)[`conjugateWas`](#conjugateWas)[`conjugateWasnot`](#conjugateWasnot)[`conjugateWasnt`](#conjugateWasnt)[`genList`](#genList)[`isListStr`](#isListStr)[`langAdjust`](#langAdjust)[`listStrIs`](#listStrIs)[`makeCountedPlural`](#makeCountedPlural)[`makeListInStr`](#makeListInStr)[`makeListStr`](#makeListStr)[`makeSentence`](#makeSentence)[`mentionA`](#mentionA)[`mentionThe`](#mentionThe)[`mergeDuplicates`](#mergeDuplicates)[`nounRoleQuestion`](#nounRoleQuestion)[`npListPronoun`](#npListPronoun)[`orList`](#orList)[`pastParticiple`](#pastParticiple)[`spelledToInt`](#spelledToInt)[`spellNumber`](#spellNumber)[`stripArticle`](#stripArticle)[`yesOrNo`](#yesOrNo)
 
 <span id="_Functions_"></span>
 

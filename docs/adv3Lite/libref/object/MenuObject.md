@@ -55,14 +55,14 @@ the + syntax (like "+ MenuItem") to define containment.
 </div>
 
 **`MenuObject`**  
-`         `[`MenuItem`](../object/MenuItem.html)  
-`                 `[`HintMenu`](../object/HintMenu.html)  
-`                         `[`TopHintMenu`](../object/TopHintMenu.html)  
-`                 `[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)  
-`                         `[`HintLongTopicItem`](../object/HintLongTopicItem.html)  
-`                         `[`InstructionsMenu`](../object/InstructionsMenu.html)  
-`                 `[`MenuTopicItem`](../object/MenuTopicItem.html)  
-`                         `[`Goal`](../object/Goal.html)  
+[`MenuItem`](../object/MenuItem.html)  
+[`HintMenu`](../object/HintMenu.html)  
+[`TopHintMenu`](../object/TopHintMenu.html)  
+[`MenuLongTopicItem`](../object/MenuLongTopicItem.html)  
+[`HintLongTopicItem`](../object/HintLongTopicItem.html)  
+[`InstructionsMenu`](../object/InstructionsMenu.html)  
+[`MenuTopicItem`](../object/MenuTopicItem.html)  
+[`Goal`](../object/Goal.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,7 +79,7 @@ the + syntax (like "+ MenuItem") to define containment.
 
 </div>
 
-` `[`contents`](#contents)`  `[`menuOrder`](#menuOrder)`  `
+[`contents`](#contents)[`menuOrder`](#menuOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,7 +89,7 @@ the + syntax (like "+ MenuItem") to define containment.
 
 </div>
 
-` `[`addToContents`](#addToContents)`  `[`compareForMenuSort`](#compareForMenuSort)`  `[`execute`](#execute)`  `[`initializeContents`](#initializeContents)`  `[`initializeLocation`](#initializeLocation)`  `
+[`addToContents`](#addToContents)[`compareForMenuSort`](#compareForMenuSort)[`execute`](#execute)[`initializeContents`](#initializeContents)[`initializeLocation`](#initializeLocation)
 
 <span id="_Properties_"></span>
 

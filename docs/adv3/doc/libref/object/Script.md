@@ -54,13 +54,13 @@ state machine.
 </div>
 
 **`Script`**  
-`         `[`EventList`](../object/EventList.html)  
-`                 `[`CyclicEventList`](../object/CyclicEventList.html)  
-`                 `[`ExternalEventList`](../object/ExternalEventList.html)  
-`                 `[`RandomEventList`](../object/RandomEventList.html)  
-`                 `[`ShuffledEventList`](../object/ShuffledEventList.html)  
-`                 `[`StopEventList`](../object/StopEventList.html)  
-`                 `[`SyncEventList`](../object/SyncEventList.html)  
+[`EventList`](../object/EventList.html)  
+[`CyclicEventList`](../object/CyclicEventList.html)  
+[`ExternalEventList`](../object/ExternalEventList.html)  
+[`RandomEventList`](../object/RandomEventList.html)  
+[`ShuffledEventList`](../object/ShuffledEventList.html)  
+[`StopEventList`](../object/StopEventList.html)  
+[`SyncEventList`](../object/SyncEventList.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -77,7 +77,7 @@ state machine.
 
 </div>
 
-` `[`curScriptState`](#curScriptState)`  `
+[`curScriptState`](#curScriptState)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ state machine.
 
 </div>
 
-` `[`doScript`](#doScript)`  `[`getScriptState`](#getScriptState)`  `
+[`doScript`](#doScript)[`getScriptState`](#getScriptState)
 
 <span id="_Properties_"></span>
 

@@ -44,7 +44,7 @@ it's active when its nodeActive property is true.
 </div>
 
 **`ConvNode`**  
-`         `[`TopicGroup`](../object/TopicGroup.html)  
+[`TopicGroup`](../object/TopicGroup.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ it's active when its nodeActive property is true.
 
 </div>
 
-` `[`isActive`](#isActive)`  `
+[`isActive`](#isActive)
 
 Inherited from `TopicGroup` :  
-` `[`active`](../object/TopicGroup.html#active)`  `[`convKeys`](../object/TopicGroup.html#convKeys)`  `[`getActor`](../object/TopicGroup.html#getActor)`  `[`scoreBoost`](../object/TopicGroup.html#scoreBoost)`  `
+[`active`](../object/TopicGroup.html#active)[`convKeys`](../object/TopicGroup.html#convKeys)[`getActor`](../object/TopicGroup.html#getActor)[`scoreBoost`](../object/TopicGroup.html#scoreBoost)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `TopicGroup` :
 
 </div>
 
-` `[`register`](#register)`  `
+[`register`](#register)
 
 Inherited from `TopicGroup` :  
-` `[`addTopic`](../object/TopicGroup.html#addTopic)`  `[`nodeActive`](../object/TopicGroup.html#nodeActive)`  `[`scoreBooster`](../object/TopicGroup.html#scoreBooster)`  `
+[`addTopic`](../object/TopicGroup.html#addTopic)[`nodeActive`](../object/TopicGroup.html#nodeActive)[`scoreBooster`](../object/TopicGroup.html#scoreBooster)
 
 <span id="_Properties_"></span>
 

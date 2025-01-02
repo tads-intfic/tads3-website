@@ -43,9 +43,9 @@ Output stream for web banner windows
 </div>
 
 **`WebWinOutputStream`**  
-`         `[`OutputStream`](../object/OutputStream.html)  
-`                 `[`PreinitObject`](../object/PreinitObject.html)  
-`                         `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`OutputStream`](../object/OutputStream.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,15 +71,15 @@ Output stream for web banner windows
 
 </div>
 
-` `[`win_`](#win_)`  `
+[`win_`](#win_)
 
 Inherited from `OutputStream` :  
-` `[`filterList_`](../object/OutputStream.html#filterList_)`  `[`justDidPara`](../object/OutputStream.html#justDidPara)`  `[`justDidParaSuppressor`](../object/OutputStream.html#justDidParaSuppressor)`  `[`myInputManager`](../object/OutputStream.html#myInputManager)`  `
+[`filterList_`](../object/OutputStream.html#filterList_)[`justDidPara`](../object/OutputStream.html#justDidPara)[`justDidParaSuppressor`](../object/OutputStream.html#justDidParaSuppressor)[`myInputManager`](../object/OutputStream.html#myInputManager)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,15 +89,15 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`execute`](#execute)`  `[`writeFromStream`](#writeFromStream)`  `
+[`construct`](#construct)[`execute`](#execute)[`writeFromStream`](#writeFromStream)
 
 Inherited from `OutputStream` :  
-` `[`addOutputFilter`](../object/OutputStream.html#addOutputFilter)`  `[`addOutputFilterBelow`](../object/OutputStream.html#addOutputFilterBelow)`  `[`applyFilters`](../object/OutputStream.html#applyFilters)`  `[`applyTextFilters`](../object/OutputStream.html#applyTextFilters)`  `[`captureOutput`](../object/OutputStream.html#captureOutput)`  `[`inputLineEnd`](../object/OutputStream.html#inputLineEnd)`  `[`removeOutputFilter`](../object/OutputStream.html#removeOutputFilter)`  `[`watchForOutput`](../object/OutputStream.html#watchForOutput)`  `[`writeToStream`](../object/OutputStream.html#writeToStream)`  `
+[`addOutputFilter`](../object/OutputStream.html#addOutputFilter)[`addOutputFilterBelow`](../object/OutputStream.html#addOutputFilterBelow)[`applyFilters`](../object/OutputStream.html#applyFilters)[`applyTextFilters`](../object/OutputStream.html#applyTextFilters)[`captureOutput`](../object/OutputStream.html#captureOutput)[`inputLineEnd`](../object/OutputStream.html#inputLineEnd)[`removeOutputFilter`](../object/OutputStream.html#removeOutputFilter)[`watchForOutput`](../object/OutputStream.html#watchForOutput)[`writeToStream`](../object/OutputStream.html#writeToStream)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

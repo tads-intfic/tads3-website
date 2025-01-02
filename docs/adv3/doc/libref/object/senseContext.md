@@ -39,9 +39,9 @@ otherwise, we'll pass output through unchanged.
 </div>
 
 **`senseContext`**  
-`         `[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)  
-`                 `[`CaptureFilter`](../object/CaptureFilter.html)  
-`                         `[`OutputFilter`](../object/OutputFilter.html)  
+[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)  
+[`CaptureFilter`](../object/CaptureFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                                 object`  
 <span id="_PropSummary_"></span>
 
@@ -51,14 +51,14 @@ otherwise, we'll pass output through unchanged.
 
 </div>
 
-` `[`cached_`](#cached_)`  `[`isBlocking_`](#isBlocking_)`  `[`sense_`](#sense_)`  `[`source_`](#source_)`  `
+[`cached_`](#cached_)[`isBlocking_`](#isBlocking_)[`sense_`](#sense_)[`source_`](#source_)
 
 Inherited from `SwitchableCaptureFilter` :  
-` `[`isBlocking`](../object/SwitchableCaptureFilter.html#isBlocking)`  `
+[`isBlocking`](../object/SwitchableCaptureFilter.html#isBlocking)
 
-` `
 
-` `
+
+
 
 <span id="_MethodSummary_"></span>
 
@@ -68,14 +68,14 @@ Inherited from `SwitchableCaptureFilter` :
 
 </div>
 
-` `[`isBlocking`](#isBlocking)`  `[`recalcSenseContext`](#recalcSenseContext)`  `[`setSenseContext`](#setSenseContext)`  `[`shouldBlock`](#shouldBlock)`  `[`withSenseContext`](#withSenseContext)`  `
+[`isBlocking`](#isBlocking)[`recalcSenseContext`](#recalcSenseContext)[`setSenseContext`](#setSenseContext)[`shouldBlock`](#shouldBlock)[`withSenseContext`](#withSenseContext)
 
 Inherited from `SwitchableCaptureFilter` :  
-` `[`filterText`](../object/SwitchableCaptureFilter.html#filterText)`  `
+[`filterText`](../object/SwitchableCaptureFilter.html#filterText)
 
-` `
 
-` `
+
+
 
 <span id="_Properties_"></span>
 

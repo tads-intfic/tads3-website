@@ -69,7 +69,7 @@ with REFLECT_BIGNUM defined.
 </div>
 
 **`BigNumber`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -94,9 +94,9 @@ with REFLECT_BIGNUM defined.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -106,10 +106,10 @@ with REFLECT_BIGNUM defined.
 
 </div>
 
-` `[`arccosine`](#arccosine)`  `[`arcsine`](#arcsine)`  `[`arctangent`](#arctangent)`  `[`copySignFrom`](#copySignFrom)`  `[`cosh`](#cosh)`  `[`cosine`](#cosine)`  `[`degreesToRadians`](#degreesToRadians)`  `[`divideBy`](#divideBy)`  `[`equalRound`](#equalRound)`  `[`expE`](#expE)`  `[`formatString`](#formatString)`  `[`getAbs`](#getAbs)`  `[`getCeil`](#getCeil)`  `[`getE`](#getE)`  `[`getFloor`](#getFloor)`  `[`getFraction`](#getFraction)`  `[`getPi`](#getPi)`  `[`getPrecision`](#getPrecision)`  `[`getScale`](#getScale)`  `[`getWhole`](#getWhole)`  `[`isNegative`](#isNegative)`  `[`log10`](#log10)`  `[`logE`](#logE)`  `[`negate`](#negate)`  `[`numType`](#numType)`  `[`radiansToDegrees`](#radiansToDegrees)`  `[`raiseToPower`](#raiseToPower)`  `[`roundToDecimal`](#roundToDecimal)`  `[`scaleTen`](#scaleTen)`  `[`setPrecision`](#setPrecision)`  `[`sine`](#sine)`  `[`sinh`](#sinh)`  `[`sqrt`](#sqrt)`  `[`tangent`](#tangent)`  `[`tanh`](#tanh)`  `[`valToSymbol`](#valToSymbol)`  `
+[`arccosine`](#arccosine)[`arcsine`](#arcsine)[`arctangent`](#arctangent)[`copySignFrom`](#copySignFrom)[`cosh`](#cosh)[`cosine`](#cosine)[`degreesToRadians`](#degreesToRadians)[`divideBy`](#divideBy)[`equalRound`](#equalRound)[`expE`](#expE)[`formatString`](#formatString)[`getAbs`](#getAbs)[`getCeil`](#getCeil)[`getE`](#getE)[`getFloor`](#getFloor)[`getFraction`](#getFraction)[`getPi`](#getPi)[`getPrecision`](#getPrecision)[`getScale`](#getScale)[`getWhole`](#getWhole)[`isNegative`](#isNegative)[`log10`](#log10)[`logE`](#logE)[`negate`](#negate)[`numType`](#numType)[`radiansToDegrees`](#radiansToDegrees)[`raiseToPower`](#raiseToPower)[`roundToDecimal`](#roundToDecimal)[`scaleTen`](#scaleTen)[`setPrecision`](#setPrecision)[`sine`](#sine)[`sinh`](#sinh)[`sqrt`](#sqrt)[`tangent`](#tangent)[`tanh`](#tanh)[`valToSymbol`](#valToSymbol)
 
 Inherited from `Object` :  
-` `[`callInherited`](../object/Object.html#callInherited)`  `[`createIterator`](../object/Object.html#createIterator)`  `[`createLiveIterator`](../object/Object.html#createLiveIterator)`  `[`forEach`](../object/Object.html#forEach)`  `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`mapAll`](../object/Object.html#mapAll)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `
+[`callInherited`](../object/Object.html#callInherited)[`createIterator`](../object/Object.html#createIterator)[`createLiveIterator`](../object/Object.html#createLiveIterator)[`forEach`](../object/Object.html#forEach)[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`mapAll`](../object/Object.html#mapAll)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)
 
 <span id="_Properties_"></span>
 

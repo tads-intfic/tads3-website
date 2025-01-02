@@ -72,7 +72,7 @@ his/her hands become too full to pick up another object.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ his/her hands become too full to pick up another object.
 
 </div>
 
-` `[`affinityFor`](#affinityFor)`  `[`moveAction`](#moveAction)`  `[`suitabilityFor`](#suitabilityFor)`  `[`tryHolding`](#tryHolding)`  `
+[`affinityFor`](#affinityFor)[`moveAction`](#moveAction)[`suitabilityFor`](#suitabilityFor)[`tryHolding`](#tryHolding)
 
 <span id="_Properties_"></span>
 

@@ -56,36 +56,36 @@ disambiguation question.
 </div>
 
 **`AmbigResponseKeeper`**  
-`         `[`DefiniteNounProd`](../object/DefiniteNounProd.html)  
-`                 `[`BasicPossessiveProd`](../object/BasicPossessiveProd.html)  
-`                         `[`ButPossessiveProd`](../object/ButPossessiveProd.html)  
-`                                 `[`exceptNounPhrase(singlePossessive)`](../object/exceptNounPhrase(singlePossessive).html)  
-`                         `[`DisambigPossessiveProd`](../object/DisambigPossessiveProd.html)  
-`                                 `[`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
-`                         `[`PossessiveNounProd`](../object/PossessiveNounProd.html)  
-`                                 `[`qualifiedSingularNounPhrase(possessive)`](../object/qualifiedSingularNounPhrase(possessive).html)  
-`                         `[`PossessivePluralProd`](../object/PossessivePluralProd.html)  
-`                                 `[`explicitDetPluralNounPhrase(possessive)`](../object/explicitDetPluralNounPhrase(possessive).html)  
-`                                 `[`explicitDetPluralOnlyNounPhrase(possessive)`](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
-`                 `[`ContainerNounPhraseProd`](../object/ContainerNounPhraseProd.html)  
-`                         `[`indetPluralNounPhrase(locational)`](../object/indetPluralNounPhrase(locational).html)  
-`                         `[`indetPluralOnlyNounPhrase(locational)`](../object/indetPluralOnlyNounPhrase(locational).html)  
-`                         `[`indetSingularNounPhrase(locational)`](../object/indetSingularNounPhrase(locational).html)  
-`                 `[`PreResolvedAmbigProd`](../object/PreResolvedAmbigProd.html)  
-`                 `[`qualifiedSingularNounPhrase(definite)`](../object/qualifiedSingularNounPhrase(definite).html)  
-`                 `[`VagueContainerNounPhraseProd`](../object/VagueContainerNounPhraseProd.html)  
-`                         `[`AllInContainerNounPhraseProd`](../object/AllInContainerNounPhraseProd.html)  
-`                                 `[`qualifiedPluralNounPhrase(theOnesIn)`](../object/qualifiedPluralNounPhrase(theOnesIn).html)  
-`                         `[`VagueContainerDefiniteNounPhraseProd`](../object/VagueContainerDefiniteNounPhraseProd.html)  
-`                                 `[`qualifiedSingularNounPhrase(theOneIn)`](../object/qualifiedSingularNounPhrase(theOneIn).html)  
-`                         `[`VagueContainerIndefiniteNounPhraseProd`](../object/VagueContainerIndefiniteNounPhraseProd.html)  
-`                                 `[`qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
-`         `[`ExactQuantifiedPluralProd`](../object/ExactQuantifiedPluralProd.html)  
-`                 `[`BothPluralProd`](../object/BothPluralProd.html)  
-`                         `[`qualifiedPluralNounPhrase(both)`](../object/qualifiedPluralNounPhrase(both).html)  
-`                 `[`explicitDetPluralNounPhrase(definiteNumber)`](../object/explicitDetPluralNounPhrase(definiteNumber).html)  
-`                 `[`explicitDetPluralOnlyNounPhrase(definiteNumber)`](../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html)  
-`                 `[`qualifiedPluralNounPhrase(allNum)`](../object/qualifiedPluralNounPhrase(allNum).html)  
+[`DefiniteNounProd`](../object/DefiniteNounProd.html)  
+[`BasicPossessiveProd`](../object/BasicPossessiveProd.html)  
+[`ButPossessiveProd`](../object/ButPossessiveProd.html)  
+[`exceptNounPhrase(singlePossessive)`](../object/exceptNounPhrase(singlePossessive).html)  
+[`DisambigPossessiveProd`](../object/DisambigPossessiveProd.html)  
+[`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
+[`PossessiveNounProd`](../object/PossessiveNounProd.html)  
+[`qualifiedSingularNounPhrase(possessive)`](../object/qualifiedSingularNounPhrase(possessive).html)  
+[`PossessivePluralProd`](../object/PossessivePluralProd.html)  
+[`explicitDetPluralNounPhrase(possessive)`](../object/explicitDetPluralNounPhrase(possessive).html)  
+[`explicitDetPluralOnlyNounPhrase(possessive)`](../object/explicitDetPluralOnlyNounPhrase(possessive).html)  
+[`ContainerNounPhraseProd`](../object/ContainerNounPhraseProd.html)  
+[`indetPluralNounPhrase(locational)`](../object/indetPluralNounPhrase(locational).html)  
+[`indetPluralOnlyNounPhrase(locational)`](../object/indetPluralOnlyNounPhrase(locational).html)  
+[`indetSingularNounPhrase(locational)`](../object/indetSingularNounPhrase(locational).html)  
+[`PreResolvedAmbigProd`](../object/PreResolvedAmbigProd.html)  
+[`qualifiedSingularNounPhrase(definite)`](../object/qualifiedSingularNounPhrase(definite).html)  
+[`VagueContainerNounPhraseProd`](../object/VagueContainerNounPhraseProd.html)  
+[`AllInContainerNounPhraseProd`](../object/AllInContainerNounPhraseProd.html)  
+[`qualifiedPluralNounPhrase(theOnesIn)`](../object/qualifiedPluralNounPhrase(theOnesIn).html)  
+[`VagueContainerDefiniteNounPhraseProd`](../object/VagueContainerDefiniteNounPhraseProd.html)  
+[`qualifiedSingularNounPhrase(theOneIn)`](../object/qualifiedSingularNounPhrase(theOneIn).html)  
+[`VagueContainerIndefiniteNounPhraseProd`](../object/VagueContainerIndefiniteNounPhraseProd.html)  
+[`qualifiedSingularNounPhrase(anyOneIn)`](../object/qualifiedSingularNounPhrase(anyOneIn).html)  
+[`ExactQuantifiedPluralProd`](../object/ExactQuantifiedPluralProd.html)  
+[`BothPluralProd`](../object/BothPluralProd.html)  
+[`qualifiedPluralNounPhrase(both)`](../object/qualifiedPluralNounPhrase(both).html)  
+[`explicitDetPluralNounPhrase(definiteNumber)`](../object/explicitDetPluralNounPhrase(definiteNumber).html)  
+[`explicitDetPluralOnlyNounPhrase(definiteNumber)`](../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html)  
+[`qualifiedPluralNounPhrase(allNum)`](../object/qualifiedPluralNounPhrase(allNum).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -102,7 +102,7 @@ disambiguation question.
 
 </div>
 
-` `[`ambigResponses_`](#ambigResponses_)`  `
+[`ambigResponses_`](#ambigResponses_)
 
 <span id="_MethodSummary_"></span>
 
@@ -112,7 +112,7 @@ disambiguation question.
 
 </div>
 
-` `[`addAmbigResponse`](#addAmbigResponse)`  `[`getAmbigResponses`](#getAmbigResponses)`  `
+[`addAmbigResponse`](#addAmbigResponse)[`getAmbigResponses`](#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

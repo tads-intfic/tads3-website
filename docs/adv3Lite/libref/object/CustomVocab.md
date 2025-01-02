@@ -67,7 +67,7 @@ of the CustomVocab objects defined throughout the game.
 
 </div>
 
-` `[`englishCustomVocab`](../object/englishCustomVocab.html)`  `
+[`englishCustomVocab`](../object/englishCustomVocab.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -76,7 +76,7 @@ of the CustomVocab objects defined throughout the game.
 
 </div>
 
-` `[`irregularPlurals`](#irregularPlurals)`  `[`specialAOrAn`](#specialAOrAn)`  `[`verbParams`](#verbParams)`  `
+[`irregularPlurals`](#irregularPlurals)[`specialAOrAn`](#specialAOrAn)[`verbParams`](#verbParams)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ of the CustomVocab objects defined throughout the game.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

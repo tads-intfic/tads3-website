@@ -42,7 +42,7 @@ accessory).
 </div>
 
 **`AccessoryObject`**  
-`         `[`NounRole`](../object/NounRole.html)  
+[`NounRole`](../object/NounRole.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -52,10 +52,10 @@ accessory).
 
 </div>
 
-` `[`curObjProp`](#curObjProp)`  `[`matchProp`](#matchProp)`  `[`missingReplyProp`](#missingReplyProp)`  `[`name`](#name)`  `[`npListProp`](#npListProp)`  `[`objListProp`](#objListProp)`  `[`objMatchProp`](#objMatchProp)`  `[`objProp`](#objProp)`  `[`order`](#order)`  `
+[`curObjProp`](#curObjProp)[`matchProp`](#matchProp)[`missingReplyProp`](#missingReplyProp)[`name`](#name)[`npListProp`](#npListProp)[`objListProp`](#objListProp)[`objMatchProp`](#objMatchProp)[`objProp`](#objProp)[`order`](#order)
 
 Inherited from `NounRole` :  
-` `[`all`](../object/NounRole.html#all)`  `[`allPredicate`](../object/NounRole.html#allPredicate)`  `[`isPredicate`](../object/NounRole.html#isPredicate)`  `
+[`all`](../object/NounRole.html#all)[`allPredicate`](../object/NounRole.html#allPredicate)[`isPredicate`](../object/NounRole.html#isPredicate)
 
 <span id="_MethodSummary_"></span>
 
@@ -65,10 +65,10 @@ Inherited from `NounRole` :
 
 </div>
 
-` `
+
 
 Inherited from `NounRole` :  
-` `[`construct`](../object/NounRole.html#construct)`  `
+[`construct`](../object/NounRole.html#construct)
 
 <span id="_Properties_"></span>
 

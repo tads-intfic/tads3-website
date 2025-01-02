@@ -46,7 +46,7 @@ Rule to start displaying the input line \[SYSRULES EXTENSION\]
 
 </div>
 
-` `[`priority`](#priority)`  `
+[`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ Rule to start displaying the input line \[SYSRULES EXTENSION\]
 
 </div>
 
-` `[`follow`](#follow)`  `
+[`follow`](#follow)
 
 <span id="_Properties_"></span>
 

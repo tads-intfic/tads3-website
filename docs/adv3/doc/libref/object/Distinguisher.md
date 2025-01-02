@@ -66,7 +66,7 @@ other objects.
 
 </div>
 
-` `[`basicDistinguisher`](../object/basicDistinguisher.html)`  `[`litUnlitDistinguisher`](../object/litUnlitDistinguisher.html)`  `[`locationDistinguisher`](../object/locationDistinguisher.html)`  `[`nullDistinguisher`](../object/nullDistinguisher.html)`  `[`ownershipDistinguisher`](../object/ownershipDistinguisher.html)`  `
+[`basicDistinguisher`](../object/basicDistinguisher.html)[`litUnlitDistinguisher`](../object/litUnlitDistinguisher.html)[`locationDistinguisher`](../object/locationDistinguisher.html)[`nullDistinguisher`](../object/nullDistinguisher.html)[`ownershipDistinguisher`](../object/ownershipDistinguisher.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -75,7 +75,7 @@ other objects.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ other objects.
 
 </div>
 
-` `[`canDistinguish`](#canDistinguish)`  `[`matchName`](#matchName)`  `[`notePrompt`](#notePrompt)`  `[`objInScope`](#objInScope)`  `
+[`canDistinguish`](#canDistinguish)[`matchName`](#matchName)[`notePrompt`](#notePrompt)[`objInScope`](#objInScope)
 
 <span id="_Properties_"></span>
 

@@ -84,17 +84,17 @@ set up a Conversation Node that includes all the TopicEntries whose
 convKeys contain at least one of these keys (e.g. *key1* or *key2* or
 *key3*). This would be equivalent to:
 
-```
+`
       someActor.addPendingKey('key1');
       someActor.addPendingKey('key2');
       someActor.addPendingKey('key3');
-```
+`
 
 Or just:
 
-```
+`
       someActor.pendingKeys = ['key1', 'key2', 'key3'];
-```
+`
 
 <span id="nodeactive"></span>
 
@@ -139,7 +139,7 @@ This should all become clearer with the aid of a few examples.
 You may recall in the previous section we gave an example of a
 QueryTopic that included a question at the end of the NPC's response:
 
-```
+`
     + QueryTopic 'how' 'old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -147,7 +147,7 @@ QueryTopic that included a question at the end of the NPC's response:
           
         askMatchObj = tAge    
     ;
-```
+`
 
 Perhaps the question "Would you like someone asking you about your age?"
 is a purely rhetorical one, but it at least invites the player to
@@ -160,7 +160,7 @@ To implement the node we could simply add a \<.convnode\> tag to the end
 of Bob's response, and then a YesTopic and a NoTopic keyed to the same
 node:
 
-```
+`
     + QueryTopic 'how' 'old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -181,7 +181,7 @@ node:
         <q>Well, there you are then!</q> he declares triumphantly. "
         convKeys = ['age-node']    
     ;
-```
+`
 
 There's nothing magic about the name 'age-node' by the way. We don't
 have to include 'node' in the name just because we're setting up a
@@ -197,7 +197,7 @@ they could be triggered by the player typing YES or NO at any point. To
 restrict them to this particular Conversation Node we need to set their
 isActive property to nodeActive:
 
-```
+`
     + YesTopic
         "<q>Yes, sure, I wouldn't mind,</q> you reply.\b
         <q>Well, I do,</q> he grunts. "
@@ -211,7 +211,7 @@ isActive property to nodeActive:
         convKeys = ['age-node']
         isActive = nodeActive    
     ;
-```
+`
 
 Note that if we had listed several keys in the convKeys property of
 these TopicEntries, they would have been available in those other
@@ -224,14 +224,14 @@ as well. We could achieve that by defining a TellTopic that had
 'age-node' in its convKeys property but didn't set its isActive property
 to nodeActive:
 
-```
+`
     + TellTopic @tYourAge
         "I'm forty-three, you tell him.\b
         Well bully for you! he declares. "
         convKeys = ['age-node']
         autoName = true
     ;
-```
+`
 
 Note also that if you do set isActive to nodeActive, there is nothing to
 stop you adding further conditions to the isActive property
@@ -244,12 +244,12 @@ about your age?" we could make him prompt the player for one until he
 receives it. For this purpose we can define a **NodeContinuationTopic**
 and set its convKeys property to the appropriate node:
 
-```
+`
     + NodeContinuationTopic
         "<q>I thought I asked you a question,</q> Bob reminds you. "
         convKeys = ['age-node']
     ;
-```
+`
 
 There's no need to define the isActive property here, since
 NodeContinuationTopic defines is as nodeActive by default. Note,
@@ -270,7 +270,7 @@ way to do this is to define a DefaultTopic that's only active in the
 node in question, but which blocks attempts to leave the node until a
 satisfactory reply is given. For example:
 
-```
+`
         
     + DefaultAnyTopic
         "<q>Don't try to change the subject; I want to know whether you'd like
@@ -279,7 +279,7 @@ satisfactory reply is given. For example:
         convKeys = ['age-node']
         isActive = nodeActive
     ;
-```
+`
 
 <span id="convstay"></span>
 
@@ -303,7 +303,7 @@ return nil, or blockEndConv, if we want to disallow ending the
 conversation. For example, to prevent the player character from saying
 goodbye while we're at this node we could define:
 
-```
+`
     + NodeEndCheck
         canEndConversation(reason)
         {
@@ -320,7 +320,7 @@ goodbye while we're at this node we could define:
         
         convKeys = ['age-node']
     ;
-```
+`
 
 Once again we don't need to explicitly define the isActive property of
 the NodeEndCheck object since the NodeEndCheck class already defines it
@@ -372,7 +372,7 @@ associated.
 Using a ConvNode object, the Conversation Node illustrated above could
 be defined like this:
 
-```
+`
     + QueryTopic 'how' 'old he is; are you'
         "<q>How old are you?</q> you ask.\b
         <q>None of your damned business,</q> he replies. <q>Would you like someone
@@ -417,7 +417,7 @@ be defined like this:
             return true;
         }    
     ;
-```
+`
 
 <span id="curnode"></span>
 

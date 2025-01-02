@@ -33,7 +33,7 @@ plural, but has the additional requirement of matching an unambiguous
 set of the exact given number ("the five books" means that we expect to
 find exactly five books matching the phrase - no fewer, and no more).
 
-`class `**`ExactQuantifiedPluralProd`**` :   `[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)`   `[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
+`class `**`ExactQuantifiedPluralProd`**` :   `[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)
 
 </div>
 
@@ -46,12 +46,12 @@ find exactly five books matching the phrase - no fewer, and no more).
 </div>
 
 **`ExactQuantifiedPluralProd`**  
-`         `[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)  
-`                 `[`PluralProd`](../object/PluralProd.html)  
-`                         `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                                 `[`BasicProd`](../object/BasicProd.html)  
+[`QuantifiedPluralProd`](../object/QuantifiedPluralProd.html)  
+[`PluralProd`](../object/PluralProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                         object`  
-`         `[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)  
+[`AmbigResponseKeeper`](../object/AmbigResponseKeeper.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -62,11 +62,11 @@ find exactly five books matching the phrase - no fewer, and no more).
 </div>
 
 **`ExactQuantifiedPluralProd`**  
-`         `[`BothPluralProd`](../object/BothPluralProd.html)  
-`                 `[`qualifiedPluralNounPhrase(both)`](../object/qualifiedPluralNounPhrase(both).html)  
-`         `[`explicitDetPluralNounPhrase(definiteNumber)`](../object/explicitDetPluralNounPhrase(definiteNumber).html)  
-`         `[`explicitDetPluralOnlyNounPhrase(definiteNumber)`](../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html)  
-`         `[`qualifiedPluralNounPhrase(allNum)`](../object/qualifiedPluralNounPhrase(allNum).html)  
+[`BothPluralProd`](../object/BothPluralProd.html)  
+[`qualifiedPluralNounPhrase(both)`](../object/qualifiedPluralNounPhrase(both).html)  
+[`explicitDetPluralNounPhrase(definiteNumber)`](../object/explicitDetPluralNounPhrase(definiteNumber).html)  
+[`explicitDetPluralOnlyNounPhrase(definiteNumber)`](../object/explicitDetPluralOnlyNounPhrase(definiteNumber).html)  
+[`qualifiedPluralNounPhrase(allNum)`](../object/qualifiedPluralNounPhrase(allNum).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -83,20 +83,20 @@ find exactly five books matching the phrase - no fewer, and no more).
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `AmbigResponseKeeper` :  
-` `[`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)`  `
+[`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
 
 <span id="_MethodSummary_"></span>
 
@@ -106,22 +106,22 @@ Inherited from `AmbigResponseKeeper` :
 
 </div>
 
-` `[`getVerifyKeepers`](#getVerifyKeepers)`  `[`selectExactCount`](#selectExactCount)`  `
+[`getVerifyKeepers`](#getVerifyKeepers)[`selectExactCount`](#selectExactCount)
 
 Inherited from `QuantifiedPluralProd` :  
-` `[`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity)`  `[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase)`  `[`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)`  `
+[`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity)[`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase)[`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns)
 
 Inherited from `PluralProd` :  
-` `[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)`  `
+[`basicPluralResolveNouns`](../object/PluralProd.html#basicPluralResolveNouns)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `AmbigResponseKeeper` :  
-` `[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)`  `[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)`  `
+[`addAmbigResponse`](../object/AmbigResponseKeeper.html#addAmbigResponse)[`getAmbigResponses`](../object/AmbigResponseKeeper.html#getAmbigResponses)
 
 <span id="_Properties_"></span>
 

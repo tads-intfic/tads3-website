@@ -43,10 +43,10 @@ No pronouns match a noun phrase.
 </div>
 
 **`NoAntecedentError`**  
-`         `[`PronounError`](../object/PronounError.html)  
-`                 `[`ResolutionError`](../object/ResolutionError.html)  
-`                         `[`ParseError`](../object/ParseError.html)  
-`                                 `[`Exception`](../object/Exception.html)  
+[`PronounError`](../object/PronounError.html)  
+[`ResolutionError`](../object/ResolutionError.html)  
+[`ParseError`](../object/ParseError.html)  
+[`Exception`](../object/Exception.html)  
 `                                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -72,19 +72,19 @@ No pronouns match a noun phrase.
 
 </div>
 
-` `
+
 
 Inherited from `PronounError` :  
-` `[`pronoun`](../object/PronounError.html#pronoun)`  `
+[`pronoun`](../object/PronounError.html#pronoun)
 
 Inherited from `ResolutionError` :  
-` `[`np`](../object/ResolutionError.html#np)`  `[`txt`](../object/ResolutionError.html#txt)`  `
+[`np`](../object/ResolutionError.html#np)[`txt`](../object/ResolutionError.html#txt)
 
 Inherited from `ParseError` :  
-` `[`allowOnRespell`](../object/ParseError.html#allowOnRespell)`  `[`curable`](../object/ParseError.html#curable)`  `[`errStage`](../object/ParseError.html#errStage)`  `
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell)[`curable`](../object/ParseError.html#curable)[`errStage`](../object/ParseError.html#errStage)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -94,19 +94,19 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`display`](#display)`  `
+[`display`](#display)
 
 Inherited from `PronounError` :  
-` `[`construct`](../object/PronounError.html#construct)`  `
+[`construct`](../object/PronounError.html#construct)
 
 Inherited from `ResolutionError` :  
-` `[`rankCorrection`](../object/ResolutionError.html#rankCorrection)`  `
+[`rankCorrection`](../object/ResolutionError.html#rankCorrection)
 
 Inherited from `ParseError` :  
-` `[`tryCuring`](../object/ParseError.html#tryCuring)`  `
+[`tryCuring`](../object/ParseError.html#tryCuring)
 
 Inherited from `Exception` :  
-` `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

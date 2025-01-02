@@ -75,10 +75,10 @@ high-priority agenda items.
 </div>
 
 **`AgendaItem`**  
-`         `[`BoredomAgendaItem`](../object/BoredomAgendaItem.html)  
-`         `[`ConvAgendaItem`](../object/ConvAgendaItem.html)  
-`         `[`DelayedAgendaItem`](../object/DelayedAgendaItem.html)  
-`         `[`FollowAgendaItem`](../object/FollowAgendaItem.html)  
+[`BoredomAgendaItem`](../object/BoredomAgendaItem.html)  
+[`ConvAgendaItem`](../object/ConvAgendaItem.html)  
+[`DelayedAgendaItem`](../object/DelayedAgendaItem.html)  
+[`FollowAgendaItem`](../object/FollowAgendaItem.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -95,7 +95,7 @@ high-priority agenda items.
 
 </div>
 
-` `[`agendaOrder`](#agendaOrder)`  `[`calledBy`](#calledBy)`  `[`initiallyActive`](#initiallyActive)`  `[`invokedByActor`](#invokedByActor)`  `[`isDone`](#isDone)`  `[`isReady`](#isReady)`  `[`name`](#name)`  `
+[`agendaOrder`](#agendaOrder)[`calledBy`](#calledBy)[`initiallyActive`](#initiallyActive)[`invokedByActor`](#invokedByActor)[`isDone`](#isDone)[`isReady`](#isReady)[`name`](#name)
 
 <span id="_MethodSummary_"></span>
 
@@ -105,7 +105,7 @@ high-priority agenda items.
 
 </div>
 
-` `[`getActor`](#getActor)`  `[`invokeItem`](#invokeItem)`  `[`invokeItemBase`](#invokeItemBase)`  `[`registerItem`](#registerItem)`  `[`report`](#report)`  `[`resetItem`](#resetItem)`  `
+[`getActor`](#getActor)[`invokeItem`](#invokeItem)[`invokeItemBase`](#invokeItemBase)[`registerItem`](#registerItem)[`report`](#report)[`resetItem`](#resetItem)
 
 <span id="_Properties_"></span>
 

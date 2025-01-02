@@ -43,7 +43,7 @@ An ErrorQuestion is a subclass of Question for curable parsing errors.
 </div>
 
 **`ParseErrorQuestion`**  
-`         `[`Question`](../object/Question.html)  
+[`Question`](../object/Question.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -69,10 +69,10 @@ An ErrorQuestion is a subclass of Question for curable parsing errors.
 
 </div>
 
-` `[`err`](#err)`  `[`priority`](#priority)`  `
+[`err`](#err)[`priority`](#priority)
 
 Inherited from `Question` :  
-` `[`answerTemplate`](../object/Question.html#answerTemplate)`  `
+[`answerTemplate`](../object/Question.html#answerTemplate)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,9 +82,9 @@ Inherited from `Question` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`parseAnswer`](#parseAnswer)`  `
+[`construct`](#construct)[`parseAnswer`](#parseAnswer)
 
-` `
+
 
 <span id="_Properties_"></span>
 

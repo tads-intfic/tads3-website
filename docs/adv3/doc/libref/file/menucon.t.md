@@ -42,7 +42,7 @@ console-mode interpreters.
 
 </div>
 
-` `[`contentsMenuBanner`](../object/contentsMenuBanner.html)`  `[`longTopicBanner`](../object/longTopicBanner.html)`  `[`topMenuBanner`](../object/topMenuBanner.html)`  `
+[`contentsMenuBanner`](../object/contentsMenuBanner.html)[`longTopicBanner`](../object/longTopicBanner.html)[`topMenuBanner`](../object/topMenuBanner.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

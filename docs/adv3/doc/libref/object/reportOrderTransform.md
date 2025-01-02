@@ -39,7 +39,7 @@ main reports, and move them into the appropriate positions.
 </div>
 
 **`reportOrderTransform`**  
-`         `[`TranscriptTransform`](../object/TranscriptTransform.html)  
+[`TranscriptTransform`](../object/TranscriptTransform.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,9 +49,9 @@ main reports, and move them into the appropriate positions.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -61,9 +61,9 @@ main reports, and move them into the appropriate positions.
 
 </div>
 
-` `[`applyTransform`](#applyTransform)`  `
+[`applyTransform`](#applyTransform)
 
-` `
+
 
 <span id="_Properties_"></span>
 

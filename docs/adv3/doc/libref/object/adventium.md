@@ -39,7 +39,7 @@ type of material is opaque to all senses.
 </div>
 
 **`adventium`**  
-`         `[`Material`](../object/Material.html)  
+[`Material`](../object/Material.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,9 +49,9 @@ type of material is opaque to all senses.
 
 </div>
 
-` `[`hearThru`](#hearThru)`  `[`seeThru`](#seeThru)`  `[`smellThru`](#smellThru)`  `[`touchThru`](#touchThru)`  `
+[`hearThru`](#hearThru)[`seeThru`](#seeThru)[`smellThru`](#smellThru)[`touchThru`](#touchThru)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -61,10 +61,10 @@ type of material is opaque to all senses.
 
 </div>
 
-` `
+
 
 Inherited from `Material` :  
-` `[`senseThru`](../object/Material.html#senseThru)`  `
+[`senseThru`](../object/Material.html#senseThru)
 
 <span id="_Properties_"></span>
 

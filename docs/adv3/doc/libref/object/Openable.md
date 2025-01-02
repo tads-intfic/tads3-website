@@ -46,8 +46,8 @@ must-be-open precondition "look in" and "board".
 </div>
 
 **`Openable`**  
-`         `[`BasicOpenable`](../object/BasicOpenable.html)  
-`                 `[`Linkable`](../object/Linkable.html)  
+[`BasicOpenable`](../object/BasicOpenable.html)  
+[`Linkable`](../object/Linkable.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -58,12 +58,12 @@ must-be-open precondition "look in" and "board".
 </div>
 
 **`Openable`**  
-`         `[`Door`](../object/Door.html)  
-`                 `[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
-`         `[`Matchbook`](../object/Matchbook.html)  
-`         `[`OpenableContainer`](../object/OpenableContainer.html)  
-`                 `[`KeyedContainer`](../object/KeyedContainer.html)  
-`                 `[`LockableContainer`](../object/LockableContainer.html)  
+[`Door`](../object/Door.html)  
+[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
+[`Matchbook`](../object/Matchbook.html)  
+[`OpenableContainer`](../object/OpenableContainer.html)  
+[`KeyedContainer`](../object/KeyedContainer.html)  
+[`LockableContainer`](../object/LockableContainer.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -80,12 +80,12 @@ must-be-open precondition "look in" and "board".
 
 </div>
 
-` `[`descContentsLister`](#descContentsLister)`  `[`lockStatusReportable`](#lockStatusReportable)`  `[`openingLister`](#openingLister)`  `
+[`descContentsLister`](#descContentsLister)[`lockStatusReportable`](#lockStatusReportable)[`openingLister`](#openingLister)
 
 Inherited from `BasicOpenable` :  
-` `[`cannotMoveThroughMsg`](../object/BasicOpenable.html#cannotMoveThroughMsg)`  `[`cannotTouchThroughMsg`](../object/BasicOpenable.html#cannotTouchThroughMsg)`  `[`initiallyOpen`](../object/BasicOpenable.html#initiallyOpen)`  `[`isOpen_`](../object/BasicOpenable.html#isOpen_)`  `[`openDesc`](../object/BasicOpenable.html#openDesc)`  `
+[`cannotMoveThroughMsg`](../object/BasicOpenable.html#cannotMoveThroughMsg)[`cannotTouchThroughMsg`](../object/BasicOpenable.html#cannotTouchThroughMsg)[`initiallyOpen`](../object/BasicOpenable.html#initiallyOpen)[`isOpen_`](../object/BasicOpenable.html#isOpen_)[`openDesc`](../object/BasicOpenable.html#openDesc)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -95,13 +95,13 @@ Inherited from `BasicOpenable` :
 
 </div>
 
-` `[`addInteriorReachableCond`](#addInteriorReachableCond)`  `[`dobjFor(Board)`](#dobjFor(Board))`  `[`dobjFor(Close)`](#dobjFor(Close))`  `[`dobjFor(GetOutOf)`](#dobjFor(GetOutOf))`  `[`dobjFor(Lock)`](#dobjFor(Lock))`  `[`dobjFor(LockWith)`](#dobjFor(LockWith))`  `[`dobjFor(LookIn)`](#dobjFor(LookIn))`  `[`dobjFor(Open)`](#dobjFor(Open))`  `[`dobjFor(Search)`](#dobjFor(Search))`  `[`iobjFor(PourInto)`](#iobjFor(PourInto))`  `[`iobjFor(PutIn)`](#iobjFor(PutIn))`  `[`openStatus`](#openStatus)`  `
+[`addInteriorReachableCond`](#addInteriorReachableCond)[`dobjFor(Board)`](#dobjFor(Board))[`dobjFor(Close)`](#dobjFor(Close))[`dobjFor(GetOutOf)`](#dobjFor(GetOutOf))[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(LookIn)`](#dobjFor(LookIn))[`dobjFor(Open)`](#dobjFor(Open))[`dobjFor(Search)`](#dobjFor(Search))[`iobjFor(PourInto)`](#iobjFor(PourInto))[`iobjFor(PutIn)`](#iobjFor(PutIn))[`openStatus`](#openStatus)
 
 Inherited from `BasicOpenable` :  
-` `[`initializeThing`](../object/BasicOpenable.html#initializeThing)`  `[`isOpen`](../object/BasicOpenable.html#isOpen)`  `[`makeOpen`](../object/BasicOpenable.html#makeOpen)`  `[`tryImplicitRemoveObstructor`](../object/BasicOpenable.html#tryImplicitRemoveObstructor)`  `
+[`initializeThing`](../object/BasicOpenable.html#initializeThing)[`isOpen`](../object/BasicOpenable.html#isOpen)[`makeOpen`](../object/BasicOpenable.html#makeOpen)[`tryImplicitRemoveObstructor`](../object/BasicOpenable.html#tryImplicitRemoveObstructor)
 
 Inherited from `Linkable` :  
-` `[`masterObject`](../object/Linkable.html#masterObject)`  `
+[`masterObject`](../object/Linkable.html#masterObject)
 
 <span id="_Properties_"></span>
 

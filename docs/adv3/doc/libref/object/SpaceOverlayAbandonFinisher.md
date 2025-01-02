@@ -70,7 +70,7 @@ afterAction notification and clean up the report order if necessary.
 
 </div>
 
-` `[`marker1`](#marker1)`  `[`marker2`](#marker2)`  `[`origLocation`](#origLocation)`  `
+[`marker1`](#marker1)[`marker2`](#marker2)[`origLocation`](#origLocation)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ afterAction notification and clean up the report order if necessary.
 
 </div>
 
-` `[`afterAction`](#afterAction)`  `[`construct`](#construct)`  `
+[`afterAction`](#afterAction)[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

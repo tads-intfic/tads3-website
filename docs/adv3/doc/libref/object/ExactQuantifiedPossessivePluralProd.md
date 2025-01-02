@@ -52,8 +52,8 @@ Possessive plural with a specific quantity that must be exact
 </div>
 
 **`ExactQuantifiedPossessivePluralProd`**  
-`         `[`explicitDetPluralNounPhrase(possessiveNumber)`](../object/explicitDetPluralNounPhrase(possessiveNumber).html)  
-`         `[`explicitDetPluralOnlyNounPhrase(possessiveNumber)`](../object/explicitDetPluralOnlyNounPhrase(possessiveNumber).html)  
+[`explicitDetPluralNounPhrase(possessiveNumber)`](../object/explicitDetPluralNounPhrase(possessiveNumber).html)  
+[`explicitDetPluralOnlyNounPhrase(possessiveNumber)`](../object/explicitDetPluralOnlyNounPhrase(possessiveNumber).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -70,7 +70,7 @@ Possessive plural with a specific quantity that must be exact
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ Possessive plural with a specific quantity that must be exact
 
 </div>
 
-` `[`resolveMainPhrase`](#resolveMainPhrase)`  `
+[`resolveMainPhrase`](#resolveMainPhrase)
 
 <span id="_Properties_"></span>
 

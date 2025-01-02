@@ -37,9 +37,9 @@ The standard inventory sublisters.
 </div>
 
 **`actorCarryingSublister`**  
-`         `[`InventorySublister`](../object/InventorySublister.html)  
-`                 `[`InventoryLister`](../object/InventoryLister.html)  
-`                         `[`Lister`](../object/Lister.html)  
+[`InventorySublister`](../object/InventorySublister.html)  
+[`InventoryLister`](../object/InventoryLister.html)  
+[`Lister`](../object/Lister.html)  
 `                                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,14 +49,14 @@ The standard inventory sublisters.
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 Inherited from `Lister` :  
-` `[`nextCustomFlag`](../object/Lister.html#nextCustomFlag)`  `
+[`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
 <span id="_MethodSummary_"></span>
 
@@ -66,16 +66,16 @@ Inherited from `Lister` :
 
 </div>
 
-` `
+
 
 Inherited from `InventorySublister` :  
-` `[`showListEmpty`](../object/InventorySublister.html#showListEmpty)`  `[`showListPrefixWide`](../object/InventorySublister.html#showListPrefixWide)`  `[`showListSuffixWide`](../object/InventorySublister.html#showListSuffixWide)`  `[`showSeparateContents`](../object/InventorySublister.html#showSeparateContents)`  `
+[`showListEmpty`](../object/InventorySublister.html#showListEmpty)[`showListPrefixWide`](../object/InventorySublister.html#showListPrefixWide)[`showListSuffixWide`](../object/InventorySublister.html#showListSuffixWide)[`showSeparateContents`](../object/InventorySublister.html#showSeparateContents)
 
 Inherited from `InventoryLister` :  
-` `[`isListed`](../object/InventoryLister.html#isListed)`  `[`showContentsList`](../object/InventoryLister.html#showContentsList)`  `[`showInlineContentsList`](../object/InventoryLister.html#showInlineContentsList)`  `[`showListItem`](../object/InventoryLister.html#showListItem)`  `[`showListItemCounted`](../object/InventoryLister.html#showListItemCounted)`  `
+[`isListed`](../object/InventoryLister.html#isListed)[`showContentsList`](../object/InventoryLister.html#showContentsList)[`showInlineContentsList`](../object/InventoryLister.html#showInlineContentsList)[`showListItem`](../object/InventoryLister.html#showListItem)[`showListItemCounted`](../object/InventoryLister.html#showListItemCounted)
 
 Inherited from `Lister` :  
-` `[`contentsListed`](../object/Lister.html#contentsListed)`  `[`contentsListedSeparately`](../object/Lister.html#contentsListedSeparately)`  `[`getArrangedListCardinality`](../object/Lister.html#getArrangedListCardinality)`  `[`getArrangedListNounPhraseCount`](../object/Lister.html#getArrangedListNounPhraseCount)`  `[`getContents`](../object/Lister.html#getContents)`  `[`getFilteredList`](../object/Lister.html#getFilteredList)`  `[`getListedContents`](../object/Lister.html#getListedContents)`  `[`getListGrouping`](../object/Lister.html#getListGrouping)`  `[`getTopLister`](../object/Lister.html#getTopLister)`  `[`listCardinality`](../object/Lister.html#listCardinality)`  `[`listSepEnd`](../object/Lister.html#listSepEnd)`  `[`listSepMiddle`](../object/Lister.html#listSepMiddle)`  `[`listSepTwo`](../object/Lister.html#listSepTwo)`  `[`listWith`](../object/Lister.html#listWith)`  `[`longListSepEnd`](../object/Lister.html#longListSepEnd)`  `[`longListSepMiddle`](../object/Lister.html#longListSepMiddle)`  `[`longListSepTwo`](../object/Lister.html#longListSepTwo)`  `[`showArrangedList`](../object/Lister.html#showArrangedList)`  `[`showList`](../object/Lister.html#showList)`  `[`showListAll`](../object/Lister.html#showListAll)`  `[`showListContentsPrefixTall`](../object/Lister.html#showListContentsPrefixTall)`  `[`showListIndent`](../object/Lister.html#showListIndent)`  `[`showListPrefixTall`](../object/Lister.html#showListPrefixTall)`  `[`showListSeparator`](../object/Lister.html#showListSeparator)`  `[`showListSimple`](../object/Lister.html#showListSimple)`  `[`showTallListNewline`](../object/Lister.html#showTallListNewline)`  `
+[`contentsListed`](../object/Lister.html#contentsListed)[`contentsListedSeparately`](../object/Lister.html#contentsListedSeparately)[`getArrangedListCardinality`](../object/Lister.html#getArrangedListCardinality)[`getArrangedListNounPhraseCount`](../object/Lister.html#getArrangedListNounPhraseCount)[`getContents`](../object/Lister.html#getContents)[`getFilteredList`](../object/Lister.html#getFilteredList)[`getListedContents`](../object/Lister.html#getListedContents)[`getListGrouping`](../object/Lister.html#getListGrouping)[`getTopLister`](../object/Lister.html#getTopLister)[`listCardinality`](../object/Lister.html#listCardinality)[`listSepEnd`](../object/Lister.html#listSepEnd)[`listSepMiddle`](../object/Lister.html#listSepMiddle)[`listSepTwo`](../object/Lister.html#listSepTwo)[`listWith`](../object/Lister.html#listWith)[`longListSepEnd`](../object/Lister.html#longListSepEnd)[`longListSepMiddle`](../object/Lister.html#longListSepMiddle)[`longListSepTwo`](../object/Lister.html#longListSepTwo)[`showArrangedList`](../object/Lister.html#showArrangedList)[`showList`](../object/Lister.html#showList)[`showListAll`](../object/Lister.html#showListAll)[`showListContentsPrefixTall`](../object/Lister.html#showListContentsPrefixTall)[`showListIndent`](../object/Lister.html#showListIndent)[`showListPrefixTall`](../object/Lister.html#showListPrefixTall)[`showListSeparator`](../object/Lister.html#showListSeparator)[`showListSimple`](../object/Lister.html#showListSimple)[`showTallListNewline`](../object/Lister.html#showTallListNewline)
 
 <span id="_Properties_"></span>
 

@@ -51,7 +51,7 @@ additional text mentioning that a program error occurred (such as
 </div>
 
 **`ProgramException`**  
-`         `[`Exception`](../object/Exception.html)  
+[`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -77,10 +77,10 @@ additional text mentioning that a program error occurred (such as
 
 </div>
 
-` `
+
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,10 +90,10 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`displayException`](#displayException)`  `
+[`construct`](#construct)[`displayException`](#displayException)
 
 Inherited from `Exception` :  
-` `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

@@ -69,7 +69,7 @@ classes.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ classes.
 
 </div>
 
-` `[`notifySightEvent`](#notifySightEvent)`  `
+[`notifySightEvent`](#notifySightEvent)
 
 <span id="_Properties_"></span>
 

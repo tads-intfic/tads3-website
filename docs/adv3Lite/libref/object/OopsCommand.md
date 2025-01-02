@@ -68,7 +68,7 @@ An OopsCommand is a fake Command object for building out an Oops tree.
 
 </div>
 
-` `[`tokens`](#tokens)`  `
+[`tokens`](#tokens)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ An OopsCommand is a fake Command object for building out an Oops tree.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

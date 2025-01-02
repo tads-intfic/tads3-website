@@ -73,7 +73,7 @@ them with an appropriate English name in their prep properties.
 
 </div>
 
-` `[`ExtLocType`](../object/ExtLocType.html)`  `[`IntLocType`](../object/IntLocType.html)`  `
+[`ExtLocType`](../object/ExtLocType.html)[`IntLocType`](../object/IntLocType.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -82,7 +82,7 @@ them with an appropriate English name in their prep properties.
 
 </div>
 
-` `[`intoPrep`](#intoPrep)`  `[`listOrder`](#listOrder)`  `[`prep`](#prep)`  `
+[`intoPrep`](#intoPrep)[`listOrder`](#listOrder)[`prep`](#prep)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,7 +92,7 @@ them with an appropriate English name in their prep properties.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

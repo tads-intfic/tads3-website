@@ -63,7 +63,7 @@ mainDeck: Shipboard, Room // etc
 </div>
 
 **`Shipboard`**  
-`         `[`ShipboardRoom`](../object/ShipboardRoom.html)  
+[`ShipboardRoom`](../object/ShipboardRoom.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -80,7 +80,7 @@ mainDeck: Shipboard, Room // etc
 
 </div>
 
-` `[`isShipboard`](#isShipboard)`  `
+[`isShipboard`](#isShipboard)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,7 +90,7 @@ mainDeck: Shipboard, Room // etc
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

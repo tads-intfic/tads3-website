@@ -54,8 +54,8 @@ object were not already somewhere in the actor's inventory.
 </div>
 
 **`LogicalVerifyResult`**  
-`         `[`VerifyResult`](../object/VerifyResult.html)  
-`                 `[`MessageResult`](../object/MessageResult.html)  
+[`VerifyResult`](../object/VerifyResult.html)  
+[`MessageResult`](../object/MessageResult.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,7 +73,7 @@ object were not already somewhere in the actor's inventory.
 
 </div>
 
-` `[`defaultLogicalVerifyResult`](../object/defaultLogicalVerifyResult.html)`  `
+[`defaultLogicalVerifyResult`](../object/defaultLogicalVerifyResult.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -82,13 +82,13 @@ object were not already somewhere in the actor's inventory.
 
 </div>
 
-` `[`keyVal`](#keyVal)`  `[`likelihood`](#likelihood)`  `[`listOrder`](#listOrder)`  `[`resultRank`](#resultRank)`  `
+[`keyVal`](#keyVal)[`likelihood`](#likelihood)[`listOrder`](#listOrder)[`resultRank`](#resultRank)
 
 Inherited from `VerifyResult` :  
-` `[`allowAction`](../object/VerifyResult.html#allowAction)`  `[`excludePluralMatches`](../object/VerifyResult.html#excludePluralMatches)`  `
+[`allowAction`](../object/VerifyResult.html#allowAction)[`excludePluralMatches`](../object/VerifyResult.html#excludePluralMatches)
 
 Inherited from `MessageResult` :  
-` `[`messageProp_`](../object/MessageResult.html#messageProp_)`  `[`messageText_`](../object/MessageResult.html#messageText_)`  `
+[`messageProp_`](../object/MessageResult.html#messageProp_)[`messageText_`](../object/MessageResult.html#messageText_)
 
 <span id="_MethodSummary_"></span>
 
@@ -98,12 +98,12 @@ Inherited from `MessageResult` :
 
 </div>
 
-` `[`compareTo`](#compareTo)`  `[`construct`](#construct)`  `[`identicalTo`](#identicalTo)`  `[`isWorseThan`](#isWorseThan)`  `[`shouldInsertBefore`](#shouldInsertBefore)`  `
+[`compareTo`](#compareTo)[`construct`](#construct)[`identicalTo`](#identicalTo)[`isWorseThan`](#isWorseThan)[`shouldInsertBefore`](#shouldInsertBefore)
 
-` `
+
 
 Inherited from `MessageResult` :  
-` `[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)`  `[`setMessage`](../object/MessageResult.html#setMessage)`  `[`showMessage`](../object/MessageResult.html#showMessage)`  `
+[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)[`setMessage`](../object/MessageResult.html#setMessage)[`showMessage`](../object/MessageResult.html#showMessage)
 
 <span id="_Properties_"></span>
 

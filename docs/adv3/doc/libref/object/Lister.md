@@ -65,30 +65,30 @@ when something other than the default behavior is needed.
 </div>
 
 **`Lister`**  
-`         `[`BaseContentsLister`](../object/BaseContentsLister.html)  
-`                 `[`BaseRearContentsLister`](../object/BaseRearContentsLister.html)  
-`                 `[`BaseSurfaceContentsLister`](../object/BaseSurfaceContentsLister.html)  
-`                 `[`BaseUndersideContentsLister`](../object/BaseUndersideContentsLister.html)  
-`         `[`BaseThingContentsLister`](../object/BaseThingContentsLister.html)  
-`         `[`ContentsLister`](../object/ContentsLister.html)  
-`                 `[`BaseInlineContentsLister`](../object/BaseInlineContentsLister.html)  
-`         `[`CustomRoomLister`](../object/CustomRoomLister.html)  
-`         `[`DescContentsLister`](../object/DescContentsLister.html)  
-`                 `[`LookWhereContentsLister`](../object/LookWhereContentsLister.html)  
-`         `[`ExitLister`](../object/ExitLister1.html)  
-`         `[`InventoryLister`](../object/InventoryLister.html)  
-`                 `[`DividedInventoryLister`](../object/DividedInventoryLister.html)  
-`                 `[`InventorySublister`](../object/InventorySublister.html)  
-`                 `[`WearingLister`](../object/WearingLister.html)  
-`                         `[`WearingSublister`](../object/WearingSublister.html)  
-`         `[`ParagraphLister`](../object/ParagraphLister.html)  
-`                 `[`SenseLister`](../object/SenseLister.html)  
-`                 `[`SpecialDescContentsLister`](../object/SpecialDescContentsLister.html)  
-`         `[`RemoteRoomLister`](../object/RemoteRoomLister.html)  
-`         `[`SimpleAttachmentLister`](../object/SimpleAttachmentLister.html)  
-`                 `[`MajorAttachmentLister`](../object/MajorAttachmentLister.html)  
-`         `[`SimpleLister`](../object/SimpleLister.html)  
-`         `[`SuggestedTopicLister`](../object/SuggestedTopicLister.html)  
+[`BaseContentsLister`](../object/BaseContentsLister.html)  
+[`BaseRearContentsLister`](../object/BaseRearContentsLister.html)  
+[`BaseSurfaceContentsLister`](../object/BaseSurfaceContentsLister.html)  
+[`BaseUndersideContentsLister`](../object/BaseUndersideContentsLister.html)  
+[`BaseThingContentsLister`](../object/BaseThingContentsLister.html)  
+[`ContentsLister`](../object/ContentsLister.html)  
+[`BaseInlineContentsLister`](../object/BaseInlineContentsLister.html)  
+[`CustomRoomLister`](../object/CustomRoomLister.html)  
+[`DescContentsLister`](../object/DescContentsLister.html)  
+[`LookWhereContentsLister`](../object/LookWhereContentsLister.html)  
+[`ExitLister`](../object/ExitLister1.html)  
+[`InventoryLister`](../object/InventoryLister.html)  
+[`DividedInventoryLister`](../object/DividedInventoryLister.html)  
+[`InventorySublister`](../object/InventorySublister.html)  
+[`WearingLister`](../object/WearingLister.html)  
+[`WearingSublister`](../object/WearingSublister.html)  
+[`ParagraphLister`](../object/ParagraphLister.html)  
+[`SenseLister`](../object/SenseLister.html)  
+[`SpecialDescContentsLister`](../object/SpecialDescContentsLister.html)  
+[`RemoteRoomLister`](../object/RemoteRoomLister.html)  
+[`SimpleAttachmentLister`](../object/SimpleAttachmentLister.html)  
+[`MajorAttachmentLister`](../object/MajorAttachmentLister.html)  
+[`SimpleLister`](../object/SimpleLister.html)  
+[`SuggestedTopicLister`](../object/SuggestedTopicLister.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -97,7 +97,7 @@ when something other than the default behavior is needed.
 
 </div>
 
-` `[`aboardVehicleLister`](../object/aboardVehicleLister.html)`  `[`darkRoomLister`](../object/darkRoomLister.html)`  `[`equivalentStateLister`](../object/equivalentStateLister.html)`  `[`finishOptionsLister`](../object/finishOptionsLister.html)`  `[`fullScoreLister`](../object/fullScoreLister.html)`  `[`otherExitLister`](../object/otherExitLister.html)`  `[`plainLister`](../object/plainLister.html)`  `[`roomLister`](../object/roomLister.html)`  `
+[`aboardVehicleLister`](../object/aboardVehicleLister.html)[`darkRoomLister`](../object/darkRoomLister.html)[`equivalentStateLister`](../object/equivalentStateLister.html)[`finishOptionsLister`](../object/finishOptionsLister.html)[`fullScoreLister`](../object/fullScoreLister.html)[`otherExitLister`](../object/otherExitLister.html)[`plainLister`](../object/plainLister.html)[`roomLister`](../object/roomLister.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -106,7 +106,7 @@ when something other than the default behavior is needed.
 
 </div>
 
-` `[`nextCustomFlag`](#nextCustomFlag)`  `
+[`nextCustomFlag`](#nextCustomFlag)
 
 <span id="_MethodSummary_"></span>
 
@@ -116,7 +116,7 @@ when something other than the default behavior is needed.
 
 </div>
 
-` `[`contentsListed`](#contentsListed)`  `[`contentsListedSeparately`](#contentsListedSeparately)`  `[`getArrangedListCardinality`](#getArrangedListCardinality)`  `[`getArrangedListNounPhraseCount`](#getArrangedListNounPhraseCount)`  `[`getContents`](#getContents)`  `[`getFilteredList`](#getFilteredList)`  `[`getListedContents`](#getListedContents)`  `[`getListGrouping`](#getListGrouping)`  `[`getTopLister`](#getTopLister)`  `[`isListed`](#isListed)`  `[`listCardinality`](#listCardinality)`  `[`listSepEnd`](#listSepEnd)`  `[`listSepMiddle`](#listSepMiddle)`  `[`listSepTwo`](#listSepTwo)`  `[`listWith`](#listWith)`  `[`longListSepEnd`](#longListSepEnd)`  `[`longListSepMiddle`](#longListSepMiddle)`  `[`longListSepTwo`](#longListSepTwo)`  `[`showArrangedList`](#showArrangedList)`  `[`showContentsList`](#showContentsList)`  `[`showInlineContentsList`](#showInlineContentsList)`  `[`showList`](#showList)`  `[`showListAll`](#showListAll)`  `[`showListContentsPrefixTall`](#showListContentsPrefixTall)`  `[`showListEmpty`](#showListEmpty)`  `[`showListIndent`](#showListIndent)`  `[`showListItem`](#showListItem)`  `[`showListItemCounted`](#showListItemCounted)`  `[`showListPrefixTall`](#showListPrefixTall)`  `[`showListPrefixWide`](#showListPrefixWide)`  `[`showListSeparator`](#showListSeparator)`  `[`showListSimple`](#showListSimple)`  `[`showListSuffixWide`](#showListSuffixWide)`  `[`showSeparateContents`](#showSeparateContents)`  `[`showTallListNewline`](#showTallListNewline)`  `
+[`contentsListed`](#contentsListed)[`contentsListedSeparately`](#contentsListedSeparately)[`getArrangedListCardinality`](#getArrangedListCardinality)[`getArrangedListNounPhraseCount`](#getArrangedListNounPhraseCount)[`getContents`](#getContents)[`getFilteredList`](#getFilteredList)[`getListedContents`](#getListedContents)[`getListGrouping`](#getListGrouping)[`getTopLister`](#getTopLister)[`isListed`](#isListed)[`listCardinality`](#listCardinality)[`listSepEnd`](#listSepEnd)[`listSepMiddle`](#listSepMiddle)[`listSepTwo`](#listSepTwo)[`listWith`](#listWith)[`longListSepEnd`](#longListSepEnd)[`longListSepMiddle`](#longListSepMiddle)[`longListSepTwo`](#longListSepTwo)[`showArrangedList`](#showArrangedList)[`showContentsList`](#showContentsList)[`showInlineContentsList`](#showInlineContentsList)[`showList`](#showList)[`showListAll`](#showListAll)[`showListContentsPrefixTall`](#showListContentsPrefixTall)[`showListEmpty`](#showListEmpty)[`showListIndent`](#showListIndent)[`showListItem`](#showListItem)[`showListItemCounted`](#showListItemCounted)[`showListPrefixTall`](#showListPrefixTall)[`showListPrefixWide`](#showListPrefixWide)[`showListSeparator`](#showListSeparator)[`showListSimple`](#showListSimple)[`showListSuffixWide`](#showListSuffixWide)[`showSeparateContents`](#showSeparateContents)[`showTallListNewline`](#showTallListNewline)
 
 <span id="_Properties_"></span>
 

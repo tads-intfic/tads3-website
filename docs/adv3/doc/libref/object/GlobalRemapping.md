@@ -64,8 +64,8 @@ dynamically with 'new'.
 </div>
 
 **`GlobalRemapping`**  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -83,7 +83,7 @@ dynamically with 'new'.
 
 </div>
 
-` `[`giveMeToAskFor`](../object/giveMeToAskFor.html)`  `
+[`giveMeToAskFor`](../object/giveMeToAskFor.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -92,12 +92,12 @@ dynamically with 'new'.
 
 </div>
 
-` `[`allGlobalRemappings`](#allGlobalRemappings)`  `[`listNeedsSorting`](#listNeedsSorting)`  `[`remappingOrder`](#remappingOrder)`  `
+[`allGlobalRemappings`](#allGlobalRemappings)[`listNeedsSorting`](#listNeedsSorting)[`remappingOrder`](#remappingOrder)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -107,12 +107,12 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`execute`](#execute)`  `[`findGlobalRemapping`](#findGlobalRemapping)`  `[`getRemapping`](#getRemapping)`  `[`registerGlobalRemapping`](#registerGlobalRemapping)`  `[`unregisterGlobalRemapping`](#unregisterGlobalRemapping)`  `
+[`construct`](#construct)[`execute`](#execute)[`findGlobalRemapping`](#findGlobalRemapping)[`getRemapping`](#getRemapping)[`registerGlobalRemapping`](#registerGlobalRemapping)[`unregisterGlobalRemapping`](#unregisterGlobalRemapping)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

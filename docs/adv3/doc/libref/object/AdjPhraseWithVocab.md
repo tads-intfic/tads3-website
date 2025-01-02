@@ -45,9 +45,9 @@ adjectives.
 </div>
 
 **`AdjPhraseWithVocab`**  
-`         `[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)  
-`                 `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                         `[`BasicProd`](../object/BasicProd.html)  
+[`NounPhraseWithVocab`](../object/NounPhraseWithVocab.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -58,13 +58,13 @@ adjectives.
 </div>
 
 **`AdjPhraseWithVocab`**  
-`         `[`adjPhrase(adj)`](../object/adjPhrase(adj).html)  
-`         `[`adjWord(adj)`](../object/adjWord(adj).html)  
-`         `[`adjWord(adjAbbr)`](../object/adjWord(adjAbbr).html)  
-`         `[`adjWord(adjApostS)`](../object/adjWord(adjApostS).html)  
-`         `[`literalAdjPhrase(literalAdj)`](../object/literalAdjPhrase(literalAdj).html)  
-`         `[`literalAdjPhrase(number)`](../object/literalAdjPhrase(number).html)  
-`         `[`literalAdjPhrase(string)`](../object/literalAdjPhrase(string).html)  
+[`adjPhrase(adj)`](../object/adjPhrase(adj).html)  
+[`adjWord(adj)`](../object/adjWord(adj).html)  
+[`adjWord(adjAbbr)`](../object/adjWord(adjAbbr).html)  
+[`adjWord(adjApostS)`](../object/adjWord(adjApostS).html)  
+[`literalAdjPhrase(literalAdj)`](../object/literalAdjPhrase(literalAdj).html)  
+[`literalAdjPhrase(number)`](../object/literalAdjPhrase(number).html)  
+[`literalAdjPhrase(string)`](../object/literalAdjPhrase(string).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -81,15 +81,15 @@ adjectives.
 
 </div>
 
-` `[`adjVocabProp`](#adjVocabProp)`  `
+[`adjVocabProp`](#adjVocabProp)
 
-` `
+
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -99,16 +99,16 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`addNounMatchList`](#addNounMatchList)`  `
+[`addNounMatchList`](#addNounMatchList)
 
 Inherited from `NounPhraseWithVocab` :  
-` `[`combineWordMatches`](../object/NounPhraseWithVocab.html#combineWordMatches)`  `[`combineWordMatchItems`](../object/NounPhraseWithVocab.html#combineWordMatchItems)`  `[`dictMatchIsExact`](../object/NounPhraseWithVocab.html#dictMatchIsExact)`  `[`dictMatchIsStronger`](../object/NounPhraseWithVocab.html#dictMatchIsStronger)`  `[`filterDictMatches`](../object/NounPhraseWithVocab.html#filterDictMatches)`  `[`getAdjustedTokens`](../object/NounPhraseWithVocab.html#getAdjustedTokens)`  `[`getVocabMatchList`](../object/NounPhraseWithVocab.html#getVocabMatchList)`  `[`getWordMatches`](../object/NounPhraseWithVocab.html#getWordMatches)`  `[`inScopeMatches`](../object/NounPhraseWithVocab.html#inScopeMatches)`  `[`intersectWordMatches`](../object/NounPhraseWithVocab.html#intersectWordMatches)`  `[`resolveNouns`](../object/NounPhraseWithVocab.html#resolveNouns)`  `[`resolveNounsMatchName`](../object/NounPhraseWithVocab.html#resolveNounsMatchName)`  `
+[`combineWordMatches`](../object/NounPhraseWithVocab.html#combineWordMatches)[`combineWordMatchItems`](../object/NounPhraseWithVocab.html#combineWordMatchItems)[`dictMatchIsExact`](../object/NounPhraseWithVocab.html#dictMatchIsExact)[`dictMatchIsStronger`](../object/NounPhraseWithVocab.html#dictMatchIsStronger)[`filterDictMatches`](../object/NounPhraseWithVocab.html#filterDictMatches)[`getAdjustedTokens`](../object/NounPhraseWithVocab.html#getAdjustedTokens)[`getVocabMatchList`](../object/NounPhraseWithVocab.html#getVocabMatchList)[`getWordMatches`](../object/NounPhraseWithVocab.html#getWordMatches)[`inScopeMatches`](../object/NounPhraseWithVocab.html#inScopeMatches)[`intersectWordMatches`](../object/NounPhraseWithVocab.html#intersectWordMatches)[`resolveNouns`](../object/NounPhraseWithVocab.html#resolveNouns)[`resolveNounsMatchName`](../object/NounPhraseWithVocab.html#resolveNounsMatchName)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

@@ -47,7 +47,7 @@ settings when we start (or RESTART) the game.
 </div>
 
 **`settingsUI`**  
-`         `[`settingsManager`](../object/settingsManager.html)  
+[`settingsManager`](../object/settingsManager.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -57,9 +57,9 @@ settings when we start (or RESTART) the game.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -69,10 +69,10 @@ settings when we start (or RESTART) the game.
 
 </div>
 
-` `[`restoreSettingsMsg`](#restoreSettingsMsg)`  `[`saveSettingsMsg`](#saveSettingsMsg)`  `[`showAll`](#showAll)`  `
+[`restoreSettingsMsg`](#restoreSettingsMsg)[`saveSettingsMsg`](#saveSettingsMsg)[`showAll`](#showAll)
 
 Inherited from `settingsManager` :  
-` `[`restoreSettings`](../object/settingsManager.html#restoreSettings)`  `[`retrieveSettings`](../object/settingsManager.html#retrieveSettings)`  `[`saveSettings`](../object/settingsManager.html#saveSettings)`  `[`storeSettings`](../object/settingsManager.html#storeSettings)`  `
+[`restoreSettings`](../object/settingsManager.html#restoreSettings)[`retrieveSettings`](../object/settingsManager.html#retrieveSettings)[`saveSettings`](../object/settingsManager.html#saveSettings)[`storeSettings`](../object/settingsManager.html#storeSettings)
 
 <span id="_Properties_"></span>
 

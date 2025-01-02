@@ -44,7 +44,7 @@ held.
 </div>
 
 **`objHeld`**  
-`         `[`PreCondition`](../object/PreCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -54,10 +54,10 @@ held.
 
 </div>
 
-` `
+
 
 Inherited from `PreCondition` :  
-` `[`preCondOrder`](../object/PreCondition.html#preCondOrder)`  `
+[`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -67,9 +67,9 @@ Inherited from `PreCondition` :
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `[`verifyPreCondition`](#verifyPreCondition)`  `
+[`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
 
-` `
+
 
 <span id="_Properties_"></span>
 

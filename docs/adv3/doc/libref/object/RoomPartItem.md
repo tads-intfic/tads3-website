@@ -88,7 +88,7 @@ way, but will only be in effect until the object is moved.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -98,7 +98,7 @@ way, but will only be in effect until the object is moved.
 
 </div>
 
-` `[`useSpecialDescInContents`](#useSpecialDescInContents)`  `[`useSpecialDescInRoom`](#useSpecialDescInRoom)`  `[`useSpecialDescInRoomPart`](#useSpecialDescInRoomPart)`  `
+[`useSpecialDescInContents`](#useSpecialDescInContents)[`useSpecialDescInRoom`](#useSpecialDescInRoom)[`useSpecialDescInRoomPart`](#useSpecialDescInRoomPart)
 
 <span id="_Properties_"></span>
 

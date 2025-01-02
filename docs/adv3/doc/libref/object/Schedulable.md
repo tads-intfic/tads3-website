@@ -61,9 +61,9 @@ our constructor to be added to the master list.
 </div>
 
 **`Schedulable`**  
-`         `[`Actor`](../object/Actor.html)  
-`                 `[`UntakeableActor`](../object/UntakeableActor.html)  
-`                         `[`Person`](../object/Person.html)  
+[`Actor`](../object/Actor.html)  
+[`UntakeableActor`](../object/UntakeableActor.html)  
+[`Person`](../object/Person.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ our constructor to be added to the master list.
 
 </div>
 
-` `[`eventManager`](../object/eventManager.html)`  `
+[`eventManager`](../object/eventManager.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -81,7 +81,7 @@ our constructor to be added to the master list.
 
 </div>
 
-` `[`allSchedulables`](#allSchedulables)`  `[`gameClockTime`](#gameClockTime)`  `[`nextRunTime`](#nextRunTime)`  `[`scheduleOrder`](#scheduleOrder)`  `
+[`allSchedulables`](#allSchedulables)[`gameClockTime`](#gameClockTime)[`nextRunTime`](#nextRunTime)[`scheduleOrder`](#scheduleOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,7 +91,7 @@ our constructor to be added to the master list.
 
 </div>
 
-` `[`calcScheduleOrder`](#calcScheduleOrder)`  `[`construct`](#construct)`  `[`execute`](#execute)`  `[`executeTurn`](#executeTurn)`  `[`getNextRunTime`](#getNextRunTime)`  `[`incNextRunTime`](#incNextRunTime)`  `
+[`calcScheduleOrder`](#calcScheduleOrder)[`construct`](#construct)[`execute`](#execute)[`executeTurn`](#executeTurn)[`getNextRunTime`](#getNextRunTime)[`incNextRunTime`](#incNextRunTime)
 
 <span id="_Properties_"></span>
 

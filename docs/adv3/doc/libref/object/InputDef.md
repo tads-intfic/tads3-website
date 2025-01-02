@@ -53,7 +53,7 @@ Keyboard input parameter definition.
 </div>
 
 **`InputDef`**  
-`         `[`BasicInputDef`](../object/BasicInputDef.html)  
+[`BasicInputDef`](../object/BasicInputDef.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -70,7 +70,7 @@ Keyboard input parameter definition.
 
 </div>
 
-` `[`allowRealTime`](#allowRealTime)`  `[`promptFunc`](#promptFunc)`  `
+[`allowRealTime`](#allowRealTime)[`promptFunc`](#promptFunc)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ Keyboard input parameter definition.
 
 </div>
 
-` `[`beginInputFont`](#beginInputFont)`  `[`endInputFont`](#endInputFont)`  `
+[`beginInputFont`](#beginInputFont)[`endInputFont`](#endInputFont)
 
 <span id="_Properties_"></span>
 

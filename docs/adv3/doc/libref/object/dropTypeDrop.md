@@ -39,7 +39,7 @@ singleton instance.
 </div>
 
 **`dropTypeDrop`**  
-`         `[`DropType`](../object/DropType.html)  
+[`DropType`](../object/DropType.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,9 +49,9 @@ singleton instance.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -61,9 +61,9 @@ singleton instance.
 
 </div>
 
-` `[`getReportPrefix`](#getReportPrefix)`  `[`standardReport`](#standardReport)`  `
+[`getReportPrefix`](#getReportPrefix)[`standardReport`](#standardReport)
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -61,7 +61,7 @@ and safer to explictly set the room1 and room2 properties.
 </div>
 
 **`SymConnector`**  
-`         `[`TravelConnector`](../object/TravelConnector.html)  
+[`TravelConnector`](../object/TravelConnector.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -72,10 +72,10 @@ and safer to explictly set the room1 and room2 properties.
 </div>
 
 **`SymConnector`**  
-`         `[`SymPassage`](../object/SymPassage.html)  
-`                 `[`SymDoor`](../object/SymDoor.html)  
-`                 `[`SymPathPassage`](../object/SymPathPassage.html)  
-`                 `[`SymStairway`](../object/SymStairway.html)  
+[`SymPassage`](../object/SymPassage.html)  
+[`SymDoor`](../object/SymDoor.html)  
+[`SymPathPassage`](../object/SymPathPassage.html)  
+[`SymStairway`](../object/SymStairway.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -92,10 +92,10 @@ and safer to explictly set the room1 and room2 properties.
 
 </div>
 
-` `[`destination`](#destination)`  `[`dirName`](#dirName)`  `[`inRoom1`](#inRoom1)`  `[`inRoom2`](#inRoom2)`  `[`isDestinationKnown`](#isDestinationKnown)`  `[`isOpen`](#isOpen)`  `[`room1`](#room1)`  `[`room1Dir`](#room1Dir)`  `[`room2`](#room2)`  `[`room2Dir`](#room2Dir)`  `[`rooms`](#rooms)`  `
+[`destination`](#destination)[`dirName`](#dirName)[`inRoom1`](#inRoom1)[`inRoom2`](#inRoom2)[`isDestinationKnown`](#isDestinationKnown)[`isOpen`](#isOpen)[`room1`](#room1)[`room1Dir`](#room1Dir)[`room2`](#room2)[`room2Dir`](#room2Dir)[`rooms`](#rooms)
 
 Inherited from `TravelConnector` :  
-` `[`isConnectorApparent`](../object/TravelConnector.html#isConnectorApparent)`  `[`isConnectorListed`](../object/TravelConnector.html#isConnectorListed)`  `[`PushTravelVia`](../object/TravelConnector.html#PushTravelVia)`  `[`suppressTravelDescForPushTravel`](../object/TravelConnector.html#suppressTravelDescForPushTravel)`  `[`transmitsLight`](../object/TravelConnector.html#transmitsLight)`  `[`travelBarriers`](../object/TravelConnector.html#travelBarriers)`  `[`traversalTime`](../object/TravelConnector.html#traversalTime)`  `[`traversed`](../object/TravelConnector.html#traversed)`  `[`traversedBy`](../object/TravelConnector.html#traversedBy)`  `
+[`isConnectorApparent`](../object/TravelConnector.html#isConnectorApparent)[`isConnectorListed`](../object/TravelConnector.html#isConnectorListed)[`PushTravelVia`](../object/TravelConnector.html#PushTravelVia)[`suppressTravelDescForPushTravel`](../object/TravelConnector.html#suppressTravelDescForPushTravel)[`transmitsLight`](../object/TravelConnector.html#transmitsLight)[`travelBarriers`](../object/TravelConnector.html#travelBarriers)[`traversalTime`](../object/TravelConnector.html#traversalTime)[`traversed`](../object/TravelConnector.html#traversed)[`traversedBy`](../object/TravelConnector.html#traversedBy)
 
 <span id="_MethodSummary_"></span>
 
@@ -105,10 +105,10 @@ Inherited from `TravelConnector` :
 
 </div>
 
-` `[`byRoom`](#byRoom)`  `[`execTravel`](#execTravel)`  `[`getDestination`](#getDestination)`  `[`initConnector`](#initConnector)`  `
+[`byRoom`](#byRoom)[`execTravel`](#execTravel)[`getDestination`](#getDestination)[`initConnector`](#initConnector)
 
 Inherited from `TravelConnector` :  
-` `[`afterTravelNotifications`](../object/TravelConnector.html#afterTravelNotifications)`  `[`beforeTravelNotifications`](../object/TravelConnector.html#beforeTravelNotifications)`  `[`canTravelerPass`](../object/TravelConnector.html#canTravelerPass)`  `[`checkPushTravel`](../object/TravelConnector.html#checkPushTravel)`  `[`checkTravelBarriers`](../object/TravelConnector.html#checkTravelBarriers)`  `[`dobjFor(GoThrough)`](../object/TravelConnector.html#dobjFor(GoThrough))`  `[`dobjFor(TravelVia)`](../object/TravelConnector.html#dobjFor(TravelVia))`  `[`explainTravelBarrier`](../object/TravelConnector.html#explainTravelBarrier)`  `[`getDepartingDirection`](../object/TravelConnector.html#getDepartingDirection)`  `[`getTraveler`](../object/TravelConnector.html#getTraveler)`  `[`hasBeenTraversedBy`](../object/TravelConnector.html#hasBeenTraversedBy)`  `[`iobjFor(PushTravelThrough)`](../object/TravelConnector.html#iobjFor(PushTravelThrough))`  `[`isConnectorVisible`](../object/TravelConnector.html#isConnectorVisible)`  `[`isDestinationKnown`](../object/TravelConnector.html#isDestinationKnown)`  `[`noteTraversal`](../object/TravelConnector.html#noteTraversal)`  `[`sayActorFollowing`](../object/TravelConnector.html#sayActorFollowing)`  `[`sayDeparting`](../object/TravelConnector.html#sayDeparting)`  `[`sayNoDestination`](../object/TravelConnector.html#sayNoDestination)`  `[`travelDesc`](../object/TravelConnector.html#travelDesc)`  `[`travelVia`](../object/TravelConnector.html#travelVia)`  `[`traversalMsg`](../object/TravelConnector.html#traversalMsg)`  `[`traversalTimeFrom`](../object/TravelConnector.html#traversalTimeFrom)`  `
+[`afterTravelNotifications`](../object/TravelConnector.html#afterTravelNotifications)[`beforeTravelNotifications`](../object/TravelConnector.html#beforeTravelNotifications)[`canTravelerPass`](../object/TravelConnector.html#canTravelerPass)[`checkPushTravel`](../object/TravelConnector.html#checkPushTravel)[`checkTravelBarriers`](../object/TravelConnector.html#checkTravelBarriers)[`dobjFor(GoThrough)`](../object/TravelConnector.html#dobjFor(GoThrough))[`dobjFor(TravelVia)`](../object/TravelConnector.html#dobjFor(TravelVia))[`explainTravelBarrier`](../object/TravelConnector.html#explainTravelBarrier)[`getDepartingDirection`](../object/TravelConnector.html#getDepartingDirection)[`getTraveler`](../object/TravelConnector.html#getTraveler)[`hasBeenTraversedBy`](../object/TravelConnector.html#hasBeenTraversedBy)[`iobjFor(PushTravelThrough)`](../object/TravelConnector.html#iobjFor(PushTravelThrough))[`isConnectorVisible`](../object/TravelConnector.html#isConnectorVisible)[`isDestinationKnown`](../object/TravelConnector.html#isDestinationKnown)[`noteTraversal`](../object/TravelConnector.html#noteTraversal)[`sayActorFollowing`](../object/TravelConnector.html#sayActorFollowing)[`sayDeparting`](../object/TravelConnector.html#sayDeparting)[`sayNoDestination`](../object/TravelConnector.html#sayNoDestination)[`travelDesc`](../object/TravelConnector.html#travelDesc)[`travelVia`](../object/TravelConnector.html#travelVia)[`traversalMsg`](../object/TravelConnector.html#traversalMsg)[`traversalTimeFrom`](../object/TravelConnector.html#traversalTimeFrom)
 
 <span id="_Properties_"></span>
 

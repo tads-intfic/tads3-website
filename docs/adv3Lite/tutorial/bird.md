@@ -33,7 +33,7 @@ that you wouldn't have to worry about it. We might take a quick look at
 it, however, before going on to define the objects that will represent
 the bird and the nest:
 
-```
+`
     + me: Thing 'you;;heidi'   
         isFixed = true    
         proper = true
@@ -41,7 +41,7 @@ the bird and the nest:
         person = 2   
         contType = Carrier    
     ;
-```
+`
 
 Note that the definition starts with a + sign. This indicates that the
 object that's about to be defined is initially located within the
@@ -97,11 +97,11 @@ objects that are rather more typical of the things you'll normally be
 defining in a game, namely the bird and its nest. We'll start with the
 bird, which should look like this:
 
-```
+`
     + bird: Thing 'baby bird;;nestling'
         "Too young to fly, the nestling tweets helplessly. "
     ;
-```
+`
 
 Type this code in immediately after the definition of the forest room,
 so that the bird starts out in the middle of the forest.
@@ -116,12 +116,12 @@ then gone on to define are the `vocab` property
 and the `desc` property. It's exactly the same
 as if we'd written:
 
-```
+`
     + bird: Thing 
         vocab = 'baby bird;;nestling'
         desc = "Too young to fly, the nestling tweets helplessly. "
     ;
-```
+`
 
 But since we're likely to define these two properties on virtually every
 Thing we create in our game, the library template allows us the shortcut
@@ -131,7 +131,7 @@ least, wherever we can). Note, however, that when we use a template, we
 do have to define the properties in the right order. Neither of the
 following definitions would work:
 
-```
+`
     + bird: Thing 
         "Too young to fly, the nestling tweets helplessly. "
     ;
@@ -139,7 +139,7 @@ following definitions would work:
     + bird: Thing  "Too young to fly, the nestling tweets helplessly. "    
         'baby bird;;nestling'
     ;
-```
+`
 
 The first won't work because we've missed out the
 `vocab` property altogether. The second won't
@@ -149,10 +149,10 @@ won't match the template. As it so happens, though, you can define
 `vocab` without `desc`,
 so the following would be legal (though not normally advisable):
 
-```
+`
     + bird: Thing 'baby bird;;nestling'
     ;
-```
+`
 
 But what do the `vocab` and
 `desc` properties actually do? The
@@ -172,10 +172,10 @@ because it actually provides a way of defining several properties at
 once. The format of the `vocab` property in full
 is:
 
-```
+`
        vocab = 'article name; additional adjectives; additional nouns; pronoun'
      
-```
+`
 
 But we don't need to define all these sections if we don't need them
 all. In the case of the bird we've defined the name ('baby bird') and an
@@ -215,13 +215,13 @@ Now let's define the nest. This starts out in the clearing, so you
 should type the following immediately after the definition of the
 `clearing` room:
 
-```
+`
     + nest: Thing 'bird\'s nest; carefully woven; moss twigs'
         "The nest is carefully woven of twigs and moss. "
         
         contType = In    
     ;
-```
+`
 
 Much of this should be starting to become familiar. The programmatic
 name of the nest object is `nest`. Once again,

@@ -73,23 +73,23 @@ before calling this object's execute().
 </div>
 
 **`ModuleExecObject`**  
-`         `[`InitObject`](../object/InitObject.html)  
-`         `[`PostRestoreObject`](../object/PostRestoreObject.html)  
-`         `[`PostUndoObject`](../object/PostUndoObject.html)  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`GlobalRemapping`](../object/GlobalRemapping.html)  
-`                 `[`MessageBuilder`](../object/MessageBuilder.html)  
-`                 `[`MetadataModuleID`](../object/MetadataModuleID.html)  
-`                         `[`GameInfoModuleID`](../object/GameInfoModuleID.html)  
-`                                 `[`GameID`](../object/GameID.html)  
-`                 `[`OutputStream`](../object/OutputStream.html)  
-`                         `[`BannerOutputStream`](../object/BannerOutputStream.html)  
-`                         `[`LogConsole`](../object/LogConsole.html)  
-`                         `[`WebWinOutputStream`](../object/WebWinOutputStream.html)  
-`                 `[`StringPreParser`](../object/StringPreParser.html)  
-`                 `[`TopHintMenu`](../object/TopHintMenu.html)  
-`         `[`PreRestartObject`](../object/PreRestartObject.html)  
-`         `[`PreSaveObject`](../object/PreSaveObject.html)  
+[`InitObject`](../object/InitObject.html)  
+[`PostRestoreObject`](../object/PostRestoreObject.html)  
+[`PostUndoObject`](../object/PostUndoObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`GlobalRemapping`](../object/GlobalRemapping.html)  
+[`MessageBuilder`](../object/MessageBuilder.html)  
+[`MetadataModuleID`](../object/MetadataModuleID.html)  
+[`GameInfoModuleID`](../object/GameInfoModuleID.html)  
+[`GameID`](../object/GameID.html)  
+[`OutputStream`](../object/OutputStream.html)  
+[`BannerOutputStream`](../object/BannerOutputStream.html)  
+[`LogConsole`](../object/LogConsole.html)  
+[`WebWinOutputStream`](../object/WebWinOutputStream.html)  
+[`StringPreParser`](../object/StringPreParser.html)  
+[`TopHintMenu`](../object/TopHintMenu.html)  
+[`PreRestartObject`](../object/PreRestartObject.html)  
+[`PreSaveObject`](../object/PreSaveObject.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -106,7 +106,7 @@ before calling this object's execute().
 
 </div>
 
-` `[`execAfterMe`](#execAfterMe)`  `[`execBeforeMe`](#execBeforeMe)`  `[`hasInitialized_`](#hasInitialized_)`  `[`isDoingExec_`](#isDoingExec_)`  `[`isExecuted_`](#isExecuted_)`  `
+[`execAfterMe`](#execAfterMe)[`execBeforeMe`](#execBeforeMe)[`hasInitialized_`](#hasInitialized_)[`isDoingExec_`](#isDoingExec_)[`isExecuted_`](#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -116,7 +116,7 @@ before calling this object's execute().
 
 </div>
 
-` `[`_execute`](#_execute)`  `[`classExec`](#classExec)`  `[`execute`](#execute)`  `
+[`_execute`](#_execute)[`classExec`](#classExec)[`execute`](#execute)
 
 <span id="_Properties_"></span>
 

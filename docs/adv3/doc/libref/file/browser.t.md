@@ -42,7 +42,7 @@ in the correct i/o module.
 
 </div>
 
-` `[`WebBannerWin`](../object/WebBannerWin.html)`  `[`WebWinOutputStream`](../object/WebWinOutputStream.html)`  `
+[`WebBannerWin`](../object/WebBannerWin.html)[`WebWinOutputStream`](../object/WebWinOutputStream.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -51,7 +51,7 @@ in the correct i/o module.
 
 </div>
 
-` `[`browserGlobals`](../object/browserGlobals.html)`  `[`commandWin`](../object/commandWin.html)`  `[`statuslineBanner`](../object/statuslineBanner.html)`  `
+[`browserGlobals`](../object/browserGlobals.html)[`commandWin`](../object/commandWin.html)[`statuslineBanner`](../object/statuslineBanner.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -60,7 +60,7 @@ in the correct i/o module.
 
 </div>
 
-` `[`aHref`](#aHref)`  `[`aHrefAlt`](#aHrefAlt)`  `[`aioClearScreen`](#aioClearScreen)`  `[`aioInputDialog`](#aioInputDialog)`  `[`aioInputEvent`](#aioInputEvent)`  `[`aioInputFile`](#aioInputFile)`  `[`aioInputLineCancel`](#aioInputLineCancel)`  `[`aioInputLineTimeout`](#aioInputLineTimeout)`  `[`aioLogInputEvent`](#aioLogInputEvent)`  `[`aioMorePrompt`](#aioMorePrompt)`  `[`aioSay`](#aioSay)`  `[`aioSetLogFile`](#aioSetLogFile)`  `[`checkHtmlMode`](#checkHtmlMode)`  `[`evtCharForScript`](#evtCharForScript)`  `[`initDisplay`](#initDisplay)`  `[`initUI`](#initUI)`  `[`readingEventScript`](#readingEventScript)`  `[`readingScript`](#readingScript)`  `[`statusHTML`](#statusHTML)`  `[`terminateUI`](#terminateUI)`  `
+[`aHref`](#aHref)[`aHrefAlt`](#aHrefAlt)[`aioClearScreen`](#aioClearScreen)[`aioInputDialog`](#aioInputDialog)[`aioInputEvent`](#aioInputEvent)[`aioInputFile`](#aioInputFile)[`aioInputLineCancel`](#aioInputLineCancel)[`aioInputLineTimeout`](#aioInputLineTimeout)[`aioLogInputEvent`](#aioLogInputEvent)[`aioMorePrompt`](#aioMorePrompt)[`aioSay`](#aioSay)[`aioSetLogFile`](#aioSetLogFile)[`checkHtmlMode`](#checkHtmlMode)[`evtCharForScript`](#evtCharForScript)[`initDisplay`](#initDisplay)[`initUI`](#initUI)[`readingEventScript`](#readingEventScript)[`readingScript`](#readingScript)[`statusHTML`](#statusHTML)[`terminateUI`](#terminateUI)
 
 <span id="_Functions_"></span>
 

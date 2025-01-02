@@ -50,7 +50,7 @@ the Web UI insetad of the traditional console UI.
 
 </div>
 
-` `[`statuslineBanner`](../object/statuslineBanner1.html)`  `
+[`statuslineBanner`](../object/statuslineBanner1.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -59,7 +59,7 @@ the Web UI insetad of the traditional console UI.
 
 </div>
 
-` `[`aHref`](#aHref)`  `[`aHrefAlt`](#aHrefAlt)`  `[`aioClearScreen`](#aioClearScreen)`  `[`aioInputDialog`](#aioInputDialog)`  `[`aioInputEvent`](#aioInputEvent)`  `[`aioInputFile`](#aioInputFile)`  `[`aioInputLineCancel`](#aioInputLineCancel)`  `[`aioInputLineTimeout`](#aioInputLineTimeout)`  `[`aioMorePrompt`](#aioMorePrompt)`  `[`aioSay`](#aioSay)`  `[`aioSetLogFile`](#aioSetLogFile)`  `[`checkHtmlMode`](#checkHtmlMode)`  `[`initDisplay`](#initDisplay)`  `[`initUI`](#initUI)`  `[`statusHTML`](#statusHTML)`  `[`terminateUI`](#terminateUI)`  `
+[`aHref`](#aHref)[`aHrefAlt`](#aHrefAlt)[`aioClearScreen`](#aioClearScreen)[`aioInputDialog`](#aioInputDialog)[`aioInputEvent`](#aioInputEvent)[`aioInputFile`](#aioInputFile)[`aioInputLineCancel`](#aioInputLineCancel)[`aioInputLineTimeout`](#aioInputLineTimeout)[`aioMorePrompt`](#aioMorePrompt)[`aioSay`](#aioSay)[`aioSetLogFile`](#aioSetLogFile)[`checkHtmlMode`](#checkHtmlMode)[`initDisplay`](#initDisplay)[`initUI`](#initUI)[`statusHTML`](#statusHTML)[`terminateUI`](#terminateUI)
 
 <span id="_Functions_"></span>
 

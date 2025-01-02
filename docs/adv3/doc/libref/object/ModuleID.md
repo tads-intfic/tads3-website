@@ -64,9 +64,9 @@ command's output).
 </div>
 
 **`ModuleID`**  
-`         `[`MetadataModuleID`](../object/MetadataModuleID.html)  
-`                 `[`GameInfoModuleID`](../object/GameInfoModuleID.html)  
-`                         `[`GameID`](../object/GameID.html)  
+[`MetadataModuleID`](../object/MetadataModuleID.html)  
+[`GameInfoModuleID`](../object/GameInfoModuleID.html)  
+[`GameID`](../object/GameID.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -75,7 +75,7 @@ command's output).
 
 </div>
 
-` `[`moduleAdv3`](../object/moduleAdv3.html)`  `
+[`moduleAdv3`](../object/moduleAdv3.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -84,7 +84,7 @@ command's output).
 
 </div>
 
-` `[`byline`](#byline)`  `[`htmlByline`](#htmlByline)`  `[`listingOrder`](#listingOrder)`  `[`name`](#name)`  `[`version`](#version)`  `
+[`byline`](#byline)[`htmlByline`](#htmlByline)[`listingOrder`](#listingOrder)[`name`](#name)[`version`](#version)
 
 <span id="_MethodSummary_"></span>
 
@@ -94,7 +94,7 @@ command's output).
 
 </div>
 
-` `[`getModuleList`](#getModuleList)`  `[`showAbout`](#showAbout)`  `[`showCredit`](#showCredit)`  `[`showVersion`](#showVersion)`  `
+[`getModuleList`](#getModuleList)[`showAbout`](#showAbout)[`showCredit`](#showCredit)[`showVersion`](#showVersion)
 
 <span id="_Properties_"></span>
 

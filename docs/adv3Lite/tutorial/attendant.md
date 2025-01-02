@@ -28,7 +28,7 @@ as a female NPC, and her name, which the player character may or may not
 learn, will be Angela. Once again we'll start by defining the basic
 Actor object:
 
-```
+`
     angela: Actor 'flight attendant; statuesque young; woman angela; her'
         @planeFront
         "She's a statuesque and by no means unattractive young woman. "
@@ -37,7 +37,7 @@ Actor object:
         
         globalParamName = 'angela'
     ;
-```
+`
 
 The one new feature we've introduced here is the **globalParamName**
 property. Because the player character may learn the flight attendant's
@@ -174,7 +174,7 @@ ActorState in question. Like AgendaItems, ActorStates are associated
 with their Actor by being located within them using the + syntax. We can
 thus define Angela's initial ActorState like this:
 
-```
+`
     + angelaGreetingState: ActorState
         isInitState = true
         specialDesc = "{The subj angela} {is} standing just inside the entrance
@@ -210,7 +210,7 @@ thus define Angela's initial ActorState like this:
         
         ticketSeen = nil
     ;
-```
+`
 
 The `specialDesc` defined on this ActorState is
 how the flight attendant will be shown in the room description when the
@@ -228,7 +228,7 @@ Angela's other three ActorStates can be defined in like manner, though
 obviously without defining `isInitState = true`
 on any of them, and without any need for a beforeTravel() method:
 
-```
+`
     + angelaAssistingState: ActorState
         specialDesc = "{The subj angela} {is} standing in the middle of the jetway,
             trying to calm the passengers who have just been forced off the plane. "
@@ -245,7 +245,7 @@ on any of them, and without any need for a beforeTravel() method:
         specialDesc = "{The subj angela} {is} sitting near the front of the plane. "
         stateDesc = "Right now, though, she's looking worried and afraid. "
     ;
-```
+`
 
 Our final task in this chapter is to make sure that the flight attendant
 ends up in the right state (and the right place) at the right time. To
@@ -255,7 +255,7 @@ change an Actor's current ActorState you should always call its
 `whenEnding(`) methods of the takeover scene,
 but we'll once again use a couple of AgendaItems to do the job:
 
-```
+`
     + angelaAssistingAgenda: AgendaItem
         initiallyActive = true
         isReady = (takeover.isHappening)
@@ -280,7 +280,7 @@ but we'll once again use a couple of AgendaItems to do the job:
         }
         
     ;
-```
+`
 
 If you compile and run the game now, you'll find that there's now no way
 for the player character to reach the rear of the plane and trigger the
@@ -295,7 +295,7 @@ soon as the player character is in a position to speak to the actor
 concerned, which in this case will happen as soon as he enters the front
 of the plane:
 
-```
+`
     + angelaTicketAgenda: ConvAgendaItem
         initiallyActive = true
         
@@ -317,7 +317,7 @@ of the plane:
             
         }
     ;
-```
+`
 
 That's fine apart from one thing: if the player character boards the
 plane without the ticket, he won't get a second chance to show it to the
@@ -327,7 +327,7 @@ method of angelaGreetingState reset angelaTicketAgenda (i.e. add it to
 Angela's agendaList again) if the player character leaves the plane when
 Angela hasn't seen the ticket:
 
-```
+`
     + angelaGreetingState: ActorState
         isInitState = true
         specialDesc = "{The subj angela} {is} standing just inside the entrance
@@ -367,7 +367,7 @@ Angela hasn't seen the ticket:
         
         ticketSeen = nil
     ;
-```
+`
 
 And that's where we'll leave Angela and her ActorStates for now,
 although we'll find further uses for them in the next chapter when we

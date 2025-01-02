@@ -26,7 +26,7 @@ The description of the Airport game calls for a ticket found by picking
 up a newspaper in the snack bar. We've already implemented the
 newspaper; now it's time to implement the ticket:
 
-```
+`
     ticket: Thing 'plane ticket'
         "It's a ticket for flight TI 179 to Buenos Aires. "
         
@@ -35,7 +35,7 @@ newspaper; now it's time to implement the ticket:
         useSpecialDesc = (location == getOutermostRoom)
 
     ;
-```
+`
 
 That was the easy bit. The only new thing here is the use of the
 useSpecialDesc property to determine when the specialDesc is used. We
@@ -59,7 +59,7 @@ defining the items elsewhere in our code with no starting location (i.e.
 a starting location of nil), as with the ticket above. We can thus put
 the ticket in the hiddenIn property of the newspaper:
 
-```
+`
     ++ newspaper: Thing 'newspaper; narcosia; paper herald'
         "It's a copy of the latest edition of the <i>Narcosia Herald</i>. "
         
@@ -70,7 +70,7 @@ the ticket in the hiddenIn property of the newspaper:
         
         hiddenIn = [ticket]
     ;
-```
+`
 
 In the same way we could use `hiddenUnder` or
 `hiddenBehind` to hide items under or behind
@@ -89,7 +89,7 @@ this is the method that reveals anything hidden under or behind the
 object, but since we're not hiding anything under or behind the
 newspaper we can override this method to do just what we need:
 
-```
+`
     ++ newspaper: Thing 'newspaper; narcosia; paper herald'
         "It's a copy of the latest edition of the <i>Narcosia Herald</i>. "
         
@@ -115,7 +115,7 @@ newspaper we can override this method to do just what we need:
         
         lookInMsg = (readDesc)
     ;
-```
+`
 
 We first check that there's something still hidden in the newspaper
 before doing anything else, since we only want the ticket to fall out of
@@ -127,7 +127,7 @@ of `revealOnMove()` will work perfectly well for
 this game, if you wanted a more generalized version of the routine that
 worked whatever was hidden in the newspaper you could write:
 
-```
+`
     ++ newspaper: Thing 'newspaper; narcosia; paper herald'
         "It's a copy of the latest edition of the <i>Narcosia Herald</i>. "
         
@@ -151,7 +151,7 @@ worked whatever was hidden in the newspaper you could write:
         
         lookInMsg = (readDesc)
     ;
-```
+`
 
 Here, `\<\<list of hiddenIn\>\>` provides a list
 of everything that's hidden in the newspaper, while the

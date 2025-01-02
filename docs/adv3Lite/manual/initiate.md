@@ -69,7 +69,7 @@ NPC who's following the player character around make a comment on each
 room (or some of the rooms) they arrive in, by keying the InitiateTopic
 to the location. This might be done like this:
 
-```
+`
     + bobAccompanying: ActorState
         specialDesc = "Bob is by your side. "
         
@@ -83,7 +83,7 @@ to the location. This might be done like this:
     ++ InitiateTopic @kitchen
         "<q>Ah!</q> says Bob. <q>Any chance of something to eat?</q> "   
     ;
-```
+`
 
 Note that such a scheme does not commit you to supplying an
 InitiateTopic for every room; if initiateTopic(obj) doesn't find a match
@@ -148,7 +148,7 @@ want to (for example, if the NPC asks a question).
 So, for example, we could have an NPC ask a question about the player
 characters's study once both of them are in the study.
 
-```
+`
     + ActorHelloTopic
         "George coughs to get your attention. ";
     ;
@@ -176,7 +176,7 @@ characters's study once both of them are in the study.
         convKeys = 'study-node'
         isActive = nodeActive
     ;
-```
+`
 
 Note how we use the value of greetingDisplayed to avoid repeating
 'George' if the greeting from the ActorHelloTopic has been displayed. If
@@ -284,11 +284,11 @@ assuming that there was no specific TopicEntry to deal with it).
 
 A DefaultAgendaTopic might therefore look something like this:
 
-```
+`
     + DefaultAgendaTopic
         "<q>Let's talk about something else,</q> he suggests. <.topics>"
     ;
-```
+`
 
 We don't have to do it precisely this way, and if we manage the
 DefaultAgendaTopic's agendaList properly (see below) the player should
@@ -328,7 +328,7 @@ doesn't allow for, so your response needs to read as a deliberate
 attempt by the NPC to change the subject. Typically, this might look
 like this:
 
-```
+`
     + fireAgenda: ConvAgendaItem
         invokeItem()
         {
@@ -338,7 +338,7 @@ like this:
             to know<<end>> is what you're going to do about this fire.</q> ";
         }
     ;
-```
+`
 
 In fact, it could get even more complicated, since in principle this
 ConvAgendaItem could be invoked in any of the three ways noted above (to
@@ -347,7 +347,7 @@ conversation, or as a DefaultAgendaTopic response), and we may need to
 customize our text to that it works well with all three. Potentially,
 this could lead to something like this:
 
-```
+`
     + fireAgenda: ConvAgendaItem
         invokeItem()
         {
@@ -375,7 +375,7 @@ this could lead to something like this:
             
         }
     ;
-```
+`
 
 This certainly takes a bit of work (and maybe some ingenuity) to get
 right, but it's worth it if you want your NPCs to be lifelike; moreover
@@ -387,7 +387,7 @@ use the macro-constants **InitiateConversationReason** (1),
 of the numbers 1, 2 and 3 in code like the above to make it a bit more
 readable, for example:
 
-```
+`
     + fireAgenda: ConvAgendaItem
         invokeItem()
         {
@@ -415,7 +415,7 @@ readable, for example:
             
         }
     ;
-```
+`
 
   
 <span id="addingagenda"></span>
@@ -498,7 +498,7 @@ situation where this may be the case is where you want an NPC to say
 something in response to a particular player character action, which is
 most conveniently triggered from an afterAction method, such as:
 
-```
+`
     martha: Actor 'Martha;;woman;her' @lounge
     ;
 
@@ -513,7 +513,7 @@ most conveniently triggered from an afterAction method, such as:
               your aunt admonishes you sternly. ');
        }
     ;
-```
+`
 
 The advantage of using `actorSay()` here instead
 of just using a double-quoted string to display the text is that this

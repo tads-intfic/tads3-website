@@ -54,11 +54,11 @@ represented by a subclass of this class.
 </div>
 
 **`PreCondition`**  
-`         `[`ObjectPreCondition`](../object/ObjectPreCondition.html)  
-`         `[`ObjOpenCondition`](../object/ObjOpenCondition.html)  
-`         `[`SameLocationCondition`](../object/SameLocationCondition.html)  
-`         `[`TouchObjCondition`](../object/TouchObjCondition.html)  
-`         `[`TravelerDirectlyInRoom`](../object/TravelerDirectlyInRoom.html)  
+[`ObjectPreCondition`](../object/ObjectPreCondition.html)  
+[`ObjOpenCondition`](../object/ObjOpenCondition.html)  
+[`SameLocationCondition`](../object/SameLocationCondition.html)  
+[`TouchObjCondition`](../object/TouchObjCondition.html)  
+[`TravelerDirectlyInRoom`](../object/TravelerDirectlyInRoom.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -67,7 +67,7 @@ represented by a subclass of this class.
 
 </div>
 
-` `[`actorDirectlyInRoom`](../object/actorDirectlyInRoom.html)`  `[`actorReadyToEnterNestedRoom`](../object/actorReadyToEnterNestedRoom.html)`  `[`actorStanding`](../object/actorStanding.html)`  `[`actorTravelReady`](../object/actorTravelReady.html)`  `[`canTalkToObj`](../object/canTalkToObj.html)`  `[`dropDestinationIsOuterRoom`](../object/dropDestinationIsOuterRoom.html)`  `[`nearbyAttachableCond`](../object/nearbyAttachableCond.html)`  `[`objAudible`](../object/objAudible.html)`  `[`objBurning`](../object/objBurning.html)`  `[`objClosed`](../object/objClosed.html)`  `[`objEmpty`](../object/objEmpty.html)`  `[`objHeld`](../object/objHeld.html)`  `[`objNotAttached`](../object/objNotAttached.html)`  `[`objNotWorn`](../object/objNotWorn.html)`  `[`objSmellable`](../object/objSmellable.html)`  `[`objUnlocked`](../object/objUnlocked.html)`  `[`objVisible`](../object/objVisible.html)`  `[`roomToHoldObj`](../object/roomToHoldObj.html)`  `
+[`actorDirectlyInRoom`](../object/actorDirectlyInRoom.html)[`actorReadyToEnterNestedRoom`](../object/actorReadyToEnterNestedRoom.html)[`actorStanding`](../object/actorStanding.html)[`actorTravelReady`](../object/actorTravelReady.html)[`canTalkToObj`](../object/canTalkToObj.html)[`dropDestinationIsOuterRoom`](../object/dropDestinationIsOuterRoom.html)[`nearbyAttachableCond`](../object/nearbyAttachableCond.html)[`objAudible`](../object/objAudible.html)[`objBurning`](../object/objBurning.html)[`objClosed`](../object/objClosed.html)[`objEmpty`](../object/objEmpty.html)[`objHeld`](../object/objHeld.html)[`objNotAttached`](../object/objNotAttached.html)[`objNotWorn`](../object/objNotWorn.html)[`objSmellable`](../object/objSmellable.html)[`objUnlocked`](../object/objUnlocked.html)[`objVisible`](../object/objVisible.html)[`roomToHoldObj`](../object/roomToHoldObj.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -76,7 +76,7 @@ represented by a subclass of this class.
 
 </div>
 
-` `[`preCondOrder`](#preCondOrder)`  `
+[`preCondOrder`](#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,7 +86,7 @@ represented by a subclass of this class.
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `[`verifyPreCondition`](#verifyPreCondition)`  `
+[`checkPreCondition`](#checkPreCondition)[`verifyPreCondition`](#verifyPreCondition)
 
 <span id="_Properties_"></span>
 

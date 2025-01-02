@@ -70,7 +70,7 @@ it ranks by our selection criteria.
 
 </div>
 
-` `[`editDist`](#editDist)`  `[`ranking`](#ranking)`  `[`replCnt`](#replCnt)`  `[`tokenList`](#tokenList)`  `[`wordIdx`](#wordIdx)`  `
+[`editDist`](#editDist)[`ranking`](#ranking)[`replCnt`](#replCnt)[`tokenList`](#tokenList)[`wordIdx`](#wordIdx)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ it ranks by our selection criteria.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

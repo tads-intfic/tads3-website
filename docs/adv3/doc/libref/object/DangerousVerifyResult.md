@@ -46,8 +46,8 @@ obvious to the player that the action is dangerous.
 </div>
 
 **`DangerousVerifyResult`**  
-`         `[`VerifyResult`](../object/VerifyResult.html)  
-`                 `[`MessageResult`](../object/MessageResult.html)  
+[`VerifyResult`](../object/VerifyResult.html)  
+[`MessageResult`](../object/MessageResult.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,13 +73,13 @@ obvious to the player that the action is dangerous.
 
 </div>
 
-` `[`allowImplicit`](#allowImplicit)`  `[`isDangerous`](#isDangerous)`  `[`resultRank`](#resultRank)`  `
+[`allowImplicit`](#allowImplicit)[`isDangerous`](#isDangerous)[`resultRank`](#resultRank)
 
 Inherited from `VerifyResult` :  
-` `[`allowAction`](../object/VerifyResult.html#allowAction)`  `[`excludePluralMatches`](../object/VerifyResult.html#excludePluralMatches)`  `
+[`allowAction`](../object/VerifyResult.html#allowAction)[`excludePluralMatches`](../object/VerifyResult.html#excludePluralMatches)
 
 Inherited from `MessageResult` :  
-` `[`messageProp_`](../object/MessageResult.html#messageProp_)`  `[`messageText_`](../object/MessageResult.html#messageText_)`  `
+[`messageProp_`](../object/MessageResult.html#messageProp_)[`messageText_`](../object/MessageResult.html#messageText_)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,13 +89,13 @@ Inherited from `MessageResult` :
 
 </div>
 
-` `
+
 
 Inherited from `VerifyResult` :  
-` `[`compareTo`](../object/VerifyResult.html#compareTo)`  `[`identicalTo`](../object/VerifyResult.html#identicalTo)`  `[`isWorseThan`](../object/VerifyResult.html#isWorseThan)`  `[`shouldInsertBefore`](../object/VerifyResult.html#shouldInsertBefore)`  `
+[`compareTo`](../object/VerifyResult.html#compareTo)[`identicalTo`](../object/VerifyResult.html#identicalTo)[`isWorseThan`](../object/VerifyResult.html#isWorseThan)[`shouldInsertBefore`](../object/VerifyResult.html#shouldInsertBefore)
 
 Inherited from `MessageResult` :  
-` `[`construct`](../object/MessageResult.html#construct)`  `[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)`  `[`setMessage`](../object/MessageResult.html#setMessage)`  `[`showMessage`](../object/MessageResult.html#showMessage)`  `
+[`construct`](../object/MessageResult.html#construct)[`resolveMessageText`](../object/MessageResult.html#resolveMessageText)[`setMessage`](../object/MessageResult.html#setMessage)[`showMessage`](../object/MessageResult.html#showMessage)
 
 <span id="_Properties_"></span>
 

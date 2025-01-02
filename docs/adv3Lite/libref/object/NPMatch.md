@@ -68,7 +68,7 @@ NPMatch is an object that describes one object matching a noun phrase.
 
 </div>
 
-` `[`flags`](#flags)`  `[`match`](#match)`  `[`name`](#name)`  `[`np`](#np)`  `[`obj`](#obj)`  `[`score`](#score)`  `[`strength`](#strength)`  `
+[`flags`](#flags)[`match`](#match)[`name`](#name)[`np`](#np)[`obj`](#obj)[`score`](#score)[`strength`](#strength)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ NPMatch is an object that describes one object matching a noun phrase.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

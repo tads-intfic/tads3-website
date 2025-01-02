@@ -69,7 +69,7 @@ given grammar.
 
 </div>
 
-` `[`cmd`](#cmd)`  `[`cmdLst`](#cmdLst)`  `[`curable`](#curable)`  `
+[`cmd`](#cmd)[`cmdLst`](#cmdLst)[`curable`](#curable)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ given grammar.
 
 </div>
 
-` `[`acceptAny`](#acceptAny)`  `[`acceptCurable`](#acceptCurable)`  `[`construct`](#construct)`  `[`getBestCmd`](#getBestCmd)`  `[`getResErr`](#getResErr)`  `[`length`](#length)`  `
+[`acceptAny`](#acceptAny)[`acceptCurable`](#acceptCurable)[`construct`](#construct)[`getBestCmd`](#getBestCmd)[`getResErr`](#getResErr)[`length`](#length)
 
 <span id="_Properties_"></span>
 

@@ -57,7 +57,7 @@ customize it for local conventions.
 </div>
 
 **`typographicalOutputFilter`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -67,9 +67,9 @@ customize it for local conventions.
 
 </div>
 
-` `[`abbreviations`](#abbreviations)`  `[`abbrevPat`](#abbrevPat)`  `[`eosPattern`](#eosPattern)`  `
+[`abbreviations`](#abbreviations)[`abbrevPat`](#abbrevPat)[`eosPattern`](#eosPattern)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -79,9 +79,9 @@ customize it for local conventions.
 
 </div>
 
-` `[`filterText`](#filterText)`  `
+[`filterText`](#filterText)
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -39,7 +39,7 @@ could be overridden if we wanted to display something fancier.
 </div>
 
 **`tipStyleTag`**  
-`         `[`StyleTag`](../object/StyleTag.html)  
+[`StyleTag`](../object/StyleTag.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -49,10 +49,10 @@ could be overridden if we wanted to display something fancier.
 
 </div>
 
-` `[`closeText`](#closeText)`  `[`openText`](#openText)`  `
+[`closeText`](#closeText)[`openText`](#openText)
 
 Inherited from `StyleTag` :  
-` `[`tagName`](../object/StyleTag.html#tagName)`  `
+[`tagName`](../object/StyleTag.html#tagName)
 
 <span id="_MethodSummary_"></span>
 
@@ -62,9 +62,9 @@ Inherited from `StyleTag` :
 
 </div>
 
-` `[`execute`](#execute)`  `
+[`execute`](#execute)
 
-` `
+
 
 <span id="_Properties_"></span>
 

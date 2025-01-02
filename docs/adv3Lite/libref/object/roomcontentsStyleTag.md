@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`roomcontentsStyleTag`**  
-`         `[`StyleTag`](../object/StyleTag.html)  
+[`StyleTag`](../object/StyleTag.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `StyleTag` :  
-` `[`closeText`](../object/StyleTag.html#closeText)`  `[`openText`](../object/StyleTag.html#openText)`  `[`tagName`](../object/StyleTag.html#tagName)`  `
+[`closeText`](../object/StyleTag.html#closeText)[`openText`](../object/StyleTag.html#openText)[`tagName`](../object/StyleTag.html#tagName)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,9 +60,9 @@ Inherited from `StyleTag` :
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_Properties_"></span>
 

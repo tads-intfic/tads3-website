@@ -37,7 +37,7 @@ The main adv3Lite library ID.
 </div>
 
 **`moduleAdv3Lite`**  
-`         `[`ModuleID`](../object/ModuleID.html)  
+[`ModuleID`](../object/ModuleID.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ The main adv3Lite library ID.
 
 </div>
 
-` `[`byline`](#byline)`  `[`htmlByline`](#htmlByline)`  `[`listingOrder`](#listingOrder)`  `[`listingOrder`](#listingOrder)`  `[`name`](#name)`  `[`version`](#version)`  `
+[`byline`](#byline)[`htmlByline`](#htmlByline)[`listingOrder`](#listingOrder)[`listingOrder`](#listingOrder)[`name`](#name)[`version`](#version)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -59,10 +59,10 @@ The main adv3Lite library ID.
 
 </div>
 
-` `[`showVersion`](#showVersion)`  `
+[`showVersion`](#showVersion)
 
 Inherited from `ModuleID` :  
-` `[`getModuleList`](../object/ModuleID.html#getModuleList)`  `[`showAbout`](../object/ModuleID.html#showAbout)`  `[`showCredit`](../object/ModuleID.html#showCredit)`  `[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)`  `
+[`getModuleList`](../object/ModuleID.html#getModuleList)[`showAbout`](../object/ModuleID.html#showAbout)[`showCredit`](../object/ModuleID.html#showCredit)[`showVersionMsg`](../object/ModuleID.html#showVersionMsg)
 
 <span id="_Properties_"></span>
 

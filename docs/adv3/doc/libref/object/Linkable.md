@@ -69,36 +69,36 @@ in one side designated as the master.
 </div>
 
 **`Linkable`**  
-`         `[`BasicOpenable`](../object/BasicOpenable.html)  
-`                 `[`BasicDoor`](../object/BasicDoor.html)  
-`                         `[`Door`](../object/Door.html)  
-`                                 `[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
-`                         `[`SecretDoor`](../object/SecretDoor.html)  
-`                                 `[`HiddenDoor`](../object/HiddenDoor.html)  
-`                 `[`Openable`](../object/Openable.html)  
-`                         `[`Door`](../object/Door.html)  
-`                                 `[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
-`                         `[`Matchbook`](../object/Matchbook.html)  
-`                         `[`OpenableContainer`](../object/OpenableContainer.html)  
-`                                 `[`KeyedContainer`](../object/KeyedContainer.html)  
-`                                 `[`LockableContainer`](../object/LockableContainer.html)  
-`         `[`Lockable`](../object/Lockable.html)  
-`                 `[`IndirectLockable`](../object/IndirectLockable.html)  
-`                 `[`LockableContainer`](../object/LockableContainer.html)  
-`                 `[`LockableWithKey`](../object/LockableWithKey.html)  
-`                         `[`KeyedContainer`](../object/KeyedContainer.html)  
-`         `[`Passage`](../object/Passage.html)  
-`                 `[`Stairway`](../object/Stairway.html)  
-`                         `[`StairwayDown`](../object/StairwayDown.html)  
-`                         `[`StairwayUp`](../object/StairwayUp.html)  
-`                 `[`ThroughPassage`](../object/ThroughPassage.html)  
-`                         `[`BasicDoor`](../object/BasicDoor.html)  
-`                                 `[`Door`](../object/Door.html)  
-`                                         `[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
-`                                 `[`SecretDoor`](../object/SecretDoor.html)  
-`                                         `[`HiddenDoor`](../object/HiddenDoor.html)  
-`                         `[`ExitOnlyPassage`](../object/ExitOnlyPassage.html)  
-`                         `[`PathPassage`](../object/PathPassage.html)  
+[`BasicOpenable`](../object/BasicOpenable.html)  
+[`BasicDoor`](../object/BasicDoor.html)  
+[`Door`](../object/Door.html)  
+[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
+[`SecretDoor`](../object/SecretDoor.html)  
+[`HiddenDoor`](../object/HiddenDoor.html)  
+[`Openable`](../object/Openable.html)  
+[`Door`](../object/Door.html)  
+[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
+[`Matchbook`](../object/Matchbook.html)  
+[`OpenableContainer`](../object/OpenableContainer.html)  
+[`KeyedContainer`](../object/KeyedContainer.html)  
+[`LockableContainer`](../object/LockableContainer.html)  
+[`Lockable`](../object/Lockable.html)  
+[`IndirectLockable`](../object/IndirectLockable.html)  
+[`LockableContainer`](../object/LockableContainer.html)  
+[`LockableWithKey`](../object/LockableWithKey.html)  
+[`KeyedContainer`](../object/KeyedContainer.html)  
+[`Passage`](../object/Passage.html)  
+[`Stairway`](../object/Stairway.html)  
+[`StairwayDown`](../object/StairwayDown.html)  
+[`StairwayUp`](../object/StairwayUp.html)  
+[`ThroughPassage`](../object/ThroughPassage.html)  
+[`BasicDoor`](../object/BasicDoor.html)  
+[`Door`](../object/Door.html)  
+[`AutoClosingDoor`](../object/AutoClosingDoor.html)  
+[`SecretDoor`](../object/SecretDoor.html)  
+[`HiddenDoor`](../object/HiddenDoor.html)  
+[`ExitOnlyPassage`](../object/ExitOnlyPassage.html)  
+[`PathPassage`](../object/PathPassage.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -115,7 +115,7 @@ in one side designated as the master.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -125,7 +125,7 @@ in one side designated as the master.
 
 </div>
 
-` `[`initializeThing`](#initializeThing)`  `[`masterObject`](#masterObject)`  `
+[`initializeThing`](#initializeThing)[`masterObject`](#masterObject)
 
 <span id="_Properties_"></span>
 

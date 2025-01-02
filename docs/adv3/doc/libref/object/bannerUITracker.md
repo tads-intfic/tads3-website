@@ -48,7 +48,7 @@ interpreter's user interface is not part of the persistence mechanism.
 
 </div>
 
-` `[`activeBanners_`](#activeBanners_)`  `
+[`activeBanners_`](#activeBanners_)
 
 <span id="_MethodSummary_"></span>
 
@@ -58,7 +58,7 @@ interpreter's user interface is not part of the persistence mechanism.
 
 </div>
 
-` `[`addBanner`](#addBanner)`  `[`getTracker`](#getTracker)`  `[`orderMatches`](#orderMatches)`  `[`removeBanner`](#removeBanner)`  `[`skipDescendants`](#skipDescendants)`  `
+[`addBanner`](#addBanner)[`getTracker`](#getTracker)[`orderMatches`](#orderMatches)[`removeBanner`](#removeBanner)[`skipDescendants`](#skipDescendants)
 
 <span id="_Properties_"></span>
 

@@ -47,7 +47,7 @@ on the player's input.
 
 </div>
 
-` `[`dict`](#dict)`  `
+[`dict`](#dict)
 
 <span id="_MethodSummary_"></span>
 
@@ -57,7 +57,7 @@ on the player's input.
 
 </div>
 
-` `[`checkSpacing`](#checkSpacing)`  `[`correct`](#correct)`  `[`correctPairSpacing`](#correctPairSpacing)`  `[`findUnknownWord`](#findUnknownWord)`  `[`getCandidates`](#getCandidates)`  `[`isWordDefined`](#isWordDefined)`  `
+[`checkSpacing`](#checkSpacing)[`correct`](#correct)[`correctPairSpacing`](#correctPairSpacing)[`findUnknownWord`](#findUnknownWord)[`getCandidates`](#getCandidates)[`isWordDefined`](#isWordDefined)
 
 <span id="_Properties_"></span>
 

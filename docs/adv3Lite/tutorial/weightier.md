@@ -34,11 +34,11 @@ might not be the best way to do things.
 To illustrate the problem, try adding another small object to the
 `cave` location:
 
-```
+`
     + pebble: Thing 'tiny pebble; smooth round'
         "It's just a tiny, round pebble, almost perfectly smooth. "
     ;
-```
+`
 
 Now compile and run the game again. You'll find that putting the tiny
 pebble on the pedestal works just as well in avoiding the trap as using
@@ -62,7 +62,7 @@ weight by default, but it's easy enough to modify Thing so it does.
 Here's a first attempt (which you could add right at the end of your
 existing code):
 
-```
+`
     modify Thing
         weight = 1
         
@@ -75,7 +75,7 @@ existing code):
             return totalWeight;
         }
     ;
-```
+`
 
 This adds a new `weight` property to the Thing
 class and defines the default weight of every object as 1 (the unit can
@@ -91,7 +91,7 @@ to implement this, but it will be more instructive for the sake of this
 tutorial to do it from scratch; besides adv3Lite extensions are beyond
 the scope of this tutorial).
 
-```
+`
     ++ goldSkull: Thing 'gold skull;; head'
         "It's the shape and size of a human skull, but made of solid gold; it must
         be worth a fortune. "
@@ -104,13 +104,13 @@ the scope of this tutorial).
         
         weight = 10
     ;
-```
+`
 
 The next step is to arrange for the trap to be sprung when the total
 weight of objects resting on the pedestal is less than the weight of the
 skull:
 
-```
+`
     + pedestal: Fixture, Surface 'stone pedestal; smooth'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -129,7 +129,7 @@ skull:
             }
         }
     ;
-```
+`
 
 Note how we specify this. The total weight of objects resting on top of
 the pedestal just before *obj* is removed is given by the new
@@ -203,14 +203,14 @@ spotted. To demonstrate what it is, we'll introduce another object into
 the game, a knapsack worn by the player character. We can define it like
 this:
 
-```
+`
     ++ knapsack: Wearable, Container 'knapsack; trusty old worn; bag sack'
         "Your trusty old knapsack may be getting a bit worn, but it's accompanied
         you on so many adventures you wouldn't be without it. "
         
         wornBy = me
     ;
-```
+`
 
 We could have defined the knapsack as a Thing with
 `isWearable = true` and
@@ -241,7 +241,7 @@ items in its contents, plus the weight of the items *they* contain, and
 so on all the way down the chain, plus the weight of the original
 object. Just a couple of small changes should fix it:
 
-```
+`
     modify Thing
         weight = 1
         
@@ -256,7 +256,7 @@ object. Just a couple of small changes should fix it:
         
         getWeight = weight + getWeightWithin()
     ;
-```
+`
 
 At first sight this may look a little odd, since
 `getWeightWithin()` now calls itself as part of
@@ -287,7 +287,7 @@ to use the `getWeight` property of the object
 being removed rather than just its `weight`
 property:
 
-```
+`
     + pedestal: Fixture, Surface 'stone pedestal; smooth'
         "The smooth stone pedestal is artfully positioned to catch the sunlight at
         just this time of day. "
@@ -306,7 +306,7 @@ property:
             }
         }
     ;
-```
+`
 
 If you compile and run the game again, you should find it runs as
 expected.
@@ -329,7 +329,7 @@ that the skull will be knocked off the pedestal if the object thrown at
 it is at least half its weight, then if we want the rock-throwing
 solution to succeed, we might write:
 
-```
+`
     ++ goldSkull: Thing 'gold skull;; head'
         "It's the shape and size of a human skull, but made of solid gold; it must
         be worth a fortune. "
@@ -354,13 +354,13 @@ solution to succeed, we might write:
             }
         }
     ;
-```
+`
 
 If, on the other hand, we don't want this solution to work (perhaps the
 cave isn't big enough to allow the player character to stand far enough
 away to avoid the trap), we can use the slightly simpler:
 
-```
+`
     ++ goldSkull: Thing 'gold skull;; head'
         "It's the shape and size of a human skull, but made of solid gold; it must
         be worth a fortune. "
@@ -377,7 +377,7 @@ away to avoid the trap), we can use the slightly simpler:
             }
         }
     ;
-```
+`
 
 Okay, so let's take a closer look at what's going on here. The command
 THROW ROCK AT SKULL consists of a verb (throw), two nouns (rock and

@@ -66,7 +66,7 @@ rememember to call the inherited method.
 A **Dial** is simply a Settable that responds to TURN WHATEVER TO VALUE
 in the same way as SET WHATEVER TO VALUE. For example:
 
-```
+`
     + Dial 'dial'
         "It can be set to 'off', 'slow' or 'fast'; it's currently set to
         <<curSetting>>. "
@@ -75,7 +75,7 @@ in the same way as SET WHATEVER TO VALUE. For example:
         
         validSettings = ['off', 'slow', 'fast']
     ;
-```
+`
 
 A **NumberedDial** is a Dial that can be turned to any (integer)
 numerical setting between **minSetting** and **maxSetting**. Note that
@@ -84,7 +84,7 @@ curSetting is still a single-quoted string (representing a number). For
 example to define a dial that can be set to any number between 1 and 50
 and starts out set to 2 you might do this:
 
-```
+`
     + NumberedDial 'dial'
         "It can be set to any number between 1 and 50; it's currently set to
         <<curSetting>>. "
@@ -93,7 +93,7 @@ and starts out set to 2 you might do this:
         minSetting = 1
         maxSetting = 50    
     ;
-```
+`
 
 By default, a NumberedDial can only be set to integer settings, but if
 the **allowDecimal** property is set to true then any number within the
@@ -163,7 +163,7 @@ a light source into a bag of holding when the player character is in a
 dark room. To prevent this we can make the bag of holding's affinity for
 light sources zero, for example:
 
-```
+`
     knapsack: BagOfHolding, Wearable, OpenableContainer 'knapsack; brown canvas large'
         "It's a large, brown knapsack made of canvas. "
         
@@ -172,7 +172,7 @@ light sources zero, for example:
             return obj.isLit ? 0 : inherited(obj);
         }
     ;
-```
+`
 
 
 

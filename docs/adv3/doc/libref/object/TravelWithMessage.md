@@ -59,10 +59,10 @@ TravelConnector-derived superclass.
 </div>
 
 **`TravelWithMessage`**  
-`         `[`TravelMessage`](../object/TravelMessage.html)  
-`                 `[`DeadEndConnector`](../object/DeadEndConnector.html)  
-`                 `[`NoTravelMessage`](../object/NoTravelMessage.html)  
-`                         `[`FakeConnector`](../object/FakeConnector.html)  
+[`TravelMessage`](../object/TravelMessage.html)  
+[`DeadEndConnector`](../object/DeadEndConnector.html)  
+[`NoTravelMessage`](../object/NoTravelMessage.html)  
+[`FakeConnector`](../object/FakeConnector.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,7 +79,7 @@ TravelConnector-derived superclass.
 
 </div>
 
-` `[`npcTravelDesc`](#npcTravelDesc)`  `
+[`npcTravelDesc`](#npcTravelDesc)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,7 +89,7 @@ TravelConnector-derived superclass.
 
 </div>
 
-` `[`noteTraversal`](#noteTraversal)`  `[`showTravelDesc`](#showTravelDesc)`  `[`travelDesc`](#travelDesc)`  `
+[`noteTraversal`](#noteTraversal)[`showTravelDesc`](#showTravelDesc)[`travelDesc`](#travelDesc)
 
 <span id="_Properties_"></span>
 

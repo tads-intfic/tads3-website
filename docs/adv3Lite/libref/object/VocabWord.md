@@ -69,7 +69,7 @@ words.
 
 </div>
 
-` `[`posFlags`](#posFlags)`  `[`strengthFlags`](#strengthFlags)`  `[`wordStr`](#wordStr)`  `
+` [`posFlags`](#posFlags)  [`strengthFlags`](#strengthFlags)  [`wordStr`](#wordStr)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ words.
 
 </div>
 
-` `[`construct`](#construct)`  `
+` [`construct`](#construct)  `
 
 <span id="_Properties_"></span>
 

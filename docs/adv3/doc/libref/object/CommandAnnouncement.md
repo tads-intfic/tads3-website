@@ -44,7 +44,7 @@ an action's results.
 </div>
 
 **`CommandAnnouncement`**  
-`         `[`CommandReport`](../object/CommandReport.html)  
+[`CommandReport`](../object/CommandReport.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,12 +55,12 @@ an action's results.
 </div>
 
 **`CommandAnnouncement`**  
-`         `[`AmbigObjectAnnouncement`](../object/AmbigObjectAnnouncement.html)  
-`         `[`CommandSepAnnouncement`](../object/CommandSepAnnouncement.html)  
-`         `[`DefaultObjectAnnouncement`](../object/DefaultObjectAnnouncement.html)  
-`         `[`ImplicitActionAnnouncement`](../object/ImplicitActionAnnouncement.html)  
-`         `[`MultiObjectAnnouncement`](../object/MultiObjectAnnouncement.html)  
-`         `[`RemappedActionAnnouncement`](../object/RemappedActionAnnouncement.html)  
+[`AmbigObjectAnnouncement`](../object/AmbigObjectAnnouncement.html)  
+[`CommandSepAnnouncement`](../object/CommandSepAnnouncement.html)  
+[`DefaultObjectAnnouncement`](../object/DefaultObjectAnnouncement.html)  
+[`ImplicitActionAnnouncement`](../object/ImplicitActionAnnouncement.html)  
+[`MultiObjectAnnouncement`](../object/MultiObjectAnnouncement.html)  
+[`RemappedActionAnnouncement`](../object/RemappedActionAnnouncement.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -77,10 +77,10 @@ an action's results.
 
 </div>
 
-` `[`messageProp_`](#messageProp_)`  `[`messageText_`](#messageText_)`  `
+[`messageProp_`](#messageProp_)[`messageText_`](#messageText_)
 
 Inherited from `CommandReport` :  
-` `[`action_`](../object/CommandReport.html#action_)`  `[`isFailure`](../object/CommandReport.html#isFailure)`  `[`isQuestion`](../object/CommandReport.html#isQuestion)`  `[`iter_`](../object/CommandReport.html#iter_)`  `
+[`action_`](../object/CommandReport.html#action_)[`isFailure`](../object/CommandReport.html#isFailure)[`isQuestion`](../object/CommandReport.html#isQuestion)[`iter_`](../object/CommandReport.html#iter_)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,10 +90,10 @@ Inherited from `CommandReport` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`getMessageText`](#getMessageText)`  `[`showMessage`](#showMessage)`  `
+[`construct`](#construct)[`getMessageText`](#getMessageText)[`showMessage`](#showMessage)
 
 Inherited from `CommandReport` :  
-` `[`getAction`](../object/CommandReport.html#getAction)`  `[`isActionImplicit`](../object/CommandReport.html#isActionImplicit)`  `[`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn)`  `[`isPartOf`](../object/CommandReport.html#isPartOf)`  `[`setAction`](../object/CommandReport.html#setAction)`  `
+[`getAction`](../object/CommandReport.html#getAction)[`isActionImplicit`](../object/CommandReport.html#isActionImplicit)[`isActionNestedIn`](../object/CommandReport.html#isActionNestedIn)[`isPartOf`](../object/CommandReport.html#isPartOf)[`setAction`](../object/CommandReport.html#setAction)
 
 <span id="_Properties_"></span>
 

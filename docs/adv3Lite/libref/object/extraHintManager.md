@@ -39,8 +39,8 @@ to be displayed.
 </div>
 
 **`extraHintManager`**  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,13 +50,13 @@ to be displayed.
 
 </div>
 
-` `[`activated`](#activated)`  `[`contents`](#contents)`  `[`daemonID`](#daemonID)`  `
+[`activated`](#activated)[`contents`](#contents)[`daemonID`](#daemonID)
 
 Inherited from `PreinitObject` :  
-` `[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)`  `[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)`  `
+[`execBeforeMe`](../object/PreinitObject.html#execBeforeMe)[`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -66,12 +66,12 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`activate`](#activate)`  `[`addToContents`](#addToContents)`  `[`cmdStr`](#cmdStr)`  `[`deactivate`](#deactivate)`  `[`execute`](#execute)`  `[`explainExtraHints`](#explainExtraHints)`  `[`extraHintsExist`](#extraHintsExist)`  `[`hintDaemon`](#hintDaemon)`  `[`removeFromContents`](#removeFromContents)`  `
+[`activate`](#activate)[`addToContents`](#addToContents)[`cmdStr`](#cmdStr)[`deactivate`](#deactivate)[`execute`](#execute)[`explainExtraHints`](#explainExtraHints)[`extraHintsExist`](#extraHintsExist)[`hintDaemon`](#hintDaemon)[`removeFromContents`](#removeFromContents)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

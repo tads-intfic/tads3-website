@@ -62,7 +62,7 @@ event queue; the subclasses must define the specifics of event timing.
 
 </div>
 
-` `[`eventManager`](../object/eventManager.html)`  `[`realTimeManager`](../object/realTimeManager.html)`  `
+[`eventManager`](../object/eventManager.html)[`realTimeManager`](../object/realTimeManager.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -71,7 +71,7 @@ event queue; the subclasses must define the specifics of event timing.
 
 </div>
 
-` `[`events_`](#events_)`  `
+[`events_`](#events_)
 
 <span id="_MethodSummary_"></span>
 
@@ -81,7 +81,7 @@ event queue; the subclasses must define the specifics of event timing.
 
 </div>
 
-` `[`addEvent`](#addEvent)`  `[`removeCurrentEvent`](#removeCurrentEvent)`  `[`removeEvent`](#removeEvent)`  `[`removeMatchingEvents`](#removeMatchingEvents)`  `
+[`addEvent`](#addEvent)[`removeCurrentEvent`](#removeCurrentEvent)[`removeEvent`](#removeEvent)[`removeMatchingEvents`](#removeMatchingEvents)
 
 <span id="_Properties_"></span>
 

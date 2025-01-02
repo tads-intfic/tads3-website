@@ -38,8 +38,8 @@ direct object
 </div>
 
 **`sameLocationAsDobj`**  
-`         `[`SameLocationCondition`](../object/SameLocationCondition.html)  
-`                 `[`PreCondition`](../object/PreCondition.html)  
+[`SameLocationCondition`](../object/SameLocationCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,12 +49,12 @@ direct object
 
 </div>
 
-` `[`sourceObj`](#sourceObj)`  `
+[`sourceObj`](#sourceObj)
 
-` `
+
 
 Inherited from `PreCondition` :  
-` `[`preCondOrder`](../object/PreCondition.html#preCondOrder)`  `
+[`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -64,13 +64,13 @@ Inherited from `PreCondition` :
 
 </div>
 
-` `
+
 
 Inherited from `SameLocationCondition` :  
-` `[`checkPreCondition`](../object/SameLocationCondition.html#checkPreCondition)`  `[`construct`](../object/SameLocationCondition.html#construct)`  `
+[`checkPreCondition`](../object/SameLocationCondition.html#checkPreCondition)[`construct`](../object/SameLocationCondition.html#construct)
 
 Inherited from `PreCondition` :  
-` `[`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)`  `
+[`verifyPreCondition`](../object/PreCondition.html#verifyPreCondition)
 
 <span id="_Properties_"></span>
 

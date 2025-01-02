@@ -44,8 +44,8 @@ EmptyNounPhraseProd, but can be used where literal phrases are required.
 </div>
 
 **`EmptyLiteralPhraseProd`**  
-`         `[`LiteralProd`](../object/LiteralProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`LiteralProd`](../object/LiteralProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -56,7 +56,7 @@ EmptyNounPhraseProd, but can be used where literal phrases are required.
 </div>
 
 **`EmptyLiteralPhraseProd`**  
-`         `[`literalPhrase(empty)`](../object/literalPhrase(empty).html)  
+[`literalPhrase(empty)`](../object/literalPhrase(empty).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -73,12 +73,12 @@ EmptyNounPhraseProd, but can be used where literal phrases are required.
 
 </div>
 
-` `[`newText`](#newText)`  `
+[`newText`](#newText)
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -88,12 +88,12 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`getLiteralText`](#getLiteralText)`  `[`getTentativeLiteralText`](#getTentativeLiteralText)`  `[`isEmptyPhrase`](#isEmptyPhrase)`  `
+[`getLiteralText`](#getLiteralText)[`getTentativeLiteralText`](#getTentativeLiteralText)[`isEmptyPhrase`](#isEmptyPhrase)
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

@@ -92,7 +92,7 @@ game.
 
 </div>
 
-` `[`InstructionsAction`](../object/InstructionsAction.html)`  `[`predicate(instructions)`](../object/predicate(instructions).html)`  `
+[`InstructionsAction`](../object/InstructionsAction.html)[`predicate(instructions)`](../object/predicate(instructions).html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">

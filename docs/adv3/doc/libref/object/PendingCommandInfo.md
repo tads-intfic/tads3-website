@@ -55,9 +55,9 @@ executed.
 </div>
 
 **`PendingCommandInfo`**  
-`         `[`PendingCommandAction`](../object/PendingCommandAction.html)  
-`         `[`PendingCommandMarker`](../object/PendingCommandMarker.html)  
-`         `[`PendingCommandToks`](../object/PendingCommandToks.html)  
+[`PendingCommandAction`](../object/PendingCommandAction.html)  
+[`PendingCommandMarker`](../object/PendingCommandMarker.html)  
+[`PendingCommandToks`](../object/PendingCommandToks.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,7 +74,7 @@ executed.
 
 </div>
 
-` `[`hasCommand`](#hasCommand)`  `[`issuer_`](#issuer_)`  `[`startOfSentence_`](#startOfSentence_)`  `
+[`hasCommand`](#hasCommand)[`issuer_`](#issuer_)[`startOfSentence_`](#startOfSentence_)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,7 +84,7 @@ executed.
 
 </div>
 
-` `[`construct`](#construct)`  `[`executePending`](#executePending)`  `
+[`construct`](#construct)[`executePending`](#executePending)
 
 <span id="_Properties_"></span>
 

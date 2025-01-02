@@ -69,7 +69,7 @@ object is able to reach out and touch another object.
 
 </div>
 
-` `[`canTouch`](#canTouch)`  `[`touchPath`](#touchPath)`  `
+[`canTouch`](#canTouch)[`touchPath`](#touchPath)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ object is able to reach out and touch another object.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

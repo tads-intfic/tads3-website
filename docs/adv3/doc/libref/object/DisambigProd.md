@@ -43,7 +43,7 @@ Basic disambiguation production class
 </div>
 
 **`DisambigProd`**  
-`         `[`BasicProd`](../object/BasicProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,22 +54,22 @@ Basic disambiguation production class
 </div>
 
 **`DisambigProd`**  
-`         `[`disambigList(list)`](../object/disambigList(list).html)  
-`         `[`disambigList(single)`](../object/disambigList(single).html)  
-`         `[`DisambigOrdProd`](../object/DisambigOrdProd.html)  
-`                 `[`disambigListItem(ordinal)`](../object/disambigListItem(ordinal).html)  
-`                 `[`disambigOrdinalList(head)`](../object/disambigOrdinalList(head).html)  
-`                 `[`disambigOrdinalList(tail)`](../object/disambigOrdinalList(tail).html)  
-`         `[`disambigPhrase(all)`](../object/disambigPhrase(all).html)  
-`         `[`disambigPhrase(any)`](../object/disambigPhrase(any).html)  
-`         `[`disambigPhrase(both)`](../object/disambigPhrase(both).html)  
-`         `[`disambigPhrase(list)`](../object/disambigPhrase(list).html)  
-`         `[`disambigPhrase(ordinalList)`](../object/disambigPhrase(ordinalList).html)  
-`         `[`DisambigPossessiveProd`](../object/DisambigPossessiveProd.html)  
-`                 `[`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
-`         `[`DisambigVocabProd`](../object/DisambigVocabProd.html)  
-`                 `[`disambigListItem(noun)`](../object/disambigListItem(noun).html)  
-`                 `[`disambigListItem(plural)`](../object/disambigListItem(plural).html)  
+[`disambigList(list)`](../object/disambigList(list).html)  
+[`disambigList(single)`](../object/disambigList(single).html)  
+[`DisambigOrdProd`](../object/DisambigOrdProd.html)  
+[`disambigListItem(ordinal)`](../object/disambigListItem(ordinal).html)  
+[`disambigOrdinalList(head)`](../object/disambigOrdinalList(head).html)  
+[`disambigOrdinalList(tail)`](../object/disambigOrdinalList(tail).html)  
+[`disambigPhrase(all)`](../object/disambigPhrase(all).html)  
+[`disambigPhrase(any)`](../object/disambigPhrase(any).html)  
+[`disambigPhrase(both)`](../object/disambigPhrase(both).html)  
+[`disambigPhrase(list)`](../object/disambigPhrase(list).html)  
+[`disambigPhrase(ordinalList)`](../object/disambigPhrase(ordinalList).html)  
+[`DisambigPossessiveProd`](../object/DisambigPossessiveProd.html)  
+[`disambigListItem(possessive)`](../object/disambigListItem(possessive).html)  
+[`DisambigVocabProd`](../object/DisambigVocabProd.html)  
+[`disambigListItem(noun)`](../object/disambigListItem(noun).html)  
+[`disambigListItem(plural)`](../object/disambigListItem(plural).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -86,10 +86,10 @@ Basic disambiguation production class
 
 </div>
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -99,10 +99,10 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`removeAmbigFlags`](#removeAmbigFlags)`  `
+[`removeAmbigFlags`](#removeAmbigFlags)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

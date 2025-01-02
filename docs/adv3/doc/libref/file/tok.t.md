@@ -38,7 +38,7 @@ declarations.
 
 </div>
 
-` `[`Tokenizer`](../object/Tokenizer.html)`  `[`TokenizerError`](../object/TokenizerError.html)`  `[`TokErrorNoMatch`](../object/TokErrorNoMatch.html)`  `
+[`Tokenizer`](../object/Tokenizer.html)[`TokenizerError`](../object/TokenizerError.html)[`TokErrorNoMatch`](../object/TokErrorNoMatch.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -55,7 +55,7 @@ declarations.
 
 </div>
 
-` `[`main`](#main)`  `
+[`main`](#main)
 
 <span id="_Functions_"></span>
 

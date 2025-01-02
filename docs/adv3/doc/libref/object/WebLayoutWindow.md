@@ -61,9 +61,9 @@ within an IFRAME, to further subdivide the space inside the IFRAME.
 </div>
 
 **`WebLayoutWindow`**  
-`         `[`WebWindow`](../object/WebWindow.html)  
-`                 `[`WebResourceResFile`](../object/WebResourceResFile.html)  
-`                         `[`WebResource`](../object/WebResource.html)  
+[`WebWindow`](../object/WebWindow.html)  
+[`WebResourceResFile`](../object/WebResourceResFile.html)  
+[`WebResource`](../object/WebResource.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -81,7 +81,7 @@ within an IFRAME, to further subdivide the space inside the IFRAME.
 
 </div>
 
-` `[`webMainWin`](../object/webMainWin.html)`  `
+[`webMainWin`](../object/webMainWin.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -90,16 +90,16 @@ within an IFRAME, to further subdivide the space inside the IFRAME.
 
 </div>
 
-` `[`frames`](#frames)`  `[`src`](#src)`  `[`vpath`](#vpath)`  `
+[`frames`](#frames)[`src`](#src)[`vpath`](#vpath)
 
 Inherited from `WebWindow` :  
-` `[`name`](../object/WebWindow.html#name)`  `[`pathName`](../object/WebWindow.html#pathName)`  `[`sthCtx`](../object/WebWindow.html#sthCtx)`  `
+[`name`](../object/WebWindow.html#name)[`pathName`](../object/WebWindow.html#pathName)[`sthCtx`](../object/WebWindow.html#sthCtx)
 
 Inherited from `WebResourceResFile` :  
-` `[`binaryExts`](../object/WebResourceResFile.html#binaryExts)`  `[`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)`  `
+[`binaryExts`](../object/WebResourceResFile.html#binaryExts)[`browserExtToMime`](../object/WebResourceResFile.html#browserExtToMime)
 
 Inherited from `WebResource` :  
-` `[`group`](../object/WebResource.html#group)`  `[`priority`](../object/WebResource.html#priority)`  `
+[`group`](../object/WebResource.html#group)[`priority`](../object/WebResource.html#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -109,16 +109,16 @@ Inherited from `WebResource` :
 
 </div>
 
-` `[`createFrame`](#createFrame)`  `[`flushWin`](#flushWin)`  `[`getState`](#getState)`  `[`winFromPath`](#winFromPath)`  `
+[`createFrame`](#createFrame)[`flushWin`](#flushWin)[`getState`](#getState)[`winFromPath`](#winFromPath)
 
 Inherited from `WebWindow` :  
-` `[`clearWindow`](../object/WebWindow.html#clearWindow)`  `[`processName`](../object/WebWindow.html#processName)`  `[`sendWinEvent`](../object/WebWindow.html#sendWinEvent)`  `[`sendWinEventTo`](../object/WebWindow.html#sendWinEventTo)`  `[`write`](../object/WebWindow.html#write)`  `
+[`clearWindow`](../object/WebWindow.html#clearWindow)[`processName`](../object/WebWindow.html#processName)[`sendWinEvent`](../object/WebWindow.html#sendWinEvent)[`sendWinEventTo`](../object/WebWindow.html#sendWinEventTo)[`write`](../object/WebWindow.html#write)
 
 Inherited from `WebResourceResFile` :  
-` `[`isTextFile`](../object/WebResourceResFile.html#isTextFile)`  `[`matchRequest`](../object/WebResourceResFile.html#matchRequest)`  `[`processRequest`](../object/WebResourceResFile.html#processRequest)`  `
+[`isTextFile`](../object/WebResourceResFile.html#isTextFile)[`matchRequest`](../object/WebResourceResFile.html#matchRequest)[`processRequest`](../object/WebResourceResFile.html#processRequest)
 
 Inherited from `WebResource` :  
-` `[`sendAck`](../object/WebResource.html#sendAck)`  `[`sendXML`](../object/WebResource.html#sendXML)`  `
+[`sendAck`](../object/WebResource.html#sendAck)[`sendXML`](../object/WebResource.html#sendXML)
 
 <span id="_Properties_"></span>
 

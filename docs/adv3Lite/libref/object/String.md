@@ -53,7 +53,7 @@ Modify the String intrinsic class to provide a to-symbol mapping
 </div>
 
 **`String`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -78,9 +78,9 @@ Modify the String intrinsic class to provide a to-symbol mapping
 
 </div>
 
-` `[`trimPat`](#trimPat)`  `
+[`trimPat`](#trimPat)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -90,10 +90,10 @@ Modify the String intrinsic class to provide a to-symbol mapping
 
 </div>
 
-` `[`compareIgnoreCase`](#compareIgnoreCase)`  `[`compareTo`](#compareTo)`  `[`delFirst`](#delFirst)`  `[`delLast`](#delLast)`  `[`digestMD5`](#digestMD5)`  `[`endsWith`](#endsWith)`  `[`find`](#find)`  `[`findAll`](#findAll)`  `[`findLast`](#findLast)`  `[`findReplace`](#findReplace)`  `[`firstChar`](#firstChar)`  `[`htmlify`](#htmlify)`  `[`lastChar`](#lastChar)`  `[`left`](#left)`  `[`length`](#length)`  `[`mapToByteArray`](#mapToByteArray)`  `[`match`](#match)`  `[`right`](#right)`  `[`sha256`](#sha256)`  `[`specialsToHtml`](#specialsToHtml)`  `[`specialsToText`](#specialsToText)`  `[`splice`](#splice)`  `[`split`](#split)`  `[`startsWith`](#startsWith)`  `[`substr`](#substr)`  `[`toFoldedCase`](#toFoldedCase)`  `[`toLower`](#toLower)`  `[`toTitleCase`](#toTitleCase)`  `[`toUnicode`](#toUnicode)`  `[`toUpper`](#toUpper)`  `[`trim`](#trim)`  `[`unpackBytes`](#unpackBytes)`  `[`urlDecode`](#urlDecode)`  `[`urlEncode`](#urlEncode)`  `[`valToSymbol`](#valToSymbol)`  `
+[`compareIgnoreCase`](#compareIgnoreCase)[`compareTo`](#compareTo)[`delFirst`](#delFirst)[`delLast`](#delLast)[`digestMD5`](#digestMD5)[`endsWith`](#endsWith)[`find`](#find)[`findAll`](#findAll)[`findLast`](#findLast)[`findReplace`](#findReplace)[`firstChar`](#firstChar)[`htmlify`](#htmlify)[`lastChar`](#lastChar)[`left`](#left)[`length`](#length)[`mapToByteArray`](#mapToByteArray)[`match`](#match)[`right`](#right)[`sha256`](#sha256)[`specialsToHtml`](#specialsToHtml)[`specialsToText`](#specialsToText)[`splice`](#splice)[`split`](#split)[`startsWith`](#startsWith)[`substr`](#substr)[`toFoldedCase`](#toFoldedCase)[`toLower`](#toLower)[`toTitleCase`](#toTitleCase)[`toUnicode`](#toUnicode)[`toUpper`](#toUpper)[`trim`](#trim)[`unpackBytes`](#unpackBytes)[`urlDecode`](#urlDecode)[`urlEncode`](#urlEncode)[`valToSymbol`](#valToSymbol)
 
 Inherited from `Object` :  
-` `[`callInherited`](../object/Object.html#callInherited)`  `[`createIterator`](../object/Object.html#createIterator)`  `[`createLiveIterator`](../object/Object.html#createLiveIterator)`  `[`forEach`](../object/Object.html#forEach)`  `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`mapAll`](../object/Object.html#mapAll)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `
+[`callInherited`](../object/Object.html#callInherited)[`createIterator`](../object/Object.html#createIterator)[`createLiveIterator`](../object/Object.html#createLiveIterator)[`forEach`](../object/Object.html#forEach)[`getPropList`](../object/Object.html#getPropList)[`getPropParams`](../object/Object.html#getPropParams)[`getSuperclassList`](../object/Object.html#getSuperclassList)[`isClass`](../object/Object.html#isClass)[`isTransient`](../object/Object.html#isTransient)[`mapAll`](../object/Object.html#mapAll)[`ofKind`](../object/Object.html#ofKind)[`propDefined`](../object/Object.html#propDefined)[`propInherited`](../object/Object.html#propInherited)[`propType`](../object/Object.html#propType)
 
 <span id="_Properties_"></span>
 

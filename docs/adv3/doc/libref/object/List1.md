@@ -48,8 +48,8 @@ Modify the List intrinsic class to provide a to-symbol mapping
 </div>
 
 **`List`**  
-`         `[`Collection`](../object/Collection.html)  
-`                 `[`Object`](../object/Object1.html)  
+[`Collection`](../object/Collection.html)  
+[`Object`](../object/Object1.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -74,11 +74,11 @@ Modify the List intrinsic class to provide a to-symbol mapping
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -88,13 +88,13 @@ Modify the List intrinsic class to provide a to-symbol mapping
 
 </div>
 
-` `[`append`](#append)`  `[`appendUnique`](#appendUnique)`  `[`car`](#car)`  `[`cdr`](#cdr)`  `[`countOf`](#countOf)`  `[`countWhich`](#countWhich)`  `[`forEach`](#forEach)`  `[`forEachAssoc`](#forEachAssoc)`  `[`getUnique`](#getUnique)`  `[`indexOf`](#indexOf)`  `[`indexWhich`](#indexWhich)`  `[`insertAt`](#insertAt)`  `[`intersect`](#intersect)`  `[`lastIndexOf`](#lastIndexOf)`  `[`lastIndexWhich`](#lastIndexWhich)`  `[`lastValWhich`](#lastValWhich)`  `[`length`](#length)`  `[`mapAll`](#mapAll)`  `[`prepend`](#prepend)`  `[`removeElementAt`](#removeElementAt)`  `[`removeRange`](#removeRange)`  `[`sort`](#sort)`  `[`sublist`](#sublist)`  `[`subset`](#subset)`  `[`valToSymbol`](#valToSymbol)`  `[`valWhich`](#valWhich)`  `
+[`append`](#append)[`appendUnique`](#appendUnique)[`car`](#car)[`cdr`](#cdr)[`countOf`](#countOf)[`countWhich`](#countWhich)[`forEach`](#forEach)[`forEachAssoc`](#forEachAssoc)[`getUnique`](#getUnique)[`indexOf`](#indexOf)[`indexWhich`](#indexWhich)[`insertAt`](#insertAt)[`intersect`](#intersect)[`lastIndexOf`](#lastIndexOf)[`lastIndexWhich`](#lastIndexWhich)[`lastValWhich`](#lastValWhich)[`length`](#length)[`mapAll`](#mapAll)[`prepend`](#prepend)[`removeElementAt`](#removeElementAt)[`removeRange`](#removeRange)[`sort`](#sort)[`sublist`](#sublist)[`subset`](#subset)[`valToSymbol`](#valToSymbol)[`valWhich`](#valWhich)
 
 Inherited from `Collection` :  
-` `[`createIterator`](../object/Collection.html#createIterator)`  `[`createLiveIterator`](../object/Collection.html#createLiveIterator)`  `
+[`createIterator`](../object/Collection.html#createIterator)[`createLiveIterator`](../object/Collection.html#createLiveIterator)
 
 Inherited from `Object` :  
-` `[`getPropList`](../object/Object1.html#getPropList)`  `[`getPropParams`](../object/Object1.html#getPropParams)`  `[`getSuperclassList`](../object/Object1.html#getSuperclassList)`  `[`isClass`](../object/Object1.html#isClass)`  `[`isTransient`](../object/Object1.html#isTransient)`  `[`ofKind`](../object/Object1.html#ofKind)`  `[`propDefined`](../object/Object1.html#propDefined)`  `[`propInherited`](../object/Object1.html#propInherited)`  `[`propType`](../object/Object1.html#propType)`  `
+[`getPropList`](../object/Object1.html#getPropList)[`getPropParams`](../object/Object1.html#getPropParams)[`getSuperclassList`](../object/Object1.html#getSuperclassList)[`isClass`](../object/Object1.html#isClass)[`isTransient`](../object/Object1.html#isTransient)[`ofKind`](../object/Object1.html#ofKind)[`propDefined`](../object/Object1.html#propDefined)[`propInherited`](../object/Object1.html#propInherited)[`propType`](../object/Object1.html#propType)
 
 <span id="_Properties_"></span>
 

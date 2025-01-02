@@ -37,7 +37,7 @@ The quoteFilter OutputFilter keeps its own track of whether a double
 quote or a single quote is rquired next, and resets this count at the
 start of each turn.
 
-**`quoteFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)`   `[`InitObject`](../object/InitObject.html)
+**`quoteFilter`**` :   `[`OutputFilter`](../object/OutputFilter.html)[`InitObject`](../object/InitObject.html)
 
 </div>
 
@@ -50,10 +50,10 @@ start of each turn.
 </div>
 
 **`quoteFilter`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
-`         `[`InitObject`](../object/InitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`InitObject`](../object/InitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -63,14 +63,14 @@ start of each turn.
 
 </div>
 
-` `[`quoteCount`](#quoteCount)`  `[`quotePat`](#quotePat)`  `[`showWarnings`](#showWarnings)`  `
+[`quoteCount`](#quoteCount)[`quotePat`](#quotePat)[`showWarnings`](#showWarnings)
 
-` `
 
-` `
+
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,14 +80,14 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`execute`](#execute)`  `[`filterText`](#filterText)`  `[`quoteCheck`](#quoteCheck)`  `
+[`execute`](#execute)[`filterText`](#filterText)[`quoteCheck`](#quoteCheck)
 
-` `
 
-` `
+
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

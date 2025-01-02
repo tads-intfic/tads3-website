@@ -57,7 +57,7 @@ invalid commands (so that we can then offer more help).
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -67,7 +67,7 @@ invalid commands (so that we can then offer more help).
 
 </div>
 
-` `[`briefIntro`](#briefIntro)`  `[`printMsg`](#printMsg)`  `[`showSample`](#showSample)`  `
+[`briefIntro`](#briefIntro)[`printMsg`](#printMsg)[`showSample`](#showSample)
 
 <span id="_Properties_"></span>
 

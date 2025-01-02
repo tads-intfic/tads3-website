@@ -35,7 +35,7 @@ writing Interactive Fiction with adv3Lite.
 You may recall towards the end of the previous chapter we tested for the
 nest being placed on the branch with the following code:
 
-```
+`
     + branch: Thing 'wide firm bough; flat; branch'
         "It's flat enough to support a small object. "
         
@@ -49,7 +49,7 @@ nest being placed on the branch with the following code:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;
-```
+`
 
 But you may be wondering, where exactly did this
 `afterAction()` method come from, and how does
@@ -60,7 +60,7 @@ have to call the `afterAction()` method on every
 Thing in scope after the performance of each successful action. On the
 Thing class, however, the afterAction() routine is defined like this:
 
-```
+`
     class Thing:  Mentionable
       ...
       
@@ -68,7 +68,7 @@ Thing class, however, the afterAction() routine is defined like this:
      
       ...
     ;
-```
+`
 
 Thus the `afterAction()` method on Thing is an
 empty method that does nothing at all (since in general we don't want
@@ -88,23 +88,23 @@ determine whether a Thing is switched on or off. It also defines an
 that Thing can be switched on and off (obviously most things can't). On
 the Thing class this property and this method are defined as follows:
 
-```
+`
     isSwitchable = nil
 
     makeOn(stat) { isOn = stat; }
-```
+`
 
 If we want to create a Thing that can be switched on and off, we'd
 therefore need to override its `isSwitchable`
 property to true, for example:
 
-```
+`
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        isSwitchable = true
        isFixed = true
     ;
-```
+`
 
 That's all we have to do in adv3Lite to create a light switch (by the
 way, I hope by now it's obvious why we also defined
@@ -131,7 +131,7 @@ would be to *override* the makeOn(stat) method on the lightSwitch to
 light up or turn off a light bulb somewhere. Here's a first (but
 erroneous) attempt:
 
-```
+`
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        isSwitchable = true
@@ -139,7 +139,7 @@ erroneous) attempt:
        
        makeOn(stat) { lightBulb.makeLit(stat); }
     ;
-```
+`
 
 Can you see what's wrong with this? We'll assume you've defined the
 `lightBulb` object elsewhere, and I can assure
@@ -152,7 +152,7 @@ be to copy the original code from
 `Thing.makeOn(stat)` into
 `lightSwitch.makeOn(stat)`, giving us:
 
-```
+`
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        isSwitchable = true
@@ -164,7 +164,7 @@ be to copy the original code from
          lightBulb.makeLit(stat); 
        }
     ;
-```
+`
 
 This would certainly work, and after a fashion it does solve the
 problem, but it really isn't a terribly good solution. Although in this
@@ -180,7 +180,7 @@ the code sample immediately above, we're missing out on most of the
 benefits of the inheritance model. The proper solution is to use the
 **inherited** keyword, thus:
 
-```
+`
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        isSwitchable = true
@@ -192,7 +192,7 @@ benefits of the inheritance model. The proper solution is to use the
          lightBulb.makeLit(stat); 
        }
     ;
-```
+`
 
 Here, `inherited(stat)` means "at this point in
 the code, do whatever the method I'm overriding would have done". In
@@ -230,7 +230,7 @@ code over and over again on each and every light switch. An alternative
 would be to add the desired behaviour to the Thing class by modifying
 it, perhaps like this:
 
-```
+`
     modify Thing
        bulbObj = nil
        isSwitchable = (bulbObj != nil)
@@ -242,7 +242,7 @@ it, perhaps like this:
              bulbObj.makeLit(stat);
        }
     ;
-```
+`
 
 There are several things to note here. The first is that we've added a
 new property, `bulbObj`, to the Thing class to
@@ -266,13 +266,13 @@ defining an associated `bulbObj`. If we modified
 Thing as above we could then define an individual light switch object
 thus:
 
-```
+`
     lightSwitch: Thing 'light switch'
        "It's just an ordinary light switch that can be turned on and off. "
        bulbObj = lightBulb
        isFixed = true   
     ;
-```
+`
 
 This is a big improvement if we have a lot of light switches to define
 in our game. It has to be said, though, that unless virtually every
@@ -281,7 +281,7 @@ perhaps even then, this probably isn't the best way to go about
 addressing this particular issue. We'd almost certainly be better off
 defining a custom LightSwitch class along the following lines:
 
-```
+`
     class LightSwitch: Thing
        bulbObj = nil
        isSwitchable = true
@@ -301,7 +301,7 @@ defining a custom LightSwitch class along the following lines:
        "It's just an ordinary light switch that can be turned on and off. "
        bulbObj = lightBulb      
     ;
-```
+`
 
 This is neater primarily because this way we can now give the light
 switch behaviour only to those objects that actually need it, and also

@@ -43,7 +43,7 @@ Details](#_Methods_)
 </div>
 
 **`Mentionable`**  
-`         `[`LMentionable`](../object/LMentionable.html)  
+[`LMentionable`](../object/LMentionable.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,72 +54,72 @@ Details](#_Methods_)
 </div>
 
 **`Mentionable`**  
-`         `[`Thing`](../object/Thing.html)  
-`                 `[`Actor`](../object/Actor.html)  
-`                 `[`Button`](../object/Button.html)  
-`                 `[`Collective`](../object/Collective.html)  
-`                         `[`DispensingCollective`](../object/DispensingCollective.html)  
-`                 `[`Consultable`](../object/Consultable.html)  
-`                 `[`Container`](../object/Container.html)  
-`                         `[`Booth`](../object/Booth.html)  
-`                         `[`OpenableContainer`](../object/OpenableContainer.html)  
-`                                 `[`KeyedContainer`](../object/KeyedContainer.html)  
-`                                 `[`LockableContainer`](../object/LockableContainer.html)  
-`                 `[`Door`](../object/Door.html)  
-`                         `[`SecretDoor`](../object/SecretDoor.html)  
-`                 `[`Fixture`](../object/Fixture.html)  
-`                         `[`CollectiveGroup`](../object/CollectiveGroup.html)  
-`                                 `[`MobileCollectiveGroup`](../object/MobileCollectiveGroup.html)  
-`                         `[`Component`](../object/Component.html)  
-`                         `[`ContainerDoor`](../object/ContainerDoor.html)  
-`                         `[`Decoration`](../object/Decoration.html)  
-`                                 `[`Distant`](../object/Distant.html)  
-`                                 `[`RoomPart`](../object/RoomPart.html)  
-`                                         `[`Ceiling`](../object/Ceiling.html)  
-`                                         `[`DefaultWall`](../object/DefaultWall.html)  
-`                                 `[`SensoryEmanation`](../object/SensoryEmanation.html)  
-`                                         `[`Noise`](../object/Noise.html)  
-`                                                 `[`SimpleNoise`](../object/SimpleNoise.html)  
-`                                         `[`Odor`](../object/Odor.html)  
-`                                                 `[`SimpleOdor`](../object/SimpleOdor.html)  
-`                                 `[`Unthing`](../object/Unthing.html)  
-`                         `[`Enterable`](../object/Enterable.html)  
-`                         `[`Heavy`](../object/Heavy.html)  
-`                 `[`Floor`](../object/Floor.html)  
-`                 `[`Food`](../object/Food.html)  
-`                 `[`Immovable`](../object/Immovable.html)  
-`                 `[`Key`](../object/Key.html)  
-`                 `[`Lever`](../object/Lever.html)  
-`                 `[`MinorItem`](../object/MinorItem.html)  
-`                 `[`Passage`](../object/Passage.html)  
-`                         `[`PathPassage`](../object/PathPassage.html)  
-`                 `[`Player`](../object/Player.html)  
-`                 `[`RearContainer`](../object/RearContainer.html)  
-`                 `[`Room`](../object/Room.html)  
-`                         `[`OutdoorRoom`](../object/OutdoorRoom.html)  
-`                 `[`Settable`](../object/Settable.html)  
-`                         `[`Dial`](../object/Dial.html)  
-`                                 `[`NumberedDial`](../object/NumberedDial.html)  
-`                 `[`SimpleAttachable`](../object/SimpleAttachable.html)  
-`                         `[`AttachableComponent`](../object/AttachableComponent.html)  
-`                         `[`NearbyAttachable`](../object/NearbyAttachable.html)  
-`                                 `[`Attachable`](../object/Attachable.html)  
-`                 `[`StairwayDown`](../object/StairwayDown.html)  
-`                 `[`StairwayUp`](../object/StairwayUp.html)  
-`                 `[`SubComponent`](../object/SubComponent.html)  
-`                 `[`Surface`](../object/Surface.html)  
-`                         `[`Platform`](../object/Platform.html)  
-`                                 `[`Bed`](../object/Bed.html)  
-`                                 `[`Chair`](../object/Chair.html)  
-`                 `[`Switch`](../object/Switch.html)  
-`                         `[`Flashlight`](../object/Flashlight.html)  
-`                 `[`SymPassage`](../object/SymPassage.html)  
-`                         `[`SymDoor`](../object/SymDoor.html)  
-`                         `[`SymPathPassage`](../object/SymPathPassage.html)  
-`                         `[`SymStairway`](../object/SymStairway.html)  
-`                 `[`Underside`](../object/Underside.html)  
-`                 `[`Wearable`](../object/Wearable.html)  
-`         `[`Topic`](../object/Topic.html)  
+[`Thing`](../object/Thing.html)  
+[`Actor`](../object/Actor.html)  
+[`Button`](../object/Button.html)  
+[`Collective`](../object/Collective.html)  
+[`DispensingCollective`](../object/DispensingCollective.html)  
+[`Consultable`](../object/Consultable.html)  
+[`Container`](../object/Container.html)  
+[`Booth`](../object/Booth.html)  
+[`OpenableContainer`](../object/OpenableContainer.html)  
+[`KeyedContainer`](../object/KeyedContainer.html)  
+[`LockableContainer`](../object/LockableContainer.html)  
+[`Door`](../object/Door.html)  
+[`SecretDoor`](../object/SecretDoor.html)  
+[`Fixture`](../object/Fixture.html)  
+[`CollectiveGroup`](../object/CollectiveGroup.html)  
+[`MobileCollectiveGroup`](../object/MobileCollectiveGroup.html)  
+[`Component`](../object/Component.html)  
+[`ContainerDoor`](../object/ContainerDoor.html)  
+[`Decoration`](../object/Decoration.html)  
+[`Distant`](../object/Distant.html)  
+[`RoomPart`](../object/RoomPart.html)  
+[`Ceiling`](../object/Ceiling.html)  
+[`DefaultWall`](../object/DefaultWall.html)  
+[`SensoryEmanation`](../object/SensoryEmanation.html)  
+[`Noise`](../object/Noise.html)  
+[`SimpleNoise`](../object/SimpleNoise.html)  
+[`Odor`](../object/Odor.html)  
+[`SimpleOdor`](../object/SimpleOdor.html)  
+[`Unthing`](../object/Unthing.html)  
+[`Enterable`](../object/Enterable.html)  
+[`Heavy`](../object/Heavy.html)  
+[`Floor`](../object/Floor.html)  
+[`Food`](../object/Food.html)  
+[`Immovable`](../object/Immovable.html)  
+[`Key`](../object/Key.html)  
+[`Lever`](../object/Lever.html)  
+[`MinorItem`](../object/MinorItem.html)  
+[`Passage`](../object/Passage.html)  
+[`PathPassage`](../object/PathPassage.html)  
+[`Player`](../object/Player.html)  
+[`RearContainer`](../object/RearContainer.html)  
+[`Room`](../object/Room.html)  
+[`OutdoorRoom`](../object/OutdoorRoom.html)  
+[`Settable`](../object/Settable.html)  
+[`Dial`](../object/Dial.html)  
+[`NumberedDial`](../object/NumberedDial.html)  
+[`SimpleAttachable`](../object/SimpleAttachable.html)  
+[`AttachableComponent`](../object/AttachableComponent.html)  
+[`NearbyAttachable`](../object/NearbyAttachable.html)  
+[`Attachable`](../object/Attachable.html)  
+[`StairwayDown`](../object/StairwayDown.html)  
+[`StairwayUp`](../object/StairwayUp.html)  
+[`SubComponent`](../object/SubComponent.html)  
+[`Surface`](../object/Surface.html)  
+[`Platform`](../object/Platform.html)  
+[`Bed`](../object/Bed.html)  
+[`Chair`](../object/Chair.html)  
+[`Switch`](../object/Switch.html)  
+[`Flashlight`](../object/Flashlight.html)  
+[`SymPassage`](../object/SymPassage.html)  
+[`SymDoor`](../object/SymDoor.html)  
+[`SymPathPassage`](../object/SymPathPassage.html)  
+[`SymStairway`](../object/SymStairway.html)  
+[`Underside`](../object/Underside.html)  
+[`Wearable`](../object/Wearable.html)  
+[`Topic`](../object/Topic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -128,7 +128,7 @@ Details](#_Methods_)
 
 </div>
 
-` `[`prevDummy_`](../object/prevDummy_.html)`  `
+[`prevDummy_`](../object/prevDummy_.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -137,10 +137,10 @@ Details](#_Methods_)
 
 </div>
 
-` `[`ambiguouslyPlural`](#ambiguouslyPlural)`  `[`disambigGroup`](#disambigGroup)`  `[`disambigMatchPhrases`](#disambigMatchPhrases)`  `[`disambigName`](#disambigName)`  `[`disambigOrder`](#disambigOrder)`  `[`distinguishByContents`](#distinguishByContents)`  `[`isHer`](#isHer)`  `[`isHim`](#isHim)`  `[`isIt`](#isIt)`  `[`massNoun`](#massNoun)`  `[`matchPhrases`](#matchPhrases)`  `[`matchPhrasesExclude`](#matchPhrasesExclude)`  `[`name`](#name)`  `[`nominalContents`](#nominalContents)`  `[`person`](#person)`  `[`plural`](#plural)`  `[`proper`](#proper)`  `[`qualified`](#qualified)`  `[`roomTitle`](#roomTitle)`  `[`states`](#states)`  `[`vocab`](#vocab)`  `[`vocabWords`](#vocabWords)`  `
+[`ambiguouslyPlural`](#ambiguouslyPlural)[`disambigGroup`](#disambigGroup)[`disambigMatchPhrases`](#disambigMatchPhrases)[`disambigName`](#disambigName)[`disambigOrder`](#disambigOrder)[`distinguishByContents`](#distinguishByContents)[`isHer`](#isHer)[`isHim`](#isHim)[`isIt`](#isIt)[`massNoun`](#massNoun)[`matchPhrases`](#matchPhrases)[`matchPhrasesExclude`](#matchPhrasesExclude)[`name`](#name)[`nominalContents`](#nominalContents)[`person`](#person)[`plural`](#plural)[`proper`](#proper)[`qualified`](#qualified)[`roomTitle`](#roomTitle)[`states`](#states)[`vocab`](#vocab)[`vocabWords`](#vocabWords)
 
 Inherited from `LMentionable` :  
-` `[`acronymPluralPat`](../object/LMentionable.html#acronymPluralPat)`  `[`alphaCharPat`](../object/LMentionable.html#alphaCharPat)`  `[`aName`](../object/LMentionable.html#aName)`  `[`apostPluralPat`](../object/LMentionable.html#apostPluralPat)`  `[`apostSPat`](../object/LMentionable.html#apostSPat)`  `[`deannotatePat`](../object/LMentionable.html#deannotatePat)`  `[`dictComp`](../object/LMentionable.html#dictComp)`  `[`dummyName`](../object/LMentionable.html#dummyName)`  `[`elevenEighteenPat`](../object/LMentionable.html#elevenEighteenPat)`  `[`emptyVocabWords`](../object/LMentionable.html#emptyVocabWords)`  `[`esPluralPat`](../object/LMentionable.html#esPluralPat)`  `[`firstWordPat`](../object/LMentionable.html#firstWordPat)`  `[`heName`](../object/LMentionable.html#heName)`  `[`herName`](../object/LMentionable.html#herName)`  `[`hersName`](../object/LMentionable.html#hersName)`  `[`himName`](../object/LMentionable.html#himName)`  `[`iesPluralPat`](../object/LMentionable.html#iesPluralPat)`  `[`irregularPlurals`](../object/LMentionable.html#irregularPlurals)`  `[`lastWordPat`](../object/LMentionable.html#lastWordPat)`  `[`leadingTagOrQuotePat`](../object/LMentionable.html#leadingTagOrQuotePat)`  `[`menPluralPat`](../object/LMentionable.html#menPluralPat)`  `[`objInName`](../object/LMentionable.html#objInName)`  `[`objIntoName`](../object/LMentionable.html#objIntoName)`  `[`objName`](../object/LMentionable.html#objName)`  `[`objOutOfName`](../object/LMentionable.html#objOutOfName)`  `[`oneLetterAnWordPat`](../object/LMentionable.html#oneLetterAnWordPat)`  `[`oneLetterWordPat`](../object/LMentionable.html#oneLetterWordPat)`  `[`ownerNamed`](../object/LMentionable.html#ownerNamed)`  `[`pluralPat`](../object/LMentionable.html#pluralPat)`  `[`posPat`](../object/LMentionable.html#posPat)`  `[`possAdj`](../object/LMentionable.html#possAdj)`  `[`possEnding`](../object/LMentionable.html#possEnding)`  `[`possNoun`](../object/LMentionable.html#possNoun)`  `[`prepList`](../object/LMentionable.html#prepList)`  `[`prepPhrasePat`](../object/LMentionable.html#prepPhrasePat)`  `[`prepWordPat`](../object/LMentionable.html#prepWordPat)`  `[`pronounMap`](../object/LMentionable.html#pronounMap)`  `[`properNamePat`](../object/LMentionable.html#properNamePat)`  `[`properPat`](../object/LMentionable.html#properPat)`  `[`reflexiveName`](../object/LMentionable.html#reflexiveName)`  `[`specialAOrAn`](../object/LMentionable.html#specialAOrAn)`  `[`tagOrQuotePat`](../object/LMentionable.html#tagOrQuotePat)`  `[`thatName`](../object/LMentionable.html#thatName)`  `[`thatObjName`](../object/LMentionable.html#thatObjName)`  `[`theName`](../object/LMentionable.html#theName)`  `[`theObjName`](../object/LMentionable.html#theObjName)`  `[`trimPat`](../object/LMentionable.html#trimPat)`  `[`truncationLength`](../object/LMentionable.html#truncationLength)`  `[`weakWordPat`](../object/LMentionable.html#weakWordPat)`  `
+[`acronymPluralPat`](../object/LMentionable.html#acronymPluralPat)[`alphaCharPat`](../object/LMentionable.html#alphaCharPat)[`aName`](../object/LMentionable.html#aName)[`apostPluralPat`](../object/LMentionable.html#apostPluralPat)[`apostSPat`](../object/LMentionable.html#apostSPat)[`deannotatePat`](../object/LMentionable.html#deannotatePat)[`dictComp`](../object/LMentionable.html#dictComp)[`dummyName`](../object/LMentionable.html#dummyName)[`elevenEighteenPat`](../object/LMentionable.html#elevenEighteenPat)[`emptyVocabWords`](../object/LMentionable.html#emptyVocabWords)[`esPluralPat`](../object/LMentionable.html#esPluralPat)[`firstWordPat`](../object/LMentionable.html#firstWordPat)[`heName`](../object/LMentionable.html#heName)[`herName`](../object/LMentionable.html#herName)[`hersName`](../object/LMentionable.html#hersName)[`himName`](../object/LMentionable.html#himName)[`iesPluralPat`](../object/LMentionable.html#iesPluralPat)[`irregularPlurals`](../object/LMentionable.html#irregularPlurals)[`lastWordPat`](../object/LMentionable.html#lastWordPat)[`leadingTagOrQuotePat`](../object/LMentionable.html#leadingTagOrQuotePat)[`menPluralPat`](../object/LMentionable.html#menPluralPat)[`objInName`](../object/LMentionable.html#objInName)[`objIntoName`](../object/LMentionable.html#objIntoName)[`objName`](../object/LMentionable.html#objName)[`objOutOfName`](../object/LMentionable.html#objOutOfName)[`oneLetterAnWordPat`](../object/LMentionable.html#oneLetterAnWordPat)[`oneLetterWordPat`](../object/LMentionable.html#oneLetterWordPat)[`ownerNamed`](../object/LMentionable.html#ownerNamed)[`pluralPat`](../object/LMentionable.html#pluralPat)[`posPat`](../object/LMentionable.html#posPat)[`possAdj`](../object/LMentionable.html#possAdj)[`possEnding`](../object/LMentionable.html#possEnding)[`possNoun`](../object/LMentionable.html#possNoun)[`prepList`](../object/LMentionable.html#prepList)[`prepPhrasePat`](../object/LMentionable.html#prepPhrasePat)[`prepWordPat`](../object/LMentionable.html#prepWordPat)[`pronounMap`](../object/LMentionable.html#pronounMap)[`properNamePat`](../object/LMentionable.html#properNamePat)[`properPat`](../object/LMentionable.html#properPat)[`reflexiveName`](../object/LMentionable.html#reflexiveName)[`specialAOrAn`](../object/LMentionable.html#specialAOrAn)[`tagOrQuotePat`](../object/LMentionable.html#tagOrQuotePat)[`thatName`](../object/LMentionable.html#thatName)[`thatObjName`](../object/LMentionable.html#thatObjName)[`theName`](../object/LMentionable.html#theName)[`theObjName`](../object/LMentionable.html#theObjName)[`trimPat`](../object/LMentionable.html#trimPat)[`truncationLength`](../object/LMentionable.html#truncationLength)[`weakWordPat`](../object/LMentionable.html#weakWordPat)
 
 <span id="_MethodSummary_"></span>
 
@@ -150,10 +150,10 @@ Inherited from `LMentionable` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`filterResolveList`](#filterResolveList)`  `[`matchName`](#matchName)`  `[`matchNameCommon`](#matchNameCommon)`  `[`matchNameDisambig`](#matchNameDisambig)`  `[`phraseMatchName`](#phraseMatchName)`  `[`simpleMatchName`](#simpleMatchName)`  `
+[`construct`](#construct)[`filterResolveList`](#filterResolveList)[`matchName`](#matchName)[`matchNameCommon`](#matchNameCommon)[`matchNameDisambig`](#matchNameDisambig)[`phraseMatchName`](#phraseMatchName)[`simpleMatchName`](#simpleMatchName)
 
 Inherited from `LMentionable` :  
-` `[`addDictWord`](../object/LMentionable.html#addDictWord)`  `[`addVocab`](../object/LMentionable.html#addVocab)`  `[`addVocabWord`](../object/LMentionable.html#addVocabWord)`  `[`aNameFrom`](../object/LMentionable.html#aNameFrom)`  `[`aNameFromPoss`](../object/LMentionable.html#aNameFromPoss)`  `[`classInit`](../object/LMentionable.html#classInit)`  `[`contify`](../object/LMentionable.html#contify)`  `[`distinguishedName`](../object/LMentionable.html#distinguishedName)`  `[`ifPronoun`](../object/LMentionable.html#ifPronoun)`  `[`inheritVocab`](../object/LMentionable.html#inheritVocab)`  `[`initVocab`](../object/LMentionable.html#initVocab)`  `[`initVocabWord`](../object/LMentionable.html#initVocabWord)`  `[`locify`](../object/LMentionable.html#locify)`  `[`matchPronoun`](../object/LMentionable.html#matchPronoun)`  `[`pluralNameFrom`](../object/LMentionable.html#pluralNameFrom)`  `[`pluralWordFrom`](../object/LMentionable.html#pluralWordFrom)`  `[`possessify`](../object/LMentionable.html#possessify)`  `[`pronoun`](../object/LMentionable.html#pronoun)`  `[`removeVocabWord`](../object/LMentionable.html#removeVocabWord)`  `[`replaceVocab`](../object/LMentionable.html#replaceVocab)`  `[`theNameFrom`](../object/LMentionable.html#theNameFrom)`  `[`theNameIs`](../object/LMentionable.html#theNameIs)`  `
+[`addDictWord`](../object/LMentionable.html#addDictWord)[`addVocab`](../object/LMentionable.html#addVocab)[`addVocabWord`](../object/LMentionable.html#addVocabWord)[`aNameFrom`](../object/LMentionable.html#aNameFrom)[`aNameFromPoss`](../object/LMentionable.html#aNameFromPoss)[`classInit`](../object/LMentionable.html#classInit)[`contify`](../object/LMentionable.html#contify)[`distinguishedName`](../object/LMentionable.html#distinguishedName)[`ifPronoun`](../object/LMentionable.html#ifPronoun)[`inheritVocab`](../object/LMentionable.html#inheritVocab)[`initVocab`](../object/LMentionable.html#initVocab)[`initVocabWord`](../object/LMentionable.html#initVocabWord)[`locify`](../object/LMentionable.html#locify)[`matchPronoun`](../object/LMentionable.html#matchPronoun)[`pluralNameFrom`](../object/LMentionable.html#pluralNameFrom)[`pluralWordFrom`](../object/LMentionable.html#pluralWordFrom)[`possessify`](../object/LMentionable.html#possessify)[`pronoun`](../object/LMentionable.html#pronoun)[`removeVocabWord`](../object/LMentionable.html#removeVocabWord)[`replaceVocab`](../object/LMentionable.html#replaceVocab)[`theNameFrom`](../object/LMentionable.html#theNameFrom)[`theNameIs`](../object/LMentionable.html#theNameIs)
 
 <span id="_Properties_"></span>
 

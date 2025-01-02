@@ -37,7 +37,7 @@ with actions or with the objects of an action.
 
 </div>
 
-` `[`ObjectPreCondition`](../object/ObjectPreCondition.html)`  `[`ObjOpenCondition`](../object/ObjOpenCondition.html)`  `[`PreCondition`](../object/PreCondition.html)`  `[`SameLocationCondition`](../object/SameLocationCondition.html)`  `[`TouchObjCondition`](../object/TouchObjCondition.html)`  `[`TravelerDirectlyInRoom`](../object/TravelerDirectlyInRoom.html)`  `
+[`ObjectPreCondition`](../object/ObjectPreCondition.html)[`ObjOpenCondition`](../object/ObjOpenCondition.html)[`PreCondition`](../object/PreCondition.html)[`SameLocationCondition`](../object/SameLocationCondition.html)[`TouchObjCondition`](../object/TouchObjCondition.html)[`TravelerDirectlyInRoom`](../object/TravelerDirectlyInRoom.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -46,7 +46,7 @@ with actions or with the objects of an action.
 
 </div>
 
-` `[`actorDirectlyInRoom`](../object/actorDirectlyInRoom.html)`  `[`actorReadyToEnterNestedRoom`](../object/actorReadyToEnterNestedRoom.html)`  `[`actorStanding`](../object/actorStanding.html)`  `[`actorTravelReady`](../object/actorTravelReady.html)`  `[`canTalkToObj`](../object/canTalkToObj.html)`  `[`dobjTouchObj`](../object/dobjTouchObj.html)`  `[`doorOpen`](../object/doorOpen.html)`  `[`dropDestinationIsOuterRoom`](../object/dropDestinationIsOuterRoom.html)`  `[`iobjTouchObj`](../object/iobjTouchObj.html)`  `[`objAudible`](../object/objAudible.html)`  `[`objBurning`](../object/objBurning.html)`  `[`objClosed`](../object/objClosed.html)`  `[`objEmpty`](../object/objEmpty.html)`  `[`objHeld`](../object/objHeld.html)`  `[`objNotWorn`](../object/objNotWorn.html)`  `[`objOpen`](../object/objOpen.html)`  `[`objSmellable`](../object/objSmellable.html)`  `[`objUnlocked`](../object/objUnlocked.html)`  `[`objVisible`](../object/objVisible.html)`  `[`roomToHoldObj`](../object/roomToHoldObj.html)`  `[`sameLocationAsDobj`](../object/sameLocationAsDobj.html)`  `[`sameLocationAsIobj`](../object/sameLocationAsIobj.html)`  `[`touchObj`](../object/touchObj.html)`  `
+[`actorDirectlyInRoom`](../object/actorDirectlyInRoom.html)[`actorReadyToEnterNestedRoom`](../object/actorReadyToEnterNestedRoom.html)[`actorStanding`](../object/actorStanding.html)[`actorTravelReady`](../object/actorTravelReady.html)[`canTalkToObj`](../object/canTalkToObj.html)[`dobjTouchObj`](../object/dobjTouchObj.html)[`doorOpen`](../object/doorOpen.html)[`dropDestinationIsOuterRoom`](../object/dropDestinationIsOuterRoom.html)[`iobjTouchObj`](../object/iobjTouchObj.html)[`objAudible`](../object/objAudible.html)[`objBurning`](../object/objBurning.html)[`objClosed`](../object/objClosed.html)[`objEmpty`](../object/objEmpty.html)[`objHeld`](../object/objHeld.html)[`objNotWorn`](../object/objNotWorn.html)[`objOpen`](../object/objOpen.html)[`objSmellable`](../object/objSmellable.html)[`objUnlocked`](../object/objUnlocked.html)[`objVisible`](../object/objVisible.html)[`roomToHoldObj`](../object/roomToHoldObj.html)[`sameLocationAsDobj`](../object/sameLocationAsDobj.html)[`sameLocationAsIobj`](../object/sameLocationAsIobj.html)[`touchObj`](../object/touchObj.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

@@ -38,7 +38,7 @@ as "providing light"; an unlit light source shows no extra status.
 </div>
 
 **`lightSourceStateOn`**  
-`         `[`ThingState`](../object/ThingState.html)  
+[`ThingState`](../object/ThingState.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,10 +48,10 @@ as "providing light"; an unlit light source shows no extra status.
 
 </div>
 
-` `[`stateTokens`](#stateTokens)`  `
+[`stateTokens`](#stateTokens)
 
 Inherited from `ThingState` :  
-` `[`listingOrder`](../object/ThingState.html#listingOrder)`  `[`listName_`](../object/ThingState.html#listName_)`  `
+[`listingOrder`](../object/ThingState.html#listingOrder)[`listName_`](../object/ThingState.html#listName_)
 
 <span id="_MethodSummary_"></span>
 
@@ -61,10 +61,10 @@ Inherited from `ThingState` :
 
 </div>
 
-` `
+
 
 Inherited from `ThingState` :  
-` `[`findStateToken`](../object/ThingState.html#findStateToken)`  `[`inventoryName`](../object/ThingState.html#inventoryName)`  `[`listName`](../object/ThingState.html#listName)`  `[`matchName`](../object/ThingState.html#matchName)`  `[`wornName`](../object/ThingState.html#wornName)`  `
+[`findStateToken`](../object/ThingState.html#findStateToken)[`inventoryName`](../object/ThingState.html#inventoryName)[`listName`](../object/ThingState.html#listName)[`matchName`](../object/ThingState.html#matchName)[`wornName`](../object/ThingState.html#wornName)
 
 <span id="_Properties_"></span>
 

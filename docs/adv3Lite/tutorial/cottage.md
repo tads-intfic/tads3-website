@@ -42,14 +42,14 @@ cottage, this hardly seems an appropriate response. We need to provide a
 more plausible reason why Heidi can't enter her cottage. Here's one way
 to do it:
 
-```
+`
     beforeCottage: Room 'In front of a Cottage'
         "You stand outside a cottage. The forest stretches east. "
         
         east = forest
         in = 'It\'s such a lovely day -- much too nice to go inside. '
     ;
-```
+`
 
 Previously we only attached rooms to direction properties, but we can
 attach all sorts of other things as well. If, as here, we define a
@@ -64,11 +64,11 @@ something a bit less generic than "You can't go that way." One way to do
 that is to override `cannotGoThatWayMsg` on
 Room:
 
-```
+`
     modify Room
         cannotGoThatWayMsg = 'Better stick to the path. '
     ;
-```
+`
 
 Then we'd see something like:
 
@@ -91,7 +91,7 @@ message we would need to override the method
 appropriate thing to do at the top of the tree, where being told "Better
 stick to the path" is hardly appropriate:
 
-```
+`
     topOfTree: Room 'At the top of the tree'
         "You cling precariously to the trunk. "
         
@@ -102,7 +102,7 @@ stick to the path" is hardly appropriate:
             "The only way from here is down. ";
         }
     ;
-```
+`
 
 But even with all these changes we're not out of the woods yet, since if
 players attempt to EXAMINE THE COTTAGE or ENTER THE COTTAGE, they'll be
@@ -111,13 +111,13 @@ the room description. It's easy enough to add a cottage object; just add
 the following object definition immediately after the definition of the
 beforeCottage room:
 
-```
+`
     + cottage: Thing 'tiny cottage;small simple; house home'
         "It's small and simple, but you're very happy here. "
         
         isFixed = true
     ;
-```
+`
 
 This only does half the job, though:
 
@@ -137,7 +137,7 @@ This only does half the job, though:
 We can fix this by overriding the
 `cannotEnterMsg` property of the cottage:
 
-```
+`
     + cottage: Thing 'tiny cottage;small simple; house home'
         "It's small and simple, but you're very happy here. "
         
@@ -145,7 +145,7 @@ We can fix this by overriding the
         
         cannotEnterMsg = 'It\'s such a lovely day -- much too nice to go inside. '
     ;
-```
+`
 
 This works, but now we've defined exactly the same response twice, once
 on the cottage and once on the beforeCottage location. This seems a bit
@@ -156,7 +156,7 @@ have the `cannotEnterMsg` property of the
 cottage take its value from the `in` property of
 beforeCottage:
 
-```
+`
     + cottage: Thing 'tiny cottage;small simple; house home'
         "It's small and simple, but you're very happy here. "
         
@@ -164,7 +164,7 @@ beforeCottage:
         
         cannotEnterMsg = location.in
     ;
-```
+`
 
 You may have noticed that the property for the message explaining the
 refusal to allow Heidi to enter the cottage is called
@@ -182,7 +182,7 @@ character to your game when you refuse impossible or unimplemented
 actions with customized messages. In this case of the cottage, for
 example, you could write:
 
-```
+`
     + cottage: Thing 'tiny cottage;small simple; house home'
         "It's small and simple, but you're very happy here. "
         
@@ -192,7 +192,7 @@ example, you could write:
         cannotTakeMsg = 'You\'re not a tortoise; you can\'t carry your home with
             you. '
     ;
-```
+`
 
 I'll leave it as an exercise to the reader to add an appropriate
 `cannotTakeMsg` to the tree and the branch. You

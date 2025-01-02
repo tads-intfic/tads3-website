@@ -67,19 +67,19 @@ type on the traveler object.
 </div>
 
 **`TravelMessageHandler`**  
-`         `[`ActorState`](../object/ActorState.html)  
-`                 `[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
-`                         `[`GuidedInTravelState`](../object/GuidedInTravelState.html)  
-`                 `[`AccompanyingState`](../object/AccompanyingState.html)  
-`                         `[`GuidedTourState`](../object/GuidedTourState.html)  
-`                 `[`ConversationReadyState`](../object/ConversationReadyState.html)  
-`                 `[`HermitActorState`](../object/HermitActorState.html)  
-`                 `[`InConversationState`](../object/InConversationState.html)  
-`         `[`Traveler`](../object/Traveler.html)  
-`                 `[`Actor`](../object/Actor.html)  
-`                         `[`UntakeableActor`](../object/UntakeableActor.html)  
-`                                 `[`Person`](../object/Person.html)  
-`                 `[`Vehicle`](../object/Vehicle.html)  
+[`ActorState`](../object/ActorState.html)  
+[`AccompanyingInTravelState`](../object/AccompanyingInTravelState.html)  
+[`GuidedInTravelState`](../object/GuidedInTravelState.html)  
+[`AccompanyingState`](../object/AccompanyingState.html)  
+[`GuidedTourState`](../object/GuidedTourState.html)  
+[`ConversationReadyState`](../object/ConversationReadyState.html)  
+[`HermitActorState`](../object/HermitActorState.html)  
+[`InConversationState`](../object/InConversationState.html)  
+[`Traveler`](../object/Traveler.html)  
+[`Actor`](../object/Actor.html)  
+[`UntakeableActor`](../object/UntakeableActor.html)  
+[`Person`](../object/Person.html)  
+[`Vehicle`](../object/Vehicle.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -96,7 +96,7 @@ type on the traveler object.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -106,7 +106,7 @@ type on the traveler object.
 
 </div>
 
-` `[`getNominalTraveler`](#getNominalTraveler)`  `[`sayArriving`](#sayArriving)`  `[`sayArrivingDir`](#sayArrivingDir)`  `[`sayArrivingDownStairs`](#sayArrivingDownStairs)`  `[`sayArrivingLocally`](#sayArrivingLocally)`  `[`sayArrivingThroughPassage`](#sayArrivingThroughPassage)`  `[`sayArrivingUpStairs`](#sayArrivingUpStairs)`  `[`sayArrivingViaPath`](#sayArrivingViaPath)`  `[`sayDeparting`](#sayDeparting)`  `[`sayDepartingDir`](#sayDepartingDir)`  `[`sayDepartingDownStairs`](#sayDepartingDownStairs)`  `[`sayDepartingLocally`](#sayDepartingLocally)`  `[`sayDepartingThroughPassage`](#sayDepartingThroughPassage)`  `[`sayDepartingUpStairs`](#sayDepartingUpStairs)`  `[`sayDepartingViaPath`](#sayDepartingViaPath)`  `[`sayTravelingRemotely`](#sayTravelingRemotely)`  `
+[`getNominalTraveler`](#getNominalTraveler)[`sayArriving`](#sayArriving)[`sayArrivingDir`](#sayArrivingDir)[`sayArrivingDownStairs`](#sayArrivingDownStairs)[`sayArrivingLocally`](#sayArrivingLocally)[`sayArrivingThroughPassage`](#sayArrivingThroughPassage)[`sayArrivingUpStairs`](#sayArrivingUpStairs)[`sayArrivingViaPath`](#sayArrivingViaPath)[`sayDeparting`](#sayDeparting)[`sayDepartingDir`](#sayDepartingDir)[`sayDepartingDownStairs`](#sayDepartingDownStairs)[`sayDepartingLocally`](#sayDepartingLocally)[`sayDepartingThroughPassage`](#sayDepartingThroughPassage)[`sayDepartingUpStairs`](#sayDepartingUpStairs)[`sayDepartingViaPath`](#sayDepartingViaPath)[`sayTravelingRemotely`](#sayTravelingRemotely)
 
 <span id="_Properties_"></span>
 

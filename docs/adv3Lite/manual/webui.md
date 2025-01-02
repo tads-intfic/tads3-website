@@ -271,7 +271,7 @@ Here are some tips for creating a dual-mode game:
     that we added this symbol to the .t3m file for the Web UI only, so
     if this symbol is defined, you know you're compiling the Web UI
     version.
-    ```
+    `
         #ifdef TADS_INCLUDE_NET
            special code for the Web UI goes here
         #else
@@ -309,7 +309,7 @@ each folder, add an object definition like this to your game:
     WebResourceResFile
        vpath = static new RexPattern('/foldername/')
     ;
-```
+`
 
 That tells the library to treat anything in the "foldername"
 subdirectory of the game folder as an HTML resource, allowing the client
@@ -461,9 +461,9 @@ hyperlink to a separate Web page.
 To create a command link, use the Adv3LiteWeb function
 `aHref()`:
 
-```
+`
     "To save the game, type <<aHref('SAVE')>>. "
-```
+`
 
 You should continue to use `\<A HREF\>` for
 actual hyperlinks, where the link navigates to another Web page rather

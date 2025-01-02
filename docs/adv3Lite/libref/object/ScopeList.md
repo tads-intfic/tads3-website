@@ -77,7 +77,7 @@ list of in-scope objects satisfying some condition.
 
 </div>
 
-` `[`status_`](#status_)`  `[`vec_`](#vec_)`  `
+[`status_`](#status_)[`vec_`](#vec_)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ list of in-scope objects satisfying some condition.
 
 </div>
 
-` `[`add`](#add)`  `[`addAll`](#addAll)`  `[`addOnly`](#addOnly)`  `[`addSelfIlluminatingWithin`](#addSelfIlluminatingWithin)`  `[`addWithin`](#addWithin)`  `[`close`](#close)`  `[`createIterator`](#createIterator)`  `[`createLiveIterator`](#createLiveIterator)`  `[`find`](#find)`  `[`length`](#length)`  `[`subset`](#subset)`  `[`toList`](#toList)`  `
+[`add`](#add)[`addAll`](#addAll)[`addOnly`](#addOnly)[`addSelfIlluminatingWithin`](#addSelfIlluminatingWithin)[`addWithin`](#addWithin)[`close`](#close)[`createIterator`](#createIterator)[`createLiveIterator`](#createLiveIterator)[`find`](#find)[`length`](#length)[`subset`](#subset)[`toList`](#toList)
 
 <span id="_Properties_"></span>
 

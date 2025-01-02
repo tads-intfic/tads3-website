@@ -48,7 +48,7 @@ by giving you direct access to the raw bytes in the file).
 </div>
 
 **`File`**  
-`         `[`Object`](../object/Object.html)  
+[`Object`](../object/Object.html)  
 <span id="_SubClassTree_"></span>
 
 <div class="mjhd">
@@ -73,9 +73,9 @@ by giving you direct access to the raw bytes in the file).
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -85,10 +85,10 @@ by giving you direct access to the raw bytes in the file).
 
 </div>
 
-` `[`closeFile`](#closeFile)`  `[`digestMD5`](#digestMD5)`  `[`getCharacterSet`](#getCharacterSet)`  `[`getFileMode`](#getFileMode)`  `[`getFileSize`](#getFileSize)`  `[`getPos`](#getPos)`  `[`packBytes`](#packBytes)`  `[`readBytes`](#readBytes)`  `[`readFile`](#readFile)`  `[`setCharacterSet`](#setCharacterSet)`  `[`setFileMode`](#setFileMode)`  `[`setPos`](#setPos)`  `[`setPosEnd`](#setPosEnd)`  `[`sha256`](#sha256)`  `[`unpackBytes`](#unpackBytes)`  `[`writeBytes`](#writeBytes)`  `[`writeFile`](#writeFile)`  `
+` [`closeFile`](#closeFile)  [`digestMD5`](#digestMD5)  [`getCharacterSet`](#getCharacterSet)  [`getFileMode`](#getFileMode)  [`getFileSize`](#getFileSize)  [`getPos`](#getPos)  [`packBytes`](#packBytes)  [`readBytes`](#readBytes)  [`readFile`](#readFile)  [`setCharacterSet`](#setCharacterSet)  [`setFileMode`](#setFileMode)  [`setPos`](#setPos)  [`setPosEnd`](#setPosEnd)  [`sha256`](#sha256)  [`unpackBytes`](#unpackBytes)  [`writeBytes`](#writeBytes)  [`writeFile`](#writeFile)  `
 
 Inherited from `Object` :  
-` `[`callInherited`](../object/Object.html#callInherited)`  `[`createIterator`](../object/Object.html#createIterator)`  `[`createLiveIterator`](../object/Object.html#createLiveIterator)`  `[`forEach`](../object/Object.html#forEach)`  `[`getPropList`](../object/Object.html#getPropList)`  `[`getPropParams`](../object/Object.html#getPropParams)`  `[`getSuperclassList`](../object/Object.html#getSuperclassList)`  `[`isClass`](../object/Object.html#isClass)`  `[`isTransient`](../object/Object.html#isTransient)`  `[`mapAll`](../object/Object.html#mapAll)`  `[`ofKind`](../object/Object.html#ofKind)`  `[`propDefined`](../object/Object.html#propDefined)`  `[`propInherited`](../object/Object.html#propInherited)`  `[`propType`](../object/Object.html#propType)`  `[`valToSymbol`](../object/Object.html#valToSymbol)`  `
+` [`callInherited`](../object/Object.html#callInherited)  [`createIterator`](../object/Object.html#createIterator)  [`createLiveIterator`](../object/Object.html#createLiveIterator)  [`forEach`](../object/Object.html#forEach)  [`getPropList`](../object/Object.html#getPropList)  [`getPropParams`](../object/Object.html#getPropParams)  [`getSuperclassList`](../object/Object.html#getSuperclassList)  [`isClass`](../object/Object.html#isClass)  [`isTransient`](../object/Object.html#isTransient)  [`mapAll`](../object/Object.html#mapAll)  [`ofKind`](../object/Object.html#ofKind)  [`propDefined`](../object/Object.html#propDefined)  [`propInherited`](../object/Object.html#propInherited)  [`propType`](../object/Object.html#propType)  [`valToSymbol`](../object/Object.html#valToSymbol)  `
 
 <span id="_Properties_"></span>
 

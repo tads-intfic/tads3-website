@@ -52,7 +52,7 @@ Modifications to ActorTopicDatabase for SceneTopic extension
 </div>
 
 **`ActorTopicDatabase`**  
-`         `[`TopicDatabase`](../object/TopicDatabase.html)  
+[`TopicDatabase`](../object/TopicDatabase.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -63,8 +63,8 @@ Modifications to ActorTopicDatabase for SceneTopic extension
 </div>
 
 **`ActorTopicDatabase`**  
-`         `[`Actor`](../object/Actor.html)  
-`         `[`ActorState`](../object/ActorState.html)  
+[`Actor`](../object/Actor.html)  
+[`ActorState`](../object/ActorState.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -81,9 +81,9 @@ Modifications to ActorTopicDatabase for SceneTopic extension
 
 </div>
 
-` `[`askForTopics`](#askForTopics)`  `[`askTopics`](#askTopics)`  `[`commandTopics`](#commandTopics)`  `[`defaultAgendaTopic`](#defaultAgendaTopic)`  `[`giveTopics`](#giveTopics)`  `[`initiateTopics`](#initiateTopics)`  `[`miscTopics`](#miscTopics)`  `[`queryTopics`](#queryTopics)`  `[`sayTopics`](#sayTopics)`  `[`sceneEndTopics`](#sceneEndTopics)`  `[`sceneStartTopics`](#sceneStartTopics)`  `[`showTopics`](#showTopics)`  `[`talkTopics`](#talkTopics)`  `[`tellTopics`](#tellTopics)`  `
+[`askForTopics`](#askForTopics)[`askTopics`](#askTopics)[`commandTopics`](#commandTopics)[`defaultAgendaTopic`](#defaultAgendaTopic)[`giveTopics`](#giveTopics)[`initiateTopics`](#initiateTopics)[`miscTopics`](#miscTopics)[`queryTopics`](#queryTopics)[`sayTopics`](#sayTopics)[`sceneEndTopics`](#sceneEndTopics)[`sceneStartTopics`](#sceneStartTopics)[`showTopics`](#showTopics)[`talkTopics`](#talkTopics)[`tellTopics`](#tellTopics)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -93,10 +93,10 @@ Modifications to ActorTopicDatabase for SceneTopic extension
 
 </div>
 
-` `[`initiateTopic`](#initiateTopic)`  `[`listableTopics`](#listableTopics)`  `
+[`initiateTopic`](#initiateTopic)[`listableTopics`](#listableTopics)
 
 Inherited from `TopicDatabase` :  
-` `[`addTopic`](../object/TopicDatabase.html#addTopic)`  `[`getBestMatch`](../object/TopicDatabase.html#getBestMatch)`  `
+[`addTopic`](../object/TopicDatabase.html#addTopic)[`getBestMatch`](../object/TopicDatabase.html#getBestMatch)
 
 <span id="_Properties_"></span>
 

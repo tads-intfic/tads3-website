@@ -4960,7 +4960,7 @@ the plausibleKeyList and actualKeyList properties of a Key. For example,
 in the following definition the silver key will work as presumably
 intended:
 
-```
+`
     cabinet: Fixture 'cabinet'
        remapIn: SubComponent
        {
@@ -4976,7 +4976,7 @@ intended:
        plausibleLockList = [cabinet]
        actualLockList = [cabinet]
     ;
-```
+`
 
 ------------------------------------------------------------------------
 

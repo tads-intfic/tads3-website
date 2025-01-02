@@ -46,7 +46,7 @@ specific objects.
 </div>
 
 **`PushTravelBarrier`**  
-`         `[`TravelBarrier`](../object/TravelBarrier.html)  
+[`TravelBarrier`](../object/TravelBarrier.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -72,9 +72,9 @@ specific objects.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -84,9 +84,9 @@ specific objects.
 
 </div>
 
-` `[`canPushedObjectPass`](#canPushedObjectPass)`  `[`canTravelerPass`](#canTravelerPass)`  `[`explainTravelBarrier`](#explainTravelBarrier)`  `
+[`canPushedObjectPass`](#canPushedObjectPass)[`canTravelerPass`](#canTravelerPass)[`explainTravelBarrier`](#explainTravelBarrier)
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -54,7 +54,7 @@ effect during the Scene or Scenes in question.
 
 To create a Scene we simply define an object of the Scene class, e.g.;
 
-```
+`
     myScene: Scene
        startsWhen = (me.isIn(throneRoom))
        whenStarting()
@@ -65,7 +65,7 @@ To create a Scene we simply define an object of the Scene class, e.g.;
        }
        ...
     ;
-```
+`
 
 You may recall that earlier on we said that at some point the drug
 cartels would take over the aeroplane standing at Gate 3 for their own
@@ -83,7 +83,7 @@ As a start, we might then define a Scene that's triggered by the player
 reaching the plane's toilet, and starts with an announcement over the
 plane's intercom:
 
-```
+`
     takeover: Scene
         startsWhen = (bathroom.visited)
         
@@ -97,7 +97,7 @@ plane's intercom:
             cabin. ";
         }
     ;
-```
+`
 
 A good place to put this might be right at the end of the plane.t file.
 
@@ -113,7 +113,7 @@ that is to change the description of the passenger object so it's
 conditional on whether the takeover scene is happening or not, and add a
 specialDesc that's only used when the takeover scene is happening:
 
-```
+`
     airlinePassengers: MultiLoc, Decoration 'passengers;;men women; them'
         "<<if takeover.isHappening>>They seem confused and annoyed in equal
         measure<<else>>You sense an air of impatience about them, as if they're all
@@ -131,13 +131,13 @@ specialDesc that's only used when the takeover scene is happening:
         useSpecialDesc = (takeover.isHappening)  
         
     ;
-```
+`
 
 The notImportantMsg of the seats Decoration object referred to them all
 being occupied. This too needs to change to reflect that the passengers
 are now milling about in the aisle:
 
-```
+`
     MultiLoc, Decoration 'seats; red; seating seat airline; them'
         "Like all airline seats, these ones look like they were designed for the
         average-sized person of a century and a half ago. "
@@ -148,7 +148,7 @@ are now milling about in the aisle:
         
         locationList = [planeFront, planeRear]
     ;
-```
+`
 
 The commotion has been caused because El Diablo has instructed his
 ruthless lieutenant Pablo Cortez to order the passengers off the plane
@@ -174,7 +174,7 @@ a physical object but as an abstract means of enforcing various
 conditions. We can therefore define it on the
 `fore` property of the planeRear room:
 
-```
+`
     planeRear: Room 'Rear of Plane' 'rear[n] of the plane;;airplane aeroplane'
         "The main aisle continue forward to the front of the plane and aft to the
         bathroom between rows of red coloured seats. "
@@ -238,7 +238,7 @@ conditions. We can therefore define it on the
         
         regions = [planeRegion]    
     ;
-```
+`
 
 We've introduced a new TADS 3 language construct here, namely the
 **switch** statement. This compares the value of the expression in
@@ -289,7 +289,7 @@ To make sure the player can't get the game into an unwinnable state by
 dropping the key in the front of the cabin before leaving the plane
 we'll use a Doer to prevent this from happening:
 
-```
+`
     Doer 'drop Thing'
         execAction(c)
         {
@@ -301,7 +301,7 @@ we'll use a Doer to prevent this from happening:
         where = planeFront
         during = takeover
     ;
-```
+`
 
 Notice the use of the `where` and
 `during` properties to restrict when this Doer
@@ -314,7 +314,7 @@ another TravelConnector, this time on the east property of the jetway.
 While we're at it we should also change the description of the jetway to
 reflect the change in situation:
 
-```
+`
     jetway: Room 'Jetway' 'jetway;short enclosed; walkway'
         "This is little more than a short enclosed walkway leading west-east from
         the gate to the plane. <<if takeover.isHappening>> Right now it's thronging
@@ -336,7 +336,7 @@ reflect the change in situation:
         }
         
     ;
-```
+`
 
 This description mentions a throng of disgruntled passengers, which we
 should implement and move into the jetway when the scene starts. We
@@ -345,7 +345,7 @@ now notionally about to board the plane. The start of the scene might
 also be a good time to cut off the announcements calling for passengers
 to board at Gate 3, since this clearly isn't relevant any more:
 
-```
+`
     takeover: Scene
         startsWhen = (bathroom.visited)
         
@@ -375,14 +375,14 @@ to board at Gate 3, since this clearly isn't relevant any more:
         
         notImportantMsg = 'You don\'t have time for these people right now. ' 
     ;
-```
+`
 
 This might be a good point at which to ensure the player character
 doesn't start the announcements up again the next time he passes through
 the metal detector. We can check whether the takeover Scene has ever
 started by checking whether or not its startAt property is nil:
 
-```
+`
     + metalDetector: Passage 'metal detector; crude; frame'
         "The metal detector is little more than a crude metal frame, just large
         enough to step through, with a power cable trailing across the floor. "
@@ -398,7 +398,7 @@ started by checking whether or not its startAt property is nil:
                 announcementObj.start();
         }
     ;
-```
+`
 
 We've defined what happens when the takeover scene starts; we also need
 to define its ending. We'll end it when the player character puts on the
@@ -408,7 +408,7 @@ to remove the disgruntled passengers from the jetway, since they should
 all have left by then; we should also remove the original set of
 passengers from the plane and replace them with a new set:
 
-```
+`
     takeover: Scene
         startsWhen = (bathroom.visited)
         
@@ -458,7 +458,7 @@ passengers from the plane and replace them with a new set:
             }
         }
     ;
-```
+`
 
 Although the `airlinePassengers` object is a
 MultiLoc, we can quite happily move it off stage with
@@ -481,7 +481,7 @@ prevent this we'll insert a check() stage into the
 the action corresponding to taking clothes off) to prevent the player
 character from taking off the uniform once he's put it on:
 
-```
+`
     ++ uniform: Wearable 'pilot\'s uniform; timo large'  
         "It's a uniform for a Timo Airlines pilot. It's a little large for you, but
         <<if wornBy == me>> it's not too bad a f<<else>>you could probably wear
@@ -499,7 +499,7 @@ character from taking off the uniform once he's put it on:
             }
         }
     ;
-```
+`
 
 Note that we've also tweaked the description of the uniform so that it
 changes when the player character is wearing it. We've rather sneakily

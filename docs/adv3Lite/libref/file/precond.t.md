@@ -36,7 +36,7 @@ Based on code in the adv3 library (c) Michael J. Roberts.
 
 </div>
 
-` `[`ObjectPreCondition`](../object/ObjectPreCondition.html)`  `[`PreCondition`](../object/PreCondition.html)`  `
+[`ObjectPreCondition`](../object/ObjectPreCondition.html)[`PreCondition`](../object/PreCondition.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -45,7 +45,7 @@ Based on code in the adv3 library (c) Michael J. Roberts.
 
 </div>
 
-` `[`actorInStagingLocation`](../object/actorInStagingLocation.html)`  `[`actorOutOfNested`](../object/actorOutOfNested.html)`  `[`containerOpen`](../object/containerOpen.html)`  `[`objAudible`](../object/objAudible.html)`  `[`objClosed`](../object/objClosed.html)`  `[`objDetached`](../object/objDetached.html)`  `[`objHeld`](../object/objHeld.html)`  `[`objNotWorn`](../object/objNotWorn.html)`  `[`objOpen`](../object/objOpen.html)`  `[`objSmellable`](../object/objSmellable.html)`  `[`objUnlocked`](../object/objUnlocked.html)`  `[`objVisible`](../object/objVisible.html)`  `[`touchObj`](../object/touchObj.html)`  `[`travelPermitted`](../object/travelPermitted.html)`  `
+[`actorInStagingLocation`](../object/actorInStagingLocation.html)[`actorOutOfNested`](../object/actorOutOfNested.html)[`containerOpen`](../object/containerOpen.html)[`objAudible`](../object/objAudible.html)[`objClosed`](../object/objClosed.html)[`objDetached`](../object/objDetached.html)[`objHeld`](../object/objHeld.html)[`objNotWorn`](../object/objNotWorn.html)[`objOpen`](../object/objOpen.html)[`objSmellable`](../object/objSmellable.html)[`objUnlocked`](../object/objUnlocked.html)[`objVisible`](../object/objVisible.html)[`touchObj`](../object/touchObj.html)[`travelPermitted`](../object/travelPermitted.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

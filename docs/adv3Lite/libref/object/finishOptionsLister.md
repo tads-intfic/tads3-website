@@ -38,7 +38,7 @@ when the game comes to an end.
 </div>
 
 **`finishOptionsLister`**  
-`         `[`Lister`](../object/Lister.html)  
+[`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,9 +48,9 @@ when the game comes to an end.
 
 </div>
 
-` `[`showSubListing`](#showSubListing)`  `
+[`showSubListing`](#showSubListing)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ when the game comes to an end.
 
 </div>
 
-` `[`showList`](#showList)`  `[`showListPrefix`](#showListPrefix)`  `[`showListSuffix`](#showListSuffix)`  `
+[`showList`](#showList)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
 Inherited from `Lister` :  
-` `[`buildList`](../object/Lister.html#buildList)`  `[`listed`](../object/Lister.html#listed)`  `[`listOrder`](../object/Lister.html#listOrder)`  `[`show`](../object/Lister.html#show)`  `[`showListEmpty`](../object/Lister.html#showListEmpty)`  `
+[`buildList`](../object/Lister.html#buildList)[`listed`](../object/Lister.html#listed)[`listOrder`](../object/Lister.html#listOrder)[`show`](../object/Lister.html#show)[`showListEmpty`](../object/Lister.html#showListEmpty)
 
 <span id="_Properties_"></span>
 

@@ -61,7 +61,7 @@ define Scene-specific action responses, or else to rule our certain
 actions together during a Scene by using the exit macro in that Scene's
 beforeAction method, for example:
 
-```
+`
     interviewScene: Scene
        beforeAction()
        {
@@ -73,14 +73,14 @@ beforeAction method, for example:
           }
         }
     ;    
-```
+`
 
 As illustrated in the foregoing example, if you want your code to react
 to an Action, you probably need to test what action it is. You can do
 this with the **gActionIs(*action*)** macro. For example, to prevent
 someone jumping in a room with a low ceiling you might write:
 
-```
+`
         roomBeforeAction()
         {
             if(gActionIs(Jump))
@@ -89,20 +89,20 @@ someone jumping in a room with a low ceiling you might write:
                 exit;
             }
         }
-```
+`
 
 Note how we use the **exit** macro to veto the action here.
 
 Alternatively you might allow the jumping to go ahead and then report
 that the player character has banged his head on the ceiling:
 
-```
+`
         roomAfterAction()
         {
             if(gActionIs(Jump))
                 "You bang your head on the ceiling. ";
         }
-```
+`
 
 If you want to test whether the current action is one among several
 actions, you can use the macro gActionIn(*action1, action2, ...*)
@@ -125,13 +125,13 @@ direct objects involved it's safer to use gActionList, which contains a
 list of all the direct objects that made it to the action stage (i.e.
 all the direct objects for which the action succeeded. For example:
 
-```
+`
         afterAction()
         {
             if(gActionList.indexOf(redBall) != nil)
                 "You've just done something to the red ball. ";
         }
-```
+`
 
 The **actorAction()** method is called on the current actor (carrying
 out the action) just before any of the other before notifications. This
@@ -139,7 +139,7 @@ can be useful if you temporarily want to prevent an actor (in particular
 the player character) from carrying out certain kinds of action because
 s/he's temporarily incapacitated or tied up; for example:
 
-```
+`
     actorAction()
     {
         /* Be careful not to disable the system actions! */
@@ -152,7 +152,7 @@ s/he's temporarily incapacitated or tied up; for example:
         "You can't do that while you're bound and gagged!";
            exit;   
     } 
-```
+`
 
   
 
@@ -164,16 +164,16 @@ gActionIs(Travel), but that only tells you that the player character
 went (or tried to go) somewhere. If you want to test for which way s/he
 went you can combine a test for the action and the direction like so:
 
-```
+`
        if(gActionIs(Travel) && gAction.direction == eastDir)
-```
+`
 
 But to make this a little easier adv3Lite provides the
 gTravelActionIs(dir) macro, which you could use like this:
 
-```
+`
        if(gTravelActionIs(east))
-```
+`
 
 But there's a problem with testing for travel actions this way.
 Consider, for example, the case where going east would take the player
@@ -181,9 +181,9 @@ character through a door. In this case the player would get the same
 result from the commands EAST and GO THROUGH DOOR, so to make sure we
 covered both eventualities we'd have to test for:
 
-```
+`
        if(gTravelActionIs(east) || (gActionIs(GoThrough) && gDobj == frontDoor))
-```
+`
 
 <span id="beforetravel"></span>A better way of doing this is to test not
 for what direction an actor travelled in, but what TravelConnector was
@@ -203,13 +203,13 @@ In any case, rather than using gTravelActionIs() in a beforeAction() or
 afterAction() method, it's normally better to use the beforeTravel() and
 afterTravel() methods and test for the connector, e.g.:
 
-```
+`
     beforeTravel(traveler, connector)
     {
         if(traveler == gPlayerChar && connector == frontDoor)
           ...
     }
-```
+`
 
 The limitation on this is that the notifications are only called where
 there's a TravelConnector (Room, Door or other TravelConnector object)

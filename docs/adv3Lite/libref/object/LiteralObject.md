@@ -68,7 +68,7 @@ object to hold the result of a literal input
 
 </div>
 
-` `[`name`](#name)`  `[`person`](#person)`  `[`theName`](#theName)`  `
+[`name`](#name)[`person`](#person)[`theName`](#theName)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ object to hold the result of a literal input
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

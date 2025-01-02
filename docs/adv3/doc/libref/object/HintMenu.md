@@ -53,7 +53,7 @@ simply put all of the goals directly in the top hint menu. A very large
 game with lots of goals could add more levels of sub-menus to make it
 easier to navigate the large number of topics.
 
-`class `**`HintMenu`**` :   `[`MenuItem`](../object/MenuItem.html)`   `[`HintMenuObject`](../object/HintMenuObject.html)
+`class `**`HintMenu`**` :   `[`MenuItem`](../object/MenuItem.html)[`HintMenuObject`](../object/HintMenuObject.html)
 
 </div>
 
@@ -66,10 +66,10 @@ easier to navigate the large number of topics.
 </div>
 
 **`HintMenu`**  
-`         `[`MenuItem`](../object/MenuItem.html)  
-`                 `[`MenuObject`](../object/MenuObject.html)  
+[`MenuItem`](../object/MenuItem.html)  
+[`MenuObject`](../object/MenuObject.html)  
 `                         object`  
-`         `[`HintMenuObject`](../object/HintMenuObject.html)  
+[`HintMenuObject`](../object/HintMenuObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -80,7 +80,7 @@ easier to navigate the large number of topics.
 </div>
 
 **`HintMenu`**  
-`         `[`TopHintMenu`](../object/TopHintMenu.html)  
+[`TopHintMenu`](../object/TopHintMenu.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -97,16 +97,16 @@ easier to navigate the large number of topics.
 
 </div>
 
-` `[`allContents`](#allContents)`  `[`isActiveInMenu`](#isActiveInMenu)`  `[`title`](#title)`  `
+[`allContents`](#allContents)[`isActiveInMenu`](#isActiveInMenu)[`title`](#title)
 
 Inherited from `MenuItem` :  
-` `[`bgcolor`](../object/MenuItem.html#bgcolor)`  `[`curKeyList`](../object/MenuItem.html#curKeyList)`  `[`curMenu`](../object/MenuItem.html#curMenu)`  `[`fgcolor`](../object/MenuItem.html#fgcolor)`  `[`fullScreenMode`](../object/MenuItem.html#fullScreenMode)`  `[`heading`](../object/MenuItem.html#heading)`  `[`indent`](../object/MenuItem.html#indent)`  `[`isOpen`](../object/MenuItem.html#isOpen)`  `[`keyList`](../object/MenuItem.html#keyList)`  `[`prevMenuLink`](../object/MenuItem.html#prevMenuLink)`  `[`topbarbg`](../object/MenuItem.html#topbarbg)`  `[`topbarfg`](../object/MenuItem.html#topbarfg)`  `[`topMenu`](../object/MenuItem.html#topMenu)`  `
+[`bgcolor`](../object/MenuItem.html#bgcolor)[`curKeyList`](../object/MenuItem.html#curKeyList)[`curMenu`](../object/MenuItem.html#curMenu)[`fgcolor`](../object/MenuItem.html#fgcolor)[`fullScreenMode`](../object/MenuItem.html#fullScreenMode)[`heading`](../object/MenuItem.html#heading)[`indent`](../object/MenuItem.html#indent)[`isOpen`](../object/MenuItem.html#isOpen)[`keyList`](../object/MenuItem.html#keyList)[`prevMenuLink`](../object/MenuItem.html#prevMenuLink)[`topbarbg`](../object/MenuItem.html#topbarbg)[`topbarfg`](../object/MenuItem.html#topbarfg)[`topMenu`](../object/MenuItem.html#topMenu)
 
 Inherited from `MenuObject` :  
-` `[`contents`](../object/MenuObject.html#contents)`  `[`menuOrder`](../object/MenuObject.html#menuOrder)`  `
+[`contents`](../object/MenuObject.html#contents)[`menuOrder`](../object/MenuObject.html#menuOrder)
 
 Inherited from `HintMenuObject` :  
-` `[`topicOrder`](../object/HintMenuObject.html#topicOrder)`  `
+[`topicOrder`](../object/HintMenuObject.html#topicOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -116,16 +116,16 @@ Inherited from `HintMenuObject` :
 
 </div>
 
-` `[`addToContents`](#addToContents)`  `[`initializeContents`](#initializeContents)`  `[`updateContents`](#updateContents)`  `
+[`addToContents`](#addToContents)[`initializeContents`](#initializeContents)[`updateContents`](#updateContents)
 
 Inherited from `MenuItem` :  
-` `[`display`](../object/MenuItem.html#display)`  `[`enterSubMenu`](../object/MenuItem.html#enterSubMenu)`  `[`formatXML`](../object/MenuItem.html#formatXML)`  `[`getChildIndex`](../object/MenuItem.html#getChildIndex)`  `[`getKeysXML`](../object/MenuItem.html#getKeysXML)`  `[`getNextMenu`](../object/MenuItem.html#getNextMenu)`  `[`getPrevMenu`](../object/MenuItem.html#getPrevMenu)`  `[`getXML`](../object/MenuItem.html#getXML)`  `[`refreshTopMenuBanner`](../object/MenuItem.html#refreshTopMenuBanner)`  `[`removeStatusLine`](../object/MenuItem.html#removeStatusLine)`  `[`removeTopMenuBanner`](../object/MenuItem.html#removeTopMenuBanner)`  `[`showMenu`](../object/MenuItem.html#showMenu)`  `[`showMenuHtml`](../object/MenuItem.html#showMenuHtml)`  `[`showMenuText`](../object/MenuItem.html#showMenuText)`  `[`showTopMenuBanner`](../object/MenuItem.html#showTopMenuBanner)`  `
+[`display`](../object/MenuItem.html#display)[`enterSubMenu`](../object/MenuItem.html#enterSubMenu)[`formatXML`](../object/MenuItem.html#formatXML)[`getChildIndex`](../object/MenuItem.html#getChildIndex)[`getKeysXML`](../object/MenuItem.html#getKeysXML)[`getNextMenu`](../object/MenuItem.html#getNextMenu)[`getPrevMenu`](../object/MenuItem.html#getPrevMenu)[`getXML`](../object/MenuItem.html#getXML)[`refreshTopMenuBanner`](../object/MenuItem.html#refreshTopMenuBanner)[`removeStatusLine`](../object/MenuItem.html#removeStatusLine)[`removeTopMenuBanner`](../object/MenuItem.html#removeTopMenuBanner)[`showMenu`](../object/MenuItem.html#showMenu)[`showMenuHtml`](../object/MenuItem.html#showMenuHtml)[`showMenuText`](../object/MenuItem.html#showMenuText)[`showTopMenuBanner`](../object/MenuItem.html#showTopMenuBanner)
 
 Inherited from `MenuObject` :  
-` `[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)`  `[`execute`](../object/MenuObject.html#execute)`  `[`initializeLocation`](../object/MenuObject.html#initializeLocation)`  `
+[`compareForMenuSort`](../object/MenuObject.html#compareForMenuSort)[`execute`](../object/MenuObject.html#execute)[`initializeLocation`](../object/MenuObject.html#initializeLocation)
 
 Inherited from `HintMenuObject` :  
-` `[`compareForTopicSort`](../object/HintMenuObject.html#compareForTopicSort)`  `
+[`compareForTopicSort`](../object/HintMenuObject.html#compareForTopicSort)
 
 <span id="_Properties_"></span>
 

@@ -58,7 +58,7 @@ to be saved or undone.
 
 </div>
 
-` `[`notifyList`](#notifyList)`  `[`pointOfView`](#pointOfView)`  `
+[`notifyList`](#notifyList)[`pointOfView`](#pointOfView)
 
 <span id="_MethodSummary_"></span>
 
@@ -68,7 +68,7 @@ to be saved or undone.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

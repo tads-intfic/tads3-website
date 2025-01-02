@@ -50,8 +50,8 @@ the responses to "bored" and "leaving" conversation endings.
 </div>
 
 **`BoredByeTopic`**  
-`         `[`MiscTopic`](../object/MiscTopic.html)  
-`                 `[`TopicEntry`](../object/TopicEntry.html)  
+[`MiscTopic`](../object/MiscTopic.html)  
+[`TopicEntry`](../object/TopicEntry.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -77,12 +77,12 @@ the responses to "bored" and "leaving" conversation endings.
 
 </div>
 
-` `[`includeInList`](#includeInList)`  `[`matchList`](#matchList)`  `[`matchScore`](#matchScore)`  `
+[`includeInList`](#includeInList)[`matchList`](#matchList)[`matchScore`](#matchScore)
 
-` `
+
 
 Inherited from `TopicEntry` :  
-` `[`altTalkCount`](../object/TopicEntry.html#altTalkCount)`  `[`altTopicList`](../object/TopicEntry.html#altTopicList)`  `[`impliesGreeting`](../object/TopicEntry.html#impliesGreeting)`  `[`isActive`](../object/TopicEntry.html#isActive)`  `[`isConversational`](../object/TopicEntry.html#isConversational)`  `[`matchObj`](../object/TopicEntry.html#matchObj)`  `[`talkCount`](../object/TopicEntry.html#talkCount)`  `[`topicGroupActive`](../object/TopicEntry.html#topicGroupActive)`  `[`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment)`  `[`topicResponse`](../object/TopicEntry.html#topicResponse)`  `
+[`altTalkCount`](../object/TopicEntry.html#altTalkCount)[`altTopicList`](../object/TopicEntry.html#altTopicList)[`impliesGreeting`](../object/TopicEntry.html#impliesGreeting)[`isActive`](../object/TopicEntry.html#isActive)[`isConversational`](../object/TopicEntry.html#isConversational)[`matchObj`](../object/TopicEntry.html#matchObj)[`talkCount`](../object/TopicEntry.html#talkCount)[`topicGroupActive`](../object/TopicEntry.html#topicGroupActive)[`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment)[`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,13 +92,13 @@ Inherited from `TopicEntry` :
 
 </div>
 
-` `
+
 
 Inherited from `MiscTopic` :  
-` `[`isMatchPossible`](../object/MiscTopic.html#isMatchPossible)`  `[`matchTopic`](../object/MiscTopic.html#matchTopic)`  `
+[`isMatchPossible`](../object/MiscTopic.html#isMatchPossible)[`matchTopic`](../object/MiscTopic.html#matchTopic)
 
 Inherited from `TopicEntry` :  
-` `[`addAltTopic`](../object/TopicEntry.html#addAltTopic)`  `[`addSuggestedTopic`](../object/TopicEntry.html#addSuggestedTopic)`  `[`addTopic`](../object/TopicEntry.html#addTopic)`  `[`adjustScore`](../object/TopicEntry.html#adjustScore)`  `[`anyAltIsActive`](../object/TopicEntry.html#anyAltIsActive)`  `[`breakTopicTie`](../object/TopicEntry.html#breakTopicTie)`  `[`checkIsActive`](../object/TopicEntry.html#checkIsActive)`  `[`deferToEntry`](../object/TopicEntry.html#deferToEntry)`  `[`getActor`](../object/TopicEntry.html#getActor)`  `[`getTopicOwner`](../object/TopicEntry.html#getTopicOwner)`  `[`handleTopic`](../object/TopicEntry.html#handleTopic)`  `[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)`  `[`noteAltInvocation`](../object/TopicEntry.html#noteAltInvocation)`  `[`noteInvocation`](../object/TopicEntry.html#noteInvocation)`  `[`setTopicPronouns`](../object/TopicEntry.html#setTopicPronouns)`  `
+[`addAltTopic`](../object/TopicEntry.html#addAltTopic)[`addSuggestedTopic`](../object/TopicEntry.html#addSuggestedTopic)[`addTopic`](../object/TopicEntry.html#addTopic)[`adjustScore`](../object/TopicEntry.html#adjustScore)[`anyAltIsActive`](../object/TopicEntry.html#anyAltIsActive)[`breakTopicTie`](../object/TopicEntry.html#breakTopicTie)[`checkIsActive`](../object/TopicEntry.html#checkIsActive)[`deferToEntry`](../object/TopicEntry.html#deferToEntry)[`getActor`](../object/TopicEntry.html#getActor)[`getTopicOwner`](../object/TopicEntry.html#getTopicOwner)[`handleTopic`](../object/TopicEntry.html#handleTopic)[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)[`noteAltInvocation`](../object/TopicEntry.html#noteAltInvocation)[`noteInvocation`](../object/TopicEntry.html#noteInvocation)[`setTopicPronouns`](../object/TopicEntry.html#setTopicPronouns)
 
 <span id="_Properties_"></span>
 

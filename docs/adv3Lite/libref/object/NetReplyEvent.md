@@ -44,7 +44,7 @@ to a network request made with sendNetRequest().
 </div>
 
 **`NetReplyEvent`**  
-`         `[`NetEvent`](../object/NetEvent.html)  
+[`NetEvent`](../object/NetEvent.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ to a network request made with sendNetRequest().
 
 </div>
 
-` `[`evType`](#evType)`  `[`httpStatusLine`](#httpStatusLine)`  `[`redirectLoc`](#redirectLoc)`  `[`replyBody`](#replyBody)`  `[`replyHeaders`](#replyHeaders)`  `[`replyHeadersRaw`](#replyHeadersRaw)`  `[`requestID`](#requestID)`  `[`statusCode`](#statusCode)`  `
+[`evType`](#evType)[`httpStatusLine`](#httpStatusLine)[`redirectLoc`](#redirectLoc)[`replyBody`](#replyBody)[`replyHeaders`](#replyHeaders)[`replyHeadersRaw`](#replyHeadersRaw)[`requestID`](#requestID)[`statusCode`](#statusCode)
 
 Inherited from `NetEvent` :  
-` `[`evArgs`](../object/NetEvent.html#evArgs)`  `
+[`evArgs`](../object/NetEvent.html#evArgs)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,9 +83,9 @@ Inherited from `NetEvent` :
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
-` `
+
 
 <span id="_Properties_"></span>
 

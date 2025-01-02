@@ -43,7 +43,7 @@ own game-specific files. The senseRegion.t module must also be present.
 
 </div>
 
-` `[`SwitchableViewport`](../object/SwitchableViewport.html)`  `[`Viewport`](../object/Viewport.html)`  `
+[`SwitchableViewport`](../object/SwitchableViewport.html)[`Viewport`](../object/Viewport.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -52,7 +52,7 @@ own game-specific files. The senseRegion.t module must also be present.
 
 </div>
 
-` `[`QViewport`](../object/QViewport.html)`  `[`viewportID`](../object/viewportID.html)`  `
+[`QViewport`](../object/QViewport.html)[`viewportID`](../object/viewportID.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

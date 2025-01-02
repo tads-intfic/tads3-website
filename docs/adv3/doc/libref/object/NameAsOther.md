@@ -62,8 +62,8 @@ vocabulary words.
 </div>
 
 **`NameAsOther`**  
-`         `[`NameAsParent`](../object/NameAsParent.html)  
-`                 `[`ComplexComponent`](../object/ComplexComponent.html)  
+[`NameAsParent`](../object/NameAsParent.html)  
+[`ComplexComponent`](../object/ComplexComponent.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -80,7 +80,7 @@ vocabulary words.
 
 </div>
 
-` `[`aDisambigName`](#aDisambigName)`  `[`aName`](#aName)`  `[`aNameObj`](#aNameObj)`  `[`disambigEquivName`](#disambigEquivName)`  `[`disambigName`](#disambigName)`  `[`isHer`](#isHer)`  `[`isHim`](#isHim)`  `[`isIt`](#isIt)`  `[`isMassNoun`](#isMassNoun)`  `[`isPlural`](#isPlural)`  `[`isProperName`](#isProperName)`  `[`isQualifiedName`](#isQualifiedName)`  `[`itIs`](#itIs)`  `[`itIsContraction`](#itIsContraction)`  `[`itNom`](#itNom)`  `[`itObj`](#itObj)`  `[`itPossAdj`](#itPossAdj)`  `[`itPossNoun`](#itPossNoun)`  `[`itReflexive`](#itReflexive)`  `[`listName`](#listName)`  `[`name`](#name)`  `[`nameDoes`](#nameDoes)`  `[`nameIs`](#nameIs)`  `[`nameIsnt`](#nameIsnt)`  `[`nameSays`](#nameSays)`  `[`nameSees`](#nameSees)`  `[`pluralName`](#pluralName)`  `[`targetObj`](#targetObj)`  `[`thatIsContraction`](#thatIsContraction)`  `[`thatNom`](#thatNom)`  `[`thatObj`](#thatObj)`  `[`theDisambigName`](#theDisambigName)`  `[`theName`](#theName)`  `[`theNameObj`](#theNameObj)`  `[`theNamePossAdj`](#theNamePossAdj)`  `[`theNamePossNoun`](#theNamePossNoun)`  `[`theNameWithOwner`](#theNameWithOwner)`  `[`verbCan`](#verbCan)`  `[`verbCannot`](#verbCannot)`  `[`verbCant`](#verbCant)`  `[`verbEndingEs`](#verbEndingEs)`  `[`verbEndingIes`](#verbEndingIes)`  `[`verbEndingS`](#verbEndingS)`  `[`verbEndingSD`](#verbEndingSD)`  `[`verbEndingSEd`](#verbEndingSEd)`  `[`verbMust`](#verbMust)`  `[`verbToBe`](#verbToBe)`  `[`verbToCome`](#verbToCome)`  `[`verbToDo`](#verbToDo)`  `[`verbToGo`](#verbToGo)`  `[`verbToHave`](#verbToHave)`  `[`verbToLeave`](#verbToLeave)`  `[`verbToSay`](#verbToSay)`  `[`verbToSee`](#verbToSee)`  `[`verbWas`](#verbWas)`  `[`verbWill`](#verbWill)`  `[`verbWont`](#verbWont)`  `
+[`aDisambigName`](#aDisambigName)[`aName`](#aName)[`aNameObj`](#aNameObj)[`disambigEquivName`](#disambigEquivName)[`disambigName`](#disambigName)[`isHer`](#isHer)[`isHim`](#isHim)[`isIt`](#isIt)[`isMassNoun`](#isMassNoun)[`isPlural`](#isPlural)[`isProperName`](#isProperName)[`isQualifiedName`](#isQualifiedName)[`itIs`](#itIs)[`itIsContraction`](#itIsContraction)[`itNom`](#itNom)[`itObj`](#itObj)[`itPossAdj`](#itPossAdj)[`itPossNoun`](#itPossNoun)[`itReflexive`](#itReflexive)[`listName`](#listName)[`name`](#name)[`nameDoes`](#nameDoes)[`nameIs`](#nameIs)[`nameIsnt`](#nameIsnt)[`nameSays`](#nameSays)[`nameSees`](#nameSees)[`pluralName`](#pluralName)[`targetObj`](#targetObj)[`thatIsContraction`](#thatIsContraction)[`thatNom`](#thatNom)[`thatObj`](#thatObj)[`theDisambigName`](#theDisambigName)[`theName`](#theName)[`theNameObj`](#theNameObj)[`theNamePossAdj`](#theNamePossAdj)[`theNamePossNoun`](#theNamePossNoun)[`theNameWithOwner`](#theNameWithOwner)[`verbCan`](#verbCan)[`verbCannot`](#verbCannot)[`verbCant`](#verbCant)[`verbEndingEs`](#verbEndingEs)[`verbEndingIes`](#verbEndingIes)[`verbEndingS`](#verbEndingS)[`verbEndingSD`](#verbEndingSD)[`verbEndingSEd`](#verbEndingSEd)[`verbMust`](#verbMust)[`verbToBe`](#verbToBe)[`verbToCome`](#verbToCome)[`verbToDo`](#verbToDo)[`verbToGo`](#verbToGo)[`verbToHave`](#verbToHave)[`verbToLeave`](#verbToLeave)[`verbToSay`](#verbToSay)[`verbToSee`](#verbToSee)[`verbWas`](#verbWas)[`verbWill`](#verbWill)[`verbWont`](#verbWont)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,7 +90,7 @@ vocabulary words.
 
 </div>
 
-` `[`aNameOwnerLoc`](#aNameOwnerLoc)`  `[`conjugateRegularVerb`](#conjugateRegularVerb)`  `[`countDisambigName`](#countDisambigName)`  `[`countName`](#countName)`  `[`countNameOwnerLoc`](#countNameOwnerLoc)`  `[`itVerb`](#itVerb)`  `[`nameVerb`](#nameVerb)`  `[`notePromptByOwnerLoc`](#notePromptByOwnerLoc)`  `[`notePromptByPossAdj`](#notePromptByPossAdj)`  `[`theNameOwnerLoc`](#theNameOwnerLoc)`  `
+[`aNameOwnerLoc`](#aNameOwnerLoc)[`conjugateRegularVerb`](#conjugateRegularVerb)[`countDisambigName`](#countDisambigName)[`countName`](#countName)[`countNameOwnerLoc`](#countNameOwnerLoc)[`itVerb`](#itVerb)[`nameVerb`](#nameVerb)[`notePromptByOwnerLoc`](#notePromptByOwnerLoc)[`notePromptByPossAdj`](#notePromptByPossAdj)[`theNameOwnerLoc`](#theNameOwnerLoc)
 
 <span id="_Properties_"></span>
 

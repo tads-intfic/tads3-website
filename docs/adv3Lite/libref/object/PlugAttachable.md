@@ -72,7 +72,7 @@ as being plugged into it.
 
 </div>
 
-` `[`alreadyAttachedMsg`](#alreadyAttachedMsg)`  `[`alreadyPluggedInMsg`](#alreadyPluggedInMsg)`  `[`attachmentLister`](#attachmentLister)`  `[`cannotBeAttachedMsg`](#cannotBeAttachedMsg)`  `[`cannotPlugInAnyMoreMsg`](#cannotPlugInAnyMoreMsg)`  `[`canPlugIntoMe`](#canPlugIntoMe)`  `[`isPlugable`](#isPlugable)`  `[`isPluggedIn`](#isPluggedIn)`  `[`needsExplicitSocket`](#needsExplicitSocket)`  `[`notAttachedMsg`](#notAttachedMsg)`  `[`notAttachedToThatMsg`](#notAttachedToThatMsg)`  `[`okayAttachMsg`](#okayAttachMsg)`  `[`okayDetachFromMsg`](#okayDetachFromMsg)`  `[`okayDetachMsg`](#okayDetachMsg)`  `[`socketCapacity`](#socketCapacity)`  `
+` [`alreadyAttachedMsg`](#alreadyAttachedMsg)  [`alreadyPluggedInMsg`](#alreadyPluggedInMsg)  [`attachmentLister`](#attachmentLister)  [`cannotBeAttachedMsg`](#cannotBeAttachedMsg)  [`cannotPlugInAnyMoreMsg`](#cannotPlugInAnyMoreMsg)  [`canPlugIntoMe`](#canPlugIntoMe)  [`isPlugable`](#isPlugable)  [`isPluggedIn`](#isPluggedIn)  [`needsExplicitSocket`](#needsExplicitSocket)  [`notAttachedMsg`](#notAttachedMsg)  [`notAttachedToThatMsg`](#notAttachedToThatMsg)  [`okayAttachMsg`](#okayAttachMsg)  [`okayDetachFromMsg`](#okayDetachFromMsg)  [`okayDetachMsg`](#okayDetachMsg)  [`socketCapacity`](#socketCapacity)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ as being plugged into it.
 
 </div>
 
-` `[`dobjFor(PlugIn)`](#dobjFor(PlugIn))`  `[`dobjFor(PlugInto)`](#dobjFor(PlugInto))`  `[`dobjFor(Unplug)`](#dobjFor(Unplug))`  `[`dobjFor(UnplugFrom)`](#dobjFor(UnplugFrom))`  `[`iobjFor(AttachTo)`](#iobjFor(AttachTo))`  `[`iobjFor(PlugInto)`](#iobjFor(PlugInto))`  `[`makePlugged`](#makePlugged)`  `
+` [`dobjFor(PlugIn)`](#dobjFor(PlugIn))  [`dobjFor(PlugInto)`](#dobjFor(PlugInto))  [`dobjFor(Unplug)`](#dobjFor(Unplug))  [`dobjFor(UnplugFrom)`](#dobjFor(UnplugFrom))  [`iobjFor(AttachTo)`](#iobjFor(AttachTo))  [`iobjFor(PlugInto)`](#iobjFor(PlugInto))  [`makePlugged`](#makePlugged)  `
 
 <span id="_Properties_"></span>
 

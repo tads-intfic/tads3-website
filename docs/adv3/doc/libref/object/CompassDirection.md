@@ -52,7 +52,7 @@ The English-specific modifications for compass directions.
 </div>
 
 **`CompassDirection`**  
-`         `[`Direction`](../object/Direction.html)  
+[`Direction`](../object/Direction.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,7 +70,7 @@ The English-specific modifications for compass directions.
 
 </div>
 
-` `[`eastDirection`](../object/eastDirection.html)`  `[`northDirection`](../object/northDirection.html)`  `[`northeastDirection`](../object/northeastDirection.html)`  `[`northwestDirection`](../object/northwestDirection.html)`  `[`southDirection`](../object/southDirection.html)`  `[`southeastDirection`](../object/southeastDirection.html)`  `[`southwestDirection`](../object/southwestDirection.html)`  `[`westDirection`](../object/westDirection.html)`  `
+[`eastDirection`](../object/eastDirection.html)[`northDirection`](../object/northDirection.html)[`northeastDirection`](../object/northeastDirection.html)[`northwestDirection`](../object/northwestDirection.html)[`southDirection`](../object/southDirection.html)[`southeastDirection`](../object/southeastDirection.html)[`southwestDirection`](../object/southwestDirection.html)[`westDirection`](../object/westDirection.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -79,10 +79,10 @@ The English-specific modifications for compass directions.
 
 </div>
 
-` `
+
 
 Inherited from `Direction` :  
-` `[`allDirections`](../object/Direction.html#allDirections)`  `[`dirProp`](../object/Direction.html#dirProp)`  `[`sortingOrder`](../object/Direction.html#sortingOrder)`  `
+[`allDirections`](../object/Direction.html#allDirections)[`dirProp`](../object/Direction.html#dirProp)[`sortingOrder`](../object/Direction.html#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -92,10 +92,10 @@ Inherited from `Direction` :
 
 </div>
 
-` `[`sayArriving`](#sayArriving)`  `[`sayDeparting`](#sayDeparting)`  `
+[`sayArriving`](#sayArriving)[`sayDeparting`](#sayDeparting)
 
 Inherited from `Direction` :  
-` `[`defaultConnector`](../object/Direction.html#defaultConnector)`  `[`initializeDirection`](../object/Direction.html#initializeDirection)`  `[`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass)`  `
+[`defaultConnector`](../object/Direction.html#defaultConnector)[`initializeDirection`](../object/Direction.html#initializeDirection)[`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass)
 
 <span id="_Properties_"></span>
 

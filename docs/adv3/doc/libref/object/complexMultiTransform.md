@@ -41,7 +41,7 @@ following commands by a paragraph separator.
 </div>
 
 **`complexMultiTransform`**  
-`         `[`TranscriptTransform`](../object/TranscriptTransform.html)  
+[`TranscriptTransform`](../object/TranscriptTransform.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -51,9 +51,9 @@ following commands by a paragraph separator.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -63,9 +63,9 @@ following commands by a paragraph separator.
 
 </div>
 
-` `[`applyTransform`](#applyTransform)`  `
+[`applyTransform`](#applyTransform)
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -37,7 +37,7 @@ RESTART option for finishGame
 </div>
 
 **`finishOptionRestart`**  
-`         `[`FinishOption`](../object/FinishOption.html)  
+[`FinishOption`](../object/FinishOption.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,10 +47,10 @@ RESTART option for finishGame
 
 </div>
 
-` `[`desc`](#desc)`  `[`responseChar`](#responseChar)`  `[`responseKeyword`](#responseKeyword)`  `
+[`desc`](#desc)[`responseChar`](#responseChar)[`responseKeyword`](#responseKeyword)
 
 Inherited from `FinishOption` :  
-` `[`isListed`](../object/FinishOption.html#isListed)`  `[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)`  `
+[`isListed`](../object/FinishOption.html#isListed)[`showScoreInFinish`](../object/FinishOption.html#showScoreInFinish)
 
 <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ Inherited from `FinishOption` :
 
 </div>
 
-` `[`doOption`](#doOption)`  `
+[`doOption`](#doOption)
 
 Inherited from `FinishOption` :  
-` `[`responseMatches`](../object/FinishOption.html#responseMatches)`  `
+[`responseMatches`](../object/FinishOption.html#responseMatches)
 
 <span id="_Properties_"></span>
 

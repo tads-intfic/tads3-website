@@ -69,7 +69,7 @@ destination in that direction.
 
 </div>
 
-` `[`dest_`](#dest_)`  `[`destIsBack_`](#destIsBack_)`  `[`destName_`](#destName_)`  `[`dir_`](#dir_)`  `[`others_`](#others_)`  `
+[`dest_`](#dest_)[`destIsBack_`](#destIsBack_)[`destName_`](#destName_)[`dir_`](#dir_)[`others_`](#others_)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ destination in that direction.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

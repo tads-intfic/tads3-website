@@ -54,11 +54,11 @@ for determining the TopicEntry that best matches a list of topics
 </div>
 
 **`TopicDatabase`**  
-`         `[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)  
-`                 `[`Actor`](../object/Actor.html)  
-`                 `[`ActorState`](../object/ActorState.html)  
-`         `[`Consultable`](../object/Consultable.html)  
-`         `[`ThoughtManager`](../object/ThoughtManager.html)  
+[`ActorTopicDatabase`](../object/ActorTopicDatabase.html)  
+[`Actor`](../object/Actor.html)  
+[`ActorState`](../object/ActorState.html)  
+[`Consultable`](../object/Consultable.html)  
+[`ThoughtManager`](../object/ThoughtManager.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -75,7 +75,7 @@ for determining the TopicEntry that best matches a list of topics
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ for determining the TopicEntry that best matches a list of topics
 
 </div>
 
-` `[`addTopic`](#addTopic)`  `[`getBestMatch`](#getBestMatch)`  `
+[`addTopic`](#addTopic)[`getBestMatch`](#getBestMatch)
 
 <span id="_Properties_"></span>
 

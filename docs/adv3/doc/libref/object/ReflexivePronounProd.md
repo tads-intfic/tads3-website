@@ -44,9 +44,9 @@ appeared earlier in the sentence: "ask bob about himself."
 </div>
 
 **`ReflexivePronounProd`**  
-`         `[`PronounProd`](../object/PronounProd.html)  
-`                 `[`NounPhraseProd`](../object/NounPhraseProd.html)  
-`                         `[`BasicProd`](../object/BasicProd.html)  
+[`PronounProd`](../object/PronounProd.html)  
+[`NounPhraseProd`](../object/NounPhraseProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,14 +57,14 @@ appeared earlier in the sentence: "ask bob about himself."
 </div>
 
 **`ReflexivePronounProd`**  
-`         `[`HerselfProd`](../object/HerselfProd.html)  
-`                 `[`completeNounPhraseWithoutAll(herself)`](../object/completeNounPhraseWithoutAll(herself).html)  
-`         `[`HimselfProd`](../object/HimselfProd.html)  
-`                 `[`completeNounPhraseWithoutAll(himself)`](../object/completeNounPhraseWithoutAll(himself).html)  
-`         `[`ItselfProd`](../object/ItselfProd.html)  
-`                 `[`completeNounPhraseWithoutAll(itself)`](../object/completeNounPhraseWithoutAll(itself).html)  
-`         `[`ThemselvesProd`](../object/ThemselvesProd.html)  
-`                 `[`completeNounPhraseWithoutAll(themselves)`](../object/completeNounPhraseWithoutAll(themselves).html)  
+[`HerselfProd`](../object/HerselfProd.html)  
+[`completeNounPhraseWithoutAll(herself)`](../object/completeNounPhraseWithoutAll(herself).html)  
+[`HimselfProd`](../object/HimselfProd.html)  
+[`completeNounPhraseWithoutAll(himself)`](../object/completeNounPhraseWithoutAll(himself).html)  
+[`ItselfProd`](../object/ItselfProd.html)  
+[`completeNounPhraseWithoutAll(itself)`](../object/completeNounPhraseWithoutAll(itself).html)  
+[`ThemselvesProd`](../object/ThemselvesProd.html)  
+[`completeNounPhraseWithoutAll(themselves)`](../object/completeNounPhraseWithoutAll(themselves).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -81,16 +81,16 @@ appeared earlier in the sentence: "ask bob about himself."
 
 </div>
 
-` `
+
 
 Inherited from `PronounProd` :  
-` `[`isPlural`](../object/PronounProd.html#isPlural)`  `[`isPossessive`](../object/PronounProd.html#isPossessive)`  `[`pronounType`](../object/PronounProd.html#pronounType)`  `
+[`isPlural`](../object/PronounProd.html#isPlural)[`isPossessive`](../object/PronounProd.html#isPossessive)[`pronounType`](../object/PronounProd.html#pronounType)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)`  `
+[`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -100,16 +100,16 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`checkAgreement`](#checkAgreement)`  `[`resolveNouns`](#resolveNouns)`  `
+[`checkAgreement`](#checkAgreement)[`resolveNouns`](#resolveNouns)
 
 Inherited from `PronounProd` :  
-` `[`checkAnaphoricBinding`](../object/PronounProd.html#checkAnaphoricBinding)`  `
+[`checkAnaphoricBinding`](../object/PronounProd.html#checkAnaphoricBinding)
 
 Inherited from `NounPhraseProd` :  
-` `[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)`  `[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)`  `
+[`filterTruncations`](../object/NounPhraseProd.html#filterTruncations)[`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

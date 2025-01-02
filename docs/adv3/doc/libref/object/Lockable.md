@@ -48,7 +48,7 @@ superclass list.
 </div>
 
 **`Lockable`**  
-`         `[`Linkable`](../object/Linkable.html)  
+[`Linkable`](../object/Linkable.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -59,10 +59,10 @@ superclass list.
 </div>
 
 **`Lockable`**  
-`         `[`IndirectLockable`](../object/IndirectLockable.html)  
-`         `[`LockableContainer`](../object/LockableContainer.html)  
-`         `[`LockableWithKey`](../object/LockableWithKey.html)  
-`                 `[`KeyedContainer`](../object/KeyedContainer.html)  
+[`IndirectLockable`](../object/IndirectLockable.html)  
+[`LockableContainer`](../object/LockableContainer.html)  
+[`LockableWithKey`](../object/LockableWithKey.html)  
+[`KeyedContainer`](../object/KeyedContainer.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -79,9 +79,9 @@ superclass list.
 
 </div>
 
-` `[`autoUnlockOnOpen`](#autoUnlockOnOpen)`  `[`initiallyLocked`](#initiallyLocked)`  `[`isLocked_`](#isLocked_)`  `[`lockedDesc`](#lockedDesc)`  `[`lockStatusObvious`](#lockStatusObvious)`  `[`lockStatusReportable`](#lockStatusReportable)`  `
+[`autoUnlockOnOpen`](#autoUnlockOnOpen)[`initiallyLocked`](#initiallyLocked)[`isLocked_`](#isLocked_)[`lockedDesc`](#lockedDesc)[`lockStatusObvious`](#lockStatusObvious)[`lockStatusReportable`](#lockStatusReportable)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -91,10 +91,10 @@ superclass list.
 
 </div>
 
-` `[`dobjFor(Lock)`](#dobjFor(Lock))`  `[`dobjFor(LockWith)`](#dobjFor(LockWith))`  `[`dobjFor(Open)`](#dobjFor(Open))`  `[`dobjFor(Unlock)`](#dobjFor(Unlock))`  `[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))`  `[`examineStatus`](#examineStatus)`  `[`initializeThing`](#initializeThing)`  `[`isLocked`](#isLocked)`  `[`makeLocked`](#makeLocked)`  `
+[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(Open)`](#dobjFor(Open))[`dobjFor(Unlock)`](#dobjFor(Unlock))[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))[`examineStatus`](#examineStatus)[`initializeThing`](#initializeThing)[`isLocked`](#isLocked)[`makeLocked`](#makeLocked)
 
 Inherited from `Linkable` :  
-` `[`masterObject`](../object/Linkable.html#masterObject)`  `
+[`masterObject`](../object/Linkable.html#masterObject)
 
 <span id="_Properties_"></span>
 

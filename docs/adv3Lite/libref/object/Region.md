@@ -59,8 +59,8 @@ Modifications to Region to work safely with DynamicRegion
 </div>
 
 **`Region`**  
-`         `[`DynamicRegion`](../object/DynamicRegion.html)  
-`         `[`SenseRegion`](../object/SenseRegion.html)  
+[`DynamicRegion`](../object/DynamicRegion.html)  
+[`SenseRegion`](../object/SenseRegion.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -77,7 +77,7 @@ Modifications to Region to work safely with DynamicRegion
 
 </div>
 
-` `[`extraScopeItems`](#extraScopeItems)`  `[`familiar`](#familiar)`  `[`fastGoTo`](#fastGoTo)`  `[`regions`](#regions)`  `[`roomList`](#roomList)`  `[`rooms`](#rooms)`  `
+[`extraScopeItems`](#extraScopeItems)[`familiar`](#familiar)[`fastGoTo`](#fastGoTo)[`regions`](#regions)[`roomList`](#roomList)[`rooms`](#rooms)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ Modifications to Region to work safely with DynamicRegion
 
 </div>
 
-` `[`addExtraScopeItems`](#addExtraScopeItems)`  `[`addToContents`](#addToContents)`  `[`addToRoomList`](#addToRoomList)`  `[`allRegions`](#allRegions)`  `[`isCurrentlyWithin`](#isCurrentlyWithin)`  `[`isIn`](#isIn)`  `[`isOrIsIn`](#isOrIsIn)`  `[`makeRegionLists`](#makeRegionLists)`  `[`moveMLIntoAdd`](#moveMLIntoAdd)`  `[`moveMLOutOf`](#moveMLOutOf)`  `[`notifyAfter`](#notifyAfter)`  `[`notifyBefore`](#notifyBefore)`  `[`regionAfterAction`](#regionAfterAction)`  `[`regionAfterTravel`](#regionAfterTravel)`  `[`regionBeforeAction`](#regionBeforeAction)`  `[`regionBeforeTravel`](#regionBeforeTravel)`  `[`regionDaemon`](#regionDaemon)`  `[`removeFromContents`](#removeFromContents)`  `[`setFamiliarRooms`](#setFamiliarRooms)`  `[`travelerEntering`](#travelerEntering)`  `[`travelerLeaving`](#travelerLeaving)`  `
+[`addExtraScopeItems`](#addExtraScopeItems)[`addToContents`](#addToContents)[`addToRoomList`](#addToRoomList)[`allRegions`](#allRegions)[`isCurrentlyWithin`](#isCurrentlyWithin)[`isIn`](#isIn)[`isOrIsIn`](#isOrIsIn)[`makeRegionLists`](#makeRegionLists)[`moveMLIntoAdd`](#moveMLIntoAdd)[`moveMLOutOf`](#moveMLOutOf)[`notifyAfter`](#notifyAfter)[`notifyBefore`](#notifyBefore)[`regionAfterAction`](#regionAfterAction)[`regionAfterTravel`](#regionAfterTravel)[`regionBeforeAction`](#regionBeforeAction)[`regionBeforeTravel`](#regionBeforeTravel)[`regionDaemon`](#regionDaemon)[`removeFromContents`](#removeFromContents)[`setFamiliarRooms`](#setFamiliarRooms)[`travelerEntering`](#travelerEntering)[`travelerLeaving`](#travelerLeaving)
 
 <span id="_Properties_"></span>
 

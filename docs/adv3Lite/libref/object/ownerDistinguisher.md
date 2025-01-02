@@ -38,7 +38,7 @@ owners (and only applies to objects with nominal owners at all).
 </div>
 
 **`ownerDistinguisher`**  
-`         `[`Distinguisher`](../object/Distinguisher.html)  
+[`Distinguisher`](../object/Distinguisher.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,10 +48,10 @@ owners (and only applies to objects with nominal owners at all).
 
 </div>
 
-` `[`sortOrder`](#sortOrder)`  `
+[`sortOrder`](#sortOrder)
 
 Inherited from `Distinguisher` :  
-` `[`all`](../object/Distinguisher.html#all)`  `[`classInitFirst`](../object/Distinguisher.html#classInitFirst)`  `
+[`all`](../object/Distinguisher.html#all)[`classInitFirst`](../object/Distinguisher.html#classInitFirst)
 
 <span id="_MethodSummary_"></span>
 
@@ -61,10 +61,10 @@ Inherited from `Distinguisher` :
 
 </div>
 
-` `[`appliesto`](#appliesto)`  `[`equal`](#equal)`  `
+[`appliesto`](#appliesto)[`equal`](#equal)
 
 Inherited from `Distinguisher` :  
-` `[`appliesTo`](../object/Distinguisher.html#appliesTo)`  `[`apply`](../object/Distinguisher.html#apply)`  `[`classInit`](../object/Distinguisher.html#classInit)`  `[`getNames`](../object/Distinguisher.html#getNames)`  `
+[`appliesTo`](../object/Distinguisher.html#appliesTo)[`apply`](../object/Distinguisher.html#apply)[`classInit`](../object/Distinguisher.html#classInit)[`getNames`](../object/Distinguisher.html#getNames)
 
 <span id="_Properties_"></span>
 

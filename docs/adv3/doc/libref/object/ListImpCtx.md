@@ -32,7 +32,7 @@ A class for messages appearing in a list. Within a list, we want to keep
 track of the last direct object, so that we can refer to it with a
 pronoun later in the list.
 
-`class `**`ListImpCtx`**` :   `[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)`   `[`GetVerbPhraseContext`](../object/GetVerbPhraseContext.html)
+`class `**`ListImpCtx`**` :   `[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)[`GetVerbPhraseContext`](../object/GetVerbPhraseContext.html)
 
 </div>
 
@@ -45,9 +45,9 @@ pronoun later in the list.
 </div>
 
 **`ListImpCtx`**  
-`         `[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
+[`ImplicitAnnouncementContext`](../object/ImplicitAnnouncementContext.html)  
 `                 object`  
-`         `[`GetVerbPhraseContext`](../object/GetVerbPhraseContext.html)  
+[`GetVerbPhraseContext`](../object/GetVerbPhraseContext.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -73,13 +73,13 @@ pronoun later in the list.
 
 </div>
 
-` `[`baseCtx`](#baseCtx)`  `[`getVerbCtx`](#getVerbCtx)`  `[`isInList`](#isInList)`  `[`useInfPhrase`](#useInfPhrase)`  `
+[`baseCtx`](#baseCtx)[`getVerbCtx`](#getVerbCtx)[`isInList`](#isInList)[`useInfPhrase`](#useInfPhrase)
 
 Inherited from `ImplicitAnnouncementContext` :  
-` `[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)`  `
+[`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist)
 
 Inherited from `GetVerbPhraseContext` :  
-` `[`pronounObj`](../object/GetVerbPhraseContext.html#pronounObj)`  `
+[`pronounObj`](../object/GetVerbPhraseContext.html#pronounObj)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,12 +89,12 @@ Inherited from `GetVerbPhraseContext` :
 
 </div>
 
-` `[`buildImplicitAnnouncement`](#buildImplicitAnnouncement)`  `[`setBaseCtx`](#setBaseCtx)`  `
+[`buildImplicitAnnouncement`](#buildImplicitAnnouncement)[`setBaseCtx`](#setBaseCtx)
 
-` `
+
 
 Inherited from `GetVerbPhraseContext` :  
-` `[`isObjPronoun`](../object/GetVerbPhraseContext.html#isObjPronoun)`  `[`objNameObj`](../object/GetVerbPhraseContext.html#objNameObj)`  `[`setPronounObj`](../object/GetVerbPhraseContext.html#setPronounObj)`  `
+[`isObjPronoun`](../object/GetVerbPhraseContext.html#isObjPronoun)[`objNameObj`](../object/GetVerbPhraseContext.html#objNameObj)[`setPronounObj`](../object/GetVerbPhraseContext.html#setPronounObj)
 
 <span id="_Properties_"></span>
 

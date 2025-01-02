@@ -42,7 +42,7 @@ console-mode interpreters.
 
 </div>
 
-` `[`menuSysEventPage`](../object/menuSysEventPage.html)`  `
+[`menuSysEventPage`](../object/menuSysEventPage.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

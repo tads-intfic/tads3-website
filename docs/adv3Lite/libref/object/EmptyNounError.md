@@ -46,9 +46,9 @@ without a direct object).
 </div>
 
 **`EmptyNounError`**  
-`         `[`CommandError`](../object/CommandError.html)  
-`                 `[`ParseError`](../object/ParseError.html)  
-`                         `[`Exception`](../object/Exception.html)  
+[`CommandError`](../object/CommandError.html)  
+[`ParseError`](../object/ParseError.html)  
+[`Exception`](../object/Exception.html)  
 `                                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -74,16 +74,16 @@ without a direct object).
 
 </div>
 
-` `[`curable`](#curable)`  `
+[`curable`](#curable)
 
 Inherited from `CommandError` :  
-` `[`cmd`](../object/CommandError.html#cmd)`  `[`errStage`](../object/CommandError.html#errStage)`  `
+[`cmd`](../object/CommandError.html#cmd)[`errStage`](../object/CommandError.html#errStage)
 
 Inherited from `ParseError` :  
-` `[`allowOnRespell`](../object/ParseError.html#allowOnRespell)`  `
+[`allowOnRespell`](../object/ParseError.html#allowOnRespell)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -93,15 +93,15 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`display`](#display)`  `[`tryCuring`](#tryCuring)`  `
+[`construct`](#construct)[`display`](#display)[`tryCuring`](#tryCuring)
 
-` `
+
 
 Inherited from `ParseError` :  
-` `[`rankCorrection`](../object/ParseError.html#rankCorrection)`  `
+[`rankCorrection`](../object/ParseError.html#rankCorrection)
 
 Inherited from `Exception` :  
-` `[`displayException`](../object/Exception.html#displayException)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`displayException`](../object/Exception.html#displayException)[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

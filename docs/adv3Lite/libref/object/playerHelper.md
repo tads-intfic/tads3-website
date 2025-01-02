@@ -51,8 +51,8 @@ of the game.
 </div>
 
 **`playerHelper`**  
-`         `[`InitObject`](../object/InitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`InitObject`](../object/InitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -62,12 +62,12 @@ of the game.
 
 </div>
 
-` `[`ceaseCheckingErrorLevel`](#ceaseCheckingErrorLevel)`  `[`errorCheckInterval`](#errorCheckInterval)`  `[`errorCount`](#errorCount)`  `[`errorDaemonID`](#errorDaemonID)`  `[`errorThreshold`](#errorThreshold)`  `[`firstCheckAfter`](#firstCheckAfter)`  `[`firstCheckMsg`](#firstCheckMsg)`  `[`startLocation`](#startLocation)`  `
+` [`ceaseCheckingErrorLevel`](#ceaseCheckingErrorLevel)  [`errorCheckInterval`](#errorCheckInterval)  [`errorCount`](#errorCount)  [`errorDaemonID`](#errorDaemonID)  [`errorThreshold`](#errorThreshold)  [`firstCheckAfter`](#firstCheckAfter)  [`firstCheckMsg`](#firstCheckMsg)  [`startLocation`](#startLocation)  `
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+` [`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)  [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)  [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)  [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)  [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -77,12 +77,12 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`errorCheck`](#errorCheck)`  `[`execute`](#execute)`  `[`firstCheck`](#firstCheck)`  `[`firstCheckCriterion`](#firstCheckCriterion)`  `[`offerHelp`](#offerHelp)`  `[`startErrorDaemon`](#startErrorDaemon)`  `[`stopErrorDaemon`](#stopErrorDaemon)`  `
+` [`errorCheck`](#errorCheck)  [`execute`](#execute)  [`firstCheck`](#firstCheck)  [`firstCheckCriterion`](#firstCheckCriterion)  [`offerHelp`](#offerHelp)  [`startErrorDaemon`](#startErrorDaemon)  [`stopErrorDaemon`](#stopErrorDaemon)  `
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+` [`_execute`](../object/ModuleExecObject.html#_execute)  [`classExec`](../object/ModuleExecObject.html#classExec)  `
 
 <span id="_Properties_"></span>
 

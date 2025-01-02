@@ -46,7 +46,7 @@ as a possessive qualifier to the current noun phrase.
 </div>
 
 **`PossessiveProduction`**  
-`         `[`Production`](../object/Production.html)  
+[`Production`](../object/Production.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,22 +57,22 @@ as a possessive qualifier to the current noun phrase.
 </div>
 
 **`PossessiveProduction`**  
-`         `[`possessiveAdjPhrase(definiteNpApostropheS)`](../object/possessiveAdjPhrase(definiteNpApostropheS).html)  
-`         `[`possessiveAdjPhrase(her)`](../object/possessiveAdjPhrase(her).html)  
-`         `[`possessiveAdjPhrase(his)`](../object/possessiveAdjPhrase(his).html)  
-`         `[`possessiveAdjPhrase(indefiniteNpApostropheS)`](../object/possessiveAdjPhrase(indefiniteNpApostropheS).html)  
-`         `[`possessiveAdjPhrase(its)`](../object/possessiveAdjPhrase(its).html)  
-`         `[`possessiveAdjPhrase(my)`](../object/possessiveAdjPhrase(my).html)  
-`         `[`possessiveAdjPhrase(npApostropheS)`](../object/possessiveAdjPhrase(npApostropheS).html)  
-`         `[`possessiveAdjPhrase(their)`](../object/possessiveAdjPhrase(their).html)  
-`         `[`possessiveAdjPhrase(your)`](../object/possessiveAdjPhrase(your).html)  
-`         `[`possessiveNounPhrase(hers)`](../object/possessiveNounPhrase(hers).html)  
-`         `[`possessiveNounPhrase(his)`](../object/possessiveNounPhrase(his).html)  
-`         `[`possessiveNounPhrase(its)`](../object/possessiveNounPhrase(its).html)  
-`         `[`possessiveNounPhrase(mine)`](../object/possessiveNounPhrase(mine).html)  
-`         `[`possessiveNounPhrase(npApostropheS)`](../object/possessiveNounPhrase(npApostropheS).html)  
-`         `[`possessiveNounPhrase(theirs)`](../object/possessiveNounPhrase(theirs).html)  
-`         `[`possessiveNounPhrase(yours)`](../object/possessiveNounPhrase(yours).html)  
+[`possessiveAdjPhrase(definiteNpApostropheS)`](../object/possessiveAdjPhrase(definiteNpApostropheS).html)  
+[`possessiveAdjPhrase(her)`](../object/possessiveAdjPhrase(her).html)  
+[`possessiveAdjPhrase(his)`](../object/possessiveAdjPhrase(his).html)  
+[`possessiveAdjPhrase(indefiniteNpApostropheS)`](../object/possessiveAdjPhrase(indefiniteNpApostropheS).html)  
+[`possessiveAdjPhrase(its)`](../object/possessiveAdjPhrase(its).html)  
+[`possessiveAdjPhrase(my)`](../object/possessiveAdjPhrase(my).html)  
+[`possessiveAdjPhrase(npApostropheS)`](../object/possessiveAdjPhrase(npApostropheS).html)  
+[`possessiveAdjPhrase(their)`](../object/possessiveAdjPhrase(their).html)  
+[`possessiveAdjPhrase(your)`](../object/possessiveAdjPhrase(your).html)  
+[`possessiveNounPhrase(hers)`](../object/possessiveNounPhrase(hers).html)  
+[`possessiveNounPhrase(his)`](../object/possessiveNounPhrase(his).html)  
+[`possessiveNounPhrase(its)`](../object/possessiveNounPhrase(its).html)  
+[`possessiveNounPhrase(mine)`](../object/possessiveNounPhrase(mine).html)  
+[`possessiveNounPhrase(npApostropheS)`](../object/possessiveNounPhrase(npApostropheS).html)  
+[`possessiveNounPhrase(theirs)`](../object/possessiveNounPhrase(theirs).html)  
+[`possessiveNounPhrase(yours)`](../object/possessiveNounPhrase(yours).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -89,10 +89,10 @@ as a possessive qualifier to the current noun phrase.
 
 </div>
 
-` `
+
 
 Inherited from `Production` :  
-` `[`determiner`](../object/Production.html#determiner)`  `[`nounPhraseRole`](../object/Production.html#nounPhraseRole)`  `[`npClass`](../object/Production.html#npClass)`  `[`parent`](../object/Production.html#parent)`  `
+[`determiner`](../object/Production.html#determiner)[`nounPhraseRole`](../object/Production.html#nounPhraseRole)[`npClass`](../object/Production.html#npClass)[`parent`](../object/Production.html#parent)
 
 <span id="_MethodSummary_"></span>
 
@@ -102,10 +102,10 @@ Inherited from `Production` :
 
 </div>
 
-` `[`build`](#build)`  `
+[`build`](#build)
 
 Inherited from `Production` :  
-` `[`addNounListItem`](../object/Production.html#addNounListItem)`  `[`findAction`](../object/Production.html#findAction)`  `[`findChild`](../object/Production.html#findChild)`  `[`findParent`](../object/Production.html#findParent)`  `[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)`  `[`getText`](../object/Production.html#getText)`  `[`getTokens`](../object/Production.html#getTokens)`  `[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)`  `[`isChildOf`](../object/Production.html#isChildOf)`  `[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)`  `[`visitLiteral`](../object/Production.html#visitLiteral)`  `[`visitProd`](../object/Production.html#visitProd)`  `
+[`addNounListItem`](../object/Production.html#addNounListItem)[`findAction`](../object/Production.html#findAction)[`findChild`](../object/Production.html#findChild)[`findParent`](../object/Production.html#findParent)[`getNounPhraseRole`](../object/Production.html#getNounPhraseRole)[`getText`](../object/Production.html#getText)[`getTokens`](../object/Production.html#getTokens)[`grammarInfoForBuild`](../object/Production.html#grammarInfoForBuild)[`isChildOf`](../object/Production.html#isChildOf)[`noteEndOfSentence`](../object/Production.html#noteEndOfSentence)[`visitLiteral`](../object/Production.html#visitLiteral)[`visitProd`](../object/Production.html#visitProd)
 
 <span id="_Properties_"></span>
 

@@ -62,7 +62,7 @@ by default.
 </div>
 
 **`sight`**  
-`         `[`Sense`](../object/Sense.html)  
+[`Sense`](../object/Sense.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -72,9 +72,9 @@ by default.
 
 </div>
 
-` `[`ambienceProp`](#ambienceProp)`  `[`presenceProp`](#presenceProp)`  `[`sizeProp`](#sizeProp)`  `[`thruProp`](#thruProp)`  `
+[`ambienceProp`](#ambienceProp)[`presenceProp`](#presenceProp)[`sizeProp`](#sizeProp)[`thruProp`](#thruProp)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -84,10 +84,10 @@ by default.
 
 </div>
 
-` `
+
 
 Inherited from `Sense` :  
-` `[`canObjBeSensed`](../object/Sense.html#canObjBeSensed)`  `
+[`canObjBeSensed`](../object/Sense.html#canObjBeSensed)
 
 <span id="_Properties_"></span>
 

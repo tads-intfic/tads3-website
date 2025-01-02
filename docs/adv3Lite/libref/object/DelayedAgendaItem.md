@@ -44,7 +44,7 @@ the game clock reaches a given turn counter.
 </div>
 
 **`DelayedAgendaItem`**  
-`         `[`AgendaItem`](../object/AgendaItem.html)  
+[`AgendaItem`](../object/AgendaItem.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ the game clock reaches a given turn counter.
 
 </div>
 
-` `[`isReady`](#isReady)`  `[`readyTime`](#readyTime)`  `
+[`isReady`](#isReady)[`readyTime`](#readyTime)
 
 Inherited from `AgendaItem` :  
-` `[`agendaOrder`](../object/AgendaItem.html#agendaOrder)`  `[`calledBy`](../object/AgendaItem.html#calledBy)`  `[`initiallyActive`](../object/AgendaItem.html#initiallyActive)`  `[`invokedByActor`](../object/AgendaItem.html#invokedByActor)`  `[`isDone`](../object/AgendaItem.html#isDone)`  `[`name`](../object/AgendaItem.html#name)`  `
+[`agendaOrder`](../object/AgendaItem.html#agendaOrder)[`calledBy`](../object/AgendaItem.html#calledBy)[`initiallyActive`](../object/AgendaItem.html#initiallyActive)[`invokedByActor`](../object/AgendaItem.html#invokedByActor)[`isDone`](../object/AgendaItem.html#isDone)[`name`](../object/AgendaItem.html#name)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `AgendaItem` :
 
 </div>
 
-` `[`setDelay`](#setDelay)`  `
+[`setDelay`](#setDelay)
 
 Inherited from `AgendaItem` :  
-` `[`getActor`](../object/AgendaItem.html#getActor)`  `[`invokeItem`](../object/AgendaItem.html#invokeItem)`  `[`invokeItemBase`](../object/AgendaItem.html#invokeItemBase)`  `[`registerItem`](../object/AgendaItem.html#registerItem)`  `[`report`](../object/AgendaItem.html#report)`  `[`resetItem`](../object/AgendaItem.html#resetItem)`  `
+[`getActor`](../object/AgendaItem.html#getActor)[`invokeItem`](../object/AgendaItem.html#invokeItem)[`invokeItemBase`](../object/AgendaItem.html#invokeItemBase)[`registerItem`](../object/AgendaItem.html#registerItem)[`report`](../object/AgendaItem.html#report)[`resetItem`](../object/AgendaItem.html#resetItem)
 
 <span id="_Properties_"></span>
 

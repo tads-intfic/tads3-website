@@ -5,7 +5,7 @@ layout: docs
 
 `grammar `**[`yesOrNoPhrase(no)`](../object/yesOrNoPhrase(no).html)**` :   `[`YesOrNoProduction`](../object/YesOrNoProduction.html)
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1402`](../source/grammar.t.html#1402)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1402`](../source/grammar.t.html#1402)]`
 
 <div class="gramrule">
 
@@ -15,7 +15,7 @@ layout: docs
 
 `grammar `**[`yesOrNoPhrase(yes)`](../object/yesOrNoPhrase(yes).html)**` :   `[`YesOrNoProduction`](../object/YesOrNoProduction.html)
 
-[`grammar.t`](../file/grammar.t.html)`[`[`1399`](../source/grammar.t.html#1399)`]`
+[`grammar.t`](../file/grammar.t.html)[`[`1399`](../source/grammar.t.html#1399)]`
 
 <div class="gramrule">
 

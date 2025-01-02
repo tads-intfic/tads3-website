@@ -48,7 +48,7 @@ can keep track of the text in memory, in a file, or wherever desired.
 </div>
 
 **`CaptureFilter`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -59,8 +59,8 @@ can keep track of the text in memory, in a file, or wherever desired.
 </div>
 
 **`CaptureFilter`**  
-`         `[`StringCaptureFilter`](../object/StringCaptureFilter.html)  
-`         `[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)  
+[`StringCaptureFilter`](../object/StringCaptureFilter.html)  
+[`SwitchableCaptureFilter`](../object/SwitchableCaptureFilter.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -77,9 +77,9 @@ can keep track of the text in memory, in a file, or wherever desired.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -89,9 +89,9 @@ can keep track of the text in memory, in a file, or wherever desired.
 
 </div>
 
-` `[`filterText`](#filterText)`  `
+[`filterText`](#filterText)
 
-` `
+
 
 <span id="_Properties_"></span>
 

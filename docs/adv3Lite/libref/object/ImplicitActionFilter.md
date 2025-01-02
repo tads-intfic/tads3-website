@@ -46,7 +46,7 @@ itself.
 </div>
 
 **`ImplicitActionFilter`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -72,9 +72,9 @@ itself.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -84,9 +84,9 @@ itself.
 
 </div>
 
-` `[`filterText`](#filterText)`  `
+` [`filterText`](#filterText)  `
 
-` `
+
 
 <span id="_Properties_"></span>
 

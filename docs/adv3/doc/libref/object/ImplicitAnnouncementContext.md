@@ -55,7 +55,7 @@ the message is to be used.
 </div>
 
 **`ImplicitAnnouncementContext`**  
-`         `[`ListImpCtx`](../object/ListImpCtx.html)  
+[`ListImpCtx`](../object/ListImpCtx.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -64,7 +64,7 @@ the message is to be used.
 
 </div>
 
-` `[`standardImpCtx`](../object/standardImpCtx.html)`  `[`tryingImpCtx`](../object/tryingImpCtx.html)`  `
+[`standardImpCtx`](../object/standardImpCtx.html)[`tryingImpCtx`](../object/tryingImpCtx.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -73,7 +73,7 @@ the message is to be used.
 
 </div>
 
-` `[`getVerbCtx`](#getVerbCtx)`  `[`isInList`](#isInList)`  `[`isInSublist`](#isInSublist)`  `[`useInfPhrase`](#useInfPhrase)`  `
+[`getVerbCtx`](#getVerbCtx)[`isInList`](#isInList)[`isInSublist`](#isInSublist)[`useInfPhrase`](#useInfPhrase)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,7 +83,7 @@ the message is to be used.
 
 </div>
 
-` `[`buildImplicitAnnouncement`](#buildImplicitAnnouncement)`  `
+[`buildImplicitAnnouncement`](#buildImplicitAnnouncement)
 
 <span id="_Properties_"></span>
 

@@ -49,8 +49,8 @@ new file object must be created instead.
 </div>
 
 **`FileSyncException`**  
-`         `[`FileException`](../object/FileException.html)  
-`                 `[`Exception`](../object/Exception.html)  
+[`FileException`](../object/FileException.html)  
+[`Exception`](../object/Exception.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -76,12 +76,12 @@ new file object must be created instead.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+` [`errmsg_`](../object/Exception.html#errmsg_)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -91,12 +91,12 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`displayException`](#displayException)`  `
+` [`displayException`](#displayException)  `
 
-` `
+
 
 Inherited from `Exception` :  
-` `[`construct`](../object/Exception.html#construct)`  `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+` [`construct`](../object/Exception.html#construct)  [`getExceptionMessage`](../object/Exception.html#getExceptionMessage)  [`showStackTrace`](../object/Exception.html#showStackTrace)  `
 
 <span id="_Properties_"></span>
 

@@ -51,8 +51,8 @@ MultiLoc.
 </div>
 
 **`SenseConnector`**  
-`         `[`MultiLoc`](../object/MultiLoc.html)  
-`                 `[`BaseMultiLoc`](../object/BaseMultiLoc.html)  
+[`MultiLoc`](../object/MultiLoc.html)  
+[`BaseMultiLoc`](../object/BaseMultiLoc.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -63,7 +63,7 @@ MultiLoc.
 </div>
 
 **`SenseConnector`**  
-`         `[`DistanceConnector`](../object/DistanceConnector.html)  
+[`DistanceConnector`](../object/DistanceConnector.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -80,12 +80,12 @@ MultiLoc.
 
 </div>
 
-` `[`connectorMaterial`](#connectorMaterial)`  `[`getConnectedContainers`](#getConnectedContainers)`  `
+[`connectorMaterial`](#connectorMaterial)[`getConnectedContainers`](#getConnectedContainers)
 
-` `
+
 
 Inherited from `BaseMultiLoc` :  
-` `[`initialLocationClass`](../object/BaseMultiLoc.html#initialLocationClass)`  `[`locationList`](../object/BaseMultiLoc.html#locationList)`  `
+[`initialLocationClass`](../object/BaseMultiLoc.html#initialLocationClass)[`locationList`](../object/BaseMultiLoc.html#locationList)
 
 <span id="_MethodSummary_"></span>
 
@@ -95,13 +95,13 @@ Inherited from `BaseMultiLoc` :
 
 </div>
 
-` `[`addDirectConnections`](#addDirectConnections)`  `[`checkMoveThrough`](#checkMoveThrough)`  `[`checkMoveViaPath`](#checkMoveViaPath)`  `[`checkThrowThrough`](#checkThrowThrough)`  `[`checkThrowViaPath`](#checkThrowViaPath)`  `[`checkTouchThrough`](#checkTouchThrough)`  `[`checkTouchViaPath`](#checkTouchViaPath)`  `[`forEachConnectedContainer`](#forEachConnectedContainer)`  `[`sensePathFromWithout`](#sensePathFromWithout)`  `[`shineFromWithout`](#shineFromWithout)`  `[`transSensingThru`](#transSensingThru)`  `
+[`addDirectConnections`](#addDirectConnections)[`checkMoveThrough`](#checkMoveThrough)[`checkMoveViaPath`](#checkMoveViaPath)[`checkThrowThrough`](#checkThrowThrough)[`checkThrowViaPath`](#checkThrowViaPath)[`checkTouchThrough`](#checkTouchThrough)[`checkTouchViaPath`](#checkTouchViaPath)[`forEachConnectedContainer`](#forEachConnectedContainer)[`sensePathFromWithout`](#sensePathFromWithout)[`shineFromWithout`](#shineFromWithout)[`transSensingThru`](#transSensingThru)
 
 Inherited from `MultiLoc` :  
-` `[`baseMoveInto`](../object/MultiLoc.html#baseMoveInto)`  `[`baseMoveIntoAdd`](../object/MultiLoc.html#baseMoveIntoAdd)`  `[`baseMoveOutOf`](../object/MultiLoc.html#baseMoveOutOf)`  `[`cloneForMultiInstanceContents`](../object/MultiLoc.html#cloneForMultiInstanceContents)`  `[`cloneMultiInstanceContents`](../object/MultiLoc.html#cloneMultiInstanceContents)`  `[`forEachContainer`](../object/MultiLoc.html#forEachContainer)`  `[`getDropDestination`](../object/MultiLoc.html#getDropDestination)`  `[`initializeLocation`](../object/MultiLoc.html#initializeLocation)`  `[`moveIntoAdd`](../object/MultiLoc.html#moveIntoAdd)`  `[`moveOutOf`](../object/MultiLoc.html#moveOutOf)`  `[`reInitializeLocation`](../object/MultiLoc.html#reInitializeLocation)`  `[`restoreLocation`](../object/MultiLoc.html#restoreLocation)`  `[`saveLocation`](../object/MultiLoc.html#saveLocation)`  `[`sensePathToLoc`](../object/MultiLoc.html#sensePathToLoc)`  `[`shineOnLoc`](../object/MultiLoc.html#shineOnLoc)`  `
+[`baseMoveInto`](../object/MultiLoc.html#baseMoveInto)[`baseMoveIntoAdd`](../object/MultiLoc.html#baseMoveIntoAdd)[`baseMoveOutOf`](../object/MultiLoc.html#baseMoveOutOf)[`cloneForMultiInstanceContents`](../object/MultiLoc.html#cloneForMultiInstanceContents)[`cloneMultiInstanceContents`](../object/MultiLoc.html#cloneMultiInstanceContents)[`forEachContainer`](../object/MultiLoc.html#forEachContainer)[`getDropDestination`](../object/MultiLoc.html#getDropDestination)[`initializeLocation`](../object/MultiLoc.html#initializeLocation)[`moveIntoAdd`](../object/MultiLoc.html#moveIntoAdd)[`moveOutOf`](../object/MultiLoc.html#moveOutOf)[`reInitializeLocation`](../object/MultiLoc.html#reInitializeLocation)[`restoreLocation`](../object/MultiLoc.html#restoreLocation)[`saveLocation`](../object/MultiLoc.html#saveLocation)[`sensePathToLoc`](../object/MultiLoc.html#sensePathToLoc)[`shineOnLoc`](../object/MultiLoc.html#shineOnLoc)
 
 Inherited from `BaseMultiLoc` :  
-` `[`buildLocationList`](../object/BaseMultiLoc.html#buildLocationList)`  `[`isDirectlyIn`](../object/BaseMultiLoc.html#isDirectlyIn)`  `[`isIn`](../object/BaseMultiLoc.html#isIn)`  `[`isInitiallyIn`](../object/BaseMultiLoc.html#isInitiallyIn)`  `[`isListedInContents`](../object/BaseMultiLoc.html#isListedInContents)`  `[`isOrIsIn`](../object/BaseMultiLoc.html#isOrIsIn)`  `
+[`buildLocationList`](../object/BaseMultiLoc.html#buildLocationList)[`isDirectlyIn`](../object/BaseMultiLoc.html#isDirectlyIn)[`isIn`](../object/BaseMultiLoc.html#isIn)[`isInitiallyIn`](../object/BaseMultiLoc.html#isInitiallyIn)[`isListedInContents`](../object/BaseMultiLoc.html#isListedInContents)[`isOrIsIn`](../object/BaseMultiLoc.html#isOrIsIn)
 
 <span id="_Properties_"></span>
 

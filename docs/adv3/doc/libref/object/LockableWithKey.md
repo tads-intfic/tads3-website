@@ -49,8 +49,8 @@ in the superclass list.
 </div>
 
 **`LockableWithKey`**  
-`         `[`Lockable`](../object/Lockable.html)  
-`                 `[`Linkable`](../object/Linkable.html)  
+[`Lockable`](../object/Lockable.html)  
+[`Linkable`](../object/Linkable.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -61,7 +61,7 @@ in the superclass list.
 </div>
 
 **`LockableWithKey`**  
-`         `[`KeyedContainer`](../object/KeyedContainer.html)  
+[`KeyedContainer`](../object/KeyedContainer.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -78,12 +78,12 @@ in the superclass list.
 
 </div>
 
-` `[`keyList`](#keyList)`  `[`knownKeyList`](#knownKeyList)`  `[`lockStatusObvious`](#lockStatusObvious)`  `[`rememberKnownKeys`](#rememberKnownKeys)`  `
+[`keyList`](#keyList)[`knownKeyList`](#knownKeyList)[`lockStatusObvious`](#lockStatusObvious)[`rememberKnownKeys`](#rememberKnownKeys)
 
 Inherited from `Lockable` :  
-` `[`autoUnlockOnOpen`](../object/Lockable.html#autoUnlockOnOpen)`  `[`initiallyLocked`](../object/Lockable.html#initiallyLocked)`  `[`isLocked_`](../object/Lockable.html#isLocked_)`  `[`lockedDesc`](../object/Lockable.html#lockedDesc)`  `[`lockStatusReportable`](../object/Lockable.html#lockStatusReportable)`  `
+[`autoUnlockOnOpen`](../object/Lockable.html#autoUnlockOnOpen)[`initiallyLocked`](../object/Lockable.html#initiallyLocked)[`isLocked_`](../object/Lockable.html#isLocked_)[`lockedDesc`](../object/Lockable.html#lockedDesc)[`lockStatusReportable`](../object/Lockable.html#lockStatusReportable)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -93,13 +93,13 @@ Inherited from `Lockable` :
 
 </div>
 
-` `[`autoUnlockOnOpen`](#autoUnlockOnOpen)`  `[`dobjFor(Lock)`](#dobjFor(Lock))`  `[`dobjFor(LockWith)`](#dobjFor(LockWith))`  `[`dobjFor(Unlock)`](#dobjFor(Unlock))`  `[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))`  `[`getKnownKeyList`](#getKnownKeyList)`  `[`getKnownKeyOwner`](#getKnownKeyOwner)`  `[`isKeyKnown`](#isKeyKnown)`  `[`keyFitsLock`](#keyFitsLock)`  `[`keyIsPlausible`](#keyIsPlausible)`  `[`lockOrUnlockAction`](#lockOrUnlockAction)`  `
+[`autoUnlockOnOpen`](#autoUnlockOnOpen)[`dobjFor(Lock)`](#dobjFor(Lock))[`dobjFor(LockWith)`](#dobjFor(LockWith))[`dobjFor(Unlock)`](#dobjFor(Unlock))[`dobjFor(UnlockWith)`](#dobjFor(UnlockWith))[`getKnownKeyList`](#getKnownKeyList)[`getKnownKeyOwner`](#getKnownKeyOwner)[`isKeyKnown`](#isKeyKnown)[`keyFitsLock`](#keyFitsLock)[`keyIsPlausible`](#keyIsPlausible)[`lockOrUnlockAction`](#lockOrUnlockAction)
 
 Inherited from `Lockable` :  
-` `[`dobjFor(Open)`](../object/Lockable.html#dobjFor(Open))`  `[`examineStatus`](../object/Lockable.html#examineStatus)`  `[`initializeThing`](../object/Lockable.html#initializeThing)`  `[`isLocked`](../object/Lockable.html#isLocked)`  `[`makeLocked`](../object/Lockable.html#makeLocked)`  `
+[`dobjFor(Open)`](../object/Lockable.html#dobjFor(Open))[`examineStatus`](../object/Lockable.html#examineStatus)[`initializeThing`](../object/Lockable.html#initializeThing)[`isLocked`](../object/Lockable.html#isLocked)[`makeLocked`](../object/Lockable.html#makeLocked)
 
 Inherited from `Linkable` :  
-` `[`masterObject`](../object/Linkable.html#masterObject)`  `
+[`masterObject`](../object/Linkable.html#masterObject)
 
 <span id="_Properties_"></span>
 

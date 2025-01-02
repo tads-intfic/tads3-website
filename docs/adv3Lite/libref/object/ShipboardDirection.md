@@ -43,7 +43,7 @@ Directions for use aboard a vessel such as a ship
 </div>
 
 **`ShipboardDirection`**  
-`         `[`Direction`](../object/Direction.html)  
+[`Direction`](../object/Direction.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -61,7 +61,7 @@ Directions for use aboard a vessel such as a ship
 
 </div>
 
-` `[`aftDir`](../object/aftDir.html)`  `[`foreDir`](../object/foreDir.html)`  `[`portDir`](../object/portDir.html)`  `[`starboardDir`](../object/starboardDir.html)`  `
+[`aftDir`](../object/aftDir.html)[`foreDir`](../object/foreDir.html)[`portDir`](../object/portDir.html)[`starboardDir`](../object/starboardDir.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -70,10 +70,10 @@ Directions for use aboard a vessel such as a ship
 
 </div>
 
-` `
+
 
 Inherited from `Direction` :  
-` `[`allDirections`](../object/Direction.html#allDirections)`  `[`departureName`](../object/Direction.html#departureName)`  `[`dirProp`](../object/Direction.html#dirProp)`  `[`name`](../object/Direction.html#name)`  `[`nameTab`](../object/Direction.html#nameTab)`  `[`opposite`](../object/Direction.html#opposite)`  `[`sortingOrder`](../object/Direction.html#sortingOrder)`  `
+[`allDirections`](../object/Direction.html#allDirections)[`departureName`](../object/Direction.html#departureName)[`dirProp`](../object/Direction.html#dirProp)[`name`](../object/Direction.html#name)[`nameTab`](../object/Direction.html#nameTab)[`opposite`](../object/Direction.html#opposite)[`sortingOrder`](../object/Direction.html#sortingOrder)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `Direction` :
 
 </div>
 
-` `[`initializeDirection`](#initializeDirection)`  `
+[`initializeDirection`](#initializeDirection)
 
 Inherited from `Direction` :  
-` `[`classInit`](../object/Direction.html#classInit)`  `[`oppositeProp`](../object/Direction.html#oppositeProp)`  `[`propDir`](../object/Direction.html#propDir)`  `
+[`classInit`](../object/Direction.html#classInit)[`oppositeProp`](../object/Direction.html#oppositeProp)[`propDir`](../object/Direction.html#propDir)
 
 <span id="_Properties_"></span>
 

@@ -70,7 +70,7 @@ stored in the verTab table of the current action.
 
 </div>
 
-` `[`allowAction`](#allowAction)`  `[`allowImplicit`](#allowImplicit)`  `[`errMsg`](#errMsg)`  `[`myObj`](#myObj)`  `[`resultRank`](#resultRank)`  `
+` [`allowAction`](#allowAction)  [`allowImplicit`](#allowImplicit)  [`errMsg`](#errMsg)  [`myObj`](#myObj)  [`resultRank`](#resultRank)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ stored in the verTab table of the current action.
 
 </div>
 
-` `[`construct`](#construct)`  `
+` [`construct`](#construct)  `
 
 <span id="_Properties_"></span>
 

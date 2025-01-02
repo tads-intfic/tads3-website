@@ -32,7 +32,7 @@ cover these two types of cases:
 position. - The player sees a tip, saves, then resumes play at some
 later time.
 
-`transient `**`tipManager`**` :   `[`InitObject`](../object/InitObject.html)`   `[`PostRestoreObject`](../object/PostRestoreObject.html)`   `[`PostUndoObject`](../object/PostUndoObject.html)
+`transient `**`tipManager`**` :   `[`InitObject`](../object/InitObject.html)[`PostRestoreObject`](../object/PostRestoreObject.html)[`PostUndoObject`](../object/PostUndoObject.html)
 
 </div>
 
@@ -45,14 +45,14 @@ later time.
 </div>
 
 **`tipManager`**  
-`         `[`InitObject`](../object/InitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`InitObject`](../object/InitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
-`         `[`PostRestoreObject`](../object/PostRestoreObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PostRestoreObject`](../object/PostRestoreObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
-`         `[`PostUndoObject`](../object/PostUndoObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PostUndoObject`](../object/PostUndoObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -62,21 +62,21 @@ later time.
 
 </div>
 
-` `[`pendingTips`](#pendingTips)`  `[`shownTips`](#shownTips)`  `
+[`pendingTips`](#pendingTips)[`shownTips`](#shownTips)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 Inherited from `PostRestoreObject` :  
-` `[`restoreCode`](../object/PostRestoreObject.html#restoreCode)`  `
+[`restoreCode`](../object/PostRestoreObject.html#restoreCode)
 
-` `
 
-` `
 
-` `
+
+
+
 
 <span id="_MethodSummary_"></span>
 
@@ -86,20 +86,20 @@ Inherited from `PostRestoreObject` :
 
 </div>
 
-` `[`execute`](#execute)`  `[`showTips`](#showTips)`  `
+[`execute`](#execute)[`showTips`](#showTips)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
-` `
 
-` `
 
-` `
 
-` `
+
+
+
+
 
 <span id="_Properties_"></span>
 

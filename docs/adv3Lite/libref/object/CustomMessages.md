@@ -77,7 +77,7 @@ up during preinit.
 
 </div>
 
-` `[`active`](#active)`  `[`all`](#all)`  `[`messages`](#messages)`  `[`msgTab`](#msgTab)`  `[`priority`](#priority)`  `
+[`active`](#active)[`all`](#all)[`messages`](#messages)[`msgTab`](#msgTab)[`priority`](#priority)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,7 +87,7 @@ up during preinit.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

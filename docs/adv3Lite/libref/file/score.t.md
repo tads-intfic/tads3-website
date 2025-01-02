@@ -36,7 +36,7 @@ score, which indicates the player's progress through the game.
 
 </div>
 
-` `[`Achievement`](../object/Achievement.html)`  `[`SimpleAchievement`](../object/SimpleAchievement.html)`  `
+[`Achievement`](../object/Achievement.html)[`SimpleAchievement`](../object/SimpleAchievement.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -45,7 +45,7 @@ score, which indicates the player's progress through the game.
 
 </div>
 
-` `[`fullScoreLister`](../object/fullScoreLister.html)`  `[`libScore`](../object/libScore.html)`  `[`scoreNotifier`](../object/scoreNotifier.html)`  `[`scoreNotifySettingsItem`](../object/scoreNotifySettingsItem.html)`  `
+[`fullScoreLister`](../object/fullScoreLister.html)[`libScore`](../object/libScore.html)[`scoreNotifier`](../object/scoreNotifier.html)[`scoreNotifySettingsItem`](../object/scoreNotifySettingsItem.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -54,7 +54,7 @@ score, which indicates the player's progress through the game.
 
 </div>
 
-` `[`addToScore`](#addToScore)`  `
+[`addToScore`](#addToScore)
 
 <span id="_Functions_"></span>
 

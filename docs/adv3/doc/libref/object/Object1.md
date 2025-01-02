@@ -57,26 +57,26 @@ Modify the basic Object class to provide a to-symbol mapping
 </div>
 
 **`Object`**  
-`         `[`BigNumber`](../object/BigNumber1.html)  
-`         `[`ByteArray`](../object/ByteArray.html)  
-`         `[`CharacterSet`](../object/CharacterSet.html)  
-`         `[`Collection`](../object/Collection.html)  
-`                 `[`List`](../object/List1.html)  
-`                 `[`LookupTable`](../object/LookupTable.html)  
-`                         `[`WeakRefLookupTable`](../object/WeakRefLookupTable.html)  
-`                 `[`Vector`](../object/Vector.html)  
-`                         `[`AnonFuncPtr`](../object/AnonFuncPtr.html)  
-`         `[`Dictionary`](../object/Dictionary.html)  
-`         `[`File`](../object/File.html)  
-`         `[`GrammarProd`](../object/GrammarProd.html)  
-`         `[`IntrinsicClass`](../object/IntrinsicClass.html)  
-`         `[`Iterator`](../object/Iterator.html)  
-`                 `[`IndexedIterator`](../object/IndexedIterator.html)  
-`                 `[`LookupTableIterator`](../object/LookupTableIterator.html)  
-`         `[`RexPattern`](../object/RexPattern.html)  
-`         `[`String`](../object/String1.html)  
-`         `[`StringComparator`](../object/StringComparator.html)  
-`         `[`TadsObject`](../object/TadsObject.html)  
+[`BigNumber`](../object/BigNumber1.html)  
+[`ByteArray`](../object/ByteArray.html)  
+[`CharacterSet`](../object/CharacterSet.html)  
+[`Collection`](../object/Collection.html)  
+[`List`](../object/List1.html)  
+[`LookupTable`](../object/LookupTable.html)  
+[`WeakRefLookupTable`](../object/WeakRefLookupTable.html)  
+[`Vector`](../object/Vector.html)  
+[`AnonFuncPtr`](../object/AnonFuncPtr.html)  
+[`Dictionary`](../object/Dictionary.html)  
+[`File`](../object/File.html)  
+[`GrammarProd`](../object/GrammarProd.html)  
+[`IntrinsicClass`](../object/IntrinsicClass.html)  
+[`Iterator`](../object/Iterator.html)  
+[`IndexedIterator`](../object/IndexedIterator.html)  
+[`LookupTableIterator`](../object/LookupTableIterator.html)  
+[`RexPattern`](../object/RexPattern.html)  
+[`String`](../object/String1.html)  
+[`StringComparator`](../object/StringComparator.html)  
+[`TadsObject`](../object/TadsObject.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -93,7 +93,7 @@ Modify the basic Object class to provide a to-symbol mapping
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -103,7 +103,7 @@ Modify the basic Object class to provide a to-symbol mapping
 
 </div>
 
-` `[`getPropList`](#getPropList)`  `[`getPropParams`](#getPropParams)`  `[`getSuperclassList`](#getSuperclassList)`  `[`isClass`](#isClass)`  `[`isTransient`](#isTransient)`  `[`ofKind`](#ofKind)`  `[`propDefined`](#propDefined)`  `[`propInherited`](#propInherited)`  `[`propType`](#propType)`  `[`valToSymbol`](#valToSymbol)`  `
+[`getPropList`](#getPropList)[`getPropParams`](#getPropParams)[`getSuperclassList`](#getSuperclassList)[`isClass`](#isClass)[`isTransient`](#isTransient)[`ofKind`](#ofKind)[`propDefined`](#propDefined)[`propInherited`](#propInherited)[`propType`](#propType)[`valToSymbol`](#valToSymbol)
 
 <span id="_Properties_"></span>
 

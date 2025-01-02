@@ -37,8 +37,8 @@ inventoryTallLister for displaying an inventory list in TALL format.
 </div>
 
 **`inventoryTallLister`**  
-`         `[`ItemLister`](../object/ItemLister.html)  
-`                 `[`Lister`](../object/Lister.html)  
+[`ItemLister`](../object/ItemLister.html)  
+[`Lister`](../object/Lister.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ inventoryTallLister for displaying an inventory list in TALL format.
 
 </div>
 
-` `[`contentsListedProp`](#contentsListedProp)`  `[`indentLevel`](#indentLevel)`  `[`listRecursively`](#listRecursively)`  `[`maxIndentLevel`](#maxIndentLevel)`  `
+[`contentsListedProp`](#contentsListedProp)[`indentLevel`](#indentLevel)[`listRecursively`](#listRecursively)[`maxIndentLevel`](#maxIndentLevel)
 
 Inherited from `ItemLister` :  
-` `[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)`  `[`showSubListing`](../object/ItemLister.html#showSubListing)`  `[`showWornInfo`](../object/ItemLister.html#showWornInfo)`  `
+[`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo)[`showSubListing`](../object/ItemLister.html#showSubListing)[`showWornInfo`](../object/ItemLister.html#showWornInfo)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -63,13 +63,13 @@ Inherited from `ItemLister` :
 
 </div>
 
-` `[`listed`](#listed)`  `[`listName`](#listName)`  `[`showContentsTall`](#showContentsTall)`  `[`showListEmpty`](#showListEmpty)`  `[`showListPrefix`](#showListPrefix)`  `[`showListSuffix`](#showListSuffix)`  `
+[`listed`](#listed)[`listName`](#listName)[`showContentsTall`](#showContentsTall)[`showListEmpty`](#showListEmpty)[`showListPrefix`](#showListPrefix)[`showListSuffix`](#showListSuffix)
 
 Inherited from `ItemLister` :  
-` `[`show`](../object/ItemLister.html#show)`  `[`showList`](../object/ItemLister.html#showList)`  `
+[`show`](../object/ItemLister.html#show)[`showList`](../object/ItemLister.html#showList)
 
 Inherited from `Lister` :  
-` `[`buildList`](../object/Lister.html#buildList)`  `[`listOrder`](../object/Lister.html#listOrder)`  `
+[`buildList`](../object/Lister.html#buildList)[`listOrder`](../object/Lister.html#listOrder)
 
 <span id="_Properties_"></span>
 

@@ -48,7 +48,7 @@ production matches.
 </div>
 
 **`CommandRanking`**  
-`         `[`ResolveResults`](../object/ResolveResults.html)  
+[`ResolveResults`](../object/ResolveResults.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -59,9 +59,9 @@ production matches.
 </div>
 
 **`CommandRanking`**  
-`         `[`DisambigRanking`](../object/DisambigRanking.html)  
-`         `[`MissingObjectRanking`](../object/MissingObjectRanking.html)  
-`         `[`OopsResults`](../object/OopsResults.html)  
+[`DisambigRanking`](../object/DisambigRanking.html)  
+[`MissingObjectRanking`](../object/MissingObjectRanking.html)  
+[`OopsResults`](../object/OopsResults.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -78,9 +78,9 @@ production matches.
 
 </div>
 
-` `[`actorSpecifiedCount`](#actorSpecifiedCount)`  `[`allExcludedCount`](#allExcludedCount)`  `[`allowActionRemapping`](#allowActionRemapping)`  `[`ambigCount`](#ambigCount)`  `[`commandCount`](#commandCount)`  `[`emptyButCount`](#emptyButCount)`  `[`endAdjCount`](#endAdjCount)`  `[`indefiniteCount`](#indefiniteCount)`  `[`inSingleObjSlot`](#inSingleObjSlot)`  `[`insufficientCount`](#insufficientCount)`  `[`inTopicSlot`](#inTopicSlot)`  `[`listForSingle`](#listForSingle)`  `[`literalLength`](#literalLength)`  `[`match`](#match)`  `[`miscWordListCount`](#miscWordListCount)`  `[`missingCount`](#missingCount)`  `[`nonMatchCount`](#nonMatchCount)`  `[`nonMatchPossCount`](#nonMatchPossCount)`  `[`nounSlotCount`](#nounSlotCount)`  `[`pluralTruncCount`](#pluralTruncCount)`  `[`pronounCount`](#pronounCount)`  `[`rankingCriteria`](#rankingCriteria)`  `[`tokCount`](#tokCount)`  `[`truncCount`](#truncCount)`  `[`unknownWordCount`](#unknownWordCount)`  `[`unwantedPluralCount`](#unwantedPluralCount)`  `[`vocabNonMatchCount`](#vocabNonMatchCount)`  `[`weaknessLevel`](#weaknessLevel)`  `
+[`actorSpecifiedCount`](#actorSpecifiedCount)[`allExcludedCount`](#allExcludedCount)[`allowActionRemapping`](#allowActionRemapping)[`ambigCount`](#ambigCount)[`commandCount`](#commandCount)[`emptyButCount`](#emptyButCount)[`endAdjCount`](#endAdjCount)[`indefiniteCount`](#indefiniteCount)[`inSingleObjSlot`](#inSingleObjSlot)[`insufficientCount`](#insufficientCount)[`inTopicSlot`](#inTopicSlot)[`listForSingle`](#listForSingle)[`literalLength`](#literalLength)[`match`](#match)[`miscWordListCount`](#miscWordListCount)[`missingCount`](#missingCount)[`nonMatchCount`](#nonMatchCount)[`nonMatchPossCount`](#nonMatchPossCount)[`nounSlotCount`](#nounSlotCount)[`pluralTruncCount`](#pluralTruncCount)[`pronounCount`](#pronounCount)[`rankingCriteria`](#rankingCriteria)[`tokCount`](#tokCount)[`truncCount`](#truncCount)[`unknownWordCount`](#unknownWordCount)[`unwantedPluralCount`](#unwantedPluralCount)[`vocabNonMatchCount`](#vocabNonMatchCount)[`weaknessLevel`](#weaknessLevel)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -90,9 +90,9 @@ production matches.
 
 </div>
 
-` `[`allNotAllowed`](#allNotAllowed)`  `[`ambiguousNounPhrase`](#ambiguousNounPhrase)`  `[`askMissingObject`](#askMissingObject)`  `[`beginSingleObjSlot`](#beginSingleObjSlot)`  `[`beginTopicSlot`](#beginTopicSlot)`  `[`calcRanking`](#calcRanking)`  `[`compareRanking`](#compareRanking)`  `[`construct`](#construct)`  `[`emptyNounPhrase`](#emptyNounPhrase)`  `[`endSingleObjSlot`](#endSingleObjSlot)`  `[`endTopicSlot`](#endTopicSlot)`  `[`getImpliedObject`](#getImpliedObject)`  `[`incCommandCount`](#incCommandCount)`  `[`insufficientQuantity`](#insufficientQuantity)`  `[`noMatch`](#noMatch)`  `[`noMatchForAll`](#noMatchForAll)`  `[`noMatchForAllBut`](#noMatchForAllBut)`  `[`noMatchForListBut`](#noMatchForListBut)`  `[`noMatchForLocation`](#noMatchForLocation)`  `[`noMatchForPossessive`](#noMatchForPossessive)`  `[`noMatchForPronoun`](#noMatchForPronoun)`  `[`noMatchPossessive`](#noMatchPossessive)`  `[`noteActorSpecified`](#noteActorSpecified)`  `[`noteAdjEnding`](#noteAdjEnding)`  `[`noteBadPrep`](#noteBadPrep)`  `[`noteEmptyBut`](#noteEmptyBut)`  `[`noteIndefinite`](#noteIndefinite)`  `[`noteLiteral`](#noteLiteral)`  `[`noteMatches`](#noteMatches)`  `[`noteMiscWordList`](#noteMiscWordList)`  `[`noteNounSlots`](#noteNounSlots)`  `[`notePlural`](#notePlural)`  `[`notePronoun`](#notePronoun)`  `[`noteWeakPhrasing`](#noteWeakPhrasing)`  `[`nothingInLocation`](#nothingInLocation)`  `[`noVocabMatch`](#noVocabMatch)`  `[`reflexiveNotAllowed`](#reflexiveNotAllowed)`  `[`singleObjectRequired`](#singleObjectRequired)`  `[`sortByRanking`](#sortByRanking)`  `[`uniqueObjectRequired`](#uniqueObjectRequired)`  `[`unknownNounPhrase`](#unknownNounPhrase)`  `[`wrongReflexive`](#wrongReflexive)`  `[`zeroQuantity`](#zeroQuantity)`  `
+[`allNotAllowed`](#allNotAllowed)[`ambiguousNounPhrase`](#ambiguousNounPhrase)[`askMissingObject`](#askMissingObject)[`beginSingleObjSlot`](#beginSingleObjSlot)[`beginTopicSlot`](#beginTopicSlot)[`calcRanking`](#calcRanking)[`compareRanking`](#compareRanking)[`construct`](#construct)[`emptyNounPhrase`](#emptyNounPhrase)[`endSingleObjSlot`](#endSingleObjSlot)[`endTopicSlot`](#endTopicSlot)[`getImpliedObject`](#getImpliedObject)[`incCommandCount`](#incCommandCount)[`insufficientQuantity`](#insufficientQuantity)[`noMatch`](#noMatch)[`noMatchForAll`](#noMatchForAll)[`noMatchForAllBut`](#noMatchForAllBut)[`noMatchForListBut`](#noMatchForListBut)[`noMatchForLocation`](#noMatchForLocation)[`noMatchForPossessive`](#noMatchForPossessive)[`noMatchForPronoun`](#noMatchForPronoun)[`noMatchPossessive`](#noMatchPossessive)[`noteActorSpecified`](#noteActorSpecified)[`noteAdjEnding`](#noteAdjEnding)[`noteBadPrep`](#noteBadPrep)[`noteEmptyBut`](#noteEmptyBut)[`noteIndefinite`](#noteIndefinite)[`noteLiteral`](#noteLiteral)[`noteMatches`](#noteMatches)[`noteMiscWordList`](#noteMiscWordList)[`noteNounSlots`](#noteNounSlots)[`notePlural`](#notePlural)[`notePronoun`](#notePronoun)[`noteWeakPhrasing`](#noteWeakPhrasing)[`nothingInLocation`](#nothingInLocation)[`noVocabMatch`](#noVocabMatch)[`reflexiveNotAllowed`](#reflexiveNotAllowed)[`singleObjectRequired`](#singleObjectRequired)[`sortByRanking`](#sortByRanking)[`uniqueObjectRequired`](#uniqueObjectRequired)[`unknownNounPhrase`](#unknownNounPhrase)[`wrongReflexive`](#wrongReflexive)[`zeroQuantity`](#zeroQuantity)
 
-` `
+
 
 <span id="_Properties_"></span>
 

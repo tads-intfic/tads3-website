@@ -56,7 +56,7 @@ manager automatically handles them.
 </div>
 
 **`BannerWindow`**  
-`         `[`OutputStreamWindow`](../object/OutputStreamWindow.html)  
+[`OutputStreamWindow`](../object/OutputStreamWindow.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -74,7 +74,7 @@ manager automatically handles them.
 
 </div>
 
-` `[`contentsMenuBanner`](../object/contentsMenuBanner.html)`  `[`longTopicBanner`](../object/longTopicBanner.html)`  `[`statuslineBanner`](../object/statuslineBanner1.html)`  `[`topMenuBanner`](../object/topMenuBanner.html)`  `
+` [`contentsMenuBanner`](../object/contentsMenuBanner.html)  [`longTopicBanner`](../object/longTopicBanner.html)  [`statuslineBanner`](../object/statuslineBanner1.html)  [`topMenuBanner`](../object/topMenuBanner.html)  `
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -83,10 +83,10 @@ manager automatically handles them.
 
 </div>
 
-` `[`align_`](#align_)`  `[`handle_`](#handle_)`  `[`id_`](#id_)`  `[`inited_`](#inited_)`  `[`parentID_`](#parentID_)`  `[`size_`](#size_)`  `[`sizeUnits_`](#sizeUnits_)`  `[`styleFlags_`](#styleFlags_)`  `[`windowType_`](#windowType_)`  `
+` [`align_`](#align_)  [`handle_`](#handle_)  [`id_`](#id_)  [`inited_`](#inited_)  [`parentID_`](#parentID_)  [`size_`](#size_)  [`sizeUnits_`](#sizeUnits_)  [`styleFlags_`](#styleFlags_)  [`windowType_`](#windowType_)  `
 
 Inherited from `OutputStreamWindow` :  
-` `[`outputStream_`](../object/OutputStreamWindow.html#outputStream_)`  `
+` [`outputStream_`](../object/OutputStreamWindow.html#outputStream_)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -96,10 +96,10 @@ Inherited from `OutputStreamWindow` :
 
 </div>
 
-` `[`clearWindow`](#clearWindow)`  `[`construct`](#construct)`  `[`createOutputStreamObj`](#createOutputStreamObj)`  `[`createSystemBanner`](#createSystemBanner)`  `[`cursorTo`](#cursorTo)`  `[`flushBanner`](#flushBanner)`  `[`getBannerID`](#getBannerID)`  `[`initBannerWindow`](#initBannerWindow)`  `[`removeBanner`](#removeBanner)`  `[`setScreenColor`](#setScreenColor)`  `[`setSize`](#setSize)`  `[`setTextColor`](#setTextColor)`  `[`showBanner`](#showBanner)`  `[`showForRestore`](#showForRestore)`  `[`sizeToContents`](#sizeToContents)`  `[`updateForRestore`](#updateForRestore)`  `[`writeToBanner`](#writeToBanner)`  `
+` [`clearWindow`](#clearWindow)  [`construct`](#construct)  [`createOutputStreamObj`](#createOutputStreamObj)  [`createSystemBanner`](#createSystemBanner)  [`cursorTo`](#cursorTo)  [`flushBanner`](#flushBanner)  [`getBannerID`](#getBannerID)  [`initBannerWindow`](#initBannerWindow)  [`removeBanner`](#removeBanner)  [`setScreenColor`](#setScreenColor)  [`setSize`](#setSize)  [`setTextColor`](#setTextColor)  [`showBanner`](#showBanner)  [`showForRestore`](#showForRestore)  [`sizeToContents`](#sizeToContents)  [`updateForRestore`](#updateForRestore)  [`writeToBanner`](#writeToBanner)  `
 
 Inherited from `OutputStreamWindow` :  
-` `[`captureOutput`](../object/OutputStreamWindow.html#captureOutput)`  `[`createOutputStream`](../object/OutputStreamWindow.html#createOutputStream)`  `[`setOutputStream`](../object/OutputStreamWindow.html#setOutputStream)`  `
+` [`captureOutput`](../object/OutputStreamWindow.html#captureOutput)  [`createOutputStream`](../object/OutputStreamWindow.html#createOutputStream)  [`setOutputStream`](../object/OutputStreamWindow.html#setOutputStream)  `
 
 <span id="_Properties_"></span>
 

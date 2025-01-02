@@ -51,7 +51,7 @@ The TopicGroup template is defined as `+scoreBoost?
 convKeys properties can be readily defined through the template.
 Consider the following example:
 
-```
+`
     + TopicGroup +10 'alice-info'
        isActive = gRevealed('alice')
     ;
@@ -66,7 +66,7 @@ Consider the following example:
        "<q>Where did you hear about this Alice person?</q> you enquire. 
         <q>From the old vicar,</q> he tells you. "
     ;
-```
+`
 
 This adds the 'alice-info' convKey to both the TopicEntries defined
 above, and ensures that they are only active when the 'alice' tag has

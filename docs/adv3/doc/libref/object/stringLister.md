@@ -39,8 +39,8 @@ simulation objects) to showSimpleList(), etc.
 </div>
 
 **`stringLister`**  
-`         `[`SimpleLister`](../object/SimpleLister.html)  
-`                 `[`Lister`](../object/Lister.html)  
+[`SimpleLister`](../object/SimpleLister.html)  
+[`Lister`](../object/Lister.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,12 +50,12 @@ simulation objects) to showSimpleList(), etc.
 
 </div>
 
-` `
 
-` `
+
+
 
 Inherited from `Lister` :  
-` `[`nextCustomFlag`](../object/Lister.html#nextCustomFlag)`  `
+[`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
 <span id="_MethodSummary_"></span>
 
@@ -65,13 +65,13 @@ Inherited from `Lister` :
 
 </div>
 
-` `[`getArrangedListCardinality`](#getArrangedListCardinality)`  `[`showListItem`](#showListItem)`  `
+[`getArrangedListCardinality`](#getArrangedListCardinality)[`showListItem`](#showListItem)
 
 Inherited from `SimpleLister` :  
-` `[`isListed`](../object/SimpleLister.html#isListed)`  `[`makeSimpleList`](../object/SimpleLister.html#makeSimpleList)`  `[`showSimpleList`](../object/SimpleLister.html#showSimpleList)`  `
+[`isListed`](../object/SimpleLister.html#isListed)[`makeSimpleList`](../object/SimpleLister.html#makeSimpleList)[`showSimpleList`](../object/SimpleLister.html#showSimpleList)
 
 Inherited from `Lister` :  
-` `[`contentsListed`](../object/Lister.html#contentsListed)`  `[`contentsListedSeparately`](../object/Lister.html#contentsListedSeparately)`  `[`getArrangedListNounPhraseCount`](../object/Lister.html#getArrangedListNounPhraseCount)`  `[`getContents`](../object/Lister.html#getContents)`  `[`getFilteredList`](../object/Lister.html#getFilteredList)`  `[`getListedContents`](../object/Lister.html#getListedContents)`  `[`getListGrouping`](../object/Lister.html#getListGrouping)`  `[`getTopLister`](../object/Lister.html#getTopLister)`  `[`listCardinality`](../object/Lister.html#listCardinality)`  `[`listSepEnd`](../object/Lister.html#listSepEnd)`  `[`listSepMiddle`](../object/Lister.html#listSepMiddle)`  `[`listSepTwo`](../object/Lister.html#listSepTwo)`  `[`listWith`](../object/Lister.html#listWith)`  `[`longListSepEnd`](../object/Lister.html#longListSepEnd)`  `[`longListSepMiddle`](../object/Lister.html#longListSepMiddle)`  `[`longListSepTwo`](../object/Lister.html#longListSepTwo)`  `[`showArrangedList`](../object/Lister.html#showArrangedList)`  `[`showContentsList`](../object/Lister.html#showContentsList)`  `[`showInlineContentsList`](../object/Lister.html#showInlineContentsList)`  `[`showList`](../object/Lister.html#showList)`  `[`showListAll`](../object/Lister.html#showListAll)`  `[`showListContentsPrefixTall`](../object/Lister.html#showListContentsPrefixTall)`  `[`showListEmpty`](../object/Lister.html#showListEmpty)`  `[`showListIndent`](../object/Lister.html#showListIndent)`  `[`showListItemCounted`](../object/Lister.html#showListItemCounted)`  `[`showListPrefixTall`](../object/Lister.html#showListPrefixTall)`  `[`showListPrefixWide`](../object/Lister.html#showListPrefixWide)`  `[`showListSeparator`](../object/Lister.html#showListSeparator)`  `[`showListSimple`](../object/Lister.html#showListSimple)`  `[`showListSuffixWide`](../object/Lister.html#showListSuffixWide)`  `[`showSeparateContents`](../object/Lister.html#showSeparateContents)`  `[`showTallListNewline`](../object/Lister.html#showTallListNewline)`  `
+[`contentsListed`](../object/Lister.html#contentsListed)[`contentsListedSeparately`](../object/Lister.html#contentsListedSeparately)[`getArrangedListNounPhraseCount`](../object/Lister.html#getArrangedListNounPhraseCount)[`getContents`](../object/Lister.html#getContents)[`getFilteredList`](../object/Lister.html#getFilteredList)[`getListedContents`](../object/Lister.html#getListedContents)[`getListGrouping`](../object/Lister.html#getListGrouping)[`getTopLister`](../object/Lister.html#getTopLister)[`listCardinality`](../object/Lister.html#listCardinality)[`listSepEnd`](../object/Lister.html#listSepEnd)[`listSepMiddle`](../object/Lister.html#listSepMiddle)[`listSepTwo`](../object/Lister.html#listSepTwo)[`listWith`](../object/Lister.html#listWith)[`longListSepEnd`](../object/Lister.html#longListSepEnd)[`longListSepMiddle`](../object/Lister.html#longListSepMiddle)[`longListSepTwo`](../object/Lister.html#longListSepTwo)[`showArrangedList`](../object/Lister.html#showArrangedList)[`showContentsList`](../object/Lister.html#showContentsList)[`showInlineContentsList`](../object/Lister.html#showInlineContentsList)[`showList`](../object/Lister.html#showList)[`showListAll`](../object/Lister.html#showListAll)[`showListContentsPrefixTall`](../object/Lister.html#showListContentsPrefixTall)[`showListEmpty`](../object/Lister.html#showListEmpty)[`showListIndent`](../object/Lister.html#showListIndent)[`showListItemCounted`](../object/Lister.html#showListItemCounted)[`showListPrefixTall`](../object/Lister.html#showListPrefixTall)[`showListPrefixWide`](../object/Lister.html#showListPrefixWide)[`showListSeparator`](../object/Lister.html#showListSeparator)[`showListSimple`](../object/Lister.html#showListSimple)[`showListSuffixWide`](../object/Lister.html#showListSuffixWide)[`showSeparateContents`](../object/Lister.html#showSeparateContents)[`showTallListNewline`](../object/Lister.html#showTallListNewline)
 
 <span id="_Properties_"></span>
 

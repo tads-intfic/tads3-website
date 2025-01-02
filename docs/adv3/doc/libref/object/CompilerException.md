@@ -44,7 +44,7 @@ class if an error occurs compiling the source code of the new object.
 </div>
 
 **`CompilerException`**  
-`         `[`Exception`](../object/Exception.html)  
+[`Exception`](../object/Exception.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,9 +70,9 @@ class if an error occurs compiling the source code of the new object.
 
 </div>
 
-` `[`errmsg_`](#errmsg_)`  `
+[`errmsg_`](#errmsg_)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -82,10 +82,10 @@ class if an error occurs compiling the source code of the new object.
 
 </div>
 
-` `[`construct`](#construct)`  `[`displayException`](#displayException)`  `
+[`construct`](#construct)[`displayException`](#displayException)
 
 Inherited from `Exception` :  
-` `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

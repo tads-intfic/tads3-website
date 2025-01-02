@@ -40,7 +40,7 @@ precise time readings, such as from a wristwatch in the game world.
 
 </div>
 
-` `[`ClockEvent`](../object/ClockEvent.html)`  `
+[`ClockEvent`](../object/ClockEvent.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -49,7 +49,7 @@ precise time readings, such as from a wristwatch in the game world.
 
 </div>
 
-` `[`clockManager`](../object/clockManager.html)`  `
+[`clockManager`](../object/clockManager.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

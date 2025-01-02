@@ -158,7 +158,7 @@ Goldskull with a complete listing of the game as it ended up.
 
 ## Complete Goldskull Listing
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
@@ -356,7 +356,7 @@ Goldskull with a complete listing of the game as it ended up.
         
         getWeight = weight + getWeightWithin()
     ;
-```
+`
 
 
 

@@ -86,7 +86,7 @@ chapters that follow we'll continue to explore some of the detail.
 Finally, here's the complete listing of *The Adventures of Heidi* as
 we've now left it:
 
-```
+`
     #charset "us-ascii"
 
     #include <tads.h>
@@ -239,7 +239,7 @@ we've now left it:
         
         direction = [portDir, starboardDir, foreDir, aftDir]
     ;
-```
+`
 
 
 

@@ -45,11 +45,11 @@ cater for.
 </div>
 
 **`DefaultTopic`**  
-`         `[`ActorTopicEntry`](../object/ActorTopicEntry.html)  
-`                 `[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
-`                         `[`Redirector`](../object/Redirector.html)  
+[`ActorTopicEntry`](../object/ActorTopicEntry.html)  
+[`ReplaceRedirector`](../object/ReplaceRedirector.html)  
+[`Redirector`](../object/Redirector.html)  
 `                                 object`  
-`                 `[`TopicEntry`](../object/TopicEntry.html)  
+[`TopicEntry`](../object/TopicEntry.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -60,27 +60,27 @@ cater for.
 </div>
 
 **`DefaultTopic`**  
-`         `[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
-`                 `[`DefaultAgendaTopic`](../object/DefaultAgendaTopic.html)  
-`                 `[`DefaultAnyNonSayTopic`](../object/DefaultAnyNonSayTopic.html)  
-`         `[`DefaultAskForTopic`](../object/DefaultAskForTopic.html)  
-`         `[`DefaultAskQueryTopic`](../object/DefaultAskQueryTopic.html)  
-`         `[`DefaultAskTellTopic`](../object/DefaultAskTellTopic.html)  
-`         `[`DefaultAskTopic`](../object/DefaultAskTopic.html)  
-`         `[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
-`         `[`DefaultConversationTopic`](../object/DefaultConversationTopic.html)  
-`                 `[`DefaultNonSayTopic`](../object/DefaultNonSayTopic.html)  
-`         `[`DefaultGiveShowTopic`](../object/DefaultGiveShowTopic.html)  
-`         `[`DefaultGiveTopic`](../object/DefaultGiveTopic.html)  
-`         `[`DefaultQueryTopic`](../object/DefaultQueryTopic.html)  
-`         `[`DefaultSayQueryTopic`](../object/DefaultSayQueryTopic.html)  
-`         `[`DefaultSayTellTalkTopic`](../object/DefaultSayTellTalkTopic.html)  
-`         `[`DefaultSayTellTopic`](../object/DefaultSayTellTopic.html)  
-`         `[`DefaultSayTopic`](../object/DefaultSayTopic.html)  
-`         `[`DefaultShowTopic`](../object/DefaultShowTopic.html)  
-`         `[`DefaultTalkTopic`](../object/DefaultTalkTopic.html)  
-`         `[`DefaultTellTalkTopic`](../object/DefaultTellTalkTopic.html)  
-`         `[`DefaultTellTopic`](../object/DefaultTellTopic.html)  
+[`DefaultAnyTopic`](../object/DefaultAnyTopic.html)  
+[`DefaultAgendaTopic`](../object/DefaultAgendaTopic.html)  
+[`DefaultAnyNonSayTopic`](../object/DefaultAnyNonSayTopic.html)  
+[`DefaultAskForTopic`](../object/DefaultAskForTopic.html)  
+[`DefaultAskQueryTopic`](../object/DefaultAskQueryTopic.html)  
+[`DefaultAskTellTopic`](../object/DefaultAskTellTopic.html)  
+[`DefaultAskTopic`](../object/DefaultAskTopic.html)  
+[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
+[`DefaultConversationTopic`](../object/DefaultConversationTopic.html)  
+[`DefaultNonSayTopic`](../object/DefaultNonSayTopic.html)  
+[`DefaultGiveShowTopic`](../object/DefaultGiveShowTopic.html)  
+[`DefaultGiveTopic`](../object/DefaultGiveTopic.html)  
+[`DefaultQueryTopic`](../object/DefaultQueryTopic.html)  
+[`DefaultSayQueryTopic`](../object/DefaultSayQueryTopic.html)  
+[`DefaultSayTellTalkTopic`](../object/DefaultSayTellTalkTopic.html)  
+[`DefaultSayTellTopic`](../object/DefaultSayTellTopic.html)  
+[`DefaultSayTopic`](../object/DefaultSayTopic.html)  
+[`DefaultShowTopic`](../object/DefaultShowTopic.html)  
+[`DefaultTalkTopic`](../object/DefaultTalkTopic.html)  
+[`DefaultTellTalkTopic`](../object/DefaultTellTalkTopic.html)  
+[`DefaultTellTopic`](../object/DefaultTellTopic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -97,17 +97,17 @@ cater for.
 
 </div>
 
-` `[`exceptions`](#exceptions)`  `[`matchObj`](#matchObj)`  `[`matchScore`](#matchScore)`  `
+[`exceptions`](#exceptions)[`matchObj`](#matchObj)[`matchScore`](#matchScore)
 
 Inherited from `ActorTopicEntry` :  
-` `[`activated`](../object/ActorTopicEntry.html#activated)`  `[`active`](../object/ActorTopicEntry.html#active)`  `[`autoName`](../object/ActorTopicEntry.html#autoName)`  `[`convKeys`](../object/ActorTopicEntry.html#convKeys)`  `[`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused)`  `[`getActor`](../object/ActorTopicEntry.html#getActor)`  `[`impliesGreeting`](../object/ActorTopicEntry.html#impliesGreeting)`  `[`isConversational`](../object/ActorTopicEntry.html#isConversational)`  `[`keyTopics`](../object/ActorTopicEntry.html#keyTopics)`  `[`listOrder`](../object/ActorTopicEntry.html#listOrder)`  `[`name`](../object/ActorTopicEntry.html#name)`  `[`suggestAs`](../object/ActorTopicEntry.html#suggestAs)`  `[`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)`  `
+[`activated`](../object/ActorTopicEntry.html#activated)[`active`](../object/ActorTopicEntry.html#active)[`autoName`](../object/ActorTopicEntry.html#autoName)[`convKeys`](../object/ActorTopicEntry.html#convKeys)[`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused)[`getActor`](../object/ActorTopicEntry.html#getActor)[`impliesGreeting`](../object/ActorTopicEntry.html#impliesGreeting)[`isConversational`](../object/ActorTopicEntry.html#isConversational)[`keyTopics`](../object/ActorTopicEntry.html#keyTopics)[`listOrder`](../object/ActorTopicEntry.html#listOrder)[`name`](../object/ActorTopicEntry.html#name)[`suggestAs`](../object/ActorTopicEntry.html#suggestAs)[`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)
 
-` `
 
-` `
+
+
 
 Inherited from `TopicEntry` :  
-` `[`includeInList`](../object/TopicEntry.html#includeInList)`  `[`isActive`](../object/TopicEntry.html#isActive)`  `[`matchExactCase`](../object/TopicEntry.html#matchExactCase)`  `[`matchPattern`](../object/TopicEntry.html#matchPattern)`  `[`scoreBoost`](../object/TopicEntry.html#scoreBoost)`  `[`topicMatched`](../object/TopicEntry.html#topicMatched)`  `
+[`includeInList`](../object/TopicEntry.html#includeInList)[`isActive`](../object/TopicEntry.html#isActive)[`matchExactCase`](../object/TopicEntry.html#matchExactCase)[`matchPattern`](../object/TopicEntry.html#matchPattern)[`scoreBoost`](../object/TopicEntry.html#scoreBoost)[`topicMatched`](../object/TopicEntry.html#topicMatched)
 
 <span id="_MethodSummary_"></span>
 
@@ -117,19 +117,19 @@ Inherited from `TopicEntry` :
 
 </div>
 
-` `[`avoidMatching`](#avoidMatching)`  `[`matchTopic`](#matchTopic)`  `
+[`avoidMatching`](#avoidMatching)[`matchTopic`](#matchTopic)
 
 Inherited from `ActorTopicEntry` :  
-` `[`activate`](../object/ActorTopicEntry.html#activate)`  `[`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable)`  `[`buildName`](../object/ActorTopicEntry.html#buildName)`  `[`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied)`  `[`deactivate`](../object/ActorTopicEntry.html#deactivate)`  `[`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics)`  `[`handleTopic`](../object/ActorTopicEntry.html#handleTopic)`  `[`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry)`  `[`isReachable`](../object/ActorTopicEntry.html#isReachable)`  `[`nodeActive`](../object/ActorTopicEntry.html#nodeActive)`  `[`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics)`  `[`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)`  `
+[`activate`](../object/ActorTopicEntry.html#activate)[`addToConvKeyTable`](../object/ActorTopicEntry.html#addToConvKeyTable)[`buildName`](../object/ActorTopicEntry.html#buildName)[`curiositySatisfied`](../object/ActorTopicEntry.html#curiositySatisfied)[`deactivate`](../object/ActorTopicEntry.html#deactivate)[`getKeyTopics`](../object/ActorTopicEntry.html#getKeyTopics)[`handleTopic`](../object/ActorTopicEntry.html#handleTopic)[`initializeTopicEntry`](../object/ActorTopicEntry.html#initializeTopicEntry)[`isReachable`](../object/ActorTopicEntry.html#isReachable)[`nodeActive`](../object/ActorTopicEntry.html#nodeActive)[`showKeyTopics`](../object/ActorTopicEntry.html#showKeyTopics)[`timesToSuggest`](../object/ActorTopicEntry.html#timesToSuggest)
 
 Inherited from `ReplaceRedirector` :  
-` `[`redirect`](../object/ReplaceRedirector.html#redirect)`  `
+[`redirect`](../object/ReplaceRedirector.html#redirect)
 
 Inherited from `Redirector` :  
-` `[`doInstead`](../object/Redirector.html#doInstead)`  `[`doNested`](../object/Redirector.html#doNested)`  `[`doOtherAction`](../object/Redirector.html#doOtherAction)`  `
+[`doInstead`](../object/Redirector.html#doInstead)[`doNested`](../object/Redirector.html#doNested)[`doOtherAction`](../object/Redirector.html#doOtherAction)
 
 Inherited from `TopicEntry` :  
-` `[`addTopic`](../object/TopicEntry.html#addTopic)`  `[`scoreBooster`](../object/TopicEntry.html#scoreBooster)`  `[`topicResponse`](../object/TopicEntry.html#topicResponse)`  `
+[`addTopic`](../object/TopicEntry.html#addTopic)[`scoreBooster`](../object/TopicEntry.html#scoreBooster)[`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_Properties_"></span>
 

@@ -42,7 +42,7 @@ This is the lowest-ranking Special object, and is always active.
 </div>
 
 **`QDefaults`**  
-`         `[`Special`](../object/Special.html)  
+[`Special`](../object/Special.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -52,10 +52,10 @@ This is the lowest-ranking Special object, and is always active.
 
 </div>
 
-` `[`active`](#active)`  `[`priority`](#priority)`  `
+[`active`](#active)[`priority`](#priority)
 
 Inherited from `Special` :  
-` `[`all`](../object/Special.html#all)`  `[`allActive_`](../object/Special.html#allActive_)`  `
+[`all`](../object/Special.html#all)[`allActive_`](../object/Special.html#allActive_)
 
 <span id="_MethodSummary_"></span>
 
@@ -65,10 +65,10 @@ Inherited from `Special` :
 
 </div>
 
-` `[`canHear`](#canHear)`  `[`canReach`](#canReach)`  `[`canSee`](#canSee)`  `[`canSmell`](#canSmell)`  `[`canTalkTo`](#canTalkTo)`  `[`canThrowTo`](#canThrowTo)`  `[`inLight`](#inLight)`  `[`knownScopeList`](#knownScopeList)`  `[`reachBlocker`](#reachBlocker)`  `[`reachProblem`](#reachProblem)`  `[`reachProblemCheck`](#reachProblemCheck)`  `[`reachProblemVerify`](#reachProblemVerify)`  `[`scentBlocker`](#scentBlocker)`  `[`scopeList`](#scopeList)`  `[`sightBlocker`](#sightBlocker)`  `[`soundBlocker`](#soundBlocker)`  `[`topicScopeList`](#topicScopeList)`  `
+[`canHear`](#canHear)[`canReach`](#canReach)[`canSee`](#canSee)[`canSmell`](#canSmell)[`canTalkTo`](#canTalkTo)[`canThrowTo`](#canThrowTo)[`inLight`](#inLight)[`knownScopeList`](#knownScopeList)[`reachBlocker`](#reachBlocker)[`reachProblem`](#reachProblem)[`reachProblemCheck`](#reachProblemCheck)[`reachProblemVerify`](#reachProblemVerify)[`scentBlocker`](#scentBlocker)[`scopeList`](#scopeList)[`sightBlocker`](#sightBlocker)[`soundBlocker`](#soundBlocker)[`topicScopeList`](#topicScopeList)
 
 Inherited from `Special` :  
-` `[`allActive`](../object/Special.html#allActive)`  `[`classInit`](../object/Special.html#classInit)`  `[`first`](../object/Special.html#first)`  `[`next`](../object/Special.html#next)`  `
+[`allActive`](../object/Special.html#allActive)[`classInit`](../object/Special.html#classInit)[`first`](../object/Special.html#first)[`next`](../object/Special.html#next)
 
 <span id="_Properties_"></span>
 

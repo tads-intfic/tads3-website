@@ -62,7 +62,7 @@ shouldn't).
 
 </div>
 
-` `[`BinarySettingsItem`](../object/BinarySettingsItem.html)`  `[`SettingsFileComment`](../object/SettingsFileComment.html)`  `[`SettingsFileData`](../object/SettingsFileData.html)`  `[`SettingsFileItem`](../object/SettingsFileItem.html)`  `[`SettingsItem`](../object/SettingsItem.html)`  `[`SettingsNotSupportedException`](../object/SettingsNotSupportedException.html)`  `[`StringSettingsItem`](../object/StringSettingsItem.html)`  `
+[`BinarySettingsItem`](../object/BinarySettingsItem.html)[`SettingsFileComment`](../object/SettingsFileComment.html)[`SettingsFileData`](../object/SettingsFileData.html)[`SettingsFileItem`](../object/SettingsFileItem.html)[`SettingsItem`](../object/SettingsItem.html)[`SettingsNotSupportedException`](../object/SettingsNotSupportedException.html)[`StringSettingsItem`](../object/StringSettingsItem.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -71,7 +71,7 @@ shouldn't).
 
 </div>
 
-` `[`settingsManager`](../object/settingsManager.html)`  `
+[`settingsManager`](../object/settingsManager.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

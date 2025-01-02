@@ -38,7 +38,7 @@ if one is lit (i.e., its isLit property is true) and the other isn't.
 </div>
 
 **`litUnlitDistinguisher`**  
-`         `[`Distinguisher`](../object/Distinguisher.html)  
+[`Distinguisher`](../object/Distinguisher.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,9 +48,9 @@ if one is lit (i.e., its isLit property is true) and the other isn't.
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -60,10 +60,10 @@ if one is lit (i.e., its isLit property is true) and the other isn't.
 
 </div>
 
-` `[`aName`](#aName)`  `[`canDistinguish`](#canDistinguish)`  `[`countName`](#countName)`  `[`name`](#name)`  `[`theName`](#theName)`  `
+[`aName`](#aName)[`canDistinguish`](#canDistinguish)[`countName`](#countName)[`name`](#name)[`theName`](#theName)
 
 Inherited from `Distinguisher` :  
-` `[`matchName`](../object/Distinguisher.html#matchName)`  `[`notePrompt`](../object/Distinguisher.html#notePrompt)`  `[`objInScope`](../object/Distinguisher.html#objInScope)`  `
+[`matchName`](../object/Distinguisher.html#matchName)[`notePrompt`](../object/Distinguisher.html#notePrompt)[`objInScope`](../object/Distinguisher.html#objInScope)
 
 <span id="_Properties_"></span>
 

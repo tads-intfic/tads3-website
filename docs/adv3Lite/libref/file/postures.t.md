@@ -43,7 +43,7 @@ and on various things, with the posture being tracked.
 
 </div>
 
-` `[`Bed`](../object/Bed.html)`  `[`Chair`](../object/Chair.html)`  `[`Posture`](../object/Posture.html)`  `
+[`Bed`](../object/Bed.html)[`Chair`](../object/Chair.html)[`Posture`](../object/Posture.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -52,7 +52,7 @@ and on various things, with the posture being tracked.
 
 </div>
 
-` `[`lying`](../object/lying.html)`  `[`posturesID`](../object/posturesID.html)`  `[`sitting`](../object/sitting.html)`  `[`standing`](../object/standing.html)`  `
+[`lying`](../object/lying.html)[`posturesID`](../object/posturesID.html)[`sitting`](../object/sitting.html)[`standing`](../object/standing.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

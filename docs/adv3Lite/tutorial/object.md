@@ -96,17 +96,17 @@ and referred to in your program code) followed by a colon followed by
 the class to which it belongs, or by a list of the classes to which it
 belong, for example:
 
-```
+`
     redBall: Thing
 
     stoneAltar: Surface, Fixture
-```
+`
 
 The body of the object definition then consists of zero or more property
 definitions plus zero or more method definitions, either terminated by a
 semicolon or enclosed in curly braces. For example:
 
-```
+`
     redBall: Thing
        vocab = 'red ball;; round'
        desc = "It's just a round red ball. "
@@ -119,11 +119,11 @@ semicolon or enclosed in curly braces. For example:
           bounces = bounces + 1;
        }
     ;
-```
+`
 
 Or equivalently:
 
-```
+`
     redBall: Thing
     {
        vocab = 'red ball;; round'
@@ -137,7 +137,7 @@ Or equivalently:
           bounces = bounces + 1;
        }
     }
-```
+`
 
 In what follows we shall normally use the first of these forms (with the
 terminating semicolon, rather than the enclosing braces), although we'll
@@ -165,20 +165,20 @@ definition:
 
 For example:
 
-```
+`
         isListed = (!isFixed)    
         
         momentum = (mass * velocity)
-```
+`
 
 These definitions are equivalent to:
 
-```
+`
      
       isListed()  { return !isFixed; }
 
       momentum()  { return mass * velocity; }  
-```
+`
 
 Don't worry if you don't fully understand what these methods mean yet;
 that will become clearer when we go into more detail on methods later in
@@ -191,9 +191,9 @@ list and the terminating semi-colon (or braces). The following is a
 perfectly legal (though almost certainly pointless and useless) object
 definition:
 
-```
+`
     Thing;
-```
+`
 
 This creates an anonymous object of class
 `Thing` with all the default methods and
@@ -217,9 +217,9 @@ for now).
 
 The template for the *Thing* class is basically:
 
-```
+`
        'vocab' @location? "desc"?
-```
+`
 
 The question-mark denotes an optional element. This means that when
 we're defining a Thing and we're using its template, the first property
@@ -234,7 +234,7 @@ wish). Thus, using the Thing template we could define the redBall object
 used as an example above in any of the three following (functionally
 equivalent) ways:
 
-```
+`
     redBall: Thing'red ball;; round'
        "It's just a round red ball. "
        
@@ -246,11 +246,11 @@ equivalent) ways:
           bounces = bounces + 1;
        }
     ;
-```
+`
 
 Or equivalently:
 
-```
+`
     redBall: Thing
     {
        'red ball;; round'
@@ -264,11 +264,11 @@ Or equivalently:
           bounces = bounces + 1;
        }
     }
-```
+`
 
 Or equivalently:
 
-```
+`
     redBall: Thing 'red ball;; round'
      "It's just a round red ball. "
      {
@@ -280,7 +280,7 @@ Or equivalently:
           bounces = bounces + 1;
        }
     }
-```
+`
 
 In other words, if we define an object using the brace notation along
 with a template, we can either put the template properties immediately
@@ -290,20 +290,20 @@ however, we shall mainly stick to the first of the three forms above
 
 We've already met the Room template in the form:
 
-```
+`
     'roomTitle' "desc"?;
-```
+`
 
 So for example, we can define the starting location of The Adventures of
 Heidi like this:
 
-```
+`
     beforeCottage: Room 'In front of a Cottage'
         "You stand outside a cottage. The forest stretches east. "
         
         east = forest
     ;
-```
+`
 
 Here, 'In front of a Cottage' is thus the
 `roomTitle` property of beforeCottage, and "You
@@ -311,20 +311,20 @@ stand outside a cottage. The forest stretches east. " is its desc
 property. There's also a second form of the Room template which looks
 like this:
 
-```
+`
     'roomTitle' 'vocab' "desc"?;
-```
+`
 
 Which would allow us to define the vocab property of a Room as well, for
 example:
 
-```
+`
     beforeCottage: Room 'In front of a Cottage' 'front of the cottage'
         "You stand outside a cottage. The forest stretches east. "
         
         east = forest
     ;
-```
+`
 
 This would give the beforeCottage room a display name (note, this is
 quite separate from the roomTitle that appears at the head of the room
@@ -358,7 +358,7 @@ that case, there's no need to qualify the method or property name, since
 the compiler will assume that we're talking about the same object.
 That's why we can write:
 
-```
+`
     redBall: Thing 'red ball;; round'
        "It's just a round red ball. "
        
@@ -370,11 +370,11 @@ That's why we can write:
           bounces = bounces + 1;
        }
     ;
-```
+`
 
 Rather than:
 
-```
+`
     redBall: Thing 'red ball;; round'
        "It's just a round red ball. "
        
@@ -386,7 +386,7 @@ Rather than:
           redBall.bounces = redBall.bounces + 1; //There's no need for this!
        }
     ;
-```
+`
 
 Indeed, in this kind of case, the second form is best avoided.
 
@@ -395,7 +395,7 @@ should use the special keyword `self`, for
 example, if the nest needed to test whether the bird was inside it we
 might write:
 
-```
+`
     + nest: Thing 'bird\'s nest; carefully woven; moss twigs'
         "The nest is carefully woven of twigs and moss. "
         
@@ -408,7 +408,7 @@ might write:
              /* do something appropriate here */
         }
     ;
-```
+`
 
 ## Class Definitions
 
@@ -427,7 +427,7 @@ wanted to put things in and on we could have created custom classes for
 the purpose (though in practice most class definitions would probably be
 more complex than this):
 
-```
+`
     class Surface: Thing
        contType = On
     ;
@@ -435,14 +435,14 @@ more complex than this):
     class Container: Thing
        contType = In
     ;   
-```
+`
 
 This would make a Surface just like a Thing except that you could put
 things on it, and a Container just like a Thing except that you could
 put things in it. We could then have defined the nest and the branch
 thus:
 
-```
+`
      
     + nest: Container 'bird\'s nest; carefully woven; moss twigs'
         "The nest is carefully woven of twigs and moss. "
@@ -464,7 +464,7 @@ thus:
                 finishGameMsg(ftVictory, [finishOptionUndo]);
         }
     ;   
-```
+`
 
 In fact, we could have done this anyway, since the adv3Lite already
 defines a `Surface` class and a
@@ -477,7 +477,7 @@ and tables and shelves) often aren't portable. We might then feel it
 useful to define a FixedSurface class which we could define in a number
 of ways:
 
-```
+`
     class FixedSurface: Thing
        isFixed = true
        contType = On
@@ -493,7 +493,7 @@ of ways:
 
     class FixedSurface: Fixture, Surface
     ;
-```
+`
 
 Of these, the last is probably the best (given that the adv3Lite library
 does in fact already define a `Fixture` class),

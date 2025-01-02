@@ -38,7 +38,7 @@ the player.
 
 </div>
 
-` `[`BasicInputDef`](../object/BasicInputDef.html)`  `[`EndOfFileException`](../object/EndOfFileException.html)`  `[`InputDef`](../object/InputDef.html)`  `[`QuittingException`](../object/QuittingException.html)`  `[`StringPreParser`](../object/StringPreParser.html)`  `
+[`BasicInputDef`](../object/BasicInputDef.html)[`EndOfFileException`](../object/EndOfFileException.html)[`InputDef`](../object/InputDef.html)[`QuittingException`](../object/QuittingException.html)[`StringPreParser`](../object/StringPreParser.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -47,7 +47,7 @@ the player.
 
 </div>
 
-` `[`commentPreParser`](../object/commentPreParser.html)`  `[`inputManager`](../object/inputManager.html)`  `
+[`commentPreParser`](../object/commentPreParser.html)[`inputManager`](../object/inputManager.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

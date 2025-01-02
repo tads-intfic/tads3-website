@@ -47,7 +47,7 @@ invoked just before the program terminates.
 
 </div>
 
-` `[`handlers`](#handlers)`  `
+[`handlers`](#handlers)
 
 <span id="_MethodSummary_"></span>
 
@@ -57,7 +57,7 @@ invoked just before the program terminates.
 
 </div>
 
-` `[`addHandler`](#addHandler)`  `[`callHandlers`](#callHandlers)`  `
+[`addHandler`](#addHandler)[`callHandlers`](#callHandlers)
 
 <span id="_Properties_"></span>
 

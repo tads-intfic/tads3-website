@@ -44,7 +44,7 @@ Once a fuse is executed, it is removed from further scheduling.
 </div>
 
 **`Fuse`**  
-`         `[`Event`](../object/Event.html)  
+[`Event`](../object/Event.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,9 +55,9 @@ Once a fuse is executed, it is removed from further scheduling.
 </div>
 
 **`Fuse`**  
-`         `[`SenseFuse`](../object/SenseFuse.html)  
-`         `[`TimeFuse`](../object/TimeFuse.html)  
-`                 `[`SenseTimeFuse`](../object/SenseTimeFuse.html)  
+[`SenseFuse`](../object/SenseFuse.html)  
+[`TimeFuse`](../object/TimeFuse.html)  
+[`SenseTimeFuse`](../object/SenseTimeFuse.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -74,10 +74,10 @@ Once a fuse is executed, it is removed from further scheduling.
 
 </div>
 
-` `
+
 
 Inherited from `Event` :  
-` `[`captureText`](../object/Event.html#captureText)`  `[`eventOrder`](../object/Event.html#eventOrder)`  `[`executed`](../object/Event.html#executed)`  `[`interval_`](../object/Event.html#interval_)`  `[`isPromptDaemon`](../object/Event.html#isPromptDaemon)`  `[`nextRunTime`](../object/Event.html#nextRunTime)`  `[`obj_`](../object/Event.html#obj_)`  `[`prop_`](../object/Event.html#prop_)`  `[`senseObj_`](../object/Event.html#senseObj_)`  `[`senseProp_`](../object/Event.html#senseProp_)`  `
+[`captureText`](../object/Event.html#captureText)[`eventOrder`](../object/Event.html#eventOrder)[`executed`](../object/Event.html#executed)[`interval_`](../object/Event.html#interval_)[`isPromptDaemon`](../object/Event.html#isPromptDaemon)[`nextRunTime`](../object/Event.html#nextRunTime)[`obj_`](../object/Event.html#obj_)[`prop_`](../object/Event.html#prop_)[`senseObj_`](../object/Event.html#senseObj_)[`senseProp_`](../object/Event.html#senseProp_)
 
 <span id="_MethodSummary_"></span>
 
@@ -87,10 +87,10 @@ Inherited from `Event` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`executeEvent`](#executeEvent)`  `
+[`construct`](#construct)[`executeEvent`](#executeEvent)
 
 Inherited from `Event` :  
-` `[`callMethod`](../object/Event.html#callMethod)`  `[`delayEvent`](../object/Event.html#delayEvent)`  `[`eventMatches`](../object/Event.html#eventMatches)`  `[`getNextRunTime`](../object/Event.html#getNextRunTime)`  `[`removeEvent`](../object/Event.html#removeEvent)`  `
+[`callMethod`](../object/Event.html#callMethod)[`delayEvent`](../object/Event.html#delayEvent)[`eventMatches`](../object/Event.html#eventMatches)[`getNextRunTime`](../object/Event.html#getNextRunTime)[`removeEvent`](../object/Event.html#removeEvent)
 
 <span id="_Properties_"></span>
 

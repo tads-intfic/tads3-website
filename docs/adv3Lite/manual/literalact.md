@@ -74,7 +74,7 @@ object of the *action*, much as you would for any other action, while
 making use of gLiteral as appropriate. For example, to implement a note
 on which the player character can write things you could define:
 
-```
+`
     note: Thing 'note; white of[prep]; sheet piece paper writing' 
       "It's a sheet of white paper with writing on it. "
       
@@ -101,7 +101,7 @@ on which the player character can write things you could define:
           
       }  
     ;
-```
+`
 
   
 <span id="defining"></span>
@@ -117,7 +117,7 @@ execAction() method of the Write action to install the default writing
 surface as the other object of the current Command object and then use
 the WriteOn command to actually carry out the action:
 
-```
+`
     VerbRule(Write)
         'write' literalDobj
         : VerbProduction
@@ -134,7 +134,7 @@ the WriteOn command to actually carry out the action:
             WriteOn.exec(cmd);
         }
     ;
-```
+`
 
 The main thing to note here is the use of the token **literalDobj** to
 represent where in the command the literal object comes.
@@ -147,7 +147,7 @@ treat the physical object involved as actual direct object). For
 example, to define a CarveOn command to carve an inscription on
 something we might define:
 
-```
+`
     VerbRule(CarveOn)
         ('carve' | 'inscribe') literalDobj 'on' singleIobj
         : VerbProduction
@@ -192,7 +192,7 @@ something we might define:
            }
        }
     ;
-```
+`
 
   
 <span id="numeric"></span>
@@ -213,7 +213,7 @@ A `NumericAction` may be defined using the
 the numeric value in the associated VerbRule. The following somewhat
 trivial example should serve to illustrate the point:
 
-```
+`
     DefineNumericAction(GetNum)
         execAction(c)
         {
@@ -230,7 +230,7 @@ trivial example should serve to illustrate the point:
         missingQ = 'what number do you want'
     ;
      
-```
+`
 
 This action simply echoes back the number typed, although it is shown as
 an integer even if typed spelled-out; e.g. the response to NUMBER
@@ -241,7 +241,7 @@ LiteralTAction, except that it concerns a numeric value instead of a
 string one in addition to the game object. Again to give a trivial
 example that nevertheless serves to illustrate the principle:
 
-```
+`
      VerbRule(CountAs)
         'count' singleDobj 'as' numericIobj
         : VerbProduction
@@ -260,7 +260,7 @@ example that nevertheless serves to illustrate the principle:
         }
     ;
      
-```
+`
 
 As with a LiteralTAction, a NumericTAction will always treat the
 physical object as the direct object, however the associated

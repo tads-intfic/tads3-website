@@ -33,7 +33,7 @@ automatically write out a file with the metadata for each of these
 objects. This is an abstract base class; a subclass must be created for
 each specific metadata format.
 
-`class `**`MetadataModuleID`**` :   `[`ModuleID`](../object/ModuleID.html)`   `[`PreinitObject`](../object/PreinitObject.html)
+`class `**`MetadataModuleID`**` :   `[`ModuleID`](../object/ModuleID.html)[`PreinitObject`](../object/PreinitObject.html)
 
 </div>
 
@@ -46,10 +46,10 @@ each specific metadata format.
 </div>
 
 **`MetadataModuleID`**  
-`         `[`ModuleID`](../object/ModuleID.html)  
+[`ModuleID`](../object/ModuleID.html)  
 `                 object`  
-`         `[`PreinitObject`](../object/PreinitObject.html)  
-`                 `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`PreinitObject`](../object/PreinitObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -60,8 +60,8 @@ each specific metadata format.
 </div>
 
 **`MetadataModuleID`**  
-`         `[`GameInfoModuleID`](../object/GameInfoModuleID.html)  
-`                 `[`GameID`](../object/GameID.html)  
+[`GameInfoModuleID`](../object/GameInfoModuleID.html)  
+[`GameID`](../object/GameID.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -78,15 +78,15 @@ each specific metadata format.
 
 </div>
 
-` `
+
 
 Inherited from `ModuleID` :  
-` `[`byline`](../object/ModuleID.html#byline)`  `[`htmlByline`](../object/ModuleID.html#htmlByline)`  `[`listingOrder`](../object/ModuleID.html#listingOrder)`  `[`name`](../object/ModuleID.html#name)`  `[`version`](../object/ModuleID.html#version)`  `
+[`byline`](../object/ModuleID.html#byline)[`htmlByline`](../object/ModuleID.html#htmlByline)[`listingOrder`](../object/ModuleID.html#listingOrder)[`name`](../object/ModuleID.html#name)[`version`](../object/ModuleID.html#version)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -96,15 +96,15 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `[`execute`](#execute)`  `[`writeMetadataFile`](#writeMetadataFile)`  `
+[`execute`](#execute)[`writeMetadataFile`](#writeMetadataFile)
 
 Inherited from `ModuleID` :  
-` `[`getModuleList`](../object/ModuleID.html#getModuleList)`  `[`showAbout`](../object/ModuleID.html#showAbout)`  `[`showCredit`](../object/ModuleID.html#showCredit)`  `[`showVersion`](../object/ModuleID.html#showVersion)`  `
+[`getModuleList`](../object/ModuleID.html#getModuleList)[`showAbout`](../object/ModuleID.html#showAbout)[`showCredit`](../object/ModuleID.html#showCredit)[`showVersion`](../object/ModuleID.html#showVersion)
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)
 
 <span id="_Properties_"></span>
 

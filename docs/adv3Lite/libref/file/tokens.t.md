@@ -39,7 +39,7 @@ layout: docs
 
 </div>
 
-` `[`cmdTokenizer`](../object/cmdTokenizer.html)`  `
+[`cmdTokenizer`](../object/cmdTokenizer.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -48,7 +48,7 @@ layout: docs
 
 </div>
 
-` `[`concatTokens`](#concatTokens)`  `[`isWordToken`](#isWordToken)`  `
+[`concatTokens`](#concatTokens)[`isWordToken`](#isWordToken)
 
 <span id="_Functions_"></span>
 

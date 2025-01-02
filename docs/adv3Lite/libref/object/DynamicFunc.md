@@ -119,7 +119,7 @@ local y = f(7);
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -129,7 +129,7 @@ local y = f(7);
 
 </div>
 
-` `[`getSource`](#getSource)`  `
+[`getSource`](#getSource)
 
 <span id="_Properties_"></span>
 

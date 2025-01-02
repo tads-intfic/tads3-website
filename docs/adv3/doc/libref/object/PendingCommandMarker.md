@@ -50,7 +50,7 @@ command by observing the marker's progress through the queue.
 </div>
 
 **`PendingCommandMarker`**  
-`         `[`PendingCommandInfo`](../object/PendingCommandInfo.html)  
+[`PendingCommandInfo`](../object/PendingCommandInfo.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -76,10 +76,10 @@ command by observing the marker's progress through the queue.
 
 </div>
 
-` `[`hasCommand`](#hasCommand)`  `
+[`hasCommand`](#hasCommand)
 
 Inherited from `PendingCommandInfo` :  
-` `[`issuer_`](../object/PendingCommandInfo.html#issuer_)`  `[`startOfSentence_`](../object/PendingCommandInfo.html#startOfSentence_)`  `
+[`issuer_`](../object/PendingCommandInfo.html#issuer_)[`startOfSentence_`](../object/PendingCommandInfo.html#startOfSentence_)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,10 +89,10 @@ Inherited from `PendingCommandInfo` :
 
 </div>
 
-` `
+
 
 Inherited from `PendingCommandInfo` :  
-` `[`construct`](../object/PendingCommandInfo.html#construct)`  `[`executePending`](../object/PendingCommandInfo.html#executePending)`  `
+[`construct`](../object/PendingCommandInfo.html#construct)[`executePending`](../object/PendingCommandInfo.html#executePending)
 
 <span id="_Properties_"></span>
 

@@ -43,8 +43,8 @@ Details](#_Methods_)
 </div>
 
 **`UnboundInheritedMultiMethod`**  
-`         `[`UnboundMultiMethod`](../object/UnboundMultiMethod.html)  
-`                 `[`Exception`](../object/Exception.html)  
+[`UnboundMultiMethod`](../object/UnboundMultiMethod.html)  
+[`Exception`](../object/Exception.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,13 +70,13 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `UnboundMultiMethod` :  
-` `[`args_`](../object/UnboundMultiMethod.html#args_)`  `[`func_`](../object/UnboundMultiMethod.html#func_)`  `[`name_`](../object/UnboundMultiMethod.html#name_)`  `
+[`args_`](../object/UnboundMultiMethod.html#args_)[`func_`](../object/UnboundMultiMethod.html#func_)[`name_`](../object/UnboundMultiMethod.html#name_)
 
 Inherited from `Exception` :  
-` `[`errmsg_`](../object/Exception.html#errmsg_)`  `
+[`errmsg_`](../object/Exception.html#errmsg_)
 
 <span id="_MethodSummary_"></span>
 
@@ -86,13 +86,13 @@ Inherited from `Exception` :
 
 </div>
 
-` `[`displayException`](#displayException)`  `
+[`displayException`](#displayException)
 
 Inherited from `UnboundMultiMethod` :  
-` `[`construct`](../object/UnboundMultiMethod.html#construct)`  `
+[`construct`](../object/UnboundMultiMethod.html#construct)
 
 Inherited from `Exception` :  
-` `[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)`  `[`showStackTrace`](../object/Exception.html#showStackTrace)`  `
+[`getExceptionMessage`](../object/Exception.html#getExceptionMessage)[`showStackTrace`](../object/Exception.html#showStackTrace)
 
 <span id="_Properties_"></span>
 

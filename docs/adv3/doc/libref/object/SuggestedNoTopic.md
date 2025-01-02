@@ -44,7 +44,7 @@ Details](#_Methods_)
 </div>
 
 **`SuggestedNoTopic`**  
-`         `[`SuggestedTopic`](../object/SuggestedTopic.html)  
+[`SuggestedTopic`](../object/SuggestedTopic.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,10 +70,10 @@ Details](#_Methods_)
 
 </div>
 
-` `[`fullName`](#fullName)`  `[`name`](#name)`  `[`suggestionGroup`](#suggestionGroup)`  `
+[`fullName`](#fullName)[`name`](#name)[`suggestionGroup`](#suggestionGroup)
 
 Inherited from `SuggestedTopic` :  
-` `[`associatedTopic`](../object/SuggestedTopic.html#associatedTopic)`  `[`curiositySatisfied`](../object/SuggestedTopic.html#curiositySatisfied)`  `[`location`](../object/SuggestedTopic.html#location)`  `[`suggestTo`](../object/SuggestedTopic.html#suggestTo)`  `[`timesToSuggest`](../object/SuggestedTopic.html#timesToSuggest)`  `
+[`associatedTopic`](../object/SuggestedTopic.html#associatedTopic)[`curiositySatisfied`](../object/SuggestedTopic.html#curiositySatisfied)[`location`](../object/SuggestedTopic.html#location)[`suggestTo`](../object/SuggestedTopic.html#suggestTo)[`timesToSuggest`](../object/SuggestedTopic.html#timesToSuggest)
 
 <span id="_MethodSummary_"></span>
 
@@ -83,10 +83,10 @@ Inherited from `SuggestedTopic` :
 
 </div>
 
-` `
+
 
 Inherited from `SuggestedTopic` :  
-` `[`associatedTopicCanMatch`](../object/SuggestedTopic.html#associatedTopicCanMatch)`  `[`associatedTopicIsActive`](../object/SuggestedTopic.html#associatedTopicIsActive)`  `[`associatedTopicTalkCount`](../object/SuggestedTopic.html#associatedTopicTalkCount)`  `[`findEnclosingSuggestedTopic`](../object/SuggestedTopic.html#findEnclosingSuggestedTopic)`  `[`findOuterSuggestedTopic`](../object/SuggestedTopic.html#findOuterSuggestedTopic)`  `[`fromEnclosingSuggestedTopic`](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic)`  `[`initializeSuggestedTopic`](../object/SuggestedTopic.html#initializeSuggestedTopic)`  `[`isSuggestionActive`](../object/SuggestedTopic.html#isSuggestionActive)`  `[`noteSuggestion`](../object/SuggestedTopic.html#noteSuggestion)`  `
+[`associatedTopicCanMatch`](../object/SuggestedTopic.html#associatedTopicCanMatch)[`associatedTopicIsActive`](../object/SuggestedTopic.html#associatedTopicIsActive)[`associatedTopicTalkCount`](../object/SuggestedTopic.html#associatedTopicTalkCount)[`findEnclosingSuggestedTopic`](../object/SuggestedTopic.html#findEnclosingSuggestedTopic)[`findOuterSuggestedTopic`](../object/SuggestedTopic.html#findOuterSuggestedTopic)[`fromEnclosingSuggestedTopic`](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic)[`initializeSuggestedTopic`](../object/SuggestedTopic.html#initializeSuggestedTopic)[`isSuggestionActive`](../object/SuggestedTopic.html#isSuggestionActive)[`noteSuggestion`](../object/SuggestedTopic.html#noteSuggestion)
 
 <span id="_Properties_"></span>
 

@@ -34,7 +34,7 @@ more properties to be defined on it to make it function properly as a
 player character. You must also remember to include the library header.
 An absolutely minimal adv3Lite game might therefore look like this:
 
-```
+`
     #charset "us-ascii"
     #include "advlite.h"
 
@@ -51,7 +51,7 @@ An absolutely minimal adv3Lite game might therefore look like this:
         person = 2 // or person = 1 for a first-person game    
         contType = Carrier   
     ;
-```
+`
 
 Alternatively, you could achieve the same result a little more concisely
 by using the Player class rather than the Thing class to define the
@@ -60,7 +60,7 @@ gameMain object, but you need not set is initialPlayerChar property
 since the object you define with the Player class takes care of
 identifying itself as the initial player character:
 
-```
+`
     #charset "us-ascii"
     #include "advlite.h"
 
@@ -73,7 +73,7 @@ identifying itself as the initial player character:
 
     + me: Player   
     ;
-```
+`
 
 In practice, any real game would want also to include a
 [versionInfo](beginning.html#versioninfo) object to provide information
@@ -83,7 +83,7 @@ the player character and a more fully-implemented starting location. The
 actual starting code for a real game might therefore look more like
 this:
 
-```
+`
     #charset "us-ascii"
     #include "advlite.h"
 
@@ -194,7 +194,7 @@ this:
         familiar = true
     ;    
             
-```
+`
 
 Don't worry if not all of this code makes sense to you yet. It will all
 be explained in due course (not least what to authors used to the adv3
@@ -313,7 +313,7 @@ copy of the System Manual simply by editing the file **sysman.html** in
 your adv3Lite/docs directory. When you first open this file you should
 find it looks like this:
 
-```
+`
     <html>
     <head>
     <title>System Manual</title>
@@ -331,41 +331,41 @@ find it looks like this:
     <!-- FOR UNIX-like systems it might be something along the lines of -->
     <!--  <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin /TADS 3/doc/sysman/toc.html"> -->
     </head>
-```
+`
 
 To make it redirect to your local copy of the System Manual, you'll need
 to edit the line:
 
-```
+`
      
     <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.tads.org/t3doc/doc/sysman/toc.html">
-```
+`
 
 So that the url it redirects to is the location of the System Manual's
 toc.html file on your machine. For example, if you're running a 64-bit
 version of Windows (such as Windows 7) you'll probably need to change
 this line to:
 
-```
+`
     <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files (x86)/TADS 3/doc/sysman/toc.html"> 
      
-```
+`
 
 For a 32-bit version of Windows (e.g. Windows XP) you'd most likely
 need:
 
-```
+`
     <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/Program Files/TADS 3/doc/sysman/toc.html"> 
      
-```
+`
 
 On a MAC or LINUX system the change will need to be slightly more
 extensive, possibly to something like:
 
-```
+`
     <meta HTTP-EQUIV="REFRESH" content="0; url=file:///c:/usr/bin/TADS 3/doc/sysman/toc.html"> 
      
-```
+`
 
 As an alternative, you may be able simply to comment out the existing
 `\<meta HTTP-EQUIV="REFRESH"` line and uncomment

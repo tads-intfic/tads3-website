@@ -37,7 +37,7 @@ a plural noun phrase with a possessive and a number
 </div>
 
 **`explicitDetPluralNounPhrase(possessiveNumber)`**  
-`         `[`ExactQuantifiedPossessivePluralProd`](../object/ExactQuantifiedPossessivePluralProd.html)  
+[`ExactQuantifiedPossessivePluralProd`](../object/ExactQuantifiedPossessivePluralProd.html)  
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -46,9 +46,9 @@ a plural noun phrase with a possessive and a number
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -58,10 +58,10 @@ a plural noun phrase with a possessive and a number
 
 </div>
 
-` `
+
 
 Inherited from `ExactQuantifiedPossessivePluralProd` :  
-` `[`resolveMainPhrase`](../object/ExactQuantifiedPossessivePluralProd.html#resolveMainPhrase)`  `
+[`resolveMainPhrase`](../object/ExactQuantifiedPossessivePluralProd.html#resolveMainPhrase)
 
 <span id="_Properties_"></span>
 

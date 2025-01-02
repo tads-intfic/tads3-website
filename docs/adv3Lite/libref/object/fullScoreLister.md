@@ -37,7 +37,7 @@ List interface for showing the full score list
 </div>
 
 **`fullScoreLister`**  
-`         `[`Lister`](../object/Lister.html)  
+[`Lister`](../object/Lister.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ List interface for showing the full score list
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -59,10 +59,10 @@ List interface for showing the full score list
 
 </div>
 
-` `[`listed`](#listed)`  `[`showList`](#showList)`  `[`showListPrefix`](#showListPrefix)`  `
+[`listed`](#listed)[`showList`](#showList)[`showListPrefix`](#showListPrefix)
 
 Inherited from `Lister` :  
-` `[`buildList`](../object/Lister.html#buildList)`  `[`listOrder`](../object/Lister.html#listOrder)`  `[`show`](../object/Lister.html#show)`  `[`showListEmpty`](../object/Lister.html#showListEmpty)`  `[`showListSuffix`](../object/Lister.html#showListSuffix)`  `
+[`buildList`](../object/Lister.html#buildList)[`listOrder`](../object/Lister.html#listOrder)[`show`](../object/Lister.html#show)[`showListEmpty`](../object/Lister.html#showListEmpty)[`showListSuffix`](../object/Lister.html#showListSuffix)
 
 <span id="_Properties_"></span>
 

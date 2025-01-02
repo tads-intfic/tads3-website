@@ -54,12 +54,12 @@ action (e.g. 'LockWith') if you know it.
 Suppose, for example, you wanted to make the commands GRAB and SNATCH
 work just like TAKE. Here's how you'd do it by modifying a VerbRule:
 
-```
+`
     modify VerbRule(Take)
         ('take' | 'pick' 'up' | 'get' |'grab'| 'snatch') multiDobj
         | 'pick' multiDobj 'up' :
     ;
-```
+`
 
 Note that we start by using the keyword **modify** and then our
 redefinition with a colon following our new grammar specification
@@ -77,7 +77,7 @@ command, PICK *object* UP.
 The other way of adding synonyms to an existing action is to create a
 new VerbRule that refers to the existing action. For example:
 
-```
+`
     VerbRule(Grab)
         ('grab' | 'snatch') multiDobj  
         : VerbProduction
@@ -85,7 +85,7 @@ new VerbRule that refers to the existing action. For example:
         verbPhrase = 'grab/grabbing (what)'
         missingQ = 'what do you want to grab'
     ;
-```
+`
 
 Here we define the new vocabulary that we want to trigger the action in
 much the same way as before, except this time we do only have to define
@@ -160,9 +160,9 @@ phrase that's missing.
 The first step in defining a VerbRule is to use the VerbRule() macro
 with a suitable name tag, as in our previous example:
 
-```
+`
     VerbRule(Grab)
-```
+`
 
 The name-tag is arbitrary, but must be different for each VerbRule. It
 is usual (and advisable) to use something that relates as closely as
@@ -173,20 +173,20 @@ action.
 We next define the grammar that applies to the action (i.e. the way the
 player can refer to it when entering commands). e.g.:
 
-```
+`
     VerbRule(Grab)
        ('grab' | 'snatch') multiDobj
-```
+`
 
 Exactly how this should be defined for each type of action is something
 we'll explain as we come to each type of action in turn. We next define
 the VerbRule to be of the VerbProduction class:
 
-```
+`
     VerbRule(Grab)
        ('grab' | 'snatch') multiDobj
        : VerbProduction
-```
+`
 
 <span id="vrprops"></span>
 
@@ -276,7 +276,7 @@ between parentheses leaving one of them empty thus:
 (let us suppose for the sake of argument that it simply performs a PutOn
 action here) might then look like this:
 
-```
+`
      VerbRule(HangOn)
         'hang' ('up'|) singleDobj ('up'|) 'on' singleIobj
         : VerbProduction
@@ -285,7 +285,7 @@ action here) might then look like this:
         missingQ = 'what do you want to hang; what do you want to hang it on'    
      ;
      
-```
+`
 
 This would then respond to commands like HANG COAT ON PEG, HANG UP COAT
 ON PEG, HANG COAT UP ON PEG or even HANG UP COAT UP ON PEG.
@@ -321,14 +321,14 @@ responds to the command WAKE UP (in its intransitive sense, i.e. telling
 the player character to wake up, not trying to wake up another character
 as in WAKE BOB). The VerbRule might look like this:
 
-```
+`
     VerbRule(WakeUp)
         'wake' 'up'
         : VerbProduction
         action = WakeUp
         verbPhrase = 'wake/waking up'        
     ;
-```
+`
 
 Note that we don't define the missingQ property here, since an IAction
 can never have a missing object. Otherwise we define the rest of the
@@ -347,14 +347,14 @@ action's **execAction(cmd)** method to define what the action does. A
 minimal definition in the case of our new WakeUp action might look like
 this:
 
-```
+`
     DefineIAction(WakeUp)
         execAction(cmd)
         {
             "{I}{\'m} not asleep. ";
         }
     ;       
-```
+`
 
 Of course, your action may need to be more complex than this, in which
 case you'd need to define a more complicated execAction() method, for
@@ -363,7 +363,7 @@ asleep, in a dream sequence say (although another way of handling this
 might be via a [Doer](doer.html) to handle the special cases, for
 example:)
 
-```
+`
     Doer 'wake up'         
         execAction(c)
         {
@@ -371,7 +371,7 @@ example:)
         }
         during = dreamScene
     ; 
-```
+`
 
 One further small point to note: in the adv3 library
 `DefineIAction(WakeUp)` would have defined a new
@@ -394,7 +394,7 @@ For example, suppose we wanted to define a new Rub action, which can be
 applied to one or more objects at a time. Our VerbRule would look like
 this:
 
-```
+`
     VerbRule(Rub)
         'rub' multiDobj
         : VerbProduction
@@ -402,12 +402,12 @@ this:
         verbPhrase = 'rub/rubbing (what)'
         missingQ = 'what do you want to rub'
     ;
-```
+`
 
 As a second example, we could define a Repair command that can only act
 on one object at a time:
 
-```
+`
     VerbRule(Repair)
        ('repair' | 'mend' | 'fix') singleDobj
        : VerbProduction
@@ -415,7 +415,7 @@ on one object at a time:
        verbPhrase = 'repair/ repairing (what)'
        missingQ = 'what do you want to repair'
     ;
-```
+`
 
 Note how we use the bar (\|) symbol to define alternative phrasings and
 the brackets to group them. We want the command to match REPAIR FOO,
@@ -425,13 +425,13 @@ MEND, or FIX FOO.
 The second step is usually very simple indeed; we just define the new
 action using the **DefineTAction(*action-name*)** macro, for example:
 
-```
+`
     DefineTAction(Rub)
     ;
 
     DefineTAction(Repair)
     ;
-```
+`
 
 <span id="all"></span>
 
@@ -451,12 +451,12 @@ IndirectObject). The default behaviour is to return every object in
 scope, but for some actions you may want to restrict this. For example
 on the Take action the adv3Lite library defines:
 
-```
+`
         getAll(cmd, role)
         {
             return scopeList.subset({ x: !x.isDirectlyIn(cmd.actor) && !x.isFixed});
         }
-```
+`
 
 This stops TAKE ALL from trying to take objects the actor is already
 holding (which is unlikely to be what the player intended) or objects
@@ -482,7 +482,7 @@ poison, we may want to prevent the player from accidentally killing the
 player character with a DRINK ALL or EAT ALL command by doing something
 like the following:
 
-```
+`
     poisonBottle: Thing 'dark green bottle; of[prep]; poison'
       "It's labeled POISON. "
       isDrinkable = true
@@ -503,7 +503,7 @@ like the following:
       
       dobjFor(Taste) asDobjFor(Drink)
     ;
-```
+`
 
 Note that while making `hideFromAll(action)`
 return true will certainly exclude the item from ALL, having it return
@@ -566,7 +566,7 @@ behaviour). For this step you basically need to follow the principles
 already explained in the [Action Results](actres.html) section above. So
 for our Rub and Repair actions we might define:
 
-```
+`
     modify Thing
        dobjFor(Rub)
        {
@@ -590,7 +590,7 @@ for our Rub and Repair actions we might define:
        
        cannotRepairMsg = '{The subj dobj} {doesn\'t need} mending. '
     ;
-```
+`
 
 We could have defined the message '{The subj dobj} {doesn\\t need}
 mending. ' directly in the illogical() macro, but by taking the extra
@@ -608,14 +608,14 @@ that the Rub action was only ever going to be performed by the player
 character and the game was never going to change tense, then we could
 skip this step and simply define:
 
-```
+`
        report() { "You rub <<gActionListStr>>. "; }
-```
+`
 
 At some point you'll presumably want to define objects where these
 actions do something more interesting, e.g.:
 
-```
+`
     magicLamp: Thing 'brass lamp;magic; lantern'
       ...
       
@@ -650,7 +650,7 @@ actions do something more interesting, e.g.:
        }
      ;
        
-```
+`
 
   
 
@@ -662,7 +662,7 @@ for defining a TAction. Here we'll use new RubWith and RepairWith
 actions as our examples. The first step to define the VerbRules that
 trigger the actions:
 
-```
+`
     VerbRule(RubWith)
         'rub' multiDobj 'with' singleIobj
         : VerbProduction
@@ -679,7 +679,7 @@ trigger the actions:
        verbPhrase = 'repair/ repairing (what) (with what)'
        missingQ = 'what do you want to repair; what do you want to repair it with'
     ;
-```
+`
 
 These follow much the same pattern as VerbRules for TActions, but with a
 couple of additions. First, note how the verbPhrase property is defined
@@ -700,7 +700,7 @@ multiObj.
 The second step is to define the actual actions, which we do with the
 **DefineTIAction(*action-name*)** macro:
 
-```
+`
     DefineTIAction(RubWith)
        resolveIobjFirst = nil   
     ;
@@ -708,7 +708,7 @@ The second step is to define the actual actions, which we do with the
     DefineTIAction(RepairWith)
        resolveIobjFirst = nil
     ;
-```
+`
 
 <span id="resolvefirst"></span>
 
@@ -740,7 +740,7 @@ indirect object is a logical choice to rub or repair it with.
 The third step proceeds as before, except that we now have to define the
 iobjFor(Action) methods as well as the dobjFor(Action) methods:
 
-```
+`
     modify Thing
        dobjFor(RubWith)
        {
@@ -784,7 +784,7 @@ iobjFor(Action) methods as well as the dobjFor(Action) methods:
        cannotRepairWithMsg = '{I} {can\'t} repair anything with {that iobj}. '
        cannotRepairWithSelfMsg = '{I} {can\'t} repair anything with itself. '
     ;
-```
+`
 
 Here we're assuming that we've previously defined a Repair action as
 above, so we can re-use the cannotRepairMsg on the direct object of a
@@ -810,7 +810,7 @@ In addition to defining particular objects in our game that can be
 repaired, we might want to define a Tool class for objects we can
 reasonably attempt repairs with:
 
-```
+`
     class Tool: Thing
        canRepairWithMe = true
        
@@ -832,7 +832,7 @@ reasonably attempt repairs with:
        
        itemsRepaired = nil
     ;
-```
+`
 
 This assumes that you've defined a suitable makeRepaired(stat) method on
 the various things that might need mending over the course of your game.
@@ -854,7 +854,7 @@ HANG COAT or HANG UP COAT or HANG COAT UP with a response like "What do
 you want to hang it on?" we need to provide an additional VerbRule to
 field the incomplete command. Such a VerbRule would take the form:
 
-```
+`
      VerbRule(HangOnWhat)
         [badness 500] 'hang' ('up'|) singleDobj ('up'|)
         : VerbProduction
@@ -865,7 +865,7 @@ field the incomplete command. Such a VerbRule would take the form:
         iobjReply = onSingleNoun    
      ;
      
-```
+`
 
 <span id="badness"></span>
 
@@ -907,11 +907,11 @@ phrase (such as PEG, WOODEN PEG or THE BIG WOODEN PEG). If we needed
 something that didn't match any of these we could simply define our own
 **grammar** entity like so:
 
-```
+`
     grammar underSingleNoun(main):
        singleNoun->np_ | 'under' singleNoun->np_ : Production
     ;
-```
+`
 
 This would then match either a plain noun phrase (e.g. just BED) or a
 noun phrase preceded by 'under' (e.g. UNDER THE BED).
@@ -957,7 +957,7 @@ This may be clearer with the aid of an example. Suppose we want to allow
 an action like WRITE TEXT IN NOTEBOOK WITH PEN. We could define the
 action and its VerbRule thus:
 
-```
+`
     /* 
      * Although it takes three objects, we can define this action as a TIAction
      * since the third object is a literal.
@@ -994,11 +994,11 @@ action and its VerbRule thus:
     ;
      
      
-```
+`
 
 This allows us define the default handling on Thing in the normal way:
 
-```
+`
       modify Thing    
         dobjFor(WriteOnWith)
         {
@@ -1024,14 +1024,14 @@ This allows us define the default handling on Thing in the normal way:
         cannotWriteWithMsg = '{I} {can\'t} write anything with {the iobj}. '   
     ; 
       
-```
+`
 
 Finally, we can define a couple of objects, a notebook and pen, say,
 that do allow writing with the WriteOnWith action. In this case we
 probably want the existing WriteOn command to insist on a writing
 implement. In outline the code might look something like this:
 
-```
+`
      
     + notebook: Thing 'notebook'
         canWriteOnMe = true
@@ -1077,7 +1077,7 @@ implement. In outline the code might look something like this:
     ;  
       
       
-```
+`
 
 The treatment here has deliberately been kept brief, but hopefully it
 will be enough to illustrate the principle. Game authors may need to

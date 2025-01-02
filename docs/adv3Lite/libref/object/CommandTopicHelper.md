@@ -47,7 +47,7 @@ language-specific part of the library.
 </div>
 
 **`CommandTopicHelper`**  
-`         `[`LCommandTopicHelper`](../object/LCommandTopicHelper.html)  
+[`LCommandTopicHelper`](../object/LCommandTopicHelper.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -58,8 +58,8 @@ language-specific part of the library.
 </div>
 
 **`CommandTopicHelper`**  
-`         `[`CommandTopic`](../object/CommandTopic.html)  
-`         `[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
+[`CommandTopic`](../object/CommandTopic.html)  
+[`DefaultCommandTopic`](../object/DefaultCommandTopic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -76,9 +76,9 @@ language-specific part of the library.
 
 </div>
 
-` `[`allowAction`](#allowAction)`  `[`myAction`](#myAction)`  `
+[`allowAction`](#allowAction)[`myAction`](#myAction)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -88,10 +88,10 @@ language-specific part of the library.
 
 </div>
 
-` `[`handleTopic`](#handleTopic)`  `
+[`handleTopic`](#handleTopic)
 
 Inherited from `LCommandTopicHelper` :  
-` `[`actionPhrase`](../object/LCommandTopicHelper.html#actionPhrase)`  `[`getName`](../object/LCommandTopicHelper.html#getName)`  `
+[`actionPhrase`](../object/LCommandTopicHelper.html#actionPhrase)[`getName`](../object/LCommandTopicHelper.html#getName)
 
 <span id="_Properties_"></span>
 

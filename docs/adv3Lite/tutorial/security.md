@@ -41,7 +41,7 @@ computer stands. We'll start with the combination lock.
 Here's a first initial attempt at adding a sticker and a lock to the
 suitcase:
 
-```
+`
     + suitcase: OpenableContainer 'suitcase;;case' 
         "It's a black suitcase with a combination lock and a prominent sticker
         bearing a French tricolor and the slogan <q>Vive la revolution
@@ -63,7 +63,7 @@ suitcase:
         "The combination lock consists of four small brass wheels, each of which
         can be turned to any number between 0 and 9. "
     ;
-```
+`
 
 If you compile and run this, however, you'll quickly discover a problem.
 You can use the debugging command GONEAR SUITCASE to teleport straight
@@ -80,7 +80,7 @@ interior of the suitcase and attach it to the suitcase's remapIn
 property, just as we did when giving the short cabinet both an interior
 and a top:
 
-```
+`
     + suitcase: Thing 'suitcase;;case' 
         "It's a black suitcase with a combination lock and a prominent sticker
         bearing a French tricolor and the slogan <q>Vive la revolution
@@ -99,7 +99,7 @@ and a top:
                 that. '
         }
     ;
-```
+`
 
 Note that in adding the remapIn SubComponent to the suitcase, we also
 need to change the superclass of the suitcase itself from
@@ -110,7 +110,7 @@ other thing we have to do is to tweak the definition of the uniform so
 that it ends up back inside the suitcase, by adding
 `subLocation = &remapIn`:
 
-```
+`
     ++ uniform: Wearable 'pilot\'s uniform; timo large'  
         "It's a uniform for a Timo Airlines pilot. It's a little large for you, but
         you could probably wear it. "
@@ -118,7 +118,7 @@ that it ends up back inside the suitcase, by adding
         bulk = 6
         subLocation = &remapIn
     ;
-```
+`
 
 We still don't have a working lock, however. To do that we need a set of
 four brass wheels, each of which can be turned to any number from 0 to
@@ -140,7 +140,7 @@ to check whether the combination lock is now set to the correct
 combination. We can save ourselves quite a bit of repetitive coding if
 we define this behaviour on a custom class:
 
-```
+`
     class ComboWheel: NumberedDial
         desc = "It's a small brass wheel that can be turned to any number between 0
             and 9, and is currently at <<curSetting>>. "
@@ -155,7 +155,7 @@ we define this behaviour on a custom class:
             location.checkCombo();
         }
     ;
-```
+`
 
 We don't need to define `minSetting = 0` on this
 class since this is already the default for the NumberedDial class. The
@@ -165,7 +165,7 @@ the method that checks whether the player now has the correct
 combination, a method we'll actually define on the comboLock object in
 which the four wheels will be located:
 
-```
+`
     ++ comboLock: Fixture 'combination lock'
         "The combination lock consists of four small brass wheels, each of which
         can be turned to any number between 0 and 9. They're currently showing
@@ -210,7 +210,7 @@ which the four wheels will be located:
         curSetting = '2'
         listOrder = 4
     ;
-```
+`
 
 We've done several things to the comboLock object here. First we've
 added a sentence to its description to show the combination it's
@@ -252,7 +252,7 @@ We'll put the desk for the computer in the security centre room, which
 up to now has been left almost totally bare. We'll start by giving the
 room a description:
 
-```
+`
     securityCentre: Room 'Security Centre' 'security centre'
         "Judging by the monitors on the walls, this must be some sort of security
         centre. Otherwise the room is mostly bare apart from the utilitarian desk
@@ -261,19 +261,19 @@ room a description:
         east = securityArea
         out asExit(east)
     ;
-```
+`
 
 The security monitors are merely scenery; we can implement them briskly
 as a Decoration:
 
-```
+`
     + Decoration 'security monitors; blank; screens ;them'
         "They're all blank; either they're switched off or they're not working. "
         
         notImportantMsg = 'You really don\'t have time to play around with the
             monitors. '
     ;
-```
+`
 
 The desk requires a little more thought, since this is to have a drawer.
 The drawer can be implemented as a separate object, but we still want
@@ -281,7 +281,7 @@ OPEN DESK and the like to refer to the drawer. We can do that by having
 the desk's remapIn property refer to the drawer while using its remapOn
 property to provide it with a surface as a desktop:
 
-```
+`
     + desk: Heavy 'desk; utilitarian metal'
         "It's a utilitarian metal desk with a single drawer. "
         
@@ -295,14 +295,14 @@ property to provide it with a surface as a desktop:
         
         cannotTakeMsg = 'The drawer is part of the desk. '
     ;
-```
+`
 
 The only thing new here is the use of the **Heavy** class to define the
 desk. This is almost the same as making it a Fixture, except that it
 provides a custom `cannotTakeMsg`, 'The desk is
 too heavy to move around'. Next we add the notebook in the drawer:
 
-```
+`
     +++ notebook: Thing 'notebook; little green book; writing'
         "It's just a little green book with writing in it. "
         
@@ -314,7 +314,7 @@ too heavy to move around'. Next we add the notebook in the drawer:
         
         dobjFor(Open) asDobjFor(Read)
     ;
-```
+`
 
 There's just a couple of points to note about this object definition.
 The first, a minor one, is that we've given the notebook a
@@ -351,13 +351,13 @@ inherit from the Heavy class (which we also used for the desk) so the
 player character can't pick it up and carry it around, and we'll give it
 a specialDesc to make sure that the player knows that it's there:
 
-```
+`
     ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
         
         specialDesc = "A computer sits squarely on top of the desk. "
         subLocation = &remapOn
     ;
-```
+`
 
 That's all very well, but this definition doesn't tell the computer how
 to respond to specific requests for information. To do that we have to
@@ -379,9 +379,9 @@ liberty, equality, fraternity or, as here, the French Revolution. To
 define a Topic we simply define an object of the Topic class and give it
 a vocab property:
 
-```
+`
     tFrenchRevolution: Topic 'french revolution';
-```
+`
 
 A convenient place to put this definition might be right at the end of
 the start.t file, out of the way of anything else. Since the player
@@ -389,9 +389,9 @@ might reasonably use our simulated computer to look up flight
 departures, we might as well define a topic for that while we're at it
 too:
 
-```
+`
     tFlightDepartures: Topic 'flight departures; plane; times';
-```
+`
 
 The vocab property of a Topic is defined just like that for a Thing, so
 here we've ensured that the tFlightDepartures Topic will match FLIGHT
@@ -407,7 +407,7 @@ from our computer. As mentioned the way to do that is to define a couple
 of ConsultTopic objects located directly in the computer. The template
 notation makes this quick and easy:
 
-```
+`
     +++ ConsultTopic @tFrenchRevolution
         "According to Wikipedia, the French Revolution began in 1789. The article
         goes on to tell you quite a bit more about it, but you don't have time to
@@ -420,7 +420,7 @@ notation makes this quick and easy:
         hours, all the others being delayed for a variety of annoying reasons such
         as strikes, illness and inclement weather. "
     ;
-```
+`
 
 Here we define the topic we want the ConsultTopic to respond to after an
 @ sign as the first element of the template, and the response we get as
@@ -436,12 +436,12 @@ We can do this by means of a **DefaultConsultTopic**, which is what the
 game will resort to if it can't find a more specific ConsultTopic that
 matches what the player asked for:
 
-```
+`
     +++ DefaultConsultTopic
         "That's of no immediate interest to you right now; you have more urgent
         things to attend to. "
     ;
-```
+`
 
 For the full story on Consultables and ConsultTopics, see the section on
 [Topic Entries](../manual/topicentry.html) in the *adv3Lite Library
@@ -475,7 +475,7 @@ being turned on and off. We can also use the
 `passwordEntered` properties to change the
 description of the computer according to its state:
 
-```
+`
     ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
         "The computer is currently <<if isOn>>on and <<if passwordEntered>> ready
         for use<<else>> waiting for you to enter a password<<end>> <<else>>
@@ -500,7 +500,7 @@ description of the computer according to its state:
         }
         
         passwordEntered = nil
-```
+`
 
 For the next step, we need to prevent the player from looking anything
 up on the computer either if it isn't switched on or if it's still
@@ -558,7 +558,7 @@ from going ahead either if the computer hasn't been turned on yet
 entered yet (`passwordEntered == nil`). Our
 check routine should therefore look like this:
 
-```
+`
         dobjFor(ConsultAbout)
         {
             check()
@@ -569,7 +569,7 @@ check routine should therefore look like this:
                     "You'll need to enter a password first. ";
             }
         }
-```
+`
 
 For further information on the check() stage in general, see the [Action
 Responses](../manual/actres.html#check) section of the *adv3Lite Library
@@ -608,7 +608,7 @@ Our handling for the EnterOn action, which allows the player character
 to enter a password on the computer (once it is switched on), thus looks
 like this:
 
-```
+`
        
         canEnterOnMe = true
         
@@ -637,7 +637,7 @@ like this:
                     
             }
         }
-```
+`
 
 One additional refinement we could add is to make TYPE PASSWORD ON
 COMPUTER work the same as ENTER PASSWORD ON COMPUTER, which we can do
@@ -645,7 +645,7 @@ easily enough by defining `dobjFor(TypeOn)
 asDobjFor(EnterOn)`. The complete object definition for the
 computer then looks like this:
 
-```
+`
     ++ computer: Heavy, Consultable 'computer;; pc keyboard screen'
         "The computer is currently <<if isOn>>on and <<if passwordEntered>> ready
         for use<<else>> waiting for you to enter a password<<end>><<else>>
@@ -713,7 +713,7 @@ computer then looks like this:
         dobjFor(TypeOn) asDobjFor(EnterOn)
         
     ;
-```
+`
 
 You might once again like to compile and run the game to ensure that all
 works as expected.

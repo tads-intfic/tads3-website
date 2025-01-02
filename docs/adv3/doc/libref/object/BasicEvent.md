@@ -53,18 +53,18 @@ A basic event, for game-time and real-time events.
 </div>
 
 **`BasicEvent`**  
-`         `[`Event`](../object/Event.html)  
-`                 `[`Daemon`](../object/Daemon.html)  
-`                         `[`SenseDaemon`](../object/SenseDaemon.html)  
-`                 `[`Fuse`](../object/Fuse.html)  
-`                         `[`SenseFuse`](../object/SenseFuse.html)  
-`                 `[`PromptDaemon`](../object/PromptDaemon.html)  
-`                         `[`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html)  
-`         `[`RealTimeEvent`](../object/RealTimeEvent.html)  
-`                 `[`RealTimeDaemon`](../object/RealTimeDaemon.html)  
-`                         `[`RealTimeSenseDaemon`](../object/RealTimeSenseDaemon.html)  
-`                 `[`RealTimeFuse`](../object/RealTimeFuse.html)  
-`                         `[`RealTimeSenseFuse`](../object/RealTimeSenseFuse.html)  
+[`Event`](../object/Event.html)  
+[`Daemon`](../object/Daemon.html)  
+[`SenseDaemon`](../object/SenseDaemon.html)  
+[`Fuse`](../object/Fuse.html)  
+[`SenseFuse`](../object/SenseFuse.html)  
+[`PromptDaemon`](../object/PromptDaemon.html)  
+[`OneTimePromptDaemon`](../object/OneTimePromptDaemon.html)  
+[`RealTimeEvent`](../object/RealTimeEvent.html)  
+[`RealTimeDaemon`](../object/RealTimeDaemon.html)  
+[`RealTimeSenseDaemon`](../object/RealTimeSenseDaemon.html)  
+[`RealTimeFuse`](../object/RealTimeFuse.html)  
+[`RealTimeSenseFuse`](../object/RealTimeSenseFuse.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -81,7 +81,7 @@ A basic event, for game-time and real-time events.
 
 </div>
 
-` `[`obj_`](#obj_)`  `[`prop_`](#prop_)`  `[`sense_`](#sense_)`  `[`source_`](#source_)`  `
+[`obj_`](#obj_)[`prop_`](#prop_)[`sense_`](#sense_)[`source_`](#source_)
 
 <span id="_MethodSummary_"></span>
 
@@ -91,7 +91,7 @@ A basic event, for game-time and real-time events.
 
 </div>
 
-` `[`callMethod`](#callMethod)`  `[`construct`](#construct)`  `[`eventMatches`](#eventMatches)`  `[`executeEvent`](#executeEvent)`  `
+[`callMethod`](#callMethod)[`construct`](#construct)[`eventMatches`](#eventMatches)[`executeEvent`](#executeEvent)
 
 <span id="_Properties_"></span>
 

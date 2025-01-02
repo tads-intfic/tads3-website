@@ -69,7 +69,7 @@ classes.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ classes.
 
 </div>
 
-` `[`notifySmellEvent`](#notifySmellEvent)`  `
+[`notifySmellEvent`](#notifySmellEvent)
 
 <span id="_Properties_"></span>
 

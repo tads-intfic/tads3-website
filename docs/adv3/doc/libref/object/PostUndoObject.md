@@ -44,7 +44,7 @@ execute() method, immediately after we perform an 'undo' command.
 </div>
 
 **`PostUndoObject`**  
-`         `[`ModuleExecObject`](../object/ModuleExecObject.html)  
+[`ModuleExecObject`](../object/ModuleExecObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -62,7 +62,7 @@ execute() method, immediately after we perform an 'undo' command.
 
 </div>
 
-` `[`bannerTracker`](../object/bannerTracker.html)`  `[`tipManager`](../object/tipManager.html)`  `
+[`bannerTracker`](../object/bannerTracker.html)[`tipManager`](../object/tipManager.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -71,10 +71,10 @@ execute() method, immediately after we perform an 'undo' command.
 
 </div>
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)`  `[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)`  `[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)`  `[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)`  `[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)`  `
+[`execAfterMe`](../object/ModuleExecObject.html#execAfterMe)[`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe)[`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_)[`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_)[`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
 <span id="_MethodSummary_"></span>
 
@@ -84,10 +84,10 @@ Inherited from `ModuleExecObject` :
 
 </div>
 
-` `
+
 
 Inherited from `ModuleExecObject` :  
-` `[`_execute`](../object/ModuleExecObject.html#_execute)`  `[`classExec`](../object/ModuleExecObject.html#classExec)`  `[`execute`](../object/ModuleExecObject.html#execute)`  `
+[`_execute`](../object/ModuleExecObject.html#_execute)[`classExec`](../object/ModuleExecObject.html#classExec)[`execute`](../object/ModuleExecObject.html#execute)
 
 <span id="_Properties_"></span>
 

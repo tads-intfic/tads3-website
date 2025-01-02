@@ -43,7 +43,7 @@ Topic Resolver
 </div>
 
 **`TopicResolver`**  
-`         `[`Resolver`](../object/Resolver.html)  
+[`Resolver`](../object/Resolver.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,8 +54,8 @@ Topic Resolver
 </div>
 
 **`TopicResolver`**  
-`         `[`ConvTopicResolver`](../object/ConvTopicResolver.html)  
-`         `[`TActionTopicResolver`](../object/TActionTopicResolver.html)  
+[`ConvTopicResolver`](../object/ConvTopicResolver.html)  
+[`TActionTopicResolver`](../object/TActionTopicResolver.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,10 +72,10 @@ Topic Resolver
 
 </div>
 
-` `[`isGlobalScope`](#isGlobalScope)`  `[`qualifierResolver_`](#qualifierResolver_)`  `[`topicProd`](#topicProd)`  `
+[`isGlobalScope`](#isGlobalScope)[`qualifierResolver_`](#qualifierResolver_)[`topicProd`](#topicProd)
 
 Inherited from `Resolver` :  
-` `[`action_`](../object/Resolver.html#action_)`  `[`actor_`](../object/Resolver.html#actor_)`  `[`equivs_`](../object/Resolver.html#equivs_)`  `[`isSubResolver`](../object/Resolver.html#isSubResolver)`  `[`issuer_`](../object/Resolver.html#issuer_)`  `[`scope_`](../object/Resolver.html#scope_)`  `[`whichMessageObject`](../object/Resolver.html#whichMessageObject)`  `[`whichObject`](../object/Resolver.html#whichObject)`  `
+[`action_`](../object/Resolver.html#action_)[`actor_`](../object/Resolver.html#actor_)[`equivs_`](../object/Resolver.html#equivs_)[`isSubResolver`](../object/Resolver.html#isSubResolver)[`issuer_`](../object/Resolver.html#issuer_)[`scope_`](../object/Resolver.html#scope_)[`whichMessageObject`](../object/Resolver.html#whichMessageObject)[`whichObject`](../object/Resolver.html#whichObject)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,10 +85,10 @@ Inherited from `Resolver` :
 
 </div>
 
-` `[`construct`](#construct)`  `[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)`  `[`filterPluralPhrase`](#filterPluralPhrase)`  `[`filterPossRank`](#filterPossRank)`  `[`getAll`](#getAll)`  `[`getAllDefaults`](#getAllDefaults)`  `[`getDefaultObject`](#getDefaultObject)`  `[`getPossessiveResolver`](#getPossessiveResolver)`  `[`getQualifierResolver`](#getQualifierResolver)`  `[`noMatch`](#noMatch)`  `[`noMatchPoss`](#noMatchPoss)`  `[`noVocabMatch`](#noVocabMatch)`  `[`objInPhysicalScope`](#objInPhysicalScope)`  `[`objInScope`](#objInScope)`  `[`packageTopicList`](#packageTopicList)`  `[`resetResolver`](#resetResolver)`  `[`resolveTopic`](#resolveTopic)`  `[`resolveUnknownNounPhrase`](#resolveUnknownNounPhrase)`  `
+[`construct`](#construct)[`filterAmbiguousNounPhrase`](#filterAmbiguousNounPhrase)[`filterPluralPhrase`](#filterPluralPhrase)[`filterPossRank`](#filterPossRank)[`getAll`](#getAll)[`getAllDefaults`](#getAllDefaults)[`getDefaultObject`](#getDefaultObject)[`getPossessiveResolver`](#getPossessiveResolver)[`getQualifierResolver`](#getQualifierResolver)[`noMatch`](#noMatch)[`noMatchPoss`](#noMatchPoss)[`noVocabMatch`](#noVocabMatch)[`objInPhysicalScope`](#objInPhysicalScope)[`objInScope`](#objInScope)[`packageTopicList`](#packageTopicList)[`resetResolver`](#resetResolver)[`resolveTopic`](#resolveTopic)[`resolveUnknownNounPhrase`](#resolveUnknownNounPhrase)
 
 Inherited from `Resolver` :  
-` `[`allowAll`](../object/Resolver.html#allowAll)`  `[`cacheScopeList`](../object/Resolver.html#cacheScopeList)`  `[`filterAll`](../object/Resolver.html#filterAll)`  `[`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents)`  `[`getAction`](../object/Resolver.html#getAction)`  `[`getPronounDefault`](../object/Resolver.html#getPronounDefault)`  `[`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent)`  `[`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding)`  `[`getScopeList`](../object/Resolver.html#getScopeList)`  `[`getTargetActor`](../object/Resolver.html#getTargetActor)`  `[`matchName`](../object/Resolver.html#matchName)`  `[`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent)`  `[`selectIndefinite`](../object/Resolver.html#selectIndefinite)`  `[`withGlobals`](../object/Resolver.html#withGlobals)`  `
+[`allowAll`](../object/Resolver.html#allowAll)[`cacheScopeList`](../object/Resolver.html#cacheScopeList)[`filterAll`](../object/Resolver.html#filterAll)[`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents)[`getAction`](../object/Resolver.html#getAction)[`getPronounDefault`](../object/Resolver.html#getPronounDefault)[`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent)[`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding)[`getScopeList`](../object/Resolver.html#getScopeList)[`getTargetActor`](../object/Resolver.html#getTargetActor)[`matchName`](../object/Resolver.html#matchName)[`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent)[`selectIndefinite`](../object/Resolver.html#selectIndefinite)[`withGlobals`](../object/Resolver.html#withGlobals)
 
 <span id="_Properties_"></span>
 

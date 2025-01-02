@@ -35,7 +35,7 @@ justify modules of their own.
 
 </div>
 
-` `[`CyclicEventList`](../object/CyclicEventList.html)`  `[`EventList`](../object/EventList.html)`  `[`ExternalEventList`](../object/ExternalEventList.html)`  `[`FinishOption`](../object/FinishOption.html)`  `[`FinishType`](../object/FinishType.html)`  `[`GameMainDef`](../object/GameMainDef.html)`  `[`RandomEventList`](../object/RandomEventList.html)`  `[`RandomFiringScript`](../object/RandomFiringScript.html)`  `[`Script`](../object/Script.html)`  `[`ShuffledEventList`](../object/ShuffledEventList.html)`  `[`ShuffledIntegerList`](../object/ShuffledIntegerList.html)`  `[`ShuffledList`](../object/ShuffledList.html)`  `[`StopEventList`](../object/StopEventList.html)`  `[`SyncEventList`](../object/SyncEventList.html)`  `
+[`CyclicEventList`](../object/CyclicEventList.html)[`EventList`](../object/EventList.html)[`ExternalEventList`](../object/ExternalEventList.html)[`FinishOption`](../object/FinishOption.html)[`FinishType`](../object/FinishType.html)[`GameMainDef`](../object/GameMainDef.html)[`RandomEventList`](../object/RandomEventList.html)[`RandomFiringScript`](../object/RandomFiringScript.html)[`Script`](../object/Script.html)[`ShuffledEventList`](../object/ShuffledEventList.html)[`ShuffledIntegerList`](../object/ShuffledIntegerList.html)[`ShuffledList`](../object/ShuffledList.html)[`StopEventList`](../object/StopEventList.html)[`SyncEventList`](../object/SyncEventList.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -44,7 +44,7 @@ justify modules of their own.
 
 </div>
 
-` `[`adv3LibInit`](../object/adv3LibInit.html)`  `[`adv3LibPreinit`](../object/adv3LibPreinit.html)`  `[`finishOptionAmusing`](../object/finishOptionAmusing.html)`  `[`finishOptionCredits`](../object/finishOptionCredits.html)`  `[`finishOptionFullScore`](../object/finishOptionFullScore.html)`  `[`finishOptionQuit`](../object/finishOptionQuit.html)`  `[`finishOptionRestart`](../object/finishOptionRestart.html)`  `[`finishOptionRestore`](../object/finishOptionRestore.html)`  `[`finishOptionScore`](../object/finishOptionScore.html)`  `[`finishOptionUndo`](../object/finishOptionUndo.html)`  `[`ftDeath`](../object/ftDeath.html)`  `[`ftFailure`](../object/ftFailure.html)`  `[`ftGameOver`](../object/ftGameOver.html)`  `[`ftVictory`](../object/ftVictory.html)`  `[`libGlobal`](../object/libGlobal.html)`  `[`restoreOptionRestoreAnother`](../object/restoreOptionRestoreAnother.html)`  `[`restoreOptionStartOver`](../object/restoreOptionStartOver.html)`  `[`settingsUI`](../object/settingsUI.html)`  `[`verboseModeSettingsItem`](../object/verboseModeSettingsItem.html)`  `
+[`adv3LibInit`](../object/adv3LibInit.html)[`adv3LibPreinit`](../object/adv3LibPreinit.html)[`finishOptionAmusing`](../object/finishOptionAmusing.html)[`finishOptionCredits`](../object/finishOptionCredits.html)[`finishOptionFullScore`](../object/finishOptionFullScore.html)[`finishOptionQuit`](../object/finishOptionQuit.html)[`finishOptionRestart`](../object/finishOptionRestart.html)[`finishOptionRestore`](../object/finishOptionRestore.html)[`finishOptionScore`](../object/finishOptionScore.html)[`finishOptionUndo`](../object/finishOptionUndo.html)[`ftDeath`](../object/ftDeath.html)[`ftFailure`](../object/ftFailure.html)[`ftGameOver`](../object/ftGameOver.html)[`ftVictory`](../object/ftVictory.html)[`libGlobal`](../object/libGlobal.html)[`restoreOptionRestoreAnother`](../object/restoreOptionRestoreAnother.html)[`restoreOptionStartOver`](../object/restoreOptionStartOver.html)[`settingsUI`](../object/settingsUI.html)[`verboseModeSettingsItem`](../object/verboseModeSettingsItem.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">
@@ -53,7 +53,7 @@ justify modules of their own.
 
 </div>
 
-` `[`cls`](#cls)`  `[`failedRestoreOptions`](#failedRestoreOptions)`  `[`finishGame`](#finishGame)`  `[`finishGameMsg`](#finishGameMsg)`  `[`isListSubset`](#isListSubset)`  `[`main`](#main)`  `[`mainCommon`](#mainCommon)`  `[`mainRestore`](#mainRestore)`  `[`nilToList`](#nilToList)`  `[`overrides`](#overrides)`  `[`partitionList`](#partitionList)`  `[`processOptions`](#processOptions)`  `[`runGame`](#runGame)`  `
+[`cls`](#cls)[`failedRestoreOptions`](#failedRestoreOptions)[`finishGame`](#finishGame)[`finishGameMsg`](#finishGameMsg)[`isListSubset`](#isListSubset)[`main`](#main)[`mainCommon`](#mainCommon)[`mainRestore`](#mainRestore)[`nilToList`](#nilToList)[`overrides`](#overrides)[`partitionList`](#partitionList)[`processOptions`](#processOptions)[`runGame`](#runGame)
 
 <span id="_Functions_"></span>
 

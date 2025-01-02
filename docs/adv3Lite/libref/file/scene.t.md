@@ -33,7 +33,7 @@ scene.t This module forms an optional part of the adv3Lite library (c)
 
 </div>
 
-` `[`Scene`](../object/Scene.html)`  `
+[`Scene`](../object/Scene.html)
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -42,7 +42,7 @@ scene.t This module forms an optional part of the adv3Lite library (c)
 
 </div>
 
-` `[`sceneManager`](../object/sceneManager.html)`  `
+[`sceneManager`](../object/sceneManager.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

@@ -55,7 +55,7 @@ displaying a topic must trigger a side-effect.
 </div>
 
 **`MenuTopicSubItem`**  
-`         `[`Hint`](../object/Hint.html)  
+[`Hint`](../object/Hint.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -72,7 +72,7 @@ displaying a topic must trigger a side-effect.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -82,7 +82,7 @@ displaying a topic must trigger a side-effect.
 
 </div>
 
-` `[`getItemText`](#getItemText)`  `
+[`getItemText`](#getItemText)
 
 <span id="_Properties_"></span>
 

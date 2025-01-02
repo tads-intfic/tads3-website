@@ -44,7 +44,7 @@ people might react. \[DEFINED IN SENSORY EXTENSION\]
 </div>
 
 **`SightEvent`**  
-`         `[`SensoryEvent`](../object/SensoryEvent.html)  
+[`SensoryEvent`](../object/SensoryEvent.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,9 +70,9 @@ people might react. \[DEFINED IN SENSORY EXTENSION\]
 
 </div>
 
-` `[`notifyProp`](#notifyProp)`  `[`remoteProp`](#remoteProp)`  `[`senseProp`](#senseProp)`  `
+[`notifyProp`](#notifyProp)[`remoteProp`](#remoteProp)[`senseProp`](#senseProp)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -82,10 +82,10 @@ people might react. \[DEFINED IN SENSORY EXTENSION\]
 
 </div>
 
-` `
+
 
 Inherited from `SensoryEvent` :  
-` `[`remoteList`](../object/SensoryEvent.html#remoteList)`  `[`triggerEvent`](../object/SensoryEvent.html#triggerEvent)`  `
+[`remoteList`](../object/SensoryEvent.html#remoteList)[`triggerEvent`](../object/SensoryEvent.html#triggerEvent)
 
 <span id="_Properties_"></span>
 

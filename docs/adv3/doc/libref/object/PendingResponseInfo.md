@@ -68,7 +68,7 @@ Pending response information structure
 
 </div>
 
-` `[`args_`](#args_)`  `[`issuer_`](#issuer_)`  `[`prop_`](#prop_)`  `
+[`args_`](#args_)[`issuer_`](#issuer_)[`prop_`](#prop_)
 
 <span id="_MethodSummary_"></span>
 
@@ -78,7 +78,7 @@ Pending response information structure
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

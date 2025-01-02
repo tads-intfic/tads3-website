@@ -44,7 +44,7 @@ rather than the direct/indirect object of the command.
 </div>
 
 **`ObjectPreCondition`**  
-`         `[`PreCondition`](../object/PreCondition.html)  
+[`PreCondition`](../object/PreCondition.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -70,9 +70,9 @@ rather than the direct/indirect object of the command.
 
 </div>
 
-` `[`cond_`](#cond_)`  `[`obj_`](#obj_)`  `[`preCondOrder`](#preCondOrder)`  `
+[`cond_`](#cond_)[`obj_`](#obj_)[`preCondOrder`](#preCondOrder)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -82,9 +82,9 @@ rather than the direct/indirect object of the command.
 
 </div>
 
-` `[`checkPreCondition`](#checkPreCondition)`  `[`construct`](#construct)`  `[`verifyPreCondition`](#verifyPreCondition)`  `
+[`checkPreCondition`](#checkPreCondition)[`construct`](#construct)[`verifyPreCondition`](#verifyPreCondition)
 
-` `
+
 
 <span id="_Properties_"></span>
 

@@ -43,7 +43,7 @@ Details](#_Methods_)
 </div>
 
 **`DynamicRegion`**  
-`         `[`Region`](../object/Region.html)  
+[`Region`](../object/Region.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -69,10 +69,10 @@ Details](#_Methods_)
 
 </div>
 
-` `[`allRegions`](#allRegions)`  `[`regions`](#regions)`  `
+[`allRegions`](#allRegions)[`regions`](#regions)
 
 Inherited from `Region` :  
-` `[`extraScopeItems`](../object/Region.html#extraScopeItems)`  `[`familiar`](../object/Region.html#familiar)`  `[`fastGoTo`](../object/Region.html#fastGoTo)`  `[`roomList`](../object/Region.html#roomList)`  `[`rooms`](../object/Region.html#rooms)`  `
+[`extraScopeItems`](../object/Region.html#extraScopeItems)[`familiar`](../object/Region.html#familiar)[`fastGoTo`](../object/Region.html#fastGoTo)[`roomList`](../object/Region.html#roomList)[`rooms`](../object/Region.html#rooms)
 
 <span id="_MethodSummary_"></span>
 
@@ -82,10 +82,10 @@ Inherited from `Region` :
 
 </div>
 
-` `[`addExtraScopeItems`](#addExtraScopeItems)`  `[`addToRoomList`](#addToRoomList)`  `[`contractRegion`](#contractRegion)`  `[`expandRegion`](#expandRegion)`  `[`extraAdjustments`](#extraAdjustments)`  `[`isIn`](#isIn)`  `[`notifyAfter`](#notifyAfter)`  `[`notifyBefore`](#notifyBefore)`  `
+[`addExtraScopeItems`](#addExtraScopeItems)[`addToRoomList`](#addToRoomList)[`contractRegion`](#contractRegion)[`expandRegion`](#expandRegion)[`extraAdjustments`](#extraAdjustments)[`isIn`](#isIn)[`notifyAfter`](#notifyAfter)[`notifyBefore`](#notifyBefore)
 
 Inherited from `Region` :  
-` `[`addToContents`](../object/Region.html#addToContents)`  `[`allRegions`](../object/Region.html#allRegions)`  `[`isCurrentlyWithin`](../object/Region.html#isCurrentlyWithin)`  `[`isOrIsIn`](../object/Region.html#isOrIsIn)`  `[`makeRegionLists`](../object/Region.html#makeRegionLists)`  `[`moveMLIntoAdd`](../object/Region.html#moveMLIntoAdd)`  `[`moveMLOutOf`](../object/Region.html#moveMLOutOf)`  `[`regionAfterAction`](../object/Region.html#regionAfterAction)`  `[`regionAfterTravel`](../object/Region.html#regionAfterTravel)`  `[`regionBeforeAction`](../object/Region.html#regionBeforeAction)`  `[`regionBeforeTravel`](../object/Region.html#regionBeforeTravel)`  `[`regionDaemon`](../object/Region.html#regionDaemon)`  `[`removeFromContents`](../object/Region.html#removeFromContents)`  `[`setFamiliarRooms`](../object/Region.html#setFamiliarRooms)`  `[`travelerEntering`](../object/Region.html#travelerEntering)`  `[`travelerLeaving`](../object/Region.html#travelerLeaving)`  `
+[`addToContents`](../object/Region.html#addToContents)[`allRegions`](../object/Region.html#allRegions)[`isCurrentlyWithin`](../object/Region.html#isCurrentlyWithin)[`isOrIsIn`](../object/Region.html#isOrIsIn)[`makeRegionLists`](../object/Region.html#makeRegionLists)[`moveMLIntoAdd`](../object/Region.html#moveMLIntoAdd)[`moveMLOutOf`](../object/Region.html#moveMLOutOf)[`regionAfterAction`](../object/Region.html#regionAfterAction)[`regionAfterTravel`](../object/Region.html#regionAfterTravel)[`regionBeforeAction`](../object/Region.html#regionBeforeAction)[`regionBeforeTravel`](../object/Region.html#regionBeforeTravel)[`regionDaemon`](../object/Region.html#regionDaemon)[`removeFromContents`](../object/Region.html#removeFromContents)[`setFamiliarRooms`](../object/Region.html#setFamiliarRooms)[`travelerEntering`](../object/Region.html#travelerEntering)[`travelerLeaving`](../object/Region.html#travelerLeaving)
 
 <span id="_Properties_"></span>
 

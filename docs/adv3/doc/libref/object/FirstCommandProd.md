@@ -45,8 +45,8 @@ actor.
 </div>
 
 **`FirstCommandProd`**  
-`         `[`CommandProd`](../object/CommandProd.html)  
-`                 `[`BasicProd`](../object/BasicProd.html)  
+[`CommandProd`](../object/CommandProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -57,11 +57,11 @@ actor.
 </div>
 
 **`FirstCommandProd`**  
-`         `[`firstCommandPhrase(commandOnly)`](../object/firstCommandPhrase(commandOnly).html)  
-`         `[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
-`                 `[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
-`                 `[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)  
-`                 `[`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
+[`firstCommandPhrase(commandOnly)`](../object/firstCommandPhrase(commandOnly).html)  
+[`FirstCommandProdWithActor`](../object/FirstCommandProdWithActor.html)  
+[`actorBadCommandPhrase(main)`](../object/actorBadCommandPhrase(main).html)  
+[`firstCommandPhrase(askTellActorTo)`](../object/firstCommandPhrase(askTellActorTo).html)  
+[`firstCommandPhrase(withActor)`](../object/firstCommandPhrase(withActor).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -78,13 +78,13 @@ actor.
 
 </div>
 
-` `
+
 
 Inherited from `CommandProd` :  
-` `[`getActorPhrase`](../object/CommandProd.html#getActorPhrase)`  `
+[`getActorPhrase`](../object/CommandProd.html#getActorPhrase)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -94,13 +94,13 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`countCommands`](#countCommands)`  `[`getCommandSepIndex`](#getCommandSepIndex)`  `[`getCommandTokens`](#getCommandTokens)`  `[`getNextCommandIndex`](#getNextCommandIndex)`  `[`getTargetActor`](#getTargetActor)`  `[`isEndOfSentence`](#isEndOfSentence)`  `[`resolveFirstAction`](#resolveFirstAction)`  `[`resolveNouns`](#resolveNouns)`  `
+[`countCommands`](#countCommands)[`getCommandSepIndex`](#getCommandSepIndex)[`getCommandTokens`](#getCommandTokens)[`getNextCommandIndex`](#getNextCommandIndex)[`getTargetActor`](#getTargetActor)[`isEndOfSentence`](#isEndOfSentence)[`resolveFirstAction`](#resolveFirstAction)[`resolveNouns`](#resolveNouns)
 
 Inherited from `CommandProd` :  
-` `[`execActorPhrase`](../object/CommandProd.html#execActorPhrase)`  `[`hasTargetActor`](../object/CommandProd.html#hasTargetActor)`  `
+[`execActorPhrase`](../object/CommandProd.html#execActorPhrase)[`hasTargetActor`](../object/CommandProd.html#hasTargetActor)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

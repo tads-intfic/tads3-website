@@ -44,7 +44,7 @@ A numeric production. These can be either spelled-out numbers (such as
 </div>
 
 **`NumberProd`**  
-`         `[`BasicProd`](../object/BasicProd.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -55,30 +55,30 @@ A numeric production. These can be either spelled-out numbers (such as
 </div>
 
 **`NumberProd`**  
-`         `[`numberPhrase(digits)`](../object/numberPhrase(digits).html)  
-`         `[`numberPhrase(spelled)`](../object/numberPhrase(spelled).html)  
-`         `[`poundNumberPhrase(main)`](../object/poundNumberPhrase(main).html)  
-`         `[`spelledHundred(aHundred)`](../object/spelledHundred(aHundred).html)  
-`         `[`spelledHundred(aHundredPlus)`](../object/spelledHundred(aHundredPlus).html)  
-`         `[`spelledHundred(hundreds)`](../object/spelledHundred(hundreds).html)  
-`         `[`spelledHundred(hundredsPlus)`](../object/spelledHundred(hundredsPlus).html)  
-`         `[`spelledHundred(small)`](../object/spelledHundred(small).html)  
-`         `[`spelledMillion(aMillion)`](../object/spelledMillion(aMillion).html)  
-`         `[`spelledMillion(aMillionAndSmall)`](../object/spelledMillion(aMillionAndSmall).html)  
-`         `[`spelledMillion(millions)`](../object/spelledMillion(millions).html)  
-`         `[`spelledMillion(millionsAndSmall)`](../object/spelledMillion(millionsAndSmall).html)  
-`         `[`spelledMillion(millionsPlus)`](../object/spelledMillion(millionsPlus).html)  
-`         `[`spelledNumber(main)`](../object/spelledNumber(main).html)  
-`         `[`spelledSmallNumber(digit)`](../object/spelledSmallNumber(digit).html)  
-`         `[`spelledSmallNumber(teen)`](../object/spelledSmallNumber(teen).html)  
-`         `[`spelledSmallNumber(tens)`](../object/spelledSmallNumber(tens).html)  
-`         `[`spelledSmallNumber(tensAndUnits)`](../object/spelledSmallNumber(tensAndUnits).html)  
-`         `[`spelledSmallNumber(zero)`](../object/spelledSmallNumber(zero).html)  
-`         `[`spelledThousand(aThousand)`](../object/spelledThousand(aThousand).html)  
-`         `[`spelledThousand(aThousandAndSmall)`](../object/spelledThousand(aThousandAndSmall).html)  
-`         `[`spelledThousand(thousands)`](../object/spelledThousand(thousands).html)  
-`         `[`spelledThousand(thousandsAndSmall)`](../object/spelledThousand(thousandsAndSmall).html)  
-`         `[`spelledThousand(thousandsPlus)`](../object/spelledThousand(thousandsPlus).html)  
+[`numberPhrase(digits)`](../object/numberPhrase(digits).html)  
+[`numberPhrase(spelled)`](../object/numberPhrase(spelled).html)  
+[`poundNumberPhrase(main)`](../object/poundNumberPhrase(main).html)  
+[`spelledHundred(aHundred)`](../object/spelledHundred(aHundred).html)  
+[`spelledHundred(aHundredPlus)`](../object/spelledHundred(aHundredPlus).html)  
+[`spelledHundred(hundreds)`](../object/spelledHundred(hundreds).html)  
+[`spelledHundred(hundredsPlus)`](../object/spelledHundred(hundredsPlus).html)  
+[`spelledHundred(small)`](../object/spelledHundred(small).html)  
+[`spelledMillion(aMillion)`](../object/spelledMillion(aMillion).html)  
+[`spelledMillion(aMillionAndSmall)`](../object/spelledMillion(aMillionAndSmall).html)  
+[`spelledMillion(millions)`](../object/spelledMillion(millions).html)  
+[`spelledMillion(millionsAndSmall)`](../object/spelledMillion(millionsAndSmall).html)  
+[`spelledMillion(millionsPlus)`](../object/spelledMillion(millionsPlus).html)  
+[`spelledNumber(main)`](../object/spelledNumber(main).html)  
+[`spelledSmallNumber(digit)`](../object/spelledSmallNumber(digit).html)  
+[`spelledSmallNumber(teen)`](../object/spelledSmallNumber(teen).html)  
+[`spelledSmallNumber(tens)`](../object/spelledSmallNumber(tens).html)  
+[`spelledSmallNumber(tensAndUnits)`](../object/spelledSmallNumber(tensAndUnits).html)  
+[`spelledSmallNumber(zero)`](../object/spelledSmallNumber(zero).html)  
+[`spelledThousand(aThousand)`](../object/spelledThousand(aThousand).html)  
+[`spelledThousand(aThousandAndSmall)`](../object/spelledThousand(aThousandAndSmall).html)  
+[`spelledThousand(thousands)`](../object/spelledThousand(thousands).html)  
+[`spelledThousand(thousandsAndSmall)`](../object/spelledThousand(thousandsAndSmall).html)  
+[`spelledThousand(thousandsPlus)`](../object/spelledThousand(thousandsPlus).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -95,10 +95,10 @@ A numeric production. These can be either spelled-out numbers (such as
 
 </div>
 
-` `
+
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 <span id="_MethodSummary_"></span>
 
@@ -108,10 +108,10 @@ Inherited from `BasicProd` :
 
 </div>
 
-` `[`getStrVal`](#getStrVal)`  `[`getval`](#getval)`  `
+[`getStrVal`](#getStrVal)[`getval`](#getval)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 <span id="_Properties_"></span>
 

@@ -54,7 +54,7 @@ connected to any "physical" object in the simulation.
 </div>
 
 **`Topic`**  
-`         `[`VocabObject`](../object/VocabObject.html)  
+[`VocabObject`](../object/VocabObject.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -80,10 +80,10 @@ connected to any "physical" object in the simulation.
 
 </div>
 
-` `[`canResolvePossessive`](#canResolvePossessive)`  `[`isKnown`](#isKnown)`  `
+[`canResolvePossessive`](#canResolvePossessive)[`isKnown`](#isKnown)
 
 Inherited from `VocabObject` :  
-` `[`disambigPromptOrder`](../object/VocabObject.html#disambigPromptOrder)`  `[`owner`](../object/VocabObject.html#owner)`  `[`pluralOrder`](../object/VocabObject.html#pluralOrder)`  `[`vocabLikelihood`](../object/VocabObject.html#vocabLikelihood)`  `[`vocabWords`](../object/VocabObject.html#vocabWords)`  `[`weakTokens`](../object/VocabObject.html#weakTokens)`  `
+[`disambigPromptOrder`](../object/VocabObject.html#disambigPromptOrder)[`owner`](../object/VocabObject.html#owner)[`pluralOrder`](../object/VocabObject.html#pluralOrder)[`vocabLikelihood`](../object/VocabObject.html#vocabLikelihood)[`vocabWords`](../object/VocabObject.html#vocabWords)[`weakTokens`](../object/VocabObject.html#weakTokens)
 
 <span id="_MethodSummary_"></span>
 
@@ -93,10 +93,10 @@ Inherited from `VocabObject` :
 
 </div>
 
-` `[`canBeSensed`](#canBeSensed)`  `
+[`canBeSensed`](#canBeSensed)
 
 Inherited from `VocabObject` :  
-` `[`addToDictionary`](../object/VocabObject.html#addToDictionary)`  `[`construct`](../object/VocabObject.html#construct)`  `[`expandPronounList`](../object/VocabObject.html#expandPronounList)`  `[`filterResolveList`](../object/VocabObject.html#filterResolveList)`  `[`getFacets`](../object/VocabObject.html#getFacets)`  `[`getNominalOwner`](../object/VocabObject.html#getNominalOwner)`  `[`inheritVocab`](../object/VocabObject.html#inheritVocab)`  `[`initializeVocab`](../object/VocabObject.html#initializeVocab)`  `[`initializeVocabWith`](../object/VocabObject.html#initializeVocabWith)`  `[`isOwnedBy`](../object/VocabObject.html#isOwnedBy)`  `[`matchName`](../object/VocabObject.html#matchName)`  `[`matchNameCommon`](../object/VocabObject.html#matchNameCommon)`  `[`matchNameDisambig`](../object/VocabObject.html#matchNameDisambig)`  `[`throwNoMatchForLocation`](../object/VocabObject.html#throwNoMatchForLocation)`  `[`throwNoMatchForPossessive`](../object/VocabObject.html#throwNoMatchForPossessive)`  `[`throwNothingInLocation`](../object/VocabObject.html#throwNothingInLocation)`  `
+[`addToDictionary`](../object/VocabObject.html#addToDictionary)[`construct`](../object/VocabObject.html#construct)[`expandPronounList`](../object/VocabObject.html#expandPronounList)[`filterResolveList`](../object/VocabObject.html#filterResolveList)[`getFacets`](../object/VocabObject.html#getFacets)[`getNominalOwner`](../object/VocabObject.html#getNominalOwner)[`inheritVocab`](../object/VocabObject.html#inheritVocab)[`initializeVocab`](../object/VocabObject.html#initializeVocab)[`initializeVocabWith`](../object/VocabObject.html#initializeVocabWith)[`isOwnedBy`](../object/VocabObject.html#isOwnedBy)[`matchName`](../object/VocabObject.html#matchName)[`matchNameCommon`](../object/VocabObject.html#matchNameCommon)[`matchNameDisambig`](../object/VocabObject.html#matchNameDisambig)[`throwNoMatchForLocation`](../object/VocabObject.html#throwNoMatchForLocation)[`throwNoMatchForPossessive`](../object/VocabObject.html#throwNoMatchForPossessive)[`throwNothingInLocation`](../object/VocabObject.html#throwNothingInLocation)
 
 <span id="_Properties_"></span>
 

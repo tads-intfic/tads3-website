@@ -37,7 +37,7 @@ Details](#_Methods_)
 </div>
 
 **`explicitDetPluralOnlyNounPhrase(possessiveNumber)`**  
-`         `[`ExactQuantifiedPossessivePluralProd`](../object/ExactQuantifiedPossessivePluralProd.html)  
+[`ExactQuantifiedPossessivePluralProd`](../object/ExactQuantifiedPossessivePluralProd.html)  
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -46,9 +46,9 @@ Details](#_Methods_)
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -58,10 +58,10 @@ Details](#_Methods_)
 
 </div>
 
-` `
+
 
 Inherited from `ExactQuantifiedPossessivePluralProd` :  
-` `[`resolveMainPhrase`](../object/ExactQuantifiedPossessivePluralProd.html#resolveMainPhrase)`  `
+[`resolveMainPhrase`](../object/ExactQuantifiedPossessivePluralProd.html#resolveMainPhrase)
 
 <span id="_Properties_"></span>
 

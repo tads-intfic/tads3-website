@@ -90,7 +90,7 @@ to a list of character values.
 
 </div>
 
-` `[`lcsA`](#lcsA)`  `[`lcsB`](#lcsB)`  `
+[`lcsA`](#lcsA)[`lcsB`](#lcsB)
 
 <span id="_MethodSummary_"></span>
 
@@ -100,7 +100,7 @@ to a list of character values.
 
 </div>
 
-` `[`construct`](#construct)`  `
+[`construct`](#construct)
 
 <span id="_Properties_"></span>
 

@@ -37,7 +37,7 @@ chooses an event at random each time it's invoked.
 Reset our list to include the item we've just added and clear out any
 spent ones.
 
-`class `**`RandomEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)`   `[`EventList`](../object/EventList.html)
+`class `**`RandomEventList`**` :   `[`RandomFiringScript`](../object/RandomFiringScript.html)[`EventList`](../object/EventList.html)
 
 </div>
 
@@ -50,10 +50,10 @@ spent ones.
 </div>
 
 **`RandomEventList`**  
-`         `[`RandomFiringScript`](../object/RandomFiringScript.html)  
+[`RandomFiringScript`](../object/RandomFiringScript.html)  
 `                 object`  
-`         `[`EventList`](../object/EventList.html)  
-`                 `[`Script`](../object/Script.html)  
+[`EventList`](../object/EventList.html)  
+[`Script`](../object/Script.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -79,15 +79,15 @@ spent ones.
 
 </div>
 
-` `[`fireCt`](#fireCt)`  `
+[`fireCt`](#fireCt)
 
 Inherited from `RandomFiringScript` :  
-` `[`eventPercent`](../object/RandomFiringScript.html#eventPercent)`  `[`eventReduceAfter`](../object/RandomFiringScript.html#eventReduceAfter)`  `[`eventReduceTo`](../object/RandomFiringScript.html#eventReduceTo)`  `
+[`eventPercent`](../object/RandomFiringScript.html#eventPercent)[`eventReduceAfter`](../object/RandomFiringScript.html#eventReduceAfter)[`eventReduceTo`](../object/RandomFiringScript.html#eventReduceTo)
 
 Inherited from `EventList` :  
-` `[`curScriptState`](../object/EventList.html#curScriptState)`  `[`eventList`](../object/EventList.html#eventList)`  `[`eventListLen`](../object/EventList.html#eventListLen)`  `[`resetEachCycle`](../object/EventList.html#resetEachCycle)`  `
+[`curScriptState`](../object/EventList.html#curScriptState)[`eventList`](../object/EventList.html#eventList)[`eventListLen`](../object/EventList.html#eventListLen)[`resetEachCycle`](../object/EventList.html#resetEachCycle)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -97,16 +97,16 @@ Inherited from `EventList` :
 
 </div>
 
-` `[`doScript`](#doScript)`  `[`getNextRandom`](#getNextRandom)`  `
+[`doScript`](#doScript)[`getNextRandom`](#getNextRandom)
 
 Inherited from `RandomFiringScript` :  
-` `[`checkEventOdds`](../object/RandomFiringScript.html#checkEventOdds)`  `[`underusedReadyELIidx`](../object/RandomFiringScript.html#underusedReadyELIidx)`  `
+[`checkEventOdds`](../object/RandomFiringScript.html#checkEventOdds)[`underusedReadyELIidx`](../object/RandomFiringScript.html#underusedReadyELIidx)
 
 Inherited from `EventList` :  
-` `[`addItem`](../object/EventList.html#addItem)`  `[`advanceState`](../object/EventList.html#advanceState)`  `[`construct`](../object/EventList.html#construct)`  `[`doScriptEvent`](../object/EventList.html#doScriptEvent)`  `[`resetList`](../object/EventList.html#resetList)`  `[`scriptDone`](../object/EventList.html#scriptDone)`  `
+[`addItem`](../object/EventList.html#addItem)[`advanceState`](../object/EventList.html#advanceState)[`construct`](../object/EventList.html#construct)[`doScriptEvent`](../object/EventList.html#doScriptEvent)[`resetList`](../object/EventList.html#resetList)[`scriptDone`](../object/EventList.html#scriptDone)
 
 Inherited from `Script` :  
-` `[`getScriptState`](../object/Script.html#getScriptState)`  `
+[`getScriptState`](../object/Script.html#getScriptState)
 
 <span id="_Properties_"></span>
 

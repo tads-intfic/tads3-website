@@ -61,7 +61,7 @@ message giving the reason for the failure.
 </div>
 
 **`CheckStatus`**  
-`         `[`CheckStatusFailure`](../object/CheckStatusFailure.html)  
+[`CheckStatusFailure`](../object/CheckStatusFailure.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -70,7 +70,7 @@ message giving the reason for the failure.
 
 </div>
 
-` `[`checkStatusSuccess`](../object/checkStatusSuccess.html)`  `
+[`checkStatusSuccess`](../object/checkStatusSuccess.html)
 <span id="_PropSummary_"></span>
 
 <div class="mjhd">
@@ -79,7 +79,7 @@ message giving the reason for the failure.
 
 </div>
 
-` `[`isSuccess`](#isSuccess)`  `[`msgParams`](#msgParams)`  `[`msgProp`](#msgProp)`  `
+[`isSuccess`](#isSuccess)[`msgParams`](#msgParams)[`msgProp`](#msgProp)
 
 <span id="_MethodSummary_"></span>
 
@@ -89,7 +89,7 @@ message giving the reason for the failure.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_Properties_"></span>
 

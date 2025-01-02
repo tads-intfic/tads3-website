@@ -73,7 +73,7 @@ it's worth and the text describing the achievement. This can be done
 very simply using the Achievement template, so that, for example, our
 achievement objects might look like this:
 
-```
+`
     ticketAchievement: Achievement +10 "finding the plane ticket";
     boardingAchievement: Achievement +10 "boarding the plane";
     escapeAchievement: Achievement +10 "escaping Pablo Cortez";
@@ -83,13 +83,13 @@ achievement objects might look like this:
     uniformAchievement: Achievement +10 "putting on the pilot's uniform";
     cockpitAchievement: Achievement +10 "entering the cockpit";
     flyingAchievement: Achievement +15 "flying the plane";
-```
+`
 
 All we have to do now is to ensure that carrying out the appropriate
 action calls `awardPointsOnce(`) on the
 appropriate Achievement object. For example, for the first achievement:
 
-```
+`
     ticket: Thing 'ticket'
         "It's a ticket for flight TI 179 to Buenos Aires. "
         
@@ -108,7 +108,7 @@ appropriate Achievement object. For example, for the first achievement:
             }   
         }
     ;
-```
+`
 
 If you compile and run the game and try this, you'll find that the
 points are awarded only the first time you pick up the ticket; the
@@ -117,7 +117,7 @@ awardPointsOnce() method makes sure the points are awarded only once.
 The second achievement is awarded when the player character shows Angela
 the ticket:
 
-```
+`
     ++ GiveShowTopic @ticket
         topicResponse()
         {
@@ -131,7 +131,7 @@ the ticket:
             boardingAchievement.awardPointsOnce();
         }
     ;
-```
+`
 
 The next achievement needs just a little more thought. The points are
 awarded when the player reaches the Jetway from the plane, but only when
@@ -141,7 +141,7 @@ other is to test for whether the takeover Scene is happening. If it is,
 we can then award the points in the
 `travelerEntering()` method of the jetway Room:
 
-```
+`
     jetway: Room 'Jetway' 'jetway;short enclosed; walkway'
         "This is little more than a short enclosed walkway leading west-east from
         the gate to the plane. <<if takeover.isHappening>> Right now it's thronging
@@ -168,7 +168,7 @@ we can then award the points in the
                 escapeAchievement.awardPointsOnce();
         }    
     ;
-```
+`
 
 Now that we've established the principle, implementing the scoring for
 most of the other achievements can be left as an exercise for the
@@ -181,7 +181,7 @@ player character kills himself with a botched take-off attempt, so we'll
 want to tweak the `eachTurn()` method of the
 `takeOff` Scene thus:
 
-```
+`
     takeoff: Scene   
         ...
      
@@ -275,7 +275,7 @@ want to tweak the `eachTurn()` method of the
                 "The plane is losing speed. ";
         }   
     ;
-```
+`
 
 The same option should probably be added when the player character
 manages to get himself killed in other ways (notably by provoking Cortez

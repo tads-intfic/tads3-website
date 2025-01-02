@@ -46,7 +46,7 @@ settings item for score notification mode
 
 </div>
 
-` `[`isOn`](#isOn)`  `[`settingID`](#settingID)`  `
+[`isOn`](#isOn)[`settingID`](#settingID)
 
 <span id="_MethodSummary_"></span>
 
@@ -56,7 +56,7 @@ settings item for score notification mode
 
 </div>
 
-` `[`settingDesc`](#settingDesc)`  `
+[`settingDesc`](#settingDesc)
 
 <span id="_Properties_"></span>
 

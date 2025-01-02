@@ -48,7 +48,7 @@ byte-code program via the netEvent() built-in function.
 
 </div>
 
-` `[`HTTPRequest`](../object/HTTPRequest.html)`  `
+[`HTTPRequest`](../object/HTTPRequest.html)
 <span id="FunctionSummary_"></span>
 
 <div class="mjhd">

@@ -75,9 +75,9 @@ high-priority agenda items.
 </div>
 
 **`AgendaItem`**  
-`         `[`BoredomAgendaItem`](../object/BoredomAgendaItem.html)  
-`         `[`ConvAgendaItem`](../object/ConvAgendaItem.html)  
-`         `[`DelayedAgendaItem`](../object/DelayedAgendaItem.html)  
+[`BoredomAgendaItem`](../object/BoredomAgendaItem.html)  
+[`ConvAgendaItem`](../object/ConvAgendaItem.html)  
+[`DelayedAgendaItem`](../object/DelayedAgendaItem.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -94,7 +94,7 @@ high-priority agenda items.
 
 </div>
 
-` `[`agendaOrder`](#agendaOrder)`  `[`initiallyActive`](#initiallyActive)`  `[`isDone`](#isDone)`  `[`isReady`](#isReady)`  `
+[`agendaOrder`](#agendaOrder)[`initiallyActive`](#initiallyActive)[`isDone`](#isDone)[`isReady`](#isReady)
 
 <span id="_MethodSummary_"></span>
 
@@ -104,7 +104,7 @@ high-priority agenda items.
 
 </div>
 
-` `[`execute`](#execute)`  `[`getActor`](#getActor)`  `[`invokeItem`](#invokeItem)`  `[`resetItem`](#resetItem)`  `
+[`execute`](#execute)[`getActor`](#getActor)[`invokeItem`](#invokeItem)[`resetItem`](#resetItem)
 
 <span id="_Properties_"></span>
 

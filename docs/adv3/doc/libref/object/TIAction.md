@@ -50,11 +50,11 @@ English-specific additions for two-object verbs.
 </div>
 
 **`TIAction`**  
-`         `[`TAction`](../object/TAction.html)  
-`                 `[`Action`](../object/Action.html)  
-`                         `[`BasicProd`](../object/BasicProd.html)  
+[`TAction`](../object/TAction.html)  
+[`Action`](../object/Action.html)  
+[`BasicProd`](../object/BasicProd.html)  
 `                                 object`  
-`                 `[`Resolver`](../object/Resolver.html)  
+[`Resolver`](../object/Resolver.html)  
 `                         object`  
 <span id="_SubClassTree_"></span>
 
@@ -65,84 +65,84 @@ English-specific additions for two-object verbs.
 </div>
 
 **`TIAction`**  
-`         `[`AttachToAction`](../object/AttachToAction.html)  
-`                 `[`predicate(AttachTo)`](../object/predicate(AttachTo).html)  
-`                 `[`predicate(AttachToWhat)`](../object/predicate(AttachToWhat).html)  
-`         `[`AttackWithAction`](../object/AttackWithAction.html)  
-`                 `[`predicate(AttackWith)`](../object/predicate(AttackWith).html)  
-`         `[`BurnWithAction`](../object/BurnWithAction.html)  
-`                 `[`predicate(BurnWith)`](../object/predicate(BurnWith).html)  
-`         `[`CleanWithAction`](../object/CleanWithAction.html)  
-`                 `[`predicate(CleanWith)`](../object/predicate(CleanWith).html)  
-`         `[`CutWithAction`](../object/CutWithAction.html)  
-`                 `[`predicate(CutWith)`](../object/predicate(CutWith).html)  
-`                 `[`predicate(CutWithWhat)`](../object/predicate(CutWithWhat).html)  
-`         `[`DetachFromAction`](../object/DetachFromAction.html)  
-`                 `[`predicate(DetachFrom)`](../object/predicate(DetachFrom).html)  
-`         `[`DigWithAction`](../object/DigWithAction.html)  
-`                 `[`predicate(DigWith)`](../object/predicate(DigWith).html)  
-`         `[`FastenToAction`](../object/FastenToAction.html)  
-`                 `[`predicate(FastenTo)`](../object/predicate(FastenTo).html)  
-`         `[`GiveToAction`](../object/GiveToAction.html)  
-`                 `[`predicate(GiveTo)`](../object/predicate(GiveTo).html)  
-`                 `[`predicate(GiveToType2)`](../object/predicate(GiveToType2).html)  
-`                 `[`predicate(GiveToWhom)`](../object/predicate(GiveToWhom).html)  
-`         `[`LockWithAction`](../object/LockWithAction.html)  
-`                 `[`predicate(LockWith)`](../object/predicate(LockWith).html)  
-`         `[`MoveToAction`](../object/MoveToAction.html)  
-`                 `[`predicate(MoveTo)`](../object/predicate(MoveTo).html)  
-`         `[`MoveWithAction`](../object/MoveWithAction.html)  
-`                 `[`predicate(MoveWith)`](../object/predicate(MoveWith).html)  
-`         `[`PlugIntoAction`](../object/PlugIntoAction.html)  
-`                 `[`predicate(PlugInto)`](../object/predicate(PlugInto).html)  
-`                 `[`predicate(PlugIntoWhat)`](../object/predicate(PlugIntoWhat).html)  
-`         `[`PourIntoAction`](../object/PourIntoAction.html)  
-`                 `[`predicate(PourInto)`](../object/predicate(PourInto).html)  
-`         `[`PourOntoAction`](../object/PourOntoAction.html)  
-`                 `[`predicate(PourOnto)`](../object/predicate(PourOnto).html)  
-`         `[`PushTravelViaIobjAction`](../object/PushTravelViaIobjAction.html)  
-`                 `[`PushTravelClimbDownAction`](../object/PushTravelClimbDownAction.html)  
-`                         `[`predicate(PushTravelClimbDown)`](../object/predicate(PushTravelClimbDown).html)  
-`                 `[`PushTravelClimbUpAction`](../object/PushTravelClimbUpAction.html)  
-`                         `[`predicate(PushTravelClimbUp)`](../object/predicate(PushTravelClimbUp).html)  
-`                 `[`PushTravelEnterAction`](../object/PushTravelEnterAction.html)  
-`                         `[`predicate(PushTravelEnter)`](../object/predicate(PushTravelEnter).html)  
-`                 `[`PushTravelGetOutOfAction`](../object/PushTravelGetOutOfAction.html)  
-`                         `[`predicate(PushTravelGetOutOf)`](../object/predicate(PushTravelGetOutOf).html)  
-`                 `[`PushTravelThroughAction`](../object/PushTravelThroughAction.html)  
-`                         `[`predicate(PushTravelThrough)`](../object/predicate(PushTravelThrough).html)  
-`         `[`PutBehindAction`](../object/PutBehindAction.html)  
-`                 `[`predicate(PutBehind)`](../object/predicate(PutBehind).html)  
-`         `[`PutInAction`](../object/PutInAction.html)  
-`                 `[`predicate(PutIn)`](../object/predicate(PutIn).html)  
-`                 `[`predicate(PutInWhat)`](../object/predicate(PutInWhat).html)  
-`         `[`PutOnAction`](../object/PutOnAction.html)  
-`                 `[`predicate(PutOn)`](../object/predicate(PutOn).html)  
-`         `[`PutUnderAction`](../object/PutUnderAction.html)  
-`                 `[`predicate(PutUnder)`](../object/predicate(PutUnder).html)  
-`         `[`ScrewWithAction`](../object/ScrewWithAction.html)  
-`                 `[`predicate(ScrewWith)`](../object/predicate(ScrewWith).html)  
-`         `[`ShowToAction`](../object/ShowToAction.html)  
-`                 `[`predicate(ShowTo)`](../object/predicate(ShowTo).html)  
-`                 `[`predicate(ShowToType2)`](../object/predicate(ShowToType2).html)  
-`                 `[`predicate(ShowToWhom)`](../object/predicate(ShowToWhom).html)  
-`         `[`TakeFromAction`](../object/TakeFromAction.html)  
-`                 `[`predicate(TakeFrom)`](../object/predicate(TakeFrom).html)  
-`         `[`ThrowAtAction`](../object/ThrowAtAction.html)  
-`                 `[`predicate(ThrowAt)`](../object/predicate(ThrowAt).html)  
-`         `[`ThrowToAction`](../object/ThrowToAction.html)  
-`                 `[`predicate(ThrowTo)`](../object/predicate(ThrowTo).html)  
-`                 `[`predicate(ThrowToType2)`](../object/predicate(ThrowToType2).html)  
-`         `[`TurnWithAction`](../object/TurnWithAction.html)  
-`                 `[`predicate(TurnWith)`](../object/predicate(TurnWith).html)  
-`         `[`UnfastenFromAction`](../object/UnfastenFromAction.html)  
-`                 `[`predicate(UnfastenFrom)`](../object/predicate(UnfastenFrom).html)  
-`         `[`UnlockWithAction`](../object/UnlockWithAction.html)  
-`                 `[`predicate(UnlockWith)`](../object/predicate(UnlockWith).html)  
-`         `[`UnplugFromAction`](../object/UnplugFromAction.html)  
-`                 `[`predicate(UnplugFrom)`](../object/predicate(UnplugFrom).html)  
-`         `[`UnscrewWithAction`](../object/UnscrewWithAction.html)  
-`                 `[`predicate(UnscrewWith)`](../object/predicate(UnscrewWith).html)  
+[`AttachToAction`](../object/AttachToAction.html)  
+[`predicate(AttachTo)`](../object/predicate(AttachTo).html)  
+[`predicate(AttachToWhat)`](../object/predicate(AttachToWhat).html)  
+[`AttackWithAction`](../object/AttackWithAction.html)  
+[`predicate(AttackWith)`](../object/predicate(AttackWith).html)  
+[`BurnWithAction`](../object/BurnWithAction.html)  
+[`predicate(BurnWith)`](../object/predicate(BurnWith).html)  
+[`CleanWithAction`](../object/CleanWithAction.html)  
+[`predicate(CleanWith)`](../object/predicate(CleanWith).html)  
+[`CutWithAction`](../object/CutWithAction.html)  
+[`predicate(CutWith)`](../object/predicate(CutWith).html)  
+[`predicate(CutWithWhat)`](../object/predicate(CutWithWhat).html)  
+[`DetachFromAction`](../object/DetachFromAction.html)  
+[`predicate(DetachFrom)`](../object/predicate(DetachFrom).html)  
+[`DigWithAction`](../object/DigWithAction.html)  
+[`predicate(DigWith)`](../object/predicate(DigWith).html)  
+[`FastenToAction`](../object/FastenToAction.html)  
+[`predicate(FastenTo)`](../object/predicate(FastenTo).html)  
+[`GiveToAction`](../object/GiveToAction.html)  
+[`predicate(GiveTo)`](../object/predicate(GiveTo).html)  
+[`predicate(GiveToType2)`](../object/predicate(GiveToType2).html)  
+[`predicate(GiveToWhom)`](../object/predicate(GiveToWhom).html)  
+[`LockWithAction`](../object/LockWithAction.html)  
+[`predicate(LockWith)`](../object/predicate(LockWith).html)  
+[`MoveToAction`](../object/MoveToAction.html)  
+[`predicate(MoveTo)`](../object/predicate(MoveTo).html)  
+[`MoveWithAction`](../object/MoveWithAction.html)  
+[`predicate(MoveWith)`](../object/predicate(MoveWith).html)  
+[`PlugIntoAction`](../object/PlugIntoAction.html)  
+[`predicate(PlugInto)`](../object/predicate(PlugInto).html)  
+[`predicate(PlugIntoWhat)`](../object/predicate(PlugIntoWhat).html)  
+[`PourIntoAction`](../object/PourIntoAction.html)  
+[`predicate(PourInto)`](../object/predicate(PourInto).html)  
+[`PourOntoAction`](../object/PourOntoAction.html)  
+[`predicate(PourOnto)`](../object/predicate(PourOnto).html)  
+[`PushTravelViaIobjAction`](../object/PushTravelViaIobjAction.html)  
+[`PushTravelClimbDownAction`](../object/PushTravelClimbDownAction.html)  
+[`predicate(PushTravelClimbDown)`](../object/predicate(PushTravelClimbDown).html)  
+[`PushTravelClimbUpAction`](../object/PushTravelClimbUpAction.html)  
+[`predicate(PushTravelClimbUp)`](../object/predicate(PushTravelClimbUp).html)  
+[`PushTravelEnterAction`](../object/PushTravelEnterAction.html)  
+[`predicate(PushTravelEnter)`](../object/predicate(PushTravelEnter).html)  
+[`PushTravelGetOutOfAction`](../object/PushTravelGetOutOfAction.html)  
+[`predicate(PushTravelGetOutOf)`](../object/predicate(PushTravelGetOutOf).html)  
+[`PushTravelThroughAction`](../object/PushTravelThroughAction.html)  
+[`predicate(PushTravelThrough)`](../object/predicate(PushTravelThrough).html)  
+[`PutBehindAction`](../object/PutBehindAction.html)  
+[`predicate(PutBehind)`](../object/predicate(PutBehind).html)  
+[`PutInAction`](../object/PutInAction.html)  
+[`predicate(PutIn)`](../object/predicate(PutIn).html)  
+[`predicate(PutInWhat)`](../object/predicate(PutInWhat).html)  
+[`PutOnAction`](../object/PutOnAction.html)  
+[`predicate(PutOn)`](../object/predicate(PutOn).html)  
+[`PutUnderAction`](../object/PutUnderAction.html)  
+[`predicate(PutUnder)`](../object/predicate(PutUnder).html)  
+[`ScrewWithAction`](../object/ScrewWithAction.html)  
+[`predicate(ScrewWith)`](../object/predicate(ScrewWith).html)  
+[`ShowToAction`](../object/ShowToAction.html)  
+[`predicate(ShowTo)`](../object/predicate(ShowTo).html)  
+[`predicate(ShowToType2)`](../object/predicate(ShowToType2).html)  
+[`predicate(ShowToWhom)`](../object/predicate(ShowToWhom).html)  
+[`TakeFromAction`](../object/TakeFromAction.html)  
+[`predicate(TakeFrom)`](../object/predicate(TakeFrom).html)  
+[`ThrowAtAction`](../object/ThrowAtAction.html)  
+[`predicate(ThrowAt)`](../object/predicate(ThrowAt).html)  
+[`ThrowToAction`](../object/ThrowToAction.html)  
+[`predicate(ThrowTo)`](../object/predicate(ThrowTo).html)  
+[`predicate(ThrowToType2)`](../object/predicate(ThrowToType2).html)  
+[`TurnWithAction`](../object/TurnWithAction.html)  
+[`predicate(TurnWith)`](../object/predicate(TurnWith).html)  
+[`UnfastenFromAction`](../object/UnfastenFromAction.html)  
+[`predicate(UnfastenFrom)`](../object/predicate(UnfastenFrom).html)  
+[`UnlockWithAction`](../object/UnlockWithAction.html)  
+[`predicate(UnlockWith)`](../object/predicate(UnlockWith).html)  
+[`UnplugFromAction`](../object/UnplugFromAction.html)  
+[`predicate(UnplugFrom)`](../object/predicate(UnplugFrom).html)  
+[`UnscrewWithAction`](../object/UnscrewWithAction.html)  
+[`predicate(UnscrewWith)`](../object/predicate(UnscrewWith).html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -159,19 +159,19 @@ English-specific additions for two-object verbs.
 
 </div>
 
-` `[`actionIobjProp`](#actionIobjProp)`  `[`askIobjResponseProd`](#askIobjResponseProd)`  `[`checkIobjProp`](#checkIobjProp)`  `[`execFirst`](#execFirst)`  `[`iobjCur_`](#iobjCur_)`  `[`iobjInfoCur_`](#iobjInfoCur_)`  `[`iobjList_`](#iobjList_)`  `[`iobjMatch`](#iobjMatch)`  `[`iobjResolver_`](#iobjResolver_)`  `[`isPrepositionalPhrasing`](#isPrepositionalPhrasing)`  `[`lastObjList_`](#lastObjList_)`  `[`needAnaphoricBinding_`](#needAnaphoricBinding_)`  `[`omitIobjInDobjQuery`](#omitIobjInDobjQuery)`  `[`preCondIobjProp`](#preCondIobjProp)`  `[`predicateNounPhrases`](#predicateNounPhrases)`  `[`remapIobjProp`](#remapIobjProp)`  `[`resolveFirst`](#resolveFirst)`  `[`resolveFirstEmpty`](#resolveFirstEmpty)`  `[`tentativeDobj_`](#tentativeDobj_)`  `[`tentativeIobj_`](#tentativeIobj_)`  `[`verIobjProp`](#verIobjProp)`  `
+[`actionIobjProp`](#actionIobjProp)[`askIobjResponseProd`](#askIobjResponseProd)[`checkIobjProp`](#checkIobjProp)[`execFirst`](#execFirst)[`iobjCur_`](#iobjCur_)[`iobjInfoCur_`](#iobjInfoCur_)[`iobjList_`](#iobjList_)[`iobjMatch`](#iobjMatch)[`iobjResolver_`](#iobjResolver_)[`isPrepositionalPhrasing`](#isPrepositionalPhrasing)[`lastObjList_`](#lastObjList_)[`needAnaphoricBinding_`](#needAnaphoricBinding_)[`omitIobjInDobjQuery`](#omitIobjInDobjQuery)[`preCondIobjProp`](#preCondIobjProp)[`predicateNounPhrases`](#predicateNounPhrases)[`remapIobjProp`](#remapIobjProp)[`resolveFirst`](#resolveFirst)[`resolveFirstEmpty`](#resolveFirstEmpty)[`tentativeDobj_`](#tentativeDobj_)[`tentativeIobj_`](#tentativeIobj_)[`verIobjProp`](#verIobjProp)
 
 Inherited from `TAction` :  
-` `[`actionAllowsAll`](../object/TAction.html#actionAllowsAll)`  `[`actionDobjProp`](../object/TAction.html#actionDobjProp)`  `[`actor_`](../object/TAction.html#actor_)`  `[`askDobjResponseProd`](../object/TAction.html#askDobjResponseProd)`  `[`checkDobjProp`](../object/TAction.html#checkDobjProp)`  `[`dobjCur_`](../object/TAction.html#dobjCur_)`  `[`dobjInfoCur_`](../object/TAction.html#dobjInfoCur_)`  `[`dobjList_`](../object/TAction.html#dobjList_)`  `[`dobjMatch`](../object/TAction.html#dobjMatch)`  `[`dobjResolver_`](../object/TAction.html#dobjResolver_)`  `[`issuer_`](../object/TAction.html#issuer_)`  `[`preCondDobjProp`](../object/TAction.html#preCondDobjProp)`  `[`remapDobjProp`](../object/TAction.html#remapDobjProp)`  `[`verDobjProp`](../object/TAction.html#verDobjProp)`  `[`whichMessageObject`](../object/TAction.html#whichMessageObject)`  `
+[`actionAllowsAll`](../object/TAction.html#actionAllowsAll)[`actionDobjProp`](../object/TAction.html#actionDobjProp)[`actor_`](../object/TAction.html#actor_)[`askDobjResponseProd`](../object/TAction.html#askDobjResponseProd)[`checkDobjProp`](../object/TAction.html#checkDobjProp)[`dobjCur_`](../object/TAction.html#dobjCur_)[`dobjInfoCur_`](../object/TAction.html#dobjInfoCur_)[`dobjList_`](../object/TAction.html#dobjList_)[`dobjMatch`](../object/TAction.html#dobjMatch)[`dobjResolver_`](../object/TAction.html#dobjResolver_)[`issuer_`](../object/TAction.html#issuer_)[`preCondDobjProp`](../object/TAction.html#preCondDobjProp)[`remapDobjProp`](../object/TAction.html#remapDobjProp)[`verDobjProp`](../object/TAction.html#verDobjProp)[`whichMessageObject`](../object/TAction.html#whichMessageObject)
 
 Inherited from `Action` :  
-` `[`actionTime`](../object/Action.html#actionTime)`  `[`afterActionMainList`](../object/Action.html#afterActionMainList)`  `[`beforeAfterObjs`](../object/Action.html#beforeAfterObjs)`  `[`defaultForRecursion`](../object/Action.html#defaultForRecursion)`  `[`extraMessageParams`](../object/Action.html#extraMessageParams)`  `[`implicitMsg`](../object/Action.html#implicitMsg)`  `[`includeInUndo`](../object/Action.html#includeInUndo)`  `[`isImplicit`](../object/Action.html#isImplicit)`  `[`isRepeatable`](../object/Action.html#isRepeatable)`  `[`iterationCanceled`](../object/Action.html#iterationCanceled)`  `[`originalAction`](../object/Action.html#originalAction)`  `[`parentAction`](../object/Action.html#parentAction)`  `[`preCond`](../object/Action.html#preCond)`  `[`pronounOverride`](../object/Action.html#pronounOverride)`  `[`remappedFrom`](../object/Action.html#remappedFrom)`  `[`showDefaultReports`](../object/Action.html#showDefaultReports)`  `[`synthParamID`](../object/Action.html#synthParamID)`  `[`verbFlags`](../object/Action.html#verbFlags)`  `[`verifiedOkay`](../object/Action.html#verifiedOkay)`  `
+[`actionTime`](../object/Action.html#actionTime)[`afterActionMainList`](../object/Action.html#afterActionMainList)[`beforeAfterObjs`](../object/Action.html#beforeAfterObjs)[`defaultForRecursion`](../object/Action.html#defaultForRecursion)[`extraMessageParams`](../object/Action.html#extraMessageParams)[`implicitMsg`](../object/Action.html#implicitMsg)[`includeInUndo`](../object/Action.html#includeInUndo)[`isImplicit`](../object/Action.html#isImplicit)[`isRepeatable`](../object/Action.html#isRepeatable)[`iterationCanceled`](../object/Action.html#iterationCanceled)[`originalAction`](../object/Action.html#originalAction)[`parentAction`](../object/Action.html#parentAction)[`preCond`](../object/Action.html#preCond)[`pronounOverride`](../object/Action.html#pronounOverride)[`remappedFrom`](../object/Action.html#remappedFrom)[`showDefaultReports`](../object/Action.html#showDefaultReports)[`synthParamID`](../object/Action.html#synthParamID)[`verbFlags`](../object/Action.html#verbFlags)[`verifiedOkay`](../object/Action.html#verifiedOkay)
 
 Inherited from `BasicProd` :  
-` `[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)`  `[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)`  `[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)`  `
+[`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex)[`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch)[`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
 Inherited from `Resolver` :  
-` `[`action_`](../object/Resolver.html#action_)`  `[`equivs_`](../object/Resolver.html#equivs_)`  `[`isGlobalScope`](../object/Resolver.html#isGlobalScope)`  `[`isSubResolver`](../object/Resolver.html#isSubResolver)`  `[`scope_`](../object/Resolver.html#scope_)`  `[`whichObject`](../object/Resolver.html#whichObject)`  `
+[`action_`](../object/Resolver.html#action_)[`equivs_`](../object/Resolver.html#equivs_)[`isGlobalScope`](../object/Resolver.html#isGlobalScope)[`isSubResolver`](../object/Resolver.html#isSubResolver)[`scope_`](../object/Resolver.html#scope_)[`whichObject`](../object/Resolver.html#whichObject)
 
 <span id="_MethodSummary_"></span>
 
@@ -181,19 +181,19 @@ Inherited from `Resolver` :
 
 </div>
 
-` `[`announceAllDefaultObjects`](#announceAllDefaultObjects)`  `[`announceDefaultObject`](#announceDefaultObject)`  `[`canIobjResolveTo`](#canIobjResolveTo)`  `[`checkAction`](#checkAction)`  `[`checkRemapping`](#checkRemapping)`  `[`copyTentativeObjs`](#copyTentativeObjs)`  `[`createForMissingIobj`](#createForMissingIobj)`  `[`createIobjResolver`](#createIobjResolver)`  `[`doActionMain`](#doActionMain)`  `[`execAction`](#execAction)`  `[`filterAmbiguousIobj`](#filterAmbiguousIobj)`  `[`filterPluralIobj`](#filterPluralIobj)`  `[`getAllIobj`](#getAllIobj)`  `[`getAnaphoricBinding`](#getAnaphoricBinding)`  `[`getCurrentObjects`](#getCurrentObjects)`  `[`getDefaultIobj`](#getDefaultIobj)`  `[`getIobj`](#getIobj)`  `[`getIobjCount`](#getIobjCount)`  `[`getIobjFlags`](#getIobjFlags)`  `[`getIobjInfo`](#getIobjInfo)`  `[`getIobjResolver`](#getIobjResolver)`  `[`getIobjTokens`](#getIobjTokens)`  `[`getIobjWords`](#getIobjWords)`  `[`getMatchForRole`](#getMatchForRole)`  `[`getMessageParam`](#getMessageParam)`  `[`getObjectForRole`](#getObjectForRole)`  `[`getObjResponseProd`](#getObjResponseProd)`  `[`getOtherMessageObjectPronoun`](#getOtherMessageObjectPronoun)`  `[`getOtherObjectRole`](#getOtherObjectRole)`  `[`getPreCondDescList`](#getPreCondDescList)`  `[`getPreCondPropForRole`](#getPreCondPropForRole)`  `[`getQuestionInf`](#getQuestionInf)`  `[`getRemapPropForRole`](#getRemapPropForRole)`  `[`getResolvedIobjList`](#getResolvedIobjList)`  `[`getResolvedObjList`](#getResolvedObjList)`  `[`getResolveInfo`](#getResolveInfo)`  `[`getRoleFromIndex`](#getRoleFromIndex)`  `[`getTentativeDobj`](#getTentativeDobj)`  `[`getTentativeIobj`](#getTentativeIobj)`  `[`getVerbPhrase`](#getVerbPhrase)`  `[`getVerbPhrase2`](#getVerbPhrase2)`  `[`getVerifyPropForRole`](#getVerifyPropForRole)`  `[`initForMissingDobj`](#initForMissingDobj)`  `[`initForMissingIobj`](#initForMissingIobj)`  `[`initTentative`](#initTentative)`  `[`needRemappedAnnouncement`](#needRemappedAnnouncement)`  `[`resetAction`](#resetAction)`  `[`resolvedObjectsInScope`](#resolvedObjectsInScope)`  `[`resolveNouns`](#resolveNouns)`  `[`retryWithAmbiguousIobj`](#retryWithAmbiguousIobj)`  `[`retryWithMissingIobj`](#retryWithMissingIobj)`  `[`setCurrentObjects`](#setCurrentObjects)`  `[`setObjectMatches`](#setObjectMatches)`  `[`setPronounByInput`](#setPronounByInput)`  `[`setResolvedIobj`](#setResolvedIobj)`  `[`setResolvedObjects`](#setResolvedObjects)`  `[`testRetryDefaultIobj`](#testRetryDefaultIobj)`  `[`verifyAction`](#verifyAction)`  `[`whatObj`](#whatObj)`  `
+[`announceAllDefaultObjects`](#announceAllDefaultObjects)[`announceDefaultObject`](#announceDefaultObject)[`canIobjResolveTo`](#canIobjResolveTo)[`checkAction`](#checkAction)[`checkRemapping`](#checkRemapping)[`copyTentativeObjs`](#copyTentativeObjs)[`createForMissingIobj`](#createForMissingIobj)[`createIobjResolver`](#createIobjResolver)[`doActionMain`](#doActionMain)[`execAction`](#execAction)[`filterAmbiguousIobj`](#filterAmbiguousIobj)[`filterPluralIobj`](#filterPluralIobj)[`getAllIobj`](#getAllIobj)[`getAnaphoricBinding`](#getAnaphoricBinding)[`getCurrentObjects`](#getCurrentObjects)[`getDefaultIobj`](#getDefaultIobj)[`getIobj`](#getIobj)[`getIobjCount`](#getIobjCount)[`getIobjFlags`](#getIobjFlags)[`getIobjInfo`](#getIobjInfo)[`getIobjResolver`](#getIobjResolver)[`getIobjTokens`](#getIobjTokens)[`getIobjWords`](#getIobjWords)[`getMatchForRole`](#getMatchForRole)[`getMessageParam`](#getMessageParam)[`getObjectForRole`](#getObjectForRole)[`getObjResponseProd`](#getObjResponseProd)[`getOtherMessageObjectPronoun`](#getOtherMessageObjectPronoun)[`getOtherObjectRole`](#getOtherObjectRole)[`getPreCondDescList`](#getPreCondDescList)[`getPreCondPropForRole`](#getPreCondPropForRole)[`getQuestionInf`](#getQuestionInf)[`getRemapPropForRole`](#getRemapPropForRole)[`getResolvedIobjList`](#getResolvedIobjList)[`getResolvedObjList`](#getResolvedObjList)[`getResolveInfo`](#getResolveInfo)[`getRoleFromIndex`](#getRoleFromIndex)[`getTentativeDobj`](#getTentativeDobj)[`getTentativeIobj`](#getTentativeIobj)[`getVerbPhrase`](#getVerbPhrase)[`getVerbPhrase2`](#getVerbPhrase2)[`getVerifyPropForRole`](#getVerifyPropForRole)[`initForMissingDobj`](#initForMissingDobj)[`initForMissingIobj`](#initForMissingIobj)[`initTentative`](#initTentative)[`needRemappedAnnouncement`](#needRemappedAnnouncement)[`resetAction`](#resetAction)[`resolvedObjectsInScope`](#resolvedObjectsInScope)[`resolveNouns`](#resolveNouns)[`retryWithAmbiguousIobj`](#retryWithAmbiguousIobj)[`retryWithMissingIobj`](#retryWithMissingIobj)[`setCurrentObjects`](#setCurrentObjects)[`setObjectMatches`](#setObjectMatches)[`setPronounByInput`](#setPronounByInput)[`setResolvedIobj`](#setResolvedIobj)[`setResolvedObjects`](#setResolvedObjects)[`testRetryDefaultIobj`](#testRetryDefaultIobj)[`verifyAction`](#verifyAction)[`whatObj`](#whatObj)
 
 Inherited from `TAction` :  
-` `[`adjustDefaultObjectPrep`](../object/TAction.html#adjustDefaultObjectPrep)`  `[`canDobjResolveTo`](../object/TAction.html#canDobjResolveTo)`  `[`construct`](../object/TAction.html#construct)`  `[`createDobjResolver`](../object/TAction.html#createDobjResolver)`  `[`createForMissingDobj`](../object/TAction.html#createForMissingDobj)`  `[`createForRetry`](../object/TAction.html#createForRetry)`  `[`filterAmbiguousDobj`](../object/TAction.html#filterAmbiguousDobj)`  `[`filterPluralDobj`](../object/TAction.html#filterPluralDobj)`  `[`getAllDobj`](../object/TAction.html#getAllDobj)`  `[`getDefaultDobj`](../object/TAction.html#getDefaultDobj)`  `[`getDobj`](../object/TAction.html#getDobj)`  `[`getDobjCount`](../object/TAction.html#getDobjCount)`  `[`getDobjFlags`](../object/TAction.html#getDobjFlags)`  `[`getDobjInfo`](../object/TAction.html#getDobjInfo)`  `[`getDobjResolver`](../object/TAction.html#getDobjResolver)`  `[`getDobjTokens`](../object/TAction.html#getDobjTokens)`  `[`getDobjWords`](../object/TAction.html#getDobjWords)`  `[`getResolvedDobjList`](../object/TAction.html#getResolvedDobjList)`  `[`getVerbPhrase1`](../object/TAction.html#getVerbPhrase1)`  `[`initResolver`](../object/TAction.html#initResolver)`  `[`retryWithAmbiguousDobj`](../object/TAction.html#retryWithAmbiguousDobj)`  `[`retryWithMissingDobj`](../object/TAction.html#retryWithMissingDobj)`  `[`setResolvedDobj`](../object/TAction.html#setResolvedDobj)`  `[`testRetryDefaultDobj`](../object/TAction.html#testRetryDefaultDobj)`  `
+[`adjustDefaultObjectPrep`](../object/TAction.html#adjustDefaultObjectPrep)[`canDobjResolveTo`](../object/TAction.html#canDobjResolveTo)[`construct`](../object/TAction.html#construct)[`createDobjResolver`](../object/TAction.html#createDobjResolver)[`createForMissingDobj`](../object/TAction.html#createForMissingDobj)[`createForRetry`](../object/TAction.html#createForRetry)[`filterAmbiguousDobj`](../object/TAction.html#filterAmbiguousDobj)[`filterPluralDobj`](../object/TAction.html#filterPluralDobj)[`getAllDobj`](../object/TAction.html#getAllDobj)[`getDefaultDobj`](../object/TAction.html#getDefaultDobj)[`getDobj`](../object/TAction.html#getDobj)[`getDobjCount`](../object/TAction.html#getDobjCount)[`getDobjFlags`](../object/TAction.html#getDobjFlags)[`getDobjInfo`](../object/TAction.html#getDobjInfo)[`getDobjResolver`](../object/TAction.html#getDobjResolver)[`getDobjTokens`](../object/TAction.html#getDobjTokens)[`getDobjWords`](../object/TAction.html#getDobjWords)[`getResolvedDobjList`](../object/TAction.html#getResolvedDobjList)[`getVerbPhrase1`](../object/TAction.html#getVerbPhrase1)[`initResolver`](../object/TAction.html#initResolver)[`retryWithAmbiguousDobj`](../object/TAction.html#retryWithAmbiguousDobj)[`retryWithMissingDobj`](../object/TAction.html#retryWithMissingDobj)[`setResolvedDobj`](../object/TAction.html#setResolvedDobj)[`testRetryDefaultDobj`](../object/TAction.html#testRetryDefaultDobj)
 
 Inherited from `Action` :  
-` `[`actionOfKind`](../object/Action.html#actionOfKind)`  `[`addBeforeAfterObj`](../object/Action.html#addBeforeAfterObj)`  `[`afterAction`](../object/Action.html#afterAction)`  `[`afterActionMain`](../object/Action.html#afterActionMain)`  `[`announceActionObject`](../object/Action.html#announceActionObject)`  `[`beforeAction`](../object/Action.html#beforeAction)`  `[`beforeActionMain`](../object/Action.html#beforeActionMain)`  `[`cacheMultiObjectAnnouncements`](../object/Action.html#cacheMultiObjectAnnouncements)`  `[`callAfterActionMain`](../object/Action.html#callAfterActionMain)`  `[`callCatchAllProp`](../object/Action.html#callCatchAllProp)`  `[`callPreConditions`](../object/Action.html#callPreConditions)`  `[`callVerifyPreCond`](../object/Action.html#callVerifyPreCond)`  `[`callVerifyProp`](../object/Action.html#callVerifyProp)`  `[`cancelIteration`](../object/Action.html#cancelIteration)`  `[`checkPreConditions`](../object/Action.html#checkPreConditions)`  `[`combineRemappedVerifyResults`](../object/Action.html#combineRemappedVerifyResults)`  `[`createActionFrom`](../object/Action.html#createActionFrom)`  `[`createActionInstance`](../object/Action.html#createActionInstance)`  `[`createTopicQualifierResolver`](../object/Action.html#createTopicQualifierResolver)`  `[`doAction`](../object/Action.html#doAction)`  `[`doActionOnce`](../object/Action.html#doActionOnce)`  `[`filterAmbiguousWithVerify`](../object/Action.html#filterAmbiguousWithVerify)`  `[`filterFacets`](../object/Action.html#filterFacets)`  `[`filterPluralWithVerify`](../object/Action.html#filterPluralWithVerify)`  `[`finishResolveList`](../object/Action.html#finishResolveList)`  `[`getDefaultWithVerify`](../object/Action.html#getDefaultWithVerify)`  `[`getEnteredVerbPhrase`](../object/Action.html#getEnteredVerbPhrase)`  `[`getImplicitPhrase`](../object/Action.html#getImplicitPhrase)`  `[`getInfPhrase`](../object/Action.html#getInfPhrase)`  `[`getNotifyTable`](../object/Action.html#getNotifyTable)`  `[`getObjPreCondDescList`](../object/Action.html#getObjPreCondDescList)`  `[`getObjPreConditions`](../object/Action.html#getObjPreConditions)`  `[`getOriginalAction`](../object/Action.html#getOriginalAction)`  `[`getOrigTokenList`](../object/Action.html#getOrigTokenList)`  `[`getParticiplePhrase`](../object/Action.html#getParticiplePhrase)`  `[`getPredicate`](../object/Action.html#getPredicate)`  `[`getPronounOverride`](../object/Action.html#getPronounOverride)`  `[`getRemappedFrom`](../object/Action.html#getRemappedFrom)`  `[`getSimpleSynonymRemap`](../object/Action.html#getSimpleSynonymRemap)`  `[`getSortedVerifyResults`](../object/Action.html#getSortedVerifyResults)`  `[`isConversational`](../object/Action.html#isConversational)`  `[`isNestedIn`](../object/Action.html#isNestedIn)`  `[`isPartOf`](../object/Action.html#isPartOf)`  `[`isRemapped`](../object/Action.html#isRemapped)`  `[`makeResolveInfo`](../object/Action.html#makeResolveInfo)`  `[`makeResolveInfoList`](../object/Action.html#makeResolveInfoList)`  `[`maybeAnnounceDefaultObject`](../object/Action.html#maybeAnnounceDefaultObject)`  `[`maybeAnnounceImplicit`](../object/Action.html#maybeAnnounceImplicit)`  `[`maybeAnnounceMultiObject`](../object/Action.html#maybeAnnounceMultiObject)`  `[`noMatch`](../object/Action.html#noMatch)`  `[`notifyBeforeAfter`](../object/Action.html#notifyBeforeAfter)`  `[`objListPronoun`](../object/Action.html#objListPronoun)`  `[`preAnnounceActionObject`](../object/Action.html#preAnnounceActionObject)`  `[`recalcSenseContext`](../object/Action.html#recalcSenseContext)`  `[`repeatAction`](../object/Action.html#repeatAction)`  `[`resolveAction`](../object/Action.html#resolveAction)`  `[`runBeforeNotifiers`](../object/Action.html#runBeforeNotifiers)`  `[`saveActionForAgain`](../object/Action.html#saveActionForAgain)`  `[`setImplicit`](../object/Action.html#setImplicit)`  `[`setMessageParam`](../object/Action.html#setMessageParam)`  `[`setMessageParams`](../object/Action.html#setMessageParams)`  `[`setNested`](../object/Action.html#setNested)`  `[`setOriginalAction`](../object/Action.html#setOriginalAction)`  `[`setPronounOverride`](../object/Action.html#setPronounOverride)`  `[`setRemapped`](../object/Action.html#setRemapped)`  `[`spPrefix`](../object/Action.html#spPrefix)`  `[`spSuffix`](../object/Action.html#spSuffix)`  `[`synthMessageParam`](../object/Action.html#synthMessageParam)`  `[`verifyHandlersExist`](../object/Action.html#verifyHandlersExist)`  `[`whatTranslate`](../object/Action.html#whatTranslate)`  `[`withVerifyResults`](../object/Action.html#withVerifyResults)`  `[`zeroActionTime`](../object/Action.html#zeroActionTime)`  `
+[`actionOfKind`](../object/Action.html#actionOfKind)[`addBeforeAfterObj`](../object/Action.html#addBeforeAfterObj)[`afterAction`](../object/Action.html#afterAction)[`afterActionMain`](../object/Action.html#afterActionMain)[`announceActionObject`](../object/Action.html#announceActionObject)[`beforeAction`](../object/Action.html#beforeAction)[`beforeActionMain`](../object/Action.html#beforeActionMain)[`cacheMultiObjectAnnouncements`](../object/Action.html#cacheMultiObjectAnnouncements)[`callAfterActionMain`](../object/Action.html#callAfterActionMain)[`callCatchAllProp`](../object/Action.html#callCatchAllProp)[`callPreConditions`](../object/Action.html#callPreConditions)[`callVerifyPreCond`](../object/Action.html#callVerifyPreCond)[`callVerifyProp`](../object/Action.html#callVerifyProp)[`cancelIteration`](../object/Action.html#cancelIteration)[`checkPreConditions`](../object/Action.html#checkPreConditions)[`combineRemappedVerifyResults`](../object/Action.html#combineRemappedVerifyResults)[`createActionFrom`](../object/Action.html#createActionFrom)[`createActionInstance`](../object/Action.html#createActionInstance)[`createTopicQualifierResolver`](../object/Action.html#createTopicQualifierResolver)[`doAction`](../object/Action.html#doAction)[`doActionOnce`](../object/Action.html#doActionOnce)[`filterAmbiguousWithVerify`](../object/Action.html#filterAmbiguousWithVerify)[`filterFacets`](../object/Action.html#filterFacets)[`filterPluralWithVerify`](../object/Action.html#filterPluralWithVerify)[`finishResolveList`](../object/Action.html#finishResolveList)[`getDefaultWithVerify`](../object/Action.html#getDefaultWithVerify)[`getEnteredVerbPhrase`](../object/Action.html#getEnteredVerbPhrase)[`getImplicitPhrase`](../object/Action.html#getImplicitPhrase)[`getInfPhrase`](../object/Action.html#getInfPhrase)[`getNotifyTable`](../object/Action.html#getNotifyTable)[`getObjPreCondDescList`](../object/Action.html#getObjPreCondDescList)[`getObjPreConditions`](../object/Action.html#getObjPreConditions)[`getOriginalAction`](../object/Action.html#getOriginalAction)[`getOrigTokenList`](../object/Action.html#getOrigTokenList)[`getParticiplePhrase`](../object/Action.html#getParticiplePhrase)[`getPredicate`](../object/Action.html#getPredicate)[`getPronounOverride`](../object/Action.html#getPronounOverride)[`getRemappedFrom`](../object/Action.html#getRemappedFrom)[`getSimpleSynonymRemap`](../object/Action.html#getSimpleSynonymRemap)[`getSortedVerifyResults`](../object/Action.html#getSortedVerifyResults)[`isConversational`](../object/Action.html#isConversational)[`isNestedIn`](../object/Action.html#isNestedIn)[`isPartOf`](../object/Action.html#isPartOf)[`isRemapped`](../object/Action.html#isRemapped)[`makeResolveInfo`](../object/Action.html#makeResolveInfo)[`makeResolveInfoList`](../object/Action.html#makeResolveInfoList)[`maybeAnnounceDefaultObject`](../object/Action.html#maybeAnnounceDefaultObject)[`maybeAnnounceImplicit`](../object/Action.html#maybeAnnounceImplicit)[`maybeAnnounceMultiObject`](../object/Action.html#maybeAnnounceMultiObject)[`noMatch`](../object/Action.html#noMatch)[`notifyBeforeAfter`](../object/Action.html#notifyBeforeAfter)[`objListPronoun`](../object/Action.html#objListPronoun)[`preAnnounceActionObject`](../object/Action.html#preAnnounceActionObject)[`recalcSenseContext`](../object/Action.html#recalcSenseContext)[`repeatAction`](../object/Action.html#repeatAction)[`resolveAction`](../object/Action.html#resolveAction)[`runBeforeNotifiers`](../object/Action.html#runBeforeNotifiers)[`saveActionForAgain`](../object/Action.html#saveActionForAgain)[`setImplicit`](../object/Action.html#setImplicit)[`setMessageParam`](../object/Action.html#setMessageParam)[`setMessageParams`](../object/Action.html#setMessageParams)[`setNested`](../object/Action.html#setNested)[`setOriginalAction`](../object/Action.html#setOriginalAction)[`setPronounOverride`](../object/Action.html#setPronounOverride)[`setRemapped`](../object/Action.html#setRemapped)[`spPrefix`](../object/Action.html#spPrefix)[`spSuffix`](../object/Action.html#spSuffix)[`synthMessageParam`](../object/Action.html#synthMessageParam)[`verifyHandlersExist`](../object/Action.html#verifyHandlersExist)[`whatTranslate`](../object/Action.html#whatTranslate)[`withVerifyResults`](../object/Action.html#withVerifyResults)[`zeroActionTime`](../object/Action.html#zeroActionTime)
 
 Inherited from `BasicProd` :  
-` `[`canResolveTo`](../object/BasicProd.html#canResolveTo)`  `[`getOrigText`](../object/BasicProd.html#getOrigText)`  `[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)`  `
+[`canResolveTo`](../object/BasicProd.html#canResolveTo)[`getOrigText`](../object/BasicProd.html#getOrigText)[`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 
 Inherited from `Resolver` :  
-` `[`allowAll`](../object/Resolver.html#allowAll)`  `[`cacheScopeList`](../object/Resolver.html#cacheScopeList)`  `[`filterAll`](../object/Resolver.html#filterAll)`  `[`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents)`  `[`filterAmbiguousNounPhrase`](../object/Resolver.html#filterAmbiguousNounPhrase)`  `[`filterPluralPhrase`](../object/Resolver.html#filterPluralPhrase)`  `[`filterPossRank`](../object/Resolver.html#filterPossRank)`  `[`getAction`](../object/Resolver.html#getAction)`  `[`getAll`](../object/Resolver.html#getAll)`  `[`getAllDefaults`](../object/Resolver.html#getAllDefaults)`  `[`getDefaultObject`](../object/Resolver.html#getDefaultObject)`  `[`getPossessiveResolver`](../object/Resolver.html#getPossessiveResolver)`  `[`getPronounDefault`](../object/Resolver.html#getPronounDefault)`  `[`getQualifierResolver`](../object/Resolver.html#getQualifierResolver)`  `[`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent)`  `[`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding)`  `[`getScopeList`](../object/Resolver.html#getScopeList)`  `[`getTargetActor`](../object/Resolver.html#getTargetActor)`  `[`matchName`](../object/Resolver.html#matchName)`  `[`objInScope`](../object/Resolver.html#objInScope)`  `[`resetResolver`](../object/Resolver.html#resetResolver)`  `[`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent)`  `[`resolveUnknownNounPhrase`](../object/Resolver.html#resolveUnknownNounPhrase)`  `[`selectIndefinite`](../object/Resolver.html#selectIndefinite)`  `[`withGlobals`](../object/Resolver.html#withGlobals)`  `
+[`allowAll`](../object/Resolver.html#allowAll)[`cacheScopeList`](../object/Resolver.html#cacheScopeList)[`filterAll`](../object/Resolver.html#filterAll)[`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents)[`filterAmbiguousNounPhrase`](../object/Resolver.html#filterAmbiguousNounPhrase)[`filterPluralPhrase`](../object/Resolver.html#filterPluralPhrase)[`filterPossRank`](../object/Resolver.html#filterPossRank)[`getAction`](../object/Resolver.html#getAction)[`getAll`](../object/Resolver.html#getAll)[`getAllDefaults`](../object/Resolver.html#getAllDefaults)[`getDefaultObject`](../object/Resolver.html#getDefaultObject)[`getPossessiveResolver`](../object/Resolver.html#getPossessiveResolver)[`getPronounDefault`](../object/Resolver.html#getPronounDefault)[`getQualifierResolver`](../object/Resolver.html#getQualifierResolver)[`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent)[`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding)[`getScopeList`](../object/Resolver.html#getScopeList)[`getTargetActor`](../object/Resolver.html#getTargetActor)[`matchName`](../object/Resolver.html#matchName)[`objInScope`](../object/Resolver.html#objInScope)[`resetResolver`](../object/Resolver.html#resetResolver)[`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent)[`resolveUnknownNounPhrase`](../object/Resolver.html#resolveUnknownNounPhrase)[`selectIndefinite`](../object/Resolver.html#selectIndefinite)[`withGlobals`](../object/Resolver.html#withGlobals)
 
 <span id="_Properties_"></span>
 

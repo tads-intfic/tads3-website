@@ -37,8 +37,8 @@ the paragraph manager for the main output stream
 </div>
 
 **`mainParagraphManager`**  
-`         `[`ParagraphManager`](../object/ParagraphManager.html)  
-`                 `[`OutputFilter`](../object/OutputFilter.html)  
+[`ParagraphManager`](../object/ParagraphManager.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -48,12 +48,12 @@ the paragraph manager for the main output stream
 
 </div>
 
-` `
+
 
 Inherited from `ParagraphManager` :  
-` `[`leadingMultiPat`](../object/ParagraphManager.html#leadingMultiPat)`  `[`leadingSinglePat`](../object/ParagraphManager.html#leadingSinglePat)`  `[`renderAfterInput`](../object/ParagraphManager.html#renderAfterInput)`  `[`renderText`](../object/ParagraphManager.html#renderText)`  `[`suppressAfter`](../object/ParagraphManager.html#suppressAfter)`  `[`suppressBefore`](../object/ParagraphManager.html#suppressBefore)`  `
+[`leadingMultiPat`](../object/ParagraphManager.html#leadingMultiPat)[`leadingSinglePat`](../object/ParagraphManager.html#leadingSinglePat)[`renderAfterInput`](../object/ParagraphManager.html#renderAfterInput)[`renderText`](../object/ParagraphManager.html#renderText)[`suppressAfter`](../object/ParagraphManager.html#suppressAfter)[`suppressBefore`](../object/ParagraphManager.html#suppressBefore)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -63,12 +63,12 @@ Inherited from `ParagraphManager` :
 
 </div>
 
-` `
+
 
 Inherited from `ParagraphManager` :  
-` `[`filterText`](../object/ParagraphManager.html#filterText)`  `
+[`filterText`](../object/ParagraphManager.html#filterText)
 
-` `
+
 
 <span id="_Properties_"></span>
 

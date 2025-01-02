@@ -70,7 +70,7 @@ bag affinity lists.
 
 </div>
 
-` `[`aff_`](#aff_)`  `[`bag_`](#bag_)`  `[`bulk_`](#bulk_)`  `[`obj_`](#obj_)`  `
+[`aff_`](#aff_)[`bag_`](#bag_)[`bulk_`](#bulk_)[`obj_`](#obj_)
 
 <span id="_MethodSummary_"></span>
 
@@ -80,7 +80,7 @@ bag affinity lists.
 
 </div>
 
-` `[`compareAffinityTo`](#compareAffinityTo)`  `[`construct`](#construct)`  `[`removeMostRecent`](#removeMostRecent)`  `
+[`compareAffinityTo`](#compareAffinityTo)[`construct`](#construct)[`removeMostRecent`](#removeMostRecent)
 
 <span id="_Properties_"></span>
 

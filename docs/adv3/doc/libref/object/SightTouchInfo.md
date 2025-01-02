@@ -69,7 +69,7 @@ touch. We use this to pick the best facet from a list of facets.
 
 </div>
 
-` `[`obj_`](#obj_)`  `[`touchInfo`](#touchInfo)`  `[`visInfo`](#visInfo)`  `
+[`obj_`](#obj_)[`touchInfo`](#touchInfo)[`visInfo`](#visInfo)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ touch. We use this to pick the best facet from a list of facets.
 
 </div>
 
-` `[`construct`](#construct)`  `[`selectBetter`](#selectBetter)`  `
+[`construct`](#construct)[`selectBetter`](#selectBetter)
 
 <span id="_Properties_"></span>
 

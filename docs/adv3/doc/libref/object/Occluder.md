@@ -95,7 +95,7 @@ occlude.
 
 </div>
 
-` `
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -105,7 +105,7 @@ occlude.
 
 </div>
 
-` `[`clearSenseInfo`](#clearSenseInfo)`  `[`finishSensePath`](#finishSensePath)`  `[`occludeObj`](#occludeObj)`  `
+[`clearSenseInfo`](#clearSenseInfo)[`finishSensePath`](#finishSensePath)[`occludeObj`](#occludeObj)
 
 <span id="_Properties_"></span>
 

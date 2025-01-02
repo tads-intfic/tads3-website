@@ -48,7 +48,7 @@ advLite.h contains templates for MenuItems, for your convenience.
 
 A simple example menu:
 
-```
+`
        FirstMenu: MenuItem 'Test menu';
        + MenuItem 'Pets';
        ++ MenuItem 'Chinchillas';
@@ -66,7 +66,7 @@ A simple example menu:
        +++ MenuTopicItem 'Benefits'
          menuContents = ['They, uh, well...', 'Okay, I can\'t think of any.'];
      
-```
+`
 
 To display the menu in the first place, call its **display()** method.
 For example, to display the menu in the above example you would use the
@@ -87,7 +87,7 @@ MenuLongTopicItems to describe various aspects of your game; if you have
 a lot to say you might need to use another level of MenuItems to divide
 your information into sub-menus, e.g.:
 
-```
+`
        aboutMenu: MenuItem 'About';
        + MenuItem 'About Adventure';
        
@@ -111,7 +111,7 @@ your information into sub-menus, e.g.:
            menuContents = 'TADS games use a modified version of the ASK/TELL system...'
        ;
      
-```
+`
 
 You could then call `aboutMenu.display();` in
 the versionInfo.showAbout() method.

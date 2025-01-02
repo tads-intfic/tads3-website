@@ -38,8 +38,8 @@ container, in the sense of a person wearing a coat.
 </div>
 
 **`Worn`**  
-`         `[`ExtLocType`](../object/ExtLocType.html)  
-`                 `[`LocType`](../object/LocType.html)  
+[`ExtLocType`](../object/ExtLocType.html)  
+[`LocType`](../object/LocType.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -49,12 +49,12 @@ container, in the sense of a person wearing a coat.
 
 </div>
 
-` `[`prep`](#prep)`  `
+` [`prep`](#prep)  `
 
-` `
+
 
 Inherited from `LocType` :  
-` `[`intoPrep`](../object/LocType.html#intoPrep)`  `[`listOrder`](../object/LocType.html#listOrder)`  `
+` [`intoPrep`](../object/LocType.html#intoPrep)  [`listOrder`](../object/LocType.html#listOrder)  `
 
 <span id="_MethodSummary_"></span>
 
@@ -64,11 +64,11 @@ Inherited from `LocType` :
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_Properties_"></span>
 

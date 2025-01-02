@@ -37,7 +37,7 @@ our custom "asker" for the missing iobj in an "ENTER \<text\>" command
 </div>
 
 **`enterOnWhatAsker`**  
-`         `[`ResolveAsker`](../object/ResolveAsker.html)  
+[`ResolveAsker`](../object/ResolveAsker.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ our custom "asker" for the missing iobj in an "ENTER \<text\>" command
 
 </div>
 
-` `
 
-` `
+
+
 
 *(none)* <span id="_MethodSummary_"></span>
 
@@ -59,10 +59,10 @@ our custom "asker" for the missing iobj in an "ENTER \<text\>" command
 
 </div>
 
-` `[`askMissingObject`](#askMissingObject)`  `
+[`askMissingObject`](#askMissingObject)
 
 Inherited from `ResolveAsker` :  
-` `[`askDisambig`](../object/ResolveAsker.html#askDisambig)`  `
+[`askDisambig`](../object/ResolveAsker.html#askDisambig)
 
 <span id="_Properties_"></span>
 

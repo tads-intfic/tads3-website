@@ -39,8 +39,8 @@ it's used only for the command-line text itself.
 </div>
 
 **`inputlineStyleTag`**  
-`         `[`HtmlStyleTag`](../object/HtmlStyleTag.html)  
-`                 `[`StyleTag`](../object/StyleTag.html)  
+[`HtmlStyleTag`](../object/HtmlStyleTag.html)  
+[`StyleTag`](../object/StyleTag.html)  
 `                         object`  
 <span id="_PropSummary_"></span>
 
@@ -50,13 +50,13 @@ it's used only for the command-line text itself.
 
 </div>
 
-` `[`htmlCloseText`](#htmlCloseText)`  `[`htmlOpenText`](#htmlOpenText)`  `[`plainCloseText`](#plainCloseText)`  `[`plainOpenText`](#plainOpenText)`  `
+[`htmlCloseText`](#htmlCloseText)[`htmlOpenText`](#htmlOpenText)[`plainCloseText`](#plainCloseText)[`plainOpenText`](#plainOpenText)
 
 Inherited from `HtmlStyleTag` :  
-` `[`closeText`](../object/HtmlStyleTag.html#closeText)`  `[`openText`](../object/HtmlStyleTag.html#openText)`  `
+[`closeText`](../object/HtmlStyleTag.html#closeText)[`openText`](../object/HtmlStyleTag.html#openText)
 
 Inherited from `StyleTag` :  
-` `[`tagName`](../object/StyleTag.html#tagName)`  `
+[`tagName`](../object/StyleTag.html#tagName)
 
 <span id="_MethodSummary_"></span>
 
@@ -66,11 +66,11 @@ Inherited from `StyleTag` :
 
 </div>
 
-` `
 
-` `
 
-` `
+
+
+
 
 *(none)* <span id="_Properties_"></span>
 

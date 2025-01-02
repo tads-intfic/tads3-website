@@ -75,7 +75,7 @@ match object.
 
 </div>
 
-` `[`grammarAltProps`](#grammarAltProps)`  `[`grammarTag`](#grammarTag)`  `
+[`grammarAltProps`](#grammarAltProps)[`grammarTag`](#grammarTag)
 
 <span id="_MethodSummary_"></span>
 
@@ -85,7 +85,7 @@ match object.
 
 </div>
 
-` `[`grammarInfo`](#grammarInfo)`  `
+[`grammarInfo`](#grammarInfo)
 
 <span id="_Properties_"></span>
 

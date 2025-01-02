@@ -38,7 +38,7 @@ since this is the default for everything.
 </div>
 
 **`unwornState`**  
-`         `[`ThingState`](../object/ThingState.html)  
+[`ThingState`](../object/ThingState.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -48,10 +48,10 @@ since this is the default for everything.
 
 </div>
 
-` `
+
 
 Inherited from `ThingState` :  
-` `[`listingOrder`](../object/ThingState.html#listingOrder)`  `[`listName_`](../object/ThingState.html#listName_)`  `[`stateTokens`](../object/ThingState.html#stateTokens)`  `
+[`listingOrder`](../object/ThingState.html#listingOrder)[`listName_`](../object/ThingState.html#listName_)[`stateTokens`](../object/ThingState.html#stateTokens)
 
 <span id="_MethodSummary_"></span>
 
@@ -61,10 +61,10 @@ Inherited from `ThingState` :
 
 </div>
 
-` `
+
 
 Inherited from `ThingState` :  
-` `[`findStateToken`](../object/ThingState.html#findStateToken)`  `[`inventoryName`](../object/ThingState.html#inventoryName)`  `[`listName`](../object/ThingState.html#listName)`  `[`matchName`](../object/ThingState.html#matchName)`  `[`wornName`](../object/ThingState.html#wornName)`  `
+[`findStateToken`](../object/ThingState.html#findStateToken)[`inventoryName`](../object/ThingState.html#inventoryName)[`listName`](../object/ThingState.html#listName)[`matchName`](../object/ThingState.html#matchName)[`wornName`](../object/ThingState.html#wornName)
 
 <span id="_Properties_"></span>
 

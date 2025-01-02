@@ -45,7 +45,7 @@ unchanged, but keeps track of whether any text was seen at all. Our
 </div>
 
 **`MonitorFilter`**  
-`         `[`OutputFilter`](../object/OutputFilter.html)  
+[`OutputFilter`](../object/OutputFilter.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -71,9 +71,9 @@ unchanged, but keeps track of whether any text was seen at all. Our
 
 </div>
 
-` `[`outputFlag`](#outputFlag)`  `
+[`outputFlag`](#outputFlag)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -83,9 +83,9 @@ unchanged, but keeps track of whether any text was seen at all. Our
 
 </div>
 
-` `[`filterText`](#filterText)`  `
+[`filterText`](#filterText)
 
-` `
+
 
 <span id="_Properties_"></span>
 

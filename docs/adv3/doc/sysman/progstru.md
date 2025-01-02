@@ -88,7 +88,7 @@ A token is:
   mark effectively starts a new one.
 - Any of these punctuation marks or sequences: `( ) ,
   . .. ... { } \[ \] == = : ? ?? += ++ + -= -- - -\> \*= \* /= / %=
-  %` `\>= \>\>= \>\>\>= \> \>\> \>\>\> \<= \<\<=
+  %\>= \>\>= \>\>\>= \> \>\> \>\>\> \<= \<\<=
   \<\< \< ; && &= & \|\| \|= \| ^= ^ != ! ~ @ \## \#@ \#`
 
 Within strings, both single-quoted and double-quoted, the backslash

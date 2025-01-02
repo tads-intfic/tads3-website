@@ -69,7 +69,7 @@ indexed by the first word (the verb) of the command template.
 
 </div>
 
-` `[`ptab`](#ptab)`  `
+[`ptab`](#ptab)
 
 <span id="_MethodSummary_"></span>
 
@@ -79,7 +79,7 @@ indexed by the first word (the verb) of the command template.
 
 </div>
 
-` `[`addParser`](#addParser)`  `[`getParsers`](#getParsers)`  `
+[`addParser`](#addParser)[`getParsers`](#getParsers)
 
 <span id="_Properties_"></span>
 

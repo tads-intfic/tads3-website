@@ -60,13 +60,13 @@ excluded from the build if they're not needed in a particular game.
 </div>
 
 **`Script`**  
-`         `[`EventList`](../object/EventList.html)  
-`                 `[`CyclicEventList`](../object/CyclicEventList.html)  
-`                 `[`ExternalEventList`](../object/ExternalEventList.html)  
-`                 `[`RandomEventList`](../object/RandomEventList.html)  
-`                 `[`ShuffledEventList`](../object/ShuffledEventList.html)  
-`                 `[`StopEventList`](../object/StopEventList.html)  
-`                 `[`SyncEventList`](../object/SyncEventList.html)  
+[`EventList`](../object/EventList.html)  
+[`CyclicEventList`](../object/CyclicEventList.html)  
+[`ExternalEventList`](../object/ExternalEventList.html)  
+[`RandomEventList`](../object/RandomEventList.html)  
+[`ShuffledEventList`](../object/ShuffledEventList.html)  
+[`StopEventList`](../object/StopEventList.html)  
+[`SyncEventList`](../object/SyncEventList.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -83,7 +83,7 @@ excluded from the build if they're not needed in a particular game.
 
 </div>
 
-` `[`curScriptState`](#curScriptState)`  `
+[`curScriptState`](#curScriptState)
 
 <span id="_MethodSummary_"></span>
 
@@ -93,7 +93,7 @@ excluded from the build if they're not needed in a particular game.
 
 </div>
 
-` `[`doScript`](#doScript)`  `[`getScriptState`](#getScriptState)`  `
+[`doScript`](#doScript)[`getScriptState`](#getScriptState)
 
 <span id="_Properties_"></span>
 

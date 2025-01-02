@@ -37,7 +37,7 @@ show or schedule a topic inventory, as appropriate
 </div>
 
 **`byeConvType`**  
-`         `[`ConvType`](../object/ConvType.html)  
+[`ConvType`](../object/ConvType.html)  
 `                 object`  
 <span id="_PropSummary_"></span>
 
@@ -47,9 +47,9 @@ show or schedule a topic inventory, as appropriate
 
 </div>
 
-` `[`defaultResponseProp`](#defaultResponseProp)`  `[`topicListProp`](#topicListProp)`  `[`unknownMsg`](#unknownMsg)`  `
+[`defaultResponseProp`](#defaultResponseProp)[`topicListProp`](#topicListProp)[`unknownMsg`](#unknownMsg)
 
-` `
+
 
 <span id="_MethodSummary_"></span>
 
@@ -59,10 +59,10 @@ show or schedule a topic inventory, as appropriate
 
 </div>
 
-` `[`defaultResponse`](#defaultResponse)`  `
+[`defaultResponse`](#defaultResponse)
 
 Inherited from `ConvType` :  
-` `[`afterResponse`](../object/ConvType.html#afterResponse)`  `
+[`afterResponse`](../object/ConvType.html#afterResponse)
 
 <span id="_Properties_"></span>
 

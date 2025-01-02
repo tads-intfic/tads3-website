@@ -43,7 +43,7 @@ A base class for topic entries that match simple simulation objects.
 </div>
 
 **`ThingMatchTopic`**  
-`         `[`TopicEntry`](../object/TopicEntry.html)  
+[`TopicEntry`](../object/TopicEntry.html)  
 `                 object`  
 <span id="_SubClassTree_"></span>
 
@@ -54,13 +54,13 @@ A base class for topic entries that match simple simulation objects.
 </div>
 
 **`ThingMatchTopic`**  
-`         `[`GiveShowTopic`](../object/GiveShowTopic.html)  
-`                 `[`GiveTopic`](../object/GiveTopic.html)  
-`                 `[`ShowTopic`](../object/ShowTopic.html)  
-`         `[`InitiateTopic`](../object/InitiateTopic.html)  
-`         `[`TopicOrThingMatchTopic`](../object/TopicOrThingMatchTopic.html)  
-`                 `[`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
-`                 `[`AskTellShowTopic`](../object/AskTellShowTopic.html)  
+[`GiveShowTopic`](../object/GiveShowTopic.html)  
+[`GiveTopic`](../object/GiveTopic.html)  
+[`ShowTopic`](../object/ShowTopic.html)  
+[`InitiateTopic`](../object/InitiateTopic.html)  
+[`TopicOrThingMatchTopic`](../object/TopicOrThingMatchTopic.html)  
+[`AskTellGiveShowTopic`](../object/AskTellGiveShowTopic.html)  
+[`AskTellShowTopic`](../object/AskTellShowTopic.html)  
 <span id="_ObjectSummary_"></span>
 
 <div class="mjhd">
@@ -77,10 +77,10 @@ A base class for topic entries that match simple simulation objects.
 
 </div>
 
-` `
+
 
 Inherited from `TopicEntry` :  
-` `[`altTalkCount`](../object/TopicEntry.html#altTalkCount)`  `[`altTopicList`](../object/TopicEntry.html#altTopicList)`  `[`impliesGreeting`](../object/TopicEntry.html#impliesGreeting)`  `[`includeInList`](../object/TopicEntry.html#includeInList)`  `[`isActive`](../object/TopicEntry.html#isActive)`  `[`isConversational`](../object/TopicEntry.html#isConversational)`  `[`matchObj`](../object/TopicEntry.html#matchObj)`  `[`matchScore`](../object/TopicEntry.html#matchScore)`  `[`talkCount`](../object/TopicEntry.html#talkCount)`  `[`topicGroupActive`](../object/TopicEntry.html#topicGroupActive)`  `[`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment)`  `[`topicResponse`](../object/TopicEntry.html#topicResponse)`  `
+[`altTalkCount`](../object/TopicEntry.html#altTalkCount)[`altTopicList`](../object/TopicEntry.html#altTopicList)[`impliesGreeting`](../object/TopicEntry.html#impliesGreeting)[`includeInList`](../object/TopicEntry.html#includeInList)[`isActive`](../object/TopicEntry.html#isActive)[`isConversational`](../object/TopicEntry.html#isConversational)[`matchObj`](../object/TopicEntry.html#matchObj)[`matchScore`](../object/TopicEntry.html#matchScore)[`talkCount`](../object/TopicEntry.html#talkCount)[`topicGroupActive`](../object/TopicEntry.html#topicGroupActive)[`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment)[`topicResponse`](../object/TopicEntry.html#topicResponse)
 
 <span id="_MethodSummary_"></span>
 
@@ -90,10 +90,10 @@ Inherited from `TopicEntry` :
 
 </div>
 
-` `[`isMatchPossible`](#isMatchPossible)`  `[`matchTopic`](#matchTopic)`  `[`setTopicPronouns`](#setTopicPronouns)`  `
+[`isMatchPossible`](#isMatchPossible)[`matchTopic`](#matchTopic)[`setTopicPronouns`](#setTopicPronouns)
 
 Inherited from `TopicEntry` :  
-` `[`addAltTopic`](../object/TopicEntry.html#addAltTopic)`  `[`addSuggestedTopic`](../object/TopicEntry.html#addSuggestedTopic)`  `[`addTopic`](../object/TopicEntry.html#addTopic)`  `[`adjustScore`](../object/TopicEntry.html#adjustScore)`  `[`anyAltIsActive`](../object/TopicEntry.html#anyAltIsActive)`  `[`breakTopicTie`](../object/TopicEntry.html#breakTopicTie)`  `[`checkIsActive`](../object/TopicEntry.html#checkIsActive)`  `[`deferToEntry`](../object/TopicEntry.html#deferToEntry)`  `[`getActor`](../object/TopicEntry.html#getActor)`  `[`getTopicOwner`](../object/TopicEntry.html#getTopicOwner)`  `[`handleTopic`](../object/TopicEntry.html#handleTopic)`  `[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)`  `[`noteAltInvocation`](../object/TopicEntry.html#noteAltInvocation)`  `[`noteInvocation`](../object/TopicEntry.html#noteInvocation)`  `
+[`addAltTopic`](../object/TopicEntry.html#addAltTopic)[`addSuggestedTopic`](../object/TopicEntry.html#addSuggestedTopic)[`addTopic`](../object/TopicEntry.html#addTopic)[`adjustScore`](../object/TopicEntry.html#adjustScore)[`anyAltIsActive`](../object/TopicEntry.html#anyAltIsActive)[`breakTopicTie`](../object/TopicEntry.html#breakTopicTie)[`checkIsActive`](../object/TopicEntry.html#checkIsActive)[`deferToEntry`](../object/TopicEntry.html#deferToEntry)[`getActor`](../object/TopicEntry.html#getActor)[`getTopicOwner`](../object/TopicEntry.html#getTopicOwner)[`handleTopic`](../object/TopicEntry.html#handleTopic)[`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry)[`noteAltInvocation`](../object/TopicEntry.html#noteAltInvocation)[`noteInvocation`](../object/TopicEntry.html#noteInvocation)
 
 <span id="_Properties_"></span>
 
