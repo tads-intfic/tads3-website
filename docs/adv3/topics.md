@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 ## Game <a href="#top" style="font-size: small">[top]</a>
 

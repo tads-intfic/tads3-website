@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Worn</span><span class="type">object</span>
 

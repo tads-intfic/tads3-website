@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">nounPhraseWithContents(basic)</span><span class="type">grammar</span>
 

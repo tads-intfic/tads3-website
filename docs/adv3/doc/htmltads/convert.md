@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Converting a TADS 2 game to HTML TADS
 

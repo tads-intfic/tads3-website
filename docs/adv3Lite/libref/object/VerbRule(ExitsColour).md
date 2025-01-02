@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(ExitsColour)</span><span class="type">grammar</span>
 

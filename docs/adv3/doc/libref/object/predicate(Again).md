@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Again)</span><span class="type">grammar</span>
 

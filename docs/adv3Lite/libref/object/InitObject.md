@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">InitObject</span><span class="type">class</span>
 

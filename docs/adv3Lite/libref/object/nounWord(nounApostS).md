@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">nounWord(nounApostS)</span><span class="type">grammar</span>
 

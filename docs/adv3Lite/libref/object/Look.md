@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Look</span><span class="type">object</span>
 

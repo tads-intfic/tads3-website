@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Direction</span><span class="type">class</span>
 

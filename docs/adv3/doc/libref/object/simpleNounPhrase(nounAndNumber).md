@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">simpleNounPhrase(nounAndNumber)</span><span class="type">grammar</span>
 

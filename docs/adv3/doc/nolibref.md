@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 TADS 3 Library Reference Manual Not Installed
 

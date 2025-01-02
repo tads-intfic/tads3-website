@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(AttackWith)</span><span class="type">grammar</span>
 

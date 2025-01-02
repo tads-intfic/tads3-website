@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">regionPreinit</span><span class="type">object</span>
 

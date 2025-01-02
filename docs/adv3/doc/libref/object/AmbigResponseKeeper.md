@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">AmbigResponseKeeper</span><span class="type">class</span>
 

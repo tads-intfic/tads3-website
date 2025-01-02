@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">completeNounPhraseWithoutAll(her)</span><span class="type">grammar</span>
 

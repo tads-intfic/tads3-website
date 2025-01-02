@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(ExtraHints)</span><span class="type">grammar</span>
 

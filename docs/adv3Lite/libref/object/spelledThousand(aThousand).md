@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">spelledThousand(aThousand)</span><span class="type">grammar</span>
 

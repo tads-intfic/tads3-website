@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">SmellSomething</span><span class="type">object</span>
 

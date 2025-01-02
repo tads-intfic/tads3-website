@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">verify.t</span><span class="type">file</span>
 

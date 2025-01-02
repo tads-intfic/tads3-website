@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">thoughts.t</span><span class="type">file</span>
 

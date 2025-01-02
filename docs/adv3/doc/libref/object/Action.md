@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Action</span><span class="type">class</span>
 

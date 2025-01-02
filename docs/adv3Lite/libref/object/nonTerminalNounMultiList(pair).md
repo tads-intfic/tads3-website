@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">nonTerminalNounMultiList(pair)</span><span class="type">grammar</span>
 

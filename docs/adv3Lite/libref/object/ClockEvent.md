@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">ClockEvent</span><span class="type">class</span>
 

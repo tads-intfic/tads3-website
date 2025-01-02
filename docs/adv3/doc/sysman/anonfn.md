@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <div class="topbar">
 
@@ -48,12 +49,10 @@ Some types of groups are easy to iterate over. For example, performing
 an operation on each item in a list is just a matter of using a counter
 to step through the possible index values:
 
-<div class="code">
-
+```
     for (local i = 1, local cnt = lst.length() ; i <= cnt ; ++i)
       doSomethingWith(lst[i]);
-
-</div>
+```
 
 Other groups are more complicated to iterate over, though. For example,
 we might want to display all of the things a character in a game is

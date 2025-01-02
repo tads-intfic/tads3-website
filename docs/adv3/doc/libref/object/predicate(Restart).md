@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Restart)</span><span class="type">grammar</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Starboard)</span><span class="type">grammar</span>
 

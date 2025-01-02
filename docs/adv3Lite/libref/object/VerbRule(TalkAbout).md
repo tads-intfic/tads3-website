@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(TalkAbout)</span><span class="type">grammar</span>
 

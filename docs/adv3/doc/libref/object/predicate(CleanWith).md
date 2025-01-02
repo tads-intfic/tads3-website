@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(CleanWith)</span><span class="type">grammar</span>
 

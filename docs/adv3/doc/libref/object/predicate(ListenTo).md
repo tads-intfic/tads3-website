@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(ListenTo)</span><span class="type">grammar</span>
 

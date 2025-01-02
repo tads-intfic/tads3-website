@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">AskFor</span><span class="type">object</span>
 

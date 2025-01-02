@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Smell)</span><span class="type">grammar</span>
 

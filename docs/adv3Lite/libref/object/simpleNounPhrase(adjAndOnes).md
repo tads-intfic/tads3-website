@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">simpleNounPhrase(adjAndOnes)</span><span class="type">grammar</span>
 

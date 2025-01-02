@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">terminalNounPhrase(pluralExcept)</span><span class="type">grammar</span>
 

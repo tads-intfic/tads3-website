@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">State</span><span class="type">class</span>
 

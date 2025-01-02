@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Unplug)</span><span class="type">grammar</span>
 

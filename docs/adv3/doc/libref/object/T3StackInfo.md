@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">T3StackInfo</span><span class="type">class</span>
 

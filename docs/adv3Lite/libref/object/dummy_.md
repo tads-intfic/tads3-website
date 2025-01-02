@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">dummy\_</span><span class="type">object</span>
 

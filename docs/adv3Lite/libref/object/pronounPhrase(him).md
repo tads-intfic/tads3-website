@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">pronounPhrase(him)</span><span class="type">grammar</span>
 

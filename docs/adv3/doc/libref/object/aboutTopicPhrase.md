@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">aboutTopicPhrase</span><span class="type">GrammarProd</span>
 

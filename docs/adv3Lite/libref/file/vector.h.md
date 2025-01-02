@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">vector.h</span><span class="type">file</span>
 

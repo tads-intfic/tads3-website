@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">CommandActorAction</span><span class="type">class</span>
 

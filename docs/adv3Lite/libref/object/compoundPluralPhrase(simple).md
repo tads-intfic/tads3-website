@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">compoundPluralPhrase(simple)</span><span class="type">grammar</span>
 

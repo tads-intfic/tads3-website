@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">menusys.t</span><span class="type">file</span>
 

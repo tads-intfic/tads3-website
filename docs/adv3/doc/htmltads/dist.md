@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Distributing Your Game
 

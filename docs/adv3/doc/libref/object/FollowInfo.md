@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">FollowInfo</span><span class="type">class</span>
 

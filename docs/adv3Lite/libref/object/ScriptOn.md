@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">ScriptOn</span><span class="type">object</span>
 

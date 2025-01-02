@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Yell)</span><span class="type">grammar</span>
 

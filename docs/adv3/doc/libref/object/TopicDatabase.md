@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">TopicDatabase</span><span class="type">class</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">adv3LibInit</span><span class="type">object</span>
 

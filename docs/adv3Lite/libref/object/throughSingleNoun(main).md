@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">throughSingleNoun(main)</span><span class="type">grammar</span>
 

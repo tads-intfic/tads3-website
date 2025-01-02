@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">en_us.h</span><span class="type">file</span>
 

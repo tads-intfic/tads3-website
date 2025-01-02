@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">SwitchOn</span><span class="type">object</span>
 

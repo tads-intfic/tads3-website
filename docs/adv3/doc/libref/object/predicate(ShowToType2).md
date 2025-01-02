@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(ShowToType2)</span><span class="type">grammar</span>
 

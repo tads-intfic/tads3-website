@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">\_MultiMethodPlaceholder</span><span class="type">class</span>
 

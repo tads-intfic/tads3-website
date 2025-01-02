@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">actorHoldingDescInventoryListerShort</span><span class="type">object</span>
 

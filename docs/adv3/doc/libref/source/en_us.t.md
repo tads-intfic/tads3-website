@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # en_us.t
 

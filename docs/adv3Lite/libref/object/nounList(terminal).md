@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">nounList(terminal)</span><span class="type">grammar</span>
 

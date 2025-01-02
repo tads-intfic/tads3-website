@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">literalAdjPhrase(number)</span><span class="type">grammar</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Climb</span><span class="type">object</span>
 

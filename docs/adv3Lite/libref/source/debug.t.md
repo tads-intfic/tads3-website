@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # debug.t
 

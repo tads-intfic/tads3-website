@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(StandOn)</span><span class="type">grammar</span>
 

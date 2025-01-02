@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">actorBadCommandPhrase(main)</span><span class="type">grammar</span>
 

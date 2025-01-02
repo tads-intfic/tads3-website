@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(Flip)</span><span class="type">grammar</span>
 

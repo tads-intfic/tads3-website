@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">qualifiedSingularNounPhrase(indefinite)</span><span class="type">grammar</span>
 

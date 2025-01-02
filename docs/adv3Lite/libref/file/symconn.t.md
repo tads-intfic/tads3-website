@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">symconn.t</span><span class="type">file</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">pronounPhrase(himself)</span><span class="type">grammar</span>
 

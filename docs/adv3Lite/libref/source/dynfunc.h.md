@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # dynfunc.h
 

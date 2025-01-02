@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">tipMode</span><span class="type">object</span>
 

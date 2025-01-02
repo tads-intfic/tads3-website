@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Up</span><span class="type">object</span>
 

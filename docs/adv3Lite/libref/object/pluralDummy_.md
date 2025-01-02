@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">pluralDummy\_</span><span class="type">object</span>
 

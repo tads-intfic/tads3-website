@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">directionName(root)</span><span class="type">grammar</span>
 

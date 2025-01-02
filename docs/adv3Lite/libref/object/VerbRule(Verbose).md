@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(Verbose)</span><span class="type">grammar</span>
 

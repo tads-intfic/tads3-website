@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(LieIn)</span><span class="type">grammar</span>
 

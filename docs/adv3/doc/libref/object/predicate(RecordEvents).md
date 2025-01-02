@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(RecordEvents)</span><span class="type">grammar</span>
 

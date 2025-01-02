@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">realTimeManager</span><span class="type">object</span>
 

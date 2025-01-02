@@ -8,3 +8,5 @@ lsi: false
 kramdown:
   input: GFM
   extensions: [gfm, code-block]
+gems:
+  - jekyll-liquify

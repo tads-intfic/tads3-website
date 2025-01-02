@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">UnmatchedActorError</span><span class="type">class</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">\_multiMethodNonObjectBindings</span><span class="type">object</span>
 

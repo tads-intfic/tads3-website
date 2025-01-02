@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(TellAboutImplicit)</span><span class="type">grammar</span>
 

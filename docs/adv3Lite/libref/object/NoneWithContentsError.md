@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">NoneWithContentsError</span><span class="type">class</span>
 

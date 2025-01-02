@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">compoundNounPhrase</span><span class="type">GrammarProd</span>
 

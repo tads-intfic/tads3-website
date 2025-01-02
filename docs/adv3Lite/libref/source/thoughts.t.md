@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # thoughts.t
 

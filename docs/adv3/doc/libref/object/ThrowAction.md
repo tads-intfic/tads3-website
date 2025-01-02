@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">ThrowAction</span><span class="type">class</span>
 

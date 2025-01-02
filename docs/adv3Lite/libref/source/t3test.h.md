@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # t3test.h
 

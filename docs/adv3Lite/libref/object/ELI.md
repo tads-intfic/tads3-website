@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">ELI</span><span class="type">class</span>
 

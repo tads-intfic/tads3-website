@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">terminalNounPhrase(allBut)</span><span class="type">grammar</span>
 

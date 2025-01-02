@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">disambigPhrase(locational)</span><span class="type">grammar</span>
 

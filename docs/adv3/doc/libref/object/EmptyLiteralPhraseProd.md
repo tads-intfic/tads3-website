@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">EmptyLiteralPhraseProd</span><span class="type">class</span>
 

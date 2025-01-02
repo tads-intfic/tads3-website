@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Help Topics \> [Table of Contents](wbcont.html)  
   

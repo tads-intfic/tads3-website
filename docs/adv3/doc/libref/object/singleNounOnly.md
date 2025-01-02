@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">singleNounOnly</span><span class="type">GrammarProd</span>
 

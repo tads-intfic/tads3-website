@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">possessiveAdjPhrase(indefiniteNpApostropheS)</span><span class="type">grammar</span>
 

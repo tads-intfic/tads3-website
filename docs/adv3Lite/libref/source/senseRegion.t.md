@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # senseRegion.t
 

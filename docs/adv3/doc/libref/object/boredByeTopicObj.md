@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">boredByeTopicObj</span><span class="type">object</span>
 

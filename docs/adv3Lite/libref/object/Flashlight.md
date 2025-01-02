@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Flashlight</span><span class="type">class</span>
 

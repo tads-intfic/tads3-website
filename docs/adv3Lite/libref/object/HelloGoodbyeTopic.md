@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">HelloGoodbyeTopic</span><span class="type">class</span>
 

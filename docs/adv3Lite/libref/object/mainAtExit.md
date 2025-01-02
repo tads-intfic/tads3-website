@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">mainAtExit</span><span class="type">object</span>
 

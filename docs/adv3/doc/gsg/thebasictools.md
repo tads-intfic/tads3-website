@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 [\[Previous\]](furtherprogramming.html)
 [\[Main\]](newchapterwithtext.html) [\[Next\]](averysimplegame.html)  

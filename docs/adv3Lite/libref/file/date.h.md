@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">date.h</span><span class="type">file</span>
 

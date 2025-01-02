@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">compoundNounPhrase(of)</span><span class="type">grammar</span>
 

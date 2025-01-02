@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">tok.t</span><span class="type">file</span>
 

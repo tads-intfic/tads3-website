@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">commandPhrase(ambiguousConj)</span><span class="type">grammar</span>
 

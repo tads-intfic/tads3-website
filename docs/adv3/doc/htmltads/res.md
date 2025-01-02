@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Resources in HTML TADS
 

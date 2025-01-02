@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">firstCommandPhrase(askTellActorTo)</span><span class="type">grammar</span>
 

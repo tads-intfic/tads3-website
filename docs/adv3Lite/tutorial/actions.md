@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <div class="topbar">
 
@@ -18,7 +19,6 @@ Actions</a>     </span>
 
 </div>
 
-<div class="main">
 
 # Defining Actions
 
@@ -49,8 +49,7 @@ all do the same thing. One way to do this is to define a new
 **VerbRule** that recognizes PUSH X FORWARD and PUSH FORWARD ON X and
 makes either trigger the Push action. This is what it might look like:
 
-<div class="code">
-
+```
     VerbRule(PushForward)
         'push' multiDobj 'forward'
         | 'push' 'forward' 'on' multiDobj
@@ -59,8 +58,7 @@ makes either trigger the Push action. This is what it might look like:
         verbPhrase = 'push/pushing forward (what)'
         missingQ = 'what do you want to push forward'
     ;
-
-</div>
+```<div class="code">\n\n((.|\n)*?)\n\</div>
 
 Let's take this piece by piece. First we begin our specification of the
 new grammar for the Push action with
@@ -435,8 +433,6 @@ commands that can trigger them. This list also supplies the names of
 some of the properties you'll most commonly want to customize when
 defining your own action handling together with additional information
 to help you on your way.
-
-</div>
 
 ------------------------------------------------------------------------
 

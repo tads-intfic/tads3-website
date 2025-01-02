@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">directionName(east)</span><span class="type">grammar</span>
 

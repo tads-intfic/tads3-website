@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">BaseContentsLister</span><span class="type">class</span>
 

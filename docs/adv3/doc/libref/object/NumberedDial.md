@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">NumberedDial</span><span class="type">class</span>
 

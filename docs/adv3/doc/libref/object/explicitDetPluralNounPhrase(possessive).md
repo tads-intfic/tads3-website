@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">explicitDetPluralNounPhrase(possessive)</span><span class="type">grammar</span>
 

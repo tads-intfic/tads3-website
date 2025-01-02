@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 HTML TADS deviations from standard HTML specifications
 

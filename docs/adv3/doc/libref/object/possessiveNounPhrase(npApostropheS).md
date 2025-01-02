@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">possessiveNounPhrase(npApostropheS)</span><span class="type">grammar</span>
 

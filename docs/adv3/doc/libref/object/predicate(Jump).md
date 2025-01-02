@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Jump)</span><span class="type">grammar</span>
 

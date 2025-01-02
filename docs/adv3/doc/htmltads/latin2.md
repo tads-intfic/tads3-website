@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 HTML TADS Latin-2 Character Entities
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">scene.t</span><span class="type">file</span>
 

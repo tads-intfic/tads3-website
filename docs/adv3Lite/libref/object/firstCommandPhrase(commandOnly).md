@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">firstCommandPhrase(commandOnly)</span><span class="type">grammar</span>
 

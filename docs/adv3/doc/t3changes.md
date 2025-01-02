@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 TADS 3 Change History
 

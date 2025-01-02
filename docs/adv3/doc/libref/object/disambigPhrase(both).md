@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">disambigPhrase(both)</span><span class="type">grammar</span>
 

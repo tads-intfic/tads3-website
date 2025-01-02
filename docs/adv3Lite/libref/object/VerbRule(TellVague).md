@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(TellVague)</span><span class="type">grammar</span>
 

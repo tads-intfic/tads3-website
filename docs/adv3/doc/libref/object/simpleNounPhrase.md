@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">simpleNounPhrase</span><span class="type">GrammarProd</span>
 

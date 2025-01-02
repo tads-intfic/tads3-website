@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">ReplayAction</span><span class="type">class</span>
 

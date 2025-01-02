@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">DefaultAction</span><span class="type">class</span>
 

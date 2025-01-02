@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">miscWordList(list)</span><span class="type">grammar</span>
 

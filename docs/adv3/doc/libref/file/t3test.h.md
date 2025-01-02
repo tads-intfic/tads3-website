@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">t3test.h</span><span class="type">file</span>
 

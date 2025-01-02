@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">NorthwestAction</span><span class="type">class</span>
 

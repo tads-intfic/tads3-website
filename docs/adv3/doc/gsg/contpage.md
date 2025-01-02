@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <table data-border="0" data-cellspacing="2">
 <colgroup>

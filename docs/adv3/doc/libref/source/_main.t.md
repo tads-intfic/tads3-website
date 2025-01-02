@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # \_main.t
 

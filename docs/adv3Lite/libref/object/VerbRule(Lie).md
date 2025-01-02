@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(Lie)</span><span class="type">grammar</span>
 

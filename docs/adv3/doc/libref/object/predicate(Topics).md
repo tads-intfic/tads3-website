@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Topics)</span><span class="type">grammar</span>
 

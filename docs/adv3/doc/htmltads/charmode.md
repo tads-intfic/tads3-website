@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Playing HTML TADS Games with the Character-Mode Interpreter
 

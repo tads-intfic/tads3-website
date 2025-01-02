@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">nounConjunction</span><span class="type">GrammarProd</span>
 

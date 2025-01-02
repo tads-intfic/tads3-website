@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">UnfastenFromAction</span><span class="type">class</span>
 

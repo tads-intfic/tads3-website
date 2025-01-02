@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">numberObjPhrase</span><span class="type">GrammarProd</span>
 

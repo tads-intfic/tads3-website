@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">defaultVerbPhrase(noun)</span><span class="type">grammar</span>
 

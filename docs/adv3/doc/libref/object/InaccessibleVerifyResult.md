@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">InaccessibleVerifyResult</span><span class="type">class</span>
 

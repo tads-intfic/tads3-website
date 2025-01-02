@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">PushAftAction</span><span class="type">class</span>
 

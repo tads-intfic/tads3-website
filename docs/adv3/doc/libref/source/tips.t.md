@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # tips.t
 

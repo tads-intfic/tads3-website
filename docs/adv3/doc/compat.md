@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 HTML TADS System Compatibility Notes
 

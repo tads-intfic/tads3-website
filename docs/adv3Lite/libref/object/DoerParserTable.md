@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">DoerParserTable</span><span class="type">class</span>
 

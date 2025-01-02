@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">exceptList(single)</span><span class="type">grammar</span>
 

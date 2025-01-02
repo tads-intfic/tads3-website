@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">pluralPhraseWithContents(basic)</span><span class="type">grammar</span>
 

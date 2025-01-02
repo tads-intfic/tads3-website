@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Welcome to the TADS Player Kit
 

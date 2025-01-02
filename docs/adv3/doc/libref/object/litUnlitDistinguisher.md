@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">litUnlitDistinguisher</span><span class="type">object</span>
 

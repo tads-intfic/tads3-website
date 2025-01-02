@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">TurnOnAction</span><span class="type">class</span>
 

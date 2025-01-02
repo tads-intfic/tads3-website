@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(PushTravelClimbUp)</span><span class="type">grammar</span>
 

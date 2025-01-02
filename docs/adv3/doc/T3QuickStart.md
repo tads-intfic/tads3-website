@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <div class="main" role="main">
 

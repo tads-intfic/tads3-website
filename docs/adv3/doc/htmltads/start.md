@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Getting Started with HTML in TADS
 

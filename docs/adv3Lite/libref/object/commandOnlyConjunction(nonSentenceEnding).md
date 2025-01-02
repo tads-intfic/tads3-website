@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">commandOnlyConjunction(nonSentenceEnding)</span><span class="type">grammar</span>
 

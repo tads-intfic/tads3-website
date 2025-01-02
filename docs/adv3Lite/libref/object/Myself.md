@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Myself</span><span class="type">object</span>
 

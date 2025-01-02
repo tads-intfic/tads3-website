@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">npcDeferredMessagesDirect</span><span class="type">object</span>
 

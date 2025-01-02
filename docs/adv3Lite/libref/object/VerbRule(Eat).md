@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(Eat)</span><span class="type">grammar</span>
 

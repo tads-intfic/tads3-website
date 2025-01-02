@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">outDirection</span><span class="type">object</span>
 

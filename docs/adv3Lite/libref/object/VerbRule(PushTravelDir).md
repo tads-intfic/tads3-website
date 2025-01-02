@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(PushTravelDir)</span><span class="type">grammar</span>
 

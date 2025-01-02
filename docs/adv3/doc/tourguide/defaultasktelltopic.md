@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <table width="100%" data-border="0" data-cellspacing="0"
 data-cellpadding="3" data-bgcolor="#C0C0C0">

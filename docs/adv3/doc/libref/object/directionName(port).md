@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">directionName(port)</span><span class="type">grammar</span>
 

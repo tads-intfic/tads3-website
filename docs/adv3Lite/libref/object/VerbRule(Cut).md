@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(Cut)</span><span class="type">grammar</span>
 

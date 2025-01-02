@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">actorActionContinuer\_</span><span class="type">object</span>
 

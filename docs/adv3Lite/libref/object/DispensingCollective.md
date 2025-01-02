@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">DispensingCollective</span><span class="type">class</span>
 

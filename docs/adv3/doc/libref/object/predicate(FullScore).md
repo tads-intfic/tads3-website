@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(FullScore)</span><span class="type">grammar</span>
 

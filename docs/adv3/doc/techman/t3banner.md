@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <div class="topbar">
 
@@ -126,12 +127,10 @@ window).
 We could create the picture window using the low level function
 <span class="code">bannerCreate()</span>:
 
-<div class="code">
-
+```
     picWin = bannerCreate(nil, BannerAfter, statuslineBanner.handle_, BannerTypeText, 
                   BannerAlignTop, 10, BannerSizeAbsolute, BannerStyleBorder);
-
-</div>
+```
 
 The first argument here is the parent window of the new window we're
 creating. In this case the parent is the main window so we use the value
@@ -166,12 +165,10 @@ occupy the right hand half of the space currently occupied by the
 picture banner, so we make it a child of picWin, align it to the right,
 and assign it 50% of the space:
 
-<div class="code">
-
+```
     captionWin = bannerCreate(picWin, BannerFirst, nil, BannerTypeText, 
                   BannerAlignRight, 50, BannerSizePercent, BannerStyleBorder);
-
-</div>
+```
 
 This time the second and third arguments are
 <span class="code">BannerFirst</span> and <span class="code">nil</span>
@@ -191,8 +188,7 @@ which to store them. While we're at it, we could make it an
 <span class="code">InitObject</span> so that it can automatically create
 our banner layout at startup:
 
-<div class="code">
-
+```
     banners:InitObject
        picWin = nil
        captionWin = nil
@@ -208,20 +204,17 @@ our banner layout at startup:
 
        execute() {  initLayout(); }
     ;
-
-</div>
+```
 
 Now, when we want to display anything in our new banner windows, we can
 simply use the <span class="code">bannerSay()</span> method; e.g. to
 display a picture of a banner with a caption:
 
-<div class="code">
-
+```
     bannerSay(banners.picWin, '<img src="pics/sheldonian.jpg">');
     bannerSay(banners.captionWin, 'A view of Oxford\'s famous Sheldonian Theatre,
        designed by Sir Christopher Wren');
-
-</div>
+```
 
 So far, this works reasonably well, and it serves to illustrate some of
 the main principles of working with banners in TADS 3, but there a great
@@ -243,15 +236,13 @@ calling low-level tadsio methods, we define objects to represent the
 various banner windows we want to create, and then use their methods to
 manipulate them. In essence we create:
 
-<div class="code">
-
+```
     picWindow: BannerWindow
     ;
 
     captionWindow: BannerWindow
     ;
-
-</div>
+```
 
 Of course the above definitions will not actually do anything, since
 they don't define where our two new banners are to appear, or do
@@ -283,8 +274,7 @@ included in the screen layout at startup is their
 called during game initialization. Following the same logic we used
 before, as a first attempt we might try:
 
-<div class="code">
-
+```
     picWindow: BannerWindow
        initBannerWindow()
        {
@@ -310,8 +300,7 @@ before, as a first attempt we might try:
           inherited();
        }
     ;
-
-</div>
+```
 
 As you may have noticed, the arguments to
 <span class="code">showBanner()</span> are almost identical to those of
@@ -337,8 +326,7 @@ The trick is to ensure that <span class="code">initBannerWindow()</span>
 calls the <span class="code">initBannerWindow()</span> methods of any
 banners that must already exist. So as a second attempt we might try:
 
-<div class="code">
-
+```
     picWindow: BannerWindow
        initBannerWindow()
        {
@@ -363,8 +351,7 @@ banners that must already exist. So as a second attempt we might try:
           inherited();
        }
     ;
-
-</div>
+```
 
 Now if the initialization routine happens upon
 <span class="code">captionWindow</span> before
@@ -388,8 +375,7 @@ initialized, so we don't need to be initialized again. We can therefore
 check the value of <span class="code">inited\_</span> at the start of
 the <span class="code">initBannerWindow()</span> method:
 
-<div class="code">
-
+```
     picWindow: BannerWindow
        initBannerWindow()
        {
@@ -420,8 +406,7 @@ the <span class="code">initBannerWindow()</span> method:
           inherited();
        }
     ;
-
-</div>
+```
 
 At this point, you may be getting the impression that it was more
 straightforward to use the low level banner API functions, except that
@@ -442,13 +427,11 @@ In order to display actual content in these banner windows, we simply
 need to call their <span class="code">writeToBanner()</span> method; for
 example:
 
-<div class="code">
-
+```
     picWindow.writeToBanner('<img src="pics/sheldonian.jpg">');
     captionWindow.writeToBanner('A view of Oxford\'s famous Sheldonian Theatre,
        designed by Sir Christopher Wren');
-
-</div>
+```
 
 This method is perfectly workable if either of the following conditions
 is true:
@@ -517,8 +500,7 @@ of these issues for you.
 Using <span class="code">CustomBannerWindow</span>, the banners we
 defined in the previous section could be defined simply with:
 
-<div class="code">
-
+```
     picWindow: CustomBannerWindow
        bannerArgs = [nil, BannerAfter, statuslineBanner, BannerText, 
                   BannerTop, 10, BannerSizeAbsolute, BannerStyleBorder]      
@@ -528,8 +510,7 @@ defined in the previous section could be defined simply with:
        bannerArgs = [picWindow, BannerFirst, nil , BannerText, 
                     BannerRight, 50, BannerSizePercent, BannerStyleBorder]   
     ;
-
-</div>
+```
 
 This code in fact does much the same as the code we ended up with using
 BannerWindow. In particular,
@@ -565,16 +546,14 @@ issue is automatically taken care of for you. It also means that you can
 use the <span class="code">currentContents</span> property to stipulate
 what you want a banner to play at the start of the game, for example:
 
-<div class="code">
-
+```
     picWindow: CustomBannerWindow
        bannerArgs = [nil, BannerAfter, statuslineBanner, BannerText, 
                   BannerTop, 10, BannerSizeAbsolute, BannerStyleBorder]      
 
        currentContents = '<img src="welcome.jpg">'
     ;
-
-</div>
+```
 
 Apart from initialization, however, your game code should not modify
 <span class="code">currentContents</span> directly (unless for some very
@@ -626,11 +605,9 @@ function, to determine the kind of interpreter we're running on. So, for
 example, to suppress the display of a banner on an interpreter than
 can't display JPEGs we'd define:
 
-<div class="code">
-
+```
     canDisplay = (systemInfo(SysInfoJpeg))
-
-</div>
+```
 
 The main thing we need to be careful about here ensuring that we don't
 define <span class="code">canDisplay</span> methods that can evaluate to
@@ -651,13 +628,11 @@ slightly less error-prone to override the
 <span class="code">CustomBannerWindow</span> class than to override the
 <span class="code">canDisplay</span> property separately on each window:
 
-<div class="code">
-
+```
     modify CustomBannerWindow
        canDisplay = (systemInfo(SysInfoJpeg))
     ;
-
-</div>
+```
 
 It's safe to do this since the only CustomBannerWindows that exist in
 our game are the ones we create ourselves. The banner windows defined in
@@ -710,8 +685,7 @@ them to our banners. For the sake of argument we assume that our picture
 files all have a .jpg extension and that they're all in the /docs folder
 under our game folder:
 
-<div class="code">
-
+```
     class Picture
       picFile = ''
       caption = ''
@@ -736,8 +710,7 @@ under our game folder:
         captionWindow.updateContents('&lt;- ' + caption);  
       }
     ;
-
-</div>
+```
 
 Note that the <span class="code">&lt;-</span> in the last line is
 deliberate here; we want this to appear in the window as \<-, but since
@@ -747,17 +720,14 @@ the <span class="code">&lt;</span> entity to represent the \< character.
 Since we may be defining many Picture objects, we can save ourselves a
 bit of typing by defining an appropriate template:
 
-<div class="code">
-
+```
     Picture template 'picFile' 'caption';
-
-</div>
+```
 
 Next we need to modify the Room and Thing classes to display their
 pictures (and accompanying captions) if they have them:
 
-<div class="code">
-
+```
     modify Room
         pic = nil
       
@@ -792,8 +762,7 @@ pictures (and accompanying captions) if they have them:
           pic.showPic();
       }
     ;
-
-</div>
+```
 
 We next need to make an explicit LOOK command display any relevant
 picture and caption for the player character's current location. For the
@@ -801,8 +770,7 @@ purposes of this example, we only want an explicit LOOK to do this, not
 an implicit lookAround called by the library code. We therefore need to
 make a minor override to <span class="code">LookAction</span>:
 
-<div class="code">
-
+```
     modify LookAction
       execAction()
       {
@@ -813,23 +781,20 @@ make a minor override to <span class="code">LookAction</span>:
           loc.showPic();
       } 
     ;
-
-</div>
+```
 
 Our final task is to make the picture and caption of the starting
 location appear on the first turn. The easiest way to achieve that may
 be to call the room's <span class="code">showPic()</span> method from
 <span class="code"> gameMain.showIntro()</span>:
 
-<div class="code">
-
+```
     gameMain: GameMainDef  
         initialPlayerChar = me
         
         showIntro() { startRoom.showPic(); }
     ;
-
-</div>
+```
 
 And this is all we need to do to implement our scheme; the
 <span class="code"> CustomBannerWindow</span> class can be left to do
@@ -837,8 +802,7 @@ the rest, such as displaying the right picture and caption (or absence
 of picture and caption) after RESTORE, RESTART and UNDO. At this point
 we can start defining our rooms and objects, e.g.:
 
-<div class="code">
-
+```
     startRoom: OutdoorRoom 'Radcliffe Square' 'Radcliffe Square'
         "From the south-east corner of Radcliffe Square you could go north between
          the Radcliffe Camera and All Souls College. "
@@ -890,8 +854,7 @@ we can start defining our rooms and objects, e.g.:
       south = startRoom
       north = crossroads
     ;
-
-</div>
+```
 
 ## Working with a More Complicated Layout
 
@@ -924,16 +887,14 @@ It's probably easiest to start by defining the central border as the
 parent banner, and then carve the other four windows out of it. The
 definition of the central banner is then something like the following:
 
-<div class="code">
-
+```
     centreWindow: CustomBannerWindow
       bannerArgs = [nil, BannerAfter, statuslineBanner, BannerTypeText, BannerAlignTop,
         15, BannerSizeAbsolute, BannerStyleBorder]
 
       currentContents = '<body bgcolor=statusbg>'
     ;
-
-</div>
+```
 
 Since we need the left and right frames to go on the outside, we need to
 define them next. The point to bear in mind here is that we are going to
@@ -946,8 +907,7 @@ the centre. It doesn't much matter, however, whether the outer left
 window or the outer right window comes first: here we'll start with the
 outer right:
 
-<div class="code">
-
+```
     rightWindow: CustomBannerWindow
        bannerArgs = [centreWindow, BannerFirst,nil, BannerTypeText, BannerAlignRight,
         5, BannerSizePercent, BannerStyleBorder]
@@ -961,15 +921,13 @@ outer right:
 
       currentContents = '<body bgcolor=statusbg>'
     ;
-
-</div>
+```
 
 Now we can define our picture window and our caption window as before,
 this time placing them after the left-hand and right-hand framing
 windows respectively:
 
-<div class="code">
-
+```
     picWindow: CustomBannerWindow
       bannerArgs = [centreWindow, BannerAfter,  leftWindow,  BannerTypeText, 
          BannerAlignLeft, 35, BannerSizeAbsolute, BannerStyleBorder]
@@ -981,14 +939,12 @@ windows respectively:
       bannerArgs = [centreWindow, BannerAfter, rightWindow, BannerTypeText, BannerAlignRight,
                       40, BannerSizePercent, BannerStyleBorder ]     
     ;
-
-</div>
+```
 
 The only other change we need to make is in the methods that remove and
 restore the complete set of banner windows to and from the display:
 
-<div class="code">
-
+```
     class Picture: object
       picFile = ''
       caption = ''
@@ -1052,8 +1008,7 @@ restore the complete set of banner windows to and from the display:
             roomPic.showPic();
         }
     ;
-
-</div>
+```
 
 ## Summary
 

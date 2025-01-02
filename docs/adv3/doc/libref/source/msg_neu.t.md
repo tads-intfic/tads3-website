@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # msg_neu.t
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">simplePluralPhrase(poundNum)</span><span class="type">grammar</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">literalPhrase(empty)</span><span class="type">grammar</span>
 

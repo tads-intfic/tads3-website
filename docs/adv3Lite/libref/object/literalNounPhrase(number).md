@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">literalNounPhrase(number)</span><span class="type">grammar</span>
 

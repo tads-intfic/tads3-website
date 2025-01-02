@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">en_us.t</span><span class="type">file</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">completeNounPhraseWithAll</span><span class="type">GrammarProd</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">LookInAction</span><span class="type">class</span>
 

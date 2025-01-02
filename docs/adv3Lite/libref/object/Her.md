@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Her</span><span class="type">object</span>
 

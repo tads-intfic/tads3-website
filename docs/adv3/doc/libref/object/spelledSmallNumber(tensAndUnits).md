@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">spelledSmallNumber(tensAndUnits)</span><span class="type">grammar</span>
 

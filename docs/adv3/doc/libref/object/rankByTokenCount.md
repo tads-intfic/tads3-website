@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">rankByTokenCount</span><span class="type">object</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">exitsTip</span><span class="type">object</span>
 

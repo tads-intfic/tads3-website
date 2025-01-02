@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Enterable</span><span class="type">class</span>
 

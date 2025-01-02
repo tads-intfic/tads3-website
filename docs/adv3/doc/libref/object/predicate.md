@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate</span><span class="type">GrammarProd</span>
 

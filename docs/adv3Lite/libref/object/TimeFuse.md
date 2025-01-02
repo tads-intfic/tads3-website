@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">TimeFuse</span><span class="type">class</span>
 

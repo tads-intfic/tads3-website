@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(ThrowDirDown)</span><span class="type">grammar</span>
 

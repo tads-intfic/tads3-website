@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">adjWord(adjAbbr)</span><span class="type">grammar</span>
 

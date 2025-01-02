@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">flushEventsPage</span><span class="type">object</span>
 

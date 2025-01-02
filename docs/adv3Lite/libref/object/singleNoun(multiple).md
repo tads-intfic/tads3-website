@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">singleNoun(multiple)</span><span class="type">grammar</span>
 

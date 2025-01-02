@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">yesOrNoPhrase(no)</span><span class="type">grammar</span>
 

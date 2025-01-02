@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(Throw)</span><span class="type">grammar</span>
 

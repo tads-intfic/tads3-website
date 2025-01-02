@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">ParseError</span><span class="type">class</span>
 

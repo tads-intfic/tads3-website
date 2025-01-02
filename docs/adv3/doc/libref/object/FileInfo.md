@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">FileInfo</span><span class="type">class</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">PushWestAction</span><span class="type">class</span>
 

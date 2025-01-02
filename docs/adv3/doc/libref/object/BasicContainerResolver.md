@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">BasicContainerResolver</span><span class="type">class</span>
 

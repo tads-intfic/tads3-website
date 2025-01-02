@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Player</span><span class="type">class</span>
 

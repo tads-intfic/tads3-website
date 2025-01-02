@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">commandPhrase(definiteConj)</span><span class="type">grammar</span>
 

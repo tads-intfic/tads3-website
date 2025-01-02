@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">ActorTopicEntry</span><span class="type">class</span>
 

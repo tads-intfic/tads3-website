@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">exceptNounPhrase(singlePossessive)</span><span class="type">grammar</span>
 

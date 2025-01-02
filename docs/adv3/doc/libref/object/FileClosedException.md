@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">FileClosedException</span><span class="type">class</span>
 

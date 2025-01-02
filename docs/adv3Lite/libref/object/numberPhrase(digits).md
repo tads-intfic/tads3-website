@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">numberPhrase(digits)</span><span class="type">grammar</span>
 

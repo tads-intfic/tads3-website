@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">AltTopic</span><span class="type">class</span>
 

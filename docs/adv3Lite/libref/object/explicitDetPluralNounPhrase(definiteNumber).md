@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">explicitDetPluralNounPhrase(definiteNumber)</span><span class="type">grammar</span>
 

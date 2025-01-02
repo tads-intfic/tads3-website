@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/assets/images/tads-favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+                           href="/assets/css/styles.css">
+    <title>docs-adv3lite-tutorial-actions-html</title>
+    <meta property="og:title" content=
+    "docs-adv3lite-tutorial-actions-html">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
+</head>
+<header><div class="header-search">
+    <form class="header-search-form" action="/search/" method="get">
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
+  </div>  </header>
+<body>
+<main id="content">
 <div class="topbar">
 
 <img src="topbar.jpg" data-border="0" />
@@ -16,40 +39,36 @@ Actions</a>     </span>
 
 </div>
 
-<div class="main">
+<h1 id="defining-actions">Defining Actions</h1>
 
-# Defining Actions
-
-The descriptions of the control column and the thrust lever clearly
+<p>The descriptions of the control column and the thrust lever clearly
 suggest that these items can be pushed forward or pulled back, while
 that of the wheel suggests it can be turned to port or starboard.
 Players are therefore very likely to try commands like PUSH STICK
-FORWARD or TURN WHEEL TO PORT, but at the moment the game won't
+FORWARD or TURN WHEEL TO PORT, but at the moment the game won’t
 understand these commands. Our next task is to ensure that it does.
-We'll start with PUSH FORWARD and PULL BACK, since this is the easier
-part of the task.
+We’ll start with PUSH FORWARD and PULL BACK, since this is the easier
+part of the task.</p>
 
-## New Grammar for Old Actions
+<h2 id="new-grammar-for-old-actions">New Grammar for Old Actions</h2>
 
-Although the descriptions of the stick and the thrust lever both suggest
-commands of the form PUSH STICK FORWARD and PULL LEVER BACK, there's
-really no reason why these shouldn't behave just the same as PUSH STICK
-and PULL LEVER. So we don't really need any new *actions* for either of
+<p>Although the descriptions of the stick and the thrust lever both suggest
+commands of the form PUSH STICK FORWARD and PULL LEVER BACK, there’s
+really no reason why these shouldn’t behave just the same as PUSH STICK
+and PULL LEVER. So we don’t really need any new <em>actions</em> for either of
 these cases, we just need to add new ways in which the player can phrase
 commands that trigger the existing actions. There are basically two ways
-we can do this, and though there's no reason to handle PULL and PUSH
-differently here, we'll use one method on PUSH and the other on PULL
-just to illustrate both ways of doing things. We'll start with the more
-difficult way on PUSH and then illustrate the easier way on PULL.
+we can do this, and though there’s no reason to handle PULL and PUSH
+differently here, we’ll use one method on PUSH and the other on PULL
+just to illustrate both ways of doing things. We’ll start with the more
+difficult way on PUSH and then illustrate the easier way on PULL.</p>
 
-Let's suppose we want PUSH X, PUSH X FORWARD and PUSH FORWARD ON X to
+<p>Let’s suppose we want PUSH X, PUSH X FORWARD and PUSH FORWARD ON X to
 all do the same thing. One way to do this is to define a new
-**VerbRule** that recognizes PUSH X FORWARD and PUSH FORWARD ON X and
-makes either trigger the Push action. This is what it might look like:
+<strong>VerbRule</strong> that recognizes PUSH X FORWARD and PUSH FORWARD ON X and
+makes either trigger the Push action. This is what it might look like:</p>
 
-<div class="code">
-
-    VerbRule(PushForward)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    VerbRule(PushForward)
         'push' multiDobj 'forward'
         | 'push' 'forward' 'on' multiDobj
         : VerbProduction
@@ -57,63 +76,62 @@ makes either trigger the Push action. This is what it might look like:
         verbPhrase = 'push/pushing forward (what)'
         missingQ = 'what do you want to push forward'
     ;
+</code></pre></div></div>
 
-</div>
-
-Let's take this piece by piece. First we begin our specification of the
+<p>Let’s take this piece by piece. First we begin our specification of the
 new grammar for the Push action with
 <span class="code">VerbRule(PushForward)</span>.
-<span class="code">VerbRule()</span> tells the compiler we're defining
+<span class="code">VerbRule()</span> tells the compiler we’re defining
 some new grammar for an action. <span class="code">PushForward</span> is
-an arbitrary tag that's used to identify this VerbRule. It could have
-been anything we liked, so long as it's not something already used to
+an arbitrary tag that’s used to identify this VerbRule. It could have
+been anything we liked, so long as it’s not something already used to
 identify another VerbRule (each VerbRule tag has to be unique), but it
-helps make our game code more readable if we use something meaningful.
+helps make our game code more readable if we use something meaningful.</p>
 
-The next part of the definition specifies the grammar that triggers this
+<p>The next part of the definition specifies the grammar that triggers this
 rule, in other words what the player has to type in order to match this
-VerbRule. Here it's specified as <span class="code">'push' multiDobj
-'forward' \| 'push' 'forward' 'on' multiDobj</span> The vertical bar is
+VerbRule. Here it’s specified as <span class="code">‘push’ multiDobj
+‘forward’ | ‘push’ ‘forward’ ‘on’ multiDobj</span> The vertical bar is
 simply used to separate options, so this is equivalent to saying that
-the VerbRule will be matched either by <span class="code">'push'
-multiDobj 'forward'</span> or by <span class="code">'push' 'forward'
-'on' multiDobj</span>. In both cases <span class="code">multiDobj</span>
+the VerbRule will be matched either by <span class="code">‘push’
+multiDobj ‘forward’</span> or by <span class="code">‘push’ ‘forward’
+‘on’ multiDobj</span>. In both cases <span class="code">multiDobj</span>
 is a placeholder for the names of one or more direct objects (the thing
-or things to be pushed) in the player's command. If we wanted to
+or things to be pushed) in the player’s command. If we wanted to
 restrict the player to pushing one thing at a time we could specify
 <span class="code">singleDobj</span> here, but since the standard
 VerbRule for Push allows multiple direct objects, we may as well do the
-same here. For the rest, the strings in single-quotes ('push', 'forward'
-and 'on') represent what the player must actually type at this point in
+same here. For the rest, the strings in single-quotes (‘push’, ‘forward’
+and ‘on’) represent what the player must actually type at this point in
 the command; although we specify them in lower case, the player can use
-either upper case or lower case or a mixture of the two.
+either upper case or lower case or a mixture of the two.</p>
 
-The next line, <span class="code">: VerbProduction</span>, simply
+<p>The next line, <span class="code">: VerbProduction</span>, simply
 defines the VerbRule as being of the VerbProduction class. This will be
-true of every VerbRule you ever define.
+true of every VerbRule you ever define.</p>
 
-This is followed by <span class="code">action = Push</span>. This
+<p>This is followed by <span class="code">action = Push</span>. This
 defines which action is triggered by a command that matches this
-VerbRule. In this case we want to use the existing Push action.
+VerbRule. In this case we want to use the existing Push action.</p>
 
-The next line, <span class="code">verbPhrase = 'push/pushing forward
-(what)'</span>, is used by the library to construct messages like 'first
-pushing forward the stick' or 'first trying to push the stick'. Even if
-you don't think your game will ever use such messages, you should always
+<p>The next line, <span class="code">verbPhrase = ‘push/pushing forward
+(what)’</span>, is used by the library to construct messages like ‘first
+pushing forward the stick’ or ‘first trying to push the stick’. Even if
+you don’t think your game will ever use such messages, you should always
 define this property just in case, otherwise you risk getting run-time
-errors further down the line.
+errors further down the line.</p>
 
-Finally, <span class="code">missingQ = 'what do you want to push
-forward'</span> defines the text of the question the parser should ask
+<p>Finally, <span class="code">missingQ = ‘what do you want to push
+forward’</span> defines the text of the question the parser should ask
 if the player neglects to supply a direct object when entering this
 command. (In fact, in this case, the question will never be asked, since
-if the player types PUSH FORWARD ON the parser will respond with "You
-see no forward on here" because it interprets FORWARD ON as the direct
+if the player types PUSH FORWARD ON the parser will respond with “You
+see no forward on here” because it interprets FORWARD ON as the direct
 object of a PUSH command, but in principle this property should always
-be defined).
+be defined).</p>
 
-We'll now handle PULL BACK the easier way, by modifying an existing
-VerbRule:
+<p>We’ll now handle PULL BACK the easier way, by modifying an existing
+VerbRule:</p>
 
 <div class="code">
 
@@ -125,42 +143,40 @@ VerbRule:
 
 </div>
 
-Note how we end this definition with a colon, and then the terminating
+<p>Note how we end this definition with a colon, and then the terminating
 semicolon. This is just a syntactic quirk of how a VerbRule is modified
-in TADS 3, but in essence what we're doing is modifying an object, so we
-don't specify its class list again (VerbProduction) and we're leaving
+in TADS 3, but in essence what we’re doing is modifying an object, so we
+don’t specify its class list again (VerbProduction) and we’re leaving
 most of its properties (action, verbPhrase and missingQ) unchanged. What
 we are doing is replacing the existing grammar specification with one of
-our own: <span class="code">('pull' multiDobj ( \| 'back')) \| 'pull'
-'back' 'on' multiDobj</span>. This follows exactly the same principles
-as before, except that we're using parentheses to group the various
-alternatives. The group <span class="code">( \| 'back')</span> can match
-either 'back' or nothing at all, so that <span class="code">('pull'
-multiDobj ( \| 'back'))</span> can match either PULL X or PULL X BACK.
-The second half of the specification matches PULL BACK ON X.
+our own: <span class="code">(‘pull’ multiDobj ( | ‘back’)) | ‘pull’
+‘back’ ‘on’ multiDobj</span>. This follows exactly the same principles
+as before, except that we’re using parentheses to group the various
+alternatives. The group <span class="code">( | ‘back’)</span> can match
+either ‘back’ or nothing at all, so that <span class="code">(‘pull’
+multiDobj ( | ‘back’))</span> can match either PULL X or PULL X BACK.
+The second half of the specification matches PULL BACK ON X.</p>
 
-Whether you prefer to define a new VerbRule or modify an existing one is
+<p>Whether you prefer to define a new VerbRule or modify an existing one is
 generally up to you. Modifying an existing rule is usually easier, but
 there may be cases where doing so would result in such a tangle of
-bracketed alternatives that defining a new VerbRule might seem simpler.
+bracketed alternatives that defining a new VerbRule might seem simpler.</p>
 
-  
+<h2 id="defining-new-actions">Defining New Actions</h2>
 
-## Defining New Actions
-
-Although the library defines a Turn action (e.g. TURN WHEEL) and a
-TurnTo action for dials (e.g. TURN DIAL TO 23), it doesn't define
+<p>Although the library defines a Turn action (e.g. TURN WHEEL) and a
+TurnTo action for dials (e.g. TURN DIAL TO 23), it doesn’t define
 actions corresponding to TURN WHEEL LEFT or TURN WHEEL TO STARBOARD, so
-we now need to define these ourselves.
+we now need to define these ourselves.</p>
 
-The first part of this task is to define a pair of objects representing
-the two new actions, which we'll call TurnLeft and TurnRight (by
+<p>The first part of this task is to define a pair of objects representing
+the two new actions, which we’ll call TurnLeft and TurnRight (by
 convention the names of action objects in adv3Lite start with a capital
-letter, even though they're objects and not classes). Both actions will
+letter, even though they’re objects and not classes). Both actions will
 take a direct object (the wheel, principally), so they need to be of the
-TAction class (think of TAction as meaning 'Transitive Action' — an
+TAction class (think of TAction as meaning ‘Transitive Action’ — an
 action that takes an object). The library provides a DefineTAction()
-macro that makes it simple to define such objects:
+macro that makes it simple to define such objects:</p>
 
 <div class="code">
 
@@ -172,8 +188,8 @@ macro that makes it simple to define such objects:
 
 </div>
 
-The next job is to define the grammar that will trigger these actions.
-We've already seen how to do this, using the VerbRule construct:
+<p>The next job is to define the grammar that will trigger these actions.
+We’ve already seen how to do this, using the VerbRule construct:</p>
 
 <div class="code">
 
@@ -197,32 +213,32 @@ We've already seen how to do this, using the VerbRule construct:
 
 </div>
 
-The one extra thing we've added here to both definitions is
+<p>The one extra thing we’ve added here to both definitions is
 <span class="code">priority = 60</span>. This is to ensure that both
 these VerbRules will take priority over the VerbRule for TURN X TO
-*setting*, where *setting* is a literal value that could be anything,
-including 'left', 'right', 'port' or 'starboard'. The default priority
+<em>setting</em>, where <em>setting</em> is a literal value that could be anything,
+including ‘left’, ‘right’, ‘port’ or ‘starboard’. The default priority
 for a VerbRule is 50, so by giving these two VerbRules a priority of 60
-we're ensuring that they're matched in preference to
+we’re ensuring that they’re matched in preference to
 <span class="code">VerbRule(TurnTo)</span> for commands like TURN WHEEL
-TO PORT.
+TO PORT.</p>
 
-If you compile and run the game now, you'll find that it now accepts
+<p>If you compile and run the game now, you’ll find that it now accepts
 commands like TURN WHEEL TO PORT or TURN WHEEL RIGHT (provided the wheel
-is in scope) but that absolutely nothing happens in response. That's
-because we haven't yet defined what we want either of these commands to
-do. It's no good starting by defining what we want them to do on the
+is in scope) but that absolutely nothing happens in response. That’s
+because we haven’t yet defined what we want either of these commands to
+do. It’s no good starting by defining what we want them to do on the
 wheel, since players might try to use them on any object in the game.
 Our next job, therefore, is to define what we want them to do on Thing.
 We can then customize the response on particular objects (such as the
-wheel) where we want the commands to do something special.
+wheel) where we want the commands to do something special.</p>
 
-To do this, we need to modify the Thing class and then specify the
+<p>To do this, we need to modify the Thing class and then specify the
 handling of the TurnLeft and TurnRight actions in blocks marked
 <span class="code">dobjFor(TurnLeft)</span> and
-<span class="code">dobjFor(TurnRight)</span>, meaning "What do I do when
-I'm the direct object of TurnLeft or TurnRight command?". All we need is
-something like this:
+<span class="code">dobjFor(TurnRight)</span>, meaning “What do I do when
+I’m the direct object of TurnLeft or TurnRight command?”. All we need is
+something like this:</p>
 
 <div class="code">
 
@@ -434,8 +450,6 @@ some of the properties you'll most commonly want to customize when
 defining your own action handling together with additional information
 to help you on your way.
 
-&lt;/div&gt;
-
 ------------------------------------------------------------------------
 
 <div class="navb">
@@ -450,4 +464,12 @@ Cockpit</a>    
 Actions</a>     </span>
 
 </div>
-</gActionListStr></div></gActionListStr></gActionListStr></div></div>
+</gActionListStr></div></gActionListStr></gActionListStr></div>
+
+</main>
+<footer>
+    <p>This is an unofficial informational website to aggregate TADS 3 information and does not claim authorship over, or any rights to, TADS 3 itself. All resources copyright their credited owners. TADS itself is <a href="https://www.tads.org/copyright.htm">Copyright ©2001-2013 Michael J. Roberts</a>.</p>
+    <p><a href="/">Back to Homepage</a></p>
+</footer>
+</body>
+</html>

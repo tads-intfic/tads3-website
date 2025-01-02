@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">darkRoomLister</span><span class="type">object</span>
 

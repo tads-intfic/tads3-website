@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">AllPluralProd</span><span class="type">class</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">pronounPhrase(it)</span><span class="type">grammar</span>
 

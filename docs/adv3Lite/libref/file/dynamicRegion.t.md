@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">dynamicRegion.t</span><span class="type">file</span>
 

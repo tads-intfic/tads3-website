@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">tadsio.h</span><span class="type">file</span>
 

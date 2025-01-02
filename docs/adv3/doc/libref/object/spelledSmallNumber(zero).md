@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">spelledSmallNumber(zero)</span><span class="type">grammar</span>
 

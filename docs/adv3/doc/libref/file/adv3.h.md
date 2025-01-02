@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">adv3.h</span><span class="type">file</span>
 

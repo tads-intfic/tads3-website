@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Adv3Lite Quick Start Guide
 

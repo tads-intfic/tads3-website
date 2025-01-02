@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Using the BANNER Feature in HTML TADS Games
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">DefaultGiveShowTopic</span><span class="type">class</span>
 

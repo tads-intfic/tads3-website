@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">outOfSingleNoun(main)</span><span class="type">grammar</span>
 

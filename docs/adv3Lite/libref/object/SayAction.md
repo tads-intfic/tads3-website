@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">SayAction</span><span class="type">object</span>
 

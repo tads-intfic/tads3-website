@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # adv3.h
 

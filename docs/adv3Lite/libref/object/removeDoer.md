@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">removeDoer</span><span class="type">object</span>
 

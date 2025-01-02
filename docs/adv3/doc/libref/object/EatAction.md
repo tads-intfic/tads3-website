@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">EatAction</span><span class="type">class</span>
 

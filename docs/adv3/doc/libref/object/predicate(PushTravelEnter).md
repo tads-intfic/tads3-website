@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(PushTravelEnter)</span><span class="type">grammar</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Footnote)</span><span class="type">grammar</span>
 

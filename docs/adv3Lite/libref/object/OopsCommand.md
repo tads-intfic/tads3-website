@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">OopsCommand</span><span class="type">class</span>
 

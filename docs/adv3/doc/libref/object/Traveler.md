@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Traveler</span><span class="type">class</span>
 

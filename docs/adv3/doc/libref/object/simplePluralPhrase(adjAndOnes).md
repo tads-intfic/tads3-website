@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">simplePluralPhrase(adjAndOnes)</span><span class="type">grammar</span>
 

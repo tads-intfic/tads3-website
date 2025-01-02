@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">defaultCommandPhrase(examine)</span><span class="type">grammar</span>
 

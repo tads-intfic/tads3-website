@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">rankBySubcommands</span><span class="type">object</span>
 

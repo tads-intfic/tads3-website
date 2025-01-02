@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(SitIn)</span><span class="type">grammar</span>
 

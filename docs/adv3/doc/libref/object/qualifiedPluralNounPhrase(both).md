@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">qualifiedPluralNounPhrase(both)</span><span class="type">grammar</span>
 

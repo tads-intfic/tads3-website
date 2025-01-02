@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(ShowToWhom)</span><span class="type">grammar</span>
 

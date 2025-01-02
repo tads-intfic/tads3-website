@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # Notes on porting HTML TADS
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Schedulable</span><span class="type">class</span>
 

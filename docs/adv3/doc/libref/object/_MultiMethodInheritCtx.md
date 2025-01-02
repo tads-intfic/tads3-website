@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">\_MultiMethodInheritCtx</span><span class="type">class</span>
 

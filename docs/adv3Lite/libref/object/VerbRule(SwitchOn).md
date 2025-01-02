@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(SwitchOn)</span><span class="type">grammar</span>
 

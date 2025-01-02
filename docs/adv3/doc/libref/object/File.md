@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">File</span><span class="type">class</span>
 

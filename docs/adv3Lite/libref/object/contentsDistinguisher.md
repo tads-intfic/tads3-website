@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">contentsDistinguisher</span><span class="type">object</span>
 

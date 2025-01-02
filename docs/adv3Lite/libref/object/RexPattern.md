@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">RexPattern</span><span class="type">class</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(Kiss)</span><span class="type">grammar</span>
 

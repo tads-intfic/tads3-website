@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">ThrowDir</span><span class="type">object</span>
 

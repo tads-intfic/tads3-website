@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">IndirectObject</span><span class="type">object</span>
 

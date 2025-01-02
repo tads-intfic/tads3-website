@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 # actions.t
 

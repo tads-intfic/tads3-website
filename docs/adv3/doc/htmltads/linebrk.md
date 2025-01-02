@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Word Wrapping and Line Breaking in HTML TADS
 

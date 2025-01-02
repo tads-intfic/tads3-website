@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">indetSingularNounPhrase(basic)</span><span class="type">grammar</span>
 

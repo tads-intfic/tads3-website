@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">possessiveNounPhrase(his)</span><span class="type">grammar</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(ClimbUpWhat)</span><span class="type">grammar</span>
 

@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(InventoryTall)</span><span class="type">grammar</span>
 

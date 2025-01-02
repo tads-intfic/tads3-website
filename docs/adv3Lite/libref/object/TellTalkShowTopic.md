@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">TellTalkShowTopic</span><span class="type">class</span>
 

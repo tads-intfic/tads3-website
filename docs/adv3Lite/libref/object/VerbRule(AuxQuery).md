@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(AuxQuery)</span><span class="type">grammar</span>
 

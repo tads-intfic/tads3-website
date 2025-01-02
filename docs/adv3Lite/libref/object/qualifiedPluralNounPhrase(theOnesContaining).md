@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">qualifiedPluralNounPhrase(theOnesContaining)</span><span class="type">grammar</span>
 

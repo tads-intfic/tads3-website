@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">SpaceOverlay</span><span class="type">class</span>
 

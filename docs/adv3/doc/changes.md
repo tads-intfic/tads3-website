@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 Recent Changes to HTML TADS
 

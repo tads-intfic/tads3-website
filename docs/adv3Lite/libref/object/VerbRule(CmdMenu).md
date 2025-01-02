@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(CmdMenu)</span><span class="type">grammar</span>
 

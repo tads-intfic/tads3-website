@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">default3Doer</span><span class="type">object</span>
 

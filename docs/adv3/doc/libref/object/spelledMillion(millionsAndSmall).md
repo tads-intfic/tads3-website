@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">spelledMillion(millionsAndSmall)</span><span class="type">grammar</span>
 

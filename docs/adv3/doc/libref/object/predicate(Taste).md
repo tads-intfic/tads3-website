@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">predicate(Taste)</span><span class="type">grammar</span>
 

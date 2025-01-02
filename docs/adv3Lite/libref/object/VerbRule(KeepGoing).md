@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">VerbRule(KeepGoing)</span><span class="type">grammar</span>
 

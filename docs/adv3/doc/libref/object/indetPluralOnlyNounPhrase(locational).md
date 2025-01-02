@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">indetPluralOnlyNounPhrase(locational)</span><span class="type">grammar</span>
 

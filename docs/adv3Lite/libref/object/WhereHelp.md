@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">WhereHelp</span><span class="type">object</span>
 

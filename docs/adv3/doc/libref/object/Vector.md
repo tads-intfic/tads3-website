@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Vector</span><span class="type">class</span>
 

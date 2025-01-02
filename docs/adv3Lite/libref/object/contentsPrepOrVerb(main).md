@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">contentsPrepOrVerb(main)</span><span class="type">grammar</span>
 

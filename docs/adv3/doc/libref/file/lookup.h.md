@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">lookup.h</span><span class="type">file</span>
 

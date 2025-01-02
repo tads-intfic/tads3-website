@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <span class="title">Stand</span><span class="type">object</span>
 
