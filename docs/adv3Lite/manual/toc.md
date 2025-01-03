@@ -484,7 +484,7 @@ Samples</a>
 
 
 
-<a href="../sysman.html" class="toc">TADS 3 System Manual</a>
+<a href="../../adv3/doc/sysman/cover.html" class="toc">TADS 3 System Manual</a>
 
 
 

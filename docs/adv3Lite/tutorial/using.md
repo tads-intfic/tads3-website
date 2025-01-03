@@ -106,7 +106,7 @@ forms of documentation. In additition to this tutorial the important
 ones are:
 
 1.  The [adv3Lite Library Manual](..\manual\index.html)
-2.  The [TADS 3 System Manual](..\sysman.html)
+2.  The [TADS 3 System Manual](../../adv3/doc/sysman/cover.html)
 3.  A few sections of the *TADS 3 Technical Manual* (though most of it
     is directed towards the adv3 library)
 4.  The adv3Lite library source code and the comments it contains (in

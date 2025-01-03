@@ -295,7 +295,7 @@ above), here is another way:
 ## The System Manual
 
 From time to time it may prove useful to consult the [TADS 3 System
-Manual](../sysman.html) while working on an adv3Lite game. This contains
+Manual](../../adv3/doc/sysman/cover.html) while working on an adv3Lite game. This contains
 a wealth of information about the TADS 3 language and its intrinsic
 classes, all of which are important to know about when programming in
 TADS 3. The contents page of this manual and the Adv3Lite Tutorial thus

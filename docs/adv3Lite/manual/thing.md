@@ -72,7 +72,7 @@ following three property definitions are anything but equivalent:
 ```
 
 If you don't understand the distinctions being made above then you
-really should read Part III of the [TADS 3 System Manual](../sysman.html)
+really should read Part III of the [TADS 3 System Manual](../../adv3/doc/sysman/cover.html)
 before going any further with this manual (or else start by working
 through the [Tutorial](../tutorial/index.html)); if you don't observe
 these distinctions in the explanations that follow, then you may

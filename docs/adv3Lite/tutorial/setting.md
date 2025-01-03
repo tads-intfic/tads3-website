@@ -186,7 +186,7 @@ whatever you're calling it) carry out the following steps:
 
 There are one or two places where both this Tutorial and other parts of
 the adv3Lite documentation attempt to link to the [TADS 3 System
-Manual](../sysman.html). By default this links to the online version of
+Manual](../../adv3/doc/sysman/cover.html). By default this links to the online version of
 the System Manual at www.tads.org. If you have a fast and reliable
 internet connection you may be perfectly happy with this, but if you'd
 rather link to the local copy of the System Manual on your own machine

@@ -25,7 +25,7 @@ This manual is intended to explain the main features of the adv3Lite
 library, an alternative library for use with the TADS 3 Interactive
 Fiction system. If you need help with the TADS 3 *language*, or other
 aspects of TADS 3 such as using the compiler, please refer to the [TADS
-3 System Manual](../sysman.html), or start by working through the
+3 System Manual](../../adv3/doc/sysman/cover.html), or start by working through the
 [Tutorial](../tutorial/index.html). The present manual assumes at least
 basic familiarity with the TADS 3 language.
 

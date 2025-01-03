@@ -677,7 +677,7 @@ to read these three sections. On the other hand, if you're comfortable
 with what we've just covered in this section and would like to carry on
 reading the next straight away, that's fine too, but I would still
 recommend that you read those three sections of the [TADS 3 System
-Manual](../sysman.html) sooner or later.
+Manual](../../adv3/doc/sysman/cover.html) sooner or later.
 
 
 

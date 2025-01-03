@@ -204,7 +204,7 @@ perhaps, depending on your point of view) not all the information in the
 the TADS 3 game author, so you certainly don't need to read all of it to
 start out with.
 
-The following sections of the [TADS 3 System Manual](../sysman.html) are
+The following sections of the [TADS 3 System Manual](../../../adv3/doc/sysman/cover.html) are
 probably the ones you'll need to become familiar with sooner rather than
 later:
 

@@ -247,7 +247,7 @@ data that can be manipulated, but beyond mentioning string concatenation
 (with the + operator) in a previous part of this chapter, we haven't
 gone into any detail how. When you're ready to find out, you'll find
 most of the answers in the section on "String" in Part IV of the [TADS 3
-System Manual](../sysman.html), but that's something you can well afford
+System Manual](../../adv3/doc/sysman/cover.html), but that's something you can well afford
 to leave for now.
 
   

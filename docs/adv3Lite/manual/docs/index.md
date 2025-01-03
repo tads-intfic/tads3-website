@@ -84,7 +84,7 @@ adv3Lite library.
 
 ------------------------------------------------------------------------
 
-<a href="sysman.html" target="_blank"><img src="syscover.jpg"
+<a href="../../../adv3/doc/sysman/cover.html" target="_blank"><img src="syscover.jpg"
 class="book" /></a>
 
 <a href="sysman.html" class="title" target="_blank">TADS 3 System

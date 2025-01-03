@@ -512,7 +512,7 @@ entirely clear on it all, perhaps the first additional thing to read
 would be the article "Object-Oriented Programming Overview" in the *TADS
 3 Technical Manual*. For the full story on object definitions you could
 read the section on "Object Definitions" in the [TADS 3 System
-Manual](../sysman.html). You might not want to look at it right away,
+Manual](../../adv3/doc/sysman/cover.html). You might not want to look at it right away,
 however, as there's rather more information there than you really need
 right now, and if you're new to this kind of programming there's
 probably quite enough for you to take in already. But if you do want a
