@@ -501,4 +501,10 @@ Babel</a></em></li>
 </html>
 
 <script>
-    if(window.location !== window.top.loc
+    if(window.location !== window.top.location) {
+        let header = document.getElementById('header');
+        let footer = document.getElementById('footer');
+        header.remove();
+        footer.remove();
+    }
+</script>

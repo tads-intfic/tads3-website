@@ -1,4 +1,5 @@
 ---
+layout: docs
 ---
 <h2 id="topic_0">Game</h2> <a href="#top" style="font-size: small">[top]</a>
 
@@ -427,7 +428,7 @@
 - <a href="libref/object/DefaultThought.html"
   target="classes"><code>DefaultThought</code></a>
 
-<h2 id="">Events & scenes</h2><a href="#top" style="font-size: small">[top]</a>
+<h2 id="10">Events & scenes</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/event.html" target="classes">Events</a>*
 - *<a href="manual/eventlist.html" target="classes">EventList</a>*

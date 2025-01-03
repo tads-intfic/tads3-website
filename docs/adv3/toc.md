@@ -4,9 +4,8 @@ layout: docs
 # adv3 periplus
 
 - <a href="about.html" target="classes">About this periplus</a>
-- <a href="https://www.tads.org/t3doc/doc/libref/index.html"
-  target="_blank">Complete adv3 class reference</a>
-- <a href="https://www.tads.org/t3doc/doc/gsg" target="_blank">Getting
+- <a href="doc/libref/intro.html" target="classes">Complete adv3 class reference</a>
+- <a href="doc/gsg/index.html" target="classes">Getting
   Started in TADS 3</a>
 
 ## Topics

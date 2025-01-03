@@ -1048,17 +1048,18 @@ em > a {
 
 #periplus .container {
     display: flex;
-    height: 100vh;
+    flex-wrap: wrap;
+    height: 90vh;
   }
 
 #periplus .left-column {
     width: 300px;
     overflow-y: auto;
-    height: 100%
+    flex-shrink: 1;
 }
 
 #periplus .left-column iframe {
-    height: 50%
+    height: 50%;
 }
 
  #periplus   .right-column {
