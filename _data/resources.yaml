@@ -6,7 +6,7 @@ libraries:
         type: TADS 3 & Adv3
         author: Eric Eve
         description: This brief guide contains instructions for installing the TADS 3 workbench system and compiling a basic game. It also has explanation of the other documentation that exists, including guidance on where to go next, and a sample game newcomers can experiment with if they want to dive straight it.
-        url: /docs/adv3/doc/t3QuickStart.html
+        url: /docs/adv3/doc/T3QuickStart.html
       - title: Quick reference charts
         type: TADS 3 & Adv3
         author: Eric Eve
@@ -27,7 +27,7 @@ libraries:
       - title: TADS 3 Quickstart
         author: Eric Eve
         description: This brief guide contains instructions for installing the TADS 3 workbench system and compiling a basic game. It also has explanation of the other documentation that exists, including guidance on where to go next, and a sample game newcomers can experiment with if they want to dive straight it.
-        url: https://www.tads.org/t3doc/doc/t3QuickStart.htm
+        url: /docs/adv3/doc/T3QuickStart.html
       - title: Quick reference charts
         author: Eric Eve
         description: Some quick reference PDFs that summarize some of the essential information about the TADS 3 language and Adv3 library.
@@ -85,11 +85,11 @@ libraries:
       - title: TADS 3 System Manual
         author: Michael Roberts
         description: This book is a reference to the TADS 3 language and the T3 VM, including the standard intrinsic functions and classes. It covers the language and VM features in depth, so it's the place to go when you need to find the details on the system.  
-        url: https://www.tads.org/t3doc/doc/sysman/cover.htm
+        url: /docs/adv3/doc/sysman/intro.html
       - title: Introduction to HTML TADS
         author: Michael Roberts
         description: A brief introduction to HTML TADS, a text adventure interpreter based on TADS. 
-        url: https://www.tads.org/t3doc/doc/htmltads/intro.htm
+        url: /docs/adv3/doc/htmltads/intro.html
 
 quickrefs:
   - name: TLangRef.pdf
