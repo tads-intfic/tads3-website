@@ -6,7 +6,7 @@ libraries:
         type: TADS 3 & Adv3
         author: Eric Eve
         description: This brief guide contains instructions for installing the TADS 3 workbench system and compiling a basic game. It also has explanation of the other documentation that exists, including guidance on where to go next, and a sample game newcomers can experiment with if they want to dive straight it.
-        url: https://www.tads.org/t3doc/doc/t3QuickStart.htm
+        url: /docs/adv3/doc/t3QuickStart.html
       - title: Quick reference charts
         type: TADS 3 & Adv3
         author: Eric Eve
