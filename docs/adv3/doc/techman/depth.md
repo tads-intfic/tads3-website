@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| TADS 3 In Depth  
 <span class="navnp"><a href="gameinfo.html" class="nav"><em>Prev:</em> Bibliographic Metadata
 - the GameInfo Format</a>    
 <a href="t3messages.html" class="nav"><em>Next:</em> Where Messages Come
 From</a>     </span>
-
-
-
-
-
 # Part II: TADS 3 In Depth
 
 This section looks at important TADS 3 programming topics in detail.
@@ -39,11 +29,6 @@ or another.
 [Creating Dynamic Characters](t3actor.html)  
 [NPC Travel](t3npcTravel.html)  
 [Using the Banner API](t3banner.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

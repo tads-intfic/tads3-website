@@ -177,11 +177,6 @@ command.
 
 By default, we simply return nil. Subclasses/instances must override
 this to provide the custom answer parsing.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

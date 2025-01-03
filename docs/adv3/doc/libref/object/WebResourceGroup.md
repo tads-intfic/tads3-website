@@ -178,11 +178,6 @@ the group's 'server' property.
 
 Process a request. This looks for the highest priority matching resource
 in the group, then hands the request to that resource for processing.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

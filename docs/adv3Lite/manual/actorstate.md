@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Actor States  
 <span class="navnp"><a href="actorobj.html" class="nav"><em>Prev:</em> The Actor Object</a>
     <a href="agenda.html" class="nav"><em>Next:</em> AgendaItems</a>    
 </span>
-
-
-
-
-
 # Actor States
 
 <span id="purpose"></span>

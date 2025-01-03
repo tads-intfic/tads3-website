@@ -243,11 +243,6 @@ with the original command.
 
 
 save the most recent command so that it can be repeated if desired
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

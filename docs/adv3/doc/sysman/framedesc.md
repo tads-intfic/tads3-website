@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \>
 StackFrameDesc  
 <span class="navnp"><a href="rexpat.html" class="nav"><em>Prev:</em> RexPattern</a>
     <a href="string.html" class="nav"><em>Next:</em> String</a>    
 </span>
-
-
-
-
-
 # StackFrameDesc
 
 The StackFrameDesc ("desc" for "descriptor") class provides access to
@@ -289,11 +279,6 @@ automatically makes a snapshot copy of the frame's local variables in
 the StackFrameDesc, which then uses the snapshot copy whenever you
 access the locals. This means that you can access the locals even after
 the true stack frame has been deleted.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

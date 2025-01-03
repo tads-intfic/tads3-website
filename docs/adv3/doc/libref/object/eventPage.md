@@ -130,11 +130,6 @@ broadcast an event message to each client
 
 
 send an event to a particular client
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

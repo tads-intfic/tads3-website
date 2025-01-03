@@ -50,13 +50,6 @@ literalPhrase production allows both quoted and unquoted text.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
@@ -101,11 +94,6 @@ Inherited from `BasicProd` :
 
 get my string, with the quotes trimmed off (so we return simply the
 contents of the string)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

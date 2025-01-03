@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Querying the World
 Model  
 <span class="navnp"><a href="topicact.html" class="nav"><em>Prev:</em> Topic Actions</a>
     <a href="scope.html" class="nav"><em>Next:</em> Scope</a>     </span>
-
-
-
-
-
 # Querying the World Model
 
 <span id="q"></span>

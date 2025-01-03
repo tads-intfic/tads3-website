@@ -4,19 +4,9 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Introduction  
 <span class="navnp"><a href="fund.html" class="nav"><em>Next:</em> Fundamentals</a>
     </span>
-
-
-
-
-
 # Introduction
 
 Welcome to the TADS 3 Technical Manual!

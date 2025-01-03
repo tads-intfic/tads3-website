@@ -220,11 +220,6 @@ determines if our Doer is a handler for the given command.
 
 
 Check whether a Doer matches its where, when, who and during conditions.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

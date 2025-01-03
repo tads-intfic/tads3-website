@@ -21,15 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><img src="../../docs/manual/topbar.jpg" data-border="0" /></p>
-
-<p><a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
+<p><img src="../../docs/manual/topbar.jpg" data-border="0" />
+<a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> |
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> &gt;
 Sensory<br />
 <span class="navnp"><a href="sensory.html" class="nav"><em>Prev:</em> Sensory</a>
     <a href="subtime.html" class="nav"><em>Next:</em> Subtime</a>    
 </span></p>
-
 <h1 id="signals">Signals</h1>
 
 <h2 id="overview">Overview</h2>
@@ -454,7 +452,6 @@ statements:</p>
      connect(redSwitch, offSignal, cellarLight);
      
 </code></pre></div></div>
-
 <p>Since onSignal and offSignal will be emitted by the switch in any case,
 the only other step is to handle them on the cellar light. If we know
 that these are the only signals the cellar light is ever going to
@@ -586,8 +583,6 @@ relevant part of the re-connection code like so:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       connect(redSwitch, onSignal, cellarLight, &amp;handle_off);
        connect(redSwitch, offSignal, cellarLight, &amp;handle_on);
-     
-     
 </code></pre></div></div>
 
 <p>This will then make turning the switch on turn off the light, and

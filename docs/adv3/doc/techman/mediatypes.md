@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Internet Media
 Types for TADS  
@@ -16,11 +11,6 @@ Types for TADS
 Past Tense</a>    
 <a href="t3projectStarters.html" class="nav"><em>Next:</em> Workbench
 Project Starter Templates</a>     </span>
-
-
-
-
-
 # Internet Media Types for TADS
 
 *by Andreas Sewe*

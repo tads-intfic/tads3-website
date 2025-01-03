@@ -52,11 +52,6 @@ same way we'd match them if they were quoted.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `AdjPhraseWithVocab` :  
 [`adjVocabProp`](../object/AdjPhraseWithVocab.html#adjVocabProp)
 
@@ -127,11 +122,6 @@ return the result
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

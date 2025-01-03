@@ -264,11 +264,6 @@ we'll show the current score, a slash, and the number of turns.
 Show the statusline in text mode. Our default implementation shows the
 traditional two-part (left/right) status line, using showStatusLeft()
 and showStatusRight() to display the parts.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

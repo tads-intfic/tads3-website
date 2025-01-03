@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Dynamic Object
 Creation  
 <span class="navnp"><a href="multmeth.html" class="nav"><em>Prev:</em> Multi-Methods</a>
     <a href="gc.html" class="nav"><em>Next:</em> Garbage Collection and
 Finalization</a>     </span>
-
-
-
-
-
 # Dynamic Object Creation
 
 Most TADS games define a large number of "static" objects that encode

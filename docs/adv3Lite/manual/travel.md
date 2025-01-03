@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> TravelConnectors
 and Barriers  
 <span class="navnp"><a href="door.html" class="nav"><em>Prev:</em>Doors</a>
     <a href="key.html" class="nav"><em>Next:</em> Keys</a>     </span>
-
-
-
-
-
 # Travel Connectors and Barriers
 
 ## TravelConnectors

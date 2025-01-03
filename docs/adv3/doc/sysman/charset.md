@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> CharacterSet  
 <span class="navnp"><a href="bytearr.html" class="nav"><em>Prev:</em> ByteArray</a>
     <a href="collect.html" class="nav"><em>Next:</em> Collection</a>    
 </span>
-
-
-
-
-
 # CharacterSet
 
 TADS 3 uses the Unicode character set to represent all strings

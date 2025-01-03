@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../toc.html" class="nav">Table of Contents</a> \|
 <a href="../../final.html" class="nav">Final Moves</a> \> Exercises &
 Samples  
@@ -16,11 +11,6 @@ Samples
 Extensions</a>    
 <a href="../../feedback.html" class="nav"><em>Next:</em> Feedback</a>
     </span>
-
-
-
-
-
 # Exercises & Samples
 
 [Learning TADS 3 With Adv3Lite](LearningT3Lite.pdf) contains a number of

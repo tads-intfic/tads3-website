@@ -157,11 +157,6 @@ command-line input must be read in the course of a command's execution.
 
 Internal routine: write the given text directly through us, skipping any
 filtering we'd otherwise apply.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

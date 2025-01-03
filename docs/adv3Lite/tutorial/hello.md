@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Hello and Goodbye  
@@ -16,11 +11,6 @@ Hello and Goodbye
 Suggestions</a>    
 <a href="convnode.html" class="nav"><em>Next:</em> Angela Wants
 Answers</a>     </span>
-
-
-
-
-
 # Hello and Goodbye
 
 You may recall that in setting up Angela's ActorStates in the previous

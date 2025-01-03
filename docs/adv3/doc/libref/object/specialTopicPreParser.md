@@ -146,11 +146,6 @@ method is for the language module's use; by default, we do nothing.
 
 Language modules should override this to remove punctuation marks and to
 do any other language-dependent processing to make the string parsable.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

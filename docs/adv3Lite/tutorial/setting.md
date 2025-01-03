@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Setting it all up  
 <span class="navnp"><a href="getting.html" class="nav"><em>Prev:</em> Getting What You
 Need</a>    
 <a href="using.html" class="nav"><em>Next:</em> Using the Tools</a>    
 </span>
-
-
-
-
-
 # Setting it all up
 
 Once you've got up-to-date versions of the TADS 3 authoring

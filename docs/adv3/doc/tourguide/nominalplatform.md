@@ -96,149 +96,27 @@ the initial definition of the curator, and then posture = standing; and
 posture = sitting; after the two moveIntoForTravel statements, i.e.:  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>if(connector == museum)  <br />
-</td>
-</tr>
-</tbody>
-</table>
+if(connector == museum)  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      {  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      {  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>         moveIntoForTravel(byCases);  <br />
-</td>
-</tr>
-</tbody>
-</table>
+         moveIntoForTravel(byCases);  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>         posture = standing;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+         posture = standing;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      }     <br />
-</td>
-</tr>
-</tbody>
-</table>
+      }     
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      else  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      else  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      {  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      {  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>         moveIntoForTravel(behindTable);  <br />
-</td>
-</tr>
-</tbody>
-</table>
+         moveIntoForTravel(behindTable);  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>         posture = sitting;    <br />
-</td>
-</tr>
-</tbody>
-</table>
+         posture = sitting;    
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      }  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      }  
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Although raises the question of what the curator is sitting on, and

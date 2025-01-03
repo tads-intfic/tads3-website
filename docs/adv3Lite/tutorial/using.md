@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Using the Tools  
 <span class="navnp"><a href="setting.html" class="nav"><em>Prev:</em> Setting it all up</a>
    
 <a href="heidi.html" class="nav"><em>Next:</em> Heidi: our first adv3Lite
 game</a>     </span>
-
-
-
-
-
 # Using the Tools
 
 We're almost ready to dive in and start writing our first game together,

@@ -83,11 +83,6 @@ Inherited from `CommandReport` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `MarkerReport` :  
 [`showMessage`](../object/MarkerReport.html#showMessage)
 

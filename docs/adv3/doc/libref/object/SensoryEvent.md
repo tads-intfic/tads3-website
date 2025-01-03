@@ -150,11 +150,6 @@ sound of a phone ringing, the phone would probably be the source object.
 The source is used to determine which observers are capable of detecting
 the event: an observer must be able to sense the source object in the
 appropriate sense to be notified of the event.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

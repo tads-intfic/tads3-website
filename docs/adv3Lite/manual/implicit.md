@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Implicit Actions  
 <span class="navnp"><a href="doer.html" class="nav"><em>Prev:</em> Doers</a>
    
 <a href="react.html" class="nav"><em>Next:</em> Reacting to Actions</a>
     </span>
-
-
-
-
-
 # Implicit Actions
 
 An implicit action is an action that the game carries out for the player

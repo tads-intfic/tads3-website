@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Attachables  
 <span class="navnp"><a href="optional.html" class="nav"><em>Prev:</em> Optional Modules</a>
     <a href="event.html" class="nav"><em>Next:</em> Events</a>    
 </span>
-
-
-
-
-
 # Attachables
 
 The attachables module provides a couple of classes to facilitate
@@ -259,9 +249,6 @@ class and define its **needsExplicitSocket** property as nil, e.g.:
         }
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

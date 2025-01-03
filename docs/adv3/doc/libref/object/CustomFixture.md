@@ -94,11 +94,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Fixture` :  
 [`dobjFor(Move)`](../object/Fixture.html#dobjFor(Move)) [`dobjFor(MoveTo)`](../object/Fixture.html#dobjFor(MoveTo)) [`dobjFor(MoveWith)`](../object/Fixture.html#dobjFor(MoveWith)) [`dobjFor(Pull)`](../object/Fixture.html#dobjFor(Pull)) [`dobjFor(Push)`](../object/Fixture.html#dobjFor(Push)) [`dobjFor(PushTravel)`](../object/Fixture.html#dobjFor(PushTravel)) [`dobjFor(PutBehind)`](../object/Fixture.html#dobjFor(PutBehind)) [`dobjFor(PutIn)`](../object/Fixture.html#dobjFor(PutIn)) [`dobjFor(PutOn)`](../object/Fixture.html#dobjFor(PutOn)) [`dobjFor(PutUnder)`](../object/Fixture.html#dobjFor(PutUnder)) [`dobjFor(Take)`](../object/Fixture.html#dobjFor(Take)) [`dobjFor(TakeFrom)`](../object/Fixture.html#dobjFor(TakeFrom)) [`dobjFor(ThrowAt)`](../object/Fixture.html#dobjFor(ThrowAt)) [`dobjFor(ThrowDir)`](../object/Fixture.html#dobjFor(ThrowDir)) [`hideFromAll`](../object/Fixture.html#hideFromAll) [`hideFromDefault`](../object/Fixture.html#hideFromDefault) [`isOwnedBy`](../object/Fixture.html#isOwnedBy) [`verifyMoveTo`](../object/Fixture.html#verifyMoveTo)
 

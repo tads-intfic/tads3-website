@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Endings  
 <span class="navnp"><a href="beginning.html" class="nav"><em>Prev:</em> Beginnings</a>
     <a href="optional.html" class="nav"><em>Next:</em> Part III: Optional
 Modules</a>     </span>
-
-
-
-
-
 # Endings
 
 Most IF games need to have an ending somewhere (other than by the player
@@ -120,9 +110,6 @@ Or:
        }
     ;   
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

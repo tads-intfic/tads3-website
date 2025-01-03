@@ -48,11 +48,6 @@ because it ends in an exclusion list.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ListButProd` :  
 [`addedFlags`](../object/ListButProd.html#addedFlags)
 
@@ -69,11 +64,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ListButProd` :  
 [`flagAllExcepted`](../object/ListButProd.html#flagAllExcepted) [`getMainList`](../object/ListButProd.html#getMainList)
 

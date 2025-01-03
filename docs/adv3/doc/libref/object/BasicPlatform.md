@@ -91,11 +91,6 @@ stand on it.
 
 
 [`actorInPrep`](#actorInPrep) [`actorOutOfPrep`](#actorOutOfPrep) [`allowedPostures`](#allowedPostures) [`defaultPosture`](#defaultPosture) [`down`](#down) [`effectiveFollowLocation`](#effectiveFollowLocation) [`mustMoveIntoProp`](#mustMoveIntoProp) [`objInPrep`](#objInPrep) [`obviousPostures`](#obviousPostures)
-
-
-
-
-
 Inherited from `NestedRoom` :  
 [`bulkCapacity`](../object/NestedRoom.html#bulkCapacity) [`exitDestination`](../object/NestedRoom.html#exitDestination) [`out`](../object/NestedRoom.html#out) [`roomName`](../object/NestedRoom.html#roomName) [`stagingLocations`](../object/NestedRoom.html#stagingLocations)
 
@@ -310,11 +305,6 @@ nested room.
 
 Remove an actor from the platform. "Get off" is the normal command to
 leave a platform.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -73,11 +73,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `RestoreAction` :  
 [`askAndRestore`](../object/RestoreAction.html#askAndRestore) [`execSystemAction`](../object/RestoreAction.html#execSystemAction) [`performRestore`](../object/RestoreAction.html#performRestore) [`startupRestore`](../object/RestoreAction.html#startupRestore)
 

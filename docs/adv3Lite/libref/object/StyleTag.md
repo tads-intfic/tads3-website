@@ -89,11 +89,6 @@ optionally, another string that is substituted for occurrences of the
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 *(none)* <span id="_Properties_"></span>
 
 

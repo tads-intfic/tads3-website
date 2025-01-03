@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="lib.html" class="nav">The System Library</a> \> Miscellaneous
 Library Definitions  
 <span class="navnp"><a href="tok.html" class="nav"><em>Prev:</em> Basic Tokenizer</a>
     <a href="nodef.html" class="nav"><em>Next:</em> Replacing the System
 Library</a>     </span>
-
-
-
-
-
 # Miscellaneous Library Definitions
 
 This section describes a few miscellaneous functions and classes that
@@ -44,9 +34,6 @@ of Actor:
 ```
     forEachInstance(Actor, {obj: obj.isAnimate = true});
 ```
-
-
-
 `\_default_display_fn(*val*)`
 
 
@@ -101,11 +88,6 @@ system library. In particular, this object's property
 status; this property is set to `true` after
 pre-initialization has been completed, so that the library knows that
 the process won't have to be repeated when the program is started.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

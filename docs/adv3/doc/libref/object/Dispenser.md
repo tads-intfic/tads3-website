@@ -188,11 +188,6 @@ identical items, so our default implementation simply determines if the
 item is an instance of our dispensable class. If the dispenser can hand
 out items of multiple, unrelated classes, this can be overridden to use
 a different means of identifying the dispensed items.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

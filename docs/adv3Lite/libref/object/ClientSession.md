@@ -493,11 +493,6 @@ wait for the queues to empty in preparation for shutting down
 
 
 update the last event time for this client
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

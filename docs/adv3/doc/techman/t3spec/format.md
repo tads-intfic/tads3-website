@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Image File Format  
@@ -16,11 +11,6 @@ Image File Format
 Set</a>    
 <a href="bincode.html" class="nav"><em>Next:</em> Portable Binary
 Encoding</a>     </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -1952,11 +1942,6 @@ implementation uses the same pattern for its saved-state files.)
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

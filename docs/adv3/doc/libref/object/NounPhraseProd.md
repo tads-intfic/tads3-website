@@ -325,11 +325,6 @@ logicalness.
 By default, we keep only the items that are equally as logical as the
 best item in the results. Since the items are sorted in descending order
 of goodness, the best item is always the first item.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -69,11 +69,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `AgainAction` :  
 [`clearForAgain`](../object/AgainAction.html#clearForAgain) [`doAction`](../object/AgainAction.html#doAction) [`saveForAgain`](../object/AgainAction.html#saveForAgain)
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="finish.html" class="nav">Finishing Touches</a> \> Starting Out
 Right  
 <span class="navnp"><a href="finish.html" class="nav"><em>Prev:</em> Finishing Touches</a>
     <a href="scoring.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
-
-
-
-
-
 # Starting Out Right
 
 One thing our Airport currently lacks is a decent introduction. The game

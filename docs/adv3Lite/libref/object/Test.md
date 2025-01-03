@@ -202,11 +202,6 @@ Move everything in the testHolding list into the actor's inventory
 
 Run this test by passing the commands in testList through
 Parser.parse().
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

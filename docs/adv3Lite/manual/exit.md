@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Exits  
 <span class="navnp"><a href="eventlist.html" class="nav"><em>Prev:</em> EventLists</a>
     <a href="extra.html" class="nav"><em>Next:</em> Extras</a>    
 </span>
-
-
-
-
-
 # Exits
 
 The exits.t module provides the status line exit lister and a list of

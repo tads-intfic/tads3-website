@@ -278,9 +278,7 @@ reachable.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Note that the last two methods are only operative if the NPC's current

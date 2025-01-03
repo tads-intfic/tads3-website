@@ -69,11 +69,6 @@ short of the target).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `DropTypeThrow` :  
 [`path_`](../object/DropTypeThrow.html#path_) [`target_`](../object/DropTypeThrow.html#target_)
 
@@ -88,11 +83,6 @@ Inherited from `DropTypeThrow` :
 
 
 [`construct`](#construct) [`getReportPrefix`](#getReportPrefix) [`standardReport`](#standardReport)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -142,11 +132,6 @@ show the short-throw report
 
 
 we care about the \*intended\* target, not the distance connector
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

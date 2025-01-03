@@ -74,11 +74,6 @@ the same time with the other actor.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ActorState` :  
 [`autoSuggest`](../object/ActorState.html#autoSuggest) [`getImpliedConvState`](../object/ActorState.html#getImpliedConvState) [`isInitState`](../object/ActorState.html#isInitState) [`location`](../object/ActorState.html#location) [`stateDesc`](../object/ActorState.html#stateDesc) [`stateSuggestedTopics`](../object/ActorState.html#stateSuggestedTopics)
 
@@ -177,11 +172,6 @@ in-travel state object, returning to the current state when we're done.
 'traveler' is the Traveler object that's performing the travel; this
 might be an Actor, but could also be a Vehicle or other Traveler
 subclass.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -56,11 +56,6 @@ Glass is transparent to light, but opaque to touch, sound, and smell.
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Material` :  
 [`senseThru`](../object/Material.html#senseThru)
 

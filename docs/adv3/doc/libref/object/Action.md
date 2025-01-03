@@ -2605,11 +2605,6 @@ be used when a nested replacement action is to completely take over the
 time-keeping responsibility for the entire turn; all containing actions
 in this case are to take zero time, since the nested action is the only
 part of the turn that will count for timing.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

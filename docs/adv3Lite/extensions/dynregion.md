@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Dynamic Region  
 <span class="navnp"><a href="cmdhelp.html" class="nav"><em>Prev:</em> Command Help</a>
     <a href="eventlistitem.html" class="nav"><em>Next:</em>
 EventListItem</a>     </span>
-
-
-
-
-
 # DynamicRegion
 
 ## Overview

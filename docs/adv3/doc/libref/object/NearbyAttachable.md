@@ -78,11 +78,6 @@ is being moved away from the other's immediate container.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Attachable` :  
 [`attachedObjects`](../object/Attachable.html#attachedObjects) [`attachmentLister`](../object/Attachable.html#attachmentLister) [`majorAttachmentLister`](../object/Attachable.html#majorAttachmentLister)
 
@@ -192,11 +187,6 @@ when an attached object is being moved, detach the objects
 
 
 perform a nested DetachFrom action on the given object
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -189,11 +189,6 @@ check to see if it's a debugger signal of some kind
 
 
 create a runtime error with a given error message
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

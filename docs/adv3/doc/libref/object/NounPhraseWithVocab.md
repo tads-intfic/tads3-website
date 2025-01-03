@@ -113,11 +113,6 @@ adjective and noun forms.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -360,11 +355,6 @@ Resolve the objects.
 
 Run a set of resolved objects through matchName() or a similar routine.
 Returns the filtered results.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

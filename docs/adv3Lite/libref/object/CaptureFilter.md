@@ -74,13 +74,6 @@ can keep track of the text in memory, in a file, or wherever desired.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -119,11 +112,6 @@ can keep track of the text in memory, in a file, or wherever desired.
 
 Filter the text. We simply discard the text, passing nothing through to
 the underlying stream.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

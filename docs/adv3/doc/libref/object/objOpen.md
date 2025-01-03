@@ -45,13 +45,6 @@ The basic object-open condition
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `PreCondition` :  
 [`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
@@ -60,11 +53,6 @@ Inherited from `PreCondition` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ObjOpenCondition` :  
 [`checkPreCondition`](../object/ObjOpenCondition.html#checkPreCondition) [`conditionFailed`](../object/ObjOpenCondition.html#conditionFailed) [`verifyPreCondition`](../object/ObjOpenCondition.html#verifyPreCondition)
 

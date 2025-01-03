@@ -87,11 +87,6 @@ including the frame object.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -222,11 +217,6 @@ automatically use the snapshot copy, so you can continue to access the
 locals as normal without worrying about whether or not the actual stack
 frame still exists. This allows you to continue to access and modify the
 values of the variables after the routine has exited.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

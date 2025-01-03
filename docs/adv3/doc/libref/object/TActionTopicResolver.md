@@ -69,11 +69,6 @@ we'll let the action handle the resolution.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TopicResolver` :  
 [`isGlobalScope`](../object/TopicResolver.html#isGlobalScope) [`qualifierResolver_`](../object/TopicResolver.html#qualifierResolver_) [`topicProd`](../object/TopicResolver.html#topicProd)
 
@@ -121,11 +116,6 @@ Inherited from `Resolver` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

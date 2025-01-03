@@ -168,11 +168,6 @@ Show hints - invoke the hint system.
 Show a warning before showing any hints. By default, we'll show this at
 most once per session or once per saved game. Returns true if we are to
 proceed to the hints, nil if not.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

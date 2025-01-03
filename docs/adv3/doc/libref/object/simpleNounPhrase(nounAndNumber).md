@@ -47,13 +47,6 @@ tab "A" in slot "B"')
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -116,11 +109,6 @@ intersect the two lists and return the results
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

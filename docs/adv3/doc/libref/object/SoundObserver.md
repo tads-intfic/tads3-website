@@ -66,11 +66,6 @@ classes.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -107,11 +102,6 @@ classes.
 
 Receive notification of a sound event. This routine is called whenever a
 SoundEvent occurs within hearing range of this object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

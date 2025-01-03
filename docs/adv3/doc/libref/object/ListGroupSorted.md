@@ -71,11 +71,6 @@ specific sorting order.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ListGroup` :  
 [`groupDisplaysSublist`](../object/ListGroup.html#groupDisplaysSublist) [`minGroupSize`](../object/ListGroup.html#minGroupSize)
 
@@ -163,11 +158,6 @@ Show the group list
 Sort the group list. By default, if we have a compareGroupItems() method
 defined, we'll sort the list using that method; otherwise, we'll just
 return the list unchanged.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -46,13 +46,6 @@ The object which drives emanation messages for Odors and Noises
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
@@ -123,11 +116,6 @@ emanations. \[DEFINED IN SENSORY EXTENSION\]
 
 
 Set up our Daemon at the start of play. \[DEFINED IN SENSORY EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

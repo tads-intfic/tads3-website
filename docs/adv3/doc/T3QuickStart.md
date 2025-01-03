@@ -20,11 +20,6 @@ running as quickly as possible. It contains three sections:
     to read the other manuals.
 
 Enjoy!
-
-
-
-
-
 ## 1. Installing TADS 3 and Creating a Project
 
 ### 1a. Windows Users: Installing and Creating a Project in Windows Workbench
@@ -412,11 +407,6 @@ aware of the following basic ideas:
   library source where that property or method is defined. By inspecting
   the code, you can often learn a great deal about how the property or
   method works.
-
-
-
-
-
 ## 3. Jumping Right In: A Sample Game
 
 The sensible and logical thing to do at this point would be to start

@@ -68,11 +68,6 @@ Inherited from `PostRestoreObject` :
 
 Inherited from `ModuleExecObject` :  
 [`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -87,11 +82,6 @@ Inherited from `ModuleExecObject` :
 
 Inherited from `ModuleExecObject` :  
 [`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -181,11 +171,6 @@ initializing (when first starting the game or when restarting).
 
 
 Skip all descendants of the window at the given index.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

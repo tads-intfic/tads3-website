@@ -234,11 +234,6 @@ instance's \_execute() method.
 
 Subclass-specific execution method. Each subclass should override this
 method to provide its execution code.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

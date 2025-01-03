@@ -117,11 +117,6 @@ show the score in the end-of-game announcement
 
 
 this option isn't selectable, so it has no effect
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

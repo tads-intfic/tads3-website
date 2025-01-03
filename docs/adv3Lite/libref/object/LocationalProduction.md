@@ -153,11 +153,6 @@ Visit a production. When we process the locational qualifier phrase,
 we'll build out the sub-tree in the context of a new NounPhrase, which
 we attach as a locational qualifier to the encompassing noun phrase
 under construction.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

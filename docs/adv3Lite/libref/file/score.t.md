@@ -74,11 +74,6 @@ score, which indicates the player's progress through the game.
 
 Add points to the total score. This is a convenience function that
 simply calls libScore.addToScore\_().
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

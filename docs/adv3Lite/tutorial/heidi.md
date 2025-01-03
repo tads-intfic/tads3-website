@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Heidi: our first
 adv3Lite game  
 <span class="navnp"><a href="using.html" class="nav"><em>Prev:</em> Using the Tools</a>
    <a href="basicsource.html" class="nav"><em>Next:</em> Creating the Basic
 Source File</a>     </span>
-
-
-
-
-
 # Chapter 3: Heidi: our first adv3Lite game
 
 In this chapter we'll write our first adv3Lite game together.
@@ -50,11 +40,6 @@ attempt (there’s time later for more advanced stuff).
 [Adding the Bird and the Nest](bird.html)  
 [Adding the Tree and the Branch](tree.html)  
 [Finishing Touches](finishing.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

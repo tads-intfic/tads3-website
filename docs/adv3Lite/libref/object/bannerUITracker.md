@@ -151,11 +151,6 @@ all items whose windows are descended from this window. We'll leave the
 index positioned on the next entry in the list that isn't a descendant
 of the window at the given index. Note that this skips not only children
 but grandchildren (and so on) as well.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

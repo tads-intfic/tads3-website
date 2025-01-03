@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="schemes.html" class="nav">Schemes and Devices</a> \> The
 Maintenance Room  
@@ -16,11 +11,6 @@ Maintenance Room
    
 <a href="security.html" class="nav"><em>Next:</em> The Security Area</a>
     </span>
-
-
-
-
-
 # The Maintenance Room
 
 You may recall that the main point of the maintenance room in the

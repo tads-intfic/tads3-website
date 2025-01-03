@@ -21,11 +21,6 @@ completeNounPhrase-\>np2\_
 
 
 completeNounPhrase-\>np1\_ nounConjunction completeNounPhrase-\>np2\_  
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

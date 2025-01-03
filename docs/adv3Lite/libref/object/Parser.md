@@ -385,11 +385,6 @@ we repeat the process for each one.
 
 
 Return an rmcXXXX enum code depending on the state of Parser.question
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

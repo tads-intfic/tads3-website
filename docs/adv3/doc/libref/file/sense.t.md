@@ -103,11 +103,6 @@ the first one is more transparent, and -1 if the second one is more
 transparent. The comparison follows this rule:
 
 transparent \> attenuated \> distant == obscured \> opaque
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -538,11 +538,6 @@ keys on the right.
 Update our contents. By default, we'll do nothing; subclasses can
 override this to manage dynamic menus if desired. This is called just
 before the menu is displayed, each time it's displayed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

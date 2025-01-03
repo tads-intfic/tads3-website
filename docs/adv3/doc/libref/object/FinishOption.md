@@ -199,11 +199,6 @@ the string exactly matches responseKeyword or exactly matches our
 responseChar (if that's non-nil), but this can be overridden to match
 other strings if desired. By default, we'll match the response without
 regard to case.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

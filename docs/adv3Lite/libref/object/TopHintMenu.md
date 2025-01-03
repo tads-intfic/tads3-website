@@ -75,11 +75,6 @@ pre-initialization.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `HintMenu` :  
 [`allContents`](../object/HintMenu.html#allContents) [`isActiveInMenu`](../object/HintMenu.html#isActiveInMenu) [`title`](../object/HintMenu.html#title)
 
@@ -150,11 +145,6 @@ Inherited from `ModuleExecObject` :
 
 
 register as the top-level hint menu during pre-initialization
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

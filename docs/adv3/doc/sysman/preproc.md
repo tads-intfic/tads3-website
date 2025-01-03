@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> The Preprocessor  
 <span class="navnp"><a href="charmap.html" class="nav"><em>Prev:</em> Source File Character
 Sets</a>    
 <a href="types.html" class="nav"><em>Next:</em> Fundamental Datatypes</a>
     </span>
-
-
-
-
-
 # The Preprocessor
 
 TADS 3 provides a macro preprocessor that's essentially equivalent to

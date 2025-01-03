@@ -46,11 +46,6 @@ antecedents.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `GetVerbPhraseContext` :  
 [`pronounObj`](../object/GetVerbPhraseContext.html#pronounObj)
 
@@ -92,11 +87,6 @@ Inherited from `GetVerbPhraseContext` :
 
 
 we don't remember any antecedents
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -53,11 +53,6 @@ return the list
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `DisambigPossessiveProd` :  
 [`qualifiedList_`](../object/DisambigPossessiveProd.html#qualifiedList_)
 
@@ -74,21 +69,11 @@ Inherited from `BasicProd` :
 
 Inherited from `AmbigResponseKeeper` :  
 [`ambigResponses_`](../object/AmbigResponseKeeper.html#ambigResponses_)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `DisambigPossessiveProd` :  
 [`reduceDefinite`](../object/DisambigPossessiveProd.html#reduceDefinite) [`resolveNouns`](../object/DisambigPossessiveProd.html#resolveNouns)
 

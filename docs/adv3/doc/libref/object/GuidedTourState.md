@@ -222,11 +222,6 @@ traveling, and they're traveling to the next stop on our tour
 
 get our accompanying state object - we'll create an instance of the
 class specified in our escortStateClass property
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

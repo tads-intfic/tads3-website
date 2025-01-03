@@ -46,11 +46,6 @@ generate a list of command templates.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `PreinitObject` :  
 [`execBeforeMe`](../object/PreinitObject.html#execBeforeMe) [`reverseGlobalSymbols`](../object/PreinitObject.html#reverseGlobalSymbols)
 
@@ -111,11 +106,6 @@ Inherited from `ModuleExecObject` :
 Expand an initial template list. This takes a list of the form \[action,
 'a\|b\|c', 'd\|e\|f'\], and converts it into multiple lists with an
 individual noun in each slot.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

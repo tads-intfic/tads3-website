@@ -155,11 +155,6 @@ By default, we don't do anything at all.
 
 Get the current state. This returns a value that gives the current state
 of the script, which is usually simply an integer.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

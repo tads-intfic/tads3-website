@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Doors  
 <span class="navnp"><a href="roomdesc.html" class="nav"><em>Prev:</em>Room Descriptions</a>
     <a href="travel.html" class="nav"><em>Next:</em> TravelConnectors and
 Barriers</a>     </span>
-
-
-
-
-
 # Doors
 
 A Door is an object that can be attached to the direction property of a

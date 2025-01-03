@@ -55,11 +55,6 @@ they are inherently unambiguous.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ItsAdjProd` :  
 [`pronounType`](../object/ItsAdjProd.html#pronounType)
 
@@ -124,11 +119,6 @@ Inherited from `BasicProd` :
 
 
 we only agree with a singular ungendered noun
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

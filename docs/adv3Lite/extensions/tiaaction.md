@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 TIAAction  
 <span class="navnp"><a href="sysrules.html" class="nav"><em>Prev:</em> Sysrules</a>
     <a href="viewport.html" class="nav"><em>Next:</em> Viewport</a>    
 </span>
-
-
-
-
-
 # TIAAction
 
 ## Overview

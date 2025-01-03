@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> LookupTable  
 <span class="navnp"><a href="list.html" class="nav"><em>Prev:</em> List</a>
     <a href="objic.html" class="nav"><em>Next:</em> Object</a>    
 </span>
-
-
-
-
-
 # LookupTable
 
 A LookupTable is an unordered collection of values; each value indexed

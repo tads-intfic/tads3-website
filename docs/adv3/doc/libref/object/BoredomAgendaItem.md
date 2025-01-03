@@ -155,11 +155,6 @@ on invocation, end the conversation
 
 we're ready to run if our actor is in an InConversationState and its
 boredom count has reached the limit for the state
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

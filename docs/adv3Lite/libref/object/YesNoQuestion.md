@@ -135,11 +135,6 @@ conversational verb instead
 Create - 'func' is the callback function to invoke on answering the
 question. This is invoked with one argument, true if the answer was Yes,
 nil if the answer was No.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -106,11 +106,6 @@ Modify the basic Object class to provide a to-symbol mapping
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -330,11 +325,6 @@ get the type of a property defined for this object
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

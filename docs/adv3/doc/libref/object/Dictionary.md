@@ -73,13 +73,6 @@ associates the word with an object.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -328,11 +321,6 @@ MUST EQUAL calcHash(s2). (This does NOT mean that two strings with equal
 hash values must be equal, or, equivalently, that two unequal strings
 must have different hash values. Hash collisions are explicitly allowed,
 so two strings that don't match can still have the same hash value.)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

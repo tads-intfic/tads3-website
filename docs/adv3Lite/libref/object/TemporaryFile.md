@@ -92,13 +92,6 @@ protections that the safety level settings provide for ordinary files.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -171,11 +164,6 @@ directory reserved for temporary files, and the file safety level
 settings often prohibit opening files outside of the program's own home
 directory. To open the temp file, you should always pass the
 TemporaryFile object itself in place of the filename.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

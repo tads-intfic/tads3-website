@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](doorsandwindows.html)   [\[Next\]](buryingtheboots.html)*
 
@@ -18,23 +13,6 @@ As the next step to making things more complicated for Heidi, we'll put
 the key in a field on the far side of a stream. First we need to add two
 extra locations to accommodate the stream:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 pathByStream : OutdoorRoom 'By a stream'  
   "The path through the trees from the southeast comes to an end on  
@@ -56,23 +34,6 @@ meadow : OutdoorRoom 'Large Meadow'
   east = streamWade  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The reason for using the separate RoomConnector object, streamWade, will
 gradually become apparent. At the moment note that it simply connects
@@ -85,23 +46,6 @@ pathByStream.
 Next we'll move the small brass key to the meadow and tweak its
 properties a little.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 + cottageKey : Key 'small brass brassy key/object/something' 'object'  
   "It's a small brass key, with a faded tag you can no longer read. "  
@@ -123,23 +67,6 @@ properties a little.
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The reason for the special dobjFor(Take) routine is that if we let the
 key start with the name 'small brass key', it might give its presence
@@ -164,43 +91,9 @@ exist in two or more locations since it is a subclass of MultiLoc (more
 of which anon). A DistanceConnector has a library template that makes it
 exceedingly easy to define; all we need to add is:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 DistanceConnector \[pathByStream, meadow\];  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The list in square brackets is in fact the locationList property, the
 name of which should be fairly self-explanatory. Note that
@@ -210,23 +103,6 @@ Another MultiLoc object we could use here would be a stream, which runs
 through both the rooms. And while we're at it, we'll make it possible
 for the player to cross the stream with the command **cross stream**.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 stream : MultiLoc, Fixture 'stream' 'stream'  
   "The stream is not terribly deep at this point, though it's flowing  
@@ -243,23 +119,6 @@ stream : MultiLoc, Fixture 'stream' 'stream'
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Note that being a MultiLoc object (like the DistanceConnector), the
 stream does not have a location property (its list of locations instead
@@ -275,23 +134,6 @@ when we cross the stream, we simply TravelVia streamWade and leave
 streamWade to sort it all out. But as we'll see shortly, that's only
 part of the story.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 In the meantime, there's another little matter we need to attend to.
 Unlike the other verbs we've used so far, there's no definition of Cross
@@ -306,23 +148,6 @@ couple of library macros hide most of the complication of all this, and
 all we need write is:  
 *
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 DefineTAction(Cross);  
   
@@ -332,23 +157,6 @@ VerbRule(Cross)
   verbPhrase = 'cross/crossing (what)'  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We use the DefineTAction() macro to define a Transitive Action (hence
 TAction), which means an action taking a direct object (as opposed to an
@@ -435,88 +243,20 @@ analogy from the way we prevented Heidi from climbing the tree unless
 she's standing on the chair.**  
 **
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 First here's the boots; as noted above the only thing new about them is
 that we make them of class Wearable, so Heidi can put them on:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 boots : Wearable 'old wellington pair/boots/wellies' 'old pair of boots'  
   @pathByStream  
  "They look ancient, battered, and scuffed, but probably still waterproof. "  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Next we need to modify the RoomConnector so that Heidi can only cross
 the stream when she's wearing the boots:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 streamWade : RoomConnector  
   room1 = pathByStream  
@@ -529,23 +269,6 @@ streamWade : RoomConnector
   }    
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 And that's all there is to it. If you try the game again you'll find you
 can't cross the stream (in either direction) unless you're wearing the

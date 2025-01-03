@@ -75,11 +75,6 @@ A combined ASK/TELL/GIVE/SHOW topic.
 
 
 [`includeInList`](#includeInList)
-
-
-
-
-
 Inherited from `TopicEntry` :  
 [`altTalkCount`](../object/TopicEntry.html#altTalkCount) [`altTopicList`](../object/TopicEntry.html#altTopicList) [`impliesGreeting`](../object/TopicEntry.html#impliesGreeting) [`isActive`](../object/TopicEntry.html#isActive) [`isConversational`](../object/TopicEntry.html#isConversational) [`matchObj`](../object/TopicEntry.html#matchObj) [`matchScore`](../object/TopicEntry.html#matchScore) [`talkCount`](../object/TopicEntry.html#talkCount) [`topicGroupActive`](../object/TopicEntry.html#topicGroupActive) [`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment) [`topicResponse`](../object/TopicEntry.html#topicResponse)
 
@@ -93,11 +88,6 @@ Inherited from `TopicMatchTopic` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `TopicOrThingMatchTopic` :  
 [`isMatchPossible`](../object/TopicOrThingMatchTopic.html#isMatchPossible) [`matchTopic`](../object/TopicOrThingMatchTopic.html#matchTopic) [`setTopicPronouns`](../object/TopicOrThingMatchTopic.html#setTopicPronouns)
 

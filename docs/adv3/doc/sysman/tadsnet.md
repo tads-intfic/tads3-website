@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> tads-net
 Function Set  
 <span class="navnp"><a href="tadsio.html" class="nav"><em>Prev:</em> tads-io Function Set</a>
     <a href="netsec.html" class="nav"><em>Next:</em> Network Safety</a>
     </span>
-
-
-
-
-
 # tads-net Function Set
 
 The tads-net function set is part of the TADS networking package. These

@@ -76,11 +76,6 @@ for objects in a specified list of exceptions; for example, in English,
 
 
 [`addedFlags`](#addedFlags) [`filterForCollectives`](#filterForCollectives)
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
@@ -165,11 +160,6 @@ flag an error - our main list has been completely excluded
 
 
 our main list is given by the "all" list
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

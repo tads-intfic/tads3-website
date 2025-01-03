@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](makingtheitemsdosomething.html)
   [\[Next\]](definingourfirstroom.html)*
@@ -25,23 +20,6 @@ is important to ensure that the foundations of understanding are
 securely laid, and in any case we shall shortly be introducing new ways
 of accomplishing seemingly familiar tasks.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The basis for the game we shall be developing is once again the
 so-called 'advanced' starter game starta3.t, which should be located in
@@ -57,23 +35,6 @@ Now open the file in your text editor of choice (either through
 Workbench or through the editor) and remove the definition of startroom,
 i.e. the lines that read:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 startRoom: Room 'Start Room'  
     "This is the starting room. "  
@@ -108,43 +69,14 @@ IFID = '573a8b18-1008-ca66-9580-9a156f82eefa'
         /\* show our credits \*/  
         "The TADS 3 language and library were created by Michael J.   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="102"></td>
-<td>Roberts.&lt;.p&gt; <br />
-</td>
-</tr>
-</tbody>
-</table>
+Roberts.&lt;.p&gt; 
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
         The original \<i\>Adventures of Heidi\</i\> was a simple tutorial game   
+for the Inform language written by Roger Firth and Sonja Kesserich."; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>for the Inform language written by Roger Firth and Sonja Kesserich."; <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
   
         

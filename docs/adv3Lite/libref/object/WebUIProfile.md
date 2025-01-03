@@ -168,11 +168,6 @@ call a callback for each style: func(id, val)
 
 
 set a preference item in the profile
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

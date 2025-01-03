@@ -725,11 +725,6 @@ showing its contents out-of-line.
 
 Show a newline after a list item if we're in a tall list; does nothing
 for a wide list.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

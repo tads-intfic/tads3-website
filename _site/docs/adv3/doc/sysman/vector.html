@@ -21,15 +21,13 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><img src="topbar.jpg" data-border="0" /></p>
-
-<p><a href="toc.html" class="nav">Table of Contents</a> |
+<p><img src="topbar.jpg" data-border="0" />
+<a href="toc.html" class="nav">Table of Contents</a> |
 <a href="builtins.html" class="nav">The Intrinsics</a> &gt; Vector<br />
 <span class="navnp"><a href="timezone.html" class="nav"><em>Prev:</em> TimeZone</a>
    
 <a href="wlookup.html" class="nav"><em>Next:</em> WeakRefLookupTable</a>
     </span></p>
-
 <h1 id="vector">Vector</h1>
 
 <p>Vector is a subclass of <a href="collect.html">Collection</a> that provides an
@@ -382,7 +380,6 @@ this:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = new Vector(20).copyFrom(lst, 3, 2, 5);
 </code></pre></div></div>
-
 <p><code class="language-plaintext highlighter-rouge">countOf(*val*)</code></p>
 
 <p>Returns the number of elements in the vector whose values equal <em>val</em>.</p>
@@ -437,7 +434,6 @@ expressions like this:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = new Vector(20).fillValue('A', 1, 20);
 </code></pre></div></div>
-
 <p><code class="language-plaintext highlighter-rouge">forEach(*func*)</code></p>
 
 <p>Invokes the callback function
@@ -478,7 +474,6 @@ first ten positive even integers:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    local e = Vector.generate({i: i*2}, 10);
 </code></pre></div></div>
-
 <p><code class="language-plaintext highlighter-rouge">getUnique()</code></p>
 
 <p>Returns a new vector consisting of the unique elements of the original
@@ -777,7 +772,6 @@ values are greater than 10.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    y = x.subset({x: x &gt; 10});
 </code></pre></div></div>
-
 <p><code class="language-plaintext highlighter-rouge">toList(*start*?, *count*?)</code></p>
 
 <p>Creates and returns a new list value based on the vector. With no

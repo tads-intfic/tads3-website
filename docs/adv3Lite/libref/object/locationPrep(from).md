@@ -60,11 +60,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `LocationPrepProduction` :  
 ` [`build`](../object/LocationPrepProduction.html#build)  `
 

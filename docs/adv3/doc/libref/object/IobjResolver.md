@@ -186,11 +186,6 @@ get all possible default objects
 
 Get the default object or objects for this phrase. Since we resolve
 indirect objects, we'll ask the action for a default indirect object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

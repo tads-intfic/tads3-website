@@ -171,11 +171,6 @@ that carries out the action of answering the question.
 Parse the answer. We'll match the token list against the grammar rule.
 If we find a match, we'll call makeCommand() to create the command to
 carry out the action of answering the question.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

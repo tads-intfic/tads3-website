@@ -75,11 +75,6 @@ each specific metadata format.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ModuleID` :  
 [`byline`](../object/ModuleID.html#byline) [`htmlByline`](../object/ModuleID.html#htmlByline) [`listingOrder`](../object/ModuleID.html#listingOrder) [`name`](../object/ModuleID.html#name) [`version`](../object/ModuleID.html#version)
 
@@ -145,11 +140,6 @@ execute pre-initialization
 write our metadata file - this must be overridden by each subclass to
 carry out the specific steps needed to create and write the metadata
 file in the appropriate format for the subclass
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

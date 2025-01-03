@@ -47,11 +47,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `HimProd` :  
 [`pronounType`](../object/HimProd.html#pronounType)
 
@@ -69,13 +64,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `PronounProd` :  
 [`checkAnaphoricBinding`](../object/PronounProd.html#checkAnaphoricBinding) [`resolveNouns`](../object/PronounProd.html#resolveNouns)
 

@@ -87,11 +87,6 @@ as though it were in ordinary action handler code.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `PromptDaemon` :  
 [`isPromptDaemon`](../object/PromptDaemon.html#isPromptDaemon)
 
@@ -138,11 +133,6 @@ Inherited from `Event` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

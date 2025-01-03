@@ -70,13 +70,6 @@ by giving you direct access to the raw bytes in the file).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -485,11 +478,6 @@ platforms: a file written in 'data' mode on one machine can be copied
 (byte-for-byte) to another machine, even one that uses different
 hardware and a different operating system, and read back in 'data' mode
 on the new machine to yield the original values written.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

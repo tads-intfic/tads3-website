@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Introduction  
@@ -16,11 +11,6 @@ Introduction
 Documentation</a>    
 <a href="philos.html" class="nav"><em>Next:</em> Design Philosophy</a>
     </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -91,11 +81,6 @@ character flags embedded.
 
 Copyright © 2001, 2010 by Michael J. Roberts.  
 Revision: January, 2010
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

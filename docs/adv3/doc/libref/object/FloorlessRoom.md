@@ -83,11 +83,6 @@ Room.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Floorless` :  
 [`bottomRoom`](../object/Floorless.html#bottomRoom) [`roomParts`](../object/Floorless.html#roomParts)
 
@@ -108,33 +103,16 @@ Inherited from `VocabObject` :
 
 Inherited from `BasicLocation` :  
 [`cannotGoThatWayMsg`](../object/BasicLocation.html#cannotGoThatWayMsg) [`defaultPosture`](../object/BasicLocation.html#defaultPosture) [`listWithActorInTable`](../object/BasicLocation.html#listWithActorInTable) [`mustDefaultPostureProp`](../object/BasicLocation.html#mustDefaultPostureProp) [`roomNotifyList`](../object/BasicLocation.html#roomNotifyList) [`roomTravelPreCond`](../object/BasicLocation.html#roomTravelPreCond)
-
-
-
-
-
-
-
 Inherited from `RoomConnector` :  
 [`room1`](../object/RoomConnector.html#room1) [`room2`](../object/RoomConnector.html#room2)
 
 Inherited from `TravelConnector` :  
 [`connectorStagingLocation`](../object/TravelConnector.html#connectorStagingLocation) [`isCircularPassage`](../object/TravelConnector.html#isCircularPassage) [`isConnectorListed`](../object/TravelConnector.html#isConnectorListed) [`rememberCircularPassage`](../object/TravelConnector.html#rememberCircularPassage) [`travelBarrier`](../object/TravelConnector.html#travelBarrier) [`travelMemory`](../object/TravelConnector.html#travelMemory)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Floorless` :  
 [`receiveDrop`](../object/Floorless.html#receiveDrop)
 
@@ -155,11 +133,6 @@ Inherited from `VocabObject` :
 
 Inherited from `BasicLocation` :  
 [`actorInGroupPrefix`](../object/BasicLocation.html#actorInGroupPrefix) [`actorInGroupSuffix`](../object/BasicLocation.html#actorInGroupSuffix) [`actorIsFamiliar`](../object/BasicLocation.html#actorIsFamiliar) [`actorKnowsDestination`](../object/BasicLocation.html#actorKnowsDestination) [`actorTravelingWithin`](../object/BasicLocation.html#actorTravelingWithin) [`addRoomNotifyItem`](../object/BasicLocation.html#addRoomNotifyItem) [`cannotGoThatWay`](../object/BasicLocation.html#cannotGoThatWay) [`cannotGoThatWayInDark`](../object/BasicLocation.html#cannotGoThatWayInDark) [`cannotTravel`](../object/BasicLocation.html#cannotTravel) [`checkActorReadyToEnterNestedRoom`](../object/BasicLocation.html#checkActorReadyToEnterNestedRoom) [`checkMovingActorInto`](../object/BasicLocation.html#checkMovingActorInto) [`disembarkRoom`](../object/BasicLocation.html#disembarkRoom) [`dispatchRoomDaemon`](../object/BasicLocation.html#dispatchRoomDaemon) [`enteringRoom`](../object/BasicLocation.html#enteringRoom) [`leavingRoom`](../object/BasicLocation.html#leavingRoom) [`listWithActorIn`](../object/BasicLocation.html#listWithActorIn) [`makeStandingUp`](../object/BasicLocation.html#makeStandingUp) [`removeRoomNotifyItem`](../object/BasicLocation.html#removeRoomNotifyItem) [`roomActorHereDesc`](../object/BasicLocation.html#roomActorHereDesc) [`roomActorPostureDesc`](../object/BasicLocation.html#roomActorPostureDesc) [`roomActorStatus`](../object/BasicLocation.html#roomActorStatus) [`roomAfterAction`](../object/BasicLocation.html#roomAfterAction) [`roomBeforeAction`](../object/BasicLocation.html#roomBeforeAction) [`roomDarkTravel`](../object/BasicLocation.html#roomDarkTravel) [`roomListActorPosture`](../object/BasicLocation.html#roomListActorPosture) [`roomOkayPostureChange`](../object/BasicLocation.html#roomOkayPostureChange) [`travelerArriving`](../object/BasicLocation.html#travelerArriving) [`travelerLeaving`](../object/BasicLocation.html#travelerLeaving) [`tryMakingDefaultPosture`](../object/BasicLocation.html#tryMakingDefaultPosture) [`tryMakingTravelReady`](../object/BasicLocation.html#tryMakingTravelReady) [`wouldBeLitFor`](../object/BasicLocation.html#wouldBeLitFor)
-
-
-
-
-
 Inherited from `RoomAutoConnector` :  
 [`getDestination`](../object/RoomAutoConnector.html#getDestination)
 
@@ -168,11 +141,6 @@ Inherited from `RoomConnector` :
 
 Inherited from `TravelConnector` :  
 [`actorTravelPreCond`](../object/TravelConnector.html#actorTravelPreCond) [`canTravelerPass`](../object/TravelConnector.html#canTravelerPass) [`checkTravelBarriers`](../object/TravelConnector.html#checkTravelBarriers) [`connectorBack`](../object/TravelConnector.html#connectorBack) [`connectorGetConnectorTo`](../object/TravelConnector.html#connectorGetConnectorTo) [`createUnlistedProxy`](../object/TravelConnector.html#createUnlistedProxy) [`darkTravel`](../object/TravelConnector.html#darkTravel) [`describeArrival`](../object/TravelConnector.html#describeArrival) [`describeDeparture`](../object/TravelConnector.html#describeDeparture) [`describeLocalArrival`](../object/TravelConnector.html#describeLocalArrival) [`describeLocalDeparture`](../object/TravelConnector.html#describeLocalDeparture) [`describeRemoteTravel`](../object/TravelConnector.html#describeRemoteTravel) [`dobjFor(TravelVia)`](../object/TravelConnector.html#dobjFor(TravelVia)) [`explainTravelBarrier`](../object/TravelConnector.html#explainTravelBarrier) [`getApparentDestination`](../object/TravelConnector.html#getApparentDestination) [`isConnectorApparent`](../object/TravelConnector.html#isConnectorApparent) [`isConnectorPassable`](../object/TravelConnector.html#isConnectorPassable) [`isConnectorVisibleInDark`](../object/TravelConnector.html#isConnectorVisibleInDark) [`noteTraversal`](../object/TravelConnector.html#noteTraversal) [`rememberTravel`](../object/TravelConnector.html#rememberTravel)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 

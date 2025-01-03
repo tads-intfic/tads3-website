@@ -114,9 +114,7 @@ should usually be overridden if travelObjs is overridden.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
   

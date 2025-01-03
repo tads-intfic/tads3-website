@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> DynamicFunc  
 <span class="navnp"><a href="dict.html" class="nav"><em>Prev:</em> Dictionary</a>
     <a href="file.html" class="nav"><em>Next:</em> File</a>     </span>
-
-
-
-
-
 # DynamicFunc
 
 DynamicFunc is an intrinsic class that lets your program add new

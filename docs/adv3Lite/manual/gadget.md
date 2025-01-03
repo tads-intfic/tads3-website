@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Extras  
 <span class="navnp"><a href="extra.html" class="nav"><em>Prev:</em> Extras</a>
     <a href="menu.html" class="nav"><em>Next:</em> Menus</a>     </span>
-
-
-
-
-
 # Gadgets
 
 Some IF games make use of various gadgets such as buttons, levers and
@@ -173,9 +163,6 @@ light sources zero, for example:
         }
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

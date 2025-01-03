@@ -540,11 +540,6 @@ keys on the right.
 Update our contents. By default, we'll do nothing; subclasses can
 override this to manage dynamic menus if desired. This is called just
 before the menu is displayed, each time it's displayed.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

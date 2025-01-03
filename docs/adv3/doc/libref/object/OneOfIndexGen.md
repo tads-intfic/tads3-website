@@ -196,11 +196,6 @@ number of list items
 Get the next index value. Returns an integer from 1 to numItems. The
 algorithm for choosing the index depends on the list type, as defined by
 listAttrs.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

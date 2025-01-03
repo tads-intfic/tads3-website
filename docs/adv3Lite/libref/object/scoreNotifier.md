@@ -146,11 +146,6 @@ score change - first notification
 
 
 score change - notification other than the first time
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="finish.html" class="nav">Finishing Touches</a> \> What More?  
 <span class="navnp"><a href="hints.html" class="nav"><em>Prev:</em> Hints</a>

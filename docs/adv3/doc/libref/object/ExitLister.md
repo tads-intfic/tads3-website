@@ -339,11 +339,6 @@ be easily computed as loc.wouldBeLitFor(actor).
 
 
 show an exit list display in the status line, if desired
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

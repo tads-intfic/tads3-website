@@ -46,11 +46,6 @@ command).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ExitLister` :  
 [`hasBackNameFlag`](../object/ExitLister1.html#hasBackNameFlag) [`hasDestNameFlag`](../object/ExitLister1.html#hasDestNameFlag) [`listerShowsDest`](../object/ExitLister1.html#listerShowsDest) [`nextCustomFlag`](../object/ExitLister1.html#nextCustomFlag)
 
@@ -97,11 +92,6 @@ Inherited from `Lister` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Manipulating the
 Transcript  
@@ -16,11 +11,6 @@ Transcript
 Cycle</a>    
 <a href="t3scope.html" class="nav"><em>Next:</em> Redefining Scope</a>
     </span>
-
-
-
-
-
 # Manipulating the Transcript
 
 *by Eric Eve*

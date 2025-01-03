@@ -175,11 +175,6 @@ current state.
 
 
 Set the state. This can be overridden to apply side effects as needed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

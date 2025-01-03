@@ -56,11 +56,6 @@ Paper is opaque to sight and touch, but allows sound and smell to pass.
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Material` :  
 [`senseThru`](../object/Material.html#senseThru)
 

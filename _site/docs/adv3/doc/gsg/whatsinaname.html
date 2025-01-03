@@ -21,9 +21,8 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
-
-<p><a href="index.html">[Main]</a><br />
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a>
+<a href="index.html">[Main]</a><br />
 <em><a href="theartofconversation.html">[Previous]</a>
   <a href="doorsandwindows.html">[Next]</a></em></p>
 
@@ -38,78 +37,10 @@ Joe Black here’; and third, we want the parser to recognize <strong>joe</stron
 <strong>joe black</strong> or <strong>black</strong> as referring to Joe. The first two steps are
 straightforward. The third is a little more complicated.</p>
 
-<p>To carry out the first two steps we simply need to execute:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>isProperName = true; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>name = properName; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>To carry out the first two steps we simply need to execute:<br />
+ 
+isProperName = true; 
+name = properName; </p>
 
 <p>You might think that you could achieve the third by adding ‘Joe Black’
 to the burner’s vocabWords property somehow, but it’s not quite that
@@ -146,35 +77,6 @@ that could arise quite often, it makes sense to make all this happen as
 a modification of the Actor class (which will then work for everything
 of class Actor or one of is subclasses) rather than something specific
 to the burner object. The appropriate code then looks like this:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>modify Actor<br />
   makeProper<br />
@@ -236,35 +138,6 @@ he introduces himself and true afterwards (thanks to
 in the isActive property of the AltTopic. The AskTopic and AltTopic then
 look like this:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>++ AskTopic @burner<br />
    ”&lt;q&gt;My name’s Heidi.&lt;/q&gt; you announce. &lt;q&gt;What’s yours?&lt;/q&gt;&lt;.p&gt;<br />
    &lt;q&gt;&lt;&lt;burner.properName&gt;&gt;,&lt;/q&gt; he replies, &lt;q&gt;Mind you, it’ll soon be <br />
@@ -286,35 +159,6 @@ look like this:</p>
   isActive = (burner.isProperName)<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>One further refinement you could add, which I’ll leave as an optional
 exercise for the reader, is to add SuggestedAskTopic to the class list
 of each of the main topic entries in the burnerTalking state. If you do
@@ -324,35 +168,6 @@ name = ’the ring’ and name = ’himself’ as appropriate. The player 
 then use the <strong>topics</strong> command to see what topics Joe is likely to
 respond to.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>Another optional exercise you might like to try is expanding the range
 of topics to which Joe will respond meaningfully. You can do this with a
 mix of AskTopics, TellTopics, AskTellTopics, GiveTopics, ShowTopics and
@@ -361,64 +176,9 @@ DefaultAskTellTopic with a separate DefaultAskTopic and
 DefaultTellTopic. You’re not restricted to having Joe talk about objects
 defined in the game. If, for example, you think he should have an
 opinion on Oxford Blue (a type of cheese), you could define an Oxford
-Blue topic using the Topic class:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>tOxfordBlue: Topic 'oxford blue/cheese'; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+Blue topic using the Topic class:<br />
+ 
+tOxfordBlue: Topic ’oxford blue/cheese’; </p>
 
 <p>The Topic class can be used for any concrete or abstract topic not
 otherwise represented in the game. Unlike game objects (i.e. those
@@ -447,35 +207,6 @@ conversational range before moving on to the next chapter. If you want
 to be particularly adventurous, after trying out a few AskTopics and
 TellTopics, you could try adding some AltTopics and maybe even the odd
 extra ConvNode or two, complete with some more SpecialTopics.</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>Our game has now reached a point at which, barring full testing, adding
 in more decoration objects and the like, it could be regarded as

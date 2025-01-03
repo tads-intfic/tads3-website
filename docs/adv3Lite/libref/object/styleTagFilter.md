@@ -70,11 +70,6 @@ Inherited from `ModuleExecObject` :
 
 
 [`execute`](#execute) [`filterText`](#filterText) [`translateTag`](#translateTag)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
@@ -152,11 +147,6 @@ filter for a style tag
 
 
 Translate a tag
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

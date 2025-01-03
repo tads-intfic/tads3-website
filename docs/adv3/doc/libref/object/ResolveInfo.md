@@ -245,11 +245,6 @@ equivalent to us. Returns true if we find such an item, nil if not.
 Another ResolveInfo is equivalent to us if it refers to the same
 underlying game object that we do, or if it refers to a game object that
 is indistinguishable from our underlying game object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

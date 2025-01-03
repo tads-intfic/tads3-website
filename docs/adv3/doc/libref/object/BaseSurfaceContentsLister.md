@@ -68,13 +68,6 @@ Base class for contents listers for a surface
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -83,11 +76,6 @@ Inherited from `Lister` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `BaseContentsLister` :  
 [`showListContentsPrefixTall`](../object/BaseContentsLister.html#showListContentsPrefixTall) [`showListPrefixTall`](../object/BaseContentsLister.html#showListPrefixTall) [`showListPrefixWide`](../object/BaseContentsLister.html#showListPrefixWide) [`showListSuffixWide`](../object/BaseContentsLister.html#showListSuffixWide)
 

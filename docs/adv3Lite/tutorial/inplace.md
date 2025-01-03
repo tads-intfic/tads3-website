@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="goldskull.html" class="nav">Goldskull</a> \> Everything in its
 place  
 <span class="navnp"><a href="weightier.html" class="nav"><em>Prev:</em> Weightier Matters</a>
     <a href="retro.html" class="nav"><em>Next:</em> Retrospective</a>    
 </span>
-
-
-
-
-
 # Everything in its place
 
 ## Starting Out Right

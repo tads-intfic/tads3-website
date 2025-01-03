@@ -171,11 +171,6 @@ route our check to the pre-condition using our specific object
 
 
 route our verification check to the pre-condition
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

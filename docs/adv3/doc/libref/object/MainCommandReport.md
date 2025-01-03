@@ -76,11 +76,6 @@ main report
 
 
 [`seqNum`](#seqNum)
-
-
-
-
-
 Inherited from `CommandReport` :  
 [`action_`](../object/CommandReport.html#action_) [`isFailure`](../object/CommandReport.html#isFailure) [`isQuestion`](../object/CommandReport.html#isQuestion) [`iter_`](../object/CommandReport.html#iter_)
 
@@ -92,13 +87,6 @@ Inherited from `MessageResult` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `CommandReportMessage` :  
 [`construct`](../object/CommandReportMessage.html#construct)
 

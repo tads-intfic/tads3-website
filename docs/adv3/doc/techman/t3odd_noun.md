@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Handling Odd
 Noun Phrases  
@@ -16,11 +11,6 @@ Noun Phrases
 Staging Locations</a>    
 <a href="t3globalremap.html" class="nav"><em>Next:</em> Global Command
 Remapping</a>     </span>
-
-
-
-
-
 # Handling Odd Noun Phrases
 
 The TADS 3 library's English command parser makes it easy to create a

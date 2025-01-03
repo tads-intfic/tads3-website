@@ -169,11 +169,6 @@ We call the trigger event method of a SensoryEvent to simulate the
 occurrence of that event. The obj parameter is the object associated
 with the event, for example the source of a sudden explosion. \[DEFINED
 IN SENSORY EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -74,11 +74,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `FollowAction` :  
 [`initResolver`](../object/FollowAction.html#initResolver)
 

@@ -58,18 +58,8 @@ the like.)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `DefinitePluralProd` :  
 [`filterForCollectives`](../object/DefinitePluralProd.html#filterForCollectives)
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
@@ -78,11 +68,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `DefinitePluralProd` :  
 [`resolveNouns`](../object/DefinitePluralProd.html#resolveNouns)
 

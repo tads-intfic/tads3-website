@@ -213,11 +213,6 @@ if an npc moving as the result of an AgendaItem needs to implicitly open
 a door to proceed): actor is the actor performing the action, action is
 the action object to be performs, \[objs\] is the list of objects (if
 any) on which the action is to be performed.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

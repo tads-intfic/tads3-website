@@ -358,11 +358,6 @@ looking for the best match can choose the one with the highest score.
 
 Output our response to the topic. This can be typically be overridden to
 a double-quoted string or method to output the required response.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

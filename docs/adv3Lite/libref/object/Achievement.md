@@ -315,11 +315,6 @@ nothing at all. Returns true if we do award the points, nil if not
 
 
 show myself in a full-score listing
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

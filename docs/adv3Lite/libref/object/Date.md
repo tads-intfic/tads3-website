@@ -191,13 +191,6 @@ Add a method to Date as a workaround for a library bug
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -418,11 +411,6 @@ time past noon UTC on that date.
 Note that there's no local time zone involved in this calculation, since
 the Julian day number is specifically defined in terms of universal
 time.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

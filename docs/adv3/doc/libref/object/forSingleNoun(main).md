@@ -49,13 +49,6 @@ Details](#_Methods_)
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -67,11 +60,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PrepSingleNounProd` :  
 [`isSpecialResponseMatch`](../object/PrepSingleNounProd.html#isSpecialResponseMatch) [`resolveNouns`](../object/PrepSingleNounProd.html#resolveNouns)
 

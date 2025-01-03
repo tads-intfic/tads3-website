@@ -183,11 +183,6 @@ the noun phrase to use in disambiguation questions
 
 
 remember the noun phrase to use in disambiguation questions
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

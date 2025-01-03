@@ -168,11 +168,6 @@ An ID module not for the library but for the T3 VM itself. This doesn't
 display any credit information, but displays version number information
 for the VM so that the "version" command shows what version of the
 interpreter is in use.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

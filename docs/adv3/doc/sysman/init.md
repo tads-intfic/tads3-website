@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="lib.html" class="nav">The System Library</a> \> Program
 Initialization  
 <span class="navnp"><a href="lib.html" class="nav"><em>Prev:</em> The System Library</a>
     <a href="tok.html" class="nav"><em>Next:</em> Basic Tokenizer</a>    
 </span>
-
-
-
-
-
 # Program Initialization
 
 The system library provides a generic, modular initialization mechanism

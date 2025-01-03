@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Extending the Map  
 <span class="navnp"><a href="airmap1.html" class="nav"><em>Prev:</em> Starting the Map</a>
    
 <a href="airmap3.html" class="nav"><em>Next:</em> Aboard the Plane</a>
     </span>
-
-
-
-
-
 # Extending the Map
 
 Our next job is to sketch out the other half of the airport terminal

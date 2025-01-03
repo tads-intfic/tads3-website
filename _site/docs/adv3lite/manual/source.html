@@ -21,14 +21,12 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><img src="topbar.jpg" data-border="0" /></p>
-
-<p><a href="toc.html" class="nav">Table of Contents</a> |
+<p><img src="topbar.jpg" data-border="0" />
+<a href="toc.html" class="nav">Table of Contents</a> |
 <a href="action.html" class="nav">Actions</a> &gt; Source<br />
 <span class="navnp"><a href="actionref.html" class="nav"><em>Prev:</em> ActionReference</a>
     <em>Next:</em> <a href="actionref.html" class="nav">ActionReference</a>
    </span></p>
-
 <h1 id="source-reference">Source Reference</h1>
 
 <p>This file contains <em>extracts</em> from various library source files,
@@ -331,9 +329,7 @@ source files.</p>
         }
         
     ;
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineIAction(Continue)
+    DefineIAction(Continue)
         execAction(cmd)
         {
             local path;
@@ -390,9 +386,8 @@ source files.</p>
         }
         
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineSystemAction(ExitsColour)
+    DefineSystemAction(ExitsColour)
         execAction(cmd)
         {
             if(gExitLister == nil)
@@ -420,9 +415,8 @@ source files.</p>
             }
         }
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineIAction(GoBack)
+    DefineIAction(GoBack)
         execAction(cmd)
         {
             local pathBack = nil;
@@ -458,9 +452,8 @@ source files.</p>
             
         }
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    GoIn: TravelAction
+    GoIn: TravelAction
         direction = inDir
         predefinedDirection = true
     ;
@@ -480,9 +473,8 @@ source files.</p>
             }
         }
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Hello: IAction
+    Hello: IAction
         baseActionClass = Hello
         
         execAction(cmd)
@@ -542,9 +534,8 @@ source files.</p>
         
         curObj = nil  
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    class ImplicitConversationAction: TopicAction
+    class ImplicitConversationAction: TopicAction
         execAction(cmd)
         {
             if(cmd.iobj == nil &amp;&amp; cmd.dobj != nil)
@@ -600,9 +591,8 @@ source files.</p>
         topicListProperty = nil
         topics = nil
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineIAction(Inventory)
+    DefineIAction(Inventory)
         execAction(cmd)
         {
             /* 
@@ -662,9 +652,8 @@ source files.</p>
         /* Do we want separate lists of what's worn and what's carried? */
         splitListing = true
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineIAction(Listen)
+    DefineIAction(Listen)
         execAction(cmd)
         {
             /* 
@@ -707,9 +696,8 @@ source files.</p>
         /* Do nothing in the core library; senseRegion.t will override if present */
         listRemoteSounds(lst) { }
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineTAction(PushTravelDir)
+    DefineTAction(PushTravelDir)
         execAction(cmd)
         {
             local conn;
@@ -819,9 +807,8 @@ source files.</p>
         
         doTravel() { delegated TravelAction(); }
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    DefineIAction(Smell)
+    DefineIAction(Smell)
         execAction(cmd)
         {
             /* 
@@ -871,9 +858,8 @@ source files.</p>
         /* Do nothing in the core library; senseRegion.t will override if present */
         listRemoteSmells(lst) { }
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    Travel: TravelAction
+    Travel: TravelAction
         direction = (dirMatch.dir)
     ;
 </code></pre></div></div>
@@ -3323,9 +3309,8 @@ source files.</p>
         cannotUnlockWithSelfMsg = BMsg(cannot unlock with self, '{I} {can\'t} unlock
             anything with itself. ' )
     ;
-</code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     /*  
+     /*  
      *   A Key is any object that can be used to lock or lock selected items whose
      *   lockabilty is lockableWithKey. We define all the special handling on the
      *   Key class rather than on the items to be locked and/or unlocked.
@@ -3526,7 +3511,6 @@ source files.</p>
         }
     ;
 </code></pre></div></div>
-
 <hr />
 
 <p><em>adv3Lite Library Manual</em><br />

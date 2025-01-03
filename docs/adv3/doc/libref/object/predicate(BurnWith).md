@@ -79,11 +79,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `BurnWithAction` :  
 [`getAllIobj`](../object/BurnWithAction.html#getAllIobj)
 

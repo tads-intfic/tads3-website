@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \>
 <a href="t3design.html" class="nav">Tips on Designing your Game</a> \> IF
@@ -17,11 +12,6 @@ Design: In Theory
 Practice</a>    
 <a href="t3oop.html" class="nav"><em>Next:</em> Object-Oriented
 Programming Overview</a>     </span>
-
-
-
-
-
 # IF Design: In Theory
 
 *Author's note: This is an updated version of a chapter from the* TADS 2

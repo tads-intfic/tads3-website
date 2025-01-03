@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> GrammarProd  
 <span class="navnp"><a href="filename.html" class="nav"><em>Prev:</em> FileName</a>
     <a href="httpreq.html" class="nav"><em>Next:</em> HTTPRequest</a>    
 </span>
-
-
-
-
-
 # GrammarProd
 
 The GrammarProd intrinsic class is a specialized pattern-matching class

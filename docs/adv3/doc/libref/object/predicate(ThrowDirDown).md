@@ -130,11 +130,6 @@ Inherited from `Resolver` :
 
 
 the direction is fixed as 'down' for this phrasing
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

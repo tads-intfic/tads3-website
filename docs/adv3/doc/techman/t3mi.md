@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Multiple
 Inheritance  
@@ -16,11 +11,6 @@ Inheritance
    
 <a href="t3staging.html" class="nav"><em>Next:</em> Using Nested Rooms as
 Staging Locations</a>     </span>
-
-
-
-
-
 # Multiple Inheritance
 
 *by Eric Eve*

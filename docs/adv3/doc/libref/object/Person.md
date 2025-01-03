@@ -102,11 +102,6 @@ Inherited from `VocabObject` :
 
 Inherited from `Schedulable` :  
 [`allSchedulables`](../object/Schedulable.html#allSchedulables) [`gameClockTime`](../object/Schedulable.html#gameClockTime)
-
-
-
-
-
 Inherited from `ActorTopicDatabase` :  
 [`askForTopics`](../object/ActorTopicDatabase.html#askForTopics) [`askTopics`](../object/ActorTopicDatabase.html#askTopics) [`commandTopics`](../object/ActorTopicDatabase.html#commandTopics) [`giveTopics`](../object/ActorTopicDatabase.html#giveTopics) [`initiateTopics`](../object/ActorTopicDatabase.html#initiateTopics) [`miscTopics`](../object/ActorTopicDatabase.html#miscTopics) [`showTopics`](../object/ActorTopicDatabase.html#showTopics) [`specialTopics`](../object/ActorTopicDatabase.html#specialTopics) [`tellTopics`](../object/ActorTopicDatabase.html#tellTopics)
 
@@ -114,23 +109,11 @@ Inherited from `TopicDatabase` :
 [`limitSuggestions`](../object/TopicDatabase.html#limitSuggestions) [`suggestedTopics`](../object/TopicDatabase.html#suggestedTopics) [`topicGroupActive`](../object/TopicDatabase.html#topicGroupActive) [`topicGroupScoreAdjustment`](../object/TopicDatabase.html#topicGroupScoreAdjustment)
 
 
-
-
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `UntakeableActor` :  
 [`contentsInFixedIn`](../object/UntakeableActor.html#contentsInFixedIn) [`dobjFor(Taste)`](../object/UntakeableActor.html#dobjFor(Taste))
 
@@ -157,13 +140,6 @@ Inherited from `ActorTopicDatabase` :
 
 Inherited from `TopicDatabase` :  
 [`addSuggestedTopic`](../object/TopicDatabase.html#addSuggestedTopic) [`addTopic`](../object/TopicDatabase.html#addTopic) [`addTopicToList`](../object/TopicDatabase.html#addTopicToList) [`compareVocabMatch`](../object/TopicDatabase.html#compareVocabMatch) [`findTopicResponse`](../object/TopicDatabase.html#findTopicResponse) [`handleTopic`](../object/TopicDatabase.html#handleTopic) [`removeSuggestedTopic`](../object/TopicDatabase.html#removeSuggestedTopic) [`removeTopic`](../object/TopicDatabase.html#removeTopic) [`removeTopicFromList`](../object/TopicDatabase.html#removeTopicFromList) [`showSuggestedTopicList`](../object/TopicDatabase.html#showSuggestedTopicList)
-
-
-
-
-
-
-
 
 
 <span id="_Properties_"></span>

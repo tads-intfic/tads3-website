@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Topic
 Entries  
 <span class="navnp"><a href="senseregion.html" class="nav"><em>Prev:</em> SenseRegion</a>
     <a href="thought.html" class="nav"><em>Next:</em> Thoughts</a>    
 </span>
-
-
-
-
-
 # Topic Entries
 
 The topicEntry.t implements the base TopicEntry class that forms the

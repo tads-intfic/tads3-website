@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Workbench
 Project Starter Templates  
@@ -16,11 +11,6 @@ Project Starter Templates
 for TADS</a>    
 <a href="t3spec.html" class="nav"><em>Next:</em> T3 VM Technical
 Documentation</a>     </span>
-
-
-
-
-
 # Workbench Project Starter Templates
 
 TADS Workbench for Windows features a "New Project" command that

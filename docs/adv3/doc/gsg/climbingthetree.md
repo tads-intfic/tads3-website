@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](basictravel.html)
   [\[Next\]](makinglifemoreproblematic.html)*
@@ -23,52 +18,9 @@ not something you can climb." What we need to do is to modify the tree
 object so that trying to climb it has the same effect as typing **up**.
 The simplest way to achieve this is to add the following to the
 definition of tree:
+ 
+dobjFor(Climb) remapTo(Up) 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>dobjFor(Climb) remapTo(Up) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 I.e. replace **climb tree** with an **up** command. Both `dobjFor` and
 `remapTo` are macros that expand to more complex code, but that need not

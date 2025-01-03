@@ -83,11 +83,6 @@ Inherited from `TopicEntry` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `TopicEntry` :  
 [`addTopic`](../object/TopicEntry.html#addTopic) [`initializeTopicEntry`](../object/TopicEntry.html#initializeTopicEntry) [`matchTopic`](../object/TopicEntry.html#matchTopic) [`scoreBooster`](../object/TopicEntry.html#scoreBooster) [`topicResponse`](../object/TopicEntry.html#topicResponse)
 

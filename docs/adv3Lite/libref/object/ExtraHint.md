@@ -267,11 +267,6 @@ Set the number of turns that must elapse before we display this hint
 
 
 Show the text related to this ExtraHint
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

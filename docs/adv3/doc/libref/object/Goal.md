@@ -507,11 +507,6 @@ property; if our current state is Undiscovered, and the object
 referenced by openWhenSeen has been seen by the player character, then
 we'll change our state to Open. We'll make the corresponding check for
 openWhenDescribed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

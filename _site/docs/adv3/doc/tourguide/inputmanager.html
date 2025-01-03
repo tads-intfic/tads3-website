@@ -67,48 +67,9 @@ then the more prompt. E.g. you write code like:</p>
 </tbody>
 </table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>morePrompt();  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p>morePrompt();  </p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>"... suffers a sudden fatal heart attack! ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>“… suffers a sudden fatal heart attack! ”;  </p>
 
 <p>But find the more prompt is actually displayed <em>after</em> the second line
 of text, defeating your dramatic pause.</p>
@@ -132,48 +93,9 @@ of text, defeating your dramatic pause.</p>
 </tbody>
 </table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> morePrompt();  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p> morePrompt();  </p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> "... suffers a sudden fatal heart attack! ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p> ”… suffers a sudden fatal heart attack! ”;  </p>
 
 <p>   gTranscript.activate();</p>
 
@@ -195,139 +117,22 @@ inputManager method:</p>
 </tbody>
 </table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>inputManager.pauseForMore(true);  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p>inputManager.pauseForMore(true);  </p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>"... suffers a sudden fatal heart attack! ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>“… suffers a sudden fatal heart attack! ”;  </p>
 
 <p>And you should find this more works as you want.</p>
 
 <p>In general, instead of the tads-io functions you’ll always want to use
 the corresponding inputManager methods thus:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>Instead of morePrompt() use inputManager.pauseForMore(true);  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p>Instead of morePrompt() use inputManager.pauseForMore(true);  </p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p> </p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p>Instead of inputKey() use inputManager.getKey(nil, nil);  </p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>Instead of inputKey() use inputManager.getKey(nil, nil);  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p> </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -342,21 +147,6 @@ the corresponding inputManager methods thus:</p>
 </td>
 </tr>
 </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
 </table>
 
 <p>The parameters of these methods will only be of interest to you if you

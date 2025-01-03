@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Message Parameter
 Substitutions  
@@ -16,11 +11,6 @@ Substitutions
 Preconditions</a>    
 <a href="t3imp_action.html" class="nav"><em>Next:</em> Implied Action
 Reports</a>     </span>
-
-
-
-
-
 # Message Parameter Substitutions
 
 If you've looked at the TADS 3 library (known as "adv3"), you've

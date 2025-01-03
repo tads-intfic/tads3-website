@@ -80,11 +80,6 @@ Inherited from `NetEvent` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `NetEvent` :  
 [`construct`](../object/NetEvent.html#construct)
 

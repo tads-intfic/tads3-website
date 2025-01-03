@@ -89,11 +89,6 @@ in the group.
 
 
 [`filterForCollectives`](#filterForCollectives)
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
@@ -153,11 +148,6 @@ prefer to keep collectives instead of their individuals
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

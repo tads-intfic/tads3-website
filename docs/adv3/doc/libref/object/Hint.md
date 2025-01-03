@@ -155,11 +155,6 @@ Get my hint text. By default, we mark as Open any goals listed in our
 referencedGoals list, then return our hintText string. Individual Hint
 objects can override this as desired to apply any additional side
 effects.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

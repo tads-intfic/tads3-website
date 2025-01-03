@@ -47,18 +47,8 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `EverythingButProd` :  
 [`addedFlags`](../object/EverythingButProd.html#addedFlags) [`filterForCollectives`](../object/EverythingButProd.html#filterForCollectives)
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
@@ -67,11 +57,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `EverythingButProd` :  
 [`flagAllExcepted`](../object/EverythingButProd.html#flagAllExcepted) [`getMainList`](../object/EverythingButProd.html#getMainList)
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> RexPattern  
 <span class="navnp"><a href="objic.html" class="nav"><em>Prev:</em> Object</a>
    
 <a href="framedesc.html" class="nav"><em>Next:</em> StackFrameDesc</a>
     </span>
-
-
-
-
-
 # RexPattern
 
 A RexPattern object stores the internal representation, known as the
@@ -106,11 +96,6 @@ following:
 
 Returns the original string used to create the object (i.e., the string
 passed as the argument in the "new" expression that created the object).
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

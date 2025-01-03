@@ -50,13 +50,6 @@ replace '%%' with '%', and '%q' with '"'
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `LiteralAction` :  
 [`predicateNounPhrases`](../object/LiteralAction.html#predicateNounPhrases) [`verbPhrase`](../object/LiteralAction.html#verbPhrase)
 
@@ -125,11 +118,6 @@ Inherited from `BasicProd` :
 
 Use the text of the command as originally typed by the player as our
 apparent original text.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

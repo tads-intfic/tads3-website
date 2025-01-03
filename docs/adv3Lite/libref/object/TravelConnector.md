@@ -597,11 +597,6 @@ connector (e.g. 'to the north')
 If we want to vary the time to go through this TravelConnector depending
 on where the traveler is starting from (only really relevant for rooms),
 we can override this method instead. \[OBJTIME EXTENSION ONLY\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

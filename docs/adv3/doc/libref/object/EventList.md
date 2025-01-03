@@ -222,11 +222,6 @@ vary once per turn, for example, or could change each time an actor
 pushes a button. In these cases, invoking the script wouldn't affect the
 state of the event list, so the subclass would override scriptDone() so
 that it does nothing at all.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

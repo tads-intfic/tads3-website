@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Using the Banner
 API  
 <span class="navnp"><a href="t3npcTravel.html" class="nav"><em>Prev:</em> NPC Travel</a>
     <a href="advtop.html" class="nav"><em>Next:</em> Advanced Topics</a>
     </span>
-
-
-
-
-
 # Using the Banner API
 
 *by Eric Eve*

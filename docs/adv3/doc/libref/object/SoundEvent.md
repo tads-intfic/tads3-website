@@ -78,11 +78,6 @@ Sound event
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `SensoryEvent` :  
 [`triggerEvent`](../object/SensoryEvent.html#triggerEvent)
 

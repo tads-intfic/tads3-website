@@ -204,11 +204,6 @@ libraries they use.
 
 show a blank line after the game's version information, to make it stand
 apart from the list of library and VM version numbers
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

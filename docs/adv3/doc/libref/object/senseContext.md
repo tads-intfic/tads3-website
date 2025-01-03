@@ -55,11 +55,6 @@ otherwise, we'll pass output through unchanged.
 
 Inherited from `SwitchableCaptureFilter` :  
 [`isBlocking`](../object/SwitchableCaptureFilter.html#isBlocking)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -72,11 +67,6 @@ Inherited from `SwitchableCaptureFilter` :
 
 Inherited from `SwitchableCaptureFilter` :  
 [`filterText`](../object/SwitchableCaptureFilter.html#filterText)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -205,11 +195,6 @@ current game state. Returns true if so, nil if not.
 
 
 invoke a callback with a given sense context
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

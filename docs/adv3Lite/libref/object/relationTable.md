@@ -140,11 +140,6 @@ relation object and type is either normalRelation or reverseRelation. \*
 
 Message to display when there's no relation in our nameTab corresponding
 to the name rel.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -143,9 +143,7 @@ Achievement object is awarded</em> <em> <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 We have not followed these rules in this game (otherwise we should not
@@ -211,8 +209,6 @@ will be used as the maximum score.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   

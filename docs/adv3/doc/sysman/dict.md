@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Dictionary  
 <span class="navnp"><a href="date.html" class="nav"><em>Prev:</em> Date</a>
     <a href="dynfunc.html" class="nav"><em>Next:</em> DynamicFunc</a>    
 </span>
-
-
-
-
-
 # Dictionary
 
 To facilitate command parsing, TADS 3 provides an intrinsic class called

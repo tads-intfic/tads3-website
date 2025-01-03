@@ -96,11 +96,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Immovable` :  
 [`dobjFor(Drop)`](../object/Immovable.html#dobjFor(Drop)) [`dobjFor(Move)`](../object/Immovable.html#dobjFor(Move)) [`dobjFor(MoveTo)`](../object/Immovable.html#dobjFor(MoveTo)) [`dobjFor(MoveWith)`](../object/Immovable.html#dobjFor(MoveWith)) [`dobjFor(Pull)`](../object/Immovable.html#dobjFor(Pull)) [`dobjFor(Push)`](../object/Immovable.html#dobjFor(Push)) [`dobjFor(PushTravel)`](../object/Immovable.html#dobjFor(PushTravel)) [`dobjFor(PutBehind)`](../object/Immovable.html#dobjFor(PutBehind)) [`dobjFor(PutIn)`](../object/Immovable.html#dobjFor(PutIn)) [`dobjFor(PutOn)`](../object/Immovable.html#dobjFor(PutOn)) [`dobjFor(PutUnder)`](../object/Immovable.html#dobjFor(PutUnder)) [`dobjFor(Take)`](../object/Immovable.html#dobjFor(Take)) [`dobjFor(ThrowAt)`](../object/Immovable.html#dobjFor(ThrowAt)) [`dobjFor(ThrowDir)`](../object/Immovable.html#dobjFor(ThrowDir)) [`dobjFor(Turn)`](../object/Immovable.html#dobjFor(Turn))
 

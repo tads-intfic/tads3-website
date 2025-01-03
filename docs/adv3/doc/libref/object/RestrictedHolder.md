@@ -147,11 +147,6 @@ particular attribute.
 
 Check a PUT IN/ON/UNDER/BEHIND action to ensure that the direct object
 is in our approved-contents list.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

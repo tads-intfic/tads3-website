@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Ask, Tell, Give, Show  
@@ -16,11 +11,6 @@ Ask, Tell, Give, Show
 Conversation</a>    
 <a href="query.html" class="nav"><em>Next:</em> Queries and
 Suggestions</a>     </span>
-
-
-
-
-
 # Ask, Tell, Give, Show
 
 ## Introduction and Overview

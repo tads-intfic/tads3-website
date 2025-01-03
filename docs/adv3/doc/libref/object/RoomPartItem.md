@@ -85,11 +85,6 @@ way, but will only be in effect until the object is moved.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -151,11 +146,6 @@ any other container
 
 show our special description when examining our associated room part, as
 long as we actually define a special description
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

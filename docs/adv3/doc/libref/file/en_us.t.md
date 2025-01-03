@@ -285,11 +285,6 @@ function.
 Simple yes/no confirmation. The caller must display a prompt; we'll read
 a command line response, then return true if it's an affirmative
 response, nil if not.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

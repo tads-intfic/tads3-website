@@ -942,11 +942,6 @@ riverConnector: TravelConnector
         "Aided by the special shoes, you are able to walk across the river. ";
     }
 ;
-
-
-
-
-
 //------------------------------------------------------------------------------
 /*  Another OUTDOOR ROOM */
 

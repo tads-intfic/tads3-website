@@ -191,11 +191,6 @@ get the list of equivalent items in the same state
 
 
 get the name to use for listing purposes
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

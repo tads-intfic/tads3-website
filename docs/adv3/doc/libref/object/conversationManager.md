@@ -68,11 +68,6 @@ before the next command prompt)
 
 
 [`customTags`](#customTags) [`idToActor`](#idToActor) [`pendingTopicInventory`](#pendingTopicInventory) [`respondingActor`](#respondingActor) [`revealedNameTab`](#revealedNameTab) [`tagPat`](#tagPat)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
@@ -85,11 +80,6 @@ Inherited from `ModuleExecObject` :
 
 
 [`beginResponse`](#beginResponse) [`doCustomTag`](#doCustomTag) [`execute`](#execute) [`filterText`](#filterText) [`finishResponse`](#finishResponse) [`scheduleTopicInventory`](#scheduleTopicInventory) [`setRevealed`](#setRevealed) [`showOrScheduleTopicInventory`](#showOrScheduleTopicInventory) [`topicInventoryDaemon`](#topicInventoryDaemon)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
@@ -337,11 +327,6 @@ explicitly asks us to show a topic inventory using the \<.topics\> tag,
 or when other game code asks us to show topic inventory by calling
 scheduleTopicInventory(), we'll show the inventory just before the
 command input prompt.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

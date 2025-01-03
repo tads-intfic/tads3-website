@@ -113,9 +113,7 @@ object for the next stop on the tour.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Now we'll give a very simple example. Sarah has lost her ring, and if

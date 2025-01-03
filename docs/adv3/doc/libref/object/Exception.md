@@ -213,11 +213,6 @@ for efficiency, we do not by default cache a stack trace when an
 exception occurs; individual subclasses can obtain a stack trace if
 desired at construction and use the information to show a stack trace
 for the exception.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -73,11 +73,6 @@ Output Filter
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -117,11 +112,6 @@ value is the result of filtering the string.
 
 'ostr' is the OutputStream to which the text is being written, and 'txt'
 is the original text to be displayed.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

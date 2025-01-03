@@ -92,11 +92,6 @@ occlude.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -172,11 +167,6 @@ Do we occlude the given object, in the given sense and from the given
 point of view? This returns true if the object is occluded, nil if not.
 By default, we simply ask the object whether it's occluded by this
 occluder from the given POV.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

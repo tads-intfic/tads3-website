@@ -776,11 +776,6 @@ Simple implementation of matchName(), which simply checks to see if all
 of the tokens are associated with the object. The "simple" aspect is
 that we don't pay any attention to the order of the words - we simply
 check that they're all in the object's vocabulary list, in any order.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

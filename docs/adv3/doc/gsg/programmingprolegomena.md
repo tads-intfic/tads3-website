@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](creatingyourfirsttads3project.html)
   [\[Next\]](furtherprogramming.html)*

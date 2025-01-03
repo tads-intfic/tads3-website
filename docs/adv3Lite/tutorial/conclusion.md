@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="finish.html" class="nav">Finishing Touches</a> \> Conclusion  
 <span class="navnp"><a href="whatmore.html" class="nav"><em>Prev:</em> What More?</a>
 </span>
-
-
-
-
-
 # Conclusion
 
 Over the course of this tutorial we've introduced most of the features

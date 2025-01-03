@@ -73,11 +73,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `FullScoreAction` :  
 [`execSystemAction`](../object/FullScoreAction.html#execSystemAction) [`showFullScore`](../object/FullScoreAction.html#showFullScore)
 

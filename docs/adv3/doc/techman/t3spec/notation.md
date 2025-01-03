@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Notation and Conventions  
 <span class="navnp"><a href="goals.html" class="nav"><em>Prev:</em> Design Goals</a>
     <a href="model.html" class="nav"><em>Next:</em> Machine Model</a>    
 </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -77,11 +67,6 @@ language.
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

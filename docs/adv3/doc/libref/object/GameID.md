@@ -202,11 +202,6 @@ libraries they use.
 
 show a blank line after the game's version information, to make it stand
 apart from the list of library and VM version numbers
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

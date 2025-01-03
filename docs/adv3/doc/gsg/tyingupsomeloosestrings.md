@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](addinganobjecttotheroom.html)
   [\[Next\]](basictravel.html)*
@@ -27,100 +22,14 @@ fairly basic to TADS programming.
 As a first approximation, a single-quoted string is simply a string
 constant, whereas a double-quoted string is a shorthand form of a
 statement that displays the string. That is to say the statement
+ 
+"To err is human; to make a total mess-up requires a computer. "; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>"To err is human; to make a total mess-up requires a computer. "; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 is equivalent to the statement:  
+ 
+say('To err is human; to make a total mess-up requires a computer. '); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>say('To err is human; to make a total mess-up requires a computer. '); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 It follows, as a first approximation, that a single-quoted string can be
 used wherever it makes sense to use a string constant, while a
@@ -131,149 +40,32 @@ various string functions, but a double-quoted string cannot.
   
 The main confusion comes about because a definition such as  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 widget : Thing 'widget' 'brass widget'  
   desc = "It's a brass widget"  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 might erroneously lead you to suppose that you could subsequently change
 the desc property of the widget by a statement such as  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 desc = "It's a silver widget";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 But this code would generate a compiler error. The desc property should
 be regarded, not as holding a string constant, but a routine that prints
 a string constant, so that the definition is effectively equivalent
 to:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 widget : Thing 'widget' 'brass widget'  
+desc  { say('It\'s a brass widget'); } 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>desc  { say('It\'s a brass widget'); } <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 It is thus almost as if a property holding a double-quoted string were
 in reality a method that displays a string, despite its syntactic
@@ -300,100 +92,14 @@ embedded expressions enclosed in double (\<\< \>\>). Such embedded
 expressions may evaluate to a number, a double-quoted string or a
 single-quoted string (or nothing at all, i.e. nil). This means that the
 statement  
+ 
+"The rain in Spain stays &lt;&lt;someExpression&gt;&gt; in the plain."; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>"The rain in Spain stays &lt;&lt;someExpression&gt;&gt; in the plain."; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 is equivalent to  
+ 
+say('The rain in Spain stays ' + someExpression + ' in the plain.'); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>say('The rain in Spain stays ' + someExpression + ' in the plain.'); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Where someExpression could, for example, be a function call or another
 method or property on the same or a different object. Not only does this
@@ -402,53 +108,17 @@ call a method that may have all sorts of other useful side-effects such
 as changing the game state, a trick we shall be using more than once in
 what follows.  
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
 One can have a single-quoted string by itself as a statement, at least
 the compiler won't complain about it, but it will do absolutely nothing
 when the program is run.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 A final example may help to make this all a bit clearer. Here's the
 definition for a widget that changes from brass to silver when it is
 picked up:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 widget : Thing 'widget' 'brass widget'  
   "It's a \<\<metal\>\> widget. "  
@@ -464,44 +134,10 @@ widget : Thing 'widget' 'brass widget'
  metal = 'brass'  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 With such an object defined, one could obtain the following
 transcript:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 You see a brass widget here.  
   
@@ -517,23 +153,6 @@ It's a silver widget.
 \>**i**  
 You are carrying a silver widget.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 One final point about strings: in TADS a string that will be used to
 display a complete message (as opposed to an isolated word or phrase)

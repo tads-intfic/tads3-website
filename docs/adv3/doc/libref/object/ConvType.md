@@ -169,11 +169,6 @@ invokes the property given by defaultResponseProp(). We have both the
 property and the method to call the property because this allows us to
 test for the existence of the property and to call it with the
 appropriate argument list.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

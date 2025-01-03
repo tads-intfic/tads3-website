@@ -49,13 +49,6 @@ A singular qualified noun phrase with an explicit arbitrary determiner.
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -67,11 +60,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ArbitraryNounProd` :  
 [`selectFromList`](../object/ArbitraryNounProd.html#selectFromList)
 

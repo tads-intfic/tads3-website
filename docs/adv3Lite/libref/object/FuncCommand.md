@@ -128,11 +128,6 @@ the callback function for carrying out our command action
 
 Create: provide the grammar match object, if any, and the callback
 function to execute to carry out the command.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

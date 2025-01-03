@@ -177,11 +177,6 @@ treating ordinal words as adjectives or nouns
 
 
 note the an ordinal response is out of range
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

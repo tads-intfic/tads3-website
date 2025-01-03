@@ -72,11 +72,6 @@ score, which indicates the player's progress through the game.
 
 Add points to the total score. This is a convenience function that
 simply calls libScore.addToScore\_().
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

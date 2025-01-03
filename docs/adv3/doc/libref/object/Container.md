@@ -236,11 +236,6 @@ a PUT IN command to move the object into self.
 
 Try putting an object into me when I'm serving as a bag of holding. For
 a container, this simply does a "put obj in bag".
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

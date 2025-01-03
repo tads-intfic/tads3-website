@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Literal and Numeric
 Actions  
 <span class="navnp"><a href="define.html" class="nav"><em>Prev:</em> Defining New Actions</a>
     <a href="topicact.html" class="nav"><em>Next:</em> Topic Actions</a>
     </span>
-
-
-
-
-
 # Literal Actions
 
 Interactive Fiction occasionally involves commands that act on literal

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Metaclass Identifier List  
 <span class="navnp"><a href="fnset_t3.html" class="nav"><em>Prev:</em> t3vm Function Set</a>
     <a href="save.html" class="nav"><em>Next:</em> Saving and Restoring
 State</a>     </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -84,11 +74,6 @@ system to interoperate with existing compilers and other tools.
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

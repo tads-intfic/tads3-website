@@ -223,11 +223,6 @@ process the next step of the script
 Get the next random event. We'll pick an event from our list of events
 using a ShuffledIntegerList to ensure we pick each value once before
 re-using any values.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

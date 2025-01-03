@@ -68,11 +68,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `EmptyNounPhraseProd` :  
 [`getImpliedObject`](../object/EmptyNounPhraseProd.html#getImpliedObject) [`getOrigText`](../object/EmptyNounPhraseProd.html#getOrigText) [`getOrigTokenList`](../object/EmptyNounPhraseProd.html#getOrigTokenList) [`isEmptyPhrase`](../object/EmptyNounPhraseProd.html#isEmptyPhrase) [`resolveNouns`](../object/EmptyNounPhraseProd.html#resolveNouns) [`setPrompt`](../object/EmptyNounPhraseProd.html#setPrompt)
 

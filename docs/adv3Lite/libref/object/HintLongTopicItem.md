@@ -92,11 +92,6 @@ Inherited from `HintMenuObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `MenuLongTopicItem` :  
 [`getXML`](../object/MenuLongTopicItem.html#getXML) [`showMenuCommon`](../object/MenuLongTopicItem.html#showMenuCommon) [`showMenuHtml`](../object/MenuLongTopicItem.html#showMenuHtml) [`showMenuText`](../object/MenuLongTopicItem.html#showMenuText)
 

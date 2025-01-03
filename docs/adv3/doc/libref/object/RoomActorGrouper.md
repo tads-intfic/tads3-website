@@ -69,11 +69,6 @@ lets us group actors like so: "Dan and Jane are sitting on the couch."
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ListGroup` :  
 [`groupDisplaysSublist`](../object/ListGroup.html#groupDisplaysSublist) [`minGroupSize`](../object/ListGroup.html#minGroupSize)
 
@@ -127,11 +122,6 @@ Inherited from `ListGroup` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

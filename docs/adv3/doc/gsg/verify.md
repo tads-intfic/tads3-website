@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](controllingtheaction.html)   [\[Next\]](check.html)*
 
@@ -35,178 +30,18 @@ you want to allow an action to proceed unconditionally.
   
 The macros that can be used in verify routines to define verify results
 are:  
+ 
+logical 
+logicalRank(rank, key) 
+logicalRankOrd(rank, key, ord) 
+dangerous 
+illogicalAlready(msg, params…) 
+illogicalNow(msg, params…) 
+illogical(msg, params…) 
+illogicalSelf(msg, params…) 
+nonObvious 
+inaccessible(msg, params…) 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>logical <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>logicalRank(rank, key) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>logicalRankOrd(rank, key, ord) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>dangerous <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>illogicalAlready(msg, params…) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>illogicalNow(msg, params…) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>illogical(msg, params…) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>illogicalSelf(msg, params…) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>nonObvious <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>inaccessible(msg, params…) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Of these, only the five that start with i (illogical or inaccessible)
 will prevent an action altogether, the rest mainly make the object more
@@ -230,23 +65,6 @@ longer openable. Finally, a cup is never something that can be opened;
 the command OPEN CUP would never make sense. You might define the
 corresponding verify methods as follows:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 redDoor: Door 'red door\*doors' 'red door'  
   dobjFor(Open)  
@@ -277,23 +95,6 @@ redCup: Container 'red cup\*cups' 'red cup'
    }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 If you type **open red** when all three red objects are present, then if
 the red door is not closed and the red box is not broken, the parser
@@ -306,23 +107,6 @@ character took the broken red box and the red cup to another location
 and you then typed **open red**, the parser would choose the red box
 (and report that you can't open it because it's broken).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Note that in the library the argument to these illogical macros is
 typically a property pointer (e.g. &cannotTakeMsg); roughly speaking,
@@ -351,23 +135,6 @@ the box not broken we wanted the parser to prefer the door to the box in
 response to an **open red** command.. To boost the ranking of the door,
 we might use logicalRank thus:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 redDoor: Door 'red door\*doors' 'red door'  
   dobjFor(Open)  
@@ -382,23 +149,6 @@ redDoor: Door 'red door\*doors' 'red door'
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Since the (unbroken) red box has a default logical rank of 100, **open
 red** will now prefer the door. Note that in this example, 'door', the
@@ -409,23 +159,6 @@ logicalRank with the same key, then the parser knows that it can ignore
 this and look for some other way of breaking the tie), but in practice
 it seldom matters in game code what you put here.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The final two macros (dangerous and nonObvious) allow an action to
 proceed, but only if the player unambiguously names the object. Both
@@ -440,23 +173,6 @@ to prevent a bare **drink** command from making the PC drink the poison
 when the poison is the only potable object around, you would define the
 poison's verifyDobjDrink() method as dangerous.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 poison: Thing 'deadly poison' 'deadly poison'  
    dobjFor(Drink)  
@@ -479,23 +195,6 @@ wanted to make it obvious that the nest could be moved with the stick,
 we could have put nonObvious in the verify() section of the
 iobjFor(MoveWith) on the stick.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 One last point: the macros we have just been discussing (`illogical `and
 the like) are for use only in verify() routines.

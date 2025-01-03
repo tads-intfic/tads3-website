@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> How to Create
 Verbs  
@@ -16,11 +11,6 @@ Verbs
 When to Use Which</a>    
 <a href="t3precond.html" class="nav"><em>Next:</em> Custom
 Preconditions</a>     </span>
-
-
-
-
-
 # How to Create Verbs
 
 Every game based on the TADS 3 standard library automatically gets the

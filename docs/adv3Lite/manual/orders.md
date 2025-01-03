@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Giving Orders to NPCs  
 <span class="navnp"><a href="knowledge.html" class="nav"><em>Prev:</em> Player Character and
 NPC Knowledge</a>    
 <a href="tags.html" class="nav"><em>Next:</em> String Tags and Object
 Tags</a>     </span>
-
-
-
-
-
 # Giving Orders to NPCs
 
 It's a long-standing convention of interactive fiction that a command in
@@ -233,9 +223,6 @@ of TopicEntry to make an actor react, you need to use
         }    
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

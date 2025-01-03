@@ -60,11 +60,6 @@ Inherited from `Direction` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CompassDirection` :  
 ` [`initializeDirection`](../object/CompassDirection.html#initializeDirection)  `
 

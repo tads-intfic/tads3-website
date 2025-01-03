@@ -238,11 +238,6 @@ Change the point of view without altering the point-of-view stack
 Set the root point of view. This doesn't affect the current point of
 view unless there is no current point of view; this merely sets the
 outermost default point of view.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

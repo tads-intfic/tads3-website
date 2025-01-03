@@ -131,9 +131,7 @@ object's bulk to exceed our maxSingleBulk).  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 BulkLimiter also overrides the

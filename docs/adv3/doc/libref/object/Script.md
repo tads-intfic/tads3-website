@@ -149,11 +149,6 @@ By default, we don't do anything at all.
 
 Get the current state. This returns a value that gives the current state
 of the script, which is usually simply an integer.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

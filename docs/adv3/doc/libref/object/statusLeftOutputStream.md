@@ -55,11 +55,6 @@ flexibility.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `OutputStream` :  
 [`filterList_`](../object/OutputStream.html#filterList_) [`justDidPara`](../object/OutputStream.html#justDidPara) [`justDidParaSuppressor`](../object/OutputStream.html#justDidParaSuppressor) [`myInputManager`](../object/OutputStream.html#myInputManager)
 
@@ -111,11 +106,6 @@ Inherited from `ModuleExecObject` :
 
 
 we sit atop the system-level main console output stream
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

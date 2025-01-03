@@ -90,11 +90,6 @@ Modify the basic Object class to provide a to-symbol mapping
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -249,11 +244,6 @@ get the type of a property defined for this object
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 9/13/2007 from TADS version 3.0.15.2
 

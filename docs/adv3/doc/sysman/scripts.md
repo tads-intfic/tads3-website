@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Input Scripts  
 <span class="navnp"><a href="netsec.html" class="nav"><em>Prev:</em> Network Safety</a>
     <a href="pack.html" class="nav"><em>Next:</em> Byte Packing</a>    
 </span>
-
-
-
-
-
 # Input Scripts
 
 The TADS Interpreter normally reads its input directly from the

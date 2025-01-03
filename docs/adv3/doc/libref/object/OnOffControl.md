@@ -175,11 +175,6 @@ remember the new value
 
 Change our on/off setting. Subclasses can override this to apply any
 side effects of changing the value.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

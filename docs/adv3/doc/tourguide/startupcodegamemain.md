@@ -101,9 +101,7 @@ case such as situation does arise.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 
@@ -129,9 +127,7 @@ noun phrase.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 
@@ -151,9 +147,7 @@ object that serves as the initial player character.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 
@@ -175,9 +169,7 @@ past-tense and present-tense narration.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 
@@ -210,9 +202,7 @@ your gameMain <em>doesn't</em> override this property.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Our gameMain object has defined the player character as an object called

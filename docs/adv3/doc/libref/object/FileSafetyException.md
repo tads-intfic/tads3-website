@@ -68,13 +68,6 @@ prohibited by the current file safety level set by the user.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
 
@@ -118,11 +111,6 @@ Inherited from `Exception` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

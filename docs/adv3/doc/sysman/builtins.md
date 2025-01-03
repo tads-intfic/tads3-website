@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| The Intrinsics  
 <span class="navnp"><a href="errmsg.html" class="nav"><em>Prev:</em> VM Run-Time Error
 Codes</a>    
 <a href="t3vm.html" class="nav"><em>Next:</em> t3vm Function Set</a>    
 </span>
-
-
-
-
-
 # Part IV: The Intrinsics
 
 This part describes the "intrinsic" functions and classes, which are
@@ -80,11 +70,6 @@ might be justified.
 [TimeZone](timezone.html)  
 [Vector](vector.html)  
 [WeakRefLookupTable](wlookup.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

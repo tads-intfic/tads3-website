@@ -6,11 +6,6 @@ Adv3Lite Bookshelf
 
 
 <img src="title2.gif" data-border="0" />
-
-
-
-
-
 # The Books ([Where should I start?](#wherestart))
 
 ------------------------------------------------------------------------

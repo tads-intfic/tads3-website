@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Hello and Goodbye  
 <span class="navnp"><a href="convnode.html" class="nav"><em>Prev:</em> Conversation Nodes</a>
    
 <a href="knowledge.html" class="nav"><em>Next:</em> Player Character and
 NPC Knowledge</a>     </span>
-
-
-
-
-
 # Hello and Goodbye
 
 Most conversations don't normally begin abruptly with a question or

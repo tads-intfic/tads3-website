@@ -61,11 +61,6 @@ Inherited from `Direction` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ShipboardDirection` :  
 [`initializeDirection`](../object/ShipboardDirection.html#initializeDirection)
 

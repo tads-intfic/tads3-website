@@ -135,9 +135,7 @@ between versions of the library rather than bugs in the sample code.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Finally, I hope this Tour Guide will prove helpful, and even enjoyable

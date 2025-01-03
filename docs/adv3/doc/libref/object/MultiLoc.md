@@ -419,11 +419,6 @@ within out to all of our containers.
 Transmit ambient energy to my location or locations. Note that even
 though we don't by default shine light from one of our containers to
 another, we still shine light from within me to each of our containers.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

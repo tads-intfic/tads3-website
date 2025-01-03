@@ -308,11 +308,6 @@ call this on an unremapped result.
 
 Show the message. If I have any results, we'll show the message for the
 effective (i.e., most disapproving) result; otherwise we show nothing.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

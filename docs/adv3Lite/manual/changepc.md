@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Changing the Player
 Character  
@@ -16,11 +11,6 @@ Character
 Conversation</a>    
 <a href="final.html" class="nav"><em>Next:</em> Final Moves</a>    
 </span>
-
-
-
-
-
 # Changing the Player Character
 
 Many, perhaps most, works of Interactive Fiction stick to the same

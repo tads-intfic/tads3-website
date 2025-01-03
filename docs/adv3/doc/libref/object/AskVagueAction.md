@@ -81,11 +81,6 @@ provide more helpful error messages.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TopicTAction` :  
 [`needAnaphoricBinding_`](../object/TopicTAction.html#needAnaphoricBinding_) [`predicateNounPhrases`](../object/TopicTAction.html#predicateNounPhrases) [`topicList_`](../object/TopicTAction.html#topicList_) [`topicResolver_`](../object/TopicTAction.html#topicResolver_) [`whichMessageObject`](../object/TopicTAction.html#whichMessageObject) [`whichMessageTopic`](../object/TopicTAction.html#whichMessageTopic) [`whichObject`](../object/TopicTAction.html#whichObject)
 
@@ -109,11 +104,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `TopicTAction` :  
 [`announceDefaultObject`](../object/TopicTAction.html#announceDefaultObject) [`createTopicResolver`](../object/TopicTAction.html#createTopicResolver) [`filterTopic`](../object/TopicTAction.html#filterTopic) [`getAnaphoricBinding`](../object/TopicTAction.html#getAnaphoricBinding) [`getCurrentObjects`](../object/TopicTAction.html#getCurrentObjects) [`getMatchForRole`](../object/TopicTAction.html#getMatchForRole) [`getObjectForRole`](../object/TopicTAction.html#getObjectForRole) [`getOtherMessageObjectPronoun`](../object/TopicTAction.html#getOtherMessageObjectPronoun) [`getOtherObjectRole`](../object/TopicTAction.html#getOtherObjectRole) [`getQuestionInf`](../object/TopicTAction.html#getQuestionInf) [`getRoleFromIndex`](../object/TopicTAction.html#getRoleFromIndex) [`getVerbPhrase`](../object/TopicTAction.html#getVerbPhrase) [`initForMissingDobj`](../object/TopicTAction.html#initForMissingDobj) [`initForMissingTopic`](../object/TopicTAction.html#initForMissingTopic) [`resetAction`](../object/TopicTAction.html#resetAction) [`resolveNouns`](../object/TopicTAction.html#resolveNouns) [`retryWithMissingTopic`](../object/TopicTAction.html#retryWithMissingTopic) [`setCurrentObjects`](../object/TopicTAction.html#setCurrentObjects) [`setObjectMatches`](../object/TopicTAction.html#setObjectMatches) [`setResolvedObjects`](../object/TopicTAction.html#setResolvedObjects) [`whatObj`](../object/TopicTAction.html#whatObj)
 

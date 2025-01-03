@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Design Philosophy  
 <span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em> Introduction</a>
     <a href="goals.html" class="nav"><em>Next:</em> Design Goals</a>    
 </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -191,11 +181,6 @@ in the design for better execution speed, but within limits.
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

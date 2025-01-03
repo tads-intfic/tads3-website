@@ -66,11 +66,6 @@ Inherited from `ModuleExecObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `RuleBook` :  
 [`addToContents`](../object/RuleBook.html#addToContents) [`follow`](../object/RuleBook.html#follow) [`initBook`](../object/RuleBook.html#initBook) [`removeFromContents`](../object/RuleBook.html#removeFromContents)
 

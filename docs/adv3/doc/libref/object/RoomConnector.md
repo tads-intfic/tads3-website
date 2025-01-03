@@ -198,11 +198,6 @@ starting location for the travel.
 
 get the destination, given the origin: this is the one of the two rooms
 we link that we're not in now
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

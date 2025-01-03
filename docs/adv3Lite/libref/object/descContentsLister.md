@@ -162,11 +162,6 @@ that it's open or closed.
 
 Otherwise start the listing without explicitly mentioning that the
 container is open.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

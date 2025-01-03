@@ -72,11 +72,6 @@ Noun phrase with an indefinite article
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -164,11 +159,6 @@ Select an item from the list of potential matches, given the list sorted
 from most likely to least likely (according to the resolver's ambiguous
 match filter). We'll ask the resolver to make the selection, because
 indefinite noun phrases can mean different things in different contexts.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

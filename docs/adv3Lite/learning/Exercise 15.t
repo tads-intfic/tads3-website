@@ -955,14 +955,7 @@ hall: Room 'Hall'
 ;
 
 /*   The Topic object used above. */
-tModel: Topic '(bomb) model;; models number';
-
-
-
-
-
-
-//------------------------------------------------------------------------------
+tModel: Topic '(bomb) model;; models number';//------------------------------------------------------------------------------
 
 /*   
  *   The other object representing the cap, once it's been removed from the 

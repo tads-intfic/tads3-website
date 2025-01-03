@@ -264,11 +264,6 @@ we'll show the current score, a slash, and the number of turns.
 Show the statusline in text mode. Our default implementation shows the
 traditional two-part (left/right) status line, using showStatusLeft()
 and showStatusRight() to display the parts.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -124,11 +124,6 @@ Inherited from `LState` :
 
 We exclude SymStairway because including 'up' or 'down' in its vocab
 confuses the parser's interpretation of CLIMB UP and CLIMB DOWN.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

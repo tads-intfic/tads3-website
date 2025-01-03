@@ -43,23 +43,11 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ExactQuantifiedPossessivePluralProd` :  
 [`resolveMainPhrase`](../object/ExactQuantifiedPossessivePluralProd.html#resolveMainPhrase)
 

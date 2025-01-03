@@ -45,11 +45,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ExceptListProduction` :  
 [`qualifiedNP`](../object/ExceptListProduction.html#qualifiedNP)
 
@@ -61,11 +56,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ExceptListProduction` :  
 [`addNounListItem`](../object/ExceptListProduction.html#addNounListItem) [`build`](../object/ExceptListProduction.html#build)
 

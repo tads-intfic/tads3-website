@@ -343,11 +343,6 @@ with no medium.
 Determine how a sense passes to my contents. If I'm open, the sense
 passes through directly, since there's nothing in the way. If I'm
 closed, the sense must pass through my material.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

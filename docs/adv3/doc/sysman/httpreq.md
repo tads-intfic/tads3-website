@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> HTTPRequest  
 <span class="navnp"><a href="gramprod.html" class="nav"><em>Prev:</em> GrammarProd</a>
     <a href="httpsrv.html" class="nav"><em>Next:</em> HTTPServer</a>    
 </span>
-
-
-
-
-
 # HTTPRequest
 
 The HTTPRequest intrinsic class represents a request from a client
@@ -415,9 +405,6 @@ we'll get this LookupTable:
     table['c'] = 'three'
     table['d'] = ''
 ```
-
-
-
 `setCookie(*name*, *val*)`
 
 

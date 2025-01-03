@@ -392,11 +392,6 @@ is preferred. \[SUBTIME EXTENSION\]
 
 Synchronize the timeManager's time with our time, if it exists.
 \[SUBTIME EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

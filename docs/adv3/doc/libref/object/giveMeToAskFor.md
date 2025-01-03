@@ -49,11 +49,6 @@ write it in the ASK FOR handler.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `GlobalRemapping` :  
 [`allGlobalRemappings`](../object/GlobalRemapping.html#allGlobalRemappings) [`listNeedsSorting`](../object/GlobalRemapping.html#listNeedsSorting) [`remappingOrder`](../object/GlobalRemapping.html#remappingOrder)
 
@@ -108,11 +103,6 @@ Remap a command, if applicable. We look for commands of the form "X,
 GIVE ME Y": we look for a GiveTo action whose indirect object is the
 same as the issuing actor. When we find this form of command, we rewrite
 it to "ME, ASK X FOR Y".
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

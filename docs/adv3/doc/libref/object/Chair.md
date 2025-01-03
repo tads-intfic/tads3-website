@@ -100,21 +100,11 @@ Inherited from `Surface` :
 
 Inherited from `BulkLimiter` :  
 [`becomingTooFullMsg`](../object/BulkLimiter.html#becomingTooFullMsg) [`becomingTooLargeMsg`](../object/BulkLimiter.html#becomingTooLargeMsg) [`maxSingleBulk`](../object/BulkLimiter.html#maxSingleBulk) [`revealHiddenItems`](../object/BulkLimiter.html#revealHiddenItems)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `BasicChair` :  
 [`dobjFor(Board)`](../object/BasicChair.html#dobjFor(Board)) [`dobjFor(GetOffOf)`](../object/BasicChair.html#dobjFor(GetOffOf)) [`dobjFor(LieOn)`](../object/BasicChair.html#dobjFor(LieOn)) [`dobjFor(SitOn)`](../object/BasicChair.html#dobjFor(SitOn)) [`dobjFor(StandOn)`](../object/BasicChair.html#dobjFor(StandOn)) [`getDropDestination`](../object/BasicChair.html#getDropDestination) [`performEntry`](../object/BasicChair.html#performEntry) [`preCondForEntry`](../object/BasicChair.html#preCondForEntry) [`removeFromNested`](../object/BasicChair.html#removeFromNested) [`tryMovingIntoNested`](../object/BasicChair.html#tryMovingIntoNested) [`tryRemovingFromNested`](../object/BasicChair.html#tryRemovingFromNested) [`verifyEntry`](../object/BasicChair.html#verifyEntry)
 
@@ -134,11 +124,6 @@ Inherited from `VocabObject` :
 
 Inherited from `BulkLimiter` :  
 [`checkBulkInserted`](../object/BulkLimiter.html#checkBulkInserted) [`examineInterior`](../object/BulkLimiter.html#examineInterior) [`examineInteriorWithLister`](../object/BulkLimiter.html#examineInteriorWithLister) [`verifyPutInInterior`](../object/BulkLimiter.html#verifyPutInInterior)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 

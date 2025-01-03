@@ -73,11 +73,6 @@ appropriate report message.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -144,11 +139,6 @@ destination's receiveDrop() method can call this if the standard message
 is adequate to describe the result of the action.
 
 'obj' is the object being dropped, and 'dest' is the drop destination.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -314,11 +314,6 @@ Note that this message has to be a stand-alone independent clause. In
 particular note that we don't put any spacing after it, since we need to
 be able to add sentence-ending or clause-ending punctuation immediately
 after it.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

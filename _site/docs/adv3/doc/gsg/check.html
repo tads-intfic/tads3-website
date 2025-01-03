@@ -21,9 +21,8 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
-
-<p><a href="index.html">[Main]</a><br />
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a>
+<a href="index.html">[Main]</a><br />
 <em><a href="verify.html">[Previous]</a>   <a href="action.html">[Next]</a></em></p>
 
 <h3 id="check">Check</h3>
@@ -44,35 +43,6 @@ seem rather out of character, and it would serve no useful purpose in
 the game, so we probably want to prevent it. The best place to do this
 would be in a <code class="language-plaintext highlighter-rouge">check </code>routine:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>dobjFor(Doff)<br />
 {<br />
    check()<br />
@@ -81,35 +51,6 @@ would be in a <code class="language-plaintext highlighter-rouge">check </code>ro
        exit;<br />
    }<br />
 }</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>Note that here we have used the reportFailure macro; it’s not strictly
 necessary to do so here: we could have used a double-quoted string to
@@ -125,35 +66,6 @@ check() routines that Thing defines a failCheck() method that combines
 them both into one statement. The foregoing example could then be
 written:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>dobjFor(Doff)<br />
 {<br />
    check()<br />
@@ -162,66 +74,8 @@ written:</p>
    }<br />
 }</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>And our dress object (located immediately after the me object in the
 code) could then be defined as:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>+ Wearable ’plain pretty blue dress’ ’blue dress’<br />
   ”It’s quite plain, but you think it pretty enough. ”<br />
@@ -234,35 +88,6 @@ code) could then be defined as:</p>
      }<br />
   }<br />
 ;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>Of course, there’s no reason why an action should not fail in the
 action() routine as well in check() - the failCheck() method would work
@@ -305,35 +130,6 @@ suggest you always do too.</p>
 <p>For example, suppose we went on to define an NPC who reacted to Heidi
 undressing herself in front of him, with something like:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>afterAction()<br />
 {<br />
   if(gActionIs(Doff) &amp;&amp; gActor==gPlayerChar &amp;&amp; gDobj==dress)<br />
@@ -344,35 +140,6 @@ undressing herself in front of him, with something like:</p>
 <p>If we had simply displayed the message about not wandering around
 half-naked in the action() routine, we might end up with a transcript
 like this:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>&gt;<strong>remove dress</strong><br />
 You can’t wander around half naked!</p>

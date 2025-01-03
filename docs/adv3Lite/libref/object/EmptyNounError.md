@@ -166,11 +166,6 @@ our message is a missing noun query (e.g., "What do want to open?")
 
 Try curing the error. After a missing noun query, the player can respond
 with a simple noun phrase answering the question.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

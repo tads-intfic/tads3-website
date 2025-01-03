@@ -99,11 +99,6 @@ which kind of suggestion this is.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `SuggestedTopic` :  
 [`associatedTopic`](../object/SuggestedTopic.html#associatedTopic) [`curiositySatisfied`](../object/SuggestedTopic.html#curiositySatisfied) [`fullName`](../object/SuggestedTopic.html#fullName) [`location`](../object/SuggestedTopic.html#location) [`name`](../object/SuggestedTopic.html#name) [`suggestionGroup`](../object/SuggestedTopic.html#suggestionGroup) [`suggestTo`](../object/SuggestedTopic.html#suggestTo) [`timesToSuggest`](../object/SuggestedTopic.html#timesToSuggest)
 
@@ -157,11 +152,6 @@ is the associated topic active?
 
 
 get the number of previous invocations of the associated topic
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

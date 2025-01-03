@@ -112,11 +112,6 @@ in one side designated as the master.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -174,11 +169,6 @@ on the lock are performed on the master side of the door.
 We return self by default so that a linkable object can stand alone if
 desired. That is, a linkable object doesn't have to be part of a pair;
 it can just as well be a single object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -21,16 +21,14 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><img src="topbar.jpg" data-border="0" /></p>
-
-<p><a href="toc.html" class="nav">Table of Contents</a> |
+<p><img src="topbar.jpg" data-border="0" />
+<a href="toc.html" class="nav">Table of Contents</a> |
 <a href="builtins.html" class="nav">The Intrinsics</a> &gt; tads-gen
 Function Set<br />
 <span class="navnp"><a href="t3vm.html" class="nav"><em>Prev:</em> t3vm Function Set</a>
    
 <a href="regex.html" class="nav"><em>Next:</em> Regular Expressions</a>
     </span></p>
-
 <h1 id="tads-gen-function-set">tads-gen Function Set</h1>
 
 <p>The tads-gen function set provides general utility and data manipulation
@@ -984,7 +982,6 @@ it doesn’t need the original string to carry out its task.</p>
        return rexReplace('%&lt;(&lt;alphanum&gt;+)%&gt;', str, r, ReplaceAll);
     }
 </code></pre></div></div>
-
 <p><span id="rexSearch"></span></p>
 
 <p><code class="language-plaintext highlighter-rouge">rexSearch(*pat*, *str*, *index*?)</code></p>
@@ -1757,9 +1754,8 @@ undo information retained in memory at any given time, to keep memory
 consumption under control during a long-running session; as new undo
 information is added, the VM discards the oldest undo information as
 needed to keep within the memory limits. This maintains a rolling window
-of the most recent undo information.</p>
-
-<hr />
+of the most recent undo information.
+————————————————————————</p>
 
 <p><em>TADS 3 System Manual</em><br />
 <a href="toc.html" class="nav">Table of Contents</a> |

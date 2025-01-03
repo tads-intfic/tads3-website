@@ -21,9 +21,8 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
-
-<p><a href="index.html">[Main]</a><br />
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a>
+<a href="index.html">[Main]</a><br />
 <em><a href="buryingtheboots.html">[Previous]</a>   <a href="lettherebelight.html">[Next]</a></em></p>
 
 <h2 id="calling-a-spade-a-spade">Calling a Spade a Spade</h2>
@@ -50,35 +49,6 @@ And, of course, you’ll need to make some appropriate adjustments to the
 spade object itself, so that it starts out being carried by Joe rather
 than leaning against the wall of the cave.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>This is how we do it here:</p>
 
 <p>++ AskForTopic @spade<br />
@@ -90,35 +60,6 @@ than leaning against the wall of the cave.</p>
       spade.moveInto(gActor);      <br />
    }<br />
 ;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>If you compile the game (yet again) and try all this out, you’ll find
 that there’s still a problem: even after Joe hands the spade over he’s
@@ -132,35 +73,6 @@ won’t discuss anything until it’s been returned. The implementation
 relies on switching ActorStates as Joe gives the spade to Heidi and as
 Heidi gives it back again. The two new ActorStates may be defined as
 follows:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>+ burnerFretting : InConversationState<br />
   specialDesc = ”{The burner/he} is standing talking to you with his<br />
@@ -219,35 +131,6 @@ follows:</p>
       he tells you. ”<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>There’s only a couple of points to note here. The first is that we
 include an AskForTopic to handle the case where the player asks for the
 spade again when Joe’s already handed it over; since Joe will always be
@@ -278,64 +161,9 @@ actor’s current actor state (don’t simply write something like
 burner.curState = burnerTalking;). We need to use the same method in our
 handling of AskFor to get Joe to switch into his burnerFretting state.
 Add the following line immediately after spade.moveInto(gActor); in the
-topicResponse method of the first AskForTopic @spade:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>getActor().setCurState(burnerFretting); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+topicResponse method of the first AskForTopic @spade:<br />
+ 
+getActor().setCurState(burnerFretting); </p>
 
 <p>Everything should now work fine, but there is one more refinement we can
 add, not because the game really needs it, but because it allows us to
@@ -360,35 +188,6 @@ YesTopic and a NoTopic (rather than having to define any SpecialTopics
 or whatever). The new ConvNode and its associated topics then look like
 this:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>+ ConvNode ’burner-spade’<br />
   npcGreetingMsg = ”&lt;.p&gt;He looks up at your approach, and walks<br />
    away from the fire to meet you. &lt;q&gt;Have you finished with my spade<br />
@@ -408,35 +207,6 @@ this:</p>
    to get on with my job, so please be quick about it.&lt;/q&gt;”<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>The reason we start the npcGreetingMsg with the pronoun ‘he’ rather than
 {The burner/he} is that in the only context in which this message will
 ever be displayed, the player will just have read “Joe Black/The
@@ -449,68 +219,10 @@ initiateConversation. The obvious candidate would be in the
 afterTravel(traveler, connector) method of burnerWaiting, since this
 will be called after the Player Character travels to Joe’s location:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>afterTravel(traveler, connector)<br />
 {<br />
     getActor().initiateConversation(burnerFretting, ’burner-spade’);<br />
 }</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>Note the use of getActor() to get the Actor the current state belongs
 to. We could just as well have used burner.initiateConversation here,

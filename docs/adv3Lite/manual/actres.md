@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Action Results  
 <span class="navnp"><a href="actionoverview.html" class="nav"><em>Prev:</em> Overview</a>
     <a href="message.html" class="nav"><em>Next:</em> Messages</a>    
 </span>
-
-
-
-
-
 # Action Results
 
 As mentioned at the end of the previous section, the most common way to
@@ -1262,9 +1252,3 @@ ATTACH and DETACH:
 <span class="navnp"><a href="actionoverview.html" class="nav"><em>Prev:</em> Overview</a>
     <a href="message.html" class="nav"><em>Next:</em> Messages</a>    
 </span>
-
-
-
-
-
-

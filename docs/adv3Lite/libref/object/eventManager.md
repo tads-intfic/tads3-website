@@ -219,11 +219,6 @@ representing each event, and use removeEvent() to remove the specific
 Event object of interest.
 
 Returns true if we find any matching events, nil if not.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

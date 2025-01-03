@@ -266,11 +266,6 @@ information on the stack level.
 
 Is this a system routine? This returns true if an intrinsic function or
 an intrinsic class method is running at this level.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

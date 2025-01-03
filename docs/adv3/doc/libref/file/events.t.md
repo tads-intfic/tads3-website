@@ -76,11 +76,6 @@ a particular interval of time has elapsed.
 Run the main scheduling loop. This continues until we encounter an
 end-of-file error reading from the console, or a QuitException is thrown
 to terminate the game.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

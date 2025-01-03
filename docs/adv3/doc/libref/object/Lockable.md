@@ -328,11 +328,6 @@ Make the object locked or unlocked. Objects can override this to apply
 side effects of locking or unlocking. By default, if we're the master,
 we'll simply set our isLocked\_ property to the new status, and
 otherwise defer to the master object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -49,13 +49,6 @@ Details](#_Methods_)
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -67,11 +60,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `NounWordProd` :  
 [`getAdjustedTokens`](../object/NounWordProd.html#getAdjustedTokens) [`getNounText`](../object/NounWordProd.html#getNounText) [`getVocabMatchList`](../object/NounWordProd.html#getVocabMatchList)
 

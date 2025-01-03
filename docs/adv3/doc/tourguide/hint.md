@@ -83,9 +83,7 @@ desired to apply any additional side effects.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Prior to TADS 3.0.9 there was no Hint template, so you would need to

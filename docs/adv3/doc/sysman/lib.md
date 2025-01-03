@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| The System
 Library  
 <span class="navnp"><a href="wlookup.html" class="nav"><em>Prev:</em> WeakRefLookupTable</a>
    
 <a href="init.html" class="nav"><em>Next:</em> Program Initialization</a>
     </span>
-
-
-
-
-
 # Part V: The System Library
 
 The TADS 3 compiler includes a small run-time library that provides
@@ -41,11 +31,6 @@ interest to most TADS 3 programmers, whether using adv3 or not.
 [Basic Tokenizer](tok.html)  
 [Miscellaneous Library Definitions](libmisc.html)  
 [Replacing the System Library](nodef.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> The Main Program
 Entrypoint  
@@ -16,11 +11,6 @@ Entrypoint
    
 <a href="inherit.html" class="nav"><em>Next:</em> The Object Inheritance
 Model</a>     </span>
-
-
-
-
-
 # Starting Up: The Main Program Entrypoint
 
 When a user launches your TADS 3 program, the interpreter starts things

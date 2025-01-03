@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Scope  
 <span class="navnp"><a href="query.html" class="nav"><em>Prev:</em> Querying the World
 Model</a>    
 <a href="debug.html" class="nav"><em>Next:</em> Debugging Commands</a>
     </span>
-
-
-
-
-
 # Scope
 
 <span id="objscope"></span>

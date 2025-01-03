@@ -252,11 +252,6 @@ each subclass must override this to perform its actual action
 Ask for an input file. We call the input manager, which freezes the
 real-time clock, displays the appropriate local file selector dialog,
 and restarts the clock.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

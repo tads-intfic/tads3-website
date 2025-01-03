@@ -67,11 +67,6 @@ Directions for use aboard a vessel such as a ship
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Direction` :  
 [`allDirections`](../object/Direction.html#allDirections) [`departureName`](../object/Direction.html#departureName) [`dirProp`](../object/Direction.html#dirProp) [`name`](../object/Direction.html#name) [`nameTab`](../object/Direction.html#nameTab) [`opposite`](../object/Direction.html#opposite) [`sortingOrder`](../object/Direction.html#sortingOrder)
 
@@ -113,11 +108,6 @@ Inherited from `Direction` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

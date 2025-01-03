@@ -1447,11 +1447,6 @@ layout: docs
         /* Otherwise use the tryInt() function to return the result */
         return tryInt(val);
     }
-
-
-
-
-
     /*
      *   nilToList - convert a 'nil' value to an empty list.  This can be
      *   useful for mix-in classes that will be used in different inheritance

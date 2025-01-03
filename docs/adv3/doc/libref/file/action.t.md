@@ -98,11 +98,6 @@ then on the room itself.
 
 Invoke the given function with the given values for the parser global
 variables gActor and gAction.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

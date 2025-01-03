@@ -75,13 +75,6 @@ characters in input).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -144,11 +137,6 @@ OR combination of all of the flag values applicable to the match. This
 is a combination of pre-defined flag values (see below) and any flag
 values from equivalence mappings. The flag values from ALL equivalence
 mappings that were actually used to make the match are included.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

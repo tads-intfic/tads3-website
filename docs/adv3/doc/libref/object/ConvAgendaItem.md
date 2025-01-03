@@ -83,11 +83,6 @@ Inherited from `AgendaItem` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `AgendaItem` :  
 [`execute`](../object/AgendaItem.html#execute) [`getActor`](../object/AgendaItem.html#getActor) [`invokeItem`](../object/AgendaItem.html#invokeItem) [`resetItem`](../object/AgendaItem.html#resetItem)
 

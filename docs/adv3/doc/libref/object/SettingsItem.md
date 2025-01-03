@@ -263,11 +263,6 @@ representing the setting as it should appear in the external
 configuration file. We use this to write the setting to the file.
 
 Note that this is only needed if the default saveItem() method is used.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -60,11 +60,6 @@ Inherited from `ConvType` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ConvType` :  
 [`afterResponse`](../object/ConvType.html#afterResponse) [`defaultResponse`](../object/ConvType.html#defaultResponse)
 

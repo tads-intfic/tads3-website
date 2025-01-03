@@ -87,11 +87,6 @@ the actor traverses the connector.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Door` :  
 [`initiallyOpen`](../object/Door.html#initiallyOpen)
 
@@ -100,13 +95,6 @@ Inherited from `Openable` :
 
 Inherited from `BasicOpenable` :  
 [`cannotMoveThroughMsg`](../object/BasicOpenable.html#cannotMoveThroughMsg) [`cannotTouchThroughMsg`](../object/BasicOpenable.html#cannotTouchThroughMsg) [`isOpen_`](../object/BasicOpenable.html#isOpen_) [`openDesc`](../object/BasicOpenable.html#openDesc)
-
-
-
-
-
-
-
 
 
 
@@ -130,11 +118,6 @@ Inherited from `VocabObject` :
 
 Inherited from `TravelConnector` :  
 [`connectorStagingLocation`](../object/TravelConnector.html#connectorStagingLocation) [`isCircularPassage`](../object/TravelConnector.html#isCircularPassage) [`isConnectorListed`](../object/TravelConnector.html#isConnectorListed) [`rememberCircularPassage`](../object/TravelConnector.html#rememberCircularPassage) [`travelBarrier`](../object/TravelConnector.html#travelBarrier) [`travelMemory`](../object/TravelConnector.html#travelMemory)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -159,11 +142,6 @@ Inherited from `Linkable` :
 
 Inherited from `BasicDoor` :  
 [`boostLikelihoodOnTravel`](../object/BasicDoor.html#boostLikelihoodOnTravel) [`describeRemoteOpen`](../object/BasicDoor.html#describeRemoteOpen) [`noteRemoteOpen`](../object/BasicDoor.html#noteRemoteOpen)
-
-
-
-
-
 Inherited from `ThroughPassage` :  
 [`describeArrival`](../object/ThroughPassage.html#describeArrival) [`describeDeparture`](../object/ThroughPassage.html#describeDeparture) [`dobjFor(Enter)`](../object/ThroughPassage.html#dobjFor(Enter)) [`dobjFor(GoThrough)`](../object/ThroughPassage.html#dobjFor(GoThrough)) [`mapPushTravelIobj`](../object/ThroughPassage.html#mapPushTravelIobj) [`mapPushTravelIobj`](../object/ThroughPassage.html#mapPushTravelIobj)
 
@@ -186,11 +164,6 @@ Inherited from `VocabObject` :
 
 Inherited from `TravelConnector` :  
 [`actorTravelPreCond`](../object/TravelConnector.html#actorTravelPreCond) [`canTravelerPass`](../object/TravelConnector.html#canTravelerPass) [`checkTravelBarriers`](../object/TravelConnector.html#checkTravelBarriers) [`connectorGetConnectorTo`](../object/TravelConnector.html#connectorGetConnectorTo) [`createUnlistedProxy`](../object/TravelConnector.html#createUnlistedProxy) [`darkTravel`](../object/TravelConnector.html#darkTravel) [`describeLocalArrival`](../object/TravelConnector.html#describeLocalArrival) [`describeLocalDeparture`](../object/TravelConnector.html#describeLocalDeparture) [`describeRemoteTravel`](../object/TravelConnector.html#describeRemoteTravel) [`explainTravelBarrier`](../object/TravelConnector.html#explainTravelBarrier) [`getApparentDestination`](../object/TravelConnector.html#getApparentDestination) [`isConnectorApparent`](../object/TravelConnector.html#isConnectorApparent) [`noteTraversal`](../object/TravelConnector.html#noteTraversal) [`rememberTravel`](../object/TravelConnector.html#rememberTravel)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -231,11 +204,6 @@ Report the automatic closure. The TravelVia action() calls this after
 closing the door to generate a message mentioning that the door was
 closed. By default, we just show the standard doorClosesBehindMsg
 library message.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

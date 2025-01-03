@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> tads-gen
 Function Set  
@@ -16,11 +11,6 @@ Function Set
    
 <a href="regex.html" class="nav"><em>Next:</em> Regular Expressions</a>
     </span>
-
-
-
-
-
 # tads-gen Function Set
 
 The tads-gen function set provides general utility and data manipulation
@@ -1025,9 +1015,6 @@ it doesn't need the original string to carry out its task.
        return rexReplace('%<(<alphanum>+)%>', str, r, ReplaceAll);
     }
 ```
-
-
-
 <span id="rexSearch"></span>
 
 `rexSearch(*pat*, *str*, *index*?)`
@@ -1815,11 +1802,6 @@ consumption under control during a long-running session; as new undo
 information is added, the VM discards the oldest undo information as
 needed to keep within the memory limits. This maintains a rolling window
 of the most recent undo information.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

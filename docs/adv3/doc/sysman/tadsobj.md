@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> TadsObject  
 <span class="navnp"><a href="strcomp.html" class="nav"><em>Prev:</em> StringComparator</a>
     <a href="tempfile.html" class="nav"><em>Next:</em> TemporaryFile</a>
     </span>
-
-
-
-
-
 # TadsObject
 
 The objects and classes that you define in your program are of intrinsic
@@ -119,9 +109,6 @@ get the effect we want:
       createCoin() { return createInstance(); }
     ;
 ```
-
-
-
 `createInstanceOf(...)`
 
 
@@ -433,11 +420,6 @@ with one exception: lst is allowed to be
 `\[TadsObject\]` (that is, a single-element list
 containing the TadsObject class itself), in which case the object
 becomes a root TadsObject object.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

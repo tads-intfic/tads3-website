@@ -464,11 +464,6 @@ method.
 Display a message saying that we're following the player character from
 oldLoc when our actor is in this ActorState (and the actor is following
 the player character)
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

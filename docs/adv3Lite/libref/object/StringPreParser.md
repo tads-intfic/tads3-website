@@ -236,11 +236,6 @@ register a preparser
 
 Class method - Run all preparsers. Returns the result of successively
 calling each preparser on the given string.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -169,11 +169,6 @@ an actor phrase must address a single actor
 
 there's no default for the actor - it's usually simply a syntax error
 when the actor is omitted
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

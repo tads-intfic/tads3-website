@@ -68,11 +68,6 @@ are simply taken as numeric values.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `NounPhrase` :  
 [`contPrep`](../object/NounPhrase.html#contPrep) [`contQual`](../object/NounPhrase.html#contQual) [`coreProd`](../object/NounPhrase.html#coreProd) [`determiner`](../object/NounPhrase.html#determiner) [`disambigNameList`](../object/NounPhrase.html#disambigNameList) [`errName`](../object/NounPhrase.html#errName) [`errNameProd`](../object/NounPhrase.html#errNameProd) [`exclusions`](../object/NounPhrase.html#exclusions) [`locQual`](../object/NounPhrase.html#locQual) [`locType`](../object/NounPhrase.html#locType) [`matches`](../object/NounPhrase.html#matches) [`objs`](../object/NounPhrase.html#objs) [`ordinal`](../object/NounPhrase.html#ordinal) [`parent`](../object/NounPhrase.html#parent) [`possQual`](../object/NounPhrase.html#possQual) [`prod`](../object/NounPhrase.html#prod) [`pronoun`](../object/NounPhrase.html#pronoun) [`quantifier`](../object/NounPhrase.html#quantifier) [`role`](../object/NounPhrase.html#role) [`tokens`](../object/NounPhrase.html#tokens)
 
@@ -114,11 +109,6 @@ Inherited from `NounPhrase` :
 
 
 Wrap the dummy object in am NPMatch object
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

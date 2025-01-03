@@ -81,11 +81,6 @@ to determine if one tree is slightly better than the other.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -135,11 +130,6 @@ than b, 0 if they're indistinguishable, or -1 if a is worse than b.
 
 
 compare two rankings for the second, fine-grained pass
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

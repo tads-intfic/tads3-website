@@ -156,9 +156,7 @@ stage before the actor can sit on the chair.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
   

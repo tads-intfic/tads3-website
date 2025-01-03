@@ -75,11 +75,6 @@ as an enclosure (a jail cell), or an exit door.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TravelConnectorLink` :  
 [`connector`](../object/TravelConnectorLink.html#connector) [`sightSize`](../object/TravelConnectorLink.html#sightSize)
 
@@ -157,11 +152,6 @@ Get Out Of/Exit action - this simply maps to travel via the connector
 
 
 explicitly define the push-travel indirect object mapping
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -49,11 +49,6 @@ indirect object of a two-object verb.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ItselfProd` :  
 [`pronounType`](../object/ItselfProd.html#pronounType)
 
@@ -117,11 +112,6 @@ Inherited from `BasicProd` :
 
 
 check agreement of our binding
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

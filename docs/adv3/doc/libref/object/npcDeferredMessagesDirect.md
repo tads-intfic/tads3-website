@@ -74,13 +74,6 @@ askUnknownWord - for the same reason that askDisambig can't be deferred.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -263,11 +256,6 @@ tell the user they entered a word we don't know
 
 
 'take zero books'
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

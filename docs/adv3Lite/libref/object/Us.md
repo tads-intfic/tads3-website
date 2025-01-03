@@ -54,11 +54,6 @@ simply by modifying the resolve() method here.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Pronoun` :  
 [`all`](../object/Pronoun.html#all) [`aName`](../object/Pronoun.html#aName) [`ante`](../object/Pronoun.html#ante) [`person`](../object/Pronoun.html#person) [`reflexive`](../object/Pronoun.html#reflexive) [`theName`](../object/Pronoun.html#theName) [`theObjName`](../object/Pronoun.html#theObjName)
 
@@ -100,11 +95,6 @@ Inherited from `Pronoun` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

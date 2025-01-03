@@ -325,11 +325,6 @@ check for a match
 
 
 on being suggested, update the special topic history
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -102,11 +102,6 @@ Inherited from `VocabObject` :
 
 Inherited from `OnOffControl` :  
 [`onDesc`](../object/OnOffControl.html#onDesc)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -125,13 +120,6 @@ Inherited from `Thing` :
 
 Inherited from `VocabObject` :  
 [`addToDictionary`](../object/VocabObject.html#addToDictionary) [`expandPronounList`](../object/VocabObject.html#expandPronounList) [`filterResolveList`](../object/VocabObject.html#filterResolveList) [`getFacets`](../object/VocabObject.html#getFacets) [`inheritVocab`](../object/VocabObject.html#inheritVocab) [`initializeVocab`](../object/VocabObject.html#initializeVocab) [`initializeVocabWith`](../object/VocabObject.html#initializeVocabWith) [`matchName`](../object/VocabObject.html#matchName) [`matchNameCommon`](../object/VocabObject.html#matchNameCommon) [`matchNameDisambig`](../object/VocabObject.html#matchNameDisambig) [`throwNoMatchForLocation`](../object/VocabObject.html#throwNoMatchForLocation) [`throwNoMatchForPossessive`](../object/VocabObject.html#throwNoMatchForPossessive) [`throwNothingInLocation`](../object/VocabObject.html#throwNothingInLocation)
-
-
-
-
-
-
-
 
 
 <span id="_Properties_"></span>
@@ -224,11 +212,6 @@ LightSource should never be called directly on a Flashlight object,
 because it doesn't keep the switch on/off and flashlight lit/unlit
 status in sync. This routine is the one to call because it keeps
 everything properly synchronized.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

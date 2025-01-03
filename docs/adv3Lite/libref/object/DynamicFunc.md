@@ -116,11 +116,6 @@ local y = f(7);
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -157,11 +152,6 @@ local y = f(7);
 
 Get the original source code of the function. This returns the string
 that was used as the source string to create the function.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

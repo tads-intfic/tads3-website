@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Footnotes  
@@ -16,11 +11,6 @@ Footnotes
 EventListItem</a>    
 <a href="fueled.html" class="nav"><em>Next:</em> Fueled Light Source</a>
     </span>
-
-
-
-
-
 # Footnotes
 
 ## Overview

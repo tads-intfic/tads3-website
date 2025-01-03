@@ -71,11 +71,6 @@ the parser generates for interactive prompting.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -126,11 +121,6 @@ parameter list as the equivalent message object method.
 
 Ask for a missing object. This prompts for an object that's structurally
 required for an action, but which was omitted from the player's command.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

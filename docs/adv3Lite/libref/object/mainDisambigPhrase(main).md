@@ -58,13 +58,6 @@ item.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Production` :  
 [`determiner`](../object/Production.html#determiner) [`nounPhraseRole`](../object/Production.html#nounPhraseRole) [`npClass`](../object/Production.html#npClass) [`parent`](../object/Production.html#parent)
 
@@ -73,11 +66,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `DisambigProduction` :  
 [`addNounListItem`](../object/DisambigProduction.html#addNounListItem)
 

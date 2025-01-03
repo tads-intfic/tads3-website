@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Defining New Actions  
 <span class="navnp"><a href="react.html" class="nav"><em>Prev:</em> Reacting to Actions</a>
    
 <a href="literalact.html" class="nav"><em>Next:</em> Literal Actions</a>
     </span>
-
-
-
-
-
 # Defining New Actions
 
 Although adv3Lite comes with a fairly substantial range of built-in

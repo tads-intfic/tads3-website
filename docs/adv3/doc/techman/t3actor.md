@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Creating Dynamic
 Characters  
@@ -16,11 +11,6 @@ Characters
 Context-Sensitive Help System</a>    
 <a href="convbkg.html" class="nav"><em>Next:</em> Choosing a Conversation
 System</a>     </span>
-
-
-
-
-
 # Creating Dynamic Characters
 
 This article's title makes it sound like one of those how-to books for

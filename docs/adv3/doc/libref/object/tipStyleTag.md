@@ -118,11 +118,6 @@ During pre-init, create a PromptDaemon for displaying tips. We don't
 want to display them directly when the showTip() method is called, to
 allow tips to be triggered from pretty much anywhere without having to
 worry about them showing up in the middle of some text.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -170,11 +170,6 @@ this is the property after a '-\>' symbol); the token type; and extra
 information that depends on the token type. Note that we use '...' at
 the end of the argument list so that we'll be compatible with any future
 changes to GrammarProd that add more arguments to this method.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

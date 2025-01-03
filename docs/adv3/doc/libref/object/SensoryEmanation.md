@@ -549,11 +549,6 @@ Begin the emanation. This is called from the sense change daemon when
 the item first becomes noticeable to the player character - for example,
 when the player character first enters the room containing the
 emanation, or when the emanation is first activated.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

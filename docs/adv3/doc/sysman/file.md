@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> File  
 <span class="navnp"><a href="dynfunc.html" class="nav"><em>Prev:</em> DynamicFunc</a>
     <a href="filename.html" class="nav"><em>Next:</em> FileName</a>    
 </span>
-
-
-
-
-
 # File
 
 The File intrinsic class provides access to create, read, and write

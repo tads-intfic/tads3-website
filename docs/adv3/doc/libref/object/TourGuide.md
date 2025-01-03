@@ -73,11 +73,6 @@ Actor subclass.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -131,11 +126,6 @@ any other kind of state. Subclasses must override this if they use other
 kinds of states to represent guided tours, since we'll only detect that
 we're in a guided tour state if our current actor state object is of
 class GuidedTourState (or any subclass).
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

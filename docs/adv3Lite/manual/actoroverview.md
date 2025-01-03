@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Overview  
 <span class="navnp"><a href="actor.html" class="nav"><em>Prev:</em> Actors</a>
    
 <a href="actorobj.html" class="nav"><em>Next:</em> The Actor Object</a>
     </span>
-
-
-
-
-
 # NPC Overview
 
 Many works of Interactive Fiction can get by with the player character

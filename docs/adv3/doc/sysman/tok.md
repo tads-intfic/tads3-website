@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="lib.html" class="nav">The System Library</a> \> Basic
 Tokenizer  
@@ -16,11 +11,6 @@ Tokenizer
    
 <a href="libmisc.html" class="nav"><em>Next:</em> Miscellaneous Library
 Definitions</a>     </span>
-
-
-
-
-
 # Basic Tokenizer
 
 "Tokenizing" is the process of scanning a string of characters, such as
@@ -232,9 +222,6 @@ tokenizer rather than the default tokenizer:
 ```
     tokList = CalcTokenizer.tokenize(str);
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

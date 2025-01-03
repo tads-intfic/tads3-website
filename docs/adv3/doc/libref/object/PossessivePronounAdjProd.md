@@ -199,11 +199,6 @@ BOB HIS BOOK, 'his' refers to Bob.
 
 By default, the "main text" of a possessive pronoun is the same as the
 actual token text. Languages can override this as needed\>
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -51,13 +51,6 @@ flag that the actor's being addressed in the second person
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `CommandProdWithActor` :  
 [`resolvedActor_`](../object/CommandProdWithActor.html#resolvedActor_) [`resolver_`](../object/CommandProdWithActor.html#resolver_)
 
@@ -66,13 +59,6 @@ Inherited from `CommandProd` :
 
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
-
-
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -95,11 +81,6 @@ Inherited from `BasicProd` :
 
 Inherited from `FirstCommandProd` :  
 [`countCommands`](../object/FirstCommandProd.html#countCommands) [`getCommandSepIndex`](../object/FirstCommandProd.html#getCommandSepIndex) [`getCommandTokens`](../object/FirstCommandProd.html#getCommandTokens) [`getNextCommandIndex`](../object/FirstCommandProd.html#getNextCommandIndex) [`isEndOfSentence`](../object/FirstCommandProd.html#isEndOfSentence) [`resolveFirstAction`](../object/FirstCommandProd.html#resolveFirstAction)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -125,11 +106,6 @@ Inherited from `FirstCommandProd` :
 
 
 "execute" the target actor phrase
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Player Character and NPC
 Knowledge  
 <span class="navnp"><a href="hello.html" class="nav"><em>Prev:</em> Hello and Goodbye</a>
     <a href="orders.html" class="nav"><em>Next:</em> Giving Orders to
 NPCs</a>     </span>
-
-
-
-
-
 # Player Character and NPC Knowledge
 
 One type of condition that clearly effects what conversation topics

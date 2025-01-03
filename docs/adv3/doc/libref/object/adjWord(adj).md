@@ -48,11 +48,6 @@ word, or it can be an 'adjApostS' vocabulary word plus a 's token.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `AdjPhraseWithVocab` :  
 [`adjVocabProp`](../object/AdjPhraseWithVocab.html#adjVocabProp)
 
@@ -123,11 +118,6 @@ return a list of objects in scope matching our adjective
 
 
 generate a list of resolved objects
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

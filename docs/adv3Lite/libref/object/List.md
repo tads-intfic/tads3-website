@@ -78,13 +78,6 @@ Modify the List intrinsic class to provide a to-symbol mapping
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -686,11 +679,6 @@ toList() on a list simply returns the same list
 Find the first element for which the given condition is true, and return
 the value of the element. Returns nil if no item satisfies the
 condition.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

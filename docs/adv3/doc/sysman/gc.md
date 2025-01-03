@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Garbage Collection
 and Finalization  
@@ -16,11 +11,6 @@ and Finalization
 Creation</a>    
 <a href="expr.html" class="nav"><em>Next:</em> Expressions and
 Operators</a>     </span>
-
-
-
-
-
 # Automatic Garbage Collection and Finalization
 
 In languages like C and C++, the program is required to manage the

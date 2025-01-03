@@ -267,11 +267,6 @@ vary once per turn, for example, or could change each time an actor
 pushes a button. In these cases, invoking the script wouldn't affect the
 state of the event list, so the subclass would override scriptDone() so
 that it does nothing at all.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

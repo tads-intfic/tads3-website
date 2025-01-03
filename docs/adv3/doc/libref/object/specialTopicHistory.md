@@ -176,11 +176,6 @@ command. Returns true if we find a match, nil if not.
 
 
 note that a special topic 't' is being listed in a topic inventory
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

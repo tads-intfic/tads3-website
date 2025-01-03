@@ -78,13 +78,6 @@ an explanation that extra commands are being ignored.
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
 
@@ -93,13 +86,6 @@ Inherited from `Exception` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 
 
 Inherited from `Exception` :  

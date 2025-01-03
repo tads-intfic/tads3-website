@@ -70,11 +70,6 @@ directly.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `MultiInstanceInstance` :  
 [`isEquivalent`](../object/MultiInstanceInstance.html#isEquivalent) [`miParent`](../object/MultiInstanceInstance.html#miParent)
 
@@ -119,11 +114,6 @@ Get our other facets for parsing purposes - our parent maintains the
 list of all of its facets, so simply return that list. (Note that we'll
 be in the list as well, but that's harmless, so don't bother removing
 us.)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

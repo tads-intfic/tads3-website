@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Basic Ask/Tell  
 <span class="navnp"><a href="agenda.html" class="nav"><em>Prev:</em> AgendaItems</a>
     <a href="actortopicentry.html" class="nav"><em>Next:</em>
 ActorTopicEntry</a>     </span>
-
-
-
-
-
 # Basic Ask/Tell
 
 The adv3Lite libary is capable of some quite sophisticated

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Suggesting Conversational
 Topics  
@@ -16,11 +11,6 @@ Topics
 ActorTopicEntry</a>    
 <a href="specialtopic.html" class="nav"><em>Next:</em> Special Topics</a>
     </span>
-
-
-
-
-
 # Suggesting Conversational Topics
 
 Many players hate 'guess the topic' puzzles almost as much as they hate

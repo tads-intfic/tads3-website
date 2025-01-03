@@ -218,11 +218,6 @@ we do not resolve nouns in the command phrase, because we must re-parse
 the command phrase after we've finished resolving the actor phrase, and
 thus we can't resolve nouns in the command phrase until after the
 re-parse is completed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -177,11 +177,6 @@ corrections that give away information on objects the player has yet to
 encounter. We'll also allow words that are used in non-predicate grammar
 productions, since we might have a structural noun phrase word (an
 article, pronoun, etc).
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

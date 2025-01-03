@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="goldskull.html" class="nav">Goldskull</a> \> Improving the
 Game  
@@ -16,11 +11,6 @@ Game
    
 <a href="weightier.html" class="nav"><em>Next:</em> Weightier Matters</a>
     </span>
-
-
-
-
-
 # Improving the Game
 
 ## Synonymous Exits

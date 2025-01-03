@@ -45,11 +45,6 @@ the paragraph manager for the main output stream
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ParagraphManager` :  
 [`leadingMultiPat`](../object/ParagraphManager.html#leadingMultiPat) [`leadingSinglePat`](../object/ParagraphManager.html#leadingSinglePat) [`renderAfterInput`](../object/ParagraphManager.html#renderAfterInput) [`renderText`](../object/ParagraphManager.html#renderText) [`suppressAfter`](../object/ParagraphManager.html#suppressAfter) [`suppressBefore`](../object/ParagraphManager.html#suppressBefore)
 
@@ -60,11 +55,6 @@ Inherited from `ParagraphManager` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ParagraphManager` :  
 [`filterText`](../object/ParagraphManager.html#filterText)
 

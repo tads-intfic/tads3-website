@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Lists and
 Listers  
 <span class="navnp"><a href="t3imp_action.html" class="nav"><em>Prev:</em> Implied Action
 Reports</a>     <a href="t3tips.html" class="nav"><em>Next:</em> Tips: A
 Context-Sensitive Help System</a>     </span>
-
-
-
-
-
 # Lists and Listers
 
 *by Eric Eve*

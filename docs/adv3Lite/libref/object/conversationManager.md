@@ -130,11 +130,6 @@ Inherited from `ModuleExecObject` :
 
 
 [`doCustomTag`](#doCustomTag) [`execute`](#execute) [`filterText`](#filterText) [`manageKeys`](#manageKeys) [`scheduleTopicInventory`](#scheduleTopicInventory) [`setInformed`](#setInformed) [`setRevealed`](#setRevealed) [`setUnrevealed`](#setUnrevealed) [`showAgendaError`](#showAgendaError) [`showKnownError`](#showKnownError) [`showObjDoesNotBelongToActorError`](#showObjDoesNotBelongToActorError) [`showObjNotExistError`](#showObjNotExistError) [`showStateError`](#showStateError) [`showWrongKindofObjectError`](#showWrongKindofObjectError) [`topicInventoryDaemon`](#topicInventoryDaemon)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
@@ -479,11 +474,6 @@ explicitly asks us to show a topic inventory using the \<.topics\> tag,
 or when other game code asks us to show topic inventory by calling
 scheduleTopicInventory(), we'll show the inventory just before the
 command input prompt.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

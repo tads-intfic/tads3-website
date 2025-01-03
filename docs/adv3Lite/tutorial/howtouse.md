@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> How to Use This
 Book  
@@ -16,11 +11,6 @@ Book
 This Book?</a>    
 <a href="acknowledge.html" class="nav"><em>Next:</em> Acknowledgements
 and Explanations</a>     </span>
-
-
-
-
-
 # How to Use This Book
 
 I appreciate that this book will have different readers and different

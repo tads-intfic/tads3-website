@@ -89,11 +89,6 @@ Inherited from `Openable` :
 
 Inherited from `BasicOpenable` :  
 [`cannotMoveThroughMsg`](../object/BasicOpenable.html#cannotMoveThroughMsg) [`cannotTouchThroughMsg`](../object/BasicOpenable.html#cannotTouchThroughMsg) [`initiallyOpen`](../object/BasicOpenable.html#initiallyOpen) [`isOpen_`](../object/BasicOpenable.html#isOpen_) [`openDesc`](../object/BasicOpenable.html#openDesc)
-
-
-
-
-
 Inherited from `Container` :  
 [`lookInDesc`](../object/Container.html#lookInDesc)
 
@@ -220,11 +215,6 @@ items.
 It is usually desirable for a matchbook to act as a collective for the
 contained items, so that a command like "take matches" will be taken to
 apply to the matchbook rather than the individual matches.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

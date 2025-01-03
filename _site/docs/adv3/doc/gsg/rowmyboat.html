@@ -21,9 +21,8 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
-
-<p><a href="index.html">[Main]</a><br />
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a>
+<a href="index.html">[Main]</a><br />
 <em><a href="lettherebelight.html">[Previous]</a>   <a href="goingshopping.html">[Next]</a></em></p>
 
 <h2 id="row-my-boat">Row My Boat</h2>
@@ -34,35 +33,6 @@ battery, and just to make things interesting the way to the shop will be
 by rowing a boat along the stream (now you know what the oars are for).
 Since we’re going to row this boat, we once again need to define a new
 verb:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>DefineTAction(Row);</p>
 
@@ -80,70 +50,12 @@ verb:</p>
   }<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>There is a Vehicle class (a subclass of NestedRoom), but this is not
 really what we want for our boat. Instead we’ll use three different
 objects to define our boat; a Heavy, Enterable to represent the boat as
 seen from the outside, an OutdoorRoom to represent its interior, and an
 anonymous object placed inside the OutdoorRoom to be the object of the
 Row action. This is how we fit the three together:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>boat : Heavy, Enterable -&gt; insideBoat ’rowing boat’ ’rowing boat’<br />
   @cottageGarden<br />
@@ -200,35 +112,6 @@ Row action. This is how we fit the three together:</p>
   }<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>There is little here that is really new; we have simply fitted existing
 things together in a new way. Perhaps the most complex of these is the
 way we have defined the name property of insideBoat. We have taken
@@ -263,35 +146,6 @@ If you get in the boat and then sit or lie down, you’ll find that you’re
 described as being in the boat sitting or lying on the ground. The way
 to fix this is to give the boat a more appropriate floor object:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>boatBottom : Floor ’floor/bottom/(boat)’ ’bottom of the boat’<br />
 ;</p>
 
@@ -303,35 +157,6 @@ to fix this is to give the boat a more appropriate floor object:</p>
   roomParts = [boatBottom, defaultSky] <br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>You may also want to add the small wooden seat referred to in the
 description of the inside of the boat, but this can be left as an
 exercise for the reader (or you can look at the source code to heidi.t
@@ -340,35 +165,6 @@ boatBottom’s vocabWords (floor/bottom/(boat)) will automatically match
 ‘floor of boat’ and ‘bottom of boat’ - but not just ‘boat’); once again
 we don’t need to do anything special to take care of the ‘of’ in phrases
 like these.</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>This boat is fairly simple since it moves between only two locations. If
 we wanted more possible locations we’d need a more complicated
@@ -380,35 +176,6 @@ here could be extended to all sorts of vehicles.</p>
 arrives at when it’s rowed from the bottom of the garden (although you
 may already have made your own attempt). Here’s this guide’s
 suggestion:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>jetty : OutdoorRoom ’Jetty’<br />
   ”This small wooden jetty stands on the bank of the stream. Upstream <br />

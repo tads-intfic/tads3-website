@@ -73,11 +73,6 @@ the GIVE TO list only.
 
 
 [`includeInList`](#includeInList)
-
-
-
-
-
 Inherited from `TopicEntry` :  
 [`altTalkCount`](../object/TopicEntry.html#altTalkCount) [`altTopicList`](../object/TopicEntry.html#altTopicList) [`impliesGreeting`](../object/TopicEntry.html#impliesGreeting) [`isActive`](../object/TopicEntry.html#isActive) [`isConversational`](../object/TopicEntry.html#isConversational) [`matchObj`](../object/TopicEntry.html#matchObj) [`matchScore`](../object/TopicEntry.html#matchScore) [`talkCount`](../object/TopicEntry.html#talkCount) [`topicGroupActive`](../object/TopicEntry.html#topicGroupActive) [`topicGroupScoreAdjustment`](../object/TopicEntry.html#topicGroupScoreAdjustment) [`topicResponse`](../object/TopicEntry.html#topicResponse)
 
@@ -86,13 +81,6 @@ Inherited from `TopicEntry` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `ThingMatchTopic` :  
 [`isMatchPossible`](../object/ThingMatchTopic.html#isMatchPossible) [`matchTopic`](../object/ThingMatchTopic.html#matchTopic) [`setTopicPronouns`](../object/ThingMatchTopic.html#setTopicPronouns)
 

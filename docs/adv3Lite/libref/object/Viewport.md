@@ -202,11 +202,6 @@ description of the rooms it overlooks. \[VIEWPORT EXTENSION\]
 
 
 Set the list of visible rooms to lst \[VIEWPORT EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

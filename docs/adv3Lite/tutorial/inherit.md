@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="reviewing.html" class="nav">Reviewing the Basics</a> \>
 Inheritance, Modification and Overriding  
@@ -16,11 +11,6 @@ Inheritance, Modification and Overriding
 Statements</a>    
 <a href="quotes.html" class="nav"><em>Next:</em> Things in Quotes</a>    
 </span>
-
-
-
-
-
 # Inheritance, Modification and Overriding
 
 We have already discussed the basic principles of inheritance above,

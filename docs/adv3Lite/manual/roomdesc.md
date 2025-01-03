@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Room
 Descriptions  
 <span class="navnp"><a href="room.html" class="nav"><em>Prev:</em>Rooms</a>
     <a href="door.html" class="nav"><em>Next:</em> Doors</a>     </span>
-
-
-
-
-
 # Room Descriptions
 
 In a typical room description (which occurs when the player character

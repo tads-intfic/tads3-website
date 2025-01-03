@@ -155,11 +155,6 @@ we were successful in matching up to this point.
 
 for convenience, separately remember the single character that we don't
 recognize - this is simply the first character of the rest of the line
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

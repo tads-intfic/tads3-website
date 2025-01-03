@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Thoughts  
 <span class="navnp"><a href="topicentry.html" class="nav"><em>Prev:</em> Topic Entries</a>
     <a href="action.html" class="nav"><em>Next:</em> Actions</a>    
 </span>
-
-
-
-
-
 # Thoughts
 
 The thoughts.t module provides a framework for responding to commands of

@@ -95,11 +95,6 @@ soul will be in danger from the moment you hear these dark secrets!"
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `EventList` :  
 [`curScriptState`](../object/EventList.html#curScriptState) [`eventList`](../object/EventList.html#eventList) [`eventListLen`](../object/EventList.html#eventListLen)
 
@@ -146,11 +141,6 @@ Inherited from `Script` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

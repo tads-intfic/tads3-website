@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="finish.html" class="nav">Finishing Touches</a> \> Hints  
 <span class="navnp"><a href="scoring.html" class="nav"><em>Prev:</em> Scoring</a>
     <a href="whatmore.html" class="nav"><em>Next:</em> What More?</a>    
 </span>
-
-
-
-
-
 # Hints
 
 While not always strictly necessary, it's often a good idea for a game

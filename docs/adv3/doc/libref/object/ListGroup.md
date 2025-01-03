@@ -266,11 +266,6 @@ showList().
 
 Note that we are not to display any separator before or after our list;
 the caller is responsible for that.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

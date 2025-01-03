@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Optional
 Parameters  
@@ -16,11 +11,6 @@ Parameters
    
 <a href="namedargs.html" class="nav"><em>Next:</em> Named Arguments</a>
     </span>
-
-
-
-
-
 # Optional Parameters
 
 It's sometimes useful to define functions and methods with parameters

@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Advanced Topics  
 <span class="navnp"><a href="t3banner.html" class="nav"><em>Prev:</em> Using the Banner
 API</a>    
 <a href="t3banish.html" class="nav"><em>Next:</em> Banishing (and
 Changing) Awkward Messages</a>     </span>
-
-
-
-
-
 # Part III: Advanced Topics
 
 This section covers situations that you probably won't run into on every
@@ -37,11 +27,6 @@ game, but might encounter as you think about trickier customizations.
 [Writing a Game in the Past Tense](t3past.html)  
 [Internet Media Types for TADS](mediatypes.html)  
 [Workbench Project Starter Templates](t3projectStarters.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

@@ -74,11 +74,6 @@ through to the underyling stream unchanged.
 
 
 [`isBlocking`](#isBlocking)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -88,11 +83,6 @@ through to the underyling stream unchanged.
 
 
 [`filterText`](#filterText)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -132,11 +122,6 @@ default.
 
 
 filter the text
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

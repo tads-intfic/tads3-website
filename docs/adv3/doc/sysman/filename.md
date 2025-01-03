@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> FileName  
 <span class="navnp"><a href="file.html" class="nav"><em>Prev:</em> File</a>
     <a href="gramprod.html" class="nav"><em>Next:</em> GrammarProd</a>
     </span>
-
-
-
-
-
 # FileName
 
 A FileName object represents the name of a file on the host operating
@@ -817,11 +807,6 @@ universal file path notation. This notation is similar to Unix path
 syntax, with "/" as the path separator character. You can convert the
 string back to a local path on the current system, or on a different
 operating system, using [fromUniversal()](#fromUniversal).
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

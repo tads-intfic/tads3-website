@@ -69,13 +69,6 @@ for a command like "listen" or "smell".
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -132,11 +125,6 @@ show everything we're asked to list
 
 
 show a counted list item
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -199,11 +199,6 @@ the string exactly matches responseKeyword or exactly matches our
 responseChar (if that's non-nil), but this can be overridden to match
 other strings if desired. By default, we'll match the response without
 regard to case.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

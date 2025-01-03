@@ -67,11 +67,6 @@ The base class for "relative" directions (in, out)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Direction` :  
 [`allDirections`](../object/Direction.html#allDirections) [`dirProp`](../object/Direction.html#dirProp) [`sortingOrder`](../object/Direction.html#sortingOrder)
 
@@ -80,11 +75,6 @@ Inherited from `Direction` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Direction` :  
 [`defaultConnector`](../object/Direction.html#defaultConnector) [`initializeDirection`](../object/Direction.html#initializeDirection) [`initializeDirectionClass`](../object/Direction.html#initializeDirectionClass) [`sayArriving`](../object/Direction.html#sayArriving) [`sayDeparting`](../object/Direction.html#sayDeparting)
 

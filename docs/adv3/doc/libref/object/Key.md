@@ -187,11 +187,6 @@ Try making the current command's actor hold me. If we're on a keyring,
 we'll simply try to make the keyring itself held, rather than taking the
 key off the keyring; otherwise, we'll inherit the default behavior to
 make ourselves held.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

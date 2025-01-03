@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="character.html" class="nav">Character Building</a> \> Overview  
 <span class="navnp"><a href="character.html" class="nav"><em>Prev:</em> Character
 Building</a>    
 <a href="guard.html" class="nav"><em>Next:</em> The Security Guard</a>
     </span>
-
-
-
-
-
 # Overview
 
 So far our Airport game has acquired a lot of physical objects the

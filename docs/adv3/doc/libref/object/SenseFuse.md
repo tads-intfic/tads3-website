@@ -81,13 +81,6 @@ noise.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Event` :  
 [`eventOrder`](../object/Event.html#eventOrder) [`isPromptDaemon`](../object/Event.html#isPromptDaemon) [`nextRunTime`](../object/Event.html#nextRunTime)
 
@@ -138,11 +131,6 @@ Inherited from `BasicEvent` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

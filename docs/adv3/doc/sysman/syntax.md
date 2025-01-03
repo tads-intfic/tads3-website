@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Typographical
 Conventions  
@@ -16,11 +11,6 @@ Conventions
    
 <a href="naming.html" class="nav"><em>Next:</em> Naming Conventions</a>
     </span>
-
-
-
-
-
 # Typographical Conventions
 
 Like many technical manuals, this book uses some special typographical

@@ -314,11 +314,6 @@ the object role to wrap (DirectObject, IndirectObject, etc).
 
 
 Static method: create a ResolvedTopic to represent the given object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

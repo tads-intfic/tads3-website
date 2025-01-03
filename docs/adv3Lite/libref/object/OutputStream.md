@@ -391,11 +391,6 @@ Write a value to the stream. If the value is a string, we'll display the
 text of the string; if it's nil, we'll ignore it; if it's anything else,
 we'll try to convert it to a string (with the toString() function) and
 display the resulting text.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

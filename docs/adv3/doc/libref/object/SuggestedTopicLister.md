@@ -317,11 +317,6 @@ if the list is being added by the library
 
 
 show the prefix; include a paren if not in explicit mode
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

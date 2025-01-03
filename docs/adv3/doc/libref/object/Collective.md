@@ -79,11 +79,6 @@ Thing-derived) superclasses.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -135,11 +130,6 @@ Determine if I'm a collective object for the given object.
 In order to be a collective for some objects, an object must have
 vocubulary for the plural name, and must return true from this method
 for the collected objects.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Extras  
 <span class="navnp"><a href="eventlist.html" class="nav"><em>Prev:</em> Exits</a>
     <a href="gadget.html" class="nav"><em>Next:</em> Gadgets</a>    
 </span>
-
-
-
-
-
 # Extras
 
 The adv3Lite library has been devised to minimize the number of classes
@@ -487,9 +477,6 @@ which has a door we should do this:
     + cookerDoor: ContainerDoor 'cooker door; oven stove'
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

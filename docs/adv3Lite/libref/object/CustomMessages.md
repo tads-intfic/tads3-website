@@ -206,11 +206,6 @@ translations, so we set the default here to 200.
 
 Construction. Build the lookup table of our messages for fast access at
 run-time.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

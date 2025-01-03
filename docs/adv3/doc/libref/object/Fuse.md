@@ -70,11 +70,6 @@ Once a fuse is executed, it is removed from further scheduling.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Event` :  
 [`eventOrder`](../object/Event.html#eventOrder) [`isPromptDaemon`](../object/Event.html#isPromptDaemon) [`nextRunTime`](../object/Event.html#nextRunTime)
 
@@ -136,11 +131,6 @@ turn.
 
 
 execute the fuse
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

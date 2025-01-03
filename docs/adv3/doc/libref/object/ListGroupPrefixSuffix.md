@@ -179,11 +179,6 @@ show the prefix - we just show the groupPrefix message by default
 
 
 show the suffix - we just show the groupSuffix message by default
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

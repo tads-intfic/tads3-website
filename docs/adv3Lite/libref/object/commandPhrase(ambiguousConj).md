@@ -45,11 +45,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `CommandProduction` :  
 [`actor_`](../object/CommandProduction.html#actor_) [`actorPerson`](../object/CommandProduction.html#actorPerson)
 
@@ -61,11 +56,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CommandProduction` :  
 [`build`](../object/CommandProduction.html#build) [`noteEndOfSentence`](../object/CommandProduction.html#noteEndOfSentence) [`visitProd`](../object/CommandProduction.html#visitProd)
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Anonymous
 Functions  
@@ -16,11 +11,6 @@ Functions
 Handling</a>    
 <a href="undef.html" class="nav"><em>Next:</em> Capturing Calls to
 Undefined Methods</a>     </span>
-
-
-
-
-
 # Anonymous Functions
 
 There's a coding pattern that you'll see a lot in TADS, which we usually

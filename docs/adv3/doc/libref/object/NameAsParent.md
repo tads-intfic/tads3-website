@@ -84,11 +84,6 @@ Inherited from `NameAsOther` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `NameAsOther` :  
 [`aNameOwnerLoc`](../object/NameAsOther.html#aNameOwnerLoc) [`conjugateRegularVerb`](../object/NameAsOther.html#conjugateRegularVerb) [`countDisambigName`](../object/NameAsOther.html#countDisambigName) [`countName`](../object/NameAsOther.html#countName) [`countNameOwnerLoc`](../object/NameAsOther.html#countNameOwnerLoc) [`itVerb`](../object/NameAsOther.html#itVerb) [`nameVerb`](../object/NameAsOther.html#nameVerb) [`notePromptByOwnerLoc`](../object/NameAsOther.html#notePromptByOwnerLoc) [`notePromptByPossAdj`](../object/NameAsOther.html#notePromptByPossAdj) [`theNameOwnerLoc`](../object/NameAsOther.html#theNameOwnerLoc)
 

@@ -245,11 +245,6 @@ default.
 
 Send an XML reply. This wraps the given XML fragment in an XML document
 with the given root element.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

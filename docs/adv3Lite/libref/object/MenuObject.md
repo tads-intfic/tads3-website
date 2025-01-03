@@ -208,11 +208,6 @@ this as needed.
 
 Since we're inheriting from object, but need to use the "+" syntax, we
 need to set up the contents appropriately
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

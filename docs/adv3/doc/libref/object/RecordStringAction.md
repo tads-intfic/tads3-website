@@ -76,11 +76,6 @@ subclass of Record action taking a quoted string for the filename
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `RecordAction` :  
 [`fileDisposition`](../object/RecordAction.html#fileDisposition) [`filePromptMsg`](../object/RecordAction.html#filePromptMsg) [`fileTypeID`](../object/RecordAction.html#fileTypeID) [`logFileType`](../object/RecordAction.html#logFileType)
 
@@ -151,11 +146,6 @@ Inherited from `BasicProd` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

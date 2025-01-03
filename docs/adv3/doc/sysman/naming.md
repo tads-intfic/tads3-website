@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Naming
 Conventions  
@@ -16,11 +11,6 @@ Conventions
 Conventions</a>    
 <a href="hello.html" class="nav"><em>Next:</em> Hello, World!</a>    
 </span>
-
-
-
-
-
 # Naming Conventions
 
 TADS 3's standard libraries follow a naming convention similar to that

@@ -73,13 +73,6 @@ Modify the List intrinsic class to provide a to-symbol mapping
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -588,11 +581,6 @@ elements for which the callback function 'func' returns true.
 Find the first element for which the given condition is true, and return
 the value of the element. Returns nil if no item satisfies the
 condition.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

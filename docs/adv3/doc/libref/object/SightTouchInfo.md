@@ -156,11 +156,6 @@ our SenseInfo objects for sight and touch
 Class method: select the "better" of two SightTouchInfo's. Returns the
 one with the more transparent visual status, or, visual transparencies
 being equal, the one with the more transparent touch status.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

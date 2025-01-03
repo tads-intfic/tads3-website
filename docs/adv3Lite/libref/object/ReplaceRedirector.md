@@ -217,13 +217,6 @@ execNestedAction equivalent) to redirect one action to another.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -268,11 +261,6 @@ direct and indirect objects of the new action, and isReplacement
 determines whether the new action replaces the original one (if true) or
 merely takes place during the execution of the original one, which then
 resumes when the new action is complete (if isReplacement is nil).
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

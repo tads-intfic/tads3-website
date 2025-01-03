@@ -21,14 +21,12 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><img src="topbar.jpg" data-border="0" /></p>
-
-<p><a href="toc.html" class="nav">Table of Contents</a> |
+<p><img src="topbar.jpg" data-border="0" />
+<a href="toc.html" class="nav">Table of Contents</a> |
 <a href="builtins.html" class="nav">The Intrinsics</a> &gt; String<br />
 <span class="navnp"><a href="framedesc.html" class="nav"><em>Prev:</em> StackFrameDesc</a>
     <a href="strbuf.html" class="nav"><em>Next:</em> StringBuffer</a>    
 </span></p>
-
 <h1 id="string">String</h1>
 
 <p>“String” is a native TADS 3 datatype, but it’s also an intrinsic class.
@@ -200,7 +198,6 @@ start of the overall string, regardless of the <em>index</em> value.</p>
     'abcabcabc'.find('c', 7) yields 9
     'abcdef123456'.find(R'%d+') yields 7
 </code></pre></div></div>
-
 <p><span id="findAll"></span></p>
 
 <p><code class="language-plaintext highlighter-rouge">findAll(*target*, *func*?)</code></p>
@@ -240,7 +237,6 @@ for the extra group parameters.</p>
     'one two three'.findAll(R'(%w)%w*', {m, i, g1: g1} yields ['o', 'w', 't']
     'one two three'.findAll(R'(%w)%w*', {m, i, g1, g2: g2} yields [nil, nil, nil]
 </code></pre></div></div>
-
 <p><span id="findLast"></span></p>
 
 <p><code class="language-plaintext highlighter-rouge">findLast(*target*, *index*?)</code></p>
@@ -980,7 +976,6 @@ characters; and so on.</p>
     'abcdefghi'.substr(4, -4) yields 'de'
     'abcdefghi'.substr(-4, -2) yields 'fg'
 </code></pre></div></div>
-
 <p><span id="toFoldedCase"></span></p>
 
 <p><code class="language-plaintext highlighter-rouge">toFoldedCase()</code></p>
@@ -1143,9 +1138,8 @@ would encode all of the scheme and path characters (such as the “:” and
 “//” in the “http://” prefix), which would make the string unusable as a
 URL. This method is intended only for encoding the building blocks of
 URL strings, such as the value portion of a “?name=value” query
-parameter.</p>
-
-<hr />
+parameter.
+————————————————————————</p>
 
 <p><em>TADS 3 System Manual</em><br />
 <a href="toc.html" class="nav">Table of Contents</a> |

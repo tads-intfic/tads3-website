@@ -157,11 +157,6 @@ which type of event this is.
 
 Construction. getNetEvent() only constructs this object directly when
 the subclass it's looking for isn't defined in the game program.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

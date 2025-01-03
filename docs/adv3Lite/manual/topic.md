@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Topics  
 <span class="navnp"><a href="multiloc.html" class="nav"><em>Prev:</em>Multilocs</a>
     <a href="beginning.html" class="nav"><em>Next:</em> Beginnings</a>
     </span>
-
-
-
-
-
 # Topics
 
 Virtually all the classes we have encountered so far are for
@@ -86,9 +76,6 @@ of the familiar property:
 ```
     tNecklace: Topic '() Aunt Maude\'s necklace' @nil;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

@@ -62,11 +62,6 @@ Inherited from `Doer` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Doer` :  
 [`checkDirection`](../object/Doer.html#checkDirection) [`exec`](../object/Doer.html#exec) [`execAction`](../object/Doer.html#execAction) [`redirect`](../object/Doer.html#redirect)
 

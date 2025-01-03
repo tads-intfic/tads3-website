@@ -496,11 +496,6 @@ information to become out of date. For example, if you have to create a
 new game-world object during noun-phrase resolution, this should be
 called to ensure that the new object's visibility is properly calculated
 and incorporated into the cached information.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

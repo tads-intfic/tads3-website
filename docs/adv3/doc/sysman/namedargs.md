@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Named Arguments  
 <span class="navnp"><a href="optparams.html" class="nav"><em>Prev:</em> Optional
 Parameters</a>    
 <a href="except.html" class="nav"><em>Next:</em> Exceptions and Error
 Handling</a>     </span>
-
-
-
-
-
 Named Arguments
 
 # Named Arguments

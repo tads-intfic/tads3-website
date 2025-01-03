@@ -16,11 +16,6 @@ layout: docs
 **Functions**  
 [Summary](#_FunctionSummary_)  
 [Details](#_Functions_)
-
-
-
-
-
 <span id="_ClassSummary_"></span>
 
 

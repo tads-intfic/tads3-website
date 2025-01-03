@@ -49,13 +49,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `RoomPart` :  
 [`contentsLister`](../object/RoomPart.html#contentsLister) [`descContentsLister`](../object/RoomPart.html#descContentsLister) [`lookInLister`](../object/RoomPart.html#lookInLister) [`nothingBehindMsg`](../object/RoomPart.html#nothingBehindMsg) [`nothingThroughMsg`](../object/RoomPart.html#nothingThroughMsg) [`nothingUnderMsg`](../object/RoomPart.html#nothingUnderMsg) [`sightSize`](../object/RoomPart.html#sightSize) [`specialContentsLister`](../object/RoomPart.html#specialContentsLister)
 
@@ -76,13 +69,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `RoomPart` :  
 [`dobjFor(Examine)`](../object/RoomPart.html#dobjFor(Examine)) [`dobjFor(LookIn)`](../object/RoomPart.html#dobjFor(LookIn)) [`examinePartContents`](../object/RoomPart.html#examinePartContents) [`examineSpecialContents`](../object/RoomPart.html#examineSpecialContents) [`examineStatus`](../object/RoomPart.html#examineStatus) [`filterResolveList`](../object/RoomPart.html#filterResolveList) [`getHitFallDestination`](../object/RoomPart.html#getHitFallDestination) [`hideFromAll`](../object/RoomPart.html#hideFromAll) [`hideFromDefault`](../object/RoomPart.html#hideFromDefault) [`initializeThing`](../object/RoomPart.html#initializeThing) [`isIn`](../object/RoomPart.html#isIn) [`isObjListedInRoomPart`](../object/RoomPart.html#isObjListedInRoomPart) [`moveIntoAdd`](../object/RoomPart.html#moveIntoAdd) [`moveOutOf`](../object/RoomPart.html#moveOutOf)
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *  [\[Next\]](generalintroduction.html)*
 
@@ -56,23 +51,6 @@ all those readers of previous versions of this guide for their feedback
 and suggestions, which will hopefully enhance its usefulness for those
 that follow.
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 *Eric Eve  
 Harris Manchester College  

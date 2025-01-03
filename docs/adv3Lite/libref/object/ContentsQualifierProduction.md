@@ -80,11 +80,6 @@ prep\_ is the preposition giving the relationship.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Production` :  
 [`determiner`](../object/Production.html#determiner) [`nounPhraseRole`](../object/Production.html#nounPhraseRole) [`npClass`](../object/Production.html#npClass) [`parent`](../object/Production.html#parent)
 
@@ -129,11 +124,6 @@ Visit a production. When we process the contents qualifier phrase, we'll
 build out the sub-tree in the context of a new NounPhrase, which we
 attach as a contents qualifier to the encompassing noun phrase under
 construction.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -438,11 +438,6 @@ using this method.
 
 Remove this room part from the given room. This can be used if it's
 necessary to remove the room part dynamically from a room.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

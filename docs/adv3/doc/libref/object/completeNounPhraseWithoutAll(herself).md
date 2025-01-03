@@ -48,11 +48,6 @@ the result is required to be singular and masculine
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `HerselfProd` :  
 [`pronounType`](../object/HerselfProd.html#pronounType)
 
@@ -116,11 +111,6 @@ Inherited from `BasicProd` :
 
 
 check agreement of our binding
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -61,11 +61,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `LocationalProduction` :  
 [`visitProd`](../object/LocationalProduction.html#visitProd)
 

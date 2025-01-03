@@ -80,13 +80,6 @@ Add handling for emiting, handling and dispatching signals.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -270,11 +263,6 @@ The superclasses must all be TadsObject objects, with one exception: the
 list \[TadsObject\] may be passed to create an object based directly on
 TadsObject. No other intrinsic classes can be used in the list, and
 objects of other types cannot be used in the list.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

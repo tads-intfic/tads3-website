@@ -50,18 +50,8 @@ A singular qualified noun phrase with a possessive adjective.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `PossessiveNounProd` :  
 [`npKeeper`](../object/PossessiveNounProd.html#npKeeper)
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -76,11 +66,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PossessiveNounProd` :  
 [`resolveNouns`](../object/PossessiveNounProd.html#resolveNouns)
 

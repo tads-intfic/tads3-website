@@ -63,11 +63,6 @@ Details](#_Methods_)
 
 
 [`verbPhrase`](#verbPhrase)
-
-
-
-
-
 Inherited from `TIAction` :  
 [`actionIobjProp`](../object/TIAction.html#actionIobjProp) [`askIobjResponseProd`](../object/TIAction.html#askIobjResponseProd) [`checkIobjProp`](../object/TIAction.html#checkIobjProp) [`execFirst`](../object/TIAction.html#execFirst) [`iobjCur_`](../object/TIAction.html#iobjCur_) [`iobjInfoCur_`](../object/TIAction.html#iobjInfoCur_) [`iobjList_`](../object/TIAction.html#iobjList_) [`iobjMatch`](../object/TIAction.html#iobjMatch) [`iobjResolver_`](../object/TIAction.html#iobjResolver_) [`isPrepositionalPhrasing`](../object/TIAction.html#isPrepositionalPhrasing) [`lastObjList_`](../object/TIAction.html#lastObjList_) [`needAnaphoricBinding_`](../object/TIAction.html#needAnaphoricBinding_) [`omitIobjInDobjQuery`](../object/TIAction.html#omitIobjInDobjQuery) [`preCondIobjProp`](../object/TIAction.html#preCondIobjProp) [`predicateNounPhrases`](../object/TIAction.html#predicateNounPhrases) [`remapIobjProp`](../object/TIAction.html#remapIobjProp) [`resolveFirst`](../object/TIAction.html#resolveFirst) [`resolveFirstEmpty`](../object/TIAction.html#resolveFirstEmpty) [`tentativeDobj_`](../object/TIAction.html#tentativeDobj_) [`tentativeIobj_`](../object/TIAction.html#tentativeIobj_) [`verIobjProp`](../object/TIAction.html#verIobjProp)
 
@@ -86,23 +81,11 @@ Inherited from `Resolver` :
 
 
 
-
-
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PushTravelGetOutOfAction` :  
 [`performTravel`](../object/PushTravelGetOutOfAction.html#performTravel)
 
@@ -123,13 +106,6 @@ Inherited from `BasicProd` :
 
 Inherited from `Resolver` :  
 [`allowAll`](../object/Resolver.html#allowAll) [`cacheScopeList`](../object/Resolver.html#cacheScopeList) [`filterAll`](../object/Resolver.html#filterAll) [`filterAmbiguousEquivalents`](../object/Resolver.html#filterAmbiguousEquivalents) [`filterAmbiguousNounPhrase`](../object/Resolver.html#filterAmbiguousNounPhrase) [`filterPluralPhrase`](../object/Resolver.html#filterPluralPhrase) [`filterPossRank`](../object/Resolver.html#filterPossRank) [`getAction`](../object/Resolver.html#getAction) [`getAll`](../object/Resolver.html#getAll) [`getAllDefaults`](../object/Resolver.html#getAllDefaults) [`getDefaultObject`](../object/Resolver.html#getDefaultObject) [`getPossessiveResolver`](../object/Resolver.html#getPossessiveResolver) [`getPronounDefault`](../object/Resolver.html#getPronounDefault) [`getQualifierResolver`](../object/Resolver.html#getQualifierResolver) [`getRawPronounAntecedent`](../object/Resolver.html#getRawPronounAntecedent) [`getReflexiveBinding`](../object/Resolver.html#getReflexiveBinding) [`getScopeList`](../object/Resolver.html#getScopeList) [`getTargetActor`](../object/Resolver.html#getTargetActor) [`matchName`](../object/Resolver.html#matchName) [`objInScope`](../object/Resolver.html#objInScope) [`resetResolver`](../object/Resolver.html#resetResolver) [`resolvePronounAntecedent`](../object/Resolver.html#resolvePronounAntecedent) [`resolveUnknownNounPhrase`](../object/Resolver.html#resolveUnknownNounPhrase) [`selectIndefinite`](../object/Resolver.html#selectIndefinite) [`withGlobals`](../object/Resolver.html#withGlobals)
-
-
-
-
-
-
-
 
 
 

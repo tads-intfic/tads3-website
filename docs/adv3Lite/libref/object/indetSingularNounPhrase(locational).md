@@ -45,11 +45,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `LocationalProduction` :  
 ` [`locType`](../object/LocationalProduction.html#locType)  `
 
@@ -61,11 +56,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `LocationalProduction` :  
 ` [`visitProd`](../object/LocationalProduction.html#visitProd)  `
 

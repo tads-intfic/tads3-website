@@ -134,11 +134,6 @@ relative order is arbitrary.
 
 By default, we'll sort by topicOrder if the topicOrder values are
 different, otherwise alphabetically by title.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

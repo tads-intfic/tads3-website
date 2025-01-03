@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Extending
 Intrinsic Classes  
@@ -16,11 +11,6 @@ Intrinsic Classes
    
 <a href="export.html" class="nav"><em>Next:</em> Exporting Symbols</a>
     </span>
-
-
-
-
-
 # Extending Intrinsic Classes
 
 You can extend an intrinsic class's programmatic interface by adding new

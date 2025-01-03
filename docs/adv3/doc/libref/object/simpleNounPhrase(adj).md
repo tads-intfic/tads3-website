@@ -59,13 +59,6 @@ ending with an adjective followed by "one," as in "the red one."
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -128,11 +121,6 @@ return the result
 
 
 generate a list of my resolved objects
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

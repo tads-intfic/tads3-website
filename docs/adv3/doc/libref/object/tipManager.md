@@ -71,13 +71,6 @@ Inherited from `ModuleExecObject` :
 
 Inherited from `PostRestoreObject` :  
 [`restoreCode`](../object/PostRestoreObject.html#restoreCode)
-
-
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -92,13 +85,6 @@ Inherited from `PostRestoreObject` :
 
 Inherited from `ModuleExecObject` :  
 [`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
-
-
-
-
-
-
-
 
 
 <span id="_Properties_"></span>
@@ -169,11 +155,6 @@ update tip information after a restore, restart or undo
 
 Show pending tips. This is called by a PromptDaemon before each new
 round of input.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

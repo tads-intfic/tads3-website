@@ -60,11 +60,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `QuantifierProduction` :  
 [`build`](../object/QuantifierProduction.html#build) [`visitProd`](../object/QuantifierProduction.html#visitProd)
 

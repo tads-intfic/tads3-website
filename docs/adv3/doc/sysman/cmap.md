@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="local.html" class="nav">Translating and Localizing TADS</a> \>
 Creating a Character-Mapping File  
 <span class="navnp"><a href="errtrans.html" class="nav"><em>Prev:</em> Translating Error
 Messages</a>     </span>
-
-
-
-
-
 # Creating a Character-Mapping File
 
 Because TADS 3 uses Unicode internally, TADS programs can work on

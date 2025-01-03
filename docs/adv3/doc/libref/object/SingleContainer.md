@@ -72,11 +72,6 @@ remove any current contents.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Container` :  
 [`lookInDesc`](../object/Container.html#lookInDesc)
 
@@ -142,11 +137,6 @@ Inherited from `VocabObject` :
 
 
 override PutIn to enforce our single-contents rule
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

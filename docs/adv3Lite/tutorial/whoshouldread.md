@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Who Should Read This
 Book?  
 <span class="navnp"><a href="whatis.html" class="nav"><em>Prev:</em>What is adv3Lite?</a>
     <a href="howtouse.html" class="nav"><em>Next:</em> How to Use This
 Book</a>     </span>
-
-
-
-
-
 # Who Should Read This Book?
 
 Well, of course anyone's welcome to read this book, and anyone curious

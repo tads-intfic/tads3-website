@@ -130,11 +130,6 @@ so we can just return the string unaltered.
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 20/06/2013 from adv3Lite version 0.91
 

@@ -142,11 +142,6 @@ return 'self', so a delayed agenda item can be initialized and added to
 an actor's agenda in one simple operation, like so:
 
 actor.addToAgenda(item.setDelay(1));
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Writing a Game
 in the Past Tense  
@@ -16,11 +11,6 @@ in the Past Tense
 Remapping</a>    
 <a href="mediatypes.html" class="nav"><em>Next:</em> Internet Media Types
 for TADS</a>     </span>
-
-
-
-
-
 # Writing a Game in the Past Tense
 
 *by Michel Nizette*

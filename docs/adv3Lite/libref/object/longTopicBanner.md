@@ -46,11 +46,6 @@ a long topic item.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `BannerWindow` :  
 [`align_`](../object/BannerWindow.html#align_) [`handle_`](../object/BannerWindow.html#handle_) [`id_`](../object/BannerWindow.html#id_) [`inited_`](../object/BannerWindow.html#inited_) [`parentID_`](../object/BannerWindow.html#parentID_) [`size_`](../object/BannerWindow.html#size_) [`sizeUnits_`](../object/BannerWindow.html#sizeUnits_) [`styleFlags_`](../object/BannerWindow.html#styleFlags_) [`windowType_`](../object/BannerWindow.html#windowType_)
 
@@ -62,11 +57,6 @@ Inherited from `OutputStreamWindow` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `BannerWindow` :  
 [`clearWindow`](../object/BannerWindow.html#clearWindow) [`construct`](../object/BannerWindow.html#construct) [`createOutputStreamObj`](../object/BannerWindow.html#createOutputStreamObj) [`createSystemBanner`](../object/BannerWindow.html#createSystemBanner) [`cursorTo`](../object/BannerWindow.html#cursorTo) [`flushBanner`](../object/BannerWindow.html#flushBanner) [`getBannerID`](../object/BannerWindow.html#getBannerID) [`initBannerWindow`](../object/BannerWindow.html#initBannerWindow) [`removeBanner`](../object/BannerWindow.html#removeBanner) [`setScreenColor`](../object/BannerWindow.html#setScreenColor) [`setSize`](../object/BannerWindow.html#setSize) [`setTextColor`](../object/BannerWindow.html#setTextColor) [`showBanner`](../object/BannerWindow.html#showBanner) [`showForRestore`](../object/BannerWindow.html#showForRestore) [`sizeToContents`](../object/BannerWindow.html#sizeToContents) [`updateForRestore`](../object/BannerWindow.html#updateForRestore) [`writeToBanner`](../object/BannerWindow.html#writeToBanner)
 

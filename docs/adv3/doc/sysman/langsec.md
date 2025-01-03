@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| The Language  
 <span class="navnp"><a href="terp.html" class="nav"><em>Prev:</em> Running Programs: The
 Interpreter</a>    
 <a href="progstru.html" class="nav"><em>Next:</em> Source Code
 Structure</a>     </span>
-
-
-
-
-
 # Part III: The Language
 
 This part provides detailed coverage of the TADS 3 language.
@@ -50,11 +40,6 @@ This part provides detailed coverage of the TADS 3 language.
 [Extending Intrinsic Classes](icext.html)  
 [Exporting Symbols](export.html)  
 [VM Run-Time Error Codes](errmsg.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

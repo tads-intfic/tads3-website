@@ -855,11 +855,6 @@ command to locationally qualify "all" (such as when we're the box in
 "examine everything in the box"), and we have no contents. By default,
 we throw the standard parser error ("You see nothing unusual in the
 box").
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Collection  
 <span class="navnp"><a href="charset.html" class="nav"><em>Prev:</em> CharacterSet</a>
     <a href="date.html" class="nav"><em>Next:</em> Date</a>     </span>
-
-
-
-
-
 # Collection
 
 A Collection is an object that contains a set of values. Each value in a
@@ -87,11 +77,6 @@ between `createIterator()` and
 `createLiveIterator()`. For example, because a
 List object is immutable, a List returns identical iterators for both of
 these methods.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

@@ -77,13 +77,6 @@ disambiguation questions and prompts for missing noun phrases.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -168,11 +161,6 @@ Try matching the given pronoun type to the target actor. If it matches
 in gender, and the target actor isn't the PC, we'll return a resolve
 list consisting of the target actor. If we don't have a match, we'll
 return nil.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

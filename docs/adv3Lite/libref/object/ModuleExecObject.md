@@ -239,11 +239,6 @@ instance's \_execute() method.
 
 Subclass-specific execution method. Each subclass should override this
 method to provide its execution code.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

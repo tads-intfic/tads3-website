@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Things  
 <span class="navnp"><a href="core.html" class="nav"><em>Prev:</em> The Core Library</a>
    
 <a href="room.html" class="nav"><em>Next:</em> Rooms &amp; Regions</a>
     </span>
-
-
-
-
-
 # Things
 
 If you've had any experience writing Interactive Fiction, especially

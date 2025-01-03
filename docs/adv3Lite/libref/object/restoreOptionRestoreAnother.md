@@ -62,11 +62,6 @@ Inherited from `FinishOption` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `finishOptionRestore` :  
 [`doOption`](../object/finishOptionRestore.html#doOption)
 

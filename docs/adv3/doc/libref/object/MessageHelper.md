@@ -66,11 +66,6 @@ Some helper routines for the library messages.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -153,11 +148,6 @@ in-scope object matched a noun phrase, but there was only one choice
 that passed the logicalness tests), AND the announcement mode (in
 gameMain.ambigAnnounceMode) is DescribeClear, we'll choose the long-form
 message.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

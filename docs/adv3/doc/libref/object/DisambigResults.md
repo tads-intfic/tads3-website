@@ -68,11 +68,6 @@ results of resolution of a disambiguation response.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `BasicResolveResults` :  
 [`allowActionRemapping`](../object/BasicResolveResults.html#allowActionRemapping) [`allowEquivalentFiltering`](../object/BasicResolveResults.html#allowEquivalentFiltering) [`issuingActor_`](../object/BasicResolveResults.html#issuingActor_) [`targetActor_`](../object/BasicResolveResults.html#targetActor_)
 
@@ -193,11 +188,6 @@ note the an ordinal response is out of range
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

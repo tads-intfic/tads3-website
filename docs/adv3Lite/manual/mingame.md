@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Minimal Game
 Definition  
@@ -16,11 +11,6 @@ Definition
 Modules</a>    
 <a href="core.html" class="nav"><em>Next:</em> The Core Library</a>    
 </span>
-
-
-
-
-
 <span id="mingamedef"></span>
 
 # Starting Out — A Minimal Game Definition

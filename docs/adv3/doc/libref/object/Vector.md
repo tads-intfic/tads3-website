@@ -81,13 +81,6 @@ Some handy Vector extensions
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -703,11 +696,6 @@ of the elements from 'start' to the last element.
 
 Find the first element for which the given condition is true, and return
 the value of the element.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

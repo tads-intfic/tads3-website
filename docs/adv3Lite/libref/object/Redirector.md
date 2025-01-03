@@ -222,11 +222,6 @@ We begin this module by defing the Redirector class since in adv3Lite
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -291,11 +286,6 @@ executins altAction as part of the current action.
 Execute altAction on the objects specified in the args parameter. If
 isReplacement is true make altAction a replacement for the current
 action.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

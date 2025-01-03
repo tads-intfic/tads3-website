@@ -44,11 +44,6 @@ It - third-person neuter singular
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Pronoun` :  
 [`all`](../object/Pronoun.html#all) [`aName`](../object/Pronoun.html#aName) [`ante`](../object/Pronoun.html#ante) [`person`](../object/Pronoun.html#person) [`reflexive`](../object/Pronoun.html#reflexive) [`theName`](../object/Pronoun.html#theName) [`theObjName`](../object/Pronoun.html#theObjName)
 
@@ -57,11 +52,6 @@ Inherited from `Pronoun` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Pronoun` :  
 [`construct`](../object/Pronoun.html#construct) [`matchObj`](../object/Pronoun.html#matchObj) [`resolve`](../object/Pronoun.html#resolve) [`setAntecedents`](../object/Pronoun.html#setAntecedents)
 

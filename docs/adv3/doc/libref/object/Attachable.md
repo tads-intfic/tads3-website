@@ -678,11 +678,6 @@ traveling actor, 'traveler' is the Traveler performing the travel, and
 'connector' is the TravelConnector that the traveler is traversing.
 
 By default, we do nothing. Instances can override this as needed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

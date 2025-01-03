@@ -21,14 +21,12 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><img src="topbar.jpg" data-border="0" /></p>
-
-<p><a href="toc.html" class="nav">Table of Contents</a> |
+<p><img src="topbar.jpg" data-border="0" />
+<a href="toc.html" class="nav">Table of Contents</a> |
 <a href="builtins.html" class="nav">The Intrinsics</a> &gt; List<br />
 <span class="navnp"><a href="iter.html" class="nav"><em>Prev:</em> Iterator</a>
     <a href="lookup.html" class="nav"><em>Next:</em> LookupTable</a>    
 </span></p>
-
 <h1 id="list">List</h1>
 
 <p>“List” is a native TADS 3 datatype. Lists are actually instances of the
@@ -396,7 +394,6 @@ original list must consist entirely of integer values):</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = [1, 2, 3, 4];
     y = x.applyAll({x: x*2});
 </code></pre></div></div>
-
 <p><code class="language-plaintext highlighter-rouge">maxVal(*func*?)</code></p>
 
 <p>If <em>func</em> is omitted, returns the maximum of the element values in the
@@ -498,7 +495,6 @@ where the “priority” property has an integer value, you could do this:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    lst = [obj1, obj2, obj3];
     sortedLst = lst.sort(true, { a, b: a.priority - b.priority });
 </code></pre></div></div>
-
 <p><span id="splice"></span></p>
 
 <p><code class="language-plaintext highlighter-rouge">splice(*startIndex*, *deleteCount*, ...)</code></p>
@@ -542,7 +538,6 @@ omits the last two elements, and so on.</p>
     [1, 2, 3, 4, 5].sublist(1, -2) yields [1, 2, 3]
     [1, 2, 3, 4, 5].sublist(2, -2) yields [2, 3]
 </code></pre></div></div>
-
 <p><code class="language-plaintext highlighter-rouge">subset(*func*)</code></p>
 
 <p>Creates and returns a new list containing the elements of this list for
@@ -564,7 +559,6 @@ greater than 10.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    x = [5, 10, 15, 20];
     y = x.subset({x: x &gt; 10});
 </code></pre></div></div>
-
 <p><code class="language-plaintext highlighter-rouge">valWhich(*cond*)</code></p>
 
 <p>Returns the value of the first element for which the callback function
@@ -573,9 +567,8 @@ greater than 10.</p>
 <code class="language-plaintext highlighter-rouge">indexWhich(*cond*)</code>, but returns the value of
 the first matching element rather than its index. If <em>cond</em> returns
 <code class="language-plaintext highlighter-rouge">nil</code> or 0 for every element of the list, this
-method returns <code class="language-plaintext highlighter-rouge">nil</code>.</p>
-
-<hr />
+method returns <code class="language-plaintext highlighter-rouge">nil</code>.
+————————————————————————</p>
 
 <p><em>TADS 3 System Manual</em><br />
 <a href="toc.html" class="nav">Table of Contents</a> |

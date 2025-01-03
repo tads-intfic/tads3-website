@@ -168,11 +168,6 @@ An ID module not for the library but for the T3 VM itself. This doesn't
 display any credit information, but displays version number information
 for the VM so that the "version" command shows what version of the
 interpreter is in use.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

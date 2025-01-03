@@ -114,11 +114,6 @@ send an error as the reply to a request, formatted into XML
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

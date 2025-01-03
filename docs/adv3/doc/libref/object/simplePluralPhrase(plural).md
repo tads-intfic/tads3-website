@@ -52,13 +52,6 @@ number would use plural adjectives here as well as plural nouns.)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -121,11 +114,6 @@ return the result list
 
 
 generate a list of my resolved objects
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

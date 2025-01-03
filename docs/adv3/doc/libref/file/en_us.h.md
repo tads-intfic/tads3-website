@@ -470,11 +470,6 @@ for a desc, and frequently want a custom notHereMsg.
 
 `'vocabWords';`  
 Templates for the basic vocabulary object
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

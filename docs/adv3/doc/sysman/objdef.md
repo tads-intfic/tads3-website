@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Object
 Definitions  
@@ -16,11 +11,6 @@ Definitions
 Model</a>    
 <a href="inlineobj.html" class="nav"><em>Next:</em> Inline Objects</a>
     </span>
-
-
-
-
-
 # Object Definitions
 
 Objects are the main data structures in a TADS program.

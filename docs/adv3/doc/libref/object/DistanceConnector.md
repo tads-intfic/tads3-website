@@ -83,11 +83,6 @@ Intangible fills both of these needs.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `SenseConnector` :  
 [`connectorMaterial`](../object/SenseConnector.html#connectorMaterial) [`getConnectedContainers`](../object/SenseConnector.html#getConnectedContainers)
 
@@ -232,11 +227,6 @@ checkThrowThrough() to return checkStatusSuccess.
 
 
 all senses are connected through us, but at a distance
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

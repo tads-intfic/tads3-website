@@ -70,11 +70,6 @@ execution.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Daemon` :  
 [`interval_`](../object/Daemon.html#interval_)
 
@@ -127,11 +122,6 @@ displayed. senseProp is one of &canSee, &canReach, &canHear, &canSmell.
 If these parameters are omitted then the senseObj will be the same as
 the obj whose prop property is executed by the Daemon, and the senseProp
 will be &canSee, probably the most common case.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

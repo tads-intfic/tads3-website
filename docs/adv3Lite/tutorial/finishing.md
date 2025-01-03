@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Finishing Touches  
@@ -16,11 +11,6 @@ Finishing Touches
 Branch</a>    
 <a href="reviewing.html" class="nav"><em>Next:</em> Reviewing the
 Basics</a>     </span>
-
-
-
-
-
 # Finishing Touches
 
 We've nearly completed our first pass through the game. There's just a
@@ -344,9 +334,6 @@ game should now look like:
         }
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

@@ -82,11 +82,6 @@ Inherited from `Rule` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Rule` :  
 [`activate`](../object/Rule.html#activate) [`addTo`](../object/Rule.html#addTo) [`calcSpecficity`](../object/Rule.html#calcSpecficity) [`compareTo`](../object/Rule.html#compareTo) [`deactivate`](../object/Rule.html#deactivate) [`follow`](../object/Rule.html#follow) [`initializeRule`](../object/Rule.html#initializeRule) [`matchConditions`](../object/Rule.html#matchConditions) [`moveInto`](../object/Rule.html#moveInto) [`removeFrom`](../object/Rule.html#removeFrom) [`runAfter`](../object/Rule.html#runAfter) [`runBefore`](../object/Rule.html#runBefore) [`setRulebook`](../object/Rule.html#setRulebook) [`when`](../object/Rule.html#when)
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Using Nested
 Rooms as Staging Locations  
@@ -16,11 +11,6 @@ Rooms as Staging Locations
    
 <a href="t3odd_noun.html" class="nav"><em>Next:</em> Handling Odd Noun
 Phrases</a>     </span>
-
-
-
-
-
 # Using Nested Rooms as Staging Locations
 
 *by Eric Eve*

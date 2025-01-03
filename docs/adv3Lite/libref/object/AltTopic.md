@@ -85,11 +85,6 @@ is true.
 
 Inherited from `ActorTopicEntry` :  
 [`activated`](../object/ActorTopicEntry.html#activated) [`active`](../object/ActorTopicEntry.html#active) [`autoName`](../object/ActorTopicEntry.html#autoName) [`curiosityAroused`](../object/ActorTopicEntry.html#curiosityAroused) [`impliesGreeting`](../object/ActorTopicEntry.html#impliesGreeting) [`isConversational`](../object/ActorTopicEntry.html#isConversational) [`keyTopics`](../object/ActorTopicEntry.html#keyTopics) [`listOrder`](../object/ActorTopicEntry.html#listOrder) [`timesInvoked`](../object/ActorTopicEntry.html#timesInvoked)
-
-
-
-
-
 Inherited from `TopicEntry` :  
 [`isActive`](../object/TopicEntry.html#isActive) [`matchExactCase`](../object/TopicEntry.html#matchExactCase) [`matchObj`](../object/TopicEntry.html#matchObj) [`matchPattern`](../object/TopicEntry.html#matchPattern) [`matchScore`](../object/TopicEntry.html#matchScore) [`scoreBoost`](../object/TopicEntry.html#scoreBoost) [`topicMatched`](../object/TopicEntry.html#topicMatched)
 
@@ -239,11 +234,6 @@ property on the TopicEntry we're located in
 We match if our location matches, but if it does match we add our
 relative source text order to our location's match score to give us a
 higher score the later we're defined after our associated TopicEntry.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

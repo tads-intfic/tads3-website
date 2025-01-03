@@ -168,11 +168,6 @@ call a callback for each style: func(id, val)
 
 
 set a preference item in the profile
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

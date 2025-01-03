@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> EventList  
 <span class="navnp"><a href="event.html" class="nav"><em>Prev:</em> Events</a>
     <a href="exit.html" class="nav"><em>Next:</em> Exits</a>     </span>
-
-
-
-
-
 # EventList
 
 The EventList module implements the various EventList classes which are

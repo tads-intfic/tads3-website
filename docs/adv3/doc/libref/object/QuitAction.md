@@ -160,11 +160,6 @@ there's no point in including this in undo
 
 Carry out game termination. This can be called when we wish to end the
 game without asking for any additional player confirmation.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

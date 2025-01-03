@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Some Output and Input
 Issues  
@@ -16,11 +11,6 @@ Issues
    
 <a href="utility.html" class="nav"><em>Next:</em> Utility Functions</a>
     </span>
-
-
-
-
-
 # Some Output and Input Issues
 
 Outputting text to the screen in adv3Lite is mostly pretty
@@ -321,12 +311,7 @@ like WHERE IS THE SALT, that the parser can more easily understand):
             return str;
         }
     ;
-     
-     
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

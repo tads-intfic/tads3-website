@@ -48,11 +48,6 @@ an unambiguous command-only conjunction following.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `CommandProdWithDefiniteConj` :  
 [`cmdCounted_`](../object/CommandProdWithDefiniteConj.html#cmdCounted_)
 
@@ -67,11 +62,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CommandProdWithDefiniteConj` :  
 [`countCommands`](../object/CommandProdWithDefiniteConj.html#countCommands) [`getCommandSepIndex`](../object/CommandProdWithDefiniteConj.html#getCommandSepIndex) [`getNextCommandIndex`](../object/CommandProdWithDefiniteConj.html#getNextCommandIndex) [`isEndOfSentence`](../object/CommandProdWithDefiniteConj.html#isEndOfSentence) [`resolveFirstAction`](../object/CommandProdWithDefiniteConj.html#resolveFirstAction) [`resolveNouns`](../object/CommandProdWithDefiniteConj.html#resolveNouns)
 

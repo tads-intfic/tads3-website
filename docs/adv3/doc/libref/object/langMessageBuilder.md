@@ -55,11 +55,6 @@ The English-specific message builder.
 
 Inherited from `MessageBuilder` :  
 [`lastParamObj_`](../object/MessageBuilder.html#lastParamObj_) [`lastTargetObj_`](../object/MessageBuilder.html#lastTargetObj_) [`nameTable_`](../object/MessageBuilder.html#nameTable_) [`paramTable_`](../object/MessageBuilder.html#paramTable_) [`patAllCaps`](../object/MessageBuilder.html#patAllCaps) [`patIdObj`](../object/MessageBuilder.html#patIdObj) [`patIdObjSlashId`](../object/MessageBuilder.html#patIdObjSlashId) [`patIdSlash`](../object/MessageBuilder.html#patIdSlash) [`patUpper`](../object/MessageBuilder.html#patUpper)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
@@ -75,11 +70,6 @@ Inherited from `ModuleExecObject` :
 
 Inherited from `MessageBuilder` :  
 [`execute`](../object/MessageBuilder.html#execute) [`filterText`](../object/MessageBuilder.html#filterText) [`genLiteral`](../object/MessageBuilder.html#genLiteral) [`quoteMessage`](../object/MessageBuilder.html#quoteMessage)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
@@ -379,11 +369,6 @@ person of the subject, as per the regular substitution mechanism.
 
 
 Process result text.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

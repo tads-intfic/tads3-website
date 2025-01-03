@@ -21,9 +21,8 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
-
-<p><a href="index.html">[Main]</a><br />
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a>
+<a href="index.html">[Main]</a><br />
 <em><a href="basictravel.html">[Previous]</a>
   <a href="makinglifemoreproblematic.html">[Next]</a></em></p>
 
@@ -36,64 +35,9 @@ command <strong>climb the tree</strong> will result in the game responding, “T
 not something you can climb.” What we need to do is to modify the tree
 object so that trying to climb it has the same effect as typing <strong>up</strong>.
 The simplest way to achieve this is to add the following to the
-definition of tree:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>dobjFor(Climb) remapTo(Up) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+definition of tree:
+ 
+dobjFor(Climb) remapTo(Up) </p>
 
 <p>I.e. replace <strong>climb tree</strong> with an <strong>up</strong> command. Both <code class="language-plaintext highlighter-rouge">dobjFor</code> and
 <code class="language-plaintext highlighter-rouge">remapTo</code> are macros that expand to more complex code, but that need not

@@ -62,11 +62,6 @@ Inherited from `NounRole` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `NounRole` :  
 [`construct`](../object/NounRole.html#construct)
 

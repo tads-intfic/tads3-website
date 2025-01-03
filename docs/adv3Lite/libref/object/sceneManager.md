@@ -165,11 +165,6 @@ The executeEvent() method is run each turn to drive the Scenes mechanism
 
 
 Run the beforeAction method on every currently active Scene
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

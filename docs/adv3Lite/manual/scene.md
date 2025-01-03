@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Scenes  
 <span class="navnp"><a href="hint.html" class="nav"><em>Prev:</em> Pathfinding</a>
     <a href="score.html" class="nav"><em>Next:</em> Scoring</a>    
 </span>
-
-
-
-
-
 # Scenes
 
 The scenes.t module is used to implement Scenes, which are somewhat

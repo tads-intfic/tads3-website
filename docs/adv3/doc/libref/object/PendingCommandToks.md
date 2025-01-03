@@ -136,11 +136,6 @@ the token list for the command
 
 Execute the command. We'll parse our tokens and execute the parsed
 results.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

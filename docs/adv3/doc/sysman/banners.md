@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="ui.html" class="nav">The User Interface</a> \> The Banner Window
 Display Model  
@@ -16,11 +11,6 @@ Display Model
 Function</a>    
 <a href="web.html" class="nav"><em>Next:</em> Playing on the Web</a>    
 </span>
-
-
-
-
-
 # The Banner Window Display Model
 
 The tads-io function set provides a group of functions that allow the

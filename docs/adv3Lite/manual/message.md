@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Messages  
 <span class="navnp"><a href="actres.html" class="nav"><em>Prev:</em> Action Results</a>
     <a href="doer.html" class="nav"><em>Next:</em> Doers</a>     </span>
-
-
-
-
-
 # Messages
 
 In broad terms, a message is anything a game displays to the player to

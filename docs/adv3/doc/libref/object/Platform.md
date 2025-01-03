@@ -79,18 +79,8 @@ A Platform is a basic platform with the addition of Surface behavior.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `BasicPlatform` :  
 [`actorInPrep`](../object/BasicPlatform.html#actorInPrep) [`actorOutOfPrep`](../object/BasicPlatform.html#actorOutOfPrep) [`allowedPostures`](../object/BasicPlatform.html#allowedPostures) [`defaultPosture`](../object/BasicPlatform.html#defaultPosture) [`down`](../object/BasicPlatform.html#down) [`effectiveFollowLocation`](../object/BasicPlatform.html#effectiveFollowLocation) [`mustMoveIntoProp`](../object/BasicPlatform.html#mustMoveIntoProp) [`objInPrep`](../object/BasicPlatform.html#objInPrep) [`obviousPostures`](../object/BasicPlatform.html#obviousPostures)
-
-
-
-
-
 Inherited from `NestedRoom` :  
 [`bulkCapacity`](../object/NestedRoom.html#bulkCapacity) [`exitDestination`](../object/NestedRoom.html#exitDestination) [`out`](../object/NestedRoom.html#out) [`roomName`](../object/NestedRoom.html#roomName) [`stagingLocations`](../object/NestedRoom.html#stagingLocations)
 
@@ -108,21 +98,11 @@ Inherited from `Surface` :
 
 Inherited from `BulkLimiter` :  
 [`becomingTooFullMsg`](../object/BulkLimiter.html#becomingTooFullMsg) [`becomingTooLargeMsg`](../object/BulkLimiter.html#becomingTooLargeMsg) [`maxSingleBulk`](../object/BulkLimiter.html#maxSingleBulk) [`revealHiddenItems`](../object/BulkLimiter.html#revealHiddenItems)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `BasicPlatform` :  
 [`getDropDestination`](../object/BasicPlatform.html#getDropDestination) [`makeStandingUp`](../object/BasicPlatform.html#makeStandingUp) [`removeFromNested`](../object/BasicPlatform.html#removeFromNested) [`tryRemovingFromNested`](../object/BasicPlatform.html#tryRemovingFromNested)
 
@@ -147,11 +127,6 @@ Inherited from `VocabObject` :
 
 Inherited from `BulkLimiter` :  
 [`checkBulkInserted`](../object/BulkLimiter.html#checkBulkInserted) [`examineInterior`](../object/BulkLimiter.html#examineInterior) [`examineInteriorWithLister`](../object/BulkLimiter.html#examineInteriorWithLister) [`verifyPutInInterior`](../object/BulkLimiter.html#verifyPutInInterior)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 

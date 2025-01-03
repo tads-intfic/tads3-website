@@ -90,11 +90,6 @@ Inherited from `TopicEntry` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ThingMatchTopic` :  
 [`isMatchPossible`](../object/ThingMatchTopic.html#isMatchPossible) [`matchTopic`](../object/ThingMatchTopic.html#matchTopic) [`setTopicPronouns`](../object/ThingMatchTopic.html#setTopicPronouns)
 

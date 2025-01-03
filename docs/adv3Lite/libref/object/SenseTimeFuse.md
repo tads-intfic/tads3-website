@@ -70,11 +70,6 @@ time the fuse executes. \[PART OF THE OBJTIME EXTENSION\]
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TimeFuse` :  
 [`eventTime`](../object/TimeFuse.html#eventTime)
 
@@ -131,11 +126,6 @@ displayed. senseProp is one of &canSee, &canReach, &canHear, &canSmell.
 If these parameters are omitted then the senseObj will be the same as
 the obj whose prop property is executed by the Fuse, and the senseProp
 will be &canSee, probably the most common case.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

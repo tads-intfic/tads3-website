@@ -233,11 +233,6 @@ available by default during normal execution. However, saving a
 reference here prevents the garbage collector from discarding the table
 when preinit finishes, which forces it to be saved in the final .t3 file
 and thus makes it available permanently.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Extensions  
 <span class="navnp"><a href="webui.html" class="nav"><em>Prev:</em> The Web UI</a>
    
 <a href="../learning/exercises.html" class="nav"><em>Next:</em> Exercises
 &amp; Samples</a>     </span>
-
-
-
-
-
 # Extensions
 
 Extensions are a way of providing additional functionality without

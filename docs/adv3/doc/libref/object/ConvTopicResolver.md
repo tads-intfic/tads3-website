@@ -70,11 +70,6 @@ performing the command.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TopicResolver` :  
 [`isGlobalScope`](../object/TopicResolver.html#isGlobalScope) [`qualifierResolver_`](../object/TopicResolver.html#qualifierResolver_) [`topicProd`](../object/TopicResolver.html#topicProd)
 
@@ -139,11 +134,6 @@ Resolve the topic phrase. We'll break up the vocabulary matches into
 three sublists: the objects that are either in physical scope or known
 to the actor performing the command; objects that the actor considers
 likely topics; and everything else.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

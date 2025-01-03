@@ -440,11 +440,6 @@ condition, such as the number of times we've been used in relation to
 other items in our listObj. The purpose of this is to allow
 RandomFiringScripts to prioritize underused EventListItems once they
 become ready to fire.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

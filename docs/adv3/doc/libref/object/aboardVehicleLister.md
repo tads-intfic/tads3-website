@@ -45,11 +45,6 @@ board a vehicle when the vehicle arrives or departs a location.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -115,11 +110,6 @@ list anything whose isListedAboardVehicle returns true
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

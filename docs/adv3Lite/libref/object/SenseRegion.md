@@ -269,11 +269,6 @@ in a room in the SenseRegion which has light.
 
 Use this method to carry out some additional initialization useful to
 SenseRegions
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

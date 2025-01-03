@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](definingourfirstroom.html)
   [\[Next\]](tyingupsomeloosestrings.html)*
@@ -18,93 +13,25 @@ layout: docs
 It is time we added an object to our sample game. If you run the game
 again and try typing **examine cottage** you'll be told that:
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The word "cottage" is not necessary in this story.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 But since our minimalist room description mentions the cottage, our game
 ought to be able to do a bit better than that. This suggests that the
 first thing we need to add to our game is a cottage. If we defined it in
 full, our first attempt might look like this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    cottage : Thing  
+       vocabWords = 'pretty little cottage/house/building'  
+       name = 'pretty little cottage'  
+       desc = "It's just the sort of pretty little cottage that townspeople  
+        dream of living in, with roses round the door and a neat little   
+        window frame freshly painted in green. "  
+       location = outsideCottage  
+    ;  
 
-cottage : Thing  
-   vocabWords = 'pretty little cottage/house/building'  
-   name = 'pretty little cottage'  
-   desc = "It's just the sort of pretty little cottage that townspeople  
-    dream of living in, with roses round the door and a neat little   
-    window frame freshly painted in green. "  
-   location = outsideCottage  
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 As we shall see in a moment, this can be simplified using the
 appropriate template and the + syntax, but writing it out in full has
@@ -124,23 +51,6 @@ you can **examine building**, **examine little house**, **examine pretty
 little cottage**, but not **examine house cottage**, or **x building
 house**.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 In practice you would hardly ever define all those properties
 explicitly, instead you'd make use of the standard Thing template (which
@@ -148,47 +58,13 @@ can be used not only for Thing objects but for objects whose classes
 descend from Thing, which is the great majority of physical objects in
 the game). Using this template, the definition becomes:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    cottage : Thing 'pretty little cottage/house/building'   
+       'pretty little cottage'  @outsideCottage  
+       "It's just the sort of pretty little cottage that townspeople dream of living in,   
+        with roses round the door and a neat little window frame freshly painted in green. "     
+    ;  
 
-cottage : Thing 'pretty little cottage/house/building'   
-   'pretty little cottage'  @outsideCottage  
-   "It's just the sort of pretty little cottage that townspeople dream of living in,   
-    with roses round the door and a neat little window frame freshly painted in green. "     
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Note the form of this definition, since it is *very* common in TADS 3.
 After the superclass (or superclass list) comes first the list of
@@ -204,117 +80,32 @@ identify the object, while at the same time being sufficiently distinct
 from the words used to identify other objects that the parser will not
 have too hard a time trying to figure out which object is meant.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The @location element is optional in this template, so you could simply
 define, for example:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    cottage : Thing 'pretty little cottage/house/building'   
+       'pretty little cottage'  
+    
+        "It's just the sort of pretty little cottage that townspeople dream of living in,   
+        with roses round the door and a neat little window frame freshly painted in green. "     
+    ;  
 
-cottage : Thing 'pretty little cottage/house/building'   
-   'pretty little cottage'  
-  
-    "It's just the sort of pretty little cottage that townspeople dream of living in,   
-    with roses round the door and a neat little window frame freshly painted in green. "     
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The only problem with this is that there's now nothing to say where the
 cottage is located; the game will still compile but the cottage will
 have disappeared. One way to bring it back would be to use the +
 notation, so that the cottage could be defined:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    + cottage : Thing 'pretty little cottage/house/building'   
+       'pretty little cottage'    
+    
+       "It's just the sort of pretty little cottage that townspeople dream of living in,   
+        with roses round the door and a neat little window frame freshly painted in green. "     
+    ;  
 
-+ cottage : Thing 'pretty little cottage/house/building'   
-   'pretty little cottage'    
-  
-   "It's just the sort of pretty little cottage that townspeople dream of living in,   
-    with roses round the door and a neat little window frame freshly painted in green. "     
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The + is just a shorthand way of saying "set the location property of
 this object to the nearest previous object in the current source file
@@ -324,50 +115,16 @@ property of myObj would be set to the nearest preceding object beginning
 with a single + and so on. This allows for very compact code for
 defining nested objects, e.g.:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
-
-study : Room 'study' "A large desk stands under the window. ";  
-+ desk : Heavy, Surface 'desk' 'desk' "This large desk has a single drawer. ";  
-++ drawer : Component, OpenableContainer 'drawer', 'drawer' "It looks like it should open easily. ";  
-+++ redPencil : Thing 'red pencil' 'red pencil' "It's a bit blunt. ";  
-+++ bluePencil: Thing 'blue pencil' 'blue pencil' "It's been sharpened recently. ";  
+    study : Room 'study' "A large desk stands under the window. ";  
+    + desk : Heavy, Surface 'desk' 'desk' "This large desk has a single drawer. ";  
+    ++ drawer : Component, OpenableContainer 'drawer', 'drawer' "It looks like it should open easily. ";  
+    +++ redPencil : Thing 'red pencil' 'red pencil' "It's a bit blunt. ";  
+    +++ bluePencil: Thing 'blue pencil' 'blue pencil' "It's been sharpened recently. ";  
   
 In this case both the red pencil and the blue pencil will be inside the
 drawer, the drawer inside the desk, and the desk inside the study.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 But, to return to our cottage, if you change its definition to the
 latest version above and recompile and run the game, you should find it
@@ -404,46 +161,12 @@ give an object name. Such an object can simply be defined with its
 superclass name (or list). So we can finally redefine our cottage as
 follows:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    + Decoration 'pretty little cottage/house/building' 'pretty little cottage'    
+       "It's just the sort of pretty little cottage that townspeople dream of living in,  
+         with roses round the door and a neat little window frame freshly painted in green. "     
+    ;  
 
-+ Decoration 'pretty little cottage/house/building' 'pretty little cottage'    
-   "It's just the sort of pretty little cottage that townspeople dream of living in,  
-     with roses round the door and a neat little window frame freshly painted in green. "     
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Try this, and you'll see that the game now simply tells you that "The
 pretty little cottage isn't important" if you try to do anything with it

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> NPC-Initiated
 Conversation  
@@ -16,11 +11,6 @@ Conversation
 Tags</a>    
 <a href="changepc.html" class="nav"><em>Next:</em> Changing the Player
 Character</a>     </span>
-
-
-
-
-
 # NPC-Initiated Conversation
 
 All the conversational features of the adv3Lite library we have looked

@@ -58,11 +58,6 @@ do differ ("her" vs "hers", for example).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ItsNounProd` :  
 [`pronounType`](../object/ItsNounProd.html#pronounType)
 
@@ -83,13 +78,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 
 
 Inherited from `PronounProd` :  

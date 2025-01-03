@@ -333,11 +333,6 @@ Verify putting something new in my interior. This is suitable for use as
 a verify() method for a command like PutIn or PutOn. Note that this
 routine assumes and requires that gDobj be the object to be added, and
 gIobj be self.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

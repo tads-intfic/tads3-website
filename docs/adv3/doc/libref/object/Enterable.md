@@ -82,11 +82,6 @@ made an Enterable that simply points to the door object.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TravelConnectorLink` :  
 [`connector`](../object/TravelConnectorLink.html#connector) [`sightSize`](../object/TravelConnectorLink.html#sightSize)
 
@@ -164,11 +159,6 @@ Inherited from `VocabObject` :
 
 
 explicitly define the push-travel indirect object mapping
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

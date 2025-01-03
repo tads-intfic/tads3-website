@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](programmingprolegomena.html)   [\[Next\]](chapter2.html)*
 
@@ -83,23 +78,6 @@ a code block.)
 You can define local variables for the current code block. This is done
 with a statement such as this:
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
   local *identifier-list* ;   
   
@@ -168,59 +146,11 @@ number of statements to help control how loops function.
 The while statement defines a loop: set of statements that is executed
 repeatedly as long as a certain condition is true.
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>while ( <em>expression</em> ) statement <br />
-</td>
-</tr>
-</tbody>
-</table>
+while ( <em>expression</em> ) statement 
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 As with the if statement, the *statement* may be a single statement or a
 set of statements enclosed in braces. The *expression* should evaluate
@@ -251,379 +181,55 @@ expression *after* each iteration of the loop. This ensures that the
 loop is executed at least once, since the expression isn't tested for
 the first time until after the first iteration of the loop.
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The general form of this statement is:  
+ 
+do <em>statement</em> while ( <em>expression</em> ); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>do <em>statement</em> while ( <em>expression</em> ); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The statement may again be a single statement or a set of statements
 enclosed in braces. The expression should again evaluate either to a
 number (in which case 0 is false and anything else is true), or a truth
 value (true or nil).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 For example, to calculate factorial n:  
+ 
+factorial(n) 
+{ 
+    local x = 1, res = 1; 
+    do 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>factorial(n) <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>{ <br />
-</td>
-</tr>
-</tbody>
-</table>
+{ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    local x = 1, res = 1; <br />
-</td>
-</tr>
-</tbody>
-</table>
+    res = res * x; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    do <br />
-</td>
-</tr>
-</tbody>
-</table>
+    x++; 
 
-|     |     |
-|-----|-----|
-|     |     |
+} 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="102"></td>
-<td>{ <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="102"></td>
-<td>    res = res * x; <br />
-</td>
-</tr>
-</tbody>
-</table>
+    while (x &lt;= n); 
+    return res; 
+} 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="102"></td>
-<td>    x++; <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="102"></td>
-<td>} <br />
-</td>
-</tr>
-</tbody>
-</table>
+iii) For
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    while (x &lt;= n); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    return res; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>} <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="30"><em>iii)</em></td>
-<td><em>For</em> <em> <br />
-</em></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The for statement defines a very powerful and general type of loop. You
 can always use while to construct any loop you can construct with for,
 but the for statement is often a much more compact and readable notation
 for the same effect.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The general form of this statement is:  
+ 
+for ( <em>init-expr</em>; <em>cond-expr</em>; <em>reinit-expr</em> ) <em>statement</em> 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>for ( <em>init-expr</em>; <em>cond-expr</em>; <em>reinit-expr</em> ) <em>statement</em> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 As with other looping constructs, the *statement* can be either a single
 statement, or a block of statements enclosed in braces.  
@@ -659,238 +265,35 @@ expressions is the same as a while loop.
   
 Here's an example of using a for statement. This function implements a
 simple loop that computes the sum of the elements of a list.  
+ 
+  sumlist(lst) 
+  { 
+    local len = length(lst), sum, i; 
+    for (sum = 0, i = 1 ; i &lt;= len ; i++) 
+      sum += lst[i]; 
+  } 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  sumlist(lst) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  { <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    local len = length(lst), sum, i; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    for (sum = 0, i = 1 ; i &lt;= len ; i++) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>      sum += lst[i]; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
   
 Note that an equivalent loop could be written with an empty loop body,
 by performing the summation in the re-initialization expression. We
 could also move the initialization of len within the initialization
 expression of the loop.  
+ 
+  sumlist(lst) 
+  { 
+    local len, sum, i; 
+    for (len = length(lst), sum = 0, i = 1 ; i &lt;= len ; 
+      sum += lst[i], i++); 
+  } 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  sumlist(lst) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  { <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    local len, sum, i; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    for (len = length(lst), sum = 0, i = 1 ; i &lt;= len ; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>      sum += lst[i], i++); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
   
 You can define new local variables in the initializer part of a for
 statement by using the local keyword in the initializer. For example:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
     for (i = 1, local j = 3, local k = 4, l = 5 ; i \< 5 ; ++i) // ...  
   
@@ -908,23 +311,6 @@ local statement for each new local appeared immediately before the for
 statement, and an extra close brace ("}") appeared immediately after the
 end of the body of the loop.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -949,23 +335,6 @@ over the contents of a collection, such as a List or a Vector.
   
 The syntax of the foreach statement is:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
    foreach ( *foreach_lvalue *in *expression* ) *body  
 *  
@@ -994,79 +363,16 @@ Here's an example that displays the elements of a list.
       "\<\<x\>\>\n";  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="30"><em>v)</em></td>
-<td><em>Break and Continue <br />
-</em></td>
-</tr>
-</tbody>
-</table>
+v) Break and Continue 
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
 A program can get out of a loop early using the break statement:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+  break;  
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  break;  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
 This is useful for terminating a loop at a midpoint. Execution resumes
 at the statement immediately following the innermost loop in which the
@@ -1092,136 +398,15 @@ statement following the block.
 For example, suppose we want to loop through a player's possessions
 until we find one that is of class LightSource; we might do something
 like this:  
+ 
+local obj; 
+foreach(obj in gPlayerChar.contents) 
+{ 
+   if(obj.ofKind(LightSource)) 
+      break; 
+} 
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>local obj; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>foreach(obj in gPlayerChar.contents) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>{ <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   if(obj.ofKind(LightSource)) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>      break; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>} <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The break and continue statements can optionally specify a target label.
 When a label is used with one of these statements, it must refer to a
@@ -1238,23 +423,6 @@ enclosed in braces), control transfers to the next statement after the
 block's closing brace. Targeted break statements are especially useful
 when you want to break out of a loop from within a switch statement:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 ```
 scanLoop:  
     for (i = 1 ; i \< 10 ; ++i)  
@@ -1288,41 +456,10 @@ matchLoop:
         }  
     }  
 ```
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+vi) Alternatives to Loops 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="30"><em>vi)</em></td>
-<td><em>Alternatives to Loops <br />
-</em></td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
 It seems to be one of the best kept secrets of TADS 3 that for many
 purposes there's often a more compact alternative to using a loop,
@@ -1330,59 +467,11 @@ particular when working with a *Collection* such as List or Vector. For
 example the foreach loop used above to identify a LightSource held by
 the player could have been replaced with a single statement:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>local obj = gPlayerChar.contents.valWhich({x: x.ofKind(LightSource)}); <br />
-</td>
-</tr>
-</tbody>
-</table>
+local obj = gPlayerChar.contents.valWhich({x: x.ofKind(LightSource)}); 
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The above statement will hardly be transparent to the novice, and this
 probably isn't the best place to explain it, since it involves concepts
@@ -1405,113 +494,16 @@ object or class but still make use of the behaviour defined on that
 class. For example, suppose we defined a Switch class with a method that
 defines what happens when it's switched on and off:
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Switch: Thing  
+makeOn(stat) 
+{ 
+   isOn = stat; 
+   "You flip the switch &lt;&lt; stat ? 'on' : 'off' &gt;&gt;. " 
+} 
+isOn = nil 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>makeOn(stat) <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>{ <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   isOn = stat; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   "You flip the switch &lt;&lt; stat ? 'on' : 'off' &gt;&gt;. " <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>} <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>isOn = nil <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 ;  
   
@@ -1524,170 +516,29 @@ tedious to have to retype the whole makeOn(stat) method, particularly in
 cases where it was something rather more substantial than here; instead
 we can inherit it and then add our own modifications:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 LightSwitch: Switch  
+makeOn(stat) 
+{ 
+   inherited(stat); 
+   if(myLight != nil) 
+     myLight.makeLit(stat); 
+} 
+myLight = nil 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>makeOn(stat) <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>{ <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   inherited(stat); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   if(myLight != nil) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>     myLight.makeLit(stat); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>} <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>myLight = nil <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Note that we don't have to repeat the definition of the isOn property,
 since this is already inherited from the Switch class. We'll now examine
 this mechanism in a bit more detail.  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="30"><em>i)</em></td>
-<td><em>Inherited <br />
-</em></td>
-</tr>
-</tbody>
-</table>
+i) Inherited 
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
 A special pseudo-object called inherited allows you to call a method in
 the current self object's superclass. Moreover, you can use inherited in
@@ -1700,401 +551,55 @@ You can use inherited in an expression anywhere that you can use self.
 Here is an example of using inherited.  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  MyClass: object <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    sdesc = "myclass" <br />
-</td>
-</tr>
-</tbody>
-</table>
+  MyClass: object 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    prop1(a, b) <br />
-</td>
-</tr>
-</tbody>
-</table>
+    sdesc = "myclass" 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    { <br />
-</td>
-</tr>
-</tbody>
-</table>
+    prop1(a, b) 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>       "This is myclass's prop1.  self = &lt;&lt; sdesc &gt;&gt;, <br />
-</td>
-</tr>
-</tbody>
-</table>
+    { 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>        a = &lt;&lt; a &gt;&gt;, and b = &lt;&lt; b &gt;&gt;.\n"; <br />
-</td>
-</tr>
-</tbody>
-</table>
+       "This is myclass's prop1.  self = &lt;&lt; sdesc &gt;&gt;, 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>        return(123); <br />
-</td>
-</tr>
-</tbody>
-</table>
+        a = &lt;&lt; a &gt;&gt;, and b = &lt;&lt; b &gt;&gt;.\n"; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    } <br />
-</td>
-</tr>
-</tbody>
-</table>
+        return(123); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  ; <br />
-</td>
-</tr>
-</tbody>
-</table>
+    } 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+  ; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  myobj: MyClass <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    sdesc = "myobj" <br />
-</td>
-</tr>
-</tbody>
-</table>
+  myobj: MyClass 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    prop1(d, e, f) <br />
-</td>
-</tr>
-</tbody>
-</table>
+    sdesc = "myobj" 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    { <br />
-</td>
-</tr>
-</tbody>
-</table>
+    prop1(d, e, f) 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>        local x; <br />
-</td>
-</tr>
-</tbody>
-</table>
+    { 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>        "This is myobj's prop1.  self = &lt;&lt; sdesc &gt;&gt;, <br />
-</td>
-</tr>
-</tbody>
-</table>
+        local x; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>        d = &lt;&lt; d &gt;&gt;, e = &lt;&lt; e &gt;&gt;, and f = &lt;&lt; f &gt;&gt;.\n"; <br />
-</td>
-</tr>
-</tbody>
-</table>
+        "This is myobj's prop1.  self = &lt;&lt; sdesc &gt;&gt;, 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>        x = inherited.prop1(d, f) * 2; <br />
-</td>
-</tr>
-</tbody>
-</table>
+        d = &lt;&lt; d &gt;&gt;, e = &lt;&lt; e &gt;&gt;, and f = &lt;&lt; f &gt;&gt;.\n"; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>        "Back in myobj's prop1.  x = &lt;&lt; x &gt;&gt;\n"; <br />
-</td>
-</tr>
-</tbody>
-</table>
+        x = inherited.prop1(d, f) * 2; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    } <br />
-</td>
-</tr>
-</tbody>
-</table>
+        "Back in myobj's prop1.  x = &lt;&lt; x &gt;&gt;\n"; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  ; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
-
-   When you call myobj.prop1(1, 2, 3), the following will be
+    } 
+  ;    When you call myobj.prop1(1, 2, 3), the following will be
 displayed:  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="68"></td>
-<td> This is myobj's prop1. self = myobj, d = 1, e = 2, and f = 3. <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
+ This is myobj's prop1. self = myobj, d = 1, e = 2, and f = 3. 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="68"></td>
-<td> This is myclass's prop1. self = myobj, a = 1, and b = 3. <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
+ This is myclass's prop1. self = myobj, a = 1, and b = 3. 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="68"></td>
-<td> Back in myobj's prop1. x = 246. <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
-
-Note that the self object that is in effect while the superclass method
+ Back in myobj's prop1. x = 246. Note that the self object that is in effect while the superclass method
 is being executed is the *same* as the self object in the calling
 (subclass) method. This makes inherited very different from calling the
 superclass method directly (i.e., by using the superclass object's name
@@ -2103,45 +608,8 @@ in place of inherited).
 You can also specify the name of the superclass after the 'inherited'
 keyword; this is otherwise similar to the normal 'inherited' syntax:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
      inherited Fixture.actionDobjTake();  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
   
 This specifies that you want the method to inherit the actionDobjTake()
@@ -2153,159 +621,23 @@ provide a particular behavior for the subclass.
   
 If the last example had been called from within the actionDobjTake()
 method of the object in question, we could simply have written:  
+ 
+inherited Fixture(); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>inherited Fixture(); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 It is legal to omit the property name or expression in an inherited or
 delegated (see below) expression. When the property name or expression
 is omitted, the property inherited or delegated to is implicitly the
 same as the current target property. For example, consider this code:  
+ 
+myObj: myClass 
+  myMethod(a, b) 
+  { 
+    inherited(a*2, b*2); 
+  } 
+; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>myObj: myClass <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  myMethod(a, b) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  { <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    inherited(a*2, b*2); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>  } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
   
 This invokes the inherited myMethod(), as though we had instead written
@@ -2313,41 +645,10 @@ inherited.myMethod(a\*2, b\*2). Because the current method is myMethod
 when the inherited expression is evaluated, myMethod is the implied
 property of the inherited expression.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+ii) Multiple Inheritance 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="30"><em>ii)</em></td>
-<td><em>Multiple Inheritance <br />
-</em></td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
 An object can inherit properties from more than one other object. This
 is called Multiple Inheritance. It complicates things considerably,
@@ -2356,52 +657,11 @@ object is inheriting its properties from. In essence, the order in which
 you specify an object's superclasses determines the priority of
 inheritance if the object could inherit the same property from several
 of its superclasses.  
+ 
+multiObj: class1, class2, class3 
+; 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>multiObj: class1, class2, class3 <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
   
 Here we have defined multiObj to inherit properties first from class1,
@@ -2419,38 +679,8 @@ If a property is inherited from more than one of its superclasses (and
 is not overridden in the object's own property list), the property is
 inherited from the superclass that appears earliest in the list. For
 example, suppose you define an object like this:  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>vase: Container, Heavy; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+ 
+vase: Container, Heavy; 
 
   
 If both Container and Heavy define a method named m1, and vase itself
@@ -2484,23 +714,6 @@ inherited will inherit from; and (2) the order of classes in an object
 definition can be important (e.g myDoor: Lockable, Door works properly
 while myDoor: Door, Lockable doesn't).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 (When you're ready for fuller explanations of the mysteries of multiple
 inheritance, these are available both in the
@@ -2509,41 +722,10 @@ the
 *<a href="../techman/t3mi.html" target="_top">Technical Manual</a>).  
 *
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+iii) Replace and Modify
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="30"><em>iii)</em></td>
-<td><em>Replace and Modify</em> <em> <br />
-</em></td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
 Most game authors sooner or later find that, when writing a substantial
 game, they need to modify the standard library behaviour at a number of
@@ -2570,23 +752,6 @@ keyword replace is an otherwise normal function definition. The
 following example replaces the addToScore() function defined in
 score.t (part of the standard adv3 library):  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 ```
 replace addToScore(points, desc)   
 {   
@@ -2594,46 +759,10 @@ replace addToScore(points, desc) 
       libScore.addToScore\_(points, desc);   
 }   
 ```
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
 You can do exactly the same thing with objects or classes. For example,
 you can entirely replace the coarseMesh object defined in sense.t:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 ```
 replace coarseMesh: Material   
    seeThru = transparent   
@@ -2642,41 +771,6 @@ replace coarseMesh: Material 
    touchThru = transparent   
 ;   
 ```
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
 Replacing an object or class entirely deletes the previous definition,
 including all inheritance information and vocabulary. The only
@@ -2692,46 +786,12 @@ definition.
 For example, you might want to change one of the standard library
 responses and add one of your own:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 ```
 modify playerActionMessages  
    cannotTurnMsg = '{The dobj/he} just will not turn. '  
    shouldNotSpitMsg = 'It's rude to spit in public. '  
 ;  
 ```
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
   
 Note that no superclass information can be specified in a modify
@@ -2747,23 +807,6 @@ to the original object directly; you can only refer to it indirectly
 through the new replacement object.) Here's an example of using
 inherited with modify.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 ```
      class testClass: object  
        sdesc = "testClass"  
@@ -2785,81 +828,12 @@ inherited with modify.
        }  
      ;  
 ```
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
-
 Evaluating testObj.sdesc results in this display:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+  modified testObj...testObj...testClass 
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  modified testObj...testObj...testClass <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
 You can also replace a property entirely, erasing all traces of the
 original definition of a property. The original definition is entirely
@@ -2867,23 +841,6 @@ forgotten - using inherited will refer to the method inherited by the
 original object. To do this, use the replace keyword with the property
 itself. In the example above, we could do this instead:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 ```
       modify testObj  
         replace sdesc  
@@ -2891,45 +848,14 @@ itself. In the example above, we could do this instead:
            "modified testObj...";  
         inherited;  
        }  
-      ;  
+      ;
+```
   
    This would result in a different display for testObj.sdesc:  
-```
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  modified testObj...testClass <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
+```  modified testObj...testClass ```
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
 
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
+
 
 The replace keyword before the property definition tells the compiler to
 completely delete the previous definitions of the property. This allows
@@ -2951,23 +877,6 @@ you can put a parenthesized argument list after it to invoke the past
 function, and you can simply use the replaced keyword by itself to
 obtain a pointer to the old function. Here's an example.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
   ```
     getName(val)  
@@ -3002,23 +911,7 @@ to reach the old definition is via the replaced keyword, and that can
 only be used within the new definition of the function.  
    
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="30"><em>iv)</em></td>
-<td><em>Delegated <br />
-</em></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+<em>iv) Delegated</em>
 
 It is sometimes desirable to be able to circumvent the normal
 inheritance relationships between objects, and call a method in an
@@ -3040,23 +933,6 @@ delegated, whereas inherited requires a compile-time constant object.
   
 The syntax of delegated is similar to that of inherited:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 ```
   return_value = delegated object_expression.property   
 optional_argument_list*  
@@ -3068,7 +944,8 @@ book: Thing
   handler = Readable  
   doTake(actor) { return delegated handler.doTake(actor); }  
 ;  
-  ```
+```
+
 In this example, the doTake method delegates its processing to the
 doTake method of the object given by the "handler" property of the
 "self" object, which in this case is the Readable object. When

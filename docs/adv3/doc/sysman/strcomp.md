@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \>
 StringComparator  
 <span class="navnp"><a href="strbuf.html" class="nav"><em>Prev:</em> StringBuffer</a>
     <a href="tadsobj.html" class="nav"><em>Next:</em> TadsObject</a>    
 </span>
-
-
-
-
-
 # StringComparator
 
 The [Dictionary](dict.html) intrinsic class allows the program to
@@ -277,11 +267,6 @@ Note that, in addition to the pre-defined flags listed above,
 StringComparator reserves all flag values from 0x0001 to 0x0080, to
 allow for future expansion; equivalence mappings should use flag values
 0x0100 and above.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

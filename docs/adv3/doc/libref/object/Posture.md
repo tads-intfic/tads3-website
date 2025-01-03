@@ -212,11 +212,6 @@ put the actor into our posture via a nested action
 
 Try getting the current actor into this posture within the given
 location, by running an appropriate implied command.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

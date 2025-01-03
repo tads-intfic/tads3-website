@@ -54,11 +54,6 @@ games written for the traditional UI to the Web UI.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `WebStatusWin` :  
 [`deltas_`](../object/WebStatusWin.html#deltas_) [`src`](../object/WebStatusWin.html#src) [`txt_`](../object/WebStatusWin.html#txt_) [`vpath`](../object/WebStatusWin.html#vpath)
 
@@ -81,11 +76,6 @@ Inherited from `OutputStreamWindow` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `WebStatusWin` :  
 [`clearWindow`](../object/WebStatusWin.html#clearWindow) [`flushWin`](../object/WebStatusWin.html#flushWin) [`getState`](../object/WebStatusWin.html#getState) [`resize`](../object/WebStatusWin.html#resize) [`setStatus`](../object/WebStatusWin.html#setStatus) [`setStatusText`](../object/WebStatusWin.html#setStatusText) [`write`](../object/WebStatusWin.html#write)
 

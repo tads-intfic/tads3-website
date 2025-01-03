@@ -229,11 +229,6 @@ describe a traveler arriving from this direction
 
 
 describe a traveler departing in this direction
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

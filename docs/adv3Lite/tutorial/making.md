@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Goldskull</a> \> Making things
 happen  
 <span class="navnp"><a href="goldmap.html" class="nav"><em>Prev:</em> Laying out the map</a>
     <a href="improving.html" class="nav"><em>Next:</em> Improving the
 Game</a>     </span>
-
-
-
-
-
 # Making things happen
 
 There are basically two things we need to make happen in this game:

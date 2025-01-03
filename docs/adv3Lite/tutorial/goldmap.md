@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="goldskull.html" class="nav">Goldskull</a> \> Laying out the
 map  
@@ -16,11 +11,6 @@ map
    
 <a href="making.html" class="nav"><em>Next:</em> Making things happen</a>
     </span>
-
-
-
-
-
 # Laying out the map
 
 In this chapter we'll implement another very simple game, one that's

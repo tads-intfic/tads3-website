@@ -205,11 +205,6 @@ same information returned from Distinguisher.getNames().
 Try curing the error. After an ambiguous noun error, the player can type
 a partial noun phrase that clarifies which object was intended: a
 distinguishing adjective, a locational phrase, a possessive, etc.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

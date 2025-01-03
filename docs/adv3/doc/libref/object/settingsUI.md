@@ -54,13 +54,6 @@ settings when we start (or RESTART) the game.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -125,11 +118,6 @@ message, if necessary) for the user's edification.
 
 
 display all of the current settings
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

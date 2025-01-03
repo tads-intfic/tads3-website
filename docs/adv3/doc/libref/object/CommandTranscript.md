@@ -577,11 +577,6 @@ replacement message is part of the same conversation. If you wait until
 after summarizeAction() returns to generate more response text, the
 conversation manager won't realize that the additional text is part of
 the same conversation.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

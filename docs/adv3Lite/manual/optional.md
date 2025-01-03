@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Optional
 Modules  
 <span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em> Topics</a>
     <a href="attachable.html" class="nav"><em>Next:</em> Attachables</a>
     </span>
-
-
-
-
-
 # Part III: Optional Modules
 
 This part describes the main classes contained in the optional modules,
@@ -48,11 +38,6 @@ later, when it will get a whole part to itself.
 [SenseRegion](senseregion.html)  
 [Topic Entries](topicentry.html)  
 [Thoughts](thought.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

@@ -256,11 +256,6 @@ disambiguation question
 
 determine if an object is in scope - it's in scope if it's in the
 original main list
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

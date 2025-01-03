@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Sensory  
 <span class="navnp"><a href="sensory.html" class="nav"><em>Prev:</em> Sensory</a>
     <a href="subtime.html" class="nav"><em>Next:</em> Subtime</a>    
 </span>
-
-
-
-
-
 # Signals
 
 ## Overview
@@ -457,9 +447,6 @@ statements:
      connect(redSwitch, offSignal, cellarLight);
      
 ```
-
-
-
 Since onSignal and offSignal will be emitted by the switch in any case,
 the only other step is to handle them on the cellar light. If we know
 that these are the only signals the cellar light is ever going to
@@ -597,8 +584,6 @@ relevant part of the re-connection code like so:
 ```
        connect(redSwitch, onSignal, cellarLight, &handle_off);
        connect(redSwitch, offSignal, cellarLight, &handle_on);
-     
-     
 ```
 
 This will then make turning the switch on turn off the light, and

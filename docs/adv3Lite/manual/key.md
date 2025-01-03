@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Keys  
 <span class="navnp"><a href="travel.html" class="nav"><em>Prev:</em>TravelConnectors and
 Barriers</a>    
 <a href="multiloc.html" class="nav"><em>Next:</em> MultiLocs</a>    
 </span>
-
-
-
-
-
 # Keys
 
 As we have seen, we can define the lockability property of a Thing

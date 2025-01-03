@@ -165,11 +165,6 @@ actions to meet the condition.
 'obj' is the object being checked. Note that because this is called
 during verification, the explicitly passed-in object must be used in the
 check rather than the current object in the global current action.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

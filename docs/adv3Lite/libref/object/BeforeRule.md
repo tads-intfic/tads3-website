@@ -80,21 +80,11 @@ redirect one action to another from a BeforeRule.
 
 Inherited from `Rule` :  
 ` [`action`](../object/Rule.html#action)  [`actor`](../object/Rule.html#actor)  [`aobj`](../object/Rule.html#aobj)  [`dobj`](../object/Rule.html#dobj)  [`during`](../object/Rule.html#during)  [`execAfter`](../object/Rule.html#execAfter)  [`execBefore`](../object/Rule.html#execBefore)  [`iobj`](../object/Rule.html#iobj)  [`isActive`](../object/Rule.html#isActive)  [`matchObj`](../object/Rule.html#matchObj)  [`present`](../object/Rule.html#present)  [`priority`](../object/Rule.html#priority)  [`rulebook`](../object/Rule.html#rulebook)  [`rulebooks`](../object/Rule.html#rulebooks)  [`specificity`](../object/Rule.html#specificity)  [`stopValue`](../object/Rule.html#stopValue)  [`where`](../object/Rule.html#where)  [`who`](../object/Rule.html#who)  `
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Rule` :  
 ` [`activate`](../object/Rule.html#activate)  [`addTo`](../object/Rule.html#addTo)  [`calcSpecficity`](../object/Rule.html#calcSpecficity)  [`compareTo`](../object/Rule.html#compareTo)  [`deactivate`](../object/Rule.html#deactivate)  [`follow`](../object/Rule.html#follow)  [`initializeRule`](../object/Rule.html#initializeRule)  [`matchConditions`](../object/Rule.html#matchConditions)  [`moveInto`](../object/Rule.html#moveInto)  [`removeFrom`](../object/Rule.html#removeFrom)  [`runAfter`](../object/Rule.html#runAfter)  [`runBefore`](../object/Rule.html#runBefore)  [`setRulebook`](../object/Rule.html#setRulebook)  [`when`](../object/Rule.html#when)  `
 

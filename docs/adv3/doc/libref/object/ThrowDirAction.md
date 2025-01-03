@@ -74,11 +74,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TAction` :  
 [`actionAllowsAll`](../object/TAction.html#actionAllowsAll) [`actionDobjProp`](../object/TAction.html#actionDobjProp) [`actor_`](../object/TAction.html#actor_) [`askDobjResponseProd`](../object/TAction.html#askDobjResponseProd) [`checkDobjProp`](../object/TAction.html#checkDobjProp) [`dobjCur_`](../object/TAction.html#dobjCur_) [`dobjInfoCur_`](../object/TAction.html#dobjInfoCur_) [`dobjList_`](../object/TAction.html#dobjList_) [`dobjMatch`](../object/TAction.html#dobjMatch) [`dobjResolver_`](../object/TAction.html#dobjResolver_) [`issuer_`](../object/TAction.html#issuer_) [`preCondDobjProp`](../object/TAction.html#preCondDobjProp) [`predicateNounPhrases`](../object/TAction.html#predicateNounPhrases) [`remapDobjProp`](../object/TAction.html#remapDobjProp) [`verDobjProp`](../object/TAction.html#verDobjProp) [`whichMessageObject`](../object/TAction.html#whichMessageObject)
 
@@ -138,11 +133,6 @@ Inherited from `Resolver` :
 
 
 get the direction of the throwing (as a Direction object)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

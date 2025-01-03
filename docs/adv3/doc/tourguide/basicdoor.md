@@ -109,8 +109,6 @@ LOCK or CLOSE if this is the last door-like object the PC has traversed.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   

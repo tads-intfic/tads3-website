@@ -83,9 +83,7 @@ this object (in the case of a chair, this would be <em>sitting</em>).
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
   

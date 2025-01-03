@@ -443,11 +443,6 @@ End the list with a closing parenthesis or full stop as appropriate
 
 
 Finish the list by appending its suffix
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

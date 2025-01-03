@@ -73,13 +73,6 @@ collection's createIterator() method.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -175,11 +168,6 @@ will return a valid item, nil if no more items are available.
 
 Reset to the first item. After calling this routine, the next call to
 getNext() will return the first item in the collection.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -47,18 +47,8 @@ plural phrase qualified with "all"
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `AllPluralProd` :  
 [`filterForCollectives`](../object/AllPluralProd.html#filterForCollectives)
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
@@ -67,11 +57,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `AllPluralProd` :  
 [`getVerifyKeepers`](../object/AllPluralProd.html#getVerifyKeepers) [`resolveNouns`](../object/AllPluralProd.html#resolveNouns)
 

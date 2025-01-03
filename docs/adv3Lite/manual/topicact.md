@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Topic Actions  
 <span class="navnp"><a href="literalact.html" class="nav"><em>Prev:</em> Literal Actions</a>
     <a href="query.html" class="nav"><em>Next:</em> Querying the World
 Model</a>     </span>
-
-
-
-
-
 # Topic Actions
 
 At first sight TopicActions (and TopicTActions) look a little like

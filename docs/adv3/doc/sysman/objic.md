@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Object  
 <span class="navnp"><a href="lookup.html" class="nav"><em>Prev:</em> LookupTable</a>
     <a href="rexpat.html" class="nav"><em>Next:</em> RexPattern</a>    
 </span>
-
-
-
-
-
 # Object
 
 Every object in a running program, including objects your program
@@ -275,11 +265,6 @@ the property. This function does not evaluate the property, but merely
 determines its type. The return value is one of the
 `TYPE_xxx` values (see the
 [reflection](reflect.html) section for the list).
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

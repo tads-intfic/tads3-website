@@ -222,11 +222,6 @@ setting, as returned by canonicalizeSetting().
 Change our setting. This is always called with the canonical version of
 the new setting, as returned by canonicalizeSetting(). Subclasses can
 override this routine to apply any side effects of changing the value.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

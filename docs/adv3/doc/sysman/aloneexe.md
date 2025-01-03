@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="tools.html" class="nav">The Tools</a> \> Stand-Alone
 Executables  
 <span class="navnp"><a href="univpath.html" class="nav"><em>Prev:</em> Universal Paths</a>
     <a href="terp.html" class="nav"><em>Next:</em> Running Programs: The
 Interpreter</a>     </span>
-
-
-
-
-
 # Stand-Alone Executables
 
 For ease of distribution, you can create a "stand-alone executable"

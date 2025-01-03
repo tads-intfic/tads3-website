@@ -74,11 +74,6 @@ of our associated actor, which is the actor serving as the tour guide.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `AccompanyingInTravelState` :  
 [`leadActor`](../object/AccompanyingInTravelState.html#leadActor) [`nextState`](../object/AccompanyingInTravelState.html#nextState)
 
@@ -143,11 +138,6 @@ Inherited from `TopicDatabase` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

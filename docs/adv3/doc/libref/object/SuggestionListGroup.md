@@ -69,11 +69,6 @@ ASK/TELL suggestion list group base class
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ListGroupPrefixSuffix` :  
 [`groupPrefix`](../object/ListGroupPrefixSuffix.html#groupPrefix) [`groupSuffix`](../object/ListGroupPrefixSuffix.html#groupSuffix)
 
@@ -126,11 +121,6 @@ Inherited from `ListGroup` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

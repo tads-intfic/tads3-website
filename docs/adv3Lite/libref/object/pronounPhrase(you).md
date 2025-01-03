@@ -60,11 +60,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PronounProduction` :  
 ` [`build`](../object/PronounProduction.html#build)  `
 

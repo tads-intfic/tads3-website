@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="web.html" class="nav">Playing on the Web</a> \> Setting up a
 custom TADS Web server  
@@ -16,11 +11,6 @@ custom TADS Web server
 game</a>    
 <a href="local.html" class="nav"><em>Next:</em> Translating and
 Localizing TADS</a>     </span>
-
-
-
-
-
 # Setting up a custom TADS Web server
 
 If you have your own Web server machine, and you have some expertise at

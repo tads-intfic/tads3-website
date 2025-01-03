@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Viewport  
 <span class="navnp"><a href="tiaaction.html" class="nav"><em>Prev:</em> TIAAction</a>
     <a href="weight.html" class="nav"><em>Next:</em> Weight</a>    
 </span>
-
-
-
-
-
 # Viewport
 
 ## Overview

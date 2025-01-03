@@ -78,11 +78,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ShowToAction` :  
 [`getDefaultIobj`](../object/ShowToAction.html#getDefaultIobj)
 

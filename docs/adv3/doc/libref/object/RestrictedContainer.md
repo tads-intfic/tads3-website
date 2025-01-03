@@ -74,11 +74,6 @@ by a method that indicates whether or not an item is allowed.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `RestrictedHolder` :  
 [`validContents`](../object/RestrictedHolder.html#validContents)
 
@@ -167,11 +162,6 @@ single blanket failure message by default.
 
 
 override PutIn to enforce our contents restriction
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

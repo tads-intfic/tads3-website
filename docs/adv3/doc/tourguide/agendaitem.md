@@ -196,9 +196,7 @@ agendaList, and thus makes it easier to re-use an AgendaItem.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 To use an AgendaItem you first need to define it and locate it directly

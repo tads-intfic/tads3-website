@@ -182,11 +182,6 @@ have equal ranking, negative if I rank lower than the other item.
 
 given a vector of affinities, remove the most recent item (as indicated
 by holdingIndex) and return the BagAffinityInfo object
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -146,11 +146,6 @@ list is a type of qualifier. So, we (a) start an exception qualifier for
 'np', (b) make that list the current noun phrase within our sub-tree,
 then (c) do the normal work to build out our sub-tree, but using the new
 context.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

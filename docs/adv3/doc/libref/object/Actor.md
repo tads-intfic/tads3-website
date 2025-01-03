@@ -113,11 +113,6 @@ Inherited from `VocabObject` :
 
 Inherited from `Schedulable` :  
 [`allSchedulables`](../object/Schedulable.html#allSchedulables) [`gameClockTime`](../object/Schedulable.html#gameClockTime)
-
-
-
-
-
 Inherited from `ActorTopicDatabase` :  
 [`askForTopics`](../object/ActorTopicDatabase.html#askForTopics) [`askTopics`](../object/ActorTopicDatabase.html#askTopics) [`commandTopics`](../object/ActorTopicDatabase.html#commandTopics) [`giveTopics`](../object/ActorTopicDatabase.html#giveTopics) [`initiateTopics`](../object/ActorTopicDatabase.html#initiateTopics) [`miscTopics`](../object/ActorTopicDatabase.html#miscTopics) [`showTopics`](../object/ActorTopicDatabase.html#showTopics) [`specialTopics`](../object/ActorTopicDatabase.html#specialTopics) [`tellTopics`](../object/ActorTopicDatabase.html#tellTopics)
 
@@ -4560,11 +4555,6 @@ accept 'follow' commands, so there's no need to track everyone all the
 time; for efficiency, we take advantage of this assumption so that we
 can avoid storing a bunch of tracking information that will never be
 used.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

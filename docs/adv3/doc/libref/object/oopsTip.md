@@ -44,11 +44,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Tip` :  
 [`desc`](../object/Tip.html#desc) [`shown`](../object/Tip.html#shown)
 
@@ -57,11 +52,6 @@ Inherited from `Tip` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Tip` :  
 [`makeShown`](../object/Tip.html#makeShown) [`shouldShowTip`](../object/Tip.html#shouldShowTip) [`showTip`](../object/Tip.html#showTip) [`showTipDesc`](../object/Tip.html#showTipDesc)
 

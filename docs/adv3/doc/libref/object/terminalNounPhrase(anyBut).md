@@ -47,11 +47,6 @@ Qualified singular with an exception
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `IndefiniteNounButProd` :  
 [`addedFlags`](../object/IndefiniteNounButProd.html#addedFlags)
 
@@ -68,11 +63,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `IndefiniteNounButProd` :  
 [`filterFinalList`](../object/IndefiniteNounButProd.html#filterFinalList) [`flagAllExcepted`](../object/IndefiniteNounButProd.html#flagAllExcepted) [`getMainList`](../object/IndefiniteNounButProd.html#getMainList) [`resolveMainPhrase`](../object/IndefiniteNounButProd.html#resolveMainPhrase)
 

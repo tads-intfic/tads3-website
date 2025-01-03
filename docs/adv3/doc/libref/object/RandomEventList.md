@@ -70,11 +70,6 @@ chooses an event at random each time it's invoked.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `RandomFiringScript` :  
 [`eventPercent`](../object/RandomFiringScript.html#eventPercent) [`eventReduceAfter`](../object/RandomFiringScript.html#eventReduceAfter) [`eventReduceTo`](../object/RandomFiringScript.html#eventReduceTo)
 
@@ -141,11 +136,6 @@ process the next step of the script
 Get the next random state. By default, we simply return a number from 1
 to the number of entries in our event list. This is a separate method to
 allow subclasses to customize the way the random number is selected.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

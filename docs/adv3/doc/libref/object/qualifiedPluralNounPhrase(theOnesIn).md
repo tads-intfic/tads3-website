@@ -54,13 +54,6 @@ vague plural phrase with location specified
 
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -75,11 +68,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `AllInContainerNounPhraseProd` :  
 [`checkContentsList`](../object/AllInContainerNounPhraseProd.html#checkContentsList)
 

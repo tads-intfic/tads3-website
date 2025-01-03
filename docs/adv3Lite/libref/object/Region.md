@@ -477,11 +477,6 @@ origin (the room traveled from.
 
 This method is invoked when traveler is about to leave this region and
 go to dest (the destination room).
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

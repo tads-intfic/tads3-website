@@ -110,11 +110,6 @@ Inherited from `Thing` :
 
 Inherited from `VocabObject` :  
 [`canResolvePossessive`](../object/VocabObject.html#canResolvePossessive) [`disambigPromptOrder`](../object/VocabObject.html#disambigPromptOrder) [`pluralOrder`](../object/VocabObject.html#pluralOrder) [`vocabLikelihood`](../object/VocabObject.html#vocabLikelihood) [`vocabWords`](../object/VocabObject.html#vocabWords) [`weakTokens`](../object/VocabObject.html#weakTokens)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -321,11 +316,6 @@ preconditions of our own, but specific vehicles might want to override
 this. For example, a car might want to require that the doors are
 closed, the engine is running, and the seatbelts are fastened before it
 can travel.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

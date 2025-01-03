@@ -173,11 +173,6 @@ Make my output stream the default in the output manager. Returns the
 previous default output stream; the caller can note the return value and
 use it later to restore the original output stream via a call to
 outputManager.setOutputStream(), if desired.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

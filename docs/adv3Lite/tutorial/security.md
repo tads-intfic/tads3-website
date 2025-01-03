@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="schemes.html" class="nav">Schemes and Devices</a> \> The
 Security Area  
@@ -16,11 +11,6 @@ Security Area
 Room</a>    
 <a href="scene.html" class="nav"><em>Next:</em> Making a Scene</a>    
 </span>
-
-
-
-
-
 # The Security Area
 
 So far the implementation of the Security Area is a little sparse. We'll

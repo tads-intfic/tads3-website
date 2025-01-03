@@ -104,11 +104,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `RearContainer` :  
 [`dobjFor(LookBehind)`](../object/RearContainer.html#dobjFor(LookBehind)) [`iobjFor(PutBehind)`](../object/RearContainer.html#iobjFor(PutBehind)) [`nestedLookIn`](../object/RearContainer.html#nestedLookIn) [`tryMovingObjInto`](../object/RearContainer.html#tryMovingObjInto)
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Understanding
 Separate Compilation  
@@ -16,11 +11,6 @@ Separate Compilation
 Configurations</a>    
 <a href="t3iautohot.html" class="nav"><em>Next:</em> Using AutoHotKey
 with the Workbench Editor (Windows)</a>     </span>
-
-
-
-
-
 # Understanding Separate Compilation
 
 The TADS 3 compiler has a feature called "separate compilation" that can

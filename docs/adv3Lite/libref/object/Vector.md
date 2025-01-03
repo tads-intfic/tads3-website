@@ -86,13 +86,6 @@ Some handy Vector extensions
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -798,11 +791,6 @@ unshift a value (insert it at the start of the Vector)
 
 Find the first element for which the given condition is true, and return
 the value of the element.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="local.html" class="nav">Translating and Localizing TADS</a> \>
 Translating Error Messages  
@@ -16,11 +11,6 @@ Translating Error Messages
 Localizing TADS</a>    
 <a href="cmap.html" class="nav"><em>Next:</em> Creating a
 Character-Mapping File</a>     </span>
-
-
-
-
-
 # Translating Error Messages
 
 The TADS 3 Compiler and Interpreter can display system error messages in

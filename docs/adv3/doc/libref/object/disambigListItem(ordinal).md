@@ -56,13 +56,6 @@ possessive
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
@@ -71,11 +64,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `DisambigOrdProd` :  
 [`resolveNouns`](../object/DisambigOrdProd.html#resolveNouns) [`selectByOrdinal`](../object/DisambigOrdProd.html#selectByOrdinal)
 

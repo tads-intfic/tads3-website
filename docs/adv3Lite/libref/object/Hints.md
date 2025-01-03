@@ -48,11 +48,6 @@ turn notifications off, and acknowledge the status
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `SystemAction` :  
 [`includeInUndo`](../object/SystemAction.html#includeInUndo) [`isRepeatable`](../object/SystemAction.html#isRepeatable) [`timeTaken`](../object/SystemAction.html#timeTaken) [`turnsTaken`](../object/SystemAction.html#turnsTaken)
 
@@ -61,11 +56,6 @@ Inherited from `IAction` :
 
 Inherited from `Action` :  
 [`actionFailed`](../object/Action.html#actionFailed) [`advanceOnFailure`](../object/Action.html#advanceOnFailure) [`allowAll`](../object/Action.html#allowAll) [`extraMessageParams`](../object/Action.html#extraMessageParams) [`failCheckMsg`](../object/Action.html#failCheckMsg) [`failedActionCountsAsTurn`](../object/Action.html#failedActionCountsAsTurn) [`implicitTimeTaken`](../object/Action.html#implicitTimeTaken) [`isConversational`](../object/Action.html#isConversational) [`isImplicit`](../object/Action.html#isImplicit) [`oldRoom`](../object/Action.html#oldRoom) [`parentAction`](../object/Action.html#parentAction) [`parentAllowAll`](../object/Action.html#parentAllowAll) [`preCond`](../object/Action.html#preCond) [`redirectParent`](../object/Action.html#redirectParent) [`reportImplicitActions`](../object/Action.html#reportImplicitActions) [`scopeList`](../object/Action.html#scopeList) [`spellingPriority`](../object/Action.html#spellingPriority) [`synthParamID`](../object/Action.html#synthParamID) [`unhides`](../object/Action.html#unhides) [`verifyObj`](../object/Action.html#verifyObj) [`wasIlluminated`](../object/Action.html#wasIlluminated)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -128,11 +118,6 @@ Inherited from `Redirector` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

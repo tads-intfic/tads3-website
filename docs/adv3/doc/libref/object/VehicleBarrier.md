@@ -68,13 +68,6 @@ customize this so that we block only specific vehicles.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -127,11 +120,6 @@ any other criteria.
 
 
 explain why we can't pass
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

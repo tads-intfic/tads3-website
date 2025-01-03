@@ -12,11 +12,6 @@ layout: docs
 singleNounOnly-\>actor\_ ',' miscWordList  
 \| ('ask' \| 'tell' \| 'a' \| 't') singleNounOnly-\>actor\_ 'to'
 miscWordList  
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -9490,11 +9490,6 @@ which is usually an actor; 'senseInfo' is a SenseInfo object giving the
 sense information for this object, which we'll use instead of
 dynamically calculating the sense information for the duration of the
 routine called.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

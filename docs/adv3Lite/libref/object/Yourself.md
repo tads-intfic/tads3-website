@@ -61,11 +61,6 @@ Inherited from `Pronoun` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ReflexivePronoun` :  
 ` [`construct`](../object/ReflexivePronoun.html#construct)  [`resolve`](../object/ReflexivePronoun.html#resolve)  `
 

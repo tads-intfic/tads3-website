@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Source File
 Character Sets  
@@ -16,11 +11,6 @@ Character Sets
 Structure</a>    
 <a href="preproc.html" class="nav"><em>Next:</em> The Preprocessor</a>
     </span>
-
-
-
-
-
 # Source File Character Sets
 
 Internally, TADS 3 uses Unicode to represent all text strings. Unicode

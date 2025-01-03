@@ -169,11 +169,6 @@ allow subclasses to customize the way the random number is selected.
 However, if we have an unused EventListItem that's ready to fire, we
 select that instead, to make sure it gets a look-in at the earliest
 possible opportunity.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

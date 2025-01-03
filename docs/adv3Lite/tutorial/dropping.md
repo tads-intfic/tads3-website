@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Dropping
 objects from the tree  
@@ -16,11 +11,6 @@ objects from the tree
    
 <a href="birdinnest.html" class="nav"><em>Next:</em> Is the bird in the
 nest?</a>     </span>
-
-
-
-
-
 # Dropping objects from the tree
 
 Once Heidi reaches the top of the tree the player may encounter another

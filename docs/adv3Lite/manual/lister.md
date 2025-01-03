@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Lists and Listers  
 <span class="navnp"><a href="utility.html" class="nav"><em>Prev:</em> Utility Functions</a>
     <a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
 </span>
-
-
-
-
-
 # Lists and Listers
 
 Works of Interactive Fiction often need to display lists. Typically

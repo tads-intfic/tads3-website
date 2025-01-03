@@ -203,11 +203,6 @@ no existing item
 
 
 set a variable, adding a new variable if it doesn't already exist
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

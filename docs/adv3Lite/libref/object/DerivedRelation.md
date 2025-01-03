@@ -51,11 +51,6 @@ REQUIRES THE RELATIONS EXTENSION
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Relation` :  
 [`name`](../object/Relation.html#name) [`reciprocal`](../object/Relation.html#reciprocal) [`relationType`](../object/Relation.html#relationType) [`relTab`](../object/Relation.html#relTab) [`reverseName`](../object/Relation.html#reverseName)
 
@@ -148,11 +143,6 @@ criteria are appropriate.
 
 By default we don't permit the direct removal of relationships via this
 relation, since this is a relation dependent upon external conditions.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

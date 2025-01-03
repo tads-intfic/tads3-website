@@ -114,11 +114,6 @@ Inherited from `VocabObject` :
 
 Inherited from `TravelConnector` :  
 [`connectorStagingLocation`](../object/TravelConnector.html#connectorStagingLocation) [`isCircularPassage`](../object/TravelConnector.html#isCircularPassage) [`isConnectorListed`](../object/TravelConnector.html#isConnectorListed) [`rememberCircularPassage`](../object/TravelConnector.html#rememberCircularPassage) [`travelBarrier`](../object/TravelConnector.html#travelBarrier) [`travelMemory`](../object/TravelConnector.html#travelMemory)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -152,11 +147,6 @@ Inherited from `VocabObject` :
 
 Inherited from `TravelConnector` :  
 [`actorTravelPreCond`](../object/TravelConnector.html#actorTravelPreCond) [`canTravelerPass`](../object/TravelConnector.html#canTravelerPass) [`checkTravelBarriers`](../object/TravelConnector.html#checkTravelBarriers) [`connectorGetConnectorTo`](../object/TravelConnector.html#connectorGetConnectorTo) [`connectorTravelPreCond`](../object/TravelConnector.html#connectorTravelPreCond) [`createUnlistedProxy`](../object/TravelConnector.html#createUnlistedProxy) [`darkTravel`](../object/TravelConnector.html#darkTravel) [`describeLocalArrival`](../object/TravelConnector.html#describeLocalArrival) [`describeLocalDeparture`](../object/TravelConnector.html#describeLocalDeparture) [`describeRemoteTravel`](../object/TravelConnector.html#describeRemoteTravel) [`explainTravelBarrier`](../object/TravelConnector.html#explainTravelBarrier) [`getApparentDestination`](../object/TravelConnector.html#getApparentDestination) [`isConnectorApparent`](../object/TravelConnector.html#isConnectorApparent) [`noteTraversal`](../object/TravelConnector.html#noteTraversal) [`rememberTravel`](../object/TravelConnector.html#rememberTravel)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -266,11 +256,6 @@ treat "take path" the same as "enter path" or "go through path"
 
 
 putting something on a path is the same as dropping it
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

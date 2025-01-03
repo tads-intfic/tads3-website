@@ -60,11 +60,6 @@ Inherited from `Production` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `YesOrNoProduction` :  
 ` [`build`](../object/YesOrNoProduction.html#build)  `
 

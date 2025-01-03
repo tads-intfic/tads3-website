@@ -83,11 +83,6 @@ Basic disambiguation production class
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`firstTokenIndex`](../object/BasicProd.html#firstTokenIndex) [`isSpecialResponseMatch`](../object/BasicProd.html#isSpecialResponseMatch) [`lastTokenIndex`](../object/BasicProd.html#lastTokenIndex)
 
@@ -130,11 +125,6 @@ Inherited from `BasicProd` :
 
 Remove the "ambiguous" flags from a result list. This can be used to
 mark the response to a disambiguation query as no longer ambiguous.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

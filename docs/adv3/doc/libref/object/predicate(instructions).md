@@ -49,11 +49,6 @@ define the INSTRUCTIONS command's grammar
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `InstructionsAction` :  
 [`allRequiredVerbsDisclosed`](../object/InstructionsAction.html#allRequiredVerbsDisclosed) [`conversationAbbr`](../object/InstructionsAction.html#conversationAbbr) [`conversationInstructions`](../object/InstructionsAction.html#conversationInstructions) [`conversationVerbs`](../object/InstructionsAction.html#conversationVerbs) [`crueltyLevel`](../object/InstructionsAction.html#crueltyLevel) [`customVerbs`](../object/InstructionsAction.html#customVerbs) [`includeInUndo`](../object/InstructionsAction.html#includeInUndo) [`isRealTime`](../object/InstructionsAction.html#isRealTime) [`isRepeatable`](../object/InstructionsAction.html#isRepeatable) [`truncationLength`](../object/InstructionsAction.html#truncationLength)
 
@@ -73,11 +68,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `InstructionsAction` :  
 [`execSystemAction`](../object/InstructionsAction.html#execSystemAction) [`showAbbrevChapter`](../object/InstructionsAction.html#showAbbrevChapter) [`showAdvancedCmdChapter`](../object/InstructionsAction.html#showAdvancedCmdChapter) [`showAmbiguousCmdChapter`](../object/InstructionsAction.html#showAmbiguousCmdChapter) [`showCommandsChapter`](../object/InstructionsAction.html#showCommandsChapter) [`showConversationChapter`](../object/InstructionsAction.html#showConversationChapter) [`showInstructions`](../object/InstructionsAction.html#showInstructions) [`showObjectsChapter`](../object/InstructionsAction.html#showObjectsChapter) [`showSaveRestoreChapter`](../object/InstructionsAction.html#showSaveRestoreChapter) [`showSpecialCmdChapter`](../object/InstructionsAction.html#showSpecialCmdChapter) [`showTimeChapter`](../object/InstructionsAction.html#showTimeChapter) [`showTipsChapter`](../object/InstructionsAction.html#showTipsChapter) [`showTravelChapter`](../object/InstructionsAction.html#showTravelChapter) [`showUnknownWordsChapter`](../object/InstructionsAction.html#showUnknownWordsChapter)
 

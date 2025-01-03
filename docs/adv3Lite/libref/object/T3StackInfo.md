@@ -266,11 +266,6 @@ information on the stack level.
 
 Is this a system routine? This returns true if an intrinsic function or
 an intrinsic class method is running at this level.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

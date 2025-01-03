@@ -46,13 +46,6 @@ return the adjusted token list for the adjective
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -115,11 +108,6 @@ generate a list of objects matching the adjective
 
 
 generate a list of my resolved objects
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

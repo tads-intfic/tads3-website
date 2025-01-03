@@ -114,11 +114,6 @@ Inherited from `Special` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 25/05/2013 from adv3Lite version 0.9
 

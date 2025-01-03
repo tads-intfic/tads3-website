@@ -50,21 +50,7 @@ plural phrase qualified with "both"
 
 
 
-<span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-Inherited from `NounPhraseProd` :  
+<span class="hdln">Summary of Properties</span>  Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
 Inherited from `BasicProd` :  
@@ -78,11 +64,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `BothPluralProd` :  
 [`getQuantity`](../object/BothPluralProd.html#getQuantity)
 

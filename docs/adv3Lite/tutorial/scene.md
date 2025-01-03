@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="schemes.html" class="nav">Schemes and Devices</a> \> Making a
 Scene  
 <span class="navnp"><a href="security.html" class="nav"><em>Prev:</em> The Security Area</a>
     <a href="recap.html" class="nav"><em>Next:</em> Recapitulation</a>
     </span>
-
-
-
-
-
 # Making a Scene
 
 We have now implemented most of the physical mechanics of the game,

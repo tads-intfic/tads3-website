@@ -808,11 +808,6 @@ the table, so that we can find it later.
 
 This is called from Traveler.travelerTravelTo() on successful travel.
 We're called for each actor participating in the travel.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

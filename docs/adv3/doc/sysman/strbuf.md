@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> StringBuffer  
 <span class="navnp"><a href="string.html" class="nav"><em>Prev:</em> String</a>
    
 <a href="strcomp.html" class="nav"><em>Next:</em> StringComparator</a>
     </span>
-
-
-
-
-
 # StringBuffer
 
 A StringBuffer is a mutable character string. Unlike the regular
@@ -317,11 +307,6 @@ starting at index *idx* and continuing for *len* characters. If you omit
 *idx* can be negative to index from the end of the string. For example,
 `substr(-10)` returns a string containing the
 last 10 characters in the buffer.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

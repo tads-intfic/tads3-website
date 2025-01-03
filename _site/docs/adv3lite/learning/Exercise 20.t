@@ -485,7 +485,7 @@ bob: Actor 'tall man;;people[pl]; him'  @shop
  *
  *   But the problem then is what to do when the player does try to refer to 
  *   Bob before the PC has learned his name. If we haven't defined 'bob' in 
- *   bob's vocabWords the game will respond with "The word “bob” is not 
+ *   bob's vocabWords the game will respond with "The word ï¿½bobï¿½ is not 
  *   necessary in this story. ", but that's simply untrue!
  *
  *   One way to get round this is with this little trick using an Unthing, 
@@ -2118,14 +2118,7 @@ sally: Actor 'blonde woman; petite pretty; people[pl]; her' @shop
         
         isDone = true;
     }
-;
-
-
-
-
-
-
-//==============================================================================
+;//==============================================================================
 /*   
  *   TOPIC
  *

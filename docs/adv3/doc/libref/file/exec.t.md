@@ -288,11 +288,6 @@ instance of the given Action class, and set up a command transcript,
 then invoke the function. This is useful for writing daemon code that
 needs to invoke other code that's set up to expect a normal action
 processing environment.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

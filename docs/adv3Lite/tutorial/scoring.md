@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="finish.html" class="nav">Finishing Touches</a> \> Scoring  
 <span class="navnp"><a href="starting.html" class="nav"><em>Prev:</em> Starting Out Right</a>
     <a href="hints.html" class="nav"><em>Next:</em> Hints</a>     </span>
-
-
-
-
-
 # Scoring
 
 In older adventure games it used to be conventional to keep a tally of

@@ -142,11 +142,6 @@ global variable gPlayerChar to the player character actor.
 true, we'll show a full description of the player character's initial
 location, as though the player were to type "look around" as the first
 command.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

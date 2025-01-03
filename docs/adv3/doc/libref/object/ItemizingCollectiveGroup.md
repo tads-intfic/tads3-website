@@ -71,11 +71,6 @@ overall group object, as the basic collective group class does.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `CollectiveGroup` :  
 [`isListedInContents`](../object/CollectiveGroup.html#isListedInContents) [`isListedInInventory`](../object/CollectiveGroup.html#isListedInInventory) [`isPlural`](../object/CollectiveGroup.html#isPlural)
 
@@ -145,11 +140,6 @@ Override the main Examine handling. By default, we'll list the
 individuals that are visible, and separately list those that are being
 carried by the actor. If none of our individuals are visible, simply say
 so.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

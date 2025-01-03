@@ -93,11 +93,6 @@ in; a closet; a shallow pit.
 
 Inherited from `BasicPlatform` :  
 [`allowedPostures`](../object/BasicPlatform.html#allowedPostures) [`defaultPosture`](../object/BasicPlatform.html#defaultPosture) [`down`](../object/BasicPlatform.html#down) [`effectiveFollowLocation`](../object/BasicPlatform.html#effectiveFollowLocation) [`mustMoveIntoProp`](../object/BasicPlatform.html#mustMoveIntoProp) [`obviousPostures`](../object/BasicPlatform.html#obviousPostures)
-
-
-
-
-
 Inherited from `NestedRoom` :  
 [`bulkCapacity`](../object/NestedRoom.html#bulkCapacity) [`exitDestination`](../object/NestedRoom.html#exitDestination) [`out`](../object/NestedRoom.html#out) [`roomName`](../object/NestedRoom.html#roomName) [`stagingLocations`](../object/NestedRoom.html#stagingLocations)
 
@@ -118,11 +113,6 @@ Inherited from `BasicContainer` :
 
 Inherited from `BulkLimiter` :  
 [`becomingTooFullMsg`](../object/BulkLimiter.html#becomingTooFullMsg) [`becomingTooLargeMsg`](../object/BulkLimiter.html#becomingTooLargeMsg) [`maxSingleBulk`](../object/BulkLimiter.html#maxSingleBulk) [`revealHiddenItems`](../object/BulkLimiter.html#revealHiddenItems) [`tooFullMsg`](../object/BulkLimiter.html#tooFullMsg)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -161,11 +151,6 @@ Inherited from `BasicContainer` :
 
 Inherited from `BulkLimiter` :  
 [`checkBulkInserted`](../object/BulkLimiter.html#checkBulkInserted) [`examineInterior`](../object/BulkLimiter.html#examineInterior) [`examineInteriorWithLister`](../object/BulkLimiter.html#examineInteriorWithLister) [`verifyPutInInterior`](../object/BulkLimiter.html#verifyPutInInterior)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -278,11 +263,6 @@ room into this nested room.
 
 Remove an actor from the booth. "Get out" is the normal command to leave
 this type of room.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

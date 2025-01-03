@@ -178,11 +178,6 @@ the group's 'server' property.
 
 Process a request. This looks for the highest priority matching resource
 in the group, then hands the request to that resource for processing.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

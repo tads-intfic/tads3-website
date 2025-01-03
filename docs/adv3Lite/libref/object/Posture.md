@@ -189,11 +189,6 @@ taking this posture. \[POSTURES EXTENSION\]
 A method that returns true or nil according to whether an actor can
 adopt this posture in/on obj, which depends on the contType of obj.
 \[POSTURES EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

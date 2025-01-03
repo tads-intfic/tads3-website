@@ -116,11 +116,6 @@ class SquareRoom: Room
     
     regions = [squareRegion]
 ;
-
-
-
-
-
 //------------------------------------------------------------------------------
 /*  
  *   We now create a square comprising four corners. These will be joined by 

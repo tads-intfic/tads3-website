@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Conversation Nodes  
 <span class="navnp"><a href="topicgroup.html" class="nav"><em>Prev:</em> Topic Groups</a>
     <a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>
     </span>
-
-
-
-
-
 # Conversation Nodes
 
 In a real conversation one party generally responds to what the other

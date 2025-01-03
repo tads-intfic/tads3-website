@@ -76,13 +76,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `FootnotesAction` :  
 [`execSystemAction`](../object/FootnotesAction.html#execSystemAction)
 

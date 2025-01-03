@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Core and Optional
 Modules  
@@ -16,11 +11,6 @@ Modules
 Overview</a>    
 <a href="mingame.html" class="nav"><em>Next:</em> Minimal Game
 Definition</a>     </span>
-
-
-
-
-
 # Core and Optional Modules
 
 The adv3Lite library has been designed to be as modular as possible, so

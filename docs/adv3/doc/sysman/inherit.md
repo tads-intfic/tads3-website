@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> The Object
 Inheritance Model  
@@ -16,11 +11,6 @@ Inheritance Model
 Entrypoint</a>    
 <a href="objdef.html" class="nav"><em>Next:</em> Object Definitions</a>
     </span>
-
-
-
-
-
 # The Object Inheritance Model
 
 TADS 3 is at its core an object-oriented programming language. One of

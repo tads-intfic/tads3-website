@@ -149,11 +149,6 @@ directly remap to the underlying connector. Instead, we provide our own
 full TravelVia implementation, and then we perform the travel on the
 underlying connector via a replacement action in our own action()
 handler.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

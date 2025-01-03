@@ -137,11 +137,6 @@ half of the text-mode status line.
 
 Write from the stream. We simply buffer up text until we're asked to
 display the final data.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

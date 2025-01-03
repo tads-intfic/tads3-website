@@ -67,11 +67,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -123,11 +118,6 @@ e.g. "\<q\>\\\<\<actionPhrase\>\>!\</q\> you cry. "
 
 Get the appropriate name for an object to use the action phrase of a
 CommandTopic.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

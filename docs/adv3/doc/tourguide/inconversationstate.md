@@ -105,9 +105,7 @@ returns true if you want to allow the conversation to end, nil if not.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Armed with information, we can set about creating InConversationState

@@ -194,9 +194,7 @@ termination as standard.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
   

@@ -6,21 +6,11 @@ Inline Objects
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Inline Objects  
 <span class="navnp"><a href="objdef.html" class="nav"><em>Prev:</em> Object Definitions</a>
     <a href="opoverload.html" class="nav"><em>Next:</em> Operator
 Overloading</a>     </span>
-
-
-
-
-
 # Inline Objects
 
 Most [object definitions](objdef.html) in a TADS game are at the "top

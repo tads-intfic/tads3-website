@@ -51,13 +51,6 @@ Details](#_Methods_)
 
 
 
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -66,11 +59,6 @@ Inherited from `Lister` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `WearingSublister` :  
 [`showListEmpty`](../object/WearingSublister.html#showListEmpty) [`showListPrefixWide`](../object/WearingSublister.html#showListPrefixWide) [`showListSuffixWide`](../object/WearingSublister.html#showListSuffixWide) [`showSeparateContents`](../object/WearingSublister.html#showSeparateContents)
 

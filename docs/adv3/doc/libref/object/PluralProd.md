@@ -82,11 +82,6 @@ Base class for a plural production
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -152,11 +147,6 @@ If the "filter plural matches" configuration flag is set to true, we'll
 return the subset of items which are logical for this command. If the
 filter flag is nil, we'll simply return the full set of vocabulary
 matches without any filtering.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -48,11 +48,6 @@ conjunctions)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `CommandProdWithAmbiguousConj` :  
 [`cmdCounted_`](../object/CommandProdWithAmbiguousConj.html#cmdCounted_)
 
@@ -67,11 +62,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CommandProdWithAmbiguousConj` :  
 [`countCommands`](../object/CommandProdWithAmbiguousConj.html#countCommands) [`getCommandSepIndex`](../object/CommandProdWithAmbiguousConj.html#getCommandSepIndex) [`getNextCommandIndex`](../object/CommandProdWithAmbiguousConj.html#getNextCommandIndex) [`isEndOfSentence`](../object/CommandProdWithAmbiguousConj.html#isEndOfSentence) [`resolveFirstAction`](../object/CommandProdWithAmbiguousConj.html#resolveFirstAction) [`resolveNouns`](../object/CommandProdWithAmbiguousConj.html#resolveNouns)
 

@@ -136,11 +136,6 @@ Service routine: strip quotes from a \*possibly\* quoted string. If the
 string starts with a quote, we'll remove the open quote. If it starts
 with a quote and it ends with a corresponding close quote, we'll remove
 that as well.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

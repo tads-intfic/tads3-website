@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="tools.html" class="nav">The Tools</a> \> Compiling and Linking  
 <span class="navnp"><a href="tools.html" class="nav"><em>Prev:</em> The Tools</a>
    
 <a href="univpath.html" class="nav"><em>Next:</em> Universal Paths</a>
     </span>
-
-
-
-
-
 # Compiling and Linking
 
 ## Separate compilation

@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Newbie Help  
 <span class="navnp"><a href="instruct.html" class="nav"><em>Prev:</em> Instructions</a>
     <a href="pathfind.html" class="nav"><em>Next:</em> Path Finding</a>
     </span>
-
-
-
-
-
 # Help for New Players
 
 Players familiar with Interactive Fiction generally have a good idea

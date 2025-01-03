@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Regular
 Expressions  
@@ -16,11 +11,6 @@ Expressions
 Set</a>    
 <a href="tadsio.html" class="nav"><em>Next:</em> tads-io Function Set</a>
     </span>
-
-
-
-
-
 # Regular Expressions
 
 TADS provides a powerful string processing feature known as regular

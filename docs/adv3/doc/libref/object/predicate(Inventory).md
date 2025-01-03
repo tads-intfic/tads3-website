@@ -69,11 +69,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `InventoryAction` :  
 [`execAction`](../object/InventoryAction.html#execAction)
 

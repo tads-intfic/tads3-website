@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="tools.html" class="nav">The Tools</a> \> Running Programs: The
 Interpreter  
@@ -16,11 +11,6 @@ Interpreter
 Executables</a>    
 <a href="langsec.html" class="nav"><em>Next:</em> The Language</a>    
 </span>
-
-
-
-
-
 # Running Programs: The Interpreter
 
 The TADS 3 Interpreter is the application that executes a TADS 3

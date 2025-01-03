@@ -21,9 +21,8 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
-
-<p><a href="index.html">[Main]</a><br />
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a>
+<a href="index.html">[Main]</a><br />
 <em><a href="tyingupsomeloosestrings.html">[Previous]</a>
   <a href="climbingthetree.html">[Next]</a></em></p>
 
@@ -38,126 +37,34 @@ covered most of what we need to know in order to do this. Add the
 following code to the end of the existing program. An explanation of new
 features follows.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>forest : OutdoorRoom 'Deep in the Forest'  
+   "Through the deep foliage you glimpse a building to the west.  
+    A track leads to the northeast, and a path leads south. "  
+    west = outsideCottage  
+    northeast = clearing    
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+clearing : OutdoorRoom 'Clearing'      
+   "A tall sycamore tree stands in the middle of this clearing.  
+    One path winds to the southwest, and another to the north. "  
+    southwest = forest  
+    up = topOfTree  
+    north : FakeConnector {"You decide against going that way right  
+         now. "}  
+;  
 
-<p>forest : OutdoorRoom ’Deep in the Forest’<br />
-   ”Through the deep foliage you glimpse a building to the west.<br />
-    A track leads to the northeast, and a path leads south. ”<br />
-    west = outsideCottage<br />
-    northeast = clearing  <br />
-;</p>
 
-<p>clearing : OutdoorRoom ’Clearing’    <br />
-   ”A tall sycamore tree stands in the middle of this clearing.<br />
-    One path winds to the southwest, and another to the north. ”<br />
-    southwest = forest<br />
-    up = topOfTree<br />
-    north : FakeConnector {“You decide against going that way right<br />
-         now. ”}<br />
-;</p>
++ tree : Fixture 'tall sycamore tree' 'tree'  
+    "Standing proud in the middle of the clearing, the stout  
+     tree looks like it should be easy to climb. "     
+;  
 
-<p>+ tree : Fixture ’tall sycamore tree’ ’tree’<br />
-    ”Standing proud in the middle of the clearing, the stout<br />
-     tree looks like it should be easy to climb. ”   <br />
-;</p>
-
-<p>topOfTree : OutdoorRoom ’At the top of the tree’<br />
-   ”You cling precariously to the trunk, next to a firm, narrow<br />
-    branch. ”<br />
-    down = clearing<br />
-;</p>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>The room definitions and the definition of the tree object should need
-little explanation. The important new concept that has been introduced
-here is that of a <em>travel connector</em>. A travel connector is an object
-that controls what happens if an actor attempts to travel via it. To
-define what happens when an actor tries to move in a certain direction
-we must attach a travel connector to the appropriate direction property.
-For example, to define what happens when the player character is in the
-forest and the player types <strong>west</strong> we attach the connector called
-<code class="language-plaintext highlighter-rouge">outsideCottage</code> to the west property of <code class="language-plaintext highlighter-rouge">forest</code>. You may object that
-<code class="language-plaintext highlighter-rouge">outsideCottage</code> is simply a room, the room we started by defining; but
-<em>Rooms</em> are in fact a special kind of <em>TravelConnector</em>, connectors that
-point to themselves as destination. Traveling via a<em>Room</em> thus means
-traveling to that <em>Room</em>. So if we want movement to take place directly
-from one room to another, we simply set the appropriate direction
-property to the destination room. Note that unlike TADS 2, in TADS 3 the
-direction properties <code class="language-plaintext highlighter-rouge">northwest</code>, <code class="language-plaintext highlighter-rouge">northeast</code>, <code class="language-plaintext highlighter-rouge">southwest</code>, and
-<code class="language-plaintext highlighter-rouge">southeast</code> must be spelled out in full; the other direction properties
-you will commonly use are <code class="language-plaintext highlighter-rouge">north</code>, <code class="language-plaintext highlighter-rouge">south</code>, <code class="language-plaintext highlighter-rouge">east</code>,<code class="language-plaintext highlighter-rouge">west</code>, <code class="language-plaintext highlighter-rouge">up</code>, <code class="language-plaintext highlighter-rouge">down</code>,
-<code class="language-plaintext highlighter-rouge">in </code>and<code class="language-plaintext highlighter-rouge">out</code>.</p>
+topOfTree : OutdoorRoom 'At the top of the tree'  
+   "You cling precariously to the trunk, next to a firm, narrow  
+    branch. "  
+    down = clearing  
+;   The room definitions and the definition of the tree object should need little explanation. The important new concept that has been introduced here is that of a *travel connector*. A travel connector is an object that controls what happens if an actor attempts to travel via it. To define what happens when an actor tries to move in a certain direction we must attach a travel connector to the appropriate direction property. For example, to define what happens when the player character is in the forest and the player types **west** we attach the connector called `outsideCottage` to the west property of `forest`. You may object that `outsideCottage` is simply a room, the room we started by defining; but *Rooms* are in fact a special kind of *TravelConnector*, connectors that point to themselves as destination. Traveling via a*Room* thus means traveling to that *Room*. So if we want movement to take place directly from one room to another, we simply set the appropriate direction property to the destination room. Note that unlike TADS 2, in TADS 3 the direction properties `northwest`, `northeast`, `southwest`, and `southeast` must be spelled out in full; the other direction properties you will commonly use are `north`, `south`, `east`,`west`, `up`, `down`, `in `and`out`.  
+</code></pre></div></div>
 
 <p>You have probably noticed that the north property from the clearing uses
 a different kind of connector, a <code class="language-plaintext highlighter-rouge">FakeConnector</code>. A <code class="language-plaintext highlighter-rouge">FakeConnector </code>is
@@ -174,98 +81,15 @@ to implement, but do not wish to implement yet.</p>
 rooms as connectors if we had defined the <code class="language-plaintext highlighter-rouge">FakeConnector</code> as a separate
 object thus:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fakePath : FakeConnector  
+   travelDesc = "You decide against going that way right  
+         now. "  
+;  
+</code></pre></div></div>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>fakePath : FakeConnector<br />
-   travelDesc = ”You decide against going that way right<br />
-         now. ”<br />
-;</p>
-
-<p>The clearing would then be defined with</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>north = fakePath <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>The clearing would then be defined with<br />
+ 
+    north = fakePath </p>
 
 <p>What we in fact did was to make <code class="language-plaintext highlighter-rouge">fakePath</code> both an <em>anonymous object</em>
 and a <em>nested object</em> (all nested objects are in fact anonymous, though
@@ -293,64 +117,9 @@ that we haven’t added a connector out of the original outsideCottage
 room (a bug waiting to happen when adding more rooms to an already
 complex map). This is easy enough to put right; just add the following
 to the definition of outsideCottage, between the room description and
-the terminating semicolon:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>east = forest <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+the terminating semicolon:<br />
+ 
+    east = forest </p>
 
 <p>The game should now work as expected.</p>
 

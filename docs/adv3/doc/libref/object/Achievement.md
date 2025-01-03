@@ -277,11 +277,6 @@ nothing at all. Returns true if we do award the points, nil if not
 
 
 show myself in a full-score listing
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -86,11 +86,6 @@ as a possessive qualifier to the current noun phrase.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Production` :  
 [`determiner`](../object/Production.html#determiner) [`nounPhraseRole`](../object/Production.html#nounPhraseRole) [`npClass`](../object/Production.html#npClass) [`parent`](../object/Production.html#parent)
 
@@ -134,11 +129,6 @@ Inherited from `Production` :
 Build the phrase. We'll build out our sub-tree as normal, except that
 we'll assign its output to a new NounPhrase, which we attach as a
 possessive qualifier to the encompassing noun phrase under construction.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

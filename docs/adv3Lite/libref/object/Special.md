@@ -239,11 +239,6 @@ of a method from an overriding version in a subclass. As with
 'inherited', you can only call this directly from the method that you
 want to pass to the default handling, because this routine determines
 what to call based on the caller.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

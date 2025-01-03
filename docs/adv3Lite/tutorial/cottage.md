@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Entering the
 Cottage  
@@ -16,11 +11,6 @@ Cottage
 Bird</a>    
 <a href="climbing.html" class="nav"><em>Next:</em> Climbing the tree</a>
     </span>
-
-
-
-
-
 # Entering the Cottage
 
 Having players try to listen to the bird isn't the only accident waiting

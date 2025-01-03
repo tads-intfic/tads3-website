@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> ActorTopicEntry  
 <span class="navnp"><a href="asktell.html" class="nav"><em>Prev:</em> Basic Ask/Tell</a>
     <a href="suggest.html" class="nav"><em>Next:</em> Suggesting
 Conversational Topics</a>     </span>
-
-
-
-
-
 # The ActorTopicEntry Class
 
 The Basic Ask/Tell system described in the previous section is fine up
@@ -795,9 +785,6 @@ that triggers it:
     ; 
      
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

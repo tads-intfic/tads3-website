@@ -53,11 +53,6 @@ We enforce this condition with a verification test.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `PreCondition` :  
 [`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
@@ -99,11 +94,6 @@ Inherited from `PreCondition` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

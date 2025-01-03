@@ -161,11 +161,6 @@ execute preinitialization
 
 
 write text from the stream to the interpreter I/O system
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

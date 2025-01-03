@@ -73,11 +73,6 @@ On, Stand On) to the enclosing nested room.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Fixture` :  
 [`cannotMoveMsg`](../object/Fixture.html#cannotMoveMsg) [`cannotPutMsg`](../object/Fixture.html#cannotPutMsg) [`cannotTakeMsg`](../object/Fixture.html#cannotTakeMsg)
 
@@ -185,11 +180,6 @@ Inherited from `VocabObject` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -158,11 +158,6 @@ My message to display when the player character traverses the connector.
 This should be overridden with the custom message for the connector. By
 default, if we're a Script, we'll invoke the script to show the next
 message.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

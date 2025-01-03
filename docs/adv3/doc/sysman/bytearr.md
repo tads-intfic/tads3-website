@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> ByteArray  
 <span class="navnp"><a href="bignum.html" class="nav"><em>Prev:</em> BigNumber</a>
     <a href="charset.html" class="nav"><em>Next:</em> CharacterSet</a>
     </span>
-
-
-
-
-
 # ByteArray
 
 Most TADS programs work with the T3 VM's high-level types - integers,
@@ -503,11 +493,6 @@ doesn't store any information on the format code used to generate the
 value; this means that if you later want to read the integer value back
 out of the byte array, it will be up to your program to specify the
 correct format code.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

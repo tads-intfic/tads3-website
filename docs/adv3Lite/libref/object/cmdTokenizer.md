@@ -280,11 +280,6 @@ apostrophe-s itself.
 Handle a spelled-out hyphenated number from 21 to 99. We'll return this
 as three separate tokens: a word for the tens name, a word for the
 hyphen, and a word for the units name.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

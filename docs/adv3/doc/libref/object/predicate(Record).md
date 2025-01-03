@@ -77,11 +77,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `RecordAction` :  
 [`performFileOp`](../object/RecordAction.html#performFileOp) [`setUpRecording`](../object/RecordAction.html#setUpRecording) [`showCancelMsg`](../object/RecordAction.html#showCancelMsg)
 

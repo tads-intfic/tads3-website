@@ -79,18 +79,8 @@ opened and closed as well as locked and unlocked.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Lockable` :  
 [`autoUnlockOnOpen`](../object/Lockable.html#autoUnlockOnOpen) [`initiallyLocked`](../object/Lockable.html#initiallyLocked) [`isLocked_`](../object/Lockable.html#isLocked_) [`lockedDesc`](../object/Lockable.html#lockedDesc) [`lockStatusObvious`](../object/Lockable.html#lockStatusObvious) [`lockStatusReportable`](../object/Lockable.html#lockStatusReportable)
-
-
-
-
-
 Inherited from `Openable` :  
 [`descContentsLister`](../object/Openable.html#descContentsLister) [`openingLister`](../object/Openable.html#openingLister)
 
@@ -119,11 +109,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Lockable` :  
 [`dobjFor(Lock)`](../object/Lockable.html#dobjFor(Lock)) [`dobjFor(LockWith)`](../object/Lockable.html#dobjFor(LockWith)) [`dobjFor(Open)`](../object/Lockable.html#dobjFor(Open)) [`dobjFor(Unlock)`](../object/Lockable.html#dobjFor(Unlock)) [`dobjFor(UnlockWith)`](../object/Lockable.html#dobjFor(UnlockWith)) [`examineStatus`](../object/Lockable.html#examineStatus) [`initializeThing`](../object/Lockable.html#initializeThing) [`isLocked`](../object/Lockable.html#isLocked) [`makeLocked`](../object/Lockable.html#makeLocked)
 

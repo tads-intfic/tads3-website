@@ -57,21 +57,11 @@ Inherited from `TAction` :
 
 Inherited from `Action` :  
 ` [`actionFailed`](../object/Action.html#actionFailed)  [`advanceOnFailure`](../object/Action.html#advanceOnFailure)  [`allowAll`](../object/Action.html#allowAll)  [`extraMessageParams`](../object/Action.html#extraMessageParams)  [`failCheckMsg`](../object/Action.html#failCheckMsg)  [`failedActionCountsAsTurn`](../object/Action.html#failedActionCountsAsTurn)  [`implicitTimeTaken`](../object/Action.html#implicitTimeTaken)  [`includeInUndo`](../object/Action.html#includeInUndo)  [`isConversational`](../object/Action.html#isConversational)  [`isImplicit`](../object/Action.html#isImplicit)  [`isRepeatable`](../object/Action.html#isRepeatable)  [`oldRoom`](../object/Action.html#oldRoom)  [`parentAction`](../object/Action.html#parentAction)  [`parentAllowAll`](../object/Action.html#parentAllowAll)  [`preCond`](../object/Action.html#preCond)  [`redirectParent`](../object/Action.html#redirectParent)  [`reportImplicitActions`](../object/Action.html#reportImplicitActions)  [`scopeList`](../object/Action.html#scopeList)  [`spellingPriority`](../object/Action.html#spellingPriority)  [`synthParamID`](../object/Action.html#synthParamID)  [`timeTaken`](../object/Action.html#timeTaken)  [`turnsTaken`](../object/Action.html#turnsTaken)  [`unhides`](../object/Action.html#unhides)  [`verifyObj`](../object/Action.html#verifyObj)  [`wasIlluminated`](../object/Action.html#wasIlluminated)  `
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `TAction` :  
 ` [`addVerifyResult`](../object/TAction.html#addVerifyResult)  [`check`](../object/TAction.html#check)  [`checkAction`](../object/TAction.html#checkAction)  [`checkPreCond`](../object/TAction.html#checkPreCond)  [`doAction`](../object/TAction.html#doAction)  [`doActionOnce`](../object/TAction.html#doActionOnce)  [`execAction`](../object/TAction.html#execAction)  [`execCycle`](../object/TAction.html#execCycle)  [`execResolvedAction`](../object/TAction.html#execResolvedAction)  [`getAll`](../object/TAction.html#getAll)  [`getMessageParam`](../object/TAction.html#getMessageParam)  [`getVerbPhrase`](../object/TAction.html#getVerbPhrase)  [`getVerbPhrase1`](../object/TAction.html#getVerbPhrase1)  [`makeScopeUniversal`](../object/TAction.html#makeScopeUniversal)  [`reportAction`](../object/TAction.html#reportAction)  [`reset`](../object/TAction.html#reset)  [`resolvedObjectsInScope`](../object/TAction.html#resolvedObjectsInScope)  [`setResolvedObjects`](../object/TAction.html#setResolvedObjects)  `
 

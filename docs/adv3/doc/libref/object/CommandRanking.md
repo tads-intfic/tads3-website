@@ -1072,11 +1072,6 @@ treat this as any other noun phrase that matches nothing
 
 
 treat this as a non-matching noun phrase
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

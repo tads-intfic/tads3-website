@@ -115,13 +115,6 @@ program to handle, via the network message queue.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -227,11 +220,6 @@ down to move on to a next step, but you have other work you can perform
 in the meantime. If you don't have any other work, you can avoid burning
 CPU time by calling shutdown(true), which waits (without consuming CPU
 time) for the server to exit.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

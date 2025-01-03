@@ -142,11 +142,6 @@ appears as the first element of the grammarInfo() result list.
 Generate match information. This returns the same information that
 grammarInfo() returns for match objects that the compiler generates for
 static 'grammar' statements.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

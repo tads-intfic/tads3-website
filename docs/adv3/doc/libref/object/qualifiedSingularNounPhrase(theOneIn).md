@@ -58,11 +58,6 @@ article.
 
 Inherited from `VagueContainerDefiniteNounPhraseProd` :  
 [`npKeeper`](../object/VagueContainerDefiniteNounPhraseProd.html#npKeeper)
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -77,11 +72,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `VagueContainerDefiniteNounPhraseProd` :  
 [`checkContentsList`](../object/VagueContainerDefiniteNounPhraseProd.html#checkContentsList) [`construct`](../object/VagueContainerDefiniteNounPhraseProd.html#construct)
 

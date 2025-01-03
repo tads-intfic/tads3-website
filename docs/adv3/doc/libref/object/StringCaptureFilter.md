@@ -72,11 +72,6 @@ the captured text to a string.
 
 
 [`txt_`](#txt_)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -86,11 +81,6 @@ the captured text to a string.
 
 
 [`addText`](#addText) [`filterText`](#filterText)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -140,11 +130,6 @@ add to my captured text
 
 
 filter text
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

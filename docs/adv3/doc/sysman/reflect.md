@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Reflection  
 <span class="navnp"><a href="undef.html" class="nav"><em>Prev:</em> Capturing Calls to
 Undefined Methods</a>    
 <a href="icext.html" class="nav"><em>Next:</em> Extending Intrinsic
 Classes</a>     </span>
-
-
-
-
-
 # Reflection
 
 The term "Reflection" refers to a set of services in a programming

@@ -234,11 +234,6 @@ available by default during normal execution. However, saving a
 reference here prevents the garbage collector from discarding the table
 when preinit finishes, which forces it to be saved in the final .t3 file
 and thus makes it available permanently.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

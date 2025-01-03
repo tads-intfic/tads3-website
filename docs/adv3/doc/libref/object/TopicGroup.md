@@ -199,11 +199,6 @@ owner taken from the group's own location
 
 
 are TopicEntry objects within the group active?
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

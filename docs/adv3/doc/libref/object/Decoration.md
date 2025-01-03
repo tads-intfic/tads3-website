@@ -283,11 +283,6 @@ don't hide from defaults
 
 
 the default LOOK IN response is our standard "that's not important"
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -230,11 +230,6 @@ particularly need to customize the report in your parallel for
 movePushable() - the default ("you push x into the area") isn't very
 good when nested rooms are involved, and you'll probably want something
 more specific.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

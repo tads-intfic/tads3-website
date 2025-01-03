@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Network
 Safety  
@@ -16,11 +11,6 @@ Safety
 Set</a>    
 <a href="scripts.html" class="nav"><em>Next:</em> Input Scripts</a>    
 </span>
-
-
-
-
-
 # Network Safety in TADS
 
 Starting with version 3.1, TADS offers several networking features in

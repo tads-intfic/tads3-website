@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Enumerators  
 <span class="navnp"><a href="strlit.html" class="nav"><em>Prev:</em> String Literals</a>
     <a href="startup.html" class="nav"><em>Next:</em> The Main Program
 Entrypoint</a>     </span>
-
-
-
-
-
 # Enumerators
 
 An enumerator is a named, constant data value. Enumerators are similar
@@ -102,9 +92,6 @@ keyword in the definition:
 ```
     enum token dictWord, unknownWord, punctuation;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

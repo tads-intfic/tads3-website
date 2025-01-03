@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Global Command
 Remapping  
@@ -16,11 +11,6 @@ Remapping
 Phrases</a>    
 <a href="t3past.html" class="nav"><em>Next:</em> Writing a Game in the
 Past Tense</a>     </span>
-
-
-
-
-
 # Global Command Remapping
 
 In version 3.0.17, the Adv3 library introduced "global remapping." This
@@ -480,9 +470,6 @@ we're done.
         }
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

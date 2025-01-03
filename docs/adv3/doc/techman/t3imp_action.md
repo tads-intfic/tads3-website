@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Implied Action
 Reports  
@@ -16,11 +11,6 @@ Reports
 Substitutions</a>    
 <a href="t3lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
-
-
-
-
-
 # Implicit Action Reports
 
 *by Eric Eve*

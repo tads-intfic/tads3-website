@@ -48,11 +48,6 @@ rather allows customized text formatting for hyperlinked text.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `HtmlStyleTag` :  
 [`closeText`](../object/HtmlStyleTag.html#closeText) [`htmlCloseText`](../object/HtmlStyleTag.html#htmlCloseText) [`htmlOpenText`](../object/HtmlStyleTag.html#htmlOpenText) [`openText`](../object/HtmlStyleTag.html#openText) [`plainCloseText`](../object/HtmlStyleTag.html#plainCloseText) [`plainOpenText`](../object/HtmlStyleTag.html#plainOpenText)
 
@@ -64,13 +59,6 @@ Inherited from `StyleTag` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 
 
 *(none)* <span id="_Properties_"></span>

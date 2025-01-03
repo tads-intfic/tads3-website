@@ -201,11 +201,6 @@ default for a stretchy container is to conform exactly to the contents,
 as though the container weren't present at all, hence we simply sum the
 bulks of our contents. Subclasses can override this to define other
 aggregate bulk effects as needed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

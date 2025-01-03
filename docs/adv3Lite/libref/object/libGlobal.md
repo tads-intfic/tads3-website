@@ -572,11 +572,6 @@ revealedNameTab table.
 We put the revealedNameTab table and the setRevealed method here rather
 than on conversationManager so that it's available to games that don't
 include actor.t.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

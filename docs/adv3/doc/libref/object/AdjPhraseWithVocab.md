@@ -149,11 +149,6 @@ the property for the adjective literal - this is usually adj\_
 Add the vocabulary matches that we'd get if we were treating our
 adjective as a noun. This combines the noun interpretation with a list
 of matches we got for the adjective version.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

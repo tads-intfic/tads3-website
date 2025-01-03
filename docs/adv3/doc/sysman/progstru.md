@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Source Code
 Structure  
@@ -16,11 +11,6 @@ Structure
    
 <a href="charmap.html" class="nav"><em>Next:</em> Source File Character
 Sets</a>     </span>
-
-
-
-
-
 # Source Code Structure
 
 ## Tokens, whitespace, and newlines

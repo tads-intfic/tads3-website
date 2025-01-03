@@ -136,11 +136,6 @@ fixes for patIsHTMLTag and patIsFormatTag from \*\* Matt McGlone \*\*
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 1/21/2007 from TADS version 3.0.13
 

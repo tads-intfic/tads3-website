@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Expressions and
 Operators  
@@ -16,11 +11,6 @@ Operators
 Finalization</a>    
 <a href="proccode.html" class="nav"><em>Next:</em> Procedural Code</a>
     </span>
-
-
-
-
-
 # Expressions and Operators
 
 The TADS 3 language uses an algebraic style of notation for expressions.

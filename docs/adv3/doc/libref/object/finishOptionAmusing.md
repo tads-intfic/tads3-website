@@ -57,11 +57,6 @@ Inherited from `FinishOption` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `FinishOption` :  
 [`doOption`](../object/FinishOption.html#doOption) [`responseMatches`](../object/FinishOption.html#responseMatches)
 

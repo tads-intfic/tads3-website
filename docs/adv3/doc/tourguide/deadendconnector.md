@@ -125,9 +125,7 @@ location on your game map) and then returning to his starting point.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 And now on to the second difference. If you look at the code we just

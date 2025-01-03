@@ -50,13 +50,6 @@ interpret "take box" as though it were "take the box").
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -71,11 +64,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `DefiniteNounProd` :  
 [`reduceDefinite`](../object/DefiniteNounProd.html#reduceDefinite) [`resolveDefinite`](../object/DefiniteNounProd.html#resolveDefinite) [`resolveNouns`](../object/DefiniteNounProd.html#resolveNouns)
 

@@ -67,11 +67,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `CommandAnnouncement` :  
 [`messageProp_`](../object/CommandAnnouncement.html#messageProp_) [`messageText_`](../object/CommandAnnouncement.html#messageText_)
 
@@ -131,11 +126,6 @@ Inherited from `CommandReport` :
 
 
 we're not associated with an iteration or action
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

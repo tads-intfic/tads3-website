@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Using Build
 Configurations  
@@ -16,11 +11,6 @@ Configurations
 Input/Output Issues</a>    
 <a href="t3inc.html" class="nav"><em>Next:</em> Understanding Separate
 Compilation</a>     </span>
-
-
-
-
-
 # Using Build Configurations
 
 One of the facts of life of computer programming is that it takes at

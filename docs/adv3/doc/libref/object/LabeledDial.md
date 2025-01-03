@@ -165,11 +165,6 @@ entry.
 
 Check a setting for validity. A setting is valid only if it appears in
 the validSettings list for this dial.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Date  
 <span class="navnp"><a href="collect.html" class="nav"><em>Prev:</em> Collection</a>
     <a href="dict.html" class="nav"><em>Next:</em> Dictionary</a>    
 </span>
-
-
-
-
-
 # Date
 
 A Date object represents a date-and-time value specifying a particular
@@ -918,9 +908,6 @@ Julian date string:
     local str = 'October 4, 1582';
     "<<str>> Julian = <<Date.parseJulianDate(str) [1].formatDate('%B %#d, %Y')>>\n";
 ```
-
-
-
 <span id="setLocaleInfo"></span>
 
 `static setLocaleInfo(...)`

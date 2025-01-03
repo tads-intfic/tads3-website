@@ -87,11 +87,6 @@ Inherited from `Exception` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `NetException` :  
 [`construct`](../object/NetException.html#construct) [`displayException`](../object/NetException.html#displayException)
 

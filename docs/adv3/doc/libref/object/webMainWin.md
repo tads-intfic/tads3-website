@@ -91,11 +91,6 @@ Inherited from `WebResourceResFile` :
 
 Inherited from `WebResource` :  
 [`group`](../object/WebResource.html#group) [`priority`](../object/WebResource.html#priority)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -120,11 +115,6 @@ Inherited from `WebResourceResFile` :
 
 Inherited from `WebResource` :  
 [`sendAck`](../object/WebResource.html#sendAck) [`sendXML`](../object/WebResource.html#sendXML)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -504,11 +494,6 @@ set the window title
 
 
 is a synthetic event ready?
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

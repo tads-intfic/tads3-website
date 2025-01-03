@@ -153,11 +153,6 @@ first pass - compare by presence or absence of the problem
 
 
 second pass - compare by number of occurrences of the problem
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

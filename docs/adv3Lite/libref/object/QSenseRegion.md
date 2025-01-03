@@ -198,11 +198,6 @@ a list of containers along the path between A and B that obstruct the
 reach. If the two objects are in separate rooms, the top-level room
 containing A is in the list to represent the room separation. If there's
 no obstruction, we return an empty list.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

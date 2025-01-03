@@ -75,11 +75,6 @@ subclass of Replay action taking a quoted string for the filename
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ReplayAction` :  
 [`fileDisposition`](../object/ReplayAction.html#fileDisposition) [`filePromptMsg`](../object/ReplayAction.html#filePromptMsg) [`fileTypeID`](../object/ReplayAction.html#fileTypeID) [`scriptOptionFlags`](../object/ReplayAction.html#scriptOptionFlags)
 
@@ -150,11 +145,6 @@ Inherited from `BasicProd` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

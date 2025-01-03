@@ -4,20 +4,10 @@ layout: docs
 <div>
 
 [TADS 3](../../../index.html)
-
-
-
-
-
 <a href="../../adv3lite/index.html" class="nav-element">Adv3Lite
 Bookshelf</a>
 <a href="../index.html" class="nav-element">Adv3 Bookshelf</a>
 <a href="#" class="nav-element">Cheat Sheets</a>
-
-
-
-
-
 </div>
 
 

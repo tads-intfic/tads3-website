@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Hello, World!  
 <span class="navnp"><a href="naming.html" class="nav"><em>Prev:</em> Naming Conventions</a>
     <a href="tools.html" class="nav"><em>Next:</em> The Tools</a>    
 </span>
-
-
-
-
-
 # Hello, World!
 
 Ever since Kernighan and Ritchie published their manual on C, it's been

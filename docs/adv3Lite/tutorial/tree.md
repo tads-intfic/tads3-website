@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Adding the Tree and the Branch  
@@ -16,11 +11,6 @@ Adding the Tree and the Branch
 Nest</a>    
 <a href="finishing.html" class="nav"><em>Next:</em> Finishing Touches</a>
     </span>
-
-
-
-
-
 # Adding the Tree and the Branch
 
 The description of the clearing mentions a tall sycamore tree standing

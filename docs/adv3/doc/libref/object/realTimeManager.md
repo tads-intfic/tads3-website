@@ -53,11 +53,6 @@ time.
 
 
 [`curEvent_`](#curEvent_) [`elapsedTimeAtSave`](#elapsedTimeAtSave) [`events_`](#events_) [`startingTime`](#startingTime)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
@@ -303,11 +298,6 @@ real-time clock - a caller can note the elapsed game time at one point
 by calling getElapsedTime(), and then pass the same value to this
 routine to ensure that no real time can effectively pass between the two
 calls.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -153,11 +153,6 @@ Once we have the message text, we perform parameter substitutions.
 Parameters can be provided as strings, which are substituted in
 literally; or as objects, whose names are inserted according to the
 grammar in the template text.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

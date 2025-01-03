@@ -250,11 +250,6 @@ am I worse than the other result?
 
 
 determine if I go in a result list before the given result
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

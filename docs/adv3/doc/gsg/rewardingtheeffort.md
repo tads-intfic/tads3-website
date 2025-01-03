@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](makinglifemoreproblematic.html)
   [\[Next\]](controllingtheaction.html)*
@@ -19,100 +14,14 @@ If the player has gone to all this trouble to reach the top of the tree,
 perhaps he or she deserves some sort of reward for it. One way we can do
 this is to add some points to the player's score. This can be done with
 the statement:
+ 
+addToScore(points, 'reason for awarding points'); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>addToScore(points, 'reason for awarding points'); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 In this case we might have:  
+ 
+addToScore(1, 'reaching the top of the tree.'); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>addToScore(1, 'reaching the top of the tree.'); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The two problems we need to solve now are (a) where best to put this
 statement and (b) how to prevent the player from accumulating a huge (if
@@ -129,23 +38,6 @@ can use this to ensure that the point is awarded only the first time
 Heidi reaches the top of the tree. The revised `topOfTree` room then
 looks like this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 topOfTree : OutdoorRoom 'At the top of the tree'  
    "You cling precariously to the trunk, next to a firm, narrow branch."  
@@ -157,23 +49,6 @@ topOfTree : OutdoorRoom 'At the top of the tree'
     }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Being awarded a point is all very well, but it may all seem pretty
 pointless if that's all that happens when Heidi arrives at the top of
@@ -193,23 +68,6 @@ it's part of the tree and fixed in place (if in doubt, look at the
 pedestal in the 'goldskull' game). Then put something interesting in the
 nest, and see if you can get your revised game to compile and run.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Here's how this guide does it (this code should be placed immediately
 after the definition of topOfTree).  
@@ -256,23 +114,6 @@ it should move the ring into the nest and report the find. While we're
 at it we might as well award the player a point for the discovery. The
 appropriate code looks like this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 ++ nest : Container 'bird\\s nest' 'bird\\s nest'  
   "It's carefully woven from twigs and moss. "  
@@ -371,129 +212,19 @@ carried out, we can use `check()` to stop it being carried out and
 explain why. In this case we don't want to stop it unconditionally, but
 only if the nest isn't held:  
   
+check() 
+    { 
+      if(!isHeldBy(gActor)) 
+      { 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>check() <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>    { <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>      if(!isHeldBy(gActor)) <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>      { <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
                "You really need to hold the nest to take a good look at  
                  what's inside. ";  
+        exit; 
+      } 
+    } 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>        exit; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>      } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>    } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Our next job is to make it impossible to take the nest without the use
 of the stick. TADS 3 already defines what happens when the player tries
@@ -508,23 +239,6 @@ nest if she's simply carrying the stick. The appropriate code, which
 illustrates both a check and an action section in the same `dobjFor()`
 block, is as follows::  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 dobjFor(Take)  
   {  
@@ -545,23 +259,6 @@ dobjFor(Take)
     }    
   }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We include the if(!moved) condition in both check() and action() here on
 the assumption that once the nest has been moved, it won't be put back
@@ -589,23 +286,6 @@ way. This introduces a new complication, defining special behaviour for
 a verb involving two objects. We'll begin by defining some code on the
 intended direct object of this command, which is still the nest:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 dobjFor(MoveWith)  
   {  
@@ -676,23 +356,6 @@ might guess that just as we need to define `dobjFor()` on the direct
 object, we need to define `iobjFor()` on the indirect object. IUf you
 did guess that, you'd be right:
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 iobjFor(MoveWith)  
   {  
@@ -798,43 +461,9 @@ techniques discussed in relation to hiding the ring in the nest, or you
 could make the stick a Hidden object and call its discovered() method at
 the appropriate moment.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Here's one way of doing it:-  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 + tree : Fixture 'tall sycamore tree' 'tree'  
     "Standing proud in the middle of the clearing, the stout  
@@ -913,23 +542,6 @@ fall to the clearing, and the game will display a suitable message to
 show that the object is falling out of sight. The definition of
 topOfTree thus becomes;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 topOfTree : FloorlessRoom 'At the top of the tree'  
      "You cling precariously to the trunk, next to a firm, narrow   
@@ -943,23 +555,6 @@ topOfTree : FloorlessRoom 'At the top of the tree'
      bottomRoom = clearing  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 In the [next chapter](settingthescene.html) we shall learn how the ring
 came to be in the nest, who it belongs to, and how to win the game. To

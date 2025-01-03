@@ -6,5 +6,4 @@ url: https://tads.dev  # the base hostname and protocol for your site, e.g. http
 layout: default
 lsi: false
 kramdown:
-  input: GFM
-  extensions: [gfm, code-block]
+  extensions: [code-block]

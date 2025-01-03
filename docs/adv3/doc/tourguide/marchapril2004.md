@@ -128,8 +128,6 @@ the <a href="collectivegroup.html">CollectiveGroup</a> (static) section.
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   

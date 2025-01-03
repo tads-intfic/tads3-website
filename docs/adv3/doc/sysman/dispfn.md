@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="ui.html" class="nav">The User Interface</a> \> The Default
 Display Function  
 <span class="navnp"><a href="fmt.html" class="nav"><em>Prev:</em> The Output Formatter</a>
     <a href="banners.html" class="nav"><em>Next:</em> The Banner Window
 Display Model</a>     </span>
-
-
-
-
-
 # The Default Display Function
 
 The T3 VM does not have a built-in input/output system; as far as the VM

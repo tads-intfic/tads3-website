@@ -86,11 +86,6 @@ Process network requests. Continues until doneFunc() returns true, or a
 timeout or error occurs. If we return because doneFunc() returned true,
 we'll return nil. Otherwise, we'll return the NetEvent that terminated
 the wait.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

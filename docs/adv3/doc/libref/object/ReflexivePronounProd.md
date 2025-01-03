@@ -78,11 +78,6 @@ appeared earlier in the sentence: "ask bob about himself."
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `PronounProd` :  
 [`isPlural`](../object/PronounProd.html#isPlural) [`isPossessive`](../object/PronounProd.html#isPossessive) [`pronounType`](../object/PronounProd.html#pronounType)
 
@@ -154,11 +149,6 @@ This should return true if we agree, nil if not.
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

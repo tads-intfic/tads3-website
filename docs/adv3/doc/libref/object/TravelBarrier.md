@@ -69,11 +69,6 @@ travelBarrier property, to form a conditional barrier to travel.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -126,11 +121,6 @@ Explain why travel isn't allowed. This should generate an appropriate
 failure report explaining the problem. This is invoked when travel is
 attempted and canTravelerPass returns nil. Subclasses must override
 this.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

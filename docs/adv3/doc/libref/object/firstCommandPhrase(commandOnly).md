@@ -50,13 +50,6 @@ actor.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `CommandProd` :  
 [`getActorPhrase`](../object/CommandProd.html#getActorPhrase)
 
@@ -68,11 +61,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `FirstCommandProd` :  
 [`countCommands`](../object/FirstCommandProd.html#countCommands) [`getCommandSepIndex`](../object/FirstCommandProd.html#getCommandSepIndex) [`getCommandTokens`](../object/FirstCommandProd.html#getCommandTokens) [`getNextCommandIndex`](../object/FirstCommandProd.html#getNextCommandIndex) [`getTargetActor`](../object/FirstCommandProd.html#getTargetActor) [`isEndOfSentence`](../object/FirstCommandProd.html#isEndOfSentence) [`resolveFirstAction`](../object/FirstCommandProd.html#resolveFirstAction) [`resolveNouns`](../object/FirstCommandProd.html#resolveNouns)
 

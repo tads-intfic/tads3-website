@@ -685,11 +685,6 @@ doScript() method. This makes it especially easy to define random
 background messages for the actor - just add an EventList class
 (ShuffledEventList is usually the right one) to the state's superclass
 list, and define a list of background message strings.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

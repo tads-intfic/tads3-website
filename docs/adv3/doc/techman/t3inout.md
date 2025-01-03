@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Some Common
 Input/Output Issues  
@@ -16,11 +11,6 @@ Input/Output Issues
 Programming Overview</a>    
 <a href="t3build_config.html" class="nav"><em>Next:</em> Using Build
 Configurations</a>     </span>
-
-
-
-
-
 # Some Common Input/Output Issues
 
 *by Eric Eve*
@@ -531,9 +521,6 @@ We could then use the following code to display our ASCII diagram:
      
     showDiag(diag);
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

@@ -57,11 +57,6 @@ Inherited from `Direction` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Direction` :  
 [`classInit`](../object/Direction.html#classInit) [`initializeDirection`](../object/Direction.html#initializeDirection) [`oppositeProp`](../object/Direction.html#oppositeProp) [`propDir`](../object/Direction.html#propDir)
 

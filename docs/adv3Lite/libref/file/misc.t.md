@@ -368,11 +368,6 @@ if there is one, otherwise return nil.
 val to list - convert any value to a list. If it's already a list,
 simply return it. If it's nil return an empty list. If it's a singleton
 value, return a one-element list containing it.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

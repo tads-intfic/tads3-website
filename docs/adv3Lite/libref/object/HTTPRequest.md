@@ -75,13 +75,6 @@ HTTPRequest extensions
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -596,11 +589,6 @@ arguments work as they do with sendReply().
 After calling this routine, call sendReplyChunk() as many times as
 needed to send the pieces of the reply. After sending all of the pieces,
 call endChunkedReply() to finish the reply.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

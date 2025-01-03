@@ -76,13 +76,6 @@ Quantified plural phrase.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -199,11 +192,6 @@ currently have.
 By default, we'll simply select an arbitrary subset, since we simply
 want any 'num' of the matches. This can be overridden if other behaviors
 are needed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

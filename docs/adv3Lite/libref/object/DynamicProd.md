@@ -142,11 +142,6 @@ appears as the first element of the grammarInfo() result list.
 Generate match information. This returns the same information that
 grammarInfo() returns for match objects that the compiler generates for
 static 'grammar' statements.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -426,11 +426,6 @@ satisfied our curiosity about the topic.
 Note that we're being shown in a topic inventory listing. By default, we
 don't do anything here, but subclasses can use this to do any extra work
 they want to do on being listed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

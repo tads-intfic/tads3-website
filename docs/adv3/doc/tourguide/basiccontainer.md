@@ -86,9 +86,7 @@ was inside, but not otherwise interact with it. If it were
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 In practice, it's hard to think of examples where this class would be

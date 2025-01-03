@@ -98,11 +98,6 @@ Inherited from `CommandReport` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CommandAnnouncement` :  
 [`construct`](../object/CommandAnnouncement.html#construct) [`getMessageText`](../object/CommandAnnouncement.html#getMessageText) [`showMessage`](../object/CommandAnnouncement.html#showMessage)
 

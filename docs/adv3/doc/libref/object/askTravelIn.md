@@ -77,11 +77,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `AskConnector` :  
 [`askDisambig`](../object/AskConnector.html#askDisambig) [`askMissingObject`](../object/AskConnector.html#askMissingObject) [`connectorGetConnectorTo`](../object/AskConnector.html#connectorGetConnectorTo) [`dobjFor(TravelVia)`](../object/AskConnector.html#dobjFor(TravelVia))
 

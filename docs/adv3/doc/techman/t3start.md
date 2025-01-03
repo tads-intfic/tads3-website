@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Creating Your First
 Project  
@@ -16,11 +11,6 @@ Project
    
 <a href="t3design.html" class="nav"><em>Next:</em> Tips on Designing your
 Game</a>     </span>
-
-
-
-
-
 # Creating Your First TADS 3 Project
 
 If you're looking at TADS 3 for the first time, and you're trying to

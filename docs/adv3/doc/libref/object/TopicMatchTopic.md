@@ -228,11 +228,6 @@ Subclasses can override this as desired to use other ways of matching.
 
 
 set the topic pronouns
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

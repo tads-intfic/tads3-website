@@ -65,13 +65,6 @@ mechanism rather than with badness.
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -83,11 +76,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `TopicProd` :  
 [`getOrigText`](../object/TopicProd.html#getOrigText) [`getOrigTokenList`](../object/TopicProd.html#getOrigTokenList) [`resolveNouns`](../object/TopicProd.html#resolveNouns)
 

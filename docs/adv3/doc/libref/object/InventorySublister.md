@@ -77,13 +77,6 @@ contents, since we assume the caller will be doing this.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -164,11 +157,6 @@ don't show any prefix, suffix, or 'empty' messages
 
 
 don't show out-of-line contents
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

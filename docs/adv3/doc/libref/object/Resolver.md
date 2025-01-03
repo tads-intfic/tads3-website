@@ -1001,11 +1001,6 @@ must be handled differently.
 Execute a callback function in the global context of our actor and
 action - we'll set gActor and gAction to our own stored actor and action
 values, then call the callback, then restore the old globals.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

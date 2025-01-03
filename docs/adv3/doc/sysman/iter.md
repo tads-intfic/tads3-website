@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Iterator  
 <span class="navnp"><a href="icic.html" class="nav"><em>Prev:</em> IntrinsicClass</a>
     <a href="list.html" class="nav"><em>Next:</em> List</a>     </span>
-
-
-
-
-
 # Iterator
 
 An Iterator is an object that allows you to visit each element of a
@@ -113,11 +103,6 @@ Returns `true` if calling
 Resets the iteration to its first element. After calling this method,
 the next call to `getNext()` will yield the
 first element of the collection.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

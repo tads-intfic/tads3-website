@@ -74,11 +74,6 @@ EmptyNounPhraseProd.
 
 
 [`asker_`](#asker_) [`newMatch`](#newMatch) [`responseProd`](#responseProd)
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -94,11 +89,6 @@ Inherited from `BasicProd` :
 
 
 [`getOrigText`](#getOrigText) [`getOrigTokenList`](#getOrigTokenList) [`isEmptyPhrase`](#isEmptyPhrase) [`resolveNouns`](#resolveNouns)
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterTruncations`](../object/NounPhraseProd.html#filterTruncations) [`getVerifyKeepers`](../object/NounPhraseProd.html#getVerifyKeepers)
 
@@ -202,11 +192,6 @@ we're an empty phrase if we don't have a new topic yet
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

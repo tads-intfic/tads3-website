@@ -318,11 +318,6 @@ Initialize this SymConnector by setting up its room1 and room2
 properties if they are not already defined. This method is normally
 called from the preinitThing() method of the room that first defines
 this connector. \[SYMCOMM EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

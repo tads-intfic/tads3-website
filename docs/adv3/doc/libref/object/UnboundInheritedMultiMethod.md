@@ -67,11 +67,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `UnboundMultiMethod` :  
 [`args_`](../object/UnboundMultiMethod.html#args_) [`func_`](../object/UnboundMultiMethod.html#func_) [`name_`](../object/UnboundMultiMethod.html#name_)
 
@@ -119,11 +114,6 @@ Inherited from `Exception` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

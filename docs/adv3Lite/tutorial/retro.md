@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="goldskull.html" class="nav">Goldskull</a> \> Retrospective  
 <span class="navnp"><a href="inplace.html" class="nav"><em>Prev:</em> Everything in its
 place</a>    
 <a href="airport.html" class="nav"><em>Next:</em> Airport</a>     </span>
-
-
-
-
-
 # Retrospective
 
 We've just covered quite a lot of ground, especially for what on the
@@ -357,9 +347,6 @@ Goldskull with a complete listing of the game as it ended up.
         getWeight = weight + getWeightWithin()
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

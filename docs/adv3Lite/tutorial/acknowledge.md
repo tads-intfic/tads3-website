@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Acknowledgements and
 Explanations  
@@ -16,11 +11,6 @@ Explanations
 Book</a>    
 <a href="tools.html" class="nav"><em>Next:</em> Tools of the Trade</a>
     </span>
-
-
-
-
-
 # Acknowledgements and Explanations
 
 All three games used as examples in this book are drawn from other

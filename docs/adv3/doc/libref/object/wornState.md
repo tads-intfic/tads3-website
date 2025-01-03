@@ -44,11 +44,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ThingState` :  
 [`listingOrder`](../object/ThingState.html#listingOrder) [`listName_`](../object/ThingState.html#listName_) [`stateTokens`](../object/ThingState.html#stateTokens)
 
@@ -92,11 +87,6 @@ Inherited from `ThingState` :
 In listings of worn items, don't bother mentioning our 'worn' status, as
 the entire list consists of items being worn - it would be redundant to
 point out that the items in a list of items being worn are being worn.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

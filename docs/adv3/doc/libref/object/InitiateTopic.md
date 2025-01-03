@@ -142,11 +142,6 @@ include in the initiateTopics list
 since this kind of topic is triggered by internal calculations in the
 game, and not on anything the player is doing, there's no reason that
 our match object should be a pronoun antecedent
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

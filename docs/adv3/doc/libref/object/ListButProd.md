@@ -158,11 +158,6 @@ flag an error - everything has been excluded
 
 
 our main list is given by the 'np\_' subproduction
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

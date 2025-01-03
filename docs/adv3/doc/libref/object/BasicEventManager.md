@@ -175,11 +175,6 @@ representing each event, and use removeEvent() to remove the specific
 Event object of interest.
 
 Returns true if we find any matching events, nil if not.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

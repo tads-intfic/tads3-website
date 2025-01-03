@@ -86,11 +86,6 @@ Inherited from `Attachable` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PermanentAttachment` :  
 [`cannotDetachMsgFor`](../object/PermanentAttachment.html#cannotDetachMsgFor)
 

@@ -296,11 +296,6 @@ by DROP IT, in which case IT is probably the key. The best thing to do
 is to save both the door and the key as possible antecedents, so that we
 can choose the most suitable object when we actually see a pronoun in a
 subsequent command.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

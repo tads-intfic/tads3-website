@@ -245,11 +245,6 @@ elements describing a token:
 \- The third element the original token strings, before any conversions
 or evaluations were performed. For example, this maintains the original
 case of strings that are lower-cased for the corresponding token values.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

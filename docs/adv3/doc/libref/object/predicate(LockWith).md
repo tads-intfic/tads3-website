@@ -79,11 +79,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `LockWithAction` :  
 [`getAllIobj`](../object/LockWithAction.html#getAllIobj)
 

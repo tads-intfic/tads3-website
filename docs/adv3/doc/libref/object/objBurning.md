@@ -46,11 +46,6 @@ command on the object.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `PreCondition` :  
 [`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
@@ -103,11 +98,6 @@ Inherited from `PreCondition` :
 
 
 abort the command
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

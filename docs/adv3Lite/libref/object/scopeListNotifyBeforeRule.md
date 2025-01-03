@@ -59,11 +59,6 @@ Inherited from `BeforeRule` :
 
 Inherited from `Rule` :  
 [`action`](../object/Rule.html#action) [`actor`](../object/Rule.html#actor) [`aobj`](../object/Rule.html#aobj) [`dobj`](../object/Rule.html#dobj) [`during`](../object/Rule.html#during) [`execAfter`](../object/Rule.html#execAfter) [`execBefore`](../object/Rule.html#execBefore) [`iobj`](../object/Rule.html#iobj) [`isActive`](../object/Rule.html#isActive) [`matchObj`](../object/Rule.html#matchObj) [`present`](../object/Rule.html#present) [`rulebook`](../object/Rule.html#rulebook) [`rulebooks`](../object/Rule.html#rulebooks) [`specificity`](../object/Rule.html#specificity) [`stopValue`](../object/Rule.html#stopValue) [`where`](../object/Rule.html#where) [`who`](../object/Rule.html#who)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -122,11 +117,6 @@ Call the beforeAction method of every object in scope.
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

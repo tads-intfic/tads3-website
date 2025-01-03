@@ -50,11 +50,6 @@ spelledHundred-\>thou\_ 'thousand' 'and' spelledSmallNumber-\>num\_
 
 
 spelledHundred-\>thou\_ 'thousand' spelledHundred-\>num\_  
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

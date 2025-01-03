@@ -46,11 +46,6 @@ destinations are known.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Pathfinder` :  
 [`cachedRoute`](../object/Pathfinder.html#cachedRoute) [`currentDestination`](../object/Pathfinder.html#currentDestination) [`nodesVisited`](../object/Pathfinder.html#nodesVisited) [`pathsFound`](../object/Pathfinder.html#pathsFound) [`steps`](../object/Pathfinder.html#steps)
 
@@ -92,11 +87,6 @@ Inherited from `Pathfinder` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

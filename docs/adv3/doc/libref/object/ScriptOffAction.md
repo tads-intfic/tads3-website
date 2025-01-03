@@ -160,11 +160,6 @@ we can't include this in undo, as it affects external files
 
 
 turn off scripting
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

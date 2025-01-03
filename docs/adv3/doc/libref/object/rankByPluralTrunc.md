@@ -45,11 +45,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `CommandRankingByWeakness` :  
 [`prop_`](../object/CommandRankingByWeakness.html#prop_)
 
@@ -60,11 +55,6 @@ Inherited from `CommandRankingByWeakness` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CommandRankingByWeakness` :  
 [`comparePass1`](../object/CommandRankingByWeakness.html#comparePass1) [`comparePass2`](../object/CommandRankingByWeakness.html#comparePass2)
 

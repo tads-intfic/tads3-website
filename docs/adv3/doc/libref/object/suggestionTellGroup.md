@@ -67,11 +67,6 @@ Inherited from `ListGroup` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `SuggestionListGroup` :  
 [`showGroupItem`](../object/SuggestionListGroup.html#showGroupItem)
 

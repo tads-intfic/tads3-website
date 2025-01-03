@@ -52,13 +52,6 @@ Details](#_Methods_)
 
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -70,11 +63,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PrepSingleTopicProd` :  
 [`resolveNouns`](../object/PrepSingleTopicProd.html#resolveNouns)
 

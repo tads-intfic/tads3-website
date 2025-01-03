@@ -82,11 +82,6 @@ EXTENSION\]
 
 Make the current action take secs time in total; this overrides any
 previously calcuated time for this action. \[OBJTIME EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

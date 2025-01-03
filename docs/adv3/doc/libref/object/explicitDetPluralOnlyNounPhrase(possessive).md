@@ -50,13 +50,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `BasicPossessiveProd` :  
 [`npKeeper`](../object/BasicPossessiveProd.html#npKeeper)
 
@@ -76,11 +69,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PossessivePluralProd` :  
 [`resolveNouns`](../object/PossessivePluralProd.html#resolveNouns)
 

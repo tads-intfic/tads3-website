@@ -148,11 +148,6 @@ Format a stack frame object (of class T3StackInfo).
 
 Convert a value to a symbol, or to a string representation if it's not
 of a symbolic type.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

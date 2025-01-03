@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](abasicburner.html)
   [\[Next\]](theartofconversation.html)*
@@ -45,46 +40,12 @@ If you were going to call this function from several different places in
 your code, always with the same options, you might find it convenient to
 define your own wrapper function to do this, for example:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 endGame(msg)  
 {    
     finishGameMsg(msg, \[finishOptionUndo,finishOptionFullScore\]);  
 }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Then at each point where you wanted the game to end, you could simply
 call endGame(msg) without having to specify the list of extra options
@@ -113,23 +74,6 @@ string, the TADS 3 compiler will be perfectly happy if we treat it as a
 method containing any code we like. We can thus amend our definition of
 the GiveShowTopic to:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 + GiveShowTopic @ring  
   topicResponse  
@@ -144,23 +88,6 @@ the GiveShowTopic to:
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We have finally reached the point where the game is playable all the way
 through. It's not a very exciting game, to be sure, but at least it's

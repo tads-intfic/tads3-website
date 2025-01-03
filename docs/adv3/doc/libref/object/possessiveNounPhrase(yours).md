@@ -48,11 +48,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `YoursNounProd` :  
 [`pronounType`](../object/YoursNounProd.html#pronounType)
 
@@ -73,13 +68,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 
 
 Inherited from `PronounProd` :  

@@ -269,11 +269,6 @@ One potentially good place to call this from as at the end of each
 iteration of a ShuffledEventList, when the items are about to be
 reshuffled in any case. You can make this happen by setting the
 resetOnReshuffle property to true,
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

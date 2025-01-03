@@ -67,65 +67,15 @@ Alternatively, if you were going to do this sort of thing often, you
 could define:  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>function objDesc(obj)  <br />
-</td>
-</tr>
-</tbody>
-</table>
+function objDesc(obj)  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>{  <br />
-</td>
-</tr>
-</tbody>
-</table>
+{  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   obj.desc;   <br />
-</td>
-</tr>
-</tbody>
-</table>
+   obj.desc;   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>}  <br />
-</td>
-</tr>
-</tbody>
-</table>
+}  
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 And then call  
@@ -149,61 +99,13 @@ double-quoted string or a routine that displays a string on some members
 of the class:  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>class SpecialThing : Thing  <br />
-</td>
-</tr>
-</tbody>
-</table>
+class SpecialThing : Thing  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   specialMessage = nil  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   specialMessage = nil  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   showSpecialMessage  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   showSpecialMessage  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   {  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   {  
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -235,158 +137,34 @@ of the class:
 </tbody>
 </table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   }  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>specialBall: SpecialThing 'ball' 'ball'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+specialBall: SpecialThing 'ball' 'ball'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   specialMessage = "It's a special ball.&lt;.p&gt;"  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   specialMessage = "It's a special ball.&lt;.p&gt;"  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>specialStick: SpecialThing 'stick' 'stick'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+specialStick: SpecialThing 'stick' 'stick'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Then calling specialBall.specialMessage will result in the display of
 "It's a special ball", while calling specialStick.specialMessage will
 result in "There's nothing special about the stick. "  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
 Apart from showing the principle, the above example is pretty pointless,
 since it would have been more straightforward to have defined
@@ -398,75 +176,15 @@ string, or a routine that returned a single-quoted string. We could do
 that with the following code:  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>class SpecialThing : Thing  <br />
-</td>
-</tr>
-</tbody>
-</table>
+class SpecialThing : Thing  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   specialMessage = nil  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   specialMessage = nil  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   showSpecialMessage  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   showSpecialMessage  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   {  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   {  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>     local val;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+     local val;  
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -483,61 +201,13 @@ that with the following code:
 </tbody>
 </table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>     if(!hasDisplayed)         <br />
-</td>
-</tr>
-</tbody>
-</table>
+     if(!hasDisplayed)         
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>      switch(dataType(val))  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      switch(dataType(val))  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>      {  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      {  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>        case TypeSString:  <br />
-</td>
-</tr>
-</tbody>
-</table>
+        case TypeSString:  
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -554,457 +224,71 @@ that with the following code:
 </tbody>
 </table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>        case TypeTrue: "True&lt;.p&gt;"; break;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+        case TypeTrue: "True&lt;.p&gt;"; break;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>        default: "Nothing to report. ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
+        default: "Nothing to report. ";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>            <br />
-</td>
-</tr>
-</tbody>
-</table>
+            
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>      }    <br />
-</td>
-</tr>
-</tbody>
-</table>
+      }    
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   }  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>specialBall: SpecialThing 'ball' 'ball'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+specialBall: SpecialThing 'ball' 'ball'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   specialMessage = "It's a special ball.&lt;.p&gt;"  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   specialMessage = "It's a special ball.&lt;.p&gt;"  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>specialStick: SpecialThing 'stick' 'stick'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+specialStick: SpecialThing 'stick' 'stick'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   specialMessage = 'It\'s a stick. '  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   specialMessage = 'It\'s a stick. '  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>specialNumber: SpecialThing 'number' 'number'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+specialNumber: SpecialThing 'number' 'number'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   specialMessage = 532  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   specialMessage = 532  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>DefineIAction(Bar)  <br />
-</td>
-</tr>
-</tbody>
-</table>
+DefineIAction(Bar)  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>  execAction()  <br />
-</td>
-</tr>
-</tbody>
-</table>
+  execAction()  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>  {  <br />
-</td>
-</tr>
-</tbody>
-</table>
+  {  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>    specialBall.showSpecialMessage;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    specialBall.showSpecialMessage;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>    specialStick.showSpecialMessage;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    specialStick.showSpecialMessage;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>    specialNumber.showSpecialMessage;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    specialNumber.showSpecialMessage;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>  }  <br />
-</td>
-</tr>
-</tbody>
-</table>
+  }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>VerbRule(Bar)  <br />
-</td>
-</tr>
-</tbody>
-</table>
+VerbRule(Bar)  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> 'bar'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+ 'bar'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> :BarAction  <br />
-</td>
-</tr>
-</tbody>
-</table>
+ :BarAction  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 In this case, issuing the command BAR will result in the display:  
@@ -1022,191 +306,33 @@ specialMessage was a routine that may or may not display something,
 e.g:  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>specialBall: SpecialThing 'ball' 'ball'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+specialBall: SpecialThing 'ball' 'ball'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   specialMessage  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   specialMessage  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>    {  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    {  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>      if(fooVal &lt; 2)  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      if(fooVal &lt; 2)  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>        "It's an ordinary ball. ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
+        "It's an ordinary ball. ";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>      else if(fooVal == 2)    <br />
-</td>
-</tr>
-</tbody>
-</table>
+      else if(fooVal == 2)    
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>        "It's a special ball.&lt;.p&gt;";  <br />
-</td>
-</tr>
-</tbody>
-</table>
+        "It's a special ball.&lt;.p&gt;";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>      else if(fooVal &gt; 10)  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      else if(fooVal &gt; 10)  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>        "It's a very special ball. ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
+        "It's a very special ball. ";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>      return 'It\'s a moderately special ball. ';  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      return 'It\'s a moderately special ball. ';  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>    }  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   fooVal = 4  <br />
-</td>
-</tr>
-</tbody>
-</table>
+   fooVal = 4  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+;  
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 In this highly artificial example, specialBall.specialMessage always

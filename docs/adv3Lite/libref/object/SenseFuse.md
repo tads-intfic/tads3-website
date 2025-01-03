@@ -70,13 +70,6 @@ execution.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Event` :  
 [`captureText`](../object/Event.html#captureText) [`eventOrder`](../object/Event.html#eventOrder) [`executed`](../object/Event.html#executed) [`interval_`](../object/Event.html#interval_) [`isPromptDaemon`](../object/Event.html#isPromptDaemon) [`nextRunTime`](../object/Event.html#nextRunTime) [`obj_`](../object/Event.html#obj_) [`prop_`](../object/Event.html#prop_) [`senseObj_`](../object/Event.html#senseObj_) [`senseProp_`](../object/Event.html#senseProp_)
 
@@ -125,11 +118,6 @@ displayed. senseProp is one of &canSee, &canReach, &canHear, &canSmell.
 If these parameters are omitted then the senseObj will be the same as
 the obj whose prop property is executed by the Fuse, and the senseProp
 will be &canSee, probably the most common case.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

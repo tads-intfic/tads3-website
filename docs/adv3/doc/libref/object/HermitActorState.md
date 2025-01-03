@@ -191,11 +191,6 @@ noResponse() { myList.doScript(); }
 myList: ShuffledEventList {  
 \['message1', 'message2', 'message3'\] }  
 ;
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

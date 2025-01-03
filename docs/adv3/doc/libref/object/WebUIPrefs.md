@@ -243,11 +243,6 @@ read settings from a file
 
 
 save the current settings to the user's config file
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

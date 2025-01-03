@@ -45,11 +45,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `CommandRankingByProblem` :  
 [`prop_`](../object/CommandRankingByProblem.html#prop_)
 
@@ -60,11 +55,6 @@ Inherited from `CommandRankingByProblem` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CommandRankingByProblem` :  
 [`comparePass1`](../object/CommandRankingByProblem.html#comparePass1) [`comparePass2`](../object/CommandRankingByProblem.html#comparePass2)
 

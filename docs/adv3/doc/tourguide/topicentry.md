@@ -337,9 +337,7 @@ behaviour.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 This may look a bit daunting, but in practice the use of templates makes

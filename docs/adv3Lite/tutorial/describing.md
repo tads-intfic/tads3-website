@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Describing the game  
 <span class="navnp"><a href="airport.html" class="nav"><em>Prev:</em> Airport</a>
    
 <a href="airmap1.html" class="nav"><em>Next:</em> Starting the Map</a>
     </span>
-
-
-
-
-
 # Describing the game
 
 Over the last four chapters we have developed a pair of very simple

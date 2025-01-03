@@ -48,11 +48,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TheirAdjProd` :  
 [`pronounType`](../object/TheirAdjProd.html#pronounType)
 
@@ -117,11 +112,6 @@ Inherited from `BasicProd` :
 
 
 we only agree with a single noun that has plural usage
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

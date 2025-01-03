@@ -196,11 +196,6 @@ Find all the destinations one step away from cur
 
 
 note which nodes have now been visited
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

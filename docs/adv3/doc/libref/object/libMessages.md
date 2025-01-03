@@ -3241,11 +3241,6 @@ undo command succeeded
 
 
 web UI alert when a new user has joined a multi-user session
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

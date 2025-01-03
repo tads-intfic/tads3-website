@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Where Messages
 Come From  
 <span class="navnp"><a href="depth.html" class="nav"><em>Prev:</em> TADS 3 In Depth</a>
     <a href="t3res.html" class="nav"><em>Next:</em> Action Results</a>
     </span>
-
-
-
-
-
 # Where Messages Come From
 
 ## Anatomy of a Transcript

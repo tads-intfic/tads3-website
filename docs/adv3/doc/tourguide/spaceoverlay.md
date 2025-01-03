@@ -100,9 +100,7 @@ the SpaceOverlay are listed every time it is moved.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Note that a SpaceOverlay will generally be implemented as a Component of

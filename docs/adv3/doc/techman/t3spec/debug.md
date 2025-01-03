@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Debug Records  
@@ -16,11 +11,6 @@ Debug Records
    
 <a href="fnset_t3.html" class="nav"><em>Next:</em> t3vm Function Set</a>
     </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -269,11 +259,6 @@ the equivalent of the following VM instructions can be executed:
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

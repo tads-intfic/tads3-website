@@ -53,13 +53,6 @@ interpretation will definitely stay unambiguous.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -100,11 +93,6 @@ Inherited from `CommandRankingCriterion` :
 Do nothing on the first pass, because we want any first-pass criterion
 to prevail over our weak test. Instead, check for a difference in
 ambiguity only on the second pass.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

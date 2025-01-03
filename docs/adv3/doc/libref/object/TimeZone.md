@@ -150,13 +150,6 @@ Standard Time, and Cuba Summer Time).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -326,11 +319,6 @@ local standard time instead), or 'u' for UTC. Note that the zone has to
 be applied to the full date-and-time value, since an 's' or 'u' could
 conceivably cause the local date and the date in the rule's zone to
 differ by a day at the time of day of the rule.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -24,11 +24,6 @@ layout: docs
 **Templates**  
 [Summary](#_TemplateSummary_)  
 [Details](#_Templates_)
-
-
-
-
-
 <span id="_ClassSummary_"></span>
 
 

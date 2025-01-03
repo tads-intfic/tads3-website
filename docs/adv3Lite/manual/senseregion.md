@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> SenseRegion  
 <span class="navnp"><a href="score.html" class="nav"><em>Prev:</em> Scoring</a>
    
 <a href="topicentry.html" class="nav"><em>Next:</em> Topic Entries</a>
     </span>
-
-
-
-
-
 # SenseRegion
 
 The optional SenseRegion class can be used to define regions with

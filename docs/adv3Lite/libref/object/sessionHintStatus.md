@@ -57,11 +57,6 @@ persistent object, so that it's saved and restored along with the game.
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 *(none)* <span id="_Properties_"></span>
 
 

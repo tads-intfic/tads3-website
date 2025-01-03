@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Final Moves  
 <span class="navnp"><a href="changepc.html" class="nav"><em>Prev:</em> Changing the Player
 Character</a>    
 <a href="output.html" class="nav"><em>Next:</em> Some Output Issues</a>
     </span>
-
-
-
-
-
 # Part VI: Final Moves
 
 This part deals with a few miscellaneous topics and wraps up the manual.
@@ -35,11 +25,6 @@ This part deals with a few miscellaneous topics and wraps up the manual.
 [Conclusion](conclusion.html)  
 [Change Log](changelog.html)  
 [Index](manual_idx.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

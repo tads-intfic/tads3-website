@@ -72,11 +72,6 @@ want the player to be able to refer to them.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Fixture` :  
 [`cannotMoveMsg`](../object/Fixture.html#cannotMoveMsg) [`cannotPutMsg`](../object/Fixture.html#cannotPutMsg) [`cannotTakeMsg`](../object/Fixture.html#cannotTakeMsg)
 
@@ -137,11 +132,6 @@ Inherited from `VocabObject` :
 
 this kind of object is internal to the game's implementation, so we
 don't want it to show up in "all" lists
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

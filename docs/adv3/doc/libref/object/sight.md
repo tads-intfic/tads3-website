@@ -81,11 +81,6 @@ by default.
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Sense` :  
 [`canObjBeSensed`](../object/Sense.html#canObjBeSensed)
 

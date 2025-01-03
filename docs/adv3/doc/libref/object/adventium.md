@@ -58,11 +58,6 @@ type of material is opaque to all senses.
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Material` :  
 [`senseThru`](../object/Material.html#senseThru)
 

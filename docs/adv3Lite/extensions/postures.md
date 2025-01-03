@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Postures  
 <span class="navnp"><a href="objtime.html" class="nav"><em>Prev:</em> Objective Time</a>
     <a href="relations.html" class="nav"><em>Next:</em> Relations</a>    
 </span>
-
-
-
-
-
 # Postures
 
 ## Overview

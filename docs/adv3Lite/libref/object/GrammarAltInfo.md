@@ -162,11 +162,6 @@ we'll be compatible with any future GrammarProd versions that add
 additional arguments - we won't do anything with the extra arguments,
 but we'll harmlessly ignore them, so code compiled with this library
 version will continue to work correctly.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

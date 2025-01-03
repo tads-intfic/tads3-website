@@ -1414,11 +1414,6 @@ possessive adjective followed by our name (e.g. "Bob's wallet").
 The name with a definite article (or just the proper or qualified name)
 followed by the appropriate form of the verb 'to be'. This can be useful
 for producing sentences of which this object is the subject.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

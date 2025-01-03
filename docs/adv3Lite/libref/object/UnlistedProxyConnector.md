@@ -229,11 +229,6 @@ UnlistedProxyConnector is used, but calling code will need to supply it.
 
 
 Carry out travel via this connector.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

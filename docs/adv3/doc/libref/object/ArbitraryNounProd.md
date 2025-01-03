@@ -74,13 +74,6 @@ merely indefinite.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -133,11 +126,6 @@ Inherited from `BasicProd` :
 Select an object from a list of potential matches. Since the choice is
 explicitly arbitrary, we simply choose the first (they're in order from
 most likely to least likely, so this will choose the most likely).
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

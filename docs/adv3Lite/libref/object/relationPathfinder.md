@@ -138,11 +138,6 @@ may be supplied as a relation object, a relation string name or
 reverseName, or a list of any of these, in which case any of the
 relations contained in the list may be used to step from one object to
 the next.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

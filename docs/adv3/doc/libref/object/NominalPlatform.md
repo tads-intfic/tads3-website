@@ -124,31 +124,16 @@ Inherited from `VocabObject` :
 
 Inherited from `BasicPlatform` :  
 [`allowedPostures`](../object/BasicPlatform.html#allowedPostures) [`defaultPosture`](../object/BasicPlatform.html#defaultPosture) [`down`](../object/BasicPlatform.html#down) [`mustMoveIntoProp`](../object/BasicPlatform.html#mustMoveIntoProp) [`obviousPostures`](../object/BasicPlatform.html#obviousPostures)
-
-
-
-
-
 Inherited from `NestedRoom` :  
 [`bulkCapacity`](../object/NestedRoom.html#bulkCapacity) [`exitDestination`](../object/NestedRoom.html#exitDestination) [`out`](../object/NestedRoom.html#out) [`stagingLocations`](../object/NestedRoom.html#stagingLocations)
 
 Inherited from `BasicLocation` :  
 [`cannotGoThatWayMsg`](../object/BasicLocation.html#cannotGoThatWayMsg) [`listWithActorInTable`](../object/BasicLocation.html#listWithActorInTable) [`mustDefaultPostureProp`](../object/BasicLocation.html#mustDefaultPostureProp) [`roomNotifyList`](../object/BasicLocation.html#roomNotifyList) [`roomTravelPreCond`](../object/BasicLocation.html#roomTravelPreCond)
-
-
-
-
-
 Inherited from `Surface` :  
 [`alreadyPutInMsg`](../object/Surface.html#alreadyPutInMsg) [`cannotPutInSelfMsg`](../object/Surface.html#cannotPutInSelfMsg) [`lookInDesc`](../object/Surface.html#lookInDesc) [`putDestMessage`](../object/Surface.html#putDestMessage) [`tooFullMsg`](../object/Surface.html#tooFullMsg)
 
 Inherited from `BulkLimiter` :  
 [`becomingTooFullMsg`](../object/BulkLimiter.html#becomingTooFullMsg) [`becomingTooLargeMsg`](../object/BulkLimiter.html#becomingTooLargeMsg) [`maxSingleBulk`](../object/BulkLimiter.html#maxSingleBulk) [`revealHiddenItems`](../object/BulkLimiter.html#revealHiddenItems)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -186,20 +171,8 @@ Inherited from `NestedRoom` :
 
 Inherited from `BasicLocation` :  
 [`actorInGroupPrefix`](../object/BasicLocation.html#actorInGroupPrefix) [`actorInGroupSuffix`](../object/BasicLocation.html#actorInGroupSuffix) [`actorIsFamiliar`](../object/BasicLocation.html#actorIsFamiliar) [`actorKnowsDestination`](../object/BasicLocation.html#actorKnowsDestination) [`actorTravelingWithin`](../object/BasicLocation.html#actorTravelingWithin) [`addRoomNotifyItem`](../object/BasicLocation.html#addRoomNotifyItem) [`cannotGoThatWay`](../object/BasicLocation.html#cannotGoThatWay) [`cannotGoThatWayInDark`](../object/BasicLocation.html#cannotGoThatWayInDark) [`cannotTravel`](../object/BasicLocation.html#cannotTravel) [`dispatchRoomDaemon`](../object/BasicLocation.html#dispatchRoomDaemon) [`enteringRoom`](../object/BasicLocation.html#enteringRoom) [`getNominalActorContainer`](../object/BasicLocation.html#getNominalActorContainer) [`leavingRoom`](../object/BasicLocation.html#leavingRoom) [`listWithActorIn`](../object/BasicLocation.html#listWithActorIn) [`removeRoomNotifyItem`](../object/BasicLocation.html#removeRoomNotifyItem) [`roomActorHereDesc`](../object/BasicLocation.html#roomActorHereDesc) [`roomActorPostureDesc`](../object/BasicLocation.html#roomActorPostureDesc) [`roomActorStatus`](../object/BasicLocation.html#roomActorStatus) [`roomAfterAction`](../object/BasicLocation.html#roomAfterAction) [`roomBeforeAction`](../object/BasicLocation.html#roomBeforeAction) [`roomDarkTravel`](../object/BasicLocation.html#roomDarkTravel) [`roomListActorPosture`](../object/BasicLocation.html#roomListActorPosture) [`roomOkayPostureChange`](../object/BasicLocation.html#roomOkayPostureChange) [`travelerArriving`](../object/BasicLocation.html#travelerArriving) [`travelerLeaving`](../object/BasicLocation.html#travelerLeaving) [`tryMakingDefaultPosture`](../object/BasicLocation.html#tryMakingDefaultPosture) [`tryMakingTravelReady`](../object/BasicLocation.html#tryMakingTravelReady) [`wouldBeLitFor`](../object/BasicLocation.html#wouldBeLitFor)
-
-
-
-
-
-
-
 Inherited from `BulkLimiter` :  
 [`checkBulkInserted`](../object/BulkLimiter.html#checkBulkInserted) [`examineInterior`](../object/BulkLimiter.html#examineInterior) [`examineInteriorWithLister`](../object/BulkLimiter.html#examineInteriorWithLister) [`verifyPutInInterior`](../object/BulkLimiter.html#verifyPutInInterior)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -287,11 +260,6 @@ ignore me for 'all' and object defaulting
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

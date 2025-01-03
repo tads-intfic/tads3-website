@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Fundamentals  
 <span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em> Introduction</a>
     <a href="t3start.html" class="nav"><em>Next:</em> Creating Your First
 Project</a>     </span>
-
-
-
-
-
 # Part I: Fundamentals
 
 The articles in this section will be of interest to most TADS 3
@@ -34,11 +24,6 @@ in everyday use of the system.
 [Understanding Separate Compilation](t3inc.html)  
 [Using AutoHotKey with the Workbench Editor (Windows)](t3iautohot.html)  
 [Bibliographic Metadata - the GameInfo Format](gameinfo.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

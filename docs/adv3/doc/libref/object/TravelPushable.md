@@ -271,11 +271,6 @@ location will indicate the destination of the travel. Note that this
 routine is never called if the traveler ends up in its original location
 after the travel, so this routine isn't called when travel isn't allowed
 for the underlying traveler.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

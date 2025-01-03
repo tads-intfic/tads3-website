@@ -289,11 +289,6 @@ Remove this MultiLoc from loc.
 
 If we're a MultiLoc we don't want to carry out any of the normal
 preinitialization related to our location.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

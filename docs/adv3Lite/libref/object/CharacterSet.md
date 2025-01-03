@@ -68,13 +68,6 @@ character set or sets used for display, keyboard input, and file I/O.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -171,11 +164,6 @@ If a character has a round-trip mapping, then in general the character
 has an exact representation in the local character set (as opposed to an
 approximation: if 'a-umlaut' maps to a simple unaccented 'a', or to
 'ae', then it has only an approximated representation).
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

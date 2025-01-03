@@ -138,11 +138,6 @@ half of the text-mode status line.
 
 Write from the stream. We simply buffer up text until we're asked to
 display the final data.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \>
 <a href="t3actor.html" class="nav">Creating Dynamic Characters</a> \>
@@ -17,11 +12,6 @@ Programming Conversations with NPCs
 System</a>    
 <a href="t3npcTravel.html" class="nav"><em>Next:</em> NPC Travel</a>    
 </span>
-
-
-
-
-
 # Programming Conversations with NPCs
 
 In the [previous part of this article](convbkg.html), I offered my

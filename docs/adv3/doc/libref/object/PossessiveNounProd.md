@@ -79,11 +79,6 @@ being qualified.
 
 
 [`npKeeper`](#npKeeper)
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -155,11 +150,6 @@ our AmbigResponseKeeper for the qualified noun phrase
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

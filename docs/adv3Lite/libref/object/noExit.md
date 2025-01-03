@@ -128,11 +128,6 @@ We're not a real exit, so no actor can pass through us.
 In order to behave just as a nil exit would, we call the actor's
 location's cannotGoThatWay() method to explain why travel isn't
 possible.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

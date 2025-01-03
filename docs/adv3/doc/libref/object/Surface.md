@@ -337,11 +337,6 @@ Put On processing
 
 Try moving an object into this container. For a surface, this performs a
 PUT ON command to move the object onto self.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

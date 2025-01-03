@@ -214,11 +214,6 @@ proceeding.
 Return the index within our eventList of any as yet unused EventListItem
 that's ready to fire. This is principally for the use of our
 RandomEventList and ShuffledEventList subclasses.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

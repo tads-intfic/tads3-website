@@ -81,11 +81,6 @@ Returns a set of MatchXxx flags for a match, or 0 if there's no match.
 'tok' is the token string to match. 'words' is the list of words to
 match, as VocabWords objects. 'cmp' is the StringComparator object that
 we use to compare the strings.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Subtime  
 <span class="navnp"><a href="signals.html" class="nav"><em>Prev:</em> Signals</a>
     <a href="symconn.html" class="nav"><em>Next:</em> Symconn</a>    
 </span>
-
-
-
-
-
 # Subtime
 
 ## Overview

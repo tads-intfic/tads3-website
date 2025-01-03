@@ -81,11 +81,6 @@ Format a number as a binary string.
 Convert an integer number to Roman numerals. Returns a string with the
 Roman numeral format. This can only accept numbers in the range 1 to
 4999; returns nil for anything outside of this range.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

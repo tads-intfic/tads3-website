@@ -181,11 +181,6 @@ the Lister we use to show the items
 
 
 execute the action
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

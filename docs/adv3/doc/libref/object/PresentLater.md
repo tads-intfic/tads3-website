@@ -224,11 +224,6 @@ Note that this is a "class" method that you call on PresentLater itself.
 
 make myself present if the given condition is true; otherwise, remove me
 from the game world (i.e. move me into nil)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

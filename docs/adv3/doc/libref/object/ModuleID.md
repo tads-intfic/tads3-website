@@ -284,11 +284,6 @@ number, then start a new line. The main game's module ID should
 generally override this to show an appropriate version message for the
 game, and any library add-ins that want to display their version
 information can override this to do so.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

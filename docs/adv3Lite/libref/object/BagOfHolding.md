@@ -69,11 +69,6 @@ his/her hands become too full to pick up another object.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -155,11 +150,6 @@ Class method to determine whether the actor is carrying a suitable
 BagOfHolding that could be used to move something from his inventory
 into, and then to move items from the actor's inventory into an
 appropriate bag of holding.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

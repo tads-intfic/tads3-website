@@ -56,11 +56,6 @@ The sitting posture \[POSTURES EXTENSION\]
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Posture` :  
 [`canAdoptIn`](../object/Posture.html#canAdoptIn)
 

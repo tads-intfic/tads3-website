@@ -608,11 +608,6 @@ result of tryImplicitAction().
 This is essentially the reverse of tryMovingIntoNested(), and should in
 most cases be implemented by calling tryImplicitAction() with the
 appropriate command to get out of the room, and returning the result.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

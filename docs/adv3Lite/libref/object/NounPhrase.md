@@ -788,11 +788,6 @@ arbitrarily choosing from the available objects.
 
 3\. Plural mode: TAKE BOOKS, TAKE THE BOOKS, TAKE ALL BOOKS. The goal
 here is to choose all of the matching objects.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

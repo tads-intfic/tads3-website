@@ -74,11 +74,6 @@ otherwise overridden back to an underlying resolver
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -138,11 +133,6 @@ base our possessive resolver on the proxy
 
 
 delegate methods we don't override to the underlying resolver
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

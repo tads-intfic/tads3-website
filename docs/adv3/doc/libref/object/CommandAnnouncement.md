@@ -171,11 +171,6 @@ given by the property.
 Show our message. Our default implementation shows the library message
 given by our messageProp\_ property, using the parameters we stored in
 our constructor.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

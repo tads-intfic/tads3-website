@@ -315,11 +315,6 @@ are components or similar.
 
 We're not being held, but if our location is an actor, then we're as
 good as held because we're effectively part of the actor.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

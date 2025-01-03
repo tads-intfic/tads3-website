@@ -132,11 +132,6 @@ the full reach-and-touch path from the source to the target
 
 
 construct, given the touch path
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

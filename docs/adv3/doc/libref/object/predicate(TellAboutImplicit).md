@@ -58,11 +58,6 @@ Details](#_Methods_)
 
 
 [`omitIobjInDobjQuery`](#omitIobjInDobjQuery) [`verbPhrase`](#verbPhrase)
-
-
-
-
-
 Inherited from `TopicTAction` :  
 [`needAnaphoricBinding_`](../object/TopicTAction.html#needAnaphoricBinding_) [`predicateNounPhrases`](../object/TopicTAction.html#predicateNounPhrases) [`topicList_`](../object/TopicTAction.html#topicList_) [`topicResolver_`](../object/TopicTAction.html#topicResolver_) [`whichMessageObject`](../object/TopicTAction.html#whichMessageObject) [`whichMessageTopic`](../object/TopicTAction.html#whichMessageTopic) [`whichObject`](../object/TopicTAction.html#whichObject)
 
@@ -164,11 +159,6 @@ Inherited from `Resolver` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

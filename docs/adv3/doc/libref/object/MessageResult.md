@@ -193,11 +193,6 @@ construct the object
 
 
 Display a message describing why the command isn't allowed.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

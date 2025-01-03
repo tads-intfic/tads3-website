@@ -46,13 +46,6 @@ component of -- its container.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `LocType` :  
 [`intoPrep`](../object/LocType.html#intoPrep) [`listOrder`](../object/LocType.html#listOrder) [`prep`](../object/LocType.html#prep)
 
@@ -61,13 +54,6 @@ Inherited from `LocType` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 
 
 *(none)* <span id="_Properties_"></span>

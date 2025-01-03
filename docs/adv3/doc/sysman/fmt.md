@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="ui.html" class="nav">The User Interface</a> \> The Output
 Formatter  
 <span class="navnp"><a href="ui.html" class="nav"><em>Prev:</em> The User Interface</a>
     <a href="dispfn.html" class="nav"><em>Next:</em> The Default Display
 Function</a>     </span>
-
-
-
-
-
 # The Output Formatter
 
 TADS 3 is in many ways a general-purpose programming system, but it is

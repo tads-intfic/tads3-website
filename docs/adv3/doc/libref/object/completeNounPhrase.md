@@ -24,11 +24,6 @@ completeNounPhraseWithoutAll-\>np\_
 ('with' \| 'into' \| 'in' 'to' \| 'through' \| 'thru' \| 'for' \| 'to'  
 \| 'onto' \| 'on' 'to' \| 'at' \| 'under' \| 'behind')  
 completeNounPhrase-\>np2\_  
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

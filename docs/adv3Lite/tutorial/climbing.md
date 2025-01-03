@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Climbing the
 tree  
@@ -16,11 +11,6 @@ tree
 Cottage</a>    
 <a href="dropping.html" class="nav"><em>Next:</em> Dropping objects from
 the tree</a>     </span>
-
-
-
-
-
 # Climbing the tree
 
 Here's the next problem the player may encounter:

@@ -174,11 +174,6 @@ if we can't get out, report that it's because we're too high up
 
 
 report that we're unable to move to a staging location
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

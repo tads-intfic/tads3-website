@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> The Web UI  
 <span class="navnp"><a href="lister.html" class="nav"><em>Prev:</em> Lists and Listers</a>
     <a href="extensions.html" class="nav"><em>Next:</em> Extensions</a>
     </span>
-
-
-
-
-
 # The Web UI
 
 As in adv3, so in adv3Lite, you can choose between the traditional TADS

@@ -312,11 +312,6 @@ A wearable is not considered held by an actor when it is being worn, so
 we must do a what-if test for removing the item if the actor is
 currently wearing the item. If the actor isn't wearing the item, we can
 use the default test of moving the item into the actor's inventory.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

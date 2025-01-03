@@ -73,13 +73,6 @@ collection's createIterator() method.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -175,11 +168,6 @@ will return a valid item, nil if no more items are available.
 
 Reset to the first item. After calling this routine, the next call to
 getNext() will return the first item in the collection.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

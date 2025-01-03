@@ -156,11 +156,6 @@ input line.
 
 Reset the state. This should be used when the output stream context is
 reset, such as when clearing the window.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

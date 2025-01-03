@@ -82,13 +82,6 @@ find exactly five books matching the phrase - no fewer, and no more).
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -161,11 +154,6 @@ get the keepers in the verify stage
 
 Select the desired number of matches. Since we want an exact set of
 matches, we'll run disambiguation on the set.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -120,13 +120,6 @@ links on Unix or apply working directories to local paths.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -465,11 +458,6 @@ original file and the new file. The new file must not already exist.
 Get the universal URL-style notation for this file name. Returns a
 string giving the universal notation for the file name (including any
 path portion).
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

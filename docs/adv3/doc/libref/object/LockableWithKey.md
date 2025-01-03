@@ -357,11 +357,6 @@ override this to discriminate among the game-specific key classes.
 perform the action processing for LockWith or UnlockWith - these are
 highly symmetrical, in that the only thing that varies is the new lock
 state we establish
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

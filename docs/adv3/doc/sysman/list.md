@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> List  
 <span class="navnp"><a href="iter.html" class="nav"><em>Prev:</em> Iterator</a>
     <a href="lookup.html" class="nav"><em>Next:</em> LookupTable</a>    
 </span>
-
-
-
-
-
 # List
 
 "List" is a native TADS 3 datatype. Lists are actually instances of the
@@ -478,9 +468,6 @@ original list must consist entirely of integer values):
     x = [1, 2, 3, 4];
     y = x.applyAll({x: x*2});
 ```
-
-
-
 `maxVal(*func*?)`
 
 
@@ -605,9 +592,6 @@ where the "priority" property has an integer value, you could do this:
     lst = [obj1, obj2, obj3];
     sortedLst = lst.sort(true, { a, b: a.priority - b.priority });
 ```
-
-
-
 <span id="splice"></span>
 
 `splice(*startIndex*, *deleteCount*, ...)`
@@ -658,9 +642,6 @@ Examples:
     [1, 2, 3, 4, 5].sublist(1, -2) yields [1, 2, 3]
     [1, 2, 3, 4, 5].sublist(2, -2) yields [2, 3]
 ```
-
-
-
 `subset(*func*)`
 
 
@@ -685,9 +666,6 @@ greater than 10.
     x = [5, 10, 15, 20];
     y = x.subset({x: x > 10});
 ```
-
-
-
 `valWhich(*cond*)`
 
 
@@ -699,11 +677,6 @@ Returns the value of the first element for which the callback function
 the first matching element rather than its index. If *cond* returns
 `nil` or 0 for every element of the list, this
 method returns `nil`.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

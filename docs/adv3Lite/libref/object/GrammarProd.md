@@ -88,13 +88,6 @@ Use addAlt() to populate a new production with token matching rules.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -232,11 +225,6 @@ up this production.
 Parse the token list, starting at this production, using the given
 dictionary to look up tokens. Returns a list of match objects. If there
 are no matches to the grammar, simply returns an empty list.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

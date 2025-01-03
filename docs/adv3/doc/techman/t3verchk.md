@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Verify, Check,
 and When to Use Which  
@@ -16,11 +11,6 @@ and When to Use Which
    
 <a href="t3verb.html" class="nav"><em>Next:</em> How to Create Verbs</a>
     </span>
-
-
-
-
-
 # Verify, Check, and When to Use Which
 
 *by Steve Breslin  

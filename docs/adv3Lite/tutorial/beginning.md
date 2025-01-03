@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Beginnings  
 <span class="navnp"><a href="topic.html" class="nav"><em>Prev:</em>Topics</a>
     <a href="ending.html" class="nav"><em>Next:</em> Endings</a>    
 </span>
-
-
-
-
-
 # Beginnings
 
 A work of Interactive Fiction has to start somewhere, and preferably

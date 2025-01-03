@@ -26,17 +26,7 @@ has run into the same problem, or you can go to
 [tads.org](http://www.tads.org) for information on how to contact us.  
   
   
-
-
-
-
-
 Workbench on Windows 95/98: "SHELL32.DLL:SHGetFolderPathA" Error
-
-
-
-
-
 If you're running TADS Workbench on Windows 95 or 98, launching
 Workbench might show the following error messages:
 
@@ -55,19 +45,7 @@ upgrade this DLL as part of their installation process, so updating the
 DLL is simply a matter of updating IE.
 
 
-
-
-
-
-
-
-
 Crash running HTML TADS
-
-
-
-
-
 If HTML TADS crashes, particularly when you select the "Options" item of
 the "Edit" menu or "Customize" on the "Themes" menu, you probably have
 an out-of-date version of a Windows system file called COMCTL32.DLL. If
@@ -88,19 +66,7 @@ to continue running if TADS displays this warning, we strongly encourage
 you to upgrade your COMCTL32.DLL before running HTML TADS.
 
 
-
-
-
-
-
-
-
 Crash using Wine (Windows emulator for Linux)
-
-
-
-
-
 If you're running HTML TADS in the Wine environment (a Windows emulation
 environment for Linux/Unix systems), you might need to use the
 "-noalphablend" command-line option when running htmltads.exe. Some
@@ -117,19 +83,7 @@ this:
 
 
 
-
-
-
-
-
-
-
 Western European characters on localized (Non-English) Windows systems
-
-
-
-
-
 If you're running a Windows system that uses a character set other than
 US/Western Europe (such as Windows Eastern European or Cyrillic), please
 read this note.
@@ -166,9 +120,3 @@ with this path:
 
 
     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
-
-
-
-
-
-

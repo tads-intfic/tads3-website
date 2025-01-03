@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> What is adv3Lite?  
 <span class="navnp"><a href="intro.html" class="nav"><em>Prev:</em>Introduction</a>
    
 <a href="whoshouldread.html" class="nav"><em>Next:</em> Who Should Read
 This Book</a>     </span>
-
-
-
-
-
 # What is adv3Lite?
 
 TADS 3 is a system for writing Interactive Fiction (also known as Text

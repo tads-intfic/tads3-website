@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="lib.html" class="nav">The System Library</a> \> Replacing the
 System Library  
@@ -16,11 +11,6 @@ System Library
 Definitions</a>    
 <a href="ui.html" class="nav"><em>Next:</em> The User Interface</a>    
 </span>
-
-
-
-
-
 # Replacing the Standard Library
 
 The standard startup module that defines \_main(), PreinitObject, and so

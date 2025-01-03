@@ -53,13 +53,6 @@ as long as it's not Bob's we're looking for.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -111,11 +104,6 @@ criterion into account
 
 
 pass 2 - more possessives are better
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -45,11 +45,6 @@ inventoryLister displays an inventory listing in WIDE format.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ItemLister` :  
 [`contentsListedProp`](../object/ItemLister.html#contentsListedProp) [`listRecursively`](../object/ItemLister.html#listRecursively) [`showAdditionalInfo`](../object/ItemLister.html#showAdditionalInfo) [`showSubListing`](../object/ItemLister.html#showSubListing) [`showWornInfo`](../object/ItemLister.html#showWornInfo)
 
@@ -132,11 +127,6 @@ is the object listed in an inventory list?
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

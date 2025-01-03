@@ -77,11 +77,6 @@ Custom disambiguation resolver.
 
 
 [`allowAll`](#allowAll) [`distinguisher`](#distinguisher) [`fullMatchList`](#fullMatchList) [`matchList`](#matchList) [`matchText`](#matchText) [`ordinalMatchList`](#ordinalMatchList)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -315,11 +310,6 @@ previously set.
 Select the match for an indefinite noun phrase. In interactive
 disambiguation, an indefinite noun phrase simply narrows the list,
 rather than selecting any match, so treat this as still ambiguous.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

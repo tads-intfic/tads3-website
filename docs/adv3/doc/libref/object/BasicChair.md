@@ -407,11 +407,6 @@ Verify that we can enter the chair in the given posture. This performs
 verification work common to SIT ON, LIE ON, and STAND ON. If this
 returns true, the caller should inherit the base class default handling,
 otherwise it shouldn't.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

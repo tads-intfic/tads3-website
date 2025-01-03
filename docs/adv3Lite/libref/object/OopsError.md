@@ -69,11 +69,6 @@ OopsError is the base class for errors in an OOPS command.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ParseError` :  
 [`allowOnRespell`](../object/ParseError.html#allowOnRespell) [`curable`](../object/ParseError.html#curable) [`errStage`](../object/ParseError.html#errStage)
 
@@ -85,11 +80,6 @@ Inherited from `Exception` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ParseError` :  
 [`display`](../object/ParseError.html#display) [`rankCorrection`](../object/ParseError.html#rankCorrection) [`tryCuring`](../object/ParseError.html#tryCuring)
 

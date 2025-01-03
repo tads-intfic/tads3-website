@@ -1294,11 +1294,6 @@ Verify the action.
 
 
 get the interrogative for one of our objects
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

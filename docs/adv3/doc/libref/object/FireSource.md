@@ -68,11 +68,6 @@ mix-in class that can be used with other classes.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -110,11 +105,6 @@ mix-in class that can be used with other classes.
 We can use a fire source to light another object, provided the fire
 source is itself burning. We don't provide any action handling - we
 leave that to the direct object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

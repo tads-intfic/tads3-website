@@ -234,11 +234,6 @@ of opening or closing the object.
 
 If we're obstructing a sense path, it must be because we're closed. Try
 implicitly opening.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

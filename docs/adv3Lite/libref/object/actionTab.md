@@ -123,11 +123,6 @@ A LookupTable of Actions and their corresponding string names
 
 To return the string val corresponding to the Action val, simply look it
 up in out ctab table
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

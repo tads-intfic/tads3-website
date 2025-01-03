@@ -85,11 +85,6 @@ Inherited from `Exception` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `LibraryError` :  
 [`construct`](../object/LibraryError.html#construct)
 

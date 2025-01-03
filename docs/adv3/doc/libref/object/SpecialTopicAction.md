@@ -84,11 +84,6 @@ intentionally use some near-English gibberish.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `LiteralAction` :  
 [`predicateNounPhrases`](../object/LiteralAction.html#predicateNounPhrases) [`verbPhrase`](../object/LiteralAction.html#verbPhrase)
 
@@ -205,11 +200,6 @@ the embedded-quote encoding decoded.
 Repeat the action, for an AGAIN command. We need to make sure the
 special text interpretation we gave to the command still holds; if not,
 reparse the original text and try that.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Queries and Suggestions  
@@ -16,11 +11,6 @@ Queries and Suggestions
 Show</a>    
 <a href="hello.html" class="nav"><em>Next:</em> Hello and Goodbye</a>    
 </span>
-
-
-
-
-
 # Queries and Suggestions
 
 We've set things up so that at some point in the game the player

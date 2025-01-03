@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="cockpit.html" class="nav">Cockpit Controls</a> \> Responding to
 Actions  
 <span class="navnp"><a href="actions.html" class="nav"><em>Prev:</em> Defining Actions</a>
     <a href="takeoff.html" class="nav"><em>Next:</em> Taking Off</a>    
 </span>
-
-
-
-
-
 # Responding to Actions
 
 In the previous section we taught the game how to respond in general to

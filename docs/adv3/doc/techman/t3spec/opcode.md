@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 Byte-Code Instruction Set  
@@ -16,11 +11,6 @@ Byte-Code Instruction Set
    
 <a href="format.html" class="nav"><em>Next:</em> Image File Format</a>
     </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -4079,11 +4069,6 @@ meaning of a byte code sequence.
 
 Copyright © 2001, 2009 by Michael J. Roberts.  
 Revision: December, 2009
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

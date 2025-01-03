@@ -127,11 +127,6 @@ Inherited from `Sense` :
 Override canObjBeSensed for touch. Unlike other senses, touch requires
 physical contact with an object, so it cannot operate at a distance,
 regardless of the size of an object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

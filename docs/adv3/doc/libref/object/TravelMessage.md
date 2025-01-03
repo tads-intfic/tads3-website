@@ -163,11 +163,6 @@ our source is the same as our destination
 
 
 get my destination
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

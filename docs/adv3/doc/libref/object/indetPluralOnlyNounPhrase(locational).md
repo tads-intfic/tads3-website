@@ -51,13 +51,6 @@ Details](#_Methods_)
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -72,11 +65,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ContainerNounPhraseProd` :  
 [`resolveNouns`](../object/ContainerNounPhraseProd.html#resolveNouns)
 

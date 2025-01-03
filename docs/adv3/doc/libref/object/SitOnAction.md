@@ -74,11 +74,6 @@ want to sit on
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TAction` :  
 [`actionAllowsAll`](../object/TAction.html#actionAllowsAll) [`actionDobjProp`](../object/TAction.html#actionDobjProp) [`actor_`](../object/TAction.html#actor_) [`askDobjResponseProd`](../object/TAction.html#askDobjResponseProd) [`checkDobjProp`](../object/TAction.html#checkDobjProp) [`dobjCur_`](../object/TAction.html#dobjCur_) [`dobjInfoCur_`](../object/TAction.html#dobjInfoCur_) [`dobjList_`](../object/TAction.html#dobjList_) [`dobjMatch`](../object/TAction.html#dobjMatch) [`dobjResolver_`](../object/TAction.html#dobjResolver_) [`issuer_`](../object/TAction.html#issuer_) [`preCondDobjProp`](../object/TAction.html#preCondDobjProp) [`predicateNounPhrases`](../object/TAction.html#predicateNounPhrases) [`remapDobjProp`](../object/TAction.html#remapDobjProp) [`verDobjProp`](../object/TAction.html#verDobjProp) [`whichMessageObject`](../object/TAction.html#whichMessageObject)
 
@@ -96,11 +91,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `TAction` :  
 [`adjustDefaultObjectPrep`](../object/TAction.html#adjustDefaultObjectPrep) [`announceAllDefaultObjects`](../object/TAction.html#announceAllDefaultObjects) [`announceDefaultObject`](../object/TAction.html#announceDefaultObject) [`canDobjResolveTo`](../object/TAction.html#canDobjResolveTo) [`checkAction`](../object/TAction.html#checkAction) [`checkRemapping`](../object/TAction.html#checkRemapping) [`construct`](../object/TAction.html#construct) [`createDobjResolver`](../object/TAction.html#createDobjResolver) [`createForMissingDobj`](../object/TAction.html#createForMissingDobj) [`createForRetry`](../object/TAction.html#createForRetry) [`doActionMain`](../object/TAction.html#doActionMain) [`execAction`](../object/TAction.html#execAction) [`filterAmbiguousDobj`](../object/TAction.html#filterAmbiguousDobj) [`filterPluralDobj`](../object/TAction.html#filterPluralDobj) [`getAllDobj`](../object/TAction.html#getAllDobj) [`getCurrentObjects`](../object/TAction.html#getCurrentObjects) [`getDefaultDobj`](../object/TAction.html#getDefaultDobj) [`getDobj`](../object/TAction.html#getDobj) [`getDobjCount`](../object/TAction.html#getDobjCount) [`getDobjFlags`](../object/TAction.html#getDobjFlags) [`getDobjInfo`](../object/TAction.html#getDobjInfo) [`getDobjResolver`](../object/TAction.html#getDobjResolver) [`getDobjTokens`](../object/TAction.html#getDobjTokens) [`getDobjWords`](../object/TAction.html#getDobjWords) [`getMatchForRole`](../object/TAction.html#getMatchForRole) [`getMessageParam`](../object/TAction.html#getMessageParam) [`getObjectForRole`](../object/TAction.html#getObjectForRole) [`getObjResponseProd`](../object/TAction.html#getObjResponseProd) [`getPreCondDescList`](../object/TAction.html#getPreCondDescList) [`getPreCondPropForRole`](../object/TAction.html#getPreCondPropForRole) [`getQuestionInf`](../object/TAction.html#getQuestionInf) [`getRemapPropForRole`](../object/TAction.html#getRemapPropForRole) [`getResolvedDobjList`](../object/TAction.html#getResolvedDobjList) [`getResolvedObjList`](../object/TAction.html#getResolvedObjList) [`getResolveInfo`](../object/TAction.html#getResolveInfo) [`getRoleFromIndex`](../object/TAction.html#getRoleFromIndex) [`getVerbPhrase`](../object/TAction.html#getVerbPhrase) [`getVerbPhrase1`](../object/TAction.html#getVerbPhrase1) [`getVerifyPropForRole`](../object/TAction.html#getVerifyPropForRole) [`initForMissingDobj`](../object/TAction.html#initForMissingDobj) [`initResolver`](../object/TAction.html#initResolver) [`initTentative`](../object/TAction.html#initTentative) [`resetAction`](../object/TAction.html#resetAction) [`resolvedObjectsInScope`](../object/TAction.html#resolvedObjectsInScope) [`resolveNouns`](../object/TAction.html#resolveNouns) [`retryWithAmbiguousDobj`](../object/TAction.html#retryWithAmbiguousDobj) [`retryWithMissingDobj`](../object/TAction.html#retryWithMissingDobj) [`setCurrentObjects`](../object/TAction.html#setCurrentObjects) [`setObjectMatches`](../object/TAction.html#setObjectMatches) [`setResolvedDobj`](../object/TAction.html#setResolvedDobj) [`setResolvedObjects`](../object/TAction.html#setResolvedObjects) [`testRetryDefaultDobj`](../object/TAction.html#testRetryDefaultDobj) [`verifyAction`](../object/TAction.html#verifyAction) [`whatObj`](../object/TAction.html#whatObj)
 

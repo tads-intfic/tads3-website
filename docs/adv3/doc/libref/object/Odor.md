@@ -199,11 +199,6 @@ handle "smell" using our "examine" handler
 
 
 mention the odor as part of a room description
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

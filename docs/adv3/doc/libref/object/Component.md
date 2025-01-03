@@ -77,11 +77,6 @@ objects rather than fixed features of rooms.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Fixture` :  
 [`cannotMoveMsg`](../object/Fixture.html#cannotMoveMsg) [`cannotPutMsg`](../object/Fixture.html#cannotPutMsg) [`cannotTakeMsg`](../object/Fixture.html#cannotTakeMsg)
 
@@ -255,11 +250,6 @@ the actor.
 
 
 a component cannot be removed from its container by an actor action
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

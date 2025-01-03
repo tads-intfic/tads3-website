@@ -71,11 +71,6 @@ breaks, with a paragraph break before the first item.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -129,11 +124,6 @@ start the list with a paragraph break
 
 
 we show no list separators
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

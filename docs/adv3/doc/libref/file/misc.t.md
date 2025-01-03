@@ -294,11 +294,6 @@ global variable gPlayerChar to the player character actor.
 true, we'll show a full description of the player character's initial
 location, as though the player were to type "look around" as the first
 command.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

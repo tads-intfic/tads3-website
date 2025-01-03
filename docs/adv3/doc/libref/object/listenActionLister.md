@@ -51,13 +51,6 @@ Lister for explicit "listen" action
 
 
 
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -120,11 +113,6 @@ list everything in response to an explicit general LISTEN command
 
 
 show an empty list
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

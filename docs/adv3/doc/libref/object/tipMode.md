@@ -64,11 +64,6 @@ Inherited from `SettingsItem` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `BinarySettingsItem` :  
 [`settingFromText`](../object/BinarySettingsItem.html#settingFromText) [`settingToText`](../object/BinarySettingsItem.html#settingToText)
 

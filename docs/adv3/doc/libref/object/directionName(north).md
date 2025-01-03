@@ -47,11 +47,6 @@ direction, we add a 'directionName' grammar rule.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `DirectionProd` :  
 [`dir`](../object/DirectionProd.html#dir)
 
@@ -63,13 +58,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `BasicProd` :  
 [`canResolveTo`](../object/BasicProd.html#canResolveTo) [`getOrigText`](../object/BasicProd.html#getOrigText) [`getOrigTokenList`](../object/BasicProd.html#getOrigTokenList) [`setOrigTokenList`](../object/BasicProd.html#setOrigTokenList)
 

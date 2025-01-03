@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Understanding the Source File  
@@ -16,11 +11,6 @@ Understanding the Source File
 Source File</a>    
 <a href="locations.html" class="nav"><em>Next:</em> Defining the Game's
 Locations</a>     </span>
-
-
-
-
-
 # Understanding the Source File
 
 ## Directives

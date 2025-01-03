@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](rowmyboat.html)
   [\[Next\]](handlingcashtransactions.html)*
@@ -25,23 +20,6 @@ service.
   
 Here's our version  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 + Enterable -\> insideShop 'small shop/store' 'shop'  
   "The small, timber-clad shop has an open door, above which is a sign   
@@ -97,23 +75,6 @@ backRoom: Room 
   north = insideShop  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Only a few things need any explanation here. The definition of backRoom
 is minimal because the Player Character will never visit it - the
@@ -136,23 +97,6 @@ Since **ring** is not a verb defined in the library, we need to define
 it, which we can do by copying the definition of Row and making the few
 necessary changes:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 DefineTAction(Ring);  
   
@@ -170,23 +114,6 @@ modify Thing
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 If we were designing this game for real, we'd probably want to populate
 the shop with a few more decoration objects, e.g. for the shelves, the
@@ -212,23 +139,6 @@ This probably sounds rather complicated, if not downright
 incomprehensible, so let's take it one step at a time. First, we need to
 define the SoundEvent:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 bellRing : SoundEvent  
   triggerEvent(source)  
@@ -238,23 +148,6 @@ bellRing : SoundEvent
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We have made the SoundEvent responsible for producing the "TING!" so
 we've had to override its triggerEvent(source) method, otherwise the
@@ -265,98 +158,21 @@ class) that does all the work of notifying interested parties that the
 sound event has just happened. The source parameter is the object from
 which the sound is supposed to emanate. This is the bell, whose
 dobjFor(Ring) now needs to its action method redefined thus:  
+ 
+action()       {      bellRing.triggerEvent(self);     } 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>action()       {      bellRing.triggerEvent(self);     } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Where self, of course, refers to the bell object. The next task is to
 make sure that the bell ring can be heard in the back room as well as
 the shop. To do that we need to define a SenseConnector between the
 two:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 SenseConnector, Intangible 'wall' 'wall'  
   connectorMaterial = paper  
   locationList = \[backRoom, insideShop\]  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 If everything works as it should, giving the SenseConnector the name
 'wall' should be unnecessary, but if something works unexpectedly and
@@ -376,23 +192,6 @@ Now all we have to do is to define the shopkeeper. At this point we
 shan't program all her behaviour, just what's needed to get her to
 respond to the bell ring:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 shopkeeper : SoundObserver, Person 'young shopkeeper/woman' 'young shopkeeper'  
    @backRoom  
@@ -402,24 +201,9 @@ shopkeeper : SoundObserver, Person 'young shopkeeper/woman' 'young shopke
   notifySoundEvent(event, source, info)  
   {  
     if(event == bellRing && daemonID == nil && isIn(backRoom))  
+daemonID = new Daemon(self, &amp;daemon, 2);  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID = new Daemon(self, &amp;daemon, 2);  <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
     else if(isIn(insideShop) && event==bellRing)  
      "\<q\>All right, all right, here I am!\</q\> says {the   
@@ -437,23 +221,6 @@ shopkeeper : SoundObserver, Person 'young shopkeeper/woman' 'young shopke
   globalParamName = 'shopkeeper'  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The first new feature to note here is the addition of SoundObserver to
 the shopkeeper's class list. This allows us to define the
@@ -490,150 +257,21 @@ being an active daemon.
   
 In this particular case we could have achieved the same effect slightly
 easier by using a fuse rather than a daemon. Instead of  
+ 
+daemonID = new Daemon(self, &amp;daemon, 2); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID = new Daemon(self, &amp;daemon, 2); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We could have written  
+ 
+daemonID = new Fuse(self, &amp;daemon, 1); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID = new Fuse(self, &amp;daemon, 1); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 (Note the change in the number from 2 to 1 to produce the same effect of
 the shopkeeper moving on the next turn). The use of the fuse would have
 avoided the need for the line:  
+ 
+daemonID.removeEvent(); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID.removeEvent(); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We should still need to keep track of whether we had an active fuse
 (using daemonID, which we might rename fuseID had we used a fuse) in
@@ -645,23 +283,6 @@ shopkeeper using ActorStates and TopicEntries as with Joe the Charcoal
 Burner; you might like to try this out for yourself before reading this
 guide's version over the page.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 + sallyTalking : InConversationState  
    specialDesc = "{The shopkeeper/she} is standing behind the counter   
@@ -701,23 +322,6 @@ guide's version over the page.
      shelves.\<.p\>"  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 There is scarcely anything new here. Note the use of the double
 angle-bracket construction in the HelloTopic and ByeTopic to vary what's
@@ -746,141 +350,30 @@ test for. But then we'd have lost the opportunity to look at sensory
 events, sense connectors, fuses and daemons. If you want to try to do it
 the simpler way, by all means experiment.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Since the shopkeeper has been summoned by the ringing of the bell, she
 is likely to initiate the conversation rather than waiting to be
 addressed by her customer. To handle this, add the following line after
 daemonID = nil; at the end of the shopkeeper's daemon method:  
+ 
+initiateConversation(sallyTalking, 'sally-1'); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>initiateConversation(sallyTalking, 'sally-1'); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 And then add the definition of the appropriate conversation node; a good
 place for it would be between the definition of the shopkeeper and the
 definition of sallyTalking:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 + ConvNode 'sally-1'  
   npcGreetingMsg = "\<q\>Right, what can I get you?\</q\> she asks. \<.p\>"  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We don't need to put any topics under this conversation node; its only
 function is to display the npcGreetingMsg. Any topics can then be
 handled by the sallyTalking:InConversationState. Let's start by adding a
 few now (put them after the definition of sallyWaiting):  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 ++ AskTellTopic \[shopkeeper, gPlayerChar\]  
   "\<q\>I'm Heidi. What's your name?\</q\> you ask.\<.p\>  
@@ -933,43 +426,9 @@ object to match it to. To cope with this type of situation, where you
 want to be able to converse about things that are not game objects,
 there is a special Topic class. In this case all we need define is:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 tWeather : Topic 'weather';  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 There's nothing magic about the 't' with which I started the object name
 here; that's just a convention I use to mark it as a Topic object as
@@ -981,23 +440,6 @@ when it is defined, e.g. if a player is to be informed about a gruesome
 murder during a conversation, but does not know of it when the game
 begins, one might define the murder topic object thus:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 tMurder : Topic 'gruesome murder'  
     isKnown = nil  

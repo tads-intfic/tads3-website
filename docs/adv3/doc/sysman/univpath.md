@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="tools.html" class="nav">The Tools</a> \> Universal Paths  
 <span class="navnp"><a href="build.html" class="nav"><em>Prev:</em> Compiling and Linking</a>
     <a href="aloneexe.html" class="nav"><em>Next:</em> Stand-Alone
 Executables</a>     </span>
-
-
-
-
-
 # Universal Paths
 
 TADS has a "universal" syntax for file names that include directory

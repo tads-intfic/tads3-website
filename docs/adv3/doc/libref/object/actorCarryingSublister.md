@@ -48,13 +48,6 @@ The standard inventory sublisters.
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -63,11 +56,6 @@ Inherited from `Lister` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `InventorySublister` :  
 [`showListEmpty`](../object/InventorySublister.html#showListEmpty) [`showListPrefixWide`](../object/InventorySublister.html#showListPrefixWide) [`showListSuffixWide`](../object/InventorySublister.html#showListSuffixWide) [`showSeparateContents`](../object/InventorySublister.html#showSeparateContents)
 

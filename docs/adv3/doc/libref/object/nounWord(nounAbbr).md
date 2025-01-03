@@ -49,13 +49,6 @@ Details](#_Methods_)
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -111,11 +104,6 @@ Inherited from `BasicProd` :
 for dictionary matching purposes, include the text of our noun with the
 period attached - the period is part of the dictionary entry for an
 abbreviated word
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

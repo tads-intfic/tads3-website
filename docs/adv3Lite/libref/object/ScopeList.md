@@ -280,11 +280,6 @@ get the subset of the objects in scope matching the given condition
 
 
 return the scope as a simple list of objects
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

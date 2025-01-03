@@ -97,11 +97,6 @@ return.
 
 The return value is a simple vector of game objects. (Note that
 SenseInfo objects are not returned - just the simulation objects.)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -274,11 +274,6 @@ referring to an object in a different state.
 
 The state name to use in listings of items being worn. By default, we
 just use the base name. 'lst' has the same meaning as in listName().
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

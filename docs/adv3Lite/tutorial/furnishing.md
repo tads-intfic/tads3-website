@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="cockpit.html" class="nav">Cockpit Controls</a> \> Furnishing the
 Cockpit  
@@ -16,11 +11,6 @@ Cockpit
    
 <a href="actions.html" class="nav"><em>Next:</em> Defining Actions</a>
     </span>
-
-
-
-
-
 # Furnishing the Cockpit
 
 Up to this point we have left the cockpit as a bare room with not even a

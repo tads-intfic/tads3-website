@@ -326,11 +326,6 @@ layout: docs
         showListEmpty(paraCnt)  { DMsg(list tall empty, '\n{I} {am} empty-handed. '); }
         
     ;
-
-
-
-
-
     /*
      *   descContentsLister displays a list of miscellaneous contents of an object
      *   being examined.  

@@ -83,11 +83,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ConsultAboutAction` :  
 [`filterTopic`](../object/ConsultAboutAction.html#filterTopic) [`getDefaultDobj`](../object/ConsultAboutAction.html#getDefaultDobj)
 

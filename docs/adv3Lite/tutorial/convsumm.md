@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Summary  
@@ -16,11 +11,6 @@ Summary
    
 <a href="finish.html" class="nav"><em>Next:</em> Finishing Touches</a>
     </span>
-
-
-
-
-
 # Summary
 
 We've now taken the Angela NPC as far as we need to for the purposes of
@@ -773,9 +763,6 @@ related to the Angela NPC as far as we have reached:
         }
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

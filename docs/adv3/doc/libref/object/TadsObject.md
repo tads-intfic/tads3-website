@@ -66,13 +66,6 @@ with the "class" or "object" statements descend from this class.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -199,11 +192,6 @@ The superclasses must all be TadsObject objects, with one exception: the
 list \[TadsObject\] may be passed to create an object based directly on
 TadsObject. No other intrinsic classes can be used in the list, and
 objects of other types cannot be used in the list.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

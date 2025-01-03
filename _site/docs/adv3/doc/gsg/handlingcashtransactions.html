@@ -21,9 +21,8 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
-
-<p><a href="index.html">[Main]</a><br />
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a>
+<a href="index.html">[Main]</a><br />
 <em><a href="goingshopping.html">[Previous]</a>   <a href="fillinginsomegaps.html">[Next]</a></em></p>
 
 <h2 id="handling-cash-transactions">Handling Cash Transactions</h2>
@@ -38,35 +37,6 @@ couple of buyable items and four coins. We shall then discuss how this
 might be expanded and simplified to cope with more general cases,
 without trying to add a more general case to our game.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>What Heidi needs to buy from the shop is a battery. To make things a bit
 more interesting we’ll assume she can also buy a bag of sweets (that’s
 ‘candy’ for all you folks on the western side of the Atlantic). The
@@ -74,35 +44,6 @@ first thing to do, then, is to remove the battery from the tin (where we
 last left it) and to create a sweets/candy object. Remove the + sign
 from in front of the battery, move it after the contents of insideShop,
 and then define the bag of sweets:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>battery : Thing ’small red battery’ ’small red battery’<br />
   ”It’s a small red battery, 1.5v, manufactured by ElectroLeax<br />
@@ -115,35 +56,6 @@ and then define the bag of sweets:</p>
   canReturnItem = true<br />
   myItemClass = Sweet<br />
 ;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>We define the bag of sweets as a Dispenser since we expect it to contain
 individual items (i.e. sweets) which can be taken from the bag (and
@@ -164,35 +76,6 @@ here (Heidi doesn’t need the sweets for the player to win the game), I
 shall simply present the adaptation from the sample.t code as an
 example, without pausing to discuss it in any depth; if you like, you
 can just skip it all for now. </p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>class Sweet : Dispensable, Food <br />
   desc = ”It’s a small, round, clear, &lt;&lt;sweetGroupBaseName&gt;&gt; boiled sweet. ”<br />
@@ -244,21 +127,8 @@ can just skip it all for now. </p>
 ;</p>
 
 <p>sweetCollective: ItemizingCollectiveGroup ’candy*sweets’ ’sweets’<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+;<br />
+ </p>
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -277,35 +147,6 @@ create the sweets is minimal: <br />
 </tbody>
 </table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>RedSweet;<br />
 RedSweet;<br />
 RedSweet;<br />
@@ -315,35 +156,6 @@ GreenSweet;<br />
 GreenSweet;<br />
 YellowSweet;<br />
 YellowSweet;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>Rather than getting bogged down in a description of how all this works
 (for which see the comments in sample.t), we’ll regard it for now as
@@ -370,35 +182,6 @@ transactions. Add the following code so that the shelves are contained
 directly in the shop (e.g. by placing them directly after the definition
 of +++ Component ’knob/button’ ’knob’):</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>+ Distant, Surface ’shelf*shelves’ ’shelves’<br />
   ”The shelves with the most interesting goodies are behind the counter. ”<br />
   isPlural = true  <br />
@@ -421,70 +204,12 @@ of +++ Component ’knob/button’ ’knob’):</p>
   saleItem = sweetBag<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>The salePrice property should be fairly self explanatory; saleItem
 contains the object that will actually be handed over to Heidi, while
 saleName is a name that will be used to describe this object in the
 course of the transaction. Finally, we need to put some money where
 Heidi will find it. Since we’ve taken the battery out of the tin and
 left it empty, let’s put the cash in the tin:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>++ tin : OpenableContainer ’small tin’ ’small tin’   <br />
   ”It’s a small square tin with a lid. ”<br />
@@ -503,35 +228,6 @@ left it empty, let’s put the cash in the tin:</p>
 +++  Coin;<br />
 +++  Coin;<br />
 +++  Coin;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>Note that we can create the Coin class between the tin and the Coin
 objects and still use the + notation without any difficulty (the tin
@@ -582,35 +278,6 @@ the shopkeeper. We also need to add several custom properties to the
 shopkeeper object to keep track of the transaction. The code to be added
 to the shopkeeper is the following:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>shopkeeper : Person, SoundObserver ’young shopkeeper/woman’ ’young shopkeeper’<br />
 …<br />
 cashReceived = 0<br />
@@ -645,35 +312,6 @@ cashReceived = 0<br />
    cashFuseID = nil; <br />
  }<br />
 ;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>The cashReceived property holds the number of coins that have been
 handed over to the shopkeeper in the current transaction; price is the
@@ -714,35 +352,6 @@ handleTopic method rather than the TopicResponse to handle the action,
 since it gives us access to the object that we want to manipulate, (as
 the obj parameter):</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>++ GiveShowTopic<br />
    matchTopic(fromActor, obj)<br />
    {<br />
@@ -759,35 +368,6 @@ the obj parameter):</p>
            obj.moveInto(shopkeeper);<br />
    }<br />
 ;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>The handleTopic method will be called once for every coin that’s handed
 over; for example, if the player types <strong>give three pound coins to
@@ -820,35 +400,6 @@ Normally, one would use AltTopic to avoid burdening TopicEntry objects
 with a lots of if… else… type constructions, but since we want to
 encapsulate all the complexities of the behaviour in one class, we shall
 have to resort to if and else in the definition of that class:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>class BuyTopic : AskAboutForTopic<br />
   topicResponse<br />
@@ -935,103 +486,16 @@ amount in pounds (e.g. currencyString(3) would return ‘three pounds’).
 We can use the library function spellInt to do most of the work, so this
 function is defined simply as:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>currencyString(amount)<br />
 {  <br />
   return spellInt(amount) + ’ ’  + ((amount&gt;1) ? ’pounds’ : ’pound’);  <br />
 }</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>If you are using dollars, euros, yen or denarii instead of pounds,
 remember to change this function accordingly.</p>
 
 <p>Finally, we need to define the two BuyTopics to cope with the battery
 and the sweets. This then becomes very straightforward:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>++ BuyTopic @batteries<br />
    alreadyBought = ”You only need one battery, and you’ve already bought it.&lt;.p&gt;”<br />
@@ -1041,35 +505,6 @@ and the sweets. This then becomes very straightforward:</p>
    alreadyBought = ”You’ve already bought one bag of sweets. Think of your<br />
     figure! Think of your teeth!&lt;.p&gt;”<br />
 ;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>And this, apart from a few minor tweaks we shall be looking at in the
 next chapter, takes <em>The Further Adventures of Heidi</em> as far as this
@@ -1087,35 +522,6 @@ another object to sit on the shelf, a corresponding item to be handed
 over to Heidi, and the corresponding BuyTopic; to give a minimalist
 example:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>/* Put this just after the shelf */<br />
 ++ pears : Distant ’pear*pears’ ’pears on shelf’<br />
 “A basket of fresh pears sits on the shelf behind the counter. ”<br />
@@ -1130,50 +536,8 @@ example:</p>
  ;</p>
 
 <p>/*Make sure this gets contained in sallyTalking */<br />
-BuyTopic @pears;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+BuyTopic @pears;<br />
+ </p>
 
 <p>Provided you also add to the stock of pound coins (or whatever currency
 you’re using) to cover the cost of all the items that could be
@@ -1191,35 +555,6 @@ nickels, quarters and cents would be quite bad enough). You’d do far
 better to define a single money object, with a value property stating
 how much money it represents at any one time, e.g.:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>money : Thing ’cash/money’ ’money’<br />
   @outsideCottage<br />
   ”A quick count reveals that it comes to &lt;&lt;currencyString(value)&gt;&gt;. ”<br />
@@ -1227,70 +562,12 @@ how much money it represents at any one time, e.g.:</p>
   isPlural = true<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>Note that here we’ve chosen to store the value in the lowest
 denomination (pence, cents etc.) so any calculations can be handled as
 integer arithmetic (although you could always experiment with the
 BigNumber class as an alternative). One would then need to redefine the
 function currencyString to convert a value in pence, say, to a £12.04
 display format.</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>function currencyString(amount)<br />
 {<br />
@@ -1310,35 +587,6 @@ be set up in exactly the same way (with a BuyTopic), but then one could
 implement a routine to respond simply to <strong>give money to shopkeeper</strong> or
 <strong>pay shopkeeper</strong>. This would simply have to check that enough money
 was available, and, if so, deduct it, e.g.</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>++ GiveTopic @money<br />
 topicResponse<br />
@@ -1367,69 +615,11 @@ topicResponse<br />
     isActive = (shopkeeper.saleObject == nil)<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>Note that with this method there’s no longer any need to use a fuse, so
 that all the shopkeeper.cashFuse method could be eliminated altogether.
 Similarly, since with this revised model there’s no possibility of the
 player character issuing a command mid-transaction, so the definition of
 BuyTopic could be simplified considerably:</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>class BuyTopic : AskTopic<br />
   topicResponse<br />
@@ -1451,35 +641,6 @@ BuyTopic could be simplified considerably:</p>
    &lt;&lt;currencyString(matchObj.salePrice)&gt;&gt;,&lt;/q&gt;<br />
   {the shopkeeper/she} informs you.&lt;.p&gt;”<br />
 ;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
 
 <p>In this way, the handling of the apparently more general and complex
 situation could actually be made rather simpler than the code we needed

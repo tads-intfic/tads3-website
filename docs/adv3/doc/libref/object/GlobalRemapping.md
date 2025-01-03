@@ -279,11 +279,6 @@ register myself with the global list, making this an active mapping
 unregister - this removes me from the global list, making this mapping
 inactive: after being unregistered, the parser won't apply this mapping
 to new commands
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

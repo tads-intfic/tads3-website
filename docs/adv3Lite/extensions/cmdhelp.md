@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Command Help  
@@ -16,11 +11,6 @@ Command Help
    
 <a href="dynregion.html" class="nav"><em>Next:</em> Dynamic Region</a>
     </span>
-
-
-
-
-
 # Command Help
 
 ## Overview

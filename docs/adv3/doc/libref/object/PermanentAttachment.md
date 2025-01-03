@@ -172,11 +172,6 @@ child both be PermanentAttachments, and then just define the
 cannot-detach message in the container. If the container isn't a
 PermanentAttachment, or we're not attached to it, we'll return our
 default library message.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

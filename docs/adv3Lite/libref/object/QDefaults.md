@@ -347,11 +347,6 @@ list.
 
 Get a list of all known mentionable objects, which we assume will
 include both known Things and known Topics
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

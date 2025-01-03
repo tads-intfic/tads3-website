@@ -80,11 +80,6 @@ as a prompt for a missing object, or a disambiguation prompt.
 
 Inherited from `MainCommandReport` :  
 [`seqNum`](../object/MainCommandReport.html#seqNum)
-
-
-
-
-
 Inherited from `CommandReport` :  
 [`action_`](../object/CommandReport.html#action_) [`isFailure`](../object/CommandReport.html#isFailure) [`iter_`](../object/CommandReport.html#iter_)
 
@@ -96,13 +91,6 @@ Inherited from `MessageResult` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 
 
 Inherited from `CommandReportMessage` :  

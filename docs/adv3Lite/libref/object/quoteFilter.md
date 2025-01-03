@@ -64,11 +64,6 @@ start of each turn.
 
 
 [`quoteCount`](#quoteCount) [`quotePat`](#quotePat) [`showWarnings`](#showWarnings)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`execAfterMe`](../object/ModuleExecObject.html#execAfterMe) [`execBeforeMe`](../object/ModuleExecObject.html#execBeforeMe) [`hasInitialized_`](../object/ModuleExecObject.html#hasInitialized_) [`isDoingExec_`](../object/ModuleExecObject.html#isDoingExec_) [`isExecuted_`](../object/ModuleExecObject.html#isExecuted_)
 
@@ -81,11 +76,6 @@ Inherited from `ModuleExecObject` :
 
 
 [`execute`](#execute) [`filterText`](#filterText) [`quoteCheck`](#quoteCheck)
-
-
-
-
-
 Inherited from `ModuleExecObject` :  
 [`_execute`](../object/ModuleExecObject.html#_execute) [`classExec`](../object/ModuleExecObject.html#classExec)
 
@@ -185,11 +175,6 @@ this method at the end of each turn. It checks to see if the number of
 opening smart quotes over the course of the turn just completed is the
 same as the number of closing smart quotes, and optionally prints a
 warning message if it is not.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -69,23 +69,11 @@ WeakRefLookupTable instances.
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Iterator` :  
 [`getCurKey`](../object/Iterator.html#getCurKey) [`getCurVal`](../object/Iterator.html#getCurVal) [`getNext`](../object/Iterator.html#getNext) [`isNextAvailable`](../object/Iterator.html#isNextAvailable) [`resetIterator`](../object/Iterator.html#resetIterator)
 

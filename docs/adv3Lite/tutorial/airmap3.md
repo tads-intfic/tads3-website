@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Aboard the Plane  
 <span class="navnp"><a href="airmap2.html" class="nav"><em>Prev:</em> Extending the Map</a>
     <a href="doors.html" class="nav"><em>Next:</em> Doors and Locks</a>
     </span>
-
-
-
-
-
 # Aboard the Plane
 
 ## Preparations

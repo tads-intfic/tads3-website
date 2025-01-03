@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Creating the Basic Source File  
@@ -16,11 +11,6 @@ Creating the Basic Source File
 game</a>    
 <a href="understanding.html" class="nav"><em>Next:</em> Understanding the
 Source File</a>     </span>
-
-
-
-
-
 # Creating the Basic Source File
 
 If you followed the steps for creating a project in the last chapter,

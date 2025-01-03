@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](crossingthestream.html)
   [\[Next\]](callingaspadeaspade.html)*
@@ -46,67 +41,33 @@ when Heidi digs in the ground with a spade (which you'll need to
 provide). For inspiration, you could look back at the way we hid the
 ring in the nest, or the stick in the pile of twigs.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Here's one way of implementing the new rooms:  
   
   
-outsideCave : OutdoorRoom 'Just Outside a Cave'  
-  "The path through the trees from the north comes to an end  
-  just outside the mouth of a large cave to the south. Behind the cave  
-  rises a sheer wall of rock. "  
-  north = forest  
-  in = insideCave  
-  south asExit(in)  
-;  
-  
-+ Enterable 'cave/entrance' 'cave'  
-  "The entrance to the cave looks quite narrow, but probably just wide  
-  enough for someone to squeeze through. "  
-  connector = insideCave  
-;  
-  
-insideCave : Room 'Inside a large cave'  
-  "The cave is larger than its narrow entrance might lead one to expect.  
-    Even a tall adult could stand here quite comfortably, and the cave   
-    stretches back quite some way. "  
-  out = outsideCave   
-  north asExit(out)  
-;  
+    outsideCave : OutdoorRoom 'Just Outside a Cave'  
+      "The path through the trees from the north comes to an end  
+      just outside the mouth of a large cave to the south. Behind the cave  
+      rises a sheer wall of rock. "  
+      north = forest  
+      in = insideCave  
+      south asExit(in)  
+    ;  
+    
+    + Enterable 'cave/entrance' 'cave'  
+      "The entrance to the cave looks quite narrow, but probably just wide  
+      enough for someone to squeeze through. "  
+      connector = insideCave  
+    ;  
+    
+    insideCave : Room 'Inside a large cave'  
+      "The cave is larger than its narrow entrance might lead one to expect.  
+        Even a tall adult could stand here quite comfortably, and the cave   
+        stretches back quite some way. "  
+      out = outsideCave   
+      north asExit(out)  
+    ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 There's nothing that requires comment here, apart from the need to add
 south = outsideCave to the definition of the forest room (whose
@@ -127,68 +88,21 @@ where we might want the player to be able to dig, so that it would be
 useful to define a Diggable class that can handle all this. The class
 might then look like this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    class Diggable : Floor  
+      dobjFor(DigWith)  
+      {  
+        preCond = \[objVisible, touchObj\]      
+        verify() {}  
+        check() {}  
+        action()  
+        {  
+          "Digging here reveals nothing of interest. ";  
+        }  
+      }  
+    ;  
+ 
 
-class Diggable : Floor  
-  dobjFor(DigWith)  
-  {  
-    preCond = \[objVisible, touchObj\]      
-    verify() {}  
-    check() {}  
-    action()  
-    {  
-      "Digging here reveals nothing of interest. ";  
-    }  
-  }  
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 At first sight, this class definition may look a little surprising,
 since we have done nothing to handle the case where the player simply
@@ -227,52 +141,18 @@ sake of completeness and in order to illustrate the principle).
   
 We next need to define the spade:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    spade : Thing 'sturdy spade' 'spade'  
+    @insideCave  
+      "It's a sturdy spade with a broad steel blade and a firm wooden handle. "  
+      initSpecialDesc = "A sturdy spade leans against the wall of the cave. "   
+      iobjFor(DigWith)  
+      {  
+        verify() {}  
+        check() {}  
+      }       
+    ;  
 
-spade : Thing 'sturdy spade' 'spade'  
-@insideCave  
-  "It's a sturdy spade with a broad steel blade and a firm wooden handle. "  
-  initSpecialDesc = "A sturdy spade leans against the wall of the cave. "   
-  iobjFor(DigWith)  
-  {  
-    verify() {}  
-    check() {}  
-  }       
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Placing the spade inside the cave is a temporary measure to make it easy
 to test that the digging operation works as we intend. The only point to
@@ -285,92 +165,45 @@ Now we need to supply our Diggable object, the ground. Since digging the
 ground will create a hole, and a pair of boots will be found lurking in
 the hole, we may as well deal with them at the same time.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    caveFloor : Diggable 'cave floor/ground' 'cave floor'  
+      @insideCave  
+      "The floor of the cave is quite sandy; near the centre is  
+      \<\<hasBeenDug ? 'a freshly dug hole' : 'a patch that looks as if it has  
+      been recently disturbed'\>\>. "  
+      hasBeenDug = nil  
+      dobjFor(DigWith)  
+      {  
+        check()  
+        {  
+          if(hasBeenDug)  
+          {  
+            "You've already dug a hole here. ";  
+            exit;  
+          }        
+        }  
+       action()  
+       {  
+         hasBeenDug = true;  
+         "You dig a small hole in the sandy floor and find a buried pair of  
+         old Wellington boots. ";  
+         hole.moveInto(self);  
+         addToScore(1, 'finding the boots');  
+       }       
+      }  
+    ;  
+    
+    hole : Container, Fixture 'hole' 'hole'  
+      "There's a small round hole, freshly dug in the floor near the centre  
+      of the cave. "  
+    ;  
+    
+    + boots : Wearable 'old pair of wellington boots/wellies' 'old pair of boots'    
+     "They look ancient, battered, and scuffed, but probably still waterproof. "  
+      initSpecialDesc = "A pair of old Wellington boots lies in the hole. "  
+    ;  
+ 
 
-caveFloor : Diggable 'cave floor/ground' 'cave floor'  
-  @insideCave  
-  "The floor of the cave is quite sandy; near the centre is  
-  \<\<hasBeenDug ? 'a freshly dug hole' : 'a patch that looks as if it has  
-  been recently disturbed'\>\>. "  
-  hasBeenDug = nil  
-  dobjFor(DigWith)  
-  {  
-    check()  
-    {  
-      if(hasBeenDug)  
-      {  
-        "You've already dug a hole here. ";  
-        exit;  
-      }        
-    }  
-   action()  
-   {  
-     hasBeenDug = true;  
-     "You dig a small hole in the sandy floor and find a buried pair of  
-     old Wellington boots. ";  
-     hole.moveInto(self);  
-     addToScore(1, 'finding the boots');  
-   }       
-  }  
-;  
-  
-hole : Container, Fixture 'hole' 'hole'  
-  "There's a small round hole, freshly dug in the floor near the centre  
-  of the cave. "  
-;  
-  
-+ boots : Wearable 'old pair of wellington boots/wellies' 'old pair of boots'    
- "They look ancient, battered, and scuffed, but probably still waterproof. "  
-  initSpecialDesc = "A pair of old Wellington boots lies in the hole. "  
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Again, there's little that should require much explanation here. Note
 that we have moved the original boots and put them inside the hole,
@@ -400,52 +233,9 @@ the desc property of the cave, namely:
 Either way, this *almost* works fine, apart from one thing: as you'll no
 doubt discover, it you haven't tried it already, when you try to **dig
 floor with spade** you'll be greeted with the message:  
+ 
+Which floor do you mean, the cave floor, or the floor? 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>Which floor do you mean, the cave floor, or the floor? <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 This is somewhat annoying, to say the least. The reason for it is that
 the Room class defines a default set of room components: four walls, a
@@ -455,52 +245,18 @@ of using @insideCave to put our custom floor into the cave, was to
 include it in the list of room parts. While we're at it, we may as well
 replace some of the other default room parts:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    caveNorthWall : DefaultWall 'north wall' 'north wall'  
+      "In the north wall is a narrow gap leading out of the cave. "  
+    ;  
+    
+    caveEastWall : DefaultWall 'east wall' 'east wall'  
+      "The east wall of the cave is quite smooth and has the faint remains of  
+       something drawn or written on it. Unfortunately it's no longer possible  
+       to discern whether it was once a Neolithic cave painting or an example  
+       of modern graffiti. "  
+    ;  
 
-caveNorthWall : DefaultWall 'north wall' 'north wall'  
-  "In the north wall is a narrow gap leading out of the cave. "  
-;  
-  
-caveEastWall : DefaultWall 'east wall' 'east wall'  
-  "The east wall of the cave is quite smooth and has the faint remains of  
-   something drawn or written on it. Unfortunately it's no longer possible  
-   to discern whether it was once a Neolithic cave painting or an example  
-   of modern graffiti. "  
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We then override the roomParts property of insideCave. At the same time,
 we must be careful to remove @insideCave from the definition of
@@ -508,66 +264,19 @@ caveFloor, otherwise we'll effectively be including the floor in the
 cave twice. While we're at it, we'll also tweak insideCave's description
 so that it includes a description of the floor:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    insideCave : Room 'Inside a large cave'  
+      "The cave is larger than its narrow entrance might lead one to expect.   
+       Even a tall adult could stand here quite comfortable, and the cave   
+       stretches back quite some way. \<\<caveFloor.desc\>\>"  
+      out = outsideCave   
+      north asExit(out)  
+      roomParts = \[caveFloor, defaultCeiling,  caveNorthWall,   
+                    defaultSouthWall, caveEastWall, defaultWestWall\]  
+    
+    ;  
+ 
 
-insideCave : Room 'Inside a large cave'  
-  "The cave is larger than its narrow entrance might lead one to expect.   
-   Even a tall adult could stand here quite comfortable, and the cave   
-   stretches back quite some way. \<\<caveFloor.desc\>\>"  
-  out = outsideCave   
-  north asExit(out)  
-  roomParts = \[caveFloor, defaultCeiling,  caveNorthWall,   
-                defaultSouthWall, caveEastWall, defaultWestWall\]  
-  
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 By the way, note that we made Diggable inherit from Floor rather than,
 say, Fixture; this tells the library that the caveFloor (derived from

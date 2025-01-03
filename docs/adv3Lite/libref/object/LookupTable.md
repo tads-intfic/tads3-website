@@ -73,13 +73,6 @@ being limited to sequential integers.
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -293,11 +286,6 @@ value of any type if desired.
 
 Make a list of all of my values. The return value is a list, in
 arbitrary order, of all of the values in the table.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

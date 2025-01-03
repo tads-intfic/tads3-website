@@ -79,11 +79,6 @@ window's layout to use the Web UI model.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `OutputStreamWindow` :  
 ` [`outputStream_`](../object/OutputStreamWindow.html#outputStream_)  `
 
@@ -187,11 +182,6 @@ so different.
 
 
 write text
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

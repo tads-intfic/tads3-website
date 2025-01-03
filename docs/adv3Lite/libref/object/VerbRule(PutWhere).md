@@ -172,11 +172,6 @@ found it - use this action
 when the player supplies our missing indirect object by answering the
 "where do you want to put it" question, we'll change the action
 according to the preposition in the indirect object reply
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

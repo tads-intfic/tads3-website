@@ -286,11 +286,6 @@ Transmit energy from a container onto me.
 
 Determine how senses pass through this connection. By default, we simply
 use the material's transparency.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

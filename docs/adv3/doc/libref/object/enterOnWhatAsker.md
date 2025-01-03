@@ -44,13 +44,6 @@ our custom "asker" for the missing iobj in an "ENTER \<text\>" command
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -89,11 +82,6 @@ Inherited from `ResolveAsker` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -86,11 +86,6 @@ Inherited from `TopicEntry` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `MiscTopic` :  
 [`isMatchPossible`](../object/MiscTopic.html#isMatchPossible) [`matchTopic`](../object/MiscTopic.html#matchTopic)
 

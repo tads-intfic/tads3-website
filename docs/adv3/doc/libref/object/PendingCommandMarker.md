@@ -86,11 +86,6 @@ Inherited from `PendingCommandInfo` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PendingCommandInfo` :  
 [`construct`](../object/PendingCommandInfo.html#construct) [`executePending`](../object/PendingCommandInfo.html#executePending)
 

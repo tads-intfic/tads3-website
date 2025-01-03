@@ -245,11 +245,6 @@ elements describing a token:
 \- The third element the original token strings, before any conversions
 or evaluations were performed. For example, this maintains the original
 case of strings that are lower-cased for the corresponding token values.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

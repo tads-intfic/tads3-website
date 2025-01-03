@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Relations  
 <span class="navnp"><a href="postures.html" class="nav"><em>Prev:</em> Postures</a>
     <a href="roomparts.html" class="nav"><em>Next:</em> Room Parts</a>
     </span>
-
-
-
-
-
 # Relations
 
 ## Overview

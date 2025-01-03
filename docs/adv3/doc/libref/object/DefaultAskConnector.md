@@ -74,11 +74,6 @@ directions.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `AskConnector` :  
 [`promptMessage`](../object/AskConnector.html#promptMessage) [`travelAction`](../object/AskConnector.html#travelAction) [`travelObjs`](../object/AskConnector.html#travelObjs) [`travelObjsPhrase`](../object/AskConnector.html#travelObjsPhrase)
 
@@ -155,11 +150,6 @@ travel is apparently possible in this direction
 
 
 this is not a passable connector
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

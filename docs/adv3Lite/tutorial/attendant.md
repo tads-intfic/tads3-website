@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="character.html" class="nav">Character Building</a> \> The Flight
 Attendant  
 <span class="navnp"><a href="cortes.html" class="nav"><em>Prev:</em> Pablo Cortez</a>
     <a href="conversation.html" class="nav"><em>Next:</em> The Art of
 Conversation</a>     </span>
-
-
-
-
-
 # The Flight Attendant — Getting in a State
 
 The third and final NPC we'll implement is the flight attendant, who'll

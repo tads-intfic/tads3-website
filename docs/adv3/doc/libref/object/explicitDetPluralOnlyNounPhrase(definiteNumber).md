@@ -54,13 +54,6 @@ Details](#_Methods_)
 
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -75,11 +68,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ExactQuantifiedPluralProd` :  
 [`getVerifyKeepers`](../object/ExactQuantifiedPluralProd.html#getVerifyKeepers) [`selectExactCount`](../object/ExactQuantifiedPluralProd.html#selectExactCount)
 

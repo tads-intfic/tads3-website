@@ -76,11 +76,6 @@ information to decide whether to offer help.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ParseError` :  
 [`allowOnRespell`](../object/ParseError.html#allowOnRespell) [`curable`](../object/ParseError.html#curable) [`errStage`](../object/ParseError.html#errStage)
 
@@ -145,11 +140,6 @@ that are used in verb phrases. The next best is a corrected word that's
 used in any GrammarProd, since the problem might actually be in some
 other structural part of the command phrase above the verb phrase (a
 conjunction, for example).
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

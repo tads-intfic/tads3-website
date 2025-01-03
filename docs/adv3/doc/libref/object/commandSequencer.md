@@ -157,11 +157,6 @@ command-line input must be read in the course of a command's execution.
 
 Internal routine: write the given text directly through us, skipping any
 filtering we'd otherwise apply.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

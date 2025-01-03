@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \>
 IntrinsicClass  
 <span class="navnp"><a href="httpsrv.html" class="nav"><em>Prev:</em> HTTPServer</a>
     <a href="iter.html" class="nav"><em>Next:</em> Iterator</a>    
 </span>
-
-
-
-
-
 # IntrinsicClass
 
 Each intrinsic class that a program uses is represented by an instance

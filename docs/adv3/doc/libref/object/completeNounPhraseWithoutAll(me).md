@@ -47,11 +47,6 @@ First-person pronoun, for referring to the speaker: "bob, look at me"
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `MeProd` :  
 [`pronounType`](../object/MeProd.html#pronounType)
 
@@ -69,13 +64,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `PronounProd` :  
 [`checkAnaphoricBinding`](../object/PronounProd.html#checkAnaphoricBinding) [`resolveNouns`](../object/PronounProd.html#resolveNouns)
 

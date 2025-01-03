@@ -287,11 +287,6 @@ local func = getMultiMethodPointer(foo, x, y, z);
 
 We return a pointer to the individual multi-method function that matches
 the argument list, or nil if there's no matching multi-method.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

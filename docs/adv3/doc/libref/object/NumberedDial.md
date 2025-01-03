@@ -172,11 +172,6 @@ leading zeros, since these don't change the meaning of the value.
 
 Check a setting for validity. A setting is valid only if it's a number
 within the allowed range for the dial.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

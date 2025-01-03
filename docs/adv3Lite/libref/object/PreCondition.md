@@ -163,11 +163,6 @@ actions to meet the condition.
 'obj' is the object being checked. Note that because this is called
 during verification, the explicitly passed-in object must be used in the
 check rather than the current object in the global current action.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

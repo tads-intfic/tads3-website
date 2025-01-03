@@ -80,21 +80,11 @@ but only with a specified key.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `LockableWithKey` :  
 [`keyList`](../object/LockableWithKey.html#keyList) [`knownKeyList`](../object/LockableWithKey.html#knownKeyList) [`lockStatusObvious`](../object/LockableWithKey.html#lockStatusObvious) [`rememberKnownKeys`](../object/LockableWithKey.html#rememberKnownKeys)
 
 Inherited from `Lockable` :  
 [`autoUnlockOnOpen`](../object/Lockable.html#autoUnlockOnOpen) [`initiallyLocked`](../object/Lockable.html#initiallyLocked) [`isLocked_`](../object/Lockable.html#isLocked_) [`lockedDesc`](../object/Lockable.html#lockedDesc) [`lockStatusReportable`](../object/Lockable.html#lockStatusReportable)
-
-
-
-
-
 Inherited from `Openable` :  
 [`descContentsLister`](../object/Openable.html#descContentsLister) [`openingLister`](../object/Openable.html#openingLister)
 
@@ -123,11 +113,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `LockableWithKey` :  
 [`autoUnlockOnOpen`](../object/LockableWithKey.html#autoUnlockOnOpen) [`dobjFor(Lock)`](../object/LockableWithKey.html#dobjFor(Lock)) [`dobjFor(LockWith)`](../object/LockableWithKey.html#dobjFor(LockWith)) [`dobjFor(Unlock)`](../object/LockableWithKey.html#dobjFor(Unlock)) [`dobjFor(UnlockWith)`](../object/LockableWithKey.html#dobjFor(UnlockWith)) [`getKnownKeyList`](../object/LockableWithKey.html#getKnownKeyList) [`getKnownKeyOwner`](../object/LockableWithKey.html#getKnownKeyOwner) [`isKeyKnown`](../object/LockableWithKey.html#isKeyKnown) [`keyFitsLock`](../object/LockableWithKey.html#keyFitsLock) [`keyIsPlausible`](../object/LockableWithKey.html#keyIsPlausible) [`lockOrUnlockAction`](../object/LockableWithKey.html#lockOrUnlockAction)
 

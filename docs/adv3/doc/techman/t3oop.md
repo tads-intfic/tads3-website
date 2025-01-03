@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Object-Oriented
 Programming Overview  
 <span class="navnp"><a href="t3des2.html" class="nav"><em>Prev:</em> IF Design: In Theory</a>
     <a href="t3inout.html" class="nav"><em>Next:</em> Some Common
 Input/Output Issues</a>     </span>
-
-
-
-
-
 # Object-Oriented Programming Overview
 
 When TADS first appeared in the late 1980s, the software industry had

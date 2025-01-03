@@ -312,11 +312,6 @@ within us that should be included in a topic inventory listing because
 they are (a) currently reachable and (b) currently marked for listing.
 The resulting list forms part of the list passed to the
 suggestedTopicLister.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -57,11 +57,6 @@ Inherited from `ResolveInfo` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ResolveInfo` :  
 [`construct`](../object/ResolveInfo.html#construct) [`isDistEquivInList`](../object/ResolveInfo.html#isDistEquivInList) [`isEquivalentInList`](../object/ResolveInfo.html#isEquivalentInList)
 

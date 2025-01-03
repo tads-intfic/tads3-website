@@ -272,11 +272,6 @@ EXTENSION\]
 Remove this relation between the items specified in objs, which should
 be supplied as a two-element list \[a, b\], where a is the item that is
 no longer related to b. \[RELATIONS EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

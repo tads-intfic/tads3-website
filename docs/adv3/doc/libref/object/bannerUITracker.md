@@ -151,11 +151,6 @@ all items whose windows are descended from this window. We'll leave the
 index positioned on the next entry in the list that isn't a descendant
 of the window at the given index. Note that this skips not only children
 but grandchildren (and so on) as well.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

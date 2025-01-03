@@ -66,13 +66,6 @@ intrinsic classes themselves.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -125,11 +118,6 @@ This method returns nil for instances of an intrinsic class. For
 example, isIntrinsicClass(\[1,2,3\]) returns nil, because \[1,2,3\] is a
 List instance. If you get the superclass list for \[1,2,3\], though,
 that will be \[List\], and isIntrinsicClass(List) returns true.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

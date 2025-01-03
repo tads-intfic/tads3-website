@@ -63,13 +63,6 @@ before the implicit announcement.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -176,11 +169,6 @@ nested within the enclosing commands. Chronologically, though, the
 innermost command is actually executed first. The purpose of this
 routine is to unstack these nested sets, rearranging them into
 chronological order.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

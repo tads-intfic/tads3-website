@@ -179,11 +179,6 @@ the framing text.
 
 Show the list. We completely override the main lister method so that we
 can show our two lists.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

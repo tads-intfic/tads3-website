@@ -223,11 +223,6 @@ it may be to what the player actually typed.
 The English Tokenizer separates apostrophe-S from the word it's part of,
 so in restoring the original text we need to join any apostrophe-S back
 to the word it was separated from.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

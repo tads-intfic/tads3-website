@@ -77,11 +77,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Floor` :  
 [`actorInGroupPrefix`](../object/Floor.html#actorInGroupPrefix) [`actorInGroupSuffix`](../object/Floor.html#actorInGroupSuffix) [`childInNameGen`](../object/Floor.html#childInNameGen) [`dobjFor(LieOn)`](../object/Floor.html#dobjFor(LieOn)) [`dobjFor(SitOn)`](../object/Floor.html#dobjFor(SitOn)) [`dobjFor(StandOn)`](../object/Floor.html#dobjFor(StandOn)) [`hideFromDefault`](../object/Floor.html#hideFromDefault) [`iobjFor(PutOn)`](../object/Floor.html#iobjFor(PutOn)) [`iobjFor(ThrowAt)`](../object/Floor.html#iobjFor(ThrowAt)) [`isActorOnFloor`](../object/Floor.html#isActorOnFloor) [`isObjListedInRoomPart`](../object/Floor.html#isObjListedInRoomPart) [`performEntry`](../object/Floor.html#performEntry) [`roomActorHereDesc`](../object/Floor.html#roomActorHereDesc) [`roomActorPostureDesc`](../object/Floor.html#roomActorPostureDesc) [`roomActorStatus`](../object/Floor.html#roomActorStatus) [`roomActorThereDesc`](../object/Floor.html#roomActorThereDesc) [`roomListActorPosture`](../object/Floor.html#roomListActorPosture) [`roomOkayPostureChange`](../object/Floor.html#roomOkayPostureChange) [`verifyEntry`](../object/Floor.html#verifyEntry)
 

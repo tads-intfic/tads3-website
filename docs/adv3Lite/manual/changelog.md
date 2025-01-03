@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Change Log</a> \> Change Log  
 <span class="navnp"><a href="conclusion.html" class="nav"><em>Prev:</em> Conclusion</a>
     <a href="manual_idx.html" class="nav"><em>Next:</em> Index</a>
    </span>
-
-
-
-
-
 # Change Log
 
 - [Version 1.6.1](#v1.6-1)

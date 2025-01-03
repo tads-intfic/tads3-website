@@ -72,11 +72,6 @@ Inherited from `TouchObjCondition` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `TouchObjCondition` :  
 [`checkPreCondition`](../object/TouchObjCondition.html#checkPreCondition) [`construct`](../object/TouchObjCondition.html#construct) [`verifyPreCondition`](../object/TouchObjCondition.html#verifyPreCondition)
 

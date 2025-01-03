@@ -397,11 +397,6 @@ physical scope.
 Resolve an unknown phrase. We allow unknown words to be used in topics;
 we simply return a ResolvedTopic that doesn't refer to any simulation
 objects at all.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

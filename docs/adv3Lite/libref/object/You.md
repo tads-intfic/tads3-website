@@ -120,11 +120,6 @@ command itself, namely the addressee of the command, so we need to
 resolve it using the parser's "late binding" scheme. That is, we return
 'self' to tell the parser that it needs to go back and resolve this
 pronoun after resolving other phrases.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

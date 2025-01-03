@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> Rooms and
 Regions  
@@ -16,11 +11,6 @@ Regions
    
 <a href="roomdesc.html" class="nav"><em>Next:</em> Room Descriptions</a>
     </span>
-
-
-
-
-
 <span id="rooms"></span>
 
 # Rooms and Regions

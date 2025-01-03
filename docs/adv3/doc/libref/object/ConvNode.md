@@ -511,11 +511,6 @@ the issuing actor's interlocutor's current conversation node - which is
 to say, 'self'. We complete the two-step procedure by going back to the
 active special topic object that we previously noted and showing its
 response.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

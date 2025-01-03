@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Adding the Bird and the Nest  
@@ -16,11 +11,6 @@ Adding the Bird and the Nest
 Locations</a>    
 <a href="tree.html" class="nav"><em>Next:</em> Adding the Tree and the
 Branch</a>     </span>
-
-
-
-
-
 # Adding the Bird and the Nest
 
 We have already defined one object in the game that isn't a room: the me

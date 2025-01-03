@@ -48,13 +48,6 @@ in-line contents lister for an Underside
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -63,11 +56,6 @@ Inherited from `Lister` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `BaseInlineContentsLister` :  
 [`showListEmpty`](../object/BaseInlineContentsLister.html#showListEmpty) [`showListPrefixWide`](../object/BaseInlineContentsLister.html#showListPrefixWide) [`showListSuffixWide`](../object/BaseInlineContentsLister.html#showListSuffixWide)
 

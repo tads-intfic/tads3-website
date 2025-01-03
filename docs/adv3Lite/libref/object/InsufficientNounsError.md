@@ -70,11 +70,6 @@ quantifier (e.g., TAKE FIVE COINS, but only three coins are present).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ActorResolutionError` :  
 [`cmd`](../object/ActorResolutionError.html#cmd)
 
@@ -134,11 +129,6 @@ Inherited from `Exception` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

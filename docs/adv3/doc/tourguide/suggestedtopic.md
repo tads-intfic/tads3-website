@@ -33,107 +33,21 @@ To avoid this, you can provide players with a list of suggested topics,
 using subclasses of the SuggestedTopic class:  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedasktopic.html">SuggestedAskTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<a href="suggestedasktopic.html">SuggestedAskTopic</a>  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedgivetopic.html">SuggestedGiveTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<a href="suggestedgivetopic.html">SuggestedGiveTopic</a>  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestednotopic.html">SuggestedNoTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<a href="suggestednotopic.html">SuggestedNoTopic</a>  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedshowtopic.html">SuggestedShowTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<a href="suggestedshowtopic.html">SuggestedShowTopic</a>  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedtelltopic.html">SuggestedTellTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<a href="suggestedtelltopic.html">SuggestedTellTopic</a>  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedtopictree.html">SuggestedTopicTree</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<a href="suggestedtopictree.html">SuggestedTopicTree</a>  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedyestopic.html">SuggestedYesTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<a href="suggestedyestopic.html">SuggestedYesTopic</a>  
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Note that there are no composite types of SuggestedTopic (such as
@@ -231,9 +145,7 @@ infinitum</em>, then set timesToSuggest to nil. By default, it's set to
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 The default value of timesToSuggest *may* not be what you want where you
@@ -343,9 +255,7 @@ TO command respectively)  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 It's perfectly feasible to add a new SuggestedTopic class to match a new

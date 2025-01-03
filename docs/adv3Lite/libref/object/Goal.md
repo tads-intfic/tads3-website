@@ -307,11 +307,6 @@ property; if our current state is Undiscovered, and the object
 referenced by openWhenSeen has been seen by the player character, then
 we'll change our state to Open. We'll make the corresponding check for
 openWhenDescribed.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

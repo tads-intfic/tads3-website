@@ -185,9 +185,7 @@ first added to Lockable in TADS 3.0.10)  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 IMPORTANT NOTE. Since Lockable is a mix-in class (not derived from

@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Source  
 <span class="navnp"><a href="actionref.html" class="nav"><em>Prev:</em> ActionReference</a>
     *Next:* <a href="actionref.html" class="nav">ActionReference</a>
    </span>
-
-
-
-
-
 # Source Reference
 
 This file contains *extracts* from various library source files,
@@ -323,9 +313,6 @@ source files.
         }
         
     ;
-```
-
-```
     DefineIAction(Continue)
         execAction(cmd)
         {
@@ -383,9 +370,7 @@ source files.
         }
         
     ;
-```
 
-```
     DefineSystemAction(ExitsColour)
         execAction(cmd)
         {
@@ -414,9 +399,7 @@ source files.
             }
         }
     ;
-```
 
-```
     DefineIAction(GoBack)
         execAction(cmd)
         {
@@ -453,9 +436,7 @@ source files.
             
         }
     ;
-```
 
-```
     GoIn: TravelAction
         direction = inDir
         predefinedDirection = true
@@ -476,9 +457,7 @@ source files.
             }
         }
     ;
-```
 
-```
     Hello: IAction
         baseActionClass = Hello
         
@@ -539,9 +518,7 @@ source files.
         
         curObj = nil  
     ;
-```
 
-```
     class ImplicitConversationAction: TopicAction
         execAction(cmd)
         {
@@ -598,9 +575,7 @@ source files.
         topicListProperty = nil
         topics = nil
     ;
-```
 
-```
     DefineIAction(Inventory)
         execAction(cmd)
         {
@@ -661,9 +636,7 @@ source files.
         /* Do we want separate lists of what's worn and what's carried? */
         splitListing = true
     ;
-```
 
-```
     DefineIAction(Listen)
         execAction(cmd)
         {
@@ -707,9 +680,7 @@ source files.
         /* Do nothing in the core library; senseRegion.t will override if present */
         listRemoteSounds(lst) { }
     ;
-```
 
-```
     DefineTAction(PushTravelDir)
         execAction(cmd)
         {
@@ -820,9 +791,7 @@ source files.
         
         doTravel() { delegated TravelAction(); }
     ;
-```
 
-```
     DefineIAction(Smell)
         execAction(cmd)
         {
@@ -873,9 +842,7 @@ source files.
         /* Do nothing in the core library; senseRegion.t will override if present */
         listRemoteSmells(lst) { }
     ;
-```
 
-```
     Travel: TravelAction
         direction = (dirMatch.dir)
     ;
@@ -3328,9 +3295,7 @@ source files.
         cannotUnlockWithSelfMsg = BMsg(cannot unlock with self, '{I} {can\'t} unlock
             anything with itself. ' )
     ;
-```
 
-```
      /*  
      *   A Key is any object that can be used to lock or lock selected items whose
      *   lockabilty is lockableWithKey. We define all the special handling on the
@@ -3532,9 +3497,6 @@ source files.
         }
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

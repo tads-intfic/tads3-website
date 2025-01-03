@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="web.html" class="nav">Playing on the Web</a> \> The Web UI  
 <span class="navnp"><a href="web.html" class="nav"><em>Prev:</em> Playing on the Web</a>
    
 <a href="webdeploy.html" class="nav"><em>Next:</em> Deploying your Web UI
 game</a>     </span>
-
-
-
-
-
 # The Web UI
 
 Starting in TADS 3.1, you can choose between the traditional TADS user

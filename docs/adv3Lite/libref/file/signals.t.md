@@ -338,11 +338,6 @@ Signals to handle common state changes on Thing \[SIGNALS EXTENSION\]
 
 Function to remove the signalling relationship between sender and
 receiver via the signal Signal. \[SIGNALS EXTENSION\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

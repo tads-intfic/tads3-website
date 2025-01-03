@@ -79,11 +79,6 @@ people might react. \[DEFINED IN SENSORY EXTENSION\]
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `SensoryEvent` :  
 [`remoteList`](../object/SensoryEvent.html#remoteList) [`triggerEvent`](../object/SensoryEvent.html#triggerEvent)
 

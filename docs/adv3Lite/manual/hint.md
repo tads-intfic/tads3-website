@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Hints  
 <span class="navnp"><a href="menu.html" class="nav"><em>Prev:</em> Menus</a>
     <a href="instruct.html" class="nav"><em>Next:</em> Instructions</a>
     </span>
-
-
-
-
-
 # Hints
 
 ## Standard Hints

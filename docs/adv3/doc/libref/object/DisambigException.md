@@ -70,11 +70,6 @@ General class for disambiguation exceptions
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Exception` :  
 [`errmsg_`](../object/Exception.html#errmsg_)
 
@@ -83,11 +78,6 @@ Inherited from `Exception` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Exception` :  
 [`construct`](../object/Exception.html#construct) [`displayException`](../object/Exception.html#displayException) [`getExceptionMessage`](../object/Exception.html#getExceptionMessage) [`showStackTrace`](../object/Exception.html#showStackTrace)
 

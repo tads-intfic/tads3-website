@@ -162,11 +162,6 @@ we'll be compatible with any future GrammarProd versions that add
 additional arguments - we won't do anything with the extra arguments,
 but we'll harmlessly ignore them, so code compiled with this library
 version will continue to work correctly.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

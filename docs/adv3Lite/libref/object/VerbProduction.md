@@ -503,11 +503,6 @@ Visit a production during the build process. If this is one of our noun
 phrase slots, we tell the command to add a new noun phrase of this type,
 and make it the current phrase; then we recursively build out this child
 to populate the new noun phrase.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -72,13 +72,6 @@ and other objects that represent collections of values.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -138,11 +131,6 @@ iteration. As a result, the iterator is not guaranteed to visit all of
 the elements in the collection if the collection changes during the
 course of the iteration. If consistent results are required, use
 createIterator() instead.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

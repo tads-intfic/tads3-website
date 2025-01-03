@@ -51,11 +51,6 @@ spelledHundred-\>mil\_ 'million' 'and' spelledSmallNumber-\>num\_
 
 spelledHundred-\>mil\_ 'million'  
 (spelledThousand-\>nxt\_ \| spelledHundred-\>nxt\_)  
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

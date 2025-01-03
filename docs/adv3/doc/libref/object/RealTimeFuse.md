@@ -70,11 +70,6 @@ time into the game.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `RealTimeEvent` :  
 [`eventTime`](../object/RealTimeEvent.html#eventTime)
 
@@ -136,11 +131,6 @@ negative, the fuse will be schedulable immediately.
 
 
 execute the fuse
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

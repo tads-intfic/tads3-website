@@ -72,13 +72,6 @@ and other objects that represent collections of values.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -138,11 +131,6 @@ iteration. As a result, the iterator is not guaranteed to visit all of
 the elements in the collection if the collection changes during the
 course of the iteration. If consistent results are required, use
 createIterator() instead.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

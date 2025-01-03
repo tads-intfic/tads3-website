@@ -4,19 +4,9 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Index  
 <span class="navnp"><a href="changelog.html" class="nav"><em>Prev:</em> Change Log</a></span>
-
-
-
-
-
 # Adv3Lite Manual Index
 
 [](#) [\<](#%3C) [-](#-) [\<](#%3C) [A](#A) [B](#B) [C](#C) [D](#D)

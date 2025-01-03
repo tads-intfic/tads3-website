@@ -122,11 +122,6 @@ with the given substitution type.
 For example, buildSynthParam('abc', obj) returns '{abc xxx}', where
 'xxx' is a synthesized message parameter name (created using
 gSynthMessageParam) for the object obj.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -86,9 +86,7 @@ TELL commands.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 The basic mechanism for this is the [ConvNode](convnode.html) class,

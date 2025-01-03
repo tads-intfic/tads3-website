@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Actors  
 <span class="navnp"><a href="actionref.html" class="nav"><em>Prev:</em> Action Reference</a>
    
 <a href="actoroverview.html" class="nav"><em>Next:</em> NPC Overview</a>
     </span>
-
-
-
-
-
 # Part V: Actors
 
 This part describes how to define your own Actors (Non-Player Characters
@@ -44,11 +34,6 @@ included in your game for the features described in this part to work.
 [String Tags and Object Tags](tags.html)  
 [NPC-Initiated Conversation](initiate.html)  
 [Changing the Player Character](changepc.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

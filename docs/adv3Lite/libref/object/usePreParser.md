@@ -47,11 +47,6 @@ specific, unless the game code defines its own Use action.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `StringPreParser` :  
 [`isActive`](../object/StringPreParser.html#isActive) [`regList`](../object/StringPreParser.html#regList) [`regListSorted`](../object/StringPreParser.html#regListSorted) [`runOrder`](../object/StringPreParser.html#runOrder)
 
@@ -104,11 +99,6 @@ Inherited from `ModuleExecObject` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

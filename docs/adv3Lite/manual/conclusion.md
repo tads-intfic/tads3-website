@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Conclusion  
 <span class="navnp"><a href="feedback.html" class="nav"><em>Prev:</em> Feedback</a>
     *Next:* <a href="changelog.html" class="nav">Change Log</a>
    </span>
-
-
-
-
-
 # Conclusion
 
 This is now the first "official" (i.e. post-beta) release version of

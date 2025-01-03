@@ -57,11 +57,6 @@ Inherited from `ThingState` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ThingState` :  
 [`findStateToken`](../object/ThingState.html#findStateToken) [`inventoryName`](../object/ThingState.html#inventoryName) [`listName`](../object/ThingState.html#listName) [`matchName`](../object/ThingState.html#matchName) [`wornName`](../object/ThingState.html#wornName)
 

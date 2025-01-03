@@ -44,11 +44,6 @@ Them - third-person mixed-gender plural
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Pronoun` :  
 [`all`](../object/Pronoun.html#all) [`aName`](../object/Pronoun.html#aName) [`ante`](../object/Pronoun.html#ante) [`person`](../object/Pronoun.html#person) [`reflexive`](../object/Pronoun.html#reflexive) [`theName`](../object/Pronoun.html#theName) [`theObjName`](../object/Pronoun.html#theObjName)
 
@@ -91,11 +86,6 @@ Inherited from `Pronoun` :
 
 Them is a plural, so it can match a list, as well as an individual
 object that matches Them
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

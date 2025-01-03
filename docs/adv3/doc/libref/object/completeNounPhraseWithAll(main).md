@@ -57,11 +57,6 @@ separate list.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `EverythingProd` :  
 [`filterForCollectives`](../object/EverythingProd.html#filterForCollectives)
 
@@ -73,11 +68,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `EverythingProd` :  
 [`resolveNouns`](../object/EverythingProd.html#resolveNouns)
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Exceptions and
 Error Handling  
@@ -16,11 +11,6 @@ Error Handling
    
 <a href="anonfn.html" class="nav"><em>Next:</em> Anonymous Functions</a>
     </span>
-
-
-
-
-
 # Exceptions and Error Handling
 
 TADS 3 provides a "structured exception handling" mechanism, which lets

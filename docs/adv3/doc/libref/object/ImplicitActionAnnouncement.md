@@ -193,11 +193,6 @@ action, rather than suggesting that we actually carried it out.
 
 Note that the action we're attempting is incomplete, as it was
 interupted for interactive input (such as asking for a missing object).
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

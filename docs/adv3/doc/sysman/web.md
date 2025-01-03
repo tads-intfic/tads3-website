@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Playing on the
 Web  
 <span class="navnp"><a href="banners.html" class="nav"><em>Prev:</em> The Banner Window
 Display Model</a>    
 <a href="webui.html" class="nav"><em>Next:</em> The Web UI</a>    
 </span>
-
-
-
-
-
 # Part VII: Playing on the Web
 
 Starting in TADS 3.1, you can set your game up for on-line play. This
@@ -67,11 +57,6 @@ on Web Server Setup explains how to set this up.
 [The Web UI](webui.html)  
 [Deploying your Web UI game](webdeploy.html)  
 [Setting up a custom TADS Web server](webhost.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

@@ -239,11 +239,6 @@ empty inventory
 
 For 'tall' listings, we'll use the standard listing style, so we need to
 provide the framing messages for the tall-mode listing.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

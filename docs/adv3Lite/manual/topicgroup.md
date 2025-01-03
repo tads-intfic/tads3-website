@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Topic Groups  
 <span class="navnp"><a href="specialtopic.html" class="nav"><em>Prev:</em> Special Topics</a>
    
 <a href="convnode.html" class="nav"><em>Next:</em> Conversation Nodes</a>
     </span>
-
-
-
-
-
 # Topic Groups
 
 A Topic Group is simply a way of grouping together ActorTopicEntries

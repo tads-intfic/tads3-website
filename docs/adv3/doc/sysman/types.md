@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Fundamental
 Datatypes  
 <span class="navnp"><a href="preproc.html" class="nav"><em>Prev:</em> The Preprocessor</a>
     <a href="strlit.html" class="nav"><em>Next:</em> String Literals</a>
     </span>
-
-
-
-
-
 # Fundamental Datatypes
 
 This section describes the fundamental ("primitive") datatypes of the

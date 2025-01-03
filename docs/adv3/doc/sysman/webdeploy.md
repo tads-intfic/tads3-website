@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="web.html" class="nav">Playing on the Web</a> \> Deploying your
 Web UI game  
 <span class="navnp"><a href="webui.html" class="nav"><em>Prev:</em> The Web UI</a>
     <a href="webhost.html" class="nav"><em>Next:</em> Setting up a custom
 TADS Web server</a>     </span>
-
-
-
-
-
 # Deploying your Web UI game
 
 When you build a TADS game with the Web UI library, there are two ways

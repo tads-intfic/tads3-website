@@ -67,11 +67,6 @@ conditions, and can optionally place itself out of reach as well.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -215,11 +210,6 @@ object from within.
 
 We cannot implicitly remove this obstruction, so simply return nil when
 asked.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

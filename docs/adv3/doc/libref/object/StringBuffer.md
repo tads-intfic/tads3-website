@@ -87,11 +87,6 @@ string from a section of the buffer using the substr() method.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -237,11 +232,6 @@ running for the given character length. If the length is omitted,
 everything from the starting index to the end of the buffer is included
 in the result string. A negative value for 'idx' indexes from the end of
 the string.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

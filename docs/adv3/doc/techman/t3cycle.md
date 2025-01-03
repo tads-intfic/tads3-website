@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> The Command
 Execution Cycle  
@@ -16,11 +11,6 @@ Execution Cycle
 Changing) Awkward Messages</a>    
 <a href="t3transcript.html" class="nav"><em>Next:</em> Manipulating the
 Transcript</a>     </span>
-
-
-
-
-
 # The Command Execution Cycle
 
 *by Eric Eve*

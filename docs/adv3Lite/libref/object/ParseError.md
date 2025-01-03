@@ -235,11 +235,6 @@ If this new command is indeed a valid response to the error message, we
 return a CommandList with the "cured" version of the command. This new
 command list should supplement the command with the new information
 provided by the reply. If not, we simply return nil.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

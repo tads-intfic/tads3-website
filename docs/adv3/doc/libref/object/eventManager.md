@@ -177,11 +177,6 @@ currently schedulable.
 
 Get the next run time. We'll find the lowest run time of our fuses and
 daemons and return that.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

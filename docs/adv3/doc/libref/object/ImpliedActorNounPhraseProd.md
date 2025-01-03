@@ -78,11 +78,6 @@ leaving it out.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `EmptyNounPhraseProd` :  
 [`asker_`](../object/EmptyNounPhraseProd.html#asker_) [`fallbackResponseProd`](../object/EmptyNounPhraseProd.html#fallbackResponseProd) [`newMatch`](../object/EmptyNounPhraseProd.html#newMatch) [`responseProd`](../object/EmptyNounPhraseProd.html#responseProd)
 
@@ -136,11 +131,6 @@ Inherited from `BasicProd` :
 
 
 get my implied object
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

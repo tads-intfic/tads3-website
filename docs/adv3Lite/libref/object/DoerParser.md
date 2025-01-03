@@ -175,11 +175,6 @@ those potential matches by doing the full regular expression comparison.
 Construction. The language library should create one of these objects
 for each verb phrasing it wants to define for use in writing Doer 'cmd'
 strings.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

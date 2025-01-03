@@ -368,11 +368,6 @@ we return true only when no quantity is specified.
 
 When we have no location, we want to create our own special containment
 path, just as we create our own special SenseInfo.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Operator
 Overloading  
 <span class="navnp"><a href="inlineobj.html" class="nav"><em>Prev:</em> Inline Objects</a>
     <a href="multmeth.html" class="nav"><em>Next:</em> Multi-Methods</a>
     </span>
-
-
-
-
-
 # Operator Overloading
 
 TADS lets you define custom meanings for many of the "algebraic"

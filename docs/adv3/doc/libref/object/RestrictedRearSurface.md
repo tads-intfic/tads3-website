@@ -73,11 +73,6 @@ A restricted-contents RearSurface
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `RestrictedHolder` :  
 [`validContents`](../object/RestrictedHolder.html#validContents)
 
@@ -166,11 +161,6 @@ explain the problem
 
 
 override PutBehind to enforce our contents restriction
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -44,11 +44,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `FinishType` :  
 [`finishMsg`](../object/FinishType.html#finishMsg)
 
@@ -57,13 +52,6 @@ Inherited from `FinishType` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_Properties_"></span>
 
 

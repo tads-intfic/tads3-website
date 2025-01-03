@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Doers  
 <span class="navnp"><a href="message.html" class="nav"><em>Prev:</em> Messages</a>
    
 <a href="implicit.html" class="nav"><em>Next:</em> Implicit Actions</a>
     </span>
-
-
-
-
-
 # Doers
 
 A Doer intervenes between a Command and the actions it performs. Most of

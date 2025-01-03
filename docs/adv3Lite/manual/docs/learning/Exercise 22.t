@@ -1620,10 +1620,3 @@ fabric: SimpleAttachable 'square of fabric; dull grey gray metallic; patch'
         expose it again. '
     
 ;
-
-
-
-
-
-
-

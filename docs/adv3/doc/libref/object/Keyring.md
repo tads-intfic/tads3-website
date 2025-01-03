@@ -366,11 +366,6 @@ override this routine to return true only for the desired keys.
 
 
 implicitly put a key on the keyring
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

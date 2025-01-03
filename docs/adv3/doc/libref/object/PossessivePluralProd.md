@@ -75,11 +75,6 @@ to the possessive and np\_ to the plural.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `BasicPossessiveProd` :  
 [`npKeeper`](../object/BasicPossessiveProd.html#npKeeper)
 
@@ -144,11 +139,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

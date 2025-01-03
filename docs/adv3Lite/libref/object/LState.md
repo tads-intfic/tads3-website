@@ -158,11 +158,6 @@ the word to the dictionary, so that the spelling corrector can recognize
 it.
 
 \[Required\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Reacting to Actions  
 <span class="navnp"><a href="implicit.html" class="nav"><em>Prev:</em> Implicit Actions</a>
    
 <a href="define.html" class="nav"><em>Next:</em> Defining New Actions</a>
     </span>
-
-
-
-
-
 # Reacting to Actions
 
 In the section on [action results](actres.html) we saw how to make the

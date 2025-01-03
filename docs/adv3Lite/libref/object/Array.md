@@ -64,11 +64,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -379,11 +374,6 @@ of the elements from 'start' to the last element.
 
 Find the first element for which the given condition is true, and return
 the value of the element.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

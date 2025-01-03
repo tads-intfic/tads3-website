@@ -257,11 +257,6 @@ the given HTML text, without any additional formatting.
 
 
 add text to the status line
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

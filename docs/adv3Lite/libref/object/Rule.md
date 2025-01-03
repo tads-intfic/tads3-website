@@ -559,11 +559,6 @@ A condition that must hold (or a method returning a Boolean value to
 determine whether or not appropriate conditions hold) for this Rule to
 match. This is only needed if none of the other properties in this
 section provide a way of speficifying the required conditions.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

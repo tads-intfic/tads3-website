@@ -90,11 +90,6 @@ literalAdjPhrase-\>adj\_
 
 
 literalAdjPhrase-\>adj\_ nounWord-\>noun\_  
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

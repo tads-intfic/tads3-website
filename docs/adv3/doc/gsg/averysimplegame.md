@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](chapter2.html)   [\[Next\]](addingitemstothegame.html)*
 
@@ -19,23 +14,6 @@ objects. (We could conceivably start with only one room, to make things
 even simpler, but then there would be nothing to do while playing the
 game; with two rooms, we at least can move between them.)
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The basis for the game we shall be developing is the so-called
 'advanced' starter game starta3.t, which should be located in the
@@ -50,23 +28,6 @@ goldskull.t. Again, if you are *not* using Workbench you will need to
 use your text editor to create a file called goldskull.t3m (in the same
 location) containing the following:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 -DLANGUAGE=en_us  
 -DMESSAGESTYLE=neu  
@@ -76,89 +37,21 @@ location) containing the following:
 -lib adv3/adv3  
 -source goldskull  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Now open goldskull.t in Workbench (if you’re using Workbench) or else in
 text editor of your choice; the TADS Compiler will accept an ASCII file
 produced with any editor. Then remove (or modify as shown below) the
 definition of startroom, i.e. the lines that read:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 startRoom: Room 'Start Room'  
     "This is the starting room. "  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 If you started from starta3.t your file should already contain the vital
 lines:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 \#charset "us-ascii"  
 \#include \<adv3.h\>  
@@ -167,23 +60,6 @@ lines:
 If not, you will need to add them. You will also need to ensure that
 your source file contains:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 gameMain: GameMainDef  
     /\* the initial player character is 'me' \*/  
@@ -226,23 +102,6 @@ cave: Room
     south = startroom  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 To run this example, all you have to do is compile it with t3make, the
 TADS 3 Compiler, and run it with t3run, the TADS 3 Run-time system. If
@@ -251,149 +110,20 @@ choose the 'Compile and Run' from the 'Build' menu (or click the
 appropriate icons on the task bar). If you're not using Workbench, then
 on most operating systems you can compile your game by typing this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
 
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="40"></td>
-<td>t3make -d -f goldskull <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
 
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
-
-and you can run it by typing this:  
+t3make -d -f goldskull and you can run it by typing this:  
   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="42"></td>
-<td>t3run mygame  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
-
-If you have difficulty getting this to work, consult the README file
+t3run mygame  If you have difficulty getting this to work, consult the README file
 that came with your distribution. It's possible, for example, that you
 may need to manually create a subdirectory called obj under you main
 game directory (Workbench handles this automatically).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Now we'll walk through the sample game line by line.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The \#include command inserts another sourcefile into your program. The
 file called adv3.h is a set of basic definitions that allows your game
@@ -409,23 +139,6 @@ your game, you don't need to worry about definitions for basic words
 such as "the," a large set of verbs (such as "take," "north," and so
 forth), and many object classes (more on these in a bit).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The line including en_us.h is similar; it contains some additional
 standard definitions to interface with the parts of the library that are
@@ -433,23 +146,6 @@ specific to the English language. The reason for placing these
 definitions in a separate file is that it is then much easier to
 customize TADS 3 to work with other languages.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The line that says startroom: Room tells the compiler that you're going
 to define a room named "startroom". Now, a Room is nothing special to
@@ -463,23 +159,6 @@ be displayed by the player by typing "look". Finally, the
 north definition says that another room, called cave, is reached when
 the player types **north** while in startroom.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 A bit of terminology: startroom and cave are *objects*, belonging to the
 *class* Room; roomName, desc, north, and the like are *properties* of
@@ -493,46 +172,12 @@ thinks of as an object is actually represented by a TADS object
 (sometimes several, in fact); but your TADS program will contain many
 objects that the player doesn't directly manipulate, such as rooms.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 If you're familiar with other programming languages, you may notice that
 the program above appears to be entirely definitions of objects; you may
 wonder where the program starts running. The answer is that the program
 doesn't have an obvious beginning in the code we typed.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 TADS 3 employs a style of programming different from that you may have
 encountered before; this new style may take a little getting used to,
@@ -546,23 +191,6 @@ overall program doesn't have a beginning or an end; or rather it does,
 but these are buried deep inside the adv3 library and taken care of for
 you.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The reason TADS 3 programs aren't procedural is that the player is
 always in control of the game. When the game first starts, the library

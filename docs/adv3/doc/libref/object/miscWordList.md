@@ -24,11 +24,6 @@ layout: docs
 tokWord-\>txt\_ \| tokInt-\>txt\_ \| tokApostropheS-\>txt\_  
 \| tokPluralApostrophe-\>txt\_  
 \| tokPoundInt-\>txt\_ \| tokString-\>txt\_ \| tokAbbrPeriod-\>txt\_  
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

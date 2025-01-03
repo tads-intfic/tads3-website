@@ -243,11 +243,6 @@ Reset the item. This is invoked whenever the item is added to an actor's
 agenda. By default, we'll set isDone to nil as long as isDone isn't a
 method; this makes it easier to reuse agenda items, since we don't have
 to worry about clearing out the isDone flag when reusing an item.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

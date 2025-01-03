@@ -120,13 +120,6 @@ links on Unix or apply working directories to local paths.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -465,11 +458,6 @@ original file and the new file. The new file must not already exist.
 Get the universal URL-style notation for this file name. Returns a
 string giving the universal notation for the file name (including any
 path portion).
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

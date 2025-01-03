@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Bibliographic
 Metadata - the GameInfo Format  
@@ -16,11 +11,6 @@ Metadata - the GameInfo Format
 with the Workbench Editor (Windows)</a>    
 <a href="depth.html" class="nav"><em>Next:</em> TADS 3 In Depth</a>    
 </span>
-
-
-
-
-
 # Bibliographic Metadata: The GameInfo Format
 
 TADS has a mechanism that lets you include bibliographic information -

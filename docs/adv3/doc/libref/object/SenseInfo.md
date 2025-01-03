@@ -183,11 +183,6 @@ equally transparent, or a negative number if 'self' is less transparent
 Return the more transparent of two SenseInfo objects. Either argument
 can be nil, in which case we'll return the non-nil one; if both are nil,
 we'll return nil. If they're equal, we'll return the first one.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

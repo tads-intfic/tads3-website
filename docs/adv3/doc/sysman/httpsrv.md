@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> HTTPServer  
 <span class="navnp"><a href="httpreq.html" class="nav"><em>Prev:</em> HTTPRequest</a>
     <a href="icic.html" class="nav"><em>Next:</em> IntrinsicClass</a>    
 </span>
-
-
-
-
-
 # HTTPServer
 
 The HTTPServer intrinsic class implements an HTTP network server. HTTP

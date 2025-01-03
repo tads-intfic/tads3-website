@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](settingthescene.html)   [\[Next\]](endingthegame.html)*
 
@@ -17,50 +12,16 @@ layout: docs
 Now that we have set the scene, we can introduce our NPC, a charcoal
 burner who will be tending the fire. We may start by defining him thus:
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    burner : Person 'charcoal burner' 'charcoal burner'  
+      @fireClearing  
+      "It's rather difficult to make out his features under all the grime and  
+        soot. "  
+      properName = 'Joe Black'   
+      globalParamName = 'burner'  
+      isHim = true  
+    ;  
 
-burner : Person 'charcoal burner' 'charcoal burner'  
-  @fireClearing  
-  "It's rather difficult to make out his features under all the grime and  
-    soot. "  
-  properName = 'Joe Black'   
-  globalParamName = 'burner'  
-  isHim = true  
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 This may seem very simple code for such a potentially complicated
 object, and it certainly doesn't look like the charcoal burner will do
@@ -140,49 +101,15 @@ GiveTopic defines its actor's response to a Give command, a ShowTopic to
 a Show command, and a GiveShowTopic to either a Give or a Show command.
 For our purposes, we may as well use a GiveShowTopic.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    + GiveShowTopic @ring  
+      "As you hand the ring over to {the burner/him}, his eyes light up in   
+        delight and his jaws drop in amazement. \<q\>You found it!\</q\> he   
+        declares, \<q\>God bless you, you really found it! Now I can go and call   
+        on my sweetheart after all! Thank you, my dear, that's absolutely   
+        wonderful!\</q\>"  
+    ;  
 
-+ GiveShowTopic @ring  
-  "As you hand the ring over to {the burner/him}, his eyes light up in   
-    delight and his jaws drop in amazement. \<q\>You found it!\</q\> he   
-    declares, \<q\>God bless you, you really found it! Now I can go and call   
-    on my sweetheart after all! Thank you, my dear, that's absolutely   
-    wonderful!\</q\>"  
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Once again, using a template makes defining this object very simple. The
 object following the @ symbol is not the location but in fact the value
@@ -212,50 +139,16 @@ handle this, then, is through a combination of a DefaultGiveShowTopic
 otherwise specifically defined) and a ShuffledEventList, which picks a
 random response from a list (more on which shortly).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+    + DefaultGiveShowTopic, ShuffledEventList  
+      \[  
+        '{The burner/he} shakes his head. \<q\>No thanks, love.\</q\>',  
+        'He looks at it and grins. \<q\>That\\s nice, my dear,\</q\> he remarks,  
+         handing it back. ',  
+        '\<q\>I\\d hang on to that if I were you,\</q\> he advises. '  
+      \]  
+    ;  
 
-+ DefaultGiveShowTopic, ShuffledEventList  
-  \[  
-    '{The burner/he} shakes his head. \<q\>No thanks, love.\</q\>',  
-    'He looks at it and grins. \<q\>That\\s nice, my dear,\</q\> he remarks,  
-     handing it back. ',  
-    '\<q\>I\\d hang on to that if I were you,\</q\> he advises. '  
-  \]  
-;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 This definition means that the object is both a DefaultGiveShowTopic and
 a ShuffledEventList. The list of single-quoted strings between the

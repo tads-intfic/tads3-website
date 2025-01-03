@@ -410,11 +410,6 @@ will appear to emerge on the other end of the travel.
 Perform "local" travel - that is, travel between nested rooms within a
 single top-level location. By default, we simply defer to the actor to
 let it perform the local travel.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -333,11 +333,6 @@ the right portion. If we're listing exits, we get two more stages: stage
 
 Shut down the user interface. The library calls this when the game is
 about to terminate.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

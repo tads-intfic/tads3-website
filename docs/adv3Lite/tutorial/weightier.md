@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="goldskull.html" class="nav">Goldskull</a> \> Weightier Matters  
 <span class="navnp"><a href="improving.html" class="nav"><em>Prev:</em> Improving the
 Game</a>    
 <a href="inplace.html" class="nav"><em>Next:</em> Everything in its
 place</a>     </span>
-
-
-
-
-
 # Weightier Matters
 
 ## Weighing it up

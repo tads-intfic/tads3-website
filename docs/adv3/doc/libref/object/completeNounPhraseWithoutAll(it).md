@@ -48,11 +48,6 @@ further qualification.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ItProd` :  
 [`pronounType`](../object/ItProd.html#pronounType)
 
@@ -70,13 +65,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `PronounProd` :  
 [`checkAnaphoricBinding`](../object/PronounProd.html#checkAnaphoricBinding) [`resolveNouns`](../object/PronounProd.html#resolveNouns)
 

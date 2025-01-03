@@ -289,11 +289,6 @@ Remove me from the given location. Other locations are unaffected.
 
 remove an object from our contents - we'll delegate this to our template
 object just like we delegate addToContents
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

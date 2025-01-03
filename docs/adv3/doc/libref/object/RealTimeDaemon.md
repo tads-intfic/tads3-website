@@ -161,11 +161,6 @@ Creation. 'interval' is the number of milliseconds between invocations.
 
 
 execute the daemon
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Symconn  
 <span class="navnp"><a href="subtime.html" class="nav"><em>Prev:</em> Subtime</a>
     <a href="sysrules.html" class="nav"><em>Next:</em> Sysrules</a>    
 </span>
-
-
-
-
-
 # Symconn (Symmetrical Connectors)
 
 ## Overview

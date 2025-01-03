@@ -67,11 +67,6 @@ phrases (such as possessives or locationals) within topic phrases.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Resolver` :  
 [`action_`](../object/Resolver.html#action_) [`actor_`](../object/Resolver.html#actor_) [`equivs_`](../object/Resolver.html#equivs_) [`isGlobalScope`](../object/Resolver.html#isGlobalScope) [`isSubResolver`](../object/Resolver.html#isSubResolver) [`issuer_`](../object/Resolver.html#issuer_) [`scope_`](../object/Resolver.html#scope_) [`whichMessageObject`](../object/Resolver.html#whichMessageObject) [`whichObject`](../object/Resolver.html#whichObject)
 
@@ -161,11 +156,6 @@ we have no basis for any filtering; return the list unchanged
 
 
 we have no basis for any filtering
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

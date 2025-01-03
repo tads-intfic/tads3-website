@@ -682,11 +682,6 @@ Set pronouns for the topic, if possible. If the topic corresponds to a
 game-world object, then we should set the pronoun antecedent to the game
 object. This must be handled per subclass because of the range of
 possible meanings of 'topic'.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

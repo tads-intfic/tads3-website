@@ -147,11 +147,6 @@ doNested().
 
 
 [`activated`](#activated) [`active`](#active) [`autoName`](#autoName) [`convKeys`](#convKeys) [`curiosityAroused`](#curiosityAroused) [`getActor`](#getActor) [`impliesGreeting`](#impliesGreeting) [`isConversational`](#isConversational) [`keyTopics`](#keyTopics) [`listOrder`](#listOrder) [`name`](#name) [`suggestAs`](#suggestAs) [`timesInvoked`](#timesInvoked)
-
-
-
-
-
 Inherited from `TopicEntry` :  
 [`includeInList`](../object/TopicEntry.html#includeInList) [`isActive`](../object/TopicEntry.html#isActive) [`matchExactCase`](../object/TopicEntry.html#matchExactCase) [`matchObj`](../object/TopicEntry.html#matchObj) [`matchPattern`](../object/TopicEntry.html#matchPattern) [`matchScore`](../object/TopicEntry.html#matchScore) [`scoreBoost`](../object/TopicEntry.html#scoreBoost) [`topicMatched`](../object/TopicEntry.html#topicMatched)
 
@@ -551,11 +546,6 @@ default this is either once (if we're not also an EventList) or the
 number of items in our eventList (if we are an EventList). If you want
 this topic entry to go on being suggested ad infinitum, set
 timesToSuggest to nil.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

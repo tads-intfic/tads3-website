@@ -168,11 +168,6 @@ this is a greeting, so we don't want to trigger another greeting
 
 if we use this as a greeting upon entering a ConvNode, we'll want to
 stay in the node afterward
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

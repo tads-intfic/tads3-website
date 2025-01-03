@@ -70,13 +70,6 @@ since it lets you manipulate the raw bytes in a file directly.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -340,11 +333,6 @@ example, attempting to store 0xABCD in an 8-bit format will store only
 
 Note that the signedness doesn't matter when writing a value. The
 signedness is important only when reading the value back in.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -72,11 +72,6 @@ other objects.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -175,11 +170,6 @@ Distinguishers that can use related objects to qualify the name should
 add those related objects to the scope by returning true here. For
 example, the locational distinguisher can use the location name as a
 qualifying phrase, so the location name is in scope.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

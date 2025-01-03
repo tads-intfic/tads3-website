@@ -142,11 +142,6 @@ return 'self', so a delayed agenda item can be initialized and added to
 an actor's agenda in one simple operation, like so:
 
 actor.addToAgenda(item.setDelay(1));
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

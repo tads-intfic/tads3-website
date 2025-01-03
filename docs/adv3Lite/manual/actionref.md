@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Action Reference  
 <span class="navnp"><a href="debug.html" class="nav"><em>Prev:</em> Debugging Commands</a>
     *Next:* <a href="actor.html" class="nav">Actors</a>    </span>
-
-
-
-
-
 # Action Reference
 
 ## How To Use This Reference

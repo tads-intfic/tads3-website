@@ -333,11 +333,6 @@ the right portion. If we're listing exits, we get two more stages: stage
 
 Shut down the user interface. The library calls this when the game is
 about to terminate.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -258,11 +258,6 @@ show the score rank message
 
 
 show the full message for a given score rank string
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

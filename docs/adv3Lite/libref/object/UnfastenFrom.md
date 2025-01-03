@@ -48,11 +48,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TIAction` :  
 [`actionIobjProp`](../object/TIAction.html#actionIobjProp) [`checkIobjProp`](../object/TIAction.html#checkIobjProp) [`curIobj`](../object/TIAction.html#curIobj) [`ioActionList`](../object/TIAction.html#ioActionList) [`preCondIobjProp`](../object/TIAction.html#preCondIobjProp) [`resolveIobjFirst`](../object/TIAction.html#resolveIobjFirst) [`verIobjProp`](../object/TIAction.html#verIobjProp)
 
@@ -61,21 +56,11 @@ Inherited from `TAction` :
 
 Inherited from `Action` :  
 [`actionFailed`](../object/Action.html#actionFailed) [`advanceOnFailure`](../object/Action.html#advanceOnFailure) [`againRepeatsParse`](../object/Action.html#againRepeatsParse) [`allowAll`](../object/Action.html#allowAll) [`extraMessageParams`](../object/Action.html#extraMessageParams) [`failCheckMsg`](../object/Action.html#failCheckMsg) [`failedActionCountsAsTurn`](../object/Action.html#failedActionCountsAsTurn) [`implicitTimeTaken`](../object/Action.html#implicitTimeTaken) [`includeInUndo`](../object/Action.html#includeInUndo) [`isConversational`](../object/Action.html#isConversational) [`isImplicit`](../object/Action.html#isImplicit) [`isRepeatable`](../object/Action.html#isRepeatable) [`oldRoom`](../object/Action.html#oldRoom) [`parentAction`](../object/Action.html#parentAction) [`parentAllowAll`](../object/Action.html#parentAllowAll) [`preCond`](../object/Action.html#preCond) [`redirectParent`](../object/Action.html#redirectParent) [`reportImplicitActions`](../object/Action.html#reportImplicitActions) [`scopeList`](../object/Action.html#scopeList) [`spellingPriority`](../object/Action.html#spellingPriority) [`synthParamID`](../object/Action.html#synthParamID) [`timeTaken`](../object/Action.html#timeTaken) [`turnsTaken`](../object/Action.html#turnsTaken) [`unhides`](../object/Action.html#unhides) [`verifyObj`](../object/Action.html#verifyObj) [`wasIlluminated`](../object/Action.html#wasIlluminated)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `TIAction` :  
 [`checkAction`](../object/TIAction.html#checkAction) [`doActionOnce`](../object/TIAction.html#doActionOnce) [`execAction`](../object/TIAction.html#execAction) [`execResolvedAction`](../object/TIAction.html#execResolvedAction) [`getMessageParam`](../object/TIAction.html#getMessageParam) [`getVerbPhrase`](../object/TIAction.html#getVerbPhrase) [`getVerbPhrase2`](../object/TIAction.html#getVerbPhrase2) [`reportAction`](../object/TIAction.html#reportAction) [`reset`](../object/TIAction.html#reset) [`resolvedObjectsInScope`](../object/TIAction.html#resolvedObjectsInScope) [`setResolvedObjects`](../object/TIAction.html#setResolvedObjects)
 

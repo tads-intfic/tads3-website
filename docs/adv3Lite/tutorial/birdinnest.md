@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Is the bird in
 the nest?  
@@ -16,11 +11,6 @@ the nest?
 the tree</a>    
 <a href="summing.html" class="nav"><em>Next:</em> Summing Up</a>    
 </span>
-
-
-
-
-
 # Is the bird in the nest?
 
 Despite all we have done so far in this chapter, the game still has one

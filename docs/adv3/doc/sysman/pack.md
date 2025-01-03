@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Byte Packing  
 <span class="navnp"><a href="scripts.html" class="nav"><em>Prev:</em> Input Scripts</a>
     <a href="bignum.html" class="nav"><em>Next:</em> BigNumber</a>    
 </span>
-
-
-
-
-
 # Byte Packing
 
 Byte packing is a new feature in TADS 3.1 designed to simplify binary

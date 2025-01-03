@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Introduction  
 <span class="navnp"><a href="begin.html" class="nav"><em>Prev:</em> Opening Moves</a>
     <a href="syntax.html" class="nav"><em>Next:</em> Typographical
 Conventions</a>     </span>
-
-
-
-
-
 # Introduction
 
 Welcome to the TADS 3 System Manual!

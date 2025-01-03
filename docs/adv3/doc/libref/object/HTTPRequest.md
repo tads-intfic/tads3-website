@@ -75,13 +75,6 @@ HTTPRequest extensions
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -596,11 +589,6 @@ arguments work as they do with sendReply().
 After calling this routine, call sendReplyChunk() as many times as
 needed to send the pieces of the reply. After sending all of the pieces,
 call endChunkedReply() to finish the reply.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

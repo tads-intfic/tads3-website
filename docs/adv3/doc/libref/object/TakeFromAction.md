@@ -158,11 +158,6 @@ this is a basic inventory-management verb, so allow ALL with it
 
 
 get the ALL list for the direct object
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

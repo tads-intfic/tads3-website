@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](addingitemstothegame.html)
   [\[Next\]](startinganewgame.html)*
@@ -24,241 +19,40 @@ property which contains code (i.e. a sequence of one or more statements)
 to be executed; it is very much like a function in C or Pascal. The new
 goldSkull with the method looks like this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  goldSkull: Thing  <br />
-</td>
-</tr>
-</tbody>
-</table>
+  goldSkull: Thing  
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    name = 'gold skull'  <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    vocabWords = 'gold skull/head'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    name = 'gold skull'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    location = pedestal  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    vocabWords = 'gold skull/head'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      <br />
-</td>
-</tr>
-</tbody>
-</table>
+    location = pedestal  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    actionDobjTake()      <br />
-</td>
-</tr>
-</tbody>
-</table>
+      
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    {  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    actionDobjTake()      
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      "As you lift the skull, a volley of poisonous  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    {  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      arrows is shot from the walls! You try to dodge  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      "As you lift the skull, a volley of poisonous  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      the arrows, but they take you by surprise!";  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      arrows is shot from the walls! You try to dodge  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>        <br />
-</td>
-</tr>
-</tbody>
-</table>
+      the arrows, but they take you by surprise!";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      finishGameMsg(ftDeath, [finishOptionUndo]);  <br />
-</td>
-</tr>
-</tbody>
-</table>
+        
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    }  <br />
-</td>
-</tr>
-</tbody>
-</table>
+      finishGameMsg(ftDeath, [finishOptionUndo]);  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  ;  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+  ;  
 
-|     |     |
-|-----|-----|
-|     |     |
+ 
+
 
 The method actionDobjTake (which stands for "action **D**irect
 **obj**ect **Take**") is invoked when the player (or any other actor)
@@ -270,23 +64,6 @@ finishGameMsg to end the game with a YOU HAVE DIED message;
 finishOptionUndo offers the player an UNDO option after the death
 message).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 You should note that we didn't just pick the name actionDobjTake out of
 thin air. The actionDobjTake method in the goldSkull object is called by
@@ -314,184 +91,26 @@ However, if something is defined in both Thing and goldSkull, as
 actionDobjTake is in this example, the definition in goldSkull takes
 precedence - it "overrides" the inherited method.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 We actually don't have a very good puzzle here, because there's no way
 to take the gold skull without dying. So, let's put a rock on the cave
 floor:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+  smallRock: Thing  
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  smallRock: Thing  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
+    name = 'small rock'  
+    vocabWords = 'small rock'  
+    location = cave  
+  ;  
 
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    name = 'small rock'  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    vocabWords = 'small rock'  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    location = cave  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  ;  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
 Now, let's change the actionDobjTake method of the goldSkull.  
   
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  actionDobjTake()  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  {  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
+  actionDobjTake()  
+  {  
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -560,170 +179,18 @@ Now, let's change the actionDobjTake method of the goldSkull.
 </tr>
 </tbody>
 </table>
+    {  
+      "As you lift the skull, a volley  
+      of poisonous arrows is shot from  
+      the walls! You try to dodge the  
+      arrows, but they take you by surprise!";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    {  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
+      finishGameMsg(ftDeath, [finishOptionUndo]);  
+    }  
+  }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      "As you lift the skull, a volley  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      of poisonous arrows is shot from  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      the walls! You try to dodge the  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      arrows, but they take you by surprise!";  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>      finishGameMsg(ftDeath, [finishOptionUndo]);  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>    }  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td>  }  <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-<td width="25"></td>
-</tr>
-</tbody>
-</table>
-
-|     |     |     |     |
-|-----|-----|-----|-----|
-|     |     |     |     |
 
 This new actionDobjTake first checks to see if the object being taken
 (the special object self, which is the object to which the message
@@ -737,45 +204,11 @@ allows us to override a method only under certain special circumstances,
 and otherwise do business as usual. If we don't satisfy one of these two
 requirements, the volley of poisonous arrows is released as before.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 So, the solution to the puzzle is to put the rock on the pedestal before
 taking the skull, thereby fooling the pedestal into thinking the skull
 is still there.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 As this stands, the player can avoid losing the game, but can't actually
 win it. To finish the game with a winning ending instead of a deadly
@@ -792,23 +225,6 @@ player character enters your new room with the skull. However, if you
 don't feel confident enough to try any of this on your own just yet, no
 matter, just read on.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 This should give you some idea of how a TADS 3 program looks. In the
 next chapter, we'll start to develop a somewhat larger game, starting

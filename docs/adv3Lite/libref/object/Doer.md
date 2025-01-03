@@ -338,11 +338,6 @@ Utility method that can be called from execAction() to redirect the
 command to a new action with the same (or new) objects. This will
 normally be called via the doInstead()/doNested() interface defined on
 our Redirector superclass.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

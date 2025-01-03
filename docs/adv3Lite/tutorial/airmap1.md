@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Starting the Map  
 <span class="navnp"><a href="describing.html" class="nav"><em>Prev:</em> Describing the
 game</a>    
 <a href="airmap2.html" class="nav"><em>Next:</em> Extending the Map</a>
     </span>
-
-
-
-
-
 # Starting the Map
 
 The first step is to create a new project. Follow the steps in [Chapter

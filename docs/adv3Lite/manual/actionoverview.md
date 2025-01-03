@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Overview  
 <span class="navnp"><a href="action.html" class="nav"><em>Prev:</em> Actions</a>
     <a href="actres.html" class="nav"><em>Next:</em> Action Results</a>
     </span>
-
-
-
-
-
 # Overview
 
 So far we have seen how to populate the game world with a wide variety

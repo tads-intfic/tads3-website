@@ -20,11 +20,6 @@ disambigOrdinalItem-\>np1\_ ('and' \| ',') disambigOrdinalList-\>np2\_
 
 
 disambigOrdinalItem-\>np1\_ ('and' \| ',') disambigOrdinalItem-\>np2\_  
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

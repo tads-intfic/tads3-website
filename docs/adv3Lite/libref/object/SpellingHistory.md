@@ -268,11 +268,6 @@ a spurious correction could be a spoiler, by revealing the existence of
 a dictionary word too early in the game. To reduce spurious corrections,
 we only accept corrections that actually make the command more
 parseable.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

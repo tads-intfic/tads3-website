@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> tads-io
 Function Set  
 <span class="navnp"><a href="regex.html" class="nav"><em>Prev:</em> Regular Expressions</a>
     <a href="tadsnet.html" class="nav"><em>Next:</em> tads-net Function
 Set</a>     </span>
-
-
-
-
-
 # tads-io Function Set
 
 The tads-io function set provides access to the user interface provided
@@ -1422,9 +1412,6 @@ back to `StatModeNormal`:
     "Loud Room";
     statusMode(StatModeNormal);
 ```
-
-
-
 `statusRight(*txt*)`
 
 

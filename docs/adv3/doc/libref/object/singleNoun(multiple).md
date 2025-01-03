@@ -50,13 +50,6 @@ noun phrase, and if we try to resolve it, we'll fail with an error.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -68,11 +61,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `SingleNounWithListProd` :  
 [`resolveNouns`](../object/SingleNounWithListProd.html#resolveNouns)
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Tips: A
 Context-Sensitive Help System  
 <span class="navnp"><a href="t3lister.html" class="nav"><em>Prev:</em> Lists and Listers</a>
     <a href="t3actor.html" class="nav"><em>Next:</em> Creating Dynamic
 Characters</a>     </span>
-
-
-
-
-
 # Tips: A Context-Sensitive Help System
 
 *by Krister Fundin*
@@ -192,9 +182,6 @@ showTipDesc() property, perhaps to something like this:
        }
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

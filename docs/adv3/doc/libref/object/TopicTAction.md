@@ -538,11 +538,6 @@ Use the same handling as for a regular two-object action. We can only
 default the actual object in this kind of verb; the actual object always
 fills the DirectObject slot, but in message generation it might use a
 different slot, so use the message generation slot here.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

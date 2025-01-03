@@ -66,11 +66,6 @@ Transcript Transform.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -108,11 +103,6 @@ Transcript Transform.
 Apply our transform to the transcript vector. By default, we do nothing;
 each subclass must override this to manipulate the vector to make the
 change it wants to make.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

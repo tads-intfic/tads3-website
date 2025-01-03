@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="cockpit.html" class="nav">Cockpit Controls</a> \> Taking Off  
 <span class="navnp"><a href="responding.html" class="nav"><em>Prev:</em> Responding to
 Actions</a>    
 <a href="character.html" class="nav"><em>Next:</em> Character
 Building</a>     </span>
-
-
-
-
-
 # Taking Off
 
 Now that we have a bunch of controls in the cockpit and an aircraft on

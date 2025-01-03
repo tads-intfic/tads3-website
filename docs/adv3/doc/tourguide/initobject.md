@@ -77,9 +77,7 @@ initialize itself at startup.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Some control is possible over the order of execution of InitObjects by

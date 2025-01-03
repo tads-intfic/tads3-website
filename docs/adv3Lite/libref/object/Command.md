@@ -1226,11 +1226,6 @@ what they had in mind. A terse acknowledgment would hide this
 difference, allowing the player to wrongly assume that the parser did
 what they thought it was going to do and potentially leading to
 confusion down the road.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

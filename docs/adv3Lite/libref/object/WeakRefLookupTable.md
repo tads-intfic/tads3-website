@@ -80,23 +80,11 @@ key/value pair for the value is automatically deleted from the table.
 
 
 
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `LookupTable` :  
 ` [`applyAll`](../object/LookupTable.html#applyAll)  [`forEach`](../object/LookupTable.html#forEach)  [`forEachAssoc`](../object/LookupTable.html#forEachAssoc)  [`getBucketCount`](../object/LookupTable.html#getBucketCount)  [`getDefaultValue`](../object/LookupTable.html#getDefaultValue)  [`getEntryCount`](../object/LookupTable.html#getEntryCount)  [`isKeyPresent`](../object/LookupTable.html#isKeyPresent)  [`keysToList`](../object/LookupTable.html#keysToList)  [`nthKey`](../object/LookupTable.html#nthKey)  [`nthVal`](../object/LookupTable.html#nthVal)  [`removeElement`](../object/LookupTable.html#removeElement)  [`setDefaultValue`](../object/LookupTable.html#setDefaultValue)  [`valsToList`](../object/LookupTable.html#valsToList)  `
 

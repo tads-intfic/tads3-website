@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| T3 VM Technical
 Documentation  
 <span class="navnp"><a href="t3projectStarters.html" class="nav"><em>Prev:</em> Workbench
 Project Starter Templates</a>    
 <a href="t3spec/intro.html" class="nav"><em>Next:</em> Introduction</a>
     </span>
-
-
-
-
-
 # Part IV: T3 Virtual Machine Technical Documentation
 
 This section is for users interested in the internals of the T3 Virtual
@@ -54,11 +44,6 @@ the machine.
 [Metaclass Identifier List](t3spec/metalist.html)  
 [Saving and Restoring State](t3spec/save.html)  
 [TADS Special Characters](t3spec/tadsspch.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

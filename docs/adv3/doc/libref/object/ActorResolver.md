@@ -225,11 +225,6 @@ actor, pronouns are relative to the issuing actor.
 
 
 resolve a noun phrase involving unknown words
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

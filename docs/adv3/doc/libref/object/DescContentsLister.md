@@ -71,11 +71,6 @@ LOOK IN the object.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -119,11 +114,6 @@ Inherited from `Lister` :
 Use the explicit look-in flag for listing contents. We might list items
 within an object on explicit examination of the item that we wouldn't
 list in a room or inventory list containing the item.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Capturing Calls to
 Undefined Methods  
 <span class="navnp"><a href="anonfn.html" class="nav"><em>Prev:</em> Anonymous Functions</a>
     <a href="reflect.html" class="nav"><em>Next:</em> Reflection</a>    
 </span>
-
-
-
-
-
 # Capturing Calls to Undefined Properties
 
 The TADS 3 language doesn't require you to specify the types of
@@ -145,9 +135,6 @@ easy to implement.
       orig_ = nil
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

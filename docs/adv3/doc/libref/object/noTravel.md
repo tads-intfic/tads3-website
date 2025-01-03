@@ -48,11 +48,6 @@ appropriate message.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TravelConnector` :  
 [`connectorStagingLocation`](../object/TravelConnector.html#connectorStagingLocation) [`isCircularPassage`](../object/TravelConnector.html#isCircularPassage) [`isConnectorListed`](../object/TravelConnector.html#isConnectorListed) [`rememberCircularPassage`](../object/TravelConnector.html#rememberCircularPassage) [`travelBarrier`](../object/TravelConnector.html#travelBarrier) [`travelMemory`](../object/TravelConnector.html#travelMemory)
 
@@ -130,11 +125,6 @@ it is obvious that is no passage this way
 
 
 this is not a passable connector
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

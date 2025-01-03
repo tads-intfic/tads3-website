@@ -182,11 +182,6 @@ obstruction, make a note of the obstruction we just tried to remove; if
 we find it again on a subsequent iteration, we'll know that we've tried
 before to remove it and failed, and thus we'll know to give up without
 making the same doomed attempt again.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

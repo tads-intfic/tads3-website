@@ -67,11 +67,6 @@ The base class for shipboard directions (port, aft, etc).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Direction` :  
 [`allDirections`](../object/Direction.html#allDirections) [`dirProp`](../object/Direction.html#dirProp) [`sortingOrder`](../object/Direction.html#sortingOrder)
 
@@ -113,11 +108,6 @@ Inherited from `Direction` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

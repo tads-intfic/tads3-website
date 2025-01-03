@@ -287,11 +287,6 @@ Turn the light source on or off. Note that we don't have to make any
 special check for a change to the light level, because the main action
 handler always checks for a change in light/dark status over the course
 of the turn.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

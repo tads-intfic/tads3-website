@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Sensory  
 <span class="navnp"><a href="scenetopic.html" class="nav"><em>Prev:</em> SceneTopic</a>
     <a href="signals.html" class="nav"><em>Next:</em> Signals</a>    
 </span>
-
-
-
-
-
 # Sensory
 
 ## Overview

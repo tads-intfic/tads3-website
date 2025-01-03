@@ -186,13 +186,6 @@ default if you don't specify a time zone is
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -399,11 +392,6 @@ time past noon UTC on that date.
 Note that there's no local time zone involved in this calculation, since
 the Julian day number is specifically defined in terms of universal
 time.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

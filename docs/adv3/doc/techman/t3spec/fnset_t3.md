@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 t3vm Function Set  
@@ -16,11 +11,6 @@ t3vm Function Set
    
 <a href="metalist.html" class="nav"><em>Next:</em> Metaclass Identifier
 List</a>     </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -236,11 +226,6 @@ mechanism and the state save/restore mechanism.
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

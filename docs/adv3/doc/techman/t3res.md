@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Action Results  
 <span class="navnp"><a href="t3messages.html" class="nav"><em>Prev:</em> Where Messages Come
 From</a>    
 <a href="t3verchk.html" class="nav"><em>Next:</em> Verify, Check, and
 When to Use Which</a>     </span>
-
-
-
-
-
 # Action Results
 
 One of the main programming tasks in writing an adventure game is

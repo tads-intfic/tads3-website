@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="action.html" class="nav">Actions</a> \> Scope  
 <span class="navnp"><a href="scope.html" class="nav"><em>Prev:</em> Scope</a>
    
 <a href="actionref.html" class="nav"><em>Next:</em> Action Reference</a>
     </span>
-
-
-
-
-
 # Debugging Commands
 
 When testing and debugging a work of interactive fiction it is sometimes

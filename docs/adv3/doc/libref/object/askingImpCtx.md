@@ -47,11 +47,6 @@ case.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `tryingImpCtx` :  
 [`useInfPhrase`](../object/tryingImpCtx.html#useInfPhrase)
 
@@ -63,11 +58,6 @@ Inherited from `ImplicitAnnouncementContext` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `tryingImpCtx` :  
 [`buildImplicitAnnouncement`](../object/tryingImpCtx.html#buildImplicitAnnouncement)
 

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Summing Up  
 <span class="navnp"><a href="birdinnest.html" class="nav"><em>Prev:</em> Is the bird in the
 nest?</a>    
 <a href="goldskull.html" class="nav"><em>Next:</em> Goldskull</a>    
 </span>
-
-
-
-
-
 # Summing Up
 
 There's doubtless a great deal more that could be done to improve even
@@ -240,9 +230,6 @@ we've now left it:
         direction = [portDir, starboardDir, foreDir, aftDir]
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

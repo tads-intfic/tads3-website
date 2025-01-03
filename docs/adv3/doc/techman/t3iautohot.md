@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Using AutoHotKey with
 the Workbench Editor (Windows)  
@@ -16,11 +11,6 @@ the Workbench Editor (Windows)
 Compilation</a>    
 <a href="gameinfo.html" class="nav"><em>Next:</em> Bibliographic Metadata
 - the GameInfo Format</a>     </span>
-
-
-
-
-
 # Using AutoHotKey with the Workbench Editor (Windows)
 
 *by Eric Eve*
@@ -184,14 +174,7 @@ adding the following to the file and then saving it:
 
     Whether the particular examples given above are of any use to you will no doubt depend on your own preferences and coding style, but hopefully they should help you to get started using AutoHotKey to automate some of the typing chores in the Workbench code editor. With the help of the AutoHotKey documentation if need be, you should be able to adapt these examples to your own needs, or create hotkey and hotstring combinations that are useful to you. As you study the AutoHotKey documentation you’ll see that the program is capable of a great deal more than we have illustrated here, should you wish to try something more ambitious.
 
-    Finally, I should point out that it was Jim Aikin who put me on to AutoHotKey as a great utility to use in conjunction with TADS 3 Workbench for Windows.
-
-
-
-
-
-
-    TADS 3 Technical Manual
+    Finally, I should point out that it was Jim Aikin who put me on to AutoHotKey as a great utility to use in conjunction with TADS 3 Workbench for Windows.    TADS 3 Technical Manual
 
     Table of Contents | 
     Fundamentals > 
@@ -201,5 +184,3 @@ adding the following to the file and then saving it:
 
 
 ```
-
-

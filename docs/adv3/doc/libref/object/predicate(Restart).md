@@ -73,11 +73,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `RestartAction` :  
 [`doRestartGame`](../object/RestartAction.html#doRestartGame) [`execSystemAction`](../object/RestartAction.html#execSystemAction)
 

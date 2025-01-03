@@ -78,11 +78,6 @@ opened and closed.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Openable` :  
 [`descContentsLister`](../object/Openable.html#descContentsLister) [`lockStatusReportable`](../object/Openable.html#lockStatusReportable) [`openingLister`](../object/Openable.html#openingLister)
 
@@ -111,11 +106,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Openable` :  
 [`addInteriorReachableCond`](../object/Openable.html#addInteriorReachableCond) [`dobjFor(Board)`](../object/Openable.html#dobjFor(Board)) [`dobjFor(Close)`](../object/Openable.html#dobjFor(Close)) [`dobjFor(GetOutOf)`](../object/Openable.html#dobjFor(GetOutOf)) [`dobjFor(Lock)`](../object/Openable.html#dobjFor(Lock)) [`dobjFor(LockWith)`](../object/Openable.html#dobjFor(LockWith)) [`dobjFor(LookIn)`](../object/Openable.html#dobjFor(LookIn)) [`dobjFor(Open)`](../object/Openable.html#dobjFor(Open)) [`dobjFor(Search)`](../object/Openable.html#dobjFor(Search)) [`iobjFor(PourInto)`](../object/Openable.html#iobjFor(PourInto)) [`iobjFor(PutIn)`](../object/Openable.html#iobjFor(PutIn)) [`openStatus`](../object/Openable.html#openStatus)
 

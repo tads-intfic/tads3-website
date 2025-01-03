@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> Custom
 Preconditions  
 <span class="navnp"><a href="t3verb.html" class="nav"><em>Prev:</em> How to Create Verbs</a>
     <a href="t3msg.html" class="nav"><em>Next:</em> Message Parameter
 Substitutions</a>     </span>
-
-
-
-
-
 # Custom Preconditions
 
 *by Eric Eve*

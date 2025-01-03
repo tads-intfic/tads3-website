@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Diverse Defaults  
@@ -16,11 +11,6 @@ Diverse Defaults
 Answers</a>    
 <a href="convsumm.html" class="nav"><em>Next:</em> Summary</a>    
 </span>
-
-
-
-
-
 # Diverse Defaults
 
 The one obvious thing that's missing from Angela's conversational
@@ -303,9 +293,6 @@ overhear the conversation:
         garrulousness. "
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

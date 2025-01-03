@@ -44,11 +44,6 @@ blockEndConv method common to Actor, ActorState and NodeEndCheck
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -88,11 +83,6 @@ turn and returns nil. This is to allow us to use: \*. return
 blockEndConv;
 
 in the canEndConversation method to suppress the output of any
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

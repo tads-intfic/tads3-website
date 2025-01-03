@@ -312,11 +312,6 @@ Reset the item. This is invoked whenever the item is added to an actor's
 agenda. By default, we'll set isDone to nil as long as isDone isn't a
 method; this makes it easier to reuse agenda items, since we don't have
 to worry about clearing out the isDone flag when reusing an item.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -72,11 +72,6 @@ A special kind of Underside that only accepts specific contents.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `RestrictedHolder` :  
 [`validContents`](../object/RestrictedHolder.html#validContents)
 
@@ -165,11 +160,6 @@ blanket failure message by default.
 
 
 override PutUnder to enforce our contents restriction
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -106,11 +106,6 @@ turn.
 
 
 [`actionFailed`](#actionFailed) [`advanceOnFailure`](#advanceOnFailure) [`againRepeatsParse`](#againRepeatsParse) [`allowAll`](#allowAll) [`extraMessageParams`](#extraMessageParams) [`failCheckMsg`](#failCheckMsg) [`failedActionCountsAsTurn`](#failedActionCountsAsTurn) [`implicitTimeTaken`](#implicitTimeTaken) [`includeInUndo`](#includeInUndo) [`isConversational`](#isConversational) [`isImplicit`](#isImplicit) [`isRepeatable`](#isRepeatable) [`oldRoom`](#oldRoom) [`parentAction`](#parentAction) [`parentAllowAll`](#parentAllowAll) [`preCond`](#preCond) [`redirectParent`](#redirectParent) [`reportImplicitActions`](#reportImplicitActions) [`scopeList`](#scopeList) [`spellingPriority`](#spellingPriority) [`synthParamID`](#synthParamID) [`timeTaken`](#timeTaken) [`turnsTaken`](#turnsTaken) [`unhides`](#unhides) [`verifyObj`](#verifyObj) [`wasIlluminated`](#wasIlluminated)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -1002,11 +997,6 @@ return true to tell our caller that this routine has no objection.
 
 Wraps a list of objects in NPMatch objects so they can be run through
 the scoreObjects method.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

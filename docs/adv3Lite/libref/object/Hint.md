@@ -155,11 +155,6 @@ Get my hint text. By default, we mark as Open any goals listed in our
 referencedGoals list, then return our hintText string. Individual Hint
 objects can override this as desired to apply any additional side
 effects.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

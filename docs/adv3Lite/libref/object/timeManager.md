@@ -207,11 +207,6 @@ Reset action-dependent counts to zero for a new turn.
 
 Set the current date and time. The possible arguments are those
 described for the Date constructor in the System Manual.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

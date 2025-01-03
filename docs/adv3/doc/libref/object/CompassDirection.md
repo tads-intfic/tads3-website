@@ -76,11 +76,6 @@ The English-specific modifications for compass directions.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Direction` :  
 [`allDirections`](../object/Direction.html#allDirections) [`dirProp`](../object/Direction.html#dirProp) [`sortingOrder`](../object/Direction.html#sortingOrder)
 
@@ -134,11 +129,6 @@ describe a traveler arriving from this direction
 
 
 describe a traveler departing in this direction
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

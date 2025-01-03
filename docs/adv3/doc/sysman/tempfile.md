@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> TemporaryFile  
 <span class="navnp"><a href="tadsobj.html" class="nav"><em>Prev:</em> TadsObject</a>
     <a href="timezone.html" class="nav"><em>Next:</em> TimeZone</a>    
 </span>
-
-
-
-
-
 # TemporaryFile
 
 A TemporaryFile object represents the name of a temporary file in the

@@ -87,11 +87,6 @@ represents a word that could be looked up in the dictionary, nil if it's
 something else (such as punctuation, a number, or a quoted literal).
 
 \[Required\]
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

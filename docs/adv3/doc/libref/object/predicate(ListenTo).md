@@ -132,11 +132,6 @@ Inherited from `Resolver` :
 use the "not aware" version of the no-match message - the object of
 LISTEN TO is often intangible, so the default "you can't see that"
 message is often incongruous for this verb
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

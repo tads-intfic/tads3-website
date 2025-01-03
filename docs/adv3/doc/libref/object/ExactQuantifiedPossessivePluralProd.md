@@ -67,11 +67,6 @@ Possessive plural with a specific quantity that must be exact
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -108,11 +103,6 @@ Possessive plural with a specific quantity that must be exact
 
 resolve the main noun phrase - this is the possessive-qualified plural
 phrase
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

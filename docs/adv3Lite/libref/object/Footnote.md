@@ -243,11 +243,6 @@ get the string to display for a footnote reference
 Display a footnote given its number. If there is no such footnote, we'll
 display an error message saying so. (This is a class method, so it
 should be called directly on Footnote, not on instances of Footnote.)
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

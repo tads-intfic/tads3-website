@@ -56,11 +56,6 @@ Fine Mesh is transparent to all senses except touch.
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Material` :  
 [`senseThru`](../object/Material.html#senseThru)
 

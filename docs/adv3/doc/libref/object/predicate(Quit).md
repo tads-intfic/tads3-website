@@ -73,11 +73,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `QuitAction` :  
 [`execSystemAction`](../object/QuitAction.html#execSystemAction) [`terminateGame`](../object/QuitAction.html#terminateGame)
 

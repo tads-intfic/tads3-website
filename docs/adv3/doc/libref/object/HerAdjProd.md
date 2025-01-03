@@ -93,11 +93,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `PossessivePronounAdjProd` :  
 [`checkAnaphorAgreement`](../object/PossessivePronounAdjProd.html#checkAnaphorAgreement) [`checkAnaphoricBinding`](../object/PossessivePronounAdjProd.html#checkAnaphoricBinding) [`getOrigMainText`](../object/PossessivePronounAdjProd.html#getOrigMainText)
 

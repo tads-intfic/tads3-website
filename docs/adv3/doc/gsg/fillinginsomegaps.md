@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](handlingcashtransactions.html)
   [\[Next\]](countingthecash.html)*
@@ -40,23 +35,6 @@ a separate atmosphereStrings for each room we consider to be part of the
 forest, it will be quicker and easier to define our own ForestRoom class
 that encapsulates this behaviour:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 class ForestRoom : OutdoorRoom  
    atmosphereList : ShuffledEventList  
@@ -76,23 +54,6 @@ class ForestRoom : OutdoorRoom
    }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Defining a ShuffledEventList as a nested object should be familiar by
 now. The Room class has a built-in Room daemon that will call the
@@ -132,23 +93,6 @@ she makes an active attempt to sniff it or not. We can simulate this by
 locating an Odor object directly inside our smoke object (having removed
 the smellDesc property from smoke), thus:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 ++ Odor 'acrid smoky smell/whiff/pong' 'smell of smoke'  
   sourceDesc = "The smoke from the fire smells acrid and makes you cough. "    
@@ -157,23 +101,6 @@ the smellDesc property from smoke), thus:
   displaySchedule = \[2, 4, 6\]  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The hereWithSource message is displayed as part of the room description,
 and then at intervals defined in the displaySchedule list (in this case
@@ -205,23 +132,6 @@ each time after the object comes within sensory range after it has left
 it (in this case, each time you return to the fire clearing after having
 been somewhere else). For example:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 hereWithSource  
 {  
@@ -238,23 +148,6 @@ hereWithSource
     }  
 }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 An alternative, if you were not concerned about restarting the list
 every time the object came into scope, would be to define the
@@ -279,72 +172,12 @@ The maximum score you can obtain by winning the game is 7. Clearly we
 need to know how to adjust the maximum score; this is done by adding the
 following to the gameMain object, (which you may already have done if
 you copied the startup code from the start of chapter 3).  
+ 
+maxScore = 7 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>maxScore = 7 <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The whole gameMain object for Heidi should look like this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 gameMain: GameMainDef  
      initialPlayerChar = me  
@@ -359,23 +192,6 @@ gameMain: GameMainDef
      maxScore = 7       
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The other routines do what they say: showIntro() shows the introductory
 text for the game (which you can make more elaborate if you wish), while
@@ -393,44 +209,10 @@ then adjust gameMain.maxScore accordingly.
 If at the start of the game you type the command **east** followed by
 the command **exits** you'll see the response:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
    Obvious exits lead south; west, back to the in front of a cottage;
 and northeast.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 This is less than ideal; "back to the in front of a cottage" is not
 exactly elegant. And you'd get much the same thing if you tried, for
@@ -443,52 +225,9 @@ though, we'd prefer to see something like "back to the front of the
 cottage". Well, that's what TADS 3 provides the destName property for.
 In order to fix the problem with the exit listing, all we need to do is
 to add the line:  
+ 
+destName = 'the front of the cottage' 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>destName = 'the front of the cottage' <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 to the definition of outsideCottage. In fact, you may recall when we
 first introduced the Room template, it contained a convenient slot for
@@ -496,89 +235,21 @@ destName (because the need to change destName from the default is quite
 common). So instead of adding the above line, we could simply change the
 start of the definition of outsideCottage to:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 outsideCottage : OutdoorRoom 'In front of a cottage'   
    'the front of the cottage'   
    "You stand just outside a cottage; the forest stretches east.  
    A short path leads round the cottage to the northwest. "  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Clearly, this is not the only place in the *Further Adventures of Heidi*
 where we need to do this. Another example would be the topOfTree room:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 topOfTree : OutdoorRoom 'At the top of the tree' 'the top of the tree'  
        "You cling precariously to the trunk, next to a firm,  
             narrow branch. "  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The principle should (hopefully) now be clear enough, so I'll leave it
 as an exercise to the reader to check down the other rooms that need a
@@ -604,23 +275,6 @@ The easiest way to go about it is to stop the daemon code actually
 executing unless Heidi is in the shop. We can do that by rewriting the
 shopkeeper's daemon method thus:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 daemon  
  {  
@@ -635,23 +289,6 @@ daemon
    }  
  }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 This will work reasonably well; since the daemon has been set up to
 execute on the second turn, once the bell is rung, the daemon will keep
@@ -665,23 +302,6 @@ immediately, but it's unlikely that a player who's interested in having
 Heidi meet the shopkeeper would actually keep making that sequence of
 moves.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Nonetheless, this solution is not quite ideal. Probably what ought to
 happen is that the shopkeeper should come into the shop on the second
@@ -691,108 +311,13 @@ Heidi is in the shop to see it. We can achieve this quite
 straightforwardly by employing a SenseDaemon in place of the plain
 Daemon. To do this, find the shopkeeper's notifySoundEvent method and
 change the line:  
+ 
+daemonID = new Daemon(self, &amp;daemon, 2); 
+ 
+to read: 
+ 
+daemonID = new SenseDaemon(self, &amp;daemon, 2, self, sight); 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID = new Daemon(self, &amp;daemon, 2); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>to read: <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID = new SenseDaemon(self, &amp;daemon, 2, self, sight); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 A SenseDaemon is a special kind of Daemon that executes as normal except
 that it only displays anything if the player character can sense a
@@ -806,23 +331,6 @@ shopkeeper.daemon method) is that the shopkeeper will move on the second
 turn after the bell is rung, but will only be reported as moving if
 Heidi is there to see it.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 There's still one thing left to fix; although it's okay for Sally to
 come into the shop in response to the bell regardless of whether Heidi
@@ -834,23 +342,6 @@ Sally *can* talk to Heidi, it would be reasonable to use her
 canTalkTo method. The relevant part of the revised shopkeeper code then
 becomes:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 shopkeeper : Person, SoundObserver 'young shopkeeper/woman' 'young shopkeeper'  
  @backRoom  
@@ -914,23 +405,6 @@ we can freely use 'it' to refer to the other.
   
 The definition of the boat then becomes:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 boat : Heavy, Enterable -\> insideBoat 'rowing boat/dinghy' 'rowing boat'  
   @cottageGarden  
@@ -949,23 +423,6 @@ boat : Heavy, Enterable -\> insideBoat 'rowing boat/dinghy' 'rowing boa
   getFacets = \[rowBoat\]  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Notice the use of the illogicalNow() macro for handling **row boat**
 when Heidi is standing on the bank. It is illogical to try to row a boat
@@ -992,23 +449,6 @@ But one new thing of this type does suggest itself, and that is putting
 some trees in the forest, since allowing the player to experience the
 following would be less than optimal:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 **Deep in the Forest  
 **  
@@ -1020,68 +460,19 @@ There is a rustling in the undergrowth.
 \>**x trees**  
 The word "trees" is not necessary in this story.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 If one is in a forest, one can reasonably expect to find trees, but
 rather than defining a different "trees" decoration object in all forest
 locations, we can simply use an MultiInstance to place our 'trees'
 object in every ForestRoom:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 MultiInstance     
    instanceObject : Decoration { 'pine tree\*trees\*pines' 'pine trees'  
    "The forest is full of tall, fast-growing pines, although the  
+    occasional oak, 
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>    occasional oak, <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
     beach and sycamore can occasionally be seen among them. "  
    isPlural = true   
@@ -1089,23 +480,6 @@ MultiInstance   
    initialLocationClass = ForestRoom  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The slight complication here is that we have to define the
 instanceObject as a nested object within the MultiInstance object. We
@@ -1165,68 +539,17 @@ a disambiguation request. For a fuller discussion of 'logical rank' see
 the discussion of [verify](verify.html) above (and the section on 'Action
 Results' in the *Technical Manual*).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 One more thing you might like to consider is letting the player know
 that you have defined a couple of custom verbs (although in this case
 it's arguably superfluous). You can do that by overriding the
 customVerbs property of InstructionsAction, thus:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 modify InstructionsAction  
   customVerbs = \['ROW THE BOAT', 'CROSS STREAM', 'RING THE BELL' \]  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 Then, when players type an **instructions** command**,** your custom
 verbs will be included in the list of game verbs the instructions text

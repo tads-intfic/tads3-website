@@ -80,11 +80,6 @@ the pronoun role for the phrase.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Production` :  
 ` [`determiner`](../object/Production.html#determiner)  [`nounPhraseRole`](../object/Production.html#nounPhraseRole)  [`npClass`](../object/Production.html#npClass)  [`parent`](../object/Production.html#parent)  `
 
@@ -128,11 +123,6 @@ Inherited from `Production` :
 Build the phrase. We'll add our pronoun association to the current noun
 phrase. (We'll also build out any sub-tree, although in nearly all cases
 a pronoun phrase is just a literal and won't have a sub-tree.)
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

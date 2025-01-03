@@ -238,11 +238,6 @@ when our point in the plot is reached.
 
 
 get a formatted version of the event time
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

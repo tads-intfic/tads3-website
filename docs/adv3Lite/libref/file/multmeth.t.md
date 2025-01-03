@@ -287,11 +287,6 @@ local func = getMultiMethodPointer(foo, x, y, z);
 
 We return a pointer to the individual multi-method function that matches
 the argument list, or nil if there's no matching multi-method.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

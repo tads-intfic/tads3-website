@@ -149,11 +149,6 @@ Format a stack frame object (of class T3StackInfo).
 
 Convert a value to a symbol, or to a string representation if it's not
 of a symbolic type.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

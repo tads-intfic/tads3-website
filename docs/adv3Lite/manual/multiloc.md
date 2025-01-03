@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">The Core Library</a> \> MultiLocs  
 <span class="navnp"><a href="key.html" class="nav"><em>Prev:</em>Keys</a>
     <a href="topic.html" class="nav"><em>Next:</em> Topics</a>    
 </span>
-
-
-
-
-
 # MultiLocs
 
 The standard adv3Lite containment model normally assumes that each game

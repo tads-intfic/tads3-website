@@ -96,11 +96,6 @@ line we're reading.
 
 The return value is a list of two elements. The first element is the
 string entered, and the second element is the token list.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

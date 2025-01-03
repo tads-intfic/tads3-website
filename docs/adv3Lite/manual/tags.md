@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> String Tags and Object
 Tags  
@@ -16,11 +11,6 @@ Tags
 NPCs</a>    
 <a href="initiate.html" class="nav"><em>Next:</em> NPC-Initiated
 Conversation</a>     </span>
-
-
-
-
-
 # String Tags and Object Tags
 
 You may have noticed that with some of the conversation tags, such as

@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="character.html" class="nav">Character Building</a> \> The
 Security Guard  
 <span class="navnp"><a href="npcoverview.html" class="nav"><em>Prev:</em> Overview</a>
     <a href="cortes.html" class="nav"><em>Next:</em> Pablo Cortes</a>    
 </span>
-
-
-
-
-
 # The Security Guard — A Really Simple NPC
 
 Back in Chapter 7 we arranged for the ID card to be confiscated by a

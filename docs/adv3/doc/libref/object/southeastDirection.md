@@ -45,13 +45,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Direction` :  
 [`allDirections`](../object/Direction.html#allDirections) [`dirProp`](../object/Direction.html#dirProp) [`sortingOrder`](../object/Direction.html#sortingOrder)
 
@@ -60,11 +53,6 @@ Inherited from `Direction` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CompassDirection` :  
 [`sayArriving`](../object/CompassDirection.html#sayArriving) [`sayDeparting`](../object/CompassDirection.html#sayDeparting)
 

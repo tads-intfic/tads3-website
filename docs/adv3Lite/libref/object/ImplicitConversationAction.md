@@ -84,11 +84,6 @@ Inherited from `IAction` :
 
 Inherited from `Action` :  
 ` [`actionFailed`](../object/Action.html#actionFailed)  [`advanceOnFailure`](../object/Action.html#advanceOnFailure)  [`allowAll`](../object/Action.html#allowAll)  [`extraMessageParams`](../object/Action.html#extraMessageParams)  [`failCheckMsg`](../object/Action.html#failCheckMsg)  [`failedActionCountsAsTurn`](../object/Action.html#failedActionCountsAsTurn)  [`implicitTimeTaken`](../object/Action.html#implicitTimeTaken)  [`includeInUndo`](../object/Action.html#includeInUndo)  [`isImplicit`](../object/Action.html#isImplicit)  [`isRepeatable`](../object/Action.html#isRepeatable)  [`oldRoom`](../object/Action.html#oldRoom)  [`parentAction`](../object/Action.html#parentAction)  [`parentAllowAll`](../object/Action.html#parentAllowAll)  [`preCond`](../object/Action.html#preCond)  [`redirectParent`](../object/Action.html#redirectParent)  [`reportImplicitActions`](../object/Action.html#reportImplicitActions)  [`scopeList`](../object/Action.html#scopeList)  [`spellingPriority`](../object/Action.html#spellingPriority)  [`synthParamID`](../object/Action.html#synthParamID)  [`timeTaken`](../object/Action.html#timeTaken)  [`turnsTaken`](../object/Action.html#turnsTaken)  [`unhides`](../object/Action.html#unhides)  [`verifyObj`](../object/Action.html#verifyObj)  [`wasIlluminated`](../object/Action.html#wasIlluminated)  `
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -202,11 +197,6 @@ TopicEntry
 This is a bit of a kludge to deal with the fact that the Parser doesn't
 seem able to resolve pronouns within ResolvedTopics. We do it here
 instead.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

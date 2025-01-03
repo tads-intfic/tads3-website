@@ -68,11 +68,6 @@ lists.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -142,11 +137,6 @@ output as a string and returns it.
 Show a formatted list given a list of items. This lets you create a
 formatted list from an item list without worrying about visibility or
 other factors that affect the full Lister interfaces.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

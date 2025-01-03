@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> Special Topics  
 <span class="navnp"><a href="suggest.html" class="nav"><em>Prev:</em> Suggesting
 Conversational Topics</a>    
 <a href="topicgroup.html" class="nav"><em>Next:</em> Topic Groups</a>    
 </span>
-
-
-
-
-
 # Special Topics
 
 On the face of it, between them AskTopic, TellTopic, AskForTopic and

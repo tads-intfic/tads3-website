@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| Actions  
 <span class="navnp"><a href="thought.html" class="nav"><em>Prev:</em> Thoughts</a>
     <a href="actionoverview.html" class="nav"><em>Next:</em> Overview</a>
     </span>
-
-
-
-
-
 # Part IV: Actions
 
 This part describes how to customize the response to player commands,
@@ -38,11 +28,6 @@ and how to define your own actions.
 [Scope](scope.html)  
 [Debugging Commands](debug.html)  
 [Action Reference](actionref.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

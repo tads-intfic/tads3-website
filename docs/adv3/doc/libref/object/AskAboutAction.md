@@ -79,13 +79,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `TopicTAction` :  
 [`needAnaphoricBinding_`](../object/TopicTAction.html#needAnaphoricBinding_) [`predicateNounPhrases`](../object/TopicTAction.html#predicateNounPhrases) [`topicList_`](../object/TopicTAction.html#topicList_) [`topicResolver_`](../object/TopicTAction.html#topicResolver_) [`whichMessageObject`](../object/TopicTAction.html#whichMessageObject) [`whichMessageTopic`](../object/TopicTAction.html#whichMessageTopic) [`whichObject`](../object/TopicTAction.html#whichObject)
 
@@ -109,11 +102,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ConvTopicTAction` :  
 [`createTopicResolver`](../object/ConvTopicTAction.html#createTopicResolver) [`getDefaultDobj`](../object/ConvTopicTAction.html#getDefaultDobj)
 

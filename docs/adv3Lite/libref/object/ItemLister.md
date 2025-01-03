@@ -220,11 +220,6 @@ For an item lister we use the listName method of the lister rather than
 the aName property of the object to provide a name for the object; this
 allows the lister to add status-specific information like '(providing
 light)' or '(being worn)' to the name as it appears in the list.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

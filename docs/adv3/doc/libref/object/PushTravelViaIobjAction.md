@@ -92,11 +92,6 @@ given by the indirect object.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `TIAction` :  
 [`actionIobjProp`](../object/TIAction.html#actionIobjProp) [`askIobjResponseProd`](../object/TIAction.html#askIobjResponseProd) [`checkIobjProp`](../object/TIAction.html#checkIobjProp) [`execFirst`](../object/TIAction.html#execFirst) [`iobjCur_`](../object/TIAction.html#iobjCur_) [`iobjInfoCur_`](../object/TIAction.html#iobjInfoCur_) [`iobjList_`](../object/TIAction.html#iobjList_) [`iobjMatch`](../object/TIAction.html#iobjMatch) [`iobjResolver_`](../object/TIAction.html#iobjResolver_) [`isPrepositionalPhrasing`](../object/TIAction.html#isPrepositionalPhrasing) [`lastObjList_`](../object/TIAction.html#lastObjList_) [`needAnaphoricBinding_`](../object/TIAction.html#needAnaphoricBinding_) [`omitIobjInDobjQuery`](../object/TIAction.html#omitIobjInDobjQuery) [`preCondIobjProp`](../object/TIAction.html#preCondIobjProp) [`predicateNounPhrases`](../object/TIAction.html#predicateNounPhrases) [`remapIobjProp`](../object/TIAction.html#remapIobjProp) [`resolveFirst`](../object/TIAction.html#resolveFirst) [`resolveFirstEmpty`](../object/TIAction.html#resolveFirstEmpty) [`tentativeDobj_`](../object/TIAction.html#tentativeDobj_) [`tentativeIobj_`](../object/TIAction.html#tentativeIobj_) [`verIobjProp`](../object/TIAction.html#verIobjProp)
 
@@ -111,13 +106,6 @@ Inherited from `BasicProd` :
 
 Inherited from `Resolver` :  
 [`action_`](../object/Resolver.html#action_) [`equivs_`](../object/Resolver.html#equivs_) [`isGlobalScope`](../object/Resolver.html#isGlobalScope) [`isSubResolver`](../object/Resolver.html#isSubResolver) [`scope_`](../object/Resolver.html#scope_) [`whichObject`](../object/Resolver.html#whichObject)
-
-
-
-
-
-
-
 
 
 
@@ -151,13 +139,6 @@ Inherited from `PushTravelAction` :
 [`performTravel`](../object/PushTravelAction.html#performTravel)
 
 
-
-
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -185,11 +166,6 @@ Inherited from `PushTravelAction` :
 Verify the indirect object of the push-travel action. We'll remap this
 to given corresponding simple travel action, and call that action's
 verifier.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

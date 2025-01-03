@@ -4,13 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
-
-
 # Adv3Lite Library Reference Manual
 
 *Version 1.6.1*
@@ -109,11 +102,6 @@ authorship notices be removed or modified.
 <a href="..\manual\index.html" target="_top">Library Manual</a>
 
 <a href="..\tutorial\index.html" target="_top">Tutorial</a>
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

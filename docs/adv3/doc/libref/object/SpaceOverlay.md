@@ -295,11 +295,6 @@ than moving along with the container. For example, if we represent the
 space behind a bookcase, moving the bookcase would leave objects that
 were formerly behind the bookcase just sitting on the floor (or attached
 to the wall, or whatever).
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

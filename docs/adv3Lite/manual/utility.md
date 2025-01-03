@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="final.html" class="nav">Final Moves</a> \> Utility Functions  
 <span class="navnp"><a href="output.html" class="nav"><em>Prev:</em> Some Output Issues</a>
    
 <a href="lister.html" class="nav"><em>Next:</em> Lists and Listers</a>
     </span>
-
-
-
-
-
 # Utility Functions
 
 The library defines a number of [utility functions](#utility) and

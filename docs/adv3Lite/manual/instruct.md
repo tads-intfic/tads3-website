@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \>
 Instructions  
 <span class="navnp"><a href="hint.html" class="nav"><em>Prev:</em> Hints</a>
     <a href="newbie.html" class="nav"><em>Next:</em> Newbie Help</a>    
 </span>
-
-
-
-
-
 # Instructions
 
 The Instructions module (instruct.t) is located under the English

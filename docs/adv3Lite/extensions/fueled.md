@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Fueled Light Source  
 <span class="navnp"><a href="footnotes.html" class="nav"><em>Prev:</em> Footnotes</a>
     <a href="mobilecollectivegroup.html" class="nav"><em>Next:</em>
 MobileCollectiveGroup</a>     </span>
-
-
-
-
-
 # Fueled Light Source
 
 ## Overview

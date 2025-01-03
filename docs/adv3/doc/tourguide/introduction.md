@@ -54,51 +54,13 @@ allow travel between Rooms: their class hierarchy is
       [DeadEndConnector](deadendconnector.html)  
       [NoTravelMessage](notravelmessage.html)  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="42"></td>
-<td>         <a href="fakeconnector.html">FakeConnector</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+         <a href="fakeconnector.html">FakeConnector</a>  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="42"></td>
-<td>   <br />
-</td>
-</tr>
-</tbody>
-</table>
+   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="42"></td>
-<td> <a href="askconnector.html">AskConnector</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+ <a href="askconnector.html">AskConnector</a>  
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Note that Passage also descends from Fixture, so that Passage and all

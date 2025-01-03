@@ -229,11 +229,6 @@ static property: per-command-prompt daemon entrypoint
 Display a footnote given its number. If there is no such footnote, we'll
 display an error message saying so. (This is a class method, so it
 should be called directly on Footnote, not on instances of Footnote.)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

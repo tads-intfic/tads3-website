@@ -169,11 +169,6 @@ action could succeed, or the more illogical it is.
 
 
 The constructor for creating a new verify result.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

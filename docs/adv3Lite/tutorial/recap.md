@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="schemes.html" class="nav">Schemes and Devices</a> \>
 Recapitulation  
@@ -16,11 +11,6 @@ Recapitulation
    
 <a href="cockpit.html" class="nav"><em>Next:</em> Cockpit Controls</a>
     </span>
-
-
-
-
-
 # Recapitulation
 
 Once again, we've covered a lot of new ground in this chapter, much of

@@ -941,11 +941,6 @@ get my original token list, in canonical tokenizer format
 
 Set my original token list. This replaces the actual token list we
 matched from the parser with a new token list provided by the caller.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

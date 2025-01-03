@@ -116,11 +116,6 @@ this is a first-person pronoun
 
 the first person always resolves to the player character, regardless of
 context
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

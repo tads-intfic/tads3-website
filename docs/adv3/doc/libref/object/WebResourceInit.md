@@ -171,11 +171,6 @@ client UI connection, generating the path to the start page.
 
 Process the request. This sets up the program and client session keys as
 cookies.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

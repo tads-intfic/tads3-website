@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="airport.html" class="nav">Airport</a> \> Doors and Locks  
 <span class="navnp"><a href="airmap3.html" class="nav"><em>Prev:</em> Aboard the Plane</a>
    
 <a href="schemes.html" class="nav"><em>Next:</em> Schemes and Devices</a>
     </span>
-
-
-
-
-
 # Doors and Locks
 
 In a couple of places the room descriptions above mention a locked door.

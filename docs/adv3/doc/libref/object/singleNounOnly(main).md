@@ -47,13 +47,6 @@ single noun phrase (not a list of nouns) is required grammatically.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -65,11 +58,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `SingleNounProd` :  
 [`resolveNouns`](../object/SingleNounProd.html#resolveNouns)
 

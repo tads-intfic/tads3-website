@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Procedural Code  
 <span class="navnp"><a href="expr.html" class="nav"><em>Prev:</em> Expressions and
 Operators</a>    
 <a href="optparams.html" class="nav"><em>Next:</em> Optional
 Parameters</a>     </span>
-
-
-
-
-
 # Procedural Code
 
 TADS 3 lets you do a lot "declaratively," meaning that you just define

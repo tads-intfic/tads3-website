@@ -21,9 +21,8 @@
   </div>  </header>
 <body>
 <main id="content">
-<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a></p>
-
-<p><a href="index.html">[Main]</a><br />
+<p><a href="index.html"><img src="topbar.jpg" data-border="0" /></a>
+<a href="index.html">[Main]</a><br />
 <em><a href="settingthescene.html">[Previous]</a>   <a href="endingthegame.html">[Next]</a></em></p>
 
 <h2 id="a-basic-burner">A Basic Burner</h2>
@@ -31,72 +30,15 @@
 <p>Now that we have set the scene, we can introduce our NPC, a charcoal
 burner who will be tending the fire. We may start by defining him thus:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>burner : Person ’charcoal burner’ ’charcoal burner’<br />
-  @fireClearing<br />
-  ”It’s rather difficult to make out his features under all the grime and<br />
-    soot. ”<br />
-  properName = ’Joe Black’ <br />
-  globalParamName = ’burner’<br />
-  isHim = true<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>burner : Person 'charcoal burner' 'charcoal burner'  
+  @fireClearing  
+  "It's rather difficult to make out his features under all the grime and  
+    soot. "  
+  properName = 'Joe Black'   
+  globalParamName = 'burner'  
+  isHim = true  
+;  
+</code></pre></div></div>
 
 <p>This may seem very simple code for such a potentially complicated
 object, and it certainly doesn’t look like the charcoal burner will do
@@ -176,71 +118,14 @@ GiveTopic defines its actor’s response to a Give command, a ShowTopic to
 a Show command, and a GiveShowTopic to either a Give or a Show command.
 For our purposes, we may as well use a GiveShowTopic.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>+ GiveShowTopic @ring<br />
-  ”As you hand the ring over to {the burner/him}, his eyes light up in <br />
-    delight and his jaws drop in amazement. &lt;q&gt;You found it!&lt;/q&gt; he <br />
-    declares, &lt;q&gt;God bless you, you really found it! Now I can go and call <br />
-    on my sweetheart after all! Thank you, my dear, that’s absolutely <br />
-    wonderful!&lt;/q&gt;”<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ GiveShowTopic @ring  
+  "As you hand the ring over to {the burner/him}, his eyes light up in   
+    delight and his jaws drop in amazement. \&lt;q\&gt;You found it!\&lt;/q\&gt; he   
+    declares, \&lt;q\&gt;God bless you, you really found it! Now I can go and call   
+    on my sweetheart after all! Thank you, my dear, that's absolutely   
+    wonderful!\&lt;/q\&gt;"  
+;  
+</code></pre></div></div>
 
 <p>Once again, using a template makes defining this object very simple. The
 object following the @ symbol is not the location but in fact the value
@@ -270,72 +155,15 @@ handle this, then, is through a combination of a DefaultGiveShowTopic
 otherwise specifically defined) and a ShuffledEventList, which picks a
 random response from a list (more on which shortly).</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>+ DefaultGiveShowTopic, ShuffledEventList<br />
-  [<br />
-    ’{The burner/he} shakes his head. &lt;q&gt;No thanks, love.&lt;/q&gt;’,<br />
-    ’He looks at it and grins. &lt;q&gt;That\s nice, my dear,&lt;/q&gt; he remarks,<br />
-     handing it back. ’,<br />
-    ’&lt;q&gt;I\d hang on to that if I were you,&lt;/q&gt; he advises. ’<br />
-  ]<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ DefaultGiveShowTopic, ShuffledEventList  
+  \[  
+    '{The burner/he} shakes his head. \&lt;q\&gt;No thanks, love.\&lt;/q\&gt;',  
+    'He looks at it and grins. \&lt;q\&gt;That\\s nice, my dear,\&lt;/q\&gt; he remarks,  
+     handing it back. ',  
+    '\&lt;q\&gt;I\\d hang on to that if I were you,\&lt;/q\&gt; he advises. '  
+  \]  
+;  
+</code></pre></div></div>
 
 <p>This definition means that the object is both a DefaultGiveShowTopic and
 a ShuffledEventList. The list of single-quoted strings between the

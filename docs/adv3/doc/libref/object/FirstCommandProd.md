@@ -75,11 +75,6 @@ actor.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `CommandProd` :  
 [`getActorPhrase`](../object/CommandProd.html#getActorPhrase)
 
@@ -223,11 +218,6 @@ subcommand to resolve its action.
 
 
 resolve nouns in the command
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

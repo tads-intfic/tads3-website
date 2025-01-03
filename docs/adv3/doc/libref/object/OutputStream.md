@@ -352,11 +352,6 @@ Write a value to the stream. If the value is a string, we'll display the
 text of the string; if it's nil, we'll ignore it; if it's anything else,
 we'll try to convert it to a string (with the toString() function) and
 display the resulting text.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

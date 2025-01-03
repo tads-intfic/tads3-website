@@ -57,11 +57,6 @@ Inherited from `ModuleID` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ModuleID` :  
 ` [`getModuleList`](../object/ModuleID.html#getModuleList)  [`showAbout`](../object/ModuleID.html#showAbout)  [`showCredit`](../object/ModuleID.html#showCredit)  [`showVersion`](../object/ModuleID.html#showVersion)  [`showVersionMsg`](../object/ModuleID.html#showVersionMsg)  `
 

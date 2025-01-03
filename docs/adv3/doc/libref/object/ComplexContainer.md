@@ -680,11 +680,6 @@ pass implicit PUT x IN self operations to our subcontainer
 
 
 pass bag-of-holding operations to our sub-container
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

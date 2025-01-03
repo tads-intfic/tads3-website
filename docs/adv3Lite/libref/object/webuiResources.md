@@ -63,11 +63,6 @@ Inherited from `WebResource` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `WebResourceResFile` :  
 ` [`isTextFile`](../object/WebResourceResFile.html#isTextFile)  [`matchRequest`](../object/WebResourceResFile.html#matchRequest)  [`processName`](../object/WebResourceResFile.html#processName)  [`processRequest`](../object/WebResourceResFile.html#processRequest)  `
 

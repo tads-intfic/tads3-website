@@ -90,11 +90,6 @@ contentsPrepOrVerb-\>prep\_ completeNounPhraseWithoutAll-\>cont\_
 \| ('everything' \| 'all')  
 ('that' ('is' \| 'was') \| 'that' tokApostropheS \| ))  
 locationPrep-\>prep\_ completeNounPhraseWithoutAll-\>cont\_  
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

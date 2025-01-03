@@ -58,13 +58,6 @@ because what we consider a singular noun phrase can have plural usage
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -79,11 +72,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ContainerNounPhraseProd` :  
 [`resolveNouns`](../object/ContainerNounPhraseProd.html#resolveNouns)
 

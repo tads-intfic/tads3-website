@@ -173,11 +173,6 @@ Make my output stream the default in the output manager. Returns the
 previous default output stream; the caller can note the return value and
 use it later to restore the original output stream via a call to
 outputManager.setOutputStream(), if desired.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

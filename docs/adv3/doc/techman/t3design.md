@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \> Tips on Designing
 your Game  
@@ -16,11 +11,6 @@ your Game
 Project</a>    
 <a href="t3des1.html" class="nav"><em>Next:</em> IF Design: In
 Practice</a>     </span>
-
-
-
-
-
 # Tips on Designing your Game
 
 This chapter is a somewhat personal take on the practical aspects of
@@ -43,11 +33,6 @@ IF: namely what makes an enjoyable adventure game.
 
 [IF Design: In Practice](t3des1.html)  
 [IF Design: In Theory](t3des2.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

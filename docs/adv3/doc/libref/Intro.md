@@ -4,13 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
-
-
 # TADS 3 Library Reference Manual
 
 *Version 3.1.3*
@@ -93,11 +86,6 @@ Copyright ©2000, 2011 by Michael J. Roberts. This documentation may be
 used and redistributed without charge, subject to the condition that it
 not be altered, and that no copyright or authorship notices be removed
 or modified.
-
-
-
-
-
 TADS Library Reference Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

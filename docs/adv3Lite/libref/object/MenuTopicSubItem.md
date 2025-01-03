@@ -69,11 +69,6 @@ displaying a topic must trigger a side-effect.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -111,11 +106,6 @@ displaying a topic must trigger a side-effect.
 Get the item's text. By default, we just return an empty string. This
 should be overridden to return the appropriate text, and can also
 trigger any desired side-effects.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

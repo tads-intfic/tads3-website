@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 MobileCollectiveGroup  
 <span class="navnp"><a href="fueled.html" class="nav"><em>Prev:</em> Fueled Light Source</a>
     <a href="postures.html" class="nav"><em>Next:</em> Postures</a>    
 </span>
-
-
-
-
-
 # MobileCollectiveGroup
 
 ## Overview

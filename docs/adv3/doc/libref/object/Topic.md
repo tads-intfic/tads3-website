@@ -163,11 +163,6 @@ Topics are abstract objects, so they can't be sensed with any of the
 physical senses, even if they're ever included as part of a containment
 hierarchy (which might be convenient in some cases for purposes of
 associating a topic with a physical object, for example).
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

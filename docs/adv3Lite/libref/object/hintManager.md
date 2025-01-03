@@ -169,11 +169,6 @@ Show hints - invoke the hint system.
 Show a warning before showing any hints. By default, we'll show this at
 most once per session or once per saved game. Returns true if we are to
 proceed to the hints, nil if not.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

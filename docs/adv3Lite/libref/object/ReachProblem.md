@@ -163,11 +163,6 @@ Problems which reaching an object that occur at the verify stage and
 which might affect the choice of object. If the verify() method of a
 ReachProblem object wishes to rule out an action it should do so using
 illogical(), inaccessible() or other such verification macros.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

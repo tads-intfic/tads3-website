@@ -47,11 +47,6 @@ short form of non-player character description inventory lister
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `actorInventoryLister` :  
 [`phraseSepPat`](../object/actorInventoryLister.html#phraseSepPat)
 
@@ -158,11 +153,6 @@ we have only carried items to report
 
 
 empty inventory - saying nothing in an actor description
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

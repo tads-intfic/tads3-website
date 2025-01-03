@@ -45,13 +45,6 @@ objectLister is a concrete SimpleLister for listing simulation objects.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -60,11 +53,6 @@ Inherited from `Lister` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `SimpleLister` :  
 [`isListed`](../object/SimpleLister.html#isListed) [`makeSimpleList`](../object/SimpleLister.html#makeSimpleList) [`showSimpleList`](../object/SimpleLister.html#showSimpleList)
 

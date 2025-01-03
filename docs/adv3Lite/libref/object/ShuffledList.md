@@ -209,11 +209,6 @@ getNextValue() automatically shuffles the deck and starts over each time
 it runs through the entire deck. This is provided in case the caller has
 a reason to want to put all the values back into play immediately,
 before every value has been dealt on the current round.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="reviewing.html" class="nav">Reviewing the Basics</a> \> Object
 Definitions  
@@ -16,11 +11,6 @@ Definitions
 Basics</a>    
 <a href="containment.html" class="nav"><em>Next:</em> Object
 Containment</a>     </span>
-
-
-
-
-
 # Object Definitions
 
 As we've seen a large part of writing a game in adv3Lite (or indeed in

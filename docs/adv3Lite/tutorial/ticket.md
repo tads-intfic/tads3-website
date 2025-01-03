@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="schemes.html" class="nav">Schemes and Devices</a> \> Just the
 Ticket  
 <span class="navnp"><a href="schemes.html" class="nav"><em>Prev:</em> Schemes and Devices</a>
     <a href="maintenance.html" class="nav"><em>Next:</em> The Maintenance
 Room</a>     </span>
-
-
-
-
-
 # Just the Ticket
 
 The description of the Airport game calls for a ticket found by picking

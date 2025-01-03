@@ -183,11 +183,6 @@ representing the attributes that we match; upon seeing this, the parser
 will know to come back to this pronoun after it's finished resolving
 earlier phrases, and look for the appropriate pronoun binding within
 those other phrases.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

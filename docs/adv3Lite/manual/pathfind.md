@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Pathfinding  
 <span class="navnp"><a href="instruct.html" class="nav"><em>Prev:</em> Instructions</a>
     <a href="scene.html" class="nav"><em>Next:</em> Scenes</a>    
 </span>
-
-
-
-
-
 # Pathfinding
 
 The pathfind.t module is used to implement pathfinding for the player

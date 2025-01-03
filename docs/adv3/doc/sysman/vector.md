@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> Vector  
 <span class="navnp"><a href="timezone.html" class="nav"><em>Prev:</em> TimeZone</a>
    
 <a href="wlookup.html" class="nav"><em>Next:</em> WeakRefLookupTable</a>
     </span>
-
-
-
-
-
 # Vector
 
 Vector is a subclass of [Collection](collect.html) that provides an
@@ -399,9 +389,6 @@ this:
 ```
     x = new Vector(20).copyFrom(lst, 3, 2, 5);
 ```
-
-
-
 `countOf(*val*)`
 
 
@@ -468,9 +455,6 @@ expressions like this:
 ```
     x = new Vector(20).fillValue('A', 1, 20);
 ```
-
-
-
 `forEach(*func*)`
 
 
@@ -522,9 +506,6 @@ first ten positive even integers:
 ```
     local e = Vector.generate({i: i*2}, 10);
 ```
-
-
-
 `getUnique()`
 
 
@@ -910,9 +891,6 @@ values are greater than 10.
 ```
     y = x.subset({x: x > 10});
 ```
-
-
-
 `toList(*start*?, *count*?)`
 
 

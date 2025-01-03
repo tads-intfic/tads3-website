@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> TimeZone  
 <span class="navnp"><a href="tempfile.html" class="nav"><em>Prev:</em> TemporaryFile</a>
     <a href="vector.html" class="nav"><em>Next:</em> Vector</a>    
 </span>
-
-
-
-
-
 # TimeZone
 
 A TimeZone object represents a local time zone. It works with the
@@ -438,11 +428,6 @@ rule's firing time could differ by a day from the date in the reference
 zone for types 's' and 'u'. For example, if a US Pacific Time rule were
 stated as midnight UTC, the rule would fire on the previous afternoon in
 terms of the local date.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

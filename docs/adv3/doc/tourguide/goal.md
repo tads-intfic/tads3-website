@@ -155,9 +155,7 @@ that closes the goal  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 
@@ -298,27 +296,11 @@ standard openWhenXxx properties.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
+ 
+
 
 To illustrate the use of openWhen and closedWhen, we'll modify Goal to
 add our custom openWhenMoved and closeWhenMoved conditions. These can be
@@ -335,43 +317,15 @@ modify Goal
   closeWhen = (inherited \|\| (closeWhenMoved != nil && closeWhenMoved.moved))  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+ 
+
 
 Next we should list the other properties of Goal:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+ 
+
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -461,9 +415,7 @@ Goal.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 Normally the only properties you will need to worry about when

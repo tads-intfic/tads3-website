@@ -168,11 +168,6 @@ Perform undo. Returns true if we were successful, nil if not.
 
 'asCommand' indicates whether or not the undo is being performed as an
 explicit command: if so, we'll save the UNDO command for use in AGAIN.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

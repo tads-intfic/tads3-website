@@ -160,11 +160,6 @@ defaults to opaque.
 Determine how a sense passes through the material. We'll return a
 transparency level. (Individual materials should not need to override
 this method, since it simply dispatches to the various xxxThru methods.)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

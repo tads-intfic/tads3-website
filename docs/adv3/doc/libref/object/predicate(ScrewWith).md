@@ -78,11 +78,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ScrewWithAction` :  
 [`getAllIobj`](../object/ScrewWithAction.html#getAllIobj)
 

@@ -75,11 +75,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `DropAction` :  
 [`getAllDobj`](../object/DropAction.html#getAllDobj)
 

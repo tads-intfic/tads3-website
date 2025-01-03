@@ -80,11 +80,6 @@ Inherited from `SuggestedTopic` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `SuggestedTopic` :  
 [`associatedTopicCanMatch`](../object/SuggestedTopic.html#associatedTopicCanMatch) [`associatedTopicIsActive`](../object/SuggestedTopic.html#associatedTopicIsActive) [`associatedTopicTalkCount`](../object/SuggestedTopic.html#associatedTopicTalkCount) [`findEnclosingSuggestedTopic`](../object/SuggestedTopic.html#findEnclosingSuggestedTopic) [`findOuterSuggestedTopic`](../object/SuggestedTopic.html#findOuterSuggestedTopic) [`fromEnclosingSuggestedTopic`](../object/SuggestedTopic.html#fromEnclosingSuggestedTopic) [`initializeSuggestedTopic`](../object/SuggestedTopic.html#initializeSuggestedTopic) [`isSuggestionActive`](../object/SuggestedTopic.html#isSuggestionActive) [`noteSuggestion`](../object/SuggestedTopic.html#noteSuggestion)
 

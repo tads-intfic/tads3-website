@@ -44,11 +44,6 @@ the standard implicit action announcement context
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ImplicitAnnouncementContext` :  
 [`getVerbCtx`](../object/ImplicitAnnouncementContext.html#getVerbCtx) [`isInList`](../object/ImplicitAnnouncementContext.html#isInList) [`isInSublist`](../object/ImplicitAnnouncementContext.html#isInSublist) [`useInfPhrase`](../object/ImplicitAnnouncementContext.html#useInfPhrase)
 
@@ -57,11 +52,6 @@ Inherited from `ImplicitAnnouncementContext` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `ImplicitAnnouncementContext` :  
 [`buildImplicitAnnouncement`](../object/ImplicitAnnouncementContext.html#buildImplicitAnnouncement)
 

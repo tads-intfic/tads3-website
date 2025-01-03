@@ -229,11 +229,6 @@ for efficiency, we do not by default cache a stack trace when an
 exception occurs; individual subclasses can obtain a stack trace if
 desired at construction and use the information to show a stack trace
 for the exception.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

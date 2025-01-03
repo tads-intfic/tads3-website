@@ -138,11 +138,6 @@ our location relationship type, as a LocType object
 
 on building the production, set the locType in our LocationalProduction
 parent
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

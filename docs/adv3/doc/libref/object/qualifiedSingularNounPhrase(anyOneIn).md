@@ -55,13 +55,6 @@ article.
 
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -76,11 +69,6 @@ Inherited from `AmbigResponseKeeper` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `VagueContainerIndefiniteNounPhraseProd` :  
 [`checkContentsList`](../object/VagueContainerIndefiniteNounPhraseProd.html#checkContentsList)
 

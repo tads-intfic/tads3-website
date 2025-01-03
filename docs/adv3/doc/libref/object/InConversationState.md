@@ -267,11 +267,6 @@ handle a conversational command
 As our default response, point out that we're already at the actor's
 service. (This isn't an error, because the other actor might not have
 been talking to us, even though we thought we were talking to them.)
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

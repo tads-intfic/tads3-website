@@ -69,11 +69,6 @@ sensory context. This is the daemon counterpart of SenseFuse.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Daemon` :  
 [`interval_`](../object/Daemon.html#interval_)
 
@@ -127,11 +122,6 @@ Inherited from `BasicEvent` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

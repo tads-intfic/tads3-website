@@ -232,11 +232,6 @@ display and run our menu in HTML mode
 
 
 display and run our menu in text mode
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

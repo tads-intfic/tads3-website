@@ -68,11 +68,6 @@ via the constructor.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `InputDef` :  
 [`allowRealTime`](../object/InputDef.html#allowRealTime) [`promptFunc`](../object/InputDef.html#promptFunc)
 
@@ -114,11 +109,6 @@ Inherited from `InputDef` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

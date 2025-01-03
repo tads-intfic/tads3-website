@@ -86,11 +86,6 @@ Process network requests. Continues until doneFunc() returns true, or a
 timeout or error occurs. If we return because doneFunc() returned true,
 we'll return nil. Otherwise, we'll return the NetEvent that terminated
 the wait.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

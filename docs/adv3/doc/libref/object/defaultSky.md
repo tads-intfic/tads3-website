@@ -54,13 +54,6 @@ the default sky, for outdoor locations
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Fixture` :  
 [`cannotMoveMsg`](../object/Fixture.html#cannotMoveMsg) [`cannotPutMsg`](../object/Fixture.html#cannotPutMsg) [`cannotTakeMsg`](../object/Fixture.html#cannotTakeMsg)
 
@@ -77,23 +70,11 @@ Inherited from `RoomPart` :
 [`nothingBehindMsg`](../object/RoomPart.html#nothingBehindMsg) [`nothingThroughMsg`](../object/RoomPart.html#nothingThroughMsg) [`nothingUnderMsg`](../object/RoomPart.html#nothingUnderMsg)
 
 
-
-
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Distant` :  
 [`dobjFor(Default)`](../object/Distant.html#dobjFor(Default)) [`dobjFor(Examine)`](../object/Distant.html#dobjFor(Examine)) [`dobjFor(ListenTo)`](../object/Distant.html#dobjFor(ListenTo)) [`dobjFor(ShowTo)`](../object/Distant.html#dobjFor(ShowTo)) [`hideFromAll`](../object/Distant.html#hideFromAll) [`iobjFor(Default)`](../object/Distant.html#iobjFor(Default))
 
@@ -111,13 +92,6 @@ Inherited from `VocabObject` :
 
 Inherited from `RoomPart` :  
 [`examinePartContents`](../object/RoomPart.html#examinePartContents) [`isObjListedInRoomPart`](../object/RoomPart.html#isObjListedInRoomPart) [`moveIntoAdd`](../object/RoomPart.html#moveIntoAdd) [`moveOutOf`](../object/RoomPart.html#moveOutOf)
-
-
-
-
-
-
-
 
 
 <span id="_Properties_"></span>

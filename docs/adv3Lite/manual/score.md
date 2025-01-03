@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Scoring  
 <span class="navnp"><a href="scene.html" class="nav"><em>Prev:</em> Scenes</a>
     <a href="senseregion.html" class="nav"><em>Next:</em> SenseRegion</a>
     </span>
-
-
-
-
-
 # Scoring
 
 The score.t implements a scoring system that is identical to that in the

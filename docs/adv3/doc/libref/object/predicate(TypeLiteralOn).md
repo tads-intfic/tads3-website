@@ -83,13 +83,6 @@ Inherited from `Resolver` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 Inherited from `LiteralTAction` :  
 [`announceDefaultObject`](../object/LiteralTAction.html#announceDefaultObject) [`getCurrentObjects`](../object/LiteralTAction.html#getCurrentObjects) [`getMatchForRole`](../object/LiteralTAction.html#getMatchForRole) [`getObjectForRole`](../object/LiteralTAction.html#getObjectForRole) [`getOtherMessageObjectPronoun`](../object/LiteralTAction.html#getOtherMessageObjectPronoun) [`getOtherObjectRole`](../object/LiteralTAction.html#getOtherObjectRole) [`getQuestionInf`](../object/LiteralTAction.html#getQuestionInf) [`getRoleFromIndex`](../object/LiteralTAction.html#getRoleFromIndex) [`getVerbPhrase`](../object/LiteralTAction.html#getVerbPhrase) [`initForMissingDobj`](../object/LiteralTAction.html#initForMissingDobj) [`initForMissingLiteral`](../object/LiteralTAction.html#initForMissingLiteral) [`resolveNouns`](../object/LiteralTAction.html#resolveNouns) [`retryWithMissingLiteral`](../object/LiteralTAction.html#retryWithMissingLiteral) [`setCurrentObjects`](../object/LiteralTAction.html#setCurrentObjects) [`setObjectMatches`](../object/LiteralTAction.html#setObjectMatches) [`setResolvedObjects`](../object/LiteralTAction.html#setResolvedObjects) [`whatObj`](../object/LiteralTAction.html#whatObj)
 

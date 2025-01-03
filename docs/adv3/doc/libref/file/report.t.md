@@ -72,11 +72,6 @@ execution engine uses to keep track of the status of a command.
 
 Invoke a callback function using a transcript of the given class.
 Returns the return value of the callback function.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -155,11 +155,6 @@ on invocation, end the conversation
 
 we're ready to run if our actor is in an InConversationState and its
 boredom count has reached the limit for the state
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

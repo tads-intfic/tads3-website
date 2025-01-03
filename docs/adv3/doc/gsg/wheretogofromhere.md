@@ -4,11 +4,6 @@ layout: docs
 
 
 [<img src="topbar.jpg" data-border="0" />](index.html)
-
-
-
-
-
 [\[Main\]](index.html)  
 *[\[Previous\]](easingtestinganddebugging.html)
   [\[Next\]](appendixa-actionmessagepropert.html)*
@@ -117,23 +112,6 @@ Manual</a>) that make finding your way round the library source files
 invaluable reference resource whenever you're programming in TADS 3.  
 *
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 If you've followed this *Getting Started Guide* through to this point,
 you will not yet have created the most exciting work of Interactive

@@ -85,11 +85,6 @@ embeddings). Code can also call this directly to display items.
 
 Generate a string for showing quoted text. We simply enclose the text in
 a \<Q\>...\</Q\> tag sequence and return the result.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="heidi.html" class="nav">Heidi: our first adv3Lite game</a> \>
 Defining the Game's Locations  
@@ -16,11 +11,6 @@ Defining the Game's Locations
 Source File</a>    
 <a href="bird.html" class="nav"><em>Next:</em> Adding the Bird and the
 Nest</a>     </span>
-
-
-
-
-
 # Defining the Game's Locations
 
 A good place to start in any game is by laying out its locations. In

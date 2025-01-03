@@ -46,13 +46,6 @@ A singular qualified noun phrase with an explicit indefinite article.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -64,11 +57,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `IndefiniteNounProd` :  
 [`areAllEquiv`](../object/IndefiniteNounProd.html#areAllEquiv) [`resolveMainPhrase`](../object/IndefiniteNounProd.html#resolveMainPhrase) [`resolveNouns`](../object/IndefiniteNounProd.html#resolveNouns) [`selectFromList`](../object/IndefiniteNounProd.html#selectFromList)
 

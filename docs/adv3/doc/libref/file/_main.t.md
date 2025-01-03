@@ -259,11 +259,6 @@ Find an instance of the given class for which the given function returns
 true. We iterate over objects of the given class in arbitrary order, and
 return the first instance for which the function returns true. Retursn
 nil if there is no such instance.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

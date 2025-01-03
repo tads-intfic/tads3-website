@@ -72,11 +72,6 @@ for determining the TopicEntry that best matches a list of topics
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -125,11 +120,6 @@ Add a topic entry to the appropriate list or list on this TopicDatabase.
 
 Find the topic entry among those supplied in myList that best matches at
 least one of the topics passed in requestedList.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

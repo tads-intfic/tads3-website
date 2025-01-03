@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="character.html" class="nav">Character Building</a> \> Pablo
 Cortez  
 <span class="navnp"><a href="guard.html" class="nav"><em>Prev:</em> The Security Guard</a>
     <a href="attendant.html" class="nav"><em>Next:</em> The Flight
 Attendant</a>     </span>
-
-
-
-
-
 # Pablo Cortez — A Man with Several Agendas
 
 The second NPC we'll implement is Pablo Cortez, El Diablo's right-hand

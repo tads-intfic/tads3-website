@@ -93,11 +93,6 @@ Inherited from `MessageResult` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `CommandReportMessage` :  
 [`construct`](../object/CommandReportMessage.html#construct)
 

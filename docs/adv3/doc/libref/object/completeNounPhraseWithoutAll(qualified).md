@@ -46,13 +46,6 @@ A qualified noun phrase can, all by itself, be a full noun phrase
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -64,11 +57,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `LayeredNounPhraseProd` :  
 [`resolveNouns`](../object/LayeredNounPhraseProd.html#resolveNouns)
 

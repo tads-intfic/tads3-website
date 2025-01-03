@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> t3vm Function
 Set  
 <span class="navnp"><a href="builtins.html" class="nav"><em>Prev:</em> The Intrinsics</a>
     <a href="tadsgen.html" class="nav"><em>Next:</em> tads-gen Function
 Set</a>     </span>
-
-
-
-
-
 # t3vm Function Set
 
 The t3vm function set provides access to internal operations in the VM.
@@ -422,11 +412,6 @@ indicating that there was no previous function or method, respectively.
 The return value allows the caller to save and later restore the setting
 being changed, which is useful when the caller just wants to change the
 setting temporarily while running a particular block of code.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

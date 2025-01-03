@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> BigNumber  
 <span class="navnp"><a href="pack.html" class="nav"><em>Prev:</em> Byte Packing</a>
     <a href="bytearr.html" class="nav"><em>Next:</em> ByteArray</a>    
 </span>
-
-
-
-
-
 # BigNumber
 
 The T3 VM's basic numeric type is the integer type. While this is

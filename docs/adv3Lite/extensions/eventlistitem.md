@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 EventListIem  
 <span class="navnp"><a href="dynregion.html" class="nav"><em>Prev:</em> Dynamic Region</a>
     <a href="footnotes.html" class="nav"><em>Next:</em> Footnotes</a>    
 </span>
-
-
-
-
-
 # EventListItem
 
 ## Overview

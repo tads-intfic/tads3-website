@@ -270,11 +270,6 @@ for other actions, as not much else makes sense on us
 look in, look through, look behind, look under, search: since vaporous
 objects are usually essentially transparent, these commands reveal
 nothing interesting
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

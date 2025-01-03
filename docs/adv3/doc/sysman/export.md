@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="langsec.html" class="nav">The Language</a> \> Exporting
 Symbols  
@@ -16,11 +11,6 @@ Symbols
 Classes</a>    
 <a href="errmsg.html" class="nav"><em>Next:</em> VM Run-Time Error
 Codes</a>     </span>
-
-
-
-
-
 # Exported Symbols
 
 This section will be of interest only to writers of low-level libraries,

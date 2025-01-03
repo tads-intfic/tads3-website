@@ -47,13 +47,6 @@ simulation objects) to showSimpleList(), etc.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `Lister` :  
 [`nextCustomFlag`](../object/Lister.html#nextCustomFlag)
 
@@ -112,11 +105,6 @@ properties that would let us count cardinality the usual way)
 
 
 show a list item - list items are strings, so simply 'say' them
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

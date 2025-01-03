@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="advtop.html" class="nav">Advanced Topics</a> \> Banishing (and
 Changing) Awkward Messages  
@@ -16,11 +11,6 @@ Changing) Awkward Messages
    
 <a href="t3cycle.html" class="nav"><em>Next:</em> The Command Execution
 Cycle</a>     </span>
-
-
-
-
-
 # Banishing (and Changing) Awkward Messages
 
 *by Eric Eve*

@@ -195,11 +195,6 @@ our next run time, in game clock time
 
 
 remove this event from the event manager
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

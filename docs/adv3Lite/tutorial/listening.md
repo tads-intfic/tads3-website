@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="revisit.html" class="nav">Heidi Revisited</a> \> Listening to
 the Bird  
 <span class="navnp"><a href="revisit.html" class="nav"><em>Prev:</em> Heidi Revisited</a>
     <a href="cottage.html" class="nav"><em>Next:</em> Entering the
 Cottage</a>     </span>
-
-
-
-
-
 # Listening to the Bird
 
 The very simple game we implemented in Chapter 3 is just about all right

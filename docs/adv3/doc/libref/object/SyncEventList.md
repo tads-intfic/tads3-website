@@ -162,11 +162,6 @@ my state is simply the master list's state
 
 
 let the master list take care of finishing a script step
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

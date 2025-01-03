@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \> String  
 <span class="navnp"><a href="framedesc.html" class="nav"><em>Prev:</em> StackFrameDesc</a>
     <a href="strbuf.html" class="nav"><em>Next:</em> StringBuffer</a>    
 </span>
-
-
-
-
-
 # String
 
 "String" is a native TADS 3 datatype, but it's also an intrinsic class.
@@ -212,9 +202,6 @@ Examples:
     'abcabcabc'.find('c', 7) yields 9
     'abcdef123456'.find(R'%d+') yields 7
 ```
-
-
-
 <span id="findAll"></span>
 
 `findAll(*target*, *func*?)`
@@ -257,9 +244,6 @@ Examples:
     'one two three'.findAll(R'(%w)%w*', {m, i, g1: g1} yields ['o', 'w', 't']
     'one two three'.findAll(R'(%w)%w*', {m, i, g1, g2: g2} yields [nil, nil, nil]
 ```
-
-
-
 <span id="findLast"></span>
 
 `findLast(*target*, *index*?)`
@@ -1043,9 +1027,6 @@ Examples:
     'abcdefghi'.substr(4, -4) yields 'de'
     'abcdefghi'.substr(-4, -2) yields 'fg'
 ```
-
-
-
 <span id="toFoldedCase"></span>
 
 `toFoldedCase()`
@@ -1236,11 +1217,6 @@ would encode all of the scheme and path characters (such as the ":" and
 URL. This method is intended only for encoding the building blocks of
 URL strings, such as the value portion of a "?name=value" query
 parameter.
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

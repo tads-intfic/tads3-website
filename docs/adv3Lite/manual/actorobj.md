@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="actor.html" class="nav">Actors</a> \> The Actor Object  
 <span class="navnp"><a href="actoroverview.html" class="nav"><em>Prev:</em> NPC Overview</a>
     <a href="actorstate.html" class="nav"><em>Next:</em> Actor States</a>
     </span>
-
-
-
-
-
 # The Actor Object
 
 <span id="thinglike"></span>
@@ -362,9 +352,6 @@ e.g.:
 
     ;
 ```
-
-
-
 ------------------------------------------------------------------------
 
 

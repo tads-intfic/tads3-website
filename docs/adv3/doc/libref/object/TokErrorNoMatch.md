@@ -155,11 +155,6 @@ we were successful in matching up to this point.
 
 for convenience, separately remember the single character that we don't
 recognize - this is simply the first character of the rest of the line
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

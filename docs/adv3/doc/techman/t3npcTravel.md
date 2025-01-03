@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \> NPC Travel  
 <span class="navnp"><a href="t3conv.html" class="nav"><em>Prev:</em> Programming
 Conversations with NPCs</a>    
 <a href="t3banner.html" class="nav"><em>Next:</em> Using the Banner
 API</a>     </span>
-
-
-
-
-
 # NPC Travel
 
 Many IF games contain people and creatures for the player to encounter.

@@ -246,11 +246,6 @@ disapproving than the other.
 Determine if I should appear in a result list before the given result
 object. By default, this is true if I'm worse than the given result, but
 some types of results use special sorting orders.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

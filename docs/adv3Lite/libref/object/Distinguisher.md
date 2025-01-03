@@ -221,11 +221,6 @@ names don't have articles at all.
 Returns a list of \[name, \[objects\]\] sublists. The name is a string
 giving the distinguished name; the \[objects\] sub-sublist is a list of
 the objects known under that name.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

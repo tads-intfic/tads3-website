@@ -74,13 +74,6 @@ accepts "go through" as well.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
-
-
 Inherited from `TravelConnectorLink` :  
 [`connector`](../object/TravelConnectorLink.html#connector) [`sightSize`](../object/TravelConnectorLink.html#sightSize)
 
@@ -149,11 +142,6 @@ Inherited from `VocabObject` :
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

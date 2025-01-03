@@ -1081,11 +1081,6 @@ layout: docs
         openText = '<b>'
         closeText = '</b>'
     ;
-
-
-
-
-
     /* ------------------------------------------------------------------------ */
     /*
      *   "Style tag" filter.  This is an output filter that expands our

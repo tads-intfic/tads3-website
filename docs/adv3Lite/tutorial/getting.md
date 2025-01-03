@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="intro.html" class="nav">Introduction</a> \> Getting What You
 Need  
@@ -16,11 +11,6 @@ Need
    
 <a href="setting.html" class="nav"><em>Next:</em> Setting it all up</a>
     </span>
-
-
-
-
-
 # Getting What You Need
 
 The first thing you need is the latest version of the TADS 3 authoring

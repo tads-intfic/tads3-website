@@ -322,11 +322,6 @@ of greeting that occurs automatically when the player jumps right into a
 conversation with our actor using ASK ABOUT or the like, without
 explicitly saying HELLO first). The regular HelloTopic will handle
 explicit greetings, and the ImpHelloTopic will handle the implied kind.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

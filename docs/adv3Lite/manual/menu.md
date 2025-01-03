@@ -4,20 +4,10 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="core.html" class="nav">Optional Modules</a> \> Menus  
 <span class="navnp"><a href="gadget.html" class="nav"><em>Prev:</em> Gadgets</a>
     <a href="hint.html" class="nav"><em>Next:</em> Hints</a>     </span>
-
-
-
-
-
 # Menus
 
 The menusys.t module (which requires the menucon.t module) provides a

@@ -205,11 +205,6 @@ being qualified is singular, this will be 1; if it's plural, this will
 be nil, to indicate that there's no specific target quantity; if the
 phrase is something like "bob's five books," the the number will be the
 qualifying quantity (5, in this case).
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

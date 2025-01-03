@@ -75,11 +75,6 @@ through to the underyling stream unchanged.
 
 
 [`isBlocking`](#isBlocking)
-
-
-
-
-
 <span id="_MethodSummary_"></span>
 
 
@@ -89,11 +84,6 @@ through to the underyling stream unchanged.
 
 
 [`filterText`](#filterText)
-
-
-
-
-
 <span id="_Properties_"></span>
 
 
@@ -133,11 +123,6 @@ default.
 
 
 filter the text
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

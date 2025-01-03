@@ -45,11 +45,6 @@ before the action takes place.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `PreCondition` :  
 [`preCondOrder`](../object/PreCondition.html#preCondOrder)
 
@@ -91,11 +86,6 @@ Inherited from `PreCondition` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

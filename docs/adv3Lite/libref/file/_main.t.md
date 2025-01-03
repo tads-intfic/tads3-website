@@ -259,11 +259,6 @@ Find an instance of the given class for which the given function returns
 true. We iterate over objects of the given class in arbitrary order, and
 return the first instance for which the function returns true. Retursn
 nil if there is no such instance.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

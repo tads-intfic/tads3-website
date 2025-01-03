@@ -196,11 +196,6 @@ number of list items
 Get the next index value. Returns an integer from 1 to numItems. The
 algorithm for choosing the index depends on the list type, as defined by
 listAttrs.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

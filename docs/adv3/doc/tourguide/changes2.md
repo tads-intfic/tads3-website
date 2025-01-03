@@ -286,9 +286,7 @@ href="pathpassage.html">PathPassage</a> section.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
   

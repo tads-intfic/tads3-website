@@ -57,11 +57,6 @@ allow large objects to pass through.
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `Material` :  
 [`senseThru`](../object/Material.html#senseThru)
 

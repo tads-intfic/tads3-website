@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="builtins.html" class="nav">The Intrinsics</a> \>
 WeakRefLookupTable  
 <span class="navnp"><a href="vector.html" class="nav"><em>Prev:</em> Vector</a>
     <a href="lib.html" class="nav"><em>Next:</em> The System Library</a>
     </span>
-
-
-
-
-
 # WeakRefLookupTable
 
 WeakRefLookupTable is a subclass of [LookupTable](lookup.html). It

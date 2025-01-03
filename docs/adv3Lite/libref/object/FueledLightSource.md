@@ -266,11 +266,6 @@ displayed if the player character can't see us).
 
 Stop the fuelDaemon; first check that we actually have one and then
 disable it.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

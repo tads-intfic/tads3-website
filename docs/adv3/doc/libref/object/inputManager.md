@@ -412,11 +412,6 @@ timeout until the next real-time event.
 If allowRealTime is nil, we won't process real-time events at all; we'll
 merely return nil for the timeout to indicate to the caller that any
 user input interaction about to be attempted should wait indefinitely.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

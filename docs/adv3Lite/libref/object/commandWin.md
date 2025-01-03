@@ -47,11 +47,6 @@ The standard main command window.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `WebCommandWin` :  
 [`isInputOpen`](../object/WebCommandWin.html#isInputOpen) [`lastInput`](../object/WebCommandWin.html#lastInput) [`lastInputClient`](../object/WebCommandWin.html#lastInputClient) [`lastInputReady`](../object/WebCommandWin.html#lastInputReady) [`mode`](../object/WebCommandWin.html#mode) [`moreMode`](../object/WebCommandWin.html#moreMode) [`outbuf`](../object/WebCommandWin.html#outbuf) [`scrollback`](../object/WebCommandWin.html#scrollback) [`scrollbackLimit`](../object/WebCommandWin.html#scrollbackLimit) [`src`](../object/WebCommandWin.html#src) [`textbuf`](../object/WebCommandWin.html#textbuf) [`vpath`](../object/WebCommandWin.html#vpath)
 
@@ -69,11 +64,6 @@ Inherited from `WebResource` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `WebCommandWin` :  
 [`cancelInputLine`](../object/WebCommandWin.html#cancelInputLine) [`clearWindow`](../object/WebCommandWin.html#clearWindow) [`endMoreMode`](../object/WebCommandWin.html#endMoreMode) [`flushWin`](../object/WebCommandWin.html#flushWin) [`getInputLine`](../object/WebCommandWin.html#getInputLine) [`getState`](../object/WebCommandWin.html#getState) [`receiveInput`](../object/WebCommandWin.html#receiveInput) [`showMorePrompt`](../object/WebCommandWin.html#showMorePrompt) [`textbufToScrollback`](../object/WebCommandWin.html#textbufToScrollback) [`write`](../object/WebCommandWin.html#write)
 

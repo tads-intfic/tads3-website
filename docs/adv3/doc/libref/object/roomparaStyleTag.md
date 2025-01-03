@@ -45,11 +45,6 @@ description
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `StyleTag` :  
 [`closeText`](../object/StyleTag.html#closeText) [`openText`](../object/StyleTag.html#openText) [`tagName`](../object/StyleTag.html#tagName)
 
@@ -58,13 +53,6 @@ Inherited from `StyleTag` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
-
-
 *(none)* <span id="_Properties_"></span>
 
 

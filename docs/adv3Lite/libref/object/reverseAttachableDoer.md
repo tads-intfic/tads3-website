@@ -45,11 +45,6 @@ Details](#_Methods_)
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Doer` :  
 [`cmd`](../object/Doer.html#cmd) [`handleAction`](../object/Doer.html#handleAction) [`ignoreError`](../object/Doer.html#ignoreError) [`priority`](../object/Doer.html#priority) [`strict`](../object/Doer.html#strict)
 
@@ -96,11 +91,6 @@ Inherited from `Redirector` :
 
 
 *no description available*
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

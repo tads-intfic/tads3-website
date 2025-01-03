@@ -55,11 +55,6 @@ flexibility.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `OutputStream` :  
 [`filterList_`](../object/OutputStream.html#filterList_) [`justDidPara`](../object/OutputStream.html#justDidPara) [`justDidParaSuppressor`](../object/OutputStream.html#justDidParaSuppressor) [`myInputManager`](../object/OutputStream.html#myInputManager) [`prefix`](../object/OutputStream.html#prefix)
 
@@ -112,11 +107,6 @@ Inherited from `ModuleExecObject` :
 
 
 we sit atop the system-level main console output stream
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

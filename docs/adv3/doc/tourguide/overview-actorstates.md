@@ -278,9 +278,7 @@ you may frequently want access to its result.  <br />
 </tbody>
 </table>
 
-|     |     |
-|-----|-----|
-|     |     |
+
 
   
 In addition there's a couple of properties of Actor associated with

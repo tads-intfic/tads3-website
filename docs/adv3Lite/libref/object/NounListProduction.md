@@ -84,11 +84,6 @@ List(a, List(b, List(c, List(d)))).
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `Production` :  
 [`determiner`](../object/Production.html#determiner) [`nounPhraseRole`](../object/Production.html#nounPhraseRole) [`npClass`](../object/Production.html#npClass) [`parent`](../object/Production.html#parent)
 
@@ -131,11 +126,6 @@ Inherited from `Production` :
 
 Visit a production during the build process. When parsing the second
 element, we'll add a new NounPhrase to the current slot's list.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

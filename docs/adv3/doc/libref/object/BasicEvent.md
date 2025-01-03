@@ -212,11 +212,6 @@ does this event match the given object/property combination?
 Execute the event. This must be overridden by the subclass to perform
 the appropriate operation when executed. In particular, the subclass
 must reschedule or unschedule the event, as appropriate.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

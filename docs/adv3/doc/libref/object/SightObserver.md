@@ -66,11 +66,6 @@ classes.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 *(none)* <span id="_MethodSummary_"></span>
 
 
@@ -112,11 +107,6 @@ SightEvent occurs within view of this object.
 object that is making the visual display; and 'info' is a SenseInfo
 object describing the viewing conditions from this object to the source
 object.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

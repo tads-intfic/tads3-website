@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="begin.html" class="nav">Opening Moves</a> \> Introduction  
 <span class="navnp"><a href="begin.html" class="nav"><em>Prev:</em> Opening Moves</a>
     <a href="modules.html" class="nav"><em>Next:</em> Core and Optional
 Modules</a>     </span>
-
-
-
-
-
 # Introduction and Overview
 
 This manual is intended to explain the main features of the adv3Lite

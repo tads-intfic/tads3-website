@@ -1003,11 +1003,6 @@ Note that if the actor is already in this location, there's no need to
 run this test, since we could get the information from the actor
 directly. The point of this test is to determine the light level in this
 location without the actor having to be present.
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

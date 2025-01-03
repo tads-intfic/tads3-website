@@ -78,11 +78,6 @@ Inherited from `VocabObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `DefaultAskConnector` :  
 [`isConnectorApparent`](../object/DefaultAskConnector.html#isConnectorApparent) [`isConnectorPassable`](../object/DefaultAskConnector.html#isConnectorPassable)
 

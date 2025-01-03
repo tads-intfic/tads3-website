@@ -175,11 +175,6 @@ The time (as a Date object) at which this Fuse is set to activate
 If our eventTime is still in the future, return a turn count well into
 the future so we don't execute yet; otherwise return the current turn
 count so we do execute on this turn.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -12,11 +12,6 @@ layout: docs
 singleNounOnly-\>actor\_ ',' miscWordList  
 \| ('ask' \| 'tell' \| 'a' \| 't') singleNounOnly-\>actor\_ 'to'
 miscWordList  
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

@@ -207,11 +207,6 @@ this as needed.
 
 Since we're inheriting from object, but need to use the "+" syntax, we
 need to set up the contents appropriately
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

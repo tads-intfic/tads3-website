@@ -86,11 +86,6 @@ Take a string and return the object whose programmatic name it refers to
 
 Take a value and return the string representation of its programmatic
 name
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

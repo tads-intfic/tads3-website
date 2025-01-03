@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="../topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../toc.html" class="nav">Table of Contents</a> \|
 <a href="../t3spec.html" class="nav">T3 VM Technical Documentation</a> \>
 The Metaclasses  
@@ -16,11 +11,6 @@ The Metaclasses
    
 <a href="opcode.html" class="nav"><em>Next:</em> Byte-Code Instruction
 Set</a>     </span>
-
-
-
-
-
 ![](t3logo.gif)
 
   
@@ -487,11 +477,6 @@ in the table.
 
 Copyright © 2001, 2006 by Michael J. Roberts.  
 Revision: September, 2006
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

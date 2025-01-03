@@ -49,13 +49,6 @@ plural phrase qualified with a number and optional "any"
 <span class="hdln">Summary of Properties</span>  
 
 
-
-
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -67,11 +60,6 @@ Inherited from `BasicProd` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `QuantifiedPluralProd` :  
 [`getQuantity`](../object/QuantifiedPluralProd.html#getQuantity) [`getVerifyKeepers`](../object/QuantifiedPluralProd.html#getVerifyKeepers) [`resolveMainPhrase`](../object/QuantifiedPluralProd.html#resolveMainPhrase) [`resolveNouns`](../object/QuantifiedPluralProd.html#resolveNouns) [`selectExactCount`](../object/QuantifiedPluralProd.html#selectExactCount)
 

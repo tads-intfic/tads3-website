@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="depth.html" class="nav">TADS 3 In Depth</a> \>
 <a href="t3actor.html" class="nav">Creating Dynamic Characters</a> \>
@@ -17,11 +12,6 @@ Choosing a Conversation System
 Characters</a>    
 <a href="t3conv.html" class="nav"><em>Next:</em> Programming
 Conversations with NPCs</a>     </span>
-
-
-
-
-
 # Choosing a Conversation System
 
 Perhaps the most vexing problem of all in creating lifelike NPCs is

@@ -20,11 +20,6 @@ exceptNounPhrase-\>np1\_ nounConjunction exceptListBody-\>np2\_
 
 
 exceptNounPhrase-\>np\_
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

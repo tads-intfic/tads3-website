@@ -4,22 +4,12 @@ layout: docs
 
 
 <img src="../../docs/manual/topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="../../docs/manual/toc.html" class="nav">Table of Contents</a> \|
 <a href="../../docs/manual/extensions.html" class="nav">Extensions</a> \>
 Collective  
 <span class="navnp"><a href="brightness.html" class="nav"><em>Prev:</em> Brightness</a>
     <a href="cmdhelp.html" class="nav"><em>Next:</em> Command Help</a>
     </span>
-
-
-
-
-
 # Collective
 
 ## Overview

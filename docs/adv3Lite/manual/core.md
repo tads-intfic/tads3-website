@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \| The Core
 Library  
 <span class="navnp"><a href="mingame.html" class="nav"><em>Prev:</em> Minimal Game
 Definition</a>    
 <a href="thing.html" class="nav"><em>Next:</em> Things</a>     </span>
-
-
-
-
-
 # Part II: The Core Library
 
 This part describes the main classes contained in the core library. If
@@ -43,11 +33,6 @@ code will be dealt with in later sections.
 [Topics](topic.html)  
 [Beginnings](beginning.html)  
 [Endings](ending.html)  
-
-
-
-
-
 ------------------------------------------------------------------------
 
 

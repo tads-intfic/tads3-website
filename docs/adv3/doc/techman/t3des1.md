@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="fund.html" class="nav">Fundamentals</a> \>
 <a href="t3design.html" class="nav">Tips on Designing your Game</a> \> IF
@@ -17,11 +12,6 @@ Design: In Practice
 Game</a>    
 <a href="t3des2.html" class="nav"><em>Next:</em> IF Design: In Theory</a>
     </span>
-
-
-
-
-
 # IF Design: In Practice
 
 I've been involved in the design and implementation of several text

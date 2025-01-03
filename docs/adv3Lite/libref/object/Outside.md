@@ -65,13 +65,6 @@ Inherited from `LocType` :
 <span class="hdln">Summary of Methods</span>  
 
 
-
-
-
-
-
-
-
 *(none)* <span id="_Properties_"></span>
 
 

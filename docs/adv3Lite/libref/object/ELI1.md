@@ -87,11 +87,6 @@ Inherited from `ModuleExecObject` :
 
 
 <span class="hdln">Summary of Methods</span>  
-
-
-
-
-
 Inherited from `EventListItem` :  
 [`_invokeItem`](../object/EventListItem.html#_invokeItem) [`addToList`](../object/EventListItem.html#addToList) [`canFire`](../object/EventListItem.html#canFire) [`doScript`](../object/EventListItem.html#doScript) [`execute`](../object/EventListItem.html#execute) [`fallBack`](../object/EventListItem.html#fallBack) [`fallBackResponse`](../object/EventListItem.html#fallBackResponse) [`invokeItem`](../object/EventListItem.html#invokeItem) [`setDelay`](../object/EventListItem.html#setDelay) [`setDone`](../object/EventListItem.html#setDone) [`underused`](../object/EventListItem.html#underused)
 

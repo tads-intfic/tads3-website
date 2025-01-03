@@ -4,11 +4,6 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="conversation.html" class="nav">The Art of Conversation</a> \>
 Angela Wants Answers  
@@ -16,11 +11,6 @@ Angela Wants Answers
    
 <a href="defaults.html" class="nav"><em>Next:</em> Diverse Defaults</a>
     </span>
-
-
-
-
-
 # Angela Wants Answers
 
 ## A Simple Conversation Node

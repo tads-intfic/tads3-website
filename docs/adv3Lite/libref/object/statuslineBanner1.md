@@ -45,11 +45,6 @@ The banner window for the status line.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `BannerWindow` :  
 [`align_`](../object/BannerWindow.html#align_) [`handle_`](../object/BannerWindow.html#handle_) [`id_`](../object/BannerWindow.html#id_) [`inited_`](../object/BannerWindow.html#inited_) [`parentID_`](../object/BannerWindow.html#parentID_) [`size_`](../object/BannerWindow.html#size_) [`sizeUnits_`](../object/BannerWindow.html#sizeUnits_) [`styleFlags_`](../object/BannerWindow.html#styleFlags_) [`windowType_`](../object/BannerWindow.html#windowType_)
 
@@ -126,11 +121,6 @@ parameterized colors STATUSBG and STATUSTEXT. (These are called
 rather select whatever colors the interpreter wishes to use for the
 status line. In many cases, the interpreter lets the user select these
 colors via a Preferences dialog.)
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

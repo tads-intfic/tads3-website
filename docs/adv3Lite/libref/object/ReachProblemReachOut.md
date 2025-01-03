@@ -67,11 +67,6 @@ actor's (non top-level room) container.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `ReachProblem` :  
 [`target_`](../object/ReachProblem.html#target_)
 
@@ -115,11 +110,6 @@ Inherited from `ReachProblem` :
 If allowImplicit is true we can try moving the actor out of its
 immediate container to see if this solves the problem. If it does,
 return true; otherwise return nil.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

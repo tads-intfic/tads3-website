@@ -4,21 +4,11 @@ layout: docs
 
 
 <img src="topbar.jpg" data-border="0" />
-
-
-
-
-
 <a href="toc.html" class="nav">Table of Contents</a> \|
 <a href="optional.html" class="nav">Optional Modules</a> \> Events  
 <span class="navnp"><a href="attachable.html" class="nav"><em>Prev:</em> Attachables</a>
     <a href="eventlist.html" class="nav"><em>Next:</em> EventList</a>    
 </span>
-
-
-
-
-
 # Events
 
 The Events module implements Daemons and Fuses. A

@@ -487,11 +487,6 @@ to do that here.
 Most games will want to override this, to show a prologue message
 setting up the game's initial situation for the player. We don't show
 anything by default.
-
-
-
-
-
 Adv3Lite Library Reference Manual  
 Generated on 15/03/2023 from adv3Lite version 1.6.1
 

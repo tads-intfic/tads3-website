@@ -93,11 +93,6 @@ Base class for noun phrase productions with definite articles.
 
 
 <span class="hdln">Summary of Properties</span>  
-
-
-
-
-
 Inherited from `NounPhraseProd` :  
 [`filterForCollectives`](../object/NounPhraseProd.html#filterForCollectives)
 
@@ -180,11 +175,6 @@ Resolve an underlying phrase using definite noun phrase rules.
 
 
 *no description available*
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 

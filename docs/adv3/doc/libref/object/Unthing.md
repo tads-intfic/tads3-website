@@ -291,11 +291,6 @@ Instead, we need to indicate that the qualifying object itself (i.e.,
 
 throw a generic message when we're used as a qualifier - we'll simply
 get our "not here" message and display that
-
-
-
-
-
 TADS 3 Library Manual  
 Generated on 5/16/2013 from TADS version 3.1.3
 
