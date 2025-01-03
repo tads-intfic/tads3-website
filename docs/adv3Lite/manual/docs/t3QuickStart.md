@@ -291,7 +291,7 @@ they cover, they both contain quite a bit of more advanced and complex
 information that is likely to be not only unnecessary but also
 potentially quite confusing to new users of TADS 3/adv3Lite. You will
 also find the
-<a href="libref/index.html" class="title" target="_blank">Adv3Lite
+<a href="../../libref/" class="title" target="_blank">Adv3Lite
 Library Reference Manual</a> an absolutely essential tool once you start
 working on your own games, and *Learning TADS 3 With Adv3Lite* will
 introduce you to its use, but it's certainly not the place to begin.
@@ -303,7 +303,7 @@ them helpful when you want to achieve something beyond the basics.
 ### 2d. Using the Library Reference Manual
 
 When you first gaze upon the
-<a href="libref/index.html" class="title" target="_blank">Adv3Lite
+<a href="../../libref/index.html" class="title" target="_blank">Adv3Lite
 Library Reference Manual</a> (LRM), it may appear to be an impenetrable
 tangle, but in fact it's an extremely useful resource. To use it, you
 need to be aware of the following basic ideas:

@@ -87,7 +87,7 @@ adv3Lite library.
 <a href="../../../adv3/doc/sysman/cover.html" target="_blank"><img src="syscover.jpg"
 class="book" /></a>
 
-<a href="sysman.html" class="title" target="_blank">TADS 3 System
+<a href="../../../adv3/doc/sysman/cover.html" class="title" target="_blank">TADS 3 System
 Manual</a>  
 by Michael Roberts
 
@@ -98,10 +98,10 @@ details on the system.
 
 ------------------------------------------------------------------------
 
-<a href="libref/index.html" target="_blank"><img src="libcover.jpg"
+<a href="../../libref/index.html" target="_blank"><img src="libcover.jpg"
 class="book" /></a>
 
-<a href="libref/index.html" class="title" target="_blank">Adv3Lite
+<a href="../../libref/index.html" class="title" target="_blank">Adv3Lite
 Library Reference Manual</a>
 
 This is an extensively cross-referenced and hyperlinked compilation of
