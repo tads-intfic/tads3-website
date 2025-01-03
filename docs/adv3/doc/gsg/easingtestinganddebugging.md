@@ -73,66 +73,13 @@ would normally not be considered in scope.
 The quick and dirty way round this would be to override the objInScope
 method of the purloin and gonear actions:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>DefineTAction(Gonear) <br />
-</td>
-</tr>
-</tbody>
-</table>
+`DefineTAction(Gonear) `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> objInScope(obj) { return true; } <br />
-</td>
-</tr>
-</tbody>
-</table>
+` objInScope(obj) { return true; } `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
+`; `
   
 This works perfectly well, but it's theoretically less than ideal; we
 don't actually want *every* object to be in scope for a **purloin** or
@@ -142,23 +89,9 @@ approach, which we'll look at just to see how it's done, is to build our
 own list of objects we want considered in scope for these commands, and
 then use that:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 \#ifdef \_\_DEBUG  
   
@@ -200,23 +133,9 @@ everything : object
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 There should not be a great deal that requires explanation. We head the
 section with the preprocessor directive \#ifdef \_\_DEBUG (note the
@@ -238,23 +157,9 @@ different approach.
 Defining the purloin verb is then only slightly more complex than
 defining another new verb:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 DefineTAction(Purloin)  
   cacheScopeList()  
@@ -294,23 +199,9 @@ modify Fixture
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 modify Immovable  
   dobjFor(Purloin)  
@@ -323,23 +214,9 @@ modify Immovable
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 This definition assumes that we want to be able to **purloin** the kinds
 of things that you could normally expect to pick up and carry around,
@@ -349,23 +226,9 @@ accordingly.
   
 The definition for **gonear** is similar:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
  DefineTAction(Gonear)  
    cacheScopeList()  
@@ -409,23 +272,8 @@ modify Decoration
   }    
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
 
 modify Distant  
   dobjFor(Gonear)   
@@ -435,6 +283,7 @@ modify Distant
     action() {inherited;}  
   }    
 ;  
+```
   
 What the gonear verb does is to transport the player character to the
 room in which the direct object of the gonear command is located (e.g.
@@ -457,92 +306,25 @@ Allowing a MultiLoc to be purloined might create havoc with your game
 world, while attempting to gonear a MultiLoc has no defined outcome; we
 thus need to define special handling to deal with these cases:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 modify MultiLoc  
   dobjFor(Gonear)  
   {  
     verify() { illogical('{You/he} cannot gonear {the dobj/him}, since it  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> exists in more than one location. '); } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+ exists in more than one location. '); }
 
   }  
   dobjFor(Purloin)  
   {  
-    verify() { illogical('{You/he} cannot purloin {the dobj/him}, since it   
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>exists   in more than one location. '); } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
+    verify() { illogical('{You/he} cannot purloin {the dobj/him}, since it exists in more than one location. '); }
   }  
 ;  
   
 \#endif  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 We could simply have excluded MultiLocs from the scope list built by
 everything.initLst(), but this would result in slightly odd messages of

@@ -50,119 +50,68 @@ player. This is illustrated by the routine for handing coins to Bob in
 the sample game. We can adapt that code to our situation by redefining
 the shopkeeper’s GiveTopic object for coins thus:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+++ GiveShowTopic  
+   matchTopic(fromActor, obj)  
+   {  
+      return obj.ofKind(Coin) ? matchScore : 0;       
+   }  
+   handleTopic(fromActor, obj)  
+   {  
+     shopkeeper.cashReceived ++;  
+     currency = obj;  
+     if(shopkeeper.cashReceived \&lt;= shopkeeper.price)  
+          obj.moveInto(shopkeeper);  
+     /\* add our special report \*/  
+     gTranscript.addReport(new GiveCoinReport(obj));  
+  
+        /\* register for collective handling at the end of the command \*/  
+     gAction.callAfterActionMain(self);  
+            
+   }  
+    afterActionMain()  
+    {  
+        /\*  
+         \*   adjust the transcript by summarizing consecutive coin  
+         \*   acceptance reports   
+         \*/  
+        gTranscript.summarizeAction(  
+            {x: x.ofKind(GiveCoinReport)},  
+            {vec: 'You hand over '  
+              + spellInt(vec.length())+' ' + currency.name+'s.\n' });  
+       if(shopkeeper.saleObject == nil)  
+       {  
+         "\&lt;q\&gt;What's this for?\&lt;/q\&gt; asks {the shopkeeper/she}, handing the   
+          money back, \&lt;q\&gt;Shouldn't you tell me what you want to buy   
+           first?\&lt;/q\&gt;";  
+        shopkeeper.cashReceived = 0;   
+       }  
+    else if(shopkeeper.cashReceived \&lt; shopkeeper.price)  
+      "\&lt;q\&gt;Er, that's not enough.\&lt;/q\&gt; she points out, looking at you   
+        expectantly while she waits for the balance. ";  
+    else  
+    {  
+      "{The shopkeeper/she} takes the money and turns to take  
+       \&lt;\&lt;shopkeeper.saleObject.aName\&gt;\&gt;  
+      off the shelf. She hands you \&lt;\&lt;shopkeeper.saleObject.theName\&gt;\&gt; saying,  
+       \&lt;q\&gt;Here you are  then";  
+      if(shopkeeper.cashReceived \&gt; shopkeeper.price)  
+              ", and here's your change";  
+      ".\&lt;/q\&gt;\&lt;/p\&gt;";  
+      shopkeeper.saleObject.moveInto(gPlayerChar);  
+      shopkeeper.price = 0;  
+      shopkeeper.cashReceived = 0;  
+      shopkeeper.saleObject = nil;  
+    }  
+   }  
+ currency = nil  
+;  
 
-<p>++ GiveShowTopic<br />
-   matchTopic(fromActor, obj)<br />
-   {<br />
-      return obj.ofKind(Coin) ? matchScore : 0;     <br />
-   }<br />
-   handleTopic(fromActor, obj)<br />
-   {<br />
-     shopkeeper.cashReceived ++;<br />
-     currency = obj;<br />
-     if(shopkeeper.cashReceived &lt;= shopkeeper.price)<br />
-          obj.moveInto(shopkeeper);<br />
-     /* add our special report */<br />
-     gTranscript.addReport(new GiveCoinReport(obj));</p>
+` `
 
-<p>        /* register for collective handling at the end of the command */<br />
-     gAction.callAfterActionMain(self);<br />
-          <br />
-   }<br />
-    afterActionMain()<br />
-    {<br />
-        /*<br />
-         *   adjust the transcript by summarizing consecutive coin<br />
-         *   acceptance reports <br />
-         */<br />
-        gTranscript.summarizeAction(<br />
-            {x: x.ofKind(GiveCoinReport)},<br />
-            {vec: ’You hand over ’<br />
-              + spellInt(vec.length())+’ ’ + currency.name+’s.\n’ });<br />
-       if(shopkeeper.saleObject == nil)<br />
-       {<br />
-         ”&lt;q&gt;What’s this for?&lt;/q&gt; asks {the shopkeeper/she}, handing the <br />
-          money back, &lt;q&gt;Shouldn’t you tell me what you want to buy <br />
-           first?&lt;/q&gt;”;<br />
-        shopkeeper.cashReceived = 0; <br />
-       }<br />
-    else if(shopkeeper.cashReceived &lt; shopkeeper.price)<br />
-      ”&lt;q&gt;Er, that’s not enough.&lt;/q&gt; she points out, looking at you <br />
-        expectantly while she waits for the balance. ”;<br />
-    else<br />
-    {<br />
-      ”{The shopkeeper/she} takes the money and turns to take<br />
-       &lt;&lt;shopkeeper.saleObject.aName&gt;&gt;<br />
-      off the shelf. She hands you &lt;&lt;shopkeeper.saleObject.theName&gt;&gt; saying,<br />
-       &lt;q&gt;Here you are  then”;<br />
-      if(shopkeeper.cashReceived &gt; shopkeeper.price)<br />
-              ”, and here’s your change”;<br />
-      ”.&lt;/q&gt;&lt;/p&gt;”;<br />
-      shopkeeper.saleObject.moveInto(gPlayerChar);<br />
-      shopkeeper.price = 0;<br />
-      shopkeeper.cashReceived = 0;<br />
-      shopkeeper.saleObject = nil;<br />
-    }<br />
-   }<br />
- currency = nil<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>The first thing you should notice about this is that we have effectively
 moved the code from the shopkeeper’s cashFuse method into the new
@@ -199,92 +148,16 @@ to Sally the shopkeeper (if there were several), the game reported
 “pound coin: “ on a new line. We mitigated this a little by trying to
 make it look as if the coins were being counted out:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>pound coin: <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">pound coin: </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>pound coin: number 2 <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">pound coin: number 2 </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>pound coin: number 3 <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">pound coin: number 3 </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>But it really would have been better to do away with that repeating
+<p><code class="language-plaintext highlighter-rouge"> </code>
+But it really would have been better to do away with that repeating
 ‘pound coin:’ altogether (especially in a situation where you might want
 to hand over dozens of the things at a time), and simply to have one
 summary report that says something like “You hand over three pound
@@ -301,78 +174,27 @@ than one coin handed over.</p>
 
 <p>For this to work, we need to define the GiveCoinReport class:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+class GiveCoinReport: MainCommandReport  
+    construct(obj)  
+    {  
+        /\* remember the coin we accepted \*/  
+        coinObj = obj;  
+  
+        /\* inherit the default handling \*/  
+        gMessageParams(obj);  
+        inherited('You hand over {a obj/him}. ');  
+    }  
+  
+    /\* my coin object \*/  
+    coinObj = nil  
+;  
 
-<p>class GiveCoinReport: MainCommandReport<br />
-    construct(obj)<br />
-    {<br />
-        /* remember the coin we accepted */<br />
-        coinObj = obj;</p>
+` `
 
-<p>        /* inherit the default handling */<br />
-        gMessageParams(obj);<br />
-        inherited(‘You hand over {a obj/him}. ’);<br />
-    }</p>
-
-<p>    /* my coin object */<br />
-    coinObj = nil<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>The construct method - the object constructor - is called when we create
 a new object of the GiveCoinReport class through a call to new
@@ -390,104 +212,13 @@ whatever).</p>
 the multiple reports of “You hand over a pound coin” that we’d otherwise
 see, we include the following code in the afterActionMain() method:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">gTranscript.summarizeAction( </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>gTranscript.summarizeAction( <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">      {x: x.ofKind(GiveCoinReport)}, </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>      {x: x.ofKind(GiveCoinReport)}, <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">      {vec: 'You hand over ' </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>      {vec: 'You hand over ' <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>         + spellInt(vec.length())+' ' + currency.name+'s.\n' }); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">         + spellInt(vec.length())+' ' + currency.name+'s.\n' }); </code></p>
 
 <p>This may well look Greek to you (unless you happen to know some Greek),
 but in brief we can at least say what it <em>does</em>: what it does is to
@@ -537,79 +268,28 @@ that are in effect short form function definitions. The first parameter,
 {x: x.ofKind(GiveCoinReport)}, in effect tells the SummarizeAction
 method to treat cond() as if it were defined as:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>cond(x)<br />
-{<br />
-    return x.ofKind(GiveCoinReport);<br />
-}</p>
-
-<p>You may remember that GiveCoinReport was the custom report class we
-defined a little way back, so what we’re effectively telling the
-SummarizeAction with this is “look out for those reports of the
-GiveCoinReport class, they’re the ones we want you to count up and
-replace for us.”</p>
-
-<p>Similarly, the second parameter is passed as
-{vec: ’You hand over ’ + spellInt(vec.length())+’ ’ + currency.name+’s.\n’ }. This
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+cond(x)  
+{  
+    return x.ofKind(GiveCoinReport);  
+}  
+  
+You may remember that GiveCoinReport was the custom report class we
+defined a little way back, so what we're effectively telling the
+SummarizeAction with this is "look out for those reports of the
+GiveCoinReport class, they're the ones we want you to count up and
+replace for us."  
+  
+Similarly, the second parameter is passed as
+{vec: 'You hand over ' + spellInt(vec.length())+' ' + currency.name+'s.\n' }. This
 effectively tells SummarizeAction to treat report(vec) as if it had been
-defined as:</p>
+defined as:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>report(vec)<br />
 {<br />
@@ -617,19 +297,7 @@ defined as:</p>
       currency.name+’s.\n’;<br />
 }</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>

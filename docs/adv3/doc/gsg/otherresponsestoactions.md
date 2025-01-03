@@ -36,19 +36,7 @@ stage (i.e. it hasn't already been ruled out by verify(), check(), or
 preCond). Thus, if you want another object to respond to an action that
 fails, you must make it fail in `action()`, rather than before, e.g.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -68,19 +56,7 @@ wickedWitch: Person 'wicked ugly witch' 'wicked witch'
   }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -103,19 +79,7 @@ bob: Person ' fine young man /bob'  'Bob'
    }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -124,19 +88,7 @@ bob: Person ' fine young man /bob'  'Bob'
 If the PC tries to kiss the wicked witch while Bob is present we'll
 get:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -147,19 +99,7 @@ get:
 arm and pulling you back, "Don't you know that kissing her will turn you
 into a lump of vile green blancmange?"  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -167,19 +107,7 @@ into a lump of vile green blancmange?"
 
 Whereas if the PC tries to kiss her when Bob is elsewhere we'll get:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -189,19 +117,7 @@ Whereas if the PC tries to kiss her when Bob is elsewhere we'll get:
 **You move your lips towards hers, but your nerve fails you at the last
 moment.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -211,19 +127,7 @@ Note the use of the exit macro in Bob's beforeAction() routine to veto
 the action before it takes place. We could alternatively have given Bob
 an afterAction() routine to give his reaction after the event:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -239,19 +143,7 @@ an afterAction() routine to give his reaction after the event:
        }  
    }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -261,19 +153,7 @@ You can also allow the actor's location (Room or NestedRoom) to respond
 to actions in a similar way, but in that case you need to use
 roomBeforeAction() or roomAfterAction, e.g.:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -300,19 +180,7 @@ topOfTree : OutdoorRoom 'At the top of the tree'
     }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|

@@ -33,47 +33,11 @@ when we want to remap a command on one object to a different command
 involving the same or maybe different objects (or even no objects at
 all). So, for example, on the tree object we earlier defined:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>dobjFor(Climb) remapTo(Up) <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Climb) remapTo(Up) </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -94,47 +58,11 @@ all). So, for example, on the tree object we earlier defined:</p>
 return a list containing the action followed by the objects involved in
 the action; the example above is in fact equivalent to:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>remapDobjClimb = [UpAction] <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">remapDobjClimb = [UpAction] </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -153,47 +81,11 @@ the action; the example above is in fact equivalent to:</p>
 
 <p>A more complicated example was the cottage, where we defined:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>dobjFor(Enter) remapTo(TravelVia, insideCottage) <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Enter) remapTo(TravelVia, insideCottage) </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -212,47 +104,11 @@ the action; the example above is in fact equivalent to:</p>
 
 <p>which is equivalent to:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>remapDobjEnter = [TravelViaAction, insideCottage] <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">remapDobjEnter = [TravelViaAction, insideCottage] </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -308,19 +164,7 @@ and you wanted <strong>push gate</strong> to be treated as <strong>close gate</s
 gate was open, but in the normal way when the gate was closed, you could
 define:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -343,19 +187,7 @@ define:</p>
 
 <p>The underlying code here is in fact: </p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -374,19 +206,7 @@ define:</p>
 
 <p>remapDobjPush = (isOpen ? [CloseAction, self] : inherited());</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -445,19 +265,7 @@ when it’s closed, and close the gate when it’s open. This is beyond the
 ability of maybeRemapTo, but quite possible with the underlying remap
 property:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -481,19 +289,7 @@ property:</p>
   }<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>

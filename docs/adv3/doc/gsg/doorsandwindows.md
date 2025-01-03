@@ -47,70 +47,22 @@ requiring a key and the other using a paddle.
 We'll start by adding the outside of the front door (which should be
 contained in outsideCottage):  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
+```
 + cottageDoor : LockableWithKey, Door 'door' 'door'  
   "It's a neat little door, painted green to match the window frame. "  
   keyList = \[cottageKey\]  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 To make the door work, we also need to change the in property of
 outsideCottage to read cottageDoor instead of insideCottage. As noted
 above, we also need to define the other side of the door:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
-
-+ cottageDoorInside : Lockable, Door -\> cottageDoor 'door' 'door';  
+```
++ cottageDoorInside : Lockable, Door -\> cottageDoor 'door' 'door';
+```
   
 This needs to be located in insideCottage, and we need to change the out
 property of insideCottage to cottageDoorInside. The -\>cottageDoor is a
@@ -135,43 +87,15 @@ Before this door will work, we have to define the key object. As a
 temporary measure (we'll move it elsewhere later), we'll do this with
 simply:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 cottageKey : Key 'small brass key' 'small brass key' @outsideCottage;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 Since Heidi's now locked out of the cottage (or would be if the key was
 not so readily in reach), an obvious thing for her to try is looking
@@ -192,23 +116,9 @@ To create a window through which the contents of another location are
 visible, we need to use a SenseConnector, and locate it in the two rooms
 joined by the window:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 cottageWindow : SenseConnector, Fixture 'window' 'window'  
   "The cottage window has a freshly painted green frame.   
@@ -217,23 +127,9 @@ cottageWindow : SenseConnector, Fixture 'window' 'window'
   locationList = \[outsideCottage, insideCottage\]  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 Since SenseConnector is a MultiLoc (an object that exists in more than
 one location) we do not define its location property; instead we define
@@ -257,65 +153,20 @@ recall that we defined an initSpecialDesc on the chair. The first
 problem is that we'll now see that initSpecialDesc when Heidi is
 standing just outside the cottage:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 **In front of a cottage**  
 You stand just outside a cottage; the forest stretches east. A short
 path leads round the cottage to the northwest.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 A plain wooden chair sits in the corner.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 This description is plainly inappropriate when the chair is being viewed
 through the window from outside. What we want is a different type of
@@ -324,44 +175,16 @@ than the one in which it's actually located; for that we use
 remoteInitSpecialDesc. Add the following to the definition of the chair
 object:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 remoteInitSpecialDesc(actor) { "Through the cottage window you can  
    see a plain wooden chair sitting in the corner of the front room. "; }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 The actor parameter refers to the actor doing the looking, normally the
 player character. The parameter can be used to test where the chair is
@@ -378,92 +201,22 @@ chair, but is not so good with portable objects. For example, if you
 drop the key outside the cottage and then go inside, you'll see the key
 listed as:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
    In the in front of a cottage, you see a small brass key.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 Similarly if you leave the key inside the cottage and then go back
 outside, you'll find the key listed as:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>In the inside cottage, you see a small brass key. <br />
-</td>
-</tr>
-</tbody>
-</table>
+`In the inside cottage, you see a small brass key. `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 The library provides two ways to fix this: (1) you can give a room an
 inRoomName, which is the name to be used when an item is listed as being
@@ -478,23 +231,9 @@ outside, and method (2) for looking out through the window from the
 inside. This means that both methods need to be implemented on
 insideCottage:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 insideCottage : Room 'Inside Cottage'  
   "The front parlour of the little cottage looks impeccably neat.   
@@ -509,23 +248,9 @@ insideCottage : Room 'Inside Cottage'
    }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 The pov parameter (in inRoomName) represents the point of view, and
 could be used to give a room different names depending on where it was
@@ -540,88 +265,13 @@ outsideCottage, so it's not necessary to make use of this parameter. The
 two parameters supplied to new CustomRoomLister are the prefix and
 suffix strings. This will result in message like:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+`Through the window, you see a small brass key lying on the
+ground.`
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>Through the window, you see a small brass key lying on the
-ground. <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
-  
 Similarly, if the key is left inside the cottage, then from the outside
 you'd see:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>Inside the cottage, you see a small brass key. <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+`Inside the cottage, you see a small brass key.`
 
 Both of these messages are substantial improvements over what we had
 before. We have still not implemented a response to explicitly looking

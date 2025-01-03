@@ -28,47 +28,11 @@ As a first approximation, a single-quoted string is simply a string
 constant, whereas a double-quoted string is a shorthand form of a
 statement that displays the string. That is to say the statement
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>"To err is human; to make a total mess-up requires a computer. "; <br />
-</td>
-</tr>
-</tbody>
-</table>
+`"To err is human; to make a total mess-up requires a computer. "; `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -76,47 +40,11 @@ statement that displays the string. That is to say the statement
 
 is equivalent to the statement:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>say('To err is human; to make a total mess-up requires a computer. '); <br />
-</td>
-</tr>
-</tbody>
-</table>
+`say('To err is human; to make a total mess-up requires a computer. '); `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -131,19 +59,7 @@ various string functions, but a double-quoted string cannot.
   
 The main confusion comes about because a definition such as  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -153,19 +69,7 @@ widget : Thing 'widget' 'brass widget'
   desc = "It's a brass widget"  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -174,19 +78,7 @@ widget : Thing 'widget' 'brass widget'
 might erroneously lead you to suppose that you could subsequently change
 the desc property of the widget by a statement such as  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -194,19 +86,7 @@ the desc property of the widget by a statement such as
 
 desc = "It's a silver widget";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -217,19 +97,7 @@ be regarded, not as holding a string constant, but a routine that prints
 a string constant, so that the definition is effectively equivalent
 to:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -237,19 +105,7 @@ to:
 
 widget : Thing 'widget' 'brass widget'  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>desc  { say('It\'s a brass widget'); } <br />
-</td>
-</tr>
-</tbody>
-</table>
+`desc  { say('It\'s a brass widget'); } `
 
 |     |     |
 |-----|-----|
@@ -257,19 +113,7 @@ widget : Thing 'widget' 'brass widget'
 
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -301,47 +145,11 @@ expressions may evaluate to a number, a double-quoted string or a
 single-quoted string (or nothing at all, i.e. nil). This means that the
 statement  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>"The rain in Spain stays &lt;&lt;someExpression&gt;&gt; in the plain."; <br />
-</td>
-</tr>
-</tbody>
-</table>
+`"The rain in Spain stays &lt;&lt;someExpression&gt;&gt; in the plain."; `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -349,47 +157,11 @@ statement
 
 is equivalent to  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>say('The rain in Spain stays ' + someExpression + ' in the plain.'); <br />
-</td>
-</tr>
-</tbody>
-</table>
+`say('The rain in Spain stays ' + someExpression + ' in the plain.'); `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -410,19 +182,7 @@ One can have a single-quoted string by itself as a statement, at least
 the compiler won't complain about it, but it will do absolutely nothing
 when the program is run.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -432,19 +192,7 @@ A final example may help to make this all a bit clearer. Here's the
 definition for a widget that changes from brass to silver when it is
 picked up:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -464,19 +212,7 @@ widget : Thing 'widget' 'brass widget'
  metal = 'brass'  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -485,19 +221,7 @@ widget : Thing 'widget' 'brass widget'
 With such an object defined, one could obtain the following
 transcript:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -517,19 +241,7 @@ It's a silver widget.
 \>**i**  
 You are carrying a silver widget.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|

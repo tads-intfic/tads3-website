@@ -29,19 +29,7 @@ We'll also be creating a stream, a jetty, and a shop that Heidi will
 eventually need to visit in order to buy some batteries for the
 torch/flashlight.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -101,19 +89,7 @@ If you can't manage all this by yourself, not to worry; once you've got
 as far as you can get, you can read on to see at least one way this can
 all be implemented.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -123,19 +99,7 @@ First, then, we need to create the garden and its shed, using the
 opportunity to introduce a few more TADS 3 features we haven't come
 across yet:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -199,19 +163,7 @@ insideShed : Room 'Inside the Garden Shed'
   initSpecialDesc = "A pair of oars leans against the wall. "  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -224,19 +176,7 @@ garden implements isn't important." The other simple point is that the
 -\>insideShed on the Enterable object is a shorthand way of specifying
 its connector property (through use of a template).  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -252,19 +192,7 @@ garden** should result in a description of the garden, not the shed.
 The matchNameCommon method is the way we get round this. To quote from
 the comments in the library source code:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -332,19 +260,7 @@ phrase is "red book", the list might look like ['red', &amp;adjective,
 |-----|-----|-----|-----|
 |     |     |     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -369,19 +285,7 @@ token* in the definition of the garden shed; we'd do this by enclosing
 the word 'garden' in parentheses in the list of vocabulary words,
 i.e.:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -394,47 +298,11 @@ use the word 'garden' but would not remap such commands to the garden
 object. This, however, could easily be achieved by adding a
 vocabWords property to the definition of the cottage garden thus:-  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>vocabWords = '(cottage) garden' <br />
-</td>
-</tr>
-</tbody>
-</table>
+`vocabWords = '(cottage) garden' `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -454,103 +322,19 @@ shed** or **look in shed**, the standard library responses may be not
 just unhelpful but potentially misleading (perhaps suggesting that the
 shed is only a decoration object):  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>&gt;<strong>open shed</strong> <br />
-</td>
-</tr>
-</tbody>
-</table>
+`&gt;<strong>open shed</strong> `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>That is not something you can open.  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`That is not something you can open.  `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>&gt;<strong>look in shed</strong> <br />
-</td>
-</tr>
-</tbody>
-</table>
+`&gt;<strong>look in shed</strong> `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>There's nothing unusual in the garden shed. <br />
-</td>
-</tr>
-</tbody>
-</table>
+`There's nothing unusual in the garden shed. `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -566,19 +350,7 @@ shed** will provoke the response, 'You see no small wooden shed here';
 we need to add 'small' and 'wooden' to the vocabWords of this object.
 Our revised shed exterior thus becomes:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -590,19 +362,7 @@ Our revised shed exterior thus becomes:
   dobjFor(LookIn) asDobjFor(Enter)  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -621,19 +381,7 @@ consult the *Library Reference Manual* and the *TADS 3 Tour Guide* but
 there's no need to do so right now; the implementation of our cupboard
 using this class becomes quite straightforward:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -647,19 +395,7 @@ using this class becomes quite straightforward:
    subSurface : ComplexComponent, Surface { }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -677,19 +413,7 @@ on their superclasses.
   
 The next task is to put objects in and on the cupboard:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -714,19 +438,7 @@ The next task is to put objects in and on the cupboard:
   bulkCapacity = 1  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -754,19 +466,7 @@ that if the player insists on removing the battery while the torch is
 on, it should at once go out again. Here's the definition of the torch
 with all that extra handling added:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -816,19 +516,7 @@ with all that extra handling added:
     { desc = "fitting the battery into the torch"  }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -855,145 +543,25 @@ At this point, we need to adjust the original location, first to
 indicate that there's a path round to the side of the cottage, and
 second to provide the relevant connection:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>outsideCottage : OutdoorRoom 'In front of a cottage'    <br />
-</td>
-</tr>
-</tbody>
-</table>
+`outsideCottage : OutdoorRoom 'In front of a cottage'    `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   "You stand just outside a cottage; the forest stretches east. <br />
-</td>
-</tr>
-</tbody>
-</table>
+`   "You stand just outside a cottage; the forest stretches east. `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   A short path leads round the cottage to the northwest. " <em>//add this</em> <br />
-</td>
-</tr>
-</tbody>
-</table>
+`   A short path leads round the cottage to the northwest. " <em>//add this</em> `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   east = forest <br />
-</td>
-</tr>
-</tbody>
-</table>
+`   east = forest `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   in = cottageDoor <br />
-</td>
-</tr>
-</tbody>
-</table>
+`   in = cottageDoor `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   west asExit(in) <br />
-</td>
-</tr>
-</tbody>
-</table>
+`   west asExit(in) `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   northwest = cottageGarden <em>// add this</em> <br />
-</td>
-</tr>
-</tbody>
-</table>
+`   northwest = cottageGarden <em>// add this</em> `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>; <br />
-</td>
-</tr>
-</tbody>
-</table>
+`; `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -1010,19 +578,7 @@ check that it still works. <br />
 </tbody>
 </table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|

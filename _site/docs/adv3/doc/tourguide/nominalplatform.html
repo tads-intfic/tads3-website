@@ -109,145 +109,16 @@ sitting behind the table, you could add the line posture = sitting to
 the initial definition of the curator, and then posture = standing; and
 posture = sitting; after the two moveIntoForTravel statements, i.e.:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>if(connector == museum)  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      {  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>         moveIntoForTravel(byCases);  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>         posture = standing;  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      }     <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      else  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      {  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>         moveIntoForTravel(behindTable);  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>         posture = sitting;    <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td>      }  <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">if(connector == museum)  </code>
+<code class="language-plaintext highlighter-rouge">      {  </code>
+<code class="language-plaintext highlighter-rouge">         moveIntoForTravel(byCases);  </code>
+<code class="language-plaintext highlighter-rouge">         posture = standing;  </code>
+<code class="language-plaintext highlighter-rouge">      }     </code>
+<code class="language-plaintext highlighter-rouge">      else  </code>
+<code class="language-plaintext highlighter-rouge">      {  </code>
+<code class="language-plaintext highlighter-rouge">         moveIntoForTravel(behindTable);  </code>
+<code class="language-plaintext highlighter-rouge">         posture = sitting;    </code>
+<code class="language-plaintext highlighter-rouge">      }  </code></p>
 
 <table>
   <thead>

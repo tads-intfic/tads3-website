@@ -86,76 +86,13 @@ would normally not be considered in scope.</p>
 <p>The quick and dirty way round this would be to override the objInScope
 method of the purloin and gonear actions:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>DefineTAction(Gonear) <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">DefineTAction(Gonear) </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> objInScope(obj) { return true; } <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> objInScope(obj) { return true; } </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>; <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">; </code></p>
 
 <p>This works perfectly well, but it’s theoretically less than ideal; we
 don’t actually want <em>every</em> object to be in scope for a <strong>purloin</strong> or
@@ -165,103 +102,52 @@ approach, which we’ll look at just to see how it’s done, is to build our
 own list of objects we want considered in scope for these commands, and
 then use that:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+\#ifdef \_\_DEBUG  
+  
+/\* The purpose of the everything object is to contain a list of all usable game objects  
+   which can be used as a list of objects in scope for certain debugging verb.  
+ Everything caches a list of all relevant objects the first time its lst method is called. \*/  
+  
+everything : object  
+  /\* lst\_ will contain the list of all relevant objects. We initialize it to   
+    nil to show that the list is yet to be cached \*/  
+  lst\_ = nil  
+    
+  /\* The lst\_ method checks whether the list of objects has been cached yet.   
+   If so, it simply returns it; if not, it calls initLst to build it first   
+   (and then returns it). \*/   
+  
+  lst()  
+  {  
+    if (lst\_ == nil)  
+      initLst();  
+    return lst\_;  
+  }  
+  
+  /\* initLst loops through every game object and adds it to lst\_, unless   
+   it's a Topic, which we don't want included even in this universal scope.   
+   \*/  
+  
+  initLst()  
+  {  
+    lst\_ = new Vector(50);  
+    local obj = firstObj();  
+     while (obj != nil)  
+     {  
+        if(obj.ofKind(Thing))  
+            lst\_.append(obj);  
+        obj = nextObj(obj);  
+     }  
+     lst\_ = lst\_.toList();  
+  }  
+;  
 
-<p>#ifdef __DEBUG</p>
+` `
 
-<p>/* The purpose of the everything object is to contain a list of all usable game objects<br />
-   which can be used as a list of objects in scope for certain debugging verb.<br />
- Everything caches a list of all relevant objects the first time its lst method is called. */</p>
-
-<p>everything : object<br />
-  /* lst_ will contain the list of all relevant objects. We initialize it to <br />
-    nil to show that the list is yet to be cached */<br />
-  lst_ = nil<br />
-  <br />
-  /* The lst_ method checks whether the list of objects has been cached yet. <br />
-   If so, it simply returns it; if not, it calls initLst to build it first <br />
-   (and then returns it). */ </p>
-
-<p>  lst()<br />
-  {<br />
-    if (lst_ == nil)<br />
-      initLst();<br />
-    return lst_;<br />
-  }</p>
-
-<p>  /* initLst loops through every game object and adds it to lst_, unless <br />
-   it’s a Topic, which we don’t want included even in this universal scope. <br />
-   */</p>
-
-<p>  initLst()<br />
-  {<br />
-    lst_ = new Vector(50);<br />
-    local obj = firstObj();<br />
-     while (obj != nil)<br />
-     {<br />
-        if(obj.ofKind(Thing))<br />
-            lst_.append(obj);<br />
-        obj = nextObj(obj);<br />
-     }<br />
-     lst_ = lst_.toList();<br />
-  }<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>There should not be a great deal that requires explanation. We head the
 section with the preprocessor directive #ifdef __DEBUG (note the
@@ -283,100 +169,50 @@ different approach.</p>
 <p>Defining the purloin verb is then only slightly more complex than
 defining another new verb:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+DefineTAction(Purloin)  
+  cacheScopeList()  
+     {       
+       scope\_ = everything.lst();           
+     }    
+;  
+  
+  
+VerbRule(Purloin)  
+  ('purloin'\|'pn') dobjList   
+  :PurloinAction  
+  verbPhrase = 'purloin/purloining (what)'  
+;  
+  
+modify Thing  
+  dobjFor(Purloin)  
+  {  
+   verify()  
+   {  
+    if(isHeldBy(gActor)) illogicalNow('{You/he} {is} already holding it. ');   
+   }  
+   check() {}  
+   action  
+    {  
+      mainReport('{The/he dobj} pops into your hands.\n ');  
+      moveInto(gActor);  
+    }  
+  }  
+;  
+  
+modify Fixture  
+  dobjFor(Purloin)  
+  {  
+    verify {illogical ('That is not something you can purloin - it is fixed   
+     in place.'); }  
+  }  
+;  
 
-<p>DefineTAction(Purloin)<br />
-  cacheScopeList()<br />
-     {     <br />
-       scope_ = everything.lst();         <br />
-     }  <br />
-;</p>
+` `
 
-<p>VerbRule(Purloin)<br />
-  (‘purloin’|‘pn’) dobjList <br />
-  :PurloinAction<br />
-  verbPhrase = ’purloin/purloining (what)’<br />
-;</p>
-
-<p>modify Thing<br />
-  dobjFor(Purloin)<br />
-  {<br />
-   verify()<br />
-   {<br />
-    if(isHeldBy(gActor)) illogicalNow(‘{You/he} {is} already holding it. ’); <br />
-   }<br />
-   check() {}<br />
-   action<br />
-    {<br />
-      mainReport(‘{The/he dobj} pops into your hands.\n ’);<br />
-      moveInto(gActor);<br />
-    }<br />
-  }<br />
-;</p>
-
-<p>modify Fixture<br />
-  dobjFor(Purloin)<br />
-  {<br />
-    verify {illogical (‘That is not something you can purloin - it is fixed <br />
-     in place.’); }<br />
-  }<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>modify Immovable<br />
   dobjFor(Purloin)<br />
@@ -389,71 +225,20 @@ defining another new verb:</p>
   }<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>This definition assumes that we want to be able to <strong>purloin</strong> the kinds
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+This definition assumes that we want to be able to **purloin** the kinds
 of things that you could normally expect to pick up and carry around,
 but not things that are fixed in place. If the behaviour you want is
 different from this, you can define dobjFor(Purloin) routines
-accordingly.</p>
+accordingly.  
+  
+The definition for **gonear** is similar:  
 
-<p>The definition for <strong>gonear</strong> is similar:</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p> DefineTAction(Gonear)<br />
    cacheScopeList()<br />
@@ -497,34 +282,7 @@ accordingly.</p>
   }  <br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <p>modify Distant<br />
   dobjFor(Gonear) <br />
@@ -534,109 +292,47 @@ accordingly.</p>
     action() {inherited;}<br />
   }  <br />
 ;</p>
-
-<p>What the gonear verb does is to transport the player character to the
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  
+What the gonear verb does is to transport the player character to the
 room in which the direct object of the gonear command is located (e.g.
-<strong>gonear burner</strong> would transport you the fire clearing). Using
+**gonear burner** would transport you the fire clearing). Using
 getOutermostRoom in the action method of dobjFor(Gonear) on Thing
 ensures that you are transported to the outermost container (the room),
 not the immediate container, which might be some other object. For
-example, if you enter the command <strong>gonear torch</strong> you’ll end up inside
-the shed, not the cupboard (assuming the torch hasn’t moved). If you
+example, if you enter the command **gonear torch** you'll end up inside
+the shed, not the cupboard (assuming the torch hasn't moved). If you
 added vocabulary words to particular rooms, you could also use the
 gonear verb with the room name to go straight to a room. We add
 definitions on Decoration and Distant since it makes perfectly good
 sense to gonear objects of these classes, but the library definition of
 these classes, which makes use of dobjFor(Default), would otherwise
-annul the definition of dobjFor(Gonear) we put on Thing.</p>
-
-<p>There may be other classes for which you’d want to add special handling
+annul the definition of dobjFor(Gonear) we put on Thing.  
+  
+There may be other classes for which you'd want to add special handling
 for these verbs, but one in particular we need to consider is MultiLoc.
 Allowing a MultiLoc to be purloined might create havoc with your game
 world, while attempting to gonear a MultiLoc has no defined outcome; we
-thus need to define special handling to deal with these cases:</p>
+thus need to define special handling to deal with these cases:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>modify MultiLoc<br />
   dobjFor(Gonear)<br />
   {<br />
     verify() { illogical(‘{You/he} cannot gonear {the dobj/him}, since it</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> exists in more than one location. '); } <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> exists in more than one location. '); } </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>```</p>
 
 <p>  }<br />
   dobjFor(Purloin)<br />
   {<br />
     verify() { illogical(‘{You/he} cannot purloin {the dobj/him}, since it </p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>exists   in more than one location. '); } <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">exists   in more than one location. '); } </code></p>
 
 <table>
   <thead>
@@ -658,19 +354,7 @@ thus need to define special handling to deal with these cases:</p>
 
 <p>#endif</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>

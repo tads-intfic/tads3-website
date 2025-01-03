@@ -41,47 +41,11 @@ it is a routine, returns) a list of the preconditions needed for the
 object in question to be used in the action in question. For example, in
 the case of reading the book and examining the chest you might define:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>preCond = [objVisible] <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">preCond = [objVisible] </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -102,47 +66,11 @@ the case of reading the book and examining the chest you might define:</p>
 appropriate iobjFor() section (for AttackWith, MoveWith, UnlockWith) you
 might define:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>preCond = [objHeld] <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">preCond = [objHeld] </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -166,19 +94,7 @@ preconditions that apply to a particular action on a particular object.
 For example, you may decide that a particular book needs to be held as
 well as being visible in order to be read, so you might define:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -198,75 +114,15 @@ well as being visible in order to be read, so you might define:</p>
 <p>redBook: Readable ’little red book*books’   ’red book’<br />
 …</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>dobjFor(Read) <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">dobjFor(Read) </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>{ <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">{ </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   preCond = [objVisible, objHeld] <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">   preCond = [objVisible, objHeld] </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   … <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">   … </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>} <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">} </code></p>
 
 <table>
   <thead>
@@ -285,19 +141,7 @@ well as being visible in order to be read, so you might define:</p>
 
 <p>;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>

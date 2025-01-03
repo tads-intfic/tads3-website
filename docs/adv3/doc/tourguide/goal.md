@@ -301,20 +301,7 @@ standard openWhenXxx properties.  <br />
 |     |     |
 |-----|-----|
 |     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
@@ -334,40 +321,14 @@ modify Goal
                   
   closeWhen = (inherited \|\| (closeWhenMoved != nil && closeWhenMoved.moved))  
 ;  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
 |     |     |
 
 Next we should list the other properties of Goal:  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="25"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|

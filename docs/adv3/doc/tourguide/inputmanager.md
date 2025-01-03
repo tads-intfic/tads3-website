@@ -52,34 +52,8 @@ then the more prompt. E.g. you write code like:
 </tr>
 </tbody>
 </table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>morePrompt();  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>"... suffers a sudden fatal heart attack! ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`morePrompt();  `
+`"... suffers a sudden fatal heart attack! ";  `
 
 |     |     |
 |-----|-----|
@@ -107,34 +81,8 @@ One way to deal with this is to toggle the transcript off and on:
 </tr>
 </tbody>
 </table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> morePrompt();  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> "... suffers a sudden fatal heart attack! ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
+` morePrompt();  `
+` "... suffers a sudden fatal heart attack! ";  `
 
 |     |     |
 |-----|-----|
@@ -160,34 +108,8 @@ inputManager method:
 </tr>
 </tbody>
 </table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>inputManager.pauseForMore(true);  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>"... suffers a sudden fatal heart attack! ";  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`inputManager.pauseForMore(true);  `
+`"... suffers a sudden fatal heart attack! ";  `
 
 |     |     |
 |-----|-----|
@@ -199,70 +121,18 @@ And you should find this more works as you want.
 In general, instead of the tads-io functions you'll always want to use
 the corresponding inputManager methods thus:  
   
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>Instead of morePrompt() use inputManager.pauseForMore(true);  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`Instead of morePrompt() use inputManager.pauseForMore(true);  `
 
 |     |     |
 |-----|-----|
 |     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
 |     |     |
 |-----|-----|
 |     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>Instead of inputKey() use inputManager.getKey(nil, nil);  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+`Instead of inputKey() use inputManager.getKey(nil, nil);  `
+` `
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>

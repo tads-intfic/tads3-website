@@ -32,104 +32,13 @@ which players may find simply frustrating.
 To avoid this, you can provide players with a list of suggested topics,
 using subclasses of the SuggestedTopic class:  
   
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedasktopic.html">SuggestedAskTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedgivetopic.html">SuggestedGiveTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestednotopic.html">SuggestedNoTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedshowtopic.html">SuggestedShowTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedtelltopic.html">SuggestedTellTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedtopictree.html">SuggestedTopicTree</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="28"></td>
-<td><a href="suggestedyestopic.html">SuggestedYesTopic</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`<a href="suggestedasktopic.html">SuggestedAskTopic</a>  `
+`<a href="suggestedgivetopic.html">SuggestedGiveTopic</a>  `
+`<a href="suggestednotopic.html">SuggestedNoTopic</a>  `
+`<a href="suggestedshowtopic.html">SuggestedShowTopic</a>  `
+`<a href="suggestedtelltopic.html">SuggestedTellTopic</a>  `
+`<a href="suggestedtopictree.html">SuggestedTopicTree</a>  `
+`<a href="suggestedyestopic.html">SuggestedYesTopic</a>  `
 
 |     |     |
 |-----|-----|

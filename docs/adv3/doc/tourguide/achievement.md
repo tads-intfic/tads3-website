@@ -256,48 +256,9 @@ secretPassage : Room 'Secret Passage' 'the secret passage'
   
 crewQuarters : DarkCabin 'Crew Quarters' 'the crew quarters'  
    ...  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>enteringRoom(traveler)  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>  {  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>   darkEvents.curScriptState = 1;    <br />
-</td>
-</tr>
-</tbody>
-</table>
+`enteringRoom(traveler)  `
+`  {  `
+`   darkEvents.curScriptState = 1;    `
 
 <table data-border="0" data-cellpadding="0" data-cellspacing="0">
 <colgroup>
@@ -313,20 +274,7 @@ crewQuarters : DarkCabin 'Crew Quarters' 'the crew quarters'
 </tr>
 </tbody>
 </table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="14"></td>
-<td>  }  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`  }  `
 
 |     |     |
 |-----|-----|

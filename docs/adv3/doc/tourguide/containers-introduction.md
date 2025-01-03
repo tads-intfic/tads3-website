@@ -40,66 +40,14 @@ descendants of the BulkLimiter class:
       [RestrictedContainer](restrictedcontainer.html)  
       [SingleContainer](singlecontainer.html)  
       [StretchyContainer](stretchycontainer.html)  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="57"></td>
-<td><a href="spaceoverlay.html">SpaceOverlay</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`<a href="spaceoverlay.html">SpaceOverlay</a>  `
 
 |     |     |
 |-----|-----|
 |     |     |
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="100"></td>
-<td><a href="rearcontainer.html">RearContainer</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="100"></td>
-<td>      <a href="rearsurface.html">RearSurface</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="100"></td>
-<td><a href="underside.html">Underside</a>  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`<a href="rearcontainer.html">RearContainer</a>  `
+`      <a href="rearsurface.html">RearSurface</a>  `
+`<a href="underside.html">Underside</a>  `
 
 |     |     |
 |-----|-----|

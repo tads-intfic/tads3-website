@@ -50,75 +50,23 @@ And, of course, you’ll need to make some appropriate adjustments to the
 spade object itself, so that it starts out being carried by Joe rather
 than leaning against the wall of the cave.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <p>This is how we do it here:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+++ AskForTopic @spade  
+   topicResponse  
+   {  
+      "\&lt;q\&gt;Could I borrow your spade, please?\&lt;/q\&gt; you ask.\&lt;.p\&gt;  
+      \&lt;q\&gt;All right then,\&lt;/q\&gt; he agrees a little reluctantly, handing you the   
+       spade, \&lt;q\&gt;but make sure you bring it back.\&lt;/q\&gt;";  
+      spade.moveInto(gActor);        
+   }  
+;  
 
-<p>++ AskForTopic @spade<br />
-   topicResponse<br />
-   {<br />
-      ”&lt;q&gt;Could I borrow your spade, please?&lt;/q&gt; you ask.&lt;.p&gt;<br />
-      &lt;q&gt;All right then,&lt;/q&gt; he agrees a little reluctantly, handing you the <br />
-       spade, &lt;q&gt;but make sure you bring it back.&lt;/q&gt;”;<br />
-      spade.moveInto(gActor);      <br />
-   }<br />
-;</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>If you compile the game (yet again) and try all this out, you’ll find
 that there’s still a problem: even after Joe hands the spade over he’s
@@ -133,120 +81,70 @@ relies on switching ActorStates as Joe gives the spade to Heidi and as
 Heidi gives it back again. The two new ActorStates may be defined as
 follows:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
++ burnerFretting : InConversationState  
+  specialDesc = "{The burner/he} is standing talking to you with his  
+   hands on his hips. "  
+  stateDesc = "He's standing talking to you with his hands on his hips. "  
+  nextState = burnerWaiting  
+;  
+  
+++ burnerWaiting : ConversationReadyState  
+  specialDesc = "{The burner/he} is walking round the fire, frowning as  
+   he keeps instinctively reaching for the spade that isn't there. "  
+  stateDesc = "He's walking round the fire. "    
+;  
+  
++++ HelloTopic  
+   "\&lt;q\&gt;Hello, there.\&lt;/q\&gt; you say.\&lt;.p\&gt;  
+    \&lt;q\&gt;Hello, young lady - have you brought my spade?\&lt;/q\&gt; he asks. "  
+;  
+  
++++ ByeTopic  
+    "\&lt;q\&gt;Bye, then.\&lt;/q\&gt; you say.\&lt;.p\&gt;  
+    \&lt;q\&gt;Don't be too long with that spade - be sure to bring it right   
+      back!\&lt;/q\&gt; he admonishes you. "  
+;  
+  
+++ GiveShowTopic @spade  
+  topicResponse  
+  {  
+    "\&lt;q\&gt;Here's your spade then,\&lt;/q\&gt; you say, handing it over.\&lt;.p\&gt;  
+    \&lt;q\&gt;Ah, thanks!\&lt;/q\&gt; he replies taking it with evident relief. ";  
+    spade.moveInto(burner);  
+    burner.setCurState(burnerTalking);  
+  }  
+;  
+  
+++ AskForTopic @spade  
+  "He doesn't have the spade. "  
+  isConversational = nil  
+;  
+  
+++ AskTellTopic @spade  
+  "\&lt;q\&gt;This seems a very sturdy spade,\&lt;/q\&gt; you remark.\b  
+   \&lt;q\&gt;It is -- look after it well, I need it for my work!\&lt;/q\&gt;  
+    {the burner/he} replies. "  
+;  
+  
++++ AltTopic  
+  "\&lt;q\&gt;I seem to have left your spade somewhere,\&lt;/q\&gt; you confess.\b  
+  \&lt;q\&gt;I hope you can find it then!\&lt;/q\&gt; {the burner/he} remarks   
+   anxiously. "  
+  isActive = (!spade.isIn(burner.location))  
+;  
+  
+  
+++ DefaultAskTellTopic  
+  "\&lt;q\&gt;We can talk about that when I've got my spade back,\&lt;/q\&gt;  
+      he tells you. "  
+;  
 
-<p>+ burnerFretting : InConversationState<br />
-  specialDesc = ”{The burner/he} is standing talking to you with his<br />
-   hands on his hips. ”<br />
-  stateDesc = ”He’s standing talking to you with his hands on his hips. ”<br />
-  nextState = burnerWaiting<br />
-;</p>
+` `
 
-<p>++ burnerWaiting : ConversationReadyState<br />
-  specialDesc = ”{The burner/he} is walking round the fire, frowning as<br />
-   he keeps instinctively reaching for the spade that isn’t there. ”<br />
-  stateDesc = ”He’s walking round the fire. ”  <br />
-;</p>
-
-<p>+++ HelloTopic<br />
-   ”&lt;q&gt;Hello, there.&lt;/q&gt; you say.&lt;.p&gt;<br />
-    &lt;q&gt;Hello, young lady - have you brought my spade?&lt;/q&gt; he asks. ”<br />
-;</p>
-
-<p>+++ ByeTopic<br />
-    ”&lt;q&gt;Bye, then.&lt;/q&gt; you say.&lt;.p&gt;<br />
-    &lt;q&gt;Don’t be too long with that spade - be sure to bring it right <br />
-      back!&lt;/q&gt; he admonishes you. ”<br />
-;</p>
-
-<p>++ GiveShowTopic @spade<br />
-  topicResponse<br />
-  {<br />
-    ”&lt;q&gt;Here’s your spade then,&lt;/q&gt; you say, handing it over.&lt;.p&gt;<br />
-    &lt;q&gt;Ah, thanks!&lt;/q&gt; he replies taking it with evident relief. ”;<br />
-    spade.moveInto(burner);<br />
-    burner.setCurState(burnerTalking);<br />
-  }<br />
-;</p>
-
-<p>++ AskForTopic @spade<br />
-  ”He doesn’t have the spade. ”<br />
-  isConversational = nil<br />
-;</p>
-
-<p>++ AskTellTopic @spade<br />
-  ”&lt;q&gt;This seems a very sturdy spade,&lt;/q&gt; you remark.\b<br />
-   &lt;q&gt;It is – look after it well, I need it for my work!&lt;/q&gt;<br />
-    {the burner/he} replies. ”<br />
-;</p>
-
-<p>+++ AltTopic<br />
-  ”&lt;q&gt;I seem to have left your spade somewhere,&lt;/q&gt; you confess.\b<br />
-  &lt;q&gt;I hope you can find it then!&lt;/q&gt; {the burner/he} remarks <br />
-   anxiously. ”<br />
-  isActive = (!spade.isIn(burner.location))<br />
-;</p>
-
-<p>++ DefaultAskTellTopic<br />
-  ”&lt;q&gt;We can talk about that when I’ve got my spade back,&lt;/q&gt;<br />
-      he tells you. ”<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>There’s only a couple of points to note here. The first is that we
 include an AskForTopic to handle the case where the player asks for the
@@ -280,62 +178,11 @@ handling of AskFor to get Joe to switch into his burnerFretting state.
 Add the following line immediately after spade.moveInto(gActor); in the
 topicResponse method of the first AskForTopic @spade:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>getActor().setCurState(burnerFretting); <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">getActor().setCurState(burnerFretting); </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <p>Everything should now work fine, but there is one more refinement we can
 add, not because the game really needs it, but because it allows us to
@@ -360,82 +207,31 @@ YesTopic and a NoTopic (rather than having to define any SpecialTopics
 or whatever). The new ConvNode and its associated topics then look like
 this:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
++ ConvNode 'burner-spade'  
+  npcGreetingMsg = "\&lt;.p\&gt;He looks up at your approach, and walks  
+   away from the fire to meet you. \&lt;q\&gt;Have you finished with my spade  
+   yet?\&lt;/q\&gt; he enquires anxiously.\&lt;.p\&gt;"  
+  npcContinueMsg = "\&lt;q\&gt;What about my spade? Have you finished with it   
+   yet?\&lt;/q\&gt; {the burner/he} repeats anxiously. "  
+;  
+  
+++ YesTopic  
+   "\&lt;q\&gt;Yes, I have.\&lt;/q\&gt; you reply.\&lt;.p\&gt;  
+   \&lt;q\&gt;Can I have it back then, please?\&lt;/q\&gt; he asks. "  
+;  
+  
+++ NoTopic  
+   "\&lt;q\&gt;Not quite; can I borrow it a bit longer?\&lt;/q\&gt; you ask.\&lt;.p\&gt;  
+   \&lt;q\&gt;Very well, then.\&lt;/q\&gt; he conceded grudgingly, \&lt;q\&gt;But I need it  
+   to get on with my job, so please be quick about it.\&lt;/q\&gt;"  
+;  
 
-<p>+ ConvNode ’burner-spade’<br />
-  npcGreetingMsg = ”&lt;.p&gt;He looks up at your approach, and walks<br />
-   away from the fire to meet you. &lt;q&gt;Have you finished with my spade<br />
-   yet?&lt;/q&gt; he enquires anxiously.&lt;.p&gt;”<br />
-  npcContinueMsg = ”&lt;q&gt;What about my spade? Have you finished with it <br />
-   yet?&lt;/q&gt; {the burner/he} repeats anxiously. ”<br />
-;</p>
+` `
 
-<p>++ YesTopic<br />
-   ”&lt;q&gt;Yes, I have.&lt;/q&gt; you reply.&lt;.p&gt;<br />
-   &lt;q&gt;Can I have it back then, please?&lt;/q&gt; he asks. ”<br />
-;</p>
-
-<p>++ NoTopic<br />
-   ”&lt;q&gt;Not quite; can I borrow it a bit longer?&lt;/q&gt; you ask.&lt;.p&gt;<br />
-   &lt;q&gt;Very well, then.&lt;/q&gt; he conceded grudgingly, &lt;q&gt;But I need it<br />
-   to get on with my job, so please be quick about it.&lt;/q&gt;”<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>The reason we start the npcGreetingMsg with the pronoun ‘he’ rather than
 {The burner/he} is that in the only context in which this message will
@@ -449,68 +245,17 @@ initiateConversation. The obvious candidate would be in the
 afterTravel(traveler, connector) method of burnerWaiting, since this
 will be called after the Player Character travels to Joe’s location:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+afterTravel(traveler, connector)  
+{  
+    getActor().initiateConversation(burnerFretting, 'burner-spade');  
+}  
 
-<p>afterTravel(traveler, connector)<br />
-{<br />
-    getActor().initiateConversation(burnerFretting, ’burner-spade’);<br />
-}</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>Note the use of getActor() to get the Actor the current state belongs
 to. We could just as well have used burner.initiateConversation here,

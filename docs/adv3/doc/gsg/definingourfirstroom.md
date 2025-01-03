@@ -62,66 +62,13 @@ starts with a capital letter.
   
 The next two lines define the *properties* of our OutdoorRoom object:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>roomName = 'In front of a cottage' <br />
-</td>
-</tr>
-</tbody>
-</table>
+`roomName = 'In front of a cottage' `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>desc = "You stand just outside a cottage; the forest stretches east. " <br />
-</td>
-</tr>
-</tbody>
-</table>
+`desc = "You stand just outside a cottage; the forest stretches east. " `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
+` `
 The roomName property (a string enclosed in single quotation marks) is
 the brief title that names the current room in the status line and at
 the start of a room description. The desc property (a double quoted
@@ -133,23 +80,9 @@ Finally, on the last line, is a semicolon by itself; this simply ends
 the definition of this object. An alternative is to enclose the property
 list in curly braces thus:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 outsideCottage: OutdoorRoom  
 {  
@@ -167,23 +100,9 @@ statements. This can be a source of confusion because the property
 definitions look rather like assignment statements, so it can be very
 easy to slip into writing:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 outsideCottage: OutdoorRoom  
    roomName = 'In front of a cottage';  
@@ -212,43 +131,15 @@ way of defining the most common properties an object is likely to have.
 Since every room will have a name and a description the TADS 3 library
 defines a template that looks like this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 Room template 'roomName' 'destName'? 'name'? "desc"?;   
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 This means that if we follow the class name of a Room-type object with a
 string in single quotation-marks, it will be taken as the roomName
@@ -259,45 +150,17 @@ complications we shan't go into here) and, also optionally, a
 double-quoted string as the desc property. This would allow our room to
 be defined simply as:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 outsideCottage : OutdoorRoom 'In front of a cottage'     
    "You stand just outside a cottage; the forest stretches east. "  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 In other words, when defining a room we can simply follow the class (or
 class list) with the room name in single quotation marks, followed by
@@ -308,46 +171,18 @@ The compiler will, however, complain if you attempt something that does
 not conform to the template; for example, you would get a compile-time
 error if you wrote:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 outsideCottage : OutdoorRoom  
    "You stand just outside a cottage; the forest stretches east. "  
    'In front of a cottage'  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 In other words, the properties must be supplied in the order defined in
 the template, and must conform to the number and format of properties
@@ -355,43 +190,15 @@ the template expects. Note, however, that there is nothing magical about
 laying the code out for this object definition on three lines. So far as
 the compiler is concerned, it could have been written:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 outsideCottage : OutdoorRoom 'In front of a cottage' "You stand just outside a cottage; the forest stretches east. ";  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 It is just that the three-line version is more readable to the human
 eye, and makes for more legible code. Thanks to templates, though, there

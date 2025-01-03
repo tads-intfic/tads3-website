@@ -44,72 +44,21 @@ seem rather out of character, and it would serve no useful purpose in
 the game, so we probably want to prevent it. The best place to do this
 would be in a <code class="language-plaintext highlighter-rouge">check </code>routine:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+dobjFor(Doff)  
+{  
+   check()  
+   {  
+       reportFailure('You can\\t wander around half naked! ');  
+       exit;  
+   }  
+}  
 
-<p>dobjFor(Doff)<br />
-{<br />
-   check()<br />
-   {<br />
-       reportFailure(‘You can\t wander around half naked! ’);<br />
-       exit;<br />
-   }<br />
-}</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>Note that here we have used the reportFailure macro; it’s not strictly
 necessary to do so here: we could have used a double-quoted string to
@@ -125,144 +74,42 @@ check() routines that Thing defines a failCheck() method that combines
 them both into one statement. The foregoing example could then be
 written:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+dobjFor(Doff)  
+{  
+   check()  
+   {  
+       failCheck('You can\\t wander around half naked! ');  
+   }  
+}  
 
-<p>dobjFor(Doff)<br />
-{<br />
-   check()<br />
-   {<br />
-       failCheck(‘You can\t wander around half naked! ’);<br />
-   }<br />
-}</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>And our dress object (located immediately after the me object in the
 code) could then be defined as:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
++ Wearable 'plain pretty blue dress' 'blue dress'  
+  "It's quite plain, but you think it pretty enough. "  
+  wornBy = me  
+  dobjFor(Doff)  
+  {  
+     check()  
+     {  
+       failCheck('You can\\t wander around half naked! ');  
+     }  
+  }  
+;  
 
-<p>+ Wearable ’plain pretty blue dress’ ’blue dress’<br />
-  ”It’s quite plain, but you think it pretty enough. ”<br />
-  wornBy = me<br />
-  dobjFor(Doff)<br />
-  {<br />
-     check()<br />
-     {<br />
-       failCheck(‘You can\t wander around half naked! ’);<br />
-     }<br />
-  }<br />
-;</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>Of course, there’s no reason why an action should not fail in the
 action() routine as well in check() - the failCheck() method would work
@@ -305,74 +152,23 @@ suggest you always do too.</p>
 <p>For example, suppose we went on to define an NPC who reacted to Heidi
 undressing herself in front of him, with something like:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>afterAction()<br />
-{<br />
-  if(gActionIs(Doff) &amp;&amp; gActor==gPlayerChar &amp;&amp; gDobj==dress)<br />
-     ”&lt;q&gt;Hey! What do you think you’re doing, young lady!&lt;/q&gt; cries<br />
-     the charcoal burner. ”;<br />
-}</p>
-
-<p>If we had simply displayed the message about not wandering around
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+afterAction()  
+{  
+  if(gActionIs(Doff) &amp;&amp; gActor==gPlayerChar &amp;&amp; gDobj==dress)  
+     "\&lt;q\&gt;Hey! What do you think you're doing, young lady!\&lt;/q\&gt; cries  
+     the charcoal burner. ";  
+}  
+  
+If we had simply displayed the message about not wandering around
 half-naked in the action() routine, we might end up with a transcript
-like this:</p>
+like this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>&gt;<strong>remove dress</strong><br />
 You can’t wander around half naked!</p>

@@ -39,117 +39,62 @@ service.</p>
 
 <p>Here’s our version</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
++ Enterable -\&gt; insideShop 'small shop/store' 'shop'  
+  "The small, timber-clad shop has an open door, above which is a sign   
+   reading GENERAL STORE"  
+;  
+  
+insideShop : Room 'Inside Shop'  
+ "The interior of the shop is lined with shelves containing all sorts of   
+  items, including basic foodstuffs, sweets, snacks, stationery, batteries,  
+  soft drinks and tissues. Behind the counter is a door marked 'PRIVATE'. "  
+ out = jetty  
+ north asExit(out)  
+ south : OneWayRoomConnector  
+     {  
+       destination = backRoom  
+       canTravelerPass(traveler) { return traveler != gPlayerChar; }  
+       explainTravelBarrier(traveler)   
+        { "The counter bars your way to the door. "; }      
+     }  
+;  
+  
++ Decoration 'private door\*doors' 'door'  
+  "The door marked 'PRIVATE' is on the far side of the counter, and there   
+  seems to be no way you can reach it. The other door out to the jetty is to   
+  the north. "  
+;  
+  
++ Fixture, Surface 'counter' 'counter'  
+  "The counter is about four feet long and eighteen inches wide. "  
+;  
+  
+++ bell : Thing 'small brass bell' 'small brass bell'  
+  "The bell comprises an inverted hemisphere with a small brass knob   
+   protruding through the top. Attached to the bell is a small sign. "  
+  dobjFor(Ring)  
+  {  
+    verify() {}  
+    check() {}  
+    action() {"TING!";}  
+  }  
+;  
+  
++++ Component, Readable 'sign' 'sign'  
+ "The sign reads RING BELL FOR SERVICE. "  
+;  
+  
++++ Component 'knob/button' 'knob'  
+  "The knob protrudes through the top of the brass hemisphere of the bell. "  
+  dobjFor(Push) remapTo(Ring, bell)  
+;  
+  
+backRoom: Room   
+  north = insideShop  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>+ Enterable -&gt; insideShop ’small shop/store’ ’shop’<br />
-  ”The small, timber-clad shop has an open door, above which is a sign <br />
-   reading GENERAL STORE”<br />
-;</p>
-
-<p>insideShop : Room ’Inside Shop’<br />
- ”The interior of the shop is lined with shelves containing all sorts of <br />
-  items, including basic foodstuffs, sweets, snacks, stationery, batteries,<br />
-  soft drinks and tissues. Behind the counter is a door marked ’PRIVATE’. ”<br />
- out = jetty<br />
- north asExit(out)<br />
- south : OneWayRoomConnector<br />
-     {<br />
-       destination = backRoom<br />
-       canTravelerPass(traveler) { return traveler != gPlayerChar; }<br />
-       explainTravelBarrier(traveler) <br />
-        { ”The counter bars your way to the door. ”; }    <br />
-     }<br />
-;</p>
-
-<p>+ Decoration ’private door*doors’ ’door’<br />
-  ”The door marked ’PRIVATE’ is on the far side of the counter, and there <br />
-  seems to be no way you can reach it. The other door out to the jetty is to <br />
-  the north. ”<br />
-;</p>
-
-<p>+ Fixture, Surface ’counter’ ’counter’<br />
-  ”The counter is about four feet long and eighteen inches wide. ”<br />
-;</p>
-
-<p>++ bell : Thing ’small brass bell’ ’small brass bell’<br />
-  ”The bell comprises an inverted hemisphere with a small brass knob <br />
-   protruding through the top. Attached to the bell is a small sign. ”<br />
-  dobjFor(Ring)<br />
-  {<br />
-    verify() {}<br />
-    check() {}<br />
-    action() {“TING!”;}<br />
-  }<br />
-;</p>
-
-<p>+++ Component, Readable ’sign’ ’sign’<br />
- ”The sign reads RING BELL FOR SERVICE. ”<br />
-;</p>
-
-<p>+++ Component ’knob/button’ ’knob’<br />
-  ”The knob protrudes through the top of the brass hemisphere of the bell. ”<br />
-  dobjFor(Push) remapTo(Ring, bell)<br />
-;</p>
-
-<p>backRoom: Room <br />
-  north = insideShop<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>Only a few things need any explanation here. The definition of backRoom
 is minimal because the Player Character will never visit it - the
@@ -172,79 +117,24 @@ Since <strong>ring</strong> is not a verb defined in the library, we need to def
 it, which we can do by copying the definition of Row and making the few
 necessary changes:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+DefineTAction(Ring);  
+  
+VerbRule(Ring)  
+  'ring' singleDobj  
+  : RingAction  
+  verbPhrase = 'ring/ring (what)'  
+;  
+  
+modify Thing  
+  dobjFor(Ring)   
+  {  
+    preCond = \[touchObj\]  
+    verify() { illogical('{You/he} can\\t ring {that dobj/him}'); }  
+  }  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>DefineTAction(Ring);</p>
-
-<p>VerbRule(Ring)<br />
-  ’ring’ singleDobj<br />
-  : RingAction<br />
-  verbPhrase = ’ring/ring (what)’<br />
-;</p>
-
-<p>modify Thing<br />
-  dobjFor(Ring) <br />
-  {<br />
-    preCond = [touchObj]<br />
-    verify() { illogical(‘{You/he} can\t ring {that dobj/him}’); }<br />
-  }<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>If we were designing this game for real, we’d probably want to populate
 the shop with a few more decoration objects, e.g. for the shelves, the
@@ -270,71 +160,16 @@ matter which we use here.)</p>
 incomprehensible, so let’s take it one step at a time. First, we need to
 define the SoundEvent:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+bellRing : SoundEvent  
+  triggerEvent(source)  
+  {  
+    "TING!\&lt;.p\&gt;";  
+    inherited(source);  
+  }  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>bellRing : SoundEvent<br />
-  triggerEvent(source)<br />
-  {<br />
-    ”TING!&lt;.p&gt;”;<br />
-    inherited(source);<br />
-  }<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>We have made the SoundEvent responsible for producing the “TING!” so
 we’ve had to override its triggerEvent(source) method, otherwise the
@@ -346,130 +181,20 @@ sound event has just happened. The source parameter is the object from
 which the sound is supposed to emanate. This is the bell, whose
 dobjFor(Ring) now needs to its action method redefined thus:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>action()       {      bellRing.triggerEvent(self);     } <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">action()       {      bellRing.triggerEvent(self);     } </code></p>
 
 <p>Where self, of course, refers to the bell object. The next task is to
 make sure that the bell ring can be heard in the back room as well as
 the shop. To do that we need to define a SenseConnector between the
 two:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+SenseConnector, Intangible 'wall' 'wall'  
+  connectorMaterial = paper  
+  locationList = \[backRoom, insideShop\]  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>SenseConnector, Intangible ’wall’ ’wall’<br />
-  connectorMaterial = paper<br />
-  locationList = [backRoom, insideShop]<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>If everything works as it should, giving the SenseConnector the name
 ‘wall’ should be unnecessary, but if something works unexpectedly and
@@ -489,117 +214,39 @@ will do fine.</p>
 shan’t program all her behaviour, just what’s needed to get her to
 respond to the bell ring:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+shopkeeper : SoundObserver, Person 'young shopkeeper/woman' 'young shopkeeper'  
+   @backRoom  
+"The shopkeeper is a jolly woman with rosy cheeks and fluffy blonde curls. "  
+  isHer = true  
+  properName = 'Sally'  
+  notifySoundEvent(event, source, info)  
+  {  
+    if(event == bellRing &amp;&amp; daemonID == nil &amp;&amp; isIn(backRoom))  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+`daemonID = new Daemon(self, &amp;amp;daemon, 2);  `
 
-<p>shopkeeper : SoundObserver, Person ’young shopkeeper/woman’ ’young shopkeeper’<br />
-   @backRoom<br />
-“The shopkeeper is a jolly woman with rosy cheeks and fluffy blonde curls. ”<br />
-  isHer = true<br />
-  properName = ’Sally’<br />
-  notifySoundEvent(event, source, info)<br />
-  {<br />
-    if(event == bellRing &amp;&amp; daemonID == nil &amp;&amp; isIn(backRoom))</p>
+|     |     |
+|-----|-----|
+|     |     |
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID = new Daemon(self, &amp;daemon, 2);  <br />
-</td>
-</tr>
-</tbody>
-</table>
+    else if(isIn(insideShop) &amp;&amp; event==bellRing)  
+     "\&lt;q\&gt;All right, all right, here I am!\&lt;/q\&gt; says {the   
+        shopkeeper/she}.\&lt;.p\&gt;";  
+  }  
+  daemonID = nil  
+  daemon  
+  {  
+     moveIntoForTravel(insideShop);  
+    "{The shopkeeper/she} comes through the door and stands behind the   
+      counter. ";  
+    daemonID.removeEvent();  
+    daemonID = nil;     
+  }  
+  globalParamName = 'shopkeeper'  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>    else if(isIn(insideShop) &amp;&amp; event==bellRing)<br />
-     ”&lt;q&gt;All right, all right, here I am!&lt;/q&gt; says {the <br />
-        shopkeeper/she}.&lt;.p&gt;”;<br />
-  }<br />
-  daemonID = nil<br />
-  daemon<br />
-  {<br />
-     moveIntoForTravel(insideShop);<br />
-    ”{The shopkeeper/she} comes through the door and stands behind the <br />
-      counter. ”;<br />
-    daemonID.removeEvent();<br />
-    daemonID = nil;   <br />
-  }<br />
-  globalParamName = ’shopkeeper’<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>The first new feature to note here is the addition of SoundObserver to
 the shopkeeper’s class list. This allows us to define the
@@ -637,182 +284,23 @@ being an active daemon.</p>
 <p>In this particular case we could have achieved the same effect slightly
 easier by using a fuse rather than a daemon. Instead of</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID = new Daemon(self, &amp;daemon, 2); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">daemonID = new Daemon(self, &amp;amp;daemon, 2); </code></p>
 
 <p>We could have written</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID = new Fuse(self, &amp;daemon, 1); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">daemonID = new Fuse(self, &amp;amp;daemon, 1); </code></p>
 
 <p>(Note the change in the number from 2 to 1 to produce the same effect of
 the shopkeeper moving on the next turn). The use of the fuse would have
 avoided the need for the line:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>daemonID.removeEvent(); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">daemonID.removeEvent(); </code></p>
 
 <p>We should still need to keep track of whether we had an active fuse
 (using daemonID, which we might rename fuseID had we used a fuse) in
@@ -824,101 +312,46 @@ shopkeeper using ActorStates and TopicEntries as with Joe the Charcoal
 Burner; you might like to try this out for yourself before reading this
 guide’s version over the page.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
++ sallyTalking : InConversationState  
+   specialDesc = "{The shopkeeper/she} is standing behind the counter   
+    talking with you. "  
+   stateDesc = "She's standing behind the counter talking with you. "  
+   nextState = sallyWaiting  
+;  
+  
+++ sallyWaiting : ConversationReadyState  
+  specialDesc = "{The shopkeeper/she} is standing behind the counter,  
+    checking the stock on the shelves. "  
+  stateDesc = "She's checking the stock on the shelves behind the counter. "  
+  isInitState = true    
+  takeTurn  
+  {  
+    if(!gPlayerChar.isIn(insideShop) &amp;&amp; shopkeeper.isIn(insideShop))   
+      shopkeeper.moveIntoForTravel(backRoom);  
+    inherited;    
+  }  
+;  
+  
++++ HelloTopic  
+  "\&lt;q\&gt;Hello, \&lt;\&lt;getActor.isProperName ? properName : 'Mrs Shopkeeper'\&gt;\&gt;,\&lt;/q\&gt;  
+      you say.\&lt;.p\&gt;  
+    \&lt;q\&gt;Hello, \&lt;\&lt;getActor.isProperName ? 'Heidi' : 'young lady'\&gt;\&gt;, what can  
+    I do for you?\&lt;/q\&gt; asks {the shopkeeper/she}."  
+;  
+  
++++ ByeTopic  
+   "\&lt;q\&gt;'Bye, then!\&lt;/q\&gt; you say.\&lt;.p\&gt;  
+    \&lt;q\&gt;Goodbye\&lt;\&lt;getActor.isProperName ? ', Heidi' : nil\&gt;\&gt;.   
+    See you again soon!\&lt;/q\&gt; {the shopkeeper/she} beams in return. "  
+;  
+  
++++ ImpByeTopic  
+  "{The shopkeeper/she} turns away and starts checking the stock on the   
+     shelves.\&lt;.p\&gt;"  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>+ sallyTalking : InConversationState<br />
-   specialDesc = ”{The shopkeeper/she} is standing behind the counter <br />
-    talking with you. ”<br />
-   stateDesc = ”She’s standing behind the counter talking with you. ”<br />
-   nextState = sallyWaiting<br />
-;</p>
-
-<p>++ sallyWaiting : ConversationReadyState<br />
-  specialDesc = ”{The shopkeeper/she} is standing behind the counter,<br />
-    checking the stock on the shelves. ”<br />
-  stateDesc = ”She’s checking the stock on the shelves behind the counter. ”<br />
-  isInitState = true  <br />
-  takeTurn<br />
-  {<br />
-    if(!gPlayerChar.isIn(insideShop) &amp;&amp; shopkeeper.isIn(insideShop)) <br />
-      shopkeeper.moveIntoForTravel(backRoom);<br />
-    inherited;  <br />
-  }<br />
-;</p>
-
-<p>+++ HelloTopic<br />
-  ”&lt;q&gt;Hello, &lt;&lt;getActor.isProperName ? properName : ’Mrs Shopkeeper’&gt;&gt;,&lt;/q&gt;<br />
-      you say.&lt;.p&gt;<br />
-    &lt;q&gt;Hello, &lt;&lt;getActor.isProperName ? ’Heidi’ : ’young lady’&gt;&gt;, what can<br />
-    I do for you?&lt;/q&gt; asks {the shopkeeper/she}.”<br />
-;</p>
-
-<p>+++ ByeTopic<br />
-   ”&lt;q&gt;‘Bye, then!&lt;/q&gt; you say.&lt;.p&gt;<br />
-    &lt;q&gt;Goodbye&lt;&lt;getActor.isProperName ? ’, Heidi’ : nil&gt;&gt;. <br />
-    See you again soon!&lt;/q&gt; {the shopkeeper/she} beams in return. ”<br />
-;</p>
-
-<p>+++ ImpByeTopic<br />
-  ”{The shopkeeper/she} turns away and starts checking the stock on the <br />
-     shelves.&lt;.p&gt;”<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>There is scarcely anything new here. Note the use of the double
 angle-bracket construction in the HelloTopic and ByeTopic to vary what’s
@@ -947,233 +380,68 @@ test for. But then we’d have lost the opportunity to look at sensory
 events, sense connectors, fuses and daemons. If you want to try to do it
 the simpler way, by all means experiment.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>Since the shopkeeper has been summoned by the ringing of the bell, she
 is likely to initiate the conversation rather than waiting to be
 addressed by her customer. To handle this, add the following line after
 daemonID = nil; at the end of the shopkeeper’s daemon method:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>initiateConversation(sallyTalking, 'sally-1'); <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">initiateConversation(sallyTalking, 'sally-1'); </code></p>
 
 <p>And then add the definition of the appropriate conversation node; a good
 place for it would be between the definition of the shopkeeper and the
 definition of sallyTalking:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
++ ConvNode 'sally-1'  
+  npcGreetingMsg = "\&lt;q\&gt;Right, what can I get you?\&lt;/q\&gt; she asks. \&lt;.p\&gt;"  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>+ ConvNode ’sally-1’<br />
-  npcGreetingMsg = ”&lt;q&gt;Right, what can I get you?&lt;/q&gt; she asks. &lt;.p&gt;”<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>We don’t need to put any topics under this conversation node; its only
 function is to display the npcGreetingMsg. Any topics can then be
 handled by the sallyTalking:InConversationState. Let’s start by adding a
 few now (put them after the definition of sallyWaiting):</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>++ AskTellTopic [shopkeeper, gPlayerChar]<br />
-  ”&lt;q&gt;I’m Heidi. What’s your name?&lt;/q&gt; you ask.&lt;.p&gt;<br />
-  &lt;q&gt;Hello, Heidi; I’m &lt;&lt;shopkeeper.properName&gt;&gt;,&lt;/q&gt; she smiles.<br />
-  &lt;&lt;shopkeeper.makeProper&gt;&gt;”<br />
-;</p>
-
-<p>+++ AltTopic<br />
- ”&lt;q&gt;I’m feeling really &lt;i&gt;very&lt;/i&gt; well today; how are you?&lt;/q&gt; you <br />
-  ask.&lt;.p&gt;<br />
- &lt;q&gt;I’m feeling very well too, thanks.&lt;/q&gt; she tells you. ”<br />
- isActive = (shopkeeper.isProperName)<br />
-;</p>
-
-<p>++ AskTellTopic @burner<br />
-  ”&lt;q&gt;Do you know {the burner/him}, the old fellow who works in the <br />
-   forest?&lt;/q&gt; you enquire innocently.&lt;.p&gt;<br />
-  &lt;q&gt;He’s not &lt;i&gt;that&lt;/i&gt; old,&lt;/q&gt; she replies coyly. ”<br />
-;</p>
-
-<p>++ AskTellTopic @tWeather<br />
-  ”&lt;q&gt;Lovely weather we’re having, don’t you think?&lt;/q&gt; you remark.&lt;.p&gt;<br />
-  &lt;q&gt;Absolutely,&lt;/q&gt; she agrees, &lt;q&gt;and with luck, it should stay fine <br />
-   tomorrow.&lt;/q&gt;”<br />
-;</p>
-
-<p>++ DefaultAskTellTopic, ShuffledEventList<br />
-  [<br />
-    ’&lt;q&gt;What do you think about ’ + gTopicText + ’?&lt;/q&gt; you ask.&lt;.p&gt;<br />
-    &lt;q&gt;Frankly, not a lot.&lt;/q&gt; she replies. ’,<br />
-    ’&lt;q&gt;I think it\s really interesting that…&lt;/q&gt; you begin.&lt;.p&gt;<br />
-    &lt;q&gt;Oh yes, really interesting.&lt;/q&gt; she agrees. ’,<br />
-    ’You make polite conversation about ’ + gTopicText + ’ and<br />
-    {the shopkeeper/she} makes polite conversation in return. ’<br />
-  ]<br />
-;</p>
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+++ AskTellTopic \[shopkeeper, gPlayerChar\]  
+  "\&lt;q\&gt;I'm Heidi. What's your name?\&lt;/q\&gt; you ask.\&lt;.p\&gt;  
+  \&lt;q\&gt;Hello, Heidi; I'm \&lt;\&lt;shopkeeper.properName\&gt;\&gt;,\&lt;/q\&gt; she smiles.  
+  \&lt;\&lt;shopkeeper.makeProper\&gt;\&gt;"  
+;  
+  
++++ AltTopic  
+ "\&lt;q\&gt;I'm feeling really \&lt;i\&gt;very\&lt;/i\&gt; well today; how are you?\&lt;/q\&gt; you   
+  ask.\&lt;.p\&gt;  
+ \&lt;q\&gt;I'm feeling very well too, thanks.\&lt;/q\&gt; she tells you. "  
+ isActive = (shopkeeper.isProperName)  
+;  
+  
+++ AskTellTopic @burner  
+  "\&lt;q\&gt;Do you know {the burner/him}, the old fellow who works in the   
+   forest?\&lt;/q\&gt; you enquire innocently.\&lt;.p\&gt;  
+  \&lt;q\&gt;He's not \&lt;i\&gt;that\&lt;/i\&gt; old,\&lt;/q\&gt; she replies coyly. "  
+;  
+  
+++ AskTellTopic @tWeather  
+  "\&lt;q\&gt;Lovely weather we're having, don't you think?\&lt;/q\&gt; you remark.\&lt;.p\&gt;  
+  \&lt;q\&gt;Absolutely,\&lt;/q\&gt; she agrees, \&lt;q\&gt;and with luck, it should stay fine   
+   tomorrow.\&lt;/q\&gt;"  
+;  
+  
+++ DefaultAskTellTopic, ShuffledEventList  
+  \[  
+    '\&lt;q\&gt;What do you think about ' + gTopicText + '?\&lt;/q\&gt; you ask.\&lt;.p\&gt;  
+    \&lt;q\&gt;Frankly, not a lot.\&lt;/q\&gt; she replies. ',  
+    '\&lt;q\&gt;I think it\\s really interesting that...\&lt;/q\&gt; you begin.\&lt;.p\&gt;  
+    \&lt;q\&gt;Oh yes, really interesting.\&lt;/q\&gt; she agrees. ',  
+    'You make polite conversation about ' + gTopicText + ' and  
+    {the shopkeeper/she} makes polite conversation in return. '  
+  \]  
+;  
+</code></pre></div></div>
 <p>Most of this should be fairly familiar. Note that placing a list in
 square brackets, as in the [shopkeeper, gPlayerChar] in the first
 AskTellTopic means that the topic can be triggered by any of the objects
@@ -1189,65 +457,10 @@ object to match it to. To cope with this type of situation, where you
 want to be able to converse about things that are not game objects,
 there is a special Topic class. In this case all we need define is:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+tWeather : Topic 'weather';  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>tWeather : Topic ’weather’;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>There’s nothing magic about the ‘t’ with which I started the object name
 here; that’s just a convention I use to mark it as a Topic object as
@@ -1259,39 +472,11 @@ when it is defined, e.g. if a player is to be informed about a gruesome
 murder during a conversation, but does not know of it when the game
 begins, one might define the murder topic object thus:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>tMurder : Topic ’gruesome murder’<br />
-    isKnown = nil<br />
-;</p>
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+tMurder : Topic 'gruesome murder'  
+    isKnown = nil  
+;  
+</code></pre></div></div>
 <p>When the player then learns of the murder at a later point one could use
 the gSetKnown(tMurder) macro to set tMurder.isKnown = true.</p>
 

@@ -38,106 +38,36 @@ covered most of what we need to know in order to do this. Add the
 following code to the end of the existing program. An explanation of new
 features follows.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+forest : OutdoorRoom 'Deep in the Forest'  
+   "Through the deep foliage you glimpse a building to the west.  
+    A track leads to the northeast, and a path leads south. "  
+    west = outsideCottage  
+    northeast = clearing    
+;  
+  
+clearing : OutdoorRoom 'Clearing'      
+   "A tall sycamore tree stands in the middle of this clearing.  
+    One path winds to the southwest, and another to the north. "  
+    southwest = forest  
+    up = topOfTree  
+    north : FakeConnector {"You decide against going that way right  
+         now. "}  
+;  
+  
+  
++ tree : Fixture 'tall sycamore tree' 'tree'  
+    "Standing proud in the middle of the clearing, the stout  
+     tree looks like it should be easy to climb. "     
+;  
+  
+topOfTree : OutdoorRoom 'At the top of the tree'  
+   "You cling precariously to the trunk, next to a firm, narrow  
+    branch. "  
+    down = clearing  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>forest : OutdoorRoom ’Deep in the Forest’<br />
-   ”Through the deep foliage you glimpse a building to the west.<br />
-    A track leads to the northeast, and a path leads south. ”<br />
-    west = outsideCottage<br />
-    northeast = clearing  <br />
-;</p>
-
-<p>clearing : OutdoorRoom ’Clearing’    <br />
-   ”A tall sycamore tree stands in the middle of this clearing.<br />
-    One path winds to the southwest, and another to the north. ”<br />
-    southwest = forest<br />
-    up = topOfTree<br />
-    north : FakeConnector {“You decide against going that way right<br />
-         now. ”}<br />
-;</p>
-
-<p>+ tree : Fixture ’tall sycamore tree’ ’tree’<br />
-    ”Standing proud in the middle of the clearing, the stout<br />
-     tree looks like it should be easy to climb. ”   <br />
-;</p>
-
-<p>topOfTree : OutdoorRoom ’At the top of the tree’<br />
-   ”You cling precariously to the trunk, next to a firm, narrow<br />
-    branch. ”<br />
-    down = clearing<br />
-;</p>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>The room definitions and the definition of the tree object should need
 little explanation. The important new concept that has been introduced
@@ -174,98 +104,23 @@ to implement, but do not wish to implement yet.</p>
 rooms as connectors if we had defined the <code class="language-plaintext highlighter-rouge">FakeConnector</code> as a separate
 object thus:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+fakePath : FakeConnector  
+   travelDesc = "You decide against going that way right  
+         now. "  
+;  
+  
+The clearing would then be defined with  
 
-<p>fakePath : FakeConnector<br />
-   travelDesc = ”You decide against going that way right<br />
-         now. ”<br />
-;</p>
+` `
 
-<p>The clearing would then be defined with</p>
+`north = fakePath `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>north = fakePath <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>What we in fact did was to make <code class="language-plaintext highlighter-rouge">fakePath</code> both an <em>anonymous object</em>
 and a <em>nested object</em> (all nested objects are in fact anonymous, though
@@ -295,62 +150,9 @@ complex map). This is easy enough to put right; just add the following
 to the definition of outsideCottage, between the room description and
 the terminating semicolon:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>east = forest <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge">east = forest </code></p>
 
 <p>The game should now work as expected.</p>
 

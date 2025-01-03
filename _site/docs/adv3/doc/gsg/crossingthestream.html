@@ -32,83 +32,32 @@
 the key in a field on the far side of a stream. First we need to add two
 extra locations to accommodate the stream:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+pathByStream : OutdoorRoom 'By a stream'  
+  "The path through the trees from the southeast comes to an end on  
+  the banks of a stream. Across the stream to the west you can see  
+  an open meadow. "  
+  southeast = fireClearing  
+  west = streamWade  
+;  
+  
+streamWade : RoomConnector  
+  room1 = pathByStream  
+  room2 = meadow  
+;  
+  
+meadow : OutdoorRoom 'Large Meadow'  
+  "This large, open meadow stretches almost as far as you can see  
+  to north, west, and south, but is bordered by a fast-flowing stream  
+  to the east. "  
+  east = streamWade  
+;  
 
-<p>pathByStream : OutdoorRoom ’By a stream’<br />
-  ”The path through the trees from the southeast comes to an end on<br />
-  the banks of a stream. Across the stream to the west you can see<br />
-  an open meadow. ”<br />
-  southeast = fireClearing<br />
-  west = streamWade<br />
-;</p>
+` `
 
-<p>streamWade : RoomConnector<br />
-  room1 = pathByStream<br />
-  room2 = meadow<br />
-;</p>
-
-<p>meadow : OutdoorRoom ’Large Meadow’<br />
-  ”This large, open meadow stretches almost as far as you can see<br />
-  to north, west, and south, but is bordered by a fast-flowing stream<br />
-  to the east. ”<br />
-  east = streamWade<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>The reason for using the separate RoomConnector object, streamWade, will
 gradually become apparent. At the moment note that it simply connects
@@ -121,83 +70,32 @@ pathByStream.</p>
 <p>Next we’ll move the small brass key to the meadow and tweak its
 properties a little.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
++ cottageKey : Key 'small brass brassy key/object/something' 'object'  
+  "It's a small brass key, with a faded tag you can no longer read. "  
+  initSpecialDesc = "A small brass object lies in the grass. "  
+  remoteInitSpecialDesc(actor)   
+  {   
+    "There is a momentary glint of something brassy as  
+    the sun reflects off something lying in the meadow across the stream. ";  
+  }  
+  dobjFor(Take)  
+  {  
+    action()  
+    {  
+      if(!moved)   
+         addToScore(1, 'retrieving the key');   
+      inherited;  
+      name = 'small brass key';  
+    }  
+  }  
+;  
 
-<p>+ cottageKey : Key ’small brass brassy key/object/something’ ’object’<br />
-  ”It’s a small brass key, with a faded tag you can no longer read. ”<br />
-  initSpecialDesc = ”A small brass object lies in the grass. ”<br />
-  remoteInitSpecialDesc(actor) <br />
-  { <br />
-    ”There is a momentary glint of something brassy as<br />
-    the sun reflects off something lying in the meadow across the stream. ”;<br />
-  }<br />
-  dobjFor(Take)<br />
-  {<br />
-    action()<br />
-    {<br />
-      if(!moved) <br />
-         addToScore(1, ’retrieving the key’); <br />
-      inherited;<br />
-      name = ’small brass key’;<br />
-    }<br />
-  }<br />
-;</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>The reason for the special dobjFor(Take) routine is that if we let the
 key start with the name ‘small brass key’, it might give its presence
@@ -222,65 +120,14 @@ exist in two or more locations since it is a subclass of MultiLoc (more
 of which anon). A DistanceConnector has a library template that makes it
 exceedingly easy to define; all we need to add is:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+DistanceConnector \[pathByStream, meadow\];  
 
-<p>DistanceConnector [pathByStream, meadow];</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>The list in square brackets is in fact the locationList property, the
 name of which should be fairly self-explanatory. Note that
@@ -290,78 +137,27 @@ Another MultiLoc object we could use here would be a stream, which runs
 through both the rooms. And while we’re at it, we’ll make it possible
 for the player to cross the stream with the command <strong>cross stream</strong>.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+stream : MultiLoc, Fixture 'stream' 'stream'  
+  "The stream is not terribly deep at this point, though it's flowing  
+    quite rapidly towards the south. "  
+  locationList = \[pathByStream, meadow\]  
+  dobjFor(Cross)  
+  {  
+    verify() {}  
+    check() {}  
+    action()  
+    {  
+      replaceAction(TravelVia, streamWade);  
+    }  
+  }  
+;  
 
-<p>stream : MultiLoc, Fixture ’stream’ ’stream’<br />
-  ”The stream is not terribly deep at this point, though it’s flowing<br />
-    quite rapidly towards the south. ”<br />
-  locationList = [pathByStream, meadow]<br />
-  dobjFor(Cross)<br />
-  {<br />
-    verify() {}<br />
-    check() {}<br />
-    action()<br />
-    {<br />
-      replaceAction(TravelVia, streamWade);<br />
-    }<br />
-  }<br />
-;</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>Note that being a MultiLoc object (like the DistanceConnector), the
 stream does not have a location property (its list of locations instead
@@ -377,35 +173,6 @@ when we cross the stream, we simply TravelVia streamWade and leave
 streamWade to sort it all out. But as we’ll see shortly, that’s only
 part of the story.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>In the meantime, there’s another little matter we need to attend to.
 Unlike the other verbs we’ve used so far, there’s no definition of Cross
 anywhere in the TADS 3 library, so we have to create our own. For
@@ -419,71 +186,20 @@ couple of library macros hide most of the complication of all this, and
 all we need write is:<br />
 *</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+DefineTAction(Cross);  
+  
+VerbRule(Cross)  
+  'cross' singleDobj  
+  : CrossAction  
+  verbPhrase = 'cross/crossing (what)'  
+;  
 
-<p>DefineTAction(Cross);</p>
+` `
 
-<p>VerbRule(Cross)<br />
-  ’cross’ singleDobj<br />
-  : CrossAction<br />
-  verbPhrase = ’cross/crossing (what)’<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>We use the DefineTAction() macro to define a Transitive Action (hence
 TAction), which means an action taking a direct object (as opposed to an
@@ -571,172 +287,41 @@ analogy from the way we prevented Heidi from climbing the tree unless
 she’s standing on the chair.**<br />
 **</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
 <p>First here’s the boots; as noted above the only thing new about them is
 that we make them of class Wearable, so Heidi can put them on:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+boots : Wearable 'old wellington pair/boots/wellies' 'old pair of boots'  
+  @pathByStream  
+ "They look ancient, battered, and scuffed, but probably still waterproof. "  
+;  
 
-<p>boots : Wearable ’old wellington pair/boots/wellies’ ’old pair of boots’<br />
-  @pathByStream<br />
- ”They look ancient, battered, and scuffed, but probably still waterproof. ”<br />
-;</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>Next we need to modify the RoomConnector so that Heidi can only cross
 the stream when she’s wearing the boots:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+streamWade : RoomConnector  
+  room1 = pathByStream  
+  room2 = meadow  
+  canTravelerPass(traveler) { return boots.isWornBy(traveler); }  
+  explainTravelBarrier(traveler)   
+  {   
+    "Your shoes aren't waterproof. If you wade across you'll get your feet  
+      wet and probably catch your death of cold. ";   
+  }    
+;  
 
-<p>streamWade : RoomConnector<br />
-  room1 = pathByStream<br />
-  room2 = meadow<br />
-  canTravelerPass(traveler) { return boots.isWornBy(traveler); }<br />
-  explainTravelBarrier(traveler) <br />
-  { <br />
-    ”Your shoes aren’t waterproof. If you wade across you’ll get your feet<br />
-      wet and probably catch your death of cold. ”; <br />
-  }  <br />
-;</p>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>And that’s all there is to it. If you try the game again you’ll find you
 can’t cross the stream (in either direction) unless you’re wearing the

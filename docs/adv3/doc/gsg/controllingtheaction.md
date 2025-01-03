@@ -88,170 +88,30 @@ start with foo). In the case of the dobjFor and iobjFor macros, it's the
 name of the action (e.g. Take) plus the role of the action (dobj or
 iobj) that's the common element. So if you write:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>dobjFor(Take) <br />
-</td>
-</tr>
-</tbody>
-</table>
+`dobjFor(Take) `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>{ <br />
-</td>
-</tr>
-</tbody>
-</table>
+`{ `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   foo = 'poop'  <br />
-</td>
-</tr>
-</tbody>
-</table>
+`   foo = 'poop'  `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>   bar() { say(foo); } <br />
-</td>
-</tr>
-</tbody>
-</table>
+`   bar() { say(foo); } `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>} <br />
-</td>
-</tr>
-</tbody>
-</table>
+`} `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
 
 This is exactly the same, so far as the compiler is concerned, as if you
 had written:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>fooDobjTake = 'poop' <br />
-</td>
-</tr>
-</tbody>
-</table>
+`fooDobjTake = 'poop' `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>barDobjTake() { say(foo); } <br />
-</td>
-</tr>
-</tbody>
-</table>
+`barDobjTake() { say(foo); } `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
 
 The above example is not especially useful, since the library makes no
 use of these property and method names (although you could always define
@@ -261,121 +121,16 @@ and indirect object of any action. For example, if the action is
 TakeWith the following properties/methods will be invoked respectively
 on the direct and indirect objects of the command:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>remapDobjTakeWith         remapIobjTakeWith <br />
-</td>
-</tr>
-</tbody>
-</table>
+`remapDobjTakeWith         remapIobjTakeWith `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>preCondDobjTakeWith         preCondIobjTakeWith <br />
-</td>
-</tr>
-</tbody>
-</table>
+`preCondDobjTakeWith         preCondIobjTakeWith `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>verifyDobjTakeWith()       verifyIobjTakeWith() <br />
-</td>
-</tr>
-</tbody>
-</table>
+`verifyDobjTakeWith()       verifyIobjTakeWith() `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>checkDobjTakeWith()         checkIobjTakeWith() <br />
-</td>
-</tr>
-</tbody>
-</table>
+`checkDobjTakeWith()         checkIobjTakeWith() `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>actionDobjTakeWith()      actionIobjTakeWith() <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+`actionDobjTakeWith()      actionIobjTakeWith() `
 
 Any of these properties/methods may be defined (or invoked) using these
 names (and sometimes it may be useful to do so); dobjFor and iobjFor
@@ -383,23 +138,9 @@ merely provide a convenient way of defining these properties without
 having to remember their full names, and for grouping the related
 methods together in the code layout; e.g.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 dobjFor(TakeWith)  
 {  
@@ -423,7 +164,8 @@ dobjFor(TakeWith)
       gDobj.moveInto(gActor);  
    }  
 }  
-  
+```
+
 The [verify()](verify.html), [check()](check.html), [action()](action.html)
 and [preCondition](precond.html) methods are described in some detail in
 the articles
@@ -436,26 +178,6 @@ These are all articles you will want to read sooner rather than later;
 you might find it particularly useful to read the "TADS 3 Actions
 results" article at the end of this chapter if you want more help on the
 ground we're about to cover.  
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
-
-  
 
 ------------------------------------------------------------------------
 

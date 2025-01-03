@@ -38,19 +38,7 @@ couple of buyable items and four coins. We shall then discuss how this
 might be expanded and simplified to cope with more general cases,
 without trying to add a more general case to our game.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -75,75 +63,20 @@ last left it) and to create a sweets/candy object. Remove the + sign
 from in front of the battery, move it after the contents of insideShop,
 and then define the bag of sweets:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+battery : Thing 'small red battery' 'small red battery'  
+  "It's a small red battery, 1.5v, manufactured by ElectroLeax  
+  and made in the People's Republic of Erewhon. "  
+  bulk = 1  
+;  
+  
+sweetBag : Dispenser 'bag of candy/sweets' 'bag of sweets'  
+  "A bag of sweets. "  
+  canReturnItem = true  
+  myItemClass = Sweet  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>battery : Thing ’small red battery’ ’small red battery’<br />
-  ”It’s a small red battery, 1.5v, manufactured by ElectroLeax<br />
-  and made in the People’s Republic of Erewhon. ”<br />
-  bulk = 1<br />
-;</p>
-
-<p>sweetBag : Dispenser ’bag of candy/sweets’ ’bag of sweets’<br />
-  ”A bag of sweets. ”<br />
-  canReturnItem = true<br />
-  myItemClass = Sweet<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>We define the bag of sweets as a Dispenser since we expect it to contain
 individual items (i.e. sweets) which can be taken from the bag (and
@@ -165,146 +98,79 @@ shall simply present the adaptation from the sample.t code as an
 example, without pausing to discuss it in any depth; if you like, you
 can just skip it all for now. </p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+class Sweet : Dispensable, Food   
+  desc = "It's a small, round, clear, \&lt;\&lt;sweetGroupBaseName\&gt;\&gt; boiled sweet. "  
+  vocabWords = 'sweet/candy\*sweets'  
+  location = sweetBag  
+  listWith = \[sweetGroup\]  
+  sweetGroupBaseName = ''  
+  collectiveGroups = \[sweetCollective\]  
+  sweetGroupName = ('one ' + sweetGroupBaseName)  
+  countedSweetGroupName(cnt)  
+        { return spellIntBelow(cnt, 100) + ' ' + sweetGroupBaseName; }  
+  tasteDesc = "It tastes sweet and tangy. "  
+  dobjFor(Eat)  
+  {  
+    action()  
+    {  
+      "You pop \&lt;\&lt;theName\&gt;\&gt; into your mouth and suck it. It tastes nice  
+       but it doesn't last as long as you'd like.\&lt;.p\&gt;";  
+       inherited;  
+    }  
+  }  
+;  
+  
+class RedSweet : Sweet 'red - ' 'red sweet'   
+    isEquivalent = true   
+  sweetGroupBaseName = 'red'  
+;  
+  
+class GreenSweet : Sweet 'green - ' 'green sweet'   
+  isEquivalent = true   
+  sweetGroupBaseName = 'green'  
+;  
+  
+class YellowSweet : Sweet 'yellow - ' 'yellow sweet'  
+  isEquivalent = true   
+  sweetGroupBaseName = 'yellow'  
+;  
+  
+sweetGroup: ListGroupParen  
+    showGroupCountName(lst)  
+    {  
+        "\&lt;\&lt;spellIntBelowExt(lst.length(), 100, 0,  
+           DigitFormatGroupSep)\&gt;\&gt; sweets";  
+    }  
+    showGroupItem(lister, obj, options, pov, info)  
+        { say(obj.sweetGroupName); }  
+    showGroupItemCounted(lister, lst, options, pov, infoTab)  
+        { say(lst\[1\].countedSweetGroupName(lst.length())); }  
+;  
+  
+sweetCollective: ItemizingCollectiveGroup 'candy\*sweets' 'sweets'  
+;  
 
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+` `
 
-<p>class Sweet : Dispensable, Food <br />
-  desc = ”It’s a small, round, clear, &lt;&lt;sweetGroupBaseName&gt;&gt; boiled sweet. ”<br />
-  vocabWords = ’sweet/candy*sweets’<br />
-  location = sweetBag<br />
-  listWith = [sweetGroup]<br />
-  sweetGroupBaseName = ’’<br />
-  collectiveGroups = [sweetCollective]<br />
-  sweetGroupName = (‘one ’ + sweetGroupBaseName)<br />
-  countedSweetGroupName(cnt)<br />
-        { return spellIntBelow(cnt, 100) + ’ ’ + sweetGroupBaseName; }<br />
-  tasteDesc = ”It tastes sweet and tangy. ”<br />
-  dobjFor(Eat)<br />
-  {<br />
-    action()<br />
-    {<br />
-      ”You pop &lt;&lt;theName&gt;&gt; into your mouth and suck it. It tastes nice<br />
-       but it doesn’t last as long as you’d like.&lt;.p&gt;”;<br />
-       inherited;<br />
-    }<br />
-  }<br />
-;</p>
-
-<p>class RedSweet : Sweet ’red - ’ ’red sweet’ <br />
-    isEquivalent = true <br />
-  sweetGroupBaseName = ’red’<br />
-;</p>
-
-<p>class GreenSweet : Sweet ’green - ’ ’green sweet’ <br />
-  isEquivalent = true <br />
-  sweetGroupBaseName = ’green’<br />
-;</p>
-
-<p>class YellowSweet : Sweet ’yellow - ’ ’yellow sweet’<br />
-  isEquivalent = true <br />
-  sweetGroupBaseName = ’yellow’<br />
-;</p>
-
-<p>sweetGroup: ListGroupParen<br />
-    showGroupCountName(lst)<br />
-    {<br />
-        ”&lt;&lt;spellIntBelowExt(lst.length(), 100, 0,<br />
-           DigitFormatGroupSep)&gt;&gt; sweets”;<br />
-    }<br />
-    showGroupItem(lister, obj, options, pov, info)<br />
-        { say(obj.sweetGroupName); }<br />
-    showGroupItemCounted(lister, lst, options, pov, infoTab)<br />
-        { say(lst[1].countedSweetGroupName(lst.length())); }<br />
-;</p>
-
-<p>sweetCollective: ItemizingCollectiveGroup ’candy*sweets’ ’sweets’<br />
-;</p>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>Finally, we put some sweets in the bag simply by defining a number
+&lt;table data-border="0" data-cellpadding="0" data-cellspacing="0"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 50%" /&gt;
+&lt;col style="width: 50%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr data-valign="TOP"&gt;
+&lt;td width="51"&gt;&lt;/td&gt;
+&lt;td&gt;Finally, we put some sweets in the bag simply by defining a number
 of anonymous objects of the appropriate type; note that the class
 definitions already locate the sweets in the bag so the code required to
-create the sweets is minimal: <br />
-</td>
-</tr>
-</tbody>
-</table>
+create the sweets is minimal: &lt;br /&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+</code></pre></div></div>
 
 <p>RedSweet;<br />
 RedSweet;<br />
@@ -316,34 +182,7 @@ GreenSweet;<br />
 YellowSweet;<br />
 YellowSweet;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>```</p>
 
 <p>Rather than getting bogged down in a description of how all this works
 (for which see the comments in sample.t), we’ll regard it for now as
@@ -370,19 +209,7 @@ transactions. Add the following code so that the shelves are contained
 directly in the shop (e.g. by placing them directly after the definition
 of +++ Component ’knob/button’ ’knob’):</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -421,19 +248,7 @@ of +++ Component ’knob/button’ ’knob’):</p>
   saleItem = sweetBag<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -457,19 +272,7 @@ course of the transaction. Finally, we need to put some money where
 Heidi will find it. Since we’ve taken the battery out of the tin and
 left it empty, let’s put the cash in the tin:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -504,19 +307,7 @@ left it empty, let’s put the cash in the tin:</p>
 +++  Coin;<br />
 +++  Coin;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -582,19 +373,7 @@ the shopkeeper. We also need to add several custom properties to the
 shopkeeper object to keep track of the transaction. The code to be added
 to the shopkeeper is the following:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -646,19 +425,7 @@ cashReceived = 0<br />
  }<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -714,19 +481,7 @@ handleTopic method rather than the TopicResponse to handle the action,
 since it gives us access to the object that we want to manipulate, (as
 the obj parameter):</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -760,19 +515,7 @@ the obj parameter):</p>
    }<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -821,19 +564,7 @@ with a lots of if… else… type constructions, but since we want to
 encapsulate all the complexities of the behaviour in one class, we shall
 have to resort to if and else in the definition of that class:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -935,19 +666,7 @@ amount in pounds (e.g. currencyString(3) would return ‘three pounds’).
 We can use the library function spellInt to do most of the work, so this
 function is defined simply as:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -969,19 +688,7 @@ function is defined simply as:</p>
   return spellInt(amount) + ’ ’  + ((amount&gt;1) ? ’pounds’ : ’pound’);  <br />
 }</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1004,19 +711,7 @@ remember to change this function accordingly.</p>
 <p>Finally, we need to define the two BuyTopics to cope with the battery
 and the sweets. This then becomes very straightforward:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1042,19 +737,7 @@ and the sweets. This then becomes very straightforward:</p>
     figure! Think of your teeth!&lt;.p&gt;”<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1087,19 +770,7 @@ another object to sit on the shelf, a corresponding item to be handed
 over to Heidi, and the corresponding BuyTopic; to give a minimalist
 example:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1132,33 +803,9 @@ example:</p>
 <p>/*Make sure this gets contained in sallyTalking */<br />
 BuyTopic @pears;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1191,19 +838,7 @@ nickels, quarters and cents would be quite bad enough). You’d do far
 better to define a single money object, with a value property stating
 how much money it represents at any one time, e.g.:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1227,19 +862,7 @@ how much money it represents at any one time, e.g.:</p>
   isPlural = true<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1263,19 +886,7 @@ BigNumber class as an alternative). One would then need to redefine the
 function currencyString to convert a value in pence, say, to a £12.04
 display format.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1311,19 +922,7 @@ implement a routine to respond simply to <strong>give money to shopkeeper</stron
 <strong>pay shopkeeper</strong>. This would simply have to check that enough money
 was available, and, if so, deduct it, e.g.</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1367,19 +966,7 @@ topicResponse<br />
     isActive = (shopkeeper.saleObject == nil)<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1402,19 +989,7 @@ Similarly, since with this revised model there’s no possibility of the
 player character issuing a command mid-transaction, so the definition of
 BuyTopic could be simplified considerably:</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>
@@ -1452,19 +1027,7 @@ BuyTopic could be simplified considerably:</p>
   {the shopkeeper/she} informs you.&lt;.p&gt;”<br />
 ;</p>
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+<p><code class="language-plaintext highlighter-rouge"> </code></p>
 
 <table>
   <thead>

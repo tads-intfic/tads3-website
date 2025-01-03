@@ -37,26 +37,12 @@ And, of course, you'll need to make some appropriate adjustments to the
 spade object itself, so that it starts out being carried by Joe rather
 than leaning against the wall of the cave.  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
 
 This is how we do it here:  
-  
+  ```
+
 ++ AskForTopic @spade  
    topicResponse  
    {  
@@ -67,23 +53,9 @@ This is how we do it here:
    }  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 If you compile the game (yet again) and try all this out, you'll find
 that there's still a problem: even after Joe hands the spade over he's
@@ -98,23 +70,9 @@ relies on switching ActorStates as Joe gives the spade to Heidi and as
 Heidi gives it back again. The two new ActorStates may be defined as
 follows:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 + burnerFretting : InConversationState  
   specialDesc = "{The burner/he} is standing talking to you with his  
@@ -174,23 +132,9 @@ follows:
       he tells you. "  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 There's only a couple of points to note here. The first is that we
 include an AskForTopic to handle the case where the player asks for the
@@ -224,51 +168,11 @@ handling of AskFor to get Joe to switch into his burnerFretting state.
 Add the following line immediately after spade.moveInto(gActor); in the
 topicResponse method of the first AskForTopic @spade:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td>getActor().setCurState(burnerFretting); <br />
-</td>
-</tr>
-</tbody>
-</table>
+`getActor().setCurState(burnerFretting); `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+` `
 
 Everything should now work fine, but there is one more refinement we can
 add, not because the game really needs it, but because it allows us to
@@ -293,23 +197,9 @@ YesTopic and a NoTopic (rather than having to define any SpecialTopics
 or whatever). The new ConvNode and its associated topics then look like
 this:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 + ConvNode 'burner-spade'  
   npcGreetingMsg = "\<.p\>He looks up at your approach, and walks  
@@ -330,23 +220,9 @@ this:
    to get on with my job, so please be quick about it.\</q\>"  
 ;  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 The reason we start the npcGreetingMsg with the pronoun 'he' rather than
 {The burner/he} is that in the only context in which this message will
@@ -360,46 +236,18 @@ initiateConversation. The obvious candidate would be in the
 afterTravel(traveler, connector) method of burnerWaiting, since this
 will be called after the Player Character travels to Joe's location:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 afterTravel(traveler, connector)  
 {  
     getActor().initiateConversation(burnerFretting, 'burner-spade');  
 }  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="TOP">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 Note the use of getActor() to get the Actor the current state belongs
 to. We could just as well have used burner.initiateConversation here,

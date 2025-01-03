@@ -24,23 +24,7 @@ covered most of what we need to know in order to do this. Add the
 following code to the end of the existing program. An explanation of new
 features follows.
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
-
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 forest : OutdoorRoom 'Deep in the Forest'  
    "Through the deep foliage you glimpse a building to the west.  
@@ -70,17 +54,7 @@ topOfTree : OutdoorRoom 'At the top of the tree'
     down = clearing  
 ;  
 
-|     |     |
-|-----|-----|
-|     |     |
-
-|     |     |
-|-----|-----|
-|     |     |
-
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 The room definitions and the definition of the tree object should need
 little explanation. The important new concept that has been introduced
@@ -117,23 +91,9 @@ The code using this connector would have looked more like that using
 rooms as connectors if we had defined the `FakeConnector` as a separate
 object thus:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 fakePath : FakeConnector  
    travelDesc = "You decide against going that way right  
@@ -142,51 +102,13 @@ fakePath : FakeConnector
   
 The clearing would then be defined with  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>north = fakePath <br />
-</td>
-</tr>
-</tbody>
-</table>
+`north = fakePath `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-|     |     |
-|-----|-----|
-|     |     |
+```
 
 What we in fact did was to make `fakePath` both an *anonymous object*
 and a *nested object* (all nested objects are in fact anonymous, though
@@ -216,51 +138,11 @@ complex map). This is easy enough to put right; just add the following
 to the definition of outsideCottage, between the room description and
 the terminating semicolon:  
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
+` `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td>east = forest <br />
-</td>
-</tr>
-</tbody>
-</table>
+`east = forest `
 
-<table data-border="0" data-cellpadding="0" data-cellspacing="0">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr data-valign="top">
-<td width="51"></td>
-<td> <br />
-</td>
-</tr>
-</tbody>
-</table>
 
-|     |     |
-|-----|-----|
-|     |     |
 
 The game should now work as expected.  
   
