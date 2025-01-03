@@ -15,11 +15,9 @@ Adv3Lite Bookshelf
 
 ------------------------------------------------------------------------
 
-<a href="t3QuickStart.html" target="_blank"><img src="qstart_cover.jpg"
-class="book" /></a>
+<a href="t3QuickStart.html" target="_blank"><img src="qstart_cover.jpg" class="book" /></a>
 
-<a href="t3QuickStart.html" class="title" target="_blank"
->Adv3Lite Quick Start Guide</a>  
+<a href="t3QuickStart.html" class="title" target="_blank">Adv3Lite Quick Start Guide</a>  
 by Eric Eve
 
 This brief guide is probably the best place to start for newcomers to
@@ -30,10 +28,10 @@ newcomers can experiment with if they want to dive straight in.
 
 ------------------------------------------------------------------------
 
-<a href="tutorial/index.html" target="_blank"><img
-src="tutorial/mancover.jpg" class="book" /></a>
+<a href="../../tutorial/index.html" target="_blank"><img
+src="../../tutorial/mancover.jpg" class="book" /></a>
 
-<a href="tutorial/index.html" class="title" target="_blank">Adv3Lite
+<a href="../../tutorial/index.html" class="title" target="_blank">Adv3Lite
 Tutorial</a>  
 by Eric Eve
 
@@ -71,10 +69,10 @@ aspects of the adv3Lite library.
 
 ------------------------------------------------------------------------
 
-<a href="manual/index.html" target="_blank"><img
-src="manual/mancover.jpg" class="book" /></a>
+<a href="../index.html" target="_blank"><img
+src="../mancover.jpg" class="book" /></a>
 
-<a href="manual/index.html" class="title" target="_blank">Adv3Lite
+<a href="../index.html" class="title" target="_blank">Adv3Lite
 Library Manual</a>  
 by Eric Eve
 
@@ -136,7 +134,7 @@ HTML.)
 
 
 
-<a href="manual/changelog.html" target="_blank"><strong>Adv3Lite Library
+<a href="../changelog.html" target="_blank"><strong>Adv3Lite Library
 Change History</strong></a>. A chronological log of changes to Adv3Lite,
 the alternative TADS 3 Adventure Framework Library.
 
@@ -177,12 +175,12 @@ each question you reply NO to, go to the next item in the list).
     IF YES -\>
     <a href="t3QuickStart.html" target="_blank">Quick Start Guide</a>
 2.  Are you already familiar with TADS 3? IF YES -\>
-    <a href="manual/index.html" target="_blank">Adv3Lite Library Manual</a>
+    <a href="../index.html" target="_blank">Adv3Lite Library Manual</a>
 3.  Are you familiar with writing Interactive Fiction in another system
     (such as Inform)? IF YES -\>
     <a href="learning/LearningT3Lite.pdf" target="_blank">Learning TADS 3
     With Adv3Lite</a>
 4.  Perhaps you should start with the
-    <a href="tutorial/index.html" target="_blank">Adv3Lite Tutorial</a>
+    <a href="../../tutorial/index.html" target="_blank">Adv3Lite Tutorial</a>
 
 
