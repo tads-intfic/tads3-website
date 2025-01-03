@@ -3,18 +3,18 @@ layout: docs
 ---
 
 
-<img src="../manual/topbar.jpg" data-border="0" />
+<img src="../../topbar.jpg" data-border="0" />
 
 
 
 
 
-<a href="../manual/toc.html" class="nav">Table of Contents</a> \|
-<a href="../manual/final.html" class="nav">Final Moves</a> \> Exercises &
+<a href="../../toc.html" class="nav">Table of Contents</a> \|
+<a href="../../final.html" class="nav">Final Moves</a> \> Exercises &
 Samples  
-<span class="navnp"><a href="../manual/extensions.html" class="nav"><em>Prev:</em>
+<span class="navnp"><a href="../../extensions.html" class="nav"><em>Prev:</em>
 Extensions</a>    
-<a href="../manual/feedback.html" class="nav"><em>Next:</em> Feedback</a>
+<a href="../../feedback.html" class="nav"><em>Next:</em> Feedback</a>
     </span>
 
 
@@ -87,12 +87,12 @@ includes a couple of examples of simple Scenes.
 
 
 *Adv3Lite Manual*  
-<a href="../manual/toc.html" class="nav">Table of Contents</a> \|
-<a href="../manual/final.html" class="nav">Final Moves</a> \> Exercises &
+<a href="../../toc.html" class="nav">Table of Contents</a> \|
+<a href="../../final.html" class="nav">Final Moves</a> \> Exercises &
 Samples  
-<span class="navnp"><a href="../manual/extensions.html" class="nav"><em>Prev:</em>
+<span class="navnp"><a href="../../extensions.html" class="nav"><em>Prev:</em>
 Extensions</a>    
-<a href="../manual/feedback.html" class="nav"><em>Next:</em> Feedback</a>
+<a href="../../feedback.html" class="nav"><em>Next:</em> Feedback</a>
     </span>
 
 
