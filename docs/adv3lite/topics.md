@@ -1,6 +1,8 @@
 ---
 layout: docs
 ---
+{::options parse_block_html="true" /}
+<div class="toc">
 <h2 id="topic_0">Game</h2> <a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="manual/mingame.html" target="classes">A minimal game
@@ -546,3 +548,4 @@ layout: docs
 
 - <a href="libref/object/BannerWindow.html"
   target="classes"><code>BannerWindow</code></a>
+</div>
