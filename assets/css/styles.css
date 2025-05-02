@@ -1054,6 +1054,16 @@ em > a {
     height: 90vh;
   }
 
+#periplus .top-row {
+    width: 100%;
+    height: 30px;
+}
+
+#periplus .top-row iframe {
+    width: 100%;
+    height: 30px;
+}
+
 #periplus .left-column {
     width: 300px;
     overflow-y: auto;
