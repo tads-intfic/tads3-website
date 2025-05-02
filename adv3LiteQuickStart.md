@@ -87,14 +87,14 @@ The steps you'd typically follow once the wizard is launched would be:
     **Next** to complete the wizard. Your new adv3Lite game (or at least
     the beginnings of it) will then be created for you.
 5.  Wait until TADS 3 Workbench has finished created and compiling the
-    new skeleton game (you should see a message saying �Build
+    new skeleton game (you should see a message saying 'Build
     successfully completed' followed by the date and time). In the
-    left-hand pane of Workbench (headed �Project�) look for the section
-    (near the top) that says �Source Files� and double-click on the icon
+    left-hand pane of Workbench (headed 'Project') look for the section
+    (near the top) that says 'Source Files' and double-click on the icon
     representing the file you asked the Wizard to create at Step 3 above
-    (e.g. �MyNewGame.t�); it should be the third one down. You will then
+    (e.g. 'MyNewGame.t'); it should be the third one down. You will then
     see your new game source file open in the Workbench editing window.
-6.  To compile the project again when you�ve made changes to it, just
+6.  To compile the project again when you've made changes to it, just
     press the F7 key. (You can also select the "Compile for Debugging"
     command on the "Build" menu, or click the equivalent toolbar
     button.)
@@ -147,8 +147,8 @@ whatever you're calling it) carry out the following steps:
              -source start
                                     
 
-    You can delete any instances of comments like the �warning � this
-    file was mechanically generated� paragraph you find in the t3m file,
+    You can delete any instances of comments like the 'warning ' this
+    file was mechanically generated' paragraph you find in the t3m file,
     together with any bits of executable code you find there. You can
     also delete the line -pre. You may need to change the penultimate
     line if the path to where you've stored the adv3Lite directory is

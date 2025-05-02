@@ -62,7 +62,7 @@ complete language and library documentation.
   authoring system for writing your own interactive fiction
 - <a href="doc/libref/intro.html" target="_blank">Complete adv3 class
   reference</a>
-- <a href="https://www.tads.org/t3doc/doc/sysman/toc.html"
+- <a href="/doc/sysman/toc.htm"
   target="_blank">TADS 3 System Manual</a>, covers the TADS 3 language
   as well as system and utility functions
 - <a href="https://intfiction.org/c/authoring/tads/20"
