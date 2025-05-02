@@ -1046,6 +1046,8 @@ em > a {
     border-radius: 0.5em;
 }
 
+/* periplus */
+
 #periplus .container {
     display: flex;
     flex-wrap: wrap;
@@ -1073,5 +1075,29 @@ em > a {
 }
 
 #periplus * {
-    padding: .5rem;
+    padding: .2rem;
+}
+
+.toc {
+    font-size: 16px;
+}
+
+.toc li {
+    margin: 0 !important;
+}
+
+.toc > h1, .toc > h2, .toc > h3 {
+    margin: .25em;
+}
+
+.toc > h1 {
+    font-size: 22px;
+}
+
+.toc > h2 {
+    font-size: 20px;
+}
+
+.toc > h3 {
+    font-size: 18px;
 }

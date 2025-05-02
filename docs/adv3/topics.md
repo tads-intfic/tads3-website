@@ -1,6 +1,8 @@
 ---
 layout: docs
 ---
+{::options parse_block_html="true" /}
+<div class="toc">
 <h2 id="topic_0">Game</h2><a href="#top" style="font-size: small">[top]</a>
 
 - *<a href="doc/gsg/averysimplegame.htm"
@@ -187,21 +189,21 @@ layout: docs
 
 <h2 id="topic_3">Text, HTML, & multimedia</h2><a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/sysman/strlit.html#specials"
+- *<a href="doc/sysman/strlit.htm#specials"
   target="classes">Escaped characters (backslash codes)</a>*
-- *<a href="doc/sysman/strlit.html#embeddings"
+- *<a href="doc/sysman/strlit.htm#embeddings"
   target="classes">Embedded expressions</a>*
-- *<a href="doc/sysman/strlit.html#strtpl"
+- *<a href="doc/sysman/strlit.htm#strtpl"
   target="classes">Embedded string templates</a>*
-  - *<a href="doc/sysman/strlit.html#oneof"
+  - *<a href="doc/sysman/strlit.htm#oneof"
     target="classes">&lt;&lt;one of&gt;&gt;</a>*
-  - *<a href="doc/sysman/strlit.html#firstTimeOnly"
+  - *<a href="doc/sysman/strlit.htm#firstTimeOnly"
     target="classes">&lt;&lt;first time&gt;&gt;</a>*
-- *<a href="doc/htmltads/intro.html"
+- *<a href="doc/htmltads/intro.htm"
   target="classes">Introduction to HTML TADS</a>*
-- *<a href="doc/sysman/regex.html"
+- *<a href="doc/sysman/regex.htm"
   target="classes">Regular expressions</a>*
-- *<a href="doc/sysman/string.html"
+- *<a href="doc/sysman/string.htm"
   target="classes">String methods</a>*
 - *<a
   href="doc/libref/file/console.t.html#aHref"
@@ -589,3 +591,4 @@ layout: docs
 
 - <a href="doc/libref/object/BannerWindow.html"
   target="classes"><code>BannerWindow</code></a>
+</div>

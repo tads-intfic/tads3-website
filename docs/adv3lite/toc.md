@@ -1,8 +1,9 @@
 ---
 layout: docs
 ---
+{::options parse_block_html="true" /}
 # adv3Lite periplus
-
+<div class="toc">
 - <a href="about.html" target="classes">About this periplus</a>
 - <a href="libref/intro.html" target="classes">adv3Lite class reference</a>
 - <a href="manual/toc.html" target="classes">adv3Lite Library manual</a>
@@ -34,3 +35,4 @@ layout: docs
 - <a href="topics.html#topic_12" target="topics">Hints, goals &amp;
   menus</a>
 - <a href="topics.html#topic_13" target="topics">System</a>
+</div>
