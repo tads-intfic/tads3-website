@@ -1,3 +1,6 @@
+---
+layout: docs
+---
 <html>
 <!-- DERIVED FILE - DO NOT EDIT -->
 
@@ -98,19 +101,19 @@ catch (SecondExceptionClass exc2)
 }
 finally
 {
-  // do some cleanup work – this gets called
+  // do some cleanup work ï¿½ this gets called
   // whether an exception occurs or not
 }
 </pre></div>
  
-<p>A <span class="code">try</span> statement can have as many <span class="code">catch</span> clauses as needed –
+<p>A <span class="code">try</span> statement can have as many <span class="code">catch</span> clauses as needed ï¿½
 it can even have no <span class="code">catch</span> clauses at all.  The <span class="code">finally</span> clause
 is optional, but only one is allowed if it's present at all, and it
 must follow all of the <span class="code">catch</span> clauses.
 
 <p>Each <span class="code">catch</span> clause has a name following the name of the
 exception.  The <span class="code">catch</span> defines a new local variable with the given
-name – the variable is local to the code within the <span class="code">catch</span> clause.
+name ï¿½ the variable is local to the code within the <span class="code">catch</span> clause.
 When the exception is caught, the VM will store a reference to the
 thrown exception object in this variable; this is, of course, the same
 object that was used in the <span class="code">throw</span> statement that threw the

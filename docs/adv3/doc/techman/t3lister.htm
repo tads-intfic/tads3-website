@@ -1,3 +1,6 @@
+---
+layout: docs
+---
 <html>
 <!-- DERIVED FILE - DO NOT EDIT -->
 
@@ -744,14 +747,14 @@ You see nothing unusual about it.
 Opened. 
 
 <b>&gt;x it</b>
-It’s open but empty. 
+Itï¿½s open but empty. 
 
 <b>&gt;put pen in box</b>
 (first taking the pen)
 Done. 
 
 <b>&gt;x box</b>
-It’s open, and contains a pen. 
+Itï¿½s open, and contains a pen. 
 
 <b>&gt;close box</b>
 Closed. 
@@ -852,7 +855,7 @@ the middle of the room.
 
 <p><pre>
 <b>&gt;i</b>
-You are carrying a walking stick, a map, and an iceberg lettuce, and you’re wearing a 
+You are carrying a walking stick, a map, and an iceberg lettuce, and youï¿½re wearing a 
 long overcoat and a pair of brown shoes.
 </pre></p>
 
@@ -928,7 +931,7 @@ me: Actor
 <p>This is probably slightly more complex than it needs to be. In the most common case where the player character remains the same throughout the game, the game remains in the present tense throughout, and is always told in the second person, a lot of the stuff that looks like <code>&lt;&lt;buildParam('The/he', nm)&gt;&gt; {is}</code> could be replaced with <code>You are</code>; but if you've copied and pasted this code from the library you may just as well leave it as it is. The effect is to give you a transcript like this:<p>
 <p><pre>
 <b>&gt;i</b>
-You are holding a walking stick, a map, and an iceberg lettuce, and you’re sporting a long
+You are holding a walking stick, a map, and an iceberg lettuce, and youï¿½re sporting a long
 overcoat and a pair of brown shoes. 
 
 <b>&gt;i tall</b>
@@ -957,7 +960,7 @@ You are holding absolutely nothing.
 
 <b>&gt;wear shoes</b>
 (first taking the pair of brown shoes)
-Okay, you’re now wearing the pair of brown shoes. 
+Okay, youï¿½re now wearing the pair of brown shoes. 
 
 <b>&gt;i</b>
 You aren't holding anything, but are sporting a pair of brown shoes. 
@@ -969,7 +972,7 @@ You aren't holding anything, but are sporting a pair of brown shoes.
 <b>&gt;x myrtle</b>
 You think she's very pretty. 
 
-Myrtle is carrying a bunch of flowers, and she’s wearing a red dress. 
+Myrtle is carrying a bunch of flowers, and sheï¿½s wearing a red dress. 
 </pre></p>
 
 <p>But here the description of Myrtle is so short, that you might want to combine it with the descripition of what she's carrying. This can be done by using actorHoldingDescInventoryListerShort instead:</p>
@@ -986,7 +989,7 @@ myrtle: Person 'pretty myrtle/woman' 'Myrtle' @westRoom
 <p>You'll then get:</p>
 <p><pre>
 <b>&gt;x myrtle</b>
-You think she's very pretty. She is carrying a bunch of flowers, and she’s wearing a red dress.
+You think she's very pretty. She is carrying a bunch of flowers, and sheï¿½s wearing a red dress.
 </pre></p>
 
 <p>For any more complex customization, you'll need to use the same kind of techniques as we've already seen exemplified for listing the player character's inventory, except that you'll be working with the NPC's holdingDescInventoryLister property instead, and subclassing from

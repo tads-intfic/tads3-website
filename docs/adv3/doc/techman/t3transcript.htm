@@ -1,3 +1,6 @@
+---
+layout: docs
+---
 <html>
 <!-- DERIVED FILE - DO NOT EDIT -->
 
@@ -598,7 +601,7 @@ putReportManager: object
 <b>old coat:</b> Taken. 
 <b>odd sock:</b> Taken. 
 <b>large red box:</b> Taken. 
-<b>wardrobe:</b> You can’t take that. 
+<b>wardrobe:</b> You canï¿½t take that. 
 <b>small green book:</b> Taken. 
 <b>torch:</b> Taken. 
 <b>small square table:</b> The small square table is too heavy. 
@@ -723,7 +726,7 @@ takeReportManager: object
 <b>&gt;take all</b>
 You take the tennis ball, the old coat, the odd sock, the large red box, the small green book,
 the torch, the small blue box, eight gold coins, three silver coins, and two copper coins. 
-You can’t take that. The small square table is too heavy.
+You canï¿½t take that. The small square table is too heavy.
 </pre></p>
 
 <p>This is an improvement, but it is still not quite right. For one thing, it's far from clear what 'that' refers to in "You can't take that", and the final report might read a little better in this context it is red "The small square table is too heavy to take." We can fix this by tweaking each failure report as we append it to our result string. Here we give the code of the resultant foreach loop; the rest of the code remains the same:</p>
@@ -748,7 +751,7 @@ You can’t take that. The small square table is too heavy.
 <b>&gt;take all</b>
 You take the tennis ball, the old coat, the odd sock, the large red box, the small green book,
 the torch, the small blue box, eight gold coins, three silver coins, and two copper coins. You
-can’t take the wardrobe. The small square table is too heavy to take. 
+canï¿½t take the wardrobe. The small square table is too heavy to take. 
 </pre></p>
 
 <p>It would be possible to refine this a little further. For example, if there were several items that were too heavy to take, you might want to combine them into a single report ("The wardrobe and the small square table are too heavy to take"). But this probably isn't worthwhile. Given the number of ways a take action could fail (for example, consider the case where there's an item in a locked glass cabinet) it's probably better not to include the failure reports along with the successful ones like this. A safer approach for the more general case would be to separate out the failure reports before calling summarizeAction, have summarizeAction summarize the objects that were taken, and then let the library report the objects that weren't taken in the normal way. Not only is this safer to implement, it also makes it clearer to the player what went wrong with the items that weren't taken.</p>
@@ -774,7 +777,7 @@ can’t take the wardrobe. The small square table is too heavy to take.
 <b>&gt;take all</b>
 You take the tennis ball, the tennis ball, the old coat, the odd sock, the large red box, the
 small green book, the torch, the small blue box, eight gold coins, three silver coins, and two
-copper coins. You can’t take the wardrobe. The small square table is too heavy to take. 
+copper coins. You canï¿½t take the wardrobe. The small square table is too heavy to take. 
 </pre></p>
 
 <p>The reason for this doubling of the tennis ball is that the transcript now contains two reports for taking the tennis ball: the default command report generated from the inherited action handling and the main command report from the custom message. The simplest way to solve this is to ensure that our Vector of taken objects contains each object only once, which we can achieve by calling the getUnique() method on this Vector. Our code then becomes:</p>
