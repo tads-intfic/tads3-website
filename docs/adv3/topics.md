@@ -3,13 +3,13 @@ layout: docs
 ---
 <h2 id="topic_0">Game</h2><a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/averysimplegame.html"
+- *<a href="doc/gsg/averysimplegame.htm"
   target="classes">A very simple game</a>*
-- *<a href="doc/gsg/startinganewgame.html"
+- *<a href="doc/gsg/startinganewgame.htm"
   target="classes">Starting a new game</a>*
-- *<a href="doc/gsg/rewardingtheeffort.html"
+- *<a href="doc/gsg/rewardingtheeffort.htm"
   target="classes">Rewarding the effort</a>*
-- *<a href="doc/gsg/endingthegame.html"
+- *<a href="doc/gsg/endingthegame.htm"
   target="classes">Ending the game</a>*
 - *<a href="https://www.tads.org/ifidgen/ifidgen" target="classes">IFID
   generator</a>*
@@ -36,7 +36,7 @@ layout: docs
 
 <h2 id="topic_1">Tangibles</h2><a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/addingitemstothegame.html"
+- *<a href="doc/gsg/addingitemstothegame.htm"
   target="classes">Adding items to the game</a>*
 
 <!-- -->
@@ -77,11 +77,11 @@ layout: docs
 
 <h2 id="topic_2">Locations & travel</h2><a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/definingourfirstroom.html"
+- *<a href="doc/gsg/definingourfirstroom.htm"
   target="classes">Defining our first room</a>*
-- *<a href="doc/gsg/basictravel.html"
+- *<a href="doc/gsg/basictravel.htm"
   target="classes">Basic travel</a>*
-- *<a href="doc/gsg/doorsandwindows.html"
+- *<a href="doc/gsg/doorsandwindows.htm"
   target="classes">Doors and windows</a>*
 
 <!-- -->
@@ -325,7 +325,7 @@ layout: docs
 
 <h2 id="topic_7">Actions & verbs</h2><a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/controllingtheaction.html"
+- *<a href="doc/gsg/controllingtheaction.htm"
   target="classes">Controlling the action</a>*
 
 <!-- -->
@@ -341,9 +341,9 @@ layout: docs
 
 <h2 id="topic_8">Actors, NPCs, & conversations</h2><a href="#top" style="font-size: small">[top]</a>
 
-- *<a href="doc/gsg/abasicburner.html"
+- *<a href="doc/gsg/abasicburner.htm"
   target="classes">A basic burner</a>*
-- *<a href="doc/gsg/theartofconversation.html"
+- *<a href="doc/gsg/theartofconversation.htm"
   target="classes">The art of conversation</a>*
 
 <!-- -->
