@@ -2,7 +2,6 @@
 layout: default
 title: Search Results
 url: /search
-published: false
 ---
 <!-- List where search results will be rendered -->
 <ul id="search-results"></ul>
