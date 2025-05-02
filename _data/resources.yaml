@@ -17,10 +17,16 @@ libraries:
         author: Eric Eve
         description: This GitHub wiki aims to give users and potential users of adv3Lite the information they need to decide whether adv3Lite may be for them. There are links to adv3Lite installation and setup, a sample game, and a short primer on some coding concepts needed for adv3Lite.
         url: https://github.com/EricEve/adv3lite/wiki/Learning-adv3Lite
+      - title: TADS 3 Cookbook Wiki
+        type: Adv3 & adv3Lite
+        author: Jim Nelson
+        description: A series of "cookbook recipes", ie TADS 3 code examples, on Github.
+        url: https://github.com/jimbonator/tads-cookbook/wiki
       - title: Interactive Fiction Forum community
         type: All of TADS 3
         description: The Intfiction.org forum is a place for fans and authors of interactive fiction to gather. It has a category for TADS 3 discussion where you can discuss the language and both current libraries, and ask for help from experienced TADS 3 authors and programmers.
         url: https://intfiction.org/c/authoring/tads/
+
   - title: Adv3
     description: Adv3 is the default TADS 3 library, and is packaged with it when you install TADS 3. It's rather complex, but has a lot of fidelity and powerful features.
     resources:
@@ -34,18 +40,8 @@ libraries:
         url: /quickrefs
       - title: Adv3 Periplus
         author: Jim Nelson
-        description: A reorganized, hyperlinked, cross-referenced index of existing adv3 library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code.
+        description: A reorganized, hyperlinked, cross-referenced index of existing adv3 library source files and documentation.
         url: /docs/adv3/adv3index.html
-      - title: Example Games
-        type: Adv3 & adv3Lite
-        author: Eric Eve
-        description: A set of ten short games illustrating how to use various parts of the library in both adv3 and adv3Lite.
-        url: https://users.ox.ac.uk/~manc0049/TADSGuide/Examples/exercises.htm
-      - title: Cloak of Darkness
-        type: Adv3 & adv3Lite 
-        author: Eric Eve
-        description: Cloak of Darkness is an example game that has been implemented across multiple interactive fiction languages to demonstrate how the same features can be implemented in different systems. This is a link to implementations of the Cloak of Darkness game in adv3Lite and adv3.
-        url: https://users.ox.ac.uk/~manc0049/TADSGuide/cloak.htm
   - title: adv3Lite
     description: adv3Lite is a TADS 3 library based off Adv3, written and maintained by Eric Eve. It aims to provide a library that's easier to use than the Adv3 library, but which is almost as powerful and expressive. Adv3Lite misses out the bits that most games don't really need (like postures, room parts, and multiple light levels) while adding in some other bits that are often more useful (like scenes and regions, "borrowed" from Inform 7). Adv3Lite also cuts down drastically on the complexity of the Adv3 class hierarchy while maintaining much of their functionality.
     resources:
@@ -59,37 +55,78 @@ libraries:
         url: https://users.ox.ac.uk/~manc0049/TADSGuide/adv3Lite.htm
       - title: adv3Lite Periplus
         author: Jim Nelson
-        description: A reorganized, hyperlinked, cross-referenced index of existing adv3Lite library source files and documentation. The narrative descriptions of classes, functions, methods, and so on are transcribed from the comments in the library source code. The library source code is also provided as links.
+        description: A reorganized, hyperlinked, cross-referenced index of existing adv3Lite library source files and documentation.
         url: /docs/adv3Lite/adv3liteindex.html
-      - title: Example Games
-        type: Adv3 & adv3Lite
-        author: Eric Eve
-        description: A set of ten short games illustrating how to use various parts of the library in both adv3 and adv3Lite.
-        url: https://users.ox.ac.uk/~manc0049/TADSGuide/Examples/exercises.htm
-      - title: Cloak of Darkness
-        type: Adv3 & adv3Lite 
-        author: Eric Eve
-        description: Cloak of Darkness is an example game that has been implemented across multiple interactive fiction languages to demonstrate how the same features can be implemented in different systems. This is a link to implementations of the Cloak of Darkness game in adv3Lite and adv3.
-        url: https://users.ox.ac.uk/~manc0049/TADSGuide/cloak.htm
-      - title: 
-        author: 
-        description: 
-        url: 
-      - title: 
-        author: 
-        description: 
-        url: 
   - title: TADS 3 language
     description: These are references for the TADS 3 programming language itself, not specific to any library like Adv3 or Adv3Lite.
     resources:
       - title: TADS 3 System Manual
-        author: Michael Roberts
+        author: Michael J. Roberts
         description: This book is a reference to the TADS 3 language and the T3 VM, including the standard intrinsic functions and classes. It covers the language and VM features in depth, so it's the place to go when you need to find the details on the system.  
         url: /docs/adv3/doc/sysman/intro.html
       - title: Introduction to HTML TADS
-        author: Michael Roberts
+        author: Michael J. Roberts
         description: A brief introduction to HTML TADS, a text adventure interpreter based on TADS. 
         url: /docs/adv3/doc/htmltads/intro.html
+
+  - title: Examples
+    description: Example code snippets and games with source code available.
+    resources: 
+      - title: Example Games
+        author: Eric Eve
+        description: A set of ten short games illustrating how to use various parts of the library in both adv3 and adv3Lite.
+        url: https://users.ox.ac.uk/~manc0049/TADSGuide/Examples/exercises.htm
+      - title: TADS 3 Cookbook Wiki
+        type: Adv3 & adv3Lite
+        author: Jim Nelson
+        description: A series of "cookbook recipes", ie TADS 3 code examples, on Github.
+        url: https://github.com/jimbonator/tads-cookbook/wiki
+      - title: Cloak of Darkness 
+        author: Eric Eve
+        type: Adv3 & adv3Lite
+        description: Cloak of Darkness is an example game that has been implemented across multiple interactive fiction languages to demonstrate how the same features can be implemented in different systems. This is a link to implementations of the Cloak of Darkness game in adv3Lite and adv3.
+        url: https://users.ox.ac.uk/~manc0049/TADSGuide/cloak.htm
+      - title: Exercises
+        author: Søren Løvborg
+        type: Adv3
+        description: A series of exercises to practice, with a coded implementation of the exercise provided by the author.
+        url: https://www.kwi.dk/if/t3/exercises
+      - title: Examples of TADS 3 code - IFWiki
+        author: Wiki contributors
+        type: Adv3
+        description: A few examples of TADS 3 code for elevators and smell restrictions.
+        url: https://www.ifwiki.org/Category:Examples_of_TADS_3_code
+      - title: TADS 3 examples - IF Archive
+        author: Søren Løvborg, Cleo Kraft
+        type: Adv3
+        description: A few more examples of TADS 3 code.
+        url: https://ifarchive.org/indexes/if-archive/programming/tads3/examples/
+        
+  - title: Miscellaneous
+    description: Various resources/catchall.
+    resources: 
+      - title: TADS.org
+        author: Michael J. Roberts
+        description: The original site with links to manuals, tools, and other resources. Several of the resources are also hosted here on this site.
+        url: https://tads.org/
+      - title: tads-sources
+        author: Tristano Ajmone
+        description: A copy of the source code with consistent source styles, and a port of the existing documentation into Github Markdown. The developer's motivation was to "provide a Git compliant codebase of TADS sources that developers on GitHub can fork as a starting point to work efficiently with Git, GitHub and continuous integration services like Travis CI and others."
+        url: https://github.com/tajmone/tads-sources
+      - title: TADS 3 - IFWiki
+        author: Wiki contributors
+        description: Links to different resources and tutorials within IFWiki, kind of a rabbit hole. There are a few resources in the [TADS category tag as well](https://www.ifwiki.org/Category:TADS_3).
+        url: https://www.ifwiki.org/TADS_3
+      - title: From Inform to TADS
+        author: Jim Aikin
+        description: A casual feature comparison between TADS and Inform 7. You may find a few more tutorials or discussions on Aikin's blog as well.
+        url: https://midiguru.wordpress.com/2022/06/16/from-inform-to-tads/
+      - title: A Comparison of TADS 3 and Inform 7
+        author: Eric Eve
+        description: A very comprehensive deep-dive on the differences and similarities between the two IF languages.
+        url: http://brasslantern.org/writers/iftheory/tads3andi7.html
+
+
 
 quickrefs:
   - name: TLangRef.pdf
