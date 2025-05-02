@@ -56,7 +56,7 @@ libraries:
       - title: adv3Lite Periplus
         author: Jim Nelson
         description: A reorganized, hyperlinked, cross-referenced index of existing adv3Lite library source files and documentation.
-        url: /docs/adv3Lite/adv3liteindex.html
+        url: /docs/adv3lite/adv3liteindex.html
   - title: TADS 3 language
     description: These are references for the TADS 3 programming language itself, not specific to any library like Adv3 or Adv3Lite.
     resources:
