@@ -3,3 +3,4 @@ bin/
 Gemfile.lock
 package-lock.json
 node_modules
+_site
