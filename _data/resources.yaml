@@ -141,3 +141,6 @@ quickrefs:
   - name: ActionMessages.pdf
     description: An Action Messages Quick Reference to help you find the message properties you need to override to customise responses quickly and easily.
     url: /assets/quickrefs/ActionMessages.PDF
+  - name: Adv3Lite Quick Reference
+    description: Quick reference for Adv3Lite
+    url: /docs/adv3Lite/docs/manual/Adv3Lite Quick Reference.pdf
