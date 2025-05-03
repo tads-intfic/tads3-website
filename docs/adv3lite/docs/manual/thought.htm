@@ -1,0 +1,158 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Optional Modules &mdash; Thoughts</title>
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="optional.htm">Optional Modules</a> &gt; 
+Thoughts
+<br><span class="navnp"><a class="nav" href="topicentry.htm"><i>Prev:</i> Topic Entries</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="action.htm"><i>Next:</i> Actions</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+<h1>Thoughts</h1>
+<p>The thoughts.t module provides a framework for responding to commands of the form THINK ABOUT WHATEVER, and for customizing responses to a bare <a href='#think'>THINK command</a>. For the former, it uses precisely the same TopicEntry mechanism as the Consultable/ConsultTopic classes, and can be used in almost precisely the same way. All you need to do is to define an object of the <b>ThoughtManager</b> class and then populate it with <b>Thought</b> objects, like so:</p>
+
+
+<p><div class=code><pre>
+myThoughts: ThoughtManager
+;
+
++ Thought @george
+    "To be honest, you're not really sure what he's doing here. "
+;
+
++ Thought @tFire
+    "It's a wretched nuiscance. Your nephew's probably to blame for it
+    somehow, but the important thing right now is just to escape from it. "
+;
+
++ DefaultThought
+    "You find your thoughts start to wander; for some reason you can't
+    concentrate on that topic right now. "
+;
+</pre></div>
+
+<p>Thought inherits from <a href="topicentry.htm">TopicEntry</a>, so you can use all the properties and methods of TopicEntry with it; Thought and DefaultThought work just like ConsultTopic and DefaultConsultTopic.</p>
+
+<p>You can exclude thoughts.t if you don't want to implement a THINK ABOUT command (or you don't want to implement it this way), but if you include thoughts.t you must also include topicentry.t.</p>
+
+<a name='thinkdesc'>
+<h2>Thoughts and thinkDesc</h2>
+<p>Responses to THINK ABOUT may also be defined using the <a href='thing.htm#knowledge'>thinkDesc</a> property of a Thing or Topic. If a matching Thought has been defined, it will take precedence over the thinkDesc. The thinkDesc property will be used only if:</p>
+<ol>
+<li>No ThoughtManager object has been defined in the game; or</li>
+<li>A DefaultThought has been defined under the ThoughtManager object and no Thought handles the THINK ABOUT command.</li>
+</ol>
+
+<p>In the event that a ThoughtManager object has been defined in the game, it is the DefaultThought that will attempt to find a matching thoughtDesc. If no matching thoughtDesc exists, the DefaultThought will use its topicResponse as usual.</p>
+
+<p>Defining thoughtDesc on Things and Topics may be more convenient than defining a series of Thoughts, but it may also prove less flexible (e.g., where thoughts about a given topic vary according to circumstances). Game authors are free to mix and match both approaches. For example a Thought could have an isActive property which becomes true only under certain circumstances. When its isActive property is true, the Thought will be used to respond to the THINK ABOUT command but when it is nil the DefaultThought will try to use the relevant thinkDesc instead.</p>
+
+
+<a name='multiple'>
+<h2>Thoughts with Multiple Player Characters</h2>
+<p>If the player character changes during the course of your game, you may want to define a different set of Thoughts for each actor who might become a Player Character. To do this you need to define a <code>thoughtManager</code> object for each (potential or actual) player character and set its <b>thinker</b> property to the actor whose Thoughts will be located under it, for example:</p>
+<p><div class=code><pre>
+myThoughts: ThoughtManager
+   thinker = me
+;
+
++ Thought @george
+    "To be honest, you're not really sure what he's doing here. "
+;
+
++ Thought @tMavis
+    "You rather like her. "
+;
+
++ Thought @tFire
+    "It's a wretched nuiscance. Your nephew's probably to blame for it
+    somehow, but the important thing right now is just to escape from it. "
+;
+
++ DefaultThought
+    "You find your thoughts start to wander; for some reason you can't
+    concentrate on that topic right now. "
+;
+
+georgeThoughts: ThoughtManager
+   thinker = george
+;
+
++ Thought @tFire
+  "A nasty hazard, in your opinion."
+;
+
++ Thought @tMavis
+   "You can't stand her. "
+;
+</pre></div>
+
+<p>What happens behind the scenes here is that the preinitialization of any <span class='code'>ThoughtManager</span> object will set the <b>myThoughtManager</b> property to itself on the Thing defined on its (the ThoughtManager's) <span class='code'>thinker</span> property. If <span class='code'>thinker</span> is <code>nil</code> it will assume that the owner of the thoughts is the initial player character. The <a href='changepc.htm'>setPlayer()</a> function then changes <span class='code'>libGlobal.thoughtManagerObj</span> to the value of the new player character's <span class='code'>myThoughtManager</span> property, provided the latter is not nil.</p>
+
+<p>There is no need to do bother with any of this if the player character never changes (if <span class='code'>thinker</span> is left undefined on the sole ThoughtManager it will be assumed to belong to the sole player character), and you may prefer not to set up multiple ThoughtManagers for multiple player characters if your Thoughts are intended to model the player's thoughts rather than the player characters'.</p>
+<br>
+<a name='think'></a>
+<h2>Handling the THINK command.</h2>
+<p>If nothing else intervenes, a bare THINK command results in the output produced by <b>sayDefaultThought()</b>, a method of the Think action object. If you just want THINK to respond with the same message throughout your game, you can simply override sayDefaultThought to display whatever message you like.</p>
+
+<p>If, however, you'd like the reponse to THINK to vary according to circumstances, you can define the Think action object's <b>ruleBook</b> property to point to a <a href='../../extensions/docs/rules.htm'>RuleBook</a> you define elsewhere in your game to handle your varied responses to THINK. To do this you'll also need to include the rules extension in your project. For example:</p>
+
+<p><div class=code><pre>
+modify Think
+    ruleBook = thinkRules
+;
+
+
+thinkRules: RuleBook
+    defaultValue = true
+;
+   
++ Rule
+    "You're apprehensive about meeting this sorceress, but it seems to be your best bet ---
+        indeed, your only remaining bet. "
+    where = startroom
+;
+
++ Rule
+    "It's make up your mind time. You can either head back to the cottage and brave an audience
+    with the mysterious Mirabel or abandon all hope of escaping your life of vagrancy. "
+    
+    where = lane
+;
+</pre></div>
+
+<p>Alternatively, you can define the rulebook you want to use for your THINK reponses to be an object of the ThinkRules class. It will then automatically register itself with the Think action (provided <code>Think.ruleBook</code> is nil) and its defaultValue property will already be set to true. You could then just define:</p>
+
+<p><div class=code><pre>
+
+ThinkRules    
+;
+   
++ Rule
+    "You're apprehensive about meeting this sorceress, but it seems to be your best bet ---
+        indeed, your only remaining bet. "
+    where = startroom
+;
+
+// etc.
+</pre></div>
+
+
+
+<hr class="navb"><div class="navb">
+<i>adv3Lite Library Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="optional.htm">Optional Modules</a> &gt; 
+Thoughts
+<br><span class="navnp"><a class="nav" href="topicentry.htm"><i>Prev:</i> Topic Entries</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="action.htm"><i>Next: </i>Actions </a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>

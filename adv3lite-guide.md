@@ -21,7 +21,7 @@ each question you reply NO to, go to the next item in the list).
 
 # The Books
 
-{% include docs/adv3lite/adv3lite_index.md %}
+{% include docs/adv3Lite %}
 
 # Change Logs
 

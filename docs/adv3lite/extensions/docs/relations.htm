@@ -1,0 +1,349 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Relations</title>
+
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="../../docs/manual/topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="../../docs/manual/toc.htm">Table of Contents</a> | 
+<a class="nav" href="../../docs/manual/extensions.htm">Extensions</a> &gt; 
+Relations
+<br><span class="navnp"><a class="nav" href="postures.htm"><i>Prev:</i> Postures</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="roomparts.htm"><i>Next:</i> Room Parts</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+
+<h1>Relations</h1>
+<h2>Overview</h2>
+
+<p>The purpose of the <a href="../relations.t">relations.t</a> extension is to allow game code to set up and then test relations between objects (or other entities). This could be used, for example, to model social relationships between the NPCs in your game. The extension also enables pathfinding through any relation you define.</p>
+
+
+<br>
+<a name="classes"></a>
+<h2>New Classes, Objects and Properties</h2>
+
+<p>In addition to a number of items intended purely for internal use, this extension defines the following new classes and functions:</p>
+
+<ul>
+<li><em>Classes</em>: <strong>Relation</strong>, <strong>DerivedRelation</strong></li>
+
+<li><em>functions</em>: <span class="code">relate()</span>, <span class="code">related()</span>, <span class="code">unrelate()</span> and <span class="code">relationPath()</span>. </li>
+</ul>
+<br>
+
+<a name="usage"></a>
+<h2>Usage</h2>
+<p>Include the relations.t file after the library files but before your game source files.</p>
+
+<h2>Defining Relations</h2>
+
+<p>You define a relation by defining a Relation object. The properties you need to define on Relation are <strong>name</strong>, <strong>reverseName</strong>, <strong>relationType</strong> and <strong>reciprocal</strong>. For example:</p>
+
+ <p><div class="code"><pre>
+ loving: Relation 
+    name = 'loves'
+    reverseName = 'loved by'
+    relationType = manyToOne 
+ ;
+ </pre></div>
+ 
+<p>This can be abbreviated via the Relation template (defined in advlite.h) to:</p> 
+ 
+ <p><div class="code"><pre>
+ loving: Relation 'loves' 'loved by' @manyToOne;
+ </pre></div>
+ 
+<p>The <span class="code">name</span> property can be uses to describe the relationship as a verb (e.g. John loves Mary). The <span class="code">reverseName</span> is the name to use when we want to describe the relationship the other way round (if John loves Mary then Mary is loved by John); we could have defined the <span class="code">reverseName</span> as 'is loved by', but that's a bit more typing. The <span class="code">relationType</span> defines how many parties can appear on each side of the relationship. Here we've defined the loving relationship (in the sense of 'is in love with') to be <strong>manyToOne</strong>, meaning that each person can love at most one other person, but can be loved by several other people. (Jack and Jim may both Jill, but they can't simultaneously love anyone else - at least, not as we have defined the loving relationship). The other possible values of the relationType property are <strong>oneToOne</strong> (e.g. the marriage relationship) <strong>oneToMany</strong> (e.g. the father relationship) or <strong>manyToMany</strong> (e.g. the sibling relationship). Relations that are oneToOne or manyToMany can also be reciprocal (just define <span class="code">reciprocal = true</span> on the Relationship object in question), as indeed the marriage and sibling relationships would be.</p> 
+ <br>
+
+ <a name="making"></a>
+<h2>Making, Breaking and Testing Relations</h2> 
+ 
+<p>Relationships are normally manipulated through the <strong>relate()</strong>, <strong>related()</strong> and <strong>unrelate()</strong> functions. To set up a relationship between a and b you call the function <span class="code">relate(a <em>relation</em> b)</span>. To cancel the relation between a and b you call <span class="code">unrelate(a <em>relation</em> b)</span>. To test whether a and b are related you use <span class="code">related(a <em>relation</em> b)</span> and to get a list of items related to a via relation you use <span class="code">related(a <em>relation</em>)</span>. For example:</p> 
+
+ <p><div class="code"><pre>
+ relate(jack, loving, jill); <span class="comment">// makes Jack love Jill</span>
+ relate(jack, 'loves', jill); <span class="comment">// another way of doing the same thing.</span>
+ relate(jill, 'loved by', jim) <span class="comment">// makes Jill loved by Jim (another of making Jim love Jill)</span>
+ related(jack, loves', jim) <span class="comment">// tests whether Jack loves Jim; in this case the answer would be nil</span>
+ related(jill, 'loved by') <span class="comment">// returns a list of the people whom Jill is loved by; is this case [Jack, Jim]</span>
+ related(jack, 'loves') <span class="comment">//returns a list of the people Jack loves; in this case [Jill]</span>
+ related(jim, loving) <span class="comment">// returns a list of the people Jim loves; in this case [Jill]</span>
+ 
+ </pre></div>
+
+ <p>It will be observed that when you specify the relationship in the forward direction (x loves y) you can use either the Relation object name (e.g. <span class="code">loving</span>) or its name property (e.g. 'loves'), but when specifying it in reverse (x loved by y) you have to use the string defined on the <span class="code">reverseName</span> property.</p>
+
+ <p>Breaking relations can be done in much the same way using the <strong>unrelate()</strong> function. If Jim no longer loves Jill you just call <span class="code">unrelate(jim, 'loves', jill)</span>.</p>
+ 
+ <p>To break all relations someone has, you can call <span class="code">relate()</span> with nil as the third parameter; e.g.</p>
+ 
+  <p><div class="code"><pre>
+  relate(jim, 'loves', nil); <span class="comment">// now Jim loves no one.</span>
+  relate(jill, 'loved by', nil); <span class="comment">// now Jill isn't loved by anyone.</span>  
+  </pre></div>
+  
+ <p>If you have defined a relation as reciprocal (by setting its <span class="code">reciprocal</span> property to true), there's no need to define each related pair both ways round. For example if <span class="code">sibling</span> is a reciprocal relationship then you don't need to use both <span class="code">relate(jack sibling jill)</span> and <span class="code">relate(jill sibling jack)</span>, since the libary knows that the one implies the other. Likewise there's no need to define the <span class="code">reverseName</span> property for a reciprocal relationship, since <span class="code">related(jack sibling jill)</span> and <span class="code">related(jill sibling jack)</span> mean exactly the same thing. A reciprocal relationship is already its own reverse. </p>
+ <br>
+ 
+ <p>Finally the Relation method <b>listKeys()</b> lists all the key values in the Relation's key table, in other words all <i>a</i> values for which  this relationship has been defined (<i>a</i> related to <i>b</i>).</p>. 
+ 
+ <a name="derived"></a>
+ <h2>Derived Relations</h2>
+ <p>A good example of a many-to-many reciprocal relation might be a sibling relationship, which could be defined as:</p>
+ 
+  <p><div class="code"><pre>
+  sibling: Relation 'sibling of' @manyToMany +true;
+  
+  InitObject
+    execute()
+    {
+        relate(john, sibling, mary);
+        relate(john, sibling, luke);
+        relate(mary, sibling, luke);  
+    } 
+  </pre></div>
+ 
+<p>Here the + property at the end of template defines the <strong>reciprocal</strong> property, so we're saying that sibling is a reciprocal relationship. Because of this the Relation class knows that if John is the sibling of Mary, then Mary must be the sibling of John (so we don't need to define it both ways round). Also, there's no need to define the inverseName property on a reciprocal Relation, since the inverse of 'sibling of' is simply 'sibling of'. But suppose we were also to define a fatherOf relationship, and that James was the father of John, Mary and Luke. We'd then end up doing something like this:</p> 
+
+<p><div class="code"><pre>
+  sibling: Relation 'sibling of' @manyToMany +true;
+  fatherOf: Relation 'father of' 'child of' @oneToMany;
+  
+  InitObject
+    execute()
+    {        
+        relate(john, sibling, mary);
+        relate(john, sibling, luke);
+        relate(mary, sibling, luke);  
+        relate(james, fatherOf, mary);
+        relate(james, fatherOf, luke);
+        relate(james, fatherOf, john);
+    } 
+  </pre></div>
+
+<p>At this point there seems to be some redundancy, since if James is the father of Mary, Luke and John, then Mary, Luke and John must be siblings of one another, so it seems a bit of a chore to have to state this explicitly. The solution is to use a <strong>DerivedRelation</strong>, which is a special kind of Relation that instead of storing any data of its own, works out what is related to what according to the custom <strong>relatedTo()</strong> and <strong>inverselyRelatedTo()</strong> methods you define, both of which should return a list of objects to which their argument is related; for example:</p>
+
+ <p><div class="code"><pre>
+ sibling: DerivedRelation 'sibling of' @manyToMany +true
+   relatedTo(a) 
+   {
+        local parent = related(a, 'child of');
+        return parent.length &gt; 0 ? related(parent[1], fatherOf) - a : []; 
+   }
+
+   inverselyRelatedTo(a) 
+   {
+        return relatedTo(a);
+   }
+; 
+ </pre></div>
+  
+<p>Here, in the <span class="code">relatedTo(a)</span> method, we first find the father (or parent) of <span class="code">a</span> by using the inverse of the fatherOf relationship ('child of') to get the person of whom <em>a</em> is the child. We then return a list of the children of this parent, less <em>a</em>, since <em>a</em> is not his or her own sibling. The method thus returns a list of <em>a</em>'s siblings without the sibling Relation having to store any data of its own and without game code having to define explicitly who is the sibling of whom.</p> 
+
+<p>By default a DerivedRelation will complain if you try to use it to set a relation directly, e.g. <span class="code">(john, sibling, mary)</span>, since in general this may make no sense when the relationship in question depends on another one. In principle you could override the sibling's <strong>addRelation()</strong> method so that <span class="code">sibling.addRelation([a, b])</span> tried to give <em>a</em> and <span class="code">b</span> a common father, but in general this is probably not a good idea. What, if <em>a</em> and <em>b</em> start out with different fathers, for example? It would be an even worse idea to override a DeriveRelation's <span class="code">removeRelation()</span> method to allow the use of, say, <span class="code">unrelate(mary, sibling, john)</span>, since if two people have a common father, for example, what would it mean for them to cease to be siblings? Thus, once a DerivedRelation has been defined, you should stick to using it through the <span class="code">related()</span> function or the <span class="code">relationPath()</span> function discussed immediately below.</p> 
+
+<p>When setting up a DerivedRelation it can be useful to override its <b>listKeys()</b> method to return a list of all the values that might enter into the left-hand side of the relationship <i>a</i> related to <i>b</i>. At the very least this enables the RELATION <a href='#debugging'>debugging</a> command to list the current relationships our DerivedRelation creates. For example, in the case of the sibling relation defined above, this could be either every Actor in the game, or every Actor that has at least one sibling (perhaps the better option if this isn't going to change in the course of the game):</p>
+
+<p><div class="code"><pre>
+ sibling: DerivedRelation 'sibling of' @manyToMany +true
+   relatedTo(a) 
+   {
+        local parent = related(a, 'child of');
+        return parent.length &gt; 0 ? related(parent[1], fatherOf) - a : []; 
+   }
+
+   listKeys()
+   {
+       local vec = new Vector;
+	   
+	   <span class='comment'>/* Loop over every Actor in the game. */</span>
+	   for(local actor = firstObj(Actor); actor != nil; actor = nextObj(actor, Actor))
+	   {
+	       if(relatedTo(actor).length > 0 )
+		      vec.append(actor);
+	   }
+	   
+	   local lst = vec.toList();
+	   
+	   <span class='comment'>
+      /* 
+       *  We can do this if we know this is never going to change to avoid
+       *  having to build this list more than once. 
+       */</span>
+	   listKeys = lst;
+	   
+	   return lst;
+   }
+; 
+ </pre></div>
+
+<p>We also have a choice how we want to define the derived relation. We can either override the <b>relatedTo(a)</b> method (as above) to return a list of items related to <i>a</i> or override the <b>isRelated(a,b)</b> to return true or nil according to whether <i>a</i> and <i>b</i> are related through this relationship. We must do either one or the other, but we shouldn't have to do both. In the same way, unless our DerivedRelation is reciprocal we must also define either its <b>isInverselyRelated(a,b)</b> method or its <b>inverselyRelatedTo(a)</b> method.</p>
+
+<p>If we chose the second method, our definition of our sibling relation would become:</p>
+
+<p><div class="code"><pre>
+ sibling: DerivedRelation 'sibling of' @manyToMany +true
+   related(a,b) 
+   {
+        <span class='comment'>/* a and b are siblings if a is not b and a and b have the same father */</span>    
+        return a != b &amp;&amp; related(a, 'child of') == related(b, 'child of');
+        
+   }
+
+   listKeys()
+   {
+       local vec = new Vector;
+	   
+	   <span class='comment'>/* Loop over every Actor in the game. */</span>
+	   for(local actor = firstObj(Actor); actor != nil; actor = nextObj(actor, Actor))
+	   {
+           <span class='comment'>/* Calling relatedTo() here would create an infinite loop. */	</span>   
+	       if(related(actor, 'child of').length &gt; 0)
+		      vec.append(actor);
+	   }
+	   
+	   local lst = vec.toList();
+	   
+	   <span class='comment'>
+      /* 
+       *  We can do this if we know this is never going to change to avoid
+       *  having to build this list more than once. 
+       */</span>
+	   listKeys = lst;
+	   
+	   return lst;
+   }
+; 
+ </pre></div>
+
+<p>Note that the default <span class='code'>relatedTo()</span> on DerivedRelation calls <span class='code'>listKeys()</span> to help build its list, so if we haven't overridden <span class='code'>relatedTo()</span> to our own version of this method not referencing <span class='code'>listKeys()</span> we must avoid calling <span class='code'>relatedTo()</span> from <span class='code'>listKeys()</span>, otherwise our code will end up in a vicious circle causing our game to hang. Here we instead restrict our list of Actors to those whose fathers have been defined.</p>
+
+<p>Finally, although here our example of a DerivedRelation has made use of other Relations, we're not restricted to this; we can define a DerivedRelation using whatever data structure(s) we find useful.</p>
+
+
+<br>
+<a name="pathfinding"></a>
+<h2>Relation Pathfinding</h2>
+<p>Relation pathfinding allows us to find the shortest path from <em>a</em> to <em>b</em> via any given relation (assuming that any such path exists). In general, the function <strong>relationPath(a, rel, b)</strong> returns a list giving the shortest path from <em>a</em> to <em>b</em> via <em>rel</em> (if there is one) or <span class="code">nil</span> if no such path exists. For example, suppose that in addition to defining James as the father of John, we defined Andrew as the father of James, and John as the father of Mark. Then <span class="code">relationPath(andrew, fatherOf, mark)</span> would return the list <span class="code">[andrew, james, john, mark]</span>, while <span class="code">relationPath(mark, 'child of', andrew)</span> would return the list <span class="code">[mark, john, james, andrew]</span>. On the other hand <span class="code">relationPath(mary, fatherOf, mark)</span> would return <span class="code">nil</span>, since there's no path from Mary to Mark through the fatherOf relation.</p>
+
+<p>A potentially more interesting variant of this allows you to pass a list of relations as the second parameter. The function will then try to find a path from <em>a</em> to <span class="code">b</span> via any of the relations listed, and if it finds a path it then returns a list of two-element lists showing the steps it took to get from <em>a</em> to <em>b</em>. For example, if we also made Simon the father of Aaron, then <span class="code">relationPath(mark, [fatherOf, sibling, 'childOf'], aaron)</span> would return the list <span class="code">[[nil, mark], ['child of', john], ['child of', james], ['sibling of', simon], ['father of', aaron]]</span>, which means that Mark is the child of John who is the child of James who is the sibling of Simon who is the father of Aaron. By such means you could in principle trace the shortest relationship path through a family tree of any complexity, or of any other relationship network you wished to devise.</p>
+
+<br>
+<h2>A Note on Syntax</h2>
+<p>The Relations extension makes use of a number of functions of the form <span class="code">relxxx(a, rel, b)</span> or <span class="code">relxxx(a, b)</span> since in the main this seems the most intuitive way of setting up, describing and testing relations, rather than through method calls on the underlying objects. In some cases, though, you may find it more convenient to use other forms of syntax.</p> 
+ 
+<p>In particular, if a game starts out with a number of items or people already related via a relation, you may find it more convenient to define these starting relations on the <strong>relTab</strong> property of the relevant Relation object rather than running code to call a whole lot of <span class="code">relate()</span> functions. For this you purpose you would probably use the shortcut syntax for setting up the initial values of a LookupTable (which is what the relTab property should contain) like this:</p> 
+ 
+ <p><div class="code"><pre>
+ someRelation: Relation
+   relTab = [
+       obj1 -&gt; [a, b]
+       obj2 -&gt; [c]
+   ]
+ ;  
+ </pre></div> 
+
+<p>So, for example, instead of initializing the values of the fatherOf relation like so:</p>
+ 
+  <p><div class="code"><pre>
+ InitObject
+    execute()
+    {
+        relate(james, fatherOf, mary);
+        relate(james, fatherOf, luke);
+        relate(james, fatherOf, john);
+        relate(andrew, fatherOf, james);        
+        relate(andrew, fatherOf, simon);
+        relate(john, fatherOf, mark);
+    }
+; 
+  </pre></div>
+ 
+ <p>You could just do this:</p>
+ 
+ <p><div class="code"><pre>
+ fatherOf: Relation 'father of' 'child of' @oneToMany
+    relTab = [
+        james -&gt; [mary, luke, john],
+        andrew -&gt; [james, simon],
+        john -&gt; [mark]    
+    ]
+;
+ </pre></div> 
+ 
+ <p>There are two other abbreviated forms of syntax you can use if you really want to (although they're probably less clear than their slightly more verbose equivalents, and the way they read is potentially a little counter-intuitive):</p>
+ 
+ <ul>
+ <li><strong>relation[a] = b</strong> is equivalent to <span class="code">relate(a, relation, b)</span>; e.g. <span class="code">fatherOf[john] = luke</span> does the same as <span class="code">relate(john, fatherOf, luke)</span></li>
+ <li><strong>relation[obj]</strong> is equivalent to <span class="code">related(obj, relation)</span>; e.g. <span class="code">fatherOf[john]</span> does the same as <span class="code">related(john, fatherOf)</span>.</li>
+ </ul>
+ 
+ <br>
+<a name="debugging"></a> 
+<h2>Debugging Commands</h2>
+<p>When a game is compiled for debugging, the following commands are available to query and test relations:</p> 
+ 
+<p>The <strong>relations</strong> command lists all the relations defined in the game, with information about their type, e.g.:</p> 
+
+<p><div class="cmdline"><pre>
+<strong>&gt;relations</strong>
+<strong>fatherOf</strong> oneToMany: <em>name</em> = 'father of' <em>reverseName</em> = 'child of'
+<strong>knows</strong> oneToOne: <em>name</em> = 'knows' <em>reverseName</em> = 'known by'
+<strong>loving</strong> manyToOne: <em>name</em> = 'loves' <em>reverseName</em> = 'loved by'
+<strong>overlooking</strong> manyToMany: <em>name</em> = 'overlooks' <em>reverseName</em> = 'overlooked by'
+<strong>sibling</strong> (DerivedRelation) manyToMany: (reciprocal): <em>name</em> = 'sibling of'
+</pre></div> 
+<p>REL, RELATION or RELATIONS followed by the name of a relation lists the items related via that relation, e.g.:</p> 
+ 
+<p><div class="cmdline"><pre>
+<strong>&gt;rel father of</strong>
+<strong>fatherOf</strong> oneToMany: <em>name</em> = 'father of' <em>reverseName</em> = 'child of'
+andrew -&gt; [james, simon]
+james -&gt; [mary, luke, john]
+john -&gt; [mark]
+simon -&gt; [aaron]
+</pre></div> 
+ 
+<p>The EVAL command (which can be used with any valid expression) can also be used to set and test relations, e.g.:</p> 
+
+<p><div class="cmdline"><pre>
+<strong>&gt;eval related(mark, loving)</strong>
+
+<strong>&gt;eval relate(mark, loving, jill)</strong>
+nil
+
+<strong>&gt;eval relate(jack, loving, jill)</strong>
+nil
+
+<strong>&gt;eval related(mark, loving)</strong>
+Jill (Actor)
+
+<strong>&gt;eval related(jill, 'loved by')</strong>
+Mark (Actor),Jack (Actor)
+
+<strong>&gt;rel loving</strong>
+<strong>loving</strong> manyToOne: <em>name</em> = 'loves' <em>reverseName</em> = 'loved by'
+jack -&gt; [jill]
+mark -&gt; [jill]
+</pre></div> 
+
+<br> 
+<p>This covers most of what you need to know to use this extension. For additional information see the source code and comments in the <a href="../relations.t">relations.t</a> file.</p>
+
+</div>
+<hr class="navb"><div class="navb">
+<i>Adv3Lite Manual</i><br>
+<a class="nav" href="../../docs/manual/toc.htm">Table of Contents</a> | 
+<a class="nav" href="../../docs/manual/extensions.htm">Extensions</a> &gt; 
+Postures
+<br><span class="navnp"><a class="nav" href="postures.htm"><i>Prev:</i> Postures</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="roomparts.htm"><i>Next:</i> Room Parts</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>

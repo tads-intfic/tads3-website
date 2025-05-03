@@ -1,0 +1,393 @@
+<html><head><title>Task Topical Guide</title>
+<link rel="stylesheet" href="sysman.css" type="text/css"></head>
+<body><div class="topbar"><img src="topbar.jpg" border=0>
+</div>
+<div class="nav"><a class="nav" href="toc.htm">Table of Contents</a> | <a class="nav" href="final.htm">Final Moves</a> &gt; Task Topical Guide<br><span class="navnp"><a class="nav" href="manual_idx.html"><i>Prev:</i> Alphabetical Index</a></span></div>
+<div class="main"><h1>Adv3Lite Task Topical Guide</h1>
+<a name='top'></a>
+<h2>Introduction</h2>
+<p>This Topical Guide is provided as a kind of annotated topic index to the Library Manual. Its aim is to help guide you to the relevant section of the Library Manual for the task you're trying to perform (or the feature you're interested in), especially when neither this manual's Table of Contents nor its Alphabetical Index seems able to do the job. To use this Topical Guide, first look down its table of contents immediately below to find the link to the appropriate topic; this will either take you to a brief discussion pointing you to the relevant part of this manual, or (where more appropriate) directly to the relevant manual chapter. If that fails to help you locate what you're looking for, you could try using your brower's search function (quite likely triggered by CTRL-F) to search on a term you hope will take you to the topic you want.</p>
+
+<h2>Contents</h2>
+<ol>
+<li><a href='#creating'>Creating a New Game</a></li>
+<li><a href='#map'>Laying out the Map</a>
+<ul>
+<li><a href='#rooms'>Rooms and Regions</a></li>
+<li><a href='#directions'>Directions</a></li>
+<li><a href='#connectors'>Connectors and Barriers</a></li>
+<li><a href='#doors'>Doors, Passages and Stairs</a></li>
+<li><a href='#pathfind'>Pathfinding</a></li>
+<li><a href='#roomdesc'>Room Descriptions</a></li>
+
+</ul>
+<li><a href='#populating'>Populating the Map</a></li>
+<ul>
+<li><a href='#thing'> Basic Portable Objects - Things</a></li>
+<li><a href='thing.htm#vocab'> Vocab (how to use the vocab property on Things)</a></li>
+<li><a href='#containment'>Containment and Containers</a></li>
+<li><a href='#fixtures'>Fixtures, Fittings and Furniture</a></li>
+<li><a href='#locks'>Locks and Keys</a></li>
+<li><a href='#gadgets'>Gadgets, Controls and Devices</a>
+<li><a href='#vehicle'>Vehicles and PushTravelers</a></li>
+<li><a href='#attach'>Attachables and Attachments</a></li>
+<li><a href='#unthing'>Unthings and MinorItems</a></li>
+<li><a href='#collective'>CollectiveGroups and Collectives</a></li>
+</ul>
+<li><a href='#sense'>Senses, Sensing and Sensory Connections</a></li>
+<ul>
+<li><a href='#senses'>Senses in Adv3Lite</a></li>
+<li><a href='#senseconn'>Sensory Scope and Sensory Connections</a></li>
+<li><a href='#reach'>Reachability</a></li>
+<li><a href='#light'>Light and Darkness</a></li>
+</ul>
+<li><a href='#time'>Time</a></li>
+<ul>
+<li><a href='#passageoftime'>The Passage of Time</a>
+<li><a href='#scenes'>Scenes</a></li>
+<li><a href='#events'>Events &mdash; Fuses, Daemons etc.</a></li>
+</ul>
+<li><a href='#abstract'>Other Abstract Entities</a></li>
+<ul>
+<li><a href='#topics'>Topics</a></li>
+<li><a href='#topicentry'>TopicEntries</a></li>
+<li><a href='#thoughts'>Thoughts</a></li>
+<li><a href='#knowledge'>Knowledge</a></li>
+<li><a href='fact.htm'>Facts</a></li>
+</ul>
+<li><a href='#actions'>Commands and Actions</a></li>
+<ul>
+<li><a href='#actoverview'>Overview</a></li>
+<li><a href='#preparser'>Tweaking the Player's Input &mdash; Preparsing and SpecialVerbs</a></li>
+<li><a href='#influencing'>Influencing the Parser's Choice of Objects</a></li>
+<li><a href='doer.htm'>Doers</a></li>
+<li><a href='#messages'>Customizing Action Messages (i.e. Textual Responses)</a></li>
+<li><a href='#actres'>Customising the Results of Actions</a></li>
+<li><a href='#synth'>Synthesizing or Redirecting Actions</a></li>
+<li><a href='#vague'>Dealing with Vague or Incomplete Commands</a></li>
+<li><a href='define.htm'>Defining New Actions</a></li>
+<li><a href='literalact.htm'>Literal and Numeric Actions</a></li>
+<li><a href='topicact.htm'>Topic Actions</a></li>
+<li><a href='react.htm'>Reacting to Actions</a></li>
+<li><a href='implicit.htm'>Implicit Actions</a></li>
+<li><a href='debug.htm'>Debugging Commands</a></li>
+<li><a href='actionref.htm'>List of Commands, Actions and Related Thing Properties</a></li>
+</ul>
+<li><a href='#npcs'>Non-Player Characters (NPCs)</a></li>
+<ul>
+<li><a href='#npcoverview'>Overview</a></li>
+<li><a href='#actors'>Actors and Actor States</a></li>
+<li><a href='agenda.htm'>Actor Agendas</a></li>
+<li><a href='#conversation'>Conversation</a></li>
+<li><a href='orders.htm'>Giving Orders to NPCs</a></li>
+<li><a href='#following'>Following NPCs</a></li>
+<li><a href='mood.htm'>Moods and Stances</a></li>
+<li><a href='tags.htm'>String Tags and Object Tags</a></li>
+</ul>
+<li><a href='#startend'>Beginnings and Endings</a></li>
+<ul>
+<li><a href='#startofplay'>Start of Play</a></li>
+<li><a href='ending.htm'>Ending the Game</a></li>
+</ul>
+<li>Helping the Player</li>
+<ul>
+<li><a href='hint.htm'>Hints (requested by the player)</a></li>
+<li><a href='hint.htm#extra'>Extra Hints (offered by the game)</a></li>
+<li><a href='instruct.htm'>Instructions on Playing Interactive Fiction</a></li>
+<li><a href='newbie.htm'>Help for New Players</a></li>
+<li><a href='../../extensions/docs/cmdhelp.htm'>Additional Hand-holding for New Players (The Command Help Extension)</a></li>
+<li><a href='pathfind.htm'>Pathfinding</a></li>
+</ul>
+<li>Miscellany</li>
+<ul>
+<li><a href='../../extensions/docs/custombanner.htm'>Banner Windows</a></li>
+<li><a href='changepc.htm'>Changing the Player Character to another Actor</a></li>
+<li><a href='eventList.htm'>EventLists</a></li>
+<li><a href='../learning/exercises.htm'>Examples and Exercises</a></li>
+<li><a href='extensions.htm'>Extensions</a></li>
+<li><a href='lister.htm'>Lists and Listers</a></li>
+<li><a href='macros.htm'>Macros</a></li>
+<li><a href='menu.htm'>Menus</a></li>
+<li><a href='output.htm'>Output and Input Issues</a></li>
+<li><a href='score.htm'>Scoring</a></li>
+<li><a href='output.htm#typoquotes'>Typographical Quotation Marks</a></li>
+<li><a href='utility.htm'>Utility Functions</a></li>
+<li><a href='webui.htm'>Web User Interface</a></li>
+</ul>
+<li>The TADS3 Language</li>
+<ul>
+<li><a href='../sysman/toc.htm'>System Manual</a></li>
+<li><a href='../sysman/objdef.htm'>Object Definitions</a></li>
+<li><a href="../sysman/expr.htm">Expressions and Operators</a></li>
+<li><a href="../sysman/proccode.htm">Procedural Code</a></li>
+<li><a href="../sysman/list.htm">List</a></li>
+<li><a href="../sysman/string.htm">String</a></li>
+</ul>
+
+
+
+
+
+</ol>
+<a name='creating'>
+<h2>Creating a new Game</h2>
+<p>To start a new game you need to create a new source file, that defines a gameMain object, a versionInfo object, a starting location, and the player character. You also need to ensure you include the adv3Lite library and the appropriate header files. This is all explained in the section on <a href="mingame.htm">Starting Out</a>. You may wish to pay particular attention to some further considerations on defining the <a href='actoroverview.htm#pc'>Player Character</a>.<br><br>
+<a href='#top'>Back to top</a>
+
+<a name='map'></a>
+<h2>Laying out the Map</h2>
+<p>For an example of defining a map, see the sample game <a href='../learning/Exercise 11.t'>Exercise 11</a>.
+<a name='rooms'><h3>Rooms and Regions</h3></a>
+<p>At a minimum, laying out the map involves the creation of one or more <a href='room.htm'>Rooms</a>. Rooms can be grouped in <a href='room.htm#regions'>Regions</a>, which are allowed to overlap. Normally, once defined in your game, the list of rooms making up a region cannot be changed during the course of play. If you need regions that can change, you can use the <a href='../../extensions/docs/dynregion.htm'>Dynamic Region</a> extension. A Room is normally a discrete unit of space, isolated from other rooms (apart from the possibility of travelling to them). To establish sensory connections (sight, sound and smell) between rooms you can use a <a href='senseregion.htm'>SenseRegion</p></a>
+
+<p>Rooms come with a <a href='room.htm#roomfloor'>floor object</a> provided by default. If you want your rooms also to have a ceiling and walls you can use the <a href='../../extensions/docs/roomparts.htm'>Room Parts</a> extension.</p>
+
+<a name='directions'><h3>Directions</h3></a>
+<p>If your game contains more than one room, you will need to define connections between the different rooms to allow travel between them. The simplest method is to connect rooms direcly to each other according to their <a href='room.htm#directionprops'>direction</a> from each other.
+ The directions defined by the library are the eight compass directions (north, northeast, eaat, etc.), the four shipboard directions (port, starboard, fore and aft), and the special directions in, out, up, down. In any room you can specify whether compass directions or shipboard directions are allowed<a href='room.htm#allowedDirections'></a>. You can also <a href='room.htm#directions'>define additional directions</a> (e.g., northnortheast, or left and right) if you need them in your game.</p>
+
+<a name='connectors'><h3>Connectors and Barriers</h3></a>
+<p>While travel connections can be made directly between rooms, they can also be made via various kinds of <a href='travel.htm'>TravelConnector</a>. In addition to providing travel connections between locations, TravelConnectors can carry out the side-effects of travel, such as displaying a message describing it, or impose conditional <a href='travel.htm#travelbarrier'>barriers </a>
+to travel. The base TravelConnector is one way (RoomA to RoomB but not back) but there is also a two-way <a href='extra.htm#dstravelcon'>DSTravelConnector</a>. Various types of physical travel connector are described immediately below.</p>
+
+<a name='doors'><h3>Doors, Passages and Stairs</h3></a>
+<p>Doors, passages and stairs are types of TravelConnector that have physical presence in the game world.</p>
+<p>A <a href='door.htm'>Door</a> can be open and closed, and optionally <a href='thing.htm#lockability'>lockable</a>, with or without a matching <a href='key.htm'>Key</a>. If the two sides of a door are substantially different you can define the two sides of the door using a linked pair of Door objects. If they are reasonably similar you can define the door as a single <a href='door.htm#dsdoor'>DSDoor</a> object. A <a href='extra.htm#secretdoor'>SecretDoor</a> is a Door that only acts like a Door when it's open. When it's closed it's either totally invisible, or it appears to be something else, such as a bookcase or a panel.</p>
+
+<p><A <a href='extra.htm#travelconn'>Passage</a> represents a physical object (such as a passage, corridor or archway) through which an actor must pass to get from one location to another. A <a href='extra.htm#travelconn'>PathPassage</a> is a special kind of Passage that can be used to implement something like a path, track or road that a playey might try to FOLLOW, or GO DOWN or TAKE as synonyms for going through. A <a href='extra.htm#travelconn'>stairway</a> is something the player character can go up (StairwayUp) or down (StairwayDown), typically a flight of stairs but also any other climbable object such as a mast, tree or hillside. </p>
+<p>Like doors, the Passage, PathPassage and StairwayUp/Stairway down classes define only one side of the travel connection. For their two-way equivalents use the <a href='extra.htm#ds'>DSPassage</a>, DSPathPassage and DSStairway classess. While all these classes implement two-way connections, they don't automate the connection back (for example, if you define the east property of the hall as pointing to a DSDoor that leads to the study, you still have to define the west property of the study as pointing to the same DSDoor. If you want two-way connectors that automate the setting up of reverse connections, you can use the <a href='../../extensions/docs/symconn.htm'>SymConnector</a> extension.</p>
+
+<p>An <a href='extra.htm#enterable'>Enterable</a> is a fixture representing an object that can be entered, such as a house, hut or forest. The library mostly takes care of any <a href='pathfind.htm#proxy'>pathfinding issues</a> (the use of the GO TO command to navigate round the map) issues that might otherwise arise with Enterables that share a name with the location to which they lead.</p>
+
+<a name='pathfind'><h3>Pathfinding</h3></a>
+<p>Adv3Lite provides <a href='pathfind.htm'>pathfinding</a> as standard in the main library. This enables the player/player character to travel round the map using the GO TO command (provided the player character has already traversed the route). Pathfinding can also be used to control the movement of NPCs (non-player characters).</p>
+
+<a name='roomdesc'><h3>Room Descriptions</h3></a>
+<p>The basic description of a Room is defined on its desc property. The <a href = "room.htm#otherroomprops">roomFirstDesc</a>  property can be used to describe a room for the first time, and darkDesc to describe it in the absence of <a href='#light'>light</a>.  Although not strictly part of the business of laying out the map, now might be a convenient point to mention that several ways exist to customize how the contents of rooms are <a href='roomdesc.htm'>described</a>. If two or more rooms are in the same SenseRegion you can also customize how item are listed and described <a href='senseregion.htm#descriptions'>remotely</a>.
+
+<br><br><a href='#top'>Back to top</a>.
+<a name='populating'><h2>Populating the Map</h2></a>
+<a name='thing'><h3>Portable Objects - Things</h3></a>
+<p>All physical objects (including rooms) defined in an Adv3Lite game are either a <a href='thing.htm'>Thing</a> or of class that descends from Thing.</p>
+<p>The <a href='thing.htm#basicprops'>basic properties</a> you need to define for a Thing in adv3Lite are its name, the vocabulary used to describe it, and its description. You may also need to attend to some of the broadly <a href='thing.htm#thingprops'>name-related properties</a> that can affect how a Thing is referred to or how it's selected by the parser (although the most commonly used of these can be defined through the vocab property).</p>
+</p>
+<p>The vocabulary (which defines how the player can refer to the object) is defined on the <a href='thing.htm#vocab'>vocab</a> property. Although this normally remains fixed during the course of play, there are ways of <a href='thing.htm#manipulatevocab'>changing</a>
+it during a game. More control over what is matched by a Thing's vocab (e.g. to distinguish the green bottle from the dark green bottle, or the broad green bean from the green broad bean, when one set of words is a subset of the other or the same words are used but in a different order), you can use <a href='thing.htm#phrase'>Phrase Matching</a>.</p>
+
+<p>By default all objects defined with the base Thing class are portable (that is, they can be picked up and carried around by the player character and other actors in the game). This can be changed by overriding isFixed to true on the Thing in question but is more usual to use one of the Fixture classes discussed <a href='#fixtures'>below</a>.
+
+<a name='containment'><h3>Containment and Containers</h3></a>
+<p>The  <a href='thing.htm#containment'>containment</a>  model allows things to be put in, on, under, or behind under things. This can be defined using various containment properties on Thing. The type of containment can be defined using the <a href='thing.htm#defining_containment'>contType</a> property, but is more usually dealt with by using one of the <a href='extra.htm#shallow'>Container</a> sublasses of Thing.</p>
+<p>How much can be put in, on, under, or behind something is usually controlled by the <a href='thing.htm#bulk'>bulk and bulkCapacity</a> properties of the objects concerned. If you also want to model weight and weight capacity, this can be done using the <a href="..\..\extensions\docs\weight.htm">weight</a> extension.</p>
+<p>If you want your container to have door (a cupboard door or safe door, for example), you can use the <a href='extra.htm#containerdoor'>ContainerDoor</a> class to implement it.</p>
+<p>If you simply want to hide things in, under, and behind other things that wouldn't normally contain them, you can do so using the properties <a href='thing.htm#hidden'>hiddenIn</a>, hiddenUnder and hiddenBehind.</p>
+<p>With that exception, each Thing can normally only implement one kind of containment (in or on or under or behind); you can, however, model multiple types of containing on the same object by using the <a href='thing.htm#remapxxx'>remapXXX</a> properties.</p>
+<p>You can test for containment (what's in what and what contains what) using the relevant <a href='thing.htm#containmentprops'>properties</a> of Thing.<p>
+<p>Usually (as you might expect), objects can only be in one place at a time &mdash; only one object can contain them at a time. You can however use the <a href='multiloc.htm'>MultiLoc</a> class to create objects that are in several places (usually rooms) at once. This can be useful for objects on the border of two different rooms, or for distant objects like the sun that are visible from multiple locations, or effectively identical decorations that occur across several rooms, such as trees in a forest.</p>
+<p>For a short sample game illustrating various types of container see the <a href='../learning/exercise 13.t'>Kitchen</a>  sample game.
+
+<br><br><a href='#top'>Back to top</a>
+
+<a name='fixtures'><h3>Fixtures, Fittings, and Furniture</h3></a>
+<p>Non-portable items are usually defined using the <a href='extra.htm#shallow'>Fixture</a> class, or its close relative, the Heavy class, the former being used for items that are fixed in place and the latter for those that are too heavy to lift.</p>
+<p>Your game may contain a number of objects referred to in room descriptions, or in descrptions of other objects, or simply likely to be present (the sky in an outdoor location or trees in a forest) which the player may try to refer to but doesn't in fact need to interact with. These can be implemented using the <strong>Decoration</strong> class or its subclass <strong>Distant</strong> (used to model objects that are too far away for the player character to do anything but look at. These are normally very simple objects but you may occasionally want to apply some <a href='thing.htm#decoration'>customization</a>. By default the only commands Decoration objects respond to beyond saying "The whatever is not important" are EXAMINE and GOTO, but you can vary this in their <a href='thing.htm#decoration'>decorationActions</a> property. You may also want to tweak whether or not Decorations (or indeed other objects) are included in the list of objects acted on when the player types a command acting on ALL (e.g., EXAMINE ALL or TAKE ALL). This can be done with <a href='extra.htm#hidefromall'>the hideFromAll()</a> method. 
+<p>If your game contains a lot of decorations, you can create set of decoration objects more succinctly using the <a href='scenery.htm'>Scenery</a> class.
+
+<p>An <a href='extra.htm#enterable'>Enterable</a> is a fixture representing an object that can be entered, such as a house, hut or forest. The library mostly takes care of any <a href='pathfind.htm#proxy'>pathfinding issues</a> (the use of the GO TO command to navigate round the map) issues that might otherwise arise with Enterables that share a name with the location to which they lead.</p>
+
+
+<p>Furniture (not least in the sense of things that the player character can get in or on) may or may not be fixed-in-place or too heavy to lift (it may often be, but some chairs could be readily portable, for instance). If the player is meant to be able to get in or on a piece of furniture it will need to be defined as a Booth or a Platform. You may then wish to define the <a href='thing.htm#reaching'>reachability</a> behaviour of such objects (controlling whether an actor located in a Booth or Platform can reach an object located outside it and whether and under what conditions one can reach an object or its contents). Adv3Lite does not keep track of actors' postures (standing, sitting, or lying), unless you include the <a href='../../extensions/docs/postures.htm'>postures</a> extension, but does provide <a href='thing.htm#posture'>pseudo-postural</a> properties that let you define which objects can be sat on, stood on, or laid on.</p>
+<p>For an example of a sample game demonstrating various types of furniture and reachability, see the <a href='../learning/exercise 18.t'>Bedsitterland</a> sample game.</p>
+<br><br><a href='#top'>Back to top</a>.
+<a name='locks'><h3>Locks and Keys</h3></a>
+<p><a href='door.htm'>Doors</a> and Containers may be made lockable by defining their <a href='thing.htm#lockability'>lockability</a> property. If a door or container is defined to be lockableWithKey, it is likely to require one or more matching <a href='key.htm'>keys</a>. You can use the <a href='extra.htm#shallow'>KeyedContainer</a> class to define an OpenableContainer that can be locked or unlocked with a key. See <a href='../learning/exercise 19.t'>Exercise 19</a> for a brief example game implementing various kinds of lock.</p>
+
+<a name='gadgets'><h3>Gadgets, Controls and Devices</h3></a>
+<p>The adv3Lite library defines a number of <a href='gadget.htm'>controls and gadgets</a> that can be used for a variety of purposes, including <a href='gadget.htm#button-iddx'>Button</a>, <a href='gadget.htm#lever-idx'>Lever</a>, <a href='gadget.htm#settables'>Settables and Dials</a>, <a href='extra.htm#shallow'>Switch</a> and <a href='extra.htm#misc'>Flashlight</a>, the last of which being any kind of light source that can be turned on and off, but never runs out of fuel or battery power. To implement a Flashlight or other device that can run out of power you can use the FueledLightSource mix-in class from the <a href='../../extensions/docs/fueled.htm'>Fueled Light Source</a> extension. <a href='../learning/exercise 19.t'>Exercise 19</a> also contains examples of many of these classes in the context of a small sample game.</p>
+<p>For a computer the player character can look things up on (or book to look things up in) you can use the <a href='topicentry.htm'>Consultable</a> class (together with associated TopicEntries). For a mobile phone or computer with video chat software that can be used for the player character to talk to actors in remote locations, you can use <a href='query.htm#commlink'>commLink</a>. For a CCTV or window overlooking a remote location, you can use the <a href='../../extensions/docs/viewport.htm'>Viewport</a> extension.</p>
+
+<a name='vehicle'><h3>Vehicles and PushTravelers</h3></a>
+<p>A <b>Vehicle</b> is an object that an actor get in or on and which then moves around carrying the actor in response to movement commands (such as GO NORTH). To create a vehicle, first define an object of the <a href='extra.htm#shallow'>Booth or Platform</a> class and the set its <a href='thing.htm#vehicle'>isVehicle</a> property to true.</p>
+
+<p>A <a href='thing.htm#pushing'>PushTraveler</a> is an object that can be pushed or pulled from place to place. To create a PushTraveler create an object of the appropiate class, such as <a href='extra.htm#shallow'>Heavy</a>, and set its <a href='thing.htm#pushing'>canPushTravel</a> to true.</p>
+
+<p>The sample game <a href='../learning/Exercise 11.t'>Exercise 11</a> contains examples of both a vehicle (a bike) and a PushTraveler (a trolley).</p>
+
+<a name='attach'><h3>Attachables and Attachments</h3></a>
+<p>An <a href='attachable.htm'>Attachable</a> is something that can be attached to something else or have other things attached to it, in either case with the possibility that the objects might become detached again at some point. For something that's permamently attached to its parent object, it's usually better to use the <a href='extra.htm#shallow'>Component</a> class. For examples of Attachables see the <a href='../learning/Exercise 22.t'>Attachment</a> sample game.</p>
+
+<a name='unthing'><h3>Unthings and MinorItems</h3></a>
+<p>An <a href='extra.htm#unthing'>Unthing</a> can be used to report the <i>absence</i> of something, either something that's just been reported as leaving the area or going missing (like a key dropped down the drain or a ship that's just sailed out of sight), or possibly something that the player might expect to be there but it isn't (the moon when it's new on a cloudy night, for instance).</p>
+
+<p>A <a href='extra.htm#minoritem'>MinorItem</a> is an unobtrusive and possibly unimportant portable object (minor item) that's worth implementing in the game but sufficiently minor as to be not worth mentioning in response to X or FOO ALL unless it's either directly held by the player character or directly in the enclosing room or directly in the actor's location. Note that this is different from a <a href='extra.htm#shallow'>Decoration</a>, which is normally fixed in place and can only be examined.</p>
+
+<a name='collective'><h3>CollectiveGroups and Collectives</h3></a>
+<p>A <a href='extra.htm#collective'>CollectiveGroup</a> can be used to represent a collection of objects for certain actions (usually just examined), such as a row of buttons or bank of switches, each of which is implemented separately, but which you'd like to summarize into a single description in response to X BUTTONS or X SWITCHES. The CollectiveGroup class should only be used for things that are fixed in place. For a portable collective group use the <a href='../../extensions/docs/mobilecollectivegroup.htm'>MobileCollectiveGroup</a> extension.</p>
+
+<p>A Collective, on the other hand, means one object (such as a bunch of grapes) from which you might take one or more individual objects (in this case, grapes), which could lead to all sorts of disambiguation issues. For this situation you can use the Collective and or DispensingCollective class implemented in the <a href='../../extensions/docs/collective.htm'>Collective</a> extension.
+</p>
+
+<br><br><a href='#top'>Back to top</a>
+
+<a name='sense'><h2>Senses, Sensing, and Sensory Connections</h2></a>
+<a name='senses'><h3>Senses in Adv3Lite</h3></a>
+<p>AdvLite makes provision for five senses: sight, sound, smell, taste and touch, with by far the bulk of the attention given to the first of these. At the most basic, the other four are catered for through the <a href='thing.htm#sensory'>Sensory Properties</a> of the Thing class (and hence all its descendent classes), which provide simple responses to LISTEN TO, SMELL, TASTE or TOUCH whatever.</p>
+<p>The standard library also provides basic <a href='extra.htm#emanation'>Sensory Emanation Classes</a> called <b>Noise</b> and <b>Odor</b> to represented sounds and smells. If your game needs a more sophisticated handling of sounds and smells than these classes offer, you may want to consider including the <a href="../../extensions/docs/sensory.htm">Sensory</a> extension.</p>
+
+<a name='senseconn'><h3>Sensory Scope and Sensory Connections</h3></a>
+<p>By default, the player character can only sense what is in the same room in which he/she/it is currently located. In addition, the player character cannot see through a closed container, unless it has been declared to be <a href='thing.htm#sensory'>transparent</a>  (by defining isTransparent=true on the container).</p>
+
+<p>To determine what objects can be sensed (seen, heard, smelt, or touched) by another you can use the relevant <a href='query.htm#thingmeths'>sensory methods</a> on Thing (canSee(obj), canHear(obj), canSmell(obj), canTouch(obj)), or, of course, on any subclass of Thing, such as an actor or the player character. This should suffice for most purposes, but if you need to customise the behaviour of these methods, you need to know that they work by calling the corresponding methods of the <a href='query.htm'>Q object </a> (so called because it's used to answer question about the game state), which in turn farms them out to the relevant <a href='query.htm#special'>Special</a>. You can need to define your own Special to adjust the library's normal behaviour, perhaps under special conditions.</p>
+
+<p>For adjusting definitions and behaviour of reachability/touchability (what the player character or another actor can touch), including customizing the failure message shown when touch is ruled out, you may need to pay attention to issues concerning the <a href='query.htm#touchObj'>interaction of Specials and the touchObj precondition </a>
+
+<p>The <a href='query.htm'>Q object</a> (and hence the currently active Special) also defines what is currently in <a href='scope.htm'>Scope</a>. There are various ways of <a href='scope.htm#changing'>changing what's in scope</a>.
+
+<p>To allow the player character (and other actors) to see, hear and smell objects in neighbouring location, the rooms need to be grouped together in a <a href='senseregion.htm'>SenseRegion</a>. This class also lets you control what can be perceived through which sense and how it is to be <a href='senseregion.htm#descriptions'>described from a remote point of view</a>.</p>
+
+<p>For a mobile phone or computer that can be used for the player character to talk to (or videoconference with) actors in remote locations, you can use <a href='query.htm#commlink'>commLink</a>. For a CCTV or window overlooking a remote location, you can use the <a href='../../extensions/docs/viewport.htm'>Viewport</a> extension.</p>
+
+<p>The sample game <a href='../learning/Exercise 21.t'>Sense and Sensibility</a> contains a number of examples of senses, sensing and sense regions.</p>
+
+<a name='reach'><h3>Reachability</h3></a>
+<p>Reachability concerns which objects an actor can reach (to touch or otherwise physically handle). By default all objects in the actor's current room are reachable unless they are in a closed container. Reachability is only enforced for actions that require the <a href='actres.htm#precond'>touchObj</a> precondition.</p>
+
+<p> Reachability can be controlled in a number of ways. For most cases you would use one or more of the <a href='thing.htm#reaching'>reachability methods</a>: <strong>checkReach(actor)</strong>, <strong>checkReachIn(actor, target?)</strong>, <strong>allowReachOut(obj)</strong> and <strong>autoGetOutToReach</strong>.</p>
+<p>To determine what objects can be reached/touched by another you can use the relevant <a href='query.htm#thingmeths'>canTouch(obj)</a> method on Thing or any of its subclasses. This method calls the corresponding method on the <a href='query.htm'>Q object </a>, which in turn farms them out to the relevant <a href='query.htm#special'>Special</a>. You can need to define your own Special to adjust the library's normal behaviour, perhaps under special conditions.</p>
+<p>To customize the failure message shown when touch is ruled out, you may need to pay attention to issues concerning the <a href='query.htm#touchObj'>interaction of Specials and the touchObj precondition </a>
+  
+
+<a name='light'><h3>Light and Darkness</h3></a>
+<p>In adv3Lite rooms are either light (isLit = true) or dark (isLit = nil). An object can also be made into a light source by defining or changing its isLit property to true. If the room or any visible object in the room is lit, then everything in the room can be seen and described (provided it's not hidden in a closed container or the like). If the room is dark and there is no light source, then by default nothing can be seen at all.</p>
+
+<p>Adv3Lite also has some provision for semi-darkness. A room that is in near-darkness might still have some barely discernible features; the room class provides a number of <a href='room.htm#otherroomprops'>properties</a> that can be used to define what the room is called and how it is described in the dark, and what happens when the player character attempts travel in the dark, along with methods to test whether the room is illuminated. The Thing class provides a pair of properties for items that might be dimly discerned in a dark room: <a href='thing.htm#sensory'>visibleInDark and inDarkDesc</a>.
+
+<p>If you need to model a greater range of light levels than this (total darkness, near total darkness, and full light) you can use the <a href='../../extensions/docs/brightness.htm'>Brightness</a> extension, which you can use to implement as many different lighting levels as you like.</p>
+
+<p>To provide lightsources in your game, you can create objects whose isLit property is always or conditionally true. For a switchable light source use the <a href='extra.htm#misc'>Flashlight</a> class, which implements  any kind of light source that can be turned on and off, but never runs out of fuel or battery power. To implement a Flashlight or other device that can run out of power you can use the FueledLightSource mix-in class from the <a href='../../extensions/docs/fueled.htm'>Fueled Light Source</a> extension. <a href='../learning/exercise 17.t'>Light Sources</a> is a small sample game that contains examples of several of these classes along with a number of dark locations.</p>
+
+<br><br><a href='#top'>Back to top</a>
+
+<a name='time'><h2>Time</h2></a>
+<a name='passageoftime'><h3>The Passage of Time</h3></a>
+<p>The basic measure of the passage of time in an Adv3Lite game is the number of turns. To get at the current turn count you can use the macro <b>gTurns</b>.
+
+<p>If you wish to keep track of clock time (date and/or time of day) in your game you can use either the <a href='../../extensions/docs/objtime.htm'>Objective Time</a> extension or the <a href='../../extensions/docs/subtime.htm'>Subjective Time</a> extension. The former allows you to advance the clock each turn (by whatever amount you like); the latter lets you specify the time at which certain points in your game are reached and interpolates between them.</p>
+
+<a name='scenes'><h3>Scenes</h3></a>
+<p><a href='scene.htm'>Scenes</a> can be use to define spans of time in your game during which special conditions may obtain or simply as a way of keeping track of significant plot developments or game/story states. A Scene is mainly a way of checking whether a particular phase of your interactive story is currently in progress or has already occurred, and can be used to control how other aspects of the game work</p>
+
+<a name='events'><h3>Events &mdash; Fuses, Daemons etc.</h3></a>
+<p>To make something occur once in the future (a certain number of turns time), you can use a <a href='event.htm'>Fuse</a>. To make something happen each turn, or every so many turns, use a <a href='event.htm#daemon-idx'>Daemon</a>.
+
+<p>For examples of Fuses and Daemons see the listing of the <a href='../learning/Exercise 15.t'>Bomb Disposal</a> sample game.</p>
+
+<p>To create a sensory event (a sound, smell or visible occurrence) that actors or other objects can be programmed to react to, you can use the Sensory extension to set up a <a href='../../extensions/docs/sensory.htm#events'>SensoryEvent.</p></a>
+
+<p>To set up a sequence of events occuring in sequential or random order you can use an <a href='eventlist.htm'>EventList</a>. For some examples of this see the sample game <a href='../learning/Exercise 23.t'>An Eventful Walk</a>.</p>
+
+<br><br><a href='#top'>Back to top</a>
+
+<a name='abstract'><h2>Other Abstract Entities</h2></a>
+<a name='topics'><h3>Topics</h3></a>
+<p>A <a href='topic.htm'>Topic</a> is something that might be referred to in your game (such as the weather or Julius Caeser) that is not implemented as a physical object in your game. This allows you do deal with commands such as LOOK UP JULIUS CAESAR IN HISTORY TEXTBOOK or ASK MAVIS ABOUT THE WEATHER.</p>
+
+<a name='topicentry'><h3>Topic Entries</h3></a>
+<p>A <a href='topicentry.htm'>TopicEntry</a> is an object that encapsulates the response to looking up, talking about, or thinking about a particular topic.</p>
+
+<a name='thoughts'><h3>Thoughts</h3></a>
+<p>A <a href='thought.htm'>Thought</a> is an object that can be used to implement responses to commands like THING ABOUT AUNT MAVIS.</p>
+
+<a name='knowledge'><h3>Knowledge</h3></a>
+<p><a href='knowledge.htm'>Knowledge </a> in adv3Lite can be <a href='knowledge.htm#model'>knowledge of the existence</a>
+of an object or topic (tested by the actor's knowsAbout(obj) method) or knowledge of a fact revealed of a <a href='knowledge.htm#facts'>fact that's been revealed </a> (typically through a &lt;.revealed&gt; or &lt;.informed&gt; tag. Both types of knowledge can effect which topics are reachable in <a href='knowledge.htm#existence'>conversation</a>. The Thing class defines a number of <a href='thing.htm#knowledge'>properties and methods relating to knowledge</a>. There is also a <a href='fact.htm'>Fact</a> class that extends the functionality of &lt;.revealed&gt; or &lt;.informed&gt; tags to enable facts to be listed in response to queries and keep track of who imparted various facts to the player character, and a <a href='../../extensions/docs/factrelation.htm'>Fact Relations </a> extension that uses relations to extend what can be done with Facts.</p>
+
+<br><br><a href='#top'>Back to top</a>
+
+<a name='actions'><h2>Commands and Actions</h2></a>
+<a name='actoverview'><h3>Overview</h3></a>
+<p>A command is something entered by the player at the command prompt, e.g. LOOK, EXAMINE THE COIN, or PUT THE POTATO IN POT. The parser does its best to interpret this command and stores the result in a <a href='actionoverview.htm#commandobj'>Command</a>
+object. This is then passed to a <a href='doer.htm'>Doer</a>, which normally passes the command straight on to the appropriate Action for handling, but you can if you wish intervene at this point by providing a custom Doer. For an action that involves no physical objects (i.e. Things) the action is then handled entirely on the relevant Action object (for the various action types see the <a href='actionoverview.htm#taxonomy'>taxonomy</a> of actions). Otherwise it is handled on the direct and indirect (if any) objects of the command. For a fuller account of the action cycle see <a href='actionoverview.htm#actioncycle'>here</a>.
+
+<p>To rule out an action because the player character is incapacitated in some way (e.g., tied up, bound and gagged or paralysed) you can use either the <a href='react.htm#actoraction'>actorAction()</a> method or the <a href='react.htm#preaction'>preAction(lst)</a> method (depending on at what stage you wish the action to be stopped).</p>
+
+<p>To see which commands trigger which actions, consult the <a href='actionref.htm'>Action Reference</a>
+
+<a name='preparser'><h3>Preparsing</h3></a>
+<p>To (if you wish, conditionally) alter the text of the player's command before the parser attempts to interpret it, you can use a <a href='output.htm#preparser'>StringPreParser</a></p>
+
+<p>If your aim is to change what the player typed from one command to another command to meet special circumstances (e.g. you want RING BELL to mean PUSH BELL when the bell is the only object to which RING would apply in your game, you can use a <a href='specialaction.htm'>SpecialVerb</a>.
+
+<a name='influencing'><h3>Influencing the Parser's Choice of Objects</h3></a>
+<p>The parser will attempt to choose the direct and indirect objects (if any) of the command by finding the best match with the player's input. You can influence the parser's choice in a number of ways: adjusting <a href='#senseconn'>scope</a>, using the <a href='thing.htm#filterresolve'>filterResolvedList</a> method to tweak the list of candidate objects the parser is choosing between, adjusting the <a href='thing.htm#vocablikelihood'>vocabLikelihood</a> property or more of Things potentially involved, defining <a href='thing.htm#phrase'>matchPhrases</a> on them, and, probably most commonly of all, using/defining/overriding the appropriate <a href='actres.htm#verify'>verify</a> methods.</p>
+
+<a name='messages'><h3>Customizing Action Messages (i.e. Textual Responses)</h3> 
+<p>If all you want to customize is the textual output of an action (e.g., "You really can\'t do that with the sky" in response to PUSH SKY or "You put the vase down very carefully" in response to DROP VASE, it may just be a matter of overriding the appropriate message property on the object concerned. You can look up the name of the message properties associated with various actions in the <a href='actionref.htm#actionlist'>Action Reference</a>.
+
+<p>For a fuller account of action messages, including the use of the <a href='message.htm#dmsg'>BMsg() and DMsg() functions</a> and <a href='message.htm#parameter'>Message Substitution Parameters</a>, see the chapter on <a href='message.htm'>Messages</a>.</p>
+<a href=''></a>
+<a name='actres'><h3>Customising the Results of Actions</h3></a>
+<p>Sometimes, customising the result of an action can be as simple as overriding the appropriate property such as (canSitOnMe or lookThroughMsg) on Thing or the subclass or object(s) in question. Some of these <a href='thing.htm#behaviour'>behavioural properties</a> are documented in the chapter on the Thing class. A fuller list is provided in the <a href='actionref.htm#actionlist'>Action Reference</a>.
+
+<p>Anything more sophisticated will require overriding the <a href='define.htm#iaction'>execAction()</a> method of any Action not involving a Thing as one of its objects, or one or more of the <a href='actres.htm#verify'>verify</a>, <a href='actres.htm#precond'>preCond</a>, <a href="actres.htm#check">Check</a>, <a href="actres.htm#action">Action</a>, <a href="actres.htm#report">Report</a>, or <a href="actres.htm#remap">Remap</a> stages on the class or object in question. For the full story, see the chapter on <a href='actres.htm'>Action Results</a>. In some cases, you may prefer to use a <a href='doer.htm'>Doer</a>.</p>
+
+<a name='synth'><h3>Synthesizing or Redirecting Actions</h3></a>
+<p>The best way to redirect one action to another is to call the <b>doNested()</b> or <b>doInstead()</b> method on a <a href='doer.htm#doinstead'>Doer</a> or in the <a href='actres.htm#action'>Action</a> section of a dobjFor(Whatever) block. There are also <span class='code'>replaceAction()</span> and <span class='code'>nestedAction()</span> macros, but these do not work so well if any of the objects involved in the new action is a Topic or a Literal, so it is recommended to use <span class='code'>doNested()</span> or <span class='code'>doInstead()</span> wherever possible (which is likely to be anywhere it's useful to do so).</p>
+
+<p>To synthesize an action to be carried out by an actor other that the player character you will need to use <b>nestedActorAction()</b> or <b>replaceActorAction()</b>, e.g. <span class='code'>nestedActorAction(bob, Jump)</span> or <span class='code'>replaceActorAction(bob, Take, pen)</span> or <span class='code'>replaceActorAction(bob, putOn, pen, desk)</span>. This can only be used with IActions, TActions or TIActions (i.e., actions that don't involve Topics or Literals).</p>
+
+<h2><a name='vague'>Dealing with Vague or Incomplete Commands</a></h2>
+<p>To handle a command that's vague or incomplete, such as ATTACK BLACK KNIGHT when attacking the black knight needs a weapon (e.g. ATTACK BLACK KNIGHT WITH SWORD) or WRITE without specifiying what it is to be written (although the second of these cases is handled by the library), you can use one of <a href='actres.htm#actionmacros'><b>askForDobj(<i>action</i>), askForIobj(<i>action</i>) or askMissingLiteral(<i>action</i>, <i>role</i>)</b></a>.
+
+<br><br><a href='#top'>Back to top</a>
+<a name='npcs'><h2>Non-Player Characters (NPCs)</h2></a>
+<a name='npcoverview'><h3>Overview</h3></a>
+<p>A Non-Player Character (NPC) is any character than appears in your game other than your protagonist (or Player Character). Some NPCs may be so simple with such a restricted range of actions (like a guard or troll that does nothing but block a bridge until the player finds a way to remove them) that they could probably be implemented just with an object of the Immovable class. Here we are concerned with more sophisticated NPCs who can respond to conversational commands, and perhaps also move around the map and perform other actions under their own initiative. Such NPCs are normally implemented using the <a href='actoroverview.htm#npc'>Actor class together with a number of supplementary objects</a> located within the Actor.</p>
+
+<p>If you need to, you can track what various NPCs <a href='knowledge.htm'>know</a> (and believe), 
+and/or their current <a href='mood.htm'>mood and/or stance </a> towards the player character and other NPCs (their stance being how positively or negatively they feel towards the player character and, if you wish also to track it, towards other NPCS).
+
+<p>For illustrations of NPCs in a sample game, see the <a href='../learning/Exercise 20.t'>Lighthouse</a> listing.</p>
+
+<a name='actors'><h3>Actors and Actor States</h3></a>
+<p>At the very least, an NPC needs to be defined as an object of the <a href='actorobj.htm'>Actor</a> class. Many actors may change their state (e.g., from attending to their own business to conversing with the Player Character), in which case the ways in which they are described and respond will often change accordingly. This can best be modelled through <a href='actorstate.htm'>ActorStates</a>
+
+<a name='conversation'><h3>Conversation</h3></a>
+<p>Conversation between the player character and NPCs is handled through <a href='actortopicentry.htm'>ActorTopicEntries</a>, which can be located in <a href='actorobj.htm'>Actors</a>, <a href='actorstate.htm'>ActorStates</a> or <a href='topicgroup.htm'>TopicGroups</a>. These can be used to implement a <a href='asktell.htm'>basic ask/tell</a> system (responding to commands like ASK FRED ABOUT THE TOWER or TELL MAVIS ABOUT YOURSELF), which can optionally be extended (in your game) in various ways. First, you can <a href='suggest.htm'>suggest</a> topics of conversation to the player (as and when you see fit). Second you can implement more complex conversational exchanges through the use of <a href='specialtopic.htm'>SpecialTopics</a> such as <a href='specialtopic.htm#querytopic'>QueryTopics</a> (which let the player ask questions like ASK WHY/HOW/WHEN/IF/WHO WHATEVER) and <a href='specialtopic.htm#saytopic'>SayTopics</a>, which let the player say virtually anything you define to an NPC. And third, you can locate certain TopicEntries within <a href='convnode.htm'>Conversation Nodes</a>, which model points in the conversation (such as when the NPC has just asked a question) at which a limited range of responses may be apposite and their significance (e.g., what the player may be answering YES or NO to) highly context-dependent.</p>
+
+<p>You can also, if you wish, implement <a href='hello.htm'>greeting protocols</a> (starting and ending conversations with hello and goodbye or whatever other greeting and farewell reponses you wish). You can also decide when a conversation is <a href='hello.htm#deciding'>allowed to end</a>.</p>
+
+<p>There are a number of ways in which you can have an NPC <a href='initiate.htm'>initiate a conversation or seize the conversational 
+initiative</a>.</p>
+
+<p>There is also a <a href='fact.htm'>Fact</a> class that extends the functionality of &lt;.revealed&gt; or &lt;.informed&gt; tags, which are often used in conversation. This functionality can be further advanced with with aid of the  <a href='../../extensions/docs/factrelation.htm'>Fact Relations</a> extension, for example to enable NPCs to steer conversations towards desired goals.</p>
+
+<p>For a more basic conversation system that could be used for very simple NPCs see the <a href='modules.htm#examplenpc'>oracle example</a>
+that could be implemented in <a href='modules.htm#options'>adv3Liter</a>
+.</p>
+
+<a name='following'><h3>Following NPCs</h3></a>
+<p>To have an NPC start or stope following the player character  around, calls its <a href='actorobj.htm#specific'>startFollowing()</a>
+ or stopFollowing method.</p>
+ 
+ <p>To set up a situation in which the player character can follow an NPC (who leads the way but waits for the player character to follow), use a <a href='agenda.htm#followagenda'>FollowAgendaItem</a>.</p>
+
+<br><br><a href='#top'>Back to top</a>
+
+<a name='startend'><h2>Beginnings and Endings</h2></a>
+<a name='startofplay'><h3>Start of Play</h3></a>
+<p>If you want to display introductory text you'd normally do this in <a href='beginning.htm#gamemain'>gameMain</a>.showIntro(). The same method can be used to start up any <a href='event.htm'>Fuses or Daemons</a> you may want to be active from the start of play, or to display a <a href='menu.htm'>menu</a> of options to the player or request <a href='webui.htm#inputmanager'>player input</a>. Alternatively, you could use one or more for some of these tasks.</p>
+
+<p>For other initialization tasks, such as performing initial calculations and setting up data structures, you probably want to use PreinitObjects.</p>
+
+<p>InitObject and PreinitObject are part of the system library (rather than adv3Lite) and you can read about them in the "Program Initialization" section of the <a href='http://www.tads.org/t3doc/doc/sysman/init.htm'>TADS 3 System Manual.</a>
+
+<p>You may also want to implement an About Box for your game, using <a href='beginning.htm#notes'>gameMain.setAboutBox()</a> to set it up and gameMain.showAboutBox() to display it.</p>
+
+
+
+
+<br><br><a href='#top'>Back to top</a>
+
+</div><hr class="navb"><div class="navb"><i>adv3Lite Library Manual</i><br><a class="nav" href="toc.htm">Table of Contents</a> | <a class="nav" href="final.htm">Final Moves</a> &gt; Task Topical Guide<br><span class="navnp"><a class="nav" href="manual_idx.html"><i>Prev:</i>  Alphabetical Index</a></span></div></body></html>
+

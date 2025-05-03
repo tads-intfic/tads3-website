@@ -15,7 +15,7 @@ layout: docs
   target="classes">Ending the game</a>*
 - *<a href="https://www.tads.org/ifidgen/ifidgen" target="classes">IFID
   generator</a>*
-- *<a href="https://www.tads.org/howto/gameinfo.html"
+- *<a href="doc/techman/gameinfo.htm"
   target="classes">GameInfo.txt &amp; cover art</a>*
 - *<a href="https://babel.ifarchive.org" target="classes">Treaty of
   Babel</a>*

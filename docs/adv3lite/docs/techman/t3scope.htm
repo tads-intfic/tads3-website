@@ -1,0 +1,651 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Redefining Scope</title>
+<link rel="stylesheet" href="techman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="advtop.htm">Advanced Topics</a> &gt; 
+Redefining Scope
+<br><span class="navnp"><a class="nav" href="t3multimeth.htm"><i>Prev:</i> Handling TIActions with Multi-Methods</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="t3mi.htm"><i>Next:</i> Multiple Inheritance</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+<h1>Redefining Scope</h1>
+<p><i>by Eric Eve</i></p>
+
+<p>Any action entered by the player can only do anything to objects
+that are in scope. Being in scope doesn't necessarily mean an object
+can be used for any particular action &mdash; I can't eat a diamond
+ring or a mountain just because I can see it, for instance &mdash; but
+it does mean that whatever else the parser may go on to complain about
+it won't complain that the objects aren't there, with a message like
+"You see no ring here". The <i>scope</i> of the action defines the set
+of objects available to the actor for that action, at the moment when
+the action is to be carried out. Most actions in the library
+assumes one of two types of scope, which for convenience we may call
+<i>sensory scope</i> and <i>topic scope</i>.</p>
+
+<p><i>Sensory scope</i> applies to nearly every kind of physical action performed on simulation objects in the game world, such as examining, taking, dropping, wearing, putting in something, and any other kind of sensing or physical manipulation (the principal exception being GO TO which can operate on any room or object the player character knows about). As a general rule, sensory scope is used for any noun corresponding to singleDobj, multiDobj, singleIobj, or multiIobj in the action's VerbRule. Broadly speaking, sensory scope encompasses every object that the player character can see (or, where appropriate, hear or smell)  at the time of the action, plus any objects that the actor is carrying.</p>
+
+<p><i>Topic scope</i> applies to what we might term purely conceptual activities, such as discussing something or looking it up in a reference book, when the thing discussed or looked up need have no sensory presence at all, and may not even be a physical object (it could instead be something purely abstract such as Spanish Politics or The Meaning of Life). Topic scope is effectively universal (although still limited to what the player character knows about), since any Thing or Topic can be talked about, thought about, or looked up at any time. As a general rule, topic scope applies to any noun corresponding to singleTopic in the action's VerbRule, the possible matches to any particular TopicAction or TopicTAction being stored in a <a href='../manual/topicact.htm'>ResolvedTopic</a>.</p>
+
+<p>These two kinds of scope suffice for most purposes, and you could write quite a few TADS 3/adv3Lite games without ever having to worry about redefining scope. But you may occasionally come up against a situation where it is necessary to define scope differently. Such situations can include:</p>
+
+<ul>
+<li>Special Debugging commands that require effectively universal scope, e.g. to allow you to teleport round the map or magically summon items when testing.</li>
+<li>In-game commands that act on objects that the player character can't currently sense, such as a LOCATE command that reminds the player where something is or the GO TO command that takes the player character to a previously visited room (although this is already handled in the library).</li>
+<li>Commands that involve some form of remote sensing, like talking to a physically-absent NPC via a telephone (although this particular example is handled in the library by means of the <a href='../manual/query.htm#commlink'>Communications Link</a> Special).</li>
+<li>Allowing the Player Character to interact with objects in a dark room when s/he knows they're there but can't actually see them.</li>
+</ul>
+<br>
+<p>In this article we shall explore how to adjust the scope for all these cases. For a brief outline of this material, see the chapter on <a href='../manual/scope.htm'>Scope</a> in the <i>Adv3Lite Library Manual</i>.
+</p>
+
+<h2>Universal Scope</h2>
+
+<p>Suppose that for the purposes of testing and debugging our game we want to define a special TELEPORT TO command that magically teleports the player character to the location on any object on the map. We'll generally want this command to work on objects that <i>aren't</i> currently in sensory scope. In fact the library already defines a GONEAR command that does this, so you won't need to implement this command in your game (beyond adding 'teleport to' as addditional grammar for the existing command if you so desire), but we can use this example to illustrate how it can be done.</p>
+
+<p>The way it's done in the library couldn't be simpler. Included in the definition of DefineTAction(GoNear) we find:</p>
+
+<p><pre>
+/* The GONEAR action requires universal scope */
+    addExtraScopeItems(whichRole?)
+    {
+        makeScopeUniversal();
+    }  
+</pre>
+
+<p>This tells us (a) that we can extend the scope of things a particular action applies to by defining its  <code>addExtraScopeItems()</code> method and that there's already a <code>makeScopeUniversal()</code> method that does what it says. The optional <i>whichRole?</i> parameter can be one of DirectObject, IndirectObject or (more rarely) AuxiliaryObject, so that for actions that have more than one noun role (e.g., COMPARE X WITH Y) we could extend (or not extend) the scope differently for the two objects (X and Y).</p>
+
+The makeScopeUniversal() method is defined on TAction (and inherited by TIAction) as:</p>
+<p><pre>
+    /* 
+     *   A convenience method for putting every game object in scope, which may
+     *   be appropriate for certain commands (not least, certain debugging
+     *   commands). It's intended to be called from addExtraScopeItems when
+     *   needed.     
+     */
+    
+    makeScopeUniversal()
+    {
+        /* Note the fist object of the Thing class. */
+        local obj = firstObj(Thing);
+        
+        /* Create a vector to store our results. */
+        local vec = new Vector;
+        
+        /* Go through every Thing in the game and add it to our vector. */
+        do
+        {
+            vec.append(obj);
+            obj = nextObj(obj, Thing);
+        } while (obj!= nil);
+        
+        /* 
+         *   Convert the vector to a list and append it to our scopeList,
+         *   removing any duplicates.
+         */
+        scopeList = scopeList.appendUnique(vec.toList());
+    }
+</pre>
+
+<p>This shows us that actions define a <cod>scopeList</code> property which contains the list of items in scope for that action, and that we can manipulate that list to redefine what's in scope for that action. Here we simply loop through every Thing in the game to add it to a new Vector of every Thing, and then use appendUnique to add our new Vector to the existing scopeList without duplicating what would have been in scope anyway.</p>
+
+<p>But what would have been in scope anyway? An Action will construct its scope list every time it's executed by calling its buildScopeList() method, which on TAction is defined as:</p>
+
+<p><pre>
+   /* Build the scope list for this action. */
+    buildScopeList(whichRole = DirectObject)
+    {
+        /* Start with the scope list supplied by the Query object */
+        scopeList = Q.scopeList(gActor).toList();
+        
+        /* Add any additional items to scope as special cases if desired. */
+        addExtraScopeItems(whichRole);
+    }
+</pre>
+<p>We've already met <code>addExtraScopeItems()</code> but what about <code>Q.scopeList(gActor).toList()</code>? A full discussion of the Q object is outside the scope of this article (no pun intended), but in brief, it offers a series of methods that allow game code to query (hence Q) the current state of the game world via the relevant <a href='../manual/query.htm'>Special</a> object. Q.scopeList(gActor) returns a list of items currently in object scope for the current actor. 
+
+
+<p>Things are a bit more problematic if you want to implement a command with universal scope that you want to allow a player to use in-game. Suppose, for example, that a game takes place entirely in the player character's own home, and that the player character knows precisely where everything is, even if the player doesn't. Then to bridge the gap between player and player character knowledge you might decide to implement a LOCATE command:</p>
+
+<p><pre>
+DefineTAction(Locate)
+   addExtraScopeItems(whichRole) { makeScopeUniversal(); }
+   allowAll = nil
+;
+
+VerbRule(Locate)
+   'locate' multiDobj
+   : VerbProduction
+   action = Locate
+   verbPhrase = 'locate/locating (what)'
+   missingQ = 'what do you want to locate'
+;
+
+modify Thing 
+   dobjFor(Locate) 
+   {
+       action()
+       {
+          "{The subj dobj} {is} in &lt;&lt;gDobj.getOutermostRoom.theName&gt;&gt;. ";
+       }       
+   }
+;
+
+modify Room
+   dobjFor(Locate)
+   {
+      check()
+      {
+         "If you want to know how to get to {the dobj} you could use the GO TO command. ";
+      }
+   }
+;
+</pre></p>
+
+<p>It's reasonable to allow multiple objects with this command (at
+least, it may be so in the case of this hypothetical game), but then,
+by default, the player could issue the command LOCATE ALL. We may think
+this is a bit too much, unless there are only a handful of items in 
+the game, which is why we've defined allowAll = nil on this action. 
+
+<p>Since the list of all objects in the game will never change (assuming we don't create any dynamically), we could build this list once only then store it as a property:</p>
+<p><pre>
+allScope: PreinitObject
+    scope_ = nil
+    execute()
+    {
+        local vec = new Vector(100);
+        forEachInstance(Thing, {x: vec.append(x)}  );
+        scope_ = vec.toList();
+    }    
+;
+
+DefineTAction(Locate)
+    addExtraScopeItems(whichRole) { makeScopeUniversal(); }
+    allowAll = nil
+    makeScopeUniversal()
+    {
+        scopeList = scopeList.appendUnique(allScope.scope_);
+    }
+;
+</pre></p>
+
+<p>An alternative way to build the list of all Things in allScope would be to make use of <code>World.universalScope</code> (which contains a list of every object defined in the game:</p>
+
+<p><pre>
+allScope: PreinitObject
+    scope_ = nil
+    execute()
+    {        
+        scope_ = World.universalScope.subset({o: o.ofKind(Thing)});
+    }    
+    
+    /* Make sure World has built its universalScope list first. */
+    execBeforeMe = [World]
+;
+</pre>
+
+<p>The possibly mysterious forEachInstance() is a convenience function defined in the library; forEachInstance(cls, func) calls func(obj) for each and every obj of class cls.</p>
+
+<p>If you did want to allow the player to use ALL with this command, however, it might need some further adjustment,
+since if the player issued the command LOCATE ALL, a number of items would probably be place in scope that you didn't intend: objects such as dummy_, failVerifyObj, firstPersonObj, lightProbe_, pluralDummy_, and scopeProbe_ which the library defines as inheriting from Thing, but which don't represent physical objects in the game (they exist for various internal library purposes). To exclude these, you'd probably want to include in scope only those Things that have a non-null name property defined, something like:</p>
+
+<p><pre>
+allScope: PreinitObject
+    scope_ = nil
+    execute()
+    {
+        local vec = new Vector(100);
+        forEachInstance(Thing, new function(x) 
+        {
+            if(x.name &amp;&amp; x.name > '')
+                vec.append(x); 
+        });
+        scope_ = vec.toList();
+    }    
+;
+</pre></p>
+<p>Even then you might find ALL including objects you didn't really intend, such as Components of other objects, smells, sounds, Unthings and other Decorations which the player might not be interested in, so if you were really set on allowing LOCATE all you'd probably need to do some further tweaking, perhaps starting with:</p>
+
+<p><pre>
+allScope: PreinitObject
+    scope_ = nil
+    execute()
+    {
+        local vec = new Vector(100);
+        forEachInstance(Thing, new function(x) 
+        {
+            if(x.name &amp;&amp; x.name > '' &amp;&amp; !x.ofKind(Component) &amp;&amp; !x.ofKind(SubComponent)
+               &amp;&amp; !x.ofKind(Decoration))
+                vec.append(x); 
+        });
+        scope_ = vec.toList();
+    }    
+;
+</pre>
+<br>
+<h2>Extended Scope</h2>
+<p>We have just seen how to make a command apply to every object in the game, but if you implement a command like LOCATE X, it may be that you'd only want it to work on objects that the player character knows about, or even only objects that the player character has seen. The scope for such a command still needs to be extended beyond the standard sensory scope, but it would be less than universal, since during much of the game there would probably be objects the player had not yet seen. To define the addExtraScopeItems method() is straightforward enough:</p>
+<p><pre>
+DefineTAction(Locate)
+    addExtraScopeItems(whichRole)
+    {
+        local vec = new Vector(100);
+        forEachInstance(Thing, new function(x) 
+        {
+            if(gPlayerChar.hasSeen(x))
+                vec.append(x); 
+        });
+       scopeList = scopeList.appendUnique(vec.toList());
+    }
+    
+    allowAll = nil
+;
+</pre></p>
+<p>In this case, however, we can't pre-build a scope list in a PreInitObject, since the list of objects the player character has seen changes dynamically throughout the game.
+
+<p>If we instead wanted our Locate action to apply to every Thing the player knows about (which will be everything the pc has seen plus everything that's marked as familiar, we could instead define our addExtraScopeItems method thus:</p>
+
+<p><pre>
+DefineTAction(Locate)
+    addExtraScopeItems(whichRole)
+    {
+        local vec = new Vector(100);
+        forEachInstance(Thing, new function(x) 
+        {
+            if(gPlayerChar.knowsAbout(x))
+                vec.append(x); 
+        });
+       scopeList = scopeList.appendUnique(vec.toList());
+    }
+    
+    allowAll = nil
+;
+</pre>
+<p>This illustrates a coding pattern we can use to extend scope in various ways, but our last example re-invents a wheel that's already in the library, which already defines a knownScopeList property on the Q object, so it would be better to write our revised Location action as:</p
+
+<p><pre>
+DefineTAction(Locate)
+    /* Add all known items to scope */
+    addExtraScopeItems(whichRole?)
+    {
+       scopeList = scopeList.appendUnique(Q.knownScopeList);
+    }
+    
+    allowAll = nil    
+;
+</pre>
+
+<p>This, incidentally, is the way the library defines scope for the GO TO action.</p>
+
+<br>
+<h2>Using Topics for non-Spoilery Scope Extension</h2>
+<p>The methods used for extending scope may work fine for your game, but they do have one potential disadvantage. Armed with a command like LOCATE with universal scope, a player might speculatively try LOCATE FOO, or LOCATE TREASURE just to see if such objects exist in the game.</p>
+If you want universal scope, but you don't want it to be spoilery in this way, an alternative that may be worth considering is using a TopicAction rather than a TAction. For example, you might define:</p>
+<p><pre>
+VerbRule(Locate)
+   'locate' topicDobj
+   : VerbProduction
+   action = Locate
+   verbPhrase = 'locate/locating (what)'
+   missingQ = 'what do you want to locate'
+;
+
+DefineTopicAction(Locate)
+    execAction(c)
+    {
+        local obj;
+        local loc;      
+        
+        /* Get a list of the Things in the current ResolvedTopic's topicList. */
+        local objs = gTopic.topicList.subset({o: o.ofKind(Thing)});
+        
+        /* 
+         *   First try to find an object that's not in the actor's current location 
+         *   but has previously seen. 
+         */
+        obj = objs.valWhich({ x: gActor.hasSeen(x) &&
+                            !(x.isIn(gActor.getOutermostRoom))});
+       
+        /* If we've found one, report where it is */
+        if(obj)             
+        {
+            loc = obj.getOutermostRoom; 
+            &quot;\^&lt;&lt;obj.theNameIs&gt;&gt; &lt;&lt;loc ? loc.objInName : 'nowhere right now'
+              &gt;&gt;. &quot;;
+            return;
+        }
+        
+        /* Next try to find an object the actor has seen and is in the actor's current room. */        
+         obj = objs.valWhich({ x: gActor.hasSeen(x) &&
+                            (x.isIn(gActor.getOutermostRoom))});
+        
+        /* If we've found, report that it's right here. /
+        if(obj)
+        {            
+            &quot;\^&lt;&lt;obj.theNameIs&gt;&gt; right here. ";
+            return;
+        }
+        
+        /* 
+         * If all else fails, print a failure message that doesn't reveal the existence or 
+         * otherwise of what the player asked to locate.
+         */
+        "You haven't seen anything like that. ";
+        
+    }    
+;</pre></p>
+<p>You might want your version to be a bit more sophisticated than this, but this illustrates the general principle.</p>
+
+
+<br>
+<h2>Remote Sensory Scope</h2>
+<p>Suppose we have a device that enables the player character to sense (but not see) a remote object, e.g. a telephone that enables the player character to converse with an NPC who isn't physically present. In order to allow the player character to interact with the remote object that s/he cannot see (e.g., speak with an absent NPC over the telephone) we need to do two things:</b>
+<ol>
+<li>Establish a sensory link between the player character and the remote object or objects.</li>
+<li>Use addExtraScopeItems(whichRole?) on the action or addExtraScopeItems on the player character's Room or Region to bring the remote object into scope for the player character.</li>
+<li>Define a custom <a href='../manual/query.htm'>Special</a> to define a customized definition of scope for the situation we wish to handle.</p>
+</ol>
+<p>The library already uses one or other of these means to accomplish remote sensory scope in three of the most common situations:</p>
+
+<ol>
+<li>If we want the player character to be able to see, hear, and/or smell objects in a nearby Room, we can place both rooms (or a collection of rooms that includes both rooms) in the same <a href='../manual/senseregion.htm'>SenseRegion</a>.</li>
+<li>If we want to establish an audio or audiovisual communications like with an actor in a remote location (by mobile phone, say), we can use the <a href='../manual/query.htm#commlink'>commLink</a> Special.</li>
+<li>If we want the player character to be able to look through a window or TV screen at items in a remote location, we can use the <a href='../../extensions/docs/viewport.htm'>Viewport</a> extension.</li>
+</ol>
+
+<p>Between them, these three are likely to cover most of the remote sensory scope problems we're likely to want to solve, but in case you want to solve a different problem, let's take a look a how commLink does its job as one model you may be able to adapt to your own purpose.</p>
+
+<p>The commLink Special has to do three jobs: (1) redefine scope so that it includes the actor the player character is in remote communication with, (2) allow the player character and the remote actor to hear each other, (3) allow the player character and the remote actor to speak to each other, and (4) allow player character and the remote actor to see each other if they've established a videolink as well as an audio one. We do this by defining (1) the commLink's scopeList(actor) method, (2) its canHear(a, b) method, (3) its canTalkTo(a, b) method, and (4) its can seeSee(a, b). The last three of these need to return true if <i>a</i> can hear, talk to or see <i>b</i>.</p>
+
+ <p>To support this we define a connectionList property to hold a list of all the other actors the player character is currently connected to via this commLink, a connectTo(other) method to establish a remote connection between the player character and <i>other</i>, a disconnectFrom(other) method to end the connection with <i>other</i> and a disconnect() method to end all the remote connections. The three methods add or remove the remote actors from the connectionList and then force a recalculation of the active Specials.</p>
+ 
+ <p>The scopeList(actor) method then simply adds all the remote actors in connectionList to what would have been in scope anyway. The canHear() and canTalkTo() methods return true if the player character is connected to the remote actor and otherwise returns whether or not the player would have been able to hear or talk to them anyway. The canSee() does the same, except that it tests for their being a video connection as well as an audio one. To distinguish the two connectionList holds a list of two-element lists of the form [actor, video] where <i>actor</i> is the remote actor and <i>video</i> is a true or nil according to whether the communications link includes video. The complete listing is then:</p>
+ 
+
+<pre>
+/*------------------------------------------------------------------------- */
+/*
+ *   A commLink is a Special that establishes a communications link between the
+ *   player character and one or more actors in remote locations.
+ *
+ *   To activate the commLink with another actor, call
+ *   commLink.connectTo(other). To make it a video link as well as an audio
+ *   link, call commLink.connectTo(other, true).
+ *
+ *   To disconnect the call with a specific actor,  call
+ *   commLink.disconnectFrom(other); to terminate the commLink with all actors,
+ *   call commLink.disconnect()
+ *
+ */
+commLink: Special
+   
+    /* 
+     *   Our scope list must include all the actors we're currently connected
+     *   to.
+     */
+    scopeList(actor)
+    {
+        local s = next();
+        
+        s.vec_ += connectionList.mapAll({x: x[1]});
+        
+        s.vec_ = s.vec_.getUnique();
+        
+        return s;
+    }
+    
+    /* We can hear an actor if s/he's in our connection list */
+    canHear(a, b)
+    {
+        /* 
+         *   We assume that if a can hear b, b can hear a, but the link is only
+         *   between the player character an another actor. If b is the player
+         *   character swap a and b so that the tests that follow will still
+         *   apply.
+         */
+        if(b == gPlayerChar)
+        {
+            b = a;
+            a = gPlayerChar;
+        }
+        
+        /* 
+         *   If one of the actors is the player character and the other is in
+         *   our connection list, then they can hear each other.
+         */
+        if(a == gPlayerChar &amp;&amp; isConnectedTo(b))
+            return true;
+        
+        /* Otherwise use the next special. */
+        return next();
+    }
+    
+    canSee(a, b)
+    {
+        /* 
+         *   We assume that if a can see b, b can see a, but the link is only
+         *   between the player character and another actor. If b is the player
+         *   character swap a and b so that the tests that follow will still
+         *   apply.
+         */
+        if(b == gPlayerChar)
+        {
+            b = a;
+            a = gPlayerChar;
+        }
+        
+        /* 
+         *   If one of the actors is the player character and the other is in
+         *   our connection list with a video value of true, then they can see
+         *   each other.
+         */
+        if(a == gPlayerChar &amp;&amp; isConnectedTo(b) == VideoLink)
+            return true;
+        
+        /* Otherwise use the next special. */
+        return next();
+    }
+    
+    canTalkTo(a, b)   
+    {
+        /* 
+         *   We assume that if a can talk to b, b can talk to a, but the link is
+         *   only between the player character and another actor. If b is the
+         *   player character swap a and b so that the tests that follow will
+         *   still apply.
+         */
+        if(b == gPlayerChar)
+        {
+            b = a;
+            a = gPlayerChar;
+        }
+        
+        /* 
+         *   If one of the actors is the player character and the other is in
+         *   our connection list, then they can talk to each other.
+         */
+        if(a == gPlayerChar &amp;&amp; isConnectedTo(b))
+            return true;
+        
+        /* Otherwise use the next special. */
+        return next();
+    }
+    
+    /* 
+     *   The list of actors we're currently connected to. This is a list of two
+     *   element lists in the form [actor, video], where actor is the actor
+     *   we're connected to and video is true or nil according to whether the
+     *   link to that actor is a video link as well as an audio link.
+     */
+    connectionList = []
+    
+    /* This Special is active is there's anything in its connectionList. */
+    active = connectionList.length > 0
+    
+    /* 
+     *   Connect this comms link to other; if video is specified and is true,
+     *   the comms links is also a video link.
+     */
+    connectTo(other, video = nil)
+    {
+        /* 
+         *   In case the video parameter is supplied as AudioLink or VideoLink
+         *   (some game authors may try this even though it's not documented),
+         *   we should first translate the video parameter into true or nil as
+         *   appropriate.
+         */
+        if(video == AudioLink)
+            video = nil;
+        
+        if(video == VideoLink)
+            video = true;
+        
+        /* Add other to our connection list. */
+        connectionList = connectionList.append([other, video]);
+        
+        /* Force the Special class to rebuild its list of active Specials. */
+        Special.allActive_ = nil;
+    }
+    
+    /* Disconnect this commLink from everyone */
+    disconnect()
+    {
+        /* Empty our out connectionList */
+        connectionList = [];
+        
+        /* Force the Special class to rebuild its list of active Specials. */
+        Special.allActive_ = nil;
+    }
+    
+    /* 
+     *   Disconnect this commLink from lst, where lst may be a single actor or a
+     *   list of actors.
+     */
+    disconnectFrom(lst)
+    {
+        /* Convert the lst parameter to a list if it isn't one already */
+        lst = valToList(lst);
+        
+        /* 
+         *   Reduce our connectionList to a subset of members that aren't in
+         *   lst.
+         */
+        connectionList = connectionList.subset({x: lst.indexOf(x[1]) == nil});
+        
+        /* Force the Special class to rebuild its list of active Specials. */
+        Special.allActive_ = nil;
+    }
+ 
+    /* 
+     *   Is there a communications link with obj? Return nil if there is none,
+     *   AudioLink if there's an audio connection only and VideoLink if there's
+     *   a video connection as well.
+     */
+    isConnectedTo(obj)
+    {
+        local conn = connectionList.valWhich({x: x[1] == obj});
+        if(conn == nil)
+            return nil;
+        
+        return conn[2] ? VideoLink : AudioLink;
+    }
+    
+    
+    /* 
+     *   Give this Special a higher priority that the QSenseRegion Special so
+     *   that it takes precedence when it's active.
+     */
+    priority = 5
+;
+</pre>
+ 
+
+
+<br>
+<h2>Adjusting Scope in the Dark</h2>
+<p>Suppose in our game we have a dark cellar which is entered and exited via a flight of stairs. 
+We'd typically define it like this:</p>
+
+
+
+<p><pre>
+cellar: Room 'Cellar'
+    "The cellar is almost bare. A flight of stairs leads up to the north. "
+    north = cellarStairs
+    up asExit(north)
+    isLit = nil
+    
+    cannotGoThatWay(dir)    
+    {
+        "There's no point blundering around in that direction; you
+        know perfectly well that the only way out of here is back &lt;&lt;aHref('UP',
+            'up','Go up')&gt;&gt; the stairs. ";
+    }    
+    
+    cannotGoThatWayMsg = 'There\'s obviously nothing in that direction. '
+    cannotGoThatWayInDark(dir)
+    {  
+        "Although it's dark and you can hardly see a thing
+        down here, you're pretty certain that the only way out is back up the
+        stairs. ";
+    }    
+    darkName = 'Cellar (in the dark)'
+    darkDesc = "You're dimly aware of the flight of stairs leading back up,
+        but otherwise it's too dark to see anything in here. "
+;
+</pre></p>
+<p>Now suppose that the player character enters the cellar without a light source. As things stand that could give us a transcript like this:</p>
+
+<p><pre>
+&gt;<b>s</b>
+<b>Cellar (in the dark)</b>
+You’re dimly aware of the flight of stairs leading back up, but otherwise it’s too dark to see anything in here.
+
+&gt;<b>e</b>
+Although it’s dark and you can hardly see a thing down here, you’re pretty certain that the only way out is back up the stairs.
+
+&gt;<b>climb stairs</b>
+You see no stairs here.
+</pre>
+<p>This is obviously unsatifactory. The stairs back up are out of scope because the player character can't see them, but the player has just twice been told of their existence, and on the second occasion pretty much told to use them if they want to leave the cellar.</p>
+
+<p>There are two ways we can fix this. The first is to use extraScopeItems which we can define on the cellar to place the stairs in scope even when the player character can't see them in the dark. To do this, we just need to add the following to our definition of the cellar room:</p>
+<p><pre>
+   extraScopeItems = [cellarStairs]
+</pre>   
+
+<p>The player character will then be able to climb the stairs, even though they can't see them (X STAIRS still wouldn't work). If we wanted to make the stairs dimly visible in the dark, we could instead define <code>visibleInDark</code> on the stairs as true and then give it an <code>inDarkDesc</code>; for that to work we also need to define the stairs' desc:</p>
+
+<pre>
++ cellarStairs: StairwayUp  'flight of stairs[n];;;it them'
+    "They're just ordinary stairs. "
+    destination = hallWest
+    visibleInDark = true
+    inDarkDesc = "You can just make out the dim outline of what you know must be the stairs
+         leading back up. "
+;
+</pre></p>
+<br>
+
+
+</div>
+<hr class="navb"><div class="navb">
+<i>TADS 3 Technical Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="advtop.htm">Advanced Topics</a> &gt; 
+Redefining Scope
+<br><span class="navnp"><a class="nav" href="t3multimeth.htm"><i>Prev:</i> Handling TIActions with Multi-Methods</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="t3mi.htm"><i>Next:</i> Multiple Inheritance</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>
+
+

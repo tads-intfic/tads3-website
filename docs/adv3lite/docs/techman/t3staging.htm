@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Using Nested Rooms as Staging Locations</title>
+<link rel="stylesheet" href="techman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="advtop.htm">Advanced Topics</a> &gt; 
+Using Nested Rooms as Staging Locations
+<br><span class="navnp"><a class="nav" href="t3mi.htm"><i>Prev:</i> Multiple Inheritance</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="t3past.htm"><i>Next:</i> Writing a Game in the Past Tense</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+
+<h1>Using Nested Rooms as Staging Locations</h1>
+
+
+
+<p><i>by Eric Eve</i>
+
+<p>A fairly common type of puzzle in Interactive Fiction is where
+the player character needs to stand on one object (such as a chair
+or table) in order to reach another (such a window high up on a wall)
+in order to leave via a particular exit (in this case, the window). In
+adv3Lite, objects like tables and chairs
+that can stood on, sat on or lain on are generally implemented as
+Nested Rooms (although there's no such class in adv3Lite), while
+a location that's used to reach a particular exit
+is a staging location. Using the two together can, however, be a 
+little tricky; this article suggests how to go about it.</p>
+
+
+<h2>An erroneous example</h2>
+
+<p>To illustrate the problems, we'll start by coding an example that doesn't
+quite work, but instead exemplifies the kinds of problem an adv3Lite author faced
+with this situation could easily come up against. For the sake of illustration,
+we'll implement only two rooms, a cellar with a hatch high up in one wall and
+a secret chamber that's only reachable via the hatch. There's a bench in the cellar
+that the player character needs to stand on in order to reach the hatch, so
+the obvious thing to do is to use checkReach() to prevent the player character
+from reaching the hatch unless the pc is on the bench:<p>
+
+<p><pre>
+cellar: Room 'Cellar'
+    "The cellar is almost bare. A flight of stairs leads up to the north, 
+    and there's a hatch on the east wall. "
+    north = cellarStairs
+    up asExit(north)   
+   
+    east = hatch
+;
+
++ cellarStairs: StairwayUp  'flight of stairs[n];;;it them'
+    "They're just ordinary stairs. "
+    destination = hallWest   
+;
+
++ oldBench: Platform 'old wooden bench'
+    
+    initSpecialDess = "An old wooden bench rests by the wall. "
+        
+;
+ 
+hatch: DSDoor 'wooden hatch' @cellar @secretChamber    
+    checkReach(actor)
+    {
+        if(actor.location not in (secretChamber, oldBench))
+            "The hatch is too high up for you to reach from the ground. ";
+    }    
+;
+    
+secretChamber: Room 'Secret Chamber'
+    "The only way out of this secret chamber is through the
+    hatch to the west, which only exists for demonstration
+    purposes. "
+    
+    west = hatch
+;
+</pre>
+<p>At first sight this looks like it should work, and it almost does, except that it will generate a transcript like this:</p>
+<p><pre>
+<b>Cellar</b>
+The cellar is almost bare. A flight of stairs leads up to the north, and there’s a hatch on the east wall.
+
+You can see an old wooden bench here.
+
+&gt;<b>open hatch</b>
+The hatch is too high up for you to reach from the ground.
+
+&gt;<b>stand on bench</b>
+You get on the old wooden bench.
+
+&gt;<b>e</b>
+(first getting off the old wooden bench)
+The hatch is too high up for you to reach from the ground.
+
+&gt;<b>stand on bench</b>
+You get on the old wooden bench.
+
+&gt;<b>go through hatch</b>
+(first opening the wooden hatch)
+
+<b>Secret Chamber</b>
+The only way out of this secret chamber is through the hatch to the west, which only 
+exists for demonstration purposes.
+
+&gt;
+</pre></p>
+
+<p>The problem is that the library assumes that the staging location for travel between rooms is the actor's
+outermost room, so it moves the actor out of/off any nested rooms they're in before carrying out the travel via 
+an implicit action. In most cases this is what we want; if the actor had been sitting in a chair or sofa, we'd 
+expect them to get off the chair or sofa before leaving the room. In this case, however, the 'helpful' implicit 
+action is frustrating what we want the actor to do. To leave the cellar vis the hatch, the player character 
+needs to be standing on the bench, but issuing the EAST travel command triggers the implicit action that makes 
+the pc get off the bench. That the player character can get round this by typing GO THROUGH HATCH rather than 
+E doesn't really solve the problem, since players are likely to regard this as an inconsistent mess.</p>
+
+<h2 id="solving">Solving the Problem with stagingLocations</h2>
+
+<p>The solution here is quite simple: we can simply define a stagingLocations property on the hatch object to 
+contain a list of locations, one of which the traveler needs to be in before being able to travel through the 
+hatch:</p>
+
+<p><pre>
+hatch: DSDoor 'wooden hatch' @cellar @secretChamber    
+    checkReach(actor)
+    {
+        if(actor.location not in (secretChamber, oldBench))
+            "The hatch is too high up for you to reach from the ground. ";
+    }    
+    
+    stagingLocations = [oldBench, secretChamber]
+;
+</pre></p>
+
+<p>This means that in order to travel via the hatch the player character (or any other actor) 
+needs to be either in/on the oldBench or directly in secretChamber (so that the pc can travel 
+back through this door from the other side). Provided the player character is in one of these 
+stagingLocations, a travel command won't try to remove them from it, but if the pc isn't in one 
+of them, the travel will be disallowed. With this change we get:</p>
+
+<p><pre>
+<b>Cellar</b>
+The cellar is almost bare. A flight of stairs leads up to the north, and there’s a hatch on the east wall.
+
+You can see an old wooden bench here.
+
+&gt;<b>e</b>
+The hatch is too high up for you to reach from the ground.
+
+&gt;<b>get on bench</b>
+You get on the old wooden bench.
+
+&gt;<b>e</b>
+(first opening the wooden hatch)
+
+<b>Secret Chamber</b>
+The only way out of this secret chamber is through the hatch to the west, which only exists for testing purposes.
+
+&gt;<b>w</b>
+
+<b>Cellar</b>
+The cellar is almost bare. A flight of stairs leads up to the north, and there&rsquo;s a hatch on the east wall.
+
+You can see an old wooden bench here.
+
+&gt;<b>close hatch</b>
+The hatch is too high up for you to reach from the ground.
+
+&gt;<b>get on bench</b>
+You get on the old wooden bench.
+
+&gt;<b>close hatch</b>
+Done.
+</pre><//p>
+<p>This is just what we want.</p>
+<p>At this point we might be tempted to think that now we've defined stagingLocations on the hatch, we don't 
+need its checkReach() method as well, but removing checkReach() wouldn't be a good idea. If we did, we could end 
+up with something like this:</p>
+
+<p><pre>
+<b>Cellar</b>
+The cellar is almost bare. A flight of stairs leads up to the north, and there’s a hatch on the east wall.
+
+You can see an old wooden bench here.
+
+&gt;<b>e</b>
+You can&rsquo;t access that exit from your current location.
+
+&gt;<b>open hatch</b>
+Opened.
+
+&gt;<b>go through hatch</b>
+You can&rsquo;t access that exit from your current location.
+
+&gt;<b>get on bench</b>
+You get on the old wooden bench.
+
+&gt;<b>e</b>
+
+<b>Secret Chamber</b>
+The only way out of this secret chamber is through the hatch to the west, which only exists for testing purposes.
+</pre></p>
+
+<p>This isn't as good. We could customise the "You can't access that exit..." message by overriding <code>sayNotInStagingLocation(traveler)</code> on the hatch, but we're still left with the fact that the 
+player character can open the hatch while standing on the ground even though it's meant to be too high up 
+in the wall for the pc to reach unless standing on the bench. The moral of the story is that in this kind 
+of situation it's best to define both <code>checkReach()</code> and <code>stagingLocations</code> on the 
+TravelConnector in question.</p>
+
+<h2 id="exitloc">Exit Location</h2>
+<p>Although we've solved the problem we set out to solve here, there's still one potential imperfection. The player character needs to stand on the bench to go through the hatch, but when the pc comes back through the hatch from the secret chamber the pc ends up directly back in cellar, as if they had leapt down from the hatch onto the floor. This might just about pass muster in this case, but if the stagingLocation were, say, a large stage at one end of an auditorium with a door leading off it, we'd certainly expect coming back through that door to return the actor to the stage rather than the stage's enclosing room, and even in our cellar example, it might seem more realistic for the player character to end up back on the bench when coming back through the hatch from the secret chamber.</p>
+
+<p>We can achieve this by defining the hatch's exit location, which is the location an actor will end up in when travelling through the hatch to <i>dest</i>. We can do this by adding the following code to our hatch object:</p>
+
+<p><pre>
+    exitLocation(dest)
+    {
+        if(dest == cellar)
+            return oldBench;
+        return dest;
+    }
+
+</pre></p>
+<p>Then we'll get:</p>
+
+<p><pre>
+&gt;<b>get on bench</b>
+You get on the old wooden bench.
+
+&gt;<b>e</b>
+(first opening the wooden hatch)
+
+<b>Secret Chamber</b>
+The only way out of this secret chamber is through the hatch to the west, which only exists for testing purposes.
+
+&gt;w
+<b>Cellar (on the old wooden bench)</b>
+The cellar is almost bare. A flight of stairs leads up to the north, and there’s a hatch on the east wall.
+
+You are on the old wooden bench.
+</pre></p>
+
+<p>The <code>return dest;</code> isn't strictly necessary here, although it does prevent the compiler warning we'd 
+get if we didn't have an explicit return value for when dest isn't. If exitLocation(dest) returns anything that isn't an 
+object in <i>dest</i> then its return value is ignored and the traveler just ends up directly in dest.</p>
+
+<p>This use of exitLocation() works well enough here, but it's even better suited to a exit location that's a fixed platform, 
+like a stage in an auditorium. In that kind of case, the coding pattern we've used here will successfully simulate a door (or other TravelConnector) leading directly off the fixed platform to another location. This is useful since strictly speaking TravelConnectors can only lead between two Rooms. The combination of checkReach(), stagingLocations, and exitLocation() can make it appear that the a door (or other TravelConnector) leads directly off from the fixed Platform instead.</p>
+
+<p>But in our original example, the bench may not be fixed in place. If it's moved while the player character is in 
+the secret chamber, it's probably okay if the pc ends up directly in the cellar after their return journey, since we can imagine them leaping down from the floor, but what it if the bench were portable and there were other objects the player character could use to stand on instead. How could we arrange for the exitLocation to be the same as the stagingLocation the playerCharacter used to access the hatch?</p>
+
+<p>One way would be to store the stagingLocation in a custom property, <code>lastStagingLocation</code>,  
+when the player character uses that stagingLocation, and then have exitLocation return the value of 
+that property when the pc returns througj the hatch:</p>
+
+<p><pre>
+hatch: DSDoor 'wooden hatch' @cellar @secretChamber    
+    checkReach(actor)
+    {
+        if(actor.location not in (secretChamber, oldBench, woodenChair))
+            "The hatch is too high up for you to reach from the ground. ";
+    }
+    
+    stagingLocations = [oldBench, woodenChair, secretChamber]
+    
+    exitLocation(dest)
+    {
+        if(dest == cellar)
+            return lastStagingLocation;
+        return dest;
+    }
+    
+    lastStagingLocation = nil
+    
+    beforeTravel(traveler, connector)
+    {
+        if(traveler.isIn(cellar))
+           lastStagingLocation = traveler.location;
+    }
+;
+</pre></p>
+<p>Then, in this example, the player character will end up on whichever of the bench or the chair 
+they used to access the hatch when going through it from the cellar. This could readily be extended 
+to separate stagingLocations and exitLocations on either side of the hatch by using two properties,
+say cellarStagingLocation and chamberStagingLocation:</p>
+
+
+<p><pre>
+hatch: DSDoor 'wooden hatch' @cellar @secretChamber    
+    checkReach(actor)
+    {
+        if(actor.location not in (oldBench, woodenChair, packingCrate))
+            "The hatch is too high up for you to reach from the ground. ";
+    }
+    
+    stagingLocations = [oldBench, woodenChair, packingCrate]
+    
+    exitLocation(dest)
+    {
+        if(dest == cellar)
+            return cellarStagingLocation;
+        return chamberStagingLocation;
+    }
+    
+    cellarStagingLocation = nil
+    chamberStagingLocation = nil
+    
+    beforeTravel(traveler, connector)
+    {
+        if(traveler.isIn(cellar))
+           cellarStagingLocation = traveler.location;
+        else
+           chamberStagingLocation = traveler.location
+    }
+;
+</pre></p>
+<p>Further variations on the theme may be left as an exercise for the reader.</p>
+
+<h2>Staging Locations with Booths</h2>
+<p>So far our discussion of nested rooms as staging locations has focused entirely on Platforms, but this raisses 
+the question whether the same techniques can also be used with Booths. The answer is yes, but only to the limited
+extent. We can use the same combination of stagingLocations, exitLocation and checkReach with a Booth provided that 
+the Booth is permanently open. So, for example, we could use these techniques to model an alcove in a larger 
+room with a door set in the alcove or a passage running from it. But we can't do the same with an openable 
+Booth that might be closed, since a Door or other travelConnector connecting two Rooms would not be accessible 
+from inside the closed Booth. So if, for example, we wanted to model a wardrobe with a secret door at its rear,
+the way to do it would be to make the wardrobe a Room in its own right, perhaps putting it in the same SenseRegion 
+as its notionally enclosing room, and then defining <code>canSeeOutTo(loc) { return isOpen; }</code> on our 
+wardrobe object.</p>
+
+</div>
+<hr class="navb"><div class="navb">
+<i>TADS 3 Technical Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="advtop.htm">Advanced Topics</a> &gt; 
+Using Nested Rooms as Staging Locations
+<br><span class="navnp"><a class="nav" href="t3mi.htm"><i>Prev:</i> Multiple Inheritance</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="t3past.htm"><i>Next:</i> Writing a Game in the Past Tense</a> &nbsp;&nbsp;&nbsp; </span>
+
+
+</div>
+</body>
+</html>
+

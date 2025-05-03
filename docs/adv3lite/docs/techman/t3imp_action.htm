@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Implicit Action Reports</title>
+<link rel="stylesheet" href="techman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="depth.htm">Adv3Lite In Depth</a> &gt; 
+Implicit Action Reports
+<br><span class="navnp"><a class="nav" href="t3msg.htm"><i>Prev:</i> Message Parameter Substitutions</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="t3custom.htm"><i>Next:</i> Customising (and Using) Existing Actions</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+
+<h1>Implicit Action Reports</h1>
+
+
+
+<p><i>by Eric Eve</i>
+
+<p>Implicit Actions are actions carried out by a TADS 3 game that are not
+explicitly commanded by the player, usually in order to facilitate the
+command the player has just explicitly typed. For example if the
+player types EAST when going east would take the player character
+through a closed door, the game will (normally) first try to open the
+door with an implicit action to enable the explicitly commanded travel
+action to go ahead. Similarly, if the player types PUT BALL IN BOX
+when the ball is in plain view but not actually held by the player
+character, a TADS 3 game will typically trigger an implicit action to
+take the ball before carrying out the PUT IN action the player
+explicitly requested.</p>
+
+<p>Such behaviour is generally desirable, since it relieves the player
+of the tedium of having to explicitly open every door before walking
+through it, or explicitly picking up every object before putting it
+somewhere (and so on). It also makes for a much smoother playing
+experience to get something like:</p>
+
+<p><pre>
+<b>&gt;EAST</b>
+(first opening the door)
+
+<b>Hall</b>
+This large hall looks as if a small army of servants spends 20 hours a day
+polishing its floor. Doors lead off in all the cardinal directions.
+
+You see a red ball and a cardboard box here.
+
+<b>&gt;PUT BALL IN BOX</b>
+(first taking the red ball)
+Done.
+</pre></p>
+
+<p>Rather than the potentially frustrating:</p>
+
+<p><pre>
+<b>&gt;EAST</b>
+You can't, because the door is in the way.
+
+<b>&gt;PUT BALL IN BOX</b>
+You need to be holding the red ball before you can put it in anything.
+</pre></p>
+
+<p>Normally the library handles all this automatically for you,
+usually through the <a href="t3res.htm#precond">preconditions</a>
+applied to various actions. It is also possible to trigger an implicit
+action in your own code using the <code>tryImplicitAction</code>
+macro. Either way the game will take care of reporting the implicit
+action for you, so that the player is kept informed of what action the
+game has just performed on his/her behalf. These implicit action
+reports generally take the form of the messages in brackets we have
+just seen in the examples above, e.g.</p>
+
+<p><pre>
+(first opening the door)
+
+(first taking the red ball)
+</pre></p>
+
+<p>A slightly different form of implicit action report is displayed
+when an implicit action is attempted but fails for some reason (the
+door is locked or the ball is too heavy); in such a case the implicit
+action attempted is usually introduced with 'trying to'; for
+example:</p>
+
+<p><pre>
+<b>&gt;EAST</b>
+(first trying to open the door)
+The door seems to be locked.
+
+<b>&gt;PUT BALL IN BOX</b>
+(first trying to take the ball)
+The ball must be made of solid lead - you can't shift it!
+</pre></p>
+
+<p>For the most part these standard implicit action reports work well,
+and you may never need to worry about them in your game. Occasionally,
+though, you may feel you want to vary them for stylistic effect, or to
+avoid a report that looks jarring. Suppose, for example, that your
+leading female NPC won't let the PC kiss her while he's carrying the
+large antique china vase, but you decide to handle putting down the
+vase through an implicit action:</p>
+
+<p><pre>
+  dobjFor(Kiss)
+  {
+	  verify() {}
+	  action()
+	  {
+		  if(vase.isIn(gActor);
+		     tryImplicitAction(Drop, vase);
+		     
+		  "You give Myrtle a firm kiss on her lips, which makes her burst
+		   into a fit of giggles. ";
+      }		      
+  }
+</pre></p>
+
+<p>Then what the player will see is something like:</p>
+
+<p><pre>
+<b>&gt;kiss myrtle</b>
+(first dropping the priceless antique vase)
+You give Myrtle a firm kiss on her lips, which makes her burst
+into a fit of giggles.
+</pre></p>
+
+<p>And you may think this looks a little jarring. Perhaps you would
+have preferred:</p>
+
+<p><pre>
+<b>&gt;kiss myrtle</b>
+(first putting the priceless antique vase carefully down on the floor)
+You give Myrtle a firm kiss on her lips, which makes her burst
+into a fit of giggles.
+</pre></p>
+  
+<p>This is not too difficult to do once you know how, but it may not
+be immediately apparent how to do it. This article will explore
+how.</p>
+
+<br>
+
+<h2>The Parts of an Implicit Action Report</h2>
+
+<p>If you want to customise an implicit action report, it's first
+helpful to recognize that it's made out of a number of elements. For
+present purposes we may regard these as the <i>report framework</i>
+and the <i>action phrases</i>. The <i>action phrases</i> are the parts
+of the report referring to the specific actions being attempted, while
+the <i>report framework</i> is the surrounding material that
+identifies the whole thing as an implicit action report, and makes it
+grammatically complete. So for example, in the implicit action
+reports:</p>
+
+<p><pre>
+(first opening the door)
+(first unlocking the door then opening it)
+(first trying to open the door)
+
+opening the door
+unlocking the door
+opening it
+to open the door
+</pre></p>
+
+<p>Are all action phrases, whereas:</p>
+<p><pre>
+(first      )
+(first        then     )
+(first trying          )
+</pre></p> 
+<p>Are all report framework. From this it can be seen that an <i>action phrase</i> always consists of a verb (as either a participle - e.g. opening - or as an infinitive - e.g. to open) plus the object or objects involved in the action (the door, or the door with the brass key if the implicit action were "first unlocking the door with the brass key"). It is likely to be more useful (and generally easier) to customise an <i>action phrase</i> than the <i>report framework</i>, so we shall spend most of the time looking at the former before giving a brief discussion of the latter.</p>
+<br>
+
+<h2>Customizing Action Phrases</h2>
+
+<p>If all we want to do is to customize the action phrase part(s) of an implicit action report, then ideally we'd like to be able to leave everything else to the standard library rather than trying to reimplement wheels in our own code. In this context "everything else" refers to all aspects of the framework (such as words like "first", "trying" and "then") as well as deciding whether we need the participle or infinitive form ("first opening the door" vs "first trying to open the door") and using a pronoun instead of a noun the second and subsequent times we refer to the same object ("first unlocking the door then opening it" rather than "first opening the door then opening the door"). Fortunately it is easy to write code that changes the action phrase(s) while leaving the standard library to do everything else as normal.</p>
+
+<p>The key to this is understanding where the action phrase comes
+from. In every case the action phrase of an implicit action report is
+derived from the <code>verbPhrase</code> property of the associated
+action, so all we need to do is to change that <code>verbPhrase</code>
+at some appropriate point, just before the standard libary code uses
+it to generate the implicit action report. In the standard library
+(and on custom actions you define in your own code), the
+<code>verbPhrase</code> property is generally defined in the
+appropriate <code>VerbRule</code> (if you're not familiar with this,
+see the article on <a href="t3verb.htm">How to Create Verbs</a>). A
+<code>verbPhrase</code> typically looks like:</p>
+
+<p><pre>
+verbPhrase = 'drop/dropping (what)'
+
+verbPhrase = 'unlock/unlocking (what) (with what)'
+</pre></p>
+
+<p>In these verbPhrases, (what) is a placeholder for the noun or nouns
+involved in the action, and the 'drop/dropping' or 'unlock/unlocking'
+give the infinitive (minus the 'to') and the participle of the
+corresponding verb. So, if the implicit action report routine wants to
+construct a message for an implicit action that <i>succeeds</i> it
+takes the verb form immediately after the slash (/) and substitutes
+the noun for (what), generating a message like 'dropping the priceless
+antique vase'. Similarly, if an implicit action fails, the implicit
+action report routine take the verb form immediately before the slash
+(e.g. unlock), inserts the noun or nouns into the (what) slots (e.g.
+'the door with the brass key') and prepends "trying to" before the
+whole thing ("first trying to unlock the door with the brass
+key").</p>
+
+<p>So, in the antique vase example, what we need to do is to change
+this verbPhrase to something like 'place/placing (what) gently on the
+floor' just before the implicit drop action report is generated. The
+best place to do this is probably in the
+<code>vPhrase(obj)</code> method of the appropriate action:<p>
+
+<p><pre>
+modify Drop  
+    vPhrase(dobj)
+    {
+        if(dobj == vase)
+            return 'put/putting (what) carefully down on the floor';
+        
+        return inherited(dobj);
+    }    
+;
+</pre><p>
+
+<p>The <code>vPhrase(<i>dobj</i></code> method on a TAction obtains the verbPhrase to use 
+when constructing the implicit action report to be used when the action is 
+carried out implicitly. The <i>dobj</i> parameter is the direct object of the 
+current action. On a TIAction <code>vPhrase(dobj, iobj)</code> is called with 
+two parameters (the direct and indirect objects).
+
+In this example above  we simply test whether the current direct
+object is the vase, and if so we substitute our custom
+<code>verbPhrase</code> for the standard one. Implicitly dropping
+anything other than the vase will result in the standard message being
+used.</p>
+
+<p>This method is fine where there's only one object we want to treat
+as a special case, but if there were several - especially several with
+different customized messages - we might want a more a general
+solution (rather than writing a <code>switch</code> statement or
+multiple <code>if</code> tests in the getImplicitPhrase() method).
+What would be useful would be a method that had the object concerned
+decide whether to use a custom phrase, and if so to supply that custom
+it. We could achieve this like so:</p>
+
+<p><pre>
+modify Drop   
+    vPhrase(dobj)
+    {
+        return dobj.verbPhraseDobjDrop  ?? inherited(dobj);      
+    }    
+;
+</pre><p>
+
+<p>This code checks whether the current direct object has a non-nil
+<code>verbPhraseDobjDrop</code> property, and, if (but only if) it
+has, changes the <code>verbPhrase</code> property on the current
+action to match. We could, of course, have called the property of the
+direct object we're testing for anything we liked, but there are a
+couple of advantages to the name suggested here. First, the suffix
+'DobjDrop' makes it clear what this verbPhrase variant is for (which
+could become more relevant if we were customizing several actions in
+this way) and secondly it corresponds to the way the dobjFor
+propertyset expands property names. This means that we can then
+customize the vase thus:</p>
+
+<p><pre>
++ vase: Thing 'priceless antique vase' 'priceless antique vase'
+    dobjFor(Drop)
+    {
+        action()
+        {
+            if(!gAction.isImplicit)
+              "{You/he} set{s} the antique vase carefully down on the ground. ";
+            inherited;
+        }
+        verbPhrase = 'set/setting (what) carefully down on the ground. '
+    }
+;
+</pre><p>
+
+<p>Note that here we've also customized the response to an explicit
+DROP VASE so that it corresponds to the implicit message, and that
+we've included a test to ensure that this message is only shown when
+the action is not implicit (since otherwise we'd see both custom
+messages - the implicit and the explicit ones - when the vase was
+dropped implicitly, which would not look good.)</p>
+
+<p>Note also that if you overrise vPhrase() along the lines of the 
+previous example, but don't go on to define the corresponding property 
+for that action on at least one game object, you'll get a compiler warning.</p>
+
+<p>The technique outlined here is easily generalizable and should cater for most implicit action phrase tweaking you're likely to do,  but there are a couple of further points to bear in mind:</p>
+
+<ul>
+<li>If a player sees an implicit action report like "(first setting the priceless antique vase carefully down on the ground)" they may very well suppose that this is a legitimate way to phrase the action, and so at some future point s/he'll try SET VASE CAREFULLY DOWN ON GROUND. It might be a good idea to modify or create a VerbRule to cater for this phrasing and its likely variants. It might be better to make your customize verbPhrase reflect something the parser will understand, such as 'put/putting {what} down'.</li>
+<li>There's no reason why the technique outlined above shouldn't be extended to cover two-object commands, but what you'll then need to look out for is whether you want the direct object or the indirect object of the command to be the one providing the customized verbPhrase, or whether you want to give both objects the chance to provide a customized verbPhrase, in which case you'll need to decide which of the two is to take precedence.</li>
+</ul>
+
+<h2>Modifying Framework Text</h2>
+
+<p>Modifying the framework text for implicit action reports is probably less useful to do, but not particularly difficult to achieve, these fragments are all defined in <a href='../manual/message.htm#dmsg'>BSMg </a>strings:</p>
+
+<ul>
+<li>BMsg(implicit action report start, '&lt;.assume&gt;first ')</li>
+<li>BMsg(implicit action report separator, ' then ')</li>
+<li>BMsg(implicit action report terminator, '&lt;./assume&gt;\n')</li>
+<li>BMsg(implicit action report failure, 'trying to ') </li>
+</ul>
+
+<p>So, if we wanted to, we could change all these fragments using a <a href='../manual/message.htm#custmessage_idx'>CustomMessages</a>
+object:</p>
+<p><pre>
+CustomMessages
+    [
+        Msg(implicit action report start, '&lt;b&gt;[to begin with '),
+        Msg(implicit action report separator, ' and next '),
+        Msg(implicit action report terminator, ']&lt;/b&gt;\n'),
+        Msg(implicit action report failure, 'totally failing to ')
+    ]
+;
+</pre>
+
+<p>If we liked we could define this CustomMessages' <code>active</code> property to define when we wanted this 
+set of fragments to be used, e.g. <code>active = gActionIn(Take, Drop)</code> or <code>gPlayerChar = barnabas</code>. 
+(Whether you think any of thie is a good idea is, of course, another matter; the point is that it's 
+not hard to do if you want to).
+
+
+<h2>Silent Implicit Actions</h2>
+
+<p>It's normally a good idea to display implicit action reports so that players
+can see what's happened in the course of carrying out the command they asked for.
+Otherwise they might imagine the player character has walked through a closed door 
+or wonder how they've ended up holding the widget they couldn't put in the locked 
+box. but if you want to silence implicit action reports you can do so simply 
+by setting <b>reportImplicitActions</b> to nil either on individual actions 
+or globally on the Action class.</p>
+
+<p>If you wanted to silence Implicit Action reports for a pariculer block of code, for example, you could use 
+a pattern like the following:</p>
+
+<p><pre>
+   ...
+   try
+   { 
+      Action.reportImplicitActions = nil;
+      //Do stuff without implicit action reports here 
+      ...
+   }
+   finally   
+   {
+      Action.reportImplicitActions = true;
+   }
+  
+
+</pre>
+
+</p>
+
+
+</div>
+<hr class="navb"><div class="navb">
+<i>TADS 3 Technical Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="depth.htm">Av3Lite In Depth</a> &gt; 
+Implicit Action Reports
+<br><span class="navnp"><a class="nav" href="t3msg.htm"><i>Prev:</i> Message Parameter Substitutions</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="t3custom.htm"><i>Next:</i> Customising (and Using) Existing Actiona</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>
+

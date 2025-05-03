@@ -1,0 +1,193 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Actors &mdash; Player Character and NPC Knowledge</title>
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="actor.htm">Actors</a> &gt; 
+Player Character and NPC Knowledge
+<br><span class="navnp"><a class="nav" href="hello.htm"><i>Prev:</i> Hello and Goodbye</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="orders.htm"><i>Next:</i> Giving Orders to NPCs</a> &nbsp;&nbsp;&nbsp; </span>
+</div>
+<div class="main">
+<h1>Player Character and NPC Knowledge</h1>
+<p>One type of condition that clearly effects what conversation topics should be available at any point in time is what the player character, and possibly the NPC s/he's conversing with, knows at that point in time. For example the player character can't ask Bob about the dark tower until the player character knows such a thing exists (even if the player knows it because s/he's played the game before). In this section we look at how to keep track of what the player character and other characters know, and how to use that information to affect what conversation topics are available at any point in time.</p>
+
+<a name="model"></a><h2>The Knowledge Model</h2>
+<p>The adv3lite knowledge model starts from the premise that the player character knows of the existence of an object either if s/he has seen it, or if we declare it to be <strong>familiar</strong>. The <span class="code">familiar</span> property is a way of telling the game that the player character knows about (i.e. knows of the existence of) an object even is s/he hasn't seen it (or hasn't seen it yet). This allows the player to ask or tell other characters about this object.</p>
+
+<p>The library attempts to keep track of what the player character has seen by setting the <strong>seen</strong> property of objects to true once the player character has seen them. In some cases, however, a game author may have to do this manually, for example when moving an object into view using <span class="code">moveInto()</span>. For reasons that will become more apparent below, rather than setting the value of the seen property manually, it's often best not to do so directly (which a statement like <span class="code">codebook.seen = true</span>) but either by calling the <strong>setSeen()</strong> method on the object that has just come into view (e.g. <span class="code">codebook.setSeen()</span>) or calling <span class="code">setHasSeen(obj)</span> on the player character (e.g. <span class="code">gPlayerChar.setHasSeen(codebook)</span>). The second method can be abbreviated by using the <strong>gSetSeen()</strong> macro; writing <span class="code">gSetSeen(codebook)</span> is exactly equivalent to writing <span class="code">gPlayerChar.setHasSeen(codebook)</span>. To test whether the player character has seen something we can use the <strong>hasSeen()</strong> method, e.g. <span class="code">gPlayerChar.hasSeen(codebook)</span> will be true if the player character has seen the codebook.</p>
+
+<p>In the case of Things (or Topics) the player character learns about other than by actually seeing them, we use the <strong>familiar</strong> property. If the player character learns of the existence of a codebook that s/he is yet to find, we can set <span class="code">codebook.familiar</span> to true to indicate that the player character now knows of the codebook's existence (and so can refer to it in conversation). Again it's often best to do this using either <strong>setKnown()</strong>, e.g. <span class="code">codeBook.setKnown()</span> or <strong>setKnowsAbout()</strong>, e.g. gPlayerChar.setKnowsAbout(codebook) which can be abbreviated to <span class="code">gSetKnown(codebook)</span> using the <strong>gSetKnown()</strong> macro. Each of these methods will set <span class="code">codeBook.familiar</span> to true.</p>
+
+<p>Remember, the player character knows about the codebook either if s/he has seen it (<span class="code">codebook.seen</span> is true) or if s/he has learned about its existence in some other way (<span class="code">codebook.familiar</span> is true). To test whether the player character knows about the codebook we use the <strong>knowsAbout()</strong> method, e.g. gPlayerChar.knowsAbout(codebook) or the known property, e.g. <span class="code">codebook.known</span> (which simply returns the value of <span class="code">gPlayerChar.knowsAbout(codebook)</span>).</p>
+
+<p>At first sight, this may all seem unnecessarily complex; why not just set and test the values of <span class="code">seen</span> and <span class="code">known</span> directly, and why do we need another property called <span class="code">familiar</span>? To answer the second question first we need to distinguish <span class="code">familiar</span> (known about but not necessarily seen) from <span class="code">known</span> (either <span class="code">seen</span> or <span class="code">familiar</span>). Since <span class="code">obj.known</span> is true either if <span class="code">obj.seen</span> is true or <span class="code">obj.familiar</span> is true, we need three property names to keep track of the epistemological model.</p>
+
+<p>In games where we're only interested in what the player character has seen and knows about, it would be perfectly okay to set and test the values of <span class="code">seen</span> and <span class="code">familiar</span> directly. The complication comes in either when we have more than one player character (because the player character changes during the course of play) or because we want to keep separate track of what non-player characters have seen and/or know about. By themselves the <span class="code">seen</span> and <span class="code">familiar</span> properties of objects don't tell us who has seen them or is familiar with them. So if we're interested in tracking the knowledge of more than one actor in the game we have to do a bit more work.</p>
+
+<p>To this end we can use the <strong>seenProp</strong> and <strong>knownProp</strong> properties. These are defined on the actor concerned, and should contained property pointers defining which properties of Thing (and Topic) to use to keep track of what this particular actor has seen and is familiar with. By default <span class="code">seenProp</span> is just <span class="code">&amp;seen</span> for every actor, and <span class="code">knownProp</span> is <span class="code">&amp;familiar</span> for every actor, meaning that calling setHasSeen(obj) on <em>any</em> actor will set <span class="code">obj.seen</span> to true, and calling <span class="code">knowsAbout(obj) </span>on any actor will set <span class="code">obj.familiar</span> to true. If, however, we wanted to keep separate track of Bob's knowledge we could define new <span class="code">bobSeen</span> and <span class="code">bobFamiliar</span> properties on Thing (and a new <span class="code">bobFamiliar</span> property on Topic), and then set <span class="code">bob.seenProp</span> to <span class="code">&amp;bobSeen</span> and <span class="code">bob.knownProp</span> to <span class="code">&amp;bobFamiliar</span>, like this:</p>
+
+ <p><div class="code"><pre>
+modify Thing
+    bobSeen = nil
+    bobFamiliar = nil
+;
+
+modify Topic
+   bobFamiliar = true <span class="comment">// We tend to assume that most topics start out familiar, but we don't have to. </span>
+; 
+
+bob: Actor 'Bob; squat little;fellow man; him'
+   "He's a squat little fellow. "
+   seenProp = &amp;bobSeen
+   knownProp = &amp;bobFamiliar
+;
+ </pre></div>
+
+<p>With these definitions in place, <span class="code">bob.setHasSeen(obj</span>) will set <span class="code">obj.bobSeen</span> to true, and <span class="code">bob.setKnowsAbout(obj)</span> will set <span class="code">obj.bobFamiliar</span> to true. Likewise, <span class="code">bob.hasSeen(obj)</span> will return the value of <span class="code">obj.bobSeen</span>, and <span class="code">bob.knowsAbout(obj)</span> will return the value of <span class="code">(obj.bobSeen || obj.bobFamiliar)</span>. Note, however, that doing all this does <em>not</em> cause the library to keep automatic track of what Bob has seen; it is still up to the game code to call <span class="code">bob.setHasSeen(whatever)</span> as and when appropriate.</p> 
+
+<p>If you are certain that your game will <em>never</em> need to keep track of what anyone other than its player character has seen and knows about (and your game will only ever have one player character), then it is safe to set the <span class="code">familiar</span> and <span class="code">seen</span> properties of Things and to query the <span class="code">known</span> and <span class="code">seen</span> properties of Things directly. Otherwise its better to use <span class="code">setSeen()</span> and the rest from the start to avoid hard-to-find bugs later.</p>
+ 
+
+<a name="existence"></a><h2>Knowledge of Existence in Conversation</h2>
+
+<p>We have already seen that the library keeps basic track of the player character's knowledge of the existence of <a href="thing.htm">things</a> and <a href="topic.htm">topics</a>. As stated aboved, we can test whether the player character knows of the existence of some object <em>obj</em> by testing the value of <span class="code">gPlayerChar.knowsAbout(obj)</span> or, equivalently, <span class="code">obj.known</span>. If obj is a Thing this will be true either if the player character has seen obj or if the <strong>familiar</strong> property of obj (i.e. obj.familiar) is true. Since Topics can't be seen they're simply known if they're familiar. We can make an object become familiar to the player character during the course of play by calling <strong>gSetKnown(obj)</strong>. Equivalently, if something becomes known to the player character during the course of conversation, we can use the <strong>&lt;.known obj&gt;</strong> tag to do the same thing.</p>
+
+<p>The important thing to bear in mind is that the matchObj property of a TopicEntry won't be matched by a conversational command if the object in question isn't known to the player character. Thus, without our having to do anything else about it, the player character can't ask about the dark tower, for example, until s/he knows of the dark tower's existence. That means we can safely define ActorTopicEntries like this:</p>
+
+ <p><div class="code"><pre>
++ AskTellTopic @tTown
+   &quot;&lt;q&gt;This seems a nice town,&lt;/q&gt; you remark cheerily.\b
+    &lt;q&gt;Yes it is -- provided you don't go anywhere the dark
+    tower,&lt;/q&gt; he agrees cautiously. &lt;.known darkTower&gt; &quot;
+;
+
++ AskTopic @darkTower
+  &quot;&lt;q&gt;What can you tell me about the dark tower?&lt;/q&gt; you ask.\b
+  Bob rolls his eyes and looks away for a moment. &lt;q&gt;You don't want
+  to know,&lt;/q&gt; he mutters. &lt;q&gt;You really don't.&lt;/q&gt; &quot;
+;
+</pre></div>
+
+<p>Here, the second TopicEntry can't be reached until the player character knows about (i.e. knows of the existence of) the dark tower. This might be because the player character has already encountered the tower in his travels, or because he's read about it somewhere, or because some other NPC has mentioned it to him, but if the player character hasn't heard about the dark tower before the start of his conversation with Bob, he won't be able to trigger the second response until Bob has mentioned the dark tower in the first.</p>
+<br>
+
+<a name="facts"></a><h2>Knowledge of Facts</h2>
+<p>The player character's knowledge or ignorance of the existence of various things and topics may not, however, be sufficient to model all the epistemic conditions that determine what topics the player character can talk about. For example, in addition to learning of the dark tower's existence, the player character may come to learn when it was built, or that it's believed to be haunted by the ghost of a pirate, or that people are said to have mysteriously disappeared there. To represent such facts (or putative facts) we can use short string tags (fact tags), such as 'when-tower-built' or 'tower-haunted' or 'tower-disapperances'. For reasons that will shortly become apparent, we should regard such tags as inhabiting a global namespace (in other words, we should always use the same knowledge tag with the same meaning throughout our game).</p>
+
+<p>When a piece of information becomes known to the player character, we can note the fact by using a <strong>&lt;.reveal&gt; </strong>tag; e.g. &lt;.reveal when-tower-built&gt; or &lt;.reveal tower-haunted&gt; or &lt;.reveal tower-disappearances&gt; (we can also do the same thing using the <strong>gReveal(tag)</strong> macro, e.g. gReveal('when-tower-built')). To test whether some item of knowledge has been revealed to the player character we can use the <strong>gRevealed(tag)</strong> macro, e.g. gRevealed('tower-haunted'). So, for example, we might go on to define:</p>
+
+ <p><div class="code"><pre>
++ AskTellTopic +110 @darkTower
+   &quot;&lt;q&gt;I've heard it said that the dark tower is haunted,&lt;/q&gt; you remark.
+    &lt;q&gt;Do you believe that?&lt;/q&gt;\b
+    Bob gives a little shudder. &lt;q&gt;I don't &lt;i&gt;believe&lt;/i&gt; that tower is
+    haunted,&lt;/q&gt; he tells you, &lt;q&gt;I &lt;i&gt;know&lt;/i&gt; it is!&lt;/q&gt; &quot;
+    
+    isActive = gRevealed('tower-haunted')
+;
+</pre></div>
+
+<p>Note that we've given this AskTellTopic a matchScore of 110 (10 higher than the default) so that if the player character has heard about the rumours of haunting he asks this more specific question about the tower in place of the more general one above.</p>
+
+<p>Some game authors may wish to use this mechanism for other purposes outside strictly conversational contexts as a convenient method to set and unset flags. For this purpose the library defines an <strong>&lt;.unreveal&gt; </strong> tag, which undoes the effect of &lt;.reveal&gt; and a <strong>gUnreveal(<i>key</i>)</strong> macro which undoes the effect of gReveal(<i>key</i>) [Strictly speaking, <span class="code">&lt;.unreveal <i>key</i>&gt;</span> does not undo all the effects of <span class="code"> &lt;.reveal key&gt;</span>, it simply removes <i>key</i> from, the LookUpTable of stored keys; it doesn't undo the updating of the informed status of <i>key</i> on every NPC in earshot, since it is unclear that this is what should happen; game code can override <span class="code">Actor.setUnrevealed(tag)</span> if it wants to handle things differently].
+
+<p>At this point we might also note that gReveal(), gUnreveal and gRevealed() are defined in the core library, so you can use them even if the actor.t module isn't present (e.g. for use with the hints system), whereas the &lt;.reveal&gt; tag, in common with all such converational tags, only works if actor.t is included in the build.</p>
+<a name="informed"></a>
+<p>In the adv3Lite library &lt;.reveal&gt; tags should be regarded as a mechanism for keeping track of what has been revealed to the player character. To keep track of what the player character has told one or more NPCs we use <strong>&lt;.inform&gt;</strong> tags (note, the adv3 library does not make this distinction, but it seemed a useful distinction to introduce into adv3Lite), e.g., &lt;.inform tower-haunted&gt;. We can test whether an NPC has been informed about a particular subject by calling the <strong>informedAbout(key)</strong> method or <strong>knowsAbout(key)</strong> method on the actor, or using the <strong>gInformed(key)</strong> macro on a TopicEntry, ActorState or AgendaItem belonging to the actor. For example, if at some later point in the game the player character were to discuss his experiences in Bob's town with a friend, he might want to inform her about the haunting:</p>
+ <p><div class="code"><pre>
++ TellTopic @darkTower
+  &quot;&lt;q&gt;You know, the folks in Doomsville even think their local tower is
+   haunted,&lt;/q&gt; you remark. &lt;.inform tower-haunted&gt;\b
+   Mavis shakes her head tut-tutting away to herself. &lt;q&gt;There's no
+   end to superstition and folly,&lt;/q&gt; she remarks. &lt;q&gt;Mind you, I heard
+   a similar story about Spookhampton.&lt;/q&gt; &lt;.reveal spookhampton-haunted&gt; &quot;
+   
+  isActive = gRevealed('tower-haunted') && !gInformed('tower-haunted')
+;
+</pre></div>
+
+<p>Note how we use the gInformed() macro in the isActive property so that the player character won't tell Mavis the same piece of information twice (we might also use it elsewhere). Note how we also use the gRevealed() macro to ensure that the player character can't tell Mavis about the haunting until he knows about it himself. Finally, note that we use the &lt;.reveal spookhampton-haunted&gt; tag to note that the player character has just learned another snippet of information about alleged hauntings.</p>
+
+<p>There's one further feature of the &lt;.reveal&gt; and &lt;.inform&gt; tags to bear in mind. The adv3Lite library assumes that if other actors are in earshot when a conversation is going on between the player character and an NPC, the other actors will be listening in on the conversation and hence will learn any piece of information that's imparted with a &lt;.reveal&gt; or &lt;.inform&gt; tag. This in fact extends to the NPC the player character is conversing with as well (though not to the player character, whose knowledge is accessed entirely though what's been revealed). So, for example, if Sally were listening in on the player character's conversation with Bob, then a &lt;.reveal tower-haunted&gt; or a &lt;.inform tower-haunted&gt; tag output in the course of that conversation would add the 'tower-haunted' key to both Bob's and Sally's table of inform keys, so that thereafter both bob.informedAbout('tower-haunted') and sally.informedAbout('tower-haunted') would return true. This seems more realistic than supposing that Sally would remain ignorant of the tower haunting rumours when Bob was discussing them with the player character right in front of her. It also ensures that Bob is reckoned as being informed about anything he has revealed to the player character, which is again surely more realistic than the opposite assumption. Note, however, that the &lt;.reveal&gt; tag only causes other actors to be notified of what's just been revealed if it's used during the course of conversation; if it's used for some other purpose (e.g. to set a flag when an object is examined), the notifications won't take place (unless a conversation happens to be taking place at the same time). If you want to ensure that no notifications take place, use gReveal(tag) instead.</p>
+
+<p>If you don't want this 'overhearing' behaviour, you can also control it through use of the <strong>informOverheard</strong> and <strong>actorInformOverheard</strong> properties. The imparting of information to other actors in earshot can be prevented by setting <span class="code">informOverheard = nil</span> on the current interlocutor's current ActorState, or <span class="code">actorInformOverheard = nil</span> on the Actor (when the current ActorState is nil). To prevent the overhearing behaviour globally, set <span class="code">informOverheard = nil</span> on the actor or on the whole Actor class.</p>
+
+<p>The fact that an information-key revealed to the player character is always the same information-key that informs one or more NPCs explains why such keys must be regarded as occupying a global namespace within any given game (even if that weren't a good idea in any case to avoid confusion).</p>
+
+<p>Although an actor (or Consultable) is unlikely to forget a fact it's previously acquired, if you want that to happen you can call its <b>forget(<i>tag</i>)</b> method, where <i>tag</i> is the fact string-tag representing the fact you want it to forget.</p>
+
+<a name='belief'></a>
+<h2>Knowledge, Truth and Belief</h2>
+<p>So far we have talked about knowledge of facts as if any fact asserted by the Player Character or NPC were automatically true. If Bob asserts that "The capital of Spain is Lisbon&lt;.reveal spain-lisbon&gt;", then testing for <span class='code'>gRevealed('spain-lisbon')</span> only tells us that the player character has been told something about Spain and Lisbon. It doesn't tell us whether the putative fact that has been revealed to the player character is true, or whether the player character believes it (and likewise for anything the Player Character might inform other actors about).
+
+<p>For many if not most purposes, this may well be fine. But if you want to track the credibility of the information that's being exchanged, you can associate it with one of five values: <b>true</b>, <b>likely</b>, <b>dubious</b>, <b>unlikely</b> or <b>untrue</b>. The last four of these are enums defined in the library for the purpose.</p>
+
+<p>To associate one of these values with a knowledge tag, you can call <span class='code'>gRevealed()</span> or <span class='code'>whateveActor.setInformed()</span> with a second optional parameter, e.g. <span class='code'>gRevealed('spain-lisbon', untrue)</span> or <span class='code'>bob.setInformed'wet-tomorrow', likely)</span>. You can also pass this second optional argument in a <span class='code'>&lt;.reveal&gt;</span> or <span class='code'>&lt;.inform&gt;</span> tag provided you use an = sign directly between the tag name and the second argument, e.g. <span class='code'>&lt;.reveallisbon-spain=untrue&gt;</span> or <span class='code'>&lt;.inform wet-tomorrow=likely&gt; </span> (this is necessary because if you just used <span class='code'>&lt;.inform wet-tomorrow likely&gt;</span> the game would assume that 'wet-tomorrow likely' was the name of your knowledge tag and would store it in the informed name table with the default value of true).
+
+<p>Note that these optional values are intended to reflect the attitude of the relevant character in the game &mdash; player character or NPC &mdash; towards the item of putative knowledge associated with a fact-tag, rather than that of you, the game author.</p>
+
+<p>Before version 1.7 the macro <span class='code'>gRevealed(key)</span> and <span class='code'>gInformed(key)</span> along with the associated method <span class='code'>actor.informedAbout(key)</span> just returned true or nil. Now they return the value associated with <i>key</i>, which might be nil if the information has never been supplied at all, but could otherwise be true or any other value that's been associated with <i>key</i> This is unlikely to affect older code if it simply tests for <span class='code'>if(gRevealed(whatever))</span> or <span class='code'>if(gInformed(whatever))</span>, since any non-nil (and non-zero) value will meet such conditions, but if this a problem for backward compatibility in your game you can set <b>libGlobal.revealedTrueOrFalseOnly</b> to true to restore the previous behaviour.
+
+<a name='player'></a>
+<h2>Player Knowledge and Player Character Knowledge</h2>
+<p>Thus far we have treated Player Knowledge and Player Character knowledge as if they were same thing, insofar as gReveal()/gRevealed() effectively set and track both. If there is only ever one player character in the game, this is unlikely to matter. But if the player character ever changes, relying on gRevealed() to test what the new player character knows would cause the new player character to have inherited the old player character's knowledge, which may not be what you want. To get round this problem you can call knowsAbout(item) or informedAbout(item) on the various player characters instead of using gRevealed. You may wish to use the macro <strong>gKnown(item)</strong> for this purpose: this macro expands to <span class='code'>(gPlayerChar.knowsAbout(obj))</span>. Conversely you may wish to use the macro <strong>gSetKnown(item)</strong> to set the player character knowledge, if it's distinct from the player's knowledge. You should be able to use the tag &lt;.known item&gt; to do this with a fact tag provided <i>item</i> contains at least one character that can't occur in an an object name (in other words, anything other than an alphanumeric character or an underscore). You can force this to occur by prefacing the fact tag with $, which will then be stripped from the tag before it's passed to gActor.setKnowsAbout. If you'd rather use some other character or string for this purpose, you can set it on the <b>factTagMarker</b> property of the <strong>conversationManager</strong> object, but the string you choose should be a special character, not an alphanumeric one or underscore.</p>
+
+
+<p>What goes on behind the scenes here is that the results of revealing are stored in <span class='code'>libGlobal.revealedNameTab</span> while the results of gInform/gSetKnown are stored in the player character's <span class='code'>informedAboutTab</span>.</p>
+
+<p>Finally, if you'd prefer to use an alternative (and perhaps more logical) naming system for the tags and macros, you can use <b>pcKnows(<i>arg</i>)</b> and <b>&lt;.pcknow arg&gt;</b> to test and set the player character's knowledge of <i>arg</i> and <b>npcKnows(<i>arg</i>)</b> and <b>&lt;.npcknow arg&gt;</b> to test and set the current interlocutor's knowledge of <i>arg</i> in conversational contexts. In each case <i>arg</i> can be either the programmatic name of a game object (Thing or Topic) or a fact tag (preferably prededed by a $ in <span class='code'>&lt;.pcknow arg&gt;</span>) and <span class='code'>npcKnows(<i>arg</i>)</span>) to mark it out as string argument rather than an object name. So, for example, you'd use <span class='code'>pcKnows('troubles')</span> but <span class='code'>&lt;.pcknow $troubles&gt;</span>. We'll say more about this alternative scheme (and when to use it) below.</p> 
+
+
+<a name='summary'></a>
+<h2>Summary and Recommendations</h2>
+<p>You are, of course, free to use whichever set of tag names and macro names you wish, but here we offer some suggestions on which might be more helpful on two different scenarios.</p>
+
+<b>Scheme 1</b>, which uses the backward-compatible naming scheme, may well be the better option in games where you're happy to largely conflate player and player character knowledge. These will normally be games in which the player character never changes and/or there is little need to track NPC knowledge of the existence of objects (Things and Topics). In which case, you could stick to employing the following tags and macros:</p>
+
+<ul>
+<li>Use <b>&lt;.reveal tag&gt;</b> to note the revealing of a fact tag to the player and player character.</li>
+<li>Use <b>gRevealed(tag)</b> to test whether <i>tag</i> has been revealed to the player and player character.</li>
+<ii>Use <b>&lt;.inform tag&gt;</b> to note the revealing of a fact tag to the current interloctor (the NPC the player character is currently in conversation with) in a conversational context.</li>
+<li>Use <b>gInformed(tag)</b> in a oonversational context to test whether <i>tag</i> has been revealed to the current interlocutor.</li>
+</ul>
+
+
+
+<b>Scheme 2</b>, which uses the alternative system, may well be the better option in games where the player character changes and/or there is a need to distinguish Player knowledge, Player Character knowledge, and NPC knowledge, including which game objects and Topics different actors know about (know the existenced of) and possibly also which they have ssen.</p>
+
+<ul>
+<li><b>pcKnows(<i>arg</i>)</b> indicates whether or not the Player Character knows or knows about <i>arg</i>.</li>
+<li><b>npcKnows(<i>arg</i>)</b> indicates whether or not the NPC the Player Character is currently conversing with knows or knows about <i>arg</i>.</li>
+<li><b>&lt;.pcknow arg&gt;</b> makes the Player Character know about arg.</li>
+<li><b>&lt;.npcknow arg&gt;</b> makes the NPC the Player Character is currently conversing know about arg.</li>
+<li>Use <b>&lt;.reveal tag&gt;</b> to note the revealing of a fact tag to the <i>player</i> (e.g. in a hint system) or for general purpose flags.</li>
+<li>Use <b>gRevealed(tag)</b> to test for the revealing to the <i>player</i> (e.g. in a hint system) or for general purpose flags.</li>
+</ul> 
+<p>In the first four of the above <i>arg</i> can either be the name of a game object (Thing or Topic) or a fact tag. For <span class='code'>pcKnows(arg)</span> and <span class='code'>npcKnows(arg)</span>, if <i>arg</i> is intended as a fact tag it should be given as a single-quoted string (e.g. <span class='code'>pcKnows('troubles')</span>), For <span class='code'>&lt;.pcknown arg&gt;</span> and <span class='code'>&lt;.npcknown arg&gt;</span>, if <i>arg</i> is a fact tag it should be preceded by a $, e.g., <span class='code'>&lt;.pcknown $troubles&gt;</span>. Even though adv3Lite library may often be able to work out that <i>arg</i> can't be an object name it will make your code both safer and more readable if you always precede your tag names with a $ in these two cases (this isn't be necessary with any other conversation tags such as <span class='code'>&lt;.reveal arg&gt;</span> and the rest, but the library will strip any $ from the front of these too, just in case you include them by mistake).</p>
+
+
+<p>Note that on this second scheme, you will need to set the <b>knownProp</b>, and possibly (but not necessarily) the <b>seenProp</b>, to different values, (e.g. &amp;bobKnows, &amp;sallyKnows) on every actor whose knowledge of game objects you need to track separately, and you will also need to manage these separate properties on all relevant Things, Topics, Rooms and Regions (where familiarity may vary between different actors). It will be even more work if you need to keep track of what different actors have seen.</p>
+
+<p>To sever the link between Player knowledge and Player Character knowledge you may also wish to set <b>libGlobal.informOnReveal</b> to nil. This will prevent <span class='code'>&lt;.reveal&gt;</span> and <span class='code'>gRevealed()</span> from updating the informedNameTab of any actors, including the Player Character.</p>
+
+<p><b>On Either Scheme</b>, for testing and setting NPC knowledge outside conversational contexts where the NPC is the current interlocutor, call the methods <b>knowsAbout(arg)</b> and <b>setKnowsAbout(arg)</b> on the NPC in question, where <i>arg</i> can once again be am object name or a string tag.</p>
+
+<p>In all probability, most games will be able to use Scheme 1 without players noticing anything amiss. A few games in which the finer details of who knows what is vital to the story-line or puzzle structure may need to use Scheme 2.</p>
+
+</div>
+<hr class="navb"><div class="navb">
+<i>adv3Lite Library Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="actor.htm">Actors</a> &gt; 
+Player Character and NPC Knowledge
+<br><span class="navnp"><a class="nav" href="hello.htm"><i>Prev:</i> Hello and Goodbye</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="orders.htm"><i>Next:</i> Giving Orders to NPCs</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>

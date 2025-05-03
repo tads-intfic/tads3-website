@@ -1,0 +1,535 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Rules</title>
+
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="../../docs/manual/topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="../../docs/manual/toc.htm">Table of Contents</a> | 
+<a class="nav" href="../../docs/manual/extensions.htm">Extensions</a> &gt; 
+Rules
+<br><span class="navnp"><a class="nav" href="roomparts.htm"><i>Prev:</i> Room Parts</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="scenetopic.htm"><i>Next:</i> SceneTopic</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+<div class="main">
+
+<h1>Rules</h1>
+<h2>Overview</h2>
+<p>The purpose of the <a href="../rules.t">rules.t</a> extension is to allow game code to define Rules and RuleBooks. Rules are associated with RuleBooks, which may be invoked at any point in game code to carry out actions and/or return values to their caller.</p>
+
+<p>In brief, calling the <strong>follow()</strong> method of a RuleBook causes it to call the <span class="code">follow()</span> method of each of its associated Rules in descending order of precedence (ignoring those Rules that don't match their conditions) until either one of these Rules stops the sequence or there are no more Rules to call. The value returned to the RuleBook by the last-executed Rule's <span class="code">follow()</span> method is then returned to the caller of the RuleBook's <span class="code">follow()</span> method.</p>
+
+<p>Doers and TopicEntries (especially Doers) are standard classes in the main adv3Lite library that act a little like Rules, but the Rules extension allows you to generalize this kind of functionality into all sorts of other situations. It is most likely to be most useful in situations where a tangle of nested if statements and switch statements would otherwise be needed to code complex interactions, but you are, of course, free to use rules wherever you wish.</p>
+
+<p>This extension does not define any actual Rules or Rulebooks, but simply the Rule and RuleBook classes that allow rules and rulebooks to be defined. For some predefined rules and rulebooks that work with this extension and provide rule-based access to certain aspects of the action-processing and turn cycles, see the related <a href="sysrules.htm">sysrules</a> extension.</p>
+<br>
+
+<a name="classes"></a>
+<h2>New Classes, Methods and Properties</h2>
+<p>In addition to a number of objects, properties and methods intended purely for internal use, this extension defines the following new classes, methods and properties:</p>
+<ul>
+<li><em>Classes</em>: <strong>Rule</strong> and <strong>RuleBook</strong>.</li>
+
+<li><em>Properties/Methods on Rule</em>: <span class="code">follow()</span>, <span class="code">priority</span>, <span class="code">execAfter</span>, <span class="code">execBefore</span>, <span class="code">isActive</span>, <span class="code">activate()</span>, <span class="code">deactivate()</span>, <span class="code">addTo(rb)</span>, <span class="code">moveTo(rb)</span>, <span class="code">removeFrom(rb)</span>, <span class="code">stopValue</span>, <span class="code">where</span>, <span class="code">when</span>, <span class="code">who</span>, <span class="code">during</span>, <span class="code">action</span>, <span class="code">dobj</span>, <span class="code">iobj</span>, <span class="code">aobj</span>, <span class="code">matchObj</span>, and <span class="code">present</span>.</li>
+<li><em>Properties/Methods on RuleBook</em>: <span class="code">follow()</span>, <span class="code">actor</span>, <span class="code">contVal</span>, <span class="code">defaultVal</span>, and <span class="code">initBook()</span>.</li>
+</ul>
+<br>
+
+<a name="usage"></a>
+<h2>Usage</h2>
+<p>Include the rules.t file after the library files but before your game source files.</p>
+<br>
+<h3>Defining Rules and Rulebooks</h3>
+
+<p>At its simplest a RuleBook can be defined simply by giving it a name and making it of the RuleBook class:</p>
+
+ <p><div class="code"><pre>
+ jumpRules: RuleBook
+ ;
+ </pre></div>
+
+<p>Unless you need to refer to them in some other part of your code, rules can usually be defined as anonymous objects located in the RuleBook to which they belong by using the + property. The one method you must define on a Rule is its <strong>follow()</strong> method; for example:</p> 
+ 
+ <p><div class="code"><pre>
+ + Rule
+    where = room
+    
+    follow()
+    {
+        "You jump pointlessly. ";        
+    }
+;
+
++ Rule 
+    where = nextRoom
+    
+    follow()
+    {
+        "You jump fruitfully. ";        
+    }    
+;
+
++ Rule
+    follow()
+    {
+        "You jump energetically. ";       
+    }  
+; 
+ </pre></div> 
+
+<p>In this case we could have defined these rules even more succinctly as:</p> 
+ 
+  <p><div class="code"><pre>
+ + Rule
+    where = room
+    
+    follow = "You jump pointlessly. "
+;
+
++ Rule 
+    where = nextRoom
+    
+    follow = "You jump fruitfully. "        
+;
+
++ Rule
+    follow =  "You jump energetically. "          
+; 
+ </pre></div> 
+ 
+ <p>We can do that here because in this RuleBook, the <span class="code">follow()</span> methods take no arguments. You can, however, define as many arguments to the <span class="code">follow()</span> method of a RuleBook as you like; precisely the same arguments will then be passed to the <span class="code">follow()</span> methods of any Rule it invokes, so you must make sure that the argument lists match, or you'll get a run-time error. If in doubt you can use the variable argument list notation to ensure that your Rules match any argument lists that are passed to them, for instance:</p>
+ 
+  <p><div class="code"><pre>
+ + Rule
+    where = room
+    
+    follow([args])
+    {
+        "You jump pointlessly. ";        
+    }
+;
+
++ Rule 
+    where = nextRoom
+    
+    follow([args])
+    {
+        "You jump fruitfully. ";        
+    }    
+;
+
++ Rule
+    follow([args])
+    {
+        "You jump energetically. ";       
+    }  
+; 
+ </pre></div> 
+ 
+<p>The advlite.h header file defines one template for use with Rules, which can be used to define their location and/or action properties. If both are present in the template the location property must be defined first, preceded by @. The action property is defined either with &amp; or as a list, e.g.:</p> 
+ 
+ <p><div class="code"><pre>
+Rule @jumprules
+   <span class="comment">// A Rule located in the jumprules rulebook</span>
+   ...
+;
+ 
+Rule &amp;Jump 
+   <span class="comment">// A Rule matching the Jump action.</span>
+   ...
+; 
+
+dropRule: Rule @treetopRules [Drop, Throw, ThrowDir]
+   <span class="comment">/*  
+    *  A Rule located in the treetopRules rulebook and matching
+    *  any one of the Drop, Throw or ThrowDir actions.
+    */</span>
+   ...
+;
+ </pre></div> 
+ 
+ 
+<br> 
+ 
+ <a name="match_conditions"></a>
+<h3>Specifying Match Conditions on Rules</h3> 
+ 
+<p>Rules are only useful for distinguishing what should happen under different circumstances. Most of the rules you define (with the possible exception of the odd catch-all rule) will need to specify the conditions under which they apply. This can be specified using one or more of the following properties:</p> 
+
+<ul>
+<li><strong>where</strong>: This can be the location either of the player character (the default) or of the current actor, depending on the value of the parent rulebook's <span class="code">actor</span> property (indeed it could be the location of whatever object is specified in the rulebook's actor property, but the intention is that this should normally be either <span class="code">gPlayerChar</span> or <span class="code">gActor</span>). The <span class="code">where</span> property can be defined as a Room, a Region or a list of Rooms and/or Regions.</li>
+
+<li><strong>when</strong>: This can be any condition that must be true for the Rule to be matched. This is for use when none of the other means of speficifying rule conditions will do the job.</li>
+
+<li><strong>who</strong>: The current actor (<span class="code">gActor</span>): this can be specified as a single actor or as a list of actors.</li>
+
+<li><strong>during:</strong> A Scene or a list of Scenes, one of which must be currently happening for this Rule to be matched.</li>
+
+<li><strong>action</strong>: An action of list of actions, of one which must be the current action (<span class="code">gAction</span>) for the Rule to be matched.</li>
+
+<li><strong>dobj</strong>: The direct object of the current action. This may be specified as an object, a class, or a list of objects and/or classes.</li>
+<li><strong>iobj</strong>: The indirect object of the current action. This may be specified as an object, a class, or a list of objects and/or classes.</li>
+<li><strong>aobj</strong>: The accessory object of the current action. This may be specified as an object, a class, or a list of objects and/or classes. Note that this property is only applicable when the <a href="tiaaction.htm">TIAAction</a> extension is included in your game.</li>
+<li><strong>matchObj</strong>: an object or class or list of objects and/or classes one of which much match the first argument passed to the rulebook's <span class="code">follow()</span> method. For example if the rulebook is invoked with <span class="code">follow(helmetOfDoom)</span> the Rule would be matched if its <span class="code">matchObj</span> property was <span class="code">helmetOfDoom</span> or <span class="code">Thing</span> or <span class="code">[helmetOfDoom, pinkRabbit, cuddlyBear]</span> (or anything else that included the <span class="code">helmetOfDoom</span>). Note that while this condition is principally intended to be used with objects, it will in fact work with any kind of value, such as numbers and strings.</li>
+<li><strong>present</strong>: An object or a list of objects, one of which must be present to the actor. See below on what '<a href="#present">present</a>' means.</li>
+</ul>
+
+<p>Note that where any of the foregoing properties is specified as a list, the Rule will match if any of the items in the list matches (provided, of course, that any other conditions are also met).</p>
+
+<p>For example, to write a Rule that matches when either Fred or Mary drops the crown jewels in either the hall or the lounge during the party scene when the queen can see them you might write:</p>
+ 
+ <p><div class="code"><pre>
++ Rule
+    follow()
+    {
+       "Oh dear! That was jolly embarrassing! Her Majesty does not look at all amused.&lt;.p&gt;";    
+    }
+    
+    where = [hall, lounge]
+    during = party
+    who = [fred, mary]
+    action = Drop
+    dobj = crownJewels
+    when = (queen.canSee(gActor))
+;
+ </pre></div> 
+<p>(Assuming, that is, that we know that the player character will always be present in the same location, otherwise further conditions would need to be added).</p> 
+ <br>
+ 
+ <a name="present"></a>
+ <h4>Being Present</h4>
+ <p>One of the properties we can define on a Rule is <strong>present</strong>, but what does this mean?</p>
+ 
+ <p>First, this property must specify objects rather than classes, except for one special case. The <span class="code">present</span> property may be defined as a single class (e.g. <span class="code">present = Actor</span>), in which case the rule will be matched provided at least one object of that class is in the same room as the actor (either <span class="code">gPlayerChar</span> or <span class="code">gActor</span>, depending on how the parent rulebook defines this property).</p>
+ 
+ <p>Otherwise, if the <span class="code">present</span> property defines an object or a list of objects, at least one of these objects must be present in the same room as the actor for the rule to match.</p>
+ 
+ <p>There may, however, be occasions when 'being in the same room as' isn't quite what you want for a test of presence. For example, should the rule match if the gem of ultimate destiny is in the same room as the actor but hidden away inside a secret drawer the player character has yet to open? Conversely, if the Elephant of Desire is clearly visible in the neighbouring field, should it count as being present or not? To deal with instances such as these you can define the <span class="code">present</span> property so that  at least one of the object or objects it lists needs to be perceivable by <em>actor</em> via a given sense, which you define as one of the property pointers <span class="code">&amp;canSee</span>, <span class="code">&amp;canHear</span>, <span class="code">&amp;canSmell</span>, <span class="code">&amp;canReach</span>, e.g.:</p>
+ 
+  <p><div class="code"><pre>
+  present = [&amp;canSee, gem]
+  present = {&amp;canSmell, burntToast]
+  present = [&amp;canHear, elephant, trumpet, sergeantMajor] 
+  </pre></div>
+ 
+ <br>
+ <a name="precedence"></a>
+<h3>Rules' Order of Precedence</h3>
+ 
+<p>We stated above that when RuleBooks are called, they run through their matching Rules in descending order of precedence. But how is that order of precedence determined?</p> 
+
+<p>Left to its own devices, the Rules extensions orders rules according to their specificity (how specific their conditions are). The more conditions are specified (out of <span class="code">when</span>, <span class="code">where</span>, <span class="code">who</span>, <span class="code">during</span>, <span class="code">action</span>, <span class="code">dobj</span>, <span class="code">iobj</span>, <span class="code">aobj</span>, <span class="code">matchObj</span> or <span class="code">present</span>) the more specific the Rule is considered to be. Also, a <span class="code">where</span> condition referencing at least one Room is considered more specific that one that one references Regions, and a <span class="code">dobj</span>, <span class="code">iobj</span>, <span class="code">aobj</span>, <span class="code">matchObj</span> or <span class="code">present</span> property that includes at least one object is considered more specific that one that only refers to classes. Finally, if two rules appear to be equally specific, precedence is given to the one defined later in your source code (it may at first sight seem counter-intuitive to do it this way round, but this is consistent with the way the library handles Doers and AltTopics). Normally this default ordering will give you what you want; a more specific rule will take precedence over a more general rule without your having to worry about it. Note, however, that the library has no way of judging how specific a <span class="code">when</span> condition is, which is why it's normally better to use the other condition properties when you can.</p>
+
+<p>If for any reason you need to change the order of precedence there are a couple of ways you can do so. The first is to specify that the current rule must run either after or before one or more other specified rules (which would then need to be named so they can be referred to), by listing those other rules in the <strong>execAfter</strong> or <strong>execBefore</strong> properties respectively. For example, to ensure that your dangerousJumpRule executes after your dodgyJumpRule but before your fatalJumpRule you might write:</p>
+ 
+  <p><div class="code"><pre>
++ dangerousJumpRule: Rule
+     action = 'Jump'
+     follow = "I wouldn't jump here if I were you. "
+     execAfter = [dodgyJumpRule]
+     execBefore = [fatalJumpRule]
+;  
+  </pre></div>
+
+<p>This will then override any other ordering the library would have made. Note, however, it is then your responsibility to ensure that any use you make of <span class="code">execAfter</span> and <span class="code">execBefore</span> is consistent. If the <span class="code">dodgyJumpRule</span> were specified in both the execAfter and the execBefore properties of the same rule, for example, this would be self-contradictory; in this case the library would resolve the contradiction by ignoring the execBefore specification. On the other were rule A to specify that it is to be run after rule B, while rule B specified that it was to run after rule A, the outcome would be unpredictable.</p>  
+ 
+<p>The second method of reordering rules is to override their <strong>priority</strong> property. The default <span class="code">priority</span> is 100. The higher the priority, the higher the precedence, so that a Rule with a priority of 2000 will be run before a Rule with a <span class="code">priority</span> of 1. Changing the <span class="code">priority</span> to a very high or a very low value can thus be a useful way of ensuring that a Rule runs towards the beginning or the end of its RuleBook (or, provided you assign the <span class="code">priority</span> numbers with sufficient care) that it is either the very first or the very last Rule to be considered. Note that any rearrangement of rule ordering carried out via the <span class="code">execBefore</span> or <span class="code">execAfter</span> properties will take precedence over the setting of the <span class="code">priority</span> property, however. Apart from that, Rules with the same <span class="code">priority</span> will be ordered according to their specificity.</p> 
+
+<p>A RuleBook re-sorts the rules it is considering each time its <span class="code">follow()</span> method is called, so that if you change the value of the <span class="code">priority</span>, <span class="code">execBefore</span> or <span class="code">execAfter</span> properties during the course of your game, these changes will take effect the next time the corresponding RuleBook is invoked. Normally, however, a rule's specificity is only calculated once, at preinit, so if you made any changes to a rule that might change its specificity you would need explicitly to issue the statement <span class="code">x.specificity = x.calcSpecificity()</span> (where <em>x</em> was the rule in question) for any reordering to take effect. Such dynamic changes to rules' precedence and conditions should only be needed very rarely and should be used very sparingly, otherwise your code is likely to become quite confusing.</p>
+
+<br>
+<a name="starting"></a>
+<h3>Starting and Stopping Rulebooks: Return Values and Parameters</h3>
+<p>As we have seen, the way to start a RuleBook is to call its <strong>follow()</strong> method. This causes it to select all of the rules that belong to it that also match their various criteria, and then to run through them in descending order of precedence, calling each of their <span class="code">follow()</span> methods in turn until either there are no more rules to consider or one of the rules signals that no more rules should be considered after itself. But how does a rule signal that?</p>
+
+<p>The default behaviour is for a RuleBook to stop iterating through its rules when one of its rules returns any value except <strong>null</strong>, where <span class="code">null</span> is an enum that has been defined for this purpose. Since TADS 3 considers a method that does not have an explicit return value to implicitly return <span class="code">nil</span> (and since <span class="code">nil</span> and <span class="code">null</span> are different values) this means that the default behaviour of a RuleBook is to execute the highest priority matching rule, and then stop iterating through any other rules that happen to match. Since the RuleBook returns whatever its last-executed rule returns, this means that by default it will simply return <span class="code">nil</span> to its caller (assuming it actually executes any rules). Often this behaviour may be just what you want, since if you simply want your RuleBook to execute the most appropriate Rule, you may not be interested in the return value, and you will probably want the RuleBook to stop at the first rule it finds (in order of precedence).</p>
+
+<p>There may be occasions when you want to change this behaviour, however. First, it may that you want to define a Rule that doesn't stop its RuleBook. You can do that by ending the <span class="code">follow()</span> method of that rule with the <strong>nostop</strong> macro, for example:</p>
+
+ <p><div class="code"><pre>
++ Rule
+    priority = 1000
+    follow()
+    {
+        "You tense yourself. ";
+        nostop;
+    }
+;
+ </pre></div>
+
+<p>This rule will always run first (assuming there's no rule in the same RuleBook to which we've given a higher priority), but it won't stop the RuleBook. We could have used  <span class="code">return null</span> rather than <span class="code">nostop</span> here, but not only is <span class="code">nostop</span> less typing (and perhaps clearer in meaning), for reasons we'll explain shortly it's also safer.</p>
+
+<p>If you're defining a RuleBook in which you want the majority of Rules not to stop the processing of further Rules in that RuleBook, you can override the RuleBook's <strong>contValue</strong> (short for 'continuation value') to <span class="code">nil</span> instead of <span class="code">null</span>. The <span class="code">contValue</span> property defines the value a Rule must return if it is <strong>not</strong> to stop the processing of the RuleBook. Since (as we mentioned just above) a method with no explicit return value implicitly returns nil, this means that the RuleBook won't then stop at a rule with no explicit return value (and hence an implicit return value of nil). If you want some rules in such a RuleBook to stop the RuleBook from processing any more rules, you can make those rules return a non-nil value or use the <strong>stop</strong> macro to do this for you (by default <span class="code">stop</span> returns true, but you can change what it returns by overriding the RuleBook's <strong>stopVal</strong> property).</p>
+
+<p>As has been mentioned before, if a Rule returns any value other than its RuleBook's <span class="code">contVal</span> value, the RuleBook will pass that value back to its caller. This may be useful simply as a way of telling the caller what the RuleBook did, but it could also be used if you wanted a RuleBook to calculate a value. Suppose, for example, you wanted to use a RuleBook to calculate the player character's happiness rating; you could do something like this:</p>
+
+ <p><div class="code"><pre>
+ happinessRules: RuleBook
+    contVal = nil
+    total = 0
+    initBook()
+    {
+       total = 0;
+    }
+ ;
+ 
+ + Rule
+    priority = 0
+    follow()
+    {
+       return rulebook.total;
+    }
+ ;
+ 
+ + Rule
+   when = (me.hasSeen(gertrude))
+   follow()
+   {
+      rulebook.total += 3;
+   }
+ ;
+ 
+ + Rule
+   action = Kiss
+   dobj = gertrude
+   follow() { rulebook.total += 2; }
+ ;
+
+ + Rule
+   action = Attack
+   who = gertrude
+   dobj = me
+   follow() { rulebook.total -= 10; }
+ ;
+
+ + Rule
+   when = (orbOfSatisfaction.isIn(me))
+   follow() { rulebook.total += 6; }
+ ;   
+ ... 
+ </pre></div>
+
+ <p>Note how we here define a custom <span class="code">total</span> property on the RuleBook to keep track of the value we want to calculate. We can then use the <strong>initBook()</strong> method (which is called whenever we call the RuleBook's <span class="code">follow()</span> method) to reset the value of total to 0 before our rules go on to calculate its new value. We also supply a Rule with a priority of 0 (which should ensure that it's the last rule to run) to return the value of rulebook.total once all the other Rules have had their chance to adjust it. Finally, note the use of the <strong>rulebook</strong> property of a Rule to reference the Rulebook that triggered it (in this case, so that we can get at the <span class="code">total</span> property of that Rulebook).</p>
+ 
+ <a name="arguments"></a>
+ <h4>Passing Arguments</h4>
+
+ <p>Although it's often fine to call the <span class="code">follow()</span> method of a RuleBook with no arguments, you can pass arguments if you need to. These arguments are then passed in turn to the <span class="code">follow()</span> method of each Rule executed by the RuleBook and by the RuleBook's <span class="code">initBook()</span> method, so you must make sure that their argument lists match those you plan to pass to their RuleBook's <span class="code">follow()</span> method (or you'll get a run-time error due to argument mismatch). Thus, for example, if you are going to call a RuleBook's follow() method with two arguments (<span class="code">myRules.follow(john, 'silly')</span>, say) then you must ensure  that you define all the associated Rules' follow() methods and the RuleBook's <span class="code">initBook()</span> method with two arguments (assuming you override the latter at all; if you don't, you don't need to worry about it). If in doubt you can use the variable argument list syntax on these methods so they'll match any parameters that are passed to them, like so:</p>
+ 
+  <p><div class="code"><pre>
+  myRules: RuleBook
+    initBook([args])
+    {
+       foobar = 0;
+       ...
+    }
+    ...
+  ;
+
+ + Rule
+     follow([args])
+     {
+       ...
+     }
+     ...
+ ; 
+  </pre></div>
+ 
+<p>That way, you can be sure of avoiding any problems. But, to repeat the point, this is only necessary if you plan to pass any arguments to your RuleBook's <span class="code">follow()</span> method, which very often you won't need to do.</p> 
+
+<p>You can use the arguments you pass (if you pass any) for any purpose you find useful, but bear in mind that the first argument you pass will be used to set the value of the RuleBook's <span class="code">matchObj</span> property for its Rules' <span class="code">matchObj</span> properties to match against. This first argument will then be passed as the first argument to each of the matching Rules' follow() method, which can be helpful as a way of telling a Rule which specific object it's matching. For example: </p>
+ 
+ <p><div class="code"><pre>
+   myRules.follow(magicOrb); <span class="comment">// called somewhere else in your code</span>
+ 
+   ...
+   
+   myRules: RuleBook;
+   
+   + Rule
+      matchObj = Treasure
+      follow(obj)
+      {
+          "\&lt;&lt;obj.theNameIs&gt;&gt; worth &lt;&lt;obj.points&gt;&gt;. ";
+      }
+   ;   
+ 
+ </pre></div> 
+ 
+<p>Assuming you have defined the magicOrb to be of the Treasure class (and have given it a points property), this will allow your rule to refer to the specific Treasure matched (in this case the magicOrb), although it would, of course, have matched any other Treasure.</p> 
+<br>
+
+<a name="manipulating"></a>
+<h3>Manipulating Rules</h3>
+
+<p>There are a couple of ways you can manipulate Rules at run-time. First of all you can temporarily disable a Rule by calling its <strong>deactivate()</strong> method, which sets its <strong>isActive </strong>property to nil. You can set <span class="code">isActive</span> back to true again by calling the Rule's <strong>activate()</strong> method. When a Rule is deactivated it can never be matched, so this may occasionally be a useful way of temporarily removing a Rule from consideration.</p>
+
+<p>You can also move Rules between RuleBooks, or add Rules to more than one RuleBook at a time, using the following methods:</p>
+
+<ul>
+<li><strong>moveInto(rb)</strong>: move this Rule to the <em>rb</em> RuleBook, moving the Rule out of every RuleBook it was in previously. If <em>rb</em> is nil this has the effect of leaving the Rule detached from any RuleBook.</li>
+<li><strong>addTo(rb)</strong>: add this Rule to the <em>rb</em> RuleBook while also leaving it in its current RuleBook(s). This allows a Rule to be used in more than one RuleBook at a time.</li>
+<li><strong>removeFrom(rb)</strong>: remove this Rule from the <em>rb</em> RuleBook while leaving it attached to any other RuleBook(s) it may be associated with.</li>
+</ul>
+<br>
+
+<a name="using"></a>
+<h2>Using Rules</h2>
+<p>This extension defines the Rule and RuleBook classes, but it doesn't define any actual Rules or RuleBooks. It's up to you as a game author to decide where you want to use them in your game.</p>
+
+<p>Rules and RuleBooks are typically likely to be useful where a relatively complex set of responses would otherwise require a mass of if and switch statements to code, although there may often ways of approaching the same problem in adv3Lite. For example, if you want the Jump action to work differently in different situations, you could write a whole lot of roomBeforeAction() methods to intercept the Jump action, but it might be neater to redefine the action itself so that it uses a RuleBook:</p>
+<a name="jump"></a>
+ <p><div class="code"><pre>
+ modify Jump
+    execAction(cmd)
+    {
+        jumpRules.follow();
+    }
+;
+
+jumpRules: RuleBook
+;
+ 
++ Rule
+   when = (goldBullion.isIn(me))
+   follow()
+   {
+      "The bullion is so heavy your feet hardly leave the ground. ";
+   }
+ ;
+ 
+ + Rule
+   where = lowCave
+   follow()
+   {
+      "Your head bumps the ceiling. Ouch! ";
+   }
+ ;
+ 
+ + Rule
+    present = [king, queen, auntAgatha]
+    follow()
+    {
+       "You hesitate to leap around in the presence of so
+        august a personage. ";
+    }
+;
+ </pre></div>
+
+<p>If there were many such factors involving the outcome of a JUMP command, it could become quite convoluted to code them in any other way.</p>
+
+<p>Rules are less likely to be useful for coding the responses to TActions, since normally these can be quite easily dealt with in the various <span class="code">dobjFor()</span> sections of the direct object, although again there may be occasional cases where the outcome of an action depends on so many factors that defining a RuleBook and calling it from the action() method may be the neatest way to deal with it. This approach is more likely to be useful for TIActions, especially when different outcomes depend on different combinations of direct object and indirect object and perhaps other circumstances besides, which could then be quite messy to code in the dobjFor() or iobjFor() sections of the direct and/or indirect objects. For example, suppose that a variety of objects can be used to dig a variety of other objects in a variety of places under a variety of circumstances. The neatest way to handle it might be something like this:</p>
+<a name="digwith">
+</a> <p><div class="code"><pre>
+ modify Thing
+    dobjFor(DigWith) { action() { diggingRules.follow(); } }
+ ;   
+  
+ diggingRules: RuleBook;
+ 
+ + Rule
+     where = sandyBeach
+     follow()
+     {
+        "You dig in the sand with {the iobj}, but turn up nothing
+          of interest. ";
+     }
+ ;
+
+ + Rule
+     dobj = rockyPath
+     follow()
+     {
+        "You find you can make little impression on the hard,
+         rocky path with {the iobj}. ";
+     }     
+ ;
+ 
+ + Rule
+    dobj = rockyPath
+    iobj = pickaxe
+    follow()
+    {
+       "You manage to break through the surface of the rocky
+        path with the pickaxe. As a result you uncover a
+        small gold box. ";
+        goldBox.moveInto(me.location);
+    }
+ ;
+  
+ + Rule
+    dobj = rockyPath
+    iobj = pickaxe
+    when = (goldBox.moved)
+    follow()
+    {
+       "Digging around in the path with the pickaxe reveals
+        nothing further of interest. ";
+    }
+ ; 
+    
+ + Rule
+    dobj = rockyPath
+    priority = 150
+    present = [&amp;canSee, gardener]
+    {
+       "You start to wield {the iobj}, but when you see
+        the gardener looking your way you decide you'd
+        better stop. ";
+    }
+ ; 
+
+ ... 
+ </pre></div>
+
+<p>Note that in this second case, the check() and verify() methods of the direct and indirect objects will already have ensured that the player character is attempting to dig something that can sensibly be dug with something that can sensibly be employed as a digging implement, so your digging rules would not need to test for any of that. If the check conditions were also likely to be complicated you could always define separate checkDigging and actionDigging RuleBooks and call them from the check() and action() methods respectively.</p> 
+<br>
+
+<a name="doers"></a>
+<h3>Rules and Doers</h3>
+<p>Rules are a lot like Doers, and at first sight it might appear that both examples above could equally well have been handled with Doers, for example:</p>
+
+ <p><div class="code"><pre>
+ + Doer 'jump'
+   when = (goldBullion.isIn(me))
+   execAction(c)
+   {
+      "The bullion is so heavy your feet hardly leave the ground. ";
+   }
+ ;
+ 
+ + Doer 'jump'
+   where = lowCave
+   execAction(c)
+   {
+      "Your head bumps the ceiling. Ouch! ";
+   }
+ ;
+ </pre></div>
+ 
+<p>This would almost have the same effect, but not quite. By calling the jumpRules from within the Jump Action you ensure that the Jump action actually takes place. That means that any preconditions of jumping (such as not being in any nested room) are honoured, and that the relevant beforeAction() notifications are sent. This does not happen if you use Doers to try to achieve the same thing. You may not notice the difference, but again you may, since you might later go on to add a roomBeforeAction() or a beforeAction() method that's intended to trap a Jump action, and then discover that it doesn't work (because the beforeAction() notification are never being sent). You could manually call the beforeAction() notifications from your Doers (usually by setting their <span class="code">handleAction</span> property to true), but that's extra work, potentially quite a lot of extra work if you've defined quite a few of them. Using Doers works well if you want:</p> 
+ 
+<ol>
+<li>To stop an action happening at all (and presumably display a message explaining why), e.g. "There's not enough room here to jump. "; or</li>
+<li>To turn one action into another, e.g. to make PUT CARD IN SLOT perform the action UNLOCK SECURITY DOOR WITH CARD.</li>
+</ol> 
+
+<p>Otherwise, if you want the original action to go ahead, you may well be better off using Rules. That way you can take full advantage of the beforeAction() notifications, as well as of any verify() and check() methods the library already defines for you. (Also, Rules take a more fine-grained approach that Doers to sorting themselves in order of specificity, which may also be helpful in complex cases).</p>
+<br>
+<p>This covers most of what you need to know to use this extension. For additional information see the source code and comments in the <a href="../rules.t">rules.t</a> file.</p>
+ 
+</div>
+<hr class="navb"><div class="navb">
+<i>Adv3Lite Manual</i><br>
+<a class="nav" href="../../docs/manual/toc.htm">Table of Contents</a> | 
+<a class="nav" href="../../docs/manual/extensions.htm">Extensions</a> &gt; 
+Room Parts
+<br><span class="navnp"><a class="nav" href="roomparts.htm"><i>Prev:</i> Room Parts</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="scenetopic.htm"><i>Next:</i> SceneTopic</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>

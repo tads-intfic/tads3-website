@@ -1,0 +1,89 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Actors &mdash; Overview</title>
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="actor.htm">Actors</a> &gt; 
+Overview
+<br><span class="navnp"><a class="nav" href="actor.htm"><i>Prev:</i> Actors</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="actorobj.htm"><i>Next:</i> The Actor Object</a> &nbsp;&nbsp;&nbsp; </span>
+</div>
+<div class="main">
+<h1>Actors</h1>
+<p>Broadly speaking, there are two kinds of actor in Interactive Fiction, the <strong>Player Character</strong>, who is the protagonist of the work and whose actions are controlled by the player's commands, and <strong>Non-Player Characters</strong> (or NPCs) who are programmed by the game author for the player character to interact with. In some works of Interactive Fiction the identity of the Player Character may change (possibly to one of the NPCs) although in many the player character remains the same throughout. Most of this chapter will be concerned with creating NPCs, but first a word or two should be said about the Player Character.</p>
+<a name="pc"></a>
+<h2>The Player Character</h2>
+<p>How the player character object should be defined is discussed in the section on <a href="beginning.htm#definingpc">Beginnings</a>.</p> To reiterate what was said there, the player character object (usually, but not necessarily, called <span class='code'>me</span>) can be defined on <strong>gameMain.intialPlayerChar.</strong>. You can alternatively define the <span class='code'>isInitialPlayerChar</span> property on the player character. Using the <b>Player</b> class to define the player character does this automatically and you may find this the easiest way to define your initial player character. You should only define one object of this class in your game, even if the player character may change during the course of play. All other potential player characters should be defined using the Actor class.</p>
+
+<p>How to change the player character to change during the course of play is explained <a href="changepc.htm">below</a>. Because the player character can (at least theoretically) change in the course of play, it is good practice to refer to the player character as <strong>gPlayerChar</strong>, which always references the current player character.</p>
+
+<p>In addition to giving the player character a name (even it it's only 'you') and a description, we may also want to consider how much we want to allow the player character to carry. If there aren't that many portable objects in your game, or you're happy for your player character to be wandering around carrying everything but the kitchen sink, then you may not need to worry about this. On the other hand, you may want to limit the player character's carrying capacity either for verisimilitude or to force players to manage their inventory with care. One way to do this is by <a href='thing.htm#bulk'>bulk</a>, which means you need to define the player character's <span class='code'>bulkCapacity</span> and <span class='code'>maxSingleBulk</span> properties and assign a bulk to every portable object. Althernatively, or additionally, you can limit the total number of items the player character can carry (regardless of their bulk) by defining the player character's <span class='code'>maxItemsCarried</span> property to be whatever number you think fit. Another option is to use include the weight extension in your game and limit how much <a href="../../extensions/docs/weight.htm">weight</a> the player character can carry. If the player character can change during your game, you'll also need to do this on any other Actors who may take on the role of player character at some point.</p>
+
+<p>Note that if you do want to change the player character in the course of your game, you mustn't just write <span class='code'>gPlayerChar = newGuy</span>; instead you need to use the <span class='code'>setPlayer(newGuy)</span> function. For further details see <a href='changepc.htm'>Changing the Player Character</a>.
+
+<p>One more point to consider is whether you want the player character to be mentioned in a Room description if the PC is in/on/under/behind some other object, e.g. "You are on the old the chair. " In some contexts this may appear to be a helpful or even vital piece of information; in others it may appear redundant or even intrusive. You can control whether or not such a paragraph appears by overriding the <b>pcListedInLook</b> property on the PC's containing object (when it's not a room).</p>
+
+<a name="npc"></a>
+<h2>NPC Overview</h2>
+
+<p>Many works of Interactive Fiction can get by with the player character wandering around a deserted landscape (or perhaps confined to a single room in which s/he's the sole occupant). Implementing convincing NPCs (non-player characters) is difficult, and if you write a game in which the player character is restricted to interacting only with inanimate objects you are arguably playing to the strengths of the medium. But some games are undoubtedly enriched by the presence of NPCs, and it may be that the ability to implement NPCs is essential to the story you want your game to tell, or the type of interaction you have in mind. Nothing can make implementing a life-like and complex NPC straightforward, simple and easy, it will always be a lot of work, but the adv3Lite library endeavours to give you the tools to enable you to do the job.</p>
+
+<p>If you haven't already read Mike Roberts's trio of articles on 'Creating Dynamic Characters' in the <em>TADS 3 Technical Manual</em>, you might like to do so now. Although many of the implementation details are different in the adv3Lite library, some of them are quite similar, and the underlying principles are very similar indeed, so the 'Creating Dynamic Characters' articles might form a useful background to what follows. In particular, like the adv3 libary, the adv3Lite library tries to avoid complex programming in creating dynamic characters by allowing as much as possible of an NPC's behaviour to be defined declaratively on a number of associated objects.</p>
+
+<p>First of all, the <a href="actorobj.htm">Actor object</a> is used to define the basic properties of the NPC (name, description and so forth) as well as its response to most of the non-conversational actions (e.g. FEEL FRED) and one or two other things that we'll come to in due course. One or more <a href="actorstate.htm">ActorState</a> objects are then used to define various forms of state-specific behaviour. For example at one point in the game Fred might be involved in polishing the silver, at another he might be lounging in a chair, and at another he might be deep in conversation with the player character. Each of these states can be defined on an ActorState object which can alter the way the Actor object is described and customize certain aspects of the actor's behaviour. (Note: adv3 defines various subclasses of Actor and ActorState; adv3Lite defines only the Actor and ActorState classes, though you're welcome to define your own subclasses in game code if you need them).</p>
+
+<p>Things that the NPC may wish to do or talk about can be defined in a number of <a href="agenda.htm">AgendaItem</a> objects associated with the actor. These can define things the actor does or says when certain conditions are met.</p>
+
+<p>A very complex NPC may require very many ActorState, AgendaItem and TopicEntry objects, in which case the point may come when you want to split the definition of the NPC over more than one source file. To facilitate this you can use a <a href="actorobj.htm#proxy">ProxyActor</a> object to stand in for the original Actor object in the second and subsequent source files relating to the same NPC.</p>
+
+<a name='conversational'></a>
+<p>Conversational responses are defined using <a href="topicentry.htm">TopicEntry</a> objects a bit like the ConsultTopics used on a Consultable. The TopicEntries used for conversation are a bit more elaborate than this, however, and descend from a special <a href="actortopicentry.htm">ActorTopicEntry</a> class. Most of the TopicEntry classes available in the adv3 library are available in adv3Lite, along with a number of additional ones (such as TalkTopic, SayTopic and QueryTopic) that will be described more fully when we come to them. In adv3Lite ActorTopicEntries can be located either directly in their parent Actor object or in the ActorState object to which they relate, or in a TopicGroup or ConvNode object (which will be explained in due course). You can test whether an action is conversational via its <strong>isConversational</strong> property. This might typically be used in a construct like <span class="code">if(gAction.isConversational))</span> to test whether the current action (typically the command just entered by the player) is a conversational one, for example when testing whether to intercept an action in a beforeAction() method.</p>
+
+<p>If you want to use the adv3Lite library for a <a href="asktell.htm">basic ask/tell</a> conversation system you can, but it's capable of quite a bit more. Just as in the adv3 library, so in adv3Lite you can suggest topics for the player character to talk about, but in adv3Lite you don't need to use one of the SuggestedTopic subclasses to do so; instead you simply give a TopicEntry a name property and it will be suggested to the player under that name (the full story is a bit more complex than that, but once again, we'll come to it in due course). You can also employ various techniques to create threaded conversations, that is conversations in which there is some connection or flow from one topic response to the next, instead of the NPC being treated like a kind of stateless talking reference manual.</p>
+
+<p>To create some kind of a thread to a conversation the adv3Lite library uses a combination of various conversation tags together with the convKeys property of the ActorTopicEntry objects. The convKeys property copntains a string or a list of strings that can be used to refer to the ActorTopicEntry in various conversation tags. Since any given ActorTopicEntry can have any number of keys defined on its convKeys property and the same key can be defined on any number of ActorTopicEntries, this mechanism can be used to group ActorTopicEntries in any way desired (and subsequently act on those groups via various conversation tags).</p>
+<a name="convtags"></a>
+<p>Conversation tags are special items like '&lt;.reveal foo&gt;' that can be placed in a string (usually one used to output the actor's response to some conversation command), and that instead of displaying anything carry out some kind of special action. The tags defined in the adv3Lite library are:</p>
+
+<ul>
+<li><strong>&lt;.reveal <em>tag</em>&gt;</strong> note that the information referred to by <em>tag</em> has been revealed to the player character.</li>
+<li><strong>&lt;.inform <em>tag</em>&gt;</strong> note that the information referred to by <em>tag</em> has been imparted to the non-player character.</li>
+<li><strong>&lt;.topics&gt;</strong> schedule a list of suggested conversation topics to display just before the next command prompt.</li>
+<li><strong>&lt;.convnode <em>key</em>&gt;</strong> set up a Conversation Node based on TopicEntries whose convKeys property matches <em>key</em>.</li>
+<li><strong>&lt;.convnodet <em>key</em>&gt;</strong> set up a Conversation Node based on TopicEntries whose convKeys property matches <em>key</em>, and then display a suggested list of topics.</li>
+<li><strong>&lt;.convstay&gt;</strong> remain in the current Conversation Node for the next turn.</li>
+<li><strong>&lt;.convstayt&gt;</strong> remain in the current Conversation Node for the next turn and display a suggested list of topics.</li>
+<li><strong>&lt;.activate <em>key</em>&gt;</strong> set the activated property to true on all TopicEntries whose convKeys property matches <em>key</em>.</li>
+<li><strong>&lt;.deactivate <em>key</em>&gt;</strong> set the activated property to nil on all TopicEntries whose convKeys property matches <em>key</em>.</li>
+<li><strong>&lt;.arouse <em>key</em>&gt;</strong> set the curiosityAroused property to true on all TopicEntries whose convKeys property matches <em>key</em>.</li>
+<li><strong>&lt;.suggest <em>key</em>&gt;</strong> schedule a list of suggested conversation topics for TopicEntries whose convKeys property matches <em>key</em>.</li>
+<li><strong>&lt;.sugkey <em>key</em>&gt;</strong> set the suggestionKey property of the actor to <em>key</em>.</li>
+<li><strong>&lt;.agenda <em>item</em>&gt;</strong> add the AgendaItem <em>item</em> to the actor's agenda lists.</li>
+<li><strong>&lt;.remove <em>item</em>&gt;</strong> remove the AgendaItem <em>item</em> from the actor's agenda lists.</li>
+<li><strong>&lt;.state <em>actorstate</em>&gt;</strong> change the actor's current ActorState to <em>actorstate</em>.</li>
+<li><strong>&lt;.known <em>obj</em>&gt;</strong> mark <em>obj</em> as being known to the player character (equivalent to gSetKnown(obj)).</li>
+
+</ul>
+
+<p>These will all be discussed in more detail in due course, so don't worry at this stage if you're not sure what all these tags actually do or how they're intended to be used. In the meantime it may be helpful to know that in the above list <em>tag</em> is an arbitrary single-quoted string used to denote a piece of information (e.g. 'brian-robbed'), <em>key</em> is a single-quoted string defined on the convKeys property of an <a href="actortopicentry.htm">ActorTopicEntry</a>, <em>item</em> is the programmatic name of an AgendaItem and <em>actorstate</em> the programmatic name of an ActorState (where the 'programmatic name' means the name you give the object in your source code). When defining conversation tags that make use of single-string properties like <em>tag</em> and <em>key</em> you do not include the quotation-marks in the conversation tag (e.g. you would write <span class=code>&lt;.reveal brian-robbed&gt;</span> not <span class=code>&lt;.reveal 'brian robbed'&gt;</span>). <em>Note that there are necessary restrictions on where most of these tags can be safely used</em>; these will be explained in the section on  <a href="tags.htm">actor-specific tags</a> below.</p>
+
+<p>For a more extended overview of implementing actors in adv3Lite and the rationale behind it, see the articles on
+<a href='../techman/t3actor.htm'>Creating Dynamic Characters</a>, 
+ <a href='../techman/convbkg.htm'>Choosing a Conversation System</a> and <a href='../techman/t3conv.htm'>Programming Conversations with NPCs</a> in the <i>Technical Manual</i>
+
+</div>
+<hr class="navb"><div class="navb">
+<i>adv3Lite Library Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="actor.htm">Actors</a> &gt; 
+Overview
+<br><span class="navnp"><a class="nav" href="actor.htm"><i>Prev:</i> Actors</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="actorobj.htm"><i>Next:</i> The Actor Object </a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>

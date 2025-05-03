@@ -1,0 +1,368 @@
+<html>
+<!-- DERIVED FILE - DO NOT EDIT -->
+
+<head>
+<title>Actors &mdash; Suggesting Conversational Topics</title>
+<link rel="stylesheet" href="sysman.css" type="text/css">
+</head>
+<body>
+<div class="topbar"><img src="topbar.jpg" border=0></div>
+<div class="nav">
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="actor.htm">Actors</a> &gt; 
+Suggesting Conversational Topics
+<br><span class="navnp"><a class="nav" href="actortopicentry.htm"><i>Prev:</i> ActorTopicEntry</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="specialtopic.htm"><i>Next:</i> Special Topics</a> &nbsp;&nbsp;&nbsp; </span>
+</div>
+<div class="main">
+<h1>Suggesting Conversational Topics</h1>
+
+<p>Many players hate 'guess the topic' puzzles almost as much as they hate 'guess the verb'. One way to avoid such annoyances is to provide the player a list of conversational topics s/he can fruitfully pursue, either in response to a specific request (the TOPICS command) or when the library or the game code thinks it a good idea. You certainly don't need to provide the player with a list of <em>every</em> available topic, since in a game with quite fully-implemented NPCs the list of every available topic might be overwhelming. Moreover, in some games the topics to be pursued may be so obvious that there's no need to suggest them at all (in which case there's no need to use the facility to suggest topics). Often, however, it may be helpful to nudge the player towards the most fruitful topics of conversation at any one moment, and the best way to do that may be to provide a list of topics. If we are using any SayTopics and/or QueryTopics in our game, we must do this in any case, since the player cannot be expected to guess the wording that would trigger them.</p>
+
+<p>The <span class="code">suggestedTopicLister</span> has a <a href='#hyper'><strong>hyperlinkSuggestions</strong></a> property. If this is set to true then (provided the player is using an HTML-capable interpreter) the list of topic suggestions will be hyperlinked, allowing players to select a suggested topic just by clicking on the link. By default this property is nil unless the <a href="../../extensions/docs/cmdhelp.htm">Command Help</a> extension is present. Topic suggestions can also be <a href='#hyper'><strong>enumerated</strong></a>.</p>
+
+<p>In the adv3 library you have to mix in your TopicEntry class with a SuggestedTopic class in order for it to be suggested. In adv3Lite you simply define the name property of the TopicEntry in question. This can be done in either one of two ways:</p>
+
+<ol>
+<li>Define the name property explicitly, e.g. <span class="code">name = 'the troubles'</span>.</li>
+<li>Define the name implicitly by setting the <strong>autoName</strong> property to true. This sets the name property of the TopicEntry to the theName property of its matchObj (or of the first object in its matchObj list if matchObj is defined as a list). If you've explicitly defined the name property or there is no matchObj, setting autoName to true has no effect.</li>
+</ol>
+
+<p>The following two definitions are therefore equivalent (assuming the darkTower object has a name of 'dark tower'):</p>
+
+<p><div class="code"><pre>
++ AskTopic @darkTower
+   &quot;&lt;q&gt;Tell me about the dark tower,&lt;/q&gt; you insist.\b
+    &lt;q&gt;Oh no!&lt;/q&gt; says Bob. &lt;q&gt;We don't talk about that -- ever!&lt;/q&gt;&quot;
+    
+    name = 'the dark tower'
+;
+
++ AskTopic @darkTower
+   &quot;&lt;q&gt;Tell me about the dark tower,&lt;/q&gt; you insist.\b
+    &lt;q&gt;Oh no!&lt;/q&gt; says Bob. &lt;q&gt;We don't talk about that -- ever!&lt;/q&gt;&quot;
+    
+    autoName = true
+;
+</pre></div>
+<a name="suggestas"></a>
+<p>In either of the above examples the dark tower would be presented as something the player could ask about ('You could ask Bob about the dark tower...'), because it's obvious that an AskTopic has to be asked about. With compound types of ActorTopicEntry (e.g. AskTellTopic) it's not so obvious whether it should be suggested as something to ask about or tell about. In cases such as these the library simply makes a default choice (for example, an AskTellTopic would be suggested as something to ask about), but if the library's default choice isn't what you want in any particular case you can override it by using the TopicEntry's <strong>suggestAs</strong> property to indicate how the topic should be suggested. For example, to make the game suggest 'You could tell Bob about your visit' with an AskTellTopic you could so the following: </p>
+
+ <p><div class="code"><pre>
++ AskTellTopic @tVisit
+   "&lt;q&gt;I visited the dark tower this morning,&lt;/q&gt; you announce.\b
+    &lt;q&gt;You shouldn't have done that, you really shouldn't,&lt;/q&gt; Bob
+    replies with a shudder. &quot;
+    
+    autoName = true
+    suggestAs = TellTopic
+;
+
+....
+
+tVisit: Topic '()your visit; my;' ;
+</pre></div>
+
+<a name="listorder"></a>
+<p>If you want to control the order in which topics are suggested, you can do so by using the <strong>listOrder</strong> property of an ActorTopicEntry; the higher this number, the later the topic will be placed in a list of suggestions relative to other topics of the same time (e.g. an AskTopic with a <span class="code">listOrder</span> of 110 will be suggested after an AskTopic of a <span class="code">listOrder</span> of 100, the default value). Note that this re-ordering only takes place within each group (e.g. suggested topics to ask about or suggested topics to tell about). If you wish to change the order in which the groups (say, query, ask, tell, etc.) are suggested, you can override the <strong>typeInfo</strong> property of the <strong>suggestedTopicLister</strong> to change the order of elements.</p>
+
+<br>
+
+<a name="conditions"></a><h2>The Conditions Under Which Topics are Suggested</h2>
+
+<p>Defining the name or autoName property on an ActorTopicEntry does not mean it will necessarily be suggested. For a conversational topic to be suggested each of the following conditions must also be true:</p>
+
+<ol>
+<li>The <strong>isActive</strong> property must be true.</li>
+<li>The <strong>activated</strong> property must be true.</li>
+<li>The <strong>curiosityAroused</strong> property must be true (it is true by default).</li>
+<li>The <strong>curiositySatisfied</strong> method must return nil.</li>
+<li>The ActorTopicEntry in question must be reachable.</li>
+</ol>
+
+<p>The <strong>curiosityAroused</strong> property is defined in addition to the isActive property to allow for topics that you want the player to be able to refer to, but you don't want to suggest them yet (because they're not that important to suggest until something else happens). To make use of the curiosityAroused property you should define it declaratively by setting it to nil initially on one or more TopicEntries and then use the <strong>&lt;.arouse key&gt;</strong> tag to set the curiosityAroused property to true for every ActorTopicEntry belonging to the current interlocutor whose convKeys property matches (or contains) <em>key</em>. You can achieve the same effect by calling arouse(key) on the actor (which is what the &lt;.arouse key&gt; tag does). You can also set (or reset) <span class='code'>curiosityAroused</span> to nil by using &lt;.abate key&gt; or, if you prefer, &lt;.unarouse key&gt; (the two are equivalent) or by calling <span class='code'>arouse(key, nil)</span> on the actor. The <span class='code'>curiosityAroused</span> property thus models whether or not the player/player character is currenly interested in/curious about the topic in question, which can change over the course of the game. To be safe, the curiosityAroused property should always be defined as either true or nil, and not as a method or expression, since, as we shall see, its value can be switched between true and nil over the course of the game both by game author code and by the library.</p>
+
+<p>The <strong>curiositySatisfied</strong> property allows the topic to stop being suggested once the player character has seen the response enough times. What counts as enough times is defined on the <strong>timesToSuggest</strong> property. By default this is 1 unless the TopicEntry is an EventList, in which case timesToSuggest is the number of items in the eventList property (eventList.length). The value of <span class='code'>timesToSuggest</span> can also be tweaked by using the <a href='#lcresp'>lastConvResponse</a> property we'll explain below. You can easily override these defaults if you wish or else set timesToSuggest to nil if you want the TopicEntry to carry on being suggested indefinitely. Alternatively, you could override curiositySatisfied so that it becomes true according to some other condition.</p>
+
+<p>If, however, an ActorTopicEntry defines a non-nil keyTopics property, then <span class="code">curiositySatisfied</span> works a little differently. In this case, the function of the ActorTopicEntry is simply to suggest one or more further subtopics, so its curiosity is considered satisfied if and only if it has no subtopics to suggest (usually because they all have their curiositySatisfied).</p>
+
+<p>An ActorTopicEntry is <em><a name="reachable_idx">reachable</a></em> if using the suggestion (e.g. ASK BOB ABOUT DARK TOWER when told 'you could ask Bob about the dark tower' would actually trigger this particular TopicEntry. Reasons why it might not do so include:</p>
+
+<ul>
+<li>The isActive property is nil.</li>
+<li>The activated property is nil.</li>
+<li>The player character does not know about the matchObj.</li>
+<li>The ActorTopicEntry is masked by another ActorTopicEntry (possibly a DefaultTopic) defined under the current ActorState.</li>
+<li>The ActorTopicEntry is masked by another ActorTopicEntry with a higher matchScore.</li>
+</ul>
+
+<p>The isReachable() method of ActorTopicEntry attempts to test for all these conditions (ultimately by testing whether the current ActorTopicEntry is currently the best match for its matchObj, if it doesn't fail other tests first) to try to ensure that the player is not presented with conversation suggestions that are currently unavailable.</p>
+
+<p>Note that while the five numbered conditions above are jointly <em>necessary</em> for a topic to be suggested, they may not be jointly <em>sufficient</em>, since there are other restrictions that game authors can place on what topics are suggested at any given moment.</p>
+
+<p>Normally, all the topics that meet the five numbered conditions would be displayed in response to an explicit TOPICS command (or TALK TO X command), but game authors can restrict even this by overriding  the actor's <strong>suggestionKey</strong> property. If this is set to something other than nil, then only those TopicEntries whose convKeys property matches or contains the suggestionKey (and that also meet all the other conditions) will be listed as suggestions. The actor's suggestionKey property can also be set by using the <span class='code'>&lt;.sugkey key&gt;</span> tag in the topicResponse of a TopicEntry belonging to the actor. This may be useful when you want to restrict the list of suggested topics to those relevant to particular points in a conversation or the story, but we shall be exploring other ways of doing this below.</p>
+<a name = 'lcresp'></a>
+<h2>lastConvResponse</h2>
+<p>Consider the case where a TopicEntry is mixed in with a StopEventList that gives a series of responses that are displayed in turn until the last one is reached, which is then repeated <i>ad infinitum</i>. What should go in this last response? It may seem a little robotic for the actor to keep repeating the same piece of information over and over again, so a better approach could be to write the response in a way that summarizes what has been said before and indicates that the topic is now closed, for example:</p>
+
+<p><div class="code"><pre>
+
+bob: Actor 'Bob;;;him' @lounge
+;
+
+
++ AskTopic, StopEventList @bob
+    [
+        '&lt;q&gt;How are you today?&lt;/q&gt; you enquire.\b
+        &lt;q&gt;As well as can be expected,&lt;/q&gt; he replies. ',
+        
+        '&lt;q&gt;What do enjoy most?&lt;/q&gt; you ask.\b
+        &lt;q&gt;Not answering your questions,&lt;/q&gt; he tells you. ',
+        
+        '&lt;q&gt;I've already told you I\'m as well as can be expected
+        and that what I enjoy most is not answering your questions,&lt;/q&gt; he reminds you. '        
+    ]
+    
+    name = 'himself'
+;
+</pre></div>
+<p>This is reasonably okay; it gets the job done, but it's less than ideal. For one thing, if Bob has nothing new to say on the subject of himself, do we really want to suggest 'himself' to the player as a question to ask about for the third time? And will Bob really appear all that much less robotic if he keeps repeating his summary?</p>
+
+<p>We can avoid the second of these problems by giving the summary in the narrator's voice rather than the actor's:</p>
+<p><div class="code"><pre>
++ AskTopic, StopEventList @bob
+    [
+        '&lt;q&gt;How are you today?&lt;/q&gt; you enquire.\b
+        &lt;q&gt;As well as can be expected,&lt;/q&gt; he replies. ',
+        
+        '&lt;q&gt;What do enjoy most?&lt;/q&gt; you ask.\b
+        &lt;q&gt;Not answering your questions,&lt;/q&gt; he tells you. ',
+        
+        'He\'s already told you he\'s as well as can be expected
+        and that what he enjoys most is not answering your questions. '         
+    ]
+    
+    name = 'himself'
+;
+</pre></div>
+<p>This both clearly signals to the player that there is nothing more to be said about this topic and reminds the player what has been said on it previously. Moreover, the player can keep on repeating ASK BOB ABOUT HIMSELF and keep getting the same summary every time s/he wants a reminder, without making Bob appear robotic. But this solution doesn't solve he first problem (that it's not rentirely appropriate to suggest asking about himself the third time) and introduces a third, namely that the final response here isn't really a conversational one and shouldn't be treated as such in contexts where this may make a difference. It would, for example, be less than ideal to trigger the following exchange, which could occur if Bob has a HelloTopic:</p>
+
+<p><div class="cmdline"><pre>
+>ask bob about himself
+
+"Hi, Bob," you say.
+
+"Hello, you," he replies.
+
+He's already told you he's as well as can be expected
+snd that what he enjoys most is not answering your questions.
+</pre></div>
+<br>
+<p>We can solve both problems by setting <span class='code'>timesToSuggest</span> to one less than the length of the eventList and <span class='code'>isConversational</span> to <span class='code'>!curiositySatisfied,</span> (because we want to stop treating as Conversational at the same point as we want to stop suggesting it) like this, say:</p>
+
+
+<p><div class="code"><pre>
++ AskTopic, StopEventList @bob
+    [
+        '&lt;q&gt;How are you today?&lt;/q&gt; you enquire.\b
+        &lt;q&gt;As well as can be expected,&lt;/q&gt; he replies. ',
+        
+        '&lt;q&gt;What do enjoy most?&lt;/q&gt; you ask.\b
+        &lt;q&gt;Not answering your questions,&lt;/q&gt; he tells you. ',
+        
+        'He\'s already told you he\'s as well as can be expected
+        and that what he enjoys most is not answering your questions. '         
+    ]
+    
+    name = 'himself'
+	
+    timesToSuggest = static eventList.length -1
+    isConversational = !curiositySatisfied
+;
+</pre></div>
+
+<p>But it we have a large number of TopicEntries with StopEventLists this could create rather a lot of busywork for us. The library allows this to automate this by defining <strong>lastConvResponse</strong> as -1 either on individual TopicEntries or on the ActorTopicEntry class:</p>
+
+<p><div class="code"><pre>
++ AskTopic, StopEventList @bob
+    [
+        '&lt;q&gt;How are you today?&lt;/q&gt; you enquire.\b
+        &lt;q&gt;As well as can be expected,&lt;/q&gt; he replies. ',
+        
+        '&lt;q&gt;What do enjoy most?&lt;/q&gt; you ask.\b
+        &lt;q&gt;Not answering your questions,&lt;/q&gt; he tells you. ',
+        
+        'He\'s already told you he\'s as well as can be expected
+        and that what he enjoys most is not answering your questions. '         
+    ]
+    
+    name = 'himself'
+	
+    lastConvResponse = -1 
+;
+
+</pre></div>
+<p>Here -1 signifies that all but the last response is to be regarded as convesational (and worth suggesting). If we had defined <span class='code'>lastConvResponse = -2</span> this would have meant that all but the last two responses were to be regarded as conversational. Defining it as a positive number, such as 2, would mean that the first two responses were to be regarded as conversational, but this is less useful, since it is less generalizable.</p>
+<p>If you want all (or the majority) of your StopEventList TopicEntries to use this mechanism you can simply define:
+
+ 
+<p><div class="code"><pre>
+modify ActorTopicEntry
+   lastConvResponse = -1
+;
+</pre></div>
+<p>This is perfectly safe to do, since it will only affect TopicEntries that are mixed in with StopEventList (or, more precisely, with the class defined on the <strong>lcrScriptClass</strong> property of ActorTopicEntry, which is StopEventtList by default).
+
+
+<a name="other"></a><h2>TopicEntries that Suggest Other Topics</h2>
+
+<p>When an ActorTopicEntry matches a player's conversational command, it normally responds by displaying its topicResponse (or by executing its topicResponse method). An ActorTopicEntry can instead be defined to display a further list of more specific topics.</p>
+
+<p>Supppose the player issues the command ASK SAM ABOUT ISLAND. In your game, the Information Sam might supply about the island might include, say, the name of the island, the location of the island and the population of the island, but the player's command doesn't specify which of these they're asking about. One way of dealing with this could be to dole out each of these pieces of information in turn via a StopEventList on the relevant TopicEntry:</p>
+
+<p><div class="code"><pre>
++ AskTopic, StopEventList @tIsland
+   [
+      '&lt;q&gt;What\'s this island called?&lt;/q&gt; you ask.\b
+       &lt;q&gt;It\'s the Isle of Tads,&lt;/q&gt; Sam replies. ',
+	  
+      '&lt;q&gt;Where is this island?&lt;/q&gt; you enquire.\b
+      &lt;q&gt;About fifty leagues west of Erewhon,&lt;/q&gt; Sam tells you. ',
+	  
+      '&lt;q&gt;How many people live here?&lt;/q&gt; you ask.\b
+      &lt;q&gt;Roughly speaking, about two hundred and thirteen,&lt;/q&gt; says Sam. '
+   ]
+;
+
+</pre></div>
+
+<p>This gets the job done, and may be perfectly fine for your needs, but it doesn't give the player a lot of agency in choosing which subtopic to pursue and forces players to keep repeating ASK ABOUT ISLAND until they've seen that all the relevant information has been doled out to them.</p>
+
+<p>An alternative, which you may prefer, is to have the response to ASK SAM ABOUT ISLAND suggest a list of subtopics from which the player can then choose:</p>
+
+<p><div class="cmdline"><pre>
+&gt;<strong>ASK SAM ABOUT ISLAND</strong>
+You could ask what this island is called, or where this island is, or how many people live on the island.
+</pre></div>
+
+<p>One way of achieving this is to have the topic response of the Ask About Island topic entry output a sugkey tag, such as <span class='code'>&lt;.sugkey island&gt;</span>. This may not be the best way of managing what happens on subsequent turns however. A better way is often to make use of the master topic's (here the ask about island TopicEntry's) keyTopics property. This should contain the topic key, or a list of topic keys, defined on the convKeys property of the subtopics you want the master topic to suggest. For example:</p>
+
+
+<p><div class="code"><pre>
++ AskTopic @tIsland
+    keyTopics = ['island']
+;
+
++ QueryTopic 'what this island is called'
+    "&lt;q&gt;What\'s this island called?&lt;/q&gt; you ask.\b
+    &lt;q&gt;It\'s the Isle of Tads,&lt;/q&gt; Sam replies. "
+
+    convKeys = ['island']
+	
+    curiosityAroused = nil
+;
+
+
++ QueryTopic 'where this island is'
+    "&lt;q&gt;Where is this island?&lt;/q&gt; you enquire.\b
+     &lt;q&gt;About fifty leagues west of Erewhon,&lt;/q&gt; Sam tells you. "
+
+    convKeys = ['island']
+	
+    curiosityAroused = nil
+;
+
++ QueryTopic 'how many people live on the island'
+    "&lt;q&gt;How many people live here?&lt;/q&gt; you ask.\b
+     &lt;q&gt;Roughly speaking, about two hundred and thirteen,&lt;/q&gt; says Sam. "
+
+    convKeys = ['island']
+	
+    curiosityAroused = nil
+;
+</pre></div>
+
+<p>The QueryTopic class will be described more fully below in the chapter on <a href="specialtopic.htm#querytopic">Special Topics</a>. For now all you need to know is that QueryTopics can handle questions beginning with words like who, what, why, when and how.</p>
+
+<p>In the meantime, you could save a bit of typing in the example above by making use of a TopicGroup:</p>
+
+<p><div class="code"><pre>
++ AskTopic @tIsland
+    keyTopics = ['island']
+;
+
+
++ TopicGroup 'island'
+    curiosityAroused = nil
+;
+
+++ QueryTopic 'what this island is called'
+    "&lt;q&gt;What\'s this island called?&lt;/q&gt; you ask.\b
+    &lt;q&gt;It\'s the Isle of Tads,&lt;/q&gt; Sam replies. "
+
+;
+
+++ QueryTopic 'where this island is'
+    "&lt;q&gt;Where is this island?&lt;/q&gt; you enquire.\b
+     &lt;q&gt;About fifty leagues west of Erewhon,&lt;/q&gt; Sam tells you. "
+;
+
+++ QueryTopic 'how many people live on the island'
+    "&lt;q&gt;How many people live here?&lt;/q&gt; you ask.\b
+     &lt;q&gt;Roughly speaking, about two hundred and thirteen,&lt;/q&gt; says Sam. "
+;
+</pre></div>
+
+<a name="otherexp">
+<p>In this second case, the TopicEntries located in the TopicGroup have their <span class='code'>curiosityAroused</span> property copied from that of the TopicGroup when the game is initialised. If you don't want this behaviour (because, for example, you want to define different values of curiosityAroused on the different TopicEntries individually) then leave the TopicGroup's <span class='code'>curiosityAroused</span> at -1 (a special value that means "don't copy to me to my TopicEntries"). The 'island' in the TopicGroup's template is assigned to its <span class='code'>convKeys</span> property and then added to the <span class='code'>convKeys</span> of each of its TopicEntries when the game is initialised.</p>
+
+<p>With this setup, the command ASK SAM ABOUT ISLAND (at least for the first time) will result in a list suggesting all three QueryTopics defined above. The player is then free to type a command choosing one of those or any other topic that's currently available for Sam to respsond to. A TOPICS command at this point will list the three QueryTopics together with any other topics currently available to Sam, except for the "ask about island" topic, which won't be displayed while any of its subtopics is listed. If you did want "ask about island" to be listed too, you could set the AskTopic's <strong>autoSuppress</strong> property to nil, but it would normally seem redundant "ask about the island" to be listed in the same series of suggestions as "what this island is called", say).</p>
+
+<p>Conversely, if the player enters a command <i>not</i> related to the maater topic (here, aaking about the island). such as ASK ABOUT THE WEATHER, the game will assume that the player/player character has lost interest in the master topic (ask about island) so that the aubtopics (here the QueryTopics) will be removed from the list of suggested topics until the player types ASK SAM ABOUT ISLAND or A SAM again, while the "ask about island" topic will be restored to the list of suggestions. Again, if you don't want this behaviour, you can set the master topic entry's (here ask about island) <strong>autoSuppressSubTopics</strong> property to nil (so that the island subtopics will continue to be displayed in response to any subsequent TOPICS command). 
+That said, the library defaults (with both <span class='code'>autoSuppress</span> and <span class='code'>autoSuppressSubTopics</span> set to true) will probably give the smoothest player experience and avoid cluttering the list of suggested topics.</p>
+
+<p>Some further points to note:</p>
+<ul>
+<li>The removal of subtopics from the list of suggestions when the player changes the subject relies on (the library) resetting their <span class='code'>curiosityAroused</span> property to nil. That's why it's best not to define curiosityAroused as an expression or method, at least on TopicEntries used as subtopics or whose <span class='code'>curiosityAroused</span> property otherwise manipulated in game code.</li>
+
+<li>Once a master topic's subtopics have all had their curiosity satisfied, the master topic will no longer be included in a list of suggestions (so that, for example, "ask about the island" will no longer be shown as a suggested topic once the player has asked about the island's name, and its location, and its population).</li>
+
+<li>The message displayed when all the subtopics of a master TopicEntry have had their curiosity satisfied is "You have no more to discuss on that topic." In some cases this may be potentially misleading if further subtopics relating to the master topic could become available later in the game. In this case you could set the master topic's <b>mayAddSubtopics</b> property to <code>true</code>, and the message would be changed to "You have nothing to discuss on that topic just now." </li>
+
+<li>In earlier versions of adv3Lite it would have been necessary to define the island topic entry's keyTopics property as <span class='code'>keyTopics = ['&lt;.arouse island&gt;', 'island']</span>. This still works, but is no longer necessary, provided the topic entry's <strong>arouseKeyTopics</strong> property is true (which is the default).
+
+<li>So far, this coding pattern has assumed that the subtopics would be available to the player even before they invoke the master topic (e.g, by entering the command ASK ABOUT ISLAND) but just not suggested until then. It may be, however, that you'd want the subtopics to be unavailable until the player asks Sam about the island. In that case you can set the ask about island topic's <strong>activateKeyTopics</strong> property to true (it's nil by default) and define <span class='code'>activated = nil</span> (note, <i>not</i> <span class='code'>isActive = nil</span>) on each of the subtopics. The separation of isActive and activated allows isActive to be defined as an expression or method on either or both the TopicGroup and the TopicEntries it contains. For a TopicEntry within a TopicGroup to be active, its isActive and activated properties must both be true (the default) along with its TopicGroup's isActive property.</ii>
+
+</ul>
+
+<br>
+
+<a name="otherways"></a><h2>Other Ways of Suggesting Topics</h2>
+
+<p>It has already been mentioned in passing that the player can see a list of suggested topics (assuming there are any) by entering a TOPICS command. If you want to show the player an equivalent list of topics even though s/he hasn't explicitly asked for them, you can do so by including a <strong>&lt;.topics&gt;</strong> tag in the output of a conversational response. This schedules the diplay of a topic inventory (a list of suggested topics) just before the next command prompt. As a variation on this you can use the <strong>&lt;.suggest key&gt;</strong> tag to schedule a list of all suggested topics whose convKeys match <em>key</em>. To list all available suggested topics, even when the list might otherwise be restricted by the actor's suggestionKey property, use <strong>&lt;.suggest all&gt;</strong>.</p>
+
+<p>One further way to display a restricted list of suggested topics is via the <.convnode node> tag, but we'll discuss this in more detail when we come to look at <a href="convnode.htm">Conversation Nodes</a>.</p>
+<br>
+
+<a name='hyper'><h2>Hyperlinking and Enumerating Topic Suggestions</h2></a>
+<p>Lists of topic suggestions can be optionally hyperlinked or enumerated. If the list is hyperlinked the player can select a topic by clicking on the item in the list. If the list is enumerated the player can select a topic by just entering the relevant number (the number shown immediately before the suggestion in the list) at the command prompt. Both methods clearly offer convenience to players; whether they enhance game play will be a matter of taste (some may feel that they make the game feel less immersive if one is just clicking links or entering numbers rather than typing commands, and they may also discourage players from trying conversational commands that are not listed). Both options are disabled by default but can be enabled either by game authors or by players.</p>
+
+<p>To toggle the numbering of topic suggestions on and off, players can use the command ENUMERATE TOPIC SUGGESTIONS which can be abbreviatedto ENUM SUGGS.</p>
+
+<p>To toggle the hyperlinking of topic suggestions on and off, players can use the command HYPERLINK TOPIC SUGGESTIONS which can be abbreviatedto HYPER SUGGS. This second message will not be displayed if the player's interpreter is not HTML-capable.</p>
+<p>The player will be informed of these commands the first time a list of topic entries is displayed. If you want to suppress or change this explanation you can override <b>suggestedTopicLister.explainOptions()</b>.
+<p>The enumeration and hyperlinking of Topic Suggestions is controlled by the <span class='code'>suggestedTopicLister</span> properties <b>enumerateSuggestions</b> and <b>hyperlinkSuggestions</b> respectively. These two properties are toggled between <span class='code'>nil</span> and <span class='code'>true</span> by the two commands noted above, but could also be set and unset by game code.</p> 
+
+
+
+
+</div>
+<hr class="navb"><div class="navb">
+<i>adv3Lite Library Manual</i><br>
+<a class="nav" href="toc.htm">Table of Contents</a> | 
+<a class="nav" href="actor.htm">Actors</a> &gt; 
+Suggesting Conversational Topics
+<br><span class="navnp"><a class="nav" href="actortopicentry.htm"><i>Prev:</i> ActorTopicEntry</a> &nbsp;&nbsp;&nbsp; <a class="nav" href="specialtopic.htm"><i>Next:</i> Special Topics</a> &nbsp;&nbsp;&nbsp; </span>
+
+</div>
+</body>
+</html>
