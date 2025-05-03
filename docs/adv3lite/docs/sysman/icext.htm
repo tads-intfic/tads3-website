@@ -1,6 +1,6 @@
-<html>
-<!-- DERIVED FILE - DO NOT EDIT -->
-
+---
+layout: docs
+---
 <head>
 <title>Extending Intrinsic Classes</title>
 
@@ -53,7 +53,7 @@ modify BigNumber
   log2()
   {
     /*
-     *   cache ln(2) – use slightly greater precision than we
+     *   cache ln(2) ï¿½ use slightly greater precision than we
      *   actually need, to avoid rounding error
      */
     if (BigNumber.cacheLn2_ == nil
@@ -73,7 +73,7 @@ modify BigNumber
             / BigNumber.cacheLn2_).setPrecision(getPrecision());
   }
 
-  // our caches ln(2) value – we don't have any value initially
+  // our caches ln(2) value ï¿½ we don't have any value initially
   cacheLn2_ = nil
 ;
 </pre></div>
