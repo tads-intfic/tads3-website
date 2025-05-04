@@ -36,7 +36,7 @@ programmer's guide.** The links under "See Also" will transport you to
 complete language and library documentation.
 
 *(If you're seeking the adv3Lite periplus,
-<a href="../adv3Lite/index.html" target="_blank">go here</a>.)*
+<a href="../adv3lite/index.html" target="_blank">go here</a>.)*
 
 ## Organizing principles
 
