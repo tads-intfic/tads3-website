@@ -5,7 +5,7 @@ layout: docs
 <div class="toc">
 - <a href="about.html" target="classes">About this periplus</a>
 - <a href="docs/libref/intro.html" target="_blank">adv3Lite class reference</a>
-- <a href="docs/manual/toc.htm" target="_blank">adv3Lite Library manual</a>
+- <a href="docs/manual/toc.htm" target="classes">adv3Lite Library manual</a>
 - <a href="docs/learning/LearningT3Lite.pdf" target="classes">Learning TADS 3 with
   adv3Lite</a>
 - <a href="../../assets/quickrefs/TemplatesQref.PDF" target="classes">Template quick
