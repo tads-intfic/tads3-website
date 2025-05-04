@@ -11,6 +11,10 @@ table {
     font: 10pt/14pt Verdana, Arial, Helvetica, Sans-Serif;
 }
 
+#content {
+    padding: 0 !important;
+}
+
 a {
     text-decoration: none;
 }

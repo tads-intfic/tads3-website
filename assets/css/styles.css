@@ -1111,3 +1111,9 @@ em > a {
 .toc > h3 {
     font-size: 18px;
 }
+
+
+/* utility */
+.hidden {
+    visibility: hidden;
+}

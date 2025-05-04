@@ -1,6 +1,7 @@
 (function() {
     function showResults(results, store) {
       var searchResults = document.getElementById('search-results');
+      let googleSearch = document.getElementById("googleSearch");
   
       if (results.length) { // If there are results...
         var appendString = '';
@@ -15,6 +16,7 @@
       } else {
         searchResults.innerHTML = '<li>No results found</li>';
       }
+      googleSearch.classList.remove("hidden");
     }
   
     function getQuery(variable) {
@@ -38,7 +40,6 @@
       // Initalize lunr.js with the fields to search.
       // The title field is given more weight with the "boost" parameter
       var idx = lunr(function () {
-        this.field('id');
         this.field('title', { boost: 10 });
         this.field('content');
   
