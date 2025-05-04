@@ -11,7 +11,7 @@
     {% for resource in library.resources %}
         {% if resource.title %}
         <section>
-        <h3><a href="{{resource.url}}" target="_blank">{{resource.title}}</a> {% if resource.type %} <i>- for {{resource.type}}</i> {% endif %}</h3>
+        <h3><a href="{{resource.url}}" target="_blank">{{resource.title}}</a>{% if resource.type %} <i>- for {{resource.type}}</i> {% endif %}</h3>
         {% if resource.author %} <i>by {{ resource.author }}</i>{% endif %}
 
         <p>{{resource.description}}</p>
