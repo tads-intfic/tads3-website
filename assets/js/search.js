@@ -1,8 +1,12 @@
 (function() {
+  var searchResults = document.getElementById('search-results');
+  let googleSearch = document.getElementById("googleSearch");
+  let loading = document.getElementById("loading");
+
     function showResults(results, store) {
-      var searchResults = document.getElementById('search-results');
-      let googleSearch = document.getElementById("googleSearch");
-  
+      googleSearch.classList.remove("hidden");
+      loading.classList.add("hidden");
+      
       if (results.length) { // If there are results...
         var appendString = '';
   
@@ -16,7 +20,7 @@
       } else {
         searchResults.innerHTML = '<li>No results found</li>';
       }
-      googleSearch.classList.remove("hidden");
+
     }
   
     function getQuery(variable) {
@@ -35,6 +39,10 @@
     var searchTerm = getQuery('query');
   
     if (searchTerm) {
+      if (searchTerm.length <= 5) {
+        loading.innerHTML = "Try a more specific search term, please!"
+      }
+      else {
       document.getElementById('search-box').setAttribute("value", searchTerm);
   
       // Initalize lunr.js with the fields to search.
@@ -51,9 +59,10 @@
           });
         }
       });
-  
+      
       var results = idx.search(searchTerm); // Perform search with Lunr.js
       showResults(results, window.store);
     }
+  }
   })();
   

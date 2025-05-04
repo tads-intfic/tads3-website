@@ -23,7 +23,7 @@ libraries:
         description: A series of "cookbook recipes", ie TADS 3 code examples, on Github.
         url: https://github.com/jimbonator/tads-cookbook/wiki
       - title: Interactive Fiction Forum community
-        type: All of TADS 3
+        type: all of TADS 3
         description: The Intfiction.org forum is a place for fans and authors of interactive fiction to gather. It has a category for TADS 3 discussion where you can discuss the language and both current libraries, and ask for help from experienced TADS 3 authors and programmers.
         url: https://intfiction.org/c/authoring/tads/
 

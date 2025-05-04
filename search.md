@@ -3,6 +3,7 @@ layout: default
 title: Search Results
 url: /search
 ---
+<div id="loading">Loading...(Give it a sec)</div>
 <div id="googleSearch" class="hidden">
 <!--Google Search>-->
   <script src="https://cse.google.com/cse.js?cx=036b1d64455c94a06"></script>
