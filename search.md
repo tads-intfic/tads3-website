@@ -26,20 +26,6 @@ url: /search
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
-  let googleSearch = document.getElementById("googleSearch");
-
-  function isEmpty(obj) {
-    for (var prop in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-        return false;
-      }
-    }
-    return true
-  }
-  if (isEmpty(window.store)) {
-    googleSearch.classList.remove("hidden");
-  }
-  console.log(isEmpty(window.store));
 </script>
 
 <!-- Import lunr.js from unpkg.com -->
