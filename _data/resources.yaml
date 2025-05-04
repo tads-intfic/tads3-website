@@ -46,7 +46,7 @@ libraries:
         type: TADS 3 language and Adv3 library.
         author: Michael J. Roberts, Eric Eve, & other contributors
         description: A landing page for the various Adv3 books (tutorials, documentation, guides) that exist, written by various contributors. Some of these links are duplicated in this homepage.
-        url: /docs/adv3/doc/index.html
+        url: /docs/adv3/doc/index.htm
   - title: adv3Lite
     description: adv3Lite is a TADS 3 library based off Adv3, written and maintained by Eric Eve. It aims to provide a library that's easier to use than the Adv3 library, but which is almost as powerful and expressive. Adv3Lite misses out the bits that most games don't really need (like postures, room parts, and multiple light levels) while adding in some other bits that are often more useful (like scenes and regions, "borrowed" from Inform 7). Adv3Lite also cuts down drastically on the complexity of the Adv3 class hierarchy while maintaining much of their functionality.
     resources:
@@ -65,7 +65,7 @@ libraries:
       - title: adv3Lite Bookshelf
         author: Eric Eve
         description: A landing page for the various adv3Lite books (tutorials, documentation, guides) that exist, written by Eric Eve. Some of these links are duplicated on this homepage.
-        url: /docs/adv3lite/docs/index.html
+        url: /docs/adv3lite/docs/index.htm
   - title: TADS 3 language
     description: These are references for the TADS 3 programming language itself, not specific to any library like Adv3 or Adv3Lite.
     resources:
