@@ -13,7 +13,7 @@
         for (var i = 0; i < results.length; i++) {  // Iterate over them and generate html
           var result = results[i];
           var item = store[result.ref];
-          appendString += '<li><a href="' + result.ref + '"><h3>' + item.title + '</h3></a>';
+          appendString += '<li><a href="' + item.url + '"><h3>' + result.ref + '</h3></a>';
           appendString += '<p>' + item.summary + '...</p></li>';
         }
   

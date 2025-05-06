@@ -10,19 +10,19 @@ const index = lunr(function() {
 	this.field('title', { boost: 10 })
 	this.field('content')
 
-	for(let url in corpus) {
-		const item = corpus[url]
+	for(let title in corpus) {
+		const item = corpus[title]
 		// Add to the lunr index
 		this.add({
-			id: url,
-			title: item.title,
+			id: title,
+			title: title,
 			content: item.content
 		})
 		// lunr search only gives us the id (URL in this case), so we
 		// also want some info about the document to display in the
 		// search results
-		refs[url] = {
-			title: item.title,
+		refs[title] = {
+			url: item.url,
 			summary: item.content.substring(0, 250)
 		}
 	} 
