@@ -1,0 +1,10 @@
+---
+---
+{
+	{% for page in site.pages %}
+		"{{ page.url | url_encode }}": {
+			"title": "{{ page.url | slugify }}",
+			"content": {{ page.content | strip_html | jsonify }}
+		}{% unless forloop.last %},{% endunless %}
+	{% endfor %}
+}

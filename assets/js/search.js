@@ -11,9 +11,10 @@
         var appendString = '';
   
         for (var i = 0; i < results.length; i++) {  // Iterate over them and generate html
-          var item = store[results[i].ref];
-          appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-          appendString += '<p>' + item.content.substring(0, 250) + '...</p></li>';
+          var result = results[i];
+          var item = store[result.ref];
+          appendString += '<li><a href="' + result.ref + '"><h3>' + item.title + '</h3></a>';
+          appendString += '<p>' + item.summary + '...</p></li>';
         }
   
         searchResults.innerHTML = appendString;
@@ -47,22 +48,15 @@
   
       // Initalize lunr.js with the fields to search.
       // The title field is given more weight with the "boost" parameter
-      var idx = lunr(function () {
-        this.field('title', { boost: 10 });
-        this.field('content');
-  
-        for (var key in window.store) { // Add the JSON we generated from the site content to Lunr.js.
-          this.add({
-            'id': key,
-            'title': window.store[key].title,
-            'content': window.store[key].content
-          });
-        }
-      });
-      
-      var results = idx.search(searchTerm); // Perform search with Lunr.js
-      showResults(results, window.store);
+        fetch('/search-items.json').then(response => response.json())
+          .then(searchItems => {
+            fetch('/search-index.json').then(response => response.json())
+              .then(indexData => {
+                var idx = lunr.Index.load(indexData)
+                var results = idx.search(searchTerm); // Perform search with Lunr.js
+                showResults(results, searchItems);
+              })
+          })
+      }
     }
-  }
   })();
-  
