@@ -40,7 +40,7 @@
     var searchTerm = getQuery('query');
   
     if (searchTerm) {
-      if (searchTerm.length <= 5) {
+      if (searchTerm.length < 5) {
         loading.innerHTML = "Try a more specific search term, please!"
       }
       else {
