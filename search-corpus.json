@@ -3,7 +3,7 @@
 {
 	{% for page in site.pages %}
 		"{{ page.url | slugify }}": {
-			"url": "{{ page.url | url_encode }}",
+			"url": "{{ page.url | xml_escape }}",
 			"content": {{ page.content | strip_html | jsonify }}
 		}{% unless forloop.last %},{% endunless %}
 	{% endfor %}
