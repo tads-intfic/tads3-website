@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const lunr = require('./assets/js/lunr.js')
+
+const corpus = require('./_site/search-corpus.json')
+
+const refs = {}
+const index = lunr(function() {
+	this.field('title', { boost: 10 })
+	this.field('content')
+
+	for(let title in corpus) {
+		const item = corpus[title]
+		// Add to the lunr index
+		this.add({
+			id: title,
+			title: title,
+			content: item.content
+		})
+		// lunr search only gives us the id (URL in this case), so we
+		// also want some info about the document to display in the
+		// search results
+		refs[title] = {
+			url: item.url,
+			summary: item.content.substring(0, 250)
+		}
+	} 
+})
+
+// We probably don't need to explicitly specify the encoding, but UTF-8 used to not be the default on Windows so I'm being cautious.
+const enc = { encoding: 'utf-8' }
+fs.writeFileSync('_site/search-index.json', JSON.stringify(index), enc)
+fs.writeFileSync('_site/search-items.json', JSON.stringify(refs), enc)
+fs.rmSync('_site/search-corpus.json')

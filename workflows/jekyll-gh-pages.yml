@@ -34,8 +34,8 @@ jobs:
         with:
           ruby-version: 3.1
 
-      - name: Install pandoc
-        run: sudo apt-get install -y pandoc
+      - name: Install pandoc and node
+        run: sudo apt-get install -y pandoc nodejs
 
       - name: Install dependencies
         run: |
@@ -45,7 +45,9 @@ jobs:
           bundle install
 
       - name: Build with Jekyll
-        run: bundle exec jekyll build
+        run: |
+          bundle exec jekyll build
+          ./build-index
 
 
       - name: Upload artifact
